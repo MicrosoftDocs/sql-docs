@@ -6,7 +6,7 @@ ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
@@ -18,7 +18,10 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Holds information about all requests currently or recently active in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. It lists one row per request/query.  
+Holds information about all requests currently or recently active in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. It lists one row per request/query. 
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] For serverless SQL pool use [sys.dm_exec_requests (Transact-SQL)](sys-dm-exec-requests-transact-sql.md).
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
@@ -40,7 +43,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 |classifier_name|**sysname**|For requests utilizing resources, The name of the classifier used for assigning resources and importance.||
 |resource_allocation_percentage|**decimal(5,2)**|The percentage amount of resources allocated to the request.</br>Applies to: Azure Synapse Analytics|
 |result_cache_hit|**int**|Details whether a completed query used result set cache.  </br>Applies to: Azure Synapse Analytics| 1 = Result set cache hit </br> 0 = Result set cache miss </br> Negative integer values = Reasons why result set caching was not used.  See remarks section for details.|
-|client_correlation_id|**nvarchar(255)**|Optional user-defined name for a client session.  To set for a session, call sp_set_session_context 'client_correlation_id', '<CorrelationIDName>'.  Run `SELECT SESSION_CONTEXT(N'client_correlation_id')` to retrieve its value.|
+|client_correlation_id|**nvarchar(255)**|Optional user-defined name for a client session.  To set for a session, call sp_set_session_context 'client_correlation_id', `<CorrelationIDName>`.  Run `SELECT SESSION_CONTEXT(N'client_correlation_id')` to retrieve its value.|
+|command2|**nvarchar(max)**|Holds the full text of the request as submitted by the user. Holds queries that are longer than 4000 characters.| Any valid query or request text. NULL = Queries that are 4000 characters long or less, for these queries the full text can be found under the command column.|
 ||||
 
 ## Remarks 

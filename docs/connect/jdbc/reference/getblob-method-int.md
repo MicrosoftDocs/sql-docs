@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerCallableStatement.getBlob (int)"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getBlob Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

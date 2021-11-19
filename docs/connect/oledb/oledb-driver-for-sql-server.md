@@ -4,7 +4,7 @@ description: "The Microsoft OLE DB Driver for SQL Server provides connectivity t
 ms.custom: ""
 ms.date: "05/06/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "MSOLEDBSQL"
   - "native data access [OLE DB Driver for SQL Server]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Microsoft OLE DB Driver for SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

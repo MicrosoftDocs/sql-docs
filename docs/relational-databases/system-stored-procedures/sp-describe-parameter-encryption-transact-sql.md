@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_describe_parameter_encryption"
   - "sp_describe_parameter_encryption_TSQL"
@@ -127,7 +127,7 @@ GO
   
 CREATE TABLE t1 (  
 c1 INT ENCRYPTED WITH (  
-    COLUMN_ENCRYPTION_KEY = [CEK_Auto1],   
+    COLUMN_ENCRYPTION_KEY = [CEK1],   
     ENCRYPTION_TYPE = Randomized,   
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL,  
 );  

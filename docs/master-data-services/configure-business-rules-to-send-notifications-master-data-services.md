@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "e-mail [Master Data Services], configuring business rules"
   - "notifications [Master Data Services], configuring business rules"
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Configure Business Rules to Send Notifications (Master Data Services)

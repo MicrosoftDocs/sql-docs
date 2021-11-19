@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_cdc_cleanup_change_table"
   - "sp_cdc_cleanup_change_table_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sp_cdc_cleanup_change_tables"
   - "sp_cdc_cleanup_change_tables"
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-author: markingmyname
-ms.author: maghan
+author: briancarrig
+ms.author: brcarrig
 ---
 # sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,25 +62,26 @@ sys.sp_cdc_cleanup_change_table
  None  
   
 ## Remarks  
- sys.sp_cdc_cleanup_change_table performs the following operations:  
+ *sys.sp_cdc_cleanup_change_table* performs the following operations:  
   
-1.  If the @low_water_mark parameter is not NULL, it sets the value of start_lsn for the *capture instance* to the new *low watermark*.  
+1.  If the *@low_water_mark*  parameter is NULL, the start_lsn value for the *capture instance* is left unchanged. However, if the current low watermark is greater than the low watermark value specified using the *@low_water_mark* parameter for the procedure, the [Error 22957](../errors-events/database-engine-events-and-errors.md) is thrown. The error message for *Error 22957* is ```LSN %s, specified as the new low endpoint for the change table associated with capture instance '%s', is not within the Change Data Capture timeline [%s, %s].```
   
     > [!NOTE]  
     >  The new low watermark might not be the low watermark that is specified in the stored procedure call. If other entries in the cdc.lsn_time_mapping table share the same commit time, the smallest start_lsn represented in the group of entries is selected as the adjusted low watermark. If the @low_water_mark parameter is NULL or the current low watermark is greater than the new lowwatermark, the start_lsn value for the capture instance is left unchanged.  
   
 2.  Change table entries with __$start_lsn values less than the low watermark are then deleted. The delete threshold is used to limit the number of rows deleted in a single transaction. A failure to successfully delete entries is reported, but does not affect any change to the capture instance low watermark that might have been made based on the call.  
+3.  If the *sys.sp_cdc_cleanup_change_table* stored procedure times out after updating the start_lsn for the capture instance but without deleting the change table data, increasing the data retention value using the stored procedure [sys.sp_cdc_change_job](sys-sp-cdc-change-job-transact-sql.md) before the next execution of the stored procedure *sys.sp_cdc_cleanup_change_table*  will not retain data for the specified retention period. The start_lsn value in [cdc.change_tables](../system-tables/cdc-change-tables-transact-sql.md) should be treated as the new low watermark. The *sys.sp_cdc_cleanup_change_table* stored procedure will not set the start_lsn value to match the newly specified data retention period. The procedure always performs cleanup based on the low watermark. By specifying a value for the *@low_water_mark* parameter that is equal to or higher than the start_lsn value in [cdc.change_tables](../system-tables/cdc-change-tables-transact-sql.md) will avoid generating *Error 22957*.
 
- Use sys.sp_cdc_cleanup_change_table in the following circumstances:  
+ Use *sys.sp_cdc_cleanup_change_table* in the following circumstances:  
   
 -   The cleanup Agent job reports delete failures.  
   
-     An administrator can run this stored procedure explicitly to retry a failed operation. To retry cleanup for a given capture instance, execute sys.sp_cdc_cleanup_change_table, and specify NULL for the @low_water_mark parameter.  
+     An administrator can run this stored procedure explicitly to retry a failed operation. To retry cleanup for a given capture instance, execute *sys.sp_cdc_cleanup_change_table*, and specify NULL for the *@low_water_mark* parameter.  
   
 -   The simple retention-based policy used by the cleanup Agent job is not adequate.  
   
-     Because this stored procedure does cleanup for a single capture instance, it can be used to build a custom cleanup strategy that tailors the rules for cleanup to the individual capture instance.  
-  
+     Because this stored procedure does cleanup for a single capture instance, it can be used to build a custom cleanup strategy that tailors the rules for cleanup to the individual capture instance. 
+
 ## Permissions  
  Requires membership in the db_owner fixed database role.  
   

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "monitoring server performance [SQL Server], DACs"
   - "data-tier application [SQL Server], monitor"
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Monitor Data-tier Applications
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

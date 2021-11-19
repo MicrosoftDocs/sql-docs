@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Business Rule Conditions (Master Data Services)

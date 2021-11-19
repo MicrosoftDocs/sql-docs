@@ -7,12 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLFetch"
 apilocation: 
   - "sqlsrv32.dll"
   - "odbc32.dll"
+  - "Msodbcsql11.dll"
+  - "Sqlncli10.dll"
+  - "Sqlncli11.dll"
+  - "Sqlncli11e.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLFetch"
@@ -20,7 +24,7 @@ helpviewer_keywords:
   - "SQLFetch function [ODBC]"
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFetch Function
 **Conformance**  

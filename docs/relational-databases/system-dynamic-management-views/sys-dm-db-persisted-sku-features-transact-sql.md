@@ -6,7 +6,7 @@ ms.date: "08/23/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_persisted_sku_features_TSQL"
   - "sys.dm_db_persisted_sku_features"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "editions [SQL Server]"
   - "sys.dm_db_persisted_sku_features dynamic management view"
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.author: maghan
   
 -   **MultipleFSContainers**: Indicates that the database uses multiple FILESTREAM containers. The database has a FILESTREAM filegroup with multiple containers (files). For more information, see [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
--   **InMemoryOLTP**: Indicates that the database uses In-Memory OLTP. The database has a MEMORY_OPTIMIZED_DATA filegroup. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+-   **InMemoryOLTP**: Indicates that the database uses In-Memory OLTP. The database has a MEMORY_OPTIMIZED_DATA filegroup. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
   
   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later). 
   
@@ -60,7 +60,7 @@ ms.author: maghan
 -   **TransparentDataEncryption.** Indicates that a database is encrypted by using transparent data encryption. To remove transparent data encryption, use the ALTER DATABASE statement. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1, these features, except **TransparentDataEncryption.** are available across multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editions, and not limited to Enterprise or Developer Editions only.
+> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1, these features, except **TransparentDataEncryption.** are available across multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editions, and not limited to Enterprise or Developer Editions only.
 
  To determine whether a database uses any features that are restricted to specific editions, execute the following statement in the database:  
   
@@ -74,4 +74,3 @@ GO
  [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)  
-  

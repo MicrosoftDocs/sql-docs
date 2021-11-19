@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], deleting"
   - "deleting stored procedures"
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete a Stored Procedure
@@ -80,7 +80,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 5.  Copy and paste the following example into the query editor and insert a stored procedure name to delete from the current database.  
   
     ```sql  
-    DROP PROCEDURE <stored procedure name>;  
+    DROP PROCEDURE [<stored procedure name>];  
     GO  
     ```  
   

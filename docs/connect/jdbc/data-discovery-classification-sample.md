@@ -1,15 +1,15 @@
 ---
-title: "SQL Data Discovery and Classification JDBC Sample"
-description: "This Microsoft JDBC Driver for SQL Server sample application demonstrates how to use a result set to retrieve Data Discovery and Classification information."
+title: SQL Data Discovery and Classification Sample
+description: This Microsoft JDBC Driver for SQL Server sample application demonstrates how to use a result set to retrieve Data Discovery and Classification information.
 ms.custom: ""
-ms.date: "07/31/2020"
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # SQL Data Discovery and Classification JDBC Sample

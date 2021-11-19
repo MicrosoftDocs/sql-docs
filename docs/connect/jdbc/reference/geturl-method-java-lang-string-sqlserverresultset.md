@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.getURL (java.lang.String)"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 105a5319-0f4c-4d08-964b-cc52f8e28ec1
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getURL Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

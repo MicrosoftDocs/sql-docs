@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ShortestLineTo_TSQL"
   - "ShortestLineTo"
@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # ShortestLineTo (geography Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a **LineString** instance with two points that represent the shortest distance between the two **geography** instances. The length of the **LineString** instance returned is the distance between the two **geography** instances.  
   

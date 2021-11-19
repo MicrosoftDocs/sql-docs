@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 630a93b0-6e3c-4255-a007-1097ce0ee243
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # createBlob Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

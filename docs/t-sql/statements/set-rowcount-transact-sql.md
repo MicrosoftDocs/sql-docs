@@ -4,10 +4,10 @@ title: "SET ROWCOUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET_ROWCOUNT_TSQL"
   - "ROWCOUNT_TSQL"
@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "limiting rows returned"
   - "queries [SQL Server], stopping"
 ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ROWCOUNT (Transact-SQL)

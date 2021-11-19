@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerCallableStatement.getCharacterStream()"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 6207ad4b-56b3-4c66-bad5-6e590591ac2f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getCharacterStream Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

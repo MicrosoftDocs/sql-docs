@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_ROLE_TSQL"
   - "ALTER ROLE"
@@ -117,7 +117,7 @@ Additionally, to change the membership in a fixed database role you need:
 ### A. Change the name of a database role  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- The following example changes the name of role `buyers` to `purchasing`.   This example can be executed in the [AdventureWorks](https://msftdbprodsamples.codeplex.com/) sample database.
+ The following example changes the name of role `buyers` to `purchasing`.   This example can be executed in the [AdventureWorks](/sql/samples/adventureworks-install-configure) sample database.
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -126,12 +126,27 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### B. Add or remove role members  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry.   This example can be executed in the [AdventureWorks](https://msftdbprodsamples.codeplex.com/) sample database.
+ This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry.   This example can be executed in the [AdventureWorks](/sql/samples/adventureworks-install-configure) sample database.
   
 ```sql  
 CREATE ROLE Sales;  
 ALTER ROLE Sales ADD MEMBER Barry;  
 ALTER ROLE Sales DROP MEMBER Barry;  
+```  
+
+### C. Add a role member to special roles for Azure SQL Database and Azure Synapse Analytics
+ **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Azure SQL Database and Azure Synapse), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+  
+This example creates a SQL login in the master database, creates a database user that's related to that server login, and adds the database user as a member of the special role `dbmanager`. The example allows the user permissions to create and drop databases on an Azure SQL Database logical server. Run the example on the master database of the Azure SQL Database logical server.
+
+  
+```sql  
+ CREATE LOGIN sqllogin_nlastname WITH password='aah3%#om1os';
+    
+ CREATE USER sqllogin_nlastname FOR LOGIN sqllogin_nlastname 
+ WITH DEFAULT_SCHEMA = master;
+    
+ ALTER ROLE [dbmanager] add member sqllogin_nlastname;
 ```  
   
 ## See Also  
@@ -141,5 +156,3 @@ ALTER ROLE Sales DROP MEMBER Barry;
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
-  
-  

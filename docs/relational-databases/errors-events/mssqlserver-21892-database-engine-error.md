@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "21892 (Database Engine error)"
 ms.assetid: 199818e8-28f4-440e-ad85-7bea88f51153
@@ -30,7 +30,7 @@ ms.author: mathoma
 ## Explanation  
 **sp_validate_replica_hosts_as_publishers** queries the current primary of the availability group associated with the redirected publisher, to determine the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that host the member replicas.  When this query fails, error 21892 is returned.  
   
-**sp_validate_replica_hosts_as_publishers** is typically on of the first use of the temporary linked server, so if there are connectivity problems they are likely to appear first with **sp_validate_replica_hosts_as_publishers**. Unlike **sp_validate_redirected_publisher**, the linked server used by **sp_validate_replica_hosts_as_publishers** always uses the credentials of the caller when connecting to any of the availability group replica hosts.  
+**sp_validate_replica_hosts_as_publishers** is typically one of the first uses of the temporary linked server, so if there are connectivity problems they are likely to appear first with **sp_validate_replica_hosts_as_publishers**. Unlike **sp_validate_redirected_publisher**, the linked server used by **sp_validate_replica_hosts_as_publishers** always uses the credentials of the caller when connecting to any of the availability group replica hosts.  
   
 ## User Action  
 When running this stored procedure, made certain that you run from a login that is valid on all of the replicas. The login will require sufficient authorization to query availability group metadata tables as well as to query the subscription metadata tables in the publisher database replica.  

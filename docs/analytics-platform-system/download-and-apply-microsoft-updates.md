@@ -1,12 +1,12 @@
 ---
 title: Download Microsoft Updates
 description: This topic discusses how to download updates from the Microsoft Update Catalog to Windows Server Update Services (WSUS) and apply those updates to the Analytics Platform System appliance servers. Microsoft Update will install all applicable updates for Windows and SQL Server. WSUS is installed on the VMM virtual machine of the appliance. 
-author: mzaman1 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
@@ -120,7 +120,7 @@ Before performing these steps, you need to:
   
 5.  In the **Status** drop-down menu, select **Any** and click **Refresh**.  
   
-6.  Expand **Update Services**, *<appliance name>*-VMM, **Updates**, **All Updates**, where *<appliance name>* is your appliance name.  
+6.  Expand **Update Services**, *\<appliance name\>*-VMM, **Updates**, **All Updates**, where *\<appliance name\>* is your appliance name.  
   
 7.  In the **All Updates** window set **Approval** to **Any Except Declined**.  
   
@@ -144,7 +144,7 @@ Follow these instructions to run the Analytics Platform System Update program.
   
 1.  Make sure you are logged into the HST01 node as the Fabric Domain Administrator.  
   
-2.  Open a Command Prompt window and enter the following commands. Replace *<parameter>* with the designated information.  
+2.  Open a Command Prompt window and enter the following commands. Replace *\<parameter\>* with the designated information.  
   
 **To Run the Microsoft Update:**  
   

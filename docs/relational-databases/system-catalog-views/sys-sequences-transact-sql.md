@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sequences_TSQL"
   - "sys.sequences"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sequence number object, sys. sequences catalog view"
   - "sys.sequences catalog view"
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sequences (Transact-SQL)

@@ -3,10 +3,10 @@ title: "REPLACE (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQL reference for the REPLACE function, which replaces all occurrences of a specified string value with another string value."
 ms.date: "08/23/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "REPLACE_TSQL"
   - "REPLACE"
@@ -43,7 +43,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  Is the string [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be searched. *string_expression* can be of a character or binary data type.  
   
  *string\_pattern*  
- Is the substring to be found. *string_pattern* can be of a character or binary data type. *string_pattern* cannot be an empty string (''), and must not exceed the maximum number of bytes that fits on a page.  
+ Is the substring to be found. *string_pattern* can be of a character or binary data type. *string_pattern* must not exceed the maximum number of bytes that fits on a page. If *string_pattern* is an empty string (''), *string_expression* is returned unchanged. 
   
  *string\_replacement*  
  Is the replacement string. *string_replacement* can be of a character or binary data type.  
@@ -61,7 +61,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  0x0000 (**char(0)**) is an undefined character in Windows collations and cannot be included in REPLACE.  
   
 ## Examples  
- The following example replaces the string `cde` in `abcdefghi` with `xxx`.  
+ The following example replaces the string `cde` in `abcdefghicde` with `xxx`.  
   
 ```sql  
 SELECT REPLACE('abcdefghicde','cde','xxx');  
@@ -91,6 +91,31 @@ GO
 This is a desk  
 (1 row(s) affected)  
 ```  
+
+The following example calculates the number of spaces in a sentence using the `REPLACE` function. First, it calculates the length of the sentence with the `LEN` function. It then replaces the ' ' characters with '' with `REPLACE`. After this process, it calculates the length of the sentence again. The resulting difference is the number of space characters in the sentence.
+
+
+```sql  
+DECLARE @STR NVARCHAR(100), @LEN1 INT, @LEN2 INT;
+SET @STR = N'This is a sentence with spaces in it.';
+SET @LEN1 = LEN(@STR);
+SET @STR = REPLACE(@STR, N' ', N'');
+SET @LEN2 = LEN(@STR);
+SELECT N'Number of spaces in the string: ' + CONVERT(NVARCHAR(20), @LEN1 - @LEN2);
+
+GO  
+```  
+
+
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+------------  
+Number of spaces in the sentence: 8  
+
+(1 row(s) affected)  
+```  
+
 
   
 ## See Also  

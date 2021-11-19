@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerXAResource Fields"
 apilocation: 
   - "SQLServerXAResource Fields"
 ms.assetid: a62bbaf4-9ec3-44b5-8a26-7213786b67b3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLServerXAResource Fields
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

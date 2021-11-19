@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerCallableStatement.getRef"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 0c7632a9-1ef6-46f0-8208-06a6cbd202e4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getRef Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

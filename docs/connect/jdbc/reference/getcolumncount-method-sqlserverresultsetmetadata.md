@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSetMetaData.getColumnCount"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: a1fc3f50-3635-4fc5-b570-94d2c5a1873c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getColumnCount Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

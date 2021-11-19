@@ -38,6 +38,8 @@ ms.author: chadam
 -   Using the `WITH COMPRESSION` option during backup can minimize your storage costs and storage transaction costs. It can also decrease the time taken to complete the backup process.  
 
 - Set `MAXTRANSFERSIZE` and `BLOCKSIZE` arguments as recommended at [SQL Server Backup to URL](./sql-server-backup-to-url.md).
+
+- SQL Server is agnostic to the type of storage redundancy used. Backup to Page blobs and block blobs is supported for every storage redundancy (LRS\ZRS\GRS\RA-GRS\RA-GZRS\etc.).
   
 ## Handling Large Files  
   
@@ -128,7 +130,6 @@ When such error occurs, the blob files need to be deleted. For more information 
 When backing up a database, you may see error `Operating system error 50(The request is not supported)` for the following reasons: 
 
    - The specified storage account is not General Purpose V1/V2.
-   - The SAS token is more than 128 characters.
    - The SAS token had a `?` symbol at the beginning of the token when the credential was created. If yes, then remove it.
    - The current connection is unable to connect to the storage account from the current machine using Storage Explorer or SQL Server Management Studio (SSMS). 
    - The policy assigned to the SAS token is expired. Create a new policy using Azure Storage Explorer and either create a new SAS token using the policy or alter the credential and try backing up again. 
@@ -146,7 +147,7 @@ To avoid this issue, you can include T-SQL statements to create the credential i
 IF NOT EXISTS  
 (SELECT * FROM sys.credentials   
 WHERE credential_identity = 'mycredential')  
-CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
+CREATE CREDENTIAL [<credential name>] WITH IDENTITY = 'mystorageaccount'  
 , SECRET = '<storage access key>' ;  
 ```  
   
@@ -154,7 +155,19 @@ The credential exists but the login account that is used to run the backup comma
   
 Verify the storage account name and key values. The information stored in the credential must match the property values of the Azure storage account you are using in the backup and restore operations.  
   
-  
+
+**400 (Bad Request) errors**
+
+Using SQL Server 2012 you may encounter an error performing a backup similar to the following:
+
+```
+Backup to URL received an exception from the remote endpoint. Exception Message: 
+The remote server returned an error: (400) Bad Request..
+```
+
+This is caused by the TLS version supported by the Azure Storage Account. Changing the supported TLS version or using the workaround listed in [KB4017023](https://support.microsoft.com/en-us/topic/kb4017023-sql-server-2012-2014-or-2016-backup-to-microsoft-azure-blob-storage-service-url-isn-t-compatible-for-tls-1-2-e9ef6124-fc05-8128-86bc-f4f4f5ff2b78).
+
+
 ## Proxy Errors  
  If you are using Proxy Servers to access the internet, you may see the following issues:  
   

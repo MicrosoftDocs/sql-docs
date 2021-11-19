@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # revoscalepy (Python package in SQL Server Machine Learning Services)
@@ -25,14 +25,13 @@ Data sources and compute contexts that you create in **revoscalepy** can also be
 
 ## Full reference documentation
 
-The **revoscalepy** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual revoscalepy functions](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) is published to just one location under the [Python reference](/machine-learning-server/python-reference/introducing-python-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **revoscalepy** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual revoscalepy functions](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) is published to just one location under the [Python reference](/machine-learning-server/python-reference/introducing-python-package-reference). Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Versions and platforms
 
 The **revoscalepy** module is based on Python 3.5 and available only when you install one of the following Microsoft products or downloads:
 
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server 9.2.0 or later](/machine-learning-server/)
 + [Python client libraries for a data science client](setup-python-client-tools-sql.md)
 
 > [!NOTE]
@@ -56,7 +55,7 @@ SQL Server and Python use different data types in some cases. For a list of mapp
 | [RxXdfData](/machine-learning-server/python-reference/revoscalepy/rxxdfdata) | Create a data source based on a local XDF file. XDF files are often used to offload in-memory data to disk. An XDF file can be useful when working with more data than can be transferred from the database in one batch, or more data than can fit in memory. For example, if you regularly move large amounts of data from a database to a local workstation, rather than query the database repeatedly for each R operation, you can use the XDF file as a kind of cache to save the data locally and then work with it in your R workspace. |
 
 > [!TIP]
-> If you are new to the idea of data sources or compute contexts, we recommend that you start with [distributed computing](/machine-learning-server/r/how-to-revoscaler-distributed-computing) in the Microsoft Machine Learning Server documentation.
+> If you are new to the idea of data sources or compute contexts, we recommend that you start with the article [Distributed computing](/machine-learning-server/r/how-to-revoscaler-distributed-computing).
 
 ## 2-Data manipulation (ETL)
 
@@ -78,7 +77,7 @@ SQL Server and Python use different data types in some cases. For a list of mapp
 |[rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit) | Create a logistic regression model|
 |[rx_summary](/machine-learning-server/python-reference/revoscalepy/rx-summary) | Produce univariate summaries of objects in revoscalepy.|
 
-You should also review the functions in [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) for additional approaches.
+You should also review the functions in [microsoftml](../python/ref-py-microsoftml.md) for additional approaches.
 
 <a name="ml-scoring"></a>
 
@@ -86,7 +85,7 @@ You should also review the functions in [microsoftml](/machine-learning-server/p
 
 | Function| Description|
 | ------- | ---------- |
-| [rx_predict](/machine-learning-server/python-reference/revoscalepy/rx-predict) | Generate predictions from a trained model|) | Generates predictions from a trained model and can be used for real-time scoring. |
+| [rx_predict](/machine-learning-server/python-reference/revoscalepy/rx-predict) | Generate predictions from a trained model and can be used for real-time scoring. |
 |[rx_predict_default](/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | Compute predicted values and residuals using rx_lin_mod and rx_logit objects. |
 |[rx_predict_rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dforest) | Calculate predicted or fitted values for a data set from an rx_dforest or rx_btrees object. |
 |[rx_predict_rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dtree) | Calculate predicted or fitted values for a data set from an rx_dtree object. |
@@ -116,4 +115,4 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 ## See also
 
 + [Python tutorials](../tutorials/python-tutorials.md)
-+ [Python Reference (Microsoft Machine Learning Server)](/machine-learning-server/python-reference/introducing-python-package-reference)
++ [Python Reference](/machine-learning-server/python-reference/introducing-python-package-reference)

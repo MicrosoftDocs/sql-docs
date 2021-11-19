@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0e5c0579-84b5-4717-b128-0bcd512f6022
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsStoredFunctionsUsingCallSyntax Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

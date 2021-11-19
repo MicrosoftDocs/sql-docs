@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.CONCUR_SS_OPTIMISTIC_CCVAL"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 5314cee7-fef0-47fc-bfb4-284b8700d612
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # CONCUR_SS_OPTIMISTIC_CCVAL Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

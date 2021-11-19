@@ -16,9 +16,6 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
   Displays the time spent by a data flow component in each execution phase.  
   
 |Column name|Data type|Description|  

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLSetConnectOption function [ODBC], dBASE Driver"
 ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetConnectOption (dBASE Driver)
 > [!NOTE]  

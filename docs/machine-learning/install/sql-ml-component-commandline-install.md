@@ -3,11 +3,13 @@ title: Install from a command prompt
 description: Run SQL Server command line setup to add Machine Learning Services with Python and R to a SQL Server database engine instance.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/25/2020  
+ms.date: 09/16/2021
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
-ms.custom: seo-lt-2019
+author: garyericson
+ms.author: garye
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Install SQL Server Machine Learning Services with R and Python from the command line
@@ -67,7 +69,7 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 | /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server Machine Learning Services (In-Database).  |
 | /FEATURES = SQL_INST_MR | Pair this with AdvancedAnalytics. Installs the (In-Database) R feature, including Microsoft R Open and the proprietary R packages. |
 | /FEATURES = SQL_INST_MPY | Pair this with AdvancedAnalytics. Installs the (In-Database) Python feature, including Anaconda and the proprietary Python packages. |
-| /FEATURES = SQL_INST_MJAVA | Pair this with AdvancedAnalytics. Installs the (In-Database) Java feature, including Open JRE. |
+| /FEATURES = SQL_INST_MJAVA | Pair this with AdvancedAnalytics. Installs the (In-Database) Java feature, including Open JRE. Applies to [SQL Server Java Language Extension](../../language-extensions/install/windows-java.md).|
 | /FEATURES = SQL_SHARED_MR | Installs the R feature for the standalone version: SQL Server Machine Learning Server (Standalone). A standalone server is a "shared feature" not bound to a database engine instance.|
 | /FEATURES = SQL_SHARED_MPY | Installs the Python feature for the standalone version: SQL Server Machine Learning Server (Standalone). A standalone server is a "shared feature" not bound to a database engine instance.|
 | /IACCEPTROPENLICENSETERMS  | Indicates you have accepted the license terms for using the open source R components. |
@@ -84,7 +86,7 @@ In-database analytics are available for database engine instances, required for 
 To view progress information without the interactive on-screen prompts, use the /qs argument.
 
 > [!IMPORTANT]
-> After installation, two additional configuration steps remain. Integration is not complete until these tasks are performed. See [Post-installation tasks](#post-install) for instructions.
+> After installation, two additional configuration steps remain. Integration is not complete until these tasks are performed. See [Post-installation configuration](#post-install) for instructions.
 
 ::: moniker range=">=sql-server-2017"
 ### SQL Server Machine Learning Services: database engine, advanced analytics with Python and R
@@ -126,7 +128,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a> Post-install configuration (required)
+## <a name="post-install"></a> Post-installation configuration (required)
 
 Applies to in-database installations only.
 
@@ -190,7 +192,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 When setup is finished, you have a server, Microsoft packages, open-source distributions of R and Python, tools, samples, and scripts that are part of the distribution. 
 
-To open an R console window, go to `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` and double-click **RGui.exe**. New to R? Try this tutorial: [Basic R commands and RevoScaleR functions: 25 common examples](/machine-learning-server/r/tutorial-r-to-revoscaler).
+To open an R console window, go to `\Program files\Microsoft SQL Server\150(or 140,130)\R_SERVER\bin\x64` and double-click **RGui.exe**. New to R? Try this tutorial: [Basic R commands and RevoScaleR functions: 25 common examples](/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 To open a Python command, go to `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64` and double-click **python.exe**.
 

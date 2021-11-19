@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "IHpublications_TSQL"
   - "IHpublications"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublications system table"
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # IHpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

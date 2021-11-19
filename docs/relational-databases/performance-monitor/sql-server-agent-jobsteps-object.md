@@ -1,8 +1,8 @@
 ---
-title: "SQL Server Agent, JobSteps Object | Microsoft Docs"
+title: "SQL Server Agent, JobSteps object"
 description: Learn about the SQL Server Agent JobSteps performance object, which contains performance counters that report information about SQL Server Agent job steps.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,12 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "JobSteps object"
   - "SQLAgent:JobSteps"
-ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server Agent, JobSteps Object
+# SQL Server Agent, JobSteps object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **JobSteps** performance object contains performance counters that report information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps. The table below lists the counters that this object contains.  
   
  The table below contains the **SQLAgent:JobSteps** counters.  
@@ -45,7 +45,7 @@ ms.author: wiassaf
 |**Snapshot**|Information for job steps that use the **Snapshot** subsystem.|  
 |**TSQL**|Information for job steps that execute [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## See Also  
+## See also  
  [Manage Job Steps](../../ssms/agent/manage-job-steps.md)   
  [Use Performance Objects](../../ssms/agent/use-performance-objects.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

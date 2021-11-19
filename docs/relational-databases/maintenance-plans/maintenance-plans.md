@@ -25,7 +25,7 @@ ms.author: mikeray
 ## Benefits of Maintenance Plans  
  In [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)], maintenance plans create an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, which is run by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job. Maintenance plans can be run manually or automatically at scheduled intervals.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] maintenance plans provide the following features:  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] maintenance plans provide the following features:  
   
 -   Workflow creation using a variety of typical maintenance tasks. You can also create your own custom [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  
   

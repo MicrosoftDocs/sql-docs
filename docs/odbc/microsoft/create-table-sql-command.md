@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "CREATE TABLE [ODBC]"
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # CREATE TABLE - SQL Command
 Creates a table having the specified fields.  

@@ -4,10 +4,10 @@ title: "nchar and nvarchar (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -28,7 +28,7 @@ Character data types that are either fixed-size, **nchar**, or variable-size, **
 Fixed-size string data. *n* defines the string size in byte-pairs and must be a value from 1 through 4,000. The storage size is two times *n* bytes. For [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) encoding, the storage size is two times *n* bytes and the number of characters that can be stored is also *n*. For UTF-16 encoding, the storage size is still two times *n* bytes but the number of characters that can be stored may be smaller than *n* because Supplementary Characters use two byte-pairs (also called [surrogate-pair](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). The ISO synonyms for **nchar** are **national char** and **national character**.
   
 **nvarchar** [ ( n | **max** ) ]  
-Variable-size string data. *n* defines the string size in byte-pairs and can be a value from 1 through 4,000. **max** indicates that the maximum storage size is 2^30-1 characters (2 GB). The storage size is two times *n* bytes + 2 bytes. For [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) encoding, the storage size is two times *n* bytes + 2 bytes and the number of characters that can be stored is also *n*. For UTF-16 encoding, the storage size is still two times *n* bytes + 2 bytes but the number of characters that can be stored may be smaller than *n* because Supplementary Characters use two byte-pairs (also called [surrogate-pair](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). The ISO synonyms for **nvarchar** are **national char varying** and **national character varying**.
+Variable-size string data. *n* defines the string size in byte-pairs and can be a value from 1 through 4,000. **max** indicates that the maximum storage size is 2^30-1 characters (2 GB). The storage size is two times *n* bytes + 2 bytes. For [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) encoding, the storage size is two times *n* bytes + 2 bytes and the number of characters that can be stored is also *n*. For UTF-16 encoding, the storage size is still two times *n* bytes + 2 bytes but the number of characters that can be stored may be smaller than *n* because Supplementary Characters use two byte-pairs (also called [surrogate-pair](https://www.wikipedia.org/wiki/UTF-16#Code_points_from_U+010000_to_U+10FFFF)). The ISO synonyms for **nvarchar** are **national char varying** and **national character varying**.
   
 ## Remarks  
 A common misconception is to think that [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), the *n* defines the number of characters. But in [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) the *n* defines the string length in **byte-pairs** (0-4,000). *n* never defines numbers of characters that can be stored. This is similar to the definition of [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md).   
@@ -47,7 +47,7 @@ Objects that use **nchar** or **nvarchar** are assigned the default collation of
   
 SET ANSI_PADDING is always ON for **nchar** and **nvarchar**. SET ANSI_PADDING OFF does not apply to the **nchar** or **nvarchar** data types.
   
-Prefix a Unicode character string constants with the letter N to signal UCS-2 or UTF-16 input, depending on whether an SC collation is used or not. Without the N prefix, the string is converted to the default code page of the database that may not recognize certain characters. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], when a UTF-8 enabled collation is used, the default code page is capable of storing UNICODE UTF-8 character set. 
+Prefix a Unicode character string constants with the letter N to signal UCS-2 or UTF-16 input, depending on whether an SC collation is used or not. Without the N prefix, the string is converted to the default code page of the database that may not recognize certain characters. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], when a UTF-8 enabled collation is used, the default code page is capable of storing UNICODE UTF-8 character set. 
  
 > [!NOTE]  
 > When prefixing a string constant with the letter N, the implicit conversion will result in a UCS-2 or UTF-16 string if the constant to convert does not exceed the max length for the nvarchar string data type (4,000). Otherwise, the implicit conversion will result in a large-value nvarchar(max).

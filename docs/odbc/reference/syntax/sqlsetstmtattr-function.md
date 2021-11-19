@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLSetStmtAttr"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLSetStmtAttr function [ODBC]"
 ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetStmtAttr Function
 **Conformance**  

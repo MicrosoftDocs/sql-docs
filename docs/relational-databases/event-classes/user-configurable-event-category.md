@@ -6,14 +6,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQL Server event classes, User-Configurable event category"
   - "event classes [SQL Server], User-Configurable event category"
   - "User-Configurable event category [SQL Server]"
 ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # User-Configurable Event Category

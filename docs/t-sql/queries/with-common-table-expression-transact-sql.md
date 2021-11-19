@@ -3,10 +3,10 @@ title: "WITH common_table_expression (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQL reference for how to use common table expressions (CTE) in queries."
 ms.date: "08/09/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "WITH common_table_expression"
   - "WITH_TSQL"
@@ -268,8 +268,9 @@ FirstName NVARCHAR(30)  NOT NULL,
 LastName  NVARCHAR(40) NOT NULL,  
 Title NVARCHAR(50) NOT NULL,  
 DeptID SMALLINT NOT NULL,  
-ManagerID INT NULL,  
- CONSTRAINT PK_EmployeeID PRIMARY KEY CLUSTERED (EmployeeID ASC)   
+ManagerID SMALLINT NULL,  
+ CONSTRAINT PK_EmployeeID PRIMARY KEY CLUSTERED (EmployeeID ASC),
+ CONSTRAINT FK_MyEmployees_ManagerID_EmployeeID FOREIGN KEY (ManagerID) REFERENCES dbo.MyEmployees (EmployeeID)
 );  
 -- Populate the table with values.  
 INSERT INTO dbo.MyEmployees VALUES   

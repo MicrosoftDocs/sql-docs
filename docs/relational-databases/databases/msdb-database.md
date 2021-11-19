@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "jobs [SQL Server], msdb database"
   - "msdb database [SQL Server]"
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # msdb Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,34 +80,21 @@ ms.author: "sstein"
  The following operations cannot be performed on the **msdb** database:  
   
 -   Changing collation. The default collation is the server collation.  
-  
 -   Dropping the database.  
-  
 -   Dropping the **guest** user from the database.  
-  
 -   Enabling change data capture.  
-  
 -   Participating in database mirroring.  
-  
 -   Removing the primary filegroup, primary data file, or log file.  
-  
 -   Renaming the database or primary filegroup.  
-  
 -   Setting the database to OFFLINE.  
-  
 -   Setting the primary filegroup to READ_ONLY.  
   
 ## Related Content  
- [System Databases](../../relational-databases/databases/system-databases.md)  
-  
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
- [Move Database Files](../../relational-databases/databases/move-database-files.md)  
-  
- [Database Mail](../../relational-databases/database-mail/database-mail.md)  
-  
- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
+- [System Databases](../../relational-databases/databases/system-databases.md)  
+- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+- [Move Database Files](../../relational-databases/databases/move-database-files.md)  
+- [Database Mail](../../relational-databases/database-mail/database-mail.md)  
+- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

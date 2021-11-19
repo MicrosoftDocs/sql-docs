@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLReadFileDSN"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLReadFileDSN function [ODBC]"
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLReadFileDSN Function
 **Conformance**  

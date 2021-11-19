@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "restorefile"
   - "restorefile_TSQL"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "restoring files [SQL Server], restorefile system table"
   - "file restores [SQL Server], restorefile system table"
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # restorefile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -4,7 +4,7 @@ description: "Get acquainted with database identifiers. Learn about their collat
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Transact-SQL identifiers"
   - "database objects [SQL Server], names"
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Identifiers
@@ -112,7 +112,7 @@ Both regular and delimited identifiers must contain from 1 through 128 character
 
     -   Decimal numbers from either Basic Latin or other national scripts.
 
-    -   The at sign, dollar sign ($), number sign, or underscore.
+    -   The at sign (@), dollar sign ($), number sign (#), or underscore (\_).
 
 3.  The identifier must not be a [!INCLUDE[tsql](../../includes/tsql-md.md)] reserved word. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserves both the uppercase and lowercase versions of reserved words. When identifiers are used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, the identifiers that do not comply with these rules must be delimited by double quotation marks or brackets. The words that are reserved depend on the database compatibility level. This level can be set by using the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) statement.
 

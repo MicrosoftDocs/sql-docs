@@ -2,7 +2,7 @@
 title: Data Transfer of Table-Valued Parameters
 description: Describe Data Transfer of Table-Valued Parameters
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42

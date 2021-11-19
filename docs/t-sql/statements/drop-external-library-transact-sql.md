@@ -6,7 +6,7 @@ ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP EXTERNAL LIBRARY"
   - "DROP_EXTERNAL_LIBRARY_TSQL"

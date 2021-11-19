@@ -4,22 +4,24 @@ titleSuffix: SQL Server Big Data Cluster
 description: Learn how to deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS).
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
-ms.date: 11/12/2020
+ms.reviewer: wiassaf
+ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Tutorial: Deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS)
 
-This article explains how to deploy a SQL Server big data cluster (BDC) in the Active Directory authentication mode with a reference architecture. The reference architecture extends your on-premises Active Directory domain Service (AD DS) to Azure. You can deploy it from [Azure Architecture Center](https://github.com/mspnp/identity-reference-architectures/tree/master/adds-extend-domain) with [Azure building blocks](https://github.com/mspnp/template-building-blocks/wiki/Install-Azure-Building-Blocks).
+This article explains how to deploy a SQL Server big data cluster in the Active Directory authentication mode with a reference architecture. The reference architecture extends your on-premises Active Directory domain Service (AD DS) to Azure. You can deploy it from [Azure Architecture Center](https://github.com/mspnp/identity-reference-architectures/tree/master/adds-extend-domain) with [Azure building blocks](https://github.com/mspnp/template-building-blocks/wiki/Install-Azure-Building-Blocks).
 
 ## Prerequisites
 
 Before deploying a SQL Server big data cluster, you need to:
 
-* Access an Azure VM for management. This VM requires access to the Azure Virtual Network (VNet) where you will deploy BDC. It must either reside on the same VNet, or on [peered VNet](/azure/virtual-network/virtual-network-manage-peering).
+* Access an Azure VM for management. This VM requires access to the Azure Virtual Network (VNet) where you will deploy the big data cluster. It must either reside on the same VNet, or on [peered VNet](/azure/virtual-network/virtual-network-manage-peering).
 * [Install the big data tools](deploy-big-data-tools.md) on the management VM.
 * Prepare to deploy the cluster in the [Active Directory authentication mode](active-directory-prerequisites.md) in your on-premises AD controller.
 
@@ -73,11 +75,11 @@ After deploying an AKS cluster, [connect to the AKS cluster](/azure/aks/tutorial
 
 ## Verify reverse DNS entry for domain controller
 
-Before starting the BDC deployment in AD mode in AKS cluster, verify that the domain controller itself has both **A record** and **PTR record** (reverse DNS entry), registered in the DNS server.
+Before starting the SQL Server Big Data Clusters deployment in AD mode in AKS cluster, verify that the domain controller itself has both **A record** and **PTR record** (reverse DNS entry), registered in the DNS server.
 
 To verify this setting, run `nslookup` command or run [the PowerShell script](troubleshoot-ad-reverse-lookup-zone.md) to confirm if you have reverse DNS entry (PTR record) configured.
 
-## Create BDC Deployment Profile
+## Create big data cluster deployment profile
 
 The following command creates a deployment profile:
 
@@ -121,7 +123,7 @@ azdata bdc config replace -p bdc-ad-aks/bdc.json -j "$.spec.resources.appproxy.s
 
 ## Initiate deployment
 
-The following command initiates a BDC deployment:
+The following command initiates a big data cluster deployment:
 
 ```console
 azdata bdc create --config-profile bdc-ad-aks --accept-eula yes

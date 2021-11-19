@@ -144,10 +144,10 @@ Creating a Domain Independent Availability Group cannot currently be achieved co
          )
    ```
 
-13. Assign rights to each user created on that instance in Step 9 to be able to connect to the endpoint. 
+13. Assign rights to each login created on that instance in Step 8 to be able to connect to the endpoint. 
 
    ```sql
-   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_Login];
    GO
    ```
 

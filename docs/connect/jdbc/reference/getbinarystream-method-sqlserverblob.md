@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 4fb5a2d3-5db6-4e62-8000-d0f486c7cf46
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getBinaryStream Method (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

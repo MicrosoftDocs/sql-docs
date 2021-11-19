@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLGetTranslator"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetTranslator function [ODBC]"
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetTranslator Function
 **Conformance**  

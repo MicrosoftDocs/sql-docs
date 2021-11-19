@@ -1,62 +1,63 @@
 ---
+title: sp_describe_undeclared_parameters (Transact-SQL)
 description: "sp_describe_undeclared_parameters (Transact-SQL)"
-title: "sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_describe_undeclared_parameters"
   - "sp_describe_undeclared_parameters_TSQL"
 dev_langs: 
   - "TSQL"
-helpviewer_keywords: 
-  - "sp_describe_undeclared_parameters"
-ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "07/13/2021"
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
+
 # sp_describe_undeclared_parameters (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
-  Returns a result set that contains metadata about undeclared parameters in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considers each parameter that is used in the **\@tsql** batch, but not declared in **\@params**. A result set is returned that contains one row for each such parameter, with the deduced type information for that parameter. The procedure returns an empty result set if the **\@tsql** input batch has no parameters except those declared in **\@params**.  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```sql
-  
+Returns a result set that contains metadata about undeclared parameters in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considers each parameter that is used in the **\@tsql** batch, but not declared in **\@params**. A result set is returned that contains one row for each such parameter, with the deduced type information for that parameter. The procedure returns an empty result set if the **\@tsql** input batch has no parameters except those declared in **\@params**.
+
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## Syntax
+
+```tsql
 sp_describe_undeclared_parameters   
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
-```  
+```
 
-> [!Note] 
+> [!Note]
 > To use this stored procedure in Azure Synapse Analytics in dedicated SQL pool, set the database compatibility level to 20 or higher.   To opt out, change the database compatibility level to 10.
 
-## Arguments  
-`[ \@tsql = ] 'Transact-SQL\_batch'`
- One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  
+## Arguments
+
+`[ @tsql = ] 'Transact-SQL\_batch'`
+One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  
+
+[ \@params = ] N'parameters'`
+\@params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, similarly to the way sp_executesql works. *Parameters* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  
+
+Is one string that contains the definitions of all parameters that have been embedded in *Transact-SQL_batch*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. n is a placeholder that indicates additional parameter definitions. If the Transact-SQL statement or batch in the statement does not contain parameters, \@params is not required. The default value for this parameter is NULL.  
   
-`[ \@params = ] N'parameters'`
- \@params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, similarly to the way sp_executesql works. *Parameters* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  
+Datatype  
+The data type of the parameter.  
   
- Is one string that contains the definitions of all parameters that have been embedded in *Transact-SQL_batch*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. n is a placeholder that indicates additional parameter definitions. If the Transact-SQL statement or batch in the statement does not contain parameters, \@params is not required. The default value for this parameter is NULL.  
-  
- Datatype  
- The data type of the parameter.  
-  
-## Return Code Values  
- **sp_describe_undeclared_parameters** always returns return status of zero on success. If the procedure throws an error and the procedure is called as an RPC, the return status is populated by the type of error as described in the error_type column of sys.dm_exec_describe_first_result_set. If the procedure is called from [!INCLUDE[tsql](../../includes/tsql-md.md)], the return value is always zero, even in error cases.  
-  
+## Return Code Values
+
+**sp_describe_undeclared_parameters** always returns return status of zero on success. If the procedure throws an error and the procedure is called as an RPC, the return status is populated by the type of error as described in the error_type column of sys.dm_exec_describe_first_result_set. If the procedure is called from [!INCLUDE[tsql](../../includes/tsql-md.md)], the return value is always zero, even in error cases.  
+
 ## Result Sets  
- **sp_describe_undeclared_parameters** returns the following result set.  
-  
+
+**sp_describe_undeclared_parameters** returns the following result set.  
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|Contains the ordinal position of the parameter in the result set. Position of the first parameter will be specified as 1.|  
@@ -84,33 +85,38 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|For internal use.|  
 |**suggested_tds_length**|**int NOT NULL**|For internal use.|  
   
-## Remarks  
- **sp_describe_undeclared_parameters** always returns return status of zero.  
-  
- The most common use is when an application is given a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that might contain parameters and must process them in some way. An example is a user interface (such as ODBCTest or RowsetViewer) where the user provides a query with ODBC parameter syntax. The application must dynamically discover the number of parameters and prompt the user for each one.  
-  
- Another example is when without user input, an application must loop over the parameters and obtain the data for them from some other location (such as a table). In this case, the application does not have to pass all the parameter information at once. Instead, the application can get all the parameters information from the provider and obtain the data itself from the table. Code using **sp_describe_undeclared_parameters** is more generic and is less likely to require modification if the data structure changes later.  
-  
- **sp_describe_undeclared_parameters** returns an error in any of the following cases.  
-  
+## Remarks
+
+**sp_describe_undeclared_parameters** always returns return status of zero.  
+
+The most common use is when an application is given a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that might contain parameters and must process them in some way. An example is a user interface (such as ODBCTest or RowsetViewer) where the user provides a query with ODBC parameter syntax. The application must dynamically discover the number of parameters and prompt the user for each one.
+
+Another example is when without user input, an application must loop over the parameters and obtain the data for them from some other location (such as a table). In this case, the application does not have to pass all the parameter information at once. Instead, the application can get all the parameters information from the provider and obtain the data itself from the table. Code using **sp_describe_undeclared_parameters** is more generic and is less likely to require modification if the data structure changes later.  
+
+**sp_describe_undeclared_parameters** returns an error in any of the following cases.  
+
 -   If the input \@tsql is not a valid [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Validity is determined by parsing and analyzing the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Any errors caused by the batch during query optimization or during execution are not considered when determining whether the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch is valid.  
   
--   If \@params is not NULL and contains a string that is not a syntactically valid declaration string for parameters, or if it contains a string that declares any parameter more than one time.  
+- If \@params is not NULL and contains a string that is not a syntactically valid declaration string for parameters, or if it contains a string that declares any parameter more than one time.  
   
--   If the input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch declares a local variable of the same name as a parameter declared in \@params.  
+- If the input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch declares a local variable of the same name as a parameter declared in \@params.  
   
 - If the statement references temporary tables.
 
 - The query includes the creation of a permanent table that is then queried.
   
  If \@tsql has no parameters, other than those declared in \@params, the procedure returns an empty result set.  
+
+> [!Note]
+> You must declare the variable as a scalar TSQL variable, or an error appears.
+
+## Parameter Selection Algorithm
+
+For a query with undeclared parameters, data type deduction for undeclared parameters proceeds in three steps.  
+
+**Step 1**  
   
-## Parameter Selection Algorithm  
- For a query with undeclared parameters, data type deduction for undeclared parameters proceeds in three steps.  
-  
- **Step 1**  
-  
- The first step in data type deduction for a query with undeclared parameters is to find the data types of all the sub-expressions whose data types do not depend on the undeclared parameters. The type can be determined for the following expressions:  
+The first step in data type deduction for a query with undeclared parameters is to find the data types of all the sub-expressions whose data types do not depend on the undeclared parameters. The type can be determined for the following expressions:  
   
 -   Columns, constants, variables, and declared parameters.  
   
@@ -122,7 +128,7 @@ sp_describe_undeclared_parameters
   
  After this step, if any expression (other than a call to a UDF) has two arguments without data types, type deduction fails with an error. For example, the following all produce errors:  
   
-```sql
+```tsql
 SELECT * FROM t1 WHERE @p1 = @p2  
 SELECT * FROM t1 WHERE c1 = @p1 + @p2  
 SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)  
@@ -209,8 +215,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   CLR user-defined types  
   
-### Selection Criteria  
- Of the candidate data types, any data type that would invalidate the query is rejected. Of the remaining candidate data types, the type deduction algorithm selects one according to the following rules.  
+### Selection Criteria
+
+Of the candidate data types, any data type that would invalidate the query is rejected. Of the remaining candidate data types, the type deduction algorithm selects one according to the following rules.
   
 1.  The data type that produces the smallest number of implicit conversions in E(\@p) is selected. If a particular data type produces a data type for E(\@p) that is different from TT(\@p), the type deduction algorithm considers this to be an extra implicit conversion from the data type of E(\@p) to TT(\@p).  
   
@@ -249,22 +256,23 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
  As a final example, given a query `SELECT NULL + @p`, **int** is chosen for \@p because it results in a type (c) conversion.  
   
 ## Permissions  
+
  Requires permission to execute the \@tsql argument.  
   
 ## Examples  
+
  The following example returns information such as the expected data type for the undeclared `@id` and `@name` parameters.  
   
-```sql
+```tsql
 sp_describe_undeclared_parameters @tsql =   
 N'SELECT object_id, name, type_desc   
 FROM sys.indexes  
 WHERE object_id = @id OR name = @name'  
-  
 ```  
   
  When the `@id` parameter is provided as a `@params` reference, the `@id` parameter is omitted from the result set and only the `@name` parameter is described.  
   
-```sql
+```tsql
 sp_describe_undeclared_parameters @tsql =   
 N'SELECT object_id, name, type_desc   
 FROM sys.indexes  
@@ -273,7 +281,8 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## See Also  
- [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+## See Also
+
+- [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+- [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+- [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 05/22/2019
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "external_languages"
   - "external_languages_TSQL"
@@ -15,8 +15,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.external_languages catalog view"
-author: nelgson
-ms.author: negust
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: ">=sql-server-ver15"

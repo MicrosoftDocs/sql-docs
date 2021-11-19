@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Test a User&#39;s Permissions (Master Data Services)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLError"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLError function [ODBC]"
 ms.assetid: ee5c90de-3c61-4f63-8b57-1543d1704a0e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLError Function
 **Conformance**  

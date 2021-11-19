@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b5170751-fbe1-433b-96f5-4f237ba55f60
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateSQLXML Method (int, java.sql.SQLXML)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

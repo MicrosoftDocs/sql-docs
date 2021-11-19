@@ -11,7 +11,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.mds.configmanager.createsite.f1"
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Create Website Dialog Box (Master Data Services Configuration Manager)

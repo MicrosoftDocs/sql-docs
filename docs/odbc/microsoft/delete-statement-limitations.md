@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "DELETE statement limitations [ODBC]"
   - "ODBC SQL grammar, DELETE statement limitations"
 ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # DELETE Statement Limitations
 The DELETE statement is not supported for the Microsoft Excel or Text driver. Note that the INSERT statement is supported for the Text driver.  

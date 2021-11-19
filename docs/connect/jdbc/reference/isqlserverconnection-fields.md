@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7fb68784-d60f-47cc-9e80-568e1bc5678c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ISQLServerConnection Fields
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

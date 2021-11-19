@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "converting data from SQL to C types [ODBC], date"
   - "date data type [ODBC]"
   - "data conversions from SQL to C types [ODBC], date"
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQL to C: Date
 The identifier for the date ODBC SQL data type is:  

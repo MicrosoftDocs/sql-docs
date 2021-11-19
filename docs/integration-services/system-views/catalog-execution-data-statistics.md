@@ -16,9 +16,6 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
   This view displays a row each time a data flow component sends data to a downstream component, for a given package execution. The information in this view can be used to compute the data throughput for a component.  
   
 |Column name|Data type|Description|  

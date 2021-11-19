@@ -17,13 +17,13 @@ helpviewer_keywords:
   - "backing up databases [SQL Server], copying databases"
   - "database backups [SQL Server], copying databases"
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Copy Databases with Backup and Restore
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can create a new database by restoring a backup of a user database created by using [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version. However, backups of **master**, **model** and **msdb** that were created by using an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored by [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Also, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] backups cannot be restored by any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], you can create a new database by restoring a backup of a user database created by using [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version. However, backups of **master**, **model** and **msdb** that were created by using an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Also, [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] backups cannot be restored by any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]
 > SQL Server 2016 uses a different default path than earlier versions. Therefore, to restore backups of a database created in the default location of earlier versions you must use the MOVE option. For information about the new default path see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). For more information about moving database files, see "Moving the Database Files," later in this topic.  

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "versions [Master Data Services], locking"
   - "locking versions [Master Data Services]"
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Lock a Version (Master Data Services)

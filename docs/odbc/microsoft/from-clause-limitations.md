@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "FROM clause limitations [ODBC]"
   - "ODBC SQL grammar, FROM clause limitations"
 ms.assetid: 1cf7cd81-1750-46ee-80ed-be70f57e8569
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # FROM Clause Limitations
 The maximum number of tables in a FROM clause is 16.

@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLSetEnvAttr function [ODBC], Cursor Library"
 ms.assetid: 59cc8eae-09ae-4796-869a-c5806488ae83
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetEnvAttr and the Cursor Library
 > [!IMPORTANT]  

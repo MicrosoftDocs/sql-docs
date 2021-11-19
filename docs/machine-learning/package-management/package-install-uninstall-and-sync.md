@@ -36,15 +36,13 @@ For example, you might use package synchronization in these scenarios:
 
 ## Requirements
 
-Before you can use package synchronization, you must have the appropriate version of Microsoft R or Machine Learning Server. This feature is provided in Microsoft R version 9.1.0 or later. 
+Before you can use package synchronization, you must have the appropriate version of Microsoft R. This feature is provided in Microsoft R version 9.1.0 or later. 
 
 You must also enable the [package management feature](r-package-how-to-enable-or-disable.md) on the server.
 
 ### Determine whether your server supports package management
 
 This feature is available in SQL Server 2017 CTP 2 or later.
-
-You can add this feature to an instance of SQL Server 2016 by upgrading the instance to use the latest version of Microsoft R. For more information, see [Use SqlBindR.exe to upgrade SQL Server R Services](../install/upgrade-r-and-python.md).
 
 ### Enable the package management feature
 

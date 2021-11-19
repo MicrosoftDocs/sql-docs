@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "transitioning states [ODBC], connection"
   - "connection transitions [ODBC]"
   - "state transitions [ODBC], connection"
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connection Transitions
 ODBC connections have the following states.  

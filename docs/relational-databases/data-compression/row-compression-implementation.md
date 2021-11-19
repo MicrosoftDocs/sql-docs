@@ -1,8 +1,8 @@
 ---
-title: "Row Compression Implementation | Microsoft Docs"
+title: "Row Compression Implementation"
 description: Learn how the SQL Server Database Engine implements row compression to help you plan the storage space that you need for your data.
 ms.custom: ""
-ms.date: "06/30/2016"
+ms.date: "03/27/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -11,7 +11,6 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "compression [SQL Server], row"
   - "row compression [Database Engine]"
-ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -41,14 +40,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**smallint**|Yes|If the value fits in 1 byte, only 1 byte will be used.|  
 |**int**|Yes|Uses only the bytes that are needed. For example, if a value can be stored in 1 byte, storage will take only 1 byte.|  
 |**bigint**|Yes|Uses only the bytes that are needed. For example, if a value can be stored in 1 byte, storage will take only 1 byte.|  
-|**decimal**|Yes|This storage is exactly same as the vardecimal storage format.|  
-|**numeric**|Yes|This storage is exactly same as the vardecimal storage format.|  
+|**decimal**|Yes|Uses only the bytes that are needed, regardless of the precision specified. For example, if a value can be stored in 3 bytes, storage will take only 3 byte. The storage footprint is exactly the same as the vardecimal storage format.|  
+|**numeric**|Yes|Uses only the bytes that are needed, regardless of the precision specified. For example, if a value can be stored in 3 bytes, storage will take only 3 byte. The storage footprint is exactly the same as the vardecimal storage format.|  
 |**bit**|Yes|The metadata overhead brings this to 4 bits.|  
 |**smallmoney**|Yes|Uses the integer data representation by using a 4-byte integer. Currency value is multiplied by 10000 and the resulting integer value is stored by removing any digits after the decimal point. This type has a storage optimization similar to that for integer types.|  
 |**money**|Yes|Uses the integer data representation by using an 8-byte integer. Currency value is multiplied by 10000 and the resulting integer value is stored by removing any digits after the decimal point. This type has a larger range than **smallmoney**. This type has a storage optimization similar to that for integer types.|  
 |**float**|Yes|Least significant bytes with zeros are not stored. **float** compression is applicable mostly for nonfractional values in mantissa.|  
 |**real**|Yes|Least significant bytes with zeros are not stored. **real** compression is applicable mostly for nonfractional values in mantissa.|  
-|**smalldatetime**|No|Uses the integer data representation by using two 2-byte integers. The date takes 2 bytes. It is the number of days since 1/1/1901. This needs 2 bytes starting from 1902. Therefore, there is no savings after that point.<br /><br /> The time is the number of minutes since midnight. Time values that are slightly past 4AM start to use the second byte.<br /><br /> If a **smalldatetime** is only used to represent a date (a common case), the time is 0.0. Compression saves 2 bytes by storing the time in most significant byte format for row compression.|  
+|**smalldatetime**|No|Uses the integer data representation by using two 2-byte integers. It is the number of days since 1900-01-01. There is no row compression benefit to the date portion of smalldatetime.<br /><br />The time is the number of minutes since midnight. Time values that are slightly past 4AM start to use the second byte.<br /><br /> If a **smalldatetime** is only used to represent a date (a common case), the time is 0.0. Compression saves 2 bytes by storing the time in most significant byte format for row compression.|  
 |**datetime**|Yes|Uses the integer data representation by using two 4-byte integers. The integer value represents the number of days with base date of 1/1/1900. The first 2 bytes can represent up to the year 2079. Compression can always save 2 bytes here until that point. Each integer value represents 3.33 milliseconds. Compression exhausts the first 2 bytes in first five minutes and needs the fourth byte after 4PM. Therefore, compression can save only 1 byte after 4PM. When **datetime** is compressed like any other integer, compression saves 2 bytes in the date.|  
 |**date**|No|Uses the integer data representation by using 3 bytes. This represents the date from 1/1/0001. For contemporary dates, row compression uses all 3 bytes. This achieves no savings.|  
 |**time**|No|Uses the integer data representation by using 3 to 6 bytes. There are various precisions that start with 0 to 9 that can take 3 to 6 bytes. Compressed space is used as follows:<br /><br /> **Precision = 0. Bytes = 3**. Each integer value represents a second. Compression can represent time up to 6PM by using 2 bytes, potentially saving 1 byte.<br /><br /> **Precision = 1. Bytes = 3**. Each integer value represents 1/10 seconds. Compression uses the third byte before 2AM. Results in little savings.<br /><br /> **Precision = 2. Bytes = 3**. Similar to the previous case, it is unlikely to achieve savings.<br /><br /> **Precision = 3. Bytes = 4**. Because the first 3 bytes are taken by 5AM, achieves little savings.<br /><br /> **Precision = 4. Bytes = 4**. The first 3 bytes are taken in the first 27 seconds. No savings are expected.<br /><br /> **Precision = 5, Bytes = 5**. Fifth byte will be used after 12-noon.<br /><br /> **Precision = 6 and 7, Bytes = 5**. Achieves no savings.<br /><br /> **Precision = 8, Bytes = 6**. Sixth byte will be used after 3AM.<br /><br /> <br /><br /> Note that there is no change in storage for row compression. Overall, not much savings can be expected from compressing the **time** data type.|  

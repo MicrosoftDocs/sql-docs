@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "10770 (Database Engine error)"
 ms.assetid: 20f2147d-7f2d-470a-ac01-3c9adc29c577

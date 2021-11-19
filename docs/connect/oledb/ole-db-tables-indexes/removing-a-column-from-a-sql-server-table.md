@@ -4,7 +4,7 @@ description: The OLE DB Driver for SQL Server exposes the ITableDefinition::Drop
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "DropColumn function"
   - "OLE DB Driver for SQL Server, columns"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Removing a Column from a SQL Server Table
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

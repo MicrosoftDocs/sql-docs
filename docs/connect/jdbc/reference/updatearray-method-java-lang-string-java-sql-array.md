@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.updateArray (java.lang.String, java.sql.Array)"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 6f2ced5a-1c7d-439a-aaa5-472b9f4fdeab
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateArray Method (java.lang.String, java.sql.Array)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,8 +1,8 @@
 ---
 description: "Rename a Database"
-title: "Rename a Database | Microsoft Docs"
+title: "Rename a Database"
 ms.custom: ""
-ms.date: "10/02/2018"
+ms.date: "10/21/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,66 +11,50 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [SQL Server], renaming"
   - "renaming databases"
-ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename a Database
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  This topic describes how to rename a user-defined database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] or Azure SQL Database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The name of the database can include any characters that follow the rules for identifiers.  
-  
-## In This Topic
-  
-- Before you begin:  
-  
-     [Limitations and Restrictions](#limitations-and-restrictions)  
-  
-     [Security](#security)  
-  
-- To rename a database, using:  
-  
-     [SQL Server Management Studio](#rename-a-database-using-sql-server-management-studio)  
-  
-     [Transact-SQL](#rename-a-database-using-transact-sql)  
-  
-- **Follow Up:**  [After renaming a database](#backup-after-renaming-a-database)  
+  This article describes how to rename a user-defined database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] or Azure SQL Database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The name of the database can include any characters that follow the rules for identifiers.  
 
 > [!NOTE]
 > To rename a database in Azure Synapse Analytics or Parallel Data Warehouse, use the [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) statement.
   
-## Before You Begin
-  
-### Limitations and Restrictions  
+## Limitations and restrictions  
   
 - System databases cannot be renamed.
 - The database name cannot be changed while other users are accessing the database. 
+  - Use SQL Server Management Studio Activity Monitor to find other connections to the database, and close them. For more information, see [Open Activity Monitor in SQL Server Management Studio (SSMS)](../performance-monitor/open-activity-monitor-sql-server-management-studio.md).
   - In SQL Server, you can set a database in single user mode to close any open connections. For more information, see [set the database to single-user mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md).
   - In Azure SQL Database, you must make sure no other users have an open connection to the database to be renamed.
-  
-### Security  
-  
-#### Permissions
+- Renaming a database does not change the physical name of the database files on disk, or the logical names of the files. For more information, see [Database Files and Filegroups](database-files-and-filegroups.md#logical-and-physical-file-names).
+
+## Permissions
 
 Requires ALTER permission on the database.  
   
-## Rename a database using SQL Server Management Studio
+## Use SQL Server Management Studio
 
 Use the following steps to rename a SQL Server or Azure SQL database using SQL Server Management Studio.
 
+1. In SQL Server Management Studio, select **Object Explorer**. To open **Object Explorer**, select F8. Or on the top menu, select **View**, and then select **Object Explorer**:
   
-1. In **Object Explorer**, connect to your SQL instance.  
+2. In **Object Explorer**, connect to an instance of SQL Server, and then expand that instance.
   
-2. Make sure that there are no open connections to the database. If you are using SQL Server, you can [set the database to single-user mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md) to close any open connections and prevent other users from connecting while you are changing the database name.  
+3. Make sure that there are no open connections to the database. If you are using SQL Server, you can [set the database to single-user mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md) to close any open connections and prevent other users from connecting while you are changing the database name.  
   
-3. In Object Explorer, expand **Databases**, right-click the database to rename, and then click **Rename**.  
+4. In Object Explorer, expand **Databases**, right-click the database to rename, and then select **Rename**.  
   
-4. Enter the new database name, and then click **OK**.  
+5. Enter the new database name, and then select **OK**
   
-5. Optionally, if the database was your default database, see [Reset your default database after rename](#reset-your-default-database-after-rename).
+6. If the database was your default database, see [Reset your default database after rename](#reset-your-default-database-after-rename).
 
-## Rename a database using Transact-SQL  
+7. Refresh the database list in Object Explorer.
+
+## Use Transact-SQL  
   
 ### To rename a SQL Server database by placing it in single-user mode
 
@@ -78,16 +62,19 @@ Use the following steps to rename a SQL Server database using T-SQL in SQL Serve
   
 1. Connect to the `master` database for your instance.  
 2. Open a query window.  
-3. Copy and paste the following example into the query window and click **Execute**. This example changes the name of the `MyTestDatabase` database to `MyTestDatabaseCopy`.
+3. Copy and paste the following example into the query window and select **Execute**. This example changes the name of the `MyTestDatabase` database to `MyTestDatabaseCopy`.
   
+> [!WARNING]
+> To quickly obtain exclusive access, the code sample uses the termination option `WITH ROLLBACK IMMEDIATE`. This will cause all incomplete transactions to be rolled back and any other connections to the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to be immediately disconnected.  
+
    ```sql
    USE master;  
    GO  
-   ALTER DATABASE MyTestDatabase SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+   ALTER DATABASE MyTestDatabase SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
    GO
-   ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;
+   ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy;
    GO  
-   ALTER DATABASE MyTestDatabaseCopy SET MULTI_USER
+   ALTER DATABASE MyTestDatabaseCopy SET MULTI_USER;
    GO
    ```  
 
@@ -100,10 +87,10 @@ Use the following steps to rename an Azure SQL database using T-SQL in SQL Serve
 1. Connect to the `master` database for your instance.  
 2. Open a query window.
 3. Make sure that no one is using the database.
-4. Copy and paste the following example into the query window and click **Execute**. This example changes the name of the `MyTestDatabase` database to `MyTestDatabaseCopy`.
+4. Copy and paste the following example into the query window and select **Execute**. This example changes the name of the `MyTestDatabase` database to `MyTestDatabaseCopy`.
   
    ```sql
-   ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;
+   ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy;
    ```  
 
 ## Backup after renaming a database  
@@ -112,18 +99,16 @@ After renaming a database in SQL Server, back up the `master` database. In Azure
   
 ## Reset your default database after rename
 
-If the database you're renaming was set as your default database, use the following command to reset your default to the renamed database:
-
+If the database you're renaming was set as the default database of a SQL Server login, they may encounter Error 4064, `Cannot open user default database`. Use the following command to change the default to the renamed database:
 
 ```sql
 USE [master]
 GO
-ALTER LOGIN [your-login] WITH DEFAULT_DATABASE=[new-database-name]
+ALTER LOGIN [login] WITH DEFAULT_DATABASE=[new-database-name];
 GO
 ```
 
-
-## See Also
+## Next steps
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [Database Identifiers](../../relational-databases/databases/database-identifiers.md)  

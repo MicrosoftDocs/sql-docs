@@ -1,6 +1,6 @@
 ---
-title: "Bar Charts (Report Builder) | Microsoft Docs"
-description: Display data horizontally with a bar chart to represent data with a finite start and end date in Report Builder.
+title: "Bar charts in a paginated report | Microsoft Docs"
+description: Display data horizontally with a bar chart to represent data in a paginated report with a finite start and end date in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Bar Charts (Report Builder and SSRS)
-  A bar chart displays series as sets of horizontal bars. The plain bar chart is closely related to the column chart, which displays series as sets of vertical bars, and the range bar chart, which displays series as sets of horizontal bars with varying beginning and end points.  
+# Bar charts in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  A bar chart displays series as sets of horizontal bars in a paginated report. The plain bar chart is closely related to the column chart, which displays series as sets of vertical bars, and the range bar chart, which displays series as sets of horizontal bars with varying beginning and end points.  
   
  The bar chart is the only chart type that displays data horizontally. For this reason, it is popular for representing data that occurs over time, with a finite start and end date. It is also popular for showing categorical information since the categories can be displayed horizontally. For more information about how to add data to a bar chart, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
@@ -62,7 +65,6 @@ ms.author: maggies
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Tutorial: Adding a Bar Chart to a Report (Report Builder)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Adding a Bar Chart to a Report](https://go.microsoft.com/fwlink/?LinkId=198042)  
-  
+ [Tutorial: Adding a Bar Chart to a Report (Report Builder)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [Tutorial: Adding a Bar Chart to a Report](/previous-versions/sql/sql-server-2008-r2/cc281302(v=sql.105))  
   

@@ -1,13 +1,13 @@
 ---
-title: "Manage: Azure Data Studio notebooks"
+title: "Manage SQL Server Big Data Clusters with Azure Data Studio notebooks"
 titleSuffix: SQL Server Big Data Clusters
 description: Use a notebook from Azure Data Studio to manage and troubleshoot SQL Server Big Data Clusters.
 author: yualan
 ms.author: alanyu
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 03/30/2020
-ms.topic: conceptual
+ms.date: 07/16/2021
+ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
@@ -16,11 +16,11 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides an extension for Azure Data Studio that includes notebooks. A notebook provides documentation and code that you can use in Azure Data Studio to manage SQL Server 2019 Big Data Clusters.
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] provides an extension for Azure Data Studio that includes notebooks. A notebook provides documentation and code that you can use in Azure Data Studio to manage SQL Server 2019 Big Data Clusters.
 
 Originally implemented as an open-source project, [notebooks](../azure-data-studio/notebooks/notebooks-guidance.md) have been incorporated into [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). You can use markdown for text in the text cells and one of the available kernels to write code in the code cells.
 
-You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
 In addition to notebooks, you can view a collection of notebooks, which is called a Jupyter Book. A Jupyter Book provides a table of contents to help you navigate a collection of notebooks so you can easily find the notebook you need, whether you want to troubleshoot SQL Server or view cluster status.
 
@@ -29,7 +29,7 @@ In addition to notebooks, you can view a collection of notebooks, which is calle
 You need these prerequisites to open a notebook:
 
 * The latest version of [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
-* The [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension, installed in Azure Data Studio
+* The [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] extension, installed in Azure Data Studio
 
 In addition to those prerequisites, to deploy SQL Server 2019 Big Data Clusters, you also need:
 
@@ -93,3 +93,5 @@ To change the SQL Server big data cluster for a notebook:
 ## Next steps
 
 For more information about notebooks in Azure Data Studio, see [How to use notebooks with SQL Server](../azure-data-studio/notebooks/notebooks-guidance.md).
+
+For the location of big data cluster administration notebooks, see [Where to find SQL Server Big Data Clusters administration notebooks](view-cluster-status.md#where-to-find--administration-notebooks).

@@ -2,10 +2,10 @@
 title: "What's New in SSMA for Oracle (OracleToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Oracle (OracleToSQL) for each release.
 author: nahk-ivanov
-
 ms.prod: sql
-ms.custom: ""
-ms.date: "12/17/2020"
+ms.custom:
+  - intro-whats-new
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,54 @@ ms.author: alexiva
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v8.22
+
+The v8.22 release of SSMA for Oracle contains the following changes:
+
+* Allow to specify additional connection string options for target database connection
+* Introduce summary charts in assessment reports
+* Improve messages navigation in assessment reports
+
+## SSMA v8.21
+
+The v8.21 release of SSMA for Oracle contains the following changes:
+
+* Fix OLE DB connection string mode to respect the provider name
+* Add missing `ssma_oracle.fn_getColEntryByRange` emulation function
+* Use `COUNT_BIG` in row count queries for the target database
+* Add setting to emulate Oracle's empty string behavior in coalesce operations
+
+## SSMA v8.20
+
+The v8.20 release of SSMA for Oracle contains the following changes:
+
+* Add support for partitioned tables
+* Add conversion of SKIP LOCKED clause
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for Oracle contains the following changes:
+
+* Store and run test cases on the client-side
+* Improve resolution logic in `SELECT` list when user-defined column names match system functions
+* Ignore system-defined columns (`SYS_STS*`) and indexes (`SYS_IL*`)
+* Fix issue with packages disappearing from the objects tree after reconnect to Oracle database
+* Fix CLR assemblies deployment issue on [!INCLUDE [ssazure](../../includes/ssazure_md.md)] in 32-bit SSMA package
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for Oracle contains the following changes:
+
+* Fix sequences loading for Oracle 12c Release 1 (12.1)
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for Oracle contains the following changes:
+
+* Add support for computed columns
+* Fix parser issues when culture-specific operator characters are used in expressions
+* Update HTML assessment reports to use modern editor to display SQL text
 
 ## SSMA v8.16
 

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "out-of-memory conditions"
   - "XML schema collections [SQL Server], large"
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 ---
 # Large XML Schema Collections and Out-of-Memory Conditions

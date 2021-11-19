@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "hobt [SQL Server]"
   - "base tables"
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # System Base Tables
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,7 +86,7 @@ ms.author: maghan
 You can view the data in the system tables through the system catalog views. To update the metadata in a system base table, use the appropriate TSQL interface (for example, DDL statements). You can't manually update system tables. SQL Server reports the following messages when you perform direct updates to system tables.
 
 ### A system table is manually updated
-Msg 17659: Warning: System table ID <id> has been updated directly in database ID <id> and cache coherence may not have been maintained. SQL Server should be restarted.
+Msg 17659: Warning: System table ID \<id\> has been updated directly in database ID \<id\> and cache coherence may not have been maintained. SQL Server should be restarted.
 
 ### Starting a database with a system table that was manually updated
 Msg 3859: Warning: The system catalog was updated directly in database ID 17, most recently at date_time.

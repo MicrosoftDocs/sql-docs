@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLInstallTranslator"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLInstallTranslator function [ODBC]"
 ms.assetid: 453b21ff-3c2b-4069-8ff7-5c727f062d89
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLInstallTranslator Function
 **Conformance**  

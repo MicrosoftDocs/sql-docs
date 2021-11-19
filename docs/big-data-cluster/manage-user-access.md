@@ -1,10 +1,10 @@
 ---
 title: Manage big data cluster access in Active Directory mode
 description: Manage access to the big data cluster
-author: NelGson
-ms.author: negust
-ms.reviewer: mikeray
-ms.date: 08/04/2020
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
+ms.date: 07/09/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -85,7 +85,7 @@ For a complete list of server roles, see the corresponding SQL Server security t
    GO
    ```
 
-   To find the SID of the user or the group being added, you can use [Get-ADUser](/powershell/module/addsadministration/get-aduser/) or  [Get-ADGroup](/powershell/module/addsadministration/get-adgroup/) PowerShell commands.
+   To find the SID of the user or the group being added, you can use [Get-ADUser](/powershell/module/activedirectory/get-aduser/) or [Get-ADGroup](/powershell/module/activedirectory/get-adgroup/) PowerShell commands.
 
 2. Verify that the members of the group that you added have the expected *bdcUser* permissions by logging in to the controller endpoint or authentication to the SQL Server master instance. For example:
 

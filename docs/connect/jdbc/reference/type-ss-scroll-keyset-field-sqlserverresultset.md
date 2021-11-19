@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.TYPE_SS_SCROLL_KEYSET"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 2b16123e-07ab-4c73-9509-e0425910680b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # TYPE_SS_SCROLL_KEYSET Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

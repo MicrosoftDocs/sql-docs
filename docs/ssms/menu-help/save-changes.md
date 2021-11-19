@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - "sql13.swb.file.close.f1"
   - "VS.SaveChangesDlg"
@@ -18,7 +18,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Save Changes
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Warns you that changes to the items listed will not be saved unless you click **Yes**.  
   
 This dialog box can appear when you are closing solutions, maintenance plans, or other open files.  

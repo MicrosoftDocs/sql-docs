@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Spatial Data Catalog Views
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

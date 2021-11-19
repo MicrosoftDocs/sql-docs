@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "Not Greater"
   - "Greater"
@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "!> (not greater than)"
   - "not greater than operator (!>)"
 ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # !&gt; (Not Greater Than) (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Compares two expressions (a comparison operator). When you compare non-null expressions, the result is TRUE if the left operand doesn't have a greater value than the right operand. Otherwise, the result is FALSE. Unlike the = (equality) comparison operator, the result of the !> comparison of two NULL values doesn't depend on the ANSI_NULLS setting.  
   

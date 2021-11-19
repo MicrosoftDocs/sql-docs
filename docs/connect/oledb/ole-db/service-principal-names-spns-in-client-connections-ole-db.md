@@ -4,12 +4,12 @@ description: Learn about OLE DB Driver for SQL Server properties and member func
 ms.custom: ""
 ms.date: "09/30/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Service Principal Names (SPNs) in Client Connections (OLE DB) in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

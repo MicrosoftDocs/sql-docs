@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "displaying XML schema collections"
   - "viewing XML schema collections"
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # View a Stored XML Schema Collection
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

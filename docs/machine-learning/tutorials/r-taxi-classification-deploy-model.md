@@ -7,8 +7,8 @@ ms.technology: machine-learning
 
 ms.date: 10/15/2020
 ms.topic: tutorial
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
 ---
@@ -66,7 +66,7 @@ GO
 
 + The SELECT statement gets the serialized model from the database, and stores the model in the R variable `mod` for further processing using R.
 
-+ The new cases for scoring are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the [PREDICT](/sql/t-sql/queries/predict-transact-sql) function which generates the scores.
++ The new cases for scoring are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the [PREDICT](../../t-sql/queries/predict-transact-sql.md) function which generates the scores.
   
   `OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));`
   

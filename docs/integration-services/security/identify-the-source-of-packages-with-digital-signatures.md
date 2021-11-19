@@ -38,14 +38,22 @@ ms.author: chugu
 -   To check the digital signature of an individual package, specify the **/VerifyS[igned]** option when you use the **dtexec** utility to run the package. For more information, see [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
 ## Set a Registry value to check package signature  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] also supports an optional registry value, **BlockedSignatureStates**, that you can use to manage an organization's policy for loading signed and unsigned packages. The registry value can prevent packages from loading if the packages are unsigned, or have invalid or untrusted signatures. For more information about how to set this registry value, see [Implement a Signing Policy by Setting a Registry Value](#registry).  
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] also supports an optional registry value, **BlockedSignatureStates**, that you can use to manage an organization's policy for loading signed and unsigned packages. The registry value can prevent packages from loading if the packages are unsigned, or have invalid or untrusted signatures. For more information about how to set this registry value, see [Implement a Signing Policy by Setting a Registry Value](#registry).  
   
-> **NOTE:** The optional **BlockedSignatureStates** registry value can specify a setting that is more restrictive than the digital signature option set in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or at the **dtexec** command line. In this situation, the more restrictive registry setting overrides the other settings.  
+> [!NOTE]
+> The optional **BlockedSignatureStates** registry value can specify a setting that is more restrictive than the digital signature option set in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or at the **dtexec** command line. In this situation, the more restrictive registry setting overrides the other settings.  
 
 ## <a name="registry"></a> Implement a Signing Policy by Setting a Registry Value
-  You can use an optional registry value to manage an organization's policy for loading signed or unsigned packages. If you use this registry value, you must create this registry value on each computer on which [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages will run and on which you want to enforce the policy. After the registry value has been set, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] will check or verify the signatures before loading packages.  
+You can use an optional registry value to manage an organization's policy for loading signed or unsigned packages. If you use this registry value, you must create this registry value on each computer on which [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages will run and on which you want to enforce the policy. After the registry value has been set, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] will check or verify the signatures before loading packages.  
   
- This procedure in this topic describes how to add the optional **BlockedSignatureStates** DWORD value to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS registry key. The data value in **BlockedSignatureStates** determines whether a package should be blocked if it has an untrusted signature, has an invalid signature, or is unsigned. With regard to the status of signatures used to sign packages, the **BlockedSignatureStates** registry value uses the following definitions:  
+The procedure in this article describes how to add the optional **BlockedSignatureStates** DWORD value to the HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\150\SSIS\Setup\DTSPath registry key. 
+ 
+ > [!NOTE]
+ > A registry location under 150 represents SQL Server 2019, under 140 represents SQL Server 2017, under 130 represents SQL Server 2016, under 120 represents SQL Server 2014, and under 110 represents SQL Server 2012.
+ 
+The data value in **BlockedSignatureStates** determines whether a package should be blocked if it has an untrusted signature, has an invalid signature, or is unsigned.
+
+For the status of signatures used to sign packages, the **BlockedSignatureStates** registry value uses the following definitions:  
   
 -   A *valid signature* is one that can be read successfully.  
   
@@ -145,6 +153,6 @@ ms.author: chugu
  Click to remove the digital signature.  
 
 ## See also  
- [Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)   
- [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [Integration Services \(SSIS\) Packages](../../integration-services/integration-services-ssis-packages.md)   
+ [Security Overview \(Integration Services\)](../../integration-services/security/security-overview-integration-services.md)  
   

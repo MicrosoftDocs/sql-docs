@@ -2,10 +2,10 @@
 title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Sybase (SybaseToSQL) for each release.
 author: nahk-ivanov
-
 ms.prod: sql
-ms.custom: ""
-ms.date: "12/17/2020"
+ms.custom:
+  - intro-whats-new
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,45 @@ ms.author: alexiva
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
+
+## SSMA v8.22
+
+The v8.22 release of SSMA for SAP ASE contains the following changes:
+
+* Allow to specify additional connection string options for target database connection
+* Introduce summary charts in assessment reports
+* Improve messages navigation in assessment reports
+
+## SSMA v8.21
+
+The v8.21 release of SSMA for SAP ASE contains the following changes:
+
+* Use `COUNT_BIG` in row count queries for the target database
+
+## SSMA v8.20
+
+The v8.20 release of SSMA for SAP ASE contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for SAP ASE contains the following changes:
+
+* Store and run test cases on the client-side
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for SAP ASE contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for SAP ASE contains the following changes:
+
+* Add support for computed columns
+* Update HTML assessment reports to use modern editor to display SQL text
 
 ## SSMA v8.16
 

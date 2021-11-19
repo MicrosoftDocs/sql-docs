@@ -4,17 +4,17 @@ description: "ISSDataClassification::GetSensitivityClassification"
 ms.custom: ""
 ms.date: "09/30/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.reviewer: ""
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.reviewer: v-davidengel
 ms.technology: connectivity
-ms.topic: "reference"
+ms.topic: reference
 apiname: 
   - "ISSDataClassification::GetSensitivityClassification"
 apitype: "COM"
 helpviewer_keywords: 
   - "GetSensitivityClassification method"
-author: bazizi
-ms.author: v-beaziz
+author: David-Engel
+ms.author: v-davidengel
 ---
 # ISSDataClassification::GetSensitivityClassification
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -46,7 +46,7 @@ HRESULT GetSensitivityClassification(
 
   
 ## Remarks  
-The OLE DB Driver for SQL Server allocates a block of memory to hold the SENSITIVITYCLASSIFICATION structure and the data referenced by this structure. When the consumer no longer requires access to the classification data, it must deallocate this memory by calling the [IMalloc::Free](https://docs.microsoft.com/windows/win32/api/objidl/nf-objidl-imalloc-free) method.  
+The OLE DB Driver for SQL Server allocates a block of memory to hold the SENSITIVITYCLASSIFICATION structure and the data referenced by this structure. When the consumer no longer requires access to the classification data, it must deallocate this memory by calling the [IMalloc::Free](/windows/win32/api/objidl/nf-objidl-imalloc-free) method.  
   
  The SENSITIVITYCLASSIFICATION structure is defined as follows:
   
@@ -147,4 +147,3 @@ typedef struct tagSENSITIVITYPROPERTY
 ## See Also  
  [ISSDataClassification](../../oledb/ole-db-interfaces/issdataclassification-ole-db.md)  
  [Rowsets](../ole-db-rowsets/rowsets.md)  
-  

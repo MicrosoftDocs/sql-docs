@@ -6,8 +6,10 @@ ms.technology: ssms
 ms.topic: quickstart
 author: markingmyname
 ms.author: maghan
-ms.reviewer: sstein, mikeray
-ms.custom: contperf-fy21q2
+ms.reviewer: mikeray
+ms.custom:
+  - contperf-fy21q2
+  - intro-quickstart
 ms.date: 12/15/2020
 ---
 
@@ -90,11 +92,11 @@ The following table lists the requirements to connect to SQL Server on Azure VM.
 
 | Requirement | Description |
 |---|---|
-| [Enable SQL Server authentication mode](/sql/database-engine/configure-windows/change-server-authentication-mode#use-ssms) | SQL Server authentication is needed to connect to the VM remotely unless you have configured Active Directory on a virtual network. |
-| [Create a SQL login](/sql/relational-databases/security/authentication-access/create-a-login) | If you're using SQL authentication, you need a SQL login with a user name and password that also has permissions to your target database. |
+| [Enable SQL Server authentication mode](../../database-engine/configure-windows/change-server-authentication-mode.md#use-ssms) | SQL Server authentication is needed to connect to the VM remotely unless you have configured Active Directory on a virtual network. |
+| [Create a SQL login](../../relational-databases/security/authentication-access/create-a-login.md) | If you're using SQL authentication, you need a SQL login with a user name and password that also has permissions to your target database. |
 | Enable TCP/IP protocol | SQL Server must allow connections over TCP. |
-| [Enable firewall rule for the SQL Server port](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) | The firewall on the VM must allow inbound traffic on the SQL Server port (default 1433). |
-| [Create a network security group rule for TCP 1433](https://docs.microsoft.com/azure/virtual-network/manage-network-security-group#create-a-security-rule) | Allow the VM to receive traffic on the SQL Server port (default 1433) if you want to connect over the internet. This isn't required for local and virtual-network-only connections. This step is only required in the Azure portal. |
+| [Enable firewall rule for the SQL Server port](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) | The firewall on the VM must allow inbound traffic on the SQL Server port (default 1433). |
+| [Create a network security group rule for TCP 1433](/azure/virtual-network/manage-network-security-group#create-a-security-rule) | Allow the VM to receive traffic on the SQL Server port (default 1433) if you want to connect over the internet. This isn't required for local and virtual-network-only connections. This step is only required in the Azure portal. |
 
 > [!TIP]
 > The steps in the preceding table are done for you when you configure connectivity in the portal. Use these steps only to confirm your configuration or to set up connectivity manually for SQL Server.

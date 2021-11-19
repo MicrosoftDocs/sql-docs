@@ -1,21 +1,24 @@
 ---
-title: "SQL Server XTP Storage | Microsoft Docs"
+title: "SQL Server XTP Storage object"
 description: Learn about the SQL Server XTP Storage performance object, which contains counters related to on-disk storage for In-Memory OLTP in SQL Server.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
-ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
+helpviewer_keywords: 
+  - "SQL Server 2016 XTP Storage"
+  - "SQL Server 2017 XTP Storage"
+  - "SQL Server XTP Storage"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server XTP Storage
+# SQL Server XTP Storage object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The SQL Server XTP Storage performance object contains counters related to on-disk storage for In-Memory OLTP in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  The **SQL Server XTP Storage** performance object contains counters related to on-disk storage for In-Memory OLTP in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  This table describes the **SQL Server XTP Storage** counters.  
   
@@ -30,7 +33,16 @@ ms.author: wiassaf
 |**Merges Installed**|The number of merges successfully installed.|  
 |**Total Files Merged**|The total number of source files merged. This count can be used to find the average number of source files in the merge.|  
   
-## See Also  
- [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
-  
-  
+ 
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%XTP Storage%';
+``` 
+
+## See also  
+- [In-Memory OLTP and Memory-Optimization](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

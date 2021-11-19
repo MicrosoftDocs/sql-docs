@@ -1,8 +1,8 @@
 ---
-title: "Identify the right Azure SQL Database SKU for your on-premises database (Data Migration Assistant) | Microsoft Docs"
-description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database SKU for your on-premises database
+title: " Get Azure SQL SKU recommendations (Data Migration Assistant) | Microsoft Docs"
+description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM SKU for your on-premises database
 ms.custom: ""
-ms.date: "05/06/2019"
+ms.date: "06/08/2021"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,225 +12,192 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: rajeshsetlem
-ms.author: rajpo
+author: aciortea
+ms.author: aciortea
 ---
 
-# Identify the right Azure SQL Database/Managed Instance SKU for your on-premises database
+# Identify the right Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM SKU for your on-premises database
 
-Migrating  databases to the cloud can be complicated, especially when trying to select the best Azure database target and SKU for your database. Our goal with the Database Migration Assistant (DMA) is to help address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output.
+Migrating  databases to the cloud can be complicated, especially when trying to select the best Azure SQL Database, SQL Managed Instance or SQL Server on Azure VM target and SKU for your database. Our goal with the Database Migration Assistant (DMA) is to help address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output. Using performance data points DMA now recommends an appropriate target Azure SQL SKU, as well as an explanation for the recommendation.
 
-This article focuses on DMA's Azure SQL Database SKU recommendations feature. Azure SQL Database and Azure SQL Managed Instance have several deployment options, including:
+The SKU recommendations feature allows you to identify both the minimum recommended Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM SKU based on performance data points collected from your source SQL Server instances hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size. This functionality is currently available only via the Command Line Interface (CLI).
 
-- Single database
-- Elastic pools
-- Managed Instance
+The following are instructions to help you determine the SKU recommendations and provision corresponding databases in Azure using DMA.
 
-The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database single database or Azure SQL Managed Instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances for all recommended databases.
-
-> [!NOTE]
-> This functionality is currently available only via the Command Line Interface (CLI).
-
-The following are instructions to help you determine the SKU recommendations and provision corresponding single database(s) or managed instance(s) in Azure using DMA.
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 ## Prerequisites
 
 - Download and install the latest version of [DMA](https://aka.ms/get-dma). If you have already an earlier version of the tool, open it, and you'll be prompted to upgrade DMA.
-- Ensure that your computer has [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) or later, which is required to run all scripts. For information about how to find out which version of PowerShell is installed on your computer, see the article [Download and install Windows PowerShell 5.1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
-  > [!NOTE]
-  > To collect machine information, the data collection script uses the Get-WmiObject cmdlet, which was deprecated in PowerShell 6. To run this script in PowerShell 6 or 7, you must replace the WMI cmdlets with the newer CIM cmdlets.
-- Ensure that your computer has the Azure Powershell Module installed. For more information, see the article [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true).
-- Verify that the PowerShell file **SkuRecommendationDataCollectionScript.ps1**, which is required to collect the performance counters, is installed in the DMA folder.
-- Ensure that the computer on which you'll perform this process has Administrator permissions to the computer that is hosting your databases.
-
-## Collect performance counters
-
-The first step in the process is to collect performance counters for your databases. You can collect performance counters by running a PowerShell command on the computer that hosts your databases. DMA provides you with a copy of this PowerShell file, but you can also use your own method to capture performance counters from your computer.
-
-You don't need to perform this task for each database individually. The performance counters collected from a computer can be used to recommend the SKU for all databases hosted on the computer.
-
-1. In the DMA folder, locate the PowerShell file SkuRecommendationDataCollectionScript.ps1. This file is required to collect the performance counters.
-
-    ![PowerShell file shown in DMA folder](../dma/media/dma-sku-recommend-data-collection-file.png)
-
-2. Run the PowerShell script with the following arguments:
-    - **ComputerName**: The name of the computer that hosts your databases.
-    - **OutputFilePath**: The output file path to save the collected counters.
-    - **CollectionTimeInSeconds**: The amount of time during which you wish to collect performance counter data. Capture performance counters for at least 40 minutes to get a meaningful recommendation. The longer the duration of the capture, the more accurate the recommendation will be. Also ensure the workloads are running for the desired databases to enable more accurate recommendations.
-    - **DbConnectionString**: The Connection string pointing to the master database hosted on the computer from which you're collecting performance counter data.
-
-    Here's a sample invocation:
-
-    ```
-    .\SkuRecommendationDataCollectionScript.ps1
-     -ComputerName Foobar1
-     -OutputFilePath D:\counters2.csv
-     -CollectionTimeInSeconds 2400
-     -DbConnectionString Server=localhost;Initial Catalog=master;Integrated Security=SSPI;
-    ```
-
-    After the command executes, the process will output a file including performance counters to the location you specified. You can use this file as input for the next part of the process, which will provide SKU recommendations for both single database and managed instances options.
-
-## Use the DMA CLI to get SKU recommendations
-
-Use the performance counters output file you  created as input for this process.
-
-For the single database option, DMA will provide recommendations for the Azure SQL Database single database pricing tier, the compute level, and the maximum data size for each database on your computer. If you have multiple databases on your computer, you can also specify the databases for which you want recommendations. DMA will also provide you with the estimated monthly cost for each database.
-
-For managed instance, the recommendations support a lift-and-shift scenario. As a result, DMA will provide you with recommendations for the Azure SQL Managed Instance pricing tier, the compute level, and the maximum data size for the set of databases on your computer. Again, if you have multiple databases on your computer, you can also specify the databases for which you want recommendations. DMA will also provide you with the estimated monthly cost for managed instance.
-
-To use the DMA CLI to get SKU recommendations, at the command prompt, run dmacmd.exe with the following arguments:
-
-- **/Action=SkuRecommendation**: Enter this argument to execute SKU assessments.
-- **/SkuRecommendationInputDataFilePath**: The path to the counter file collected in the previous section.
-- **/SkuRecommendationTsvOutputResultsFilePath**: The path to write the output results in TSV format.
-- **/SkuRecommendationJsonOutputResultsFilePath**: The path to write the output results in JSON format.
-- **/SkuRecommendationHtmlResultsFilePath**: Path to write the output results in HTML format.
-
-In addition, select one of the following arguments:
-
-- Prevent price refresh
-  - **/SkuRecommendationPreventPriceRefresh**: If set to True, prevents the price refresh from occurring and assumes default prices. Use if running in offline mode. If you do not use this parameter, you must specify the parameters below to get the latest prices based on a specified region.
-- Get the latest prices
-  - **/SkuRecommendationCurrencyCode**: The currency in which to display prices (e.g. "USD").
-  - **/SkuRecommendationOfferName**: The offer name (e.g. "MS-AZR-0003P"). For more information, see the [Microsoft Azure Offer Details](https://azure.microsoft.com/support/legal/offer-details/) page.
-    - **/SkuRecommendationRegionName**: The region name (e.g., "WestUS").
-    - **/SkuRecommendationSubscriptionId**: The subscription ID.
-    - **/AzureAuthenticationTenantId**: The authentication tenant.
-    - **/AzureAuthenticationClientId**: The client ID of the AAD app used for authentication.
-    - One of the following authentication options:
-      - Interactive
-        - **AzureAuthenticationInteractiveAuthentication**: Set to true for an authentication pop-up window.
-      - Cert based
-        - **AzureAuthenticationCertificateStoreLocation**: Set to the certificate store location (e.g., "CurrentUser").
-        - **AzureAuthenticationCertificateThumbprint**: Set to the certificate thumbprint.
-      - Token based
-        - **AzureAuthenticationToken**: Set to the certificate token.
+- Install the minimum version [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) on the tools machine where the SKU recommendations console application is running.
+- Ensure the account used to connect to your SQL Server on-premises source has sysadmin permission.
 
 > [!NOTE]
-> To get the ClientId and TenantId for interactive authentication, you need to configure a new AAD application. For more information on authentication and getting these credentials, in the article [Microsoft Azure Billing API Code Samples: RateCard API](https://github.com/Azure-Samples/billing-dotnet-ratecard-api), follow the instructions under **Step 1: Configure a Native Client application in your AAD tenant**.
+> It is recommended that the tool is utilized from a separate tools (client) machine with connectivity to the target SQL instance(s), rather than from the machine hosting SQL Server itself, in order to minimize any potential overhead. When collecting performance data for SKU recommendations, it is recommended that the tool is ran with default option values over the span of several hours, covering both off-peak and on-peak workloads and excluding maintenance tasks such as index rebuild or backup database. Maintenance tasks can impact the CPU, Memory and IO consumption and subsequently drive higher recommended SKU tiers.
 
-Lastly, there is an optional argument you can use to specify the databases for which you want recommendations: 
+## Collect performance data
 
-- **/SkuRecommendationDatabasesToRecommend**: A list of databases for which to make recommendations. The database names are case-sensitive and must (1) be found in the input .csv, (2) each be surrounded by double-quotes, and (3) each be separated by a single space between names (e.g. /SkuRecommendationDatabasesToRecommend =”Database1” “Database2” “Database3”). Omitting this parameter ensure that recommendations are provided for all user databases identified in the input .csv file.  
+The collected data includes limited information about the hardware configuration of your server, as well SQL-specific performance data points from system Dynamic Management Views (DMVs)  such as CPU, memory, and storage usage, as well as IO throughput and IO latency. The collected data is stored locally on your machine. The collected data can then be aggregated and analyzed, and by examining the performance characteristics of your source instance, SKU recommendations can be determined for Azure SQL offerings (including SQL Database, SQL Managed Instance, and SQL on Azure VM) that best suit your workload while also being cost-effective.
 
-Below are some sample invocations:
+In the DMA installation path, locate the SQLAssessmentConsole folder and the SqlAssessment.exe application
 
-**Sample 1: Getting recommendations with default prices. Use when running in offline mode or when you do not have authentication credentials.**
+  ![Screenshot of SKUConsoleApplication.exe file shown in DMA installation folder location.](../dma/media/dma-sku-recommend-console-location.png)
 
-```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationPreventPriceRefresh=true
-```
+In order to start the data collection process, specify the `PerfDataCollection` action in the console application, with the following arguments:
 
-**Sample 2: Getting recommendations with latest prices for the specified region (e.g., “UKWest”).**
+- **sqlConnectionStrings**: (_Required_) Quote-enclosed formal connection string(s) for the target SQL instance(s).
+- **perfQueryIntervalInSec** (_Optional_):  Interval at which to query performance data, in seconds. (Default: 30)
+- **staticQueryIntervalInSec** (_Optional_): Interval at which to query and persist static configuration data, in seconds. (Default: 60)
+- **numberOfIterations** (_Optional_):  Number of iterations of performance data collection to perform before persisting to file. For example, with default values, performance data will be persisted every 30 seconds * 20 iterations = 10 minutes. (Default: 20)
+- **outputFolder** (_Optional_):  Folder which performance data, reports, and logs will be written to/read from. (Default: %LocalAppData%/Microsoft/SqlAssessmentConsole)
 
-```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationCurrencyCode=USD
-/SkuRecommendationOfferName=MS-AZR-0044p
-/SkuRecommendationRegionName=UKWest
-/SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationInteractiveAuthentication=true
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
-```
-
-**Sample 3: Getting recommendations for specific databases (e.g. “TPCDS1G,EDW_3G,TPCDS10G”).**
+The following is a sample invocation:
 
 ```
-.\DmaCmd.exe /Action=SkuRecommendation 
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv" 
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv" 
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json" 
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html" 
-/SkuRecommendationCurrencyCode=USD 
-/SkuRecommendationOfferName=MS-AZR-0044p 
-/SkuRecommendationRegionName=UKWest 
-/SkuRecommendationSubscriptionId=<Your Subscription Id> 
-/SkuRecommendationDatabasesToRecommend=“TPCDS1G” “EDW_3G” “TPCDS10G” 
-/AzureAuthenticationInteractiveAuthentication=true 
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId> 
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+.\SqlAssessment.exe PerfDataCollection 
+--sqlConnectionStrings "Data Source=Server1;Initial Catalog=master;Integrated Security=True;" "Data Source=Server2;Initial Catalog=master;Integrated Security=True;" 
+--outputFolder C:\Output
 ```
 
-For single database recommendations, the TSV output file will look as follows:
+Alternatively, the data collection process can be invoked by providing the appropriate arguments in a JSON configuration file, and passing the configuration file to the tool by running the executable without an action, as follows:
 
-![PowerShell single-db file shown in DMA folder](../dma/media/dma-sku-recommend-single-db-recommendations.png)
+  ```
 
-For managed instance recommendations, the TSV output file will look as follows:
+ .\SqlAssessment.exe --configFile C:\path\to\config.json
+  ```
 
-![PowerShell managed instance file shown in DMA folder](../dma/media/dma-sku-recommend-mi-recommendations.png)
+Below is a sample ConfigFile equivalent to the performance data collection action described above:
 
-A description of each column in the output file follows.
+  ```
 
-- **DatabaseName** - The name of your database.
-- **MetricType** - Recommended performance tier.
-- **MetricValue** - Recommended SKU.
-- **PricePerMonth** – The estimated price per month for the corresponding SKU.
-- **RegionName** – The region name for the corresponding SKU. 
-- **IsTierRecommended** - We make a minimum SKU recommendation for each tier. We then apply heuristics to determine the right tier for your database. This reflects which tier is recommended for the database. 
-- **ExclusionReasons** - This value is blank if a Tier is recommended. For each tier that isn't recommended, we provide the reasons why it wasn't picked.
-- **AppliedRules** - A short notation of the rules that were applied.
+  {
+    "action": "PerfDataCollection",
+    "sqlConnectionStrings": [
+    "Data Source=Server1;Initial Catalog=master;Integrated Security=True;",
+    "Data Source=Server2;Initial Catalog=master;Integrated Security=True;"
+    ],
+    "outputFolder": "C:\\Output"
+  }
+  ```
 
-The final recommended tier (i.e., **MetricType**) and value (i.e., **MetricValue**) - found where the **IsTierRecommended** column is TRUE - reflects the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For Azure SQL Managed Instance, DMA currently supports recommendations for the most commonly used 8vcore to 40vcore SKUs. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
+Sample config files for all of the actions can be found in the `Example` folder under DMA installation path: AssessSampleConfigFile.json, PerfDataCollectionSampleConfigFile.json, and GetSkuRecommendationSampleConfigFile.json.
 
-The HTML file contains this information in a graphical format. It provides a user-friendly means of viewing the final recommendation and provisioning the next part of the process. More information on the HTML output is in the following section.
+After the command executes, the performance and configuration data points are saved as a set of three *_Counters.csv files per target instance, each containing the server and instance name. You can use this file as input for the next part of the process, which will provide SKU recommendations for Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM.
 
-## Provision recommended SKUs to Azure
+## Use the console application to get SKU recommendations
 
-With just a few clicks, you can use the recommendations identified to provision target SKUs in Azure to which you can migrate your databases. You can use the HTML file to input Azure subscription; pick the pricing tier, compute level, and Max data size for your databases; and generate a script to provision your databases. You can execute this script using PowerShell.
+The data points collected by the previous step will be used as the input for the SKU recommendation process.
 
-You can perform this process on a single computer, or you can perform it on multiple computers to determine SKU recommendations at scale. DMA currently makes it a simple and scalable experience by supporting the entire process via the Command Line Interface.
+For the single database option, DMA will provide recommendations for the Azure SQL Database single database tier, the compute level, and the recommended storage configuration for each database on your SQL instance.
 
-To input provisioning information and make changes to the recommendations, update the HTML file as follows.
+For Azure SQL Managed Instance and SQL Server on Azure VM, the recommendations support a lift-and-shift scenario. As a result, SKU recommendations console app can provide you with recommendations for the Azure SQL Managed Instance or SQL Server on Azure VM tier, the compute level, and the recommended storage configuration for the set of databases on your SQL instance. You can also specify only a subset of databases to be included or excluded from the SKU recommendations.
 
-**For single database recommendations**
+`GetSkuRecommendation` uses by default a baseline strategy which maps collected performance data values representative for the workload (based on the percentile value specified) to the right Azure SQL SKU.
+We also expose an elastic strategy (statistical approach), which generates a unique price-to-performance curve based on the collected performance data, and by analyzing the workload patterns in comparison to customers already migrated to Azure SQL.
 
-![Azure SQL Database SKU Recommendations screen](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
+In order to start the SKU recommendation process, specify the `GetSkuRecommendation` action in the console application, with the following arguments:
 
-1. Open the HTML file and enter the following information:
-    - **Subscription ID** - The subscription ID of the Azure subscription to which you want to provision the databases.
-    - **Resource Group** - The resource group to which you want to deploy the databases. Enter a resource group that exists.
-    - **Region** - The region in which to provision databases. Make sure your subscription supports the select region.
-    - **Server Name** - The Azure SQL Database server to which you want the databases deployed. If you enter a server name that doesn't exist, it will be created.
-    - **Admin Username** - The server admin username.
-    - **Admin Password** - The server admin password. The password must be at least eight characters and no more than 128 characters in length. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.). The password cannot contain all or part (3+ consecutive letters) from the username.
+- **perfQueryIntervalInSec** (_Optional_):  Interval at which performance data was queried, in seconds. Note: This must match the value that was originally used during the performance data collection. (Default: 30)
+- **targetPlatform** (_Optional_): Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. If Any is selected, then SKU recommendations for all three target platforms are evaluated, and the best fit is returned. (Default: Any)
+- **targetSqlInstance** (_Optional_): Name of the SQL instance that SKU recommendation targets.  (Default: outputFolder is scanned for files created by the PerfDataCollection action, and recommendations are provided for every instance found)
+- **targetPercentile** (_Optional_): Percentile of data points to be used during aggregation of the performance data. Only used for baseline (non-elastic) strategy).Only used for baseline (non-elastic) strategy. (Default: 95)
+- **scalingFactor** (_Optional_): Scaling ('comfort') factor used during SKU recommendation. For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores. (Default: 100)
+- **startTime** (_Optional_): UTC start time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. Only used for baseline (non-elastic) strategy. (Default: all data points collected will be considered)
+- **endTime** (_Optional_): UTC end time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. Only used for baseline (non-elastic) strategy. (Default: all data points collected will be considered)
+- **elasticStrategy** (_Optional_): Whether or not to use the elastic strategy for SKU recommendations based on resource usage profiling and cost-performance analysis. Elastic strategy is currently available for Azure SQL Databases and SQL Managed Instance, not yet available for SQL Server on Azure VM target. (Default: false)
+- **databaseAllowList** (_Optional_): Space separated list of names of databases to be allowed for SKU recommendation consideration while excluding all others. Only set one of the following or neither: databaseAllowList, databaseDenyList. (Default: null)
+- **databaseDenyList** (_Optional_): Space separated list of names of databases to be excluded for SKU recommendation. Only set one of the following or neither: databaseAllowList, databaseDenyList. (Default: null)
+- **overwrite** (_Optional_): Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
+- **displayResult** (_Optional_): Whether or not to print the SKU recommendation results to the console. (Default: true)
+- **outputFolder** (_Optional_): Folder in which performance data, reports, and logs will be written to/read from. (Default:%LocalAppData%/Microsoft/SqlAssessmentConsole)
 
-2. Review recommendations for each database, and modify the pricing tier, compute level, and max data size as needed. Be sure to deselect any databases that you do not currently want to provision.
+Advanced settings for the SKU recommendations can be found in the `Console.Settings.json` file in the root directory. Currently, it includes the following customizable parameters:
 
-3. Select **Generate Provisioning Script**, save the script, and then execute it in PowerShell.
+**`CommandTimeoutGroupSetting`**: The time in seconds to wait for SQL query commands to execute before timing out.
 
-    This process should create all the databases you selected in the HTML page.
+- `PerfCollectionCommandTimeout`: Command timeout for potentially long-running queries related to performance data collection (Default: 300)
+- `DefaultCollectionCommandTimeout`: Command timeout for all other queries (Default: 120)
 
-**For Azure SQL Managed Instance recommendations**
+**`ThrottlingGroupSetting`**: Number of parallel tasks to create based on number of cores on the machine
 
-![Azure SQL MI SKU Recommendations screen](../dma/media/dma-sku-recommend-mi-recommendations1.png)
+- `ServerInstancesParallelCount`: Number of server instances to assess in parallel (Default: 2)
+- `DatabasesParallelCount`: Number of databases to assess in parallel (Default: 4)
+- `UserDefinedObjectsParallelCountPerDb`: Number of user-defined objects (stored procedures, views, triggers, etc.) to assess in parallel per database (Default: 4)
 
-1. Open the HTML file and enter the following information:
-    - **Subscription ID** - The subscription ID of the Azure subscription to which you want to provision the databases.
-    - **Resource Group** - The resource group to which you want to deploy the databases. Enter a resource group that exists.
-    - **Region** - The region in which to provision databases. Make sure your subscription supports the select region.
-    - **Instance Name** – The instance of Azure SQL Managed Instance to which you want to migrate the databases. The instance name can contain only lowercase letters, numbers, and ‘-‘, but it can’t begin or end with ‘-‘ or have more than 63 characters.
-    - **Instance Admin Username** – The instance admin username. Make sure your login name meets the following requirements - It's a SQL Identifier, and not a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.), or a built-in database user or role (like dbo, guest, public, etc.). Make sure your name doesn't contain whitespaces, Unicode characters, or nonalphabetic characters, and that it doesn't begin with numbers or symbols. 
-    - **Instance Admin Password** - The instance admin password. Your password must be at least 16 characters and no more than 128 characters in length. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.). The password cannot contain all or part (3+ consecutive letters) from the username.
-    - **Vnet Name** – The VNet name under which the managed instance should be provisioned. Enter an existing VNet name.
-    - **Subnet Name** – The Subnet name under which the managed instance should be provisioned. Enter an existing Subnet name.
+**`AllowTelemetry`**: Whether or not to allow the collection and transmission of anonymous feature usage and diagnostic data to Microsoft. (Default: true)
 
-2. Review recommendations for each instance, and modify the pricing tier, compute level, and max data size as needed. While the recommendations are currently limited to 8vcore to 40vcore SKUs, there is still the option to provision 64vcore and 80vcore SKUs if desired. Be sure to deselect any instances that you do not currently want to provision.
+Alternatively, the SKU recommendation process can be invoked by providing the appropriate arguments in a JSON configuration file, and passing the configuration file to the tool by running the executable without an action, as follows:
 
-    This process should create all the databases you selected in the HTML page.
+```
 
-    > [!NOTE]
-    > Creating managed instances on a subnet (especially for the first time) may take several hours to complete. After you run the provisioning script via PowerShell, you can check the status of your deployment on Azure Portal.
+ .\SqlAssessment.exe --configFile C:\path\to\config.json
+
+```
+
+Below is a sample ConfigFile equivalent to the SKU recommendations action described above:
+
+```
+{
+    "action": "GetSkuRecommendation",
+    "outputFolder": "C:\\Output",
+    "targetPlatform": "AzureSqlDatabase",
+    "targetSqlInstance": "Server1",
+    "targetPercentile": 95,
+    "scalingFactor": 100,
+    "startTime": "2020-01-01 00:00",
+    "endTime": "2022-01-01 00:00",
+    "perfQueryIntervalInSec": 30,
+    "overwrite": "true"
+}
+ ```
+
+In order to get SKU recommendations for a specific Azure SQL platform instead of selecting one automatically, provide a value for the --targetPlatform option, as follows:
+
+**Sample 1: Getting SKU recommendations  for Azure SQL Database.**
+
+```
+.\SqlAssessment.exe GetSkuRecommendation 
+--outputFolder C:\Output 
+--targetPlatform AzureSqlDatabase
+```
+
+**Sample 2: Getting SKU recommendations using elastic strategy for Azure SQL Managed Instance.**
+
+```
+.\SqlAssessment.exe GetSkuRecommendation 
+--outputFolder C:\Output 
+--targetPlatform AzureSqlManagedInstance
+--elasticStrategy true
+```
+
+**Sample 3: Getting SKU recommendations  for Azure SQL Virtual Machine.**
+
+```
+.\SqlAssessment.exe GetSkuRecommendation 
+--outputFolder C:\Output 
+--targetPlatform AzureSqlVirtualMachine
+```
+
+The following is an example output of an Azure SQL Database recommendation:
+
+:::image type="content" source="media/sku-recommendations-azure-sql-db.png" alt-text="Screenshot of Azure SQL Database SKU tier and sizing recommendations shown in SQLAssessment console.":::
+
+The following is an example output of an Azure SQL Managed Instance recommendation:
+
+:::image type="content" source="media/sku-recommendations-azure-sql-managed-instance.png" alt-text="Screenshot of Azure SQL Managed Instance SKU tier and size recommendations shown in console.":::
+
+The following is an example output of a SQL Server on Azure VM recommendation:
+
+:::image type="content" source="media/sku-recommendations-azure-sql-virtual-machine.png" alt-text="Screenshot of SQL Server on Azure VM SKU tier and size recommendations output shown in console.":::
+
+The output of the SKU recommendations covers the following sections:
+
+- **Instance Name**: Name of the on-premises SQL Server instance(s)
+- **Database Name**: Name of the on-premises SQL Server database(s)
+- **SKU Recommendation**: The minimum cost-efficient SKU offering among all the performance eligible SKUs that could accommodate your workloads.
+- **Recommendation Reason**: For each tier that is recommended, we provide the reasons and collected data values driving the recommendations.
+
+The final recommended tier and configuration values for that tier reflect the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is the S4 standard tier, then choosing S3 or below may cause queries to time out or fail to execute.
 
 ## Next step
 

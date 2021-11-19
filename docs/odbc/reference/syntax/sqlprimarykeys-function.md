@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLPrimaryKeys"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLPrimaryKeys function [ODBC]"
 ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLPrimaryKeys Function
 **Conformance**  

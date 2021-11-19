@@ -4,7 +4,7 @@ description: The LINKEDSERVERS rowset enumerates organization data sources that 
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "LINKEDSERVERS rowset"
   - "enumerating data sources [OLE DB]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Schema Rowsets - LINKEDSERVERS Rowset
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

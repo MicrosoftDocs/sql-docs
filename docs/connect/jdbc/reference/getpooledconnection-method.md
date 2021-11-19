@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerConnectionPoolDataSource.getPooledConnection ()"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: aad6c325-3398-462c-aa6e-201dc89fa5ef
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getPooledConnection Method ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

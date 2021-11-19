@@ -4,10 +4,10 @@ title: "Expressions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "simple expressions [SQL Server]"
   - "complex expressions [SQL Server]"
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Expressions (Transact-SQL)
@@ -133,9 +133,8 @@ DELETE FROM dbo.MyTable
 WHERE
 (c1 = '0000001' AND c2 = 'A000001') or
 (c1 = '0000002' AND c2 = 'A000002') or
-(c1 = '0000003' AND c2 = 'A000003') or
-...
-
+(c1 = '0000003' AND c2 = 'A000003') 
+/* ... additional, similar expressions omitted for simplicity */
 ```
 Change this query to:
 
@@ -143,7 +142,7 @@ Change this query to:
 DELETE FROM dbo.MyTable WHERE (c1 = '0000001' AND c2 = 'A000001');
 DELETE FROM dbo.MyTable WHERE (c1 = '0000002' AND c2 = 'A000002');
 DELETE FROM dbo.MyTable WHERE (c1 = '0000003' AND c2 = 'A000003');
-...
+/* ... refactored, individual DELETE statements omitted for simplicity  */
 ```
 
 ## See Also  

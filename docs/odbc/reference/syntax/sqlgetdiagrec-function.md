@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLGetDiagRec"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetDiagRec function [ODBC]"
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetDiagRec Function
 **Conformance**  
@@ -90,7 +90,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_SUCCESS: The function successfully returned diagnostic information.  
   
--   SQL_SUCCESS_WITH_INFO: The \**MessageText* buffer was too small to hold the requested diagnostic message. No diagnostic records were generated. To determine that a truncation occurred, the application must compare *BufferLength* to the actual number of bytes available, which is written to **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO: The \**MessageText* buffer was too small to hold the requested diagnostic message. No diagnostic records were generated. To determine that a truncation occurred, the application must compare *BufferLength* to the actual number of bytes available, which is written to **TextLengthPtr*.  
   
 -   SQL_INVALID_HANDLE: The handle indicated by *HandleType* and *Handle* was not a valid handle.  
   

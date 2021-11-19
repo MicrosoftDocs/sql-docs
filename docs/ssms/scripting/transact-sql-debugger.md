@@ -10,9 +10,9 @@ helpviewer_keywords:
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.reviewer: drskwier
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
+ms.date: 10/16/2021
 monikerRange: ">= sql-server-2016" 
 ---
 
@@ -22,7 +22,7 @@ monikerRange: ">= sql-server-2016"
 
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger helps you find errors in [!INCLUDE[tsql](../../includes/tsql-md.md)] code by investigating the run-time behavior of the code. After you set the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window to debug mode, you can pause execution on specific lines of code and inspect information and data that is used by or returned by those [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
 
-[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]  T-SQL debugging is also available in [SQL Server Data Tools](../../ssdt/sql-server-data-tools.md) for Visual Studio.
 
 ## Stepping through Transact-SQL Code
 
@@ -40,7 +40,7 @@ The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger provides the following 
 
     If you're sure there are no errors in a stored procedure, you can step over it. The procedure is executed in full, and the results are returned to the code.  
 
-    If you want to debug a stored procedure or function, you can step into the module. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] opens a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window that is populated with the source code for the module, places the window into debug mode, and then pauses execution on the first statement in the module. You can then navigate through the module code, for example, by setting breakpoints or stepping through the code.  
+    If you want to debug a stored procedure or function, you can step into the module. SQL Server Management Studio opens a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window that is populated with the source code for the module, places the window into debug mode, and then pauses execution on the first statement in the module. You can then navigate through the module code, for example, by setting breakpoints or stepping through the code.  
 
 For more information about how the debugger enables you to navigate code, see [Step Through Transact-SQL Code](./step-through-transact-sql-code.md).  
 

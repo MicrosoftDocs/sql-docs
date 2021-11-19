@@ -6,7 +6,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fulltext_semantic_language_statistics_database_TSQL"
   - "fulltext_semantic_language_statistics_database_TSQL"
@@ -29,9 +29,8 @@ ms.reviewer: mikeray
  You can query this view to find out about the semantic language statistics component required for semantic processing.  
    
   
-||||  
-|-|-|-|  
 |**Column name**|**Type**|**Description**|  
+|-|-|-|  
 |**database_id**|**int**|ID of the database, unique within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**register_date**|**datetime**|Date the database was registered for semantic processing.|  
 |**registered_by**|**int**|ID of the server principal that registered the database for semantic processing.|  

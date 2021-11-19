@@ -8516,6 +8516,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/database-engine/configure-windows/precompute-rank-server-configuration-option.md",
+      "redirect_url": "/docs/database-engine/discontinued-database-engine-functionality-in-sql-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md",
       "redirect_url": "/previous-versions/sql/2014/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections",
       "redirect_document_id": false
@@ -20927,7 +20932,7 @@
     },
     {
       "source_path": "docs/2014/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md",
-      "redirect_url": "/previous-versions/sql/2014/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization",
+      "redirect_url": "/previous-versions/sql/2014/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
       "redirect_document_id": false
     },
     {
@@ -41186,6 +41191,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/big-data-cluster/configure-cluster.md",
+      "redirect_url": "/sql/big-data-cluster/configure-bdc-overview",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/relational-databases/polybase/data-virtualization-csv.md",
       "redirect_url": "/sql/big-data-cluster/data-virtualization-csv",
       "redirect_document_id": true
@@ -41286,8 +41296,103 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/dma/dma-consolidatereports.md",
+      "redirect_url": "/azure/migrate/tutorial-assess-sql",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/dma/dma-powerbiassesreport.md",
       "redirect_url": "/sql/dma/dma-consolidatereports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc.md",
+      "redirect_url": "/azure/azure-arc/data/reference/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-dc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc-config.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-dc-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc-debug.md",
+      "redirect_url": "/azure/azure-arc/data/reference/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc-endpoint.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-dc-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc-status.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-dc-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-backup.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-endpoint.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-server.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-server-backup.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-server-config.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-resource.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-resource-kind",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-resource-kind.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-resource-kind",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-sql.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-sql-endpoint.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-sql-mi-config.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-sql-mi.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc",
       "redirect_document_id": false
     },
     {
@@ -41811,27 +41916,27 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-verify.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-verify.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
       "redirect_document_id": false
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-run-using-tsql.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-run-using-tsql.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
       "redirect_document_id": true
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
       "redirect_document_id": false
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-create-predictive-model.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-create-predictive-model.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-train-score-model",
       "redirect_document_id": true
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-predict-from-model.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-predict-from-model.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-train-score-model",
       "redirect_document_id": false
     },
@@ -42343,6 +42448,11 @@
     {
       "source_path": "docs/advanced-analytics/r/converting-r-code-for-use-in-sql-server.md",
       "redirect_url": "/sql/machine-learning/r/converting-r-code-for-use-in-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/r/converting-r-code-for-use-in-sql-server.md",
+      "redirect_url": "/sql/machine-learning/deploy/modify-r-python-code-to-run-in-sql-server",
       "redirect_document_id": true
     },
     {
@@ -42356,6 +42466,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/machine-learning/r/creating-workflows-that-use-r-in-sql-server.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/advanced-analytics/r/data-exploration-and-predictive-modeling-with-r.md",
       "redirect_url": "/sql/machine-learning/r/data-exploration-and-predictive-modeling-with-r",
       "redirect_document_id": true
@@ -42363,7 +42478,17 @@
     {
       "source_path": "docs/advanced-analytics/r/how-to-create-a-stored-procedure-using-sqlrutils.md",
       "redirect_url": "/sql/machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils",
-      "redirect_document_id": true
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql/machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md",
+      "redirect_url": "/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r.md",
+      "redirect_url": "/sql/machine-learning/r/reference/sqlrutils/how-to-create-stored-procedure-from-r",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md",
@@ -42383,7 +42508,7 @@
     {
       "source_path": "docs/advanced-analytics/r/operationalizing-your-r-code.md",
       "redirect_url": "/sql/machine-learning/r/operationalizing-your-r-code",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/r/performance-case-study-r-services.md",
@@ -42437,7 +42562,12 @@
     },
     {
       "source_path": "docs/advanced-analytics/r/set-up-a-data-science-client.md",
-      "redirect_url": "/sql/machine-learning/r/set-up-a-data-science-client",
+      "redirect_url": "/sql/machine-learning/r/set-up-data-science-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql/machine-learning/r/set-up-a-data-science-client.md",
+      "redirect_url": "/sql/machine-learning/r/set-up-data-science-client",
       "redirect_document_id": true
     },
     {
@@ -42901,6 +43031,41 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/machine-learning/tutorials/data-science-scenarios-and-solution-templates.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-tutorials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md",
+      "redirect_url": "/sql/machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/r/operationalizing-your-r-code.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/deploy/operationalizing-your-r-code.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/r/save-and-load-r-objects-from-sql-server-using-odbc.md",
+      "redirect_url": "/sql/machine-learning/data-exploration/save-and-load-r-objects-from-sql-server-using-odbc",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/machine-learning/r/creating-multiple-models-using-rxexecby.md",
+      "redirect_url": "/sql/machine-learning/data-exploration/creating-multiple-models-using-rxexecby",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/machine-learning/r/data-exploration-and-predictive-modeling-with-r.md",
+      "redirect_url": "/sql/machine-learning/tutorials/r-tutorials",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
       "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
       "redirect_document_id": false
@@ -43332,7 +43497,7 @@
     },
     {
       "source_path": "docs/advanced-analytics/r/setup-or-configure-r-tools.md",
-      "redirect_url": "/sql/advanced-analytics/r/set-up-a-data-science-client",
+      "redirect_url": "/sql/advanced-analytics/r/set-up-data-science-client",
       "redirect_document_id": false
     },
     {
@@ -44412,7 +44577,7 @@
     },
     {
       "source_path": "docs/advanced-analytics/r-services/set-up-a-data-science-client.md",
-      "redirect_url": "/sql/advanced-analytics/r/set-up-a-data-science-client",
+      "redirect_url": "/sql/advanced-analytics/r/set-up-data-science-client",
       "redirect_document_id": false
     },
     {
@@ -44999,6 +45164,11 @@
       "source_path": "docs/connect/odbc/windows/release-notes.md",
       "redirect_url": "/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md",
+      "redirect_url": "/sql/connect/odbc/connection-resiliency",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/connect/odbc/windows/using-transparent-network-ip-resolution.md",
@@ -56411,6 +56581,16 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/ssma/oracle/legal-notice-ssma-for-oracle.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant#legal-notice-ssma",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssma/oracle/shortcut-keys-oracle-to-sql.md",
+      "redirect_url": "/sql/ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/2014/analysis-services/data-mining/index.md",
       "redirect_url": "/sql/analysis-services/data-mining/data-mining-ssas?view=sql-server-2014",
       "redirect_document_id": false
@@ -56677,7 +56857,7 @@
     },
     {
       "source_path": "docs/2014/relational-databases/in-memory-oltp/index.md",
-      "redirect_url": "/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=sql-server-2014",
+      "redirect_url": "/previous-versions/sql/2014/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
       "redirect_document_id": false
     },
     {
@@ -57128,11 +57308,6 @@
     {
       "source_path": "docs/analytics-platform-system/index.md",
       "redirect_url": "/sql/analytics-platform-system/home-analytics-platform-system-aps-pdw",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/big-data-cluster/index.md",
-      "redirect_url": "/sql/big-data-cluster/big-data-cluster-overview",
       "redirect_document_id": false
     },
     {
@@ -57852,7 +58027,7 @@
     },
     {
       "source_path": "docs/relational-databases/in-memory-oltp/index.md",
-      "redirect_url": "/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization",
+      "redirect_url": "/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
       "redirect_document_id": false
     },
     {
@@ -58681,6 +58856,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md",
+      "redirect_url": "/sql/ssms/agent/autorestart-sql-server-agent-sql-server-management-studio",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/ssms/f1-help/index.md",
       "redirect_url": "/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio",
       "redirect_document_id": false
@@ -59071,6 +59251,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/azure-data-studio/notebooks/notebooks-parameterization.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/parameterize-papermill",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
       "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
@@ -59113,6 +59298,21 @@
     {
       "source_path": "docs/ssms/quickstarts/connect-query-sql-server.md",
       "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md",
+      "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-enclaves-query-columns",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md",
+      "redirect_url": "/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-stored-procedures/sp-batch-params-transact-sql.md",
+      "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql",
       "redirect_document_id": false
     }
   ]

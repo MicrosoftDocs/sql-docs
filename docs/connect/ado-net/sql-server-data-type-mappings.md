@@ -8,7 +8,7 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: v-chmalh
 ---
 # SQL Server data type mappings
@@ -61,7 +61,7 @@ The following table shows the inferred .NET Framework type, the <xref:System.Dat
 
 ## SQL Server documentation
 
-For more information about SQL Server data types, see [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).
+For more information about SQL Server data types, see [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).
 
 ## See also
 

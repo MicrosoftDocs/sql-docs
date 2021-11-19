@@ -1,13 +1,16 @@
 ---
 title: What is Azure Data Studio
-description: Azure Data Studio is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure Synapse Analytics. 
+description: Azure Data Studio is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure Synapse Analytics.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: "overview"
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu, sstein"
-ms.custom: "seodec18, sqlfreshmay19"
+ms.reviewer: "alayu"
+ms.custom:
+  - seodec18
+  - sqlfreshmay19
+  - intro-overview
 ms.date: "10/20/2020"
 ---
 
@@ -17,7 +20,7 @@ Azure Data Studio is a cross-platform database tool for data professionals using
 
 Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It's engineered with the data platform user in mind, with built-in charting of query result sets and customizable dashboards.
 
-The source code for Azure Data Studio and its data providers is available on GitHub under a source code EULA that provides rights to modify and use the software, but not to redistribute it or host it in a cloud service. For more information, see [Azure Data Studio FAQ](faq.md).
+The source code for Azure Data Studio and its data providers is available on GitHub under a source code EULA that provides rights to modify and use the software, but not to redistribute it or host it in a cloud service. For more information, see [Azure Data Studio FAQ](faq.yml).
 
 **[Download and Install Azure Data Studio](./download-azure-data-studio.md)**
 
@@ -162,7 +165,7 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 ## Next steps
 
 - [Download and Install Azure Data Studio](./download-azure-data-studio.md)
-- [Azure Data Studio FAQ](faq.md)
+- [Azure Data Studio FAQ](faq.yml)
 - [Connect and query SQL Server](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database](quickstart-sql-database.md)
 

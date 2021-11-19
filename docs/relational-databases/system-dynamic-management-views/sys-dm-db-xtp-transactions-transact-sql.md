@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_xtp_transactions"
   - "sys.dm_db_xtp_transactions_TSQL"
@@ -18,16 +18,16 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_transactions dynamic management view"
 ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Reports the active transactions in the In-Memory OLTP database engine.  
   
- For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
     
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -74,5 +74,4 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||
   
 ## See Also  
  [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
-  
   

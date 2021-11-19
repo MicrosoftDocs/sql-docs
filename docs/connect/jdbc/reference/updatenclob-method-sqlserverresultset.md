@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0cb0d347-4449-4920-b382-05f88f2a3225
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateNClob Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

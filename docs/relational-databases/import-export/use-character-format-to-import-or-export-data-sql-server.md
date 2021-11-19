@@ -3,7 +3,7 @@ title: "Use character format to import & export data"
 description: Character format uses character data format for all columns. This is useful working with other programs or copying to an instance from another database vendor.
 ms.date: "09/29/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "data formats [SQL Server], character"
   - "character formats [SQL Server]"
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---

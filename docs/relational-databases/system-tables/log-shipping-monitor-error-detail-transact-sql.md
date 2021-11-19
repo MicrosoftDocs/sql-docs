@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "log_shipping_monitor_error_detail_TSQL"
   - "log_shipping_monitor_error_detail"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_monitor_error_detail system table"
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

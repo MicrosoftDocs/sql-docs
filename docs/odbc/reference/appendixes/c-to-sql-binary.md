@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "binary data type [ODBC]"
   - "data conversions from C to SQL types [ODBC], binary"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "converting data from c to SQL types [ODBC], binary"
 ms.assetid: 3e9083f3-357b-41aa-833c-2c8aac2226cd
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # C to SQL: Binary
 The identifier for the binary ODBC C data type is:  

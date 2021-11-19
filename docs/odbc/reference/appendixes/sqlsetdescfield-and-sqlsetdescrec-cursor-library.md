@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLSetDescField function [ODBC], Cursor Library"
   - "SQLSetDescRec function [ODBC], Cursor Library"
 ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetDescField and SQLSetDescRec (Cursor Library)
 > [!IMPORTANT]  

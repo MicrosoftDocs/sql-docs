@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.http_endpoints"
   - "http_endpoints"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.http_endpoints catalog view"
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.http_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

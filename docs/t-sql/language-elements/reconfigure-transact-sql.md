@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "RECONFIGURE"
   - "RECONFIGURE_TSQL"
@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "RECONFIGURE"
   - "RECONFIGURE, WITH OVERRIDE statement"
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # RECONFIGURE (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Updates the currently configured value (the **config_value** column in the **sp_configure** result set) of a configuration option changed with the **sp_configure** system stored procedure. Because some configuration options require a server stop and restart to update the currently running value, RECONFIGURE does not always update the currently running value (the **run_value** column in the **sp_configure** result set) for a changed configuration value.    
     

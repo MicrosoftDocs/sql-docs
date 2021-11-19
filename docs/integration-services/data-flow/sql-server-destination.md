@@ -111,7 +111,7 @@ ms.author: chugu
   
 ## Related Content  
   
--   Technical article, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=199482), on support.microsoft.com.  
+-   Technical article, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](/troubleshoot/sql/integration-services/error-you-run-ssis-package), on support.microsoft.com.  
   
 -   Technical article, [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)), on msdn.microsoft.com.  
   
@@ -200,4 +200,3 @@ ms.author: chugu
   
 ## See Also  
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  

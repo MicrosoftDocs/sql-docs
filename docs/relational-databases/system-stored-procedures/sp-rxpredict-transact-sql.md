@@ -1,11 +1,12 @@
 ---
-title: "sp_rxPredict | Microsoft Docs"
-ms.date: "03/31/2020"
+title: "sp_rxPredict"
+description: sp_rxPredict generates a predicted value for a given input consisting of a machine learning model stored in a binary format in a SQL Server database. 
+ms.date: "04/05/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: machine-learning-services
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_rxPredict"
   - "sp_rxPredict_TSQL"
@@ -15,6 +16,7 @@ helpviewer_keywords:
   - "sp_rxPredict procedure"
 author: dphansen
 ms.author: davidph
+ms.custom: 
 # NOTE: sp_rxPredict is not supported on Linux.
 monikerRange: ">=sql-server-2016"
 ---
@@ -23,9 +25,10 @@ monikerRange: ">=sql-server-2016"
 
 Generates a predicted value for a given input consisting of a machine learning model stored in a binary format in a SQL Server database.
 
-Provides scoring on R and Python machine learning models in near real-time. `sp_rxPredict` is a stored procedure provided as a wrapper for the `rxPredict` R function in [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler) and [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package), and the [rx_predict](/machine-learning-server/python-reference/revoscalepy/rx-predict) Python function in [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package). It is written in C++ and is optimized specifically for scoring operations.
+Provides scoring on R and Python machine learning models in near real time. `sp_rxPredict` is a stored procedure provided as a wrapper for 
+- `rxPredict` R function in [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler) and [MicrosoftML](../../machine-learning/r/ref-r-microsoftml.md), and the [rx_predict](/machine-learning-server/python-reference/revoscalepy/rx-predict) Python function in [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](../../machine-learning/python/ref-py-microsoftml.md). It's written in C++ and is optimized specifically for scoring operations.
 
-Although the model must be created using R or Python, once it is serialized and stored in a binary format on a target database engine instance, it can be consumed from that database engine instance even when R or Python integration is not installed. For more information, see [Real-time scoring with sp_rxPredict](../../machine-learning/predictions/real-time-scoring.md).
+Although the model must be created using R or Python, once it's serialized and stored in a binary format on a target database engine instance, it can be consumed from that database engine instance even when R or Python integration is not installed. For more information, see [Real-time scoring with sp_rxPredict](../../machine-learning/predictions/real-time-scoring.md).
 
 ## Syntax
 
@@ -63,61 +66,67 @@ To create and train model, use one of the supported algorithms for R or Python, 
 
 #### R: RevoScaleR models
 
-  + [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod)
-  + [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit)
-  + [rxBTrees](/machine-learning-server/r-reference/revoscaler/rxbtrees)
-  + [rxDtree](/machine-learning-server/r-reference/revoscaler/rxdtree)
-  + [rxdForest](/machine-learning-server/r-reference/revoscaler/rxdforest)
+  + [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
+  + [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit) \*
+  + [rxBTrees](/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
+  + [rxDtree](/machine-learning-server/r-reference/revoscaler/rxdtree) \*
+  + [rxdForest](/machine-learning-server/r-reference/revoscaler/rxdforest) \*
+
+Models marked with \* also support native scoring with the `PREDICT` function.
 
 #### R: MicrosoftML models
 
-  + [rxFastTrees](/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](/machine-learning-server/r-reference/microsoftml/rxfastforest)
-  + [rxLogisticRegression](/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
-  + [rxOneClassSvm](/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
-  + [rxNeuralNet](/machine-learning-server/r-reference/microsoftml/rxneuralnet)
-  + [rxFastLinear](/machine-learning-server/r-reference/microsoftml/rxfastlinear)
+  + [rxFastTrees](../../machine-learning/r/reference/microsoftml/rxfasttrees.md)
+  + [rxFastForest](../../machine-learning/r/reference/microsoftml/rxfastforest.md)
+  + [rxLogisticRegression](../../machine-learning/r/reference/microsoftml/rxlogisticregression.md)
+  + [rxOneClassSvm](../../machine-learning/r/reference/microsoftml/rxoneclasssvm.md)
+  + [rxNeuralNet](../../machine-learning/r/reference/microsoftml/rxneuralnet.md)
+  + [rxFastLinear](../../machine-learning/r/reference/microsoftml/rxfastlinear.md)
 
 #### R: Transformations supplied by MicrosoftML
 
-  + [featurizeText](/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](/machine-learning-server/r-reference/microsoftml/concat)
-  + [categorical](/machine-learning-server/r-reference/microsoftml/categorical)
-  + [categoricalHash](/machine-learning-server/r-reference/microsoftml/categoricalHash)
-  + [selectFeatures](/machine-learning-server/r-reference/microsoftml/selectFeatures)
+  + [featurizeText](../../machine-learning/r/reference/microsoftml/rxfasttrees.md)
+  + [concat](../../machine-learning/r/reference/microsoftml/concat.md)
+  + [categorical](../../machine-learning/r/reference/microsoftml/categorical.md)
+  + [categoricalHash](../../machine-learning/r/reference/microsoftml/categoricalHash.md)
+  + [selectFeatures](../../machine-learning/r/reference/microsoftml/selectFeatures.md)
 
 #### Python: revoscalepy models
 
-  + [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
-  + [rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit)
-  + [rx_btrees](/machine-learning-server/python-reference/revoscalepy/rx-btrees)
-  + [rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-dtree)
-  + [rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-dforest)
+  + [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) \*
+  + [rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit) \*
+  + [rx_btrees](/machine-learning-server/python-reference/revoscalepy/rx-btrees) \*
+  + [rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-dtree) \*
+  + [rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-dforest) \*
 
+Models marked with \* also support native scoring with the `PREDICT` function.
 
 #### Python: microsoftml models
 
-  + [rx_fast_trees](/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
-  + [rx_fast_forest](/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
-  + [rx_logistic_regression](/machine-learning-server/python-reference/microsoftml/rx-logistic-regression)
-  + [rx_oneclass_svm](/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm)
-  + [rx_neural_network](/machine-learning-server/python-reference/microsoftml/rx-neural-network)
-  + [rx_fast_linear](/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
+  + [rx_fast_trees](../../machine-learning/python/reference/microsoftml/rx-fast-trees.md)
+  + [rx_fast_forest](../../machine-learning/python/reference/microsoftml/rx-fast-forest.md)
+  + [rx_logistic_regression](../../machine-learning/python/reference/microsoftml/rx-logistic-regression.md)
+  + [rx_oneclass_svm](../../machine-learning/python/reference/microsoftml/rx-oneclass-svm.md)
+  + [rx_neural_network](../../machine-learning/python/reference/microsoftml/rx-neural-network.md)
+  + [rx_fast_linear](../../machine-learning/python/reference/microsoftml/rx-fast-linear.md)
 
 #### Python: Transformations supplied by microsoftml
 
-  + [featurize_text](/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
-  + [concat](/machine-learning-server/python-reference/microsoftml/concat)
-  + [categorical](/machine-learning-server/python-reference/microsoftml/categorical)
-  + [categorical_hash](/machine-learning-server/python-reference/microsoftml/categorical-hash)
+  + [featurize_text](../../machine-learning/python/reference/microsoftml/rx-fast-trees.md)
+  + [concat](../../machine-learning/python/reference/microsoftml/concat.md)
+  + [categorical](../../machine-learning/python/reference/microsoftml/categorical.md)
+  + [categorical_hash](../../machine-learning/python/reference/microsoftml/categorical-hash.md)
   
 ### Unsupported model types
 
 The following model types are not supported:
 
-+ Models using the `rxGlm` or `rxNaiveBayes` algorithms in RevoScaleR
-+ PMML models in R
-+ Models created using other third-party libraries 
++ Models using the `rxGlm` or `rxNaiveBayes` algorithms in RevoScaleR.
++ PMML models in R.
++ Models created using other third-party libraries.
++ Models using a transformation function or formula containing a transformation, such as `A ~ log(B` are not supported in real-time scoring. To use a model of this type, we recommend that you perform the transformation on input data before passing the data to real-time scoring.
+
+Real-time scoring does not use an interpreter, so any functionality that might require an interpreter is not supported during the scoring step.
 
 ## Examples
 
@@ -132,6 +141,6 @@ EXEC sp_rxPredict @model = @model,
 
 In addition to being a valid SQL query, the input data in *\@inputData* must include columns compatible with the columns in the stored model.
 
-`sp_rxPredict` supports only the following .NET column types: double, float, short, ushort, long, ulong and string. You may need to filter out unsupported types in your input data before using it for real-time scoring. 
+`sp_rxPredict` supports only the following .NET column types: double, float, short, ushort, long, ulong and string. You may need to filter out unsupported types in your input data before using it for real-time scoring.
 
-  For information about corresponding SQL types, see [SQL-CLR Type Mapping](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) or [Mapping CLR Parameter Data](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
+For information about corresponding SQL types, see [SQL-CLR Type Mapping](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) or [Mapping CLR Parameter Data](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).

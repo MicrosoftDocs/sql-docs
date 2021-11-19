@@ -2,14 +2,14 @@
 title: "Universal Data Link (UDL) Configuration | Microsoft Docs"
 description: Learn how to use the Connection tab to specify how to connect to your data using the OLE DB Driver for SQL Server.
 ms.custom: ""
-ms.date: "09/30/2020"
+ms.date: "05/31/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.reviewer: ""
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.reviewer: v-davidengel
 ms.technology: connectivity
-ms.topic: reference
-ms.author: "v-beaziz"
-author: bazizi
+ms.topic: conceptual
+ms.author: v-davidengel
+author: David-Engel
 ---
 # Universal Data Link (UDL) configuration
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +26,7 @@ The Connection tab is provider-specific and displays only the connection propert
 |Option|Description|
 |---   |---        |
 |Select or enter a server name|Select a server name from the drop-down list, or type the location of the server where the database you want to access is located. Selecting the database on the server is a separate action. Update the list by clicking "Refresh".
-|Enter information to sign in to the server|You can select the following authentication options from this drop-down list: <ul><li>`Windows Authentication:` Authentication to SQL Server using the currently logged-in user's Windows account credentials.</li><li>`SQL Server Authentication:` Authentication using login ID and password.</li><li>`Active Directory - Integrated:` Integrated authentication with an Azure Active Directory identity. This mode can also be used for Windows authentication to SQL Server.</li><li>`Active Directory - Password:` User ID and password authentication with an Azure Active Directory identity.</li><li>`Active Directory - Universal with MFA support:` Interactive authentication with an Azure Active Directory identity. This mode supports Azure multi-factor authentication (MFA).</li><li>`Active Directory - Service Principal:` Authentication with an Azure Active Directory service principal. **User name** should be set to the application (client) ID. **Password** should be set to the application (client) secret.</li></ul>|
+|Enter information to sign in to the server|You can select the following authentication options from this drop-down list: <ul><li>`Windows Authentication:` Authentication to SQL Server using the currently logged-in user's Windows account credentials.</li><li>`SQL Server Authentication:` Authentication using login ID and password.</li><li>`Active Directory - Integrated:` Integrated authentication with an Azure Active Directory identity. This mode can also be used for Windows authentication to SQL Server.</li><li>`Active Directory - Password:` User ID and password authentication with an Azure Active Directory identity.</li><li>`Active Directory - Universal with MFA support:` Interactive authentication with an Azure Active Directory identity. This mode supports Azure Active Directory Multi-Factor Authentication (MFA).</li><li>`Active Directory - Service Principal:` Authentication with an Azure Active Directory service principal. **User name** should be set to the application (client) ID. **Password** should be set to the application (client) secret.</li></ul>|
 |Server SPN|If you use a trusted connection, you can specify a service principal name (SPN) for the server.|
 |User name|Type the User ID to use for authentication when you sign in to the data source.|
 |Password|Type the password to use for authentication when you sign in to the data source.|
@@ -47,6 +47,8 @@ Use the Advanced tab to view and set additional initialization properties.
 |Option|Description|
 |---   |---        |
 | Connect timeout | Specifies the amount of time (in seconds) that the Microsoft OLE DB Driver for SQL Server waits for initialization to complete. If initialization times out, an error is returned and the connection is not created.|
+| Connect retry count | Specifies the number of times that the Microsoft OLE DB Driver for SQL Server will attempt to reconnect in the case of connection loss.|
+| Connect retry interval | Specifies the amount of time (in seconds) that the Microsoft OLE DB Driver for SQL Server will wait between reconnection attempts.|
 
 
 > [!NOTE]  

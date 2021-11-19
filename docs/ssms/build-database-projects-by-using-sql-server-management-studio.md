@@ -20,18 +20,18 @@ ms.date: 01/19/2017
 
 # Build Database Projects by Using SQL Server Management Studio
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-A database script project is an organized set of scripts, connection information, and templates that are all associated with a database or one part of a database. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] for administering and designing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases within the context of a script project. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] includes designers, editors, guides and wizards to assist users in developing, deploying and maintaining databases.  
+A database script project is an organized set of scripts, connection information, and templates that are all associated with a database or one part of a database. Microsoft SQL Server provides the SQL Server Management Studio for administering and designing SQL Server databases within the context of a script project. SQL Server Management Studio includes designers, editors, guides and wizards to assist users in developing, deploying and maintaining databases.  
   
 ## SQL Server Management Studio  
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is a suite of administrative tools for managing the components belonging to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This integrated environment allows users to perform a variety of tasks, such as backing up data, editing queries, and automating common functions within a single interface.  
+SQL Server Management Studio is a suite of administrative tools for managing the components belonging to SQL Server. This integrated environment allows users to perform a variety of tasks, such as backing up data, editing queries, and automating common functions within a single interface.  
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] includes the following tools:  
+SQL Server Management Studio includes the following tools:  
   
--   Code Editor is a rich script editor for writing and editing scripts. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides four versions of the Code Editor; the [!INCLUDE[ssDE](../includes/ssde_md.md)] Query Editor for [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, the DMX Query Editor, the MDX Query Editor, and the XML/A Query Editor.  
+-   Code Editor is a rich script editor for writing and editing scripts. SQL Server Management Studio provides four versions of the Code Editor; the Database Engine Query Editor for [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, the DMX Query Editor, the MDX Query Editor, and the XML/A Query Editor.  
   
--   Object Explorer for locating, modifying, scripting or running objects belonging to instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   Object Explorer for locating, modifying, scripting or running objects belonging to instances of SQL Server.  
   
 -   Template Explorer for locating and scripting templates.  
   
@@ -39,16 +39,16 @@ A database script project is an organized set of scripts, connection information
   
 -   Properties Window for displaying the current properties of selected objects.  
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] supports efficient work processes by providing:  
+SQL Server Management Studio supports efficient work processes by providing:  
   
--   Disconnected access. You can write and edit scripts without connecting to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   Disconnected access. You can write and edit scripts without connecting to an instance of SQL Server.  
   
 -   Scripting from any dialog box. You can create a script from any dialog box so that you can read, modify, store and reuse the scripts after you create them.  
   
--   Nonmodal dialog boxes. When you access a UI dialog box you can browse other resources in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] without closing the dialog box.  
+-   Nonmodal dialog boxes. When you access a UI dialog box you can browse other resources in SQL Server Management Studio without closing the dialog box.  
   
 ## Solutions and Script Projects  
-Solution Explorer is a utility to store and reopen database solutions. Solutions organize related script projects and files. Script projects store [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] script files, SQL templates, connection information and other miscellaneous files. When a script is saved in a script project, users are able to:  
+Solution Explorer is a utility to store and reopen database solutions. Solutions organize related script projects and files. Script projects store SQL Server script files, SQL templates, connection information and other miscellaneous files. When a script is saved in a script project, users are able to:  
   
 -   Maintain version control on scripts.  
   
@@ -58,7 +58,7 @@ Solution Explorer is a utility to store and reopen database solutions. Solutions
   
 -   Save connection information with scripts.  
   
-Solution Explorer is a tool for developers who are creating and reusing scripts that are related to the same project. If a similar task is required later, you can use group of scripts that were stored in a project. If you have created applications by using [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], you will find Solution Explorer very familiar.  
+Solution Explorer is a tool for developers who are creating and reusing scripts that are related to the same project. If a similar task is required later, you can use group of scripts that were stored in a project. If you have created applications by using Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], you will find Solution Explorer very familiar.  
   
 A solution consists of one or more script projects. A project consists of one or more scripts or connections. A project may also include nonscript files.  
   

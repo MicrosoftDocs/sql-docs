@@ -7,12 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLCloseCursor"
 apilocation: 
   - "sqlsrv32.dll"
   - "odbc32.dll"
+  - "Msodbcsql11.dll"
+  - "Sqlncli10.dll"
+  - "Sqlncli11.dll"
+  - "Sqlncli11e.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLCloseCursor"
@@ -20,7 +24,7 @@ helpviewer_keywords:
   - "SQLCloseCursor function [ODBC]"
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLCloseCursor Function
 **Conformance**  

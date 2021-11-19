@@ -1,0 +1,29 @@
+<svg id="Shapes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.975" height="28" viewBox="0 0 25.975 28">
+  <defs>
+    <linearGradient id="linear-gradient" x1="12.987" y1="1201.234" x2="12.987" y2="1219.659" gradientTransform="matrix(1, 0, 0, -1, 0, 1219.864)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2e76bc"/>
+      <stop offset="0.16" stop-color="#347dc0"/>
+      <stop offset="0.53" stop-color="#4c8dcb"/>
+      <stop offset="0.82" stop-color="#6198d1"/>
+      <stop offset="1" stop-color="#699cd3"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="6.175" y1="1198.596" x2="19.94" y2="1198.596" gradientTransform="matrix(1, 0, 0, -1, 0, 1219.864)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#33bedd"/>
+      <stop offset="0.06" stop-color="#3ac4e2"/>
+      <stop offset="0.3" stop-color="#66cce7"/>
+      <stop offset="0.45" stop-color="#74cfeb"/>
+      <stop offset="0.55" stop-color="#74cfeb"/>
+      <stop offset="0.7" stop-color="#66cce7"/>
+      <stop offset="0.94" stop-color="#3ac4e2"/>
+      <stop offset="1" stop-color="#33bedd"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path d="M25.975,12.853a5.818,5.818,0,0,0-5.055-5.6A7.373,7.373,0,0,0,13.329.208,7.573,7.573,0,0,0,6.113,5.123,6.968,6.968,0,0,0,0,11.827a7.061,7.061,0,0,0,7.31,6.8H19.753a1.794,1.794,0,0,0,.311,0A5.926,5.926,0,0,0,25.975,12.853Z" fill="url(#linear-gradient)"/>
+    <path d="M13.065,16.524c-3.811,0-6.89-.98-6.89-2.193v11.68c0,1.2,3.111,2.178,6.8,2.194h.093c3.8,0,6.875-.98,6.875-2.194V14.331C19.94,15.544,16.86,16.524,13.065,16.524Z" fill="url(#linear-gradient-2)"/>
+    <path d="M19.94,14.331c0,1.213-3.111,2.193-6.875,2.193s-6.89-.98-6.89-2.193,3.111-2.193,6.89-2.193,6.875.98,6.875,2.193" fill="#e8e8e8"/>
+    <path d="M18.338,14.206c0,.762-2.364,1.4-5.273,1.4s-5.288-.638-5.288-1.4,2.364-1.4,5.288-1.4,5.273.623,5.273,1.4" fill="#74cfeb"/>
+    <path d="M13.065,14.486a14.22,14.22,0,0,0-4.184.529,13.991,13.991,0,0,0,4.184.544,14.125,14.125,0,0,0,4.184-.544A14.388,14.388,0,0,0,13.065,14.486Z" fill="#33bedd"/>
+    <path d="M8.772,7.985,12.8,3.91A.465.465,0,0,1,13.46,3.9l.009.009L17.5,7.985a.2.2,0,0,1-.156.358H14.869a.217.217,0,0,0-.217.217h0v4.993a.156.156,0,0,1-.139.171H11.774a.171.171,0,0,1-.171-.171V8.514a.2.2,0,0,0-.171-.218H8.912a.2.2,0,0,1-.171-.229A.2.2,0,0,1,8.772,7.985Z" fill="#f2f2f3"/>
+  </g>
+</svg>

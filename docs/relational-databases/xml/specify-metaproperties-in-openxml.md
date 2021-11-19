@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "extracting information of XML nodes [SQL Server]"
   - "OPENXML statement, metaproperties"
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Specify Metaproperties in OPENXML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

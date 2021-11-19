@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "character data type [ODBC]"
   - "data conversions from C to SQL types [ODBC], character"
   - "converting data from c to SQL types [ODBC], character"
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # C to SQL: Character
 The identifiers for the character ODBC C data type are:  

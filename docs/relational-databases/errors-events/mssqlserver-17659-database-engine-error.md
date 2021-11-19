@@ -6,7 +6,7 @@ ms.date: 08/20/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "17659 (Database Engine error)"
 ms.assetid: 
@@ -56,4 +56,4 @@ To resolve this issue, use one of the following methods.
 
 ## More information
 
-For more information you can, see: [System Base Tables](/sql/relational-databases/system-tables/system-base-tables).
+For more information you can, see: [System Base Tables](../system-tables/system-base-tables.md).

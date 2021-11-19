@@ -1,5 +1,5 @@
 ---
-title: "Create a Stepped Report (Report Builder) | Microsoft Docs"
+title: "Create a stepped paginated report | Microsoft Docs"
 description: Discover how to show detail rows or child groups indented under a parent group in the same column in a Report Builder paginated report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,8 +12,11 @@ ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Create a Stepped Report (Report Builder and SSRS)
-A stepped report is a type of  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report that shows detail rows or child groups indented under a parent group in the same column, as shown in the example below:  
+# Create a stepped paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+A stepped report is a type of paginated report that shows detail rows or child groups indented under a parent group in the same column, as shown in the example below:  
   
  ![Rendered stepped report](../../reporting-services/report-design/media/steppedreportrendered.gif "Rendered stepped report")  
   
@@ -63,7 +66,7 @@ A stepped report is a type of  [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
   
          Size designators are:  
   
-        |||  
+        |Designator|Description|  
         |-|-|  
         |**in**|Inches (1 inch = 2.54 centimeters)|  
         |**cm**|Centimeters|  

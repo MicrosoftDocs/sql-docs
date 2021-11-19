@@ -4,12 +4,12 @@ description: Learn how to use IRowsetFastLoad to stream varying length BLOB data
 ms.custom: ""
 ms.date: "05/25/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

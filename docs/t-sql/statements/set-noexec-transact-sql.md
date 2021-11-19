@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "NOEXEC_TSQL"
   - "SET_NOEXEC_TSQL"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "compiling queries [SQL Server]"
   - "NOEXEC option"
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SET NOEXEC (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -78,7 +78,7 @@ GO
 -- SET NOEXEC to ON.  
 SET NOEXEC ON;  
 GO  
--- Function name uses is a reserved keyword.  
+-- Function name used is a reserved keyword.  
 USE AdventureWorks2012;  
 GO  
 CREATE FUNCTION dbo.Values(@BusinessEntityID int)  

@@ -32,7 +32,7 @@ Download Microsoft Change Data Capture Designer and Service for Oracle by Attuni
   
  The installation of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC Service for Oracle places the service configuration UI and the service program in the selected location. The CDC Service for Oracle is configured separately using the Oracle CDC Service Configuration Console. For more information on configuring the Oracle CDC Service, see [Change Data Capture Service for Oracle by Attunity F1 Help](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md).  
   
- The CDC Service for Oracle can be installed on any supported Windows computer where the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client is installed; it does not need to be installed on the same computer where the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
+ The CDC Service for Oracle can be installed on any supported Windows computer where the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Native Client is installed; it does not need to be installed on the same computer where the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   
 ## Supported Windows Environments  
  The Change Data Capture Service for Oracle by Attunity can run in the following Windows environments:  
@@ -52,8 +52,6 @@ Download Microsoft Change Data Capture Designer and Service for Oracle by Attuni
 -   Oracle Database 10g Release 2
 -   Oracle Database 11g Release 1 and Release 2
 -   Oracle Database 12c in classic installation. (Multitenant installation is not supported.)  
--   Oracle Database 18c in classic installation. (Multitenant installation is not supported.) 
--   Oracle Database 19c in classic installation. (Multitenant installation is not supported.) 
   
 ### Target SQL Server Database  
  For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  

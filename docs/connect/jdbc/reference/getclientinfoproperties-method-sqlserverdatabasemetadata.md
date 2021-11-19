@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 1568aef4-f4c4-40a0-a1ab-9c106905bd92
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getClientInfoProperties Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

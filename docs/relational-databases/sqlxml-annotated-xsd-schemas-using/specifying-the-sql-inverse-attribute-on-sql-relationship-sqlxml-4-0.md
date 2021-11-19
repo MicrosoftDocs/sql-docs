@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "updategrams [SQLXML], relationships"
   - "sql:inverse"
 ms.assetid: 08904cbd-9c86-493d-90c3-f5e1d13ce59d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ""
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

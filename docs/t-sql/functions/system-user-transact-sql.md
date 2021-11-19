@@ -4,10 +4,10 @@ title: "SYSTEM_USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SYSTEM_USER_TSQL"
   - "SYSTEM_USER"
@@ -128,7 +128,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### C: Using SYSTEM_USER to return the current system user name  
+### C. Using SYSTEM_USER to return the current system user name  
  The following example returns the current value of `SYSTEM_USER`.  
   
 ```sql

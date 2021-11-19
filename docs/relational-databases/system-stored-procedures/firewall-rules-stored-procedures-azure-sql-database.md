@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: "07/28/2016"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -43,4 +43,4 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 
 &nbsp;
   
-For [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], use Window firewall rules. For more information, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).   
+For [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], use Windows firewall rules. For more information, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).   

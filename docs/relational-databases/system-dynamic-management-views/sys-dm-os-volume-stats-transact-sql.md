@@ -6,7 +6,7 @@ ms.date: "09/03/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_os_volume_stats_TSQL"
   - "dm_os_volume_stats"
@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_volume_stats dynamic management function"
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,8 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## Table Returned  
   
-||||  
-|-|-|-|  
 |**Column**|**Data type**|**Description**|  
+|-|-|-|  
 |**database_id**|**int**|ID of the database. Cannot be null.|  
 |**file_id**|**int**|ID of the file. Cannot be null.|  
 |**volume_mount_point**|**nvarchar(512)**|Mount point at which the volume is rooted. Can return an empty string. Returns null on Linux operating system.|  
@@ -58,7 +57,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**supports_sparse_files**|**tinyint**|Indicates if the volume supports sparse files.  Cannot be null on Windows and returns null on Linux operating system.|  
 |**is_read_only**|**tinyint**|Indicates if the volume is currently marked as read only. Cannot be null.|  
 |**is_compressed**|**tinyint**|Indicates if this volume is currently compressed. Cannot be null on Windows and returns null on Linux operating system.|  
-|**incurs_seek_penalty**|**tinyint**|Indicates the type of storage supporting this volume. Possible values are:<br /><br />0: No seek penalty on this volume, typically when the storage device is PMM or SSD<br /><br />1: Seek penalty on this volume, typically when the storage device is HDD<br /><br />2: The storage type can't be determined when the volume is on a UNC path or mounted shares<br /><br />NULL: The storage type can't be determined on Linux operating system<br /><br />**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])|  
+|**incurs_seek_penalty**|**tinyint**|Indicates the type of storage supporting this volume. Possible values are:<br /><br />0: No seek penalty on this volume, typically when the storage device is PMM or SSD<br /><br />1: Seek penalty on this volume, typically when the storage device is HDD<br /><br />2: The storage type can't be determined when the volume is on a UNC path or mounted shares<br /><br />NULL: The storage type can't be determined on Linux operating system<br /><br />**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])|  
   
 ## Security  
   

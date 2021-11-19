@@ -18,7 +18,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Insert Surround-with Transact-SQL snippets
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   A surround-with snippet is a template you can use as a starting point when enclosing a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a BEGIN, IF, or WHILE block.  
   
 ## Inserting Surround-with Snippets  

@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 17adafd4-3ac3-4ff0-af9d-f087cc5ef936
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateNClob Method (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

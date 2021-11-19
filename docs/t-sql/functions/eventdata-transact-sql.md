@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "EVENTDATA"
   - "fn_event_data"
@@ -23,11 +23,11 @@ helpviewer_keywords:
   - "status information [SQL Server], events"
   - "DDL triggers, returning event data"
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # EVENTDATA (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns information about server or database events. When an event notification fires, and the specified service broker receives the results, `EVENTDATA` is called. A DDL or logon trigger also support internal use of `EVENTDATA`.  
   

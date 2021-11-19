@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerPreparedStatement.setTimestamp (int, java.sql.Timestamp, java.util.Calendar))"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 10c93cbf-f831-4e00-8e37-ea728bf34b1e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setTimestamp Method (int, java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerConnection.prepareStatement (java.lang.String, int, int, int)"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # prepareStatement Method (java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

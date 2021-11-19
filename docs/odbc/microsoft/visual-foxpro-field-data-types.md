@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "field data types [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], data types"
 ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Visual FoxPro Field Data Types
 The following table lists the values for the *FieldType* argument in ALTER TABLE and CREATE TABLE and indicates whether *nFieldWidth* and *nPrecision* arguments are required.  

@@ -4,24 +4,23 @@ description: Learn about the OLE DB Driver for SQL Server support for the date a
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Date and Time Improvements
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  This topic describes the OLE DB Driver for SQL Server support for the date and time data types that were added in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
+  This topic describes the OLE DB Driver for SQL Server support for the date and time data types that were added in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].
   
- For more information about date/time improvements, see [Date and Time Improvements &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md).  
-  
- For information about sample applications that demonstrate this feature, see [SQL Server Data Programming Samples](https://msftdpprodsamples.codeplex.com/).  
-  
+ For more information about date/time improvements, see [Date and Time Improvements &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md).
+
+
 ## Usage  
  The following sections describe various ways of using the new date and time types.  
   

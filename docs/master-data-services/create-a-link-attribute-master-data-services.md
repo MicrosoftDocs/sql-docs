@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "attributes [Master Data Services], creating link attributes"
   - "creating link attributes [Master Data Services]"
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Create a Link Attribute (Master Data Services)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ODBC cursor library [ODBC], about cursor library"
   - "ODBC cursor library [ODBC]"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "cursor library [ODBC]"
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Appendix F: ODBC Cursor Library
 > [!IMPORTANT]  

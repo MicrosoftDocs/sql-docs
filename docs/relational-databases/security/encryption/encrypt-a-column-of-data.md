@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-This article describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption. This feature is in preview for Azure Synapse Analytics
+This article describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption. This feature is in preview for Azure Synapse Analytics
 
 The examples in this article have been validated against AdventureWorks2017. To get sample databases, see [AdventureWorks sample databases](../../../samples/adventureworks-install-configure.md).
 

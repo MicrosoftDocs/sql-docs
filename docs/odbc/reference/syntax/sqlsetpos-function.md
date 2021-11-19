@@ -7,12 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLSetPos"
 apilocation: 
   - "sqlsrv32.dll"
   - "odbc32.dll"
+  - "Msodbcsql11.dll"
+  - "Sqlncli10.dll"
+  - "Sqlncli11.dll"
+  - "Sqlncli11e.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLSetPos"
@@ -20,7 +24,7 @@ helpviewer_keywords:
   - "SQLSetPos function [ODBC]"
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetPos Function
 **Conformance**  

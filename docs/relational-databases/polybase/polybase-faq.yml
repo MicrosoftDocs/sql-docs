@@ -1,0 +1,101 @@
+### YamlMime:FAQ
+metadata:
+  title: "Frequently Asked Questions in PolyBase"
+  description: Compare PolyBase and linked servers and compare PolyBase in Big Data Clusters and PolyBase in stand-alone instances. Find out what's new in PolyBase 2019.
+  ms.date: 08/13/2021
+  ms.prod: sql
+  ms.technology: polybase
+  ms.topic: conceptual
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.reviewer: 
+  monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
+
+title: Frequently asked questions
+summary: |
+   [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  
+
+sections:
+  - name: Ignored
+    questions:
+      - question: PolyBase VS. linked servers
+        answer: |
+          The following table highlights the differences between PolyBase and linked server features:
+          
+          |PolyBase | Linked Servers|
+          |--------------------------|--------------------------|  
+          |Database scoped object|Instance scoped object|
+          |Uses ODBC drivers|Uses OLEDB providers|
+          |Supports read-only operations for all data sources and insert operation for HADOOP & data pool data source only|Supports both read and write operations|
+          |Queries to remote data source from a single connection can be scaled-out |Queries to remote data source from a single connection cannot be scaled-out|
+          |Predicates pushdown is supported|Predicates pushdown is supported|
+          |No separate configuration needed for availability group|Separate configuration needed for each instance in availability group|
+          |Basic authentication only|Basic & integrated authentication|
+          |Suitable for analytic queries processing large number of rows|Suitable for OLTP queries returning single or few rows|
+          |Queries using external table cannot participate in distributed transaction|Distributed queries can participate in distributed transaction|
+          
+      - question: What's new in PolyBase 2019? 
+        answer: |
+          PolyBase in [!INCLUDE[sssql19](../../includes/sssql19-md.md)] can now read data from a larger variety of data sources. The data from these external data sources can be store as external tables on your SQL Server. PolyBase also supports pushdown computation to these external data sources, excluding ODBC generic types.
+          
+          **Compatible Data Sources**
+          
+          - SQL Server
+          - Oracle
+          - Teradata
+          - MongoDB
+          - Compatible ODBC generic types
+            
+          > [!NOTE]
+          > PolyBase can allow connection to external data sources using third party ODBC drivers. These drivers are not provided along with PolyBase and may not work as intended. For more information, visit our [guide](../../relational-databases/polybase/polybase-configure-odbc-generic.md) for PolyBase ODBC generic configuration.  
+          
+      - question: PolyBase in Big Data Clusters vs. PolyBase in stand-alone instances
+        answer: |
+          The following table highlights the PolyBase features available in [!INCLUDE[sssql19](../../includes/sssql19-md.md)] stand-alone install and [!INCLUDE[sssql19](../../includes/sssql19-md.md)] big data cluster:
+          
+          |Feature |Big Data Cluster|Stand alone instance|
+          |--------------------------|--------------------------|---------|   
+          |Create external data source for SQL Server, Oracle, Teradata, and Mongo DB |X|X|
+          |Create external data source using a compatible third-party ODBC Driver | | X|
+          |Create external data source for HADOOP data source | X| X|
+          |Create external data source for Azure Blob Storage | X| X|
+          |Create external table on a SQL Server data pool | X| |
+          |Create external table on a SQL Server storage pool | X| |
+          |Scale-out query execution | X| X (Windows only) |
+          
+          > [!NOTE]
+          > For more information on connections using the ODBC generic connector visit our [How to guide for configuring ODBC generic types](polybase-configure-odbc-generic.md).
+
+      - question: How can I view the remote query execution plan of PolyBase pushdown computation?
+        answer: |
+          This is possible via a couple of methods depending on the version of SQL Server. See [PolyBase Troubleshooting - To view the PolyBase query plan](polybase-troubleshooting.md#to-view-the-polybase-query-plan).
+
+      - question: How can I tell whether PolyBase pushdown computation is happening?
+        answer: |
+          See [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
+
+      - question: Which ports should I allow through my firewall for PolyBase?
+        answer: | 
+          No additional ports are needed to open for PolyBase itself, except in the case of a PolyBase scale-out group. Without a scale-out group, the PolyBase service alone should not require any firewall rule. 
+          
+          On Windows servers, PolyBase will leverage the ports used by SQL Server in the **IPAll** section of the TCP/IP settings in SQL Server Configuration Manager. For more information, see [TCP/IP Properties](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab.md). On Linux servers, PolyBase will leverage the **network.tcpport** setting. For more information, see [TCP port](../../linux/sql-server-linux-configure-mssql-conf.md#tcpport).
+          
+          For PolyBase scale-out groups over multiple Windows servers, see port information in the next question.
+
+          However, you must allow other ports for communication to the various external data source(s) used by PolyBase. Refer to ODBC configuration, Azure resource configuration, or specific data source documentation. For example:
+
+          | Source platform | Reference | 
+          | ---- | ---- |
+          | Microsoft SQL Server | [Ports Used By SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md#ports-used-by-)| 
+          | Hortonworks HDP | [Administering HDFS](https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.5/administration/content/hdfs-ports.html)|
+          | Cloudera CDH | [Ports Used by CDH Components](https://docs.cloudera.com/documentation/enterprise/6/6.3/topics/cdh_ports.html)| 
+          | | | 
+
+      - question: What ports are used for PolyBase scale-out group? 
+        answer: | 
+          By default, the PolyBase data movement service connects to the head node of a scale-out group over a range of ports from TCP 16450-16460, typically using 16450-16453, plus port 17001. These ports are only used when a PolyBase scale-out group is configured and should be allowed through server firewalls. SQL Server Setup should automatically create a local firewall rule allowing these ports upon feature installation. For more information, see [Configure PolyBase scale-out groups on Windows](configure-scale-out-groups-windows.md). 
+          
+          
+      
+          

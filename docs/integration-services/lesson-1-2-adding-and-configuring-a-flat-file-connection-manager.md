@@ -42,7 +42,7 @@ In this lesson, you configure the following properties in your Flat File connect
   
 4.  In the **Open** dialog box, locate the **SampleCurrencyData.txt** file on your computer.  
   
-5.  Clear the column names in the first data row checkbox.  
+5.  Clear the **Column names in the first data row** checkbox.  
   
 ### Set locale-sensitive properties  
   

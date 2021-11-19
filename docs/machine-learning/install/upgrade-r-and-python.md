@@ -5,12 +5,14 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/30/2020
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 monikerRange: "=sql-server-2016||=sql-server-2017"
 ---
 # Upgrade Python and R runtime with binding in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
+
+[!INCLUDE [retirement banner](~/includes/machine-learning-server-retirement.md)]
 
 This article describes how to use am installation process called **binding** to upgrade the R or Python runtimes in [SQL Server 2016 R Services](../r/sql-server-r-services.md) or [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md). You can get [newer versions of Python and R](#version-map) by *binding* to [Microsoft Machine Learning Server](/machine-learning-server).
 
@@ -40,7 +42,7 @@ The rest of this article explains the binding mechanism and how it works for eac
 For SQL Server 2016 R Services customers, binding provides:
 
 - Updated R packages.
-- New packages not part of the original installation ([MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package))
+- New packages not part of the original installation ([MicrosoftML](../r/ref-r-microsoftml.md))
 - Pre-trained machine learning [models](/machine-learning-server/install/microsoftml-install-pretrained-models) for sentiment analysis and image detection.
 
 All of the binding can further be refreshed at each new major and minor release of [Microsoft Machine Learning Server](/machine-learning-server/index).
@@ -59,10 +61,10 @@ Component |Initial Release | [R Server 9.0.1](/machine-learning-server/install/r
 ----------|----------------|----------------|--------------|---------|-------|-------|
 Microsoft R Open (MRO) over R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 | R 3.5.2
 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |  9.4.7 |
-[MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
+[MicrosoftML](../r/ref-r-microsoftml.md)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
 [pretrained models](/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
-[sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
-[olapR](/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
+[sqlrutils](../r/ref-r-sqlrutils.md)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
+[olapR](../r/ref-r-olapr.md) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017"
@@ -72,12 +74,12 @@ Component |Initial Release | Machine Learning Server 9.3 | Machine Learning Serv
 ----------|----------------|---------|---------|
 Microsoft R Open (MRO) over R | R 3.3.3 | R 3.4.3 | R 3.5.2 |
 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | 9.4.7 |
-[MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
-[sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | 1.0 |
-[olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | 1.0 |
+[MicrosoftML](../r/ref-r-microsoftml.md) | 9.2  | 9.3| 9.4.7 |
+[sqlrutils](../r/ref-r-sqlrutils.md)| 1.0 |  1.0 | 1.0 |
+[olapR](../r/ref-r-olapr.md) | 1.0 |  1.0 | 1.0 |
 Anaconda 4.2 over Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 |
 [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| 9.4.7 |
-[microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
+[microsoftml](../python/ref-py-microsoftml.md) | 9.2  | 9.3| 9.4.7 |
 [pretrained models](/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| 9.4.7 |
 ::: moniker-end
 

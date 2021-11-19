@@ -2,11 +2,11 @@
 description: "MSSQLSERVER_18482"
 title: MSSQLSERVER_18482
 ms.custom: ""
-ms.date: 10/27/2020
+ms.date: 12/25/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "18482 (Database Engine error)"
 ms.assetid: 
@@ -69,6 +69,6 @@ After running those steps, the sysservers table should look like the following:
 
 There may be some cases wherein the entries in sysservers table look correct, but when you run `select @@servername`, it returns NULL. In these scenarios, you should still run through Steps 1 through 3 listed above to fix the issue.
 
-## More Information
+## More information
 
 You may receive this error message when installing replication because the installation process makes remote procedure calls between the servers involved in replication.

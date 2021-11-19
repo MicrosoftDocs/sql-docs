@@ -7,12 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLFreeHandle"
 apilocation: 
   - "sqlsrv32.dll"
   - "odbc32.dll"
+  - "Msodbcsql11.dll"
+  - "Sqlncli10.dll"
+  - "Sqlncli11.dll"
+  - "Sqlncli11e.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLFreeHandle"
@@ -20,7 +24,7 @@ helpviewer_keywords:
   - "SQLFreeHandle function [ODBC]"
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFreeHandle Function
 **Conformance**  

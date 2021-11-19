@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "conversation_priorities_TSQL"
   - "conversation_priorities"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Service Broker, conversations"
   - "sys.conversation_priorities catalog view"
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.conversation_priorities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

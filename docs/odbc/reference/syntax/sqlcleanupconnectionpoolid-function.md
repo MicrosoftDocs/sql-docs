@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLCleanupConnectionPoolID function [ODBC]"
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLCleanupConnectionPoolID Function
 **Conformance**  

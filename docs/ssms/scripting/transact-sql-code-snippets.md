@@ -15,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Transact-SQL Code Snippets
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A [!INCLUDE[tsql](../../includes/tsql-md.md)].code snippet is a template containing the basic structure of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or block. You can use snippets as a starting point when adding statements in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor. You can insert the pre-defined snippets supplied with SQL Server, or create your own.  
 

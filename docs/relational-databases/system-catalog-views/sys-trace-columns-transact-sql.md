@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.trace_columns"
   - "trace_columns"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.trace_columns catalog view"
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.trace_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

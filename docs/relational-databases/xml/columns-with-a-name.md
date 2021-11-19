@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns with"
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Columns with a Name
 

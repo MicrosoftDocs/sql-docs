@@ -2,11 +2,11 @@
 description: "MSSQLSERVER_6522"
 title: MSSQLSERVER_6522
 ms.custom: ""
-ms.date: 10/27/2020
+ms.date: 12/25/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "6522 (Database Engine error)"
 ms.assetid: 
@@ -46,8 +46,6 @@ When you execute the CLR routine or use the assembly from either of these scenar
 A .NET Framework error occurred during execution of user defined routine or aggregate 'getsid':
 >
 > System.IO.FileLoadException: Could not load file or assembly 'System.DirectoryServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. Assembly in host store has a different signature than assembly in GAC. (Exception from HRESULT: 0x80131050)
->
-> System.IO.FileLoadException:
 
 ## Possible cause
 
@@ -201,7 +199,7 @@ Assume that the MyDateTime data type occupies 9 bytes in storage.
 ## References
 
 - For more information about the assembly version, see [Visual Studio 2005 Retired documentation](https://www.microsoft.com/download/details.aspx?id=55984).
-- For more information about how to update an assembly, see [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql).
-- For more information about how to drop an assembly, see [DROP ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/drop-assembly-transact-sql).
-- For more information about how to register an assembly in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, see [CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql).
-- For more information about the Bcp.exe utility, see [https://msdn2.microsoft.com/library/ms162802.aspx](/sql/tools/bcp-utility).
+- For more information about how to update an assembly, see [ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md).
+- For more information about how to drop an assembly, see [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md).
+- For more information about how to register an assembly in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, see [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md).
+- For more information about the Bcp.exe utility, see [https://msdn2.microsoft.com/library/ms162802.aspx](../../tools/bcp-utility.md).

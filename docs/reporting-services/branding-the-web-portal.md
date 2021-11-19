@@ -1,6 +1,6 @@
 ---
 title: "Branding the web portal | Microsoft Docs"
-ms.date: 07/01/2020
+ms.date: 10/08/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -12,7 +12,7 @@ ms.author: maggies
 
 # Branding the web portal
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
 You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.
 
@@ -26,7 +26,7 @@ A brand package for Reporting Services consists of three items and is packaged a
 - metadata.xml  
 - logo.png (optional)  
   
-The files must have the names listed above. The zip file can be named however you like.  
+The files must have the names listed above. Package the files above into a zip file. The zip file can be named however you like.  
   
 ### metadata.xml
   
@@ -57,7 +57,7 @@ Example with a logo file.
 </Contents>  
 ```
 
-### Colors.json
+### colors.json
   
 When the brand package is uploaded, the server extracts the appropriate name/value pairs from the colors.json file and merges them with the master LESS stylesheet, brand.less. This LESS file is then processed and the resulting CSS file is served to the client. All colors in the stylesheet follow the six-character hexadecimal representation of a color.  
   
@@ -121,7 +121,7 @@ If you include a logo with your brand package, it will appear in the web portal 
   
 The file you include for the logo must use the PNG file format. The file dimensions will be scaled once uploaded to the server. It should scale to around 290px x 60px.  
    
-## Applying the brand package to the web portal
+## <a name="#applying-the-brand-package-to-the-web-portal"></a>Applying the brand package to the web portal
   
 To add, download, or remove a brand package, you can do the following.  
   
@@ -137,7 +137,7 @@ To add, download, or remove a brand package, you can do the following.
   
 **Currently installed brand package** will either display the name of the package that has been uploaded, or it will display None.  
   
-**Upload brand package** will apply the package to the web portal. You will see it take effect immediately.  
+**Upload brand package** will prompt you to select a zip file from a local folder and then apply the package to the web portal. You will see it take effect immediately.  
   
 You can also **Download** or **Remove** the package. Removing the package will reset the web portal to the default brand immediately.  
   
@@ -157,7 +157,7 @@ You can also **Download** or **Remove** the package. Removing the package will r
 </SystemResourcePackage>  
 ```
 
-## Colors.json example
+## colors.json example
 
 ```json
 {  
@@ -253,6 +253,9 @@ You can also **Download** or **Remove** the package. Removing the package will r
 }  
 ```
 
+##  <a name="bkmk_download_samples"></a> To Download the Sample Branding Packages
+ Download the samples from the GitHub site [Sample Branding Packages](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding) to a local folder. For more information, see the section [Applying the brand package to the web portal](#applying-the-brand-package-to-the-web-portal) in this article. 
+
 ## Next steps
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

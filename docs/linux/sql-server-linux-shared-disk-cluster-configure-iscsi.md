@@ -32,7 +32,7 @@ The most important thing to ensure is completed on the target is that the disks 
 This section will cover how to configure an iSCSI initiator on the servers that will serve as nodes for the FCI. The instructions should work as is on RHEL and Ubuntu.
 
 For more information on iSCSI initiator for the supported distributions, consult the following links:
-- [Red Hat](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
+- [Red Hat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/osm-create-iscsi-initiator)
 - [SUSE](https://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
 
@@ -52,7 +52,7 @@ For more information on iSCSI initiator for the supported distributions, consult
 
     See the following example:
 
-    ![Screenshot of the file with the files completely filled out.][2]
+    ![Screenshot of the file with the values completely filled out.][2]
 
 3.	Find the iSCSI target.
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSdistribution_status_TSQL"
   - "MSdistribution_status"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdistribution_status view"
 ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # MSdistribution_status (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

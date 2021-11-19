@@ -26,7 +26,11 @@ Almost everything you can do in a client tool can also be accomplished with Tran
 
 ## Azure Data Studio
 
-The new Azure Data Studio is a cross-platform tool for managing SQL Server. For more information, see [Azure Data Studio](../azure-data-studio/what-is.md).
+The new Azure Data Studio is a cross-platform tool for managing SQL Server. For more information, see [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md).
+
+## Named Pipes
+
+The Named Pipes protocol is not supported for SQL Server on Linux.
 
 ## SQL Server Management Studio on Windows
 

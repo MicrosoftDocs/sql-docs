@@ -100,13 +100,13 @@ This example configures a new distributor and publisher and puts the distributio
 6. On DIST2 and DIST3, run:
 
    ```sql
-   sp_adddistributiondb 'distribution'
+   EXEC sys.sp_adddistributiondb @database = 'distribution';
    ```
 
 1. To add `PUB` as publisher on DIST1, run:
    
    ```sql
-   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   EXEC sys.sp_adddistpublisher @publisher = 'PUB', @distribution_db = 'distribution', @working_directory = '<network path>';
    ```
 
    The value of `@working_directory` should be a network path independent of DIST1, DIST2, and DIST3.
@@ -114,13 +114,13 @@ This example configures a new distributor and publisher and puts the distributio
 1. On DIST2 and DIST3, if the replica is readable as a secondary, run:  
 
    ```sql
-   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   EXEC sys.sp_adddistpublisher @publisher = 'PUB', @distribution_db = 'distribution', @working_directory = '<network path>';
    ```
 
    If a replica is not readable as a secondary, perform failover such that the replica becomes the primary, and run 
 
    ```sql
-   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   EXEC sys.sp_adddistpublisher @publisher = 'PUB', @distribution_db = 'distribution', @working_directory = '<network path>';
    ```
    
    The value of `@working_directory` should be the same as the previous step.
@@ -130,7 +130,7 @@ This example configures a new distributor and publisher and puts the distributio
 To add the `distribution` database AG listener as the distributor, on PUB, run: 
 
    ```sql
-   sp_adddistributor @distributor = 'DISTLISTENER', @password = <distributor_admin password> 
+   EXEC sys.sp_adddistributor @distributor = 'DISTLISTENER', @password = '<distributor_admin password>' ;
    ```
 
    The value of @password should be the one that was specified when distributors were configured in the distributor workflow.
@@ -150,26 +150,26 @@ In this example, DIST1 is the current primary of `distribution` database AG. DIS
 1. On DIST2 and DIST3, run:
 
    ```sql
-   sp_dropdistpublisher 'PUB',  @no_checks = 1
+   EXEC sys.sp_dropdistpublisher @publisher = 'PUB', @no_checks = 1;
    ```
 
 1. On DIST1, run:
 
    ```sql
-   sp_dropdistpublisher 'PUB'
+   EXEC sys.sp_dropdistpublisher @publisher = 'PUB';
    ```
 
 1. Delete the AG.
 2. On DIST2 and DIST3, change the `distribution` database to read_write mode by restoring the database with recovery.
    
    ```sql
-   RESTORE DATABASE distribution WITH RECOVERY, KEEP_REPLICATION
+   RESTORE DATABASE [distribution] WITH RECOVERY, KEEP_REPLICATION;
    ```
 
 1. To drop `distribution` database and to retain the snapshot directory, run: 
 
    ```sql
-   sp_dropdistributiondb 'distribution' , @former_ag_secondary=1
+   EXEC sys.sp_dropdistributiondb @database = 'distribution' , @former_ag_secondary = 1;
    ```
 
   This procedure removes all the dangling jobs on this replica.
@@ -177,7 +177,7 @@ In this example, DIST1 is the current primary of `distribution` database AG. DIS
 1. To drop `distribution` database on DIST1, run
 
    ```sql
-   sp_dropdistributiondb 'distribution'
+   EXEC sys.sp_dropdistributiondb @database = 'distribution';
    ``` 
 
 1. If there are no other distribution databases in AG, run `sp_dropdistributor` on DIST1, DIST2, and DIST3.
@@ -193,19 +193,19 @@ This example adds a new distributor to an existing replication configuration wit
 3. On DIST3, run:
 
    ```sql
-   sp_adddistributiondb 'distribution'
+   EXEC sys.sp_adddistributiondb @database = 'distribution';
    ```
 
 4. On DIST3, if the replica is readable as a secondary, run: 
 
    ```sql
-   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   EXEC sys.sp_adddistpublisher @publisher = 'PUB', @distribution_db = 'distribution', @working_directory = '<network path>';
    ```
 
    If the replica is not readable as a secondary, perform failover such that the replica becomes the primary, and run:
 
    ```sql
-   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   EXEC sys.sp_adddistpublisher @publisher = 'PUB', @distribution_db = 'distribution', @working_directory = '<network path>';
    ```
    
    The value of `@working_directory` should be the same as what was specified for DIST1 and DIST2.
@@ -223,25 +223,25 @@ This example removes a distributor from a current distribution database AG while
 3. On DIST3, change the `distribution` database to read_write mode by restoring the database with recovery. For example, run the following command:  
    
    ```sql
-   RESTORE DATABASE distribution WITH RECOVERY, KEEP_REPLICATION.
+   RESTORE DATABASE distribution WITH RECOVERY, KEEP_REPLICATION;
    ```
    
 1. To remove all the orphaned jobs on DIST3 run: 
 
    ```sql
-   sp_dropdistpublisher 'PUB', @no_checks = 1
+   EXEC sys.sp_dropdistpublisher @publisher = 'PUB', @no_checks = 1;
    ```
 
 1. On DIST3, run:
 
    ```sql
-   sp_dropdistributiondb 'distribution', @former_ag_secondary=1
+   EXEC sys.sp_dropdistributiondb @database = 'distribution', @former_ag_secondary = 1;
    ```
 
 1. On DIST3, run: 
 
    ```sql
-   sp_dropdistributor
+   EXEC sys.sp_dropdistributor;
    ```
 
 ## Remove a publisher from distribution database AG
@@ -259,13 +259,13 @@ DIST1 is the current primary of `distribution` database AG.
 1. On DIST2 and DIST3, run:
 
    ```sql
-   sp_dropdistpublisher 'PUB1',  @no_checks = 1
+   EXEC sys.sp_dropdistpublisher @publisher = 'PUB1',  @no_checks = 1;
    ```
 
 1. On DIST1, run:
 
    ```sql
-   sp_dropdistpublisher 'PUB1'
+   EXEC sys.sp_dropdistpublisher @publisher = 'PUB1';
    ```
 
 1. At this point, there may be orphaned jobs related to PUB1 on DIST2 or DIST3. Whenever a failover occurs to DIST2 and DIST3, orphaned jobs related to all the publications of PUB1 will be removed by the `Monitor and sync replication agent jobs` job.
@@ -283,9 +283,9 @@ On PUB, add subscription as you would normally do to subscriber `SUB`.
 On DIST2 and DIST3, add a linked server for 'SUB' if it is not previously registered with DIST2 or DIST3. Below is a sample TSQL for linked server creation -
 
    ```sql 
-   EXEC master.dbo.sp_addlinkedserver@server =N'SUB', @srvproduct=N'SQL Server'
+   EXEC master.dbo.sp_addlinkedserver@server =N'SUB', @srvproduct=N'SQL Server';
    /* For security reasons the linked server remote logins password is changed with ######## */
-   EXEC master.dbo.sp_addlinkedsrvlogin@rmtsrvname=N'SUB', @useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL
+   EXEC master.dbo.sp_addlinkedsrvlogin@rmtsrvname = N'SUB', @useself = N'True',@locallogin = NULL,@rmtuser =N ULL,@rmtpassword = NULL;
    ```
 
 ## Add a pull subscription
@@ -305,20 +305,20 @@ The following script enables a distribution database in an availability group.
 
 -- Step1 - Configure the Distribution DB nodes (AG Replicas) to act as a distributor
 :Connect SQLNode1
-sp_adddistributor @distributor = @@ServerName, @password = 'Pass@word1'
+EXEC sys.sp_adddistributor @distributor = @@ServerName, @password = 'Pass@word1';
 Go 
 :Connect SQLNode2
-sp_adddistributor @distributor = @@ServerName, @password = 'Pass@word1'
+EXEC sys.sp_adddistributor @distributor = @@ServerName, @password = 'Pass@word1';
 Go
 
 -- Step2 - Configure the Distribution Database
 :Connect SQLNode1
 USE master
-EXEC sp_adddistributiondb @database = 'DistributionDB', @security_mode = 1;
+EXEC sys.sp_adddistributiondb @database = 'DistributionDB', @security_mode = 1;
 GO
-Alter Database [DistributionDB] Set Recovery Full
+ALTER DATABASE [DistributionDB] SET RECOVERY FULL;
 Go
-Backup Database [DistributionDB] to Disk = 'Nul'
+BACKUP DATABASE [DistributionDB] TO DISK = 'Nul';
 Go
 -- Step 3 - Create AG for the Distribution DB.
 :Connect SQLNode1
@@ -328,7 +328,7 @@ CREATE ENDPOINT [Hadr_endpoint]
 	STATE=STARTED
 	AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)   
 	FOR DATA_MIRRORING (ROLE = ALL, AUTHENTICATION = WINDOWS NEGOTIATE
-, ENCRYPTION = REQUIRED ALGORITHM AES)
+, ENCRYPTION = REQUIRED ALGORITHM AES);
 GO
 
 :Connect SQLNode2
@@ -338,7 +338,7 @@ CREATE ENDPOINT [Hadr_endpoint]
 	STATE=STARTED
 	AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)   
 	FOR DATA_MIRRORING (ROLE = ALL, AUTHENTICATION = WINDOWS NEGOTIATE
-, ENCRYPTION = REQUIRED ALGORITHM AES)
+, ENCRYPTION = REQUIRED ALGORITHM AES);
 GO
 
 :Connect SQLNode1
@@ -362,10 +362,10 @@ N'SQLNode2' WITH (ENDPOINT_URL = N'TCP://SQLNode2.contoso.com:5022',
 
 
 :Connect SQLNode2
-ALTER AVAILABILITY GROUP [DistributionDB_AG] JOIN
+ALTER AVAILABILITY GROUP [DistributionDB_AG] JOIN;
 GO  
-ALTER AVAILABILITY GROUP [DistributionDB_AG] GRANT CREATE ANY DATABASE
-Go
+ALTER AVAILABILITY GROUP [DistributionDB_AG] GRANT CREATE ANY DATABASE;
+GO
 
 --STEP4 - Create the Listener for the Availability Group. This is very important.
 :Connect SQLNode1
@@ -380,32 +380,33 @@ GO
 
 -- STEP 5 - Enable SQLNode2 also as a Distributor
 :CONNECT SQLNODE2
-EXEC sp_adddistributiondb @database = 'DistributionDB', @security_mode = 1;
+EXEC sys.sp_adddistributiondb @database = 'DistributionDB', @security_mode = 1;
 GO
 
 --STEP 6 - On all Distributor Nodes Configure the Publisher Details 
 :CONNECT SQLNODE1
-EXEC sp_addDistPublisher @publisher = 'SQLNode4', @distribution_db = 'DistributionDB', 
-	@working_directory = '\\sqlfileshare\Dist_Work_Directory\'
+EXEC sys.sp_adddistpublisher @publisher = 'SQLNode4', @distribution_db = 'DistributionDB', 
+	@working_directory = '\\sqlfileshare\Dist_Work_Directory\';
 GO
 :CONNECT SQLNODE2
-EXEC sp_addDistPublisher @publisher = 'SQLNode4', @distribution_db = 'DistributionDB', 
-	@working_directory = '\\sqlfileshare\Dist_Work_Directory\'
+EXEC sys.sp_adddistpublisher @publisher = 'SQLNode4', @distribution_db = 'DistributionDB', 
+	@working_directory = '\\sqlfileshare\Dist_Work_Directory\';
 GO
 
 -- SECTION 2 ---- CONFIGURE THE PUBLISHER SERVER
 :CONNECT SQLNODE4
-EXEC sp_addDistributor @distributor = 'DistributionDBList', -- Listener for the Distribution DB.	
-	@password = 'Pass@word1'
-Go
+EXEC sys.sp_adddistributor @distributor = 'DistributionDBList', -- Listener for the Distribution DB.	
+	@password = 'Pass@word1';
+GO
 
 -- SECTION 3 ---- CONFIGURE THE SUBSCRIBERS 
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
- /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct = N'SQL Server';
+/* For security reasons the linked server remote logins password is changed with ######## */
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname = N'SQLNODE5', @useself = N'True',
+	@locallogin = NULL,@rmtuser = NULL,@rmtpassword = NULL;
 ```
 
 ## See Also  

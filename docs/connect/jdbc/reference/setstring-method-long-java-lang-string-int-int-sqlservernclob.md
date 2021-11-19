@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 2d5e9f50-15b2-4c76-8bfc-3b5be49c2781
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setString Method (long, java.lang.String, int, int) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

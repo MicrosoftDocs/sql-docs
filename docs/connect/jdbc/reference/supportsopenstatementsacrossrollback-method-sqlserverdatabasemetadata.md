@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDatabaseMetaData.supportsOpenStatementsAcrossRollback"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 4e38b938-f39f-4c5d-9b32-4ba489535c45
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsOpenStatementsAcrossRollback Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

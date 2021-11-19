@@ -57,7 +57,7 @@ For example, as the database administrator, you may want to ensure that certain 
   
     -   **On change: prevent**. This automated mode uses DDL triggers to prevent policy violations.  
   
-        > **IMPORTANT!** If the nested triggers server configuration option is disabled, **On change: prevent** will not work correctly. Policy-Based Management relies on DDL triggers to detect and roll back DDL operations that do not comply with policies that use this evaluation mode. Removing the Policy-Based Management DDL triggers or disabling nest triggers, will cause this evaluation mode to fail or perform unexpectedly.  
+        > **IMPORTANT!** If the nested triggers server configuration option is disabled, **On change: prevent** will not work correctly. Policy-Based Management relies on DDL triggers to detect and roll back DDL operations that do not comply with policies that use this evaluation mode. Removing the Policy-Based Management DDL triggers or disabling nested triggers, will cause this evaluation mode to fail or perform unexpectedly.  
   
     -   **On change: log only**. This automated mode uses event notification to evaluate a policy when a relevant change is made.  
   

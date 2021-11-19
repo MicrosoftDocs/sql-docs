@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLGetDescRec"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetDescRec function [ODBC]"
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetDescRec Function
 **Conformance**  

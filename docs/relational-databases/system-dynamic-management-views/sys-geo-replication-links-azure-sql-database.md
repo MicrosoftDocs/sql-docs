@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "sys.dm_geo_replication_links dynamic management view"
   - "dm_geo_replication_links dynamic management view"
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "= azuresqldb-current"
 ---
 # sys.geo_replication_links (Azure SQL Database)
@@ -39,7 +39,8 @@ monikerRange: "= azuresqldb-current"
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|The secondary type, one of:<br /><br /> 0 = No. The secondary database is not accessible until failover.<br /><br /> 1 = ReadOnly. The secondary database is accessible only to client connections with ApplicationIntent=ReadOnly.<br /><br /> 2 = All. The secondary database is accessible to any client connection.|  
 |secondary_allow_connections _desc|**nvarchar(256)**|No<br /><br /> All<br /><br /> Read-Only|  
-  
+|percent_copied|**int**|Seeding progress in percent|
+
 ## Permissions
 
 This view is only available in the **master** database to the server-level principal login.  

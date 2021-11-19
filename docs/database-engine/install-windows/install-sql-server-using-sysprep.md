@@ -1,7 +1,8 @@
 ---
 title: "Install SQL Server Using SysPrep | Microsoft Docs"
 description: This article describes how to prepare and complete images by using SysPrep in SQL Server installation.
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "09/07/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -34,7 +35,7 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 ### To Prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster (Unattended)  
   
-1. Prepare the image (as discussed in [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)) and capture the windows image through SysPrep Generalization. The following sample prepares the image:  
+1. Prepare the image (as discussed in [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)) and capture the Windows image through SysPrep Generalization. The following sample prepares the image:  
   
     ```  
     Setup.exe /q /ACTION=PrepareImage l /FEATURES=SQLEngine /InstanceID =<MYINST> /IACCEPTSQLSERVERLICENSETERMS  
@@ -98,9 +99,10 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
     |Installation|Components|  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication<br /><br /> Full-Text Features<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in Native mode<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Redistributable Features<br /><br /> Shared Features|  
+    |[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication<br /><br /> Full-Text Features<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in Native mode<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Redistributable Features<br /><br /> Shared Features|  
   
-     A description for each component group appears in the right pane when you highlight the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md). 
+     A description for each component group appears in the right pane when you highlight the feature name. You can select any combination of check boxes. For more information, see  [Features Supported by the Editions of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and
+     [SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)
   
      The prerequisites for the selected features are displayed on the right-hand pane. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will install the prerequisite that are not already installed during the installation step described later in this procedure. 
   
@@ -290,7 +292,7 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 9. On the **Complete** page you can review the completion status of the operation. Click **close** to exit the installation wizard. 
   
-10. Repeat steps 1 to 9 until all components of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] have been removed. 
+10. Repeat steps 1 to 9 until all components of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] have been removed. 
   
 ##  <a name="bk_Modifying_Uninstalling"></a> Modifying or Uninstalling a Completed Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  The process to add or remove features or to uninstall a completed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is similar to the process to an installed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see the following articles:  

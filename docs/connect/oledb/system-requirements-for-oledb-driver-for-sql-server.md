@@ -4,7 +4,7 @@ description: Learn about the software prerequisites necessary to use data access
 ms.custom: ""
 ms.date: "03/18/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, system requirements"
   - "MSOLEDBSQL, system requirements"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # System requirements for OLE DB Driver for SQL Server

@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "3414 (Database Engine error)"
 ms.assetid: f25852f9-b91c-4356-b817-78bec9ec8db4
@@ -38,7 +38,7 @@ Database 'mydb' cannot be opened. It has been marked SUSPECT by recovery. See th
 Note that when this error occurs in **tempdb**, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance shuts down.  
 
 ## Cause
-This error can be caused by a transient condition that existed on the system during a given attempt to start up the server instance or to recover a database. This error can also be caused by a permanent failure that occurs every time that you attempt to start the database. The cause of the recovery failure is typically found in error(s) that precedes Error 3414 in the ERRORLOG or Event Log. The preceding error in the log file contains the same spid<n> value. For example, the following recovery failure is due to a checksum error when trying to read a log block. Note *spid15s* is present in all lines:
+This error can be caused by a transient condition that existed on the system during a given attempt to start up the server instance or to recover a database. This error can also be caused by a permanent failure that occurs every time that you attempt to start the database. The cause of the recovery failure is typically found in error(s) that precedes Error 3414 in the ERRORLOG or Event Log. The preceding error in the log file contains the same spid\<n\> value. For example, the following recovery failure is due to a checksum error when trying to read a log block. Note *spid15s* is present in all lines:
 
 ```
 2020-03-31 17:33:13.00 spid15s     Error: 824, Severity: 24, State: 4.  
@@ -65,7 +65,7 @@ The first method of restoring a good database backup is the best choice to bring
 
 The second best choice, if no backup is available, is to get the database online and accessible. However, you must realize that transactional consistency cannot be guaranteed since recovery failed. There is no way to know what transactions should have been rolled back or rolled forward but were not allowed because of the recovery failure. The steps to proceed with emergency repair are described in the section titled [Resolving Database Errors in Emergency Mode](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md#resolving-errors-in-database-emergency-mode) in the DBCC CHECKDB documentation. 
 
-If emergency repair does not work and you want to try to salvage some data to another database, the way to get access to the database is by setting the database in emergency mode via the ALTER DATABASE <dbname> SET EMERGENCY command. Then you can attempt to copy data out from tables.
+If emergency repair does not work and you want to try to salvage some data to another database, the way to get access to the database is by setting the database in emergency mode via the ALTER DATABASE \<dbname\> SET EMERGENCY command. Then you can attempt to copy data out from tables.
 
 ### Correctable errors and deferred transactions
 Not all errors encountered during database recovery will result in a recovery failure and a suspect database:

@@ -8,7 +8,7 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: v-chmalh
 ---
 # Asynchronous programming
@@ -38,9 +38,9 @@ These asynchronous programming features provides a simple technique to make code
 
 For more information about asynchronous programming in .NET, see:
 
-- [Asynchronous programming in C#](/dotnet/csharp/async.md)
+- [Asynchronous programming in C#](/dotnet/csharp/async)
 
-- [Asynchronous Programming with Async and Await (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/async/index.md)
+- [Asynchronous Programming with Async and Await (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/async/index)
 
 When your user interface is unresponsive or your server does not scale, it is likely that you need your code to be more asynchronous. Writing asynchronous code has traditionally involved installing a callback (also called continuation) to express the logic that occurs after the asynchronous operation finishes. This complicates the structure of asynchronous code as compared with synchronous code.
 

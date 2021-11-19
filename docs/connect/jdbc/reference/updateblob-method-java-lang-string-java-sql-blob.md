@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.updateBlob (java.lang.String, java.sql.Blob)"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: fdd47885-c7ec-4599-a645-ad0e082586f4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateBlob Method (java.lang.String, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

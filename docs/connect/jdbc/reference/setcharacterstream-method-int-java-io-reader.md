@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b8d4e1f7-14fc-4590-af98-1eda30d2ca6d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setCharacterStream Method (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

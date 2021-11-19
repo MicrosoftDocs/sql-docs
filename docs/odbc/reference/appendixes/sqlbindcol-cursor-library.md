@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLAllocStmt function [ODBC], Cursor Library"
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLBindCol (Cursor Library)
 > [!IMPORTANT]  

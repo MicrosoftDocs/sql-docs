@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FILEPROPERTYEX_TSQL"
   - "FILEPROPERTYEX"
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "FILEPROPERTYEX function"
   - "file names [SQL Server], FILEPROPERTYEX"
 author: stevestein
-ms.author: sstein
+ms.author: mikeray
 ---
 # FILEPROPERTYEX (Transact-SQL)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

@@ -4,7 +4,7 @@ description: Learn how OLE DB Driver for SQL Server supports sparse columns and 
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "sparse columns, OLE DB Driver for SQL Server"
   - "sparse columns, OLE DB"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Sparse Columns Support in OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -22,8 +22,6 @@ ms.author: v-daenge
   OLE DB Driver for SQL Server supports sparse columns. For more information about sparse columns in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Use Sparse Columns](../../../relational-databases/tables/use-sparse-columns.md) and [Use Column Sets](../../../relational-databases/tables/use-column-sets.md).  
   
  For more information about sparse column support in OLE DB Driver for SQL Server, [Sparse Columns Support &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md).  
-  
- For information about sample applications that demonstrate this feature, see [SQL Server Data Programming Samples](https://msftdpprodsamples.codeplex.com/).  
   
 ## User Scenarios for Sparse Columns and OLE DB Driver for SQL Server  
  The following table summarizes the common user scenarios for OLE DB Driver for SQL Server users with sparse columns:  

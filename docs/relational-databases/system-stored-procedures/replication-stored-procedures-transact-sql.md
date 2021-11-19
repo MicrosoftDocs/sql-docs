@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "system stored procedures [SQL Server], replication"
   - "replication stored procedures [SQL Server]"

@@ -4,7 +4,7 @@ description: Learn how the ISequentialStream interface supports consumer access 
 ms.custom: ""
 ms.date: "05/25/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, BLOBs"
   - "large data, OLE objects"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # BLOBs and OLE Objects
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

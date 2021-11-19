@@ -7,7 +7,7 @@ ms.date: "01/19/2017"
 ms.reviewer: 
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "RDS properties [ADO]"
   - "properties [ADO], RDS"

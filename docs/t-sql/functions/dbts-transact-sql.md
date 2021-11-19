@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;DBTS (Transact-SQL)"
+description: "@@DBTS (Transact-SQL)"
 title: DBTS (Transact-SQL)
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@DBTS_TSQL"
   - "@@DBTS"
@@ -17,13 +17,13 @@ helpviewer_keywords:
   - "@@DBTS function"
   - "timestamp data type"
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 
 # &#x40;&#x40;DBTS (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the value of the current **timestamp** data type for the current database. The current database will have a guaranteed unique timestamp value.
   

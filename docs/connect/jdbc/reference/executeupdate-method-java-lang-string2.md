@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerPreparedStatement.executeUpdate (java.lang.String)"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # executeUpdate Method (java.lang.String)
 

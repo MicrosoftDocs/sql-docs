@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerCallableStatement.setTime (java.lang.String, java.lang.Time, java.lang.Calendar))"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: ca08fea8-ee1a-49e4-a973-2923d325df79
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setTime Method (java.lang.String, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

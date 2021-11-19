@@ -4,10 +4,10 @@ title: "sys.schemas (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "schemas_TSQL"
   - "sys.schemas_TSQL"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.schemas catalog view"
 ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Schemas Catalog Views - sys.schemas
@@ -42,7 +42,7 @@ Database schemas act as namespaces or containers for objects, such as tables, vi
 Each schema has a an owner. The owner is a security [principal](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ## Permissions  
- Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requires membership in the **public** role.
   
 ## See Also  
 [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)

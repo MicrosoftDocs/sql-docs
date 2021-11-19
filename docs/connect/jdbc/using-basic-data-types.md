@@ -2,7 +2,7 @@
 title: "Using basic JDBC data types"
 description: "The Microsoft JDBC Driver for SQL Server uses basic JDBC data types to convert SQL Server data types to a format that can be understood by Java."
 ms.custom: ""
-ms.date: "08/24/2019"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using basic data types
 
@@ -57,7 +57,7 @@ The following table lists the default mappings between the basic [!INCLUDE[ssNoV
 | varchar            | VARCHAR                                            | String                       |
 | varchar(max)       | VARCHAR                                            | String                       |
 | xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String<br /><br /> SQLXML    |
-| sqlvariant         | SQLVARIANT                                         | Object                       |
+| sqlvariant         | microsoft.sql.Types.SQL_VARIANT                    | Object                       |
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   

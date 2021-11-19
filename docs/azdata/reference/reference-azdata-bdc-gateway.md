@@ -1,11 +1,11 @@
 ---
 title: azdata bdc gateway reference
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Reference article for azdata bdc gateway commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 10/05/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -22,10 +22,10 @@ The following article provides reference for the **sql** commands in the **azdat
 |Command|Description|
 | --- | --- |
 [azdata bdc gateway status](reference-azdata-bdc-gateway-status.md) | Gateway service status commands.
+[azdata bdc gateway settings](reference-azdata-bdc-gateway-settings.md) | BDC settings commands for gateway service.
 
 ## Next steps
 
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
-

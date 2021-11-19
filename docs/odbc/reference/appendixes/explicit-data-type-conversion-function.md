@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "explicit data type conversion functions [ODBC]"
   - "data type conversion functions [ODBC]"
   - "functions [ODBC], explicit data type conversion functions"
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Explicit Data Type Conversion Function
 Explicit data type conversion is specified in terms of SQL data type definitions.  

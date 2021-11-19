@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ODBC cursor library [ODBC], cache"
   - "cursor library [ODBC], cache"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "cache [ODBC]"
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Row Status
 > [!IMPORTANT]  

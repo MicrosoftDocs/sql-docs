@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDatabaseMetaData.dataDefinitionIgnoredInTransactions"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 1674fb46-43a7-46d0-9f05-cf993d3bc032
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # dataDefinitionIgnoredInTransactions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

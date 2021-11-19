@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 9/2/2020
+ms.date: 11/04/2021
 ---
 
 # Create a report server database, Report Server Configuration Manager  
@@ -44,7 +44,7 @@ The following are example names of the three SharePoint mode databases:
  ### Native mode
  You can create the native mode report server database in the following ways:  
   
-- **Automatic**. Use the SQL Server setup wizard if you choose the default configuration option for installation. In the SQL Server Installation Wizard, this option is **Install and configure** on the **Report Server Installation Options** page. If you choose the **Install only** option, you must use SQL Server Report Server Configuration Manager to create the database.  
+- **Automatic**. Use the SQL Server setup wizard if you choose the default configuration option for installation. In the SQL Server Installation Wizard, this option is **Install and configure** on the **Report Server Installation Options** page. If you choose the **Install only** option, you must use SQL Server Report Server Configuration Manager to create the database. (Applies only to SQL Server Reporting Services 2016 and earlier)
   
 - **Manual**. Use SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Create the report server database manually if you use a remote [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to host the database. For more information, see [Create a Native Mode Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
@@ -74,11 +74,14 @@ The **Report Server Installation Options** page has only one option for SharePoi
 - SQL Server 2017  
 ::: moniker-end
 
-- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+- [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  
   
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+
+> [!NOTE] 
+> SQL on Linux isn't a supported environment to host a SQL Server Reporting Services database.
 
 If you create the report server database on a remote computer, configure the connection to use a domain user account or a service account that has network access. If you use a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, consider which credentials the report server should use to connect to the instance. For more information, see [Configure a Report Server Database Connection &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
@@ -95,4 +98,4 @@ If you create the report server database on a remote computer, configure the con
 
 Read about [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).  
 
-More questions? Ask the [Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+More questions? Ask the [Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

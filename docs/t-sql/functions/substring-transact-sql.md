@@ -3,10 +3,10 @@ title: "SUBSTRING (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQL reference for the SUBSTRING function. This function returns a portion of a specified character, binary, text, or image expression."
 ms.date: "10/21/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SUBSTRING"
   - "SUBSTRING_TSQL"

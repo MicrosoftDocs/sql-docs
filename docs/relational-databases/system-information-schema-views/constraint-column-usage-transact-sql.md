@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "CONSTRAINT_COLUMN_USAGE_TSQL"
   - "CONSTRAINT_COLUMN_USAGE"

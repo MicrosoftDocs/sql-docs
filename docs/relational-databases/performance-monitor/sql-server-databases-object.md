@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, Databases Object | Microsoft Docs"
+title: "SQL Server, Databases object"
 description: Learn about the SQLServer:Databases object, which provides counters for bulk copy operations, backup and restore throughput, and transaction log activities.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -13,11 +13,10 @@ helpviewer_keywords:
   - "Databases object"
   - "SQLServer:Databases"
   - "Availability Groups [SQL Server], performance counters"
-ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Databases Object
+# SQL Server, Databases object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:Databases** object in SQL Server provides counters to monitor bulk copy operations, backup and restore throughput, and transaction log activities. Monitor transactions and the transaction log to determine how much user activity is occurring in the database and how full the transaction log is becoming. The amount of user activity can determine the performance of the database and affect log size, locking, and replication. Monitoring low-level log activity to gauge user activity and resource usage can help you to identify performance bottlenecks.  
   
@@ -27,13 +26,14 @@ ms.author: wiassaf
   
 |SQL Server Databases counters|Description|  
 |-----------------------------------|-----------------|  
+|**Active parallel redo threads**|Count of active parallel redo threads.|
 |**Active Transactions**|Number of active transactions for the database.|  
 |**Avg Dist From EOL/LP Request**|Average distance in bytes from end of log per log pool request, for requests in the last VLF.| 
 |**Backup/Restore Throughput/sec**|Read/write throughput for backup and restore operations of a database per second. For example, you can measure how the performance of the database backup operation changes when more backup devices are used in parallel or when faster devices are used. Throughput of a database backup or restore operation allows you to determine the progress and performance of your backup and restore operations.|  
 |**Bulk Copy Rows/sec**|Number of rows bulk copied per second.|  
 |**Bulk Copy Throughput/sec**|Amount of data bulk copied (in kilobytes) per second.|  
 |**Commit table entries**|The size (row count) of the in-memory portion of the commit table for the database. For more information, see [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
-|**Data File(s) Size (KB)**|Cumulative size (in kilobytes) of all the data files in the database including any automatic growth. Monitoring this counter is useful, for example, for determining the correct size of **tempdb**.|  
+|**Data File(s) Size (KB)**|Cumulative size (in kilobytes) of all the data files in the database including any automatic growth. Monitoring this counter is useful, for example, for determining the correct size of `tempdb`.|  
 |**DBCC Logical Scan Bytes/sec**|Number of logical read scan bytes per second for database console commands (DBCC).|  
 |**Group Commit Time/sec**|Group stall time (microseconds) per second.|
 |**Log Bytes Flushed/sec**|Total number of log bytes flushed.|  
@@ -66,11 +66,20 @@ ms.author: wiassaf
 |**Log Shrinks**|Total number of log shrinks for this database.|  
 |**Log Truncations**|The number of times the transaction log has been truncated (in Simple Recovery Model).|  
 |**Percent Log Used**|Percentage of space in the log that is in use.|  
+|**PVS in-row diff generated/sec**|Number of versions generated with in-row diff style. |
+|**PVS in-row diff retrieved/sec**|Number of versions retrieved with in-row diff style. |
+|**PVS off-row pages allocated/sec**|Number of pages allocated to the persistent version store.|
+|**PVS off-row pages deleted/sec**|Number of pages deallocated from the persistent version store. |
+|**PVS off-row record generated/sec**|Number of records inserted to the persistent version store. |
+|**PVS off-row record retrieved/sec**|Number of records retrieved from the persistent version store. |
 |**Repl. Pending Xacts**|Number of transactions in the transaction log of the publication database marked for replication, but not yet delivered to the distribution database.|  
 |**Repl. Trans. Rate**|Number of transactions per second read out of the transaction log of the publication database and delivered to the distribution database.|  
 |**Shrink Data Movement Bytes/sec**|Amount of data being moved per second by autoshrink operations, or DBCC SHRINKDATABASE or DBCC SHRINKFILE statements.|  
 |**Tracked transactions/sec**|Number of committed transactions recorded in the commit table for the database.|  
-|**Transactions/sec**|Number of transactions started for the database per second.<br /><br /> **Transactions/sec** does not count XTP-only transactions (transactions started by a natively compiled stored procedure)..|  
+|**Transactions/sec**|Number of transactions started for the database per second.<br /><br /> **Transactions/sec** does not count XTP-only transactions (transactions started by a natively compiled stored procedure.)|  
+|**WPR add lsn bucket miss**|Number of bucket misses when adding LSNs to writePageRecorder.|
+|**WPR bucket swaps**|Number of bucket swaps in writePageRecorder. |
+|**WPR stale check bucket miss**|Number of bucket misses when checking for stale LSNs. |
 |**Write Transactions/sec**|Number of transactions that wrote to the database and committed, in the last second.|  
 |**XTP Controller DLC Latency Base**|For internal use only.| 
 |**XTP Controller DLC Latency/Fetch**|Average latency in microseconds between log blocks entering the Direct Log Consumer and being retrieved by the XTP controller, per second.|
@@ -78,7 +87,17 @@ ms.author: wiassaf
 |**XTP Controller Log Processed/sec**|The amount of log bytes processed by the XTP controller thread, per second.|
 |**XTP Memory Used (KB)**|The amount of memory used by XTP in the database.| 
   
-## See Also  
+
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%Databases%';
+```  
+
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   

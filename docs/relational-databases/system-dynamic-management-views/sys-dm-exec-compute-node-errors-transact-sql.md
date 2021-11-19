@@ -4,10 +4,10 @@ title: "sys.dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "SYS.DM_EXEC_COMPUTE_NODE_ERRORS_TSQL"
   - "DM_EXEC_COMPUTE_NODE_ERRORS"
@@ -20,13 +20,13 @@ helpviewer_keywords:
   - "dm_exec_compute_node_errors"
   - "sys.dm_exec_compute_node_errors management view"
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_node_errors (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
+[!INCLUDE [sqlserver2016-asdbmi](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
   Returns errors that occur on PolyBase compute nodes.  
   

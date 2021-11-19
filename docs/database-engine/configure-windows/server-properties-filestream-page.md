@@ -18,7 +18,7 @@ ms.author: maghan
 ---
 # Server Properties - FILESTREAM Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ## UI element list  
  **Enable FILESTREAM for Transact-SQL access**  

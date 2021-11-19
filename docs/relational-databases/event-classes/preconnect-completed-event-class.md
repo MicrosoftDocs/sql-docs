@@ -6,12 +6,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "PreConnect:Completed Event Class"
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PreConnect:Completed Event Class

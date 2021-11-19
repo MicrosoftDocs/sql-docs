@@ -6,7 +6,7 @@ ms.date: "08/09/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_resource_governor_resource_pool_affinity_TSQL"
   - "sys.dm_resource_governor_resource_pool_affinity"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "dm_resource_governor_resource_pool_affinity"
   - "sys.dm_resource_governor_resource_pool_affinity"
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

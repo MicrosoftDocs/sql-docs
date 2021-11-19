@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Levels collection [ADO MD], members"
 ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f

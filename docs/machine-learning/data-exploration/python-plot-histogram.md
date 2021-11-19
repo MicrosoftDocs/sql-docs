@@ -2,8 +2,8 @@
 title: Plot a histogram for data exploration with Python
 titleSuffix: SQL machine learning
 description: Learn how to create a histogram to visualize data using Python.
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.date: 07/14/2020
 ms.topic: how-to
 ms.prod: sql
@@ -32,7 +32,7 @@ This article describes how to plot data using the Python package [pandas'.hist()
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
 
-* Azure Data Studio. To install, see [Azure Data Studio](../../azure-data-studio/what-is.md).
+* Azure Data Studio. To install, see [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
 
 * [Restore sample DW database](../../samples/adventureworks-install-configure.md) to get sample data used in this article.
 
@@ -82,7 +82,7 @@ password = 'databasename'
 cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 sql = "SELECT DATEDIFF(year, c.BirthDate, GETDATE()) AS Age FROM [dbo].[FactInternetSales] s INNER JOIN dbo.DimCustomer c ON s.CustomerKey = c.CustomerKey"
-df = pd.read_sql(sql, cnxn)
+df = plt.read_sql(sql, cnxn)
 df.hist(bins=10)
 ```
 

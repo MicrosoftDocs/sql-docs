@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "version flags [Master Data Services]"
   - "versions [Master Data Services], version flags"
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Versions (Master Data Services)

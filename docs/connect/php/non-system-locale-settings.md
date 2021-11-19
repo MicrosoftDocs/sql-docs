@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "locale, linux, macOS, system"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Non-System Locale Settings

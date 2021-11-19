@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLTablePrivileges"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLTablePrivileges function [ODBC]"
 ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLTablePrivileges Function
 **Conformance**  

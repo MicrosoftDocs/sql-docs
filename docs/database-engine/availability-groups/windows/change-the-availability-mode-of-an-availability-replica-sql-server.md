@@ -17,7 +17,7 @@ ms.author: chadam
 ---
 # Change availability mode of a replica within an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to change the availability mode of an availability replica in an Always On availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell. The availability mode is a replica property that controls the whether the replica commits asynchronously or synchronously. *Asynchronous-commit mode* maximizes performance at the expense of high availability and supports only forced manual failover (with possible data loss), typically called *forced failover*. *Synchronous-commit mode* emphasizes high availability over performance and, once the secondary replica is synchronized, supports manual failover and, optionally, automatic failover.  
+  This topic describes how to change the availability mode of an availability replica in an Always On availability group in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell. The availability mode is a replica property that controls the whether the replica commits asynchronously or synchronously. *Asynchronous-commit mode* maximizes performance at the expense of high availability and supports only forced manual failover (with possible data loss), typically called *forced failover*. *Synchronous-commit mode* emphasizes high availability over performance and, once the secondary replica is synchronized, supports manual failover and, optionally, automatic failover.  
     
 ##  <a name="Prerequisites"></a> Prerequisites  
   
@@ -48,8 +48,11 @@ You must be connected to the server instance that hosts the primary replica.
 2.  Use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) statement, as the following example:  
   
      ```sql
-     ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
-     WITH ( AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT , FAILOVER_MODE = MANUAL );  
+     ALTER AVAILABILITY GROUP [<availability_group_name>] MODIFY REPLICA ON '*server_name*'  
+     WITH ( AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT)
+	 
+     ALTER AVAILABILITY GROUP [<availability_group_name>] MODIFY REPLICA ON '*server_name*'  
+     WITH ( FAILOVER_MODE = MANUAL );  
      ```
      
      Where *group_name* is the name of the availability group and *server_name* is the name of the server instance that hosts the replica to be modified.  

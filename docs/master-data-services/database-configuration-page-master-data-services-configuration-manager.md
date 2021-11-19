@@ -11,7 +11,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.mds.configmanager.dbpg.f1"
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Database Configuration Page (Master Data Services Configuration Manager)

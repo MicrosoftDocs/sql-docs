@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "service_contract_message_usages_TSQL"
   - "sys.service_contract_message_usages"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_contract_message_usages catalog view"
 ms.assetid: f783e662-126c-4595-8e22-f9d05191f5d0
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.service_contract_message_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

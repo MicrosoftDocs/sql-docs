@@ -275,7 +275,7 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```
 
-If manual seeding is used to create the database on the forwarder, perform a full backup and a transaction log backup from the global primary, and restore them to the forwarder with NONRECOVERY option. For example:
+If manual seeding is used to create the database on the forwarder, perform a full backup and a transaction log backup from the global primary, and restore them to the forwarder with NORECOVERY option. For example:
 
 To back up on the global primary: 
 

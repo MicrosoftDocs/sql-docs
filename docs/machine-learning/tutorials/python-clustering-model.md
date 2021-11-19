@@ -57,7 +57,7 @@ In [part four](python-clustering-model-deploy.md), you'll learn how to create a 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
 
-* [Azure Data Studio](../../azure-data-studio/what-is.md). You'll use a notebook in Azure Data Studio for both Python and SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+* [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md). You'll use a notebook in Azure Data Studio for both Python and SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 
 * Additional Python packages - The examples in this tutorial series use Python packages that you may or may not have installed.
 

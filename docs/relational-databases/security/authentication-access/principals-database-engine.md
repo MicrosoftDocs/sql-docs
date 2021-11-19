@@ -4,7 +4,7 @@ description: Learn about principals in Database Engine, which are entities that 
 ms.custom: ""
 ms.date: "01/09/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "derived hierarchies, hiding levels"
   - "derived hierarchies, deleting levels"
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Hide or Delete Levels in a Derived Hierarchy (Master Data Services)

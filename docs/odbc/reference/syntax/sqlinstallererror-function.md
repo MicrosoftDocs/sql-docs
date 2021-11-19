@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLInstallerError"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLInstallerError [ODBC]"
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLInstallerError Function
 **Conformance**  

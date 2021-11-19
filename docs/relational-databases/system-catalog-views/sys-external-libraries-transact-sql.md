@@ -6,7 +6,7 @@ ms.date: 06/25/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "external_libraries"
   - "external_libraries_TSQL"

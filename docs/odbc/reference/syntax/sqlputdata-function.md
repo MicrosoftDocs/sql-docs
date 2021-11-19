@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLPutData"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLPutData function [ODBC]"
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLPutData Function
 **Conformance**  

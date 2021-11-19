@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerStatement.executeUpdate (java.lang.String[])"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # executeUpdate Method (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

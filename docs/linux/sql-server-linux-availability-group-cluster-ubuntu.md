@@ -16,7 +16,7 @@ ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This document explains how to create a three-node cluster on Ubuntu and add a previously created availability group as a resource in the cluster. 
+This document explains how to create a three-node cluster on Ubuntu 20.04 and add a previously created availability group as a resource in the cluster. 
 For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
@@ -120,8 +120,8 @@ sudo systemctl enable pacemaker
 The following command creates a three-node cluster. Before you run the script, replace the values between `< ... >`. Run the following command on the primary node. 
 
    ```bash
-   sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <node1> <node2...> <node3>
+   sudo pcs host auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
+   sudo pcs cluster setup <clusterName> <node1> <node2> <node3>
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```
@@ -189,8 +189,7 @@ sudo apt-get install mssql-server-ha
 To create the availability group resource, use `pcs resource create` command and set the resource properties. Below command creates a `ocf:mssql:ag` master/subordinate type resource for availability group with name `ag1`. 
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master meta notify=true
-
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s promotable notify=true
 ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
@@ -212,7 +211,7 @@ Use constraints to configure the decisions of the cluster. Constraints have a sc
 To ensure that primary replica and the virtual ip resource are on the same host, define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node. 
 
 ```bash
-sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
+sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY
 ```
 
 ## Add ordering constraint
@@ -234,7 +233,7 @@ To prevent the IP address from temporarily pointing to the node with the pre-fai
 To add an ordering constraint, run the following command on one node:
 
 ```bash
-sudo pcs constraint order promote ag_cluster-master then start virtualip
+sudo pcs constraint order promote ag_cluster-clone then start virtualip
 ```
 
 >[!IMPORTANT]

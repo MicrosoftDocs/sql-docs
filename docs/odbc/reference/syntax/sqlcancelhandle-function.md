@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords: 
   - "SQLCancelHandle"
 helpviewer_keywords: 
   - "SQLCancelHandle function [ODBC]"
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLCancelHandle Function
 **Conformance**  

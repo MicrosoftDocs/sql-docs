@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLColumns"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLColumns function [ODBC]"
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLColumns Function
 **Conformance**  

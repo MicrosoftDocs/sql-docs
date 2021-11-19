@@ -1,20 +1,23 @@
 ---
-description: "sp_data_source_table_columns (Transact-SQL)"
-title: "sp_data_source_table_columns | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/10/2020"
+title: sp_data_source_table_columns
+description: sp_data_source_table_columns (Transact-SQL)
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords: 
-  - "sp_data_source_table_columns"
+  - sp_data_source_table_columns_TSQL
+dev_langs:
+  - TSQL
 helpviewer_keywords: 
   - "PolyBase"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.custom: ""
+ms.date: "11/10/2020"
 ---
+
 # sp_data_source_table_columns (Transact-SQL)
 
 [!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
@@ -22,7 +25,7 @@ ms.author: mikeray
 Returns list of columns in external data source table.
   
 > [!NOTE]
-> This procedure is introduced in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster.md#cu5).
+> This procedure is introduced in [SQL 2019 CU5](../../big-data-cluster/release-notes-cumulative-updates-history.md#cu5).
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

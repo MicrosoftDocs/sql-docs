@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sql_variant"
   - "sql_variant_TSQL"
@@ -25,7 +25,7 @@ ms.author: mikeray
 
 # sql_variant (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 A data type that stores values of various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-supported data types.
   
@@ -111,7 +111,6 @@ The following lists the types of values that cannot be stored by using **sql_var
 - **text**
 - **varchar(max)**
 - **varbinary(max)**
-- **sql_variant**
 - User-defined types
 - **xml**
 

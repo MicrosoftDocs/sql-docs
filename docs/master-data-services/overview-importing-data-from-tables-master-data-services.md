@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "importing data [Master Data Services]"
   - "staging process [Master Data Services]"
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Overview: Importing Data from Tables (Master Data Services)
@@ -44,7 +44,7 @@ ms.author: lle
      You use staging stored procedures or [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] to load the data.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], support for the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] staging processes is deprecated.  
+>  In [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], support for the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] staging processes is deprecated.  
   
 ## Deactivating and Deleting Members (MDS)  
  Deactivating means the member can be reactivated. If you reactivate a member, its attributes and its membership in hierarchies and collections are restored. All previous transactions are intact. Deactivation transactions are visible to administrators in the **Version Management** functional area of the Master Data Manager.  

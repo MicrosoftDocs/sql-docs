@@ -2,7 +2,7 @@
 description: "Modify a Partition Scheme"
 title: "Modify a Partition Scheme | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "1/5/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Modify a Partition Scheme
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  You can modify a partition scheme in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by designating a filegroup to hold the next partition that is added to a partitioned table using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You do this by assigning the NEXT USED property to a filegroup. You can assign the NEXT USED property to an empty filegroup or to one that already holds a partition. In other words, a filegroup can hold more than one partition.  
+  You can modify a partition scheme in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by designating a filegroup to hold the next partition that is added to a partitioned table using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You do this by assigning the NEXT USED property to a filegroup. You can assign the NEXT USED property to an empty filegroup or to one that already holds a partition. In other words, a filegroup can hold more than one partition.  
   
  **In This Topic**  
   
@@ -34,6 +34,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
  Any filegroup affected by ALTER PARTITION SCHEME must be online.  
+
+> [!NOTE]
+> In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only primary filegroups are supported.  
   
 ###  <a name="Security"></a> Security  
   

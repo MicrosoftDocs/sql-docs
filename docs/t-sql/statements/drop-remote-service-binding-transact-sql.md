@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP REMOTE SERVICE BINDING"
   - "DROP_REMOTE_SERVICE_BINDING_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "remote service bindings [Service Broker], dropping"
   - "DROP REMOTE SERVICE BINDING statement"
 ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

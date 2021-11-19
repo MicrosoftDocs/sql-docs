@@ -10,4 +10,4 @@
  ms.custom: include file
 ---
 
- :::image type="icon" source="media/yes-icon.png":::Power BI Report Server
+✔️&nbsp;Power&nbsp;BI&nbsp;Report&nbsp;Server

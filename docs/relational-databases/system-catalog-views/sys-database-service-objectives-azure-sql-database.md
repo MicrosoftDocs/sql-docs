@@ -4,7 +4,7 @@ title: "sys.database_service_objectives"
 titleSuffix: Azure SQL Database
 ms.date: "03/21/2018"
 ms.service: sql-database
-ms.prod_service: "sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.topic: conceptual
 keywords: 
@@ -13,8 +13,8 @@ keywords:
 f1_keywords: 
   - "DATABASE_SERVICE_OBJECTIVES_TSQL"
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---

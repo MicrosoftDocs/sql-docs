@@ -4,7 +4,7 @@ description: "CREATE XML INDEX (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_XML_INDEX_TSQL"
   - "XML INDEX"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "index creation [SQL Server], XML indexes"
   - "XML indexes [SQL Server], creating"
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "08/10/2017"

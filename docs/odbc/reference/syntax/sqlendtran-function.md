@@ -7,12 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLEndTran"
 apilocation: 
   - "sqlsrv32.dll"
   - "odbc32.dll"
+  - "Msodbcsql11.dll"
+  - "Sqlncli10.dll"
+  - "Sqlncli11.dll"
+  - "Sqlncli11e.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLEndTran"
@@ -20,7 +24,7 @@ helpviewer_keywords:
   - "SQLEndTran function [ODBC]"
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLEndTran Function
 **Conformance**  

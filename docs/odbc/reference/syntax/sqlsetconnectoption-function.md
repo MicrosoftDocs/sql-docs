@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLSetConnectOption"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLSetConnectOption function [ODBC]"
 ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetConnectOption Function
 **Conformance**  

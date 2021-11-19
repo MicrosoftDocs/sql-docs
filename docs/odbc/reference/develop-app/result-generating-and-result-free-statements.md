@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "result-free statements [ODBC]"
 ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Result-Generating and Result-Free Statements
 SQL statements can be loosely divided into the following five categories:  

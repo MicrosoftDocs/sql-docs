@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@TIMETICKS_TSQL"
   - "@@TIMETICKS"
@@ -24,7 +24,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # &#x40;&#x40;TIMETICKS (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of microseconds per tick.  
   

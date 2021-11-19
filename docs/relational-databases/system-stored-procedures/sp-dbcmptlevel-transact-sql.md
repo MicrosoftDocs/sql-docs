@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_dbcmptlevel"
   - "sp_dbcmptlevel_TSQL"
@@ -52,7 +52,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  **120** = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
- **130** = [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+ **130** = [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

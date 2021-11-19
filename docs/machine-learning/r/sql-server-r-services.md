@@ -4,11 +4,13 @@ titleSuffix:
 description: R Services is a feature in SQL Server 2016 that gives the ability to run R scripts with relational data. You can use open-source packages and frameworks, and the Microsoft R packages for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/06/2020
+ms.date: 09/16/2021
 ms.topic: overview
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 monikerRange: "=sql-server-2016"
+ms.custom:
+  - intro-overview
 ---
 # What is SQL Server 2016 R Services?
 
@@ -49,7 +51,7 @@ There are two ways to execute R scripts in R Services:
 
 + The most common way is to use the T-SQL stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-+ You can also use your preferred R client and write scripts that push the execution (referred to as a *remote compute context*) to a remote SQL Server. See how to [set up a data science client R development](../r/set-up-a-data-science-client.md) for more information.
++ You can also use your preferred R client and write scripts that push the execution (referred to as a *remote compute context*) to a remote SQL Server. See how to [set up a data science client R development](../r/set-up-data-science-client.md) for more information.
 
 <a name="version"></a>
 
@@ -77,17 +79,17 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 | [RevoScaleR](../r/ref-r-revoscaler.md) | The primary package for scalable R. Data transformations and manipulation, statistical summarization, visualization, and many forms of modeling. Additionally, functions in this package automatically distribute workloads across available cores for parallel processing. |
 | [MicrosoftML (R)](../r/ref-r-microsoftml.md) | Adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. |
 | [olapR](../r/ref-r-olapr.md) | R functions used for MDX queries against a SQL Server Analysis Services OLAP cube. |
-| [sqlrutils](../r/ref-r-sqlrutils.md) | A mechanism to use R scripts in a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an [R development environment](../r/set-up-a-data-science-client.md). |
+| [sqlrutils](../r/ref-r-sqlrutils.md) | A mechanism to use R scripts in a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an [R development environment](../r/set-up-data-science-client.md). |
 | [Microsoft R Open](https://mran.microsoft.com/rro) | Microsoft R Open (MRO) is the enhanced distribution of R from Microsoft. It is a complete open-source platform for statistical analysis and data science. It is based on and 100% compatible with R, and includes additional capabilities for improved performance and reproducibility. |
 
-## How do I get started with RServices?
+## How do I get started with R Services?
 
 1. [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
 1. Configure your development tools. You can use:
 
-    + [Azure Data Studio](../../azure-data-studio/what-is.md) or [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) to use T-SQL and the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute your R script.
-    + R on your own development laptop or workstation to execute scripts. You can either pull data down locally or push the execution remotely to SQL Server with [RevoScaleR](../r/ref-r-revoscaler.md). See how to [set up a data science client R development](../r/set-up-a-data-science-client.md) for more information.
+    + [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) or [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) to use T-SQL and the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute your R script.
+    + R on your own development laptop or workstation to execute scripts. You can either pull data down locally or push the execution remotely to SQL Server with [RevoScaleR](../r/ref-r-revoscaler.md). See how to [set up a data science client R development](../r/set-up-data-science-client.md) for more information.
 
 1. Write your first R script
 
@@ -99,4 +101,4 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 ## Next steps
 
 + [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [Set up a data science client for R development](../r/set-up-a-data-science-client.md)
++ [Set up a data science client for R development](../r/set-up-data-science-client.md)

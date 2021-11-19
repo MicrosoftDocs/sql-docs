@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "IsNull (geometry Data Type)"
 dev_langs: 
@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # IsNull (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The type of a **geometry** instance is null. Returns 0 if the instance isn't null.
   

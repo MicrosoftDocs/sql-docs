@@ -7,12 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLNumParams"
 apilocation: 
   - "sqlsrv32.dll"
   - "odbc32.dll"
+  - "Msodbcsql11.dll"
+  - "Sqlncli10.dll"
+  - "Sqlncli11.dll"
+  - "Sqlncli11e.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLNumParams"
@@ -20,7 +24,7 @@ helpviewer_keywords:
   - "SQLNumParams function [ODBC]"
 ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLNumParams Function
 **Conformance**  

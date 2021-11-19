@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLGetDiagField"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetDiagField function [ODBC]"
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetDiagField Function
 

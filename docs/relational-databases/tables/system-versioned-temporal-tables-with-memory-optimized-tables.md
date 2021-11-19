@@ -65,7 +65,7 @@ The data flush task is activated regularly with a schedule that varies based on 
 Data flush deletes all records from in-memory internal buffer that are older than the oldest currently running transaction to move these records to the disk-based history table.
 
 You can enforce a data flush by invoking [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) and specifying the schema and table name:
-**sys.sp_xtp_flush_temporal_history @schema_name, @object_name**. With this user-executed command, the same data movement process is invoked as when data flush task is invoked by the system on internal schedule.
+**sys.sp_xtp_flush_temporal_history \@schema_name, \@object_name**. With this user-executed command, the same data movement process is invoked as when data flush task is invoked by the system on internal schedule.
 
 ## See Also
 

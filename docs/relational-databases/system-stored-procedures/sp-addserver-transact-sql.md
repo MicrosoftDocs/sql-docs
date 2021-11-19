@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_addserver"
   - "sp_addserver_TSQL"
@@ -63,6 +63,8 @@ sp_addserver [ @server = ] 'server' ,
  **sp_addserver** cannot be used inside a user-defined transaction.
 
  Using **sp_addserver** to add a remote server is discontinued. Use [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) instead.
+ 
+ Using **sp_addserver** to change the local server name may cause undesired effects or unsupported configurations when using Availbility Groups or Replication.
 
 ## Permissions
  Requires membership in the **setupadmin** fixed server role.

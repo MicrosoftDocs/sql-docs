@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "01/28/2019"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "bandwidth_usage"
   - "sys.bandwidth_usage"

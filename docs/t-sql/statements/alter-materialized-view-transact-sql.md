@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: jrasnick
 ms.technology: data-warehouse
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_VIEW_TSQL"
   - "ALTER VIEW"
@@ -39,7 +39,8 @@ ALTER MATERIALIZED VIEW [ schema_name . ] view_name
 }
 [;]
 ```  
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
 

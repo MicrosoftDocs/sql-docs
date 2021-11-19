@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "log_shipping_monitor_primary"
   - "log_shipping_monitor_primary_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_monitor_primary system table"
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 6ae704f5-823c-4dfe-8c08-07b547c61a3c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getNCharacterStream Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

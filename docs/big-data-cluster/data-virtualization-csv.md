@@ -4,7 +4,7 @@ subtitle: SQL Server Big Data Clusters
 description: Steps detailing the create external table for virtualization of a CSV file in a Big Data Cluster
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.date: 04/24/2020
 ms.topic: conceptual
 ms.prod: sql
@@ -15,7 +15,7 @@ ms.metadata: seo-lt-2019
 
 # Virtualize CSV data from storage pool (Big Data Clusters)
 
-SQL Server Big Data Clusters can virtualize data from CSV files in HDFS. This process allows the data to stay in its original location, but can be queried from a SQL Server instance like any other table. This feature uses PolyBase connectors, and minimizes the need for ETL processes. For more information on data virtualization, see [What is PolyBase?](../relational-databases/polybase/polybase-guide.md)
+SQL Server Big Data Clusters can virtualize data from CSV files in HDFS. This process allows the data to stay in its original location, but can be queried from a SQL Server instance like any other table. This feature uses PolyBase connectors, and minimizes the need for ETL processes. For more information on data virtualization, see [Introducing data virtualization with PolyBase](../relational-databases/polybase/polybase-guide.md)
 
 ## Prerequisites
 
@@ -92,4 +92,4 @@ Once created the table can now be queried directly using T-SQL from the SQL Serv
 
 ## Next steps
 
-For more information on SQL Server Big Data Cluster and related scenarios, see [What is SQL Server Big Data Cluster?](big-data-cluster-overview.md).
+For more information on SQL Server Big Data Cluster and related scenarios, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

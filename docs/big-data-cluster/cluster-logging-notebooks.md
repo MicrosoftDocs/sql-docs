@@ -1,43 +1,46 @@
 ---
 title: Gathering and analyzing logs with Jupyter notebooks and Azure Data Studio
 titleSuffix: SQL Server Big Data Clusters
-description: Logging cluster with Jupyter notebooks and Azure Data Studio on SQL Server 2019 big data cluster.
+description: Logging cluster with Jupyter notebooks and Azure Data Studio on SQL Server 2019 Big Data Clusters.
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 09/22/2020
+ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Gathering and analyzing logs in the cluster with notebooks
+# Gathering and analyzing logs in Big Data Clusters by using notebooks
 
-This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in logging Big Data Clusters.
+This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in logging big data clusters.
 
-Each notebook is designed to check for its own dependencies. A **Run all cells** will either complete successfully or will raise an exception with a hyperlinked hint to another notebook to resolve the missing dependency. Follow the hint hyperlink to the subsequent notebook, press **Run all cells**, and upon success return back to the original notebook, and **Run all cells**.
+Each notebook is designed to check for its own dependencies. The **Run all cells** option either completes successfully or raises an exception with a hyperlinked *hint* to another notebook to resolve the missing dependency. Follow the hint hyperlink to the target notebook, click **Run all cells**. Upon success return back to the original notebook, then click **Run all cells**.
 
 Once all dependencies are installed, but **Run all cells** fails, each notebook will analyze results and where possible, produce a hyperlinked hint to another notebook to further aid in resolving the issue.
 
-## Gathering logs from Big Data Cluster (BDC)
+* For more information on using notebooks to manage SQL Server Big Data Clusters, see [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md).
+* For the location of big data cluster administration notebooks, see [Where to find SQL Server Big Data Clusters administration notebooks](view-cluster-status.md#where-to-find--administration-notebooks).
 
-This section contains a set of notebooks useful for getting logs from a SQL Server Big Data Cluster (BDC).
+## Gathering logs from Big Data Cluster
+
+This section contains a set of notebooks useful for getting logs from a SQL Server Big Data Cluster.
 
 | Name | Description |
 |--|--|
-| TSG001 - Run azdata copy-logs | Use the azdata command line interface to copy data in BDC clusters. |
-| TSG061 - Get tail of all container logs for pods in BDC namespace | Get all container logs for pods from BDC cluster in the namespace. |
-| TSG062 - Get tail of all previous container logs for pods in BDC namespace | Get all previous container logs for pods  from BDC cluster in the namespace. |
-| TSG083 - Run kubectl cluster-info dump | Use the kubetl command line interface to dump BDC cluster-related information. |
+| TSG001 - Run azdata copy-logs | Use the azdata command line interface to copy data in big data clusters. |
+| TSG061 - Get tail of all container logs for pods in BDC namespace | Get all container logs for pods from big data cluster in the namespace. |
+| TSG062 - Get tail of all previous container logs for pods in BDC namespace | Get all previous container logs for pods from big data cluster in the namespace. |
+| TSG083 - Run kubectl cluster-info dump | Use the kubetl command line interface to dump big data cluster-related information. |
 | TSG084 - Internal Query Processor Error | Using DMV query to get more information on the internal query processor error. |
 | TSG091 - Get the azdata CLI logs | Get the azdata logs from the local machine. |
 
 
 
-## Analyse logs from Big Data Clusters (BDC)
+## Analyse logs from Big Data Clusters
 
-A set of notebooks to gather and analyze logs from a SQL Server Big Data Cluster.  The analysis process will suggest follow-on notebooks to run for known issue found in the logs.
+A set of notebooks to gather and analyze logs from a SQL Server big data cluster.  The analysis process will suggest follow-on notebooks to run for known issue found in the logs.
 
 |Name|Description |
 |---|---|
@@ -45,7 +48,7 @@ A set of notebooks to gather and analyze logs from a SQL Server Big Data Cluster
 |TSG031 - SQL Server PolyBase logs|Get SQL Server PolyBase logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG034 - Livy logs|Get Livy logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG035 - Spark History logs|Get Spark History logs and analyze log entries and suggest further relevant troubleshooting guides.|
-|TSG036 - Controller logs|Get the last ‘n’ hours of controller logs and analyze log entries and suggest further relevant troubleshooting guides.|
+|TSG036 - Controller logs|Get the last 'n' hours of controller logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG046 - Knox gateway logs|Knox gives a 500 error to the client, and removes details (the stack) pointing to the cause of the underlying issue. Therefore use this notebook to get the Knox logs from the cluster. Get Knox gateway logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG073 - InfluxDB logs|Get InfluxDB logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG076 - Elastic Search logs|Get Elastic Search logs and analyze log entries and suggest further relevant troubleshooting guides.|
@@ -60,4 +63,4 @@ A set of notebooks to gather and analyze logs from a SQL Server Big Data Cluster
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

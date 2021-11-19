@@ -6,7 +6,7 @@ ms.date: "05/19/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DELETE"
   - "DELETE_TSQL"
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "row removal [SQL Server], DELETE statement"
   - "deleting data"
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DELETE (Transact-SQL)
@@ -215,7 +215,7 @@ DELETE
   
  To delete rows in a heap and deallocate pages, use one of the following methods.  
   
--   Specify the TABLOCK hint in the DELETE statement. Using the TABLOCK hint causes the delete operation to take an exclusive lock on the table instead of a row or page lock. This allows the pages to be deallocated. For more information about the TABLOCK hint, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+-   Specify the TABLOCK hint in the DELETE statement. Using the TABLOCK hint causes the delete operation to take an IX lock on the object instead of a row or page lock. This allows the pages to be deallocated. For more information about the TABLOCK hint, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 -   Use `TRUNCATE TABLE` if all rows are to be deleted from the table.  
   

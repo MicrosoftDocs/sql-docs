@@ -73,9 +73,9 @@ ms.author: maggies
   
 -   **Data source** The data types supported by the version of the type of data source to which you are connecting.  
   
-     For example, typical data types for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source include **int**, **datetime**, and **varchar**. Data types introduced by [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] added support for **date**, **time**, **datetimetz**, and **datetime2**. For more information, see [Data Types (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362).  
+     For example, typical data types for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source include **int**, **datetime**, and **varchar**. Data types introduced by [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] added support for **date**, **time**, **datetimetz**, and **datetime2**. For more information, see [Data Types (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100)).  
   
--   **Data provider or data processing extension** The data types supported by the version of the data provider of the data processing extension you select when you connect to the data source. Data providers based on the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] use data types supported by the CLR. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider data types, see [Data Type Mappings (ADO.NET)](https://go.microsoft.com/fwlink/?LinkId=112178) and [Working with Base Types](https://go.microsoft.com/fwlink/?LinkId=112177) on MSDN.  
+-   **Data provider or data processing extension** The data types supported by the version of the data provider of the data processing extension you select when you connect to the data source. Data providers based on the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] use data types supported by the CLR. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider data types, see [Data Type Mappings (ADO.NET)](/dotnet/framework/data/adonet/data-type-mappings-in-ado-net) and [Working with Base Types](/dotnet/standard/base-types/common-type-system) on MSDN.  
   
      For example, typical data types supported by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] include **Int32** and **String**. Calendar dates and times are supported by the **DateTime** structure. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 introduced support for the **DateTimeOffset** structure for dates with a time zone offset.  
   
@@ -93,7 +93,7 @@ ms.author: maggies
     |**DateTimeTZ**|**DateTimeOffset**|Date and time with time zone offset|  
     |**DateTime2**|**DateTime**|Date and time with fractional milliseconds|  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types, see [Data Types (Database Engine)](https://go.microsoft.com/fwlink/?linkid=98362) and [Date and Time Data Types and Functions (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360).  
+ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types, see [Data Types (Database Engine)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100)) and [Date and Time Data Types and Functions (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms186724(v=sql.100)).  
   
  For more information about including references to a dataset field from an expression, see [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
@@ -103,8 +103,7 @@ ms.author: maggies
   
   
 ## See Also  
- [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
+ [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;]()   
  [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
-  
   

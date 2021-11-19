@@ -4,12 +4,12 @@ description: Learn about the IDBProperties interface in OLE DB Driver for SQL Se
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: "reference"
+ms.topic: reference
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # IDBProperties (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

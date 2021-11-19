@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # isValid Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

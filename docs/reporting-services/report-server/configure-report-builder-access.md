@@ -1,39 +1,34 @@
 ---
 title: "Configure Report Builder Access | Microsoft Docs"
-description: Configure Report Builder, a reporting tool installed with a SQL Server Reporting Services report server. It uses either native or SharePoint integration mode.
+description: Configure Report Builder, a report design tool to use with a SQL Server Reporting Services report server. It uses either native or SharePoint integration mode.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/06/2019
+ms.date: 03/07/2021
 ---
 
 # Configure Report Builder Access
-Report Builder is an ad hoc reporting tool that installs with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server configured for either native mode or SharePoint integration mode.  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+Microsoft Report Builder is an ad hoc reporting tool that can be used with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server configured for either native mode or SharePoint integration mode.  
 
 Access to Report Builder depends on the following factors:  
 
-- Server properties that determine whether Report Builder is available on the report server.  
-
 - Role assignments or permissions that make Report Builder available to individual users or groups.  
 
-- Authentication settings that determine whether user credentials can be passed through to the report server or anonymous access is configured on application files.
+- Authentication settings that determine whether user credentials can be passed through to the report server.
 
 ## Prerequisites
 
-Report Builder is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
-
-The client computer must have the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 or 4.6.1 installed for SSRS 2016 and 2017 respectively. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides the infrastructure for running [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] applications.  
-
-You must use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 or later, or another modern browser.  
-
-Report Builder always runs in full trust; you cannot configure it to run in partial trust. In previous releases, it was possible to run Report Builder in partial trust, but that option is not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions.  
+The client computer must have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 or higher installed.
 
 ## Enabling and Disabling Report Builder  
 
-Report Builder is enabled by default. Report server administrators have the option of disabling the Report Builder feature by setting the report server system property **ShowDownloadMenu** to **false**. Setting this property will disable Report Builder, Mobile Report Publisher, and Power BI Mobile downloads for that report server.  
+Downloading Report Builder via the portal is enabled by default. Report server administrators have the option of disabling the Report Builder download by setting the report server system property **ShowDownloadMenu** to **false**. Setting this property will disable Report Builder, Mobile Report Publisher, Power BI Desktop, and Power BI Mobile downloads for that report server.  
 
  To set report server system properties, you can use Management Studio or script:  	
 
@@ -45,7 +40,7 @@ Report Builder is enabled by default. Report server administrators have the opti
 
 On a native mode report server, create user role assignments that include tasks for using Report Builder. You must be a Content Manager and System Administrator to create or modify role definitions and role assignments on items and at the site level.  
 
-The following instructions assume that you are using predefined roles. If you modified the role definitions or if you upgraded from SQL Server 2000, check the roles to verify they contain the necessary tasks. For more information about creating role assignments, see [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md).
+The following instructions assume that you are using predefined roles. If you modified the role definitions, check the roles to verify they contain the necessary tasks. For more information about creating role assignments, see [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md).
 
 After you create the role assignments, users will have permission to do the following:  
 
@@ -138,8 +133,6 @@ If you use custom permission levels, you must include Add Items and Edit Items i
 ## Authentication considerations and credential reuse  
 
 - Report Builder opens its own connection to a report server. If you are not using Windows integrated security with single sign on, users must re-type their credentials for the Report Builder connection to the report server.  
-
-The following table describes the authentication types supported by the report server, and whether additional configuration is required to access Report Builder.  
 
 ## See also  
 

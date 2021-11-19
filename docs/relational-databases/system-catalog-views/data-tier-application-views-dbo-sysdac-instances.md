@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.sysdac_instances_TSQL"
   - "sysdac_instances"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "dbo.sysdac_instances"
   - "sysdac_instances"
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Data-tier Application Views - dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLSetConnectAttr"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLSetConnectAttr function [ODBC]"
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetConnectAttr Function
 **Conformance**  

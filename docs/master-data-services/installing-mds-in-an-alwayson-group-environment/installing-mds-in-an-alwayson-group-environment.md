@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ""
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 
@@ -86,7 +86,7 @@ This section covers the following tasks.
 
 As shown in Figure 1 in the previous section, the solution described in this article includes Windows Server Failover Cluster (WSFC). We need to setup WSFC because AGs depend on WFSC for failure detection and failover.
 
-WSFC is a feature to improve high availability of applications and services. It consists of a group of independent windows server instances with Microsoft Failover Cluster Service running on those instances. The windows server instances (or nodes as they are called sometimes) are connected so that they can communicate with each other, and the failure detection is possible. WSFC provide failure detection and failover functionalities. If a node or a service fails in the cluster, then the failure is detected, and another node automatically or manually begins to provide the services hosted on the failed node. As such, users only experience minimum disruptions in services, and service availability is improved.  
+WSFC is a feature to improve high availability of applications and services. It consists of a group of independent Windows Server instances with Microsoft Failover Cluster Service running on those instances. The Windows Server instances (or nodes as they are called sometimes) are connected so that they can communicate with each other, and the failure detection is possible. WSFC provide failure detection and failover functionalities. If a node or a service fails in the cluster, then the failure is detected, and another node automatically or manually begins to provide the services hosted on the failed node. As such, users only experience minimum disruptions in services, and service availability is improved.
 
 ### Prerequisites
 

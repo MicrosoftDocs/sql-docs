@@ -20,18 +20,13 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Replica Join State|  
-|**Issue**|Availability Replica is not joined.|  
-|**Category**|**Warning**|  
-|**Facet**|Availability replica|  
+- **Policy Name**: Availability Replica Join State
+- **Issue**: Availability Replica is not joined.
+- **Category**: **Warning**
+- **Facet**: Availability replica  
   
 ## Description  
  This policy checks the join state of the availability replica. The policy is in an unhealthy state when the availability replica is added to the availability group, but is not joined properly. The policy is otherwise in a healthy state.  
-  
-> [!NOTE]  
->  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Availability replica is not joined](https://go.microsoft.com/fwlink/p/?LinkId=220859) on the TechNet Wiki.  
   
 ## Possible Causes  
  The secondary replica is not joined to the availability group. For an availability replica to be successfully joined to the availability group, the join state must be Joined Standalone Instance (1) or Joined Failover Cluster (2).  

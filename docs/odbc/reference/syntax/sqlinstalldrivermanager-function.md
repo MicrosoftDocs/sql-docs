@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLInstallDriverManager"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLInstallDriverManager function [ODBC]"
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLInstallDriverManager Function
 **Conformance**  

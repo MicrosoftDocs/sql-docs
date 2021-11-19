@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ENDPOINT"
   - "CREATE ENDPOINT"
@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "SERVICE_BROKER option"
   - "Availability Groups [SQL Server], endpoint"
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 
 # CREATE ENDPOINT (Transact-SQL)
@@ -158,8 +158,8 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  For options that are specific to SERVICE_BROKER, see "SERVICE_BROKER Options," later in this section. For options that are specific to DATABASE_MIRRORING, see "DATABASE_MIRRORING Options," later in this section.  
   
- AUTHENTICATION **=** \<authentication_options> 
- Specifies the TCP/IP authentication requirements for connections for this endpoint. The default is WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options>  
+ Specifies the TCP/IP authentication requirements for connections for this endpoint. The default value is `WINDOWS`.
   
  The supported authentication methods include NTLM and or Kerberos or both.  
   
@@ -197,7 +197,7 @@ FOR DATABASE_MIRRORING (
  Optionally, you can use the ALGORITHM argument to specify the form of encryption used by the endpoint, as follows:  
   
  **AES**  
- Specifies that the endpoint must use the AES algorithm. This is the default in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
+ Specifies that the endpoint must use the AES algorithm. This is the default in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.  
   
  RC4  
  Specifies that the endpoint must use the RC4 algorithm. This is the default through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -321,6 +321,3 @@ GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
  [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
-

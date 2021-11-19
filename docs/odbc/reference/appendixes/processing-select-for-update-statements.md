@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ODBC cursor library [ODBC], statement processing"
   - "SQL statements [ODBC], select for update statements"
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "cursor library [ODBC], statement processing"
 ms.assetid: 8d2e79a4-5daf-458e-a536-d8b6e588753e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Processing SELECT FOR UPDATE Statements
 > [!IMPORTANT]  

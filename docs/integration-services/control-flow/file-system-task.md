@@ -130,7 +130,7 @@ ms.author: chugu
  **IsSourcePathVariable**  
  Indicate whether the destination path is stored in a variable. This property has the options listed in the following table.  
   
-|Value||  
+|Value|Description|  
 |-----------|-|  
 |**True**|The destination path is stored in a variable. Selecting this value displays the dynamic option, **SourceVariable**.|  
 |**False**|The destination path is specified in a File connection manager. Selecting this value displays the dynamic option, **DestinationVariable**.|  

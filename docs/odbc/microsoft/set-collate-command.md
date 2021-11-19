@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "set collate command [ODBC]"
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SET COLLATE Command
 Specifies a collation sequence for character fields in subsequent indexing and sorting operations.  

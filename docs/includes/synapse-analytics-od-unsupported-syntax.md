@@ -1,2 +1,1 @@
-> [!NOTE]
-> This syntax is not supported by serverless SQL pool in Azure Synapse Analytics.
+This syntax is not supported by serverless SQL pool in Azure Synapse Analytics.

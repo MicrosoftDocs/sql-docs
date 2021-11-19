@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "XPath operators [SQLXML]"
   - "operators [SQLXML]"
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

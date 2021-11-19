@@ -4,7 +4,7 @@ description: Learn about OLE DB Driver for SQL Server support for persisted data
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, persisted data source objects"
   - "persisted data source objects"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Persisted Data Source Objects
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

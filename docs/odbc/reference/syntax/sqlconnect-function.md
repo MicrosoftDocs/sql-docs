@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLConnect"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLConnect function [ODBC]"
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLConnect Function
 **Conformance**  

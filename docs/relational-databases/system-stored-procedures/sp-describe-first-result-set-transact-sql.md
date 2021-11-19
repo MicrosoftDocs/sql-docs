@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_describe_first_result_set"
   - "sp_describe_first_result_set_TSQL"
@@ -37,15 +37,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## Arguments  
-`[ \@tsql = ] 'Transact-SQL_batch'`
+`[ @tsql = ] 'Transact-SQL_batch'`
  One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(***n***)** or **nvarchar(max)**.  
   
-`[ \@params = ] N'parameters'`
+`[ @params = ] N'parameters'`
  \@params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, which is similar to sp_executesql. Parameters may be **nvarchar(n)** or **nvarchar(max)**.  
   
  Is one string that contains the definitions of all parameters that have been embedded in the [!INCLUDE[tsql](../../includes/tsql-md.md)]*_batch*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in the statement must be defined in \@params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in the statement does not contain parameters, \@params is not required. NULL is the default value for this parameter.  
   
-`[ \@browse_information_mode = ] tinyint`
+`[ @browse_information_mode = ] tinyint`
  Specifies if additional key columns and source table information are returned. If set to 1, each query is analyzed as if it includes a FOR BROWSE option on the query. Additional key columns and source table information are returned.  
   
 -   If set to 0, no information is returned.  
@@ -218,6 +218,66 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
+  
+### C. Storing results in a table
+
+In some scenarios you would need to put the results of the `sp_describe_first_result_set` procedure in some table so your can further process the schema. 
+First you need to create a table that matches the output of the `sp_describe_first_result_set` procedure:
+
+```sql
+create table #frs (
+    is_hidden bit not null,
+    column_ordinal int not null,
+    name sysname null,
+    is_nullable bit not null,
+    system_type_id int not null,
+    system_type_name nvarchar(256) null,
+    max_length smallint not null,
+    precision tinyint not null,
+    scale tinyint not null,
+    collation_name sysname null,
+    user_type_id int null,
+    user_type_database sysname null,
+    user_type_schema sysname null,
+    user_type_name sysname null,
+    assembly_qualified_type_name nvarchar(4000),
+    xml_collection_id int null,
+    xml_collection_database sysname null,
+    xml_collection_schema sysname null,
+    xml_collection_name sysname null,
+    is_xml_document bit not null,
+    is_case_sensitive bit not null,
+    is_fixed_length_clr_type bit not null,
+    source_server sysname null,
+    source_database sysname null,
+    source_schema sysname null,
+    source_table sysname null,
+    source_column sysname null,
+    is_identity_column bit null,
+    is_part_of_unique_key bit null,
+    is_updateable bit null,
+    is_computed_column bit null,
+    is_sparse_column_set bit null,
+    ordinal_in_order_by_list smallint null,
+    order_by_list_length smallint null,
+    order_by_is_descending smallint null,
+    tds_type_id int not null,
+    tds_length int not null,
+    tds_collation_id int null,
+    tds_collation_sort_id tinyint null
+);
+```
+
+When you create a table, you can store the schema of some query in that table.
+
+```sql
+declare @tsql nvarchar(max) = 'select top 0 * from sys.credentials';
+
+insert #frs
+exec sys.sp_describe_first_result_set @tsql;
+
+select * from #frs;
+```
   
 ### Examples of problems  
  The following examples use two tables for all examples. Execute the following statements to create the example tables.  

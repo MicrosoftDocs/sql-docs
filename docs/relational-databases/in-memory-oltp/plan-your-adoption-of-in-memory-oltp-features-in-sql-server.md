@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan your adoption of In-Memory OLTP Features in SQL Server
@@ -108,7 +108,7 @@ You work with .dacpac files in the context of a Visual Studio project of type *D
 
 For guidance on whether In-Memory OLTP features can improve the performance of your particular application, see:
 
-- [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (In-Memory Optimization)](./overview-and-usage-scenarios.md)
 
 
 
@@ -297,4 +297,4 @@ You can make your Transact-SQL scripts more robust against a possible transactio
 
 ## Related links
 
-- [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (In-Memory Optimization)](./overview-and-usage-scenarios.md)

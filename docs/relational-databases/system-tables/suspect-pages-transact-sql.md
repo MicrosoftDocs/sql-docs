@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "suspect_page_table"
   - "suspect_page_table_TSQL"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "suspect_pages system table"
   - "suspect pages [SQL Server]"
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # suspect_pages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

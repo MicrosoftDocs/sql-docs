@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "record updates [SQLXML]"
   - "record deletions [SQLXML]"
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 .NET Framework Support - Using DiffGrams to Modify Data

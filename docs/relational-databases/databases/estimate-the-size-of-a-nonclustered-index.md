@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "designing databases [SQL Server], estimating size"
   - "calculating table size"
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "= azuresqldb-current || >= sql-server-2016"
 ---
 # Estimate the Size of a Nonclustered Index

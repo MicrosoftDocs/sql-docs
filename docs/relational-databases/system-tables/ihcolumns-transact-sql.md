@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "IHcolumns_TSQL"
   - "IHcolumns"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHcolumns system table"
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # IHcolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

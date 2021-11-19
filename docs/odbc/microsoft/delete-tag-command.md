@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "DELETE TAG command [ODBC]"
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # DELETE TAG Command
 Removes a tag or tags from a compound index (.cdx) file.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@CONNECTIONS"
   - "@@CONNECTIONS_TSQL"
@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "number of connection attempts"
   - "attempted connections"
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # &#x40;&#x40;CONNECTIONS (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the number of attempted connections - both successful and unsuccessful - since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.
   

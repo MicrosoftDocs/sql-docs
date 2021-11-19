@@ -23,7 +23,7 @@ ms.author: wiassaf
 Returns list of table objects that are available to be virtualized.
 
 > [!NOTE]
-> This procedure is introduced in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster.md#cu5).
+> This procedure is introduced in [SQL 2019 CU5](../../big-data-cluster/release-notes-cumulative-updates-history.md#cu5).
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -233,7 +233,7 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 
 ## See also
 
-- [sp_data_source_columns](/sql/relational-databases/system-stored-procedures/sp-data-source-table-columns)   
+- [sp_data_source_columns](./sp-data-source-table-columns.md)   
 - [CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
 - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
 - [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md)   

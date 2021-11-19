@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
@@ -15,7 +15,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Extended Methods on Geography Instances
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a number of extended methods on Open Geospatial Consortium (OGC) geography instances.  
   

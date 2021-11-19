@@ -38,7 +38,7 @@ ms.author: chadam
   
      In an *offline file restore*, the database is offline while damaged files or filegroups are restored. At the end of the restore sequence, the database comes online.  
   
-     All editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] support offline file restore.  
+     All editions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] support offline file restore.  
   
 -   Online file restore  
   

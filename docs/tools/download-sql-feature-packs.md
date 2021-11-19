@@ -10,7 +10,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.date: 12/15/2019
+ms.date: 09/17/2021
 ---
 # Download SQL Server extended features and tools
 
@@ -22,7 +22,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [Analysis Services Client Libraries](https://go.microsoft.com/fwlink/?LinkID=853574) |The Microsoft Analysis Services client libraries encapsulate application programming interfaces (APIs) to authenticate and exchange requests and responses with Microsoft SQL Server Analysis Services 2005 or higher, Microsoft Azure Analysis Services, and Microsoft Power BI.<br><br> Microsoft Analysis Services client libraries include the following setup packages: </br> Microsoft Analysis Services ADOMD.NET </br> Microsoft Analysis Services OLE DB Provider (MSOLAP) </br> Microsoft Analysis Management Objects (AMO) |
+| [Analysis Services Client Libraries](/analysis-services/client-libraries) |The Microsoft Analysis Services client libraries encapsulate application programming interfaces (APIs) to authenticate and exchange requests and responses with Microsoft SQL Server Analysis Services 2005 or higher, Microsoft Azure Analysis Services, and Microsoft Power BI.<br><br> Microsoft Analysis Services client libraries include the following setup packages: </br> Microsoft Analysis Services ADOMD.NET </br> Microsoft Analysis Services OLE DB Provider (MSOLAP) </br> Microsoft Analysis Management Objects (AMO) |
 | [NuGetAnalysisSrvs](https://www.nuget.org/profiles/NuGetAnalysisSrvs) | NuGets for Analysis Services |
 |||
 
@@ -37,12 +37,12 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [Command Line Utilities for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
-| [Drivers for PHP for SQL Server](https://aka.ms/downloadmsphpsql) | The Microsoft Drivers for PHP for SQL Server are PHP extensions that allow for the reading and writing of SQL Server data from within PHP scripts. |
-| [JDBC Driver for SQL Server](https://aka.ms/downloadmssqljdbc) | The Microsoft JDBC Driver for SQL Server provides access to SQL Server from any Java application, application server, or Java-enabled applet.|
-| [SQL Server Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=56508) | The SQL Server Data-tier Application (DAC) framework is a component based on the .NET Framework that provides application lifecycle services for database development and management. |
+| [Command Line Utilities for SQL Server](sqlcmd-utility.md) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
+| [Drivers for PHP for SQL Server](../connect/php/download-drivers-php-sql-server.md) | The Microsoft Drivers for PHP for SQL Server are PHP extensions that allow for the reading and writing of SQL Server data from within PHP scripts. |
+| [JDBC Driver for SQL Server](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md) | The Microsoft JDBC Driver for SQL Server provides access to SQL Server from any Java application, application server, or Java-enabled applet.|
+| [SQL Server Data-Tier Application Framework](sqlpackage/sqlpackage-download.md#dacfx) | The SQL Server Data-tier Application framework (DacFx) is a .NET component that provides application lifecycle services for database development and management and is available in the [SqlPackage](sqlpackage/sqlpackage-download.md) CLI and as a [NuGet package](https://www.nuget.org/packages/Microsoft.SqlServer.DacFx). The Data-tier Application Framework includes TransactSql.ScriptDOM. |
 | [SQL Server Semantic Language Statistics](../relational-databases/search/install-and-configure-semantic-search.md) | The Semantic Language Statistics Database is a required component for the Statistical Semantic Search feature in Microsoft SQL Server. |
-| [SQL Server Shared Management Objects](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SQL Server Management Objects (SMO) is a .NET Framework object model that enables software developers to create client-side applications to manage and administer SQL Server objects and services. |
+| [SQL Server Management Objects](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SQL Server Management Objects (SMO) is a .NET Framework object model that enables software developers to create client-side applications to manage and administer SQL Server objects and services. |
 | [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | The SQL Server System CLR Types package contains the components implementing the geometry, geography, and hierarchy ID types in SQL Server. **Note: This component also requires [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)**. |
 | [Windows PowerShell Extensions for Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md) | The Microsoft Windows PowerShell Extensions for SQL Server include a provider and a set of cmdlets that enable administrators and developers to build PowerShell scripts for managing instances of SQL Server. |
 |||
@@ -51,7 +51,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [Command Line Utilities for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
+| [Command Line Utilities for SQL Server](sqlcmd-utility.md) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
 | [Remote Blob Store](https://go.microsoft.com/fwlink/?linkid=2109005) | The SQL Server Remote Blob Store is a method for storing blobs of unstructured data in an external Content Addressable data store. The component consists of a client-side DLL that is linked into a user application, and a set of stored procedures to be installed on SQL Server. |
 | [SQL Server Upgrade Advisor](../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md) | Microsoft Upgrade Advisor analyzes instances of SQL Server in preparation for upgrading to SQL Server. |
 |||
@@ -82,7 +82,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [ODBC Drivers for Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=852531) | The Microsoft ODBC Drivers for SQL Server provide native connectivity from Windows and Unix to Microsoft SQL Server and Microsoft Azure SQL Database. |
+| [ODBC Drivers for Microsoft SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) | The Microsoft ODBC Drivers for SQL Server provide native connectivity from Windows and Unix to Microsoft SQL Server and Microsoft Azure SQL Database. |
 | [OLEDB Provider for DB2 for Microsoft SQL Server](/host-integration-server/db2oledbv/installing-data-provider-version-6-0) | The Microsoft OLE DB Provider for DB2 v5.0 offers a set of technologies and tools for integrating vital data stored in IBM DB2 databases with new solutions. SQL Server developers and administrators can use the data provider with integration Services, Analysis Services, Replication, Reporting Services, and Distributed Query Processor. Read the Installing Data Provider section of the product documentation, which is available on-line or as a download. |
 |||
 

@@ -7,7 +7,9 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 ms.date: 04/25/2019
 ---
 
@@ -48,4 +50,4 @@ The following directions differ depending on your version of Windows. The follow
 
 ## Next steps
 
-- [Tutorial: SQL Server Management Studio](./quickstarts/connect-query-sql-server.md)
+- [Tutorial: SQL Server Management Studio](./quickstarts/ssms-connect-query-sql-server.md)

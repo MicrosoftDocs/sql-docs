@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "commit modes [ODBC]"
 ms.assetid: 963fe470-f7cb-4dbe-a779-05f98d7ff17d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Commit Mode
 Transactions in ODBC can be in one of two modes: auto-commit mode or manual-commit mode.  

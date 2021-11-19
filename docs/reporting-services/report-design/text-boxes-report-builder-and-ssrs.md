@@ -1,6 +1,6 @@
 ---
-title: "Text Boxes (Report Builder) | Microsoft Docs"
-description: Find out about cells in a table or matrix that also contain a text box, which you can format the same way as stand-alone text boxes in Report Builder.
+title: "Text boxes in paginated reports | Microsoft Docs"
+description: Find out about cells in a table or matrix in a paginated report that also contain a text box, which you can format the same way as stand-alone text boxes in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -17,8 +17,11 @@ ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Text Boxes (Report Builder and SSRS)
-  When you think of a text box, you probably think of a stand-alone box containing text on a surface like in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, some text boxes are like that, and they can display static text for titles, descriptions, and labels, or dynamic text based on expressions. But every cell in a table or matrix (a tablix data region) also contains a text box, which you can format the same way you format stand-alone text boxes in your report.  
+# Text boxes in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  When you think of a text box, you probably think of a stand-alone box containing text on a surface like in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. In paginated reports, some text boxes are like that, and they can display static text for titles, descriptions, and labels, or dynamic text based on expressions. But every cell in a table or matrix (a tablix data region) also contains a text box, which you can format the same way you format stand-alone text boxes in your report.  
   
 > [!NOTE]  
 >  If you drag a report dataset field value directly to the report design surface, or to a text box on the report design surface, you only see the first value in the result set when you run the report. To see all the values for a field, you need to create a table, matrix, or list data region first, and drag the field to a cell in the data region. That way, when you run the report, you will see all the values in that field.  

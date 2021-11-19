@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Specify Synchronization Schedules
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  This topic describes how to specify synchronization schedules in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). When you create a subscription, you can define a synchronization schedule that controls when the replication agent for the subscription will run. If you do not specify scheduling parameters, the subscription will use the default schedule.  
+  This topic describes how to specify synchronization schedules in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). When you create a subscription, you can define a synchronization schedule that controls when the replication agent for the subscription will run. If you do not specify scheduling parameters, the subscription will use the default schedule.  
   
  Subscriptions are synchronized by the Distribution Agent (for snapshot and transactional replication) or the Merge Agent (for merge replication). Agents can run continuously, run on demand, or run on a schedule.  
   
@@ -37,7 +37,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Specify synchronization schedules on the **Synchronization Schedule** page of the New Subscription Wizard. For more information about accessing this wizard, see [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md) and [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
- Modify synchronization schedules in the **Job Schedule Properties** dialog box, which is available from the **Jobs** folder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and from the agent details windows in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Modify synchronization schedules in the **Job Schedule Properties** dialog box, which is available from the **Jobs** folder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and from the agent detail windows in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
  If you specify schedules from the **Jobs** folder, use the following table to determine the agent job name.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "syscollector_config_store_TSQL"
   - "syscollector_config_store"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_config_store view"
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # syscollector_config_store (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

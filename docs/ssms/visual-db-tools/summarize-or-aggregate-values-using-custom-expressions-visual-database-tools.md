@@ -17,7 +17,7 @@ ms.reviewer:
 
 ---
 # Summarize or Aggregate Values Using Custom Expressions (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In addition to using aggregate functions to aggregate data, you can create custom expressions to produce aggregate values. You can use custom expressions in place of aggregate functions anywhere in an aggregate query.  
   
 For example, in the `titles` table you might want to create a query that shows not just the average price, but what the average price would be if it were discounted.  

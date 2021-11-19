@@ -47,7 +47,7 @@ ms.author: chadam
  **Backup set will expire**  
  Choose one of the following expiration options. This option is disabled if **URL** is chosen as the backup destination.  
   
-|||  
+|Option|Description|  
 |-|-|  
 |**After**|Specify the number of days that must elapse before this backup set expires and can be overwritten. This value can be from 0 to 99999 days; a value of 0 days means that the backup set will never expire.<br /><br /> The default value for backup expiration is the value set in the **Default backup media retention (in days)** option. To access this, right-click the server name in Object Explorer and select **Properties**; then click the **Database Settings** page of the **Server Properties** dialog box.|  
 |**On**|Specify a specific date when the backup set expires and can be overwritten.|  
@@ -58,7 +58,7 @@ ms.author: chadam
  **Set backup compression**  
  In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (or a later version), select one of the following backup compression values:  
   
-|||  
+|Value|Description|  
 |-|-|  
 |**Use the default server setting**|Click to use the server-level default.<br /><br /> This default is set by the **backup compression default** server-configuration option. For information about how to view the current setting of this option, see [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
 |**Compress backup**|Click to compress the backup, regardless of the server-level default.<br /><br /> **\*\* Important \*\*** By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely impact concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  

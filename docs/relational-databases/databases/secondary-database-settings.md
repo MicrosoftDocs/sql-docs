@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Secondary Database Settings
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ODBC cursor library [ODBC], examples"
   - "cursor library [ODBC], examples"
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Cursor Library Code Example
 > [!IMPORTANT]  

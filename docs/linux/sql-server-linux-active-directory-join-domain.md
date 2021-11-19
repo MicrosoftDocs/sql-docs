@@ -5,7 +5,7 @@ description: This article provides guidance joining a SQL Server Linux host mach
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 11/30/2020
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -22,6 +22,8 @@ Before you configure Active Directory authentication, you need to set up an Acti
 
 > [!IMPORTANT]
 > The sample steps described in this article are for guidance only and refer to Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x and SUSE Enterprise Linux (SLES) 12 operating systems. Actual steps may slightly differ in your environment depending on how your overall environment is configured and operating system version. For example, Ubuntu 18.04 uses netplan while Red Hat Enterprise Linux (RHEL) 8.x uses nmcli among other tools to manage and configure network. It is recommended to engage your system and domain administrators for your environment for specific tooling, configuration, customization, and any required troubleshooting.
+>
+> For information on configuring Active Directory with newer versions of Ubuntu, RHEL, or SLES, see [Configure Active Directory authentication with SQL Server on Linux using adutil](sql-server-linux-ad-auth-adutil-tutorial.md).
 
 ### Reverse DNS (RDNS)
 
@@ -214,7 +216,7 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    sudo hostname <old hostname>.contoso.com
    ```
    
-   After running the above command, your /etc/hostname file should contain <old hostname>.contoso.com.
+   After running the above command, your /etc/hostname file should contain \<old hostname\>.contoso.com.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -251,11 +253,11 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    ```
 
    > [!NOTE]
-   > - If **id user\@contoso.com** returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > - If **id user\@contoso.com** returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/trouble#SSSD-Troubleshooting).
    >
    > - If **kinit user\@CONTOSO.COM** returns, `KDC reply did not match expectations while getting initial credentials`, make sure you specified the realm in uppercase.
 
-For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
+For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/windows_integration_guide/realmd-domain).
 
 ### <a id="option2"></a> Option 2: Use third-party openldap provider utilities
 

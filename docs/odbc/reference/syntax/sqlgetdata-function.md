@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLGetData"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetData function [ODBC]"
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetData Function
 **Conformance**  

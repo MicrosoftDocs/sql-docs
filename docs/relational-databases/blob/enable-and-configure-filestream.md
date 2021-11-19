@@ -22,7 +22,7 @@ ms.author: mikeray
   
 #### To enable and change FILESTREAM settings  
   
-1.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
+1.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
   
 2.  In the list of services, right-click **SQL Server Services**, and then click **Open**.  
   

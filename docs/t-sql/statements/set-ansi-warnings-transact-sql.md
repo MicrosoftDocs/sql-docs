@@ -4,10 +4,10 @@ title: "SET ANSI_WARNINGS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/15/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET ANSI_WARNINGS"
   - "ANSI_WARNINGS_TSQL"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SET ANSI_WARNINGS statement"
   - "ANSI_WARNINGS option"
 ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_WARNINGS (Transact-SQL)

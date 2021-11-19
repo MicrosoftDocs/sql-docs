@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "CHANGE_TRACKING_IS_COLUMN_IN_MASK_TSQL"
   - "CHANGE_TRACKING_IS_COLUMN_IN_MASK"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "change tracking [SQL Server], CHANGE_TRACKING_IS_COLUMN_IN_MASK"
   - "CHANGE_TRACKING_IS_COLUMN_IN_MASK"
 ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)

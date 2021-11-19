@@ -78,7 +78,7 @@ SqlLocalDB.exe
 ## Examples  
   
 ### A. Creating an Instance of LocalDB  
- The following example creates an instance of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** named `DEPARTMENT` using the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] binaries and starts the instance.  
+ The following example creates an instance of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** named `DEPARTMENT` using the [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] binaries and starts the instance.  
   
 ```  
 SqlLocalDB.exe create "DEPARTMENT" 12.0 -s  

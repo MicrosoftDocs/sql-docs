@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # compareTo Method (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

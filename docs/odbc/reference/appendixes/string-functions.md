@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "functions [ODBC], string functions"
   - "string functions [ODBC]"
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # String Functions
 The following table lists string manipulation functions. An application can determine which string functions are supported by a driver by calling **SQLGetInfo** with an *information type* of SQL_STRING_FUNCTIONS.  

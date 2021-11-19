@@ -1,12 +1,12 @@
 ---
 title: Acquire & configure backup server
 description: This article describes how to configure a non-appliance Windows system as a backup server for use with the backup and restore features in Analytics Platform System (APS) and Parallel Data Warehouse (PDW). 
-author: mzaman1 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
@@ -126,7 +126,7 @@ Since PDW backups are not stored on the appliance, your IT team is responsible f
   
 ### Manage network credentials  
   
-Network access to the backup directory is based on standard Windows file sharing security. Before performing a backup, you need to create or designate a Windows account that will be used for authenticating PDW to the backup directory. This windows account must have permission to access, create, and write to the backup directory.  
+Network access to the backup directory is based on standard Windows file sharing security. Before performing a backup, you need to create or designate a Windows account that will be used for authenticating PDW to the backup directory. This Windows account must have permission to access, create, and write to the backup directory.  
   
 > [!IMPORTANT]  
 > To reduce security risks with your data, we advise that you designate one Windows account solely for the purpose of performing backup and restore operations. Allow this account to have permissions to the backup location and nowhere else.  

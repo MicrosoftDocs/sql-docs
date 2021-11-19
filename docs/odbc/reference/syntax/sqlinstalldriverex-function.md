@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLInstallDriverEx"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLInstallDriverEx function [ODBC]"
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLInstallDriverEx Function
 **Conformance**  

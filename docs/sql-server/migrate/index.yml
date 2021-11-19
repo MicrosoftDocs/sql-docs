@@ -9,14 +9,14 @@ metadata:
   description: Choose the SQL Server migration path you're interested in. 
   ms.prod: sql
   ms.topic: landing-page
-  author: MashaMSFT
-  ms.author: mathoma
+  author: cawrites
+  ms.author: chadam
   ms.date: 12/09/2019  
   ms.reviewer: rajpo
 
 
 landingContent:
-  - title: SQL to SQL Server
+  - title: SQL Server to SQL Server
     linkLists:
     - linkListType: overview
       links:
@@ -51,7 +51,7 @@ landingContent:
       - text: From Sybase
         url: ../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
 
-  - title: SQL to Azure SQL
+  - title: SQL Server to Azure SQL
     linkLists:
     - linkListType: overview
       links:

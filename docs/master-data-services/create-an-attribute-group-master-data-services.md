@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "attribute groups [Master Data Services], creating"
   - "creating attribute groups [Master Data Services]"
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Create an Attribute Group (Master Data Services)

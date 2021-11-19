@@ -7,12 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLBindCol"
 apilocation: 
   - "sqlsrv32.dll"
   - "odbc32.dll"
+  - "Msodbcsql11.dll"
+  - "Sqlncli10.dll"
+  - "Sqlncli11.dll"
+  - "Sqlncli11e.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLBindCol"
@@ -20,7 +24,7 @@ helpviewer_keywords:
   - "SQLBindCol function [ODBC]"
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLBindCol Function
 **Conformance**  

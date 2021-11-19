@@ -4,7 +4,7 @@ description: This example obtains information from the various error interfaces 
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "errors [OLE DB], retrieving information"
   - "OLE DB error handling, examples"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Retrieving Error Information
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

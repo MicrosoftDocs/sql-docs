@@ -20,6 +20,8 @@
     href: quickstart-sql-dw.md
   - name: Connect & query PostgreSQL
     href: quickstart-postgres.md
+  - name: Connect & explore Oracle
+    href: quickstart-oracle.md
 - name: Tutorials
   items:
   - name: T-SQL Editor
@@ -30,7 +32,7 @@
     href: tutorial-table-space-sql-server.md
   - name: Build a custom insight
     href: tutorial-build-custom-insight-sql-server.md
-  - name: Backup & restore
+  - name: Back up & restore
     href: tutorial-backup-restore-sql-server.md
 - name: Concepts
   items:
@@ -40,8 +42,16 @@
       href: extensions/add-extensions.md
     - name: Azure Arc extension
       href: extensions/azure-arc-extension.md
+    - name: Azure SQL Migration extension
+      href: extensions/azure-sql-migration-extension.md
+    - name: Azure Monitor Logs extension
+      href: extensions/azure-monitor-logs-extension.md
+    - name: Database Schema Conversion Toolkit
+      href: extensions/dsct/toc.yml
     - name: Data Virtualization extension
       href: extensions/data-virtualization-extension.md
+    - name: Extension for Oracle
+      href: extensions/extension-for-oracle.md
     - name: Kusto extension
       href: extensions/kusto-extension.md
     - name: Machine Learning extension
@@ -116,14 +126,28 @@
     items:
     - name: Notebooks overview
       href: notebooks/notebooks-guidance.md
-    - name: Use SQL Kernel
-      href: notebooks/notebooks-sql-kernel.md
-    - name: Use Python Kernel
-      href: notebooks/notebooks-python-kernel.md
-    - name: Use Kusto Kernel
+    - name: Notebooks views
+      href: notebooks/notebooks-views.md
+    - name: Log Analytics Kernel
+      href: notebooks/notebooks-azure-monitor-logs.md
+    - name: Kusto Kernel
       href: notebooks/notebooks-kusto-kernel.md
-    - name: Use Kqlmagic
+    - name: Kqlmagic
       href: notebooks/notebooks-kqlmagic.md
+    - name: Python Kernel
+      href: notebooks/notebooks-python-kernel.md
+    - name: Python Kernel Offline
+      href: notebooks/notebooks-python-offline-installation.md
+    - name: SQL Kernel
+      href: notebooks/notebooks-sql-kernel.md
+    - name: Parameterization
+      items: 
+      - name: Papermill Parameterization
+        href: notebooks/parameterize-papermill.md
+      - name: URI Parameterization
+        href: notebooks/parameterize-uri.md
+      - name: Run with Parameters
+        href: notebooks/run-with-parameters.md
   - name: Deployment
     items:
     - name: Deploy Azure SQL Database
@@ -155,12 +179,12 @@
 - name: Resources
   items:
   - name: FAQ
-    href: faq.md
+    href: faq.yml
   - name: Troubleshooting
     href: troubleshooting.md
   - name: Azure Data Studio GitHub repo >
     href: https://www.github.com/Microsoft/azuredatastudio
-  - name: Report issues & make suggestions >
+  - name: Report issues & suggestions >
     href: https://github.com/microsoft/azuredatastudio/issues
   - name: SQL Server documentation >
     href: ../sql-server/index.yml

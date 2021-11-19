@@ -1,8 +1,8 @@
 ---
-title: "tempdb database | Microsoft Docs"
-description: This topic provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
+title: "tempdb database"
+description: This article provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
 ms.custom: "P360"
-ms.date: 09/16/2020
+ms.date: 10/28/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: 
@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "tempdb database [SQL Server], about tempdb"
   - "temporary stored procedures [SQL Server]"
   - "tempdb database [SQL Server]"
-ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # tempdb database
@@ -62,6 +61,9 @@ The number of secondary data files depends on the number of (logical) processors
 
 > [!NOTE]
 > The default value for the number of data files is based on the general guidelines in [KB 2154845](https://support.microsoft.com/kb/2154845/).  
+
+> [!NOTE]
+> To check current size and growth parameters for `tempdb`, query view `tempdb.sys.database_files`.
   
 ### Moving the tempdb data and log files in SQL Server
 
@@ -207,7 +209,7 @@ Put the `tempdb` database on a fast I/O subsystem. Use disk striping if there ar
 Put the `tempdb` database on disks that differ from the disks that user databases use.
 
 ## Performance improvements in tempdb for SQL Server
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `tempdb` performance is further optimized in the following ways:  
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], `tempdb` performance is further optimized in the following ways:  
   
 - Temporary tables and table variables are cached. Caching allows operations that drop and create the temporary objects to run very quickly. Caching also reduces page allocation and metadata contention.  
 - The allocation page latching protocol is improved to reduce the number of `UP` (update) latches that are used.  
@@ -220,14 +222,15 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `tempdb` perfor
 For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 
 ## Memory-optimized tempdb metadata
-Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that's part of the [in-memory database](../in-memory-database.md) feature family: memory-optimized tempdb metadata. 
+Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces a new feature that's part of the [in-memory database](../in-memory-database.md) feature family: memory-optimized tempdb metadata. 
 
-This feature effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free, non-durable, memory-optimized tables.
+This feature effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free, non-durable, memory-optimized tables.
+
+Currently the memory-optimized tempdb metadata feature is not available in Azure SQL Database or Azure SQL Managed Instance.
 
 Watch this seven-minute video for an overview of how and when to use memory-optimized tempdb metadata:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
-
 
 ### Configuring and using memory-optimized tempdb metadata
 
@@ -303,22 +306,22 @@ Running out of disk space in `tempdb` can cause significant disruptions in the [
  -- Determining the amount of free space in tempdb
 SELECT SUM(unallocated_extent_page_count) AS [free pages],
   (SUM(unallocated_extent_page_count)*1.0/128) AS [free space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
 
 -- Determining the amount of space used by the version store
 SELECT SUM(version_store_reserved_page_count) AS [version store pages used],
   (SUM(version_store_reserved_page_count)*1.0/128) AS [version store space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
 
 -- Determining the amount of space used by internal objects
 SELECT SUM(internal_object_reserved_page_count) AS [internal object pages used],
   (SUM(internal_object_reserved_page_count)*1.0/128) AS [internal object space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
 
 -- Determining the amount of space used by user objects
 SELECT SUM(user_object_reserved_page_count) AS [user object pages used],
   (SUM(user_object_reserved_page_count)*1.0/128) AS [user object space in MB]
-FROM sys.dm_db_file_space_usage;
+FROM tempdb.sys.dm_db_file_space_usage;
  ```
 
 To monitor the page allocation or deallocation activity in `tempdb` at the session or task level, you can use the [sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) and [sys.dm_db_task_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md) dynamic management views. These views can help you identify large queries, temporary tables, or table variables that are using lots of `tempdb` disk space. You can also use several counters to monitor the free space that's available in `tempdb` and the resources that are using `tempdb`.
@@ -340,12 +343,13 @@ SELECT R2.session_id,
 FROM sys.dm_db_session_space_usage AS R1
 INNER JOIN sys.dm_db_task_space_usage AS R2 ON R1.session_id = R2.session_id
 GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
-  R1.internal_objects_dealloc_page_count;;
+  R1.internal_objects_dealloc_page_count;
 ```
 
-## Related content
-[SORT_IN_TEMPDB option for indexes](../../relational-databases/indexes/sort-in-TempDB-option-for-indexes.md)    
-[System databases](../../relational-databases/databases/system-databases.md)    
-[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
-[sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
-[Move database files](../../relational-databases/databases/move-database-files.md)    
+## Next steps
+
+- [SORT_IN_TEMPDB option for indexes](../../relational-databases/indexes/sort-in-TempDB-option-for-indexes.md)    
+- [System databases](../../relational-databases/databases/system-databases.md)    
+- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
+- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
+- [Move database files](../../relational-databases/databases/move-database-files.md)    

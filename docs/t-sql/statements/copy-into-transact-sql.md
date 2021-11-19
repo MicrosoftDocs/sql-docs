@@ -2,9 +2,9 @@
 title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Use the COPY statement in Azure Synapse Analytics for loading from external storage accounts.
-ms.date: 09/25/2020
+ms.date: 05/20/2021
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: jrasnick
 ms.technology: t-sql
 ms.topic: language-reference
@@ -15,12 +15,11 @@ f1_keywords:
   - "LOAD"
 dev_langs: 
   - "TSQL"
-author: kevinvngo
-ms.author: kevin
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azure-sqldw-latest"
 ---
 # COPY (Transact-SQL)
-
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 This article explains how to use the COPY statement in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. Use COPY for the following capabilities:
@@ -77,20 +76,21 @@ Is the name of the table to COPY data into. The target table can be a temporary 
 *(column_list)*  
 Is an optional list of one or more columns used to map source data fields to target table columns for loading data. *column_list* must be enclosed in parentheses and delimited by commas. The column list is of the following format:
 
-[(Column_name [Default_value] [Field_number] [,...n])]
+[(Column_name [default Default_value] [Field_number] [,...n])]
 
 - *Column_name* - the name of the column in the target table.
-- *Default_value* - the default value that will replace any NULL value in the input file. Default value applies to all file formats. COPY will attempt to load NULL from the input file when a column is omitted from the column list or when there is an empty input file field.
+- *Default_value* - the default value that will replace any NULL value in the input file. Default value applies to all file formats. COPY will attempt to load NULL from the input file when a column is omitted from the column list or when there is an empty input file field. Default value is preceded by the keyword 'default'
 - *Field_number* - the input file field number that will be mapped to the target column name.
 - The field indexing starts at 1.
+
 
 When a column list is not specified, COPY will map columns based on the source and target ordinality: Input field 1 will go to target column 1, field 2 will go to column 2, etc.
 
 *External locations(s)*</br>
 Is where the files containing the data is staged. Currently Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage are supported:
 
-- *External location* for Blob Storage: https://<account>.blob.core.windows.net/<container>/<path>
-- *External location* for ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
+- *External location* for Blob Storage: https://\<account\>.blob.core.windows.net/\<container\>/\<path\>
+- *External location* for ADLS Gen2: https://\<account\>.dfs.core.windows.net/\<container\>/\<path\>
 
 > [!NOTE]  
 > The .blob endpoint is available for ADLS Gen2 as well and currently yields the best performance. Use the .blob endpoint when .dfs is not required for your authentication method.
@@ -112,7 +112,7 @@ Wildcards cards can be included in the path where
 
 Multiple file locations can only be specified from the same storage account and container via a comma-separated list such as:
 
-- ‘https://<account>.blob.core.windows.net/<container>/<path>’, ‘https://<account>.blob.core.windows.net/<container>/<path>’…
+- ‘https://\<account\>.blob.core.windows.net/\<container\>/\<path\>’, ‘https://\<account\>.blob.core.windows.net\<container\>/\<path\>’…
 
 *FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
 *FILE_TYPE* specifies the format of the external data.
@@ -153,7 +153,7 @@ Multiple file locations can only be specified from the same storage account and 
   
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 
-  - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *IDENTITY: \<ClientID\>@<OAuth_2.0_Token_EndPoint>*
   - *SECRET: AAD Application Service Principal key*
   -  Minimum RBAC roles required: Storage blob data contributor, Storage blob data contributor, Storage blob data owner, or Storage blob data reader
 
@@ -191,7 +191,7 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
   - Minimum permissions required: READ, LIST, WRITE, CREATE, DELETE
   
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
-  - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *IDENTITY: \<ClientID\>@<OAuth_2.0_Token_EndPoint>*
   - *SECRET: AAD Application Service Principal key*
   - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner
   
@@ -396,7 +396,7 @@ WITH (
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?
-The COPY command will have better performance depending on your workload. For best loading performance, consider splitting your input into multiple files when loading CSV.
+The COPY command will have better performance depending on your workload. For best loading performance, consider splitting your input into multiple files when loading CSV. This guidance apples to gzip compressed files as well.
 
 ### What is the file splitting guidance for the COPY command loading CSV files?
 Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. For a simple file splitting experience, refer to the following [documentation](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 

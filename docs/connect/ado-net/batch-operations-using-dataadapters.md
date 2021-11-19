@@ -10,7 +10,7 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: v-chmalh
 ---
 # Batch operations using DataAdapters
@@ -55,7 +55,7 @@ When batch processing is enabled, a single `RowUpdated` event is generated for m
 Batch execution has the same effect as the execution of each individual statement. Statements are executed in the order that the statements were added to the batch. Errors are handled the same way in batch mode as they are when batch mode is disabled. Each row is processed separately. Only rows that have been successfully processed in the database will be updated in the corresponding <xref:System.Data.DataRow> within the <xref:System.Data.DataTable>.
 
 > [!NOTE]
-> The Microsoft SqlClient Data Provider SQL Server and the back-end database server determine which SQL constructs are supported for batch execution. An exception may be thrown if a non-supported statement is submitted for execution.
+> The Microsoft SqlClient Data Provider for SQL Server and the back-end database server determine which SQL constructs are supported for batch execution. An exception may be thrown if a non-supported statement is submitted for execution.
 
 ## See also
 

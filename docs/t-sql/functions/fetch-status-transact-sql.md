@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@FETCH_STATUS"
   - "@@FETCH_STATUS_TSQL"
@@ -18,12 +18,12 @@ helpviewer_keywords:
   - "status information [SQL Server], FETCH"
   - "@@FETCH_STATUS function"
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 
 # &#x40;&#x40;FETCH_STATUS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the status of the last cursor FETCH statement issued against any cursor currently opened by the connection.  
   

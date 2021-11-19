@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLSetDescField"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLSetDescField function [ODBC]"
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetDescField Function
 

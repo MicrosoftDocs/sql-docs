@@ -3,7 +3,7 @@ description: "Metadata - Date and Time and Schema Rowsets in SQL Server Native C
 title: "Date and Time and Schema Rowsets"
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 

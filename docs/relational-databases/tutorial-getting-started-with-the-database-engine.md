@@ -1,14 +1,16 @@
 ---
 description: "Tutorial: Getting Started with the Database Engine"
 title: "Tutorial: Getting Started with the Database Engine"
-ms.custom: seo-dt-2019
+ms.custom:
+  - seo-dt-2019
+  - intro-quickstart
 ms.date: "06/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "tutorials [connecting]"
   - "tutorials [Database Engine]"
   - "unable to connect [SQL Server]"
@@ -43,6 +45,5 @@ Your system must have the following installed to use this tutorial:
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To install [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
 ## See Also  
-[Tutorial: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
-  
+[Tutorial: SQL Server Management Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)  
   

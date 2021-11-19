@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "$partition_TSQL"
   - "$partition"
@@ -21,11 +21,11 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # $PARTITION (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Returns the partition number into which a set of partitioning column values would be mapped for any specified partition function in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Returns the partition number into which a set of partitioning column values would be mapped for any specified partition function in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -71,7 +71,7 @@ GO
 ### B. Getting the number of rows in each nonempty partition of a partitioned table or index  
  The following example returns the number of rows in each partition of table `TransactionHistory` that contains data. The `TransactionHistory` table uses partition function `TransactionRangePF1` and is partitioned on the `TransactionDate` column.  
   
- To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
+ To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. 
   
 ```sql
 USE AdventureWorks2012;  
@@ -87,7 +87,7 @@ GO
  The following example returns all rows that are in partition `5` of the table `TransactionHistory`.  
   
 > [!NOTE]  
->  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
+>  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. 
   
 ```sql  
 SELECT * FROM Production.TransactionHistory  
@@ -96,5 +96,4 @@ WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;
   
 ## See Also  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
-  
-  
+ 

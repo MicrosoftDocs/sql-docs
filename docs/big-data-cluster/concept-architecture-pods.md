@@ -2,22 +2,24 @@
 title: Deployed resources
 titleSuffix: SQL Server Big Data Clusters
 description: A description of the pods typically deployed in a SQL Server Big Data Cluster.
-author: mihaelablendea 
-ms.author: mihaelab
-ms.reviewer: mikeray
-ms.date: 03/30/2020
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
-# Resources deployed with Big Data Cluster
+# Resources deployed with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes the resources a SQL Server Big Data Cluster deploys.
 
-A Big Data Cluster cluster deploys pods based on the deployment profile. For details see [Default configurations](deployment-guidance.md#configfile). 
+A big data cluster deploys pods based on the deployment profile. For details see [Default configurations](deployment-guidance.md#configfile). 
 
 This article describes the pods deployed with `aks-dev-test-ha` profile and includes a Spark pool. Query Kubernetes to see the pods deployed in your cluster. The following example returns a list of pods under a specific namespace.
 
@@ -33,7 +35,7 @@ The following diagram displays the components deployed in a Big Data Cluster:
 
 :::image type="content" source="media/big-data-cluster-overview/architecture-diagram-overview.png" alt-text="big-data-cluster-diagram":::
 
-For information about the architecture, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md).
+For information about the architecture, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
 
 ## Deployed pods
 
@@ -62,7 +64,7 @@ The following table lists pods deployed in a Big Data Cluster.
 |`appproxy-<#m>`         |[Application pool](#application-pool)|
 |`gateway-<#>`           |[Gateway service](#gateway-service)|
 
-Not all pods are included in every BDC cluster. Deployments with high availability, or active directory integration include specific pods. 
+Not all pods are included in every big data cluster. Deployments with high availability, or active directory integration include specific pods. 
 
 ### High availability specific pods:
 
@@ -160,7 +162,7 @@ The application pool is included in some of the test configuration profiles. The
 |--------|----|------|
 |`appproxy`| ReplicaSet |- `app-service-proxy`<br><br>- `fluentbit`
 
-For more information, see [What is Application Deployment on a Big Data Cluster?](concept-application-deployment.md).
+For more information, see [Introducing Application Deployment on a Big Data Cluster](concept-application-deployment.md).
 
 Include additional pods at deployment time, depending on workload. 
 
@@ -176,23 +178,12 @@ Only one gateway is supported.
 
 ## Open-source container references
 
-Some containers are developed by open-source projects. For information about open-source containers used, see:
-
-- [Elasticsearch](https://www.elastic.co/)
-- [Kibana](https://www.elastic.co/kibana)
-- [InfluxDB](https://www.influxdata.com)
-- [Grafana](https://grafana.com/)
-- [Fluent Bit](https://docs.fluentbit.io/manual/about/what-is-fluent-bit)
-- [HDFS DataNode](concept-storage-pool.md)
-- [HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) 
-- [Spark](configure-spark-hdfs.md)
-- [ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) 
-
+For for specific open-source projects and versions, see [Open-source software reference](reference-open-source-software.md).
 
 ## Next steps
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following resources:
 
-- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
-- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/microsoft/sqlworkshops-bdc)
 - [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile)

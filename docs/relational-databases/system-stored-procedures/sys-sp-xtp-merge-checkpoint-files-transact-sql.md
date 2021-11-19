@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sp_xtp_merge_checkpoint_files_TSQL"
   - "sys.sp_xtp_merge_checkpoint_files"
@@ -30,7 +30,7 @@ ms.author: maghan
   
 ||  
 |-|  
-|**Note**: This stored procedure is deprecated in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. It is no longer needed, and cannot be used, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
+|**Note**: This stored procedure is deprecated in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. It is no longer needed, and cannot be used, starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].|  
   
 ## Syntax  
   
@@ -64,6 +64,5 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
   
 ## See Also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md)  
   

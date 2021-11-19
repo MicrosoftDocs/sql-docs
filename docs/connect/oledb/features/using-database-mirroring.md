@@ -4,7 +4,7 @@ description: OLE DB Driver for SQL Server supports database mirroring. Developer
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "MSOLEDBSQL, database mirroring"
   - "OLE DB Driver for SQL Server, database mirroring"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Database Mirroring
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

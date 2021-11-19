@@ -4,17 +4,17 @@ description: Learn how the ISSCommandWithParameters::SetParameterProperties meth
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: "reference"
+ms.topic: reference
 apiname: 
   - "ISSCommandWithParameters::SetParameterProperties (OLE DB)"
 apitype: "COM"
 helpviewer_keywords: 
   - "SetParameterProperties method"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

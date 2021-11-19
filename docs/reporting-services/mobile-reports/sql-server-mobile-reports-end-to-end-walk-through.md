@@ -28,12 +28,12 @@ To follow along, you need these products:
   
 * To create data sources and KPIs, and publish datasets and mobile reports, you need access to a [Reporting Services native mode report server](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * To create shared datasets, [install Report Builder](../install-windows/install-report-builder.md).  
-* To create mobile reports, [install SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkId=717766).  
+* To create mobile reports, [install SQL Server Mobile Report Publisher](../reporting-services-features-and-tasks-ssrs.md).  
 * [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases).  
-*  OR: World Wide Importers sample database, available from the [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) page.
+*  OR: World Wide Importers sample database, available from the [Microsoft SQL Server Samples](../../samples/sql-samples-where-are.md) page.
 * To view the result: 
   *   [Sign up for the Power BI service](https://go.microsoft.com/fwlink/?LinkID=513879) and
-  *  [Download the Power BI mobile app](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) to your mobile device: iOS, Android phone, or Windows 10 device.  
+  *  [Download the Power BI mobile app](/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) to your mobile device: iOS, Android phone, or Windows 10 device.  
 
   
 ## Create a shared data source  
@@ -129,7 +129,7 @@ You create KPIs right in the [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversio
     
 ## <a name="create-mobile-report">Create a Reporting Services mobile report</a>  
    
-To create a Reporting Services mobile report, [install SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkId=717766), or launch it from the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal. 
+To create a Reporting Services mobile report, [install SQL Server Mobile Report Publisher](../reporting-services-features-and-tasks-ssrs.md), or launch it from the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal. 
 
 When you first open [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], you see a blank canvas where you can create your mobile report. You can start by creating visuals first, or start with your data. If you create the visuals first, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] automatically generates simulated data that is tied to the report and changes dynamically as you change your visual selections. Try this yourself.   
   
@@ -297,8 +297,6 @@ The KPIs and mobile reports are displayed in the same folders they're in on the 
   
 ## See also  
  
--  View [on-premises report server mobile reports and KPIs in the Power BI mobile app](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) for iOS and Android devices
+-  View [on-premises report server mobile reports and KPIs in the Power BI mobile app](/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) for iOS and Android devices
 -  View [on-premises report server mobile reports and KPIs in the Power BI mobile app for Windows 10 devices](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
-   
-

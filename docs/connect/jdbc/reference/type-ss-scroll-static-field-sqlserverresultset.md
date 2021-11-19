@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.TYPE_SS_SCROLL_STATIC"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 179551a0-3ca4-4816-8098-8195898c997f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # TYPE_SS_SCROLL_STATIC Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -5,8 +5,8 @@ description: In this four-part tutorial series, you'll develop data to train a p
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.reviewer: garye, davidph
 ms.date: 05/26/2020
 ms.custom: seo-lt-2019
@@ -64,7 +64,7 @@ In [part four](r-predictive-model-deploy.md), you'll learn how to store the mode
 
 * RODBC - This driver is used in the R scripts you'll develop in this tutorial. If it's not already installed, install it using the R command `install.packages("RODBC")`. For more information on RODBC, see [CRAN - Package RODBC](https://CRAN.R-project.org/package=RODBC).
 
-* SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
+* SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 
 ## Restore the sample database
 

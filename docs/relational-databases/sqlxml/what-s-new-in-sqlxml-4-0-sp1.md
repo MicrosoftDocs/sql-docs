@@ -1,14 +1,15 @@
 ---
 title: "What&#39;s New in SQLXML 4.0 SP1"
 description: View a summary of the updates and enhancements in SQLXML 4.0 SP1 with links to more detailed information.
-ms.custom: ""
+ms.custom:
+  - intro-whats-new
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "registry keys [SQLXML]"
   - "SQLNCLI, SQLXML"
   - "what's new [SQLXML]"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "SQL Server Native Client, SQLXML"
   - "side-by-side installations [SQLXML]"
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # What&#39;s New in SQLXML 4.0 SP1

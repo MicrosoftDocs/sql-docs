@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], base address"
 ms.assetid: 3601c0c7-18ad-4b41-b80b-5839276d0cba
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Base Address of Drivers
 Each of the ODBC Desktop Database Drivers has been linked with a base address of 0x04c0000.

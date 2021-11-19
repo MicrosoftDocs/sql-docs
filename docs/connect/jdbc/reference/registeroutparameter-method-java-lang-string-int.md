@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerCallableStatement.registerOutParameter (java.lang.String, int)"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 5d00242c-4d9c-42cc-86bb-b76f5ef876b8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # registerOutParameter Method (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -7,12 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLParamOptions"
 apilocation: 
   - "sqlsrv32.dll"
   - "odbc32.dll"
+  - "Msodbcsql11.dll"
+  - "Sqlncli10.dll"
+  - "Sqlncli11.dll"
+  - "Sqlncli11e.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLParamOptions"
@@ -20,7 +24,7 @@ helpviewer_keywords:
   - "SQLParamOptions function [ODBC]"
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLParamOptions Function
 **Conformance**  

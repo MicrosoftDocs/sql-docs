@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "SYS.QUERY_STORE_RUNTIME_STATS_TSQL"
   - "QUERY_STORE_RUNTIME_STATS_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "query_store_runtime_stats catalog view"
   - "sys.query_store_runtime_stats catalog view"
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_runtime_stats (Transact-SQL)
@@ -83,11 +83,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=s
 |**min_rowcount**|**bigint**|Minimum number of returned rows for the query plan within the aggregation interval.<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
 |**max_rowcount**|**bigint**|Maximum number of returned rows for the query plan within the aggregation interval.|  
 |**stdev_rowcount**|**float**|Number of returned rows standard deviation for the query plan within the aggregation interval.|
-|**avg_log_bytes_used**|**float**|Average number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**last_log_bytes_used**|**bigint**|Number of bytes in the database log used by the last execution of the query plan, within the aggregation interval.<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**min_log_bytes_used**|**bigint**|Minimum number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**max_log_bytes_used**|**bigint**|Maximum number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**stdev_log_bytes_used**|**float**|Standard deviation of the number of bytes in the database log used by a query plan, within the aggregation interval.<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|  
+|**avg_log_bytes_used**|**float**|Average number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**last_log_bytes_used**|**bigint**|Number of bytes in the database log used by the last execution of the query plan, within the aggregation interval.<br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**min_log_bytes_used**|**bigint**|Minimum number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**max_log_bytes_used**|**bigint**|Maximum number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**stdev_log_bytes_used**|**float**|Standard deviation of the number of bytes in the database log used by a query plan, within the aggregation interval.<br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|  
 |**avg_tempdb_space_used**|**float**|Average number of pages used in tempdb for the query plan within the aggregation interval (expressed as a number of 8KB pages).<br><br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**last_tempdb_space_used**|**bigint**|Last number of pages used in tempdb for the query plan within the aggregation interval (expressed as a number of 8KB pages).<br><br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**min_tempdb_space_used**|**bigint**|Minimum number of pages used in tempdb for the query plan within the aggregation interval (expressed as a number of 8KB pages).<br><br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|

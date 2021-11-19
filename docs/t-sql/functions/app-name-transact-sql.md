@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "APP_NAME_TSQL"
   - "APP_NAME"
@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "current session application names"
   - "APP_NAME function"
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # APP_NAME (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the application name for the current session, if the application sets that name value.
   

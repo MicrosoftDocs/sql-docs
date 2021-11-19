@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "positioned deletes [ODBC]"
   - "ODBC cursor library [ODBC], statement processing"
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "cursor library [ODBC], statement processing"
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Processing Positioned Update and Delete Statements
 > [!IMPORTANT]  

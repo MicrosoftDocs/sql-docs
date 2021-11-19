@@ -19,7 +19,7 @@ ms.author: chadam
 # Progress Page (Always On Availability Group Wizards)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  Use this dialog box to view the progress of a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] wizard that you are running in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. The progress bar indicates the relative progress of the steps that the wizard is performing.  
+  Use this dialog box to view the progress of a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] wizard that you are running in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. The progress bar indicates the relative progress of the steps that the wizard is performing.  
   
 ## UI element list  
  **More details**  

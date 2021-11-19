@@ -8,12 +8,11 @@ helpviewer_keywords:
   - "feature adding [SQL Server]"
   - " SQL Server, features"
   - "adding features to  SQL Server"
-ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: cawrites
 ms.author: chadam
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 09/07/2019
+ms.date: 10/05/2021
 monikerRange: ">=sql-server-2016"
 ---
 
@@ -21,27 +20,28 @@ monikerRange: ">=sql-server-2016"
 
 [!INCLUDE [ SQL Server - Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-This article provides a step-by-step procedure for adding features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Some SQL Server components or services are specific to an instance of SQL Server. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance  SQL Server, along with the shared components of if they are not already installed. For a list of features that are supported by the different editions of SQL Server, see [Editions and supported features of SQL Server  2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+This article provides a step-by-step procedure for adding features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Some SQL Server components or services are specific to an instance of SQL Server. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance SQL Server, along with the shared components of if they are not already installed. For a list of features that are supported by the different editions of SQL Server, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) or [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 
 To add features to an instance of SQL Server from the command prompt, see [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md).
 
+> [!CAUTION]
+> Adding features to an existing installation of SQL Server will install the features at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow the success of SQL Server Setup by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of features added to an installation of SQL Server, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
+
 ## Prerequisites
 
-Before you continue, review articles in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).
+Before you continue, review articles in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md). Also be aware:
 
-> [!NOTE]
-> For local installations, you must run Setup as an administrator. If you install SQL Server from a remote share, you must use a domain account that has read permissions on the remote share.  
-  
-> [!NOTE]
-> When you add features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the existing usage report settings are applied to the newly-added features. To change these settings, use the **SQL Server  Error and Usage Reporting** tool on the SQL Server **Configuration Tools** menu.
+- For local installations, you must run Setup as an administrator. If you install SQL Server from a remote share, you must use a domain account that has read permissions on the remote share.  
+- When you add features to an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the existing usage report settings are applied to the newly added features. To change these settings, use the **SQL Server Error and Usage Reporting** tool on the SQL Server **Configuration Tools** menu.
+- You cannot add features to a failover cluster instance. For example, you cannot add the PolyBase feature to an existing failover cluster instance. Similarly, removing features from a failover cluster instance is also not supported.
 
 ## Procedures
 
-#### To add features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+#### To add features to an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
 
-1. Insert the SQL Server installation media. From the root folder, double-click setup.exe. To install from a network share, navigate to the root folder on the share, and then double-click setup.exe. If the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup dialog box appears, select **OK** to install the prerequisites, then select **Cancel** to quit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation.  
+1. Insert the SQL Server installation media. From the root folder, double-click setup.exe. To install from a network share, navigate to the root folder on the share, and then double-click setup.exe. If the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Setup dialog box appears, select **OK** to install the prerequisites, then select **Cancel** to quit [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] installation.  
 
-2. The Installation Wizard will launch the SQL Server Installation Center. To add a new feature to an existing instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], select **Installation** in the left-hand navigation area, and then select **New SQL Server stand-alone installation or add features to an existing installation**.
+2. The Installation Wizard will launch the SQL Server Installation Center. To add a new feature to an existing instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], select **Installation** in the left-hand navigation area, and then select **New SQL Server stand-alone installation or add features to an existing installation**.
 
 3. The System Configuration Checker will run a discovery operation on your computer. To view the verification details, select **View Details**. To continue, select **OK**.
 
@@ -51,11 +51,11 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 6. The System Configuration Checker will verify the system state of your computer before Setup continues.  
 
-7. On the Installation Type page, select the option **Add features to an existing instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, and select the instance you would like to update.
+7. On the Installation Type page, select the option **Add features to an existing instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]**, and select the instance you would like to update.
 
-8. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right-hand pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md). Each component can be installed only once on a given instance of SQL Server. To install multiple components, you must install an additional instance of SQL Server.
+8. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right-hand pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and [SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md). Each component can be installed only once on a given instance of SQL Server. To install multiple components, you must install an additional instance of SQL Server.
 
-    The prerequisites for the selected features are displayed on the right-hand pane. SQL Server Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.
+    The prerequisites for the selected features are displayed on the right-hand pane. SQL Server Setup will install the prerequisites that are not already installed during the installation step described later in this procedure.
 
     The System Configuration Checker will verify the system state of your computer before Setup continues. Select **Next** to continue.
 
@@ -75,7 +75,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 12. Use the **Server Configuration - Collation** tab to specify non-default collations for the Database Engine and Analysis Services. For more information, see [Server Configuration - Collation](./install-sql-server.md).
 
-13. Use the Database Engine Configuration - Account Provisioning page to specify the following:  
+13. Use the Database Engine Configuration - Account Provisioning page to specify the following settings:  
 
     - Security Mode - Select Windows Authentication or Mixed Mode Authentication for your instance of SQL Server. If you select Mixed Mode Authentication, you must provide a strong password for the built-in SQL Server system administrator account.
 
@@ -94,7 +94,9 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 15. Use the Database Engine Configuration - FILESTREAM page to enable FILESTREAM for your instance of SQL Server. For more information about FILESTREAM, see [Database Engine Configuration - Filestream](./install-sql-server.md). To continue, select Next.
 
-16. Use the Analysis Services Configuration - Account Provisioning page to specify the server mode and the users or accounts that will have administrator permissions for Analysis Services. Server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, choose the default option, Multidimensional and Data Mining server mode. Regarding administrator permissions, you must specify at least one system administrator for Analysis Services. To add the account under which SQL Server Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for Analysis Services. For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning](./install-sql-server.md).
+16. Use the Analysis Services Configuration - Account Provisioning page to specify the server mode and the users or accounts that will have administrator permissions for Analysis Services. Server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. An instance of Analysis Services can support either conventional multidimensional cubes, or tabular models, but an instance cannot support both types of models. For new development, use the default option, **Tabular Mode**. 
+
+    Regarding administrator permissions, you must specify at least one system administrator for Analysis Services. To add the account under which SQL Server Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for Analysis Services. For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning](./install-sql-server.md).
 
     When you are finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.
 
@@ -115,7 +117,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 20. Use the Distributed Replay Client Configuration page to specify the users you want to grant administrative permissions to for the Distributed Replay client service. Users that have administrative permissions will have unlimited access to the Distributed Replay client service.
 
-    **Controller Name** is an optional parameter, and the default value is \<*blank*>. Enter the name of the controller that the client computer will communicate with for the Distributed Replay client service. Note the following:
+    **Controller Name** is an optional parameter, and the default value is \<*blank*>. Enter the name of the controller that the client computer will communicate with for the Distributed Replay client service. Note the following conditions:
 
     - If you have already set up a controller, enter the name of the controller while configuring each client.
 
@@ -127,7 +129,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
     To continue, select **Next**.
 
-21. On the Error Reporting page, specify the information you would like to send to Microsoft that will help to improve SQL Server. By default, options for error reporting is enabled.
+21. On the Error Reporting page, specify the information you would like to send to Microsoft that will help to improve SQL Server. By default, the option for error reporting is enabled.
 
 22. The System Configuration Checker will run one more set of rules to validate your computer configuration with the SQL Server features you have specified.  
 
@@ -138,6 +140,11 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 25. After installation, the Complete page provides a link to the summary log file for the installation and other important notes. To complete the SQL Server installation process, select **Close**.
 
 26. If you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you are done with Setup. For information about Setup log files, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+
+> [!CAUTION]
+> Apply servicing updates
+>
+> Adding features to an existing installation of SQL Server will install the feature at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow up installing the new feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of the server and new features, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
 
 ## Next Steps
 
@@ -151,3 +158,4 @@ Configure your SQL Server installation
 - [Repair a Failed SQL Server 2016 Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 - [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 - [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md)
+- [Latest Updates for SQL Server](latest-updates-for-microsoft-sql-server.md)

@@ -4,7 +4,7 @@ description: Learn about the hierarchy of entities that can be secured with perm
 ms.custom: ""
 ms.date: "03/23/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual

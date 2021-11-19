@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "minimum SQL syntax supported [ODBC]"
   - "ODBC drivers [ODBC], minimum SQL syntax supported"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], data types"
 ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Data Type Support
 ODBC drivers must support at least one of SQL_CHAR and SQL_VARCHAR. Support for other data types is determined by the driver's or data source's SQL-92 conformance level. An application should call **SQLGetTypeInfo** to determine the data types supported by the driver.  

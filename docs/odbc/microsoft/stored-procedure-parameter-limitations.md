@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "stored procedures [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], stored procedures"
 ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Stored Procedure Parameter Limitations
 > [!IMPORTANT]  

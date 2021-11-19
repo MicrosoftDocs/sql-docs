@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLInstallTranslatorEx"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLInstallTranslatorEx function [ODBC]"
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLInstallTranslatorEx Function
 **Conformance**  

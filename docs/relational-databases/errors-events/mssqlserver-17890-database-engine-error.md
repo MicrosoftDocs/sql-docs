@@ -2,11 +2,11 @@
 description: "MSSQLSERVER_17890"
 title: MSSQLSERVER_17890
 ms.custom: ""
-ms.date: 10/27/2020
+ms.date: 12/25/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "17890 (Database Engine error)"
 ms.assetid: 
@@ -32,7 +32,7 @@ ms.author: ramakoni
 
 You might encounter the following error message in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log or the Windows Application event log.
 
-> A significant part of SQL Server  process memory has been paged out. This may result in a performance degradation. Duration: 0 seconds. Working set (KB): 3383250, committed (KB): 9112480, memory utilization: 37%..
+> A significant part of SQL Server  process memory has been paged out. This may result in a performance degradation. Duration: 0 seconds. Working set (KB): 3383250, committed (KB): 9112480, memory utilization: 37%.
 
 You might also notice a sudden performance degradation with query execution and all other operations on the SQL Server.
 
@@ -126,7 +126,7 @@ Below, you can find information on each of these categories
     - [Poor performance occurs on a computer that has NUMA-based processors and that is running Windows Server 2008 R2 or Windows 7 if a thread requests lots of memory that is within the first 4 GB of memory](https://support.microsoft.com/help/2155311)
     - [Computer intermittently performs poorly or stops responding when the Storport driver is used in Windows Server 2008 R2](https://support.microsoft.com/help/2468345)
 
-## Important considerations before you assign the "Lock pages in memory" user right for an instance of SQL Server
+## Important considerations before you assign the "Lock pages in memory" user right
 
 You should make additional considerations before you assign the Lock pages in memory user right. If you assign this user right on systems that are configured incorrectly, the system may become unstable or experience a performance decrease of the whole system. Additionally, event ID 333 may be logged in the event log.
 
@@ -151,9 +151,9 @@ Before you assign the Lock pages in memory user right, make sure that you captur
 
 - Before you configure the max server memory option and the min server memory option for multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances, consider the memory requirements of the nonbuffer pool for each instance of SQL Server. Then, configure these options for each instance of SQL Server.
 
-Ideally, you collect this baseline information during peak loads. Therefore, you can determine the memory requirements for various applications and components to support the peak load. The memory requirements vary from one system to another system, depending on the activities and the applications that are running on the system. You can query the information that is provided in the dynamic management view sys.dm_os_process_memory to understand whether the system is encountering low memory conditions. For more information, see [sys.dm_os_process_memory (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-process-memory-transact-sql).
+Ideally, you collect this baseline information during peak loads. Therefore, you can determine the memory requirements for various applications and components to support the peak load. The memory requirements vary from one system to another system, depending on the activities and the applications that are running on the system. You can query the information that is provided in the dynamic management view sys.dm_os_process_memory to understand whether the system is encountering low memory conditions. For more information, see [sys.dm_os_process_memory (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md).
 
-## Improvements added in Windows Server 2008 and in Windows Server 2008 R2 that Reduce Working Set Trimming
+## Improvements added in Windows Server 2008 and R2 version
 
 Windows Server 2008 and Windows Server 2008 R2 improve the contiguous memory allocation mechanism. This improvement lets Windows Server 2008 and Windows Server 2008 R2 reduce to a certain extent the effects of paging out the working set of applications when new memory requests arrive.
 

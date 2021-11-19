@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;ROWCOUNT (Transact-SQL)"
+description: "@@ROWCOUNT (Transact-SQL)"
 title: "@@ROWCOUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@ROWCOUNT_TSQL"
   - "@@ROWCOUNT"
@@ -24,7 +24,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # &#x40;&#x40;ROWCOUNT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the number of rows affected by the last statement. If the number of rows is more than 2 billion, use [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
   

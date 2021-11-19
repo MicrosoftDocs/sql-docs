@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: "01/28/2019"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.database_connection_stats"
   - "database_connection_stats"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sys.database_connection_stats"
   - "database_connection_stats"
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current"
 ---
@@ -53,7 +53,7 @@ monikerRange: "= azuresqldb-current"
   
 ### Interval start_time and end_time
 
- An event is included in an aggregation interval when the event occurs *on* or _after_**start_time** and _before_**end_time** for that interval. For example, an event occurring exactly at `2012-10-30 19:25:00.0000000` would be included only in the second interval shown below:  
+ An event is included in an aggregation interval when the event occurs *on* or _after_ **start_time** and _before_ **end_time** for that interval. For example, an event occurring exactly at `2012-10-30 19:25:00.0000000` would be included only in the second interval shown below:  
   
 ```  
   

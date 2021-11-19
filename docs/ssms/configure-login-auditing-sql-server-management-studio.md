@@ -18,7 +18,7 @@ ms.author: "maghan"
 ---
 # Configure Login Auditing (SQL Server Management Studio)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-This topic describes how to configure login auditing in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] to monitor [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] login activity. Login auditing can be configured to write to the error log on the following events.  
+This topic describes how to configure login auditing in SQL Server to monitor [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] login activity. Login auditing can be configured to write to the error log on the following events.  
   
 -   Failed logins  
   
@@ -26,13 +26,13 @@ This topic describes how to configure login auditing in [!INCLUDE[ssCurrent](../
   
 -   Both failed and successful logins  
   
-You must restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] before this option will take effect.  
+You must restart SQL Server before this option will take effect.  
   
 ## <a name="SSMSProcedure"></a>Using SQL Server Management Studio  
   
 #### To configure login auditing  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] with Object Explorer.  
+1.  In SQL Server Management Studio, connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] with Object Explorer.  
   
 2.  In Object Explorer, right-click the server name, and then click **Properties**.  
   

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax"
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Supported ODBC SQL Grammar (Visual FoxPro ODBC Driver)
 The Microsoft Visual FoxPro ODBC Driver supports the following:  

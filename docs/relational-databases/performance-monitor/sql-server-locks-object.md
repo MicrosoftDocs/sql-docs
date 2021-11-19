@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, Locks Object | Microsoft Docs"
+title: "SQL Server, Locks object"
 description: Learn about the SQLServer:Locks object, which provides information about SQL Server locks on individual resource types. 
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,11 +11,10 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Locks object"
   - "SQLServer:Locks"
-ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, Locks Object
+# SQL Server, Locks object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:Locks** object in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locks on individual resource types. Locks are held on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources, such as rows read or modified during a transaction, to prevent concurrent use of resources by different transactions. For example, if an exclusive (X) lock is held on a row within a table by a transaction, no other transaction can modify that row until the lock is released. Minimizing locks increases concurrency, which can improve performance. Multiple instances of the **Locks** object can be monitored at the same time, with each instance representing a lock on a resource type.  
   
@@ -46,10 +45,22 @@ ms.author: wiassaf
 |**Key**|A lock on a row in an index.|  
 |**Metadata**|A lock on a piece of catalog information, also called metadata.|  
 |**Object**|A lock on table, stored procedure, view, etc, including all data and indexes. The object can be anything that has an entry in **sys.all_objects**.|  
+|**OIB**|Lock resource for online index build locks, specifically for a online index build LOB tracking table.|
 |**Page**|A lock on an 8-kilobyte (KB) page in a database.|  
 |**RID**|Row ID. A lock on a single row in a heap.|  
+|**RowGroup**|Lock resource for a columnstore index rowgroup.|
+|**Xact**|Lock resource for a transactions.|
   
-## See Also  
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%Locks%';
+```  
+
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

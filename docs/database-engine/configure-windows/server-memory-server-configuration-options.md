@@ -1,7 +1,7 @@
 ---
 title: "Server memory configuration options | Microsoft Docs"
-ms.custom: contperfq4
-ms.date: "08/14/2019"
+ms.custom: contperf-fy20q4
+ms.date: "08/10/2021"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -54,9 +54,10 @@ The server options **min server memory** and **max server memory** can be set to
 >[!NOTE]
 >[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not guaranteed to allocate the amount of memory specified in **min server memory**. If the load on the server never requires allocating the amount of memory specified in **min server memory**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will run with less memory.
 
-<a name="max_server_memory"></a> Use **max_server_memory** to guarantee the OS does not experience detrimental memory pressure. To set max server memory configuration, monitor overall consumption of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process in order to determine memory requirements. To be more accurate with these calculations for a single instance:
-- From the total OS memory, reserve 1GB-4GB to the OS itself.
-- Then subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory allocations outside the **max server memory** control, which is comprised of **stack size <sup>1</sup> \* calculated max worker threads <sup>2</sup>**. What remains should be the max_server_memory setting for a single instance setup.
+<a name="max_server_memory"></a> Use **max_server_memory** to guarantee the OS does not experience detrimental memory pressure. To set max server memory configuration, monitor overall consumption of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process in order to determine memory requirements. For an initial configuration or when there was no opportunity to collect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process memory usage over time, use the following generalized best practice approach to configure **max_server_memory** for a single instance:
+- From the total OS memory, subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory allocations outside the **max server memory** control, which is comprised of **stack size <sup>1</sup> \* calculated max worker threads <sup>2</sup>**. 
+- Then subtract 25% for other memory allocations outside the **max server memory** control, such as backup buffers, and other components. This is a generic approximation, mileage may vary.
+- What remains should be the max_server_memory setting for a single instance setup.
 
 <sup>1</sup> Refer to the [Memory Management Architecture guide](../../relational-databases/memory-management-architecture-guide.md#stacksizes) for information on thread stack sizes per architecture.
 

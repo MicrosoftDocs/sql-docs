@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ELEMENTXSINIL directive"
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Example: Specifying the ELEMENTXSINIL Directive
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLRemoveTranslator"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLRemoveTranslator function [ODBC]"
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLRemoveTranslator Function
 **Conformance**  

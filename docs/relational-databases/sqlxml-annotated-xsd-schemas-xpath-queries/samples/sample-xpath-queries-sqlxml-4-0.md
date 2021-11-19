@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "mapping schema [SQLXML], queries"
   - "XPath queries [SQLXML], samples"
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

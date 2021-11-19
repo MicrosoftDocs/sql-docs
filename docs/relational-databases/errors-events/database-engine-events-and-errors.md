@@ -22,7 +22,7 @@ SELECT message_id AS Error, severity AS Severity,
 [Event Logged] = CASE is_event_logged WHEN 0 THEN 'No' ELSE 'Yes' END,
 text AS [Description]
 FROM sys.messages
-WHERE language_id = <desired language, such as 1033 for US English>
+WHERE language_id = 1040 /* replace 1040 with the desired language ID, such as 1033 for US English*/
 ORDER BY message_id
 ```
 
@@ -589,7 +589,7 @@ ORDER BY message_id
 |977 | 10 |  No  |  Warning: Could not find associated index for the constraint '%.*ls' on object_id '%d' in database '%.*ls'.|
 |978 | 14 |  No  |  The target database ('%.*ls') is in an availability group and is currently accessible for connections when the application intent is set to read only. For more information about application intent, see SQL Server Books Online. |
 |979  | 14 | No  |  The target database ('%.*ls') is in an availability group and currently does not allow read only connections. For more information about application intent, see SQL Server Books Online.|
-|980 |  21 |  Yes |  SQL Server cannot load database '%.*ls' because it contains a columnstore index. The currently installed edition of SQL Server |does not support columnstore indexes. Either disable the columnstore index in the database by using a supported edition of SQL Se|
+|980 |  21 |  Yes |  SQL Server cannot load database '%.*ls' because it contains a columnstore index. The currently installed edition of SQL Server does not support columnstore indexes. Either disable the columnstore index in the database by using a supported edition of SQL Se|
 |981  |  10 | No | Database manager will be using %d target database version. |
 |982  |  14 | No | Unable to access the '%.*ls' database because no online secondary replicas are enabled for read-only access. Check the availability group configuration to verify that at least one secondary replica is configured for read-only access. Wait for an enabled re|
 |983 |  14  | No | Unable to access availability database '%.*ls' because the database replica is not in the PRIMARY or SECONDARY role. Connections to an availability database is permitted only when the database replica is in the PRIMARY or SECONDARY role. Try the operation |
@@ -1171,7 +1171,7 @@ ORDER BY message_id
 |    2325    |    16    |    No    |    %sThe end tag '%ls' doesn't match opening tag '%ls:%ls' from line %u    |
 |    2326    |    16    |    No    |    %sThe end tag '%ls:%ls' doesn't match opening tag '%ls:%ls' from line %u    |
 |    2327    |    16    |    No    |    %sThe content or definition of <%ls> is missing.    |
-|    2328    |    16    |    No    |    %sSchema namespace '%ls' doesn't match <include> directive's '%ls'    |
+|    2328    |    16    |    No    |    %sSchema namespace '%ls' doesn't match \<include\> directive's '%ls'    |
 |    2329    |    16    |    No    |    %sThe string "%ls" is not a valid time duration value.    |
 |    2331    |    16    |    No    |    %sRedefinition has to have itself as base type. Location: '%ls'.    |
 |    2332    |    16    |    No    |    %s'%ls' may not be used with an 'empty' operand    |
@@ -1372,7 +1372,7 @@ ORDER BY message_id
 |    2752    |    16    |    No    |    Identity column '%.*ls' contains invalid SEED.    |
 |    2753    |    16    |    No    |    Identity column '%.*ls' contains invalid INCREMENT.    |
 |    2754    |    16    |    No    |    Error severity levels greater than %d can only be specified by members of the sysadmin role, using the WITH LOG option.    |
-|    2755    |    16    |    No    |    SET DEADLOCK_PRIORITY option is invalid. Valid options are {HIGH | NORMAL | LOW | [%d ... %d] of type integer}.    |
+|    2755    |    16    |    No    |    SET DEADLOCK_PRIORITY option is invalid. Valid options are {HIGH \| NORMAL \| LOW \| [%d ... %d] of type integer}.    |
 |    2756    |    16    |    No    |    Invalid value %d for state. Valid range is from %d to %d.    |
 |    2759    |    16    |    No    |    CREATE SCHEMA failed due to previous errors.    |
 |    2760    |    16    |    No    |    The specified schema name "%.*ls" either does not exist or you do not have permission to use it.    |
@@ -2030,12 +2030,12 @@ ORDER BY message_id
 |    4347    |    16    |    No    |    The current restore sequence was previously interrupted during the transition to the online state. RESTORE DATABASE WITH RECOVERY can be used to complete the transition to online.    |
 |    4348    |    16    |    No    |    The online restore to database '%ls' failed. It may be appropriate to perform an offline restore instead. An offline restore is initiated by using BACKUP LOG WITH NORECOVERY.    |
 |    4349    |    16    |    No    |    The log in this backup set begins at LSN %.*ls, which is too recent to apply to the database. This restore sequence needs to initialize the log to start at LSN %.*ls. Reissue the RESTORE LOG statement using an earlier log backup.    |
-|    4350    |    16    |    No    |    The list of pages provided with the RESTORE PAGE statement is incorrectly formatted. Prior to the problem %d pages were correctly identified. The problem was hit at character offset %d. Check that all pages are identified by numeric <file>:<page> pairs with commas separating each pair. For example: PAGE='1:57,2:31'.    |
+|    4350    |    16    |    No    |    The list of pages provided with the RESTORE PAGE statement is incorrectly formatted. Prior to the problem %d pages were correctly identified. The problem was hit at character offset %d. Check that all pages are identified by numeric \<file\>:\<page\> pairs with commas separating each pair. For example: PAGE='1:57,2:31'.    |
 |    4351    |    16    |    No    |    Backups taken on earlier versions of SQL Server are not supported by fn_dump_dblog.    |
 |    4352    |    16    |    No    |    RESTORE LOG is not supported from this data backup because file '%ls' is too old. Use a regular log backup to continue the restore sequence.    |
 |    4353    |    16    |    No    |    Conflicting file relocations have been specified for file '%.*ls'. Only a single WITH MOVE clause should be specified for any logical file name.    |
 |    4354    |    10    |    Yes    |    The file '%.*ls' of restored database '%ls' is being left in the defunct state because the database is being upgraded from a prior version. Piecemeal restore is not supported when an upgrade is involved.    |
-|    4355    |    16    |    No    |    The revert command is incorrectly specified. The RESTORE statement must be of the form: RESTORE DATABASE <x> FROM DATABASE_SNAPSHOT = <y>.    |
+|    4355    |    16    |    No    |    The revert command is incorrectly specified. The RESTORE statement must be of the form: RESTORE DATABASE \<x\> FROM DATABASE_SNAPSHOT = \<y\>.    |
 |    4356    |    10    |    No    |    Restore is complete on database '%ls'. The database is now available.    |
 |    4357    |    16    |    No    |    Restore cannot take '%ls' offline because changes exist that require a log backup. Take a log backup and then retry the RESTORE.    |
 |    4358    |    16    |    No    |    The database can not be brought online because file '%ls' is currently restored to LSN %.*ls but must be restored to LSN %.*ls.    |
@@ -2192,7 +2192,7 @@ ORDER BY message_id
 |    4863    |    16    |    No    |    Bulk load data conversion error (truncation) for row %d, column %d (%ls).    |
 |    4864    |    16    |    No    |    Bulk load data conversion error (type mismatch or invalid character for the specified codepage) for row %d, column %d (%ls).    |
 |    4865    |    16    |    No    |    Cannot bulk load because the maximum number of errors (%d) was exceeded.    |
-|    4866    |    16    |    No    |    The bulk load failed. The column is too long in the data file for row %d, column %d. Verify that the field terminator and row terminator are specified correctly.    | Bulk load failed due to invalid column value in CSV data file %ls in row %d, column %d | 
+|    4866    |    16    |    No    |    The bulk load failed. The column is too long in the data file for row %d, column %d. Verify that the field terminator and row terminator are specified correctly. Bulk load failed due to invalid column value in CSV data file %ls in row %d, column %d | 
 |    4867    |    16    |    No    |    Bulk load data conversion error (overflow) for row %d, column %d (%ls).    |
 |    4868    |    16    |    No    |    The bulk load failed. The codepage "%d" is not installed. Install the codepage and run the command again.    |
 |    4869    |    16    |    No    |    The bulk load failed. Unexpected NULL value in data file row %d, column %d. The destination column (%ls) is defined as NOT NULL.    |
@@ -3463,7 +3463,7 @@ ORDER BY message_id
 |    7802    |    16    |    No    |    Functions that have a return type of "%.*ls" are unsupported through SOAP invocation.    |
 |    7803    |    15    |    No    |    The clause %.*ls can not be used in the %.*ls statement.    |
 |    7804    |    15    |    No    |    %.*ls and %.*ls can not share the same value.    |
-|    7805    |    16    |    No    |    The parameter SITE can not be prefixed by a scheme such as 'https://'. Valid values for SITE include {'*' | '+' | 'site_name'}.    |
+|    7805    |    16    |    No    |    The parameter SITE can not be prefixed by a scheme such as 'https://'. Valid values for SITE include {'*' \| '+' \| 'site_name'}.    |
 |    7806    |    16    |    No    |    The URL specified by endpoint '%.*ls' is already registered to receive requests or is reserved for use by another service.    |
 |    7807    |    16    |    No    |    An error ('0x%x') occurred while attempting to register the endpoint '%.*ls'.    |
 |    7808    |    10    |    No    |    The endpoint '%.*ls' could not be unregistered.    |
@@ -3792,7 +3792,7 @@ ORDER BY message_id
 |    8195    |    16    |    No    |    Cannot create "%.*ls" on "%.*ls". Insert, Update, and Delete triggers can only be created on user tables and views.    |
 |    8196    |    16    |    No    |    Duplicate column specified as ROWGUIDCOL.    |
 |    8197    |    16    |    No    |    The object '%.*ls' does not exist or is invalid for this operation.    |
-|    8199    |    16    |    No    |    In EXECUTE <procname>, procname can only be a literal or variable of type char, varchar, nchar, or nvarchar.    |
+|    8199    |    16    |    No    |    In EXECUTE \<procname\>, procname can only be a literal or variable of type char, varchar, nchar, or nvarchar.    |
 |    8301    |    10    |    No    |    Use of level0type with value 'USER' in procedure sp_addextendedproperty, sp_updateextendedproperty and sp_dropextendedproperty and in table-valued function fn_listextendedproperty has been deprecated and will be removed in a future version of SQL Server. Users are now schema scoped and hence use level0type with value 'SCHEMA' and level1type with value 'USER' for extended properties on USER.    |
 |    8302    |    10    |    No    |    CREATE RULE and DROP RULE will be removed in a future version of SQL Server. Avoid using CREATE RULE and DROP RULE in new development work, and plan to modify applications that currently use them. Use check constraints instead, which are created using the CHECK keyword of CREATE TABLE or ALTER TABLE.    |
 |    8303    |    10    |    No    |    CREATE DEFAULT and DROP DEFAULT will be removed in a future version of SQL Server. Avoid using CREATE DEFAULT and DROP DEFAULT in new development work, and plan to modify applications that currently use them. Instead, use default definitions created using the DEFAULT keyword of ALTER TABLE or CREATE TABLE.    |
@@ -3835,7 +3835,7 @@ ORDER BY message_id
 |    8388    |    10    |    No    |    The ability to return results from triggers will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.    |
 |    8389    |    10    |    No    |    The ALL permission will be removed in a future version of SQL Server. Avoid using this permission in new development work and plan to modify applications that currently use it.    |
 |    8390    |    10    |    No    |    The '::' function calling syntax will be removed in a future version of SQL Server. Replace it with "sys.".    |
-|    8391    |    10    |    No    |    The usage of 2-part names in DROP INDEX is deprecated. New-style syntax DROP INDEX <1p-name> ON {<3p-table-name> | <3p-view-name> }    |
+|    8391    |    10    |    No    |    The usage of 2-part names in DROP INDEX is deprecated. New-style syntax DROP INDEX <1p-name> ON {<3p-table-name> \| <3p-view-name> }    |
 |    8393    |    10    |    No    |    The ability to not specify a column name when the datatype is timestamp will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.    |
 |    8394    |    10    |    No    |    Usage of deprecated index option syntax. The deprecated relational index option syntax structure will be removed in a future version of SQL Server. Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature.    |
 |    8396    |    10    |    No    |    %ls will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use %ls instead.    |
@@ -4020,10 +4020,10 @@ ORDER BY message_id
 |    8682    |    16    |    No    |    SELECT via cursor failed because in XML plan provided to USE PLAN hint, neither Populate nor Fetch plans are provided, and at least one must be present. For best likelihood of successful plan forcing, use an XML cursor plan captured from SQL Server without modification.    |
 |    8683    |    16    |    No    |    Could not force query plan because XML showplan provided in USE PLAN hint contains invalid Star Join specification. Consider specifying a USE PLAN hint that contains an unmodified XML showplan produced by SQL Server. This may allow you to force the plan.    |
 |    8684    |    16    |    No    |    A query plan could not be found because optimizer exceeded number of allowed operations while searching for plan specified in USE PLAN hint. First consider removing USE PLAN hint. Then if necessary consider (1) updating statistics, (2) using other hints such as join hints, index hints, or the OPTIMIZE FOR hint, (3) rewriting query or breaking it down into two or more separate queries.    |
-|    8685    |    16    |    No    |    Query cannot be compiled because <CursorStmt> element appears in XML plan provided to USE PLAN but USE PLAN was applied to a non-cursor statement. Consider using an XML plan obtained from SQL Server for statement without modification.    |
-|    8686    |    16    |    No    |    Cursor plan forcing failed because input plan has more than one <Operation> node with OperationType=%ls. Consider using an XML cursor plan captured from SQL Server without modification.    |
+|    8685    |    16    |    No    |    Query cannot be compiled because \<CursorStmt\> element appears in XML plan provided to USE PLAN but USE PLAN was applied to a non-cursor statement. Consider using an XML plan obtained from SQL Server for statement without modification.    |
+|    8686    |    16    |    No    |    Cursor plan forcing failed because input plan has more than one \<Operation\> node with OperationType=%ls. Consider using an XML cursor plan captured from SQL Server without modification.    |
 |    8687    |    16    |    No    |    Cursor plan failed because it is not possible to force the plan for a cursor of type other than FAST_FORWARD or STATIC with a USE PLAN hint. Consider removing USE PLAN hint and updating statistics or using different hints to influence query plan choice.    |
-|    8688    |    16    |    No    |    Cursor plan forcing failed because in XML plan provided to USE PLAN, required element %ls is missing under <CursorPlan> element. Consider using an XML cursor plan captured from SQL Server without modification.    |
+|    8688    |    16    |    No    |    Cursor plan forcing failed because in XML plan provided to USE PLAN, required element %ls is missing under \<CursorPlan\> element. Consider using an XML cursor plan captured from SQL Server without modification.    |
 |    [8689](mssqlserver-8689-database-engine-error.md)    |    16    |    No    |    Database '%.*ls', specified in the USE PLAN hint, does not exist. Specify an existing database.    |
 |    8690    |    16    |    No    |    Query cannot be compiled because USE PLAN hint conflicts with hint %ls. Consider removing hint %ls.    |
 |    8691    |    16    |    No    |    Query cannot be compiled because USE PLAN hint conflicts with SET %ls ON. Consider setting %ls OFF.    |
@@ -4211,7 +4211,7 @@ ORDER BY message_id
 |    9243    |    10    |    No    |    Query notification delivery could not send message on dialog '%.*ls'. Query notification delivery failed because of the following error in service broker: '%.*ls'. See the error log for additional information.    |
 |    9244    |    16    |    No    |    Query notification cleanup could not access metadata for database "%d". Check whether the database is successfully restored and online.    |
 |    9300    |    16    |    No    |    %sIn this version of the server, the 'fn:id()' function only accepts an argument of type 'IDREF *'.    |
-|    9301    |    16    |    No    |    %sIn this version of the server, 'cast as <type>%s' is not available. Please use the 'cast as <type> ?' syntax.    |
+|    9301    |    16    |    No    |    %sIn this version of the server, 'cast as \<type\>%s' is not available. Please use the 'cast as \<type\> ?' syntax.    |
 |    9302    |    16    |    No    |    %sThe context item in which the 'fn:id()' function is used must be a node.    |
 |    9303    |    16    |    No    |    %sSyntax error near '%ls', expected '%ls'.    |
 |    9304    |    16    |    No    |    %sThis version of the server only supports XQuery version '1.0'.    |
@@ -5422,7 +5422,7 @@ ORDER BY message_id
 |    14020    |    16    |    No    |    Could not obtain the column ID for the specified column. Schema replication failed.    |
 |    14021    |    16    |    No    |    The column was not added correctly to the article.    |
 |    14022    |    16    |    No    |    The \@property parameter value must be either 'description', 'sync_object', 'type', 'ins_cmd', 'del_cmd', 'upd_cmd', 'filter', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'status', 'schema_option', or 'destination_owner'.    |
-|    14023    |    16    |    No    |    The type must be '[indexed view ]logbased[ (manualview|manualfilter|manualboth)]', '[serializable ]proc exec', or '(view|indexed view|proc|func|aggregate|synonym) schema only'.    |
+|    14023    |    16    |    No    |    The type must be '[indexed view ]logbased[ (manualview\|manualfilter\|manualboth)]', '[serializable ]proc exec', or '(view\|indexed view\|proc\|func\|aggregate\|synonym) schema only'.    |
 |    14024    |    16    |    No    |    The value of property 'subscriber_provider' cannot be NULL.    |
 |    14025    |    10    |    No    |    Article update successful.    |
 |    14026    |    16    |    No    |    The value of property 'subscriber_type is not a supported heterogeneous subscriber type. The value must be 1 (ODBC subscriber), or 3 (OLEDB subscriber).    |
@@ -5725,7 +5725,7 @@ ORDER BY message_id
 |    14504    |    16    |    No    |    '%s' is the fail-safe operator. You must make another operator the fail-safe operator before '%s' can be dropped.    |
 |    14505    |    16    |    No    |    Specify a null %s when supplying a performance condition.    |
 |    14506    |    16    |    No    |    Cannot set alerts on message ID %ld.    |
-|    14507    |    16    |    No    |    A performance condition must be formatted as: 'object_name|counter_name|instance_name|comparator(> or < or =)|numeric value'.    |
+|    14507    |    16    |    No    |    A performance condition must be formatted as: 'object_name\|counter_name\|instance_name\|comparator(> or \< or =)\|numeric value'.    |
 |    14508    |    16    |    No    |    Specify both \@wmi_namespace and \@wmi_query.    |
 |    14509    |    16    |    No    |    Specify a valid %s when supplying a \@wmi_namespace.    |
 |    14510    |    16    |    No    |    Specify a null %s when supplying a \@wmi_namespace.    |
@@ -5990,7 +5990,7 @@ ORDER BY message_id
 |    15068    |    16    |    No    |    A remote user '%s' already exists for remote server '%s'.    |
 |    15069    |    16    |    No    |    One or more users are using the database. The requested operation cannot be completed.    |
 |    15070    |    10    |    No    |    Object '%s' was successfully marked for recompilation.    |
-|    15071    |    16    |    No    |    Usage: sp_addmessage <msgnum>,<severity>,<msgtext> [,<language> [,FALSE | TRUE [,REPLACE]]]    |
+|    15071    |    16    |    No    |    Usage: sp_addmessage \<msgnum\>,\<severity\>,\<msgtext\> [,\<language\> [,FALSE \| TRUE [,REPLACE]]]    |
 |    15072    |    16    |    No    |    Usage: sp_addremotelogin remoteserver [,loginname [,remotename]]    |
 |    15074    |    10    |    No    |    Warning: You must recover this database prior to access.    |
 |    15076    |    16    |    No    |    Default, table, and user data types must be in the current database.    |
@@ -6001,7 +6001,7 @@ ORDER BY message_id
 |    15081    |    16    |    No    |    Membership of the public role cannot be changed.    |
 |    15083    |    16    |    No    |    Physical data type '%s' does not accept a collation    |
 |    15084    |    16    |    No    |    The column or user data type must be in the current database.    |
-|    15085    |    16    |    No    |    Usage: sp_addtype name, 'data type' [,'NULL' | 'NOT NULL']    |
+|    15085    |    16    |    No    |    Usage: sp_addtype name, 'data type' [,'NULL' \| 'NOT NULL']    |
 |    15096    |    16    |    No    |    Could not find object '%ls' or you do not have required permission or the object is not valid for adding extended property.    |
 |    15097    |    16    |    No    |    The size associated with an extended property cannot be more than 7,500 bytes.    |
 |    15098    |    16    |    No    |    The name change cannot be performed because the SID of the new name does not match the old SID of the principal.    |
@@ -6034,7 +6034,7 @@ ORDER BY message_id
 |    15128    |    16    |    No    |    The CHECK_POLICY and CHECK_EXPIRATION options cannot be turned OFF when MUST_CHANGE is ON.    |
 |    15129    |    16    |    No    |    '%d' is not a valid value for configuration option '%s'.    |
 |    15130    |    16    |    No    |    There already exists a '%s' trigger for '%s'.    |
-|    15131    |    16    |    No    |    Usage: sp_dbremove <dbname> [,dropdev]    |
+|    15131    |    16    |    No    |    Usage: sp_dbremove \<dbname\> [,dropdev]    |
 |    15133    |    16    |    No    |    INSTEAD OF trigger '%s' cannot be associated with an order.    |
 |    15134    |    16    |    No    |    No alias exists for the specified user.    |
 |    15135    |    16    |    No    |    Object is invalid. Extended properties are not permitted on '%s', or the object does not exist.    |
@@ -6076,7 +6076,7 @@ ORDER BY message_id
 |    15174    |    16    |    No    |    Login '%s' owns one or more database(s). Change the owner of the database(s) before dropping the login.    |
 |    15175    |    16    |    No    |    Login '%s' is aliased or mapped to a user in one or more database(s). Drop the user or alias before dropping the login.    |
 |    15176    |    16    |    No    |    The only valid \@parameter value is 'WITH_LOG'.    |
-|    15177    |    16    |    No    |    Usage: sp_dropmessage <msg number> [,<language> | 'ALL']    |
+|    15177    |    16    |    No    |    Usage: sp_dropmessage \<msg number\> [,\<language\> \| 'ALL']    |
 |    15178    |    16    |    No    |    Cannot drop or alter a message with an ID less than 50,000.    |
 |    15179    |    16    |    No    |    The message number %u or specified language version does not exist.    |
 |    15182    |    16    |    No    |    Cannot disable access to the guest user in master or tempdb.    |
@@ -6128,7 +6128,7 @@ ORDER BY message_id
 |    15238    |    16    |    No    |    Column '%s' has no rule.    |
 |    15239    |    16    |    No    |    User data type '%s' has no rule.    |
 |    15240    |    16    |    No    |    Cannot write into file '%s'. Verify that you have write permissions, that the file path is valid, and that the file does not already exist.    |
-|    15241    |    16    |    No    |    Usage: sp_dboption [dbname [,optname [,'true' | 'false']]]    |
+|    15241    |    16    |    No    |    Usage: sp_dboption [dbname [,optname [,'true' \| 'false']]]    |
 |    15242    |    16    |    No    |    Database option '%s' is not unique.    |
 |    15243    |    16    |    No    |    The option '%s' cannot be changed for the master database.    |
 |    15244    |    16    |    No    |    Only members of the sysadmin role or the database owner may set database options.    |
@@ -6142,12 +6142,12 @@ ORDER BY message_id
 |    15253    |    11    |    No    |    Syntax error parsing SQL identifier '%s'.    |
 |    15254    |    16    |    No    |    Users other than the database owner or guest exist in the database. Drop them before removing the database.    |
 |    15255    |    11    |    No    |    '%s' is not a valid value for \@autofix. The only valid value is 'auto'.    |
-|    15256    |    16    |    No    |    Usage: sp_certify_removable <dbname> [,'auto']    |
+|    15256    |    16    |    No    |    Usage: sp_certify_removable \<dbname\> [,'auto']    |
 |    15257    |    16    |    No    |    The database that you are attempting to certify cannot be in use at the same time.    |
 |    15258    |    16    |    No    |    The database must be owned by a member of the sysadmin role before it can be removed.    |
 |    15259    |    16    |    No    |    The DEFAULT_SCHEMA clause cannot be used with a Windows group or with principals mapped to certificates or asymmetric keys.    |
 |    15260    |    16    |    No    |    The format of the security descriptor string '%s' is invalid.    |
-|    15261    |    16    |    No    |    Usage: sp_create_removable <dbname>,<syslogical>,<sysphysical>,<syssize>,<loglogical>,<logphysical>,<logsize>,<datalogical1>,<dataphysical1>,<datasize1> [,<datalogical2>,<dataphysical2>,<datasize2>...<datalogical16>,<dataphysical16>,<datasize16>]    |
+|    15261    |    16    |    No    |    Usage: sp_create_removable \<dbname\>,\<syslogical\>,\<sysphysical\>,\<syssize\>,\<loglogical\>,\<logphysical\>,\<logsize\>,\<datalogical1\>,\<dataphysical1\>,\<datasize1\> [,\<datalogical2\>,\<dataphysical2\>,\<datasize2\>...\<datalogical16\>,\<dataphysical16\>,\<datasize16\>]    |
 |    15262    |    10    |    No    |    Invalid file size entered. All files must be at least 1 MB.    |
 |    15263    |    16    |    No    |    A SID in the security descriptor string '%s' could not be found in an account lookup operation.    |
 |    15264    |    16    |    No    |    Could not create the '%s' portion of the database.    |
@@ -6232,7 +6232,7 @@ ORDER BY message_id
 |    15351    |    10    |    No    |    The CLR procedure/function/type being signed refers to an assembly that is not signed either by a strong name or an assembly.    |
 |    15352    |    16    |    No    |    The %S_MSG cannot be dropped because one or more entities are either signed or encrypted using it.    |
 |    15353    |    16    |    No    |    An entity of type %S_MSG cannot be owned by a role, a group, an approle, or by principals mapped to certificates or asymmetric keys.    |
-|    15354    |    10    |    No    |    Usage: sp_detach_db <dbname>, [TRUE|FALSE], [TRUE|FALSE]    |
+|    15354    |    10    |    No    |    Usage: sp_detach_db \<dbname\>, [TRUE\|FALSE], [TRUE\|FALSE]    |
 |    15356    |    16    |    No    |    The current application role has been dropped. The current security context contains no valid database user context.    |
 |    15357    |    16    |    No    |    The current security context was set by "%ls". It cannot be reverted by statement "%ls".    |
 |    15358    |    10    |    No    |    User-defined filegroups should be made read-only.    |
@@ -6506,7 +6506,7 @@ ORDER BY message_id
 |    16996    |    16    |    No    |    %ls cannot take output parameters.    |
 |    16998    |    16    |    No    |    The asynchronous cursor worktable population thread spawn failed.    |
 |    16999    |    20    |    Yes    |    Internal Cursor Error: The cursor is in an invalid state.    |
-|    17000    |    10    |    No    |    Usage: sp_autostats <table_name> [, {ON|OFF} [, <index_name>] ]    |
+|    17000    |    10    |    No    |    Usage: sp_autostats <table_name> [, {ON\|OFF} [, <index_name>] ]    |
 |    17001    |    16    |    Yes    |    Failure to send an event notification instance of type '%s' on conversation handle '%s'. Error Code = '%s'.    |
 |    17002    |    16    |    Yes    |    Failed to post QUEUE_ACTIVATION event. Error code: '0x%s'.    |
 |    17003    |    16    |    Yes    |    Closed event notification conversation endpoint with handle '%s', due to the following error: '%.*ls'.    |
@@ -7608,7 +7608,7 @@ ORDER BY message_id
 |    21273    |    16    |    No    |    You must upgrade the Subscriber to SQL Server 2000 to create updatable subscriptions when the Publisher is SQL Server 2000 or higher.    |
 |    21274    |    16    |    No    |    Invalid publication name '%s'.    |
 |    21275    |    16    |    No    |    Cannot publish the schema-bound view '%ls'. The value specified for the \@type parameter must be "indexed view schema only" (for snapshot or transactional replication) or "indexed view logbased" (for transactional replication only).    |
-|    21276    |    16    |    No    |    The type must be 'table' or '( view | indexed view | proc | func ) schema only'.    |
+|    21276    |    16    |    No    |    The type must be 'table' or '( view \| indexed view \| proc \| func ) schema only'.    |
 |    21277    |    16    |    No    |    Cannot publish the source object '%ls'. The value specified for the \@type parameter ("indexed view schema only" or "indexed view logbased") can be used only for indexed views. Either specify a value of "view schema only" for the \@type parameter, or modify the view to be schema bound with a unique clustered index.    |
 |    21278    |    16    |    No    |    Cannot publish the source object '%ls'. The value specified for the \@type parameter ("indexed view logbased") requires that the view be schema bound with a unique clustered index. Either specify a value of "view schema only" for the \@type parameter, or modify the view to be schema bound with a unique clustered index.    |
 |    21279    |    16    |    No    |    The 'schema_option' property for a merge article cannot be changed after a snapshot is generated for the publication. To change the 'schema_option' property of this article the corresponding merge publication must be dropped and re-created.    |
@@ -8797,7 +8797,7 @@ ORDER BY message_id
 |    30045    |    17    |    No    |    Fulltext index error during compression or decompression. Full-text index may be corrupted on disk. Run dbcc checkdatabase and re-populate the index.    |
 |    30046    |    16    |    No    |    SQL Server encountered error 0x%x while communicating with full-text filter daemon host (FDHost) process. Make sure that the FDHost process is running. To re-start the FDHost process, run the sp_fulltext_service 'restart_all_fdhosts' command or restart the SQL Server instance.    |
 |    30047    |    16    |    No    |    The user does not have permission to %.*ls stoplist '%.*ls'.    |
-|    30048    |    10    |    No    |    Informational: Ignoring duplicate thesaurus rule '%ls' while loading thesaurus file for LCID %d. A duplicate thesaurus phrase was encountered in either the <sub> section of an expansion rule or the <pat> section of a replacement rule. This causes an ambiguity and hence this phrase will be ignored.    |
+|    30048    |    10    |    No    |    Informational: Ignoring duplicate thesaurus rule '%ls' while loading thesaurus file for LCID %d. A duplicate thesaurus phrase was encountered in either the \<sub\> section of an expansion rule or the \<pat\> section of a replacement rule. This causes an ambiguity and hence this phrase will be ignored.    |
 |    30049    |    17    |    No    |    Fulltext thesaurus internal error (HRESULT = '0x%08x')    |
 |    30050    |    16    |    No    |    Both the thesaurus file for lcid '%d' and the global thesaurus could not be loaded.    |
 |    30051    |    16    |    No    |    Phrases longer than 512 unicode characters are not allowed in a thesaurus file. Phrase: '%ls'.    |
@@ -9088,7 +9088,7 @@ ORDER BY message_id
 |    35011    |    16    |    No    |    The \@server_name parameter cannot be a relative name.    |
 |    35012    |    16    |    No    |    You cannot add a shared registered server with the same name as the Configuration Server.    |
 |    [41030](mssqlserver-41030-database-engine-error.md)    |        |        |    Failed to open the Windows Server Failover Clustering registry subkey '%.*ls' (Error code %d).  The parent key is the cluster root key.  The WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. If the corresponding availability group has been dropped, this error is expected. For information about this error code, see "System Error Codes" in the Windows Development documentation.    |
-|    [41301](mssqlserver-41301-database-engine-error.md)    |        |        |    A previous transaction that the current transaction took a dependency on has aborted, and the current transaction can no longer commit.|    |
+|    [41301](mssqlserver-41301-database-engine-error.md)    |        |        |    A previous transaction that the current transaction took a dependency on has aborted, and the current transaction can no longer commit.   |
 |    [41302](mssqlserver-41302-database-engine-error.md)    |        |        |    The current transaction attempted to update a record that has been updated since this transaction started. The transaction was aborted.    |
 |    [41305](mssqlserver-41305-database-engine-error.md)    |        |        |    The current transaction failed to commit due to a repeatable read validation failure.    |
 |    [41307](mssqlserver-41307-database-engine-error.md)    |        |        |    The row size limit of *number* bytes for memory optimized tables has been exceeded. Please simplify the table definition.    |
@@ -9103,6 +9103,14 @@ ORDER BY message_id
 |    [41368](mssqlserver-41368-database-engine-error.md)    |        |        |    Accessing memory optimized tables using the READ COMMITTED isolation level is supported only for autocommit transactions. It is not supported for explicit or implicit transactions. Provide a supported isolation level for the memory optimized table using a table hint, such as WITH (SNAPSHOT).    |
 |    [41396](mssqlserver-41396-database-engine-error.md)    |        |        |    The sort operation exceeded the buffer limit. The stored procedure execution was aborted. Consult SQL Server Books Online for more information.    |
 |    [41399](mssqlserver-41399-database-engine-error.md)    |        |        |    The sort operation is too complex. Consult SQL Server Books Online for more information.    |
+|    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
+
+## Errors 41,400 to 42109
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
+|    [42108](mssqlserver-42108-database-engine-error.md)    |    20    |    No    |    Can not connect to the SQL pool since it is paused. Please resume the SQL pool and try again.    |
+|    [42109](mssqlserver-42109-database-engine-error.md)    |    20    |    No    |    The SQL pool is warming up. Please try again.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
 ## See Also

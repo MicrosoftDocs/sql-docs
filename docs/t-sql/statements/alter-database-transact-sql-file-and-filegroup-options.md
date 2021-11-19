@@ -3,12 +3,12 @@ title: "ALTER DATABASE File and Filegroups"
 description: Update a database's files and filegroups using Transact-SQL.
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: "seo-lt-2019"
-ms.date: "02/21/2019"
+ms.date: "09/15/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ADD FILE"
   - "ADD_FILE_TSQL"
@@ -41,8 +41,8 @@ helpviewer_keywords:
   - "files [SQL Server], adding"
   - "databases [SQL Server], moving"
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options
@@ -139,7 +139,7 @@ Removes the logical file description from an instance of [!INCLUDE[ssNoVersion](
 Is the logical name used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file.
 
 > [!WARNING]
-> Removing a database file that has `FILE_SNAPSHOT` backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later).
+> Removing a database file that has `FILE_SNAPSHOT` backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
 
 MODIFY FILE
 Specifies the file that should be modified. Only one \<filespec> property can be changed at a time. NAME must always be specified in the \<filespec> to identify the file to be modified. If SIZE is specified, the new size must be larger than the current file size.
@@ -258,7 +258,7 @@ If FILEGROWTH is not specified, the default values are:
 
 |Version|Default values|
 |-------------|--------------------|
-|Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Data 64 MB. Log files 64 MB.|
+|Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]|Data 64 MB. Log files 64 MB.|
 |Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 1 MB. Log files 10%.|
 |Prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 10%. Log files 10%.|
 
@@ -290,7 +290,7 @@ CONTAINS MEMORY_OPTIMIZED_DATA
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later)
 
-Specifies that the filegroup stores memory optimized data in the file system. For more information, see [In-Memory OLTP - In-Memory Optimization](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Only one `MEMORY_OPTIMIZED_DATA` filegroup is allowed per database. For creating memory optimized tables, the filegroup cannot be empty. There must be at least one file. *filegroup_name* refers to a path. The path up to the last folder must exist, and the last folder must not exist.
+Specifies that the filegroup stores memory optimized data in the file system. For more information, see [In-Memory OLTP - In-Memory Optimization](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md). Only one `MEMORY_OPTIMIZED_DATA` filegroup is allowed per database. For creating memory optimized tables, the filegroup cannot be empty. There must be at least one file. *filegroup_name* refers to a path. The path up to the last folder must exist, and the last folder must not exist.
 
 REMOVE FILEGROUP *filegroup_name*
 Removes a filegroup from the database. The filegroup cannot be removed unless it is empty. Remove all files from the filegroup first. For more information, see "REMOVE FILE *logical_file_name*," earlier in this topic.
@@ -311,13 +311,13 @@ NAME = *new_filegroup_name*
 Changes the filegroup name to the *new_filegroup_name*.
 
 AUTOGROW_SINGLE_FILE
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later)
 
 When a file in the filegroup meets the autogrow threshold, only that file grows. This is the default.
 
 AUTOGROW_ALL_FILES
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later)
 
 When a file in the filegroup meets the autogrow threshold, all files in the filegroup grow.
 
@@ -841,8 +841,8 @@ A value of 0 indicates that automatic growth is set to off and no additional spa
 
 If FILEGROWTH is not specified, the default values are:
 
-- Data 64 MB
-- Log files 64 MB
+- Data 16 MB
+- Log files 16 MB
 
 **\<add_or_modify_filegroups>::=**
 

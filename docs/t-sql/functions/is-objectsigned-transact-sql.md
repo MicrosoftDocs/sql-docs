@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "IS_OBJECTSIGNED"
   - "IS_OBJECTSIGNED_TSQL"
@@ -20,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # IS_OBJECTSIGNED (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Indicates whether an object is signed by a specified certificate or asymmetric key.  
   

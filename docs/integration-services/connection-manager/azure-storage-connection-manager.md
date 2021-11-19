@@ -2,7 +2,7 @@
 title: "Azure Storage connection manager | Microsoft Docs"
 description: The Azure Storage connection manager enables an SSIS package to connect to an Azure Storage account.
 ms.custom: ""
-ms.date: "05/22/2019"
+ms.date: "07/19/2021"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -39,33 +39,34 @@ The following properties are available.
 - **Environment:** Specifies the cloud environment hosting the storage account.
 
 ## Managed identities for Azure resources authentication
-When running SSIS packages on [Azure-SSIS integration runtime in Azure Data Factory](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use the [managed identity](/azure/data-factory/connector-azure-sql-database#managed-identity) associated with your data factory for Azure storage authentication. The designated factory can access and copy data from or to your storage account by using this identity.
+When running SSIS packages on [Azure-SSIS integration runtime (IR) in Azure Data Factory (ADF)](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use Azure Active Directory (AAD) authentication with [the specified system/user-assigned managed identity for your ADF](/azure/data-factory/connector-azure-blob-storage#managed-identity) to access Azure Storage. Your Azure-SSIS IR can access and copy data from or to your storage account by using this managed identity.
 
-Refer to [Authenticate access to Azure Storage using Azure Active Directory](/azure/storage/common/storage-auth-aad) for Azure Storage authentication in general. To use managed identity authentication for Azure Storage:
+Refer to the [Authenticate access to Azure Storage using AAD](/azure/storage/common/storage-auth-aad) article for Azure Storage authentication in general. To use AAD authentication with the specified system/user-assigned managed identity for your ADF to access Azure Storage, follow these steps:
+ 
+1. [Find the specified system/user-assigned managed identity for your ADF from Azure portal](/azure/data-factory/data-factory-service-identity). Go to your data factory's **Properties**. Copy the **Managed Identity Application ID** (not the **Managed Identity Object ID**).
 
-1. [Find the data factory managed identity from the Azure portal](/azure/data-factory/data-factory-service-identity). Go to your data factory's **Properties**. Copy the **Managed Identity Application ID** (not **Managed Identity Object ID**).
+1. Grant the specified system/user-assigned managed identity for your ADF the required permissions to access Azure Storage. For more details about roles, see the [Manage access rights to Azure Storage data with RBAC](/azure/storage/common/storage-auth-aad-rbac-portal) article.
 
-1. Grant the managed identity proper permission in your storage account. For more details about roles, see [Manage access rights to Azure Storage data with RBAC](/azure/storage/common/storage-auth-aad-rbac-portal).
+   - **As source**, in Access control (IAM), grant at least the **Storage Blob Data Reader** role.
+   - **As destination**, in Access control (IAM), grant at least the **Storage Blob Data Contributor** role.
 
-    - **As source**, in Access control (IAM), grant at least the **Storage Blob Data Reader** role.
-    - **As destination**, in Access control (IAM), grant at least the **Storage Blob Data Contributor** role.
+Finally, you can configure AAD authentication with the specified system/user-assigned managed identity for your ADF on the Azure Storage connection manager. Here are the options to do this:
 
-Then configure managed identity authentication for the Azure Storage connection manager. Here are the options to do this:
+- **Configure at design time.** In SSIS Designer, double-click on your Azure Storage connection manager to open the **Azure Storage Connection Manager Editor**. Select the **Use managed identity to authenticate on Azure** option.
 
-- **Configure at design time.** In SSIS Designer, double-click the Azure Storage connection manager to open **Azure Storage Connection Manager Editor**. Select **Use managed identity to authenticate on Azure**.
-    > [!NOTE]
-    >  Currently, this option doesn't take effect (indicating that managed identity authentication doesn't work) when you run SSIS package in SSIS Designer or [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server.
-    
-- **Configure at runtime.** When you run the package via [SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md) or [Azure Data Factory Execute SSIS Package activity](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), find the Azure Storage connection manager. Update its property `ConnectUsingManagedIdentity` to `True`.
-    > [!NOTE]
-    >  In Azure-SSIS integration runtime, all other authentication methods (for example, access key and service principal) preconfigured on the Azure Storage connection manager are overridden when managed identity authentication is used for storage operations.
+  > [!NOTE]
+  >  Currently, this option doesn't take effect (indicating that AAD authentication with the specified system/user-assigned managed identity for your ADF doesn't work) when you run your package in SSIS Designer or on SQL Server.
 
-> [!NOTE]
->  To configure managed identity authentication on existing packages, the preferred way is to rebuild your SSIS project with the [latest SSIS Designer](../../ssdt/download-sql-server-data-tools-ssdt.md) at least once. Redeploy that SSIS project to your Azure-SSIS integration runtime, so that the new connection manager property `ConnectUsingManagedIdentity` is automatically added to all Azure Storage connection managers in your SSIS project. The alternative way is to directly use a property override with property path **\Package.Connections[{the name of your connection manager}].Properties[ConnectUsingManagedIdentity]** at runtime.
+- **Configure at run time.** When you run your package via [SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md) or [Execute SSIS Package activity in ADF pipeline](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), find the Azure Storage connection manager and update its property `ConnectUsingManagedIdentity` to `True`.
+
+  > [!NOTE]
+  > On Azure-SSIS IR, all other authentication methods (for example, integrated security and password) preconfigured on your Azure Storage connection manager are overridden when using AAD authentication with the specified system/user-assigned managed identity for your ADF.
+
+To configure AAD authentication with the specified system/user-assigned managed identity for your ADF on your existing packages, the preferred way is to rebuild your SSIS project with the [latest SSIS Designer](../../ssdt/download-sql-server-data-tools-ssdt.md) at least once. Redeploy your SSIS project to run on Azure-SSIS IR, so that the new connection manager property `ConnectUsingManagedIdentity` is automatically added to all Azure Storage connection managers in your project. The alternative way is to directly use property overrides with the property path *\Package.Connections[{the name of your connection manager}].Properties[ConnectUsingManagedIdentity]* assigned to `True` at run time.
 
 ## Secure network traffic to your storage account
-Azure Data Factory is now a [trusted Microsoft service](/azure/storage/common/storage-network-security#trusted-microsoft-services) to Azure storage. When you use managed identity authentication, it is possible to 
-secure your storage account by [limiting access to selected networks](/azure/storage/common/storage-network-security#change-the-default-network-access-rule) while still allowing your data factory to access your storage account. Please refer to [Managing exceptions](/azure/storage/common/storage-network-security#managing-exceptions) for instructions.
+ADF is now a [trusted Microsoft service](/azure/storage/common/storage-network-security#trusted-microsoft-services) to Azure Storage. When you use AAD authentication with the specified system/user-assigned managed identity for your ADF, it's possible to 
+secure your storage account by [limiting access to selected networks](/azure/storage/common/storage-network-security#change-the-default-network-access-rule) while still allowing your ADF to access it. Please refer to the [Managing exceptions](/azure/storage/common/storage-network-security#managing-exceptions) article for instructions.
 
-## See also  
- [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)
+## See also
+- [Integration Services (SSIS) Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)

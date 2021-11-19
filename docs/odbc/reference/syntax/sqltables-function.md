@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLTables"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLTables function [ODBC]"
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLTables Function
 **Conformance**  

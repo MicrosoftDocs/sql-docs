@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.column_store_row_groups_TSQL"
   - "column_store_row_groups"
@@ -19,8 +19,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.column_store_row_groups catalog view"
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.author: maghan
 |**index_id**|int|ID of the index for the table that has this columnstore index.|  
 |**partition_number**|int|ID of the table partition that holds row group row_group_id. You can use partition_number to join this DMV to sys.partitions.|  
 |**row_group_id**|int|The row group number associated with this row group. This is unique within the partition.<br /><br /> -1 = tail of an in-memory table.|  
-|**delta_store_hobt_id|bigint**|The hobt_id for OPEN row group in the delta store.<br /><br /> NULL if the row group is not in the delta store.<br /><br /> NULL for the tail of an in-memory table.|  
+|**delta_store_hobt_id**|bigint|The hobt_id for OPEN row group in the delta store.<br /><br /> NULL if the row group is not in the delta store.<br /><br /> NULL for the tail of an in-memory table.|  
 |**state**|tinyint|ID number associated with the state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = TOMBSTONE|  
 |**state_description**|nvarchar(60)|Description of the persistent state of the row group:<br /><br /> INVISIBLE -A hidden compressed segment in the process of being built from data in a delta store. Read actions will use the delta store until the invisible compressed segment is completed. Then the new segment is made visible, and the source delta store is removed.<br /><br /> OPEN - A read/write row group that is accepting new records. An open row group is still in rowstore format and has not been compressed to columnstore format.<br /><br /> CLOSED - A row group that has been filled, but not yet compressed by the tuple mover process.<br /><br /> COMPRESSED - A row group that has filled and compressed.|  
 |**total_rows**|bigint|Total rows physically stored in the row group. Some may have been deleted but they are still stored. The maximum number of rows in a row group is 1,048,576 (hexadecimal FFFFF).|  
@@ -75,7 +75,7 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
 ## See also  
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   

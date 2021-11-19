@@ -3,8 +3,8 @@ title: Active Directory authentication for SQL Server on Linux
 titleSuffix: SQL Server
 description: This article provides an overview of Active Directory Authentication for SQL Server on Linux.
 ms.date: 04/01/2019
-author: Dylan-MSFT
-ms.author: dygray
+author: amvin87
+ms.author: amitkh
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.prod: sql
@@ -45,7 +45,7 @@ The details for how to configure AD authentication are provided in the tutorial,
 
 ## Known issues
 
-- At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release.
+- At this time, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` authentication method will be enabled in a future release.
 - SQL Server on Linux does not support NTLM protocol for remote connections. Local connection may work using NTLM.
 
 ## Next Steps

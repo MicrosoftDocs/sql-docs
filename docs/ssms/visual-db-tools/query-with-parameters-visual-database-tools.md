@@ -18,7 +18,7 @@ ms.reviewer:
 
 ---
 # Query with Parameters (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In many instances, it is useful to create a query that you can reuse many times in your applications with different input each time. In this section you will find information about how to create parameter queries for these general purposes.  
   
 ## In This Section  

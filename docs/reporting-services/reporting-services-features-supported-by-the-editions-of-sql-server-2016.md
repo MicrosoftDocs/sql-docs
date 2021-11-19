@@ -68,7 +68,7 @@ For features supported by the Evaluation and Developer editions, see the SQL Ser
 > SQL Server Express with Tools and SQL Server Express don't support SQL Server Reporting Services.
   
 ## Edition requirements for the report server database
- When you create a report server database, not all editions of SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] you can use for specific editions of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ When you create a report server database, not all editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] you can use for specific editions of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 |For this edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services,|Use this edition of the Database Engine instance to host the database.|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
@@ -99,4 +99,4 @@ The following software client applications are available on the Microsoft Downlo
 
 * [Plan a SQL Server installation](../sql-server/install/planning-a-sql-server-installation.md).
 
-* More questions? Ask the [SQL Server Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+* More questions? Ask the [SQL Server Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

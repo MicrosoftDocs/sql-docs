@@ -4,10 +4,10 @@ title: "ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ROLLBACK TRANSACTION"
   - "ROLLBACK"
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "roll back transactions [SQL Server]"
   - "savepoints [SQL Server]"
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROLLBACK TRANSACTION (Transact-SQL)

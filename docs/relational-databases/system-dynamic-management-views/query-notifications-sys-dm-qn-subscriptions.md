@@ -6,7 +6,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_qn_subscriptions"
   - "dm_qn_subscriptions_TSQL"
@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_qn_subscriptions dynamic management view"
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Query Notifications - sys.dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

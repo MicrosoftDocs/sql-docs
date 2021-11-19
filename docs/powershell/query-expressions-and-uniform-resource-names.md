@@ -1,5 +1,5 @@
 ---
-title: "Query Expressions and Uniform Resource Names | Microsoft Docs"
+title: Query Expressions and Uniform Resource Names
 description: Learn about Query Expressions, which enumerate one or more objects in an object model hierarchy, and about Uniform Resource names (URNs), which uniquely identify a single object.
 ms.prod: sql
 ms.technology: sql-server-powershell
@@ -8,7 +8,6 @@ helpviewer_keywords:
   - "query expressions"
   - "unique resource names"
   - "URN"
-ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
@@ -18,7 +17,7 @@ ms.date: 10/14/2020
 
 # Query Expressions and Uniform Resource Names
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object (SMO) models and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell snap-ins use two types of expression strings that are similar to XPath expressions. Query expressions are strings that specify a set of criteria used to enumerate one or more objects in an object model hierarchy. A Uniform Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object.  
 
@@ -164,5 +163,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
   
 ## See Also
 
-- [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)
+- [Invoke-PolicyEvaluation cmdlet](/powershell/module/sqlserver/Invoke-PolicyEvaluation)
 - [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)

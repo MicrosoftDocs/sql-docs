@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FILE_IDEX"
   - "FILE_IDEX_TSQL"
@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], files"
   - "file names [SQL Server], FILE_IDEX"
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # FILE_IDEX (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the file identification (ID) number for the specified logical name of a data, log, or full-text file of the current database. 
   

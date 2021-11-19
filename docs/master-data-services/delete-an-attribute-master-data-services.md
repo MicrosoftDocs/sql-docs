@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "attributes [Master Data Services], deleting"
   - "deleting attributes [Master Data Services]"
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Delete an Attribute (Master Data Services)

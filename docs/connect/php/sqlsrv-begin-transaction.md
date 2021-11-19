@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "sqlsrv_begin_transaction"
 apitype: "NA"
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_begin_transaction"
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

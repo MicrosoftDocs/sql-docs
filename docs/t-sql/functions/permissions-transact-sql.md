@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "PERMISSIONS_TSQL"
   - "PERMISSIONS"
@@ -27,7 +27,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # PERMISSIONS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a value containing a bitmap that indicates the statement, object, or column permissions of the current user.  
   

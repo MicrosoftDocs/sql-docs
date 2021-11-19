@@ -2,9 +2,9 @@
 title: "Using Connection String Keywords with OLE DB Driver"
 description: "Some OLE DB Driver for SQL Server APIs use connection strings, which are a list of keywords and values that identify particular connection attributes."
 ms.custom: ""
-ms.date: "09/30/2020"
+ms.date: "05/31/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: "vanto"
 ms.technology: connectivity
 ms.topic: "conceptual"
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "connection strings [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, connection string keywords"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Connection String Keywords with OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,6 +81,8 @@ ms.author: v-daenge
 |**Authentication**<a href="#table1_1"><sup id="table1_authmode">**1**</sup></a>|SSPROP_AUTH_MODE|Specifies the SQL or Active Directory authentication used. Valid values are:<br/><ul><li>`(not set)`: Authentication mode determined by other keywords.</li><li>`ActiveDirectoryPassword:`User ID and password authentication with an Azure Active Directory identity.</li><li>`ActiveDirectoryIntegrated:` Integrated authentication with an Azure Active Directory identity.</li><br/>**NOTE:** The `ActiveDirectoryIntegrated` keyword can also be used for Windows authentication to SQL Server. It replaces `Integrated Security` (or `Trusted_Connection`) authentication keywords. It's **recommended** that applications using `Integrated Security` (or `Trusted_Connection`) keywords or their corresponding properties set the value of the `Authentication` keyword (or its corresponding property) to `ActiveDirectoryIntegrated` to enable new encryption and certificate validation behavior.<br/><br/><li>`ActiveDirectoryInteractive:` Interactive authentication with an Azure Active Directory identity. This method supports Azure multi-factor authentication (MFA). </li><li>`ActiveDirectoryMSI:` [Managed Identity (MSI)](/azure/active-directory/managed-identities-azure-resources/overview) authentication. For a user-assigned identity, the user ID should be set to the object ID of the user identity.</li><li>`ActiveDirectoryServicePrincipal:` Authentication with an Azure Active Directory service principal. The user ID should be set to the application (client) ID. The password should be set to the application (client) secret.</li><li>`SqlPassword:` Authentication using user ID and password.</li><br/>**NOTE:** It's **recommended** that applications using `SQL Server` authentication set the value of the `Authentication` keyword (or its corresponding property) to `SqlPassword` to enable [new encryption and certificate validation behavior](../features/using-azure-active-directory.md#encryption-and-certificate-validation).</ul>|
 |**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|Synonym for **AutoTranslate**.|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configures OEM/ANSI character translation. Recognized values are `yes` and `no`.|  
+|**ConnectRetryCount**|SSPROP_INIT_CONNECT_RETRY_COUNT|Controls the number of reconnection attempts in the case of connection loss. Valid values range from `0` to `255`. The default value is `1`. A value of 0 would result in no attempt to reconnect. For more information, see [Idle Connection Resiliency](../features/idle-connection-resiliency.md).|  
+|**ConnectRetryInterval**|SSPROP_INIT_CONNECT_RETRY_INTERVAL|Specifies the number of seconds between each connection retry attempt in the case of connection loss. Valid values range from `1` to `60`. The default value is `10`. For more information, see [Idle Connection Resiliency](../features/idle-connection-resiliency.md).|  
 |**Database**|DBPROP_INIT_CATALOG|The database name.|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|Specifies the mode of data type handling to use. Recognized values are `0` for provider data types and `80` for SQL Server 2000 data types.|  
 |**Encrypt**<a href="#table1_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|Specifies whether data should be encrypted before sending it over the network. Possible values are `yes` and `no`. The default value is `no`.|  
@@ -143,6 +145,8 @@ ms.author: v-daenge
 |**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|Synonym for **AutoTranslate**.|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configures OEM/ANSI character translation. Recognized values are `true` and `false`.|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|The amount of time (in seconds) to wait for data source initialization to complete.|  
+|**Connect Retry Count**|SSPROP_INIT_CONNECT_RETRY_COUNT|Controls the number of reconnection attempts in the case of connection loss. Valid values range from `0` to `255`. The default value is `1`. A value of 0 would result in no attempt to reconnect. For more information, see [Idle Connection Resiliency](../features/idle-connection-resiliency.md).|  
+|**Connect Retry Interval**|SSPROP_INIT_CONNECT_RETRY_INTERVAL|Specifies the number of seconds between each connection retry attempt in the case of connection loss. Valid values range from `1` to `60`. The default value is `10`. For more information, see [Idle Connection Resiliency](../features/idle-connection-resiliency.md).|  
 |**Current Language**|SSPROPT_INIT_CURRENTLANGUAGE|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] language name.|  
 |**Data Source**|DBPROP_INIT_DATASOURCE|The name of an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the organization.<br /><br /> When not specified, a connection is made to the default instance on the local computer.<br /><br /> For more information about valid address syntax, see the description of the **Server** keyword, in this topic.|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|Specifies the mode of data type handling to use. Recognized values are `0` for provider data types and `80` for [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] data types.|  
@@ -203,6 +207,8 @@ ms.author: v-daenge
 |**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|Synonym for **AutoTranslate**.|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configures OEM/ANSI character translation. Recognized values are `true` and `false`.|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|The amount of time (in seconds) to wait for data source initialization to complete.|  
+|**Connect Retry Count**|SSPROP_INIT_CONNECT_RETRY_COUNT|Controls the number of reconnection attempts in the case of connection loss. Valid values range from `0` to `255`. The default value is `1`. A value of 0 would result in no attempt to reconnect. For more information, see [Idle Connection Resiliency](../features/idle-connection-resiliency.md).|  
+|**Connect Retry Interval**|SSPROP_INIT_CONNECT_RETRY_INTERVAL|Specifies the number of seconds between each connection retry attempt in the case of connection loss. Valid values range from `1` to `60`. The default value is `10`. For more information, see [Idle Connection Resiliency](../features/idle-connection-resiliency.md).|  
 |**Current Language**|SSPROPT_INIT_CURRENTLANGUAGE|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] language name.|  
 |**Data Source**|DBPROP_INIT_DATASOURCE|The name of an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the organization.<br /><br /> When not specified, a connection is made to the default instance on the local computer.<br /><br /> For more information about valid address syntax, see the description of the **Server** keyword, in this topic.|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|Specifies the mode of data type handling that will be used. Recognized values are `0` for provider data types and `80` for SQL Server 2000 data types.|  

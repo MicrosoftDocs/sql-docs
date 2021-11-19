@@ -4,7 +4,7 @@ description: Learn how to use the OLE DB Driver for SQL Server header and librar
 ms.custom: ""
 ms.date: "02/12/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, library files"
   - "MSOLEDBSQL, library files"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using the OLE DB Driver for SQL Server header and library files
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

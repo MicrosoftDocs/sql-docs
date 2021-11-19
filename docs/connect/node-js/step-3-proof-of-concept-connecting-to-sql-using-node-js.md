@@ -1,6 +1,6 @@
 ---
 title: "Step 3: Connecting to SQL using Node.js"
-description: "This example should be considered a proof of concept showing how to connect to SQL using node.js and is simplified for clarity."
+description: "This example should be considered a proof of concept showing how to connect to SQL using Node.js and is simplified for clarity."
 ms.custom: ""
 ms.date: "07/23/2019"
 ms.prod: sql
@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Step 3: Proof of concept connecting to SQL using Node.js
 
@@ -45,7 +45,10 @@ The **new Connection** function is used to connect to SQL Database.
     connection.on('connect', function(err) {  
         // If no error, then good to proceed.
         console.log("Connected");  
-    });  
+    });
+    
+    connection.connect();
+
 ```  
   
 ## Step 2:  Execute a query  
@@ -77,6 +80,8 @@ All SQL statements are executed using the **new Request()** function. If the sta
         console.log("Connected");  
         executeStatement();  
     });  
+    
+    connection.connect();
   
     var Request = require('tedious').Request;  
     var TYPES = require('tedious').TYPES;  
@@ -102,6 +107,11 @@ All SQL statements are executed using the **new Request()** function. If the sta
         request.on('done', function(rowCount, more) {  
         console.log(rowCount + ' rows returned');  
         });  
+        
+        // Close the connection after the final event emitted by the request, after the callback passes
+        request.on("requestCompleted", function (rowCount, more) {
+            connection.close();
+        });
         connection.execSql(request);  
     }  
 ```  
@@ -133,8 +143,10 @@ In this example you will see how to execute an [INSERT](../../t-sql/statements/i
         // If no error, then good to proceed.  
         console.log("Connected");  
         executeStatement1();  
-    });  
-  
+    });
+    
+    connection.connect();
+    
     var Request = require('tedious').Request  
     var TYPES = require('tedious').TYPES;  
   
@@ -155,7 +167,12 @@ In this example you will see how to execute an [INSERT](../../t-sql/statements/i
                 console.log("Product id of inserted item is " + column.value);  
               }  
             });  
-        });       
+        });
+
+        // Close the connection after the final event emitted by the request, after the callback passes
+        request.on("requestCompleted", function (rowCount, more) {
+            connection.close();
+        });
         connection.execSql(request);  
     }  
 ```  

@@ -6,8 +6,8 @@ ms.date: "12/13/2017"
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
-author: "haoqian"
-ms.author: "haoqian"
+author: HaoQian-MS
+ms.author: haoqian
 ms.reviewer: maghan
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecuteinscaleout.f1"
@@ -119,6 +119,9 @@ To switch the default execution mode back so that packages no longer run by defa
 
 ## <a name="sql_agent"></a> Run package in SQL Server Agent job
 In a SQL Server Agent job, you can run an SSIS package as one step of the job. To run the package in Scale Out, set the default execution mode to **Scale Out**. After you set the default execution mode to **Scale Out**, packages in SQL Server Agent jobs run in Scale Out mode.
+
+> [!NOTE]
+> You can't stop Scale Out package execution by canceling the SQL Server Agent job. To stop Scale Out execution, we recommend that you use the catalog.stop_operation stored procedure or use the **Active Operations** pane. 
 
 ## Next steps
 -   [Troubleshoot Scale Out](troubleshooting-scale-out.md)

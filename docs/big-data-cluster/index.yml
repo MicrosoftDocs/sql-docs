@@ -1,0 +1,248 @@
+### YamlMime:Landing
+
+title: Big Data Clusters
+summary: SQL Server Big Data Clusters is the multi-cloud, open data platform for analytics at any scale. Big Data Clusters unites SQL Server with Apache Spark to deliver the best compute engines available for analytics in a single, easy to use deployment. With these engines, Big Data Clusters is the ideal data platform for AI, ML, M/R, Streaming, BI, T-SQL, and Spark. Delivered as part of the SQL Server 2019 release, Big Data Clusters is a cloud-native solution orchestrated by Kubernetes. Our mission is to accelerate, delight, and empower our users as they quench their thirst for data driven insights.
+
+metadata:
+  title: Big Data Clusters - Learn how to manage, deploy, and use
+  description: Learn how to use SQL Server Big Data Cluster. Tutorials, code examples, installation guides, and other documentation.
+  ms.service: sql
+  ms.topic: landing-page
+  ms.technology: big-data-cluster
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.date: 09/07/2021
+  ms.prod: sql
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (Get started)
+  - title: About Big Data Clusters
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Introducing Big Data Clusters
+            url: big-data-cluster-overview.md
+          - text: Big Data Clusters FAQ
+            url: big-data-cluster-faq.yml
+      - linkListType: whats-new
+        links:
+          - text: What's new
+            url: release-notes-big-data-cluster.md
+      - linkListType: video
+        links:
+          - text: Architecture & deployment
+            url: https://www.youtube.com/watch?v=q7mxWcYqBMM
+      - linkListType: quickstart
+        links:
+          - text: Deploy
+            url: deploy-get-started.md
+          - text: Load data
+            url: data-ingestion-restore-database.md
+          - text: Run a spark job
+            url: spark-submit-job.md
+  
+  # Card (Load data)
+  - title: Load data
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: Virtualize CSV
+          url: ./data-virtualization-csv.md
+        - text: Configure HDFS tiering
+          url: hdfs-tiering.md
+        - text: Mount ADLS Gen2
+          url: hdfs-tiering-mount-adlsgen2.md
+      - linkListType: concept
+        links:
+        - text: Data ingestion - curl
+          url: data-ingestion-curl.md
+        - text: Data ingestion - restore 
+          url: data-ingestion-restore-database.md
+      - linkListType: tutorial
+        links: 
+        - text: Sample notebook using Spark
+          url: notebooks-tutorial-spark.md
+        - text: Ingest data into data pool with Spark jobs
+          url: tutorial-data-pool-ingest-spark.md
+        - text: Ingest data into data pool with T-SQL
+          url: tutorial-data-pool-ingest-sql.md
+        - text: Load Sample Data
+          url: tutorial-load-sample-data.md
+
+  # Card (ML)
+  - title: Big Data and ML
+    linkLists:
+      - linkListType: concept
+        links:
+        - text: ML Services
+          url: machine-learning-services.md
+        - text: Install big data tools
+          url: deploy-big-data-tools.md          
+      - linkListType: how-to-guide
+        links:
+        - text: Create, export, and score Spark ML models
+          url: spark-create-machine-learning-model.md
+        - text: Spark library management
+          url: spark-install-packages.md
+        - text: Sparklyr from RStudio
+          url: sparklyr-from-RStudio.md      
+        - text: Spark Streaming guide
+          url: spark-streaming-guide.md
+        - text: Delta Lake
+          url: package-management-delta-lake.md
+      - linkListType: tutorial
+        links:
+        - text: Run a sample notebook using Spark
+          url: notebooks-tutorial-spark.md
+        - text: Query HDFS 
+          url: tutorial-query-hdfs-storage-pool.md
+        - text: Query Oracle
+          url: tutorial-query-Oracle.md
+          
+  # Card (Architect)
+  - title: Architect
+    linkLists:
+      - linkListType: architecture
+        links:
+          - text: Deploy on Kubernetes
+            url: deployment-guidance.md
+          - text: Resources deployed
+            url: concept-architecture-pods.md
+          - text: Security
+            url: concept-security.md
+          - text: Configure HDFS tiering
+            url: hdfs-tiering.md          
+      - linkListType: how-to-guide
+        links:
+          - text: Deploy
+            url: deploy-get-started.md
+          - text: Deploy on AKS with Notebook
+            url: notebooks-deploy.md
+          - text: Configure deployment settings
+            url: deployment-custom-configuration.md
+          - text: Configure settings post-deployment            
+            url: configure-bdc-postdeployment.md
+          - text: Deploy offline
+            url: deploy-offline.md
+          - text: Private cluster deploy
+            url: private-deploy.md
+          - text: Upgrade
+            url: deployment-upgrade.md
+      - linkListType: quickstart
+        links:
+          - text: Deploy on Azure Kubernetes Service (AKS)
+            url: quickstart-big-data-cluster-deploy.md
+          - text: Deploy on Azure Red Hat OpenShift (ARO)
+            url: quickstart-big-data-cluster-deploy-aro.md  
+          - text: Deploy on OpenShift
+            url: deploy-openshift.md            
+      - linkListType: tutorial
+        links:
+          - text: Configure AKS for Big Data Clusters
+            url: deploy-on-aks.md
+          - text: Kubeadm 
+            url: deploy-with-kubeadm.md
+          - text: Deploy with high availability
+            url: deployment-high-availability.md
+          - text: Deploy in Active Directory mode
+            url: ./active-directory-prerequisites.md
+
+  # Card (Manage)
+  - title: Administration and Logging
+    linkLists:        
+      - linkListType: overview
+        links:
+          - text: Administration resources
+            url: view-cluster-status.md          
+      - linkListType: concept
+        links:
+          - text: Monitor cluster with Grafana
+            url: cluster-monitor-grafana.md
+          - text: Visualize logs with Kibana
+            url: cluster-logging-kibana.md
+          - text: Cluster monitoring notebooks
+            url: cluster-common-notebooks.md
+      - linkListType: tutorial
+        links:
+          - text: Monitor cluster status 
+            url: cluster-monitor-ads.md        
+          - text: Monitor with azdata and kubectl
+            url: cluster-monitor-cmdlet.md
+      - linkListType: how-to-guide 
+        links:
+          - text: Manage (Controller dashboard)
+            url: manage-with-controller-dashboard.md
+          - text: Troubleshoot cluster
+            url: cluster-troubleshooting-commands.md
+          - text: Troubleshoot Active Directory
+            url: troubleshoot-active-directory.md
+    
+  # Card (Secure)
+  - title: Secure
+    linkLists:
+      - linkListType: overview
+        links:
+        - text: Security
+          url: concept-security.md
+        - text: Kubernetes RBAC
+          url: kubernetes-rbac.md
+        - text: Encryption at rest
+          url: encryption-at-rest-concepts-and-configuration.md
+      - linkListType: how-to-guide
+        links:
+        - text: Connect
+          url: connect-to-big-data-cluster.md
+        - text: Connect in AD mode
+          url: active-directory-connect.md
+        - text: Deploy - Active Directory
+          url: active-directory-deploy.md
+        - text: Manage HDFS permissions
+          url: hdfs-tiering-manage-permissions.md
+        - text: AD password rotation
+          url: active-directory-password-rotation.md          
+      - linkListType: tutorial
+        links:
+        - text: HDFS Encryption Zones usage guide
+          url: encryption-at-rest-hdfs-encryption-zones.md
+        - text: TDE usage guide
+          url: encryption-at-rest-sql-server-tde.md     
+
+  # Card (Related technologies)
+  - title: Related technologies
+    linkLists:
+      - linkListType: reference
+        links:
+        - text: Get started with Kubernetes
+          url: https://kubernetes.io/docs/setup/
+        - text: Troubleshoot Kubernetes
+          url: https://kubernetes.io/docs/tasks/debug-application-cluster/troubleshooting/
+        - text: Apache Spark
+          url: /azure/hdinsight/spark/apache-spark-overview
+
+  # Card (Other resources)
+  - title: Related resources
+    linkLists:
+      - linkListType: reference
+        links:
+        - text: Integration partners
+          url: ../sql-server/partner-big-data-cluster.md
+        - text: Apache Spark
+          url: /azure/hdinsight/spark/apache-spark-overview
+        - text: Samples (GitHub)
+          url: https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster
+        - text: Solution partners
+          url: ../sql-server/partner-big-data-cluster.md
+      - linkListType: learn
+        links:
+          - text: Introduction to Kubernetes
+            url: /learn/modules/intro-to-kubernetes/
+          - text: Distributed file systems
+            url: /learn/modules/cmu-case-study-distributed-file-systems/
+          - text: Introduction to Python
+            url: /learn/modules/intro-to-python/
+          - text: Big Data Clusters Architecture Workshop
+            url: https://github.com/microsoft/sqlworkshops-bdc

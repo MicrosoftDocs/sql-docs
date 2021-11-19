@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;SERVICENAME (Transact-SQL)"
+description: "@@SERVICENAME (Transact-SQL)"
 title: "@@SERVICENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@SERVICENAME_TSQL"
   - "@@SERVICENAME"

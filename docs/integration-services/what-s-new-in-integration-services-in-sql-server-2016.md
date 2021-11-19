@@ -1,15 +1,16 @@
 ---
 description: "What&#39;s New in Integration Services in SQL Server 2016"
 title: "What&#39;s New in Integration Services in SQL Server 2016 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom:
+  - SQL2016_New_Updated
+  - intro-whats-new
 ms.date: "09/28/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services, what's new"
   - "what's new [Integration Services]"
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
@@ -362,7 +363,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 ####  <a name="ValidateXML"></a> Rich XML validation output in the XML Task  
  Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task. Before the **ValidationDetails** property was available, XML validation by the XML Task returned only a true or false result, with no information about errors or their locations. Now, when you set **ValidationDetails** to true, the output file contains detailed information about every error including the line number and the position. You can use this information to understand, locate, and fix errors in XML documents. For more info, see [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. This new property was not announced or documented at that time. The **ValidationDetails** property is also available in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].   
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. This new property was not announced or documented at that time. The **ValidationDetails** property is also available in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)].   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

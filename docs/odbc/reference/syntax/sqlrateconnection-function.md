@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLRateConnection function [ODBC]"
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLRateConnection Function
 **Conformance**  

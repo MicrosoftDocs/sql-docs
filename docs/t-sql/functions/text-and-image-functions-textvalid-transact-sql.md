@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "TEXTVALID_TSQL"
   - "TEXTVALID"
@@ -25,7 +25,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Text and Image Functions - TEXTVALID (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   A **text**, **ntext**, or **image** function that checks whether a specific text pointer is valid.  
   

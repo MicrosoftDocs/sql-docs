@@ -4,10 +4,10 @@ title: "SESSION_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/23/2018"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 author: VanMSFT

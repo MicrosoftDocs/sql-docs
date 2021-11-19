@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
-ms.reviewer: "alayu, maghan, sstein"
+ms.reviewer: "maghan"
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ---

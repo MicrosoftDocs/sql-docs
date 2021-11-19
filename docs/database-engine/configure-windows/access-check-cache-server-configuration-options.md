@@ -25,7 +25,7 @@ The **access check cache bucket count** option controls the number of hash bucke
 
 The **access check cache quota** option controls the number of entries that are stored in the access check result cache. When the maximum number of entries is reached, the oldest entries are removed from the access check result cache.
   
-The default values of 0 indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is managing these options. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the default values translate to the following internal configurations:
+The default values of 0 indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is managing these options. Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the default values translate to the following internal configurations:
 -   For access check cache bucket count, the value 0 sets a default value of 256 buckets.
 -   For access check cache quota, the value 0 sets a default value of 1,024 entries.
 

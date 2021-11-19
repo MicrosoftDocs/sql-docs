@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "HIDE directive"
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Example: Specifying the HIDE Directive
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

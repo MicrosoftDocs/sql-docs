@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CERTPRIVATEKEY"
   - "CERTPRIVATEKEY_TSQL"
@@ -20,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CERTPRIVATEKEY (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the private key of a certificate in binary format. This function takes three arguments.
 -   A certificate ID.  

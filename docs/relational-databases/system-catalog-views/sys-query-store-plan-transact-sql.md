@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "QUERY_STORE_PLAN_TSQL"
   - "SYS.QUERY_STORE_PLAN"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "query_store_plan catalog view"
   - "sys.query_store_plan catalog view"
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_plan (Transact-SQL)
@@ -49,8 +49,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=s
 |**initial_compile_start_time**|**datetimeoffset**|Plan compilation statistics.|  
 |**last_compile_start_time**|**datetimeoffset**|Plan compilation statistics.|  
 |**last_execution_time**|**datetimeoffset**|Last execution time refers to the last end time of the query/plan.|  
-|**avg_compile_duration**|**float**|Plan compilation statistics. <br/>**Note:** Azure Synapse Analytics will always return zero (0).|  
-|**last_compile_duration**|**bigint**|Plan compilation statistics. <br/>**Note:** Azure Synapse Analytics will always return zero (0).|  
+|**avg_compile_duration**|**float**|Plan compilation statistics.|  
+|**last_compile_duration**|**bigint**|Plan compilation statistics.|  
 |**plan_forcing_type**|**int**|Plan forcing type.<br /><br />0: NONE<br /><br />1: MANUAL<br /><br />2: AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />NONE: No plan forcing<br /><br />MANUAL: Plan forced by user<br /><br />AUTO: Plan forced by automatic tuning|  
 

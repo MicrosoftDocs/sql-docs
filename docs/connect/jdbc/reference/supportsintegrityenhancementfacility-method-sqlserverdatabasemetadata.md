@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDatabaseMetaData.supportsIntegrityEnhancementFacility"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: edee084b-9a8c-4167-9e13-66fc3ed1ecaa
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsIntegrityEnhancementFacility Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

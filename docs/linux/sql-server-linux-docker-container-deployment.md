@@ -1,10 +1,12 @@
 ---
 title: Deploy and connect to SQL Server Docker containers
 description: Explore how SQL Server can be deployed on Docker containers and learn about various tools to connect to SQL Server from inside and outside the container
-author: vin-yu
-ms.author: vinsonyu
+author: amvin87
+ms.author: amitkh
 ms.reviewer: vanto
-ms.custom: contperfq1
+ms.custom:
+  - contperf-fy21q1
+  - intro-deployment
 ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
@@ -26,7 +28,7 @@ For other deployment scenarios, see:
 - [Kubernetes - Big Data Clusters](../big-data-cluster/deploy-get-started.md)
 
 > [!NOTE]
-> This article specifically focuses on using the mssql-server-linux image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+> This article specifically focuses on using the mssql-server-linux image. SQL Server deployments in Windows containers are not covered by support. For development and testing, you can create your own custom container images to work with SQL Server in Windows containers. Sample files are available on [GitHub](https://github.com/microsoft/mssql-docker/blob/master/windows/mssql-server-windows-developer/dockerfile_1). Sample files are for reference only.
 
 > [!IMPORTANT]
 > Before choosing to run a SQL Server container for production use cases, please review our [support policy for SQL Server Containers](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) to ensure that you are running on a supported configuration.
@@ -204,7 +206,10 @@ Packages
 ## <a id="tags"></a> Run a specific SQL Server container image
 
 > [!NOTE]
-> Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported. You can retrieve a list of all available tags for mssql/server at <https://mcr.microsoft.com/v2/mssql/server/tags/list>.
+>
+> - Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported.
+> - Starting with SQL Server 2019 CU10, Ubuntu 20.04 is supported.
+> - You can retrieve a list of all available tags for mssql/server at <https://mcr.microsoft.com/v2/mssql/server/tags/list>.
 
 There are scenarios where you might not want to use the latest SQL Server container image. To run a specific SQL Server container image, use the following steps:
 

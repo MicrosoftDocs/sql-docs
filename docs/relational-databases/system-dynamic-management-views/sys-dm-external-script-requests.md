@@ -7,7 +7,7 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
   
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_external_script_requests"
   - "sys.dm_external_script_requests_TSQL"

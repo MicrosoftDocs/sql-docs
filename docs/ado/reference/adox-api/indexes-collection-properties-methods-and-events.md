@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Indexes collection [ADOX], members"
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87

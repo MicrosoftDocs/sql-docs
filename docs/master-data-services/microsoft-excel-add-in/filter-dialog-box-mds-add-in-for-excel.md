@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Filter Dialog Box (MDS Add-in for Excel)

@@ -11,7 +11,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "versions [Master Data Services], changing name"
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Change a Version Name (Master Data Services)

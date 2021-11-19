@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ODBC escape sequences [ODBC], GUID"
   - "escape sequences [ODBC], guid"
   - "guid escape sequence [ODBC]"
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # GUID Escape Sequences
 ODBC uses escape sequences for GUID literals. The syntax of this escape sequence is as follows:  

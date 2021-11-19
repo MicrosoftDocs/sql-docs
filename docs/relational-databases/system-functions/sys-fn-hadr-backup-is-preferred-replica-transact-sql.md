@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_hadr_backup_is_preferred_replica_TSQL"
   - "sys.fn_hadr_backup_is_preferred_replica"
@@ -32,8 +32,7 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )  
 ```  
   
@@ -47,13 +46,14 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ## Remarks  
  Use this function in a backup script to determine if the current database is on the replica that is preferred for backups. You can run a script on every availability replica. Each of these jobs looks at the same data to determine which job should run, so only one of the scheduled jobs actually proceeds to the backup stage. Sample code could be similar to the following.  
   
-```  
+```sql  
 If sys.fn_hadr_backup_is_preferred_replica( @dbname ) <> 1   
 BEGIN  
--- If this is not the preferred replica, exit (probably without error).  
+-- If this is not the preferred replica, exit (probably without error).
+      Select 'This is not the preferred replica, exiting with success';  
 END  
 -- If this is the preferred replica, continue to do the backup.  
-  
+  /* actual backup command goes here */
 ```  
   
 ## Examples  
@@ -61,7 +61,7 @@ END
 ### A. Using sys.fn_hadr_backup_is_preferred_replica  
  The following example returns 1 if the current database is the preferred backup replica.  
   
-```  
+```sql
 SELECT sys.fn_hadr_backup_is_preferred_replica ('TestDB');  
 GO  
 ```  

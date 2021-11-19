@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQLXML, xml data type support"
   - "xml data type [SQL Server], SQLXML"
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # xml Data Type Support in SQLXML 4.0

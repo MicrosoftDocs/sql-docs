@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDatabaseMetaData.dataDefinitionCausesTransactionCommit"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: bf04fa73-b9f1-4403-b6a0-e53d0d27c671
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # dataDefinitionCausesTransactionCommit Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

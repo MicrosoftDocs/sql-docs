@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "keywords [SQL Server], control-of-flow language"
   - "control-of-flow language [SQL Server], keywords listed"
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # Control-of-Flow
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The [!INCLUDE[tsql](../../includes/tsql-md.md)] control-of-flow language keywords are:  
   

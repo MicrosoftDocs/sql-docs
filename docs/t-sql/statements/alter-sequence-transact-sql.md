@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_SEQUENCE_TSQL"
   - "ALTER SEQUENCE"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sequence number object, altering"
   - "ALTER SEQUENCE statement"
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

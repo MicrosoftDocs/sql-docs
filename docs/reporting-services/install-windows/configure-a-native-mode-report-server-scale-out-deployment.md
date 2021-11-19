@@ -1,7 +1,7 @@
 ---
 description: "Configure a Native Mode Report Server Scale-Out Deployment"
 title: "Configure a Native Mode Report Server Scale-Out Deployment | Microsoft Docs"
-ms.date: 11/29/2018
+ms.date: 08/26/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 
@@ -17,11 +17,12 @@ ms.author: maggies
 
 # Configure a Native Mode Report Server Scale-Out Deployment
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017-and-later-enterprise](../../includes/ssrs-appliesto-2017-and-later-enterprise.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
 Reporting Services native mode supports a scale-out deployment model that allows you to run multiple report server instances that share a single report server database. Scale-out deployments are used to increase scalability of report servers to handle more concurrent users and larger report execution loads. It can also be used to dedicate specific servers to process interactive or scheduled reports.
 
-For Power BI Report Server, you need to configure client affinity (sometimes called sticky sessions) on the load balancer for any scale-out environment, to ensure proper performance.  
+> [!IMPORTANT]
+> For Power BI Report Server, you need to configure client affinity (sometimes called sticky sessions or persistence) on the load balancer for any scale-out environment to ensure proper performance and consistent Power BI (PBIX) report functionality.
   
 For SQL Server 2016 Reporting Services and earlier, SharePoint mode report servers utilize the SharePoint products infrastructure for scale-out. SharePoint mode scale-out is performed by adding more SharePoint mode report servers to the SharePoint farm. For information on scale-out in SharePoint mode, see [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
 
@@ -46,22 +47,21 @@ For SQL Server 2016 Reporting Services and earlier, SharePoint mode report serve
   
  **To plan, install, and configure a scale-out deployment, follow these steps:**  
   
--   Review [Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) for instructions on how to install report server instances.  
+- Review [Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) for instructions on how to install report server instances.   
+- If you are planning to host the scale-out deployment on a network load balanced (NLB) cluster, you should configure the NLB cluster before you configure the scale-out deployment. For more information, see [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
--   If you are planning to host the scale-out deployment on a network load balanced (NLB) cluster, you should configure the NLB cluster before you configure the scale-out deployment. For more information, see [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
-  
--   Review the procedures in this topic for instructions on how to share a report server database and join report servers to a scale-out.  
+- Review the procedures in this topic for instructions on how to share a report server database and join report servers to a scale-out.  
   
      The procedures explain how to configure a two-node report server scale-out deployment. Repeat the steps described in this topic to add additional report server nodes to the deployment.  
   
-    -   Use Setup to install each report server instance that will be joined to the scale-out deployment.  
+    - Use Setup to install each report server instance that will be joined to the scale-out deployment.  
   
          To avoid database compatibility errors when connecting the server instances to the shared database, be sure that all instances are the same version. For example, if you create the report server database using a SQL Server 2016 report server instance, all other instances in the same deployment must also be SQL Server 2016.  
   
-    -   Use the Report Server Configuration Manager to connect each report server to the shared database. You can only connect to and configure one report server at a time.  
-  
-    -   Use the Reporting Services Configuration tool to complete the scale-out by joining new report server instances to the first report server instance already connected to the report server database.  
-  
+    - Use the Report Server Configuration Manager to connect each report server to the shared database. You can only connect to and configure one report server at a time.
+    - Use the Reporting Services Configuration tool to complete the scale-out by joining new report server instances to the first report server instance already connected to the report server database.  
+    - Use SQL Server Reporting Services Enterprise Edition. See [SQL Server Reporting Services features supported by editions](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md) for details.
+
 ## To install a SQL Server instance to host the report server databases  
   
 1.  Install a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on a computer that will host the report server databases. At a minimum, install [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -151,4 +151,4 @@ The issue will be intermittent is that only the server who created the SQL Agent
 [Add and Remove Encryption Keys for Scale-Out Deployment](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
 [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

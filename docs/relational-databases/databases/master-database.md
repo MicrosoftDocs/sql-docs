@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "master database [SQL Server], about"
   - "master database [SQL Server]"
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # master Database
 

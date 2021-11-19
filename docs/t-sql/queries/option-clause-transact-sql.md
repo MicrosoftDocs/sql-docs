@@ -4,10 +4,10 @@ title: "OPTION Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "OPTION clause"
   - "OPTION_TSQL"
@@ -34,15 +34,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
+### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazure_md.md](../../includes/ssazure_md.md)].
+
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database  
-  
 [ OPTION ( <query_hint> [ ,...n ] ) ]   
 ```  
   
+### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
+
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
-  
 OPTION ( <query_option> [ ,...n ] )  
   
 <query_option> ::=  
@@ -57,6 +57,15 @@ OPTION ( <query_option> [ ,...n ] )
     | { FORCE | DISABLE } EXTERNALPUSHDOWN  
 ```  
   
+### Syntax for [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
+
+```syntaxsql
+OPTION ( <query_option> [ ,...n ] )
+
+<query_option> ::=
+    LABEL = label_name
+```  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
@@ -120,29 +129,29 @@ OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);
  The following example creates a view named CustomerView and then uses a HASH JOIN query hint in a query that references a view and a table.  
   
 ```sql
--- Uses AdventureWorks  
+-- Uses the AdventureWorks sample database
   
 CREATE VIEW CustomerView  
 AS  
 SELECT CustomerKey, FirstName, LastName FROM ssawPDW..DimCustomer;  
-  
+GO
 SELECT COUNT (*) FROM dbo.CustomerView a  
 INNER JOIN dbo.FactInternetSales b  
 ON (a.CustomerKey = b.CustomerKey)  
 OPTION (HASH JOIN);  
-  
+GO
 DROP VIEW CustomerView;
+GO
 ```  
   
 ### F. Query with a subselect and a query hint  
  The following example shows a query that contains both a subselect and a query hint. The query hint is applied globally. Query hints are not allowed to be appended to the subselect statement.  
   
 ```sql
--- Uses AdventureWorks  
-  
+-- Uses the AdventureWorks sample database
 CREATE VIEW CustomerView AS  
 SELECT CustomerKey, FirstName, LastName FROM ssawPDW..DimCustomer;  
-  
+GO
 SELECT * FROM (  
 SELECT COUNT (*) AS a FROM dbo.CustomerView a  
 INNER JOIN dbo.FactInternetSales b  

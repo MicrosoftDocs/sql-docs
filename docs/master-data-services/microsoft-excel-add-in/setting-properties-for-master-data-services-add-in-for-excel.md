@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Setting Properties for Master Data Services Add-in for Excel

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLColAttributes"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLColAttributes function [ODBC]"
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLColAttributes Function
 **Conformance**  

@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLFreeStmt function [ODBC], Cursor Library"
 ms.assetid: 47bfbd4d-9453-4609-958d-1e05794cb223
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFreeStmt (Cursor Library)
 > [!IMPORTANT]  

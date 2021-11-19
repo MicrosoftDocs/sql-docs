@@ -1,1 +1,1 @@
- Parallel Data Warehouse 
+ Analytics Platform System (PDW) 

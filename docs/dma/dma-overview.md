@@ -64,7 +64,7 @@ To install DMA, download the latest version of the tool from the [Microsoft Down
 
 ## Prerequisites
 
-To run an assessment, you have to be a member of the SQL Server **sysadmin** role.
+To run an assessment, you have to be a member of the SQL Server **sysadmin** role. The recommended display resolution is 1024x756.
 
 ## Supported source and target versions
 
@@ -78,7 +78,9 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- SQL Server 2017 on Windows
+- SQL Server 2017 
+- SQL Server 2019
+- Amazon RDS for SQL Server
 
 **Targets**
 

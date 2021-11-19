@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "names [SQL Server], columns with"
   - "XPath node test"
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Columns with the Name of an XPath Node Test
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

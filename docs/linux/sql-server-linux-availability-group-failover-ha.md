@@ -4,7 +4,7 @@ description: "This article describes types of failover: automatic, planned manua
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 03/01/2018
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -44,17 +44,18 @@ To manually fail over an AG resource named *ag_cluster* to cluster node named *n
 - **RHEL/Ubuntu example**
 
    ```bash
-   sudo pcs resource move ag_cluster-master nodeName2 --master
+   sudo pcs resource move ag_cluster-master nodeName2 --master --lifetime=30S
    ```
 
 - **SLES example**
 
    ```bash
-   crm resource migrate ag_cluster nodeName2
+   crm resource migrate ag_cluster nodeName2 --lifetime=30S
    ```
 
 >[!IMPORTANT]
->After you manually fail over a resource, you need to remove a location constraint that is automatically added.
+>When you use the --lifetime option, the location constraint created to move the resource is temporary in nature and is valid for 30 seconds in previous example.
+>Please note that the temporary constraint is not cleared automatically and may show up in the constraint list, but as an expired constraint. Expired constraints do not affect the failover behavior of pacemaker cluster. If you do not use the --lifetime option when moving the resource, you should remove a location constraint that is automatically added as noted below.
 
 #### <a name="removeLocConstraint"> </a> Step 2. Remove the location constraint
 
@@ -112,7 +113,7 @@ An example of the constraint which gets created because of a manual failover.
 >Automatic failover does not add a location constraint, so no cleanup is necessary. 
 
 For more information:
-- [Red Hat - Managing Cluster Resources](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
+- [Red Hat - Managing Cluster Resources](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/ch-manageresource-haar)
 - [Pacemaker - Move Resources Manually](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES Administration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  

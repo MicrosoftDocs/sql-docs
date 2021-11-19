@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.updateCharacterStream (java.lang.String, java.io.Reader, int)"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 08cfc4e0-83f0-4f2f-ac55-b381f34fe67f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateCharacterStream Method (java.lang.String, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -2,10 +2,10 @@
 title: "What's New in SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for DB2 (DB2ToSQL) for each release.
 author: nahk-ivanov
-
 ms.prod: sql
-ms.custom: ""
-ms.date: "12/17/2020"
+ms.custom:
+  - intro-whats-new
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,56 @@ ms.author: alexiva
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+
+## SSMA v8.22
+
+The v8.22 release of SSMA for DB2 contains the following changes:
+
+* Fix AM/PM handling in `ssma_db2.TIMESTAMP_FORMAT` emulation function
+* Improve day-of-week validation in `ssma_db2.TIMESTAMP_FORMAT` emulation function
+* Allow to specify additional connection string options for target database connection
+* Introduce summary charts in assessment reports
+* Improve messages navigation in assessment reports
+
+## SSMA v8.21
+
+The v8.21 release of SSMA for DB2 contains the following changes:
+
+* Load aliases for old/new row/table within the triggers definition for DB2 for i
+* Add conversion for the `LCASE`, `UCASE`, `LOWER`, `UPPER` functions with two and three arguments
+* Add conversion for the `LTRIM` and `RTRIM` functions with two arguments
+* Improve conversion for `LOCATE` and `POSITION` functions
+* Fix return type of the `ssma_db2.CHAR` emulation function
+* Fix arguments of the `ssma_db2.DECIMAL` emulation function
+* Use `COUNT_BIG` in row count queries for the target database
+
+## SSMA v8.20
+
+The v8.20 release of SSMA for DB2 contains the following changes:
+
+* Improve `VARCHAR_FORMAT` emulation function
+* Fix tables discovery for DB2 for i
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for DB2 contains the following changes:
+
+* Improve `TIMESTAMP_FORMAT` emulation function
+* Improve foreign keys discovery for z/OS platform
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for DB2 contains the following changes:
+
+* Add support for identity columns
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for DB2 contains the following changes:
+
+* Improve conversion of TRANSLATE function
+* Fix data migration for tables with computed columns
+* Update HTML assessment reports to use modern editor to display SQL text
 
 ## SSMA v8.16
 

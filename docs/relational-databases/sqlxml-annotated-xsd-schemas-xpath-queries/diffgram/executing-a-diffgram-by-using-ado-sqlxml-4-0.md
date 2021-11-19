@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data providers [SQLXML], SQLOLEDB Provider"
   - "DiffGrams [SQLXML], ADO"
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

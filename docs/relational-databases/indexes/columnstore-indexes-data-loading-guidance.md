@@ -4,7 +4,7 @@ title: "Columnstore indexes - Data loading guidance | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -79,15 +79,17 @@ If you are loading data only to stage it before running more transformations, lo
  A common pattern for data load is to load the data into a staging table, do some transformation and then load it into the target table using the following command  
   
 ```sql  
-INSERT INTO <columnstore index>  
-SELECT <list of columns> FROM <Staging Table>  
+INSERT INTO [<columnstore index>]
+SELECT col1 /* include actual list of columns in place of col1*/
+FROM [<Staging Table>]
 ```  
   
- This command loads the data into the columnstore index in similar ways to BCP or Bulk Insert but in a single batch. If the number of rows in the staging table < 102400, the rows are loaded into a delta rowgroup otherwise the rows are directly loaded into compressed rowgroup. One key limitation was that this `INSERT` operation was single threaded. To load data in parallel, you could create multiple staging table or issue `INSERT`/`SELECT` with non-overlapping ranges of rows from the staging table. This limitation goes away with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. The command below loads the data from staging table in parallel but you will need to specify `TABLOCK`. You may find this contradictory to what was said earlier with bulkload but the key difference is the parallel data load from the staging table is executed under the same transaction.
+ This command loads the data into the columnstore index in similar ways to BCP or Bulk Insert but in a single batch. If the number of rows in the staging table < 102400, the rows are loaded into a delta rowgroup otherwise the rows are directly loaded into compressed rowgroup. One key limitation was that this `INSERT` operation was single threaded. To load data in parallel, you could create multiple staging table or issue `INSERT`/`SELECT` with non-overlapping ranges of rows from the staging table. This limitation goes away with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. The command below loads the data from staging table in parallel but you will need to specify `TABLOCK`. You may find this contradictory to what was said earlier with bulkload but the key difference is the parallel data load from the staging table is executed under the same transaction.
   
 ```sql  
-INSERT INTO <columnstore index> WITH (TABLOCK) 
-SELECT <list of columns> FROM <Staging Table>  
+INSERT INTO [<columnstore index>] WITH (TABLOCK) 
+SELECT col1 /* include actual list of columns in place of col1*/
+FROM [<Staging Table>]
 ```  
   
  There are following optimizations available when loading into clustered columnstore index from staging table:
@@ -101,7 +103,7 @@ SELECT <list of columns> FROM <Staging Table>
 *Trickle insert* refers to the way individual rows move into the columnstore index. Trickle inserts use the [INSERT INTO](../../t-sql/statements/insert-transact-sql.md) statement. With trickle insert, all of the rows go to the deltastore. This is useful for small numbers of rows, but not practical for large loads.
   
 ```sql  
-INSERT INTO <table-name> VALUES (<set of values>)  
+INSERT INTO [<table-name>] VALUES ('some value' /*replace with actual set of values*/)  
 ```  
   
  > [!NOTE]
@@ -110,13 +112,13 @@ INSERT INTO <table-name> VALUES (<set of values>)
  Once the rowgroup contains 1,048,576 rows, the delta rowgroup us marked closed but it is still available for queries and update/delete operations but the newly inserted rows go into an existing or newly created deltastore rowgroup. There is a background thread *Tuple Mover (TM)* that compresses the closed delta rowgroups periodically every 5 minutes or so. You can explicitly invoke the following command to compress the closed delta rowgroup  
   
 ```sql  
-ALTER INDEX <index-name> on <table-name> REORGANIZE  
+ALTER INDEX [<index-name>] on [<table-name>] REORGANIZE  
 ```  
   
  If you want force a delta rowgroup closed and compressed, you can execute the following command. You may want run this command if you are done loading the rows and don't expect any new rows. By explicitly closing and compressing the delta rowgroup, you can save storage further and improve the analytics query performance. A best practice is to invoke this command if you  don't expect new rows to be inserted.  
   
 ```sql  
-ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUPS = ON)  
+ALTER INDEX [<index-name>] on [<table-name>] REORGANIZE with (COMPRESS_ALL_ROW_GROUPS = ON)  
 ```  
   
 ## How loading into a partitioned table works  

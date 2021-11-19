@@ -1,12 +1,12 @@
 ---
 title: Troubleshooting SQL Server Docker containers
 description: Explore the different troubleshooting techniques that you can use to resolve common errors that are seen when using Linux Docker containers with SQL Server images
-author: vin-yu
-ms.author: vinsonyu
+author: amvin87
+ms.author: amitkh
 ms.reviewer: vanto
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 ms.date: 09/07/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: linux
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017"

@@ -1,12 +1,12 @@
 ---
 title: Apply Analytics Platform System hotfixes
 description: This article discusses how to apply hotfixes to the Analytics Platform System software.  
-author: mzaman1 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
@@ -48,7 +48,7 @@ Unlike the Microsoft updates, the hotfixes for the Analytics Platform System sof
   
     2.  Use the **Run as administrator** option to open a Command Prompt.  
   
-    3.  Run the following command, replacing *<HotfixPackageName>* with the name of the hotfix executable package, and replacing the other placeholder items *<  >* with the appropriate information.  
+    3.  Run the following command, replacing *\<HotfixPackageName\>* with the name of the hotfix executable package, and replacing the other placeholder items *<  >* with the appropriate information.  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  

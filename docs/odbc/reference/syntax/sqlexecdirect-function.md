@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLExecDirect"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLExecDirect function [ODBC]"
 ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLExecDirect Function
 **Conformance**  

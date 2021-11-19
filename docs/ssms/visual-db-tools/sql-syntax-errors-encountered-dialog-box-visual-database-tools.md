@@ -17,7 +17,7 @@ ms.reviewer:
 
 ---
 # SQL Syntax Errors Encountered Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This dialog box notifies you that the designer cannot parse the SQL statement in the SQL pane.  
   
 This dialog box appears when you enter or edit an SQL statement in the SQL pane; then either switch to another pane, verify the query, or attempt to execute the query; and one of the following conditions applies:  

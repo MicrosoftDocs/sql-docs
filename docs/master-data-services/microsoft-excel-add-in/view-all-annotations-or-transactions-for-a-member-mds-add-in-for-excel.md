@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # View All Annotations or Transactions for a Member (MDS Add-in for Excel)

@@ -2,8 +2,8 @@
 title: Encrypting Connections to SQL Server on Linux
 description: SQL Server on Linux uses TLS to encrypt data that's transmitted across a network between a client application and an instance of SQL Server.
 ms.date: 06/29/2020
-author: vin-yu 
-ms.author: vinsonyu
+author: amvin87
+ms.author: amitkh
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.prod: sql
@@ -36,13 +36,16 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
 - **Generate certificate** (/CN should match your SQL Server host fully qualified domain name)
 
 > [!NOTE]
-> For this example we use a Self-Signed Certificate, this should not be used for production scenarios. You should use CA certificates. 
+> For this example we use a Self-Signed Certificate, this should not be used for production scenarios. You should use CA certificates.<br>
+> Ensure that the folder/s you save your certs and Private keys are accessible by the mssql user/group and has permission set to 700 (drwx-----). You can create folders manually with permission set to 700 (drwx------) and owned by mssql user/group or set the permission to 755(drwxr-xr-x) and owned by other user but still accessible to mssql user group. Example, you could create a folder called 'sslcert' under the path '/var/opt/mssql/' and then save the certificate and the private key with permissions on the files set to 600 as show below. 
 
 ```bash
 openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
 sudo chown mssql:mssql mssql.pem mssql.key 
-sudo chmod 600 mssql.pem mssql.key   
-sudo mv mssql.pem /etc/ssl/certs/ 
+sudo chmod 600 mssql.pem mssql.key 
+# in this case we are saving the certificate to the certs folder under /etc/ssl/ which has the following permission 755(drwxr-xr-x)
+sudo mv mssql.pem /etc/ssl/certs/ drwxr-xr-x 
+# in this case we are saving the private key to the private folder under /etc/ssl/ with permissions set to 755(drwxr-xr-x)
 sudo mv mssql.key /etc/ssl/private/ 
 ```
 
@@ -50,11 +53,12 @@ sudo mv mssql.key /etc/ssl/private/
 
 ```bash
 systemctl stop mssql-server 
-cat /var/opt/mssql/mssql.conf 
+sudo cat /var/opt/mssql/mssql.conf 
 sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
 sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+systemctl restart mssql-server 
 ```
 
 - **Register the certificate on your client machine (Windows, Linux, or macOS)**
@@ -107,11 +111,12 @@ sudo mv mssql.key /etc/ssl/private/
 
 ```bash
 systemctl stop mssql-server 
-cat /var/opt/mssql/mssql.conf 
+sudo cat /var/opt/mssql/mssql.conf 
 sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
+sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1
+systemctl restart mssql-server 
 ```
 
 -	**Example connection strings** 
@@ -143,3 +148,17 @@ sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1
 |The target principal name is incorrect.  |Make sure that Common Name field on SQL Server's certificate matches the server name specified in the client's connection string. |  
 |An existing connection was forcibly closed by the remote host. |This error can occur when the client doesn't support the TLS protocol version required by SQL Server. For example, if [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is configured to require TLS 1.2, make sure your clients also support the TLS 1.2 protocol. |
 | | |   
+
+### Ubuntu 20.04 and other recent Linux distribution releases
+
+**Symptom**
+
+When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux instance loads a certificate that was created with a signature algorithm using less than 112 bits of security (examples: MD5, SHA-1), you might observe a connection failure error, like this example:
+
+`A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - An existing connection was forcibly closed by the remote host.) (Microsoft SQL Server, Error: 10054)`
+
+The error is due to OpenSSL security level 2 being enabled by default on Ubuntu 20.04 and later. Security level 2 prohibits TLS connections that have less than 112 bits of security from being established.
+
+**Solution**
+
+Install a certificate with a signature algorithm using at least 112 bits of security. Signature algorithms that satisfy this requirement include SHA-224, SHA-256, SHA-384, and SHA-512.

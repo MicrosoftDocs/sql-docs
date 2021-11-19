@@ -5,11 +5,11 @@ ms.custom: ""
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: jroth
+ms.reviewer: chadam
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 # JSON_MODIFY (Transact-SQL)
@@ -52,7 +52,7 @@ JSON_MODIFY ( expression , path , newValue )
 - *\<json path>*  
     Specifies the path for the property to update. For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
+In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
 
 **JSON_MODIFY** returns an error if the format of *path* isn't valid.  
   
@@ -74,7 +74,7 @@ JSON_MODIFY escapes all special characters in the new value if the type of the v
   
  The following table compares the behavior of **JSON_MODIFY** in lax mode and in strict mode. For more info about the optional path mode specification (lax or strict), see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Existing value|Path exists|Lax mode|Strict mode|  
+|New value|Path exists|Lax mode|Strict mode|  
 |--------------------|-----------------|--------------|-----------------|  
 |Not NULL|Yes|Update the existing value.|Update the existing value.|  
 |Not NULL|No|Try to create a new key:value pair on the specified path.<br /><br /> This may fail. For example, if you specify the path `$.user.setting.theme`, JSON_MODIFY does not insert the key `theme` if the `$.user` or `$.user.settings` objects do not exist, or if settings is an array or a scalar value.|Error - INVALID_PROPERTY|  

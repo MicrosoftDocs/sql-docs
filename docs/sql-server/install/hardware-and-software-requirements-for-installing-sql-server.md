@@ -2,7 +2,7 @@
 title: "SQL Server 2016 & 2017: Hardware & software requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2016 and SQL Server 2017. 
 ms.custom: "seo-lt-2019"
-ms.date: "02/19/2020"
+ms.date: "09/16/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -42,7 +42,6 @@ helpviewer_keywords:
   - "cross-language support"
   - "disk space [SQL Server]"
   - "localized SQL Server versions"
-ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: chadam
 author: cawrites
 ---
@@ -83,7 +82,7 @@ The following software requirements apply to all installations:
   
 |Component|Requirement|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] and later require [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 for the Database Engine, Master Data Services, or  Replication. SQL Server setup automatically installs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. You can also manually install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] from [Microsoft .NET Framework 4.6 (Web Installer) for Windows](https://support.microsoft.com/kb/3045560).<br/><br/> For more information, recommendations, and guidance about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 see [.NET Framework Deployment Guide for Developers](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)], and [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] require [KB2919355](https://support.microsoft.com/kb/2919355) before installing [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql16-md.md)] and later require [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 for the Database Engine, Master Data Services, or  Replication. SQL Server setup automatically installs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. You can also manually install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] from [Microsoft .NET Framework 4.6 (Web Installer) for Windows](https://support.microsoft.com/kb/3045560).<br/><br/> For more information, recommendations, and guidance about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 see [.NET Framework Deployment Guide for Developers](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)], and [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] require [KB2919355](https://support.microsoft.com/kb/2919355) before installing [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
 |Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, TCP/IP, and VIA.<br/><br/> **Note:** VIA protocol is not supported on failover clusters. Clients or applications running on the same node of the failover cluster as the SQL Server instance, can use Shared Memory protocol to connect to SQL Server using its local pipe address. However this type of connection is not cluster-aware and will fail after an instance failover. It is therefore not recommended and should only be used in very specific scenarios.<br/><br/> **Important:** The VIA protocol is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> For more information about Network Protocols and Network Libraries, see [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
@@ -99,12 +98,112 @@ The following software requirements apply to all installations:
 
 
 
-## Operating System support
+## Operating System support for SQL Server 2017
 
-The following table shows which editions of SQL Server 2016 and 2017 are compatible with which versions of Windows:  
+The following table shows which editions of SQL Server 2017 are compatible with which versions of Windows:  
   
 | SQL Server edition:               | Enterprise | Developer | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
+| Windows Server 2022 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2022 Datacenter: Azure Edition|    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2022 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2016 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2016 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2016 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 R2 Datacenter |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 R2 Standard   |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 R2 Essentials |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 R2 Foundation |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 Foundation    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows 10 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 10 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8.1 Enterprise            |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8.1 Pro                   |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8.1 Enterprise            |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8 Pro                     |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8                         |    No      |    Yes    |    Yes   | No  |   Yes   | 
+
+### Server Core support for SQL Server 2017
+
+Installing SQL Server 2017 on Server Core mode is supported by the following editions of Windows Server:
+
+:::row:::
+    :::column:::
+        Windows Server 2022 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2022 Datacenter
+    :::column-end:::
+    :::column:::
+        Windows Server 2022 Datacenter: Azure edition
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2019 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2019 Datacenter
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2016 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2016 Datacenter
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2012 R2 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2012 R2  Datacenter
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2012 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2012 Datacenter
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+
+## Operating System support for SQL Server 2016
+
+The following table shows which editions of SQL Server 2016 are compatible with which versions of Windows:  
+
+| SQL Server edition:               | Enterprise | Developer | Standard | Web | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ |
+| Windows Server 2022 Datacenter    |    No     |    No    |    No   | No |   No   |
+| Windows Server 2022 Datacenter: Azure Edition|    No     |    No    |    No   | No |   No   | 
+| Windows Server 2022 Standard      |    No     |    No    |    No   | No |   No   |
 | Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
@@ -131,10 +230,9 @@ The following table shows which editions of SQL Server 2016 and 2017 are compati
 
 For minimum version requirements to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on [!INCLUDE[win8srv](../../includes/win8srv-md.md)] or [!INCLUDE[win8](../../includes/win8-md.md)], see [Installing SQL Server on Windows Server 2012 or Windows 8](https://support.microsoft.com/kb/2681562). 
 
+### Server Core support for SQL Server 2016
 
-### Server Core support
-
-Installing SQL Server 2016 and 2017 on Server Core mode is supported by the following editions of Windows Server:
+Installing SQL Server 2016 on Server Core mode is supported by the following editions of Windows Server:
 
 :::row:::
     :::column:::

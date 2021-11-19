@@ -6,7 +6,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "WITH_XMLNAMESPACES_TSQL"
   - "WITH XMLNAMESPACES"
@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "WITH XMLNAMESPACES clause"
   - "declaring XML namespaces"
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # WITH XMLNAMESPACES
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Declares one or more XML namespaces.  
   

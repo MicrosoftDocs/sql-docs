@@ -21,7 +21,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Font Color, Size, and Style
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   You can customize the way the text appears in the Editor as well as other places in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### To change font color, size, and style in the Editor  
@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > [!NOTE]  
 >  Click **Use Defaults** to return to the default settings.  
   
- There is only one font setting for the Editor and it affects all editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can change the color based on the text type (such as comments and statements). Monospace fonts appear in bold in the Font list, and you can apply bold settings on a per-text-type basis. For example, you can format comments and operators bold, and the other text types are unaffected.  
+ There is only one font setting for the Editor and it affects all editors in SQL Server Management Studio. You can change the color based on the text type (such as comments and statements). Monospace fonts appear in bold in the Font list, and you can apply bold settings on a per-text-type basis. For example, you can format comments and operators bold, and the other text types are unaffected.  
   
  The settings for text color and font type are global for all text element types, such as comments, strings, and so on.  
   

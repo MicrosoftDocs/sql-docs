@@ -1,8 +1,8 @@
 ---
-title: "View or Change the Compatibility Level of a Database | Microsoft Docs"
+title: "View or Change the Compatibility Level of a Database"
 description: Learn how to view or change the compatibility level of a database in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
-ms.date: "11/24/2017"
+ms.date: "10/21/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -12,61 +12,47 @@ helpviewer_keywords:
   - "compatibility levels [SQL Server], viewing"
   - "compatibility [SQL Server], databases"
   - "compatibility levels [SQL Server], changing"
-ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# View or Change the Compatibility Level of a Database
+# View or change the compatibility level of a database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  This topic describes how to view or change the compatibility level of a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Before you change the compatibility level of a database, you should understand the impact of the change on your applications. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Security](#Security)  
-  
--   **To view or change the compatibility level of a database, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+  This article describes how to view or change the compatibility level of a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+
+> [!IMPORTANT]
+> Before you change the compatibility level of a database, you should understand the impact of the change on your applications. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+    
+## <a name="Security"></a><a name="Permissions"></a> Permissions  
  Requires ALTER permission on the database.  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a>Use SQL Server Management Studio  
   
-#### To view or change the compatibility level of a database  
+ To view or change the compatibility level of a database:
   
-1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name.  
+1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, select the server name.  
   
 2.  Expand **Databases**, and, depending on the database, either select a user database or expand **System Databases** and select a system database.  
   
-3.  Right-click the database, and then click **Properties**.  
+3.  Right-click the database, and then select **Properties**.  
   
      The **Database Properties** dialog box opens.  
   
-4.  In the **Select a page** pane, click **Options**.  
-  
-     The current compatibility level is displayed in the **Compatibility level** list box.  
-  
-5.  To change the compatibility level, select a different option from the list. The available options for different [!INCLUDE[ssde_md](../../includes/ssde_md.md)] versions are listed in the [ALTER DATABASE Compatibility Level (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) page.  
+4.  In the **Select a page** pane, select **Options**. 
 
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+5.  The current compatibility level is displayed in the **Compatibility level** list box.  
   
-#### To view the compatibility level of a database  
+    To change the compatibility level, select a different option from the list. The available options for different [!INCLUDE[ssde_md](../../includes/ssde_md.md)] versions are listed in the [ALTER DATABASE Compatibility Level (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) page.  
+
+## <a name="TsqlProcedure"></a>Use Transact-SQL  
+  
+### View the compatibility level of a database
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  From the Standard bar, click **New Query**.  
+2.  From the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example returns the compatibility level of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+3.  Copy and paste the following example into the query window and select **Execute**. This example returns the compatibility level of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -76,13 +62,13 @@ FROM sys.databases WHERE name = 'AdventureWorks2012';
 GO  
 ```  
   
-#### To change the compatibility level of a database  
+### Change the compatibility level of a database
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  From the Standard bar, click **New Query**.  
+2.  From the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example changes the compatibility level of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `120`, which is the compatibility level for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+3.  Copy and paste the following example into the query window and select **Execute**. This example changes the compatibility level of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `120`, which is the compatibility level for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
@@ -90,5 +76,5 @@ SET COMPATIBILITY_LEVEL = 120;
 GO  
 ```  
   
-## See Also
- [ALTER DATABASE &#40;Transact-SQL&#41; Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
+## Next steps
+ - [ALTER DATABASE &#40;Transact-SQL&#41; Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)

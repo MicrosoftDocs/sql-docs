@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "versions [Master Data Services], validating"
   - "business rules [Master Data Services], applying to all members"
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Validate a Version against Business Rules (Master Data Services)

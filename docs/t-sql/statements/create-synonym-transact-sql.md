@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_SYNONYM_TSQL"
   - "SYNONYM_TSQL"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "CREATE SYNONYM statement"
   - "synonyms [SQL Server], creating"
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 
 # CREATE SYNONYM (Transact-SQL)

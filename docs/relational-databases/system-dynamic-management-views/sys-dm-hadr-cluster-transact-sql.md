@@ -6,7 +6,7 @@ ms.date: "01/31/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_hadr_cluster"
   - "dm_hadr_cluster_HADR"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.dm_hadr_cluster catalog view"
   - "Availability Groups [SQL Server], WSFC clusters"
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

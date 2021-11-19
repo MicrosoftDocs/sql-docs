@@ -6,8 +6,8 @@ ms.technology: machine-learning-services
 
 ms.date: 11/26/2018  
 ms.topic: tutorial
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
@@ -26,7 +26,7 @@ From R, connect to SQL Server and use **RevoScaleR** functions to perform the fo
 
 Sample data is simulated credit card fraud data (the ccFraud dataset), partitioned into training and scoring datasets. The data file is included in **RevoScaleR**.
 
-Use an R IDE or **Rgui** to complete these taks. Be sure to use the R executables found at this location: C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 (either Rgui.exe if you are using that tool, or an R IDE pointing to C:\Program Files\Microsoft\R Client\R_SERVER). Having an [R client workstation](../r/set-up-a-data-science-client.md) with these executables is considered a prerequisite of this tutorial.
+Use an R IDE or **Rgui** to complete these taks. Be sure to use the R executables found at this location: C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 (either Rgui.exe if you are using that tool, or an R IDE pointing to C:\Program Files\Microsoft\R Client\R_SERVER). Having an [R client workstation](../r/set-up-data-science-client.md) with these executables is considered a prerequisite of this tutorial.
 
 ## Create the training data table
 

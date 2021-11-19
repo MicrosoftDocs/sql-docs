@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "indexes [XML in SQL Server]"
   - "XML indexes [SQL Server], creating"
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Create XML Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

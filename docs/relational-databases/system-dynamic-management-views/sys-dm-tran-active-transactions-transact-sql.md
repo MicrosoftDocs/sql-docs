@@ -1,13 +1,13 @@
 ---
 description: "sys.dm_tran_active_transactions (Transact-SQL)"
-title: "sys.dm_tran_active_transactions (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_tran_active_transactions (Transact-SQL) "
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "03/18/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_tran_active_transactions"
   - "sys.dm_tran_active_transactions_TSQL"
@@ -16,10 +16,9 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "sys.dm_tran_active_transactions dynamic management view"
-ms.assetid: 154ad6ae-5455-4ed2-b014-e443abe2c6ee
-author: markingmyname
-ms.author: maghan
+  - "sys.dm_tran_active_transactions dynamic management view" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_active_transactions (Transact-SQL)
@@ -28,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns information about transactions for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_tran_active_transactions**.  
+>  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_tran_active_transactions**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
   
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,12 +47,36 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Permissions
 
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.
+
+On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
+
+
+## Examples  
   
+### A. Using sys.dm_tran_active_transactions with other DMVs to find information about active transactions
+ The following example shows any active transactions on the system and provides detailed information about the transaction, the user session, the application that submitted, and the query that started it and many others.  
+  
+```sql  
+SELECT
+  GETDATE() as now,
+  DATEDIFF(SECOND, transaction_begin_time, GETDATE()) as tran_elapsed_time_seconds,
+  st.session_id,
+  txt.text, 
+  *
+FROM
+  sys.dm_tran_active_transactions at
+  INNER JOIN sys.dm_tran_session_transactions st ON st.transaction_id = at.transaction_id
+  LEFT OUTER JOIN sys.dm_exec_sessions sess ON st.session_id = sess.session_id
+  LEFT OUTER JOIN sys.dm_exec_connections conn ON conn.session_id = sess.session_id
+    OUTER APPLY sys.dm_exec_sql_text(conn.most_recent_sql_handle)  AS txt
+ORDER BY
+  tran_elapsed_time_seconds DESC;
+```
+
+
 ## See Also  
  [sys.dm_tran_session_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
  [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
-  

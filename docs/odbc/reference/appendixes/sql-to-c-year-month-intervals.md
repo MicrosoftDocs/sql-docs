@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "converting data from SQL to c types [ODBC], about converting"
   - "data conversions from SQL to C types [ODBC], year-month intervals"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "year-month intervals [ODBC]"
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQL to C: Year-Month Intervals
 

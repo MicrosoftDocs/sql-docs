@@ -4,7 +4,7 @@ description: "SSVARIANT structure in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/15/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -13,7 +13,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "SSVARIANT struct"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SSVARIANT Structure
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

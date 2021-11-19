@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "sqlsrv_close"
 apitype: "NA"
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_close"
 ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

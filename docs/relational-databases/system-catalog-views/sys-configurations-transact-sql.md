@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.configurations_TSQL"
   - "configurations"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.configurations catalog view"
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ For a configuration option that is not dynamic there is no way to tell if the RE
  
  
 ## Permissions  
- Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requires membership in the **public** role.
   
 ## See Also  
  [Server-wide Configuration Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "file data sources [ODBC]"
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connecting Using File Data Sources
 The connection information for a file data source is stored in a .dsn file. As a result, the connection string can be used repeatedly by a single user or shared among several users if they have the appropriate driver installed. The file contains a driver name (or another data source name in the case of an unshareable file data source) and optionally, a connection string that can be used by **SQLDriverConnect**. The Driver Manager builds the connection string for the call to **SQLDriverConnect** from the keywords in the .dsn file.  
@@ -49,4 +49,4 @@ DSN = MyDataSource
  The connection string used for a file data source is the union of the keywords specified in the .dsn file and the keywords specified in the connection string in the call to **SQLDriverConnect**. If any of the keywords in the .dsn file conflict with keywords in the connection string, the Driver Manager decides which keyword value should be used. For more information, see [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## See Also  
- [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)
+ [https://support.microsoft.com/kb/165866](https://mskb.pkisolutions.com/kb/165866)

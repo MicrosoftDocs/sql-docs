@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSdbms_TSQL"
   - "MSdbms"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdbms system table"
 ms.assetid: 2be631bf-de09-4e7a-9ccb-d6c37b81c237
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSdbms (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

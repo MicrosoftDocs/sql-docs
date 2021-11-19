@@ -10,7 +10,7 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: v-chmalh
 ---
 # Connection events
@@ -28,7 +28,7 @@ The Microsoft SqlClient Data Provider for SQL Server has **Connection** objects 
 
 ## Work with the InfoMessage event
 
-You can retrieve warnings and informational messages from a SQL Server data source using the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event of the <xref:Microsoft.Data.SqlClient.SqlConnection> object. Errors returned from the data source with a severity level of 11 through 16 cause an exception to be thrown. However, the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event can be used to obtain messages from the data source that are not associated with an error. In the case of Microsoft SQL Server, any error with a severity of 10 or less is considered to be an informational message, and can be captured by using the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event. For more information, see the [Database Engine Error Severities](/sql/relational-databases/errors-events/database-engine-error-severities) article.
+You can retrieve warnings and informational messages from a SQL Server data source using the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event of the <xref:Microsoft.Data.SqlClient.SqlConnection> object. Errors returned from the data source with a severity level of 11 through 16 cause an exception to be thrown. However, the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event can be used to obtain messages from the data source that are not associated with an error. In the case of Microsoft SQL Server, any error with a severity of 10 or less is considered to be an informational message, and can be captured by using the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event. For more information, see the [Database Engine Error Severities](../../relational-databases/errors-events/database-engine-error-severities.md) article.
 
 The <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event receives an <xref:Microsoft.Data.SqlClient.SqlInfoMessageEventArgs> object containing, in its **Errors** property, a collection of the messages from the data source. You can query the **Error** objects in this collection for the error number and message text, as well as the source of the error. The Microsoft SqlClient Data Provider for SQL Server also includes detail about the database, stored procedure, and line number that the message came from.
 

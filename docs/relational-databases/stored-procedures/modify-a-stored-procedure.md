@@ -1,8 +1,8 @@
 ---
-title: "Modify a Stored Procedure | Microsoft Docs"
-description: Learn how to modify a stored procedure in SQL Server 2019 (15.x) by using SQL Server Management Studio or Transact-SQL.
+title: "Modify a Stored Procedure"
+description: Learn how to modify a stored procedure in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "10/21/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: stored-procedures
@@ -11,72 +11,57 @@ helpviewer_keywords:
   - "modifying stored procedures"
   - "editing stored procedures"
   - "stored procedures [SQL Server], modifying"
-ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify a Stored Procedure
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
     
-##  <a name="Top"></a> This topic describes how to modify a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+<a name="Top"></a> This article describes how to modify a stored procedure in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
-  
--   **To alter a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and restrictions  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures cannot be modified to be CLR stored procedures and vice versa.  
   
  If the previous procedure definition was created using WITH ENCRYPTION or WITH RECOMPILE, these options are enabled only if they are included in the ALTER PROCEDURE statement.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+## <a name="Security"></a><a name="Permissions"></a> Permissions  
  Requires ALTER PROCEDURE permission on the procedure.  
-  
-##  <a name="Procedures"></a> How to Modify a Stored Procedure  
- You can use one of the following:  
-  
--   [SQL Server Management Studio](#SSMSProcedure)  
-  
--   [Transact-SQL](#TsqlProcedure)  
-  
-###  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- **To modify a procedure in Management Studio**  
+    
+##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio  
+ 
+To modify a procedure in SQL Server Management Studio:
   
 1.  In Object Explorer, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database in which the procedure belongs, and then expand **Programmability**.  
   
-3.  Expand **Stored Procedures**, right-click the procedure to modify, and then click **Modify**.  
+3.  Expand **Stored Procedures**, right-click the procedure to modify, and then select **Modify**.  
   
 4.  Modify the text of the stored procedure.  
   
-5.  To test the syntax, on the **Query** menu, click **Parse**.  
+5.  To test the syntax, on the **Query** menu, select **Parse**.  
   
-6.  To save the modifications to the procedure definition, on the **Query** menu, click **Execute**.  
+6.  To save the modifications to the procedure definition, on the **Query** menu, select **Execute**.  
   
-7.  To save the updated procedure definition as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script, on the **File** menu, click **Save As**. Accept the file name or replace it with a new name, and then click **Save**.  
+7.  To save the updated procedure definition as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script, on the **File** menu, select **Save As**. Accept the file name or replace it with a new name, and then select **Save**.  
 
 > [!IMPORTANT]  
->  Validate all user input. Do not concatenate user input before you validate it. Never execute a command constructed from unvalidated user input.  
+>  Validate all user input. Do not concatenate user input before you validate it. Never execute a command constructed from unvalidated user input. For more information, see [SQL Injection](../security/sql-injection.md)
   
-###  <a name="TsqlProcedure"></a> Using Transact-SQL  
- **To modify a procedure in Query Editor**  
+##  <a name="TsqlProcedure"></a> Use Transact-SQL  
+ 
+ To modify a procedure using T-SQL commands:
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand **Databases**, expand the database in which the procedure belongs. Or, from the tool bar, select the database from the list of available databases. For this example, select the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-3.  On the **File** menu, click **New Query**.  
+3.  On the **File** menu, select **New Query**.  
   
 4.  Copy and paste the following example into the query editor. The example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-    ```  
-  
+    ```sql  
     IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
         DROP PROCEDURE Purchasing.uspVendorAllInfo;  
     GO  
@@ -93,15 +78,17 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
         INNER JOIN Production.Product p  
           ON pv.ProductID = p.ProductID   
         ORDER BY v.Name ASC;  
-    GO  
-  
+    GO   
     ```  
+
+      > [!IMPORTANT]  
+      >  Dropping and recreating an existing stored procedure removes permissions that have been explicitly granted to the stored procedure. Use ALTER instead.
+      
+5.  On the **File** menu, select **New Query**.  
   
-5.  On the **File** menu, click **New Query**.  
+6.  Copy and paste the following example into the query editor. The example modifies the `uspVendorAllInfo` procedure. The `EXECUTE AS CALLER` clause is removed and the body of the procedure is modified to return only those vendors that supply the specified product. The `LEFT` and `CASE` functions customize the appearance of the result set.  
   
-6.  Copy and paste the following example into the query editor. The example modifies the `uspVendorAllInfo` procedure. The EXECUTE AS CALLER clause is removed and the body of the procedure is modified to return only those vendors that supply the specified product. The `LEFT` and `CASE` functions customize the appearance of the result set.  
-  
-    ```  
+    ```sql  
     ALTER PROCEDURE Purchasing.uspVendorAllInfo  
         @Product varchar(25)   
     AS  
@@ -127,22 +114,20 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
         WHERE p.Name LIKE @Product  
         ORDER BY v.Name ASC;  
     GO  
-  
     ```  
   
-7.  To save the modifications to the procedure definition, on the **Query** menu, click **Execute**.  
+7.  To save the modifications to the procedure definition, on the **Query** menu, select **Execute**.  
   
-8.  To save the updated procedure definition as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script, on the **File** menu, click **Save As**. Accept the file name or replace it with a new name, and then click **Save**.  
+8.  To save the updated procedure definition as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script, on the **File** menu, select **Save As**. Accept the file name or replace it with a new name, and then select **Save**.  
   
 9. To run the modified stored procedure, execute the following example.  
   
-    ```  
+    ```sql  
     EXEC Purchasing.uspVendorAllInfo N'LL Crankarm';  
     GO  
-  
     ```  
   
-## See Also  
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  
-  
-  
+## Next steps
+
+ - [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  
+ - [SQL Injection](../security/sql-injection.md)

@@ -2,9 +2,9 @@
 title: "OLE DB Driver for SQL Server Features"
 description: "Learn about features supported by the OLE DB Driver for SQL Server like database mirroring, asynchronous operation, Azure Active Directory, and others."
 ms.custom: ""
-ms.date: "02/11/2019"
+ms.date: "05/31/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -13,12 +13,14 @@ helpviewer_keywords:
   - "MSOLEDBSQL, about OLE DB Driver for SQL Server"
   - "data access [OLE DB Driver for SQL Server], features"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # OLE DB Driver for SQL Server Features
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+For a list of popular features that are supported and not supported in different OLE DB versions, see the [Driver feature matrix](../../driver-feature-matrix.md#table2).
 
   In addition to exposing features of the Windows (formerly Microsoft) Data Access Components (WDAC), OLE DB Driver for SQL Server also implements many other features to expose [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] functionality.  
   
@@ -97,6 +99,9 @@ Discusses new authentication methods introduced in OLE DB driver 18.2.1 that hav
   
  [Using Transparent Network IP Resolution](../../oledb/features/using-transparent-network-ip-resolution.md)  
  Discusses how OLE DB Driver for SQL Server supports transparent network IP resolution in a failover cluster.  
+  
+ [Idle Connection Resiliency](idle-connection-resiliency.md)  
+ Discusses how OLE DB Driver for SQL Server supports idle connection resiliency.  
   
 ## See Also  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      

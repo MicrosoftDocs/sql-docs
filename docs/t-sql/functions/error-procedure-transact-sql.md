@@ -4,10 +4,10 @@ title: "ERROR_PROCEDURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ERROR_PROCEDURE_TSQL"
   - "ERROR_PROCEDURE"
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "messages [SQL Server], stored procedure where occurred"
   - "errors [SQL Server], trigger where occurred"
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ERROR_PROCEDURE (Transact-SQL)

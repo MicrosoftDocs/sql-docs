@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b351e999-85bf-498b-915a-f91d89134bce
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getNString Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

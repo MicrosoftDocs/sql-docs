@@ -4,10 +4,10 @@ title: "ODBC Scalar Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -57,7 +57,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # ODBC Scalar Functions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  You can use [ODBC Scalar Functions](https://go.microsoft.com/fwlink/?LinkID=88579) in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. These statements are interpreted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They can be used in stored procedures and user-defined functions. These include string, numeric, time, date, interval, and system functions.  
+  You can use [ODBC Scalar Functions](../../odbc/reference/appendixes/appendix-e-scalar-functions.md) in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. These statements are interpreted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They can be used in stored procedures and user-defined functions. These include string, numeric, time, date, interval, and system functions.  
   
 ## Usage  
  ```syntaxsql
@@ -129,7 +129,7 @@ DECLARE @len INT
 SET @len = (SELECT {fn OCTET_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
-  
+GO
 SELECT dbo.ODBCudf('Returns the length.');  
 --Returns 38  
 ```  
@@ -203,7 +203,7 @@ DECLARE @len INT
 SET @len = (SELECT {fn BIT_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
-  
+GO
 SELECT dbo.ODBCudf('Returns the length in bits.');  
 --Returns 432  
 ```  
@@ -245,4 +245,4 @@ SELECT {fn WEEK( @date_exp )};
 ```  
   
 ## See Also  
- [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
+ [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)

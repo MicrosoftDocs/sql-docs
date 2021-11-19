@@ -4,7 +4,7 @@ title: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_CRYPTOGRAPHIC_TSQL"
   - "CRYPTOGRAPHIC PROVIDER"
@@ -45,7 +45,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  Is the name of the Extensible Key Management provider.  
   
  *path_of_DLL*  
- Is the path of the .dll file that implements the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extensible Key Management interface. When using the **SQL Server Connector for Microsoft Azure Key Vault** the default location is **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'**.  
+ Is the path of the .dll file that implements the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extensible Key Management interface. When using the **SQL Server Connector for Microsoft Azure Key Vault** the default location is **'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'**.  
   
 ## Remarks  
  All keys created by a provider will reference the provider by its GUID. The GUID is retained across all versions of the DLL.  

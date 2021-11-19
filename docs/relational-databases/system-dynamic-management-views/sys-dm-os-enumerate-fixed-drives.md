@@ -6,7 +6,7 @@ ms.date: "09/18/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_enumerate_fixed_drives"
   - "sys.dm_os_enumerate_fixed_drives_TSQL"
@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_enumerate_fixed_drives dynamic management view"
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_os_enumerate_fixed_drives (Transact-SQL)
 

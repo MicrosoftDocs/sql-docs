@@ -1,17 +1,17 @@
 ---
-title: What are data pools?
-titleSuffix: SQL Server big data clusters
+title: Data pools in SQL Server Big Data Clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Learn the role of SQL Server data pools in a SQL Server Big Data Cluster, as well as the architecture and functionality of a SQL data pool.
-author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 08/21/2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
+ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# What are data pools in a SQL Server big data cluster?
+# Introducing the data pool in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -37,5 +37,5 @@ Access to the SQL server instances in the data pool is managed from the SQL Serv
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following resources:
 
-- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
-- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/microsoft/sqlworkshops-bdc)

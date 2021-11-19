@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSdynamicsnapshotviews_TSQL"
   - "MSdynamicsnapshotviews"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdynamicsnapshotviews system table"
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

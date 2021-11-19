@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "displaying database snapshots"
   - "viewing database snapshots"
 ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # View a Database Snapshot (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

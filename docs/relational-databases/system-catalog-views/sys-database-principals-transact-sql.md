@@ -4,10 +4,10 @@ title: "sys.database_principals (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/27/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "database_principals"
   - "database_principals_TSQL"
@@ -40,10 +40,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**sid**|**varbinary(85)**|SID (Security Identifier) of the principal.  NULL for SYS and INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|If 1, this row represents an entry for one of the fixed database roles: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
 |**authentication_type**|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Signifies authentication type. The following are the possible values and their descriptions.<br /><br /> 0 : No authentication<br />1 : Instance authentication<br />2 : Database authentication<br />3 : Windows authentication<br />4 : Azure Active Directory authentication|  
-|**authentication_type_desc**|**nvarchar(60)**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Description of the authentication type. The following are the possible values and their descriptions.<br /><br /> NONE : No authentication<br />INSTANCE : Instance authentication<br />DATABASE : Database authentication<br />WINDOWS : Windows authentication<br />EXTERNAL: Azure Active Directory authentication|  
+|**authentication_type_desc**|**nvarchar(60)**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Description of the authentication type. The following are the possible values and their descriptions.<br /><br /> `NONE` : No authentication<br />`INSTANCE` : Instance authentication<br />`DATABASE` : Database authentication<br />`WINDOWS` : Windows authentication<br />`EXTERNAL`: Azure Active Directory authentication|  
 |**default_language_name**|**sysname**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Signifies the default language for this principal.|  
 |**default_language_lcid**|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Signifies the default LCID for this principal.|  
-|**allow_encrypted_value_modifications**|**bit**|**Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy data encrypted using Always Encrypted, between tables or databases, without decrypting the data. The default is OFF. |      
+|**allow_encrypted_value_modifications**|**bit**|**Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy data encrypted using Always Encrypted, between tables or databases, without decrypting the data. The default is OFF. |      
   
 ## Remarks  
  The *PasswordLastSetTime* properties are available on all supported configurations of SQL Server, but the other properties are only available when SQL Server is running on Windows Server 2003 or later and both CHECK_POLICY and CHECK_EXPIRATION are enabled. See [Password Policy](../../relational-databases/security/password-policy.md) for more information.

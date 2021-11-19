@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLWritePrivateProfileString"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLWritePrivateProfileString [ODBC]"
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLWritePrivateProfileString Function
 **Conformance**  

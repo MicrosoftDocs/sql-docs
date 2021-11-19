@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "sqlsrv_rows_affected"
 apitype: "NA"
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_rows_affected"
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

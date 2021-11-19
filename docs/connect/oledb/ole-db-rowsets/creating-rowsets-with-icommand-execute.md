@@ -4,7 +4,7 @@ description: Learn about creating rowsets with ICommand::Execute in OLE DB Drive
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "OLE DB rowsets, creating"
   - "Execute method"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Creating Rowsets with ICommand::Execute
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

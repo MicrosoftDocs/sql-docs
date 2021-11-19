@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "xs:QName type"
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # The xs:QName Type
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

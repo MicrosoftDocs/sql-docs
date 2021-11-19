@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSpublication_access_TSQL"
   - "MSpublication_access"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpublication_access system table"
 ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSpublication_access (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

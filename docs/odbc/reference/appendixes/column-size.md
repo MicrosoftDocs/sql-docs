@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "data types [ODBC], column size"
   - "size of data types [ODBC]"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "column size of data types [ODBC]"
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Column Size
 The column (or parameter) size of numeric data types is defined as the maximum number of digits used by the data type of the column or parameter, or the precision of the data. For character types, this is the length in characters of the data; for binary data types, column size is defined as the length in bytes of the data. For the time, timestamp, and all interval data types, this is the number of characters in the character representation of this data. The column size defined for each concise SQL data type is shown in the following table.  

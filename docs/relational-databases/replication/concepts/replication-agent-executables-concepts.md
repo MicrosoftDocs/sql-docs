@@ -51,7 +51,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 >  Line breaks in these examples were added to improve readability. In a batch file, commands must be made in a single line.  
   
 ### Running the Snapshot Agent  
- This example batch file invokes the Snapshot Agent from the command prompt to generate a snapshot for the **AdvWorksSalesOrdersMerge** publication. (The scripts below use the path to [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] files (version 130). You should adjust the scripts to point to the files for your version of [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)].)  
+ This example batch file invokes the Snapshot Agent from the command prompt to generate a snapshot for the **AdvWorksSalesOrdersMerge** publication. (The scripts below use the path to [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] files (version 130). You should adjust the scripts to point to the files for your version of [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)].)  
   
 ```  
 REM -- Declare variables  

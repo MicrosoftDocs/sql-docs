@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLAllocConnect"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLAllocConnect function [ODBC]"
 ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLAllocConnect Function
 **Conformance**  

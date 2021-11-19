@@ -1,8 +1,8 @@
 ---
-title: "Monitoring Performance By Using the Query Store | Microsoft Docs"
+title: "Monitoring Performance By Using the Query Store"
 description: The SQL Server Query Store provides insight on query plan choice and performance. Query Store captures history of queries, plans, and runtime statistics.
 ms.custom: ""
-ms.date: 04/09/2020
+ms.date: 10/28/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -11,21 +11,20 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store"
   - "Query Store, described"
-ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # Monitoring performance by using the Query Store
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store feature provides you with insight on query plan choice and performance. It simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes happened on the server. You can configure query store using the [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) option.
 
 For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
 
 > [!IMPORTANT]
-> If you are using Query Store for just in time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
+> If you are using Query Store for just in time workload insights in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
 
 ## <a name="Enabling"></a> Enabling the Query Store
 
@@ -33,7 +32,7 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 ### Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
-1. In Object Explorer, right-click a database, and then click **Properties**.
+1. In Object Explorer, right-click a database, and then select **Properties**.
 
    > [!NOTE]
    > Requires at least version 16 of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
@@ -44,16 +43,24 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 ### Use Transact-SQL Statements
 
-Use the **ALTER DATABASE** statement to enable the query store for a given database. For example:
+Use the `ALTER DATABASE` statement to enable the query store for a given database. For example:
 
 ```sql
+ALTER DATABASE <database_name>
 SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
+```
+
+In Azure Synapse Analytics, enable the Query Store without additional options, for example:
+
+```sql
+ALTER DATABASE <database_name>
+SET QUERY_STORE = ON;
 ```
 
 For more syntax options related to the Query Store, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 > [!NOTE]
-> Query Store cannot be enabled for the **master** or **tempdb** databases.
+> Query Store cannot be enabled for the `master` or `tempdb` databases.
 
 > [!IMPORTANT]
 > For information on enabling Query Store and keeping it adjusted to your workload, refer to [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
@@ -72,6 +79,7 @@ Since the Query Store retains multiple execution plans per query, it can enforce
 **Wait stats** are another source of information that helps to troubleshoot performance in the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. For a long time, wait statistics were available only on instance level, which made it hard to backtrack waits to a specific query. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Query Store includes a dimension that tracks wait stats. The following example enables the Query Store to collect wait stats.
 
 ```sql
+ALTER DATABASE <database_name>
 SET QUERY_STORE = ON ( WAIT_STATS_CAPTURE_MODE = ON );
 ```
 
@@ -101,7 +109,7 @@ FROM sys.query_store_plan AS Pl
 INNER JOIN sys.query_store_query AS Qry
     ON Pl.query_id = Qry.query_id
 INNER JOIN sys.query_store_query_text AS Txt
-    ON Qry.query_text_id = Txt.query_text_id ;
+    ON Qry.query_text_id = Txt.query_text_id;
 ```
 
 ## <a name="Regressed"></a> Use the Regressed Queries feature
@@ -116,7 +124,7 @@ Select a plan to see the graphical query plan. Buttons are available to view the
 
 ![SQL Server 2016 Regressed Queries in SSMS Object Explorer](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016 Regressed Queries in SSMS Object Explorer")
 
-To force a plan, select a query and plan, and then click **Force Plan**. You can only force plans that were saved by the query plan feature and are still retained in the query plan cache.
+To force a plan, select a query and plan, then select **Force Plan**. You can only force plans that were saved by the query plan feature and are still retained in the query plan cache.
 
 ## <a name="Waiting"></a> Finding waiting queries
 
@@ -134,7 +142,7 @@ Select a wait category by clicking on the bar and a detail view on the selected 
 
 Use the drop-down box at the top to filter queries based on various wait time criteria for the selected wait category: avg, max, min, std dev, and **total** (default). Select a plan to see the graphical query plan. Buttons are available to view the source query, force, and unforce a query plan, and refresh the display.
 
-**Wait categories** are combining different wait types into buckets similar by nature. Different wait categories require a different follow up analysis to resolve the issue, but wait types from the same category lead to very similar troubleshooting experiences, and providing the affected query on top of waits would be the missing piece to complete the majority of such investigations successfully.
+**Wait categories** are combining different wait types into buckets similar by nature. Different wait categories require a different follow-up analysis to resolve the issue, but wait types from the same category lead to very similar troubleshooting experiences, and providing the affected query on top of waits would be the missing piece to complete most such investigations successfully.
 
 Here are some examples how you can get more insights into your workload before and after introducing wait categories in Query Store:
 
@@ -149,9 +157,12 @@ Here are some examples how you can get more insights into your workload before a
 
 For the available options to configure Query Store parameters, see [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
-Query the **sys.database_query_store_options** view to determine the current options of the Query Store. For more information about the values, see [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
+Query the `sys.database_query_store_options` view to determine the current options of the Query Store. For more information about the values, see [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
 For examples about setting configuration options using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, see [Option Management](#OptionMgmt).
+
+> [!NOTE]
+> For Azure Synapse Analytics, the Query Store can be enabled as on other platforms but additional configuration options are not supported. 
 
 ## <a name="Related"></a> Related Views, Functions, and Procedures
 
@@ -205,7 +216,7 @@ Catalog views present information about the Query Store.
 :::row-end:::
 
 
-### Query Store Stored Procedures
+### Query Store stored procedures
 
 Stored procedures configure the Query Store.
 
@@ -241,7 +252,7 @@ Stored procedures configure the Query Store.
     :::column-end:::
 :::row-end:::
 
-<sup>1</sup> In extreme scenarios Query Store can enter an ERROR state because of internal errors. Starting with SQL Server 2017 (14.x), if this happens, Query Store can be recovered by executing the sp_query_store_consistency_check stored procedure in the affected database. See [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) for more details described in the actual_state_desc column description.
+<sup>1</sup> In extreme scenarios Query Store can enter an ERROR state because of internal errors. Starting with SQL Server 2017 (14.x), if this happens, Query Store can be recovered by executing the `sp_query_store_consistency_check` stored procedure in the affected database. See [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) for more details described in the `actual_state_desc` column description.
 
 ## <a name="Scenarios"></a> Key Usage Scenarios
 
@@ -249,7 +260,7 @@ Stored procedures configure the Query Store.
 
 This section provides some guidelines on managing Query Store feature itself.
 
-**Is Query Store currently active?**
+#### Query Store state
 
 Query Store stores its data inside the user database and that is why it has size limit (configured with `MAX_STORAGE_SIZE_MB`). If data in Query Store hits that limit Query Store will automatically change state from read-write to read-only and stop collecting new data.
 
@@ -261,10 +272,9 @@ SELECT actual_state, actual_state_desc, readonly_reason,
 FROM sys.database_query_store_options;
 ```
 
-Query Store status is determined by actual_state column. If it's different than the desired status, the `readonly_reason` column can give you more information.
-When Query Store size exceeds the quota, the feature will switch to read_only mode.
+Query Store status is determined by the `actual_state` column. If it's different than the desired status, the `readonly_reason` column can give you more information. When Query Store size exceeds the quota, the feature will switch to read_only mode and provide a reason. For information on reasons, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
-**Get Query Store options**
+#### Get Query Store options
 
 To find out detailed information about Query Store status, execute following in a user database.
 
@@ -272,21 +282,21 @@ To find out detailed information about Query Store status, execute following in 
 SELECT * FROM sys.database_query_store_options;
 ```
 
-**Setting Query Store interval**
+#### Setting Query Store interval
 
-You can override interval for aggregating query runtime statistics (default is 60 minutes).
+You can override interval for aggregating query runtime statistics (default is 60 minutes). New value for interval is exposed through `sys.database_query_store_options` view.
 
 ```sql
 ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
 ```
 
+Arbitrary values are not allowed for `INTERVAL_LENGTH_MINUTES`. Use one of the following: 1, 5, 10, 15, 30, 60, or 1440 minutes.
+
 > [!NOTE]
-> Arbitrary values are not allowed for `INTERVAL_LENGTH_MINUTES`. Use one of the following: 1, 5, 10, 15, 30, 60, or 1440 minutes.
+> For Azure Synapse Analytics, customizing Query Store configuration options, as demonstrated in this section, is not supported. 
 
-New value for interval is exposed through **sys.database_query_store_options** view.
-
-**Query Store space usage**
+#### Query Store space usage
 
 To check current the Query Store size and limit execute the following statement in the user database.
 
@@ -302,7 +312,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
 ```
 
-**Set Query Store options**
+#### Set Query Store options
 
 You can set multiple Query Store options at once with a single ALTER DATABASE statement.
 
@@ -323,7 +333,7 @@ SET QUERY_STORE (
 
 For the full list of configuration options, see [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
-**Cleaning up the space**
+#### Cleaning up the space
 
 Query Store internal tables are created in the PRIMARY filegroup during database creation and that configuration cannot be changed later. If you are running out of space you might want to clear older Query Store data by using the following statement.
 
@@ -331,62 +341,63 @@ Query Store internal tables are created in the PRIMARY filegroup during database
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 ```
 
-Alternatively, you might want to clear up only ad-hoc query data, since it is less relevant for query optimizations and plan analysis but takes up just as much space.
+Alternatively, you might want to clear up only ad-hoc query data, since it is less relevant for query optimizations and plan analysis but takes up just as much space. 
 
-**Delete ad-hoc queries**
+In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past 30 days.
 
-This purges adhoc and internal queries from the query store every 3 minutes so that the query store does not run out of space and remove queries we really need to track
+#### Delete ad-hoc queries
+
+This purges adhoc and internal queries from the Query Store so that the Query Store does not run out of space and remove queries we really need to track.
 
 ```sql
 SET NOCOUNT ON
--- This purges adhoc and internal queries from the query store every 3 minutes so that the
--- query store does not run out of space and remove queries we really need to track
-DECLARE @command varchar(1000)
+-- This purges adhoc and internal queries from 
+-- the Query Store in the current database 
+-- so that the Query Store does not run out of space 
+-- and remove queries we really need to track
 
-SELECT @command = 'IF ''?'' NOT IN(''master'', ''model'', ''msdb'', ''tempdb'') BEGIN USE ?
-EXEC(''
-DECLARE @id int
+DECLARE @id int;
 DECLARE adhoc_queries_cursor CURSOR
 FOR
-SELECT q.query_id
-FROM sys.query_store_query_text AS qt
-JOIN sys.query_store_query AS q
-ON q.query_text_id = qt.query_text_id
-JOIN sys.query_store_plan AS p
-ON p.query_id = q.query_id
-JOIN sys.query_store_runtime_stats AS rs
-ON rs.plan_id = p.plan_id
-WHERE q.is_internal_query = 1 ' -- is it an internal query then we dont care to keep track of it
-
-' OR q.object_id = 0' -- if it does not have a valid object_id then it is an adhoc query and we dont care about keeping track of it
-' GROUP BY q.query_id
-HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE()) ' -- if it has been more than 5 minutes since the adhoc query ran
-' ORDER BY q.query_id ;
+    SELECT q.query_id
+    FROM sys.query_store_query_text AS qt
+    JOIN sys.query_store_query AS q
+    ON q.query_text_id = qt.query_text_id
+    JOIN sys.query_store_plan AS p
+    ON p.query_id = q.query_id
+    JOIN sys.query_store_runtime_stats AS rs
+    ON rs.plan_id = p.plan_id
+    WHERE q.is_internal_query = 1  -- is it an internal query then we dont care to keep track of it
+       OR q.object_id = 0 -- if it does not have a valid object_id then it is an adhoc query and we don't care about keeping track of it
+    GROUP BY q.query_id
+    HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE())  -- if it has been more than 5 minutes since the adhoc query ran
+    ORDER BY q.query_id;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
 BEGIN
-EXEC sp_query_store_remove_query @id
-FETCH NEXT FROM adhoc_queries_cursor INTO @id
+    PRINT 'EXEC sp_query_store_remove_query ' + str(@id);
+    EXEC sp_query_store_remove_query @id;
+    FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 END
-CLOSE adhoc_queries_cursor ;
+CLOSE adhoc_queries_cursor;
 DEALLOCATE adhoc_queries_cursor;
-'') END' ;
-EXEC sp_MSforeachdb @command
 ```
 
 You can define your own procedure with different logic for clearing up data you no longer want.
 
-The example above uses the **sp_query_store_remove_query** extended stored procedure for removing unnecessary data. You can also use:
+The example above uses the `sp_query_store_remove_query` extended stored procedure for removing unnecessary data. You can also:
 
-- **sp_query_store_reset_exec_stats** to clear runtime statistics for a given plan.
-- **sp_query_store_remove_plan** to remove a single plan.
+- Use `sp_query_store_reset_exec_stats` to clear runtime statistics for a given plan.
+- Use `sp_query_store_remove_plan` to remove a single plan.
 
-### <a name="Peformance"></a> Performance Auditing and Troubleshooting
+### <a name="Performance"></a> Performance Auditing and Troubleshooting
 
-Query Store keeps a history of compilation and runtime metrics throughout query executions, allowing you to ask questions about your workload.
+Query Store keeps a history of compilation and runtime metrics throughout query executions, allowing you to ask questions about your workload. The following sample queries may be helpful in your performance baseline and query performance investigation:
 
-**Last *n* queries executed on the database?**
+#### Last queries executed on the database
+
+The last *n* queries executed on the database:
 
 ```sql
 SELECT TOP 10 qt.query_sql_text, q.query_id,
@@ -401,7 +412,9 @@ JOIN sys.query_store_runtime_stats AS rs
 ORDER BY rs.last_execution_time DESC;
 ```
 
-**Number of executions for each query?**
+#### Execution counts
+
+Number of executions for each query:
 
 ```sql
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,
@@ -417,7 +430,9 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;
 ```
 
-**The number of queries with the longest average execution time within last hour?**
+#### Longest average execution time
+
+The number of queries with the longest average execution time within last hour:
 
 ```sql
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,
@@ -434,7 +449,9 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;
 ```
 
-**The number of queries that had the biggest average physical I/O reads in last 24 hours, with corresponding average row count and execution count?**
+#### Biggest average physical I/O reads
+
+The number of queries that had the biggest average physical I/O reads in last 24 hours, with corresponding average row count and execution count:
 
 ```sql
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,
@@ -453,7 +470,9 @@ WHERE rsi.start_time >= DATEADD(hour, -24, GETUTCDATE())
 ORDER BY rs.avg_physical_io_reads DESC;
 ```
 
-**Queries with multiple plans?** These queries are especially interesting because they are candidates for regressions due to plan choice change. The following query identifies these queries along with all plans:
+#### Queries with multiple plans
+
+These queries are especially interesting because they are candidates for regressions due to plan choice change. The following query identifies these queries along with all plans:
 
 ```sql
 WITH Query_MultPlans
@@ -482,7 +501,30 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;
 ```
 
- **Queries that recently regressed in performance (comparing different point in time)?** The following query example returns all queries for which execution time doubled in last 48 hours due to a plan choice change. Query compares all runtime stat intervals side by side.
+#### Highest wait durations 
+
+This query will return top 10 queries with the highest wait durations:
+
+```sql
+SELECT TOP 10
+    qt.query_text_id,
+    q.query_id,
+    p.plan_id,
+    sum(total_query_wait_time_ms) AS sum_total_wait_ms
+FROM sys.query_store_wait_stats ws
+JOIN sys.query_store_plan p ON ws.plan_id = p.plan_id
+JOIN sys.query_store_query q ON p.query_id = q.query_id
+JOIN sys.query_store_query_text qt ON q.query_text_id = qt.query_text_id
+GROUP BY qt.query_text_id, q.query_id, p.plan_id
+ORDER BY sum_total_wait_ms DESC;
+```
+
+> [!NOTE]
+> In Azure Synapse Analytics, the Query Store sample queries in this section are supported with the exception of wait stats, which are not available in the Azure Synapse Analytics Query Store DMVs.
+
+ #### Queries that recently regressed in performance
+
+The following query example returns all queries for which execution time doubled in last 48 hours due to a plan choice change. This query compares all runtime stat intervals side by side:
 
 ```sql
 SELECT
@@ -519,26 +561,11 @@ WHERE rsi1.start_time > DATEADD(hour, -48, GETUTCDATE())
 ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
 ```
 
-If you want to see performance all regressions (not only those related to plan choice change) than just remove condition `AND p1.plan_id <> p2.plan_id` from the previous query.
+If you want to see performance all regressions (not only those related to plan choice change), remove condition `AND p1.plan_id <> p2.plan_id` from the previous query.
 
-**Queries that are waiting the most?**
-This query will return top 10 queries that wait the most.
+ #### Queries with historical regression in performance
 
-```sql
-SELECT TOP 10
-    qt.query_text_id,
-    q.query_id,
-    p.plan_id,
-    sum(total_query_wait_time_ms) AS sum_total_wait_ms
-FROM sys.query_store_wait_stats ws
-JOIN sys.query_store_plan p ON ws.plan_id = p.plan_id
-JOIN sys.query_store_query q ON p.query_id = q.query_id
-JOIN sys.query_store_query_text qt ON q.query_text_id = qt.query_text_id
-GROUP BY qt.query_text_id, q.query_id, p.plan_id
-ORDER BY sum_total_wait_ms DESC
-```
-
-**Queries that recently regressed in performance (comparing recent vs. history execution)?** The next query compares query execution based periods of execution. In this particular example the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metrics is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:
+Comparing recent execution to historical execution, the next query compares query execution based on period of execution. In this particular example, the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metric is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:
 
 ```sql
 --- "Recent" workload - last 1 hour
@@ -623,9 +650,9 @@ OPTION (MERGE JOIN);
 
 ### <a name="Stability"></a> Maintaining query performance stability
 
-For queries executed multiple times you may notice that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses different plans, resulting in different resource utilization and duration. With Query Store you can detect when query performance regressed and determine the optimal plan within a period of interest. You can then force that optimal plan for future query execution.
+For queries executed multiple times you may notice that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses different plans, resulting in different resource utilization and duration. With Query Store, you can detect when query performance regressed and determine the optimal plan within a period of interest. You can then force that optimal plan for future query execution.
 
-You can also identify inconsistent query performance for a query with parameters (either auto-parameterized or manually parameterized). Among different plans you can identify the plan which is fast and optimal enough for all or most of the parameter values and force that plan, keeping predictable performance for the wider set of user scenarios.
+You can also identify inconsistent query performance for a query with parameters (either auto-parameterized or manually parameterized). Among different plans, you can identify the plan that is fast and optimal enough for all or most of the parameter values and force that plan, keeping predictable performance for the wider set of user scenarios.
 
 ### Force a plan for a query (apply forcing policy)
 
@@ -635,15 +662,18 @@ When a plan is forced for a certain query, [!INCLUDE[ssNoVersion](../../includes
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```
 
-When using **sp_query_store_force_plan** you can only force plans that were recorded by Query Store as a plan for that query. In other words, the only plans available for a query are those that were already used to execute that query while Query Store was active.
+When using `sp_query_store_force_plan` you can only force plans that were recorded by Query Store as a plan for that query. In other words, the only plans available for a query are those that were already used to execute that query while Query Store was active.
+
+> [!NOTE]
+> Forcing plans in Query Store is not supported in Azure Synapse Analytics. 
 
 #### <a name="ctp23"><a/> Plan forcing support for fast forward and static cursors
 
-Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and Azure SQL Database (all deployment models), Query Store supports the ability to force query execution plans for fast forward and static [!INCLUDE[tsql](../../includes/tsql-md.md)] and API cursors. Forcing is supported via `sp_query_store_force_plan` or through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Store reports.
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and Azure SQL Database (all deployment models), Query Store supports the ability to force query execution plans for fast forward and static [!INCLUDE[tsql](../../includes/tsql-md.md)] and API cursors. Forcing is supported via `sp_query_store_force_plan` or through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Store reports.
 
 ### Remove plan forcing for a query
 
-To rely again on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer to calculate the optimal query plan, use **sp_query_store_unforce_plan** to unforce the plan that was selected for the query.
+To rely again on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer to calculate the optimal query plan, use `sp_query_store_unforce_plan` to unforce the plan that was selected for the query.
 
 ```sql
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;

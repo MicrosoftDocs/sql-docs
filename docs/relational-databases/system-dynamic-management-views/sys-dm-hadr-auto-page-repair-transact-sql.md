@@ -6,7 +6,7 @@ ms.date: "02/05/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_hadr_auto_page_repair_TSQL"
   - "sys.dm_hadr_auto_page_repair"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "automatic page repair"
   - "sys.dm_hadr_auto_page_repair dynamic management view"
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

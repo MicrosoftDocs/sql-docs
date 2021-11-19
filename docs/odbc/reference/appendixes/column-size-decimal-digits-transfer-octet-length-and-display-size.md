@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "display size of data types [ODBC]"
   - "data types [ODBC], column size"
@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "data types [ODBC], transfer octet length"
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Column Size, Decimal Digits, Transfer Octet Length, and Display Size - ODBC
 Data types are characterized by their column (or parameter) size, decimal digits, length, and display size. The following ODBC functions return these attributes for a parameter in an SQL statement or for an SQL data type on a data source. Each ODBC function returns a different set of these attributes, as follows:  

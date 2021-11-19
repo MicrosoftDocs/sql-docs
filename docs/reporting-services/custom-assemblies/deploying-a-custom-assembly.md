@@ -5,10 +5,8 @@ ms.date: 11/23/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: custom-assemblies
-
-
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deploying custom assemblies [Reporting Services]"
   - "custom assemblies [Reporting Services], deploying"
   - "custom assemblies [Reporting Services], updating"
@@ -16,6 +14,8 @@ helpviewer_keywords:
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 author: maggiesMSFT
 ms.author: maggies
+ms.custom:
+  - intro-deployment
 ---
 # Deploying a Custom Assembly
   To deploy a custom assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], place the assembly in the application folders of both Report Designer and the report server. By default, custom assemblies are granted **Execution** permission in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. To grant custom assemblies privileges beyond Execute permission, you will need to edit the rssrvpolicy.config configuration file for the report server and the rspreviewpolicy.config configuration file for the Report Designer preview window. Alternatively, you can install your custom assembly in the global assembly cache (GAC).  
@@ -131,6 +131,5 @@ ms.author: maggies
   
 ## See Also  
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Working with Assemblies and the Global Assembly Cache](https://go.microsoft.com/fwlink/?LinkId=63912)  
-  
+ [Working with Assemblies and the Global Assembly Cache](/dotnet/framework/app-domains/working-with-assemblies-and-the-gac)  
   

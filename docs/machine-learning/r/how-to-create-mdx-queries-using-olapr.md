@@ -4,17 +4,17 @@ description: Learn how to use the olapR package library in SQL Server to write M
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 05/22/2019
+ms.date: 05/04/2021
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # How to create MDX queries in R using olapR
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-The [olapR](/machine-learning-server/r-reference/olapr/olapr) package supports MDX queries against cubes hosted in SQL Server Analysis Services. You can build a query against an existing cube, explore dimensions and other cube objects, and paste in existing MDX queries to retrieve data.
+The [olapR](../r/ref-r-olapr.md) in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) package supports MDX queries against cubes hosted in [SQL Server Analysis Services](/analysis-services/ssas-overview). You can build a query against an existing cube, explore dimensions and other cube objects, and paste in existing MDX queries to retrieve data.
 
 This article describes the two main uses of the **olapR** package:
 
@@ -73,7 +73,7 @@ The following examples are based on the AdventureWorks data mart and cube projec
 + Create the cube that is used in these examples by following the Analysis Services tutorial up to Lesson 4:
 [Creating an OLAP cube](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-+ Download an existing cube as a backup, and restore it to an instance of Analysis Services. For example, this site provides a fully processed cube in zipped format: [Adventure Works Multidimensional Model SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extract the file, and then restore it to your SSAS instance. For more information, see [Backup and restore](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases), or [Restore-ASDatabase Cmdlet](/powershell/module/sqlserver/restore-asdatabase).
++ Download an existing cube as a backup, and restore it to an instance of Analysis Services. For example, this site provides a fully processed cube in zipped format: [Adventure Works Multidimensional Model SQL 2014](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial). Extract the file, and then restore it to your SSAS instance. For more information, see [Backup and restore](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases), or [Restore-ASDatabase Cmdlet](/powershell/module/sqlserver/restore-asdatabase).
 
 ### 1. Basic MDX with slicer
 

@@ -31,9 +31,8 @@ ms.author: "jroth"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following table lists [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, their equivalents in the common language runtime (CLR) for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the **System.Data.SqlTypes** namespace, and their native CLR equivalents in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
-||||  
-|-|-|-|  
 |**SQL Server data type**|Type (in System.Data.SqlTypes or Microsoft.SqlServer.Types)|**CLR data type (.NET Framework)**|  
+|-|-|-|  
 |**bigint**|**SqlInt64**|**Int64, Nullable\<Int64>**|  
 |**binary**|**SqlBytes, SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**Boolean, Nullable\<Boolean>**|  
@@ -45,9 +44,9 @@ ms.author: "jroth"
 |**DATETIMEOFFSET**|**None**|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
 |**decimal**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
 |**float**|**SqlDouble**|**Double, Nullable\<Double>**|  
-|**geography**|**SqlGeography**<br /><br /> **SqlGeography** is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430).|None|  
-|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430).|None|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430).|None|  
+|**geography**|**SqlGeography**<br /><br /> **SqlGeography** is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430).|None|  
+|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430).|None|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430).|None|  
 |**image**|None|None|  
 |**int**|**SqlInt32**|**Int32, Nullable\<Int32>**|  
 |**money**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  
@@ -102,9 +101,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
  Not all CLR data types can be automatically converted to their equivalent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types through an out parameter, however. The following table lists these exceptions.  
   
-|||  
-|-|-|  
 |**CLR data type (SQL Server)**|**SQL Server data type**|  
+|-|-|  
 |**Decimal**|smallmoney|  
 |**SqlMoney**|smallmoney|  
 |**Decimal**|money|  

@@ -4,10 +4,10 @@ title: "SET DATEFIRST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET DATEFIRST"
   - "SET_DATEFIRST_TSQL"
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "weekdays [SQL Server]"
   - "options [SQL Server], date"
 ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFIRST (Transact-SQL)

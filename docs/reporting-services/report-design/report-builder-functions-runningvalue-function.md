@@ -1,6 +1,6 @@
 ---
-title: "RunningValue Function (Report Builder) | Microsoft Docs"
-description: Get acquainted with the RunningValue function, which returns a running aggregate of all non-null numeric values specified by the expression in Report Builder.
+title: "RunningValue function in a paginated report | Microsoft Docs"
+description: Get acquainted with the RunningValue function, which returns a running aggregate of all non-null numeric values in a paginated report specified by the expression in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - RunningValue Function
-  Returns a running aggregate of all non-null numeric values specified by the expression, evaluated for the given scope.  
+# Report Builder functions - RunningValue function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns a running aggregate of all non-null numeric values specified by the expression, evaluated for the given scope in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -43,7 +46,7 @@ RunningValue(expression, function, scope)
   
  **RunningValue** cannot be used in a filter or sort expression.  
   
- The set of data for which the running value is calculated must have the same data type. To convert data that has multiple numeric data types to the same data type, use conversion functions like **CInt**, **CDbl** or **CDec**. For more information, see [Type Conversion Functions](https://go.microsoft.com/fwlink/?LinkId=96142).  
+ The set of data for which the running value is calculated must have the same data type. To convert data that has multiple numeric data types to the same data type, use conversion functions like **CInt**, **CDbl** or **CDec**. For more information, see [Type Conversion Functions](/dotnet/visual-basic/language-reference/functions/type-conversion-functions).  
   
  *Scope* cannot be an expression.  
   
@@ -87,5 +90,4 @@ RunningValue(expression, function, scope)
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

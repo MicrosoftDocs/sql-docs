@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLSetParam"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLSetParam function [ODBC]"
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetParam Function
 **Conformance**  

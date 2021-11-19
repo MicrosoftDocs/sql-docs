@@ -79,6 +79,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores| 
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|
 |Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Operating System Maximum|128 GB|64 GB|1410 MB|
+|Maximum capacity for [buffer pool extension](../database-engine/configure-windows/buffer-pool-extension.md) per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]| 32 * (max server memory configuration)| 4 * (max server memory configuration)|N/A |N/A |
 |Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB|  
 |Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB|
 |Maximum relational database size|524 PB|524 PB|524 PB|10 GB|  
@@ -91,7 +92,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |-------------|----------------|--------------|---------|------------------------|  
 |Log shipping|Yes|Yes|Yes|No|  
 |Backup compression|Yes|Yes|No|No| 
-|Database snapshot|Yes|No|No|No|
+|Database snapshot|Yes|Yes|No|No|
 |Always On failover cluster instance<sup>1</sup>|Yes|Yes|No|No| 
 |Always On availability groups<sup>2</sup>|Yes|No|No|No|
 |Basic availability groups <sup>3</sup>|No|Yes|No|No|
@@ -147,7 +148,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |Dynamic data masking|Yes|Yes|Yes|Yes|   
 |Basic auditing|Yes|Yes|Yes|Yes| 
 |Fine grained auditing|Yes|Yes|Yes|Yes| 
-|Transparent database encryption|Yes|Yes|No|No|   
+|Transparent database encryption (TDE)|Yes|Yes|No|No|   
 |User-defined roles|Yes|Yes|Yes|Yes| 
 |Contained databases|Yes|Yes|Yes|Yes| 
 |Encryption for backups|Yes|Yes|No|No|  
@@ -224,9 +225,9 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Alerts |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
-| **Security** | Extensible Key Management |
-| &nbsp; | AD Authentication for Linked Servers | 
-| &nbsp; | AD Authentication for Availability Groups (AGs) | 
+| **Security** | Extensible Key Management (EKM) |
+| &nbsp; | AD Authentication for Linked Servers |
+| &nbsp; | AD Authentication for Availability Group (AG) Endpoints |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services<sup>1</sup> |
 | &nbsp; | StreamInsight |

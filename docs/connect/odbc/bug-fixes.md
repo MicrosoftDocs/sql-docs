@@ -2,22 +2,44 @@
 title: "List of bugs fixed"
 description: "This page contains a listing of bugs fixed in each release, starting with Microsoft ODBC Driver 17 for SQL Server."
 ms.custom: ""
-ms.date: "04/24/2020"
+ms.date: "07/30/2021"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "driver"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-author: "v-chojas"
-ms.author: v-jizho2
+author: v-chojas
+ms.author: v-chojas
 manager: kenvh
 ---
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.8 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix for restrictions on connection string regarding usage of `UID` and `PWD` keywords
+- Fix for inconsistent fonts in non-English dialogs
+- Fix issue with having multiple connections with different AKV credentials
+- Fix issue with NVDA not reading connection test results in DSN configuration UI
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix issue with 404 Not Found errors when using Managed Service Identity authentication
+- Fix for intermittent Encryption Not Supported errors under high multithreaded loads
+- Fix for intermittent crash under high multithreaded loads
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix character encoding of VARIANT columns in BCP NATIVE mode
+- Fix setting of SQL_ATTR_PARAMS_PROCESSED_PTR under specific conditions
+- Fix SQLDescribeParam in FMTONLY mode for statements containing comments
+- Fix an issue with federated authentication when using Okta
+- Fix excessive memory usage on multi-processor systems
+- Fix Azure AD authentication for some variants of Azure SQL DB
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

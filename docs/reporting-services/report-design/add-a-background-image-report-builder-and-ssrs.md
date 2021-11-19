@@ -1,6 +1,6 @@
 ---
-title: "Add a Background Image (Report Builder) | Microsoft Docs"
-description: Discover how to embed an image in the report definition to add the image to a variety of report items including text boxes, lists, and page header.
+title: "Add a background image to a paginated report | Microsoft Docs"
+description: Discover how to embed an image in the paginated report definition to add the image to a variety of report items including text boxes, lists, and page header.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,13 +12,13 @@ ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add a Background Image (Report Builder and SSRS)
-  You can add a background image to a report item such as a rectangle, text box, list, matrix, table, and some parts of a chart, or a report section such as the page header, page footer, or report body. You can define a background image for any selected item on the report design surface that displays **BackgroundImage** in the Properties pane. Like other images, the background image can be a URL to an image on the report server, an image from a dataset field, or an image embedded in the report definition. To use an image embedded in the report, you must first add the image to the report definition before you can add the image to the design surface.  
-  
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
-### To embed an image in the report definition  
+# Add a background image to a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+You can add a background image to a paginated report item such as a rectangle, text box, list, matrix, table, and some parts of a chart, or a report section such as the page header, page footer, or report body. You can define a background image for any selected item on the report design surface that displays **BackgroundImage** in the Properties pane. Like other images, the background image can be a URL to an image on the report server, an image from a dataset field, or an image embedded in the report definition. To use an image embedded in the report, you must first add the image to the report definition before you can add the image to the design surface.  
+   
+## To embed an image in the report definition  
   
 1.  In the Report Data pane, right-click the **Images** node, and then click **Add Image**.  
   
@@ -27,7 +27,7 @@ ms.author: maggies
   
 2.  Navigate to the image you want to embed in your report definition, and then click **OK**.  
   
-### To add a background image  
+## To add a background image  
   
 1.  In report design view, select the report item to which you want to add a background image.  
   

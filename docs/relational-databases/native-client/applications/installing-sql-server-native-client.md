@@ -1,7 +1,8 @@
 ---
 title: "Installing"
 description: SQL Server Native Client 11.0 is installed with SQL Server 2016. Learn where components are installed. There is also a redistributable installation program.
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "07/15/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -9,7 +10,7 @@ ms.technology: native-client
 author: markingmyname
 ms.author: maghan
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client, uninstalling"
   - "SQLNCLI, installing"
   - "SQLNCLI, uninstalling"
@@ -27,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
-  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 is installed when you install [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]. 
+  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 is installed when you install [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)]. 
  
  There is no SQL Server 2016 Native Client. For more information, see [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md). 
  

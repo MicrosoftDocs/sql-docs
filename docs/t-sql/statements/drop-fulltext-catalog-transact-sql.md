@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP_FULLTEXT_CATALOG_TSQL"
   - "DROP FULLTEXT CATALOG"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "deleting full-text catalogs"
   - "DROP FULLTEXT CATALOG statement"
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

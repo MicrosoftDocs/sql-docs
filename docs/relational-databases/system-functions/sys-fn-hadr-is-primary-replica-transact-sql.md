@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_hadr_is_primary_replica"
   - "fn_hadr_is_primary_replica_TSQL"
@@ -40,7 +40,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  Is the name of the database. *dbname* is type sysname.  
   
 ## Returns  
- Returns data type **bool**: 1 if the database on the current instance is the primary replica, otherwise 0.  
+ Returns data type **bit**: 1 if the database on the current instance is the primary replica, otherwise 0.  
   
 ## Remarks  
  Use this function to conveniently determine whether the local instance is hosting the primary replica of the specified availability database. Sample code could be similar to the following.  

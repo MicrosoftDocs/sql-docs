@@ -1,25 +1,26 @@
 ---
-description: "Options (Environment - Startup page)"
 title: " SQL Server Options page - Environment - Startup"
-ms.date: 11/05/2018
+description: "Options (Environment - Startup page)"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: 11/05/2018
 ---
+
 # Options (Environment - Startup page)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Use the **Options** dialog box to configure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] startup actions, general window management options, and other general settings. On the **Tools** menu, click **Options**, expand the **Environment** folder, and then click **Startup**.
+Use the **Options** dialog box to configure [!INCLUDE[msCoName](../../includes/msconame_md.md)] SQL Server Management Studio startup actions, general window management options, and other general settings. On the **Tools** menu, click **Options**, expand the **Environment** folder, and then click **Startup**.
 
 ## UI element list
 
 **At startup**
 
-Select the action for [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to perform when it's started. The options are:
+Select the action for SQL Server Management Studio to perform when it's started. The options are:
 
 - **Open Object Explorer** prompts for a connection and then opens Object Explorer.
 
@@ -29,7 +30,7 @@ Select the action for [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-
 
 - **Open Object Explorer and Activity Monitor**
 
-- **Open empty environment** opens [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] without a SQL Query editor window and without connecting Object Explorer to a server.
+- **Open empty environment** opens SQL Server Management Studio without a SQL Query editor window and without connecting Object Explorer to a server.
 
 **Hide system objects in Object Explorer**
 

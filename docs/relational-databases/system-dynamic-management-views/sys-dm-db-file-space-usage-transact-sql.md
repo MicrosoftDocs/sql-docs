@@ -1,13 +1,13 @@
 ---
 description: "sys.dm_db_file_space_usage (Transact-SQL)"
-title: "sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_db_file_space_usage (Transact-SQL)"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_file_space_usage"
   - "sys.dm_db_file_space_usage_TSQL"
@@ -17,9 +17,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_db_file_space_usage dynamic management view"
-ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_file_space_usage (Transact-SQL)
@@ -28,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns space usage information for each data file in the database.  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_file_space_usage**.  
+>  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_file_space_usage**.  [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,7 +41,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |user_object_reserved_page_count|**bigint**|Total number of pages allocated from uniform extents for user objects in the database. Unused pages from an allocated extent are included in the count.<br /><br /> IAM pages are not included, because they are always allocated from mixed extents. PFS pages are included if they are allocated from a uniform extent.<br /><br /> You can use the total_pages column in the [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) catalog view to return the reserved page count of each allocation unit in the user object. However, note that the total_pages column includes IAM pages.|  
 |internal_object_reserved_page_count|**bigint**|Total number of pages in uniform extents allocated for internal objects in the file. Unused pages from an allocated extent are included in the count.<br /><br /> IAM pages are not included, because they are always allocated from mixed extents. PFS pages are included if they are allocated from a uniform extent.<br /><br /> There is no catalog view or dynamic management object that returns the page count of each internal object.|  
 |mixed_extent_page_count|**bigint**|Total number of allocated and unallocated pages in allocated mixed extents in the file. Mixed extents contain pages allocated to different objects. This count does include all the IAM pages in the file.|
-|modified_extent_page_count|**bigint**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later.<br /><br />Total number of pages modified in allocated extents of the file since last full database backup. The modified page count can be used to track amount of differential changes in the database since last full backup, to decide if differential backup is needed.|
+|modified_extent_page_count|**bigint**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.<br /><br />Total number of pages modified in allocated extents of the file since last full database backup. The modified page count can be used to track amount of differential changes in the database since last full backup, to decide if differential backup is needed.|
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
 |distribution_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The unique numeric id associated with the distribution.|  
   
@@ -85,12 +84,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Permissions
 
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.
+
+On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
 
 ## Examples  
   
-### Determing the Amount of Free Space in tempdb  
+### Determining the amount of free space in tempdb  
  The following query returns the total number of free pages and total free space in megabytes (MB) available in all data files in **tempdb**.  
   
 ```sql
@@ -112,8 +112,8 @@ SELECT SUM(user_object_reserved_page_count) AS [user object pages used],
 FROM sys.dm_db_file_space_usage;
 ```  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
- [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
+## See also  
+ - [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ - [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+ - [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+ - [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)

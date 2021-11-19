@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_PageResCracker"
   - "sys.fn_PageResCracker_TSQL"
@@ -66,7 +66,7 @@ The `sys.fn_PageResCracker` function can be used in conjunction with [sys.dm_db_
 SELECT page_info.* 
 FROM sys.dm_exec_requests AS d  
 CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r  
-CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
+CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'DETAILED') AS page_info
 ```  
   
 ## See Also  

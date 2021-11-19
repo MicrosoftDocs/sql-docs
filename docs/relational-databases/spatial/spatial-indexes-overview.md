@@ -1,7 +1,7 @@
 ---
 description: "Spatial Indexes Overview"
 title: "Spatial Indexes Overview | Microsoft Docs"
-ms.date: "09/12/2016"
+ms.date: "09/17/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -17,9 +17,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Spatial Indexes Overview
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports spatial data and spatial indexes. A *spatial index* is a type of extended index that allows you to index a spatial column. A spatial column is a table column that contains data of a spatial data type, such as **geometry** or **geography**.  
-  
-> [!IMPORTANT]  
->  For a detailed description and examples of spatial features introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], including features that affect spatial indexes, download the white paper, [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ##  <a name="about"></a> About Spatial Indexes  
   
@@ -95,7 +92,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  For example, consider the preceding illustration, which shows an octagon that fits completely into cell 15 of the level-1 grid. In the figure, cell 15 has been tessellated, dissecting the octagon into nine level-2 cells. This illustration assumes that the cells-per-object limit is 9 or more. If the cells-per-object limit were 8 or less, however, cell 15 would not be tessellated, and only that cell 15 would be counted for the object.  
   
- By default, the cells-per-object limit is 16 cells per object, which provides a satisfactory trade-off between space and precision for most spatial indexes. However, the [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement supports a CELLS_PER_OBJECT**=**_n_ clause that enables you to specify a cells-per-object limit between 1 and 8192, inclusive.  
+ By default, the cells-per-object limit is 16 cells per object, which provides a satisfactory trade-off between space and precision for most spatial indexes. However, the [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement supports a CELLS_PER_OBJECT **=** _n_ clause that enables you to specify a cells-per-object limit between 1 and 8192, inclusive.  
   
 > [!NOTE]  
 >  The **cells_per_object** setting of a spatial index is visible in the [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) catalog view.  

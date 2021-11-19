@@ -1,25 +1,26 @@
 ---
 description: "Deploy a Database By Using a DAC"
 title: "Deploy a Database By Using a DAC | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-deployment
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.dbdeployment.settings.f1"
   - "sql13.swb.dbdeployment.progress.f1"
   - "sql13.swb.dbdeployment.summary.f1"
   - "sql13.swb.dbdeployment.results.f1"
   - "sql13.swb.dbdeployment.welcome.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deploy database wizard"
   - "database deploy [SQL Server]"
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Deploy a Database By Using a DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -120,8 +121,6 @@ ms.author: "sstein"
   
 ## Using a .Net Framework Application  
  **To deploy a database using the DacStoreExport() and Import() methods in a .Net Framework application.**  
-  
- To view a code example, download the DAC sample application on [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
 1.  Create a SMO Server object and set it to the instance or server that contains the database to be deployed.  
   

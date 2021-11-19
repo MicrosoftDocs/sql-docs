@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "minimally logged operations [SQL Server]"
   - "bulk importing [SQL Server], minimal logging"
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Prerequisites for Minimal Logging in Bulk Import
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

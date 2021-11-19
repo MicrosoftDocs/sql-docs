@@ -4,10 +4,10 @@ title: "SUSER_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/12/2020"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, sql-database"
+ms.prod_service: "synapse-analytics, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SUSER_NAME"
   - "SUSER_NAME_TSQL"
@@ -27,7 +27,7 @@ ms.author: vanto
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SUSER_NAME (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi-asa-svrless-poolonly.md)]
 
 Returns the login identification name of the user.  
   

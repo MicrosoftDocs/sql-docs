@@ -2,9 +2,9 @@
 description: "DBCC DROPCLEANBUFFERS (Transact-SQL)"
 title: DBCC DROPCLEANBUFFERS (Transact-SQL)
 ms.custom: ""
-ms.date: "07/16/2017"
+ms.date: "11/5/2021"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 
 # DBCC DROPCLEANBUFFERS (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Removes all clean buffers from the buffer pool, and columnstore objects from the columnstore object pool.
   
@@ -59,11 +59,11 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
  Purge the data cache in memory from each Compute node.  
   
  ALL  
- Purge the data cache in memory from each Compute node and from the Control node. This is the default if you do not specify a value.  
+ Purge the data cache in memory from each Compute node and from the Control node. This setting is the default if you don't specify a value.  
   
 ## Remarks  
 Use DBCC DROPCLEANBUFFERS to test queries with a cold buffer cache without shutting down and restarting the server.
-To drop clean buffers from the buffer pool and columnstore objects from the columnstore object pool, first use CHECKPOINT to produce a cold buffer cache. This forces all dirty pages for the current database to be written to disk and cleans the buffers. After you do this, you can issue DBCC DROPCLEANBUFFERS command to remove all buffers from the buffer pool.
+To drop clean buffers from the buffer pool and columnstore objects from the columnstore object pool, first use CHECKPOINT to produce a cold buffer cache. CHECKPOINT forces all dirty pages for the current database to be written to disk and cleans the buffers. After you checkpoint the database, you can issue DBCC DROPCLEANBUFFERS command to remove all buffers from the buffer pool.
   
 ## Result Sets  
 DBCC DROPCLEANBUFFERS on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns:

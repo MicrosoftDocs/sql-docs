@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "ConfigTranslator"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "ConfigTranslator [ODBC]"
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ConfigTranslator Function
 **Conformance**  

@@ -6,7 +6,7 @@ ms.date: "07/11/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "2814 (Database Engine error)"
 ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
@@ -55,10 +55,10 @@ The following table lists the reasons for recompilation.
         OBJECT_NAME(st.objectid) AS object_name,  
         st.text  
     FROM sys.dm_exec_query_stats AS qs  
-    CROSS APPLY sys.dm_exec_sql_text (*sql_handle*) AS st  
-    WHERE qs.statement_start_offset = *starting_offset*  
-    AND qs.statement_end_offset = *ending_offset*  
-    AND qs.plan_handle = *plan_handle*;
+    CROSS APPLY sys.dm_exec_sql_text (0x01000600B74C2A1300D2582A2100000000000000000000000000000000000000000000000000000000000000 /* replace the 0x01000600B... value with the actual sql_handle*/) AS st  
+    WHERE qs.statement_start_offset = 123 /*replace 123 with actual starting_offset value*/  
+    AND qs.statement_end_offset = 456 /*replace 456 with actual ending_offset value*/
+    AND qs.plan_handle = 0x06000100A27E7C1FA821B10600 /*replace 0x06000100A27E7C1FA821B10600with actual plan_handle value*/;
     ```
   
 2.  Based on the reason code description, modify the statement, batch, or procedure to avoid recompilations. For example, a stored procedure may contain one or more SET statements. These statements should be removed from the procedure. For additional examples of recompilation causes and resolutions, see [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/cc966425(v=technet.10)).  

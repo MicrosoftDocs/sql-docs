@@ -1,12 +1,12 @@
 ---
 title: Use a DNS forwarder
 description: Use a DNS forwarder to resolve non-appliance DNS names in Analytics Platform System.
-author: mzaman1 
+author: charlesfeddersen 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
-ms.author: murshedz
+ms.author: charlesf
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
@@ -55,7 +55,7 @@ For customers that choose to configure the appliance to look for updates on the 
 > [!NOTE]  
 > The customer network administrator must provide the IP address for a corporate DNS server that can resolve names at **Microsoft.com**.  
   
-1.  Using remote desktop, log on to VMM VM (<fabric domain>-VMM) using the fabric domain administrator account.  
+1.  Using remote desktop, log on to VMM VM (\<fabric domain\>-VMM) using the fabric domain administrator account.  
   
 2.  Open the Control Panel, click **Network and Internet**, and then click **Network and Sharing Center**.  
   

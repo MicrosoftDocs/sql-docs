@@ -15,7 +15,7 @@ author: chugugrace
 
 [!INCLUDE[asa](../includes/applies-to-version/asa.md)]
 
-Create a SQL Server Integration Services (SSIS) package to load data into a dedicated SQL pool in Azure Synapse Analytics](/azure/sql-data-warehouse/index). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
+Create a SQL Server Integration Services (SSIS) package to load data into a dedicated SQL pool in [Azure Synapse Analytics](/azure/sql-data-warehouse/index). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
 
 This article shows you how to do the following things:
 
@@ -72,7 +72,7 @@ To continue the tutorial with this option, you need the following things:
 
 - The [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. The SQL DW Upload task is a component of the Feature Pack.
 
-- An [Azure Blob Storage](https://docs.microsoft.com/azure/storage/) account. The SQL DW Upload task loads data from Azure Blob Storage into Azure Synapse Analytics. You can load files that are already in Blob Storage, or you can load files from your computer. If you select files on your computer, the SQL DW Upload task uploads them to Blob Storage first for staging, and then loads them into your dedicated SQL pool.
+- An [Azure Blob Storage](/azure/storage/) account. The SQL DW Upload task loads data from Azure Blob Storage into Azure Synapse Analytics. You can load files that are already in Blob Storage, or you can load files from your computer. If you select files on your computer, the SQL DW Upload task uploads them to Blob Storage first for staging, and then loads them into your dedicated SQL pool.
 
 ### Add and configure the SQL DW Upload Task
 

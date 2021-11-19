@@ -1,6 +1,6 @@
 ---
-description: "Tutorial: Use Azure Blob storage service with SQL Server 2016"
-title: "Tutorial: Use Azure Blob storage service with SQL Server 2016"
+description: "Tutorial: Use Azure Blob Storage with SQL Server 2016"
+title: "Tutorial: Use Azure Blob Storage with SQL Server 2016"
 ms.custom: seo-dt-2019
 ms.date: 07/22/2020
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Tutorial: Use Azure Blob storage service with SQL Server 2016
+# Tutorial: Use Azure Blob Storage with SQL Server 2016
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-Welcome to the  Working with SQL Server 2016 in Microsoft Azure Blob Storage service tutorial. This tutorial helps you understand how to use the Microsoft Azure Blob storage service for SQL Server data files and SQL Server backups.  
+Welcome to the  Working with SQL Server 2016 in Microsoft Azure Blob Storage tutorial. This tutorial helps you understand how to use the Azure Blob Storage for SQL Server data files and SQL Server backups.  
   
-SQL Server integration support for the Microsoft Azure Blob storage service began as a SQL Server 2012 Service Pack 1 CU2 enhancement, and has been enhanced further with SQL Server 2014 and SQL Server 2016. For an overview of the functionality and benefits of using this feature, see [SQL Server Data Files in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). For a live demo, see [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo).  
+SQL Server integration support for the Azure Blob Storage began as a SQL Server 2012 Service Pack 1 CU2 enhancement, and has been enhanced further with SQL Server 2014 and SQL Server 2016. For an overview of the functionality and benefits of using this feature, see [SQL Server Data Files in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). For a live demo, see [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo).  
 
-This tutorial shows you how to work with  SQL Server Data Files in Microsoft Azure Blob storage service in multiple sections. Each section is focused on a specific task and the sections should be completed in sequence. First, you will learn how to create a new container in Blob storage with a stored access policy and a shared access signature. Then, you will learn how to create a SQL Server credential to integrate SQL Server with Azure Blob storage. Next, you will back up a database to Blob storage and restore it to an Azure virtual machine. You will then use SQL Server 2016 file-snapshot transaction log backup to restore to a point in time and to a new database. Finally, the tutorial will demonstrate the use of meta data system stored procedures and functions to help you understand and work with file-snapshot backups.
+This tutorial shows you how to work with  SQL Server Data Files in Azure Blob Storage in multiple sections. Each section is focused on a specific task and the sections should be completed in sequence. First, you will learn how to create a new container in Blob Storage with a stored access policy and a shared access signature. Then, you will learn how to create a SQL Server credential to integrate SQL Server with Azure Blob Storage. Next, you will back up a database to Blob Storage and restore it to an Azure virtual machine. You will then use SQL Server 2016 file-snapshot transaction log backup to restore to a point in time and to a new database. Finally, the tutorial will demonstrate the use of meta data system stored procedures and functions to help you understand and work with file-snapshot backups.
   
 ## Prerequisites
 
@@ -37,6 +37,9 @@ To use this tutorial, you need an Azure storage account, SQL Server Management S
 - Install [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Download [AdventureWorks2016 sample databases](../samples/adventureworks-install-configure.md).
 - Assign the user account to the role of [db_backupoperator](./security/authentication-access/database-level-roles.md) and grant [alter any credential](../t-sql/statements/alter-credential-transact-sql.md) permissions. 
+
+> [!IMPORTANT]
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support [Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction), ensure that [hierarchical namespace](/azure/storage/blobs/data-lake-storage-namespace) is not enabled on the storage account used for this tutorial.
 
 ## 1 - Create stored access policy and shared access storage
 
@@ -99,7 +102,7 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     # Create a new storage account context using an Azure Resource Manager storage account  
     $storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
 
-    # Creates a new container in blob storage  
+    # Creates a new container in Blob Storage  
     $container = New-AzStorageContainer -Context $storageContext -Name $containerName  
   
     # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
@@ -178,7 +181,7 @@ In this section, you will back up the AdventureWorks2016 database in your on-pre
 > [!NOTE]  
 > If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the  deprecated syntax documented [here](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014&preserve-view=true) to backup to URL using the WITH CREDENTIAL syntax.  
   
-To back up a database to Blob storage, follow these steps:  
+To back up a database to Blob Storage, follow these steps:  
   
 1.  Connect to SQL Server Management Studio.  
 2.  Open a new query window and connect to the SQL Server 2016 instance of the database engine in your Azure virtual machine.  
@@ -210,14 +213,14 @@ In this section, you will restore the AdventureWorks2016 database to your SQL Se
 > [!NOTE]  
 > For the purposes of simplicity in this tutorial, we are using the same container for the data and log files that we used for the database backup. In a production environment, you would likely use multiple containers, and frequently multiple data files as well. With SQL Server 2016, you could also consider striping your backup across multiple blobs to increase backup performance when backing up a large database.  
   
-To restore the AdventureWorks2016 database from Azure blob storage to your SQL Server 2016 instance in your Azure virtual machine, follow these steps:  
+To restore the AdventureWorks2016 database from Azure Blob Storage to your SQL Server 2016 instance in your Azure virtual machine, follow these steps:  
   
 1.  Connect to SQL Server Management Studio.   
 2.  Open a new query window and connect to the SQL Server 2016 instance of the database engine in your Azure virtual machine.   
 3.  Copy and paste the following Transact-SQL script into the query window. Modify the URL appropriately for your storage account name and the container that you specified in section 1 and then execute this script.  
   
     ```sql  
-    -- Restore AdventureWorks2016 from URL to SQL Server instance using Azure blob storage for database files  
+    -- Restore AdventureWorks2016 from URL to SQL Server instance using Azure Blob Storage for database files  
     RESTORE DATABASE AdventureWorks2016   
        FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2016_onprem.bak'   
        WITH  

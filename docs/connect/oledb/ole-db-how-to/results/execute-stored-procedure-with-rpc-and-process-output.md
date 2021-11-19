@@ -4,7 +4,7 @@ description: Learn how to run SQL Server stored procedures with RPC, and process
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "RPC syntax"
   - "stored procedures [SQL Server], RPC syntax"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Execute Stored Procedure with RPC and Process Output
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

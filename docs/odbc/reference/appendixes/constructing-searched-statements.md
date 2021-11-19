@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "searched statements [ODBC]"
   - "ODBC cursor library [ODBC], statement processing"
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "SQL statements [ODBC], searched statements"
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Constructing Searched Statements
 > [!IMPORTANT]  

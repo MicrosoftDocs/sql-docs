@@ -4,7 +4,7 @@ title: "Transaction Locking and Row Versioning Guide"
 ms.custom: seo-dt-2019
 ms.date: "03/10/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
@@ -505,7 +505,7 @@ GO
 -   The **TABLOCK** hint is specified or the **table lock on bulk load** table option is set using **sp_tableoption**.  
   
 > [!TIP]  
-> Unlike the BULK INSERT statement, which holds a less restrictive Bulk Update lock, INSERT INTO...SELECT with the TABLOCK hint holds an exclusive (X) lock on the table. This means that you cannot insert rows using parallel insert operations.  
+> Unlike the BULK INSERT statement, which holds a less restrictive Bulk Update (BU) lock, INSERT INTO...SELECT with the TABLOCK hint holds an intent exclusive (IX) lock on the table. This means that you cannot insert rows using parallel insert operations.  
   
 ### <a name="key_range"></a> Key-Range Locks  
  Key-range locks protect a range of rows implicitly included in a record set being read by a [!INCLUDE[tsql](../includes/tsql-md.md)] statement while using the serializable transaction isolation level. Key-range locking prevents phantom reads. By protecting the ranges of keys between rows, it also prevents phantom insertions or deletions into a record set accessed by a transaction.  
@@ -515,9 +515,9 @@ GO
   
 <a name="lock_compat_table"></a> The following table shows the compatibility of the most commonly encountered lock modes.  
   
-||Existing granted mode||||||  
+|Existing granted mode|**IS**|**S**|**U**|**IX**|**SIX**|**X**|
 |------|---------------------------|------|------|------|------|------|  
-|**Requested mode**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
+|**Requested mode**|
 |**Intent shared (IS)**|Yes|Yes|Yes|Yes|Yes|No|  
 |**Shared (S)**|Yes|Yes|Yes|No|No|No|  
 |**Update (U)**|Yes|Yes|No|No|No|No|  
@@ -558,9 +558,9 @@ GO
   
  Key-range lock modes have a compatibility matrix that shows which locks are compatible with other locks obtained on overlapping keys and ranges.  
   
-||Existing granted mode|||||||  
+|Existing granted mode|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|
 |------|---------------------------|------|------|------|------|------|------|  
-|**Requested mode**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
+|**Requested mode**  
 |**Shared (S)**|Yes|Yes|No|Yes|Yes|Yes|No|  
 |**Update (U)**|Yes|No|No|Yes|No|Yes|No|  
 |**Exclusive (X)**|No|No|No|No|No|Yes|No|  

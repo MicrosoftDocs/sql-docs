@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1"
   - "SQL13.SWB.COLUMNMASTERKEYDEF.GENERAL.F1"

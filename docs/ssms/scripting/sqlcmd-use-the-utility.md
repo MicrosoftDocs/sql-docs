@@ -20,14 +20,14 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sqlcmd - Use the utility
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The **sqlcmd** utility is a command-line utility for ad hoc, interactive execution of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and scripts and for automating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripting tasks. To use **sqlcmd** interactively, or to build script files to be run using **sqlcmd**, users must understand [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **sqlcmd** utility is typically used in the following ways:  
   
 -   Users enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a manner similar to working at the command prompt. The results are displayed at the command prompt. To open a Command Prompt window, enter "cmd" in the Windows search box and click **Command Prompt** to open. At the command prompt, type **sqlcmd** followed by a list of options that you want. For a complete list of the options that are supported by **sqlcmd**, see [sqlcmd Utility](../../tools/sqlcmd-utility.md).  
   
 -   Users submit a **sqlcmd** job either by specifying a single [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to execute, or by pointing the utility to a text file that contains [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to execute. The output is usually directed to a text file, but can also be displayed at the command prompt.  
   
--   [SQLCMD mode](./edit-sqlcmd-scripts-with-query-editor.md) in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor.  
+-   [SQLCMD mode](./edit-sqlcmd-scripts-with-query-editor.md) in SQL Server Management Studio Query Editor.  
   
 -   SQL Server Management Objects (SMO)  
   
@@ -200,7 +200,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  There are different ways to create database script files:  
   
--   You can interactively build and debug a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then save the contents of the Query window as a script file.  
+-   You can interactively build and debug a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in SQL Server Management Studio, and then save the contents of the Query window as a script file.  
   
 -   You can create a text file that contains [!INCLUDE[tsql](../../includes/tsql-md.md)] statements by using a text editor, such as Notepad.  
   

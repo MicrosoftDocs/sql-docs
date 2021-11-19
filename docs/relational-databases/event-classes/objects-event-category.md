@@ -6,14 +6,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQL Server event classes, Objects event category"
   - "Objects event category [SQL Server]"
   - "event classes [SQL Server], Objects event category"
 ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Objects Event Category

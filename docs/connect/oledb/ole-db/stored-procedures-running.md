@@ -4,7 +4,7 @@ description: Learn about the advantages of calling a stored procedure on the dat
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "OLE DB, stored procedures"
   - "OLE DB Driver for SQL Server, stored procedures"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Stored Procedures - Running
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

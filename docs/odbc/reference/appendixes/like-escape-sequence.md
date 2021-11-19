@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ODBC escape sequences [ODBC], LIKE"
   - "LIKE escape sequence [ODBC]"
   - "escape sequences [ODBC], LIKE"
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # LIKE Escape Sequence
 ODBC uses escape sequences for the LIKE clause. The syntax of this escape sequence is as follows:  

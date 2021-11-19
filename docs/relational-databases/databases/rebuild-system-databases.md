@@ -14,12 +14,12 @@ helpviewer_keywords:
   - "rebuilding databases, master"
   - "system databases [SQL Server], rebuilding"
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Rebuild System Databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  System databases must be rebuilt to fix corruption problems in the [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md), or [resource](../../relational-databases/databases/resource-database.md) system databases or to modify the default server-level collation. This topic provides step-by-step instructions to rebuild system databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  System databases must be rebuilt to fix corruption problems in the [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md), or [resource](../../relational-databases/databases/resource-database.md) system databases or to modify the default server-level collation. This topic provides step-by-step instructions to rebuild system databases in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
  **In This Topic**  
   
@@ -91,7 +91,7 @@ ms.author: "sstein"
   
 #### To rebuild system databases for an instance of SQL Server:  
   
-1.  Insert the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation media into the disk drive, or, from a command prompt, change directories to the location of the setup.exe file on the local server. The default location on the server is C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\SQLServer2016.  
+1.  Insert the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] installation media into the disk drive, or, from a command prompt, change directories to the location of the setup.exe file on the local server. The default location on the server is C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\SQLServer2016.  
   
 2.  From a command prompt window, enter the following command. Square brackets are used to indicate optional parameters. Do not enter the brackets. When using a Windows operating system that has User Account Control (UAC) enabled, running Setup requires elevated privileges. The command prompt must be run as Administrator.  
   
@@ -141,7 +141,7 @@ ms.author: "sstein"
   
 #### To rebuild the resource system database:  
   
-1.  Launch the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup program (setup.exe) from the distribution media.  
+1.  Launch the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Setup program (setup.exe) from the distribution media.  
   
 2.  In the left navigation area, click **Maintenance**, and then click **Repair**.  
   

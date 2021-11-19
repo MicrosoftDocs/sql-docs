@@ -2,7 +2,7 @@
 description: "Use the inserted and deleted Tables"
 title: "Use the inserted and deleted Tables | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/05/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -34,7 +34,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Find the difference between the state of a table before and after a data modification and take actions based on that difference.  
   
- The deleted table stores copies of the affected rows during DELETE and UPDATE statements. During the execution of a DELETE or UPDATE statement, rows are deleted from the trigger table and transferred to the deleted table. The deleted table and the trigger table ordinarily have no rows in common.  
+ The deleted table stores copies of the affected rows during DELETE and UPDATE statements. During the execution of a DELETE or UPDATE statement, rows are deleted from the trigger table and transferred to the deleted table. The trigger table is the table on which the DML trigger runs. The deleted table and the trigger table ordinarily have no rows in common.
   
  The inserted table stores copies of the affected rows during INSERT and UPDATE statements. During an insert or update transaction, new rows are added to both the inserted table and the trigger table. The rows in the inserted table are copies of the new rows in the trigger table.  
   
@@ -45,7 +45,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 > [!NOTE]  
 >  If trigger actions depend on the number of rows a data modification effects, use tests (such as an examination of @@ROWCOUNT) for multirow data modifications (an INSERT, DELETE, or UPDATE based on a SELECT statement), and take appropriate actions. For more information, see [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] does not allow for **text**, **ntext**, or **image** column references in the inserted and deleted tables for AFTER triggers. However, these data types are included for backward compatibility purposes only. The preferred storage for large data is to use the **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types. Both AFTER and INSTEAD OF triggers support **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data in the inserted and deleted tables. For more information, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] does not allow for **text**, **ntext**, or **image** column references in the inserted and deleted tables for AFTER triggers. However, these data types are included for backward compatibility purposes only. The preferred storage for large data is to use the **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types. Both AFTER and INSTEAD OF triggers support **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data in the inserted and deleted tables. For more information, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **An Example of Using the inserted Table in a Trigger to Enforce Business Rules**  
   
@@ -53,8 +53,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  The following example creates a DML trigger. This trigger checks to make sure the credit rating for the vendor is good when an attempt is made to insert a new purchase order into the `PurchaseOrderHeader` table. To obtain the credit rating of the vendor corresponding to the purchase order that was just inserted, the `Vendor` table must be referenced and joined with the inserted table. If the credit rating is too low, a message is displayed and the insertion does not execute.
   
- [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
-  
+ :::code language="sql" source="../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql":::
+
 ## Using the inserted and deleted Tables in INSTEAD OF Triggers  
  The inserted and deleted tables passed to INSTEAD OF triggers defined on tables follow the same rules as the inserted and deleted tables passed to AFTER triggers. The format of the inserted and deleted tables is the same as the format of the table on which the INSTEAD OF trigger is defined. Each column in the inserted and deleted tables maps directly to a column in the base table.  
   
@@ -87,4 +87,6 @@ ON e.BusinessEntityID = p.BusinessEntityID;
   
  The select list of a view can also contain expressions that do not directly map to a single base-table column. Some view expressions, such as a constant or function invocation, may not reference any columns and can be ignored. Complex expressions can reference multiple columns, yet the inserted and deleted tables have only one value for each inserted row. The same issues apply to simple expressions in a view if they reference a computed column that has a complex expression. An INSTEAD OF trigger on the view must handle these types of expressions.  
   
-  
+## Performance considerations with inserted and delete tables
+
+Because the inserted and deleted tables are virtual, memory-resident tables, properties such as statistics or indexes are not available. Though some cardinality information is exposed from these tables, you should exercise care when considering the number of rows to be temporarily stored there. Inserting a large number of rows in these tables and querying or joining them with other tables may result in sub-optimial query plans and slow query executions. Be sure to carefully design and test your application to meet your query performance needs.

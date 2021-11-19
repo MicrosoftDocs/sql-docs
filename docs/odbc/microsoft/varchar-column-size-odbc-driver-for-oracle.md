@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], data types"
 ms.assetid: eb4cb410-3d00-4251-8c5e-a06f36c4dac7
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # VARCHAR Column Size (ODBC Driver for Oracle)
 > [!IMPORTANT]  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_expired_subscription_cleanup"
   - "SP_EXPIRED_SUBSCRIPTION_CLEANUP_TSQL"

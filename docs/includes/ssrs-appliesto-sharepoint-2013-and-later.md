@@ -11,4 +11,4 @@
 ---
 
 
- :::image type="icon" source="media/yes-icon.png":::SharePoint 2013 & later
+✔️ SharePoint 2013 & later

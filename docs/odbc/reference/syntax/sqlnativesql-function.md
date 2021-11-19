@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLNativeSql"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLNativeSql function [ODBC]"
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLNativeSql Function
 **Conformance**  

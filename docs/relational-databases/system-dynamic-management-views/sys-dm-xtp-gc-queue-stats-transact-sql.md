@@ -6,7 +6,7 @@ ms.date: "08/02/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_xtp_gc_stats"
   - "dm_xtp_gc_stats_TSQL"
@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_xtp_gc_stats dynamic management view"
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # sys.dm_xtp_gc_queue_stats (Transact-SQL)
@@ -31,7 +31,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
   
  You can determine if garbage collection is freeing memory for deleted rows by executing sys.dm_xtp_gc_queue_stats to see if the enqueued work is being processed. If entries in the current_queue_depth are not being processed or if no new work items are being added to the current_queue_depth, this is an indication that garbage collection is not freeing memory. For example, garbage collection can't be done if there is a long running transaction.  
   
- For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
   
 
 |Column name|Type|Description|  
@@ -62,5 +62,4 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
   
 ## See Also  
  [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
-  
   

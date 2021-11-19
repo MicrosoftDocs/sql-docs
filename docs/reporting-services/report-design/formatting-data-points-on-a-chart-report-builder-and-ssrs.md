@@ -1,6 +1,6 @@
 ---
-title: "Formatting Data Points on a Chart (Report Builder) | Microsoft Docs"
-description: Find out about different types of formatting of data points on charts in your reports in Report Builder. 
+title: "Formatting data points on a paginated report chart | Microsoft Docs"
+description: Find out about different types of formatting of data points on charts in your paginated reports in Report Builder. 
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -15,8 +15,11 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Formatting Data Points on a Chart (Report Builder and SSRS)
-In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report, a data point is the smallest individual entity on the chart. On non-Shape charts, data points are represented depending on their chart type. For example, a Line series consists of one or more connected data points. On Shape charts, data points are represented by individual slices or segments that add up to the whole chart. For example, on a pie chart, each piece is a data point. For more information, see [Chart Types &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
+# Formatting data points on a paginated report chart (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+In a paginated report, a data point is the smallest individual entity on the chart. On non-Shape charts, data points are represented depending on their chart type. For example, a Line series consists of one or more connected data points. On Shape charts, data points are represented by individual slices or segments that add up to the whole chart. For example, on a pie chart, each piece is a data point. For more information, see [Chart Types &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
   
  One or more data points form a series. By default, all formatting options are applied to all data points in the series. If you want to specify properties for individual data points, you can specify a field or expression on the series that formats individual data point at run time based on the dataset.  
   
@@ -71,7 +74,7 @@ In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated rep
 |#MAX|Maximum of all Y values in the series.|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|First of all Y values in the series.|All|`=First(Fields!MyDataField.Value)`|  
   
- To format the keyword, enclose a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format string in parentheses. For example, to specify the value of the data point in a ToolTip as a number with two decimal places, include the format string "N2" in braces, such as "#VALY{N2}" for the **ToolTip** property on the series. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format strings, see [Formatting Types](https://go.microsoft.com/fwlink/?LinkId=112024) on MSDN. For more information about formatting numbers in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ To format the keyword, enclose a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format string in parentheses. For example, to specify the value of the data point in a ToolTip as a number with two decimal places, include the format string "N2" in braces, such as "#VALY{N2}" for the **ToolTip** property on the series. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format strings, see [Formatting Types](/previous-versions/) on MSDN. For more information about formatting numbers in Report Builder, see [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
  For more information about adding keywords to a chart, see [Show ToolTips on a Series &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md), [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
@@ -98,5 +101,4 @@ In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated rep
  [Tutorial: Add a Pie Chart to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

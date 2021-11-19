@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, SQL Errors Object | Microsoft Docs"
+title: "SQL Server, SQL Errors object"
 description: Learn about the SQLServer:SQL Errors object, which provides counters to monitor SQL Errors in SQL Server.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,13 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Errors object"
   - "SQLServer:SQL Errors"
-ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, SQL Errors Object
+# SQL Server, SQL Errors object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  The **SQLServer:SQL Errors** object in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor **SQL Errors**.  
+  The **SQLServer:SQL Errors** object provides counters to monitor errors in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Errors** counters.  
   
@@ -35,7 +34,17 @@ ms.author: wiassaf
 |**Kill Connection Errors**|Tracks severe errors that cause [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to kill the current connection.|  
 |**User Errors**|Information about user errors.|  
   
-## See Also  
+  
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%SQL Errors%';
+```  
+
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -6,7 +6,7 @@ ms.date: "08/09/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_cluster_properties_TSQL"
   - "sys.dm_os_cluster_properties"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "dm_os_cluster_properties"
   - "sys.dm_os_cluster_properties"
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

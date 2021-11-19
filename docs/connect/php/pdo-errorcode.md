@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

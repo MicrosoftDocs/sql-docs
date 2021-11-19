@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "syscollector_execution_log_TSQL"
   - "syscollector_execution_log"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_execution_log view"
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # syscollector_execution_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -30,7 +30,7 @@ ms.author: "jroth"
   
  You can use these XQuery extensions when specifying an XQuery in the **query()** method of the **xml** data type. As a result, the **query()** method can produce XML that combines data from XML and non-**xml** data types.  
   
- You can also use these functions when you use the **xml** data type methods **modify()**, **value()**, **query()**, and **exist()**to expose a relational value inside XML.  
+ You can also use these functions when you use the **xml** data type methods **modify()**, **value()**, **query()**, and **exist()** to expose a relational value inside XML.  
   
  For more information, see [sql:column() function (XQuery)](../xquery/xquery-extension-functions-sql-column.md) and [sql:variable() function (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   

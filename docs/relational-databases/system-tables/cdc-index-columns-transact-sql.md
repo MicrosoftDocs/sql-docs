@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "cdc.index_columns_TSQL"
   - "cdc.index_columns"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.index_columns"
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # cdc.index_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.TYPE_SS_DIRECT_FORWARD_ONLY"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: f8eb2fc2-f624-4fd5-a408-ae4bb1de4913
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # TYPE_SS_DIRECT_FORWARD_ONLY Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

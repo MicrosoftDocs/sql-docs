@@ -7,7 +7,8 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: 10/14/2020
 ---
 
@@ -160,11 +161,11 @@ Visit [Manage SQL Server on Linux with PowerShell Core](../linux/sql-server-linu
 
 ## Cmdlet reference
 
-- [SqlServer cmdlets](https://docs.microsoft.com/powershell/module/sqlserver)
-- [SQLPS cmdlets](https://docs.microsoft.com/powershell/module/sqlps)
+- [SqlServer cmdlets](/powershell/module/sqlserver)
+- [SQLPS cmdlets](/powershell/module/sqlps)
 
 ## Next steps
 
 - [SQL Server PowerShell](sql-server-powershell.md)
-- [SQL Server PowerShell cmdlets](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQL Server PowerShell cmdlets](/powershell/module/sqlserver)
 - [Use PowerShell with Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

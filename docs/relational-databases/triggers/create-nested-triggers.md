@@ -38,7 +38,7 @@ CREATE TRIGGER Purchasing.savedel
    ON Purchasing.PurchaseOrderDetail  
 FOR DELETE  
 AS  
-   INSERT del_save;  
+   INSERT del_save
    SELECT * FROM deleted;  
 ```  
   

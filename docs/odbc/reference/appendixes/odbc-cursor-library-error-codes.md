@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "cursor library [ODBC], error codes"
   - "error codes [ODBC], cursor library"
   - "ODBC cursor library [ODBC], error codes"
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ODBC Cursor Library Error Codes
 > [!IMPORTANT]  

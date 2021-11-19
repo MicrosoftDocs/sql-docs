@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "output parameters [SQL Server]"
   - "input parameters [SQL Server]"
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Parameters

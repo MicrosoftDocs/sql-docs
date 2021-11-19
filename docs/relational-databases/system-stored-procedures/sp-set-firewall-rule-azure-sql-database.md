@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "07/28/2016"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_set_firewall_rule"
   - "sp_set_firewall_rule_TSQL"

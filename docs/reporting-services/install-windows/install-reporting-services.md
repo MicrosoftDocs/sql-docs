@@ -4,11 +4,12 @@ title: "Install SQL Server Reporting Services | Microsoft Docs"
 ms.date: 12/11/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: ">= sql-server-2016"
+ms.custom:
+  - intro-installation
 ---
 # Install SQL Server Reporting Services
 
@@ -85,7 +86,7 @@ For more information, see [Configure the report server service account](configur
 
 ## Windows Service
 
-A windows service is created as part of the installation. It is displayed as **SQL Server Reporting Services**. The service name is **SQLServerReportingServices**.
+A Windows service is created as part of the installation. It is displayed as **SQL Server Reporting Services**. The service name is **SQLServerReportingServices**.
 
 ## Default URL reservations
 
@@ -132,6 +133,6 @@ For information on how to install SQL Server 2016 Reporting Services (and earlie
 
 With your report server installed, begin to create reports and deploy those to your report server. For information on how to start with Report Builder, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
-To create reports using SQL Server Data Tools, [download SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
+To create reports using SQL Server Data Tools, [download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

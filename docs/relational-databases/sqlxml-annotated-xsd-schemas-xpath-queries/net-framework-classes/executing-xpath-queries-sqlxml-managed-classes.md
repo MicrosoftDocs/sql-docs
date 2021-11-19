@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "mapping schema [SQLXML], XPath queries"
   - "SQLXML Managed Classes, executing XPath queries"
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

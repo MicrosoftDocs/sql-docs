@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.updateBigDecimal (java.lang.String, java.math.BigDecimal)"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: b844cd9d-3d2d-4385-ab01-ecc89692054f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateBigDecimal Method (java.lang.String, java.math.BigDecimal)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER ENDPOINT"
   - "ALTER_ENDPOINT_TSQL"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "modifying endpoints"
   - "endpoints [SQL Server], modifying"
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

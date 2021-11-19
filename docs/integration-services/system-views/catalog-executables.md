@@ -16,9 +16,6 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
   This view displays a row for each executable in the specified execution.  
   
  An executable is a task or container that you add to the control flow of a package.  

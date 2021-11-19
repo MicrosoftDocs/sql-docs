@@ -29,7 +29,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Checks the integrity of all the pages and structures that make up the table or indexed view.
 
@@ -152,7 +152,7 @@ Logical consistency checking on indexes varies according to the compatibility le
          These logical consistency checks cross check the internal index table of the index object with the user table that it is referencing. To find outlying rows, an internal query is constructed to perform a full intersection of the internal and user tables. Running this query can have a very high effect on performance, and its progress cannot be tracked. Therefore, we recommend that you specify WITH EXTENDED_LOGICAL_CHECKS only if you suspect index issues that are unrelated to physical corruption, or if page-level checksums have been turned off and you suspect column-level hardware corruption.    
     -   If the index is a filtered index, DBCC CHECKDB performs consistency checks to verify that the index entries satisfy the filter predicate.   
       
-- Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], additional checks on persisted computed columns, UDT columns, and filtered indexes will not run by default to avoid the expensive expression evaluations. This change greatly reduces the duration of CHECKDB against databases containing these objects. However, the physical consistency checks of  these objects is always completed. Only when EXTENDED_LOGICAL_CHECKS option is specified will the expression evaluations be performed in addition to already present logical checks (indexed view, XML indexes, and spatial indexes) as part of the EXTENDED_LOGICAL_CHECKS option.
+- Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], additional checks on persisted computed columns, UDT columns, and filtered indexes will not run by default to avoid the expensive expression evaluations. This change greatly reduces the duration of CHECKDB against databases containing these objects. However, the physical consistency checks of  these objects is always completed. Only when EXTENDED_LOGICAL_CHECKS option is specified will the expression evaluations be performed in addition to already present logical checks (indexed view, XML indexes, and spatial indexes) as part of the EXTENDED_LOGICAL_CHECKS option.
 -  If the compatibility level is 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) or less, unless NOINDEX is specified, DBCC CHECKTABLE performs both physical and logical consistency checks on a single table or indexed view and on all its nonclustered and XML indexes. Spatial indexes are not supported.
     
  **To learn the compatibility level of a database**    
@@ -174,7 +174,11 @@ By default, DBCC CHECKTABLE performs parallel checking of objects. The degree of
 Parallel checking can be disabled by using trace flag 2528. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
     
 > [!NOTE]    
-> During a DBCC CHECKTABLE operation, the bytes that are stored in a byte-ordered user-defined type column must be equal to the computed serialization of the user-defined type value. If this is not true, the DBCC CHECKTABLE routine will report a consistency error.    
+> During a DBCC CHECKTABLE operation, the bytes that are stored in a byte-ordered user-defined type column must be equal to the computed serialization of the user-defined type value. If this is not true, the DBCC CHECKTABLE routine will report a consistency error. 
+
+> [!NOTE]
+> This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see parallel consistency check in the RDBMS Manageability section of [Features Supported by the Editions of SQL Server](../../sql-server/editions-and-components-of-sql-server-version-15.md#RDBMSM). 
+
     
 ## Understanding DBCC Error Messages    
 After the DBCC CHECKTABLE command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.

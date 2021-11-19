@@ -143,7 +143,7 @@ public class ScriptMain
   
 2.  In the **Script Task Editor**, on the **Script** tab, click **ReadOnlyVariables** and enter the property value using one of the following methods:  
   
-    -   Type **ExcelTable** and **ExcelFile** separated by commas**.**  
+    -   Type **ExcelTable** and **ExcelFile** separated by commas.  
   
          -or-  
   

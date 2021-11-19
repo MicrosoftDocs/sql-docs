@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLGetStmtOption function [ODBC], mapping"
   - "mapping deprecated functions [ODBC], SQLGetStmtOption"
 ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetStmtOption Mapping
 When an application calls **SQLGetStmtOption** to an ODBC *3.x* driver that does not support it, the call to  

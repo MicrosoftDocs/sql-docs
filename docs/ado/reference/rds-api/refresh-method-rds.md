@@ -7,7 +7,7 @@ ms.date: "01/19/2017"
 ms.reviewer: 
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "Refresh"

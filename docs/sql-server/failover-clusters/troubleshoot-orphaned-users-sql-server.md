@@ -4,7 +4,7 @@ description: Orphaned users occur when a database user login no longer exist in 
 ms.custom: "seo-lt-2019"
 ms.date: "07/14/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: troubleshooting
@@ -57,12 +57,12 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 To detect orphaned users in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] based on missing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication logins, execute the following statement in the user database:  
   
 ```  
-SELECT dp.type_desc, dp.SID, dp.name AS user_name  
+SELECT dp.type_desc, dp.sid, dp.name AS user_name  
 FROM sys.database_principals AS dp  
 LEFT JOIN sys.server_principals AS sp  
-    ON dp.SID = sp.SID  
-WHERE sp.SID IS NULL  
-    AND authentication_type_desc = 'INSTANCE';  
+    ON dp.sid = sp.sid  
+WHERE sp.sid IS NULL  
+    AND dp.authentication_type_desc = 'INSTANCE';  
 ```  
   
  The output lists the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication  users and corresponding security identifiers (SID) in the current database that are not linked to any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  

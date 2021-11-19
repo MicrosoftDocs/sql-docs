@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLWriteDSNToIni"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLWriteDSNToIni [ODBC]"
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLWriteDSNToIni Function
 **Conformance**  

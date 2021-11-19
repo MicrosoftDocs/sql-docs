@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FILE_NAME_TSQL"
   - "FILE_NAME"
@@ -24,11 +24,11 @@ helpviewer_keywords:
   - "FILE_NAME function"
   - "logical file names [SQL Server]"
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # FILE_NAME (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the logical file name for a given file identification (ID) number.  
   

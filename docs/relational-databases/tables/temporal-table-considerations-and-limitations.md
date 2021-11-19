@@ -2,7 +2,7 @@
 description: "Temporal Table Considerations and Limitations"
 title: "Temporal Table Considerations and Limitations | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/12/2017"
+ms.date: "09/24/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -25,6 +25,7 @@ Consider the following when working with temporal tables:
 
 - A temporal table must have a primary key defined in order to correlate records between the current table and the history table, and the history table cannot have a primary key defined.
 - The SYSTEM_TIME period columns used to record the **SysStartTime** and **SysEndTime** values must be defined with a datatype of datetime2.
+- Temporal syntax works on tables or views that are **stored locally** in the database. If it is a remote object like a table on linked server or external table then you cannot use the **FOR** clause or period predicates directly in the query.
 - If the name of a history table is specified during history table creation, you must specify the schema and table name.
 - By default, the history table is **PAGE** compressed.
 - If current table is partitioned, the history table is created on default file group because partitioning configuration is not replicated automatically from the current table to the history table.
@@ -47,7 +48,7 @@ Consider the following when working with temporal tables:
 - Usage of replication technologies is limited:
 
   - **Always On:** Fully supported
-  - **Change Data Capture and Change Data Tracking:** Supported only on the current table
+  - **Change Data Capture and Change Tracking:** Supported only on the current table
   - **Snapshot and transactional replication**: Only supported for a single publisher without temporal being enabled and one subscriber with temporal enabled. In this case, the publisher is used for an OLTP workload while subscriber serves for offloading reporting (including 'AS OF' querying). When the distribution agent starts, it opens a transaction that is held open until distribution agent stops. Due to this behavior SysStartTime and SysEndTime are populated to the begin time of the first transaction that distribution agent starts. Consequently, it may be preferable to run the distribution agent on a schedule rather than the default behavior of running it continuously, if having SysStartTime and SysEndTime populated with a time that is close to the current system time is important to your application or organization. Use of multiple subscribers is not supported as this may lead to inconsistent temporal data due to dependency on local system clock.
   - **Merge replication:** Not supported for temporal tables
 

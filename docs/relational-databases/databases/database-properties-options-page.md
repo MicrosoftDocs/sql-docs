@@ -1,8 +1,8 @@
 ---
-title: "Database Properties (Options Page) | Microsoft Docs"
+title: "Database Properties (Options Page)"
 description: "Learn how to use the Options tab in the Database Properties dialog box to view or modify a database's collation, recovery model, and other settings."
 ms.custom: ""
-ms.date: "08/28/2017"
+ms.date: "08/17/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,9 +10,8 @@ ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.options.f1"
-ms.assetid: a3447987-5507-4630-ac35-58821b72354d
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Properties (Options Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +42,13 @@ ms.author: "sstein"
  Specify whether to use the incremental option when per partition statistics are created. For information about incremental statistics, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Auto Create Statistics**  
- Specify whether the database automatically creates missing optimization statistics. Possible values are **True** and **False**. When **True**, any missing statistics needed by a query for optimization are automatically built during optimization. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
+ Specify whether the database automatically creates missing optimization statistics. Possible values are **True** and **False**. When **True**, any missing statistics needed by a query for optimization are automatically built during optimization. For more information, see [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics).  
   
  **Auto Shrink**  
  Specify whether the database files are available for periodic shrinking. Possible values are **True** and **False**. For more information, see [Shrink a Database](../../relational-databases/databases/shrink-a-database.md).  
   
  **Auto Update Statistics**  
- Specify whether the database automatically updates out-of-date optimization statistics. Possible values are **True** and **False**. When **True**, any out-of-date statistics needed by a query for optimization are automatically built during optimization. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
+ Specify whether the database automatically updates out-of-date optimization statistics. Possible values are **True** and **False**. When **True**, any out-of-date statistics needed by a query for optimization are automatically built during optimization. For more information, see [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics).
   
  **Auto Update Statistics Asynchronously**  
  When **True**, queries that initiate an automatic update of out-of-date statistics do not wait for the statistics to be updated before compiling. Subsequent queries use the updated statistics when they are available.  
@@ -162,7 +161,7 @@ Enables this feature.
  When **False**, correlation statistics are not maintained.  
  
  **Delayed Durability**  
- Enables this feature.  
+ Enables this feature. For more information, see [Control Transaction Durability](../logs/control-transaction-durability.md).
  
  **Is Read Committed Snapshot On**  
  Enables this feature.  

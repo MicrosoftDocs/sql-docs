@@ -6,9 +6,11 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/06/2020
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
-ms.custom: contperfq4
+author: garyericson
+ms.author: garye
+ms.custom:
+  - contperf-fy20q4
+  - intro-installation
 monikerRange: "=sql-server-2016"
 ---
 # Install SQL Server 2016 R Services
@@ -104,7 +106,7 @@ This step requires a server restart. You can hold off on the restart until all o
 
 ##  Enable script execution
 
-1. Open [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is.md).
+1. Open [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
 
 1. Connect to the instance where you installed R Services, click **New Query** to open a query window, and run the following command:
 

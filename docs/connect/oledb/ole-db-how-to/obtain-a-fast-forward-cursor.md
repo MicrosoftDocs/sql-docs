@@ -4,14 +4,14 @@ description: Learn how to set the rowset properties to obtain a FAST_FORWARD cur
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "fast forward-only cursors"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Obtain a FAST_FORWARD Cursor
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -18,7 +18,7 @@ ms.date: 06/11/2020
 
 **[Install SQL Server PowerShell](download-sql-server-ps-module.md)**
 
-There are two SQL Server PowerShell modules; **[SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)** and **[SQLPS](https://docs.microsoft.com/powershell/module/sqlps)**.
+There are two SQL Server PowerShell modules; **[SqlServer](/powershell/module/sqlserver)** and **[SQLPS](/powershell/module/sqlps)**.
 
 The **SqlServer** module is the current PowerShell module to use.
 
@@ -72,12 +72,29 @@ Query expressions are strings that use syntax similar to XPath to specify a set 
 
 There's no change to the module used by SQL Server Agent. As such, SQL Server Agent jobs, which have PowerShell type job steps use the SQLPS module. For more information, see [How to run PowerShell with SQL Server Agent](run-windows-powershell-steps-in-sql-server-agent.md). However, starting with SQL Server 2019, you can disable SQLPS. To do so, on the first line of a job step of the type PowerShell you can add `#NOSQLPS`, which stops the SQL Agent from auto-loading the SQLPS module. When you do this, your SQL Agent Job runs the version of PowerShell installed on the machine, and then you can use any other PowerShell module you like.
 
+### Troubleshooting SQLPS
+If you see agent job steps (PowerShell subsystem) failing with the following error, this section may be helpful in troubleshooting the issue. 
+
+> A job step received an error at line 1 in a PowerShell script. The corresponding line is 'import-module SQLPS'. Correct the script and reschedule the job. The error information returned by PowerShell is: 'The specified module 'SQLPS' was not loaded because no valid module file was found in any module directory.  
+
+The SQLPS module must be available at the environment variable PSModulePath.  Uninstalling SSMS 16.x may remove the SQLPS from PSModulePath.  To check the current values stored in PSModulePath, run the following PowerShell:
+
+```powershell
+ $env:PSModulePath -split ";"
+```
+
+If the path is set, you will see an entry similar to `C:\Program Files (x86)\Microsoft SQL Server\130\Tools\PowerShell\Modules`.  If the path is not set, locate the SQLPS folder on your server and add it to the environment variable value either through PowerShell or in *System Properties>Advanced>Environment Variables*.
+
+### SQLServer module with SQL Agent
+
 If you want to use the **SqlServer** module in your SQL Agent Job step, you can place this code on the first two lines of your script.
 
 ```powershell
 #NOSQLPS
 Import-Module -Name SqlServer
 ```
+
+
 
 ## Cmdlet reference
 

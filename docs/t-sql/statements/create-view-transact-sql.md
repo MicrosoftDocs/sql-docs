@@ -2,12 +2,12 @@
 description: "CREATE VIEW (Transact-SQL)"
 title: CREATE VIEW (Transact-SQL)
 ms.custom: ""
-ms.date: 04/16/2020
+ms.date: 09/08/2021
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE VIEW"
   - "VIEW_TSQL"
@@ -34,9 +34,8 @@ helpviewer_keywords:
   - "distributed partitioned views [SQL Server]"
   - "views [SQL Server], indexed views"
   - "maximum number of columns per view"
-ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -84,16 +83,16 @@ AS <select_statement>
     [ WITH <common_table_expression> [ ,...n ] ]  
     SELECT <select_criteria>  
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
-OR ALTER  
- **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).   
+#### OR ALTER  
+ **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1).   
   
  Conditionally alters the view only if it already exists. 
- 
+
  *schema_name*  
  Is the name of the schema to which the view belongs.  
   
@@ -108,7 +107,7 @@ OR ALTER
 > [!NOTE]  
 >  In the columns for the view, the permissions for a column name apply across a CREATE VIEW or ALTER VIEW statement, regardless of the source of the underlying data. For example, if permissions are granted on the **SalesOrderID** column in a CREATE VIEW statement, an ALTER VIEW statement can name the **SalesOrderID** column with a different column name, such as **OrderRef**, and still have the permissions associated with the view using **SalesOrderID**.  
   
- AS  
+#### AS  
  Specifies the actions the view is to perform.  
   
  *select_statement*  
@@ -135,23 +134,26 @@ OR ALTER
   
  Functions and multiple SELECT statements separated by UNION or UNION ALL can be used in *select_statement*.  
   
- CHECK OPTION  
+#### CHECK OPTION  
  Forces all data modification statements executed against the view to follow the criteria set within *select_statement*. When a row is modified through a view, the WITH CHECK OPTION makes sure the data remains visible through the view after the modification is committed.  
   
 > [!NOTE]
 >  The CHECK OPTION only applies to updates made through the view. It has no applicability to any updates performed directly to a view's underlying tables.  
   
- ENCRYPTION  
+#### ENCRYPTION  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Encrypts the entries in [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) that contain the text of the CREATE VIEW statement. Using WITH ENCRYPTION prevents the view from being published as part of SQL Server replication.  
   
- SCHEMABINDING  
+#### SCHEMABINDING  
  Binds the view to the schema of the underlying table or tables. When SCHEMABINDING is specified, the base table or tables cannot be modified in a way that would affect the view definition. The view definition itself must first be modified or dropped to remove dependencies on the table that is to be modified. When you use SCHEMABINDING, the *select_statement* must include the two-part names (_schema_**.**_object_) of tables, views, or user-defined functions that are referenced. All referenced objects must be in the same database.  
   
  Views or tables that participate in a view created with the SCHEMABINDING clause cannot be dropped unless that view is dropped or changed so that it no longer has schema binding. Otherwise, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error. Also, executing ALTER TABLE statements on tables that participate in views that have schema binding fail when these statements affect the view definition.  
+
+> [!NOTE] 
+> In Azure Synapse Analytics, views currently do not support schema binding. For more information, see [T-SQL views with dedicated SQL pool and serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-views#limitations).
   
- VIEW_METADATA  
+#### VIEW_METADATA  
  Specifies that the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return to the DB-Library, ODBC, and OLE DB APIs the metadata information about the view, instead of the base table or tables, when browse-mode metadata is being requested for a query that references the view. Browse-mode metadata is additional metadata that the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns to these client-side APIs. This metadata enables the client-side APIs to implement updatable client-side cursors. Browse-mode metadata includes information about the base table that the columns in the result set belong to.  
   
  For views created with VIEW_METADATA, the browse-mode metadata returns the view name and not the base table names when it describes columns from the view in the result set.  

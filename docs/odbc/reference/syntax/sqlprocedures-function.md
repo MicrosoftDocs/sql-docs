@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLProcedures"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLProcedures function [ODBC]"
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLProcedures Function
 **Conformance**  

@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "8992 (Database Engine error)"
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
@@ -70,15 +70,15 @@ Do not make manual updates to system tables. SQL Server does not support any man
 
 #### When a system table is manually updated
 
-Msg 17659: Warning: System table ID <id> has been updated directly in database ID <id> and cache coherence may not have been maintained. SQL Server should be restarted.
+Msg 17659: Warning: System table ID \<id\> has been updated directly in database ID \<id\> and cache coherence may not have been maintained. SQL Server should be restarted.
 
 #### Starting a database with a system table that was manually updated
 
-Msg 3859: Warning: The system catalog was updated directly in database ID <id>, most recently at date_time
+Msg 3859: Warning: The system catalog was updated directly in database ID \<id\>, most recently at date_time
 
 #### when you execute the DBCC_CHECKDB command after a system table is manually updated
 
-Msg 3859: Warning: The system catalog was updated directly in database ID <id>, most recently at date_time.  
+Msg 3859: Warning: The system catalog was updated directly in database ID \<id\>, most recently at date_time.  
 
 ## See Also
 

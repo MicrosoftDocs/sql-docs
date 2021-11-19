@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLDriverConnect"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLDriverConnect function [ODBC]"
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLDriverConnect Function
 **Conformance**  

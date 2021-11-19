@@ -6,7 +6,7 @@ ms.date: "10/14/2019"
 ms.prod: sql 
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 
@@ -15,18 +15,22 @@ ms.author: xiaoyul
 monikerRange: "=azure-sqldw-latest"
 ---
 
-# sys.pdw_nodes_dm_exec_sql_text (Transact-SQL)
+# sys.dm_pdw_nodes_exec_sql_text (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Returns the text of the SQL batch that is identified by the specified *sql_handle*. This table-valued function replaces the system function **fn_get_sql**.  
+Returns the text of the SQL batch that is identified by the specified *sql_handle*. This table-valued function replaces the system function **fn_get_sql**.
+
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
    
 ## Table returned  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**pdw_node_id**|**int**|Unique numeric ID associated with the node.|
 |**dbid**|**smallint**|ID of database.<br /><br /> For unplanned and prepared SQL statements, the ID of the database where the statements were compiled.|  
-|**objectid**|**int**|ID of object.<br /><br /> Is NULL for ad hoc and prepared SQL statements.|  
-|**number**|**smallint**|For a numbered stored procedure, this column returns the number of the stored procedure. For more information, see [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Is NULL for ad hoc and prepared SQL statements.|  
+|**objectid**|**int**|ID of object.<br /><br /> Is NULL for improvised and prepared SQL statements.|  
+|**number**|**smallint**|For a numbered stored procedure, this column returns the number of the stored procedure. For more information, see [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Is NULL for improvised and prepared SQL statements.|  
 |**encrypted**|**bit**|1: SQL text is encrypted.<br /><br /> 0: SQL text is not encrypted.|  
 |**text**|**nvarchar(max)**|Text of the SQL query.<br /><br /> Is NULL for encrypted objects.|  
 

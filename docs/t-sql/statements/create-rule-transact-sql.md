@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "RULE_TSQL"
   - "CREATE RULE"
@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "binding rules [SQL Server]"
   - "rules [SQL Server], creating"
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

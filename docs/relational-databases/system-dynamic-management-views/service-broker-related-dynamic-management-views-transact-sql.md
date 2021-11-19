@@ -6,7 +6,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Service Broker, dynamic management views"
   - "dynamic management views [SQL Server], Service Broker"
 ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Service Broker Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

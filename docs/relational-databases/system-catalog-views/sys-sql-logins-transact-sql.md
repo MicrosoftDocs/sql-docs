@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sql_logins_TSQL"
   - "sql_logins_TSQL"
@@ -42,8 +42,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
  When contained database users are enabled, connections can be made without logins. To identify those accounts, see  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
 ## Permissions  
- Any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication login can see their own login name, and the sa login. To see other logins, requires ALTER ANY LOGIN, or a permission on the login.  
+**SQL Server**: Any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication login can see their own login name, and the sa login. To see other logins, requires ALTER ANY LOGIN, or a permission on the login.  
  To view the contents of the password_hash column, the CONTROL SERVER permission is required.
+ **Azure SQL Database**: only members of the special database role loginmanager in master or the AAD Admin and Server Admin can see all logins.
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

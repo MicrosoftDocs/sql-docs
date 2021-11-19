@@ -1,16 +1,18 @@
 ---
-title: "Install PolyBase on Windows | Microsoft Docs"
+title: "Install PolyBase on Windows"
 description: Learn to install PolyBase as a single node or PolyBase scale-out group. You can use an installation wizard or a command prompt. Finally, enable PolyBase.
-ms.date: 09/24/2018
+ms.date: 10/05/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-helpviewer_keywords: 
-   - "PolyBase, installation"
+helpviewer_keywords:
+  - "PolyBase, installation"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 monikerRange: ">= sql-server-2016"
+ms.custom:
+  - intro-installation
 ---
 # Install PolyBase on Windows
 
@@ -30,31 +32,31 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
   
 - Recommended: Minimum of 16-GB RAM.
    
-- TCP/IP must be enabled for PolyBase to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For PolyBase to function correctly on the Developer and Express editions, you must enable TCP/IP connectivity. See [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
+- PolyBase services require SQL Server service to have TCP/IP network protocol enabled to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For PolyBase to function correctly on the Developer and Express editions, you must enable TCP/IP connectivity. See [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md). Additionally, if TCP/IP Protocol configuration setting **Listen All** is set to **No**, you must still have an entry for the correct listener port in either **TCP Dynamic Ports** or **TCP Ports** under **IPAll** in TCP/IP Properties. This is required due to the way PolyBase services resolve the listener port of the SQL Server Engine.
 
+- PolyBase services require Shared Memory protocol to be enabled to function properly.
 
->[!NOTE] 
-> PolyBase can be installed on only one SQL Server instance per machine.
+- PolyBase can be installed on only one SQL Server instance per machine.
 
+- You cannot add features to a failover cluster instance after creation. For example, you cannot add the PolyBase feature to an existing failover cluster instance.
 
->[!NOTE]
->In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
-
->[!IMPORTANT]
->To use the computation pushdown functionality against Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
-  
+ 
 ## Single node or PolyBase scale-out group
 
 Before you install PolyBase on your SQL Server instances, decide whether you want a single node installation or a [PolyBase scale-out group](../../relational-databases/polybase/polybase-scale-out-groups.md).
 
+For the PolyBase service account, choose:
+- the default virtual service account (VSA) for stand-alone installations of PolyBase.
+- a domain account, with a group managed service account (gMSA) preferred, for installations in a PolyBase scale-out group. For more information, see [Group Managed Service Accounts Overview](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
+
 For a PolyBase scale-out group, make sure that:
 
 - All the machines are on the same domain.
-- You use the same service account and password during PolyBase installation.
+- You use the same domain service account and password during PolyBase installation.
 - Your SQL Server instances can communicate with one another over the network.
 - The SQL Server instances are all the same version of SQL Server.
 
-After you install PolyBase either standalone or in a scale-out group, you can't change. To change this setting, you have to uninstall and reinstall the feature.
+After installation of PolyBase to either standalone or in a scale-out group, you cannot change to a scale-out group or standalone service. If you need to change an existing installation of PolyBase to a standalone instance or a scale-out group, uninstall and reinstall the PolyBase feature.
 
 ## Use the installation wizard
    
@@ -155,11 +157,12 @@ After installation, PolyBase must be enabled to access its features. Use the fol
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
 RECONFIGURE;
 ```
-
-
 ## Post-installation notes  
 
 PolyBase installs three user databases, DWConfiguration, DWDiagnostics, and DWQueue. These databases are for PolyBase use. Don't alter or delete them.  
+
+> [!CAUTION]
+> Adding PolyBase to an existing installation of SQL Server will install the feature at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow up installing the PolyBase feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of PolyBase, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
    
 ### <a id="confirminstall"></a> How to confirm installation  
 

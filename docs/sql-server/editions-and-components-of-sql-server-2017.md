@@ -3,7 +3,7 @@ title: "Editions and supported features"
 titleSuffix: SQL Server 2017
 description: This article describes features supported by the various editions of SQL Server 2017, which accommodate different performance, runtime, and price requirements.
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: "03/26/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -56,7 +56,7 @@ For the latest release notes and what's new information, see the following:
 
 ### Try SQL Server    
     
-> [![Download from Evaluation Center](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/) **[Download SQL Server 2017 from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
+> [![Download from Evaluation Center](/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/) **[Download SQL Server 2017 from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
 <!---    
 > ![Azure Virtual Machine small](/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
@@ -129,6 +129,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores| 
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores|  
 |Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Operating System Maximum|128 GB|64 GB|1410 MB|1410 MB|
+|Maximum capacity for [buffer pool extension](../database-engine/configure-windows/buffer-pool-extension.md) per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]| 32 * (max server memory configuration)| 4 * (max server memory configuration)|N/A |N/A |N/A |
 |Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB| 352 MB|  
 |Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB| 352 MB|  
 |Maximum memory utilized per instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Operating System Maximum|Tabular: 16 GB<br /><br /> MOLAP: 64 GB|N/A|N/A|N/A|  
@@ -159,7 +160,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|No|
-|Read-scale availability group<sup>3,4</sup>|Yes|No|No|No|No|No|
+|Read-scale availability group<sup>3,4</sup>|Yes|No|No|No|No|
 
 <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
@@ -184,10 +185,10 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Table and index partitioning|Yes|Yes|Yes|Yes|Yes|  
 |Data compression|Yes|Yes|Yes|Yes|Yes|
 |Resource Governor|Yes|No|No|No|No|  
-|Partitioned Table Parallelism|Yes|No|No|No|No|
+|Partitioned Table Parallelism|Yes|Yes|Yes|Yes|Yes|  
 |Multiple Filestream containers|Yes|Yes|Yes|Yes|Yes|
 |NUMA Aware Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
-|Buffer Pool Extension|Yes|Yes|No|No|No|
+|Buffer pool extension|Yes|Yes|No|No|No|
 |I/O Resource Governance|Yes|No|No|No|No|  
 |Read-Ahead|Yes|No|No|No|No|
 |Advanced Scanning|Yes|No|No|No|No|
@@ -395,7 +396,7 @@ For information about the Business Intelligence Client features supported by the
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No| 
 |StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|   
 
-> [![Download SSMS](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**     
+> [![Download SSMS](/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**     
   
 ## Next steps 
  [Product Specifications for SQL Server](./index.yml)   

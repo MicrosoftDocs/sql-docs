@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-2016"
+monikerRange: ">= sql-server-2016 " 
 ---
 
 # PolyBase configuration and security for Hadoop

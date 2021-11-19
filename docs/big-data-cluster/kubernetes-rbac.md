@@ -1,11 +1,11 @@
 ---
 title: Kubernetes RBAC
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: This article describes how SQL Server Big Data Clusters uses RBAC with Kubernetes.
-author: mihaelablendea 
-ms.author: mihaelab
-ms.reviewer: mikeray
-ms.date: 08/04/2020
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: dacoelho
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -44,7 +44,7 @@ Starting with SQL Server 2019 CU5, Telegraf requires a service account with clus
 
 Here are the steps to show how to create the required artifacts:
 
-1. Create a *metrics-role.yaml* file with below content. Make sure to replace the *<clusterName>* placeholders  with the name of your big data cluster.
+1. Create a *metrics-role.yaml* file with below content. Make sure to replace the *\<clusterName\>* placeholders  with the name of your big data cluster.
 
    ```yaml
    apiVersion: rbac.authorization.k8s.io/v1
@@ -57,6 +57,7 @@ Here are the steps to show how to create the required artifacts:
      resources:
      - pods
      - nodes/stats
+     - nodes/proxy
      verbs:
      - get
    ---

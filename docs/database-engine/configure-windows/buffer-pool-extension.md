@@ -1,5 +1,5 @@
 ---
-title: "Buffer Pool Extension | Microsoft Docs"
+title: "Buffer pool extension | Microsoft Docs"
 description: Learn about buffer pool extension and its benefits, which include improved I/O throughput. View best practices to follow when turning on this feature.
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,11 +12,11 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: markingmyname
 ms.author: maghan
 ---
-# Buffer Pool Extension
+# Buffer pool extension
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Introduced in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the buffer pool extension provides the seamless integration of a nonvolatile random access memory (that is, solid-state drive) extension to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] buffer pool to significantly improve I/O throughput. The buffer pool extension is not available in every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-## Benefits of the Buffer Pool Extension  
+## Benefits of the buffer pool extension  
  The primary purpose of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is to store and retrieve data, so intensive disk I/O is a core characteristic of the Database Engine. Because disk I/O operations can consume many resources and take a relatively long time to finish, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] focuses on making I/O highly efficient. The buffer pool serves as a primary memory allocation source of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Buffer management is a key component in achieving this efficiency. The buffer management component consists of two mechanisms: the buffer manager to access and update database pages, and the buffer pool, to reduce database file I/O.  
   
  Data and index pages are read from disk into the buffer pool and modified pages (also known as dirty pages) are written back to disk. Memory pressure on the server and database checkpoints cause hot (active) dirty pages in the buffer cache to be evicted from the cache and written to mechanical disks and then read back into the cache. These I/O operations are typically small random reads and writes on the order of 4 to 16 KB of data. Small random I/O patterns incur frequent seeks, competing for the mechanical disk arm, increasing I/O latency, and reducing aggregate I/O throughput of the system.  
@@ -49,30 +49,36 @@ ms.author: maghan
  Buffer pool  
  Also called buffer cache. The buffer pool is a global resource shared by all databases for their cached data pages. The maximum and minimum size of the buffer pool cache is determined during startup or when the instance of SQL server is dynamically reconfigured by using sp_configure. This size determines the maximum number of pages that can be cached in the buffer pool at any time in the running instance.  
   
- The maximum memory that can be committed by Buffer Pool Extension can be limited by the other applications running on the machine in case those create significant memory pressure.  
+ The maximum memory that can be committed by buffer pool extension can be limited by the other applications running on the machine in case those create significant memory pressure.  
   
  Checkpoint  
  A checkpoint creates a known good point from which the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can start applying changes contained in the transaction log during recovery after an unexpected shutdown or crash. A checkpoint writes the dirty pages and transaction log information from memory to disk and, also, records information about the transaction log. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
-## Buffer Pool Extension Details  
+## Details  
  SSD storage is used as an extension to the memory subsystem rather than the disk storage subsystem. That is, the buffer pool extension file allows the buffer pool manager to use both DRAM and NAND-Flash memory to maintain a much larger buffer pool of lukewarm pages in nonvolatile random access memory backed by SSDs. This creates a multilevel caching hierarchy with level 1 (L1) as the DRAM and level 2 (L2) as the buffer pool extension file on the SSD. Only clean pages are written to the L2 cache, which helps maintain data safety. The buffer manager handles the movement of clean pages between the L1 and L2 caches.  
   
  The following illustration provides a high-level architectural overview of the buffer pool relative to other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components.  
   
- ![SSD Buffer Pool Extension Architecture](../../database-engine/configure-windows/media/ssdbufferpoolextensionarchitecture.gif "SSD Buffer Pool Extension Architecture")  
+ ![SSD buffer pool extension Architecture](../../database-engine/configure-windows/media/ssdbufferpoolextensionarchitecture.gif "SSD buffer pool extension Architecture")  
   
  When enabled, the buffer pool extension specifies the size and file path of the buffer pool caching file on the SSD. This file is a contiguous extent of storage on the SSD and is statically configured during startup of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alterations to the file configuration parameters can only be done when the buffer pool extension feature is disabled. When the buffer pool extension is disabled, all related configuration settings are removed from the registry. The buffer pool extension file is deleted upon shutdown of the instance of SQL Server.  
-  
+
+## Capacity limitations
+
+SQL Server Enterprise edition allows a maximum buffer pool extension size of 32 times the value of max_server_memory.
+
+SQL Server Standard edition allows a maximum buffer pool extension size of 4 times the value of max_server_memory.
+
 ## Best Practices  
  We recommend that you follow these best practices.  
   
--   After enabling Buffer Pool Extension for the first time it is recommended to restart the SQL Server instance to get the maximum performance benefits.  
+-   After enabling buffer pool extension for the first time it is recommended to restart the SQL Server instance to get the maximum performance benefits.  
   
--   The buffer pool extension size can be up to 32 times the value of max_server_memory.  We recommend a ratio between the size of the physical memory (max_server_memory) and the size of the buffer pool extension of 1:16 or less. A lower ratio in the range of 1:4 to 1:8 may be optimal. For information about setting the max_server_memory option, see [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
+-  Set the buffer pool extension so the ratio between the size of the physical memory (max_server_memory) and the size of the buffer pool extension of 1:16 or less. A lower ratio in the range of 1:4 to 1:8 may be optimal. For information about setting the max_server_memory option, see [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
 -   Test the buffer pool extension thoroughly before implementing in a production environment. Once in production, avoid making configuration changes to the file or turning the feature off. These activities may have a negative impact on server performance because the buffer pool is significantly reduced in size when the feature is disabled. When disabled, the memory used to support the feature is not reclaimed until the instance of SQL Server is restarted. However, if the feature is re-enabled, the memory will be reused without restarting the instance.  
   
-## Return Information about the Buffer Pool Extension  
+## Return information about the buffer pool extension  
  You can use the following dynamic management views to display the configuration of the buffer pool extension and return information about the data pages in the extension.  
   
 -   [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  

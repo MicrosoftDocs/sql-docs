@@ -4,11 +4,13 @@ description: This tutorial shows how to take a SQL Server database backup on Win
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 08/16/2017
+ms.date: 04/08/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
+ms.custom:
+  - intro-migration
 ---
 # Migrate a SQL Server database from Windows to Linux using backup and restore
 
@@ -97,7 +99,7 @@ To restore the database, you must first transfer the backup file from the Window
 
 ## Move the backup file before restoring
 
-At this point, the backup file is on your Linux server in your user's home directory. Before restoring the database to SQL Server, you must place the backup in a subdirectory of **/var/opt/mssql**.
+At this point, the backup file is on your Linux server in your user's home directory. Before restoring the database to SQL Server, you must place the backup in a subdirectory of **/var/opt/mssql**, as this is owned by the user `mssql` and group `mssql`. If you are looking to change the default backup location, see the [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md#backupdir) article.
 
 1. In the same Windows Bash session, connect remotely to your target Linux machine with **ssh**. The following example connects to the Linux machine **192.0.2.9** as user **user1**.
 

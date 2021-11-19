@@ -5,13 +5,13 @@ ms.custom: ""
 ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OLE DB Driver for SQL Server, data classification"
-author: "bazizi"
-ms.author: v-beaziz
+author: David-Engel
+ms.author: v-davidengel
 manager: kenvh
 ---
 # Using data classification
@@ -20,9 +20,9 @@ manager: kenvh
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 ## Overview
-[SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification) is a set of advanced services for discovering, classifying, labeling, and reporting sensitive information in your databases. Microsoft OLE DB Driver for SQL Server (version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850)) adds support for retrieving classification metadata when the underlying data source supports the feature. This information is accessed via the [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) interface.
+[SQL Data Discovery and Classification](../../../relational-databases/security/sql-data-discovery-and-classification.md) is a set of advanced services for discovering, classifying, labeling, and reporting sensitive information in your databases. Microsoft OLE DB Driver for SQL Server (version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850)) adds support for retrieving classification metadata when the underlying data source supports the feature. This information is accessed via the [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) interface.
 
-For more information on how to assign classification to columns, see [SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification).
+For more information on how to assign classification to columns, see [SQL Data Discovery and Classification](../../../relational-databases/security/sql-data-discovery-and-classification.md).
 
 ## Code samples
 
@@ -225,5 +225,4 @@ void PrintSensitivityClassificationInfo(SENSITIVITYCLASSIFICATION* pSensitivityC
 
 ## See also
  [Interfaces &#40;OLE DB&#41;](../ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
- [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md)  
-
+ [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md)

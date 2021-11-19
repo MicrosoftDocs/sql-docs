@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerConnection.TRANSACTION_SNAPSHOT"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 21c55c0b-76f0-411d-aa13-f606d3524b0e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # TRANSACTION_SNAPSHOT Field (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

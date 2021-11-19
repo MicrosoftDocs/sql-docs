@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Create Unique Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  This topic describes how to create a unique index on a table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A unique index guarantees that the index key contains no duplicate values and therefore every row in the table is in some way unique. There are no significant differences between creating a UNIQUE constraint and creating a unique index that is independent of a constraint. Data validation occurs in the same manner, and the query optimizer does not differentiate between a unique index created by a constraint or manually created. However, creating a UNIQUE constraint on the column makes the objective of the index clear. For more information on UNIQUE constraints, see [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+  This topic describes how to create a unique index on a table in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A unique index guarantees that the index key contains no duplicate values and therefore every row in the table is in some way unique. There are no significant differences between creating a UNIQUE constraint and creating a unique index that is independent of a constraint. Data validation occurs in the same manner, and the query optimizer does not differentiate between a unique index created by a constraint or manually created. However, creating a UNIQUE constraint on the column makes the objective of the index clear. For more information on UNIQUE constraints, see [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
  When you create a unique index, you can set an option to ignore duplicate keys. If this option is set to **Yes** and you attempt to create duplicate keys by adding data that affects multiple rows (with the INSERT statement), the row containing a duplicate is not added. If it is set to **No**, the entire insert operation fails and all the data is rolled back.  
   
@@ -159,9 +159,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     ```  
     USE AdventureWorks2012;  
     GO  
-    -- Find an existing index named AK_UnitMeasure_Name and delete it if found  
+    -- Find an existing index named AK_UnitMeasure_Name 
+    -- on the Production.UnitMeasure table and delete it if found. 
     IF EXISTS (SELECT name from sys.indexes  
-               WHERE name = N'AK_UnitMeasure_Name')   
+               WHERE name = N'AK_UnitMeasure_Name'
+               AND object_id = OBJECT_ID(N'Production.UnitMeasure', N'U'))   
        DROP INDEX AK_UnitMeasure_Name ON Production.UnitMeasure;   
     GO  
     -- Create a unique index called AK_UnitMeasure_Name  

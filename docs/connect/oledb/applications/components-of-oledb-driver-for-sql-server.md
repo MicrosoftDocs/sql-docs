@@ -4,7 +4,7 @@ description: Learn about the OLE DB Driver for SQL Server components, including 
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "components [OLE DB Driver for SQL Server]"
   - "MSOLEDBSQL, about OLE DB Driver for SQL Server"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Components of OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

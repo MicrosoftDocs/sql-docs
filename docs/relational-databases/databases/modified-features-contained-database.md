@@ -11,11 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, modifications to DBs"
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Modified Features (Contained Database)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
   The following features have been modified to be supported by a partially contained database. Features are usually modified so they do not cross the database boundary.  
   
  For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md).  

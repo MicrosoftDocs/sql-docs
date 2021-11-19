@@ -6,12 +6,12 @@ ms.date: "05/24/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Broker:Forwarded Message Sent event class"
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker:Forwarded Message Sent Event Class

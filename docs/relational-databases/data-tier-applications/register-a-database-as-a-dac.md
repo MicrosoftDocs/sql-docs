@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "register DAC"
   - "data-tier application [SQL Server], register"
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Register a Database As a DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

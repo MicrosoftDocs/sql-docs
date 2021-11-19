@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "concurrency [SQLXML]"
   - "intermediate concurrency protection [SQLXML]"
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

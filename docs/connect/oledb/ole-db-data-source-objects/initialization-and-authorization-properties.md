@@ -2,9 +2,9 @@
 title: "Initialization and authorization properties (OLE DB driver) | Microsoft Docs"
 description: Learn how the OLE DB Driver for SQL Server interprets OLE DB initialization and authorization properties.
 ms.custom: ""
-ms.date: "09/30/2020"
+ms.date: "05/31/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, authorization properties"
   - "initialization properties [OLE DB]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Initialization and Authorization Properties
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,6 +57,8 @@ ms.author: v-daenge
 |SSPROP_AUTH_OLD_PASSWORD|Type: VT_BSTR<br /><br /> R/W: Write<br /><br /> Default: VT_EMPTY<br /><br /> Description: The current or expired password. For more information, see [Changing Passwords Programmatically](../../oledb/features/changing-passwords-programmatically.md).|  
 |SSPROP_INIT_APPNAME|Type: VT_BSTR<br /><br /> R/W: Read/write<br /><br /> Description: The client application name.|  
 |SSPROP_INIT_AUTOTRANSLATE|Type: VT_BOOL<br /><br /> R/W: Read/write<br /><br /> Default: VARIANT_TRUE<br /><br /> Description: OEM/ANSI character conversion.<br /><br /> VARIANT_TRUE: The OLE DB Driver for SQL Server translates ANSI character strings sent between the client and server by converting through Unicode to minimize problems in matching extended characters between the code pages on the client and the server:<br /><br /> Client DBTYPE_STR data sent to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**char**, **varchar**, or **text** variable, parameter, or column is converted from character to Unicode using the client ANSI code page (ACP) and then converted from Unicode to character using the ACP of the server.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**, **varchar**, or **text** data sent to a client DBTYPE_STR variable is converted from character to Unicode using the server ACP and then converted from Unicode to character using the client ACP.<br /><br /> These conversions are performed on the client by the OLE DB Driver for SQL Server. This requires that the same ACP used on the server be available on the client.<br /><br /> These settings have no effect on the conversions that occur for these transfers:<br /><br /> Unicode DBTYPE_WSTR client data sent to **char**, **varchar**, or **text** on the server.<br /><br /> **char**, **varchar**, or **text** server data sent to a Unicode DBTYPE_WSTR variable on the client.<br /><br /> ANSI DBTYPE_STR client data sent to Unicode **nchar**, **nvarchar**, or **ntext** on the server.<br /><br /> Unicode **char**, **varchar**, or **text** server data sent to an ANSI DBTYPE_STR variable on the client.<br /><br /> VARIANT_FALSE: The OLE DB Driver for SQL Server does not perform character translations.<br /><br /> The OLE DB Driver for SQL Server does not translate client ANSI character DBTYPE_STR data sent to **char**, **varchar**, or **text** variables, parameters, or columns on the server. No translation is performed on **char**, **varchar**, or **text** data sent from the server to DBTYPE_STR variables on the client.<br /><br /> If the client and the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] are using different ACPs, extended characters can be misinterpreted.|  
+|SSPROP_INIT_CONNECT_RETRY_COUNT|Type: VT_I4<br /><br /> R/W: Read/write<br /><br/>Default: 1<br /><br />Description: Controls the number of reconnection attempts in the case of connection loss. For more information, see [Idle Connection Resiliency](../features/idle-connection-resiliency.md).|  
+|SSPROP_INIT_CONNECT_RETRY_INTERVAL|Type: VT_I4<br /><br /> R/W: Read/write<br /><br/>Default: 10<br /><br />Description: Specifies the number of seconds between each connection retry attempt in the case of connection loss. For more information, see [Idle Connection Resiliency](../features/idle-connection-resiliency.md).|  
 |SSPROP_INIT_CURRENTLANGUAGE|Type: VT_BSTR<br /><br /> R/W: Read/write<br /><br /> Description: A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] language name. Identifies the language used for system message selection and formatting. The language must be installed on the computer running an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or data source initialization fails.|  
 |SSPROP_INIT_DATATYPECOMPATIBILITY|Type: VT_UI2<br /><br /> R/W: Read/write<br /><br /> Default: 0<br /><br /> Description: Enables data type compatibility between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and ActiveX Data Object (ADO) applications. If the default value of 0 is used, data type handling defaults to that used by the provider. If the value of 80 is used, data type handling uses only [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] data types. For more information, see [Using ADO with OLE DB Driver for SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).|  
 |SSPROP_INIT_ENCRYPT<a href="#table1_1"><sup>**1**</sup></a>|Type: VT_BOOL<br /><br /> R/W: Read/Write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: To encrypt the data going over the network, SSPROP_INIT_ENCRYPT property is set to VARIANT_TRUE.<br /><br /> If Force Protocol Encryption is on, encryption will always occur, regardless of the setting of SSPROP_INIT_ENCRYPT. If it is off and SSPROP_INIT_ENCRYPT is set to VARIANT_TRUE, then encryption will occur.<br /><br /> If Force Protocol Encryption is off and SSPROP_INIT_ENCRYPT is set to VARIANT_FALSE, then no encryption occurs.|  

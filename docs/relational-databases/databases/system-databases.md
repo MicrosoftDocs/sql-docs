@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "modifying system data"
   - "viewing system database data"
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Databases

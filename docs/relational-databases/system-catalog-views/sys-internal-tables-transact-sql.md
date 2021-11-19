@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.internal_tables"
   - "internal_tables"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "internal tables"
   - "sys.internal_tables catalog view"
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

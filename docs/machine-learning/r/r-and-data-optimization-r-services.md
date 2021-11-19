@@ -6,8 +6,8 @@ ms.technology: machine-learning-services
 
 ms.date: 10/20/2020
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
@@ -170,4 +170,4 @@ We also recommend that you look into the new **MicrosoftML** package, which prov
 
 + For R functions you can use to improve the performance of your R code, see [Use R code profiling functions to improve performance](using-r-code-profiling-functions.md).
 
-+ For more complete information about performance tuning on SQL Server, see [Performance Center for SQL Server Database Engine and Azure SQL Database](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database).
++ For more complete information about performance tuning on SQL Server, see [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md).

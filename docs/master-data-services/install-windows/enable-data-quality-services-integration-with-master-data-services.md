@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ab32938d-a80e-4106-80d4-94b2de3d67dc
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Enable Data Quality Services Integration with Master Data Services

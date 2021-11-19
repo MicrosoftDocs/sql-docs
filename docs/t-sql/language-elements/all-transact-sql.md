@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALL_TSQL"
   - "ALL"
@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "single-column set of values [SQL Server]"
   - "ALL (Transact-SQL)"
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # ALL (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Compares a scalar value with a single-column set of values.  
   

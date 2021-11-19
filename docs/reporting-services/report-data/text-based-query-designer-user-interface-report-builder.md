@@ -82,7 +82,7 @@ uspGetWhereUsedProductID
   
  Click the **Run** (**!**) button. When prompted for the query parameters, use the following table to enter values.  
   
-|||  
+|Parameter|Value|  
 |-|-|  
 |*\@StartProductID*|820|  
 |*\@CheckDate*|20010115|  

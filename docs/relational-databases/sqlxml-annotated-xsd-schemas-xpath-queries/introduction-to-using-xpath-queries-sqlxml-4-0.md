@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "W3C XPath specification"
   - "XPath queries [SQLXML], functionality"
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

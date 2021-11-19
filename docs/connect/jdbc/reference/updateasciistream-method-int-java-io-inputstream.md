@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 1dcc3d4f-ae30-45c0-afad-a531358807af
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateAsciiStream Method (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

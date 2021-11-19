@@ -4,12 +4,11 @@ description: The SQL Server Distributed Replay administration tool, DReplay.exe,
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 08/12/2016
 ---

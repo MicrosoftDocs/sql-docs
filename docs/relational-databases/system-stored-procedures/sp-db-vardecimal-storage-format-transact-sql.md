@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_db_vardecimal_storage_format"
   - "sp_db_vardecimal_storage_format_TSQL"
@@ -29,13 +29,15 @@ ms.author: maghan
 
   Returns the current vardecimal storage format state of a database or enables a database for vardecimal storage format.  Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], user databases are always enabled. Enabling databases for the vardecimal storage format is only necessary in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
+> [!NOTE]  
+> [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] supports the vardecimal storage format; however, because row-level compression achieves the same goals, the vardecimal storage format is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
+  
 > [!IMPORTANT]  
->  Changing the vardecimal storage format state of a database can affect backup and recovery, database mirroring, sp_attach_db, log shipping, and replication.  
+> Changing the vardecimal storage format state of a database can affect backup and recovery, database mirroring, sp_attach_db, log shipping, and replication.  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']   
     [ , [ @vardecimal_storage_format = ] { 'ON' | 'OFF' } ]   
 [;]  
@@ -46,7 +48,10 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  Is the name of the database for which the storage format is to be changed. *database_name* is **sysname**, with no default. If the database name is omitted, the vardecimal storage format status of all the databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are returned.  
   
  [ @vardecimal_storage_format= ] {'ON'|'OFF'}  
- Specifies whether the vardecimal storage format is enabled. @vardecimal_storage_format can be ON or OFF. The parameter is **varchar(3)**, with no default. If a database name is provided but @vardecimal_storage_format is omitted, the current setting of the specified database is returned. This argument has no effect on [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions.  
+ Specifies whether the vardecimal storage format is enabled. @vardecimal_storage_format can be ON or OFF. The parameter is **varchar(3)**, with no default. If a database name is provided but @vardecimal_storage_format is omitted, the current setting of the specified database is returned. 
+ 
+ > [!IMPORTANT]
+ > This argument has no effect on [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions.  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  
@@ -71,7 +76,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  Changing the state to OFF will fail if there are tables using vardecimal database compression. To change the storage format of a table, use [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). To determine which tables in a database are using vardecimal storage format, use the `OBJECTPROPERTY` function and search for the `TableHasVarDecimalStorageFormat` property, as shown in the following example.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT name, object_id, type_desc  
@@ -84,7 +89,7 @@ GO
 ## Examples  
  The following code enables compression in the `AdventureWorks2012` database, confirms the state, and then compresses decimal and numeric columns in the `Sales.SalesOrderDetail` table.  
   
-```  
+```sql  
 USE master ;  
 GO  
   

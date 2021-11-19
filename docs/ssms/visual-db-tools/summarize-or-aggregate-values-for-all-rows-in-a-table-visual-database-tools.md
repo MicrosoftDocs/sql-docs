@@ -17,7 +17,7 @@ ms.reviewer:
 
 ---
 # Summarize or Aggregate Values for All Rows in a Table (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 ## Aggregate function
 Using an aggregate function, you can create a summary for all the values in a table. For example, you can create a query such as the following to display the total price for all books in the `titles` table:  
   

@@ -23,13 +23,13 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 
 [!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 introduces *secondary to primary replica read/write connection redirection* for Always On Availability Groups. Read/write connection redirection is available on any operating system platform. It allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
+[!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] CTP 2.0 introduces *secondary to primary replica read/write connection redirection* for Always On Availability Groups. Read/write connection redirection is available on any operating system platform. It allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
 
 For  example, the connection string can target a secondary replica. Depending on the configuration of the availability group (AG) replica and the settings in the connection string, the connection can be automatically redirected to the primary replica. 
 
 ## Use cases
 
-Prior to [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], the AG listener and the corresponding cluster resource redirect user traffic to the primary replica to ensure reconnection after failover. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] continues to support the AG listener functionality and adds replica connection redirection for scenarios that cannot include a listener. For example:
+Prior to [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)], the AG listener and the corresponding cluster resource redirect user traffic to the primary replica to ensure reconnection after failover. [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] continues to support the AG listener functionality and adds replica connection redirection for scenarios that cannot include a listener. For example:
 
 * The cluster technology that SQL Server availability groups integrates with does not offer a listener like capability 
 * A multi-subnet configuration like in the cloud or multi-subnet floating IP with Pacemaker where configurations become complex, prone to errors, and difficult to troubleshoot due to multiple components involved
@@ -46,7 +46,7 @@ In order for a secondary replica to redirect read/write connection requests:
 
 To configure read/write connection redirection, set `READ_WRITE_ROUTING_URL` for the primary replica when you create the AG. 
 
-In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], `READ_WRITE_ROUTING_URL` has been added to the `<add_replica_option>` specification. See the following topics: 
+In [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)], `READ_WRITE_ROUTING_URL` has been added to the `<add_replica_option>` specification. See the following topics: 
 
 * [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
@@ -61,7 +61,7 @@ By default, read/write replica connection redirection is not set for a replica. 
 |`ApplicationIntent=ReadWrite`<br/> Default|Connections fail|Connections fail|Connections succeed<br/>Reads succeed<br/>Writes fail|
 |`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
 
-The preceding table shows the default behavior, which is the same as versions of SQL Server before [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]. 
+The preceding table shows the default behavior, which is the same as versions of SQL Server before [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)]. 
 
 ### PRIMARY_ROLE(READ_WRITE_ROUTING_URL) set 
 
@@ -90,7 +90,7 @@ The following transact-SQL script creates this AG. In this example, Each replica
 CREATE AVAILABILITY GROUP MyAg   
      WITH ( CLUSTER_TYPE =  NONE )  
    FOR   
-     DATABASE  <Database1>   
+     DATABASE  [<Database1>]   
    REPLICA ON   
       'COMPUTER01' WITH   
          (  
@@ -100,8 +100,8 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' ),
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER02, COMPUTER03),
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' )   
+            READ_ONLY_ROUTING_LIST = ('COMPUTER02', 'COMPUTER03'),
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' ),   
          SESSION_TIMEOUT = 10  
          ),   
       'COMPUTER02' WITH   
@@ -112,8 +112,8 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' ),  
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER01, COMPUTER03),  
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' )   
+            READ_ONLY_ROUTING_LIST = ('COMPUTER01', 'COMPUTER03'),  
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' ),
          SESSION_TIMEOUT = 10  
          ),   
       'COMPUTER03' WITH   
@@ -124,8 +124,8 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER01, COMPUTER02),  
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' )  
+            READ_ONLY_ROUTING_LIST = ('COMPUTER01', 'COMPUTER02'),  
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),
          SESSION_TIMEOUT = 10  
          );
 GO  

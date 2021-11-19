@@ -4,7 +4,7 @@ description: OLE DB Driver for SQL Server supports handling password expiration 
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, password expiration"
   - "modifying passwords"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Changing Passwords Programmatically
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

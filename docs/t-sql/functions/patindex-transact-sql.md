@@ -4,10 +4,10 @@ title: "PATINDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "PATINDEX"
   - "PATINDEX_TSQL"
@@ -124,7 +124,7 @@ position
 The following example uses the `[^]` [string operator](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md) to find the position of a character that is not a number, letter, or space.
 
 ```sql
-SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
+SELECT position = PATINDEX('%[^ 0-9A-Za-z]%', 'Please ensure the door is locked!'); 
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 

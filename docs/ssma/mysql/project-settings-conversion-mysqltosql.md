@@ -24,16 +24,14 @@ The Conversion pane is available in the **Project Settings** and **Default Proje
   
 ### Collate Clause  
   
-|||  
-|-|-|  
 |**Term**|**Definition**|  
+|-|-|  
 |**Explicit COLLATE clause conversion**|Explicit COLLATE clause conversion option specifies how to convert explicit COLLATE clauses in MySQL code. Possible Choices: Ignore and Mark with a Warning / Generate an Error<br /><br />**Default Mode**:  Ignore and Mark with a Warning<br /><br />**Optimistic Mode**:  Ignore and Mark with a Warning<br /><br />**Full Mode**:  Ignore and Mark with a Warning|  
   
 ### Column Constraints  
   
-|||  
-|-|-|  
 |**Term**|**Definition**|  
+|-|-|  
 |**Generate Constraint for columns of ENUM data type**|Generates constraint for columns of ENUM data type in the SQL Server or SQL Azure table, if it is not present in the MySQL table. If yes, all converted columns of ENUM data type will be accompanied with CHECK constraint controlling the value.<br /><br />**Default Mode**:   No<br /><br />**Optimistic Mode**:  No<br /><br />**Full Mode**:   Yes|  
 |**Generate Constraint for columns of SET data type**|Generates constraint for columns of SET data type in the SQL Server or SQL Azure table, if it is not present in the MySQL table. If yes, all converted columns of SET data type will be accompanied with CHECK constraint controlling the value.<br /><br />**Default Mode**:   No<br /><br />**Optimistic Mode**:  No<br /><br />**Full Mode**:   Yes|  
 |**Generate Constraint for columns of UNSIGNED numeric data type columns**|Add CHECK for non-negative value to columns of UNSIGNED numeric data types.<br /><br />**Default Mode**:   No<br /><br />**Optimistic Mode**:  No<br /><br />**Full Mode**:   Yes|  
@@ -41,17 +39,15 @@ The Conversion pane is available in the **Project Settings** and **Default Proje
   
 ### Data Types  
   
-|||  
-|-|-|  
 |**Term**|**Definition**|  
+|-|-|  
 |**ENUM data type conversion**|Specifies how MySQL ENUM data type should be converted either as Convert to NVARCHAR or Convert to Numeric<br /><br />**Default Mode**:  Convert to NVARCHAR<br /><br />**Optimistic Mode**:  Convert to NVARCHAR<br /><br />**Full Mode**:  Convert to NVARCHAR|  
 |**SET data type conversion**|Specifies how MySQL SET data type should be converted, Convert to NVARCHAR(L)/Convert to BINARY(L)<br /><br />**Default Mode**: Convert to NVARCHAR(L)<br /><br />**Optimistic Mode**: Convert to NVARCHAR(L)<br /><br />**Full Mode**: Convert to NVARCHAR(L)|  
   
 ### Generic  
   
-|||  
-|-|-|  
 |**Term**|**Definition**|  
+|-|-|  
 |**Columns without DEFAULT value in INSERT and REPLACE**|If 'Yes', all the statements that reference tables using stored engines other than MyISAM and InnoDb should be marked with warning conversion messages.<br /><br />**Default Mode**:  Add to Column list<br /><br />**Optimistic Mode**:  Add to Column list<br /><br />**Full Mode**:   Add to Column list|  
 |**Division by Zero Conversion Produces**|Specifies whether or not to emulate MySQL without ERROR_FOR_DIVISION_BY_ZERO behavior.<br /><br />**Default Mode**:   Error<br /><br />**Optimistic Mode**:  Error<br /><br />**Full Mode**:   NULL|  
 |**IN operator**|Specifies how to convert MySQL IN operator.<br /><br />**Default Mode**:   Always convert to IN<br /><br />**Optimistic Mode**:  Always convert to IN<br /><br />**Full Mode**:   Expand if necessary|  
@@ -62,41 +58,36 @@ The Conversion pane is available in the **Project Settings** and **Default Proje
   
 ### Misc  
   
-|||  
-|-|-|  
 |**Term**|**Definition**|  
+|-|-|  
 |**Default Schema Mapping**|Specifies how to map MySQL databases into SQL Server schemas.<br /><br />**Default Mode**:  Database to Database<br /><br />**Optimistic Mode**:  Database to Database<br /><br />**Full Mode**:  Database to Database|  
   
 ### Procedures and Functions  
   
-|||  
-|-|-|  
 |**Term**|**Definition**|  
+|-|-|  
 |**Default Function conversion**|Specifies if functions should be by default be converted to T-SQL functions or to stored procedures.<br /><br />**Default Mode**:  Convert to Function<br /><br />**Optimistic Mode**:  Convert to Function<br /><br />**Full Mode**:  Convert to Function|  
 |**Generate SET XACT_ABORT ON**|Specifies whether or not SET XACT_ABORT ON needs to be added to the beginning of the converted procedure or trigger.<br /><br />**Default Mode**:  Yes<br /><br />**Optimistic Mode**:  Yes<br /><br />**Full Mode**:  Yes|  
 |**Generate SET NOCOUNT ON**|Specifies whether or not SET NOCOUNT ON needs to be added to the beginning of the converted procedure or trigger.<br /><br />**Default Mode**:  Yes<br /><br />**Optimistic Mode**:  Yes<br /><br />**Full Mode**:  Yes|  
   
 ### Spatial Data Types  
   
-|||  
-|-|-|  
 |**Term**|**Definition**|  
+|-|-|  
 |**Default bounding box {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} for spatial indexes**|Defines default value for {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} parameter of bounding box used in spatial indexes.<br /><br />**Default Mode**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Optimistic Mode**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Full Mode**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**Default grid density for spatial indexes**|Defines default value for LEVEL_1, LEVEL_2, LEVEL_3, and LEVEL_4 of grid density used in spatial indexes.<br /><br />**Default Mode**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**Optimistic Mode**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**Full Mode**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default|  
   
 ### Transactions  
   
-|||  
-|-|-|  
 |**Term**|**Definition**|  
+|-|-|  
 |**Non-transactional tables**|Specifies whether or not all references to table that do not support transactions should be marked with warning conversion messages.<br /><br />**Default Mode**: No<br /><br />**Optimistic Mode**: No<br /><br />**Full Mode**: Yes|  
 |**Transaction isolation level**|Specifies what transaction isolation level should be used for new transactions.<br /><br />**Default Mode**:   Default<br /><br />**Optimistic Mode**:  Default<br /><br />**Full Mode**:   Repeatable read|  
   
 ### Value Control  
   
-|||  
-|-|-|  
 |**Term**|**Definition**|  
+|-|-|  
 |**Character to Numeric conversion**|Specifes how to handle implicit and explicit conversion from Character data type to numeric data types.<br /><br />**Default Mode**:   Optimistic<br /><br />**Optimistic Mode**:  Optimistic<br /><br />**Full Mode**:   Precise|  
 |**Control UNSIGNED numeric values**|Control assigning values to UNSIGNED numeric variables and parameters.<br /><br />**Default Mode**:   No<br /><br />**Optimistic Mode**:  No<br /><br />**Full Mode**:   Yes|  
 |**Control UNSIGNED Subtraction**|Modify negative values inserted into table columns of UNSIGNED datatype.<br /><br />**Default Mode**:   Convert 'as-is'<br /><br />**Optimistic Mode**:  Convert 'as-is'<br /><br />**Full Mode**:   Mark With a Warning|  

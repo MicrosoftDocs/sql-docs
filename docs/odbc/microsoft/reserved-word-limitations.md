@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC]"
   - "desktop database drivers [ODBC]"
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Reserved Keyword Limitations
 

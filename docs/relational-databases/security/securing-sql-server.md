@@ -159,6 +159,7 @@ Windows Defender Application Control (WDAC) prevents unauthorized code execution
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [SQL Server 2012 Security Best Practices - Operational and Administrative Tasks](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
+[Playbook for addressing common security requirements with Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/security-best-practice)   
 [SQL Server Security Blog](/archive/blogs/sqlsecurity/)  
 [Security Best Practice and Label Security Whitepapers](/archive/blogs/sqlsecurity/security-best-practice-and-label-security-whitepapers)  
 [Row-Level Security](../../relational-databases/security/row-level-security.md)   

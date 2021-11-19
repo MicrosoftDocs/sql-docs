@@ -39,7 +39,7 @@ ms.author: chugu
 -   [WMI Data Reader Task](../../integration-services/control-flow/wmi-data-reader-task.md)  
   
 ## WQL Queries  
- WQL is a dialect of SQL with extensions to support WMI event notification and other WMI-specific features. For more information about WQL, see the Windows Management Instrumentation documentation in the [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
+ WQL is a dialect of SQL with extensions to support WMI event notification and other WMI-specific features. For more information about WQL, see the Windows Management Instrumentation documentation in the [MSDN Library](/documentation/).  
   
 > [!NOTE]  
 >  WMI classes vary between versions of Windows.  
@@ -172,4 +172,4 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
  **WQLQuerySource**  
  Select a variable in the list, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md)

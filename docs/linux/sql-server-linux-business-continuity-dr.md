@@ -4,7 +4,7 @@ description: This article is an overview of business continuity solutions for hi
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mihaelab
-ms.date: 10/02/2017
+ms.date: 06/10/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux

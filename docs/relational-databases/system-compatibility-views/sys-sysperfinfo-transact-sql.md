@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysperfinfo_TSQL"
   - "sys.sysperfinfo_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysperfinfo compatibility view"
   - "sysperfinfo system table"
 ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysperfinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

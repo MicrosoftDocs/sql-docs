@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLFetch function [ODBC], Cursor Library"
 ms.assetid: 35a0d493-778b-4fb1-84ee-a13540e2fe0e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFetch (Cursor Library)
 > [!IMPORTANT]  

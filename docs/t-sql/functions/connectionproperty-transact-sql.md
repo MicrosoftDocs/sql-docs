@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CONNECTIONPROPERTY_TSQL"
   - "CONNECTIONPROPERTY"
@@ -16,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "CONNECTIONPROPERTY statement"
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # CONNECTIONPROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 For a request that comes in to the server, this function returns information about the connection properties of the unique connection which supports that request.
   

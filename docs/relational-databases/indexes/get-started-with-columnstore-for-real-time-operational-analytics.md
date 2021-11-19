@@ -1,7 +1,8 @@
 ---
 description: "Get started with Columnstore for real-time operational analytics"
 title: "Get started with Columnstore for real-time operational analytics | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "03/08/2016"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
@@ -14,9 +15,9 @@ ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get started with Columnstore for real-time operational analytics
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] introduces real-time operational analytics, the ability to run both analytics and OLTP workloads on the same database tables at the same time. Besides running analytics in real time, you can also eliminate the need for ETL and a data warehouse.  
+  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduces real-time operational analytics, the ability to run both analytics and OLTP workloads on the same database tables at the same time. Besides running analytics in real time, you can also eliminate the need for ETL and a data warehouse.  
   
 ## Real-Time Operational Analytics Explained  
  Traditionally, businesses have had separate systems for operational (that is, OLTP) and analytics workloads. For such systems, Extract, Transform, and Load (ETL) jobs regularly move the data from the operational store to an analytics store. The analytics data is usually stored in a data warehouse or data mart dedicated to running analytics queries. While this solution has been the standard, it has these three key challenges:  
@@ -101,6 +102,12 @@ There is no time delay when analytics and OLTP workloads run on the same underly
   
 -   [Columnstore index and the merge policy for rowgroups](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)  
   
+## Videos
+ A mini-series on Data Exposed goes into more details on some of the capabilities and considerations. The first video is below, but you can also find [Part 2: Optimize existing databases and applications with operational analytics](https://channel9.msdn.com/Shows/Data-Exposed/Optimize-Existing-Databases-and-Applications-with-Operational-Analytics-in-Azure-SQL-Part-2) and [Part 3: How to create operational analytics with Window Functions](https://channel9.msdn.com/Shows/Data-Exposed/How-to-Create-Operational-Analytics-with-Window-Functions-in-Azure-SQL-Part-3) for more. 
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-Azure-SQL-Enables-Real-time-Operational-Analytics-HTAP-Part-1/player?format=ny]
+ 
+
 ## Performance tip #1: Use filtered indexes to improve query performance  
  Running real-time operational analytics can impact the performance of the OLTP workload. This impact should be minimal. The example below shows how to use filtered indexes to minimize impact of nonclustered columnstore index on transactional workload while still delivering analytics in real time.  
   

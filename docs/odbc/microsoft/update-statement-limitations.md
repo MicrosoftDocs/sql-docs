@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "UPDATE statement limitations [ODBC]"
   - "ODBC SQL grammar, UPDATE statement limitations"
 ms.assetid: 14700aac-e135-4dc0-9138-4b01224461d5
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # UPDATE Statement Limitations
 For the Paradox driver to update a table, the table must have a unique index (Paradox primary key). When you use the Paradox driver without implementing the Borland Database Engine, it is not possible to update a Paradox table.  

@@ -1,7 +1,7 @@
 ---
 title: "Data Sources Supported by Reporting Services | Microsoft Docs"
 description: Learn about the various data sources that are supported by Reporting Services, including Microsoft SQL Server, Oracle, and ODBC.
-ms.date: 11/10/2020
+ms.date: 10/21/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data
@@ -167,7 +167,8 @@ This data source has been deprecated. Use the SQL Server data source type to con
   
  This data provider uses the ADOMD.NET object model to create queries using XML for Analysis (XMLA) version 1.1. Results are returned as a flattened rowset. For more information, see [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md), and [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md). 
  
- For Azure Analysis Services and Power BI Premium dataset data sources, please note you must have multi-factor authentication disabled for the credentials being used to connect to the data source. If you need multi-factor authentication enabled for your environment, review <a href="/azure/active-directory/conditional-access/overview">Azure Active Directory Conditional Access</a> as an option to disable multi-factor authentication for the credentials used in the data source.
+> [!NOTE]
+> For Azure Analysis Services and Power BI Premium dataset data sources, you must have multi-factor authentication (MFA) disabled for the credentials being used to connect to the data source. If you need multi-factor authentication enabled for your environment, review <a href="/azure/active-directory/conditional-access/overview">Azure Active Directory Conditional Access</a> as an option to disable multi-factor authentication for the credentials used in the data source.
   
  When using a Power BI Premium dataset as a data source, only Import mode and DirectQuery are supported.
   
@@ -178,7 +179,7 @@ This data source has been deprecated. Use the SQL Server data source type to con
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  The OLE DB data processing extension requires the choice of an additional data provider layer based on the version of the data source you want to use in your report. If you do not select a specific data provider, a default is provided. Choose a specific data provider through the **Connection Properties** dialog box, accessed through the **Edit** button on the Data Source or Shared Data Source dialog boxes.  
   
- For more information about the OLE DB associated query designer, see [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md). For more information about specific support for OLE DB providers, see [Visual Studio .NET Designer Tool Supports Specific OLE DB Providers](https://support.microsoft.com/default.aspx/kb/811241) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ For more information about the OLE DB associated query designer, see [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md). For more information about specific support for OLE DB providers, see [Visual Studio .NET Designer Tool Supports Specific OLE DB Providers](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/811241) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  [Return to Data sources table](#DataSourcesTable)  
   
@@ -199,7 +200,7 @@ This data source has been deprecated. Use the SQL Server data source type to con
   
  Unnamed parameters that are position-dependent are supported. Named parameters are not supported by this extension. To use named parameters, use the [Oracle](#OracleClient) data processing extension.  
   
- For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://support.microsoft.com/kb/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://support.microsoft.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://mskb.pkisolutions.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  [Return to Data sources table](#DataSourcesTable)  
   
@@ -228,15 +229,11 @@ This data source has been deprecated. Use the SQL Server data source type to con
  [Return to Data sources table](#DataSourcesTable)  
   
 ###  <a name="OracleClient"></a> Oracle Data Processing Extension  
- When you select data source type **Oracle**, you are selecting a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension that uses the Oracle Data Provider directly and no longer goes through System.Data.OracleClient. To retrieve report data from an Oracle database, your administrator must install Oracle client tools. The client application version must be 11g or later. These tools must be installed on the report authoring client to preview reports and on the report server to view published reports.  
+ When you select data source type **Oracle**, you are selecting a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension that uses Oracle's Data Provider directly and no longer uses the Microsoft System.Data.OracleClient provider as it has been deprecated. To retrieve report data from an Oracle database, your administrator must install Oracle client software and the version must be 11g or later. It must be installed on the report authoring client to preview reports and on the report server to view published reports.  
  
-To install the Oracle Client tools you can do the following.
- 
-1.	Go to [Oracle's download site](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html)
-2.	Download ODAC 12c Release 4 (12.1.0.2.4) for Windows (64bit for server, 32bit for tools)
-3.	Install the Data Provider for .NET 4
+ To install the Oracle client software, see [Oracle Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md).
   
- Named parameters are supported by this extension. For Oracle version 11g or later, multivalue parameters are supported. For unnamed parameters that are position-dependent, use the OLE DB data processing extension with the data provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle. For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://support.microsoft.com/kb/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://support.microsoft.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ Named parameters are supported by this extension. For Oracle version 11g or later, multivalue parameters are supported. For unnamed parameters that are position-dependent, use the OLE DB data processing extension with the data provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle. For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://mskb.pkisolutions.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  You can retrieve data from stored procedures with multiple input parameters, but the stored procedure must return only one output cursor. For more information, see [Returning results with Oracle REF CURSORs](/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) in "Retrieve data using a DataReader."
   
@@ -277,7 +274,9 @@ To install the Oracle Client tools you can do the following.
   
 ###  <a name="SharePointList"></a> SharePoint List Data Extension  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint List Data Extension so that you can use SharePoint lists as a source of data in a report. You can retrieve list data from the following:  
-  
+ 
+-   SharePoint Server 2019
+
 -   SharePoint Server 2016  
 
 -   [!INCLUDE[SPS2013](../../includes/sps2013-md.md)]  
@@ -314,5 +313,4 @@ To install the Oracle Client tools you can do the following.
 ## See Also  
  [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
-More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
+More questions? [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

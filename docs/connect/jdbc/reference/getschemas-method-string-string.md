@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getSchemas Method (String, String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -179,7 +179,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### Using Adornments  
- Custom report item classes can also implement a **Microsoft.ReportDesigner.Design.Adornment** class. An adornment allows the custom report item control to provide areas outside the main rectangle of the design surface. These areas can handle user interface events, such as mouse clicks and drag-and-drop operations. The **Adornment** class that is defined in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** namespace is a pass-through implementation of the <xref:System.Windows.Forms.Design.Behavior.Adorner> class found in Windows Forms. For complete documentation on the **Adorner** class, see [Behavior Service Overview](https://go.microsoft.com/fwlink/?LinkId=116673) in the MSDN library. For sample code that implements a **Microsoft.ReportDesigner.Design.Adornment** class, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
+ Custom report item classes can also implement a **Microsoft.ReportDesigner.Design.Adornment** class. An adornment allows the custom report item control to provide areas outside the main rectangle of the design surface. These areas can handle user interface events, such as mouse clicks and drag-and-drop operations. The **Adornment** class that is defined in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** namespace is a pass-through implementation of the <xref:System.Windows.Forms.Design.Behavior.Adorner> class found in Windows Forms. For complete documentation on the **Adorner** class, see [Behavior Service Overview](/previous-versions/ms171826(v=vs.140)) in the MSDN library. For sample code that implements a **Microsoft.ReportDesigner.Design.Adornment** class, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
  For more information about programming and using Windows Forms in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], see these topics in the MSDN Library:  
   
@@ -194,5 +194,4 @@ private void OnProportionalScaling(object sender, EventArgs e)
  [Creating a Custom Report Item Run-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Custom Report Item Class Libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
  [How to: Deploy a Custom Report Item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
-  
   

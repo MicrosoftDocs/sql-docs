@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DecryptByCert_TSQL"
   - "DECRYPTBYCERT"
@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DECRYPTBYCERT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function uses the private key of a certificate to decrypt encrypted data.  
   

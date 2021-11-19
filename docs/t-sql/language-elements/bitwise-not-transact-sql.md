@@ -4,10 +4,10 @@ title: "~ (Bitwise NOT) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "~_TSQL"
   - "bitwise"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "bitwise NOT (~)"
   - "~ (bitwise NOT)"
 ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ~ (Bitwise NOT) (Transact-SQL)
@@ -90,17 +90,17 @@ FROM bitwise;
 (1 row(s) affected)  
 ```  
   
- The binary representation of 170 (`a_int_value` or `A`) is `0000 0000 1010 1010`. Performing the bitwise NOT operation on this value produces the binary result `1111 1111 0101 0101`, which is decimal -171. The binary representation for 75 is `0000 0000 0100 1011`. Performing the bitwise NOT operation produces `1111 1111 1011 0100`, which is decimal -76.  
+ The binary representation of 170 (`a_int_value` or `A`) is `0000 0000 0000 0000 0000 0000 1010 1010`. Performing the bitwise NOT operation on this value produces the binary result `1111 1111 1111 1111 1111 1111 0101 0101`, which is decimal -171. The binary representation for 75 is `0000 0000 0000 0000 0000 0000 0100 1011`. Performing the bitwise NOT operation produces `1111 1111 1111 1111 1111 1111 1011 0100`, which is decimal -76.  
   
 ```  
  (~A)     
-         0000 0000 1010 1010  
-         -------------------  
-         1111 1111 0101 0101  
+         0000 0000 0000 0000 0000 0000 1010 1010  
+         ---------------------------------------  
+         1111 1111 1111 1111 1111 1111 0101 0101  
 (~B)     
-         0000 0000 0100 1011  
-         -------------------  
-         1111 1111 1011 0100  
+         0000 0000 0000 0000 0000 0000 0100 1011  
+         ---------------------------------------  
+         1111 1111 1111 1111 1111 1111 1011 0100  
 ```  
   
  

@@ -43,7 +43,7 @@ ms.custom: "seo-lt-2019"
 1.  Use the [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) system stored procedure to update the list of languages, as follows:  
   
     ```  
-    exec sp_fulltext_service 'update_languages';   
+    EXEC sp_fulltext_service 'update_languages';   
     ```  
   
 ### To unregister uninstalled word breakers and filters  
@@ -51,13 +51,13 @@ ms.custom: "seo-lt-2019"
 1.  Use the **sp_fulltext_service** to update the list of languages, as follows:  
   
     ```  
-    exec sp_fulltext_service 'update_languages'  
+    EXEC sp_fulltext_service 'update_languages';  
     ```  
   
 2.  Use the **sp_fulltext_service** to restart the filter daemon host processes (fdhost.exe), as follows:  
   
     ```  
-    exec sp_fulltext_service 'restart_all_fdhosts';  
+    EXEC sp_fulltext_service 'restart_all_fdhosts';  
     ```  
   
 ### To replace existing word breakers or filters when installing new ones  

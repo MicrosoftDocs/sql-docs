@@ -4,10 +4,10 @@ title: "Transact-SQL Syntax Conventions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "sql13.TSQLExpandPortal.f1"
 dev_langs: 
@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "naming conventions [SQL Server]"
   - "syntax [SQL Server], Transact-SQL"
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -41,9 +41,8 @@ The following table lists and describes conventions that are used in the syntax 
 |UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] keywords.|  
 |_italic_|User-supplied parameters of [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax.|  
 |**bold**|Type database names, table names, column names, index names, stored procedures, utilities, data type names, and text exactly as shown.|  
-|underline|Indicates the default value applied when the clause that contains the underlined value is omitted from the statement.|  
 |&#124; (vertical bar)|Separates syntax items enclosed in brackets or braces. You can use only one of the items.|  
-|`[ ]` (brackets)|Optional syntax items. Don't type the brackets.|  
+|[ ] (brackets)|Optional syntax item.|  
 |{ } (braces)|Required syntax items. Don't type the braces.|  
 |[**,**..._n_]|Indicates the preceding item can be repeated _n_ number of times. The occurrences are separated by commas.|  
 |[..._n_]|Indicates the preceding item can be repeated _n_ number of times. The occurrences are separated by blanks.|  

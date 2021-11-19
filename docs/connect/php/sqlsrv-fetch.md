@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "sqlsrv_fetch"
 apitype: "NA"
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "retrieving data, as a single field"
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

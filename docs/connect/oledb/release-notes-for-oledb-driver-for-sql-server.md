@@ -1,13 +1,12 @@
 ---
 title: "Release notes for OLE DB Driver"
 description: "This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server."
-ms.date: "12/01/2020"
+ms.date: 06/18/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: genemi
-author: mateusz-kmiecik
-ms.author: v-makmie
+author: David-Engel
+ms.author: v-davidengel
 ---
 # Release notes for the Microsoft OLE DB Driver for SQL Server
 
@@ -21,6 +20,33 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## 18.6.0
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2164384)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2164408)  
+
+Released: June 18, 2021
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+    For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2164384&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2164384&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2164384&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2164384&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2164384&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2164384&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2164384&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2164384&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2164384&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2164384&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2164384&clcid=0x40a)  
+    For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2164408&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2164408&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2164408&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2164408&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2164408&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2164408&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2164408&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2164408&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2164408&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2164408&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2164408&clcid=0x40a)  
+
+### Features added
+
+| Feature added | Details |
+| :------------ | :------ |
+| Support for Idle Connection Resiliency | [Idle Connection Resiliency in the OLE DB Driver](features/idle-connection-resiliency.md) |
+| Removal of dependency on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools while reading BCP XML format files | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools is no longer required in order to read BCP XML format files. For more information, see the `BCP_OPTION_FMTXML` option for [IBCPSession::BCPControl](ole-db-interfaces\ibcpsession-bcpcontrol-ole-db.md). |
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| :-------- | :------ |
+| Fixed an issue with endianness of port numbers in data access trace logs. | Fixed a bug, which resulted in port numbers logged having incorrect endianness while doing [Data Access Tracing](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)). |
+| Fixed an accessibility issue. | Fixed an accessibility issue in the user interface of [Universal Data Link (UDL)](help-topics\data-link-pages.md). This accessibility issue resulted in the *Browse* button not being announced by screen reader software. |
+| Fixed crash in scenarios involving Multiple Active Result Sets. | Fixed a bug, which could result in the driver crashing in some scenarios involving [Multiple Active Result Sets (MARS)](features/using-multiple-active-result-sets-mars.md).|
+
+## Previous Releases
 
 ## 18.5.0
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2135577)  
@@ -47,8 +73,6 @@ If you need to download the installer in a language other than the one detected 
 | Fixed a memory leak in the [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) interface. | Fixed a memory leak in the [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) interface involving bulk copy operations of `sql_variant` data type. |
 | Fixed bugs, which resulted in incorrect values being returned for `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` and `SSPROP_MUTUALLYAUTHENTICATED` properties. | Previous versions of the driver returned truncated values of the `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` property. Also, in the `ActiveDirectoryIntegrated` authentication case, the returned value of the `SSPROP_MUTUALLYAUTHENTICATED` property was `VARIANT_FALSE` even when both sides were mutually authenticated.|
 | Fixed a linked server remote table insert bug. | Fixed a bug which caused a linked server remote table insert to fail if the [NOCOUNT server configuration option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) has been enabled. |
-
-## Previous Releases
 
 ## 18.4.0
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2129954)  

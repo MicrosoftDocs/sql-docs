@@ -32,7 +32,8 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
 
 Shrinks the current database's specified data or log file size. You can use it to move data from one file to other files in the same filegroup, which empties the file and allows for its database removal. You can shrink a file to less than its size at creation, resetting the minimum file size to the new value.
   
@@ -61,7 +62,7 @@ The file to be shrunk's logical name.
 The file to be shrunk's identification (ID) number. To get a file ID, use the [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) system function or query the [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) catalog view in the current database.
   
 *target_size*  
-An integer - the file's new megabyte size. If not specified, DBCC SHRINKFILE reduces to the file creation size.
+An integer - the file's new megabyte size. If not specified or 0, DBCC SHRINKFILE reduces to the file creation size.
   
 > [!NOTE]  
 >  You can reduce an empty file's default size using DBCC SHRINKFILE *target_size*. For example, if you create a 5-MB file and then shrink the file to 3 MB while the file is still empty, the default file size is set to 3 MB. This applies only to empty files that have never contained data.  

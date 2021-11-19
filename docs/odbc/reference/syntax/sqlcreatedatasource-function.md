@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLCreateDataSource"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLCreateDataSource function [ODBC]"
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLCreateDataSource Function
 **Conformance**  

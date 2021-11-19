@@ -1,8 +1,8 @@
 ---
-title: "Connecting to an Azure SQL database"
-description: "This article discusses issues when using the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database."
+title: Connecting to an Azure SQL database
+description: This article discusses issues when using the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database.
 ms.custom: ""
-ms.date: "12/18/2020"
+ms.date: 12/18/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connecting to an Azure SQL database
 

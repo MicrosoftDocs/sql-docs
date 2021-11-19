@@ -1,12 +1,10 @@
 ---
 title: "Configure Reporting Services to use a Subject Alternative Name (SAN) | Microsoft Docs"
 description: Learn how to configure SQL Server Reporting Services and Power BI Report Server to use a SAN by modifying the rsreportserver.config file and using the Netsh.exe tool.
-ms.date: 09/27/2020
+ms.date: 06/30/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: security
-
-
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -27,17 +25,17 @@ For more information about TLS settings for Reporting Services, see [Configure T
   
 ## Configure to use a Subject Alternative Name for Web Service URL
   
-1.  Start Report Server Configuration Manager.  
+1. Start Report Server Configuration Manager.  
   
      For more information, see [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  On the **Web Service URL** page, select a TLS/SSL port and TLS/SSL Certificate.  
+2. On the **Web Service URL** page, select a TLS/SSL port and TLS/SSL Certificate.  
   
      ![Report Server Configuration Manager](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Report Server Configuration Manager")  
   
      The configuration manager registers the TLS/SSL certificate for the port.  
   
-3.  Open the rsreportserver.config file.  
+3. Open the rsreportserver.config file.  
   
      For SSRS 2016 Native mode, the file is located by default in the following folder:  
   
@@ -57,7 +55,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
     \Program Files\Microsoft Power BI Report Server\PBIRS\ReportServer  
     ```  
   
-4.  Copy the URL section for the **ReportServerWebService** application.
+4. Copy the URL section for the **ReportServerWebService** application.
   
      For example, the following original URL section is:  
   
@@ -86,28 +84,18 @@ For more information about TLS settings for Reporting Services, see [Configure T
   
     ```  
   
-  > [!TIP]  
->  * For SSRS 2017 and later, the `AccountSid` value is `S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301` and the `AccountName` value is `NT SERVICE\SQLServerReportingServices`.
->  * For Power BI Report Server, the `AccountSid` value is `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663` and the `AccountName` value is `NT SERVICE\PowerBIReportServer`.
+    > [!TIP]  
+    >  * For SSRS 2017 and later, the `AccountSid` value is `S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301` and the `AccountName` value is `NT SERVICE\SQLServerReportingServices`.
+    >  * For Power BI Report Server, the `AccountSid` value is `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663` and the `AccountName` value is `NT SERVICE\PowerBIReportServer`.
+
+5. Repeat this process for the **ReportServerWebApp** URL section.
+5. Save the rsreportserver.config file.  
   
-5.  Save the rsreportserver.config file.  
-  
-6.  Start a command prompt using **Run as Administrator**, and run the Netsh.exe tool.  
-  
-    ```  
-    C:\windows\system32\netsh  
-    ```  
-  
-7.  Switch to the http context by typing the following.  
+6. Start a command prompt using **Run as Administrator**.
+8. Show the existing urlacls by typing the following:
   
     ```  
-    Netsh>http  
-    ```  
-  
-8.  Show the existing urlacls by typing the following:
-  
-    ```  
-    Netsh http>show urlacl  
+    Netsh http show urlacl  
     ```  
   
      An entry such as the following appears.  
@@ -125,26 +113,28 @@ For more information about TLS settings for Reporting Services, see [Configure T
 9. Create a new entry for the Subject Alternative Name, with the same user and SDDL as the existing entry, by typing the following:  
   
     ```  
-    netsh http>add urlacl  url=https://www.myreports.com:443/ReportServer    
+    netsh http add urlacl  url=https://www.myreports.com:443/ReportServer    
     user="NT Service\ReportServer" sddl=D:(A;;GX;;;S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051)  
   
     ```  
-  
+    > [!TIP]
+    > If you copy the code to Notepad to edit, rather than typing it manually, remove the CRLF before pasting the code into the command prompt.
+
 10. For the **Web Portal URL**, create a new entry for the Subject Alternative Name by typing the following:
 
     ```  
-    netsh http>add urlacl  url=https://www.myreports.com:443/Reports  
+    netsh http add urlacl  url=https://www.myreports.com:443/Reports  
     user="NT Service\ReportServer" sddl=D:(A;;GX;;;S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051)  
   
     ```  
-> [!TIP]  
->  * For SSRS 2017 and later, the `user` value is `NT SERVICE\SQLServerReportingServices` and the `sddl` value is `D:(A;;GX;;;S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301)`.
->  * For Power BI Report Server, the `user` value is `NT SERVICE\PowerBIReportServer` and the `sddl` value is `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663`
+    > [!TIP]  
+    >  * For SSRS 2017 and later, the `user` value is `NT SERVICE\SQLServerReportingServices` and the `sddl` value is `D:(A;;GX;;;S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301)`.
+    >  * For Power BI Report Server, the `user` value is `NT SERVICE\PowerBIReportServer` and the `sddl` value is `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663`
 
-> [!NOTE]  
-> For Power BI Report Server, you need to create two additional entries for the Subject Alternative Name by typing the following:
->  * `add urlacl url=https://www.myreports.com:443/PowerBI user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
->  * `add urlacl url=https://www.myreports.com:443/wopi user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
+    > [!NOTE]  
+    > For Power BI Report Server, you need to create two additional entries for the Subject Alternative Name by typing the following:
+    >  * `add urlacl url=https://www.myreports.com:443/PowerBI user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
+    >  * `add urlacl url=https://www.myreports.com:443/wopi user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
 
 11. On the **Report Server Status** page of the Report Server Configuration Manager, Click **Stop** and then click **Start** to restart the report server.  
   
@@ -155,4 +145,4 @@ For more information about TLS settings for Reporting Services, see [Configure T
  [Modify a Reporting Services configuration file](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configure Report Server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ADO, reference"
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3

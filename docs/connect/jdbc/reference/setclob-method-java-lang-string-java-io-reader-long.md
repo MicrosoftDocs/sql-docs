@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: bc9fddea-134e-4440-ba54-a1f74bb40c46
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setClob Method (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

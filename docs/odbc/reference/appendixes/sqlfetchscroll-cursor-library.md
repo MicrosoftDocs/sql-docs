@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLFetchScroll function [ODBC], Cursor Library"
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFetchScroll (Cursor Library)
 > [!IMPORTANT]  

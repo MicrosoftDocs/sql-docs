@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "SQLvariant"
 ms.author: "aanelson"
-ms.reviewer: "alayu, maghan, sstein"
+ms.reviewer: "alayu, maghan"
 ms.custom: 
 ms.date: "04/19/2019"
 ---

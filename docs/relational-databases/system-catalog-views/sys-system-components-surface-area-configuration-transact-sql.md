@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.system_components_surface_area_configuration_TSQL"
   - "system_components_surface_area_configuration"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.system_components_surface_area_configuration catalog view"
 ms.assetid: d9920008-3387-4f9e-8f21-47473f2ba04f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.system_components_surface_area_configuration (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

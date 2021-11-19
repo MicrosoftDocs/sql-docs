@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "log_shipping_secondary_databases_TSQL"
   - "log_shipping_secondary_databases"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_secondary_databases system table"
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # log_shipping_secondary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

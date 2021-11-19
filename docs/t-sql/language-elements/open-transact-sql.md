@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "OPEN_TSQL"
   - "OPEN"
@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "OPEN statement"
   - "Transact-SQL cursors, opening"
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # OPEN (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Opens a [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor and populates the cursor by executing the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement specified on the DECLARE CURSOR or SET *cursor_variable* statement.  
   

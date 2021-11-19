@@ -58,11 +58,10 @@ ms.author: wiassaf
     WITH  
     (  
          IMPORTANCE = MEDIUM  
-    );  
-    
+    )
     --- Assign the workload group to the production processing  
     --- resource pool.  
-    USING pProductionProcessing  
+    USING pProductionProcessing;
     GO  
     
     --- Create a resource pool for off-hours processing  

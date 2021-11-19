@@ -6,7 +6,7 @@ ms.date: "12/30/2019"
 ms.prod: sql
 ms.reviewer: 
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.syssessions_TSQL"
   - "dbo.syssessions"
@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syssessions system table"
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.syssessions (Transact-SQL)
 

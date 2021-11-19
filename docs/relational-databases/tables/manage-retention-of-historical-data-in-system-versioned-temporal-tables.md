@@ -45,9 +45,9 @@ Once you determine your data retention period, your next step is to develop a pl
 ## Using stretch database approach
 
 > [!NOTE]
-> Using the Stretch Database approach only applies to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+> Using the Stretch Database approach only applies to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.
 
 Using the Stretch Database approach, you can stretch some or all of your temporal history tables to Azure and SQL Server will silently move historical data to Azure. Stretch-enabling a history table does not change how you interact with the temporal table in terms of data modification and temporal querying.
 
@@ -64,7 +64,7 @@ You can configure a temporal history table for Stretch using either the Stretch 
 
 ### Using the Stretch Wizard to stretch the entire history table
 
-The easiest method for beginners is to use the Stretch Wizard to enable stretch for the entire database and then select the temporal history table within the Stretch wizard (this example assumes that you have configured the Department table as a system-versioned temporal table in an otherwise empty database). In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you cannot right-click the temporal history table itself and click Stretch.
+The easiest method for beginners is to use the Stretch Wizard to enable stretch for the entire database and then select the temporal history table within the Stretch wizard (this example assumes that you have configured the Department table as a system-versioned temporal table in an otherwise empty database). In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you cannot right-click the temporal history table itself and click Stretch.
 
 1. Right-click your database and point to **Tasks**, point to **Stretch**, and then click **Enable** to launch the wizard.
 2. In the **Select tables** window, select the checkbox for the temporal history table and click Next.
@@ -95,7 +95,7 @@ See also:
 You can also use Transact-SQL to enable Stretch on the local server and [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). You can then [use Transact-SQL to enable Stretch Database on a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). With a database previously enabled for Stretch Database, execute the following Transact-SQL script to stretch an existing system-versioned temporal history table:
 
 ```sql
-ALTER TABLE <history table name>
+ALTER TABLE [<history table name>]
 SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```
 
@@ -115,7 +115,7 @@ RETURN SELECT 1 AS is_eligible
 Next, use the following script to add the filter predicate to the history table and set the migration state to OUTBOUND to enable predicate based data migration for the history table.
 
 ```sql
-ALTER TABLE <history table name>
+ALTER TABLE [<history table name>]
 SET (
       REMOTE_DATA_ARCHIVE = ON
         (
@@ -130,25 +130,27 @@ To maintain a sliding window, you need to make predicate function to be accurate
 
 ```sql
 BEGIN TRAN
+GO
 /*(1) Create new predicate function definition */
-  CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151102(@systemEndTime datetime2)
-   RETURNS TABLE
-    WITH SCHEMABINDING
-      AS
-        RETURN SELECT 1 AS is_eligible
-          WHERE @systemEndTime < CONVERT(datetime2,'2015-11-02T00:00:00', 101)
-  GO
+CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151102(@systemEndTime datetime2)
+  RETURNS TABLE
+  WITH SCHEMABINDING
+    AS
+      RETURN SELECT 1 AS is_eligible
+        WHERE @systemEndTime < CONVERT(datetime2,'2015-11-02T00:00:00', 101)
+GO
  
 /*(2) Set the new function as filter predicate */
-  ALTER TABLE <history table name>
-    SET
-      (
-        REMOTE_DATA_ARCHIVE = ON
-          (
-            FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20151102(SysEndTime),
-              MIGRATION_STATE = OUTBOUND
-          )
-      )
+ALTER TABLE [<history table name>]
+  SET
+    (
+      REMOTE_DATA_ARCHIVE = ON
+        (
+          FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20151102(SysEndTime),
+            MIGRATION_STATE = OUTBOUND
+        )
+    )
+GO
 COMMIT ;
 ```
 
@@ -190,7 +192,7 @@ The detailed steps for the recurring partition maintenance tasks are:
 1. SWITCH OUT: Create a staging table and then switch a partition between the history table and the staging table using the [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) statement with the SWITCH PARTITION argument (see Example C. Switching partitions between tables).
 
     ```sql
-    ALTER TABLE <history table> SWITCH PARTITION 1 TO <staging table>
+    ALTER TABLE [<history table>] SWITCH PARTITION 1 TO [<staging table>]
     ```
 
     After the partition switch, you can optionally archive the data from staging table and then either drop or truncate the staging table to be ready for the next time you need to perform this recurring partition maintenance task.
@@ -368,14 +370,15 @@ DECLARE @periodColumnName sysname
 
 /*Generate script to discover history table name and end of period column for given temporal table name*/
 EXECUTE sp_executesql
-    N'SELECT @hst_tbl_nm = t2.name, @hst_sch_nm = s.name, @period_col_nm = c.name
+    N'SELECT @hst_tbl_nm = t2.name, @hst_sch_nm = s2.name, @period_col_nm = c.name
         FROM sys.tables t1
             JOIN sys.tables t2 on t1.history_table_id = t2.object_id
-        JOIN sys.schemas s on t2.schema_id = s.schema_id
-            JOIN sys.periods p on p.object_id = t1.object_id
+        JOIN sys.schemas s1 on t1.schema_id = s1.schema_id
+        JOIN sys.schemas s2 on t2.schema_id = s2.schema_id
+           JOIN sys.periods p on p.object_id = t1.object_id
            JOIN sys.columns c on p.end_column_id = c.column_id and c.object_id = t1.object_id
                   WHERE
-                 t1.name = @tblName and s.name = @schName'
+                 t1.name = @tblName and s1.name = @schName'
                 , N'@tblName sysname
                 , @schName sysname
                 , @hst_tbl_nm sysname OUTPUT
@@ -414,7 +417,7 @@ COMMIT;
 ## Using temporal history retention policy approach
 
 > [!NOTE]
-> Using the Temporal History Retention Policy approach applies to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and SQL Server 2017 starting from CTP 1.3.
+> Using the Temporal History Retention Policy approach applies to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and SQL Server 2017 starting from CTP 1.3.
 
 Temporal history retention can be configured at the individual table level, which allows users to create flexible aging polices. Applying temporal retention is simple: it requires only one parameter to be set during table creation or schema change.
 
@@ -437,7 +440,7 @@ FROM sys.databases
 Database flag **is_temporal_history_retention_enabled** is set to ON by default, but users can change it with ALTER DATABASE statement. It is also automatically set to OFF after point in time restore operation. To enable temporal history retention cleanup for your database, execute the following statement:
 
 ```sql
-ALTER DATABASE <myDB>
+ALTER DATABASE [<myDB>]
 SET TEMPORAL_HISTORY_RETENTION ON
 ```
 

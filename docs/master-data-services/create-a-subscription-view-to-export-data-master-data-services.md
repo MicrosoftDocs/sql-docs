@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "subscription views [Master Data Services], creating"
   - "creating subscription views [Master Data Services]"
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Create a Subscription View to Export Data (Master Data Services)

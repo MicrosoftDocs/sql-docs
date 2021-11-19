@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Database Requirements (Master Data Services)
@@ -30,9 +30,9 @@ ms.author: lle
  The [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database can be hosted on the following editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
  
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Enterprise (64-bit) x64  
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Enterprise (64-bit) x64  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Developer (64-bit) x64  
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Developer (64-bit) x64  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence (64-bit) x64  
   

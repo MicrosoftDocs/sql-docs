@@ -22,7 +22,7 @@ ms.author: chugu
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  The CDC source reads a range of change data from [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] change tables and delivers the changes downstream to other SSIS components.  
+  The CDC source reads a range of change data from [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] change tables and delivers the changes downstream to other SSIS components.  
   
  The range of change data read by the CDC source is called the CDC Processing Range and is determine by the CDC Control task that is executed before the current data flow starts. The CDC Processing Range is derived from the value of a package variable that maintains the state of the CDC processing for a group of tables.  
   
@@ -120,7 +120,7 @@ use <cdc-enabled-database-name>
 -   [Extract Change Data Using the CDC Source](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
 ## CDC Source Editor (Connection Manager Page)
-  Use the **Connection Manager** page of the **CDC Source Editor** dialog box to select the ADO.NET connection manager for the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database that the CDC source reads change rows from (the CDC database). Once the CDC database is selected you need to select a captured table in the database.  
+  Use the **Connection Manager** page of the **CDC Source Editor** dialog box to select the ADO.NET connection manager for the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] database that the CDC source reads change rows from (the CDC database). Once the CDC database is selected you need to select a captured table in the database.  
   
  For more information about the CDC source, see [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   

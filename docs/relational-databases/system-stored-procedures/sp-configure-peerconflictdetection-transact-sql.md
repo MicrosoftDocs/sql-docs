@@ -2,12 +2,12 @@
 description: "sp_configure_peerconflictdetection (Transact-SQL)"
 title: "sp_configure_peerconflictdetection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/04/2017"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_configure_peerconflictdetection_TSQL"
   - "sp_configure_peerconflictdetection"
@@ -18,9 +18,13 @@ author: markingmyname
 ms.author: maghan
 ---
 # sp_configure_peerconflictdetection (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Configures conflict detection for a publication that is involved in a peer-to-peer transactional replication topology. For more information, see [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md). This stored procedure is executed at the Publisher on the publication database.  
+
+> [!IMPORTANT]
+> You can't use `sp_configure_peerconflictdetection` to enable `lastwriter`. To change the conflict resolution of an existing replication topology, drop the publication and recreate it.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

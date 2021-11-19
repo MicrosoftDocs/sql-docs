@@ -12,8 +12,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "DiffGrams [SQLXML], about DiffGrams"
 ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Guidelines and Limitations of DiffGrams in SQLXML

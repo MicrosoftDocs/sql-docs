@@ -2,11 +2,11 @@
 description: "MSSQLSERVER_18483"
 title: MSSQLSERVER_18483
 ms.custom: ""
-ms.date: 11/20/2020
+ms.date: 12/25/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "18483 (Database Engine error)"
 ms.assetid: 
@@ -96,9 +96,9 @@ On the computer where you deployed [!INCLUDE[ssNoVersion](../../includes/ssnover
 10. In the **Wizard Actions** dialog box, click **Next**.
 11. In the **Complete the Wizard** dialog box, click **Finish**.
 
-## See Also
+## See also
 
-- [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](/sql/database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server)
-- [@@SERVERNAME (Transact-SQL)](/sql/t-sql/functions/servername-transact-sql)
-- [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql)
-- [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql)
+- [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)
+- [@@SERVERNAME (Transact-SQL)](../../t-sql/functions/servername-transact-sql.md)
+- [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)
+- [sp_addserver (Transact-SQL)](../system-stored-procedures/sp-addserver-transact-sql.md)

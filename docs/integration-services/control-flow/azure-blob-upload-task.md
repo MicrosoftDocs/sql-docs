@@ -20,7 +20,7 @@ ms.author: chugu
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-The **Azure Blob Upload Task** enables an SSIS package to upload files to an Azure blob storage.
+The **Azure Blob Upload Task** enables an SSIS package to upload files to Azure Blob Storage.
     
 To add an **Azure Blob Upload Task**, drag-drop it to the SSIS Designer, and double-click or right-click and click **Edit** to see the following **Azure Blob Upload Task Editor** dialog box.  
   

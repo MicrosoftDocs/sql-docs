@@ -134,7 +134,7 @@ In this section, you create a table report, a data source, and a dataset. When y
   
 1.  In the Report Data pane, expand the **Datasets** folder.  
   
-2.  Right-click **DataSet1** and click **Dataset Properties.**  
+2.  Right-click **DataSet1** and click **Dataset Properties**.  
 
     ![Screenshot showing how access the Dataset Properties in report builder.](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
@@ -315,7 +315,7 @@ In this section, you create the CountryRegion dataset and use the **Lookup** fun
   
 2.  In the Report Data pane, click **New** and then click **Dataset**.  
   
-3.  In **Dataset Properties, click **Use a dataset embedded in my report**.  
+3.  In **Dataset Properties**, click **Use a dataset embedded in my report**.  
   
 4.  In the **Data source** list, select ExpressionsDataSource.  
   

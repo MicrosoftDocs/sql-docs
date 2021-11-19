@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data-tier application [SQL Server], view"
   - "view DAC"
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Validate a DAC Package
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

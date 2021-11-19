@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_servershareddrives"
   - "fn_servershareddrives_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "names [SQL Server], shared drives"
   - "sys.fn_serversharedrives function"
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_servershareddrives (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

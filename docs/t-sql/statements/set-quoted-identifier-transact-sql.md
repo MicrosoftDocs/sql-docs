@@ -4,10 +4,10 @@ title: "SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "QUOTED_IDENTIFIER_TSQL"
   - "SET_QUOTED_IDENTIFIER_TSQL"
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "ISO delimited identifiers rules"
   - "SET QUOTED_IDENTIFIER statement"
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET QUOTED_IDENTIFIER (Transact-SQL)
@@ -90,7 +90,9 @@ To view the current setting for this setting, run the following query:
 ```sql
 DECLARE @QUOTED_IDENTIFIER VARCHAR(3) = 'OFF';
 IF ( (256 & @@OPTIONS) = 256 ) 
-SET @QUOTED_IDENTIFIER = 'ON';
+BEGIN
+    SET @QUOTED_IDENTIFIER = 'ON';
+END
 
 SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 ```

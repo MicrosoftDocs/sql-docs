@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLConfigDriver"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLConfigDriver function [ODBC]"
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLConfigDriver Function
 **Conformance**  

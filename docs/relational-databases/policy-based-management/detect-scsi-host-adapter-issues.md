@@ -21,6 +21,6 @@ ms.author: vanto
 ## Best Practices Recommendations  
  Review the following Microsoft Knowledge Base article for more information about how to troubleshoot this error:  
   
--   [Microsoft Knowledge Base article 311081](https://go.microsoft.com/fwlink/?linkid=117744)  
+-   [Microsoft Knowledge Base article 311081](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/311081)  
   
   

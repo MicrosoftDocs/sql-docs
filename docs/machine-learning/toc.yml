@@ -1,3 +1,4 @@
+items:
 - name: SQL machine learning documentation
   href: ../machine-learning/index.yml
 
@@ -52,7 +53,7 @@
   - name: Set up a Python client
     href: ../machine-learning/python/setup-python-client-tools-sql.md
   - name: Set up an R client
-    href: ../machine-learning/r/set-up-a-data-science-client.md
+    href: ../machine-learning/r/set-up-data-science-client.md
   - name: Install on Azure VM
     href: ../machine-learning/install/sql-machine-learning-azure-virtual-machine.md
   - name: Install standalone server
@@ -211,10 +212,6 @@
       href: ../machine-learning/tutorials/demo-data-iris-in-sql.md
     - name: NYC Taxi data set
       href: ../machine-learning/tutorials/demo-data-nyctaxi-in-sql.md
-- name: Samples >>
-  href: https://github.com/Microsoft/sql-server-samples
-- name: Solutions
-  href: ../machine-learning/tutorials/data-science-scenarios-and-solution-templates.md
 - name: Concepts
   items:
   - name: Extensibility framework
@@ -250,11 +247,9 @@
     - name: R
       items:
       - name: Load R objects using ODBC
-        href: ../machine-learning/r/save-and-load-r-objects-from-sql-server-using-odbc.md
-      - name: Predictive modeling with R
-        href: ../machine-learning/r/data-exploration-and-predictive-modeling-with-r.md
+        href: ../machine-learning/data-exploration/save-and-load-r-objects-from-sql-server-using-odbc.md
       - name: Create multiple models using rxExecBy
-        href: ../machine-learning/r/creating-multiple-models-using-rxexecby.md
+        href: ../machine-learning/data-exploration/creating-multiple-models-using-rxexecby.md
   - name: Data type conversions
     items:
     - name: Python to SQL
@@ -263,14 +258,8 @@
       href: ../machine-learning/r/r-libraries-and-data-types.md
   - name: Deploy
     items:
-    - name: Operationalize using stored procedures
-      href: ../machine-learning/r/operationalizing-your-r-code.md
-    - name: Create SSIS and SSRS workflows with R
-      href: ../machine-learning/r/creating-workflows-that-use-r-in-sql-server.md
-    - name: Convert R code for SQL Server
-      href: ../machine-learning/r/converting-r-code-for-use-in-sql-server.md
-    - name: Create a stored procedure using sqlrutils
-      href: ../machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md
+    - name: Modify R/Python code for SQL Server
+      href: ../machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md
   - name: Predictions
     items:
     - name: Native scoring with PREDICT T-SQL
@@ -353,20 +342,238 @@
   items:
   - name: Python packages
     items:
+    - name: azureml-model-management-sdk
+      items:
+      - name: Package overview
+        href: ../machine-learning/python/reference/azureml-model-management-sdk/azureml-model-management-sdk.md
+      - name: DeployClient
+        href: ../machine-learning/python/reference/azureml-model-management-sdk/deploy-client.md
+      - name: MLServer
+        href: ../machine-learning/python/reference/azureml-model-management-sdk/mlserver.md
+      - name: Operationalization
+        href: ../machine-learning/python/reference/azureml-model-management-sdk/operationalization.md
+      - name: OperationalizationDefinition
+        href: ../machine-learning/python/reference/azureml-model-management-sdk/operationalization-definition.md
+      - name: ServiceDefinition
+        href: ../machine-learning/python/reference/azureml-model-management-sdk/service-definition.md
+      - name: RealtimeDefinition
+        href: ../machine-learning/python/reference/azureml-model-management-sdk/realtime-definition.md
+      - name: Service
+        href: ../machine-learning/python/reference/azureml-model-management-sdk/service.md
+      - name: ServiceResponse
+        href: ../machine-learning/python/reference/azureml-model-management-sdk/service-response.md
+      - name: Batch
+        href: ../machine-learning/python/reference/azureml-model-management-sdk/batch.md
+      - name: BatchResponse
+        href: ../machine-learning/python/reference/azureml-model-management-sdk/batch-response.md
+    - name: microsoftml
+      items:
+      - name: Package overview
+        href: ../machine-learning/python/ref-py-microsoftml.md
+      - name: adadelta_optimizer
+        href: ../machine-learning/python/reference/microsoftml/adadelta-optimizer.md
+      - name: avx_math
+        href: ../machine-learning/python/reference/microsoftml/avx-math.md
+      - name: categorical
+        href: ../machine-learning/python/reference/microsoftml/categorical.md
+      - name: categorical_hash
+        href: ../machine-learning/python/reference/microsoftml/categorical-hash.md
+      - name: clr_math
+        href: ../machine-learning/python/reference/microsoftml/clr-math.md
+      - name: concat
+        href: ../machine-learning/python/reference/microsoftml/concat.md
+      - name: 'count_select '
+        href: ../machine-learning/python/reference/microsoftml/count-select.md
+      - name: custom
+        href: ../machine-learning/python/reference/microsoftml/custom.md
+      - name: drop_columns
+        href: ../machine-learning/python/reference/microsoftml/drop-columns.md
+      - name: extract_pixels
+        href: ../machine-learning/python/reference/microsoftml/extract-pixels.md
+      - name: featurize_image
+        href: ../machine-learning/python/reference/microsoftml/featurize-image.md
+      - name: featurize_text
+        href: ../machine-learning/python/reference/microsoftml/featurize-text.md
+      - name: get_sentiment
+        href: ../machine-learning/python/reference/microsoftml/get-sentiment.md
+      - name: gpu_math
+        href: ../machine-learning/python/reference/microsoftml/gpu-math.md
+      - name: hinge_loss
+        href: ../machine-learning/python/reference/microsoftml/hinge-loss.md
+      - name: load_image
+        href: ../machine-learning/python/reference/microsoftml/load-image.md
+      - name: log_loss
+        href: ../machine-learning/python/reference/microsoftml/log-loss.md
+      - name: mkl_math
+        href: ../machine-learning/python/reference/microsoftml/mkl-math.md
+      - name: mutualinformation_select
+        href: ../machine-learning/python/reference/microsoftml/mutualinformation-select.md
+      - name: n_gram
+        href: ../machine-learning/python/reference/microsoftml/n-gram.md
+      - name: n_gram_hash
+        href: ../machine-learning/python/reference/microsoftml/n-gram-hash.md
+      - name: predefined
+        href: ../machine-learning/python/reference/microsoftml/predefined.md
+      - name: resize_image
+        href: ../machine-learning/python/reference/microsoftml/resize-image.md
+      - name: rx_ensemble
+        href: ../machine-learning/python/reference/microsoftml/rx-ensemble.md
+      - name: rx_fast_forest
+        href: ../machine-learning/python/reference/microsoftml/rx-fast-forest.md
+      - name: rx_fast_linear
+        href: ../machine-learning/python/reference/microsoftml/rx-fast-linear.md
+      - name: rx_fast_trees
+        href: ../machine-learning/python/reference/microsoftml/rx-fast-trees.md
+      - name: rx_featurize
+        href: ../machine-learning/python/reference/microsoftml/rx-featurize.md
+      - name: rx_logistic_regression
+        href: ../machine-learning/python/reference/microsoftml/rx-logistic-regression.md
+      - name: rx_neural_network
+        href: ../machine-learning/python/reference/microsoftml/rx-neural-network.md
+      - name: rx_oneclass_svm
+        href: ../machine-learning/python/reference/microsoftml/rx-oneclass-svm.md
+      - name: rx_predict
+        href: ../machine-learning/python/reference/microsoftml/rx-predict.md
+      - name: select_columns
+        href: ../machine-learning/python/reference/microsoftml/select-columns.md
+      - name: sgd_optimizer
+        href: ../machine-learning/python/reference/microsoftml/sgd-optimizer.md
+      - name: smoothed_hinge_loss
+        href: ../machine-learning/python/reference/microsoftml/smoothed-hinge-loss.md
+      - name: squared_loss
+        href: ../machine-learning/python/reference/microsoftml/squared-loss.md
+      - name: sse_math
+        href: ../machine-learning/python/reference/microsoftml/sse-math.md
     - name: revoscalepy
       href: ../machine-learning/python/ref-py-revoscalepy.md
-    - name: microsoftml
-      href: ../machine-learning/python/ref-py-microsoftml.md
+
   - name: R packages
     items:
     - name: RevoScaleR
       href: ../machine-learning/r/ref-r-revoscaler.md
     - name: MicrosoftML
-      href: ../machine-learning/r/ref-r-microsoftml.md
+      items:
+      - name: Package overview
+        href: ../machine-learning/r/ref-r-microsoftml.md
+      - name: categorical
+        href: ../machine-learning/r/reference/microsoftml/categorical.md
+      - name: categoricalHash
+        href: ../machine-learning/r/reference/microsoftml/categoricalhash.md
+      - name: concat
+        href: ../machine-learning/r/reference/microsoftml/concat.md
+      - name: dropColumns
+        href: ../machine-learning/r/reference/microsoftml/dropcolumns.md
+      - name: ensembleControl
+        href: ../machine-learning/r/reference/microsoftml/ensemblecontrol.md
+      - name: extractPixels
+        href: ../machine-learning/r/reference/microsoftml/extractpixels.md
+      - name: fastForest
+        href: ../machine-learning/r/reference/microsoftml/fastforest.md
+      - name: fastLinear
+        href: ../machine-learning/r/reference/microsoftml/fastlinear.md
+      - name: fastTrees
+        href: ../machine-learning/r/reference/microsoftml/fasttrees.md
+      - name: featurizeImage
+        href: ../machine-learning/r/reference/microsoftml/featurizeimage.md
+      - name: featurizeText
+        href: ../machine-learning/r/reference/microsoftml/featurizetext.md
+      - name: getNetDefinition
+        href: ../machine-learning/r/reference/microsoftml/getnetdefinition.md
+      - name: getSampleDataDir
+        href: ../machine-learning/r/reference/microsoftml/getsampledatadir.md
+      - name: getSentiment
+        href: ../machine-learning/r/reference/microsoftml/getsentiment.md
+      - name: kernel
+        displayName: linearKernel,polynomialKernel,rbfKernel,sigmoidKernel
+        href: ../machine-learning/r/reference/microsoftml/kernel.md
+      - name: loadImage
+        href: ../machine-learning/r/reference/microsoftml/loadimage.md
+      - name: logisticRegression
+        href: ../machine-learning/r/reference/microsoftml/logisticregression.md
+      - name: loss
+        displayName: expLoss,hingeLoss,logLoss,poissonLoss,smoothHingeLoss,squaredLoss
+        href: ../machine-learning/r/reference/microsoftml/loss.md
+      - name: minCount
+        href: ../machine-learning/r/reference/microsoftml/mincount.md
+      - name: mlModel
+        href: ../machine-learning/r/reference/microsoftml/mlmodel.md
+      - name: mutualInformation
+        href: ../machine-learning/r/reference/microsoftml/mutualinformation.md
+      - name: NeuralNet
+        href: ../machine-learning/r/reference/microsoftml/neuralnet.md
+      - name: ngram
+        href: ../machine-learning/r/reference/microsoftml/ngram.md
+      - name: OneClassSvm
+        href: ../machine-learning/r/reference/microsoftml/oneclasssvm.md
+      - name: optimizer
+        href: ../machine-learning/r/reference/microsoftml/optimizer.md
+      - name: resizeImage
+        href: ../machine-learning/r/reference/microsoftml/resizeimage.md
+      - name: rxEnsemble
+        href: ../machine-learning/r/reference/microsoftml/rxensemble.md
+      - name: rxFastForest
+        href: ../machine-learning/r/reference/microsoftml/rxfastforest.md
+      - name: rxFastLinear
+        href: ../machine-learning/r/reference/microsoftml/rxfastlinear.md
+      - name: rxFastTrees
+        href: ../machine-learning/r/reference/microsoftml/rxfasttrees.md
+      - name: rxFeaturize
+        href: ../machine-learning/r/reference/microsoftml/rxfeaturize.md
+      - name: rxHashEnv
+        href: ../machine-learning/r/reference/microsoftml/rxhashenv.md
+      - name: rxLogisticRegression
+        href: ../machine-learning/r/reference/microsoftml/rxlogisticregression.md
+      - name: rxNeuralNet
+        href: ../machine-learning/r/reference/microsoftml/rxneuralnet.md
+      - name: rxOneClassSvm
+        href: ../machine-learning/r/reference/microsoftml/rxoneclasssvm.md
+      - name: rxPredict
+        href: ../machine-learning/r/reference/microsoftml/rxpredict.md
+      - name: selectColumns
+        href: ../machine-learning/r/reference/microsoftml/selectcolumns.md
+      - name: selectFeatures
+        href: ../machine-learning/r/reference/microsoftml/selectfeatures.md
     - name: olapR
-      href: ../machine-learning/r/ref-r-olapr.md
+      href: 
+      items:
+      - name: Package overview
+        href: ../machine-learning/r/ref-r-olapr.md
+      - name: Execute2D
+        href: ../machine-learning/r/reference/olapr/execute2d.md
+      - name: ExecuteMD
+        href: ../machine-learning/r/reference/olapr/executemd.md
+      - name: Explore
+        href: ../machine-learning/r/reference/olapr/explore.md
+      - name: OlapConnection
+        href: ../machine-learning/r/reference/olapr/olapconnection.md
+      - name: Query
+        href: ../machine-learning/r/reference/olapr/query.md
     - name: sqlrutils
-      href: ../machine-learning/r/ref-r-sqlrutils.md
+      items:
+      - name: Package overview
+        href: ../machine-learning/r/ref-r-sqlrutils.md
+      - name: Create a stored procedure from R code
+        href: ../machine-learning/r/reference/sqlrutils/how-to-create-stored-procedure-from-r.md
+      - name: executeStoredProcedure
+        href: ../machine-learning/r/reference/sqlrutils/executestoredprocedure.md
+      - name: getInputParameters
+        href: ../machine-learning/r/reference/sqlrutils/getinputparameters.md
+      - name: InputData
+        href: ../machine-learning/r/reference/sqlrutils/inputdata.md
+      - name: InputParameter
+        href: ../machine-learning/r/reference/sqlrutils/inputparameter.md
+      - name: OutputData
+        href: ../machine-learning/r/reference/sqlrutils/outputdata.md
+      - name: OutputParameter
+        href: ../machine-learning/r/reference/sqlrutils/outputparameter.md
+      - name: registerStoredProcedure
+        href: ../machine-learning/r/reference/sqlrutils/registerstoredprocedure.md
+      - name: setInputDataQuery
+        href: ../machine-learning/r/reference/sqlrutils/setinputdataquery.md
+      - name: setInputParameterValue
+        href: ../machine-learning/r/reference/sqlrutils/setinputparametervalue.md
+      - name: StoredProcedure
+        href: ../machine-learning/r/reference/sqlrutils/storedprocedure.md
 - name: Resources
   items:
   - name: Release notes 2019 >
@@ -379,8 +586,6 @@
     href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
   - name: Troubleshooting
     items:
-    - name: Troubleshooting overview
-      href: ../machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md
     - name: Known issues
       href: ../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md
     - name: Collect data for troubleshooting

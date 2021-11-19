@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7d9d7b05-582a-41df-b2c4-ec4a64d49752
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getDateTimeOffset Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

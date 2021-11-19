@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DIALOG CONVERSATION"
   - "DIALOG"
@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], conversations"
   - "starting conversations"
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

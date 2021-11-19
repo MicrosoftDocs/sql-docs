@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_syspolicy_unsubscribe_from_policy_category_TSQL"
   - "sp_syspolicy_unsubscribe_from_policy_category"

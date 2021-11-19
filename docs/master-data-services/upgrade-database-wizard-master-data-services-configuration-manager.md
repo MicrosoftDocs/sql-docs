@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Upgrade Database Wizard (Master Data Services Configuration Manager)

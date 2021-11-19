@@ -1,8 +1,8 @@
 ---
-title: "Database-Level Roles | Microsoft Docs"
+title: "Database-Level Roles"
 description: SQL Server provides several roles that are security principals that group other principals to manage the permissions in your databases.
 ms.custom: ""
-ms.date: 06/03/2020
+ms.date: 10/12/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, azure-synapse, pdw"
 ms.reviewer: ""
@@ -35,7 +35,6 @@ helpviewer_keywords:
   - "fixed database roles [SQL Server]"
   - "authentication [SQL Server], roles"
   - "groups [SQL Server], roles"
-ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -73,9 +72,9 @@ For a list of all the permissions, see the [Database Engine Permissions](https:/
 |**db_backupoperator**|Members of the **db_backupoperator** fixed database role can back up the database.|  
 |**db_ddladmin**|Members of the **db_ddladmin** fixed database role can run any Data Definition Language (DDL) command in a database.|  
 |**db_datawriter**|Members of the **db_datawriter** fixed database role can add, delete, or change data in all user tables.|  
-|**db_datareader**|Members of the **db_datareader** fixed database role can read all data from all user tables.|  
+|**db_datareader**|Members of the **db_datareader** fixed database role can read all data from all user tables and views. User objects can exist in any schema except *sys* and *INFORMATION_SCHEMA*. |  
 |**db_denydatawriter**|Members of the **db_denydatawriter** fixed database role cannot add, modify, or delete any data in the user tables within a database.|  
-|**db_denydatareader**|Members of the **db_denydatareader** fixed database role cannot read any data in the user tables within a database.|  
+|**db_denydatareader**|Members of the **db_denydatareader** fixed database role cannot read any data from the user tables and views within a database.|  
 
 The permissions assigned to the fixed-database roles cannot be changed. The following figure shows the permissions assigned to the fixed-database roles:
 
@@ -87,7 +86,8 @@ These database roles exist only in the virtual master database. Their permission
 
 |Role name|Description|  
 |--------------------|-----------------|
-|**dbmanager** | Can create and delete databases. A member of the dbmanager role that creates a database, becomes the owner of that database which allows that user to connect to that database as the dbo user. The dbo user has all database permissions in the database. Members of the dbmanager role do not necessarily have permission to access databases that they do not own.|
+|**dbmanager** | Can create and delete databases. A member of the **dbmanager** role that creates a database, becomes the owner of that database which allows that user to connect to that database as the dbo user. The dbo user has all database permissions in the database. Members of the **dbmanager** role do not necessarily have permission to access databases that they do not own.|
+|**db_exporter** | *Applies only to Azure Synapse Analytics dedicated SQL pools (formerly SQL DW).*<BR>Members of the **db_exporter** fixed database role can perform all data export activities. Permissions granted via this role are CREATE TABLE, ALTER ANY SCHEMA, ALTER ANY EXTERNAL DATA SOURCE, ALTER ANY EXTERNAL FILE FORMAT. |
 |**loginmanager** | Can create and delete logins in the virtual master database.|
 
 > [!NOTE]
@@ -136,7 +136,40 @@ Some database roles are not applicable to Azure SQL or Synapse SQL:
   
 ## public Database Role  
  Every database user belongs to the **public** database role. When a user has not been granted or denied specific permissions on a securable object, the user inherits the permissions granted to **public** on that object. Database users cannot be removed from the **public** role. 
-  
+ 
+ 
+## <a name="_examples"></a> Examples
+
+The examples in this section show how to work with database-level roles.  
+
+### A.  Adding a User to a database-level role
+
+The following example adds the User 'Ben' to the fixed database-level role `db_datareader`. 
+
+```sql  
+ALTER ROLE db_datareader
+    ADD MEMBER Ben;  
+GO
+```  
+
+### B.  Listing all database-principals which are members of a database-level role
+
+The following statement returns all members of any database role. 
+
+```sql  
+SELECT    roles.principal_id                            AS RolePrincipalID
+    ,    roles.name                                    AS RolePrincipalName
+    ,    database_role_members.member_principal_id    AS MemberPrincipalID
+    ,    members.name                                AS MemberPrincipalName
+FROM sys.database_role_members AS database_role_members  
+JOIN sys.database_principals AS roles  
+    ON database_role_members.role_principal_id = roles.principal_id  
+JOIN sys.database_principals AS members  
+    ON database_role_members.member_principal_id = members.principal_id;  
+GO
+```  
+
+ 
 ## Related Content  
  [Security Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
   

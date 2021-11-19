@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;NESTLEVEL (Transact-SQL)"
+description: "@@NESTLEVEL (Transact-SQL)"
 title: "@@NESTLEVEL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/17/2017"
@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@NESTLEVEL"
   - "@@NESTLEVEL_TSQL"
@@ -22,7 +22,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # &#x40;&#x40;NESTLEVEL (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the nesting level of the current stored procedure execution (initially 0) on the local server.  
   

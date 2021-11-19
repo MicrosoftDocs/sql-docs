@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], stored procedures"
 ms.assetid: 24070039-03ab-4623-a681-6308802eb399
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Revoking and Granting Rights When Using Stored Procedures
 > [!IMPORTANT]  

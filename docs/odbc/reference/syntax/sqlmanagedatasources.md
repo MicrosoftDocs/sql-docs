@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLManageDataSources"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLManageDataSources [ODBC]"
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLManageDataSources
 **Conformance**  

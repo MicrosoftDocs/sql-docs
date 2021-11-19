@@ -1,14 +1,16 @@
 ---
 title: "What's new"
 description: "See what's new in Microsoft Analytics Platform System, a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse."
-author: "mzaman1"
+author: charlesfeddersen
 ms.prod: "sql"
 ms.technology: data-warehouse
 ms.topic: "conceptual"
 ms.date: "06/27/2018"
-ms.author: "murshedz"
+ms.author: charlesf
 ms.reviewer: "martinle"
-ms.custom: seo-dt-2019
+ms.custom:
+  - seo-dt-2019
+  - intro-whats-new
 ---
 # What's new in Analytics Platform System, a scale-out MPP data warehouse
 See what's new in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
@@ -136,7 +138,7 @@ New APS SSIS destination adapter that supports SQL Server 2017 as deployment tar
 Release date - July 2018
 
 ### DBCC commands do not consume concurrency slots (behavior change)
-APS supports a subset of the T-SQL [DBCC commands](../t-sql/database-console-commands/dbcc-transact-sql.md) such as [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md). Previously, these commands would consume a [concurrency slot](./workload-management.md?view=aps-pdw-2016-au7#concurrency-slots) reducing the number of user loads/queries that could be executed. The `DBCC` commands are now run in a local queue that do not consume a user concurrency slot improving overall query execution performance.
+APS supports a subset of the T-SQL [DBCC commands](../t-sql/database-console-commands/dbcc-transact-sql.md) such as [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md). Previously, these commands would consume a [concurrency slot](./workload-management.md?view=aps-pdw-2016-au7&preserve-view=true&#concurrency-slots) reducing the number of user loads/queries that could be executed. The `DBCC` commands are now run in a local queue that do not consume a user concurrency slot improving overall query execution performance.
 
 ### Replaces some metadata calls with catalog objects
 Using catalog objects for metadata calls instead of using SMO has shown performance improvement in APS. Starting from CU7.1, some of these metadata calls now use catalog objects by default. This behavior can be turned off by [feature switch](appliance-feature-switch.md) if customers using metadata queries run into any issues.
@@ -284,4 +286,3 @@ The proper formats have at least two big advantages.  One big advantage is that 
 
 
   
-

@@ -4,10 +4,10 @@ title: "ALTER USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/10/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_USER_TSQL"
   - "ALTER USER"
@@ -116,7 +116,7 @@ NAME = newUserName
 > This option may only be specified in a contained database and only for contained users.
 
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.
 
@@ -139,6 +139,8 @@ NAME = newUserName
  You can change the name of a user who is mapped to a Windows login or group only when the SID of the new user name matches the SID that is recorded in the database. This check helps prevent spoofing of Windows logins in the database.
 
  The WITH LOGIN clause enables the remapping of a user to a different login. Users without a login, users mapped to a certificate, or users mapped to an asymmetric key can't be remapped with this clause. Only SQL users and Windows users (or groups) can be remapped. The WITH LOGIN clause can't be used to change the type of user, such as changing a Windows account to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.
+ 
+ A mismatched SID can occur when you have restored a database from another server and have a database user mapped to a SQL Server login. You can use the WITH LOGIN clause to correct this situation by replacing the user SID in the database with the login SID from the server.
 
  The name of the user will be automatically renamed to the login name if the following conditions are true.
 
@@ -206,6 +208,16 @@ WITH NAME = Philipe
 , DEFAULT_SCHEMA = Development
 , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per'
 , DEFAULT_LANGUAGE= French ;
+GO
+```
+
+### D. Correct a mismatched SID 
+
+ The following example corrects the user SID in the database to match the SID on the server for a SQL Server authenticated login.
+ 
+```sql
+ALTER USER Mai
+WITH LOGIN = Mai;
 GO
 ```
 
@@ -311,7 +323,7 @@ ALTER USER userName
 > This option is available only for contained users.
 
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.
 

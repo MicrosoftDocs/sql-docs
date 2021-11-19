@@ -4,11 +4,12 @@ title: "What is a Cursor? | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
-ms.custom: ""
+ms.custom:
+  - intro-overview
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cursors [ADO], about cursors"
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: rothja

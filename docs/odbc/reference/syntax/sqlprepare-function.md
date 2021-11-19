@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLPrepare"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLPrepare function [ODBC]"
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLPrepare Function
 **Conformance**  

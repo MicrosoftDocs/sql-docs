@@ -7,12 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLSetScrollOptions"
 apilocation: 
   - "sqlsrv32.dll"
   - "odbc32.dll"
+  - "Msodbcsql11.dll"
+  - "Sqlncli10.dll"
+  - "Sqlncli11.dll"
+  - "Sqlncli11e.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLSetScrollOptions"
@@ -20,7 +24,7 @@ helpviewer_keywords:
   - "SQLSetScrollOptions function [ODBC]"
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetScrollOptions Function
 **Conformance**  

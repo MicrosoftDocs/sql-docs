@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "conversation_endpoints_TSQL"
   - "conversation_endpoints"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.conversation_endpoints catalog view"
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

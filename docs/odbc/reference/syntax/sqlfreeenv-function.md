@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLFreeEnv"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLFreeEnv function [ODBC]"
 ms.assetid: 32000150-e120-445e-b269-43200f813b2a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFreeEnv Function
 **Conformance**  

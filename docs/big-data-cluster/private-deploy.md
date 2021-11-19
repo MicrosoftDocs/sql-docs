@@ -4,11 +4,13 @@ titleSuffix: SQL Server Big Data Cluster
 description: Learn how to deploy a SQL Server Big Data Clusters with Azure Kubernetes Service (AKS) private cluster with advanced networking (CNI).
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy BDC in Azure Kubernetes Service (AKS) private cluster
@@ -23,15 +25,15 @@ A private deployment provides the following benefits:
 
 This article demonstrates how to use an AKS private cluster to restrict the use of Public IP address while respective security strings have applied.
 
-## Deploy private BDC cluster with AKS private cluster
+## Deploy private big data cluster with AKS private cluster
 
 To get started, create a [AKS private cluster](/azure/aks/private-clusters) to make sure the network traffic between API server and node pools remains on the private network only. The control plane or API server has internal IP addresses in an AKS private cluster.
 
-This section shows you deploy a BDC cluster in Azure Kubernetes Service (AKS) private cluster with advanced networking (CNI).
+This section shows you deploy a big data cluster in Azure Kubernetes Service (AKS) private cluster with advanced networking (CNI).
 
 ## Create a private AKS cluster with advanced networking
 
-```console
+```bash
 
 export REGION_NAME=<your Azure region >
 export RESOURCE_GROUP=< your resource group name >
@@ -65,7 +67,7 @@ echo $SUBNET_ID
 
 To be able to get to next step, you need to provision an AKS cluster with Standard Load Balancer with private cluster feature enabled. Your command will look like as follows: 
 
-```console
+```bash
 az aks create \
     --resource-group $RESOURCE_GROUP \
     --name $AKS_NAME \
@@ -81,25 +83,25 @@ az aks create \
     --generate-ssh-keys
 ```
 
-After a successful deployment, you can go to `<MC_yourakscluster>` resource group and you’ll find the `kube-apiserver` is a private endpoint. For example, see the following section.
+After a successful deployment, you can go to `<MC_yourakscluster>` resource group and you'll find the `kube-apiserver` is a private endpoint. For example, see the following section.
 
 ## Connect to an AKS cluster
 
-```console
+```azurecli
 az aks get-credentials -n $AKS_NAME -g $RESOURCE_GROUP
 ```
 
-## Build Big Data Cluster (BDC) deployment profile
+## Build Big Data Cluster deployment profile
 
 After connecting to an AKS cluster, you can start to deploy BDC, and you can prepare the environment variable and initiate a deployment: 
 
-```console
+```azurecli
 azdata bdc config init --source aks-dev-test --target private-bdc-aks --force
 ```
 
 Generate and config BDC custom deployment profile:
 
-```console
+```azurecli
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.docker.imageTag=2019-CU6-ubuntu-16.04"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.data.className=default"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.logs.className=default"
@@ -114,17 +116,17 @@ azdata bdc config replace -c private-bdc-aks/bdc.json -j "$.spec.resources.apppr
 
 ## Deploy private SQL Server Big Data Cluster with HA
 
-In case you are [deploying a SQL Server Big Data Cluster (SQL-BDC) with high availability (HA)](deployment-high-availability.md), you’ll be using deploy `aks-dev-test-ha` deployment profile. After a successful deployment, you can use the same `kubectl get svc` command and you’ll see an additional `master-secondary-svc` service is created. You need to configure `ServiceType` as `NodePort`. Other steps will be similar to what mentioned in previous section.
+In case you are [deploying a SQL Server Big Data Cluster (SQL-BDC) with high availability (HA)](deployment-high-availability.md), you'll be using deploy `aks-dev-test-ha` deployment profile. After a successful deployment, you can use the same `kubectl get svc` command and you'll see an additional `master-secondary-svc` service is created. You need to configure `ServiceType` as `NodePort`. Other steps will be similar to what mentioned in previous section.
 
 The following example sets the `ServiceType` as `NodePort`:
 
-```console
+```azurecli
 azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.master.spec.endpoints[1].serviceType=NodePort"
 ```
 
 ## Deploy BDC in AKS private cluster
 
-```console
+```azurecli
 export AZDATA_USERNAME=<your bdcadmin username>
 export AZDATA_PASSWORD=< your bdcadmin password>
 
@@ -147,7 +149,7 @@ Use the following command to check the services. Verify that they are all health
 kubectl get services -n mssql-cluster
 ```
 
-See how to [manage BDC in AKS private cluster](private-manage.md) and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).
+See how to [manage big data cluster in AKS private cluster](private-manage.md) and then the next step is to [connect to a SQL Server big data cluster](connect-to-big-data-cluster.md).
 
 See automation scripts for this scenario at [SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
 
@@ -155,6 +157,6 @@ See automation scripts for this scenario at [SQL Server Samples repository on Gi
 
 [Manage a private cluster](private-manage.md)
 
-[Restrict egress traffic of Private BDC cluster](private-restrict-egress-traffic.md)
+[Restrict egress traffic of Private big data cluster](private-restrict-egress-traffic.md)
 
 [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)

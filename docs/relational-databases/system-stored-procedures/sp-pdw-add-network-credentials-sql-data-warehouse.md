@@ -3,9 +3,10 @@ description: "sp_pdw_add_network_credentials (Azure Synapse Analytics)"
 title: "sp_pdw_add_network_credentials"
 titleSuffix: Azure Synapse Analytics
 ms.date: "03/14/2017"
-ms.service: sql-data-warehouse
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
@@ -28,7 +29,8 @@ ms.custom: seo-dt-2019
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'  
 ```  
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments  
  '*target_server_name*'  

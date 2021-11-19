@@ -4,17 +4,17 @@ description: Learn about the OLE DB interfaces and methods that exhibit provider
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: "reference"
+ms.topic: reference
 helpviewer_keywords: 
   - "OLE DB Driver for SQL Server, reference"
   - "OLE DB, programmer's reference"
   - "MSOLEDBSQL, OLE DB"
   - "OLE DB Driver for SQL Server, OLE DB"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # OLE DB Driver for SQL Server (OLE DB) Interfaces
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

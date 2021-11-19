@@ -1,20 +1,22 @@
 ---
-description: "Transact-SQL statements"
-title: "Statements | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/17/2020"
+title: Transact-SQL statements
+description: Transact-SQL statements
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
+f1_keywords:
+  - Alter_TSQL
 dev_langs: 
   - "TSQL"
-ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.custom: ""
+ms.date: 04/17/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Transact-SQL statements
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

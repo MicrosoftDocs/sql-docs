@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "getTrustServerCertificate Method (SQLServerDataSource)"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getTrustServerCertificate Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

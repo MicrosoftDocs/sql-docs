@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerParameterMetaData.getParameterTypeName"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: ebe7ff0f-3cc0-408e-9503-4ca754c9c37f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getParameterTypeName Method (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

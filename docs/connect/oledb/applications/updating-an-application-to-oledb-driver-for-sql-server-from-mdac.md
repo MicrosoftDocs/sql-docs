@@ -4,7 +4,7 @@ description: "Learn what's changed from the old OLE DB Provider for SQL Server a
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], vs. MDAC"
   - "OLE DB Driver for SQL Server, updating applications"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Updating an Application to OLE DB Driver for SQL Server from MDAC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

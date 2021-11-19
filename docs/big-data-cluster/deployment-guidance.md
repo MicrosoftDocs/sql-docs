@@ -2,30 +2,32 @@
 title: Deployment guidance
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to deploy SQL Server Big Data Clusters on Kubernetes.
-author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: mihaelab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: dacoelho
 ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-A SQL Server big data cluster is deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
+SQL Server Big Data Cluster is deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
 
 - Set up a Kubernetes cluster on a single VM, cluster of VMs, in Azure Kubernetes Service (AKS), Red Hat OpenShift or in Azure Red Hat OpenShift (ARO).
 - Install the cluster configuration tool [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] on your client machine.
 - Deploy a SQL Server big data cluster in a Kubernetes cluster.
 
-## Supported platforms
+## Tested configurations
 
-See [Supported platforms](release-notes-big-data-cluster.md#supported-platforms) for a complete list of the various Kubernetes platforms validated for deploying SQL Server Big Data Clusters.
+See [Tested configurations](release-notes-big-data-cluster.md#tested-configurations) for a complete list of the various Kubernetes platforms validated for deploying SQL Server Big Data Clusters.
 
-### SQL Server Editions
+### SQL Server editions
 
 |Edition|Notes|
 |---------|---------|
@@ -58,15 +60,16 @@ kubectl config view
 ```
 
 > [!Important] 
-> If you are deploying on a multi node Kuberntes cluster that you bootstrapped using `kubeadm`, before starting the big data cluster deployment, ensure the clocks are synchronized across all the Kubernetes nodes the deployment is targeting. The big data cluster has built-in health properties for various services that are time sensitive and clock skews can result in incorrect status.
+> If you are deploying on a multi node Kubernetes cluster that you bootstrapped using `kubeadm`, before starting the big data cluster deployment, ensure the clocks are synchronized across all the Kubernetes nodes the deployment is targeting. The big data cluster has built-in health properties for various services that are time sensitive and clock skews can result in incorrect status.
 
 After you have configured your Kubernetes cluster, you can proceed with the deployment of a new SQL Server big data cluster. If you are upgrading from a previous release, please see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
 ## Ensure you have storage configured
 
-Most big data cluster deployments should have persistent storage. At this time, you need to make sure you have a plan for how you're going to provide persistent storage on the Kubernetes cluster before you deploy the BDC.
+Most big data cluster deployments should have persistent storage. At this time, you need to make sure you have a plan for how you're going to provide persistent storage on the Kubernetes cluster before you deploy.
 
-If you deploy in AKS, no storage setup is necessary. AKS provides built-in storage classes with dynamic provisioning. You can customize the storage class (`default` or `managed-premium`) in the deployment configuration file. The built-in profiles use a `default` storage class. If you are deploying on a Kubernetes cluster you deployed using `kubeadm`, you'll need to ensure you have sufficient storage for a cluster of your desired scale available and configured for use. If you wish to customize how your storage is used, you should do this before proceeding. See [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
+ - If you deploy in AKS, no storage setup is necessary. AKS provides built-in storage classes with dynamic provisioning. You can customize the storage class (`default` or `managed-premium`) in the deployment configuration file. The built-in profiles use a `default` storage class. 
+ - If you are deploying on a Kubernetes cluster you deployed using `kubeadm`, you'll need to ensure you have sufficient storage for a cluster of your desired scale available and configured for use. If you wish to customize how your storage is used, you should do this before proceeding. See [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
 
 ## Install SQL Server 2019 Big Data tools
 
@@ -76,6 +79,7 @@ Before deploying a SQL Server 2019 big data cluster, first [install the big data
 - `kubectl`
 - Azure Data Studio
 - [Data Virtualization extension](../azure-data-studio/extensions/data-virtualization-extension.md) for Azure Data Studio
+- [Azure CLI](/cli/azure/install-azure-cli), if deploying to AKS
 
 
 ## <a id="deploy"></a> Deployment overview
@@ -91,9 +95,9 @@ Big data cluster deployment options are defined in JSON configuration files. You
 > [!NOTE]
 > The container images required for the big data cluster deployment are hosted on Microsoft Container Registry (`mcr.microsoft.com`), in the `mssql/bdc` repository. By default, these settings are already included in the `control.json` configuration file in each of the deployment profiles included with [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. In addition, the container image tag for each release is also pre-populated in the same configuration file. If you need to pull the container images into your own private container registry and or modify the container registry/repository settings, follow the instructions in the [Offline installation article](deploy-offline.md)
 
-Run this command to find what are the templates available:
+Run this command to find the templates available:
 
-```
+```bash
 azdata bdc config list -o table 
 ```
 
@@ -101,14 +105,14 @@ The following templates are available as of SQL Server 2019 CU5:
 
 | Deployment profile | Kubernetes environment |
 |---|---|
-| `aks-dev-test` | Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)|
-| `aks-dev-test-ha` | Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS). Mission critical services like SQL Server master and HDFS name node are configured for high availability.|
-| `aro-dev-test`|Deploy SQL Server big data cluster on Azure Red Hat OpenShift for development and testing. <br/><br/>Introduced in SQL Server 2019 CU 5.|
-| `aro-dev-test-ha`|Deploy SQL Server big data cluster with high availability on a Red Hat OpenShift cluster for development and testing. <br/><br/>Introduced in SQL Server 2019 CU 5.|
-| `kubeadm-dev-test` | Deploy SQL Server big data cluster on a Kubernetes cluster created with kubeadm using a single or multiple physical or virtual machines.|
-| `kubeadm-prod`| Deploy SQL Server big data cluster on a Kubernetes cluster created with kubeadm using a single or multiple physical or virtual machines. Use this template to enable big data cluster services to integrate with Active Directory. Mission critical services like SQL Server master instance and HDFS name node are deployed in a highly available configuration.  |
-| `openshift-dev-test`|Deploy SQL Server big data cluster on a Red Hat OpenShift cluster for development and testing. <br/><br/>Introduced in SQL Server 2019 CU 5.|
-| `openshift-prod`|Deploy SQL Server big data cluster with high availability on a Red Hat OpenShift cluster. <br/><br/>Introduced in SQL Server 2019 CU 5.|
+| `aks-dev-test` | Deploy SQL Server Big Data Cluster on Azure Kubernetes Service (AKS)|
+| `aks-dev-test-ha` | Deploy SQL Server Big Data Cluster on Azure Kubernetes Service (AKS). Mission critical services like SQL Server master and HDFS name node are configured for high availability.|
+| `aro-dev-test`|Deploy SQL Server Big Data Cluster on Azure Red Hat OpenShift for development and testing. <br/><br/>Introduced in SQL Server 2019 CU 5.|
+| `aro-dev-test-ha`|Deploy SQL Server Big Data Cluster with high availability on a Red Hat OpenShift cluster for development and testing. <br/><br/>Introduced in SQL Server 2019 CU 5.|
+| `kubeadm-dev-test` | Deploy SQL Server Big Data Cluster on a Kubernetes cluster created with kubeadm using a single or multiple physical or virtual machines.|
+| `kubeadm-prod`| Deploy SQL Server Big Data Cluster on a Kubernetes cluster created with kubeadm using a single or multiple physical or virtual machines. Use this template to enable big data cluster services to integrate with Active Directory. Mission critical services like SQL Server master instance and HDFS name node are deployed in a highly available configuration.  |
+| `openshift-dev-test`|Deploy SQL Server Big Data Cluster on a Red Hat OpenShift cluster for development and testing. <br/><br/>Introduced in SQL Server 2019 CU 5.|
+| `openshift-prod`|Deploy SQL Server Big Data Cluster with high availability on a Red Hat OpenShift cluster. <br/><br/>Introduced in SQL Server 2019 CU 5.|
 
 You can deploy a big data cluster by running `azdata bdc create`. This prompts you to choose one of the default configurations and then guides you through the deployment.
 
@@ -149,11 +153,11 @@ It is also possible to customize your deployment to accommodate the workloads yo
    ```
 
    > [!TIP]
-   > You can also pass in the cluster name at deployment time using the *--name* parameter for *azdata create bdc* command. The parameters in the command have precedence over the values in the configuration files.
+   > You can also pass in the cluster name at deployment time using the *--name* parameter for `azdata create bdc` command. The parameters in the command have precedence over the values in the configuration files.
    >
    > A useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
    >
-   In addition to passing key-value pairs, you can also provide inline JSON values or pass JSON patch files. For more information, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
+   In addition to passing key-value pairs, you can also provide inline JSON values or pass JSON patch files. For more information, see [Configure deployment settings for Big Data Cluster resources and services](deployment-custom-configuration.md).
 
 1. Pass the custom configuration file to `azdata bdc create`. Note that you must set the required [environment variables](#env), otherwise the terminal prompts for the values:
 
@@ -161,7 +165,10 @@ It is also possible to customize your deployment to accommodate the workloads yo
    azdata bdc create --config-profile custom --accept-eula yes
    ```
 
-> For more information on the structure of a deployment configuration file, see the [Deployment configuration file reference](reference-deployment-config.md). For more configuration examples, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
+> [!WARNING]
+> The parameter ```imagePullPolicy``` is required to be set as ```"Always"``` in the deployment profile control.json file.
+
+For more information on the structure of a deployment configuration file, see the [Deployment configuration file reference](reference-deployment-config.md). For more configuration examples, see [Configure deployment settings for Big Data Clusters](deployment-custom-configuration.md).
 
 ## <a id="env"></a> Environment variables
 
@@ -169,7 +176,7 @@ The following environment variables are used for security settings that are not 
 
 | Environment variable | Requirement |Description |
 |---|---|---|
-| `AZDATA_USERNAME` | Required |The username for SQL Server big data cluster administrator. A sysadmin login with the same name is created in SQL Server master instance. As a security best practice, `sa` account is disabled. <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
+| `AZDATA_USERNAME` | Required |The username for SQL Server Big Data Cluster administrator. A sysadmin login with the same name is created in SQL Server master instance. As a security best practice, `sa` account is disabled. <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
 | `AZDATA_PASSWORD` | Required |The password for the user accounts created above. On clusters deployed prior to SQL Server 2019 CU5, the same password is used for the `root` user, to secure Knox gateway and HDFS. |
 | `ACCEPT_EULA`| Required for first use of [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]| Set to "yes". When set as an environment variable, it applies EULA to both SQL Server and [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. If not set as environment variable, you can include `--accept-eula=yes` in the first use of [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] command.|
 | `DOCKER_USERNAME` | Optional | The username to access the container images in case they are stored in a private repository. See the [Offline deployments](deploy-offline.md) topic for more details on how to use a private Docker repository for big data cluster deployment.|
@@ -427,8 +434,9 @@ For more information on how to connect to the big data cluster, see [Connect to 
 
 ## Next steps
 
-To learn more about big data cluster deployment, see the following resources:
+To learn more about SQL Server Big Data Cluster deployment, see the following resources:
 
 - [Configure deployment settings for big data clusters](deployment-custom-configuration.md)
 - [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md)
-- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/microsoft/sqlworkshops-bdc)
+- [Big Data Clusters FAQ](big-data-cluster-faq.yml)  

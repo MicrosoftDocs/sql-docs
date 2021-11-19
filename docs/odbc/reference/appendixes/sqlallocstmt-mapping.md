@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "mapping deprecated functions [ODBC], SQLAllocStmt"
   - "SQLAllocStmt function [ODBC], mapping"
 ms.assetid: a2449dbb-1b6c-4b49-81b9-ebdddd4442fd
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLAllocStmt Mapping
 When an application calls **SQLAllocStmt** through an ODBC *3.x* driver, the call to:  

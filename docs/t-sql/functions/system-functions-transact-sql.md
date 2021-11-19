@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -18,7 +18,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # System Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The following system functions perform operations on and return information about values, objects, and settings in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

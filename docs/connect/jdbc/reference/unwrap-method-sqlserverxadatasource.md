@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # unwrap Method (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.CONCUR_SS_SCROLL_LOCKS"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 0fd5d34a-c323-4e9c-a1ef-6288c4a0b4ca
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # CONCUR_SS_SCROLL_LOCKS Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

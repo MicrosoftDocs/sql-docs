@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "collections [Master Data Services]"
   - "collections [Master Data Services], about collections"
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Collections (Master Data Services)

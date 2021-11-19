@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Purge Version Members (Master Data Services)

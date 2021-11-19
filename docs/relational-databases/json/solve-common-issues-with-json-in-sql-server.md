@@ -36,7 +36,7 @@ SELECT col1, col2, col3,
      (SELECT col11, col12, col13 FROM t11 WHERE t11.FK = t1.PK FOR JSON PATH) as t11,  
      (SELECT col21, col22, col23 FROM t21 WHERE t21.FK = t1.PK FOR JSON PATH) as t21,  
      (SELECT col31, col32, col33 FROM t31 WHERE t31.FK = t1.PK FOR JSON PATH) as t31,  
-     JSON_QUERY('{"'+col4'":"'+col5+'"}') as t41  
+     JSON_QUERY('{"'+col4+'":"'+col5+'"}') as t41  
 FROM t1  
 FOR JSON PATH  
 ```  

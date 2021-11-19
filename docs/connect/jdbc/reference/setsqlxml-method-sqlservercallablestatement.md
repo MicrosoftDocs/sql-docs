@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: de095cb3-1111-4154-8996-3c2e529e3000
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setSQLXML Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

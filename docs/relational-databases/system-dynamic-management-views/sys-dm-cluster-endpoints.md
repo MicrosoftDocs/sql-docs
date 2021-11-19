@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, big-data-clusters"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_cluster_endpoints"
   - "dm_cluster_endpoints_TSQL"
@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_cluster_endpoints dynamic management view"
 ms.assetid: 
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-2017"
 ---
 # sys.dm_cluster_endpoints (Transact-SQL)

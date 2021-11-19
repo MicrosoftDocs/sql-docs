@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "Reparent_TSQL"
   - "Reparent"
@@ -20,7 +20,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # GetReparentedValue (Database Engine)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a node whose path from the root is the path to _newRoot_, followed by the path from _oldRoot_.
   

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], variables"
   - "xml data type [SQL Server], columns"
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Create XML Data Type Variables and Columns
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

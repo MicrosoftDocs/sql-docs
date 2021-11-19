@@ -1,13 +1,13 @@
 ---
 description: "CREATE LOGIN (Transact-SQL)"
-title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
+title: "CREATE LOGIN (Transact-SQL)"
 ms.custom: ""
-ms.date: 07/29/2020
+ms.date: 08/11/2021
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_LOGIN_TSQL"
   - "CREATE LOGIN"
@@ -24,7 +24,6 @@ helpviewer_keywords:
   - "Windows domain accounts [SQL Server]"
   - "re-hashing passwords"
   - "certificates [SQL Server], logins"
-ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -93,39 +92,39 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## Arguments
 
-*login_name*
+#### *login_name*
 Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of fewer than 21 characters.
 
-PASSWORD **=**'*password*'
+#### PASSWORD **=**'*password*'
 Applies to SQL Server logins only. Specifies the password for the login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with SQL Server 2012 (11.x), stored password information is calculated using SHA-512 of the salted password.
 
 Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
 
-PASSWORD **=** *hashed\_password*
+#### PASSWORD **=** *hashed\_password*
 Applies to the HASHED keyword only. Specifies the hashed value of the password for the login that is being created.
 
-HASHED
+#### HASHED
 Applies to SQL Server logins only. Specifies that the password entered after the PASSWORD argument is already hashed. If this option is not selected, the string entered as password is hashed before it is stored in the database. This option should only be used for migrating databases from one server to another. Do not use the HASHED option to create new logins. The HASHED option cannot be used with hashes created by SQL 7 or earlier.
 
-MUST_CHANGE
+#### MUST_CHANGE
 Applies to SQL Server logins only. If this option is included, SQL Server prompts the user for a new password the first time the new login is used.
 
-CREDENTIAL **=**_credential\_name_
+#### CREDENTIAL **=**_credential\_name_
 The name of a credential to be mapped to the new SQL Server login. The credential must already exist in the server. Currently this option only links the credential to a login. A credential cannot be mapped to the System Administrator (sa) login.
 
-SID = *sid*
+#### SID = *sid*
 Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. SQL Server login SID: a 16 byte (**binary(16)**) literal value based on a GUID. For example, `SID = 0x14585E90117152449347750164BA00A7`.
 
-DEFAULT_DATABASE **=**_database_
+#### DEFAULT_DATABASE **=**_database_
 Specifies the default database to be assigned to the login. If this option is not included, the default database is set to master.
 
-DEFAULT_LANGUAGE **=**_language_
+#### DEFAULT_LANGUAGE **=**_language_
 Specifies the default language to be assigned to the login. If this option is not included, the default language is set to the current default language of the server. If the default language of the server is later changed, the default language of the login remains unchanged.
 
-CHECK_EXPIRATION **=** { ON | **OFF** }
+#### CHECK_EXPIRATION **=** { ON | **OFF** }
 Applies to SQL Server logins only. Specifies whether password expiration policy should be enforced on this login. The default value is OFF.
 
-CHECK_POLICY **=** { **ON** | OFF }
+#### CHECK_POLICY **=** { **ON** | OFF }
 Applies to SQL Server logins only. Specifies that the Windows password policies of the computer on which SQL Server is running should be enforced on this login. The default value is ON.
 
 If the Windows policy requires strong passwords, passwords must contain at least three of the following four characteristics:
@@ -135,13 +134,13 @@ If the Windows policy requires strong passwords, passwords must contain at least
 - A digit (0-9).
 - One of the non-alphanumeric characters, such as a space, _, @, *, ^, %, !, $, #, or &.
 
-WINDOWS
+#### WINDOWS
 Specifies that the login be mapped to a Windows login.
 
-CERTIFICATE *certname*
+#### CERTIFICATE *certname*
 Specifies the name of a certificate to be associated with this login. This certificate must already occur in the master database.
 
-ASYMMETRIC KEY *asym_key_name*
+#### ASYMMETRIC KEY *asym_key_name*
 Specifies the name of an asymmetric key to be associated with this login. This key must already occur in the master database.
 
 ## Remarks
@@ -275,6 +274,27 @@ CHECK_POLICY = OFF,
 CHECK_EXPIRATION = OFF ;
 ```
 
+
+### H. Creating a SQL login with hashed password
+
+The following example shows how to create SQL Logins with the same password as existing Logins as done in a migration scenario. The first step is to retrieve the password hash from existing Logins on the source database server. Then the same hash will be used to create the Login on a new database server. By doing this the new Login will have the same password as on the old server.
+
+```sql
+-- run this to retrieve the password hash for an individual Login:
+SELECT LOGINPROPERTY('Andreas','PASSWORDHASH') AS password_hash;
+-- as an alternative, the catalog view sys.sql_logins can be used to retrieve the password hashes for multiple accounts at once. (This could be used to create a dynamic sql statemnt from the result set)
+SELECT name, password_hash
+FROM sys.sql_logins
+  WHERE
+    principal_id > 1    -- excluding sa
+    AND
+    name NOT LIKE '##MS_%##' -- excluding special MS system accounts
+-- create the new SQL Login on the new database server using the hash of the source server
+CREATE LOGIN Andreas
+  WITH PASSWORD = 0x02000A1A89CD6C6E4C8B30A282354C8EA0860719D5D3AD05E0CAE1952A1C6107A4ED26BEBA2A13B12FAB5093B3CC2A1055910CC0F4B9686A358604E99BB9933C75B4EA48FDEA HASHED;
+```
+
+
 ## See Also
 
 - [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
@@ -324,15 +344,15 @@ CREATE LOGIN login_name
 
 ## Arguments
 
-*login_name*
+#### *login_name*
 Specifies the name of the login that is created. Single and pooled databases in Azure SQL Database and databases in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] supports only SQL logins. To create accounts for Azure Active Directory users or to create user accounts not associated with a login, use the [CREATE USER](create-user-transact-sql.md) statement. For more information, see [Manage Logins in Azure SQL Database](/azure/sql-database/sql-database-manage-logins).
 
-PASSWORD **='**password**'*
+#### PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
 
 Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
 
-SID = *sid*
+#### SID = *sid*
 Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## Remarks
@@ -446,18 +466,20 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 ## Arguments
 
-*login_name*
+#### *login_name*
 When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Azure Active Directory (AD) Principal, which is an Azure AD user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
-FROM EXTERNAL PROVIDER </br>
+Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, Managed Instance, or Azure Synapse.
+
+#### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Azure AD Authentication.
 
-PASSWORD **=** '*password*'
+#### PASSWORD **=** '*password*'
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
 
 Passwords are case-sensitive. Passwords should always be at least ten characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
 
-SID **=** *sid*
+#### SID **=** *sid*
 Used to recreate a login. Applies to SQL Server authentication logins only. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## Remarks
@@ -649,16 +671,16 @@ CREATE LOGIN login_name
 
 ## Arguments
 
-*login_name*
+#### *login_name*
 Specifies the name of the login that is created. SQL Analytics in Azure Synapse supports only SQL logins. To create accounts for Azure Active Directory users, use the [CREATE USER](create-user-transact-sql.md) statement.
 
-PASSWORD **='**password**'*
+#### PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
 
 Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
 
- SID = *sid*
- Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Analytics, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+#### SID = *sid*
+Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Analytics, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## Remarks
 
@@ -783,21 +805,21 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## Arguments
 
-*login_name*
+#### *login_name*
 Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of fewer than 21 characters.
 
-PASSWORD **='**_password_'
+#### PASSWORD **='**_password_'
 Applies to SQL Server logins only. Specifies the password for the login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with SQL Server 2012 (11.x), stored password information is calculated using SHA-512 of the salted password.
 
 Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
 
-MUST_CHANGE
+#### MUST_CHANGE
 Applies to SQL Server logins only. If this option is included, SQL Server prompts the user for a new password the first time the new login is used.
 
-CHECK_EXPIRATION **=** { ON | **OFF** }
+#### CHECK_EXPIRATION **=** { ON | **OFF** }
 Applies to SQL Server logins only. Specifies whether password expiration policy should be enforced on this login. The default value is OFF.
 
-CHECK_POLICY **=** { **ON** | OFF }
+#### CHECK_POLICY **=** { **ON** | OFF }
 Applies to SQL Server logins only. Specifies that the Windows password policies of the computer on which SQL Server is running should be enforced on this login. The default value is ON.
 
 If the Windows policy requires strong passwords, passwords must contain at least three of the following four characteristics:
@@ -807,7 +829,7 @@ If the Windows policy requires strong passwords, passwords must contain at least
 - A digit (0-9).
 - One of the non-alphanumeric characters, such as a space, _, @, *, ^, %, !, $, #, or &.
 
-WINDOWS
+#### WINDOWS
 Specifies that the login be mapped to a Windows login.
 
 ## Remarks

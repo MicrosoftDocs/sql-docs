@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLAllocHandle"
 apilocation: 
@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "SQLAllocHandle function [ODBC]"
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLAllocHandle Function
 **Conformance**  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.syscomments_TSQL"
   - "syscomments"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.syscomments compatibility view"
   - "syscomments system table"
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.syscomments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

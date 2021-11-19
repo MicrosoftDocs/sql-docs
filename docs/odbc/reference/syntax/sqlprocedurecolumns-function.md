@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLProcedureColumns"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLProcedureColumns function [ODBC]"
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLProcedureColumns Function
 **Conformance**  

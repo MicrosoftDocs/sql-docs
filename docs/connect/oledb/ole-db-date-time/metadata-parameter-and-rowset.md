@@ -4,14 +4,14 @@ description: Learn about the DBBINDING type and type members related to OLE DB D
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "metadata [OLE DB]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Metadata - Parameter and Rowset
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

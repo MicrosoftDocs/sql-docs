@@ -25,7 +25,7 @@ ms.author: mathoma
  The following sections describe data collection security in general, as well as the roles you must grant to users so they can configure and use the data collector, and carry out tasks associated with the management data warehouse.  
   
 ## General Security  
- The data collector is installed according to the documented standards specified for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ The data collector is installed according to the documented standards specified for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ### Network Security  
  Sensitive information can be passed between target instances, the relational instance associated with the configuration server, the collection sets that are running, and the server that hosts the management data warehouse.  

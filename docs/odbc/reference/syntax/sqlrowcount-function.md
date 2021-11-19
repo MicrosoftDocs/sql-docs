@@ -7,12 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLRowCount"
 apilocation: 
   - "sqlsrv32.dll"
   - "odbc32.dll"
+  - "Msodbcsql11.dll"
+  - "Sqlncli10.dll"
+  - "Sqlncli11.dll"
+  - "Sqlncli11e.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLRowCount"
@@ -20,7 +24,7 @@ helpviewer_keywords:
   - "SQLRowCount function [ODBC]"
 ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLRowCount Function
 **Conformance**  

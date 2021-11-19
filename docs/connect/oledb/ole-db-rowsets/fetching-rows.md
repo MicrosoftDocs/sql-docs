@@ -4,7 +4,7 @@ description: Learn how consumers in OLE DB Driver for SQL Server use the IRowset
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "IRowset interface"
   - "OLE DB Driver for SQL Server, fetching"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Fetching Rows
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

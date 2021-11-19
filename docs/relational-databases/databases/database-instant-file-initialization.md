@@ -1,7 +1,7 @@
 ---
 title: Database Instant File Initialization
 description: Learn about instant file initialization and how to enable it on your SQL Server database.
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 07/24/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "IFI [SQL Server]"
   - "database instant file initialization [SQL Server]"
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Instant File Initialization
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ By default, data and log files are initialized to overwrite any existing data le
 - Increase the size of an existing file (including autogrow operations).  
 - Restore a database or filegroup.  
 
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], instant file initialization (IFI) allows for faster execution of the previously mentioned file operations, since it reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], for data files only, instant file initialization (IFI) allows for faster execution of the previously mentioned file operations, since it reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.
 
 
 ## Enable instant file initialization
@@ -40,7 +40,7 @@ Instant file initialization is only available if the [!INCLUDE[ssNoVersion](../.
 > Some feature usage, such as [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), can prevent Instant File Initialization.  
 
 > [!NOTE]
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this permission can be granted to the service account at install time, during setup. <br><br>If using the [command prompt install](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), add the /SQLSVCINSTANTFILEINIT argument, or check the box *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* in the [installation wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
+> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], this permission can be granted to the service account at install time, during setup. <br><br>If using the [command prompt install](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), add the /SQLSVCINSTANTFILEINIT argument, or check the box *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* in the [installation wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
   
 To grant an account the `Perform volume maintenance tasks` permission:  
   
@@ -59,7 +59,7 @@ To grant an account the `Perform volume maintenance tasks` permission:
 1. Check the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log at startup.
    
   
-    **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later).
+    **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
     1. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account is granted *SE_MANAGE_VOLUME_NAME*, an informational message that resembles the following is logged:
 
         `Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`

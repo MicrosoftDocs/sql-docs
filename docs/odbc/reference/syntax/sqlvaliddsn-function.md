@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLValidDSN"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLValidDSN [ODBC]"
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLValidDSN Function
 **Conformance**  

@@ -1,18 +1,19 @@
 ---
 title: Deploying Models
 description: Deploy model packages to move copies of models from one Master Data Services environment to another or to create new models in your environment.
-ms.custom: ""
+ms.custom:
+  - intro-deployment
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deployment packages [Master Data Services], about deployment packages"
   - "deployment packages [Master Data Services]"
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-author: lrtoyou1223
+author: chugugrace
 ms.author: lle
 ---
 # Deploying Models (Master Data Services)
@@ -22,7 +23,7 @@ ms.author: lle
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a package is an XML file that contains a deployable model structure, and optionally, data from the model. Use model packages to move copies of models from one MDS environment to another, or to create new models in your existing MDS environment.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **MDSModelDeploy tool** is backward compatible with the packages created in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] or higher.  
+> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and later **MDSModelDeploy tool** is backward compatible with the packages created in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] or higher.  
   
 ## Tools for Deploying Models  
  To work with model packages, you can use one of three tools, depending on your needs.  

@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Technical Reference (Master Data Services)

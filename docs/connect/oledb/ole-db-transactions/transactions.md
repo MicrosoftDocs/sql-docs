@@ -4,7 +4,7 @@ description: Learn how the OLE DB Driver for SQL Server supports local transacti
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "transactions [OLE DB]"
   - "OLE DB Driver for SQL Server, transactions"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Transactions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

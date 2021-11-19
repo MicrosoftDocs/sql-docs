@@ -1,8 +1,10 @@
 ---
 title: "Install: PowerShell Desired State Configuration"
 description: "Install SQL Server by using PowerShell DSC and learn about the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016."
-ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
+ms.date: "09/17/2021"
 ms.devlang: PowerShell
 ms.prod: sql
 ms.reviewer: ""
@@ -27,6 +29,9 @@ Read about [PowerShell Desired State Configuration (DSC)](/powershell/scripting/
 
 This article explores the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016 by using the **SqlServerDsc** DSC resource. Some prior knowledge of DSC is helpful as we won't explore how DSC works.
 
+> [!NOTE]
+> This article refers to PowerShell 5.1, which is the default version of PowerShell installed with Windows Server 2016, 2019, and 2022.
+
 The following items are required for this walkthrough:
 
 - A machine that runs Windows Server 2016.
@@ -39,7 +44,7 @@ In most cases, DSC is used to handle the prerequisite requirements. But for the 
 
 ## Install the SqlServerDsc DSC resource
 
-Download the [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC resource from the [PowerShell Gallery](https://www.powershellgallery.com/) by using the [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1&preserve-view=true) cmdlet. 
+Download the [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC resource from the [PowerShell Gallery](https://www.powershellgallery.com/) by using the [Install-Module](/powershell/module/powershellget/Install-Module) cmdlet. 
 
 > [!NOTE]
 > Make sure PowerShell is running **As Administrator** to install the module.

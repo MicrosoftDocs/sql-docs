@@ -1,6 +1,7 @@
 ---
-title: "Custom Code and Assembly References in Expressions in Report Designer | Microsoft Docs"
-description: Find out how to add references to custom code embedded in a report. Build and save to your computer and deploy to the report server in Report Builder.
+title: "Custom code and assembly references in expressions in a paginated report in Report Designer | Microsoft Docs"
+
+description: Find out how to add references to custom code embedded in a paginated report. Build and save to your computer and deploy to the report server in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -21,7 +22,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Custom Code and Assembly References in Expressions in Report Designer (SSRS)
+# Custom code and assembly references in expressions in a paginated report in Report Designer (SSRS)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)] [!INCLUDE [ssrs-appliesto-not-pbi-rb](../../includes/ssrs-appliesto-not-pbi-rb.md)] [!INCLUDE [ssrs-appliesto-not-ssrs-rb](../../includes/ssrs-appliesto-not-ssrs-rb.md)]
+
   You can add references to custom code embedded in a report or to custom assemblies that you build and save to your computer and deploy to the report server. Use embedded code for custom constants, complex functions or functions that are used multiple times in a single report. Use custom code assemblies to maintain code in a single place and share it for use by multiple reports. Custom code can include new custom constants, variables, functions, or subroutines. You can include read-only references to built-in collections such as the Parameters collection. However, you cannot pass sets of report data values to custom functions; specifically, custom aggregates are not supported.  
   
 > [!IMPORTANT]  
@@ -45,16 +49,16 @@ ms.author: maggies
 2.  Preview a report with references to custom assemblies in local mode.  
   
 ##  <a name="Common"></a> Including References to Commonly Used Functions  
- Use the **Expression** dialog box to view a categorized list of common functions built-in to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. When you expand **Common Functions** and click a category, the **Item** pane displays the list of functions that you include in an expression. The common functions include classes from the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> and <xref:System.Convert> namespaces and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] run-time library functions. For convenience, you can view the most commonly used functions in the **Expression** dialog box, where they are listed by category: Text, Date and Time, Math, Inspection, Program Flow, Aggregate, Financial, Conversion, and Miscellaneous. Less commonly used functions do not appear in the list but can still be used in an expression.  
+ Use the **Expression** dialog box to view a categorized list of common functions built-in to Report Builder. When you expand **Common Functions** and click a category, the **Item** pane displays the list of functions that you include in an expression. The common functions include classes from the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> and <xref:System.Convert> namespaces and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] run-time library functions. For convenience, you can view the most commonly used functions in the **Expression** dialog box, where they are listed by category: Text, Date and Time, Math, Inspection, Program Flow, Aggregate, Financial, Conversion, and Miscellaneous. Less commonly used functions do not appear in the list but can still be used in an expression.  
   
  To use a built-in function, double-click the function name in the Item pane. A description of the function appears in the Description pane and an example of the function call appears in the Example pane. In the code pane, when you type the function name followed by a left parenthesis **(**, the IntelliSense help displays each valid syntax for the function call. For example, to calculate the maximum value for a field named `Quantity` in a table, add the simple expression `=Max(` to the Code pane, and then use the smart tags to view all possible valid syntaxes for the function call. To complete this example, type `=Max(Fields!Quantity.Value)`.  
   
- For more information about each function, see <xref:System.Math>, <xref:System.Convert>, and [Visual Basic Runtime Library Members](https://go.microsoft.com/fwlink/?LinkId=198941) on MSDN.  
+ For more information about each function, see <xref:System.Math>, <xref:System.Convert>, and [Visual Basic Runtime Library Members](/dotnet/visual-basic/language-reference/runtime-library-members) on MSDN.  
   
 ##  <a name="NotCommon"></a> Including References to Less Commonly Used Functions  
  To include a reference to other less commonly used CLR namespaces, you must use a fully qualified reference, for example, <xref:System.Text.StringBuilder>. IntelliSense is not supported in the code pane of the **Expression** dialog box for these less commonly used functions.  
   
- For more information, see [Visual Basic Runtime Library Members](https://go.microsoft.com/fwlink/?LinkId=198941) on MSDN.  
+ For more information, see [Visual Basic Runtime Library Members](/dotnet/visual-basic/language-reference/runtime-library-members) on MSDN.  
   
 ##  <a name="External"></a> Including References to External Assemblies  
  To include a reference to a class in an external assembly, you must identify the assembly for the report processor. Use the **References** page of the **Report Properties** dialog box to specify the fully qualified name of the assembly to add to the report. In your expression, you must use the fully qualified name for the class in the assembly. Classes in an external assembly do not appear in the **Expression** dialog box; you must provide the correct name for the class. A fully qualified name includes the namespace, the class name, and the member name.  
@@ -155,7 +159,7 @@ End Function
 ##  <a name="Custom"></a> Including References to Code from Custom Assemblies  
  To use custom assemblies in a report, you must first create the assembly, make it available to Report Designer, add a reference to the assembly in the report, and then use an expression in the report to refer to the methods contained in that assembly. When the report is deployed to the report server, you must also deploy the custom assembly to the report server.  
   
- For information about creating a custom assembly and making it available to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md).  
+ For information about creating a custom assembly and making it available to Report Builder, see [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md).  
   
  To refer to custom code in an expression, you must call the member of a class within the assembly. How you do this depends on whether the method is static or instance-based. Static methods within a custom assembly are available globally within the report. You can access static methods in expressions by specifying the namespace, class, and method name. The following example calls the method **ToGBP**, which converts the value of the **StandardCost** value from dollar to pounds sterling:  
   
@@ -192,5 +196,4 @@ End Function
  [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Report Samples (Report Builder and SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
-  
   

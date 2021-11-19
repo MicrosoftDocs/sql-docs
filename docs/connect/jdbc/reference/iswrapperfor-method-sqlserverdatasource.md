@@ -7,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f77af027-c021-4a17-b264-1ee592bfdd84
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # isWrapperFor Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

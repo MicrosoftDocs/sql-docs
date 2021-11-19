@@ -4,7 +4,7 @@ description: "Bulk copy data into a SQL Server table Using IRowsetFastLoad inter
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "bulk copy [OLE DB], data files"
   - "bulk copy [OLE DB], about bulk copy"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

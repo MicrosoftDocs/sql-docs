@@ -102,7 +102,7 @@ For more information, see [Using SQL Server in Windows 8 and later](https://supp
 
   
 > [!CAUTION]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep does not support side by side installation of prepared instances of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the same computer. For example, you cannot prepare a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance side by side with a prepared instance of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. However, you can install multiple prepared instances of the same major version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] side by side on the same computer. For more information, see [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep does not support side by side installation of prepared instances of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the same computer. However, you can install multiple prepared instances of the same major version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] side by side on the same computer. For more information, see [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
 >
 > SQL Server 2016 and greater cannot be installed side-by-side with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a computer that is running Windows Server 2008 R2 Server Core SP1. For more information on Server Core installations, see [Install SQL Server 2016 on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
@@ -118,6 +118,7 @@ When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluste
 * [Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
 * [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)
 * [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
+* [Editions and supported features of SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md) 
 * [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
 * [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
 * [Backward Compatibility_deleted](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))

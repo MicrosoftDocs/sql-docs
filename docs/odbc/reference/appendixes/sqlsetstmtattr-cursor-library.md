@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLSetStmtAttr function [ODBC], Cursor Library"
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetStmtAttr (Cursor Library)
 > [!IMPORTANT]  

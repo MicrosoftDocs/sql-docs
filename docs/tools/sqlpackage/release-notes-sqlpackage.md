@@ -2,9 +2,9 @@
 title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft sqlpackage.
 ms.custom: "tools|sos"
-ms.date: 02/02/2019
+ms.date: 10/04/2021
 ms.prod: sql
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "llali"
 ms.prod_service: sql-tools
 ms.topic: conceptual
 author: dzsquared
@@ -15,6 +15,127 @@ ms.author: drskwier
 **[Download the latest version](sqlpackage-download.md)**
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.exe.
+
+## 18.8 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2164920)|October 4, 2021|18.8|15.0.5282.3|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165009)|October 4, 2021| 18.8|15.0.5282.3|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165008)|October 4, 2021| 18.8|15.0.5282.3|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165007)|October 4, 2021| 18.8|15.0.5282.3|
+
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Export | Adds option VerifyExtraction to change behavior of schema model validation on export |
+| Azure SQL | Support for ledger database and tables, import and export |
+| Platform | Upgrade Microsoft.Data.SqlClient from 2.0.0 to 2.1.3 for .NET Core version |
+| Azure Synapse Analytics | Support for column encryption with symmetric key  |
+| Azure Synapse Analytics | Support for column encryption with CREATE CERTIFICATE |
+| Azure Synapse Analytics | Support for MERGE statement |
+| Deployment | Variable parameterization for AE columns, new publish property IsAlwaysEncryptedParameterizationEnabled |
+| Deployment | Support for IgnoreWorkloadClassifiers & IgnoreDatabaseWorkloadGroups publish properties |
+| Deployment | Support for external language runtimes |
+| ScriptDOM | Support for ledger database and tables |
+| ScriptDOM | Support for INCLUDE columns in inline index definitions |
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Deployment | Fixed an issue where external user deployment to Managed Instance would fail |
+| Deployment | Fix for deployment order involving temporal tables to drop dependencies before turning system versioning off |
+| Deployment | Fix for Always Encrypted deployment bug with error "Invalid object name '#tmpErrors'"  |
+| Export | Validation for SqlPackage parameters ExcludeObjectType(s) and DoNotDropObjectType(s) |
+| Export | Fixed export failure when there are CDC objects in database by excluding |
+| Extract | Adds a retry to extract validation when first time fails due to race condition |
+| Import | Fixed occasional deadlocks when importing to Azure by setting MAXDOP to 1 |
+| Import | Fixed import failure when temporal table has dependency on security policy with schema binding on |
+| Platform | DacFramework.msi is now signed by "Microsoft SQL Server Data-Tier Application Framework" instead of "SQL Server 2012" |
+| Platform | Default to large arrays in x64 SqlPackage, fixes some scenarios involving large databases |
+| Schema Compare | Fix for schema compare failing for equal databases with database scoped configurations |
+| Schema Compare | Fixed schema compare with columnstore indexes |
+| SQL Project | Fixed a bug with build error for "GRANT EXECUTE ANY EXTERNAL SCRIPT" |
+| SQL Project | Fixed a bug where database project with columnstore index and a (n)varchar(max) column builds successfully but fails at deployment |
+| SQL Project | Fixed unresolved reference warnings for table distribution columns within Stored Procedures |
+
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | N/A |
+| Deployment | The Azure SQL ledger table feature is not yet supported | N/A |
+
+## 18.7.1 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2165211)|June 2, 2021|18.7.1|15.0.5164.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165132)|June 2, 2021| 18.7.1|15.0.5164.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165213)|June 2, 2021| 18.7.1|15.0.5164.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165212)|June 2, 2021| 18.7.1|15.0.5164.1|
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Auditing | Adds support for [EXTERNAL_MONITOR](/azure/azure-sql/managed-instance/auditing-configure). |
+| Azure Synapse Analytics | Adds support for [PREDICT](../../t-sql/queries/predict-transact-sql.md). |
+| Logging | Adds SqlPackage version and architecture information to diagnostic log file. |
+
+### Fixes
+| Feature | Details |
+| :------ | :------ | 
+| Export | Fixed an issue where exporting a table with text or image in the first column would fail without a clustered index. |
+| Export | Fixed an issue where exporting a table that has the order of columns in a statistic in a different order than the table create script would fail without a clustered index. |
+
+## 18.7 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2157201)|March 10, 2021|18.7|15.0.5084.2|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157203)|March 10, 2021| 18.7|15.0.5084.2|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157202)|March 10, 2021| 18.7|15.0.5084.2|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157302)|March 10, 2021| 18.7|15.0.5084.2|
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Deployment | Extract/Publish Big Data to/from Azure Storage. For more info, see [SqlPackage for Big Data](sqlpackage-for-azure-synapse-analytics.md) |
+| Azure Synapse Analytics | Row level security support (inline table valued function, security policy, security predicate)  |
+| Azure Synapse Analytics | Workload classification support |
+| Azure SQL Edge | External streaming job support |
+| Azure SQL Edge | Added table and database options for data retention. |
+| Import | Added 2 new index option properties for import operation. *DisableIndexesForDataPhase* (Disable indexes before importing data into SQL Server, default true) and *RebuildIndexesOfflineForDataPhase* (Rebuild indexes offline after importing data into SQL Server, default false) |
+| Logging | Added property for all operations (HashObjectNamesInLogs) that will turn all object names into a hash string in log messages. |
+| Performance | Improvements to import and export performance, including additional logging to assist in determining additional bottlenecks. |
+| SQLCMD | Added property for Deployment and Schema Compare (DoNotEvaluateSqlCmdVariables) that specifies whether SQLCMD variables will be replaced with values. |
+
+
+
+### Fixes
+| Feature | Details |
+| :------ | :------ | 
+| Deployment | Default MAXDOP changed from 0 to 8 for [Azure SQL](https://techcommunity.microsoft.com/t5/azure-sql/changing-default-maxdop-in-azure-sql-database/ba-p/1538528), updating schema model default in DacFx | 
+| Schema Compare | Stored procedures using OUT and OUTPUT keywords to be ignored as a difference |
+| Deployment | Additional validation for Big Data tokens |
+| Build/Deployment | Full schema model cleanup of temp external tables for final dacpac consistency.  |
+| Build/Deployment | Adding error handling and fixing non-Edge 150 RE. |
+| Import/Deployment | Sequence value restored during deployment |
+| Deployment | Fixed an issue where changing the compression option on clustered index caused the table to be recreated instead of alter index. |
+| Deployment | Fixed an issue where a clustered columnstore index was dropped and recreated if table column changed. |
+| Deployment | Fixed external users getting dropped and recreated during deployment. |
+| Schema Compare | Fixed schema compare issue with external streaming job. |
+| Import | Null reference exception raised when enabling ambient setting ReliableDdlEnabled scripting a deployment report.|
+| Deployment | Fixed an issue where deployment steps containing system versioning would be created in the incorrect order. |
+| Deployment | Fixed an issue where schema compare update or dacpac deploy failed due to target containing temporal tables. |
+| Deployment | Reseeds identity value after deployment based on target's previous last value. |
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | N/A |
+| Deployment | In an incremental deploy scenario when the user is dropping a temporal table along with dropping objects that are dependent on it, like functions, stored procs etc. the deployment can fail. The script generation order tries to turn off SYSTEM_VERSIONING on the table which is a pre-req for dropping the table, but the order of steps generated is incorrect. [Work item](https://github.com/microsoft/azuredatastudio/issues/14655) | Generate the deployment script, move the System_Versioning OFF step to just before the table being dropped and then run the script. |
 
 ## 18.6 sqlpackage
 
@@ -269,7 +390,7 @@ This release includes cross-platform preview builds of sqlpackage that target .N
 | :---------- | :------ |
 | Deployment | For .NET Core, build and deployment contributors aren't supported. | 
 | Deployment | For .NET Core, older .dacpac and .bacpac files that use json data serialization aren't supported. | 
-| Deployment | For .NET Core referenced .dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. | A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
+| Deployment | For .NET Core referenced .dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
 | &nbsp; | &nbsp; |
 
 ## 18.0 sqlpackage

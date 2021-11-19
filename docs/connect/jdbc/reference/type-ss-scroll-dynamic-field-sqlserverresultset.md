@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerResultSet.TYPE_SS_SCROLL_DYNAMIC"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: d87afd89-3e75-402c-b844-1b434eb258df
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # TYPE_SS_SCROLL_DYNAMIC Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

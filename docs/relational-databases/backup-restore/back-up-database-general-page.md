@@ -67,7 +67,7 @@ ms.author: chadam
   
  Select one of the following option buttons:  
   
-|||  
+|Option|Description|  
 |-|-|  
 |**Database**|Specifies that the entire database be backed up.|  
 |**Files and filegroups**|Specifies that the specified files and/or filegroups be backed up.<br /><br /> Selecting this option, opens the **Select Files and Filegroups** dialog box. After you select the filegroups or files you want to back up and click **Ok**, your selections appear in the **Filegroups and files** box.|  
@@ -81,7 +81,7 @@ ms.author: chadam
  **Back up to**  
  Select one of the following types of media to which to back up. The destinations you select appear in the **Back up to** list.  
   
-|||  
+|Media type|Description|  
 |-|-|  
 |**Disk**|Backs up to disk. This may be a system file or a disk-based logical backup device created for the database. The currently selected disks appear in the **Back up to** list. You can select up to 64 disk devices for your backup operation.|  
 |**Tape**|Backs up to tape. This may be a local tape drive or a tape-based logical backup device created for the database. The currently selected tapes appear in the **Back up to** list. The maximum number is 64. If there are no tape devices attached to the server, this option is deactivated. The tapes you select are listed in the **Back up to** list.<br /><br /> Note: Support for tape backup devices will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  

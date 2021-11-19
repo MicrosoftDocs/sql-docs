@@ -1,11 +1,10 @@
 ---
 description: "sys.resource_stats (Azure SQL Database)"
-title: "sys.resource_stats (Azure SQL Database) | Microsoft Docs"
+title: "sys.resource_stats (Azure SQL Database)"
 ms.custom: ""
-ms.date: "09/13/2018"
+ms.date: "08/19/2021"
 ms.service: sql-database
-ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - resource_stats
   - sys.resource_stats
@@ -16,18 +15,21 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.resource_stats"
   - "resource_stats"
-ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "= azuresqldb-current"
+ms.reviewer: wiassaf
+monikerRange: "=azuresqldb-current"
 ---
 # sys.resource_stats (Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database Azure](../../includes/applies-to-version/asdb.md)]
 
   Returns CPU usage and storage data for an Azure SQL Database. The data is collected and aggregated within five-minute intervals. For each user database, there is one row for every five-minute reporting window in which there is a change in resource consumption. The data returned includes CPU usage, storage size change, and database SKU modification. Idle databases with no changes may not have rows for every five-minute interval. Historical data is retained for approximately 14 days.  
   
- The **sys.resource_stats** view has different definitions depending on the version of the Azure SQL Database Server that the database is associated with. Consider these differences and any modifications your application requires when upgrading to a new server version.  
-  
+ The `sys.resource_stats` view has different definitions depending on the version of the Azure SQL Database Server that the database is associated with. Consider these differences and any modifications your application requires when upgrading to a new server version.  
+ 
+> [!NOTE]
+> This dynamic management view applies to Azure SQL Database only. For an equivalent view for Azure SQL Managed Instance, use [sys.server_resource_stats](sys-server-resource-stats-azure-sql-database.md).
+
  The following table describes the columns available in a v12 server:  
   
 |Columns|Data Type|Description|  
@@ -54,16 +56,22 @@ monikerRange: "= azuresqldb-current"
 >  For more context about these limits and service tiers, see the topics [Service Tiers](/azure/azure-sql/database/purchasing-models).  
     
 ## Permissions  
- This view is available to all user roles with permissions to connect to the virtual **master** database.  
-  
+ In Azure SQL Database, this view is available to all user roles with permissions to connect to the virtual `master` database. 
+   
 ## Remarks  
- The data returned by **sys.resource_stats** is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
+ The data returned by `sys.resource_stats` is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
   
  When a database is a member of an elastic pool, resource statistics presented as percent values, are expressed as the percent of the max limit for the databases as set in the elastic pool configuration.  
   
- For a more granular view of this data, use **sys.dm_db_resource_stats** dynamic management view in a user database. This view captures data every 15 seconds and maintains historical data for 1 hour.  For more information, see [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
+ For a more granular view of this data, use `sys.dm_db_resource_stats` dynamic management view in a user database. This view captures data every 15 seconds and maintains historical data for 1 hour. For more information, see [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
+
+> [!NOTE]
+> For more information on troubleshooting CPU utilization using dynamic management views, see [Identify CPU performance issues in Microsoft Azure SQL Database and Azure SQL Managed Instance performance](/azure/azure-sql/database/monitoring-with-dmvs#identify-cpu-performance-issues). 
 
 ## Examples  
+
+ On Azure SQL Database, you must be connected to the `master` database to query `sys.resource_stats` in the following examples.
+
  The following example returns all databases that are averaging at least 80% of compute utilization over the last one week.  
   
 ```sql  
@@ -75,10 +83,11 @@ SELECT database_name, AVG(avg_cpu_percent) AS Average_Compute_Utilization
 FROM sys.resource_stats   
 WHERE start_time BETWEEN @s AND @e  
 GROUP BY database_name  
-HAVING AVG(avg_cpu_percent) >= 80  
+HAVING AVG(avg_cpu_percent) >= 80;
 ```  
     
 ## See Also  
- [Service Tiers](/azure/azure-sql/database/purchasing-models)   
- [Service tier capabilities and limits](/azure/azure-sql/database/performance-guidance)  
-  
+ - [Service Tiers](/azure/azure-sql/database/purchasing-models)   
+ - [Service tier capabilities and limits](/azure/azure-sql/database/performance-guidance) 
+ - [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+ - [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLTransact"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLTransact function [ODBC]"
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLTransact Function
 **Conformance**  

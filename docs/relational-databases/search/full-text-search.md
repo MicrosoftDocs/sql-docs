@@ -1,7 +1,7 @@
 ---
 description: "Full-Text Search"
 title: "Full-Text Search | Microsoft Docs"
-ms.date: "04/10/2018"
+ms.date: "12/29/2020"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.technology: search
@@ -15,7 +15,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Full-Text Search
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Full-Text Search in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] lets users and applications run full-text queries against character-based data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables.
   
@@ -52,11 +52,11 @@ A full-text index includes one or more character-based columns in a table. These
   
  Full-text queries are not case-sensitive. For example, searching for "Aluminum" or "aluminum" returns the same results.  
   
- Full-text queries use a small set of [!INCLUDE[tsql](../../includes/tsql-md.md)] predicates (CONTAINS and FREETEXT) and functions (CONTAINSTABLE and FREETEXTTABLE). However, the search goals of a given business scenario influence the structure of the full-text queries. For example:  
+ Full-text queries use a small set of [!INCLUDE[tsql](../../includes/tsql-md.md)] predicates (`CONTAINS` and `FREETEXT`) and functions (`CONTAINSTABLE` and `FREETEXTTABLE`). However, the search goals of a given business scenario influence the structure of the full-text queries. For example:  
   
 -   e-business-searching for a product on a website:  
   
-    ```  
+    ```sql  
     SELECT product_id   
     FROM products   
     WHERE CONTAINS(product_description, "Snap Happy 100EZ" OR FORMSOF(THESAURUS,'Snap Happy') OR '100EZ')   
@@ -65,7 +65,7 @@ A full-text index includes one or more character-based columns in a table. These
   
 -   Recruitment scenario-searching for job candidates that have experience working with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-    ```  
+    ```sql  
     SELECT candidate_name,SSN   
     FROM candidates   
     WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division = 'DBA';  
@@ -104,8 +104,8 @@ A full-text index includes one or more character-based columns in a table. These
   
 -   **Full-Text Engine.** The Full-Text Engine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is fully integrated with the query processor. The Full-Text Engine compiles and executes full-text queries. As part of query execution, the Full-Text Engine might receive input from the thesaurus and stoplist.  
 
-    >[!NOTE]  
-    >  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, the Full-Text Engine resides in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process, rather than in a separate service. Integrating the Full-Text Engine into the Database Engine improved full-text manageability, optimization of mixed query, and overall performance.  
+    > [!NOTE]  
+    > In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, the Full-Text Engine resides in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process, rather than in a separate service. Integrating the Full-Text Engine into the Database Engine improved full-text manageability, optimization of mixed query, and overall performance.  
 
 -   **Index writer (indexer).** The index writer builds the structure that is used to store the indexed tokens.  
   
@@ -121,6 +121,10 @@ A full-text index includes one or more character-based columns in a table. These
 -   **Filters.** Some data types require filtering before the data in a document can be full-text indexed, including data in **varbinary**, **varbinary(max)**, **image**, or **xml** columns. The filter used for a given document depends on its document type. For example, different filters are used for Microsoft Word (.doc) documents, Microsoft Excel (.xls) documents, and XML (.xml) documents. Then the filter extracts chunks of text from the document, removing embedded formatting and retaining the text and, potentially, information about the position of the text. The result is a stream of textual information. For more information, see [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
 -   **Word breakers and stemmers.** A word breaker is a language-specific component that finds word boundaries based on the lexical rules of a given language (*word breaking*). Each word breaker is associated with a language-specific stemmer component that conjugates verbs and performs inflectional expansions. At indexing time, the filter daemon host uses a word breaker and stemmer to perform linguistic analysis on the textual data from a given table column. The language that is associated with a table column in the full-text index determines which word breaker and stemmer are used for indexing the column. For more information, see [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
+
+    > [!NOTE]  
+    > [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] installs a new version of the word breakers and stemmers for US English (LCID 1033) and UK English (LCID 2057).
+    > However you can switch to the previous version of these components if you want to retain the previous behavior. For more information, see [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).
   
 ##  <a name="processing"></a> Full-Text Search processing  
  Full-text search is powered by the Full-Text Engine. The Full-Text Engine has two roles: indexing support and querying support.  
@@ -248,4 +252,4 @@ Only one full-text index is allowed per table. For a full-text index to be creat
   
  Word breakers (and stemmers) and filters run in the filter daemon host process (fdhost.exe).  
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+

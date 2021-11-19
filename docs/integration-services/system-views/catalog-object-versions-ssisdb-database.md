@@ -16,9 +16,6 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
   Displays the versions of objects in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog. In this release, only versions of projects are supported in this view.  
   
 |Column name|Data type|Description|  

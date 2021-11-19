@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "business rules [Master Data Services], about business rules"
   - "business rules [Master Data Services]"
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Business Rules (Master Data Services)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerConnection.prepareStatement (java.lang.String)"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # prepareStatement Method (java.lang.String)
 

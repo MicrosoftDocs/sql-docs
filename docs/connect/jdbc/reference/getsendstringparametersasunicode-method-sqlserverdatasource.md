@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDataSource.getSendStringParametersAsUnicode"
 apilocation: 
@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 3836d0ab-c3fb-41ff-bb89-10389594ae51
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getSendStringParametersAsUnicode Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

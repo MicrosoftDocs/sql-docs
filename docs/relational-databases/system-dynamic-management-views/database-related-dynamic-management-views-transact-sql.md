@@ -6,15 +6,15 @@ ms.date: "05/18/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "database dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server], database"
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

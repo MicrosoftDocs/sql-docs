@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLRemoveDriverManager"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLRemoveDriverManager function function [ODBC]"
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLRemoveDriverManager Function
 **Conformance**  

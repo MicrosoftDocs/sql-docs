@@ -16,9 +16,6 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
   Displays the parameters for all packages and projects in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
 |Column name|Data type|Description|  
@@ -37,8 +34,8 @@ ms.author: chugu
 |value_type|**char(1)**|Indicates the type of parameter value. This field displays `V` when parameter_value is a literal value and `R` when the value is assigned by referencing an environment variable.|  
 |value_set|**bit**|When the value is `1`, the parameter value has been assigned. When the value is `0`, the parameter value has not been assigned.|  
 |referenced_variable_name|**nvarchar(128)**|The name of the environment variable that is assigned to the value of the parameter. The default value is **NULL**.|  
-|validation_status|**char(1)**|Identified for informational purposes only. Not used in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|last_validation_time|**datetimeoffset(7)**|Identified for informational purposes only. Not used in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|validation_status|**char(1)**|Identified for informational purposes only. Not used in [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)].|  
+|last_validation_time|**datetimeoffset(7)**|Identified for informational purposes only. Not used in [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)].|  
   
 ## Permissions  
  To see rows in this view, you must have one of the following permissions:  

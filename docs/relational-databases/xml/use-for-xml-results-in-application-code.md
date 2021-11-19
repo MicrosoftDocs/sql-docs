@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "XML data islands [SQL Server]"
   - "data islands [SQL Server]"
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Use FOR XML Results in Application Code
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

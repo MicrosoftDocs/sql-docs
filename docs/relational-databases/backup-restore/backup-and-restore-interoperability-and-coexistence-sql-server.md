@@ -21,7 +21,7 @@ ms.author: chadam
 # Backup and Restore: Interoperability and Coexistence (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This topic describes backup-and-restore considerations for several features in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. These features include: file restore and database startup, online restore and disabled indexes, database mirroring, and piecemeal restore and full-text indexes.  
+  This topic describes backup-and-restore considerations for several features in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. These features include: file restore and database startup, online restore and disabled indexes, database mirroring, and piecemeal restore and full-text indexes.  
   
  **In this Topic:**  
   

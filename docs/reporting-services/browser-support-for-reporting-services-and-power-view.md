@@ -1,7 +1,7 @@
 ---
 title: "Browser Support for Reporting Services and Power View | Microsoft Docs"
 description: Learn about what browser versions are supported for managing and viewing SQL Server Reporting Services, the ReportViewer Controls and Power View.
-ms.date: 07/02/2017
+ms.date: 10/25/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -25,17 +25,21 @@ ms.author: maggies
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Learn about what browser versions are supported for managing and viewing SQL Server Reporting Services, the ReportViewer Controls and Power View.
+Learn about what browser versions are supported for managing and viewing SQL Server Reporting Services (SSRS), the ReportViewer Controls and Power View.
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
+> [!NOTE]
+> Support for the Microsoft Edge Legacy browser stopped beginning March 9, 2021, and support for Microsoft Internet Explorer 11 stopped beginning August 17, 2021. Support for Edge (Internet Explorer mode) and Chrome will be supported going forward, but may experience some visual (non-functional) issues on versions of SSRS prior to 2016.
 
 ## Browser requirements for the web portal
 
 The following is the current list of browsers supported for the web portal.
 
 **Microsoft Windows**  
-*Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
+*Windows 7, 8.1, 10, 11; Windows Server 2008 R2, 2012, 2012 R2, 2016, 2019*
+
 - Microsoft Edge (+)
 - Microsoft Internet Explorer 10 or 11
 - Google Chrome (+)
@@ -81,7 +85,7 @@ The following is the current list of browsers supported for the web portal.
 
 ::: moniker range="=sql-server-2016"
 
- If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see  [Plan browser support in SharePoint 2016](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+ If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see  [Plan browser support in SharePoint 2016](/sharepoint/install/browser-support-planning-2016-2019).
 
 ::: moniker-end
 
@@ -91,8 +95,8 @@ The following is the current list of browsers supported for the web portal.
 
 |**Browser type**|**Supports**|**Browser default**|**Server default**|
 |----------------------|------------------|-------------------------|------------------------|
-|**Microsoft Edge** (+)|Negotiate, Kerberos, NTLM, Basic|Negotiate|Yes. The default authentication settings work with Edge.|
-|**Microsoft Internet Explorer**|Negotiate, Kerberos, NTLM, Basic|Negotiate|Yes. The default authentication settings work with Internet Explorer.|
+|**Microsoft Edge** (+)|Negotiate, NTLM, Basic|Negotiate|Yes. The default authentication settings work with Edge.|
+|**Microsoft Internet Explorer**|Negotiate, NTLM, Basic|Negotiate|Yes. The default authentication settings work with Internet Explorer.|
 |**Google Chrome**(+)|Negotiate, NTLM, Basic|Negotiate|Yes. The default authentication settings work with Chrome.|
 |**Mozilla Firefox**(+)|NTLM, Basic|NTLM|Yes. The default authentication settings work with Firefox.|
 |**Apple Safari**(+)|NTLM, Basic|Basic|Yes. The default authentication settings work with Safari.|
@@ -145,7 +149,7 @@ The following is the current list of browsers supported for the web portal.
 
 ::: moniker range="=sql-server-2016"
 
- For more information on the SharePoint 2016 browser support, see [Plan browser support in SharePoint 2013](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+ For more information on the SharePoint 2016 browser support, see [Plan browser support in SharePoint 2013](/sharepoint/install/browser-support-planning-2016-2019).
 
 ::: moniker-end
 
@@ -157,4 +161,4 @@ The following is the current list of browsers supported for the web portal.
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

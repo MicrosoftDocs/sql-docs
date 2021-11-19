@@ -5,13 +5,17 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 01/03/2020
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
-ms.custom: seo-lt-2019
+author: garyericson
+ms.author: garye
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 monikerRange: ">=sql-server-2016"
 ---
 # Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
 
 ::: moniker range=">=sql-server-2017"
 SQL Server Setup includes a **shared feature** option for installing a standalone machine learning server that runs outside of SQL Server. It's called **Machine Learning Server (Standalone)** and includes Python and R. 
@@ -20,7 +24,7 @@ SQL Server Setup includes a **shared feature** option for installing a standalon
 SQL Server Setup includes a **shared feature** option for installing a standalone machine learning server that runs outside of SQL Server. In SQL Server 2016, this feature is called **R Server (Standalone)**.  
 ::: moniker-end
 
-A standalone server as installed by SQL Server Setup is functionally equivalent to the non-SQL-branded versions of [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server), supporting the same use cases and scenarios, including:
+A standalone server as installed by SQL Server Setup supports use cases and scenarios such as the following:
 
 + Remote execution, switching between local and remote sessions in the same console
 + Operationalization with web nodes and compute nodes
@@ -213,7 +217,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
 ## Development tools
 
-A development IDE is not installed as part of setup. For more information about configuring a development environment, see [Set up R tools](../r/set-up-a-data-science-client.md) and [Set up Python tools](../python/setup-python-client-tools-sql.md).
+A development IDE is not installed as part of setup. For more information about configuring a development environment, see [Set up R tools](../r/set-up-data-science-client.md) and [Set up Python tools](../python/setup-python-client-tools-sql.md).
 
 ## Next steps
 

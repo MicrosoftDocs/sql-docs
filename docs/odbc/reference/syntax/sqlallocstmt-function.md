@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLAllocStmt"
 apilocation: 
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLAllocStmt function [ODBC]"
 ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLAllocStmt Function
 **Conformance**  

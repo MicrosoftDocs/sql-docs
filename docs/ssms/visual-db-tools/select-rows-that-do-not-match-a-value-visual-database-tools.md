@@ -19,7 +19,7 @@ ms.reviewer:
 
 ---
 # Select Rows That Do Not Match a Value (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 To find rows that do not match a value, use the NOT operator.  
   
 ### To find rows that do not match a value  

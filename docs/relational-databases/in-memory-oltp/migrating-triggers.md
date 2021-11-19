@@ -1,7 +1,8 @@
 ---
 title: "Migrating Triggers | Microsoft Docs"
 description: Learn about memory-optimized tables and DDL triggers, which fire for CREATE, ALTER, DROP, GRANT, DENY, REVOKE, or UPDATE STATISTICS on a SQL Server instance.
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -9,8 +10,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Migrating Triggers

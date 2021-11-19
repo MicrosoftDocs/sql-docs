@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: a3e90ac3-69a6-47c9-aa18-8e9084717369
-author: lrtoyou1223
+author: chugugrace 
 ms.author: lle
 ---
 # Master Data Services and Data Quality Services Features Support

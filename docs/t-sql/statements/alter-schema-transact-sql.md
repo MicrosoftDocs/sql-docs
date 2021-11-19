@@ -4,10 +4,10 @@ title: "ALTER SCHEMA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER SCHEMA"
   - "ALTER_SCHEMA_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "schemas [SQL Server], modifying"
   - "modifying schemas"
 ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER SCHEMA (Transact-SQL)
@@ -97,7 +97,7 @@ ALTER SCHEMA schema_name
 ## Examples  
   
 ### A. Transferring ownership of a table  
- The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the 'HumanResources` schema.  
+ The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the `HumanResources` schema.  
   
 ```sql  
 USE AdventureWorks2012;  

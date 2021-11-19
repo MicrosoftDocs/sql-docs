@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: machine-learning-services
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_execute_external_script_TSQL"
   - "sys.sp_execute_external_script"

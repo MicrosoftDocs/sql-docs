@@ -7,7 +7,7 @@ ms.prod_service: sql-tools
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: sstein
+ms.reviewer: 
 helpviewer_keywords:
   - "source controls [SQL Server Management Studio], tutorials"
   - "Help [SQL Server], SQL Server Management Studio"
@@ -23,7 +23,7 @@ ms.date: 03/13/2018
 
 # Tips and tricks for using SQL Server Management Studio (SSMS)
 
-This article gives you some tips and tricks for using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). This article shows you how to: 
+This article gives you some tips and tricks for using SQL Server Management Studio (SSMS). This article shows you how to: 
 
 > [!div class="checklist"]
 > * Comment/uncomment your Transact-SQL (T-SQL) text
@@ -34,17 +34,17 @@ This article gives you some tips and tricks for using [!INCLUDE[ssManStudioFull]
 
 ## Prerequisites
 
-To test out the steps provided in this article, you need [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], access to a SQL server, and an AdventureWorks database. 
+To test out the steps provided in this article, you need SQL Server Management Studio, access to a SQL server, and an AdventureWorks database. 
 
 * Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
-* Install [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Install [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Download an [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). To learn how to restore a database in SSMS, see [Restoring a database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## Comment/uncomment your T-SQL code
 
 You can comment and uncomment portions of your text by using the **Comment** button on the toolbar. Text that is commented out is not executed.
 
-1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+1. Open SQL Server Management Studio.
 
 2. Connect to your SQL server.
 
@@ -281,7 +281,7 @@ If you're connected to an alias or to an Availability Group listener, that infor
 
 The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to* articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
-* [Connect to and query an instance](../quickstarts/connect-query-sql-server.md)
+* [Connect to and query an instance](../quickstarts/ssms-connect-query-sql-server.md)
 * [Scripting](scripting-ssms.md)
 * [Using Templates in SSMS](../template/templates-ssms.md)
 * [SSMS Configuration](ssms-configuration.md)

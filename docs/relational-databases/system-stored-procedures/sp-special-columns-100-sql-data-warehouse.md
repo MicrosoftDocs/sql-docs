@@ -3,11 +3,10 @@ description: "sp_special_columns_100 (Azure Synapse Analytics)"
 title: "sp_special_columns_100 (Azure Synapse Analytics)"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: sql-data-warehouse
-ms.subservice: design
+ms.prod: sql
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
@@ -37,7 +36,8 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 [ ; ]  
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  [ @table_name=] '*table_name*'  

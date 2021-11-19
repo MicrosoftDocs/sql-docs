@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ## Options  
  Select each Subscriber type that this publication must support.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]  
  The publication can use all features.  
   
  [!INCLUDE[ssEW](../../includes/ssew-md.md)]  

@@ -6,7 +6,7 @@ ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER EXTERNAL LIBRARY"
   - "ALTER_EXTERNAL_LIBRARY_TSQL"
@@ -31,7 +31,7 @@ Modifies the content of an existing external package library.
 
 ::: moniker range="=azuresqldb-mi-current"
 > [!NOTE]
-> In Azure SQL Managed Instance, you can alter a library by removing it and then using **sqlmlutils** to install the altered version. For more information about **sqlmlutils**, see [Install Python packages with sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) and [Install new R packages with sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current).
+> In Azure SQL Managed Instance, you can alter a library by removing it and then using **sqlmlutils** to install the altered version. For more information about **sqlmlutils**, see [Install Python packages with sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current&preserve-view=true) and [Install new R packages with sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current&preserve-view=true).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"

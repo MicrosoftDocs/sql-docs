@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "mail host databases [SQL Server]"
   - "host databases [Database Mail]"
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Mail Messaging Objects
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

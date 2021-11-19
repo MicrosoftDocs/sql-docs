@@ -1,10 +1,10 @@
 ---
 description: "Use Sparse Columns"
-title: "Use Sparse Columns | Microsoft Docs"
+title: "Use Sparse Columns"
 ms.custom: ""
-ms.date: "03/22/2016"
+ms.date: "07/09/2021"
 ms.prod: sql
-ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -12,16 +12,15 @@ helpviewer_keywords:
   - "sparse columns, described"
   - "null columns"
   - "sparse columns"
-ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Use Sparse Columns
+# Use sparse columns
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  Sparse columns are ordinary columns that have an optimized storage for null values. Sparse columns reduce the space requirements for null values at the cost of more overhead to retrieve nonnull values. Consider using sparse columns when the space saved is at least 20 percent to 40 percent. Sparse columns and column sets are defined by using the [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) or [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) statements.  
+  Sparse columns are ordinary columns that have an optimized storage for null values. Sparse columns reduce the space requirements for null values at the cost of more overhead to retrieve non-NULL values. Consider using sparse columns when the space saved is at least 20 percent to 40 percent. Sparse columns and column sets are defined by using the [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) or [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) statements.  
   
  Sparse columns can be used with column sets and filtered indexes:  
   
@@ -33,16 +32,16 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
      Because sparse columns have many null-valued rows, they are especially appropriate for filtered indexes. A filtered index on a sparse column can index only the rows that have populated values. This creates a smaller and more efficient index. For more information, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
- Sparse columns and filtered indexes enable applications, such as [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], to efficiently store and access a large number of user-defined properties by using [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Sparse columns and filtered indexes enable applications, such as [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], to efficiently store and access a large number of user-defined properties by using [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ## Properties of Sparse Columns  
  Sparse columns have the following characteristics:  
   
 -   The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses the SPARSE keyword in a column definition to optimize the storage of values in that column. Therefore, when the column value is NULL for any row in the table, the values require no storage.  
   
--   Catalog views for a table that has sparse columns are the same as for a typical table. The sys.columns catalog view contains a row for each column in the table and includes a column set if one is defined.  
+-   Catalog views for a table that has sparse columns are the same as for a typical table. The `sys.columns` catalog view contains a row for each column in the table and includes a column set if one is defined.  
   
--   Sparse columns are a property of the storage layer, rather than the logical table. Therefore a SELECT...INTO statement does not copy over the sparse column property into a new table.  
+-   Sparse columns are a property of the storage layer, rather than the logical table. Therefore a `SELECT ... INTO` statement does not copy over the sparse column property into a new table.  
   
 -   The COLUMNS_UPDATED function returns a **varbinary** value to indicate all the columns that were updated during a DML action. The bits that are returned by the COLUMNS_UPDATED function are as follows:  
   
@@ -56,15 +55,17 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  The following data types cannot be specified as SPARSE:  
   
-|||  
-|-|-|  
-|**geography**|**text**|  
-|**geometry**|**timestamp**|  
-|**image**|**user-defined data types**|  
-|**ntext**||  
+:::row:::
+   :::column span="":::
+      **geography**<br>      **geometry**<br>      **image**<br>      **ntext**
+   :::column-end:::
+   :::column span="":::
+      **text**  <br>      **timestamp**  <br>      **user-defined data types**
+   :::column-end:::
+:::row-end:::
   
-## Estimated Space Savings by Data Type  
- Sparse columns require more storage space for nonnull values than the space required for identical data that is not marked SPARSE. The following tables show the space usage for each data type. The **NULL Percentage** column indicates what percent of the data must be NULL for a net space savings of 40 percent.  
+## Estimated space savings by data type  
+ Sparse columns require more storage space for non-NULL values than the space required for identical data that is not marked SPARSE. The following tables show the space usage for each data type. The **NULL Percentage** column indicates what percent of the data must be NULL for a net space savings of 40 percent.  
   
  **Fixed-Length Data Types**  
   
@@ -111,12 +112,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  *The length is equal to the average of the data that is contained in the type, plus 2 or 4 bytes.  
   
-## In-Memory Overhead Required for Updates to Sparse Columns  
+## In-Memory overhead required for updates to sparse columns  
  When designing tables with sparse columns, keep in mind that an additional 2 bytes of overhead are required for each non-null sparse column in the table when a row is being updated. As a result of this additional memory requirement, updates can fail unexpectedly with error 576 when the total row size, including this memory overhead, exceeds 8019, and no columns can be pushed off the row.  
   
  Consider the example of a table that has 600 sparse columns of type bigint. If there are 571 non-null columns, then the total size on disk is 571 * 12 = 6852 bytes. After including additional row overhead and the sparse column header, this increases to around 6895 bytes. The page still has around 1124 bytes available on disk. This can give the impression that additional columns can be updated successfully. However, during the update, there is additional overhead in memory which is 2\*(number of non-null sparse columns). In this example, including the additional overhead - 2 \* 571 = 1142 bytes - increases the row size on disk to around 8037 bytes. This size exceeds the maximum allowed size of 8019 bytes. Since all the columns are fixed-length data types, they cannot be pushed off the row. As a result, the update fails with the 576 error.  
   
-## Restrictions for Using Sparse Columns  
+## Restrictions for using sparse columns  
  Sparse columns can be of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type and behave like any other column with the following restrictions:  
   
 -   A sparse column must be nullable and cannot have the ROWGUIDCOL or IDENTITY properties. A sparse column cannot be of the following data types: **text**, **ntext**, **image**, **timestamp**, user-defined data type, **geometry**, or **geography**; or have the FILESTREAM attribute.  
@@ -129,7 +130,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   A data mask can be defined on a sparse column, but not on a sparse column that is part of a column set.  
   
--   A sparse column cannot be part of a clustered index or a unique primary key index. However, both persisted and nonpersisted computed columns that are defined on sparse columns can be part of a clustered key.  
+-   A sparse column cannot be part of a clustered index or a unique primary key index. However, both persisted and non-persisted computed columns that are defined on sparse columns can be part of a clustered key.  
   
 -   A sparse column cannot be used as a partition key of a clustered index or heap. However, a sparse column can be used as the partition key of a nonclustered index.  
   
@@ -137,7 +138,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Sparse columns are incompatible with data compression. Therefore sparse columns cannot be added to compressed tables, nor can any tables containing sparse columns be compressed.  
   
--   Changing a column from sparse to nonsparse or nonsparse to sparse requires changing the storage format of the column. The SQL Server Database Engine uses the following procedure to accomplish this change:  
+-   Changing a column from sparse to non-sparse, or non-sparse to sparse, requires changing the storage format of the column. The SQL Server Database Engine uses the following procedure to accomplish this change:  
   
     1.  Adds a new column to the table in the new storage size and format.  
   
@@ -152,7 +153,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   When you change a non-sparse column to a sparse column, the sparse column will consume more space for non-null values. When a row is close to the maximum row size limit, the operation can fail.  
   
-## SQL Server Technologies That Support Sparse Columns  
+## SQL Server technologies that support sparse columns  
  This section describes how sparse columns are supported in the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies:  
   
 -   Transactional replication  
@@ -181,9 +182,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  In this example, a document table contains a common set that has the columns `DocID` and `Title`. The Production group wants a `ProductionSpecification` and `ProductionLocation` column for all production documents. The Marketing group wants a `MarketingSurveyGroup` column for marketing documents. The code in this example creates a table that uses sparse columns, inserts two rows into the table, and then selects data from the table.  
   
 > [!NOTE]  
->  This table has only five columns to make it easier to display and read. Declaring the sparse columns to be nullable is optional if the ANSI_NULL_DFLT_ON option is set.  
+>  This table has only five columns to make it easier to display and read. Declaring the sparse columns to be nullable is optional if the [ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) option is set. When SET ANSI_DEFAULTS is ON, SET ANSI_NULL_DFLT_ON is enabled. ANSI_DEFAULTS is ON by default for most connection providers. For more information, see [SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md).
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -206,7 +207,7 @@ GO
   
  To select all the columns from the table returns an ordinary result set.  
   
-```  
+```sql  
 SELECT * FROM DocumentStore ;  
 ```  
   
@@ -220,7 +221,7 @@ SELECT * FROM DocumentStore ;
   
  Because the Production department is not interested in the marketing data, they want to use a column list that returns only columns of interest, as shown in the following query.  
   
-```  
+```sql  
 SELECT DocID, Title, ProductionSpecification, ProductionLocation   
 FROM DocumentStore   
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -232,10 +233,9 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## See Also  
- [Use Column Sets](../../relational-databases/tables/use-column-sets.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
-  
-  
+## See also  
+ - [Use column sets](../../relational-databases/tables/use-column-sets.md)   
+ - [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+ - [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+ - [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+

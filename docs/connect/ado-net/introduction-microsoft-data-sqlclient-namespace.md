@@ -9,7 +9,6 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
-ms.reviewer: v-jizho2
 ---
 # Introduction to Microsoft.Data.SqlClient namespace
 
@@ -18,7 +17,6 @@ ms.reviewer: v-jizho2
 ### Release notes for Microsoft.Data.SqlClient 4.0
 
 Release notes are also available in the GitHub Repository: [4.0 Release Notes](https://github.com/dotnet/SqlClient/tree/main/release-notes/4.0).
-
 
 ### Breaking changes in 4.0
 
@@ -32,17 +30,21 @@ Release notes are also available in the GitHub Repository: [4.0 Release Notes](h
 ### New features in 4.0
 
 ### Encrypt default value set to true
+
 The default value of the `Encrypt` connection setting has been changed from `false` to `true`. With the growing use of cloud databases and the need to ensure those connections are secure, it's time for this backwards-compatibility-breaking change.
 
 ### Ensure connections fail when encryption is required
+
 In scenarios where client encryption libraries were disabled or unavailable, it was possible for unencrypted connections to be made when Encrypt was set to true or the server required encryption.
 
 ###  App Context Switch for using System default protocols
+
 TLS 1.3 is not supported by the driver; therefore, it has been removed from the supported protocols list by default. Users can switch back to forcing use of the Operating System's client protocols, by enabling the App Context switch below:
 
  `Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols`
 
 ### Enable optimized parameter binding
+
 Microsoft.Data.SqlClient introduces a new `SqlCommand` API, `EnableOptimizedParameterBinding` to improve performance of queries with large number of parameters. This property is disabled by default. When set to `true`, parameter names will not be sent to the SQL server when the command is executed.
 
 ```cs
@@ -66,7 +68,6 @@ SqlLocalDb shared instances are now supported when using Managed SNI.
   - `(localdb)\.\<shared instance name>` (*newly added support)
 
 ###  `GetFieldValueAsync<T>` and `GetFieldValue<T>` support for `XmlReader`, `TextReader`, `Stream` types
-
 
 `XmlReader`, `TextReader`, `Stream` types are now supported when using `GetFieldValueAsync<T>` and `GetFieldValue<T>`.
 
@@ -244,7 +245,7 @@ With this authentication mode, the driver acquires a token by passing "[DefaultA
 
 ### Custom master key store provider registration enhancements
 
-Microsoft.Data.SqlClient now offers more control of where master key store providers are accessible in an application to better support multi-tenant applications and their use of column encryption/decryption. The following APIs are introduced to allow registration of custom master key store providers on instances of `SqlConnection` and `SqlCommand`:
+Microsoft.Data.SqlClient now offers more control of where master key store providers are accessible in an application in order to better support multi-tenant applications and their use of column encryption/decryption. The following APIs are introduced to allow registration of custom master key store providers on instances of `SqlConnection` and `SqlCommand`:
 
 ```cs
 public class SqlConnection

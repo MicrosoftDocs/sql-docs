@@ -38,12 +38,12 @@ The default value of the `Encrypt` connection setting has been changed from `fal
 In scenarios where client encryption libraries were disabled or unavailable, it was possible for unencrypted connections to be made when Encrypt was set to true or the server required encryption.
 
 ###  App Context Switch for using System default protocols
-TLS 1.3 is not supported by the driver; therefore, it has been removed from the supported protocols list by default. Users can switch back to forcing use of Operating System's client protocols, by enabling the App Context switch below:
+TLS 1.3 is not supported by the driver; therefore, it has been removed from the supported protocols list by default. Users can switch back to forcing use of the Operating System's client protocols, by enabling the App Context switch below:
 
  `Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols`
 
 ### Enable optimized parameter binding
-Microsoft.Data.SqlClient introduces new `SqlCommand` API, `EnableOptimizedParameterBinding` to improve performance of queries with large number of parameters. This property is disabled by default. When set to `true`, parameter names will not be sent to the SQL server when the command is executed.
+Microsoft.Data.SqlClient introduces a new `SqlCommand` API, `EnableOptimizedParameterBinding` to improve performance of queries with large number of parameters. This property is disabled by default. When set to `true`, parameter names will not be sent to the SQL server when the command is executed.
 
 ```cs
 public class SqlCommand

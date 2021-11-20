@@ -50,19 +50,19 @@ Is another **geography** instance to compare to the instance on which `STInterse
 ## Examples  
  The following example uses `STIntersects()` to determine whether two `geography` instances intersect each other.  
   
-```sql
+```  
  DECLARE @g geography;  
  DECLARE @h geography;  
  SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
  SET @h = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
-```  
+ ```  
   
-```sql
+```
  SELECT CASE @g.STIntersects(@h) 
  WHEN 1 THEN '@g intersects @h'  
  ELSE '@g does not intersect @h'  
  END;
-```  
+ ```  
   
 ## See Also  
  [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

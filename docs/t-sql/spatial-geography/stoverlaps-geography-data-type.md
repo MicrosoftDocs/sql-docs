@@ -45,7 +45,7 @@ ms.author: mlandzic
 ## Examples  
  The following example uses `STOverlaps()` to test two **geography** instances for overlap.  
   
-```  
+```sql
 DECLARE @g geography;  
 DECLARE @h geography;  
 SET @g = geography::Parse('POLYGON ((-120.533 46.566, -118.283 46.1, -122.3 47.45, -120.533 46.566))');  

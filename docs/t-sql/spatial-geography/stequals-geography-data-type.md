@@ -48,7 +48,7 @@ ms.author: mlandzic
 ## Examples  
  The following example creates two `geography` instances with `STGeomFromText()` that are equal but not trivially equal, and uses `STEquals()` to test their equality. The instances are equal because `LINESTRING` and `POINT` are contained within the `POLYGON`.  
   
-```sql
+```  
 DECLARE @g geography;  
 DECLARE @h geography;  
 SET @g = geography::STGeomFromText('GEOMETRYCOLLECTION(POLYGON((-122.368 47.658, -122.338 47.649, -122.338 47.658, -122.368 47.658, -122.368 47.658)), LINESTRING(-122.360 47.656, -122.343 47.656), POINT (-122.35 47.656))', 4326);  

@@ -1,7 +1,7 @@
 ---
-title: "Connection string builders"
-description: Learn about the connection string builder classes used for different providers in ADO.NET, all of which inherit from DbConnectionStringBuilder.
-ms.date: "11/13/2020"
+title: Connection string builders
+description: Learn about the connection string builder classes used for different providers in ADO.NET. These classes all inherit from DbConnectionStringBuilder.
+ms.date: 11/13/2020
 dev_langs: 
   - "csharp"
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
@@ -18,13 +18,13 @@ ms.author: v-davidengel
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-In earlier versions of ADO.NET, compile-time checking of connection strings with concatenated string values did not occur, so that at run time, an incorrect keyword generated an <xref:System.ArgumentException>. The Microsoft SqlClient Data Provider for SQL Server includes the strongly typed connection string builder class <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType> that inherits from <xref:System.Data.Common.DbConnectionStringBuilder>.
+In earlier versions of ADO.NET, compile-time checking of connection strings with concatenated string values didn't occur, so that at run time, an incorrect keyword generated an <xref:System.ArgumentException>. The Microsoft SqlClient Data Provider for SQL Server includes the connection string builder class <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType> that inherits from <xref:System.Data.Common.DbConnectionStringBuilder>.
 
 ## Connection string injection attacks
 
-A connection string injection attack can occur when dynamic string concatenation is used to build connection strings that are based on user input. If the string is not validated and malicious text or characters not escaped, an attacker can potentially access sensitive data or other resources on the server. For example, an attacker could mount an attack by supplying a semicolon and appending an additional value. The connection string is parsed by using a "**last one wins**" algorithm, and the hostile input is substituted for a legitimate value.
+A connection string injection attack can occur when dynamic string concatenation is used to build connection strings that are based on user input. If the string isn't validated and malicious text or characters not escaped, an attacker can potentially access sensitive data or other resources on the server. For example, an attacker could mount an attack by supplying a semicolon and appending another value. The connection string is parsed by using a "**last one wins**" algorithm, and the hostile input is replaced for a legitimate value.
 
-The connection string builder classes are designed to eliminate guesswork and protect against syntax errors and security vulnerabilities. They provide methods and properties corresponding to the known key/value pairs permitted by the data provider. Each class maintains a fixed collection of synonyms and can translate from a synonym to the corresponding well-known key name. Checks are performed for valid key/value pairs and an invalid pair throws an exception. In addition, injected values are handled in a safe manner.
+The connection string builder classes are designed to eliminate guesswork and protect against syntax errors and security vulnerabilities. They provide methods and properties corresponding to the known key/value pairs permitted by the data provider. Each class maintains a fixed collection of synonyms and can translate from a synonym to the corresponding well-known key name. Checks are done for valid key/value pairs and an invalid pair throws an exception. Also, injected values are handled in a safe manner.
 
 The following example demonstrates how the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> handles an inserted extra value for the `Initial Catalog` setting.
 
@@ -39,7 +39,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
 
 ## Build connection strings from configuration files
 
-If certain elements of a connection string are known beforehand, they can be stored in a configuration file and retrieved at run time to construct a complete connection string. For example, the name of the database might be known in advance, but not the name of the server. Or you might want a user to supply a name and password at run time without being able to inject other values into the connection string.
+If certain elements of a connection string are known beforehand, they can be stored in a configuration file and retrieved at run time to construct a complete connection string. For example, the name of the database might be known in advance, but not the name of the server. Or you might want a user to supply a name and password at run time without the ability to inject other values into the connection string.
 
 One of the overloaded constructors for a connection string builder takes a <xref:System.String> as an argument, which enables you to supply a partial connection string that can then be completed from user input. The partial connection string can be stored in a configuration file and retrieved at run time.
 

@@ -1,7 +1,7 @@
 ---
-title: "Asynchronous programming"
+title: Asynchronous programming
 description: Learn about asynchronous programming in the Microsoft SqlClient Data Provider for SQL Server.
-ms.date: "12/04/2020"
+ms.date: 12/04/2020
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,11 +16,11 @@ ms.author: v-davidengel
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-This topic discusses support for asynchronous programming in the Microsoft SqlClient Data Provider for SQL Server (SqlClient).
+This article discusses support for asynchronous programming in the Microsoft SqlClient Data Provider for SQL Server (SqlClient).
 
 ## Legacy asynchronous programming
 
-The Microsoft SqlClient Data Provider for SQL Server includes methods from **System.Data.SqlClient** in order to maintain backwards compatibility for applications migrating to <xref:Microsoft.Data.SqlClient>. It isn't recommended to use the following legacy asynchronous programming methods for new development:
+The Microsoft SqlClient Data Provider for SQL Server includes methods from **System.Data.SqlClient** to maintain backwards compatibility for applications migrating to <xref:Microsoft.Data.SqlClient>. It isn't recommended to use the following legacy asynchronous programming methods for new development:
 
 - <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -33,7 +33,7 @@ The Microsoft SqlClient Data Provider for SQL Server includes methods from **Sys
 
 ## Asynchronous programming features
 
-These asynchronous programming features provides a simple technique to make code asynchronous.
+These asynchronous programming features provide a simple technique to make code asynchronous.
 
 For more information about asynchronous programming in .NET, see:
 
@@ -41,7 +41,7 @@ For more information about asynchronous programming in .NET, see:
 
 - [Asynchronous Programming with Async and Await (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/async/index)
 
-When your user interface is unresponsive or your server does not scale, it is likely that you need your code to be more asynchronous. Writing asynchronous code has traditionally involved installing a callback (also called continuation) to express the logic that occurs after the asynchronous operation finishes. This complicates the structure of asynchronous code as compared with synchronous code.
+When your user interface is unresponsive or your server doesn't scale, it's likely you need your code to be more asynchronous. Writing asynchronous code has traditionally involved installing a callback (also called continuation) to express the logic that occurs after the asynchronous operation finishes. This style complicates the structure of asynchronous code as compared with synchronous code.
 
 You can call into asynchronous methods without using callbacks, and without splitting your code across multiple methods or lambda expressions.
 
@@ -50,7 +50,7 @@ The `async` modifier specifies that a method is asynchronous. When calling an `a
 > [!TIP]
 > In the Microsoft SqlClient Data Provider for SQL Server, asynchronous calls are not required to set the `Context Connection` connection string keyword.
 
-Calling an `async` method does not allocate any additional threads. It may use the existing I/O completion thread briefly at the end.
+Calling an `async` method doesn't create extra threads. It may use the existing I/O completion thread briefly at the end.
 
 The following methods in the Microsoft SqlClient Data Provider for SQL Server support asynchronous programming:
 
@@ -95,7 +95,7 @@ Other asynchronous members support [SqlClient streaming support](sqlclient-strea
 
 ### Synchronous to asynchronous connection open
 
-You can upgrade an existing application to use the asynchronous feature. For example, assume an application has a synchronous connection algorithm and blocks the UI thread every time it connects to the database and, once connected, the application calls a stored procedure that signals other users of the one who just signed in.
+You can upgrade an existing application to use the asynchronous feature. For example, assume an application has a synchronous connection algorithm and blocks the UI thread every time it connects to the database. Once connected, the application calls a stored procedure that signals other users of the one who just signed in.
 
 [!code-csharp[SqlCommand_ExecuteNonQuery#1](~/../sqlclient/doc/samples/SqlCommand_ExecuteNonQuery.cs#1)]
 
@@ -105,7 +105,7 @@ When converted to use the asynchronous functionality, the program would look lik
 
 ### Add the asynchronous feature in an existing application (mixing old and new patterns)
 
-It is also possible to add asynchronous capability (SqlConnection::OpenAsync) without changing the existing asynchronous logic. For example, if an application currently uses:
+It's also possible to add asynchronous capability (SqlConnection::OpenAsync) without changing the existing asynchronous logic. For example, if an application currently uses:
 
 [!code-csharp[SqlConnection_OpenAsync_ContinueWith#1](~/../sqlclient/doc/samples/SqlConnection_OpenAsync_ContinueWith.cs#1)]
 
@@ -115,7 +115,7 @@ You can begin to use the asynchronous pattern without substantially changing the
 
 ### Use the base provider model and the asynchronous feature
 
-You may need to create a tool that is able to connect to different databases and execute queries. You can use the base provider model and the asynchronous feature.
+You may need to create a tool that can connect to different databases and execute queries. You can use the base provider model and the asynchronous feature.
 
 The Microsoft Distributed Transaction Controller (MSDTC) must be enabled on the server to use distributed transactions. For information on how to enable MSDTC, see [How to Enable MSDTC on a Web Server](/previous-versions/commerce-server/dd327979(v=cs.90)).
 
@@ -154,7 +154,7 @@ The example opens a single connection to the **AdventureWorks** database. Using 
 
 ## Asynchronously read and update data with MARS
 
-MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation. This feature eliminates the need for an application to deal with connection-busy errors. In addition, MARS can replace the use of server-side cursors, which generally consume more resources. Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.
+MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation. This feature eliminates the need for an application to deal with connection-busy errors. Also, MARS can replace the use of server-side cursors, which generally consume more resources. Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.
 
 The following Console application demonstrates how to use two <xref:Microsoft.Data.SqlClient.SqlDataReader> objects with three <xref:Microsoft.Data.SqlClient.SqlCommand> objects and a single <xref:Microsoft.Data.SqlClient.SqlConnection> object with MARS enabled. The first command object retrieves a list of vendors whose credit rating is 5. The second command object uses the vendor ID provided from a <xref:Microsoft.Data.SqlClient.SqlDataReader> to load the second <xref:Microsoft.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor. Each product record is visited by the second <xref:Microsoft.Data.SqlClient.SqlDataReader>. A calculation is performed to determine what the new **OnOrderQty** should be. The third command object is then used to update the **ProductVendor** table with the new value. This entire process takes place within a single transaction, which is rolled back at the end.
 

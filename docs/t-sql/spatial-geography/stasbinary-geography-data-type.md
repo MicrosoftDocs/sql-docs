@@ -28,7 +28,7 @@ ms.author: mlandzic
   
 ## Syntax  
   
-```  
+```
   
 .STAsBinary ( )  
 ```  

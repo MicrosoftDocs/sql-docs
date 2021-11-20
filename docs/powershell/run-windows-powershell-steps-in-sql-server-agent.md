@@ -67,7 +67,7 @@ Each SQL Server Agent job step that runs PowerShell with the **sqlps** module la
 
 6. In the **Process exit code of a successful command** box, enter a value from 0 to 999999.
 
-7. In the **Command** box, enter PowerShell.exe with parameters specifying the PowerShell script to be run. This is pretty much what you would write at a cmd command prompt, so take a look at `PowerShell.exe -?` for all the possible options.
+7. In the **Command** box, enter commands beginning with PowerShell.exe with parameters specifying the PowerShell script to be run. These examples are similar to the syntax for executing PowerShell commands from a Windows command prompt. Refer to `PowerShell.exe -?` for all the possible syntax options.
 
    - Example 1: Runs a simple cmdlet.
      ```cmd

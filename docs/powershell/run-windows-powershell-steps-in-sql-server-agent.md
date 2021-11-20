@@ -77,7 +77,7 @@ Each SQL Server Agent job step that runs PowerShell with the **sqlps** module la
      ```cmd
         PowerShell.exe -Command "& {&SQLCmd.exe -S $(ESCAPE_NONE(SRVR)) -Q 'select @@version'}"
      ```
-   - Example 3: Runs a PowerShell script (using PS7, which would have to be installed on the server). Note that the path to the script is local to the server where SQL Agent is running.
+   - Example 3: Runs a PowerShell script (using `pwsh.exe`, the executable name in PowerShell 7.0, which must be installed on the server). Note that the path to the script is local to the server where SQL Agent is running.
      ```cmd
         PWSH.exe -ExecutionPolicy RemoteSigned -File X:\MyScripts\script001.ps1 
      ```

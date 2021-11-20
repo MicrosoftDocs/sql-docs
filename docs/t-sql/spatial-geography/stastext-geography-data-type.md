@@ -48,7 +48,7 @@ ms.author: mlandzic
 ## Examples  
  The following example uses `STAsText()` to create a `LineString``geography` instance from (-122.360, 47.656) to (-122.343, 47.656) from text. It then returns the result in text.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
 SELECT @g.STAsText();  

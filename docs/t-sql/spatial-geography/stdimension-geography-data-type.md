@@ -44,7 +44,7 @@ ms.author: mlandzic
 ## Examples  
  The following example uses `STDimension()` to create a table variable to hold `geography` instances, and inserts a `Point`, a `LineString`, and a `Polygon`.  
   
-```sql
+```  
 DECLARE @temp table ([name] varchar(10), [geom] geography);  
   
 INSERT INTO @temp values ('Point', geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326));  

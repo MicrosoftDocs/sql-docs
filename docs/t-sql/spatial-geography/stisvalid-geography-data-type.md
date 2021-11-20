@@ -45,7 +45,7 @@ ms.author: mlandzic
 ## Examples  
  The following example creates a `geography` instance and uses `STIsValid()` to test if the instance is valid.  
   
-```  
+```sql
 DECLARE @g geography = geography::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 4326);  
 SELECT @g.STIsValid();  
 DECLARE @g geography  

@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: ad5c8d9b-f8c8-4ddf-85c8-23420bba54ee
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateNClob Method (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

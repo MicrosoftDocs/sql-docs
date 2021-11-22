@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: dd1fb351-b4f2-4ebe-80a0-8bafb0637906
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # length Method (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Building the connection URL
 

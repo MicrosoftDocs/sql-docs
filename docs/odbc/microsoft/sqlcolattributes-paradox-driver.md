@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Paradox driver [ODBC], SQLColAttributes"
 ms.assetid: bbeef024-d470-4d28-b61b-26997ef41007
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLColAttributes (Paradox Driver)
 > [!NOTE]  

@@ -1,7 +1,7 @@
 ---
 title: "Install PolyBase on Windows"
 description: Learn to install PolyBase as a single node or PolyBase scale-out group. You can use an installation wizard or a command prompt. Finally, enable PolyBase.
-ms.date: 08/05/2021
+ms.date: 10/05/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -36,8 +36,9 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
 
 - PolyBase services require Shared Memory protocol to be enabled to function properly.
 
->[!NOTE] 
-> PolyBase can be installed on only one SQL Server instance per machine.
+- PolyBase can be installed on only one SQL Server instance per machine.
+
+- You cannot add features to a failover cluster instance after creation. For example, you cannot add the PolyBase feature to an existing failover cluster instance.
 
  
 ## Single node or PolyBase scale-out group
@@ -195,7 +196,7 @@ At installation, if you use the SQL Server instance as part of a PolyBase scale-
    
 ### PolyBase service accounts
 
-To change the service accounts for the PolyBase Engine and PolyBase Data Movement service, uninstall and reinstall the PolyBase feature.
+To change the service accounts for the PolyBase Engine and PolyBase Data Movement service, uninstall and reinstall the PolyBase feature. If the password for the service account was changed in Active Directory, you can change the service account password with Windows Services Console (services.msc).
 
 ## Next steps  
 

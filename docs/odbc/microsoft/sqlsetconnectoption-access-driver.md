@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLSetConnectOption function [ODBC], Access Driver"
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetConnectOption (Access Driver)
 > [!NOTE]  

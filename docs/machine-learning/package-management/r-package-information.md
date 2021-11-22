@@ -77,7 +77,7 @@ The following Microsoft R packages are installed with SQL Server R Services.
 |Packages | Version | Description |
 |---------|---------|-------------|
 | [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
-| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
+| [sqlrutils](../r/ref-r-sqlrutils.md) | 1.0.0 | Used for including R script in stored procedures. |
 
 ::: moniker-end
 
@@ -88,9 +88,9 @@ The following Microsoft R packages are installed with SQL Server Machine Learnin
 |Packages | Version | Description |
 |---------|---------|-------------|
 | [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
-| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
-| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | Adds machine learning algorithms in R. | 
-| [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Used for writing MDX statements in R. |
+| [sqlrutils](../r/ref-r-sqlrutils.md) | 1.0.0 | Used for including R script in stored procedures. |
+| [MicrosoftML](../r/ref-r-microsoftml.md)| 1.4.0 | Adds machine learning algorithms in R. | 
+| [olapR](../r/ref-r-olapr.md) | 1.0.0 | Used for writing MDX statements in R. |
 
 ::: moniker-end
 
@@ -101,9 +101,9 @@ The following Microsoft R packages are installed with SQL Server Machine Learnin
 |Packages | Version | Description |
 |---------|---------|-------------|
 | [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
-| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
-| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | Adds machine learning algorithms in R. |
-| [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Used for writing MDX statements in R. |
+| [sqlrutils](../r/ref-r-sqlrutils.md) | 1.0.0 | Used for including R script in stored procedures. |
+| [MicrosoftML](../r/ref-r-microsoftml.md)| 9.4.7 | Adds machine learning algorithms in R. |
+| [olapR](../r/ref-r-olapr.md) | 1.0.0 | Used for writing MDX statements in R. |
 
 ::: moniker-end
 

@@ -1,5 +1,5 @@
 ---
-title: "Add or Remove Margins from a Chart (Report Builder) | Microsoft Docs"
+title: "Add or remove margins from a paginated report chart | Microsoft Docs"
 description: Add or remove margins from a column or scatter chart in Report Builder. Improve readability or appearance of paginated reports. 
 ms.date: 03/03/2017
 ms.prod: reporting-services
@@ -12,8 +12,11 @@ ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add or Remove Margins from a Chart (Report Builder and SSRS)
-For Column and Scatter chart types in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, the chart automatically adds side margins on the ends of the x-axis. In Bar chart types, the chart automatically adds side margins on the ends of the y-axis. In all other chart types, the chart does not add side margins. You cannot change the size of the margin.  
+# Add or remove margins from a paginated report chart (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+For Column and Scatter chart types in paginated reports, the chart automatically adds side margins on the ends of the x-axis. In Bar chart types, the chart automatically adds side margins on the ends of the y-axis. In all other chart types, the chart does not add side margins. You cannot change the size of the margin.  
   
  This topic does not apply to pie, doughnut, funnel, or pyramid chart types.  
   

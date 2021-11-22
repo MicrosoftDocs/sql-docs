@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 7ffd282d-c2f6-4d1b-a7a6-859d18b388aa
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setMultiSubnetFailover Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

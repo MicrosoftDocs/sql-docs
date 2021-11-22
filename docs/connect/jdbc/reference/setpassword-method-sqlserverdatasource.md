@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 0db06631-5e68-488c-a9f1-6e5052c0759d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setPassword Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

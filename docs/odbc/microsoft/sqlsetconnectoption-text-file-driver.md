@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "text file driver [ODBC], SQLSetConnectOption"
 ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetConnectOption (Text File Driver)
 > [!NOTE]  

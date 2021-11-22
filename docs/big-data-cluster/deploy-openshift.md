@@ -2,8 +2,8 @@
 title: Deploy on OpenShift
 titleSuffix: SQL Server Big Data Cluster
 description: Learn how to upgrade SQL Server Big Data Clusters on OpenShift.
-author: mihaelablendea
-ms.author: mihaelab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: dacoelho
 ms.date: 07/29/2021
 ms.topic: conceptual

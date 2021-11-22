@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ODBC escape sequences [ODBC], procedure call"
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Procedure Call Escape Sequence
 ODBC uses escape sequences for procedure calls. The syntax of this escape sequence is as follows:  

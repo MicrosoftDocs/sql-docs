@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: c99d0772-b26c-492c-a643-2813b5429993
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getBigDecimal Method (int, int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

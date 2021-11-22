@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLTables function [ODBC], Text File Driver"
 ms.assetid: f47fd1a4-5bd8-4b2e-8ae3-e595e49f4f95
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLTables (Text File Driver)
 > [!NOTE]  

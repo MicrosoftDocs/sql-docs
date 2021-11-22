@@ -56,6 +56,26 @@ Supportability and diagnostics related improvements included in [!INCLUDE[sssql1
 
 This section identifies issues which may occur after you apply [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3.
 
+### R Services using specific algorithms, streaming, or partitioning
+
+- **Issue**: The following limitations apply on [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] with runtime upgrade configured using [RegisterRext.exe /configure](../machine-learning/install/change-default-language-runtime-version.md) or with SP3 slipstream install. This issue applies to Enterprise Edition.
+
+  - Parallelism: `RevoScaleR` and `MicrosoftML` algorithm thread parallelism for scenarios are limited to maximum of 2 threads.
+  - Streaming & partitioning: Scenarios involving `@r_rowsPerRead` parameter passed to T-SQL `sp_execute_external_script` is not applied.
+  - Streaming & partitioning: `RevoScaleR` and `MicrosoftML` data sources (i.e. `ODBC`, `XDF`) does not support reading rows in chunks for training or scoring scenarios. These scenarios always bring all data to memory for computation and the operations are memory bound
+
+- **Solution**: The best solution is to upgrade to [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]. Alternatively you can continue to use [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP3, after you complete the following tasks.
+
+   1. Edit registry to create a key `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\150` and add a value `SharedCode` with data `C:\Program Files\Microsoft SQL Server\150\Shared` or the shared directory as configured for the instance.
+
+   1. Create a folder `C:\Program Files\Microsoft SQL Server\150\Shared and copy instapi130.dll` from the folder `C:\Program Files\Microsoft SQL Server\130\Shared` to the newly created folder.
+   1. Rename the `instapi130.dll` to `instapi150.dll` in the new folder `C:\Program Files\Microsoft SQL Server\150\Shared`.
+
+> [!IMPORTANT]
+> If you do the steps above, you must manually remove the added key prior to upgrading to a later version of SQL Server.
+
+For additional information, see [Change R runtime version in SQL Server 2016](../machine-learning/install/change-default-language-runtime-version.md#change-r-runtime-version-in-sql-server-2016).
+
 ### Change Tracking cleanup errors
 
 - **Issue**: The following error message occurs after you run a change tracking cleanup stored procedure `sp_flush_commit_table_on_demand` or `sp_flush_CT_internal_table_on_demand`:

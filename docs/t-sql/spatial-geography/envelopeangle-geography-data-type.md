@@ -49,7 +49,7 @@ EnvelopeAngle( )
   
 ## Examples  
   
-```  
+```sql
 DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';   
 SELECT @g.EnvelopeAngle();  
 ```  

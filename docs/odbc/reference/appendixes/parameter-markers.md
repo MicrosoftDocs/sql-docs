@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "parameter markers [ODBC]"
 ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: ""
 ---
 # Parameter Markers

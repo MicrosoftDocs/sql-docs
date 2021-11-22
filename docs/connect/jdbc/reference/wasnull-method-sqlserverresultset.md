@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: d37f80ef-d72c-4429-ada3-1d685bdab6d7
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # wasNull Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

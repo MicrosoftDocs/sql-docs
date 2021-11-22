@@ -97,7 +97,7 @@ ALTER SCHEMA schema_name
 ## Examples  
   
 ### A. Transferring ownership of a table  
- The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the 'HumanResources` schema.  
+ The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the `HumanResources` schema.  
   
 ```sql  
 USE AdventureWorks2012;  

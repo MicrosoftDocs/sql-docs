@@ -1,6 +1,6 @@
 ---
-title: "Add or Remove a Page Header or Footer (Report Builder) | Microsoft Docs"
-description: Find out how you can add static text, images, lines, rectangles, and borders to page headers or footers in Report Builder.
+title: "Add or remove a page header or footer in a paginated report | Microsoft Docs"
+description: Find out how you can add static text, images, lines, rectangles, and borders to paginated report page headers or footers in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add or Remove a Page Header or Footer (Report Builder and SSRS)
-  You can add static text, images, lines, rectangles, and borders to page headers or footers. You can place expressions and data-bound images in a textbox if you want variable or computed data in a header or footer.  
+# Add or remove a page header or footer in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  You can add static text, images, lines, rectangles, and borders to paginated report page headers or footers. You can place expressions and data-bound images in a textbox if you want variable or computed data in a header or footer.  
   
 > [!NOTE]  
 >  Each rendering extension processes page headers and footers differently. For more information, see [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md) and [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  

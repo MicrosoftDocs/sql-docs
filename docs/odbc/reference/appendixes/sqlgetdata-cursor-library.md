@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLGetData function [ODBC], Cursor Library"
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetData (Cursor Library)
 > [!IMPORTANT]  

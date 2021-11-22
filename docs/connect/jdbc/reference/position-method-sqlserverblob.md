@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: b520f192-6a14-4453-babd-8e7861ab25d6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # position Method (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

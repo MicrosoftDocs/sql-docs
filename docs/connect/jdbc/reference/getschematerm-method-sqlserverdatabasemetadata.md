@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 3e4a400f-0859-4ac3-983e-c25633b33683
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getSchemaTerm Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

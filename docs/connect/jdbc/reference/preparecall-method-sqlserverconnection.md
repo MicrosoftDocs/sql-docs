@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 265b024c-898a-4bd0-98b5-f06076717b9e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # prepareCall Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

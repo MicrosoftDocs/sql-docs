@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: Consume an application deployed on SQL Server Big Data Clusters using a RESTful web service.
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.date: 06/22/2020
 ms.metadata: seo-lt-2019
 ms.topic: conceptual

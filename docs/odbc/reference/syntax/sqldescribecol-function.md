@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLDescribeCol function [ODBC]"
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLDescribeCol Function
 **Conformance**  

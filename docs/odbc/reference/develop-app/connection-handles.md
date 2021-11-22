@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "handles [ODBC], connection"
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connection Handles
 A *connection* consists of a driver and a data source. A connection handle identifies each connection. The connection handle defines not only which driver to use but which data source to use with that driver. Within a segment of code that implements ODBC (the Driver Manager or a driver), the connection handle identifies a structure that contains connection information, such as the following:  

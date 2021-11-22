@@ -82,7 +82,9 @@ RECONFIGURE
 |**run_value**|**int**|Currently running value of the configuration option (value in **sys.configurations.value_in_use**).<br /><br /> For more information, see [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
 ## Remarks  
- Use **sp_configure** to display or change server-level settings. To change database-level settings, use ALTER DATABASE. To change settings that affect only the current user session, use the SET statement.  
+ Use **sp_configure** to display or change server-level settings. To change database-level settings, use `ALTER DATABASE`. To change settings that affect only the current user session, use the `SET` statement.  
+ 
+ Some server configuration options are only available through [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -121,12 +123,12 @@ RECONFIGURE
 ## Examples  
   
 ### A. Listing the advanced configuration options  
- The following example shows how to set and list all configuration options. Advanced configuration options are displayed by first setting `show advanced option` to `1`. After this option has been changed, executing `sp_configure` with no parameters displays all configuration options.  
+ The following example shows how to set and list all configuration options. Advanced configuration options are displayed by first setting `show advanced options` to `1`. After this option has been changed, executing `sp_configure` with no parameters displays all configuration options.  
   
 ```sql  
 USE master;  
 GO  
-EXEC sp_configure 'show advanced option', '1';  
+EXEC sp_configure 'show advanced options', '1';  
 ```  
   
  Here is the message: "Configuration option 'show advanced options' changed from 0 to 1. Run the RECONFIGURE statement to install."  
@@ -169,6 +171,7 @@ EXEC sp_configure @configname='hadoop connectivity';
  Setting Hadoop connectivity requires a few more steps in addition to running sp_configure. For the full procedure, see [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
 ## See Also  
+ [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

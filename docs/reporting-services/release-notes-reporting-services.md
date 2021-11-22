@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 07/27/2021
+ms.date: 10/20/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -47,6 +47,15 @@ We are "standardizing" all our 'Release Notes' style articles:
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## SQL Server 2019 Reporting Services
+
+## 15.0.7961.31630, 2021/10/20 
+*(Product Version: 15.0.1102.932)*
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Added `<LINK>` tag in PDFs exported with accessible PDF enabled on textboxs with 'Go to URL' actions.  | &nbsp; |
+| Added `<UL>` and `<LI>` tags in PDFs exported with accessible PDF enabled for textbox Lists | &nbsp; |
+| Fixed an issue with date parameters in Oracle based reports failing with "ORA-01008: not all variables bound"  | &nbsp; |
 
 ## 15.0.7842.32355, 2021/06/24 
 *(Product Version: 15.0.1102.911)*

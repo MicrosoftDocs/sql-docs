@@ -9,8 +9,8 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
-ms.reviewer: v-daenge
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
 ---
 
 # Using Azure Active Directory authentication with SqlClient

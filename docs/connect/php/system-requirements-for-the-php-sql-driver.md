@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "requirements"
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # System requirements for the Microsoft Drivers for PHP for SQL Server

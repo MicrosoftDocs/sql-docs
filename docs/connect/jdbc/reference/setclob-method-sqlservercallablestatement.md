@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 222ea248-1185-4c33-ae10-5158bf3f6430
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setClob Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

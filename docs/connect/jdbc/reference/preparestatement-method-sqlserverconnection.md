@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: bd4e4085-f704-4a73-b6a7-7d443d564728
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # prepareStatement Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

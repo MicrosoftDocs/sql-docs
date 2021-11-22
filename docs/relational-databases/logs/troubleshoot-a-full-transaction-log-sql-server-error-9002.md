@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords: 
   - "logs [SQL Server], full"
   - "troubleshooting [SQL Server], full transaction log"
@@ -25,11 +25,12 @@ ms.custom: "seo-lt-2019"
  
  
  **Option 1: Follow the steps directly in a notebook via Azure Data Studio**
+
+> [!NOTE]
+> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
  
  > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-Shooting_LogFull_9002.ipynb)  
-
-[Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)
  
  
  **Option 2: Follow the step manually**
@@ -298,7 +299,7 @@ AND bs.backup_start_date > DATEADD(month, -2, sysdatetime()) --only look at last
 ORDER BY bs.database_name asc, bs.Backup_Start_Date desc;
 ```
 
-A complete history of all SQL Server backup and restore operations on a server instance is stored in the `msdb` system database. For more information on backup history, see [Backup History and Header Information (SQL Server)](/sql/relational-databases/backup-restore/backup-history-and-header-information-sql-server).
+A complete history of all SQL Server backup and restore operations on a server instance is stored in the `msdb` system database. For more information on backup history, see [Backup History and Header Information (SQL Server)](../backup-restore/backup-history-and-header-information-sql-server.md).
 
 #### Create a transaction log backup
 
@@ -537,4 +538,4 @@ If autogrow is disabled, the database is online, and sufficient space is availab
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
  [MSSQLSERVER_9002](../errors-events/mssqlserver-9002-database-engine-error.md)  
- [How a log file structure can affect database recovery time - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server-support/how-a-log-file-structure-can-affect-database-recovery-time/ba-p/315780)  
+ [How a log file structure can affect database recovery time - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server-support/how-a-log-file-structure-can-affect-database-recovery-time/ba-p/315780)

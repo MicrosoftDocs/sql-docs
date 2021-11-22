@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "DropColumn function"
   - "OLE DB Driver for SQL Server, columns"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Removing a Column from a SQL Server Table
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

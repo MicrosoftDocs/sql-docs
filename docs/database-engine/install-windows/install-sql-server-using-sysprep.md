@@ -35,7 +35,7 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 ### To Prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster (Unattended)  
   
-1. Prepare the image (as discussed in [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)) and capture the windows image through SysPrep Generalization. The following sample prepares the image:  
+1. Prepare the image (as discussed in [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)) and capture the Windows image through SysPrep Generalization. The following sample prepares the image:  
   
     ```  
     Setup.exe /q /ACTION=PrepareImage l /FEATURES=SQLEngine /InstanceID =<MYINST> /IACCEPTSQLSERVERLICENSETERMS  

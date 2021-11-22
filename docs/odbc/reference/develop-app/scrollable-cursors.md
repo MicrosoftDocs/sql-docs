@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "cursors [ODBC], scrollable"
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Scrollable Cursors
 In modern screen-based applications, the user scrolls backward and forward through the data. For such applications, returning to a previously fetched row is a problem. One possibility is to close and reopen the cursor and then fetch rows until the cursor reaches the required row. Another possibility is to read the result set, cache it locally, and implement scrolling in the application. Both possibilities work well only with small result sets, and the latter possibility is difficult to implement. A better solution is to use a *scrollable cursor,* which can move backward and forward in the result set.  

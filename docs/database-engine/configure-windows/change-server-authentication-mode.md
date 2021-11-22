@@ -15,7 +15,7 @@ ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: markingmyname
 ms.author: maghan
 ms.custom: ""
-ms.date: 02/18/2020
+ms.date: 11/17/2021
 ---
 
 # Change server authentication mode

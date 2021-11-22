@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: b7da6d44-f5b1-44f8-95f5-40179968b1b0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setNString Method (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

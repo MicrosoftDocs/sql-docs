@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "functions [ODBC], Unicode functions"
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Unicode Drivers
 Whether a driver should be a Unicode driver or an ANSI driver depends entirely on the nature of the data source. If the data source supports Unicode data, the driver should be a Unicode driver. If the data source only supports ANSI data, the driver should remain an ANSI driver.  

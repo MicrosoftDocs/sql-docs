@@ -3,7 +3,7 @@ title: "SUSE: Install SQL Server on Linux"
 description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/10/2021
+ms.date: 11/22/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -18,16 +18,16 @@ ms.custom:
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In this quickstart, you install SQL Server 2017 or SQL Server 2019 on SUSE Linux Enterprise Server (SLES) v12. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 on SUSE Linux Enterprise Server (SLES) v12. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-In this quickstart, you install SQL Server 2019 on SUSE Linux Enterprise Server (SLES) v12. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2019 on SUSE Linux Enterprise Server (SLES) v15. You then connect with **sqlcmd** to create your first database and run queries.
 
 > [!IMPORTANT]
-> SQL Server 2019 is supported on SUSE Enterprise Linux Server v12 SP2, SP3, SP4 or SP5.
+> SQL Server 2019 is supported on SUSE Enterprise Linux Server v12 SP3, SP4 or SP5. SQL Server 2019 is also supported on SUSE Enterprise Linux Server v15 starting with SQL Server 2019 CU14.
 
 ::: moniker-end
 
@@ -46,7 +46,7 @@ You must have a SLES v12 SP3, SP4, or SP5 machine machine with **at least 2 GB**
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-You must have a SLES v12 SP3, SP4, or SP5 machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
+You must have a SLES v15 machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 
 ::: moniker-end
 
@@ -134,7 +134,7 @@ To configure SQL Server 2019 on SLES, run the following commands in a terminal t
 1. Download the Microsoft SQL Server 2019 SLES repository configuration file:
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2019.repo
    ```
 
 2. Refresh your repositories.
@@ -188,7 +188,7 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 1. Add the Microsoft SQL Server repository to Zypper.
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/prod.repo 
    sudo zypper --gpg-auto-import-keys refresh
    ```
 

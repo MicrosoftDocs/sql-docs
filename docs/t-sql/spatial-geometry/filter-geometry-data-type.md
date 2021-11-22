@@ -53,7 +53,7 @@ In cases where an index is not available, or is not used, the method will return
 ## Examples  
  The following example uses `Filter()` to determine if two `geometry` instances intersect each other.  
   
-```  
+```sql
 CREATE TABLE sample (id int primary key, g geometry);  
 GO  
 INSERT INTO sample VALUES  

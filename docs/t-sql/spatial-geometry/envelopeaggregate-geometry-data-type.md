@@ -51,7 +51,7 @@ EnvelopeAggregate ( geometry_operand )
 ## Examples  
  The following example returns a bounding box for a set of objects in a table variable column.  
   
- ```
+ ```sql
  -- Setup table variable for EnvelopeAggregate example 
 DECLARE @Geom TABLE 
 ( 
@@ -63,7 +63,7 @@ INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1,
 -- Perform EnvelopeAggregate on @Geom.shape column 
 SELECT geometry::EnvelopeAggregate(shape).ToString() 
 FROM @Geom;
- ```  
+```  
   
 ## See Also  
  [Extended Static Geometry Methods](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

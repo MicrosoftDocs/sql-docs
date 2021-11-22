@@ -53,7 +53,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
 ## Examples  
  The following example uses `STMLineFromText()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STMLineFromText('MULTILINESTRING ((100 100, 200 200), (3 4, 7 8, 10 10))', 0);  
 ```  

@@ -77,7 +77,7 @@ SQL Server return type: **geometry**
 ```sql
  DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
  SELECT @g.BufferWithCurves(-1).ToString(); 
-```
+ ```
   
 ### B. Calling BufferWithCurves() with a parameter value < 0 on a two dimensional geometry instance  
  The following example returns a `CurvePolygon` instance with a negative buffer:  
@@ -85,7 +85,7 @@ SQL Server return type: **geometry**
 ```sql
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
  SELECT @g.BufferWithCurves(-1).ToString()
-```  
+ ```  
   
 ### C. Calling BufferWithCurves() with a parameter value < 0 that returns an empty GeometryCollection  
  The following example shows what occurs when the *distance* parameter equals -2:  
@@ -93,7 +93,7 @@ SQL Server return type: **geometry**
 ```sql
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
  SELECT @g.BufferWithCurves(-2).ToString();
-```  
+ ```  
   
  This **SELECT** statement returns `GEOMETRYCOLLECTION EMPTY`  
   
@@ -103,7 +103,7 @@ SQL Server return type: **geometry**
 ```sql
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
  SELECT @g.BufferWithCurves(0).ToString();
-```  
+ ```  
   
 ### E. Calling BufferWithCurves() with a non-zero parameter value that is extremely small  
  The following example also returns a copy of the calling **geometry** instance:  
@@ -112,7 +112,7 @@ SQL Server return type: **geometry**
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
  DECLARE @distance float = 1e-20; 
  SELECT @g.BufferWithCurves(@distance).ToString();
-```  
+ ```  
   
 ### F. Calling BufferWithCurves() with a parameter value > 0  
  The following example returns a `CurvePolygon` instance:  
@@ -120,7 +120,7 @@ SQL Server return type: **geometry**
 ```sql
  DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
  SELECT @g.BufferWithCurves(2).ToString();
-```  
+ ```  
   
 ### G. Passing a valid string parameter  
  The following example returns the same `CurvePolygon` instance as mentioned earlier, but a string parameter is passed to the method:  
@@ -128,7 +128,7 @@ SQL Server return type: **geometry**
 ```sql
  DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
  SELECT @g.BufferWithCurves('2').ToString();
-```  
+ ```  
   
 ### H. Passing an invalid string parameter  
  The following example will throw an error:  
@@ -136,7 +136,7 @@ SQL Server return type: **geometry**
 ```sql
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)' 
  SELECT @g.BufferWithCurves('a').ToString();
-```  
+ ```  
   
  Note that the previous two examples passed a string literal to the `BufferWithCurves()` method. The first example works because the string literal can be converted to a numeric value. However, the second example throws an `ArgumentException`.  
   
@@ -148,7 +148,7 @@ SQL Server return type: **geometry**
  SELECT @g.BufferWithCurves(1).ToString(); 
  SELECT @g.BufferWithCurves(1.5).ToString(); 
  SELECT @g.BufferWithCurves(1.6).ToString();
-```  
+ ```  
   
  The first two **SELECT** statements return a `GeometryCollection` instance because the parameter *distance* is less than or equal to 1/2 the distance between the two points (1 1) and (1 4). The third **SELECT** statement returns a `CurvePolygon` instance because the buffered instances of the two points (1 1) and (1 4) overlap.  
   

@@ -16,6 +16,17 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
 
+## SSMA v8.23
+
+The v8.23 release of SSMA for Oracle contains the following changes:
+
+* Support for mapping of DATE type from Oracle to SQL Server's DATE type in Type Mapping setting
+* Support for table partition added for Azure SQL Database targets with all table partition mapped to primary filegroup
+* New option "Allow Statements from Files", for adding statements from file system
+* Enhanced XML output when running in console mode
+* New "Feedback" link in reports to send feedback
+* In reports, enhanced visualization experience
+
 ## SSMA v8.22
 
 The v8.22 release of SSMA for Oracle contains the following changes:

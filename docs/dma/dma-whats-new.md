@@ -22,7 +22,7 @@ ms.author: aciortea
 
 This article lists the additions in each release of Data Migration Assistant.
 
-## Data Migration Assistant v 5.5
+## Data Migration Assistant v 5.5 (October 2021)
 
 The v5.5 release of the Data Migration Assistant provides support for:
 
@@ -37,7 +37,7 @@ In addition, this release of Data Migration Assistant provides bug fixes and imp
 - Fixed an issue related to incorrect SKU recommendations for environments with highly variable workload patterns.
 - Fixed an issue affecting data collection in high memory environments.
 
-## Data Migration Assistant v 5.4
+## Data Migration Assistant v 5.4 (Release date)
 
 The v5.4 release of the Data Migration Assistant provides support for:
 - New console experience that provides recommendations as well as explanations for target Azure SQL Database, Azure SQL Managed Instance and SQL Server on Azure VM SKUs based on performance data points.
@@ -49,7 +49,7 @@ In addition, this release of Data Migration Assistant provides bug fixes for the
 - Fixed missing rule to detect three-part or four-part cross-database references when assessing Azure SQL Database targets.
 - Fixed `specified value for 'AssessmentDatabases' is invalid` error when using AssessTargetReadiness option in DMA command line.
 
-## Data Migration Assistant v 5.3
+## Data Migration Assistant v 5.3 (Release date 2)
 
 The v5.3 release of the Data Migration Assistant provides support for:
 - External application ad hoc query assessment in command line. 
@@ -63,7 +63,7 @@ In addition, this release of Data Migration Assistant has been updated to .NET 4
 - Users encountered issues uploading JSON assessment reports to Azure Migrate.
 - Cannot migrate the objects containing Chinese characters.
 
-## Data Migration Assistant v 5.2
+## Data Migration Assistant v 5.2 (...)
 
 The v5.2 release of the Data Migration Assistant provides support for:
 - Uploading assessments to Azure Migrate with support for Azure Government and national clouds (sovereign offering).  This feature enables to assess the readiness of SQL Server data estate migrating to Azure SQL.

@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
-ms.date: 11/18/2021
+ms.date: 11/22/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -83,7 +83,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Affected releases**: Releases CU8 and below
 
-- **Issue and customer impact**: When directly upgrading a cluster on CU8 release or below to any release above CU9, upgrade fails from Monitoring Phase.
+- **Issue and customer effect**: When directly upgrading a cluster on CU8 release or below to any release above CU9, upgrade fails from Monitoring Phase.
 
 - **Solution**: Upgrade to CU9 first. Then upgrade from CU9 to the latest release.
 
@@ -91,18 +91,18 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Affected releases**: All releases
 
-- **Issue and customer impact**: Kubernetes API 1.21 or superior is not a tested configuration of SQL Server Big Data Clusters as of CU12.
+- **Issue and customer effect**: Kubernetes API 1.21 or superior is not a tested configuration of SQL Server Big Data Clusters as of CU12.
 
 ### MicrosoftML packages on SQL Server Machine Learning Services
 
 - **Affected releases**: CU10, CU11, CU12, and CU13
 
-- **Issue and customer impact**: Some MicrosoftML R/Python packages on SQL Server Machine Learning Services are not working. It affects all SQL Server master instances.
+- **Issue and customer effect**: Some MicrosoftML R/Python packages on SQL Server Machine Learning Services are not working. It affects all SQL Server master instances.
 
 ### Failed to connect to remote instance of SQL Server 2016 or older
 
 - **Affected releases**: CU10
-- **Issue and customer impact**: When using PolyBase in [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU10 to connect to an existing SQL Server instance that is using a certificate for channel encryption that was created using the SHA1 algorithm, you may observe the following error:     
+- **Issue and customer effect**: When using PolyBase in [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU10 to connect to an existing SQL Server instance that is using a certificate for channel encryption that was created using the SHA1 algorithm, you may observe the following error:     
 
 > `Msg 105082, Level 16, State 1, Line 1`
 > `105082;Generic ODBC error: [Microsoft][ODBC Driver 17 for SQL Server]SSL Provider: An existing connection was forcibly closed by the remote host.`
@@ -115,7 +115,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Affected releases**: Existing clusters when a failed upgrade to CU9 results in a rollback or user issues a downgrade to an older release.
 
-- **Issue and customer impact**: The software version used for Elastic Search was upgraded with CU9 and the new version is not backwards compatible with previous logs format/metadata. If ElasticSearch component upgrades successfully, but a later rollback is triggered, the logs collected between the ElasticSearch upgrade and the rollback will be permanently lost. If you issue a downgrade to older version of [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] (not recommended), logs stored in Elasticsearch will be lost. If you upgrade back to CU9, the data will be restored.
+- **Issue and customer effect**: The software version used for Elastic Search was upgraded with CU9 and the new version is not backwards compatible with previous logs format/metadata. If ElasticSearch component upgrades successfully, but a later rollback is triggered, the logs collected between the ElasticSearch upgrade and the rollback will be permanently lost. If you issue a downgrade to older version of [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] (not recommended), logs stored in Elasticsearch will be lost. If you upgrade back to CU9, the data will be restored.
 
 - **Workaround**: If needed, you can troubleshoot using logs collected using `azdata bdc debug copy-logs` command.
 
@@ -123,7 +123,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Affected releases**: Existing and new clusters upon upgrade to CU9
 
-- **Issue and customer impact**: As a result of upgrading the version of Telegraf used for big data cluster monitoring components in CU9, when upgrading the cluster to CU9 release, you will notice that pods and container metrics are not being collected. This is because an additional resource is required in the definition of the cluster role used for Telegraf as a result of the software upgrade. If the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
+- **Issue and customer effect**: As a result of upgrading the version of Telegraf used for big data cluster monitoring components in CU9, when upgrading the cluster to CU9 release, you will notice that pods and container metrics are not being collected. This is because an additional resource is required in the definition of the cluster role used for Telegraf as a result of the software upgrade. If the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
 
 - **Workaround**: You can ask an administrator to create or update the role and the corresponding service account (either before or after the deployment/upgrade), and the big data cluster will use them. [This article](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) describes how to create the required artifacts.
 
@@ -131,7 +131,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Affected releases**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version *20.0.0*
 
-- **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool version 1.15 or higher is installed on the client machine from which the command is issued. If `kubectl` version 1.14 is used, the `azdata bdc debug copy-logs` command will complete with no failures, but logs are not copied. When run with *--debug* flag, you can see this error in the output: *source '.' is invalid*.
+- **Issue and customer effect**: Implementation of *copy-logs* command is assuming `kubectl` client tool version 1.15 or higher is installed on the client machine from which the command is issued. If `kubectl` version 1.14 is used, the `azdata bdc debug copy-logs` command will complete with no failures, but logs are not copied. When run with *--debug* flag, you can see this error in the output: *source '.' is invalid*.
 
 - **Workaround**: Install `kubectl` version 1.15 or higher  tool on the same client machine and re-issue the `azdata bdc copy-logs` command. See instructions [here](deploy-big-data-tools.md) how to install `kubectl`.
 
@@ -139,31 +139,31 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Affected releases**: All big data cluster deployment configurations, irrespective of the release.
 
-- **Issue and customer impact**: With SQL Server deployed within the big data cluster as SQL Server master instance, the MSDTC feature cannot be enabled. There is no workaround to this issue.
+- **Issue and customer effect**: With SQL Server deployed within the big data cluster as SQL Server master instance, the MSDTC feature cannot be enabled. There is no workaround to this issue.
 
 ### HA SQL Server Database Encryption key encryptor rotation
 
 - **Affected releases**: All version up to CU8. Resolved for CU9.
 
-- **Issue and customer impact**: With SQL Server deployed with HA, the certificate rotation for the encrypted database fails. When the following command is executed on the master pool, an error message will appear:
+- **Issue and customer effect**: With SQL Server deployed with HA, the certificate rotation for the encrypted database fails. When the following command is executed on the master pool, an error message will appear:
     ```sql
     ALTER DATABASE ENCRYPTION KEY
     ENCRYPTION BY SERVER
     CERTIFICATE <NewCertificateName>
     ```
-    There is no impact, the command fails, and the target database encryption is preserved using the previous certificate.
+    There is no effect, the command fails, and the target database encryption is preserved using the previous certificate.
 
 ### Enabling HDFS Encryption Zones support on CU8
 
 - **Affected releases**: This scenario surfaces when upgrading specifically to CU8 release from CU6 or previous. This won't happen on new deployments of CU8+ or when upgrading directly to CU9. CU10 or superior releases are not affected.
 
-- **Issue and customer impact**: HDFS Encryption Zones support is not enabled by default in this scenario and needs to be configured using the steps provided in the [configuration guide](encryption-at-rest-concepts-and-configuration.md).
+- **Issue and customer effect**: HDFS Encryption Zones support is not enabled by default in this scenario and needs to be configured using the steps provided in the [configuration guide](encryption-at-rest-concepts-and-configuration.md).
 
 ### Empty Livy jobs before you apply cumulative updates
 
 - **Affected releases**: All version up to CU6. Resolved for CU8.
 
-- **Issue and customer impact**: During an upgrade, `sparkhead` returns 404 error.
+- **Issue and customer effect**: During an upgrade, `sparkhead` returns 404 error.
 
 - **Workaround**: Before upgrading the big data cluster, ensure that there are no active Livy sessions or batch jobs. Follow the instructions under [Upgrade from supported release](deployment-upgrade.md#upgrade-from-supported-release) to avoid this. 
 
@@ -177,7 +177,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Affected releases**: All big data cluster deployments with Active Directory integration, irrespective of the release
 
-- **Issue and customer impact**: During big data cluster deployment, the workflow generates a set of [service accounts](active-directory-objects.md). Depending on the password expiration policy set in the Domain Controller, passwords for these accounts can expire (default is 42 days). At this time, there is no mechanism to rotate credentials for all accounts in the big data cluster, so the cluster will become inoperable once the expiration period is met.
+- **Issue and customer effect**: During big data cluster deployment, the workflow generates a set of [service accounts](active-directory-objects.md). Depending on the password expiration policy set in the Domain Controller, passwords for these accounts can expire (default is 42 days). At this time, there is no mechanism to rotate credentials for all accounts in the big data cluster, so the cluster will become inoperable once the expiration period is met.
 
 - **Workaround**: Update the expiration policy for the big data cluster service accounts to "Password never expires" in the Domain Controller. For a complete list of these accounts see [Auto generated Active Directory objects](active-directory-objects.md). This action can be done before or after the expiration time. In the latter case, Active Directory will reactivate the expired passwords.
 
@@ -185,16 +185,16 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Affected releases**: New clusters deployed starting with CU5.
 
-- **Issue and customer impact**: For new big data clusters deployed using SQL Server Big Data Clusters CU5, gateway username is not **root**. If the application used to connect to gateway endpoint is using the wrong credentials, you will see an authentication error. This change is a result of running applications within the big data cluster as non-root user (a new default behavior starting with SQL Server Big Data Clusters CU5 release, when you deploy a new big data cluster using CU5, the username for the gateway endpoint is based on the value passed through **AZDATA_USERNAME** environment variable. It is the same username used for the controller and SQL Server endpoints. This is only impacting new deployments, existing big data clusters deployed with any of the previous releases will continue to use **root**. There is no impact to credentials when the cluster is deployed to use Active Directory authentication. 
+- **Issue and customer effect**: For new big data clusters deployed using SQL Server Big Data Clusters CU5, gateway username is not **root**. If the application used to connect to gateway endpoint is using the wrong credentials, you will see an authentication error. This change is a result of running applications within the big data cluster as non-root user (a new default behavior starting with SQL Server Big Data Clusters CU5 release, when you deploy a new big data cluster using CU5, the username for the gateway endpoint is based on the value passed through **AZDATA_USERNAME** environment variable. It is the same username used for the controller and SQL Server endpoints. This is only affecting new deployments, existing big data clusters deployed with any of the previous releases will continue to use **root**. There is no effect to credentials when the cluster is deployed to use Active Directory authentication. 
 
 - **Workaround**: Azure Data Studio will handle the credentials change transparently for the connection made to gateway to enable HDFS browsing experience in the ObjectExplorer. You must install [latest Azure Data Studio release](../azure-data-studio/download-azure-data-studio.md) that includes the necessary changes that address this use case.
-For other scenarios where  you must provide credentials for accessing service through the gateway (for example, logging in with [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], accessing web dashboards for Spark), you must ensure the correct credentials are used. If you are targeting an existing cluster deployed before CU5 you will continue using **root** username to connect to gateway, even after upgrading the cluster to CU5. If you deploy a new cluster using CU5 build, log in by providing the username corresponding to **AZDATA_USERNAME** environment variable.
+For other scenarios where  you must provide credentials for accessing service through the gateway (for example, logging in with [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], accessing web dashboards for Spark), you must ensure the correct credentials are used. If you are targeting an existing cluster deployed before CU5 you will continue using **root** username to connect to gateway, even after upgrading the cluster to CU5. If you deploy a new cluster using CU5 build, sign in by providing the username corresponding to **AZDATA_USERNAME** environment variable.
 
 ### Pods and nodes metrics not being collected
 
 - **Affected releases**: New and existing clusters that are using CU5 images
 
-- **Issue and customer impact**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers may have noticed that the metrics are not being collected. This is possible in both new and existing deployments of [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster-wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
+- **Issue and customer effect**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers may have noticed that the metrics are not being collected. This is possible in both new and existing deployments of [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster-wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
 
 - **Workaround**: You can ask an administrator to create the role and service account (either before or after the deployment/upgrade), and the big data cluster will use them. [This article](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) describes how to create the required artifacts.
 
@@ -202,7 +202,7 @@ For other scenarios where  you must provide credentials for accessing service th
 
 - **Affected releases**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version *20.0.0*
 
-- **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool is installed on the client machine from which the command is issued. If you are issuing the command against a big data cluster installed on OpenShift, from a client where only `oc` tool is installed, you will get an error: *An error occurred while collecting the logs: [WinError 2] The system cannot find the file specified*.
+- **Issue and customer effect**: Implementation of *copy-logs* command is assuming `kubectl` client tool is installed on the client machine from which the command is issued. If you are issuing the command against a big data cluster installed on OpenShift, from a client where only `oc` tool is installed, you will get an error: *An error occurred while collecting the logs: [WinError 2] The system cannot find the file specified*.
 
 - **Workaround**: Install `kubectl` tool on the same client machine and re-issue the `azdata bdc copy-logs` command. See instructions [here](deploy-big-data-tools.md) how to install `kubectl`.
 
@@ -210,7 +210,7 @@ For other scenarios where  you must provide credentials for accessing service th
 
 - **Affected releases**: GDR1, CU1, CU2. Resolved for CU3.
 
-- **Issue and customer impact**: Upgrade from private repository has specific requirements
+- **Issue and customer effect**: Upgrade from private repository has specific requirements
 
 - **Workaround**: If you use a private repository to pre-pull the images for deploying or upgrading the big data cluster, ensure that the current build images as well as the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the credentials of the  private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] does not support updating the credentials through `AZDATA_PASSWORD` and `AZDATA_USERNAME` environment variables. Update the secret using [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
 
@@ -220,7 +220,7 @@ Upgrading using different repositories for current and target builds is not supp
 
 - **Affected releases**: GDR1, CU1, CU2. Resolved for CU 3.
 
-- **Issue and customer impact**: An upgrade may fail due to timeout.
+- **Issue and customer effect**: An upgrade may fail due to timeout.
 
    The following code shows what the failure might look like:
 
@@ -296,7 +296,7 @@ Upgrading using different repositories for current and target builds is not supp
 
 ### Livy job submission from Azure Data Studio (ADS) or curl fail with 500 error
 
-- **Issue and customer impact**: In an HA configuration, Spark shared resources `sparkhead` are configured with multiple replicas. In this case, you might experience failures with Livy job submission from Azure Data Studio (ADS) or `curl`. To verify, `curl` to any `sparkhead` pod results in refused connection. For example, `curl https://sparkhead-0:8998/` or `curl https://sparkhead-1:8998` returns 500 error.
+- **Issue and customer effect**: In an HA configuration, Spark shared resources `sparkhead` are configured with multiple replicas. In this case, you might experience failures with Livy job submission from Azure Data Studio (ADS) or `curl`. To verify, `curl` to any `sparkhead` pod results in refused connection. For example, `curl https://sparkhead-0:8998/` or `curl https://sparkhead-1:8998` returns 500 error.
 
    This happens in the following scenarios:
 
@@ -315,13 +315,13 @@ Upgrading using different repositories for current and target builds is not supp
 
 ### Create memory optimized table when master instance in an availability group
 
-- **Issue and customer impact**: You cannot use the primary endpoint exposed for connecting to availability group databases (listener) to create memory optimized tables.
+- **Issue and customer effect**: You cannot use the primary endpoint exposed for connecting to availability group databases (listener) to create memory optimized tables.
 
 - **Workaround**: To create memory optimized tables when SQL Server master instance is an availability group configuration, [connect to the SQL Server instance](deployment-high-availability.md#instance-connect), expose an endpoint, connect to the SQL Server database, and create the memory optimized tables in the session created with the new connection.
 
 ### Insert to external tables Active Directory authentication mode
 
-- **Issue and customer impact**: When SQL Server master instance is in Active Directory authentication mode, a query that selects only from external tables, where at least one of the external tables is in a storage pool, and inserts into another external table, the query returns:
+- **Issue and customer effect**: When SQL Server master instance is in Active Directory authentication mode, a query that selects only from external tables, where at least one of the external tables is in a storage pool, and inserts into another external table, the query returns:
 
 > `Msg 7320, Level 16, State 102, Line 1`
 > `Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.`
@@ -331,7 +331,7 @@ Upgrading using different repositories for current and target builds is not supp
 
 ### Transparent Data Encryption capabilities cannot be used with databases that are part of the availability group in the SQL Server master instance
 
-- **Issue and customer impact**: In an HA configuration, databases that have encryption enabled can't be used after a failover since the master key used for encryption is different on each replica. 
+- **Issue and customer effect**: In an HA configuration, databases that have encryption enabled can't be used after a failover since the master key used for encryption is different on each replica. 
 
 - **Workaround**: There is no workaround for this issue. We recommend to not enable encryption in this configuration until a fix is in place.
 

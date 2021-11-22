@@ -38,7 +38,7 @@ The following table contains the tested configuration matrix for each release of
 Restrictions:
 
 * SQL Server Big Data Clusters is supported as a *workload*. Microsoft provides support for the software components on the containers installed and configured by SQL Server Big Data Clusters only. Kubernetes itself, and other containers that may influence SQL Server Big Data Clusters behavior, are not supported by the support team. For Kubernetes support, contact your certified Kubernetes distribution provider.
-* SQL Server Big Data Clusters requires block storage for all persisted volumes. Management operation on top of the persisted volumes created and used by SQL Server Big Data Cluster is a capability that depends on the storage provider. This includes, for example, the expansion of persistent volumes (PVs). Reference your specific CSI storage provider documentation or the [partner reference architecture white papers](../sql-server/partner-big-data-cluster.md).
+* SQL Server Big Data Clusters requires block storage for all persisted volumes. Management operation on top of the persisted volumes created and used by SQL Server Big Data Cluster is a capability that depends on the storage provider including, for example, operations to expand persistent volumes (PVs). Reference your specific CSI storage provider documentation or the [partner reference architecture white papers](../sql-server/partner-big-data-cluster.md).
 * The open-source components included by SQL Server Big Data Clusters are fixed for that particular release and must not be updated or modified.
 * Container images are provided "as-is". Composability features of Kubernetes are not supported. Changing the set of container images in a SQL Server Big Data Cluster release, or to customize the containers, is not supported.
 
@@ -53,21 +53,21 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-no
 
 | Release <sup>1</sup> | [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
-| [CU14](release-notes-cumulative-update-14.md) |  15.0.4188.2  | 20.3.9    | 2021-11-22 |
-| [CU13](release-notes-cumulative-update-13.md) |  15.0.4178.15 | 20.3.8    | 2021-09-29 |
-| [CU12](release-notes-cumulative-update-12.md) |  15.0.4153.13 | 20.3.7    | 2021-08-04 |
-| [CU11](release-notes-cumulative-updates-history.md#cu11) |  15.0.4138.2 | 20.3.5    | 2021-06-10 |
-| [CU10](release-notes-cumulative-updates-history.md#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
-| [CU9](release-notes-cumulative-updates-history.md#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
-| [CU8-GDR](release-notes-cumulative-updates-history.md#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
-| [CU8](release-notes-cumulative-updates-history.md#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
-| [CU6](release-notes-cumulative-updates-history.md#cu6)     | 15.0.4053.23 | 20.0.1    | 2020-08-04 |
-| [CU5](release-notes-cumulative-updates-history.md#cu5)     | 15.0.4043.16 | 20.0.0    | 2020-06-22 |
-| [CU4](release-notes-cumulative-updates-history.md#cu4)     | 15.0.4033.1  | 15.0.4033 | 2020-03-31 |
-| [CU3](release-notes-cumulative-updates-history.md#cu3)     | 15.0.4023.6  | 15.0.4023 | 2020-03-12 |
-| [CU2](release-notes-cumulative-updates-history.md#cu2)     | 15.0.4013.40 | 15.0.4013 | 2020-02-13 |
-| [CU1](release-notes-cumulative-updates-history.md#cu1)     | 15.0.4003.23 | 15.0.4003 | 2020-01-07 |
-| [GDR1](release-notes-cumulative-updates-history.md#rtm)    | 15.0.2070.34 | 15.0.2070 | 2019-11-04 |
+| [CU14](release-notes-cumulative-update-14.md) |  15.0.4188.2  | 20.3.9    | Nov 22 2021 |
+| [CU13](release-notes-cumulative-update-13.md) |  15.0.4178.15 | 20.3.8    | Sept 9 2021 |
+| [CU12](release-notes-cumulative-update-12.md) |  15.0.4153.13 | 20.3.7    | Aug 4 2021 |
+| [CU11](release-notes-cumulative-updates-history.md#cu11) |  15.0.4138.2 | 20.3.5    | June 10 2021 |
+| [CU10](release-notes-cumulative-updates-history.md#cu10) |  15.0.4123.1 | 20.3.2    | April 6 2021 |
+| [CU9](release-notes-cumulative-updates-history.md#cu9) |  15.0.4102.2 | 20.3.0    | Feb 11 2021 |
+| [CU8-GDR](release-notes-cumulative-updates-history.md#cu8-gdr) | 15.0.4083.2  | 20.2.6    | Jan 12 2021 |
+| [CU8](release-notes-cumulative-updates-history.md#cu8)     | 15.0.4073.23 | 20.2.2    | Oct 19 2020 |
+| [CU6](release-notes-cumulative-updates-history.md#cu6)     | 15.0.4053.23 | 20.0.1    | Aug 4 2020 |
+| [CU5](release-notes-cumulative-updates-history.md#cu5)     | 15.0.4043.16 | 20.0.0    | June 22 2020 |
+| [CU4](release-notes-cumulative-updates-history.md#cu4)     | 15.0.4033.1  | 15.0.4033 | March 31 2020 |
+| [CU3](release-notes-cumulative-updates-history.md#cu3)     | 15.0.4023.6  | 15.0.4023 | March 12 2020 |
+| [CU2](release-notes-cumulative-updates-history.md#cu2)     | 15.0.4013.40 | 15.0.4013 | Feb 13 2020 |
+| [CU1](release-notes-cumulative-updates-history.md#cu1)     | 15.0.4003.23 | 15.0.4003 | Jan 7 2020 |
+| [GDR1](release-notes-cumulative-updates-history.md#rtm)    | 15.0.2070.34 | 15.0.2070 | Nov 4 2019 |
 
 <sup>1</sup> CU7 is not available for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)].
 
@@ -109,7 +109,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 > `Additional error <2>: ErrorMsg: [Microsoft][ODBC Driver 17 for SQL Server]Client unable to establish connection, SqlState: 08001, NativeError: 10054 Additional error <3>: ErrorMsg: [Microsoft][ODBC Driver 17 for SQL Server]`
 > `Invalid connection string attribute, SqlState: 01S00, NativeError: 0 .`
 
-- **Solution**: Due to the heightened security requirements of Ubuntu 20.04 over the previous base image version, the remote connection is not allowed for a certificate using the SHA1 algorithm. The default self-signed certificate of SQL Server releases 2005-2016 used the SHA1 algorithm. Refer to this blog post for more information on [changes made to self-signed certificates in SQL Server 2017](https://techcommunity.microsoft.com/t5/sql-server-support/changes-to-hashing-algorithm-for-self-signed-certificate-in-sql/ba-p/319026). In the remote SQL Server instance, use a certificate that is created with an algorithm that uses at least 112 bits of security (for example, SHA256). For production environments, it is recommended to obtain a trusted certificate from a Certificate Authority. For testing purposes, self-signed certificate can also be used. To create a self-signed certificate, see the [PowerShell Cmdlet New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate) or [certreq command](/windows-server/administration/windows-commands/certreq_1). For instructions to install a new certificate it on the remote SQL Server instance, see [Enable encrypted connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
+- **Solution**: Due to the heightened security requirements of Ubuntu 20.04 over the previous base image version, the remote connection is not allowed for a certificate using the SHA1 algorithm. The default self-signed certificate of SQL Server releases 2005-2016 used the SHA1 algorithm. For more information on this change, see [changes made to self-signed certificates in SQL Server 2017](https://techcommunity.microsoft.com/t5/sql-server-support/changes-to-hashing-algorithm-for-self-signed-certificate-in-sql/ba-p/319026). In the remote SQL Server instance, use a certificate that is created with an algorithm that uses at least 112 bits of security (for example, SHA256). For production environments, it is recommended to obtain a trusted certificate from a Certificate Authority. For testing purposes, self-signed certificate can also be used. To create a self-signed certificate, see the [PowerShell Cmdlet New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate) or [certreq command](/windows-server/administration/windows-commands/certreq_1). For instructions to install a new certificate it on the remote SQL Server instance, see [Enable encrypted connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
 
 ### Partial loss of logs collected in ElasticSearch upon rollback
 

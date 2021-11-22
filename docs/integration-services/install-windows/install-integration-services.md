@@ -1,14 +1,15 @@
 ---
 title: "Install SQL Server Integration Services | Microsoft Docs"
 description: Learn how to install Microsoft SQL Server Integration Services (SSIS) and how to get other downloads for SSIS
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "09/19/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services, installing"
   - "SSIS, installing"
   - "installing Integration Services, about installing Integration Services"

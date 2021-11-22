@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: a266e3bc-05c2-44e2-9346-125ae6780216
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getRow Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

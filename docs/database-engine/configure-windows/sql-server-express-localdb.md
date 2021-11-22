@@ -33,7 +33,6 @@ LocalDB is a feature you select during SQL Server Express installation, and is a
 
 - [SQL Server Express 2019](https://go.microsoft.com/fwlink/?LinkID=866658)
 - [SQL Server Express 2017](https://go.microsoft.com/fwlink/?LinkID=853017)
-- [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012)
 
 The LocalDB installer &mdash; `SqlLocalDB.msi` &mdash; is available in the installation media for all editions except for Express Core. It is located in the `<installation_media_root>\<LCID>_ENU_LP\x64\Setup\x64` folder. LCID is a locale identifier or language code. For example, an LCID value of 1033 refers to the **en-US** locale.
 
@@ -72,7 +71,7 @@ The instance collation for LocalDB is set to `SQL_Latin1_General_CP1_CI_AS` and 
 
 - LocalDB only allows local queues for Service Broker.
 
-- An instance of LocalDB owned by the built-in accounts such as `NT AUTHORITY\SYSTEM` can have manageability issues due to windows file system redirection. Instead use a normal windows account as the owner.
+- An instance of LocalDB owned by the built-in accounts such as `NT AUTHORITY\SYSTEM` can have manageability issues due to Windows file system redirection. Instead use a normal Windows account as the owner.
 
 ### Automatic and named instances
 

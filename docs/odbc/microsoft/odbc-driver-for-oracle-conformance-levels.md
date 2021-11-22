@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "conformance levels [ODBC], ODBC driver for Oracle"
 ms.assetid: 2ad2ef7a-a86f-4a77-b12c-bbd5a3499dac
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ODBC Driver for Oracle Conformance Levels
 > [!IMPORTANT]  

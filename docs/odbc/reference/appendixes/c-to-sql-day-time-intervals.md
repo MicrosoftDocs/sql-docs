@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "intervals [ODBC], converting"
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # C to SQL: Day-Time Intervals
 The identifiers for the day-time interval ODBC C data types are:  

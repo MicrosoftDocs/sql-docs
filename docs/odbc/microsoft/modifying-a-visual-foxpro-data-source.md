@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "editing data sources [ODBC], Visual FoxPro"
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Modifying a Visual FoxPro Data Source
 ### To modify a Visual FoxPro data source  

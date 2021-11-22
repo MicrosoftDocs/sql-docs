@@ -1,7 +1,8 @@
 ---
 title: "Getting Started with the Microsoft Drivers for PHP"
 description: "Learn about the system requirements for using the Microsoft Drivers for PHP for SQL Server and for loading the driver into the PHP process space."
-ms.custom: ""
+ms.custom:
+  - intro-get-started
 ms.date: "03/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,7 +11,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Getting Started with the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

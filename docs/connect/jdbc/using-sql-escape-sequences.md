@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using SQL escape sequences
 

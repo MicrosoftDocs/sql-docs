@@ -1353,7 +1353,7 @@ Takes an ExclusiveUpdate lock on the DATABASE object.
 
 **Manage Network Credentials**
 
-Network access to the backup directory is based on standard operating system file sharing security. Before performing a backup, you need to create or designate a Windows account that will be used for authenticating [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] to the backup directory. This windows account must have permission to access, create, and write to the backup directory.
+Network access to the backup directory is based on standard operating system file sharing security. Before performing a backup, you need to create or designate a Windows account that will be used for authenticating [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] to the backup directory. This Windows account must have permission to access, create, and write to the backup directory.
 
 > [!IMPORTANT]
 > To reduce security risks with your data, we advise that you designate one Windows account solely for the purpose of performing backup and restore operations. Allow this account to have permissions to the backup location and nowhere else.

@@ -269,17 +269,17 @@ In Windows servers, the logs are located in the installation directory path, by 
 In Linux servers, the logs are located by default in /var/opt/mssql/log/polybase.
 
 PolyBase data movement log files:  
-- <INSTANCENAME>_<SERVERNAME>_Dms_errors.log 
-- <INSTANCENAME>_<SERVERNAME>_Dms_movement.log 
+- \<INSTANCENAME\>_\<SERVERNAME\>_Dms_errors.log 
+- \<INSTANCENAME\>_\<SERVERNAME\>_Dms_movement.log 
 
 PolyBase engine service log files:  
-- <INSTANCENAME>_<SERVERNAME>_DWEngine_errors.log 
-- <INSTANCENAME>_<SERVERNAME>_DWEngine_movement.log 
-- <INSTANCENAME>_<SERVERNAME>_DWEngine_server.log 
+- \<INSTANCENAME\>_\<SERVERNAME\>_DWEngine_errors.log 
+- \<INSTANCENAME\>_\<SERVERNAME\>_DWEngine_movement.log 
+- \<INSTANCENAME\>_\<SERVERNAME\>_DWEngine_server.log 
 
 In Windows, PolyBase Java log files:
-- <SERVERNAME> Dms polybase.log
-- <SERVERNAME>_DWEngine_polybase.log
+- \<SERVERNAME\> Dms polybase.log
+- \<SERVERNAME\>_DWEngine_polybase.log
  
 In Linux, PolyBase Java log files:
 - /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_pdw.log

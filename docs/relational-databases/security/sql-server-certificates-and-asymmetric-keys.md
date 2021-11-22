@@ -64,7 +64,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 | Tool | Purpose |
 | ---- | ------- |
-|[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|Creates self-signed certificates.|  
+|[New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate)|Creates self-signed certificates.|  
 |[makecert](/windows/desktop/SecCrypto/makecert)|Creates certificates. Deprecated in favor of **New-SelfSignedCertificate**.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Creates strong names for symmetric keys.|  
   

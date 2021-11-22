@@ -2,7 +2,7 @@
 description: "sp_changepublication (Transact-SQL)"
 title: "sp_changepublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/29/2017"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -32,7 +32,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
     [ , [ @value = ] 'value' ]  
     [ , [ @force_invalidate_snapshot = ] force_invalidate_snapshot ]  
     [ , [ @force_reinit_subscription = ] force_reinit_subscription ]  
-    [ , [ @publisher = ] 'publisher' ]  
+    [ , [ @publisher = ] 'publisher' ]
 ```  
   
 ## Arguments  
@@ -47,7 +47,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  This table describes the properties of the publication that can be changed and restrictions on the values for those properties.  
   
-|Property|Value|Description|  
+|**Property**|**Value**|**Description**|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Anonymous subscriptions can be created for the given publication, and *immediate_sync* must also be **true**. Cannot be changed for peer-to-peer publications.|  
 ||**false**|Anonymous subscriptions cannot be created for the given publication. Cannot be changed for peer-to-peer publications.|  
@@ -93,8 +93,9 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**publish_to_ActiveDirectory**|**true**|This parameter has been deprecated and is only supported for the backward compatibility of scripts. You can no longer add publication information to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.|  
 ||**false**|Removes the publication information from Active Directory.|  
 |**queue_type**|**sql**|Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to store transactions. This property can be changed only if there are no active subscriptions.<br /><br /> Note: Support for using [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing has been discontinued. Specifying a value of **msmq** for *value* results in an error.|  
+|**redirected_publisher**||The name of the availability group listener. Used in peer-to-peer replication when a peer is in an availability group. This property cannot be changed for non-SQL Server publications. Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 13. For additional information see [Configure one peer as part of availability group](../replication/transactional/peer-to-peer/single-availability-group.md) or [Configure both peers in availability groups](../replication/transactional/peer-to-peer/multi-availability-group.md).|  
 |**repl_freq**|**continuous**|Publishes output of all log-based transactions.|  
-||**snapshot**|Publishes only scheduled synchronization events.|  
+||**snapshot**|Publishes only scheduled synchronization events.| 
 |**replicate_ddl**|**1**|Data definition language (DDL) statements executed at the publisher are replicated. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**0**|DDL statements are not replicated. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications. Replication of schema changes cannot be disabled when using peer-to-peer replication.|  
 |**replicate_partition_switch**|**true**|ALTER TABLE...SWITCH statements that are executed against the published database should be replicated to Subscribers. This option is valid only if *allow_partition_switch* is set to TRUE. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  

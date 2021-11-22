@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "IRowsetFind comparability"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Comparability for IRowsetFind
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

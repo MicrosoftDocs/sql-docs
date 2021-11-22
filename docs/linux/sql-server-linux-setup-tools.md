@@ -2,12 +2,14 @@
 title: Install SQL Server command-line tools on Linux
 titleSuffix: SQL Server
 description: Learn how to install the SQL Server command-line tools, Microsoft ODBC drivers, and their dependencies on Linux.
-author: VanMSFT 
+author: VanMSFT
 ms.author: vanto
 ms.date: 04/07/2021
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sqlfreshmay19"
+ms.custom:
+  - sqlfreshmay19
+  - intro-installation
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ---

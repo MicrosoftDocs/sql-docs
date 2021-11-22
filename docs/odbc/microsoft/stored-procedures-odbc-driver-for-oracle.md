@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Stored Procedures (ODBC Driver for Oracle)
 > [!IMPORTANT]  

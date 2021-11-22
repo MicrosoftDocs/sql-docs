@@ -1,8 +1,8 @@
 ---
-title: "tempdb database | Microsoft Docs"
-description: This topic provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
+title: "tempdb database"
+description: This article provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
 ms.custom: "P360"
-ms.date: 07/02/2021
+ms.date: 10/28/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: 
@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "tempdb database [SQL Server], about tempdb"
   - "temporary stored procedures [SQL Server]"
   - "tempdb database [SQL Server]"
-ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -227,10 +226,11 @@ Metadata contention in `tempdb` has historically been a bottleneck to scalabilit
 
 This feature effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free, non-durable, memory-optimized tables.
 
+Currently the memory-optimized tempdb metadata feature is not available in Azure SQL Database or Azure SQL Managed Instance.
+
 Watch this seven-minute video for an overview of how and when to use memory-optimized tempdb metadata:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
-
 
 ### Configuring and using memory-optimized tempdb metadata
 
@@ -343,10 +343,11 @@ SELECT R2.session_id,
 FROM sys.dm_db_session_space_usage AS R1
 INNER JOIN sys.dm_db_task_space_usage AS R2 ON R1.session_id = R2.session_id
 GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
-  R1.internal_objects_dealloc_page_count;;
+  R1.internal_objects_dealloc_page_count;
 ```
 
-## Related content
+## Next steps
+
 - [SORT_IN_TEMPDB option for indexes](../../relational-databases/indexes/sort-in-TempDB-option-for-indexes.md)    
 - [System databases](../../relational-databases/databases/system-databases.md)    
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    

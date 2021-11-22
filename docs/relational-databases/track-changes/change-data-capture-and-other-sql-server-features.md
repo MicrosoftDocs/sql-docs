@@ -61,6 +61,8 @@ This topic describes how the following features interact with change data captur
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports change data capture.`  
   
  You can use [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) to remove change data capture from a restored or attached database.  
+ 
+ After restoring a database on Azure SQL Managed Instance, CDC will remain enabled, but you must ensure that the scan and cleanup jobs are added and running. You can manually add the jobs by running [sys.sp_cdc_add_job](../system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md?view=sql-server-ver15). 
   
 ##  <a name="Contained"></a> Contained databases  
  Change data capture is not supported in [contained databases](../../relational-databases/databases/contained-databases.md).
@@ -80,11 +82,12 @@ Running point-in-time-restore (PITR) on a Azure SQL Database that has change dat
 
 If you create a database in Azure SQL Database as an AAD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another AAD user will be able to enable/disable change data capture on the same database. 
 
+Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an AAD user won't work. 
+
 > [!NOTE]
 > Support for change data capture in Azure SQL Database is currently in [preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
 
 
 ## See Also  
  [Administer and Monitor change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
-  
   

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], setup DLL"
 ms.assetid: 7e036b66-2fbe-4ce2-815c-2fd03b6fce4d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Setup DLL
 The ODBC Administrator calls the function **ConfigDSN** when users configure data sources.

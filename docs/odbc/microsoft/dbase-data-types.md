@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], DBasedriver"
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # dBASE Data Types
 The following table shows how dBASE data types are mapped to ODBC SQL data types. Note that not all ODBC SQL data types are supported.  

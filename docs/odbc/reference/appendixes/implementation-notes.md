@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Implementation Notes
 > [!IMPORTANT]  

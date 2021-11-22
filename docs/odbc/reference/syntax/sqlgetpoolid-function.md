@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLGetPoolID function [ODBC]"
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetPoolID Function
 **Conformance**  

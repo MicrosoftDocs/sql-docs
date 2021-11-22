@@ -119,7 +119,7 @@ The extensions settings look like this:
 
 ## SandDance visualization
 
-The [SandDance extension](sanddance-extension.md) with the Kusto (KQL) extension in Azure Data Studio bring rich interactive visualization together. From the KQL query result set, select the **Visualizer** button to launch [SandDance](https://sanddance.js.org/).
+The [SandDance extension](sanddance-extension.md) with the Kusto (KQL) extension in Azure Data Studio bring rich interactive visualization together. From the KQL query result set, select the **Visualizer** button to launch [SandDance](https://microsoft.github.io/SandDance/).
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance visualization":::
 
@@ -128,7 +128,7 @@ The [SandDance extension](sanddance-extension.md) with the Kusto (KQL) extension
 | Details | Workaround |
 |---------|------------|
 | [In Kusto notebook, Changing a database connection on a saved alias connection is stuck after an error in code cell execution](https://github.com/microsoft/azuredatastudio/issues/12384) | Close and reopen the Notebook, then connect to the right cluster with the database |
-| [In Kusto Notebook, changing a database connection on a non-saved alias connection doesn't work](https://github.com/microsoft/azuredatastudio/issues/12843) |Create a new connection from Connection Viewlet and save it with an alias. Then create a new notebook and connect to the newly saved connection) | 
+| [In Kusto Notebook, changing a database connection on a non-saved alias connection doesn't work](https://github.com/microsoft/azuredatastudio/issues/12843) |Create a new connection from Connection Viewlet and save it with an alias. Then create a new notebook and connect to the newly saved connection) |
 | [In Kusto Notebook, the database dropdown isn't populated when creating a new ADX connection](https://github.com/microsoft/azuredatastudio/issues/12666) | Create a new connection from Connection Viewlet and save it with an alias. Then create a new notebook and connect to the newly saved connection) |
 
 You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  
@@ -140,4 +140,4 @@ You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?ass
 - [Kqlmagic notebook in Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
 - [SQL to Kusto cheat sheet](/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview)
-- [Using SandDance visualizations](https://sanddance.js.org/)
+- [Using SandDance visualizations](https://microsoft.github.io/SandDance/)

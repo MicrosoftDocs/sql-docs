@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "applications [OLE DB Driver for SQL Server]"
   - "OLE DB, creating applications"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Creating an OLE DB Driver for SQL Server Application
 

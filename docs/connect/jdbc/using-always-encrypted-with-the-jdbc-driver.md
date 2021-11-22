@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Using Always Encrypted with the JDBC driver

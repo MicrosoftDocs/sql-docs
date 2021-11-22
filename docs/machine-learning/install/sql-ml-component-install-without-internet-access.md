@@ -7,7 +7,9 @@ ms.date: 10/01/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Offline install SQL Server Machine Learning Services Python and R on computers with no internet access

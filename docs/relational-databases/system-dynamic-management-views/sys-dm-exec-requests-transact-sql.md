@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_exec_requests (Transact-SQL)"
-title: "sys.dm_exec_requests (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_exec_requests (Transact-SQL)"
 ms.custom: ""
-ms.date: 10/01/2019
+ms.date: 11/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
@@ -16,10 +16,9 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_exec_requests dynamic management view"
-ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
-ms.reviewer: sstein
+ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| = azure-sqldw-latest"
 ---
 # sys.dm_exec_requests (Transact-SQL)
@@ -36,8 +35,8 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 |session_id|**smallint**|ID of the session to which this request is related. Is not nullable.|  
 |request_id|**int**|ID of the request. Unique in the context of the session. Is not nullable.|  
 |start_time|**datetime**|Timestamp when the request arrived. Is not nullable.|  
-|status|**nvarchar(30)**|Status of the request. This can be one of the following:<br /><br /> Background<br />Running<br />Runnable<br />Sleeping<br />Suspended<br /><br /> Is not nullable.|  
-|command|**nvarchar(32)**|Identifies the current type of command that is being processed. Common command types include the following:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> The text of the request can be retrieved by using sys.dm_exec_sql_text with the corresponding sql_handle for the request. Internal system processes set the command based on the type of task they perform. Tasks can include the following:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Is not nullable.|  
+|status|**nvarchar(30)**|Status of the request. Can be one of the following values:<br /><br /> Background<br />Running<br />Runnable<br />Sleeping<br />Suspended<br /><br /> Is not nullable.|  
+|command|**nvarchar(32)**|Identifies the current type of command that is being processed. Common command types include the following values:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> The text of the request can be retrieved by using sys.dm_exec_sql_text with the corresponding sql_handle for the request. Internal system processes set the command based on the type of task they perform. Tasks can include the following values:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Is not nullable.|  
 |sql_handle|**varbinary(64)**|Is a token that uniquely identifies the batch or stored procedure that the query is part of. Is nullable.| 
 |statement_start_offset|**int**|Indicates, in bytes, beginning with 0, the starting position of the currently executing statement for the currently executing batch or persisted object. Can be used together with the `sql_handle`, the `statement_end_offset`, and the `sys.dm_exec_sql_text` dynamic management function to retrieve the currently executing statement for the request. Is nullable.|  
 |statement_end_offset|**int**|Indicates, in bytes, starting with 0, the ending position of the currently executing statement for the currently executing batch or persisted object. Can be used together with the `sql_handle`, the `statement_start_offset`, and the `sys.dm_exec_sql_text` dynamic management function to retrieve the currently executing statement for the request. Is nullable.|  
@@ -45,7 +44,7 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 |database_id|**smallint**|ID of the database the request is executing against. Is not nullable.|  
 |user_id|**int**|ID of the user who submitted the request. Is not nullable.|  
 |connection_id|**uniqueidentifier**|ID of the connection on which the request arrived. Is nullable.|  
-|blocking_session_id|**smallint**|ID of the session that is blocking the request. If this column is NULL or equal to 0, the request is not blocked, or the session information of the blocking session is not available (or cannot be identified).<br /><br /> -2 = The blocking resource is owned by an orphaned distributed transaction.<br /><br /> -3 = The blocking resource is owned by a deferred recovery transaction.<br /><br /> -4 = Session ID of the blocking latch owner could not be determined at this time because of internal latch state transitions.|  
+|blocking_session_id|**smallint**|ID of the session that is blocking the request. If this column is NULL or equal to 0, the request is not blocked, or the session information of the blocking session is not available (or cannot be identified). For more information, see [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking).<br /><br /> -2 = The blocking resource is owned by an orphaned distributed transaction.<br /><br /> -3 = The blocking resource is owned by a deferred recovery transaction.<br /><br /> -4 = Session ID of the blocking latch owner could not be determined at this time because of internal latch state transitions.<br /><br /> -5 = Session ID of the blocking latch owner could not be determined because it is not tracked for this latch type (for example, for an SH latch).|  
 |wait_type|**nvarchar(60)**|If the request is currently blocked, this column returns the type of wait. Is nullable.<br /><br /> For information about types of waits, see [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|If the request is currently blocked, this column returns the duration in milliseconds, of the current wait. Is not nullable.|  
 |last_wait_type|**nvarchar(60)**|If this request has previously been blocked, this column returns the type of the last wait. Is not nullable.|  
@@ -99,7 +98,7 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 ## Remarks 
 To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode. Time values returned by this dynamic management view do not include time spent in preemptive mode.
 
-When executing parallel requests in [row mode](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a worker thread to coordinate the worker threads responsible for completing tasks assigned to them. In this DMV only the coordinator thread is visible for the request. The columns **reads**, **writes**, **logical_reads**, and **row_count** are **not updated** for the coordinator thread. The columns **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**, and **granted_query_memory** are **only updated** for the coordinator thread. For more information, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
+When executing parallel requests in [row mode](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a worker thread to coordinate the worker threads responsible for completing tasks assigned to them. In this DMV, only the coordinator thread is visible for the request. The columns `reads`, `writes`, `logical_reads`, and `row_count` are **not updated** for the coordinator thread. The columns `wait_type`, `wait_time`, `last_wait_type`, `wait_resource`, and `granted_query_memory` are **only updated** for the coordinator thread. For more information, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## Permissions
 If the user has `VIEW SERVER STATE` permission on the server, the user will see all executing sessions on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session. `VIEW SERVER STATE` cannot be granted in Azure SQL Database so `sys.dm_exec_requests` is always limited to the current connection.
@@ -127,14 +126,14 @@ GO
 
 ### B. Finding all locks that a running batch is holding
 
-The following example queries **sys.dm_exec_requests** to find the interesting batch and copy its `transaction_id` from the output.
+The following example queries `sys.dm_exec_requests` to find the interesting batch and copy its `transaction_id` from the output.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-Then, to find lock information, use the copied `transaction_id` with the system function **sys.dm_tran_locks**.  
+Then, to find lock information, use the copied `transaction_id` with the system function `sys.dm_tran_locks`.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks
@@ -145,12 +144,12 @@ GO
 
 ### C. Finding all currently blocked requests
 
-The following example queries **sys.dm_exec_requests** to find information about blocked requests.  
+The following example queries `sys.dm_exec_requests` to find information about blocked requests.  
 
 ```sql
-SELECT session_id ,status ,blocking_session_id  
-    ,wait_type ,wait_time ,wait_resource
-    ,transaction_id
+SELECT session_id, status, blocking_session_id  
+    , wait_type, wait_time, wait_resource
+    , transaction_id
 FROM sys.dm_exec_requests
 WHERE status = N'suspended';  
 GO  
@@ -184,14 +183,19 @@ FROM sys.dm_exec_requests AS req
 GO
 ```
 
-## See Also
-[Dynamic Management Views and Functions](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
-[Execution Related Dynamic Management Views and Functions](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
-[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
-[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
-[sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
-[sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
-[SQL Server, SQL Statistics Object](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
-[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)       
-[Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)    
+## See also
+
+- [Dynamic Management Views and Functions](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+- [Execution Related Dynamic Management Views and Functions](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
+- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
+- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
+- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+- [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
+- [SQL Server, SQL Statistics Object](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
+- [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+- [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)    
+
+## Next steps
+
+- [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking)

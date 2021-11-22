@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # JDBC Driver API Reference
 

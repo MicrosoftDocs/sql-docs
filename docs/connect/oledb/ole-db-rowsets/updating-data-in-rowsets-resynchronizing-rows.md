@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "resynchronizing rows"
   - "data updates [SQL Server], OLE DB"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Updating Data in Rowsets - Resynchronizing Rows
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

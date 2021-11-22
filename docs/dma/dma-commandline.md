@@ -30,7 +30,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentDatabases="connectionString1" \["connectionString2"\]
 \[/AssessmentSourcePlatform="SourcePlatform"]
 \[/AssessmentTargetPlatform="TargetPlatform"\]
-/AssessmentEvaluateRecommendations|/AssessmentEvaluateCompatibilityIssues
+/AssessmentEvaluateFeatureParity|/AssessmentEvaluateCompatibilityIssues
 \[/AssessmentOverwriteResult\]
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
@@ -42,9 +42,8 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentDatabases`     | Space-delimited list of connection strings. Database name (Initial Catalog) is case-sensitive. | Y
 |`/AssessmentSourcePlatform`     | Source platform for the assessment: <br>Supported values for Assessment: SqlOnPrem, RdsSqlServer (default) <br>Supported values for Target Readiness Assessment: SqlOnPrem, RdsSqlServer (default), Cassandra (preview)   | N
 |`/AssessmentTargetPlatform`     | Target platform for the assessment:  <br> Supported values for Assessment: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 and SqlServerWindows2017 (default)  <br> Supported values for Target Readiness Assessment: ManagedSqlServer (default), CosmosDB (preview)   | N
-|`/AssessmentEvaluateFeatureParity`  | Run feature parity rules. If source platform is RdsSqlServer, feature parity evaluation is not supported for target platform AzureSqlDatabase  | N
-|`/AssessmentEvaluateCompatibilityIssues`     | Run compatibility rules  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendations is required.)
-|`/AssessmentEvaluateRecommendations`     | Run feature recommendations        | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendations is required)
+|`/AssessmentEvaluateFeatureParity`  | Run feature parity rules. If source platform is RdsSqlServer, feature parity evaluation is not supported for target platform AzureSqlDatabase  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateFeatureParity is required.)
+|`/AssessmentEvaluateCompatibilityIssues`     | Run compatibility rules  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateFeatureParity is required.)
 |`/AssessmentOverwriteResult`     | Overwrite the result file    | N
 |`/AssessmentResultJson`     | Full path to the JSON result file     | Y <br> (Either AssessmentResultJson or AssessmentResultCsv is required)
 |`/AssessmentResultCsv`    | Full path to the CSV result file   | Y <br> (Either AssessmentResultJson or AssessmentResultCsv is required)
@@ -79,13 +78,13 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
 ```
 
-**Single-database assessment using SQL Server authentication and running feature recommendation**
+**Single-database assessment using SQL Server authentication and running feature parity**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;User Id=myUsername;Password=myPassword;"
-/AssessmentEvaluateRecommendations /AssessmentOverwriteResult
+/AssessmentEvaluateFeatureParity /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
@@ -96,7 +95,7 @@ DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
 /AssessmentTargetPlatform="SqlServer2012"
-/AssessmentEvaluateRecommendations /AssessmentOverwriteResult
+/AssessmentEvaluateFeatureParity /AssessmentOverwriteResult
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
@@ -144,7 +143,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
 /AssessmentName="TestAssessment" 
-/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;User Id=myUsername;Password=myPassword;" /AssessmentEvaluateRecommendations 
+/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;User Id=myUsername;Password=myPassword;" /AssessmentEvaluateFeatureParity 
 /AssessmentOverwriteResult 
 /AssessmentResultJson="C:\temp\Results\AssessmentReport.json" 
 
@@ -245,7 +244,6 @@ DmaCmd.exe
 /AssessmentSourcePlatform=SqlOnPrem 
 /AssessmentTargetPlatform=ManagedSqlServer
 /AssessmentEvaluateCompatibilityIssues 
-/AssessmentEvaluateRecommendations 
 /AssessmentEvaluateFeatureParity 
 /AssessmentOverwriteResult 
 /AssessmentName="assess-myDatabase"
@@ -298,11 +296,14 @@ These commands support recommendations for both Azure SQL Database single databa
 |`--perfQueryIntervalInSec` | Interval at which performance data was queried, in seconds. | N <br> (Specific for `GetSkuRecommendation`action. This must match the value that was originally used during the performance data collection. Default: `30`) 
 |`--targetPlatform` | Target platform for SKU recommendation: either `AzureSqlDatabase`, `AzureSqlManagedInstance`, `AzureSqlVirtualMachine`, or `Any`. | N <br> (Specific for `GetSkuRecommendation`action. Default: `Any`)
 |`--targetSqlInstance` | Name of the SQL instance that SKU recommendation will be targeting. | N <br> (Specific for `GetSkuRecommendation`action)
-|`--targetPercentile` | Percentile of data points to be used during aggregation of the performance data. | N <br> (Specific for `GetSkuRecommendation`action, Default `95`)
-|`--scalingFactor` | Scaling (comfort) factor used during SKU recommendation. | N <br> (Specific for `GetSkuRecommendation`action. Default `100`) 
-|`--startTime` | UTC start time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format. | N <br> (Specific for `GetSkuRecommendation`action) 
-|`--endTime` | UTC end time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format | N <br> (Specific for `GetSkuRecommendation`action) 
-|`--displayResult` | Whether or not to print the SKU recommendation results to the console | N <br> (Specific for `GetSkuRecommendation`action.Default: `true`)
+|`--targetPercentile` | Percentile of data points to be used during aggregation of the performance data. | N <br> (Specific for `GetSkuRecommendation`action. Only used for baseline (non-elastic) strategy.  Default: `95`)
+|`--scalingFactor` | Scaling (comfort) factor used during SKU recommendation. | N <br> (Specific for `GetSkuRecommendation`action. Default: `100`) 
+|`--startTime` | UTC start time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format. | N <br> (Specific for `GetSkuRecommendation`action. Only used for baseline (non-elastic) strategy) 
+|`--endTime` | UTC end time of performance data points to consider during aggregation, in `"YYYY-MM-DD HH:MM"` format | N <br> (Specific for `GetSkuRecommendation`action. Only used for baseline (non-elastic) strategy) 
+|`--elasticStrategy` | Whether or not to use the elastic strategy for SKU recommendations based on statistical resource usage profiling. Elastic strategy is currently available for Azure SQL Databases and SQL Managed Instance, not yet available for SQL Server on Azure VM target. | N <br> (Specific for `GetSkuRecommendation`action. Default: `false`)
+|`--databaseAllowList` | Space separated list of names of databases to be included for SKU recommendations | N <br> (Specific for `GetSkuRecommendation`action. Default: `null`)
+|`--databaseDenyList` | Space separated list of names of databases to be excluded for SKU recommendations. Only set one of the following or neither: `databaseAllowList`, `databaseDenyList` | N <br> (Specific for `GetSkuRecommendation`action. Default: `null`)
+|`--displayResult` | Whether or not to print the SKU recommendation results to the console. Only set one of the following or neither: `databaseAllowList`, `databaseDenyList` | N <br> (Specific for `GetSkuRecommendation`action. Default: `true`)
 
 ## Examples of SKU assessments using the CLI
 

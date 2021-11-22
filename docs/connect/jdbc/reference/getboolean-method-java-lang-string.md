@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: c9ee851f-1827-42f5-a50a-bdef3e323a5e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getBoolean Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

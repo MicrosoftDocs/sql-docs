@@ -52,6 +52,7 @@ SQL Server on Azure Arc-enabled servers supports SQL Server 2012 or higher runni
 
 To connect the SQL Server instances and the hosting machine to Azure Arc, you must have an account with privileges to perform the following actions:
 
+- Microsoft.HybridCompute/machines/extensions/read
 - Microsoft.HybridCompute/machines/extensions/write
 - Microsoft.HybridCompute/machines/extensions/delete
 - Microsoft.HybridCompute/machines/read

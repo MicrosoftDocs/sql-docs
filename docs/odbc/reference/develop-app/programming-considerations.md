@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Programming Considerations
 This section briefly discusses a number of topics related to writing ODBC applications and drivers.  

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 721bc8e3-36c0-4fa6-8561-4f8d54c8265a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsSelectForUpdate Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

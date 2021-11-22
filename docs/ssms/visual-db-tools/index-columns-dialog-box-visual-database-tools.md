@@ -21,7 +21,7 @@ Use this dialog box to select the columns for an index and set their sort orders
   
 ## Options  
 **Column Name**  
-Choose the columns that participate in this index. Select **<None>** to remove that column from the index..  
+Choose the columns that participate in this index. Select **\<None\>** to remove that column from the index..  
   
 **Sort Order**  
 Select a sort order for the specified column. Available options are **Ascending** or **Descending**.  

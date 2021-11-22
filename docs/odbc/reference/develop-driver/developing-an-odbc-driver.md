@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3225a011-5605-46ba-bb74-1ca6106a5271
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Developing an ODBC Driver
 This section contains topics that discuss how to develop an ODBC driver.  

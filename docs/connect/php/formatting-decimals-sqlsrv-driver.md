@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "formatting, decimal types, money values"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Formatting Decimal Strings and Money Values (SQLSRV Driver)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

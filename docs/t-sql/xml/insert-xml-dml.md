@@ -27,7 +27,7 @@ ms.author: jroth
   
 ```syntaxsql 
 insert Expression1 (  
-{AS first | AS last} INTO | AFTER | BEFORE  
+{as first | as last} into | after | before  
 Expression2  
 )  
 ```  
@@ -156,7 +156,7 @@ insert (
            attribute SetupHours {".5" },             
            attribute SomeOtherAtt {".2"}             
         )             
-INTO (/Root/Location[@LocationID=10])[1] ');             
+into (/Root/Location[@LocationID=10])[1] ');             
 SELECT @myDoc;  
 GO  
 ```  

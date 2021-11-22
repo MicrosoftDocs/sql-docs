@@ -1,15 +1,16 @@
 ---
 description: "Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard"
 title: "Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard  | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.date: 10/31/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Always Encrypted, configure with SSMS"
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas

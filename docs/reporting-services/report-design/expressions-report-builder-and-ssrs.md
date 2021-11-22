@@ -1,6 +1,6 @@
 ---
-title: "Expressions (Report Builder) | Microsoft Docs"
-description: Control the content, design, and interactivity of your report with expressions that enable you to retrieve, display, filter, and format data in Report Builder.
+title: "Expressions in a paginated report | Microsoft Docs"
+description: Control the content, design, and interactivity of your paginated report with expressions that enable you to retrieve, display, filter, and format data in Report Builder.
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Expressions (Report Builder and SSRS)
-  Expressions are widely used throughout [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports to retrieve, calculate, display, group, sort, filter, parameterize, and format data. 
+# Expressions in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Expressions are widely used throughout paginated reports to retrieve, calculate, display, group, sort, filter, parameterize, and format data. 
   
   Many report item properties can be set to an expression. Expressions help you control the content, design, and interactivity of your report. Expressions are written in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], saved in the report definition, and evaluated by the report processor when you run the report.  
   

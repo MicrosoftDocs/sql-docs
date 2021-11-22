@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "configure odbc.ini"
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Connecting from Linux or macOS
@@ -63,7 +63,7 @@ Alternatively, you can add the DSN information to a template file, and execute t
 For complete documentation on ini files and `odbcinst`, see the [unixODBC documentation](http://www.unixodbc.org/odbcinst.html). For entries in the `odbc.ini` file specific to the ODBC Driver for SQL Server, see [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) for ones supported on Linux and macOS.
 
 You can verify that your driver is working by using `isql` to test the connection, or you can use this command:
- - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
+ - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S \<server\> -U \<name\> -P \<password\>**  
 
 ## Using TLS/SSL  
 

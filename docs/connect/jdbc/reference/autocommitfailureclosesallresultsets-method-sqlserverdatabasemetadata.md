@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 1739ecb5-e5cb-4807-b5a8-97c0299929d0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # autoCommitFailureClosesAllResultSets Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

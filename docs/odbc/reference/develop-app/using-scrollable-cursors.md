@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "cursors [ODBC], scrollable"
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Scrollable Cursors
 Using a scrollable cursor requires these three steps:  

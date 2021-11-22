@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # High availability and disaster recovery on Linux and macOS
 

@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # JDBC driver support for High Availability, disaster recovery

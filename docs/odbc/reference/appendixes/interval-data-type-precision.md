@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "interval precision [ODBC]"
 ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Interval Data Type Precision
 Precision for an interval data type includes interval leading precision, interval precision, and seconds precision.  

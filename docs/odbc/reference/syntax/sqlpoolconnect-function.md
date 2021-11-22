@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLPoolConnect function [ODBC]"
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLPoolConnect Function
 **Conformance**  

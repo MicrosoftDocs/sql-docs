@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: e7c10372-0be8-4baa-87f7-ed6b66003357
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # rowInserted Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

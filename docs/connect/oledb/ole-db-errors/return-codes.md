@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "FAILED macro"
   - "errors [OLE DB], return codes"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Return Codes
 

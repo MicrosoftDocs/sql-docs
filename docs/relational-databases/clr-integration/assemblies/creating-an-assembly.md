@@ -45,7 +45,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   The assembly that is called or referenced was created in the same database.  
   
 ## Specifying Security When Creating Assemblies  
- When creating an assembly into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, you can specify one of three different levels of security in which your code can run: **SAFE**, **EXTERNAL_ACCESS**, or **UNSAFE**. When the **CREATE ASSEMBLY** statement is run, certain checks are performed on the code assembly which may cause the assembly to fail to register on the server. For more information, see the Impersonation sample on [CodePlex](https://msftengprodsamples.codeplex.com/).  
+ When creating an assembly into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, you can specify one of three different levels of security in which your code can run: **SAFE**, **EXTERNAL_ACCESS**, or **UNSAFE**. When the **CREATE ASSEMBLY** statement is run, certain checks are performed on the code assembly which may cause the assembly to fail to register on the server.   
   
  **SAFE** is the default permission set and works for the majority of scenarios. To specify a given security level, you modify the syntax of the CREATE ASSEMBLY statement as follows:  
   

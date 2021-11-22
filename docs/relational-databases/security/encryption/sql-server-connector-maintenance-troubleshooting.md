@@ -194,7 +194,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 
 ![aad change default directory helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
-1. Go to the Azure classic portal: [https://manage.windowsazure.com](https://manage.windowsazure.com)  
+1. Go to the Azure classic portal: [https://portal.azure.com/](https://portal.azure.com/)  
 2. On the left-hand menu, select **Settings**.
 3. Select the Azure subscription you are currently using, and click **Edit Directory** from the commands at the bottom of the screen.
 4. In the pop-up window, use the **Directory** dropdown to select the Active Directory you'd like to use. This will make it the default Directory.

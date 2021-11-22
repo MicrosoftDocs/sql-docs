@@ -1,8 +1,8 @@
 ---
 description: "Create Foreign Key Relationships"
-title: "Create Foreign Key Relationships | Microsoft Docs"
+title: "Create Foreign Key Relationships"
 ms.custom: ""
-ms.date: "06/19/2020"
+ms.date: "10/21/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -10,7 +10,6 @@ ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "relationships [SQL Server], creating"
-ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -48,29 +47,29 @@ Creating a foreign key in an existing table requires [ALTER](../../t-sql/stateme
 
 ## Create a foreign key relationship in Table Designer
 
-### Using SQL Server Management Studio
+### Use SQL Server Management Studio
 
-1. In Object Explorer, right-click the table that will be on the foreign-key side of the relationship and click **Design**.
+1. In Object Explorer, right-click the table that will be on the foreign-key side of the relationship and select **Design**.
 
    The table opens in [**Table Designer**](../../ssms/visual-db-tools/design-tables-visual-database-tools.md).
-2. From the **Table Designer** menu, click **Relationships**.
-3. In the **Foreign-key Relationships** dialog box, click **Add**.
+2. From the **Table Designer** menu, select **Relationships**.
+3. In the **Foreign-key Relationships** dialog box, select **Add**.
 
    The relationship appears in the **Selected Relationship** list with a system-provided name in the format FK_\<*tablename*>_\<*tablename*>, where *tablename* is the name of the foreign key table.
-4. Click the relationship in the **Selected Relationship** list.
-5. Click **Tables and Columns Specification** in the grid to the right and click the ellipses (**...**) to the right of the property.
+4. Select the relationship in the **Selected Relationship** list.
+5. Select **Tables and Columns Specification** in the grid to the right and select the ellipses (**...**) to the right of the property.
 6. In the **Tables and Columns** dialog box, in the **Primary Key** drop-down list, choose the table that will be on the primary-key side of the relationship.
 7. In the grid beneath, choose the columns contributing to the table's primary key. In the adjacent grid cell to the right of each column, choose the corresponding foreign-key column of the foreign-key table.
 
    **Table Designer** suggests a name for the relationship. To change this name, edit the contents of the **Relationship Name** text box.
 8. Choose **OK** to create the relationship.
-9. Close the table designer window and **save** your changes for the foreign key relationship change to take effect.
+9. Close the table designer window and **Save** your changes for the foreign key relationship change to take effect.
 
 ## Create a foreign key in a new table
 
-### Using Transact-SQL
+### Use Transact-SQL
 
-The following example creates a table and defines a foreign key constraint on the column `TempID` that references the column `SalesReasonID` in the `Sales.SalesReason` table in the AdventureWorks database. The ON DELETE CASCADE and ON UPDATE CASCADE clauses are used to ensure that changes made to `Sales.SalesReason` table are automatically propagated to the `Sales.TempSalesReason` table.    
+The following example creates a table and defines a foreign key constraint on the column `TempID` that references the column `SalesReasonID` in the `Sales.SalesReason` table in the `AdventureWorks` database. The ON DELETE CASCADE and ON UPDATE CASCADE clauses are used to ensure that changes made to `Sales.SalesReason` table are automatically propagated to the `Sales.TempSalesReason` table.    
 
 ```sql
 CREATE TABLE Sales.TempSalesReason 
@@ -87,8 +86,8 @@ CREATE TABLE Sales.TempSalesReason
 
 ## Create a foreign key in an existing table
 
-### Using Transact-SQL
-The following example creates a foreign key on the column `TempID` and references the column `SalesReasonID` in the `Sales.SalesReason` table in the AdventureWorks database.
+### Use Transact-SQL
+The following example creates a foreign key on the column `TempID` and references the column `SalesReasonID` in the `Sales.SalesReason` table in the `AdventureWorks` database.
 
 ```sql
 ALTER TABLE Sales.TempSalesReason
@@ -100,8 +99,6 @@ ALTER TABLE Sales.TempSalesReason
 ```
 
 ## Next steps
-
-For more information, see:
 
 - [Primary and Foreign Key Constraints](primary-and-foreign-key-constraints.md)
 - [GRANT Database Permissions](../../t-sql/statements/grant-database-permissions-transact-sql.md)

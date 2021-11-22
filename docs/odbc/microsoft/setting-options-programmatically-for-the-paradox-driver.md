@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], Paradox driver"
 ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Setting Options Programmatically for the Paradox Driver
 

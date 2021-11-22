@@ -16,6 +16,16 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
 
+## SSMA v8.23
+
+The v8.23 release of SSMA for SAP ASE contains the following changes:
+
+* Improved messaging for conversion of TRANSACTION_RPC statements
+* New option "Allow Statements from Files", for adding statements from file system
+* Enhanced XML output when running in console mode
+* New "Feedback" link in reports to send feedback
+* In reports, enhanced visualization experience
+
 ## SSMA v8.22
 
 The v8.22 release of SSMA for SAP ASE contains the following changes:

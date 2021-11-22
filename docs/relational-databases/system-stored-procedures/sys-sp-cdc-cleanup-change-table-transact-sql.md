@@ -30,30 +30,29 @@ ms.author: brcarrig
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
-  
-```  
+``` 
 sys.sp_cdc_cleanup_change_table   
-  [ @capture_instance = ] 'capture_instance',   
+  [ @capture_instance = ] 'capture_instance', 
   [ @low_water_mark = ] low_water_mark ,  
   [ @threshold = ]'delete threshold',
-  [ @fCleanupFailed = ] 'cleanup failed' OUTPUT  
-```  
+  [ @fCleanupFailed = ] 'cleanup failed' OUTPUT
+```
+
+## Arguments
+[ @capture_instance = ] '*capture_instance*'  
+Is the name of the capture instance associated with the change table. *capture_instance* is **sysname**, with no default, and cannot be NULL.  
   
-## Arguments  
- [ @capture_instance = ] '*capture_instance*'  
- Is the name of the capture instance associated with the change table. *capture_instance* is **sysname**, with no default, and cannot be NULL.  
+*capture_instance* must name a capture instance that exists in the current database.  
   
- *capture_instance* must name a capture instance that exists in the current database.  
+[ @low_water_mark = ] *low_water_mark*  
+Is a log sequence number (LSN) that is to be used as the new low watermark for the *capture instance*. *low_water_mark* is **binary(10)**, with no default.  
   
- [ @low_water_mark = ] *low_water_mark*  
- Is a log sequence number (LSN) that is to be used as the new low watermark for the *capture instance*. *low_water_mark* is **binary(10)**, with no default.  
+If the value is nonnull, it must appear as the start_lsn value of a current entry in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) table. If other entries in cdc.lsn_time_mapping share the same commit time as the entry identified by the new low watermark, the smallest LSN associated with that group of entries is chosen as the low watermark.  
   
- If the value is nonnull, it must appear as the start_lsn value of a current entry in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) table. If other entries in cdc.lsn_time_mapping share the same commit time as the entry identified by the new low watermark, the smallest LSN associated with that group of entries is chosen as the low watermark.  
+If the value is explicitly set to NULL, the current *low watermark* for the *capture instance* is used to define the upper bound for the cleanup operation.  
   
- If the value is explicitly set to NULL, the current *low watermark* for the *capture instance* is used to define the upper bound for the cleanup operation.  
-  
- [ @threshold= ] '*delete threshold*'  
- Is the maximum number of delete entries that can be deleted by using a single statement on cleanup. *delete_threshold* is **bigint**, with a default of 5000.
+[ @threshold= ] '*delete threshold*'  
+Is the maximum number of delete entries that can be deleted by using a single statement on cleanup. *delete_threshold* is **bigint**, with a default of 5000.
 
 [ @fCleanupFailed = ] '*cleanup failed*' OUTPUT
 Is an OUTPUT parameter indicating whether the cleanup operation failed or not. *cleanup failed* is a **bit**, with a default of 0.
@@ -65,8 +64,8 @@ None, unless the optional **bit** @fCleanupFailed OUTPUT parameter is used.
  **0** (success) or **1** (failure)
 
 ## Example
-```--== Declaring a variable and Setting to zero first
-
+```
+--== Declaring a variable and Setting to zero first
 SELECT @cleanup_failed_bit = 0;
 
 --== Execute cleanup and obtain output bit
@@ -77,14 +76,17 @@ EXEC @retcode = sys.sp_cdc_cleanup_change_table
   @fCleanupFailed = @cleanup_failed_bit OUTPUT;
 
 --== Leverage @cleanup_failed_bit output to check the status.
-SELECT IIF(@cleanup_failed_bit > 0, 'CLEANUP FAILURE', 'CLEANUP SUCCESS');```
+SELECT IIF(@cleanup_failed_bit > 0, 'CLEANUP FAILURE', 'CLEANUP SUCCESS');
+```
 
-```Result
+```
+Result
 --------
-CLEANUP SUCCESS``` 
+CLEANUP SUCCESS
+``` 
   
 ## Remarks  
- *sys.sp_cdc_cleanup_change_table* performs the following operations:  
+*sys.sp_cdc_cleanup_change_table* performs the following operations:  
   
 1.  If the *@low_water_mark*  parameter is NULL, the start_lsn value for the *capture instance* is left unchanged. However, if the current low watermark is greater than the low watermark value specified using the *@low_water_mark* parameter for the procedure, the [Error 22957](../errors-events/database-engine-events-and-errors.md) is thrown. The error message for *Error 22957* is ```LSN %s, specified as the new low endpoint for the change table associated with capture instance '%s', is not within the Change Data Capture timeline [%s, %s].```
   

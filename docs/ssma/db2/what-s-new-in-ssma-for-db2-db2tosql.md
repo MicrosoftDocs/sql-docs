@@ -16,6 +16,17 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
 
+## SSMA v8.23
+
+The v8.23 release of SSMA for DB2 contains the following changes:
+
+* Improvements to TOTALORDER function
+* Conversion support for ANCHORED datatype
+* New option "Allow Statements from Files", for adding statements from file system
+* Enhanced XML output when running in console mode
+* New "Feedback" link in reports to send feedback
+* In reports, enhanced visualization experience
+
 ## SSMA v8.22
 
 The v8.22 release of SSMA for DB2 contains the following changes:

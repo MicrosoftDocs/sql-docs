@@ -44,7 +44,7 @@ Returns the Open Geospatial Consortium (OGC) type name represented by a **geomet
 ## Examples  
  The following example creates a `Polygon` instance and uses `STGeometryType()` to confirm that it is a polygon.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0))', 0);  
 SELECT @g.STGeometryType();  

@@ -116,7 +116,7 @@ Some captured highlights are:
 
 |Breaking change  |Action  |
 |---------|---------|
-|```spark-submit``` parameters ```yarn-client``` and ```yarn-clustermodes``` are removed in Spark 3|Use ```spark-submit --master yarn --deploy-mode client``` or ```--deploy-mode cluster``` instead.<br/>Details refer https://spark.apache.org/docs/latest/running-on-yarn.html|
+|```spark-submit``` parameters ```yarn-client``` and ```yarn-clustermodes``` are removed in Spark 3|Use ```spark-submit --master yarn --deploy-mode client``` or ```--deploy-mode cluster``` instead.<br/>Details refer https://spark.apache.org/docs/latest/running-on-yarn.html |
 |```HiveContext``` class is removed|Use ```SparkSession.builder.enableHiveSupport()``` instead|
 |The order of argument is reversed in the TRIM method|Use ```TRIM(str, trimStr)``` instead of ```TRIM(trimStr, str)```|
 |Due to the upgrade to Scala 2.12, ```DataStreamWriter.foreachBatch``` is not a compatible source with Scala program|Update your Scala source code to distinguish between Scala function and Java lambda.|

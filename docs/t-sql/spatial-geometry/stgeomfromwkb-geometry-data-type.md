@@ -53,7 +53,7 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
 ## Examples  
  The following example uses `STGeomFromWKB()` to create a **geometry** instance.  
   
-```  
+```sql
 DECLARE @g geometry;   
 SET @g = geometry::STGeomFromWKB(0x010200000003000000000000000000594000000000000059400000000000003440000000000080664000000000008066400000000000806640, 0);  
 SELECT @g.STAsText();  

@@ -44,7 +44,7 @@ Returns the number of interior rings of a **Polygongeometry** instance.
 ## Examples  
  The following example creates a `Polygon` instance and uses `STNumInteriorRing()` to find how many interior rings the instance has.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);  
 SELECT @g.STNumInteriorRing();  

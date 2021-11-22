@@ -18,6 +18,8 @@ The following release notes apply to SQL Server 2019 running on Linux. This arti
 > [!TIP]
 > To learn about new Linux features in SQL Server 2019, see [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true#sql-server-on-linux).
 
+## Supported platforms
+
 [!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
 ## Tools
@@ -73,6 +75,8 @@ For manual or offline package installations, you can download the RPM and Debian
 > Starting with CU1, the offline package installation links for Red Hat are pointing to RHEL 8 packages. If you are looking for RHEL 7 packages, refer to the download path <https://packages.microsoft.com/rhel/7/mssql-server-2019/>
 >
 > **Ubuntu 20.04** is now supported on SQL Server 2019 starting with CU10. The offline package installation links for Ubuntu are pointing to Ubuntu 20.04 packages. If you are looking for Ubuntu 18.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/>
+>
+> **SLES 15** is now supported on SQL Server 2019 starting with CU14. The offline package installation links for SLES are pointing to SLES 15 packages. If you are looking for SLES 12 packages, refer to the download path <https://packages.microsoft.com/sles/12/mssql-server-2019/>
 
 | Package | Package version | Downloads |
 |-----|-----|-----|

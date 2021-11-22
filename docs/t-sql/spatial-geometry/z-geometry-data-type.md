@@ -48,7 +48,7 @@ The Z (elevation) value of the instance. The semantics of the elevation value ar
 ## Examples  
  The following example creates a `Point` instance with Z (elevation) and M (measure) values and uses `Z` to fetch the Z value of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);  
 SELECT @g.Z;  

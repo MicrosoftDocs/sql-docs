@@ -51,7 +51,7 @@ ConvexHullAggregate ( geometry_operand )
 ## Examples  
  The following example returns a convex hull of the set of geometry objects in a table variable column.  
   
- ```
+ ```sql
  -- Setup table variable for ConvexHullAggregate example  
  DECLARE @Geom TABLE  
  (  

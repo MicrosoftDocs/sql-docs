@@ -41,7 +41,7 @@ STEnvelope ( )
 ## Examples  
  The following example uses `STGeomFromText()` to create a `LineString` instance from (0,0) to (2,3), and uses `STEnvelope()` to return the bounding box of the `LineString`.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);  
 SELECT @g.STEnvelope().ToString();  

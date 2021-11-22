@@ -35,7 +35,7 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 For detailed SQL Server engine changes, check the [official SQL Server CU13 knowledge base article](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535).
 
 > [!NOTE]
-> Due to the [runtime for Apache Spark](runtime-for-apache-spark.md), some container image sizes increased considerably (two fold for the mssql-hadoop container). Average cluster upgrade time might be impacted by this.
+> Due to the [runtime for Apache Spark](runtime-for-apache-spark.md), starting with SQL Server Big Data Clusters CU13, some container image sizes increased considerably (two fold for the mssql-hadoop container, for example). Average cluster upgrade time might be impacted by this.
 
 ## Tested configurations for CU13
 

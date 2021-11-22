@@ -51,7 +51,7 @@ ms.author: mlandzic
 ## Examples  
  The following example uses `STRelate()` to test two **geometry** instances for spatial disjoint using an explicit DE-9IM pattern.  
   
-```  
+```sql
 DECLARE @g geometry;  
 DECLARE @h geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);  

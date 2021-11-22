@@ -48,7 +48,7 @@ Returns the geometric center of a **geometry** instance that consists of one or 
 ### A. Computing the centroid of a Polygon instance  
  The following example uses `STCentroid()` to compute the centroid of a `polygon``geometry` instance:  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);  
 SELECT @g.STCentroid().ToString();  
@@ -57,7 +57,7 @@ SELECT @g.STCentroid().ToString();
 ### B. Computing the centroid of a CurvePolygon instance  
  The following example computes the centroid for a `CurvePolygon` instance:  
   
-```
+```sql
  DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))';  
  SELECT @g.STCentroid().ToString() AS Centroid
  ```  

@@ -1,7 +1,7 @@
 ---
-title: "Connection events"
+title: Connection events
 description: The connection events to retrieve informational messages from a data source and determine if its state is changed.
-ms.date: "11/13/2020"
+ms.date: 11/13/2020
 dev_langs: 
   - "csharp"
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
@@ -11,7 +11,6 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
-ms.reviewer: v-chmalh
 ---
 # Connection events
 
@@ -23,14 +22,14 @@ The Microsoft SqlClient Data Provider for SQL Server has **Connection** objects 
 
 |Event|Description|  
 |-----------|-----------------|  
-|**InfoMessage**|Occurs when an informational message is returned from a data source. Informational messages are messages from a data source that do not result in an exception being thrown.|  
+|**InfoMessage**|Occurs when an informational message is returned from a data source. Informational messages are messages from a data source that don't result in an exception being thrown.|  
 |**StateChange**|Occurs when the state of the **Connection** changes.|  
 
 ## Work with the InfoMessage event
 
-You can retrieve warnings and informational messages from a SQL Server data source using the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event of the <xref:Microsoft.Data.SqlClient.SqlConnection> object. Errors returned from the data source with a severity level of 11 through 16 cause an exception to be thrown. However, the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event can be used to obtain messages from the data source that are not associated with an error. In the case of Microsoft SQL Server, any error with a severity of 10 or less is considered to be an informational message, and can be captured by using the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event. For more information, see the [Database Engine Error Severities](../../relational-databases/errors-events/database-engine-error-severities.md) article.
+You can retrieve warnings and informational messages from a SQL Server data source using the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event of the <xref:Microsoft.Data.SqlClient.SqlConnection> object. Errors returned from the data source with a severity level of 11 through 16 cause an exception to be thrown. However, the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event can be used to obtain messages from the data source that aren't associated with an error. With Microsoft SQL Server, any error with a severity of 10 or less is considered to be an informational message, and can be captured by using the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event. For more information, see the [Database Engine Error Severities](../../relational-databases/errors-events/database-engine-error-severities.md) article.
 
-The <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event receives an <xref:Microsoft.Data.SqlClient.SqlInfoMessageEventArgs> object containing, in its **Errors** property, a collection of the messages from the data source. You can query the **Error** objects in this collection for the error number and message text, as well as the source of the error. The Microsoft SqlClient Data Provider for SQL Server also includes detail about the database, stored procedure, and line number that the message came from.
+The <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event receives an <xref:Microsoft.Data.SqlClient.SqlInfoMessageEventArgs> object containing, in its **Errors** property, a collection of the messages from the data source. You can query the **Error** objects in this collection for the error number, message text, and the source of the error. The Microsoft SqlClient Data Provider for SQL Server also includes detail about the database, stored procedure, and line number that the message came from.
 
 ### Example
 
@@ -40,9 +39,9 @@ The following code example shows how to add an event handler for the <xref:Micro
 
 ## Handle errors as InfoMessages
 
-The <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event will normally fire only for informational and warning messages that are sent from the server. However, when an actual error occurs, the execution of the **ExecuteNonQuery** or **ExecuteReader** method that initiated the server operation is halted and an exception is thrown.
+The <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event will normally fire only for informational and warning messages that are sent from the server. However, when an actual error occurs, the execution of the **ExecuteNonQuery** or **ExecuteReader** method that began the server operation is halted and an exception is thrown.
 
-If you want to continue processing the rest of the statements in a command regardless of any errors produced by the server, set the <xref:Microsoft.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A> property of the <xref:Microsoft.Data.SqlClient.SqlConnection> to `true`. Doing this causes the connection to fire the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event for errors instead of throwing an exception and interrupting processing. The client application can then handle this event and respond to error conditions.
+If you want to continue processing the rest of the statements in a command regardless of any errors produced by the server, set the <xref:Microsoft.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A> property of the <xref:Microsoft.Data.SqlClient.SqlConnection> to `true`. Setting this property causes the connection to fire the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event for errors instead of throwing an exception and interrupting processing. The client application can then handle this event and respond to error conditions.
 
 > [!NOTE]
 > An error with a severity level of 17 or above that causes the server to stop processing the command must be handled as an exception. In this case, an exception is thrown regardless of how the error is handled in the <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> event.

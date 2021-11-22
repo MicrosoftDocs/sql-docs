@@ -46,7 +46,7 @@ ms.author: mlandzic
 ### A. Using STBoundary() on a LineString instance with different endpoints  
  The following example creates a `LineString``geometry` instance. `STBoundary()` returns the boundary of the `LineString`.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, 2 0)', 0);  
 SELECT @g.STBoundary().ToString();  
@@ -55,7 +55,7 @@ SELECT @g.STBoundary().ToString();
 ### B. Using STBoundary() on a LineString instance with the same endpoints  
  The following example creates a valid `LineString` instance with the same endpoints. `STBoundary()` returns an empty `GeometryCollection`.  
   
-```
+```sql
  DECLARE @g geometry;  
  SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, -2 2, 0 0)', 0);  
  SELECT @g.STBoundary().ToString();
@@ -64,7 +64,7 @@ SELECT @g.STBoundary().ToString();
 ### C. Using STBoundary() on a CurvePolygon instance  
  The following example uses `STBoundary()` on a `CurvePolygon` instance. `STBoundary()` returns a `CircularString` instance.  
   
-```
+```sql
  DECLARE @g geometry;  
  SET @g = geometry::STGeomFromText('CURVEPOLYGON(CIRCULARSTRING(0 0, 2 2, 0 2, -2 2, 0 0))', 0);  
  SELECT @g.STBoundary().ToString();

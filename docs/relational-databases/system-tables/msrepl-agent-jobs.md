@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "MSrepl_agent_jobs system table"
 ms.assetid: 50ca9254-a0d8-45fb-8cfd-e96ad8aca613
 author: briancarrig
-ms.author: briancarrig
+ms.author: brcarrig
 ---
 # MSrepl_agent_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

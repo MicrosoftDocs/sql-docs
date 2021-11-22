@@ -46,7 +46,7 @@ Returns 1 if the start and end points of the given **geometry** instance are the
 ## Examples  
  The following example creates a `LineString` instance and uses `STIsClosed()` to test if the `LineString` is closed.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
 SELECT @g.STIsClosed();  

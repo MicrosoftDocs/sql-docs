@@ -44,7 +44,7 @@ The Y-coordinate property of a **Point** instance.
 ## Examples  
  The following example creates a `Point` instance and uses `STY` to retrieve the Y-coordinate of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT(3 8)', 0);  
 SELECT @g.STY;  

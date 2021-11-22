@@ -16,6 +16,15 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
 
+## SSMA v8.23
+
+The v8.23 release of SSMA for Access contains the following changes:
+
+* Enhanced conversion for tables without primary key
+* Enhanced XML output when running in console mode
+* New "Feedback" link in reports to send feedback
+* In reports, improved visualization experience
+
 ## SSMA v8.22
 
 The v8.22 release of SSMA for Access contains the following changes:

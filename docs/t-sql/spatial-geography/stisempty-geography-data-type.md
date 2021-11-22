@@ -41,7 +41,7 @@ ms.author: mlandzic
 ## Examples  
  The following example creates an empty `geography` instance and uses `STIsEmpty()` to verify that the instance is empty.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('POLYGON EMPTY', 4326);  
 SELECT @g.STIsEmpty();  

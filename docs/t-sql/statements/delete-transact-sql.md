@@ -2,7 +2,7 @@
 description: "DELETE (Transact-SQL)"
 title: "DELETE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/19/2020"
+ms.date: "11/19/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -185,31 +185,33 @@ DELETE
  Keywords that indicate which optimizer hints are used to customize the way the [!INCLUDE[ssDE](../../includes/ssde-md.md)] processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## Best Practices  
- To delete all the rows in a table, use TRUNCATE TABLE. TRUNCATE TABLE is faster than DELETE and uses fewer system and transaction log resources. TRUNCATE TABLE has restrictions, for example, the table cannot participate in replication. For more information, see [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)  
+ To delete all the rows in a table, use `TRUNCATE TABLE`. `TRUNCATE TABLE` is faster than DELETE and uses fewer system and transaction log resources. `TRUNCATE TABLE` has restrictions, for example, the table cannot participate in replication. For more information, see [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)  
   
- Use the @@ROWCOUNT function to return the number of deleted rows to the client application. For more information, see [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
+ Use the `@@ROWCOUNT` function to return the number of deleted rows to the client application. For more information, see [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ## Error Handling  
- You can implement error handling for the DELETE statement by specifying the statement in a TRY...CATCH construct.  
+ You can implement error handling for the DELETE statement by specifying the statement in a `TRY...CATCH` construct.  
   
- The DELETE statement may fail if it violates a trigger or tries to remove a row referenced by data in another table with a FOREIGN KEY constraint. If the DELETE removes multiple rows, and any one of the removed rows violates a trigger or constraint, the statement is canceled, an error is returned, and no rows are removed.  
+ The `DELETE` statement may fail if it violates a trigger or tries to remove a row referenced by data in another table with a `FOREIGN KEY` constraint. If the `DELETE` removes multiple rows, and any one of the removed rows violates a trigger or constraint, the statement is canceled, an error is returned, and no rows are removed.  
   
- When a DELETE statement encounters an arithmetic error (overflow, divide by zero, or a domain error) occurring during expression evaluation, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] handles these errors as if SET ARITHABORT is set ON. The rest of the batch is canceled, and an error message is returned.  
+ When a DELETE statement encounters an arithmetic error (overflow, divide by zero, or a domain error) occurring during expression evaluation, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] handles these errors as if `SET ARITHABORT` is set ON. The rest of the batch is canceled, and an error message is returned.  
   
 ## Interoperability  
  DELETE can be used in the body of a user-defined function if the object modified is a table variable.  
   
  When you delete a row that contains a FILESTREAM column, you also delete its underlying file system files. The underlying files are removed by the FILESTREAM garbage collector. For more information, see [Access FILESTREAM Data with Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md).  
   
- The FROM clause cannot be specified in a DELETE statement that references, either directly or indirectly, a view with an INSTEAD OF trigger defined on it. For more information about INSTEAD OF triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ The FROM clause cannot be specified in a DELETE statement that references, either directly or indirectly, a view with an `INSTEAD OF` trigger defined on it. For more information about INSTEAD OF triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## Limitations and Restrictions  
- When TOP is used with DELETE, the referenced rows are not arranged in any order and the ORDER BY clause can not be directly specified in this statement. If you need to use TOP to delete rows in a meaningful chronological order, you must use TOP together with an ORDER BY clause in a subselect statement. See the Examples section that follows in this topic.  
+When `TOP` is used with `DELETE`, the referenced rows are not arranged in any order and the `ORDER BY` clause can not be directly specified in this statement. If you need to use TOP to delete rows in a meaningful chronological order, you must use `TOP` together with an `ORDER BY` clause in a subselect statement. See the Examples section that follows in this topic.  
   
- TOP cannot be used in a DELETE statement against partitioned views.  
+`TOP` cannot be used in a `DELETE` statement against partitioned views.  
   
 ## Locking Behavior  
- By default, a DELETE statement always acquires an intent exclusive (IX) lock on the table object it modifies, and holds that lock until the transaction completes. With an intent exclusive (IX) lock, no other transactions can modify data; read operations can take place only with the use of the NOLOCK hint or read uncommitted isolation level. You can specify table hints to override this default behavior for the duration of the DELETE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+By default, a `DELETE` statement always acquires an intent exclusive (IX) lock on the table object and pages it modifies, an exclusive (X) lock on the rows it modifies, and holds those locks until the transaction completes. 
+
+With an intent exclusive (IX) lock, no other transactions can modify the same set of data; read operations can take place only with the use of the NOLOCK hint or read uncommitted isolation level. You can specify table hints to override this default behavior for the duration of the DELETE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  When rows are deleted from a heap the [!INCLUDE[ssDE](../../includes/ssde-md.md)] may use row or page locking for the operation. As a result, the pages made empty by the delete operation remain allocated to the heap. When empty pages are not deallocated, the associated space cannot be reused by other objects in the database.  
   

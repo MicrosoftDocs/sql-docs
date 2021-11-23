@@ -64,7 +64,7 @@ For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../in
 
 ### Using PowerShell
 
- **Option 1: Follow the steps directly in a notebook via Azure Data Studio**
+#### Option 1: Run the steps directly in an executable notebook via Azure Data Studio
 
 > [!NOTE]
 > Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
@@ -72,8 +72,8 @@ For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../in
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting-SQL-SystemAdmins-Locked-out.ipynb)  
 
-**Option 2: Follow the step manually**
- 
+#### Option 2: Follow the step manually
+
 1. Open a Windows PowerShell command - Run as an Administrator
 1. Set up service name and SQL Server instance, and Windows login variables. Replace these with values to match your environment
 

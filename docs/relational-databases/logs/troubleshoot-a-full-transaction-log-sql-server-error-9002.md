@@ -24,7 +24,7 @@ ms.custom: "seo-lt-2019"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
  
  
- **Option 1: Follow the steps directly in a notebook via Azure Data Studio**
+ **Option 1: Run the steps directly in an executable notebook via Azure Data Studio**
 
 > [!NOTE]
 > Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).

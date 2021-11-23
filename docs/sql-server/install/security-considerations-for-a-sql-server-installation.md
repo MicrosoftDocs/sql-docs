@@ -2,7 +2,7 @@
 title: "Security Considerations"
 description: This article discusses some security best practices that you should consider both before and after you install SQL Server.
 ms.custom: ""
-ms.date: "08/23/2017"
+ms.date: "11/22/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: security
@@ -81,13 +81,15 @@ ms.author: chadam
 ###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  Using the correct file system increases security. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations, you should do the following tasks:  
   
--   Use the NTFS file system (NTFS). NTFS is the preferred file system for installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] because it is more stable and recoverable than FAT file systems. NTFS also enables security options like file and directory access control lists (ACLs) and Encrypting File System (EFS) file encryption. During installation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will set appropriate ACLs on registry keys and files if it detects NTFS. These permissions should not be changed. Future releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might not support installation on computers with FAT file systems.  
+Use the NT file system (NTFS) or Resilient File System (ReFS). NTFS and ReFS are the recommended file system for installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] because it is more stable and recoverable than FAT32 file systems. NTFS or ReFS also enable security options like file and directory access control lists (ACLs) and Encrypting File System (EFS) - file encryption. During installation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will set appropriate ACLs on registry keys and files if it detects NTFS. These permissions should not be changed. Future releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might not support installation on computers with FAT file systems.  
   
-    > [!NOTE]  
-    >  If you use EFS, database files will be encrypted under the identity of the account running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Only this account will be able to decrypt the files. If you must change the account that runs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you should first decrypt the files under the old account and then re-encrypt them under the new account.  
-  
--   Use a redundant array of independent disks (RAID) for critical data files.  
-  
+  > [!NOTE]  
+  >  If you use EFS, database files will be encrypted under the identity of the account running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Only this account will be able to decrypt the files. If you must change the account that runs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must first decrypt the files under the old account and then re-encrypt them under the new service account.  
+   
+ 
+  >  [!WARNING]
+  >  Using file encryption via EFS may lead to slower I/O performance because encryption causes asynchronous I/O to become synchronous. See [Asynchronous disk I/O appears as synchronous on Windows](../troubleshoot/windows/win32/asynchronous-disk-io-synchronous#ntfs-encryption). Instead, you can sonsider using SQL Server encryption technologies like [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption), [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine), and column-level encryption [T-SQL functions](/sql/t-sql/functions/cryptographic-functions-transact-sql). 
+
 ###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  Servers in the perimeter network should have all unnecessary protocols disabled, including NetBIOS and server message block (SMB).  
   

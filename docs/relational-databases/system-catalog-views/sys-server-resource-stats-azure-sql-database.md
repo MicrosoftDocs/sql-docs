@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 
 [!INCLUDE[Azure SQL Managed Instance](../../includes/applies-to-version/_asdbmi.md)]
 
-Returns CPU usage, IO, and storage data for Azure SQL Managed Instance. The data is collected and aggregated within five-minute intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and SKU. Historical data is retained for approximately 14 days.
+Returns CPU usage, IO, and storage data for Azure SQL Managed Instance. The data is collected, aggregated and updated within 5 to 10 minutes intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and SKU. Historical data is retained for approximately 14 days.
 
 The `sys.server_resource_stats` view has different definitions depending on the version of the Azure SQL Managed Instance that the database is associated with. Consider these differences and any modifications your application requires when upgrading to a new server version.
 

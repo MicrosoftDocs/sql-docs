@@ -38,10 +38,12 @@ sp_delete_firewall_rule [@name =] 'name'
  The argument of the stored procedure is:  
   
  [@name =] '*name*'  
- The name of the server-level firewall setting that will be removed. *name* is **nvarchar (128)** with no default.  
+ The name of the server-level firewall setting that will be removed. *name* is **nvarchar (128)** with no default. The datatype of the value passed in must be **nvarchar**. 
   
 ## Remarks  
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to authenticate a connection and server-level firewall rules are temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ 
+Because this is an extended stored procedure, the data type of the value passed in for the parameter much match exactly. Implicit conversions from other types will not take place.
   
 ## Permissions  
  Only the server-level principal login created by the provisioning process can delete server level firewall rules. The user must be connected to the master database to execute sp_delete_firewall_rule.  

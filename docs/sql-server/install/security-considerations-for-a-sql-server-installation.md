@@ -88,7 +88,7 @@ Use the NT file system (NTFS) or Resilient File System (ReFS). NTFS and ReFS are
    
  
   >  [!WARNING]
-  >  Using file encryption via EFS may lead to slower I/O performance because encryption causes asynchronous I/O to become synchronous. See [Asynchronous disk I/O appears as synchronous on Windows](../troubleshoot/windows/win32/asynchronous-disk-io-synchronous#ntfs-encryption). Instead, you can sonsider using SQL Server encryption technologies like [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption), [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine), and column-level encryption [T-SQL functions](/sql/t-sql/functions/cryptographic-functions-transact-sql). 
+  >  Using file encryption via EFS may lead to slower I/O performance because encryption causes asynchronous I/O to become synchronous. See [Asynchronous disk I/O appears as synchronous on Windows](/troubleshoot/windows/win32/asynchronous-disk-io-synchronous#ntfs-encryption). Instead, you can sonsider using SQL Server encryption technologies like [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption), [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine), and column-level encryption [T-SQL functions](/sql/t-sql/functions/cryptographic-functions-transact-sql). 
 
 ###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  Servers in the perimeter network should have all unnecessary protocols disabled, including NetBIOS and server message block (SMB).  

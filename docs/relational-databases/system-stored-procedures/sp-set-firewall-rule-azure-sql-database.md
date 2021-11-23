@@ -41,7 +41,7 @@ sp_set_firewall_rule [@name =] 'name',
   
 |Name|Datatype|Description|  
 |----------|--------------|-----------------|  
-|[@name =] 'name'|**NVARCHAR(128)**|The name used to describe and distinguish the server-level firewall setting. The value passed in must match this parameter's data type (NVARCHAR)|  
+|[@name =] 'name'|**NVARCHAR(128)**|The name used to describe and distinguish the server-level firewall setting. The value passed in must match this parameter's data type (NVARCHAR).|  
 |[@start_ip_address =] 'start_ip_address'|**VARCHAR(50)**|The lowest IP address in the range of the server-level firewall setting. IP addresses equal to or greater than this can attempt to connect to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server. The lowest possible IP address is `0.0.0.0`.|  
 |[@end_ip_address =] 'end_ip_address'|**VARCHAR(50)**|The highest IP address in the range of the server-level firewall setting. IP addresses equal to or less than this can attempt to connect to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server. The highest possible IP address is `255.255.255.255`.<br /><br /> Note: Azure connection attempts are allowed when both this field and the *start_ip_address* field equals `0.0.0.0`.|  
   

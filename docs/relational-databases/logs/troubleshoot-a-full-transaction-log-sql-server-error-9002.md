@@ -24,7 +24,7 @@ ms.custom: "seo-lt-2019"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
  
  
- **Option 1: Run the steps directly in an executable notebook via Azure Data Studio**
+ ### Option 1: Run the steps directly in an executable notebook via Azure Data Studio
 
 > [!NOTE]
 > Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
@@ -33,7 +33,7 @@ ms.custom: "seo-lt-2019"
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-Shooting_LogFull_9002.ipynb)  
  
  
- **Option 2: Follow the step manually**
+ ### Option 2: Follow the step manually
  
  
   This topic discusses possible responses to a full transaction log and suggests how to avoid it in the future. 

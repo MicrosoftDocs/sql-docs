@@ -3,7 +3,7 @@ title: What's New for SQL Server 2019 on Linux
 description: This article highlights what's new for SQL Server 2019 on Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/07/2021
+ms.date: 11/22/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -16,6 +16,10 @@ ms.custom:
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article describes the major features and services available for SQL Server 2019 running on Linux. For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2019.md).
+
+## SLES 15 supported
+
+Starting with SQL Server 2019 CU14, SLES 15 is now supported. Check out our Quickstart on [Installing SQL Server and creating a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md).
 
 ## Ubuntu 18.04 and 20.04 supported
 

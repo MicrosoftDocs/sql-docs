@@ -25,7 +25,7 @@ You can disable a check constraint for `INSERT` and `UPDATE` transactions in [!I
 For more information, see [Check Constraints](unique-constraints-and-check-constraints.md#check).
 
 > [!Note] 
-> Check constraints are enabled and disabled with an `ALTER TABLE` statement, which always requires [a schema modification lock (`Sch-M`)](../sql-server-transaction-locking-and-row-versioning-guide.md#schema), which prevents concurrent access to the table. For more information, see [Locks and ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#locks-and-alter-table).
+> Check constraints are enabled and disabled with an `ALTER TABLE` statement, which always requires [a schema modification lock (`Sch-M`)](../sql-server-transaction-locking-and-row-versioning-guide.md#schema). Sch-M locks prevent concurrent access to the table. For more information, see [Locks and ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#locks-and-alter-table).
    
 ###  <a name="Permissions"></a> Permissions  
  Requires ALTER permission on the table.  

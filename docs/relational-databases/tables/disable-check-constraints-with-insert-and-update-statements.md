@@ -1,6 +1,7 @@
 ---
 description: "Disable Check Constraints with INSERT and UPDATE Statements"
-title: "Disable Check Constraints with INSERT and UPDATE Statements"
+title: "Disable check constraints with INSERT and UPDATE statements"
+
 ms.custom: ""
 ms.date: "11/24/2021"
 ms.prod: sql

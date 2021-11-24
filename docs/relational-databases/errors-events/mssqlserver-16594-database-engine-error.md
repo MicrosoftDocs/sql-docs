@@ -33,6 +33,6 @@ ms.author: stefanazaric
 There are logical file paths which are duplicate of one another.
 This error requires action from the user in order for query to succeed.
   
-## User Action
+## User action
 
 Remove duplicate logical file paths from the query.

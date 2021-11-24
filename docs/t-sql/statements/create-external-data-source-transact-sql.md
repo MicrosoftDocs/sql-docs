@@ -128,8 +128,9 @@ To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (
 #### TYPE = *[ HADOOP ]*
 
 Specifies the type of the external data source being configured. This parameter isn't always required, and should only be specified as `HADOOP` when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account. 
+
 > [!NOTE]
-> In SQL Server 2016 only, `TYPE` should be set to `HADOOP` even when accessing Azure Storage.
+> `TYPE` should be set to `HADOOP` even when accessing Azure Storage. 
 
 For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage account, see [Create external data source to access data in Azure Storage using the wasb:// interface](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface) <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
 
@@ -395,7 +396,10 @@ To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (
 Specifies the type of the external data source being configured. This parameter isn't always required, and should only be specified when connecting to Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2.
 
 - Use `HADOOP` when the external data source is Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2.
-- Use `BLOB_STORAGE` when executing bulk operations from Azure Storage account using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. Introduced with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. 
+- Use `BLOB_STORAGE` when executing bulk operations from Azure Storage account using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. Introduced with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Use `HADOOP` when intending to CREATE EXTERNAL TABLE against Azure Storage.
+
+> [!NOTE]
+> `TYPE` should be set to `HADOOP` even when accessing Azure Storage. 
 
 For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage account, see [Create external data source to access data in Azure Storage using the wasb:// interface](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface) <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
 
@@ -708,8 +712,8 @@ To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (
 Specifies the type of the external data source being configured. This parameter isn't always required, and should only be specified when connecting to Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2. 
 
 - In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], do not specify TYPE unless connecting to Cloudera CDH, Hortonworks HDP, an Azure Storage account.
-- Use `HADOOP` when the external data source is Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2.
-- Use `BLOB_STORAGE` when executing bulk operations from Azure Storage account using [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
+- Use `HADOOP` when the external data source is Cloudera CDH, Hortonworks HDP, an Azure Storage account, or an Azure Data Lake Storage Gen2. 
+- Use `BLOB_STORAGE` when executing bulk operations from Azure Storage account using [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Use `HADOOP` when intending to CREATE EXTERNAL TABLE against Azure Storage.
 
 For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage account, see [Create external data source to access data in Azure Storage using the wasb:// interface](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface) <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
 
@@ -1074,7 +1078,7 @@ Specifies the type of the external data source being configured. This parameter 
 
 - Use `RDBMS` for cross-database queries using elastic query from SQL Database.
 - Use `SHARD_MAP_MANAGER` when creating an external data source when connecting to a sharded SQL Database.
-- Use `BLOB_STORAGE` when executing bulk operations with [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset].
+- Use `BLOB_STORAGE` when executing bulk operations with [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset]. 
 
 > [!IMPORTANT]
 > Do not set `TYPE` if using any other external data source.

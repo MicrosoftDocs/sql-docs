@@ -22,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 You can disable a check constraint for `INSERT` and `UPDATE` transactions in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. After you disable the check constraints, future inserts or updates to the column will not be validated against the constraint conditions. Use this option if you know that new data will violate the existing constraint or if the constraint applies only to the data already in the database.
 
-For more information, see [Check Constraints](unique-constraints-and-check-constraints.md#check).
+For more information, see [Check Constraints](unique-constraints-and-check-constraints.md#Check).
 
 > [!Note] 
 > Check constraints are enabled and disabled with an `ALTER TABLE` statement, which always requires [a schema modification lock (`Sch-M`)](../sql-server-transaction-locking-and-row-versioning-guide.md#schema). Sch-M locks prevent concurrent access to the table. For more information, see [Locks and ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#locks-and-alter-table).

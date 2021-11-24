@@ -33,6 +33,6 @@ ms.author: stefanazaric
 Synapse SQL pool has a limit of maximum allowed logical file paths.
 This error requires action from the user in order for query to succeed.
   
-## User Action  
+## User action  
 
 Lower the number of logical file paths in a query bellow the limit shown in error.

@@ -151,7 +151,7 @@ SELECT TOP 5
 ### Microsoft videos
 
 > [!NOTE]
-> Some of the video links in this section may not work at this time. Microsoft is migrating content formerly on Channel 9 to a new platform. We will update the links as the videos are migrated to the new platform
+> Some of the video links in this section may not work at this time. Microsoft is migrating content formerly on Channel 9 to a new platform. We will update the links as the videos are migrated to the new platform.
 
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
 

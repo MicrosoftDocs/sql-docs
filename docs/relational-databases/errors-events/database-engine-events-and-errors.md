@@ -6447,6 +6447,8 @@ ORDER BY message_id
 
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
+|    [16591](mssqlserver-16591-database-engine-error.md)    |    16    |    No    |    Multiple logical file paths limit has been reached. Statement contains %ld logical file paths, maximum allowed limit is %d.    |
+|    [16594](mssqlserver-16594-database-engine-error.md)    |    16    |    No    |    Path '%ls' was referenced multiple times in result set '%ls'.    |
 |    16901    |    16    |    No    |    %hs: This feature has not been implemented yet.    |
 |    16902    |    16    |    No    |    %ls: The value of the parameter %ls is invalid.    |
 |    16903    |    16    |    No    |    The "%ls" procedure was called with an incorrect number of parameters.    |

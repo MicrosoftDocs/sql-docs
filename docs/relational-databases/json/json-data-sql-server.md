@@ -23,10 +23,16 @@ monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||>=s
 
 JSON is a popular textual data format that's used for exchanging data in modern web and mobile applications. JSON is also used for storing unstructured data in log files or NoSQL databases such as Microsoft Azure Cosmos DB. Many REST web services return results that are formatted as JSON text or accept data that's formatted as JSON. For example, most Azure services, such as Azure Search, Azure Storage, and Azure Cosmos DB, have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between webpages and web servers by using AJAX calls. 
 
-JSON functions, first introduced in SQL Server 2016, enable you to combine NoSQL and relational concepts in the same database. Now you can combine classic relational columns with columns that contain documents formatted as JSON text in the same table, parse and import JSON documents in relational structures, or format relational data to JSON text. You see how JSON functions connect relational and NoSQL concepts in SQL Server and Azure SQL Database in the following video:
+JSON functions, first introduced in SQL Server 2016, enable you to combine NoSQL and relational concepts in the same database. Now you can combine classic relational columns with columns that contain documents formatted as JSON text in the same table, parse and import JSON documents in relational structures, or format relational data to JSON text.
+
+<!-- Pending channel 9 migration
+
+You see how JSON functions connect relational and NoSQL concepts in SQL Server and Azure SQL Database in the following video:
 
 *JSON as a bridge between NoSQL and relational worlds*
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
+
+-->
 
 Here's an example of JSON text:
 
@@ -54,10 +60,14 @@ By using SQL Server built-in functions and operators, you can do the following t
   
 ## Key JSON capabilities of SQL Server and SQL Database
 
-The next sections discuss the key capabilities that SQL Server provides with its built-in JSON support. You can see how to use JSON functions and operators in the following video:
+The next sections discuss the key capabilities that SQL Server provides with its built-in JSON support. 
+
+<!-- Pending channel 9 migration
+You can see how to use JSON functions and operators in the following video:
 
 *SQL Server 2016 and JSON Support*
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player?WT.mc_id=dataexposed-c9-niner]
+-->
 
 ### Extract values from JSON text and use them in queries
 
@@ -398,10 +408,15 @@ Here's what you can do with the scripts that are included in the file:
   
 ### Microsoft videos
 
+> [!NOTE]
+> Some of the video links in this section may not work at this time. Microsoft is migrating content formerly on Channel 9 to a new platform. We will update the links as the videos are migrated to the new platform.
+
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following video:
 
+<!-- Pending channel 9 migration
 *Using JSON in SQL Server 2016 and Azure SQL Database*
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
+-->
 
 *Building REST API with SQL Server using JSON functions*
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]

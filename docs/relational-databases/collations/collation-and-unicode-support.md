@@ -473,15 +473,12 @@ To use the UTF-8 collations that are available in [!INCLUDE[sql-server-2019](../
  
 -   The UTF8 flag can be applied to:    
     -   Linguistic collations that already support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS) awareness
-    -   BIN2<sup>1</sup> binary collation
+    -   BIN2 binary collation
     
 -   The UTF8 flag can't be applied to:    
     -   Linguistic collations that don't support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS) awareness
-    -   The BIN or BIN2<sup>2</sup> binary collations
+    -   The BIN binary collations
     -   The SQL\_* collations  
-    
-<sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 3.0 replaced collation **UTF8_BIN2** with **Latin1_General_100_BIN2_UTF8**.        
-<sup>2</sup> Up to with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3.    
     
 To evaluate issues that are related to using Unicode or non-Unicode data types, test your scenario to measure performance differences in your environment. It's a good practice to standardize the collation that's used on systems across your organization, and to deploy Unicode servers and clients wherever possible.    
     

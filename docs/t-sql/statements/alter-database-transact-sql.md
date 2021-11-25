@@ -2,7 +2,7 @@
 description: "ALTER DATABASE (Transact-SQL)"
 title: "ALTER DATABASE (Transact-SQL)"
 ms.custom: "references_regions"
-ms.date: 6/9/2021
+ms.date: 11/24/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -1039,7 +1039,7 @@ ALTER DATABASE { database_name | Current }
 Specifies the name of the database to be modified.
 
 MODIFY NAME = *new_database_name*   
-Renames the database with the name specified as *new_database_name*.
+Renames the database with the name specified as *new_database_name*. The 'MODIFY NAME' option is not available for dedicated SQL Pools created in a Synapse Workspace.
 
 MAXSIZE   
 The default is 245,760 GB (240 TB).
@@ -1083,13 +1083,14 @@ The `ALTER DATABASE` statement cannot be part of a user-defined transaction.
 
 You cannot change the database collation.
 
-The 'MODIFY NAME' option is not available for dedicated SQL Pools created in a Synapse Workspace.
-
 ## Examples
 
 Before you run these examples, make sure the database you are altering is not the current database. The current database must be a different database than the one you are altering, therefore **ALTER must be run while connected to the master database**.
 
-### A. Change the name of the database (Not supported if dedicated SQL pool is created in Synapse workspace)
+### A. Change the name of the database
+
+The 'MODIFY NAME' option is not available for dedicated SQL Pools created in a Synapse Workspace.
+
 ```sql
 ALTER DATABASE AdventureWorks2012
 MODIFY NAME = Northwind;

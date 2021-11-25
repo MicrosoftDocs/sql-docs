@@ -1083,12 +1083,13 @@ The `ALTER DATABASE` statement cannot be part of a user-defined transaction.
 
 You cannot change the database collation.
 
+The 'MODIFY NAME' option is not available for dedicated SQL Pools created in a Synapse Workspace.
+
 ## Examples
 
 Before you run these examples, make sure the database you are altering is not the current database. The current database must be a different database than the one you are altering, therefore **ALTER must be run while connected to the master database**.
 
-### A. Change the name of the database
-
+### A. Change the name of the database (Not supported if dedicated SQL pool is created in Synapse workspace)
 ```sql
 ALTER DATABASE AdventureWorks2012
 MODIFY NAME = Northwind;

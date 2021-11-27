@@ -103,15 +103,6 @@ Use the NT file system (NTFS) or Resilient File System (ReFS). NTFS and ReFS are
   
 - TCP/445  
   
-::: mermaid
- graph LR;
- A[NetBIOS] --> B[UDP/137];
- A[NetBIOS] --> C[UDP/138];
- A[NetBIOS] --> D[TCP/139];
- E[SMB] --> D[TCP/193];
- E[SMB] --> P[TCP/445];
-:::
-
  Web servers and Domain Name System (DNS) servers do not require NetBIOS or SMB. On these servers, disable both protocols to reduce the threat of user enumeration.  
   
 ### <a name="Install_DC"></a> Installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a domain controller

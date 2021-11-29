@@ -11,7 +11,7 @@ ms.custom:
   - seodec18
   - contperf-fy21q4
   - intro-overview
-ms.date: 11/15/2021
+ms.date: 11/29/2021
 ---
 
 # Download and install Azure Data Studio
@@ -23,9 +23,6 @@ Azure Data Studio offers a modern editor experience with IntelliSense, code snip
 Use Azure Data Studio to query, design, and manage your databases and data warehouses wherever they are, on your local computer or in the cloud.
 
 For more information about Azure Data Studio, visit [What is Azure Data Studio?](what-is-azure-data-studio.md).
-
-> [!NOTE]
-> How can we make Azure SQL better? [Take the survey](https://aka.ms/AzureSQLSurveyNov2021)
 
 ## Download Azure Data Studio
 

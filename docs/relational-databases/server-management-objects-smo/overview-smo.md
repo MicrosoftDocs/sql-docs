@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
   
  Features in SMO include the following:  
   
--   Cached object model and optimized object instance creation. Objects are loaded only when specifically referenced. Object properties are only partially loaded when the object is created. The remaining objects and properties are loaded when they are referenced directly.  
+-   Cached object model and optimized object instance creation. Objects are loaded only when referenced. Object properties are only partially loaded when the object is created. The remaining objects and properties are loaded when they are referenced directly.  
   
 -   Batched execution of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Statements are batched to improve network performance.  
   
@@ -45,7 +45,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
   
 -   Snapshot isolation and row level versioning for increased concurrency. For more information, see [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
--   XML Schema collection, XML indexes and XML datatype provide validation and storage of XML data. For more information, see [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md) and [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
+-   XML Schema collection, XML indexes, and XML datatype provide validation and storage of XML data. For more information, see [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md) and [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   Snapshot databases for creating read-only copies of databases.  
   
@@ -72,7 +72,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
   
  The instance classes represent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects such as servers, databases, tables, triggers, and stored procedures. The <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class is used to establish a connection to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and control the capture mode of commands sent to it.  
   
- The SMO instance objects form a hierarchy that represents the hierarchy of a database server. At the top are the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], under which are the databases, and following on with tables, columns, triggers and so on. If it is logical that there is a one parent to many children relationship, such as a table having one or more columns, then the child is represented by a collection of objects. Otherwise the child is just represented by an object.  
+ The SMO instance objects form a hierarchy that represents the hierarchy of a database server. At the top are the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], under which are the databases, and following on with tables, columns, triggers, and so on. If it is logical that there is a one parent to many children relationship, such as a table having one or more columns, then the child is represented by a collection of objects. Otherwise the child is represented by one object.  
   
  **Utility Classes**  
   
@@ -91,7 +91,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
   
  You can control instantiation to suit the system environment. Relying on delayed instantiation minimizes the amount of memory required by the application, although it might trigger many server requests when properties are referenced.  
   
- Instance classes, objects that represent real database objects, can exist in three levels of instantiation. These are minimal-instantiated (only the minimal required properties are read in one block), partially instantiated (all the properties that use a relatively large amount of memory are read in one block), and fully instantiated. Un-instantiated and fully instantiated are the traditional states of instantiation. The partially instantiated state increases efficiency because a partially instantiated object does not contain values for the full set of object properties. Partial instantiation is the default state for an object that is not directly referenced. When one of these properties is referenced, a fault is generated that prompts a full instantiation of the object.  
+ Instance classes, objects that represent real database objects, can exist in three levels of instantiation. These are minimal-instantiated (only the minimal required properties are read in one block), partially instantiated (all the properties that use a relatively large amount of memory are read in one block), and fully instantiated. Uninstantiated and fully instantiated are the traditional states of instantiation. The partially instantiated state increases efficiency because a partially instantiated object does not contain values for the full set of object properties. Partial instantiation is the default state for an object that is not directly referenced. When one of these properties is referenced, a fault is generated that prompts a full instantiation of the object.  
   
  **Capture Execution**  
   
@@ -101,7 +101,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
   
  **WMI Provider**  
   
- The WMI Provider objects are wrapped by SMO. This provides the SMO programmer with a simple object model that is similar to SMO classes very closely, without the requirement to understand the programming model that is represented by the namespace and the details of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI Provider. The WMI Provider lets you configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, aliases, and client and server network libraries.  
+ The WMI Provider objects are wrapped by SMO. This provides the SMO programmer with a simple object model that is similar to SMO classes closely, without the requirement to understand the programming model that is represented by the namespace and the details of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI Provider. The WMI Provider lets you configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, aliases, and client and server network libraries.  
   
  **Scripting**  
   

@@ -2,7 +2,7 @@
 description: "ALTER DATABASE (Transact-SQL)"
 title: "ALTER DATABASE (Transact-SQL)"
 ms.custom: "references_regions"
-ms.date: 6/9/2021
+ms.date: 11/24/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -618,7 +618,7 @@ To add an existing database to an elastic pool, set the SERVICE_OBJECTIVE of the
 > Databases in the Hyperscale service tier cannot be added to an elastic pool.
 
 ADD SECONDARY ON SERVER \<partner_server_name>   
-Creates a geo-replication secondary database with the same name on a partner server, making the local database into a geo-replication primary, and begins asynchronously replicating data from the primary to the new secondary. If a database with the same name already exists on the secondary, the command fails. The command is executed on the master database on the server hosting the local database that becomes the primary.
+Creates a geo-replication secondary database with the same name on a partner server, making the local database into a geo-replication primary, and begins asynchronously replicating data from the primary to the new secondary. If a database with the same name already exists on the secondary, the command fails. The command is executed on the `master` database on the server hosting the local database that becomes the primary.
 
 > [!IMPORTANT]
 > By default, the secondary database is created with the same backup storage redundancy as that of the primary or source database. Changing the backup storage redundancy while creating the secondary is not supported via T-SQL. 
@@ -637,7 +637,7 @@ When ELASTIC_POOL is not specified, the secondary database is not created in an 
 > The user executing the ADD SECONDARY command must be DBManager on primary server, have db_owner membership in local database, and DBManager on secondary server. The client IP address must be added to the allowed list under firewall rules for both the primary and secondary servers. In case of different client IP addresses, the exact same client IP address that has been added on the primary server must also be added to the secondary. This is a required step to be done before running the ADD SECONDARY command to initiate geo-replication.
 
 REMOVE SECONDARY ON SERVER \<partner_server_name>
-Removes the specified geo-replicated secondary database on the specified server. The command is executed on the master database on the server hosting the primary database.
+Removes the specified geo-replicated secondary database on the specified server. The command is executed on the `master` database on the server hosting the primary database.
 
 > [!IMPORTANT]
 > The user executing the `REMOVE SECONDARY` command must be DBManager on the primary server.
@@ -684,7 +684,7 @@ You can use catalog views, system functions, and system stored procedures to ret
 
 ## Permissions
 
-To alter a database a login must be either the server-level principal login (created by the provisioning process), a member of the `dbmanager` database role in master, a member of the `db_owner` database role in the current database, or `dbo` of the database.
+To alter a database a login must be either the server-level principal login (created by the provisioning process), a member of the `dbmanager` database role in `master`, a member of the `db_owner` database role in the current database, or `dbo` of the database.
 
 ## Examples
 
@@ -1039,7 +1039,7 @@ ALTER DATABASE { database_name | Current }
 Specifies the name of the database to be modified.
 
 MODIFY NAME = *new_database_name*   
-Renames the database with the name specified as *new_database_name*.
+Renames the database with the name specified as *new_database_name*. The 'MODIFY NAME' option is not available for dedicated SQL Pools created in a Synapse Workspace.
 
 MAXSIZE   
 The default is 245,760 GB (240 TB).
@@ -1066,7 +1066,7 @@ The owner of the database cannot alter the database unless the owner is a member
 
 ## General Remarks
 
-The current database must be a different database than the one you are altering, therefore **ALTER must be run while connected to the master database**.
+The current database must be a different database than the one you are altering, therefore ALTER must be run while connected to the `master` database.
 
 COMPATIBILITY_LEVEL in SQL Analytics is set to 130 by default and cannot be changed. For more details, see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](./alter-database-transact-sql-compatibility-level.md).
 
@@ -1085,9 +1085,11 @@ You cannot change the database collation.
 
 ## Examples
 
-Before you run these examples, make sure the database you are altering is not the current database. The current database must be a different database than the one you are altering, therefore **ALTER must be run while connected to the master database**.
+Before you run these examples, make sure the database you are altering is not the current database. The current database must be a different database than the one you are altering, therefore ALTER must be run while connected to the `master` database.
 
 ### A. Change the name of the database
+
+The 'MODIFY NAME' option is not available for dedicated SQL Pools created in a Synapse Workspace.
 
 ```sql
 ALTER DATABASE AdventureWorks2012

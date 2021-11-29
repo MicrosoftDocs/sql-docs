@@ -75,11 +75,6 @@ The present article focuses on OLTP, and not on Analytics. For information on ho
 - [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
 - [Columnstore Indexes Guide](../../relational-databases/indexes/columnstore-indexes-overview.md)  
   
-  
-> [!NOTE]
-> A two minute video about the In-Memory features is available at [Azure SQL Database - In-Memory Technologies](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). The video is dated December 2015.  
-
-
 ### Columnstore
 
 A sequence of excellent blog posts elegantly explains columnstore indexes from several perspectives. The majority of the posts describe further the concept of real-time operational analytics, which columnstore supports.  These posts were authored by Sunil Agarwal, a Program Manager at Microsoft, in March 2016.

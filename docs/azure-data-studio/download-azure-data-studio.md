@@ -11,7 +11,7 @@ ms.custom:
   - seodec18
   - contperf-fy21q4
   - intro-overview
-ms.date: 11/29/2021
+ms.date: 12/3/2021
 ---
 
 # Download and install Azure Data Studio

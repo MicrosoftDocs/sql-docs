@@ -22,7 +22,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 11/29/2021 
+ms.date: 12/3/2021 
 ---
 
 # Download SQL Server Management Studio (SSMS)

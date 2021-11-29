@@ -1,6 +1,6 @@
 ---
 title: "Branding the web portal | Microsoft Docs"
-ms.date: 10/08/2021
+ms.date: 11/23/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -211,7 +211,14 @@ You can also **Download** or **Remove** the package. Removing the package will r
         "kpiGoodContrast":"#fff",  
         "kpiBadContrast":"#fff",  
         "kpiNeutralContrast":"#fff",  
-        "kpiNoneContrast":"#fff"  
+        "kpiNoneContrast":"#fff",
+        
+        "itemTypeIconColor":"#ffffff",
+        "reportIconBackground":"#12239e",
+        "excelIconBackground":"#217346",
+        "folderIconBackground":"#4668c5",
+        "datasetIconBackground":"#c94f0f",
+        "otherIconBackground":"#000000"        
         },  
         "theme":{  
         "dataPoints":[  

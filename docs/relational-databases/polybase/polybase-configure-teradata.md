@@ -38,7 +38,7 @@ The following Transact-SQL commands are used in this section:
 - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1. Create a database scoped credential for accessing the MongoDB source.
+1. Create a database scoped credential for accessing the Teradata source.
 
     ```sql
     /*  specify credentials to external data source

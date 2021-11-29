@@ -56,7 +56,7 @@ To query the data in your Hadoop data source, you must define an external table 
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-1. Create a database scoped credential for Azure blob storage; IDENTITY can be anything as it's not used.
+1. Create a database scoped credential for Azure blob storage; `IDENTITY` can be anything as it's not used.
 
    ```sql
    -- IDENTITY: any string (this is not used for authentication to Azure storage).  
@@ -87,7 +87,7 @@ To query the data in your Hadoop data source, you must define an external table 
                USE_TYPE_DEFAULT = TRUE))  
    ```
 
-1. Create an external table pointing to data stored in Azure storage with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car sensor data; LOCATION can't be '/' but '/Demo/' as in this example doesn't need to exist previously.
+1. Create an external table pointing to data stored in Azure storage with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car sensor data; `LOCATION` can't be `/` but `/Demo/` as in this example doesn't need to exist previously.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  

@@ -63,7 +63,7 @@ The following Transact-SQL commands are used in this section:
         CREDENTIAL = SQLServerCredentials);
     ```
 
-1. Create the external table with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md), note the three-part notation and the collation which is mandatory.
+1. Create the external table with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) The statement requires collation and the location requires three-part notation (`<database>.<schema>.<table>`).
 
     ```sql
     CREATE EXTERNAL TABLE DatabasesExternal (

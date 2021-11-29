@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: f5291217-2a0c-4daa-9e39-9f348fc911f7
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getMaxTablesInSelect Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -121,7 +121,7 @@ ms.author: chadam
   
 -   If you try to create or delete a database file while a backup operation is in progress, the create or delete operation fails.  
   
- If a backup operation overlaps with a file-management operation or shrink operation, a conflict occurs. Regardless of which of the conflicting operation began first, the second operation waits for the lock set by the first operation to time out. (The time-out period is controlled by a session time-out setting.) If the lock is released during the time-out period, the second operation continues. If the lock times out, the second operation fails.  
+ If a backup operation overlaps with a file-management operation or shrink operation, a conflict occurs. Regardless of which of the conflicting operations began first, the second operation waits for the lock set by the first operation to time out. (The time-out period is controlled by a session time-out setting.) If the lock is released during the time-out period, the second operation continues. If the lock times out, the second operation fails.  
   
 ##  <a name="RelatedTasks"></a> Related tasks  
  **Backup devices and backup media**  

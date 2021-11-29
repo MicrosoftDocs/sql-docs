@@ -1,14 +1,16 @@
 ---
 description: "Tutorial: Signing Stored Procedures with a Certificate"
 title: "Tutorial: Signing Stored Procedures with a Certificate"
-ms.custom: seo-dt-2019
+ms.custom:
+  - seo-dt-2019
+  - intro-quickstart
 ms.date: "08/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "signing stored procedures tutorial [SQL Server]"
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: "MashaMSFT"

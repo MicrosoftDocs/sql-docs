@@ -53,7 +53,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
 ## Examples  
  The following example uses `STPointFromText()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STPointFromText('POINT (100 100)', 0);  
 SELECT @g.ToString();  

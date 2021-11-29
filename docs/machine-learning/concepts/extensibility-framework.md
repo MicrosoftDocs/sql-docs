@@ -93,7 +93,7 @@ BxlServer uses SQL Satellite for these tasks:
 
 SQL Satellite uses a custom data format that is optimized for fast data transfer between SQL Server and external script languages. It performs type conversions and defines the schemas of the input and output datasets during communications between SQL Server and the external script runtime.
 
-The SQL Satellite can be monitored by using windows extended events (xEvents). For more information, see [Extended Events for SQL Server Machine Learning Services](../../machine-learning/administration/extended-events.md).
+The SQL Satellite can be monitored by using Windows extended events (xEvents). For more information, see [Extended Events for SQL Server Machine Learning Services](../../machine-learning/administration/extended-events.md).
 
 ## Communication channels between components
 

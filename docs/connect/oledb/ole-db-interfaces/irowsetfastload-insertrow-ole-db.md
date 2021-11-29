@@ -14,7 +14,7 @@ apitype: "COM"
 helpviewer_keywords: 
   - "InsertRow method"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

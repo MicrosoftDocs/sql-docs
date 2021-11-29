@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 90dcd2f1-ad58-440c-8bf2-0f146fa727a3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setNull Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

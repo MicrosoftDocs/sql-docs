@@ -4,8 +4,10 @@ description: "Learn how to run the installation package Microsoft SQL Server Rep
 ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.custom: seo-lt-2019​, seo-mmd-2019
-
+ms.custom:
+  - seo-lt-2019​
+  - seo-mmd-2019
+  - intro-installation
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
@@ -270,4 +272,4 @@ Rssharepoint.msi /?
 [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md)   
 [Reporting Services Report Server &#40;SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

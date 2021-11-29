@@ -3,7 +3,6 @@ title: sp_describe_undeclared_parameters (Transact-SQL)
 description: "sp_describe_undeclared_parameters (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
@@ -11,10 +10,9 @@ f1_keywords:
   - "sp_describe_undeclared_parameters_TSQL"
 dev_langs: 
   - "TSQL"
-helpviewer_keywords: 
-  - "sp_describe_undeclared_parameters"
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
 ms.custom: ""
 ms.date: "07/13/2021"
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
@@ -30,19 +28,18 @@ Returns a result set that contains metadata about undeclared parameters in a [!I
 
 ## Syntax
 
-```sql
-  
+```tsql
 sp_describe_undeclared_parameters   
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
-```  
+```
 
 > [!Note]
 > To use this stored procedure in Azure Synapse Analytics in dedicated SQL pool, set the database compatibility level to 20 or higher.   To opt out, change the database compatibility level to 10.
 
 ## Arguments
 
-`[ \@tsql = ] 'Transact-SQL\_batch'`
+`[ @tsql = ] 'Transact-SQL\_batch'`
 One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  
 
 [ \@params = ] N'parameters'`
@@ -100,9 +97,9 @@ Another example is when without user input, an application must loop over the pa
 
 -   If the input \@tsql is not a valid [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Validity is determined by parsing and analyzing the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Any errors caused by the batch during query optimization or during execution are not considered when determining whether the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch is valid.  
   
--   If \@params is not NULL and contains a string that is not a syntactically valid declaration string for parameters, or if it contains a string that declares any parameter more than one time.  
+- If \@params is not NULL and contains a string that is not a syntactically valid declaration string for parameters, or if it contains a string that declares any parameter more than one time.  
   
--   If the input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch declares a local variable of the same name as a parameter declared in \@params.  
+- If the input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch declares a local variable of the same name as a parameter declared in \@params.  
   
 - If the statement references temporary tables.
 
@@ -117,9 +114,9 @@ Another example is when without user input, an application must loop over the pa
 
 For a query with undeclared parameters, data type deduction for undeclared parameters proceeds in three steps.  
 
- **Step 1**  
+**Step 1**  
   
- The first step in data type deduction for a query with undeclared parameters is to find the data types of all the sub-expressions whose data types do not depend on the undeclared parameters. The type can be determined for the following expressions:  
+The first step in data type deduction for a query with undeclared parameters is to find the data types of all the sub-expressions whose data types do not depend on the undeclared parameters. The type can be determined for the following expressions:  
   
 -   Columns, constants, variables, and declared parameters.  
   
@@ -131,7 +128,7 @@ For a query with undeclared parameters, data type deduction for undeclared param
   
  After this step, if any expression (other than a call to a UDF) has two arguments without data types, type deduction fails with an error. For example, the following all produce errors:  
   
-```sql
+```tsql
 SELECT * FROM t1 WHERE @p1 = @p2  
 SELECT * FROM t1 WHERE c1 = @p1 + @p2  
 SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)  
@@ -266,17 +263,16 @@ Of the candidate data types, any data type that would invalidate the query is re
 
  The following example returns information such as the expected data type for the undeclared `@id` and `@name` parameters.  
   
-```sql
+```tsql
 sp_describe_undeclared_parameters @tsql =   
 N'SELECT object_id, name, type_desc   
 FROM sys.indexes  
 WHERE object_id = @id OR name = @name'  
-  
 ```  
   
  When the `@id` parameter is provided as a `@params` reference, the `@id` parameter is omitted from the result set and only the `@name` parameter is described.  
   
-```sql
+```tsql
 sp_describe_undeclared_parameters @tsql =   
 N'SELECT object_id, name, type_desc   
 FROM sys.indexes  

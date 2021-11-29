@@ -213,7 +213,7 @@ Specify the destination for the data flow.
   
 5.  Fill in the information for the server, user, password, and destination database with information specific to your appliance. (Examples are shown below). Then click **OK**.  
   
-    For InfiniBand connections, **Server name**: Enter <appliance-name>-SQLCTL01,17001.  
+    For InfiniBand connections, **Server name**: Enter \<appliance-name\>-SQLCTL01,17001.  
   
     For Ethernet connections, **Server name**: Enter the IP address of the Control node cluster, comma, port 17001. For example, 10.192.63.134,17001.  
   
@@ -247,9 +247,8 @@ Run the package on your computer Integration Services.
 [Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
 [Tutorial: Creating a Basic Package Using a Wizard](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Getting Started (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
-[Dynamic Package Generation Sample](https://go.microsoft.com/fwlink/?LinkId=202413)  
+[Dynamic Package Generation Sample](https://apexandbeyond.wordpress.com/2017/03/15/dynamic-package-xml-generation/)  
 [Designing Your SSIS Packages for Parallelism (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd795221(v=sql.100))  
-[Microsoft SQL Server Community Examples: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Improving Incremental Loads with Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [Slowly Changing Dimension Transformation](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [Bulk Insert Task](../integration-services/control-flow/bulk-insert-task.md)  

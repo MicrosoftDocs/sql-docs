@@ -26,7 +26,7 @@ When you create an outer join, the order in which tables appear in the SQL state
   
 1.  Create the join, either automatically or manually. For details, see [Join Tables Automatically &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md) or [Join Tables Manually &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md).  
   
-2.  Select the join line in the Diagram pane, and then from the **Query Designer** menu, choose **Select All Rows from <tablename>**, selecting the command that includes the table whose extra rows you want to include.  
+2.  Select the join line in the Diagram pane, and then from the **Query Designer** menu, choose **Select All Rows from \<tablename\>**, selecting the command that includes the table whose extra rows you want to include.  
   
     -   Choose the first table to create a left outer join.  
   

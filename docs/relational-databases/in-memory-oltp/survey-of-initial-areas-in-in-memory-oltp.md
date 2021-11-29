@@ -490,7 +490,7 @@ The following article, and its children articles in the table of contents (TOC),
   
 ## Related links  
   
-- Initial article: [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- Initial article: [In-Memory OLTP (In-Memory Optimization)](./overview-and-usage-scenarios.md)  
     
 Here are articles that offer code to demonstrate the performance gains you can achieve by using In-Memory OLTP:  
   

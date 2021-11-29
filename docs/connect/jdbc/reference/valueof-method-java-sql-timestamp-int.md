@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # valueOf Method (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

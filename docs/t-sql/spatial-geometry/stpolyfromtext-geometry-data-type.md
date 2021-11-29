@@ -53,7 +53,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 ## Examples  
  The following example uses `STPolyFromText()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;   
 SET @g = geometry::STPolyFromText('POLYGON ((5 5, 10 5, 10 10, 5 5))', 0);  
 SELECT @g.ToString();  

@@ -47,7 +47,7 @@ For more information on Geography Markup Language, see the following Open Geospa
 ## Examples  
  The following example creates a `LineString` instance and uses `AsGML()` to return the GML description of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0)  
 SELECT @g.AsGml();  
@@ -55,7 +55,7 @@ SELECT @g.AsGml();
   
  This method returns the description as a `LineString` instance.  
   
-```  
+```xml
 <LineString xmlns="https://www.opengis.net/gml">  
 <posList>0 0 0 1 1 0</posList></LineString>  
 ```  

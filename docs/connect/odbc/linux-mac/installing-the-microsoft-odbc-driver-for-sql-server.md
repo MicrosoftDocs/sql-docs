@@ -10,7 +10,9 @@ helpviewer_keywords:
   - "driver, installing"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
+ms.custom:
+  - intro-installation
 ---
 
 # Install the Microsoft ODBC driver for SQL Server (Linux)
@@ -45,8 +47,8 @@ curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d
 curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.8.1.1-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql17_17.7.2.1-1_amd64.sig msodbcsql17_17.8.1.1-1_amd64.apk
-gpg --verify mssql-tools_17.7.1.1-1_amd64.sig mssql-tools_17.8.1.1-1_amd64.apk
+gpg --verify msodbcsql17_17.8.1.1-1_amd64.sig msodbcsql17_17.8.1.1-1_amd64.apk
+gpg --verify mssql-tools_17.8.1.1-1_amd64.sig mssql-tools_17.8.1.1-1_amd64.apk
 
 
 #Install the package(s)

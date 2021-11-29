@@ -74,7 +74,7 @@ JSON_MODIFY escapes all special characters in the new value if the type of the v
   
  The following table compares the behavior of **JSON_MODIFY** in lax mode and in strict mode. For more info about the optional path mode specification (lax or strict), see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Existing value|Path exists|Lax mode|Strict mode|  
+|New value|Path exists|Lax mode|Strict mode|  
 |--------------------|-----------------|--------------|-----------------|  
 |Not NULL|Yes|Update the existing value.|Update the existing value.|  
 |Not NULL|No|Try to create a new key:value pair on the specified path.<br /><br /> This may fail. For example, if you specify the path `$.user.setting.theme`, JSON_MODIFY does not insert the key `theme` if the `$.user` or `$.user.settings` objects do not exist, or if settings is an array or a scalar value.|Error - INVALID_PROPERTY|  

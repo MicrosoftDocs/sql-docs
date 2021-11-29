@@ -3,7 +3,7 @@ title: "ALTER DATABASE File and Filegroups"
 description: Update a database's files and filegroups using Transact-SQL.
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: "seo-lt-2019"
-ms.date: "02/21/2019"
+ms.date: "09/15/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -290,7 +290,7 @@ CONTAINS MEMORY_OPTIMIZED_DATA
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later)
 
-Specifies that the filegroup stores memory optimized data in the file system. For more information, see [In-Memory OLTP - In-Memory Optimization](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Only one `MEMORY_OPTIMIZED_DATA` filegroup is allowed per database. For creating memory optimized tables, the filegroup cannot be empty. There must be at least one file. *filegroup_name* refers to a path. The path up to the last folder must exist, and the last folder must not exist.
+Specifies that the filegroup stores memory optimized data in the file system. For more information, see [In-Memory OLTP - In-Memory Optimization](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md). Only one `MEMORY_OPTIMIZED_DATA` filegroup is allowed per database. For creating memory optimized tables, the filegroup cannot be empty. There must be at least one file. *filegroup_name* refers to a path. The path up to the last folder must exist, and the last folder must not exist.
 
 REMOVE FILEGROUP *filegroup_name*
 Removes a filegroup from the database. The filegroup cannot be removed unless it is empty. Remove all files from the filegroup first. For more information, see "REMOVE FILE *logical_file_name*," earlier in this topic.
@@ -841,8 +841,8 @@ A value of 0 indicates that automatic growth is set to off and no additional spa
 
 If FILEGROWTH is not specified, the default values are:
 
-- Data 64 MB
-- Log files 64 MB
+- Data 16 MB
+- Log files 16 MB
 
 **\<add_or_modify_filegroups>::=**
 

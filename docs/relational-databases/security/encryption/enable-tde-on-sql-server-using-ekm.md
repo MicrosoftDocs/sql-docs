@@ -55,7 +55,7 @@ ms.author: shohamd
   
 #### To enable TDE using EKM  
   
-1.  Copy the files supplied by the EKM provider to an appropriate location on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer. In this example, we use the **C:\EKM** folder.  
+1.  Copy the files supplied by the EKM provider to an appropriate location on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer. In this example, we use the **C:\EKM_Files** folder.  
   
 2.  Install certificates to the computer as required by your EKM provider.  
   

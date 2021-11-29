@@ -17,7 +17,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Reporting Services Report Server (Native Mode)
-  A report server configured for native mode runs as an application server that provides all processing and management capability exclusively through [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]components.  
+  A report server configured for native mode runs as an application server that provides all processing and management capability exclusively through [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components.  
   
  You can use either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or the web portal to manage [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports. Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration manager to manage a report server in native mode.  
   

@@ -4,11 +4,12 @@ description: "In these instructions, learn how to install the Microsoft Drivers 
 ms.date: "03/15/2021"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 manager: v-mabarw
 ---
 

@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetStmtAttr function [ODBC]"
 ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetStmtAttr Function
 **Conformance**  

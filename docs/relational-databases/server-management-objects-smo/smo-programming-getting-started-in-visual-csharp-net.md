@@ -1,12 +1,13 @@
 ---
 description: "SMO Programming - Getting Started in Visual C# .NET"
 title: "Getting Started in Visual C# .NET | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.technology: 
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Visual C# [SMO]"
 ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
 author: "markingmyname"

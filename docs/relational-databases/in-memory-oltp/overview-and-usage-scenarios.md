@@ -205,9 +205,9 @@ GO
 
 - [In-Memory OLTP Technologies for Faster T-SQL Performance](./survey-of-initial-areas-in-in-memory-oltp.md)
 - Perf demo using In-Memory OLTP can be found at: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
-- [17-minute video explaining In-Memory OLTP and showing the demo](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)
+- [17-minute video explaining In-Memory OLTP and showing the demo](https://www.youtube.com/watch?v=UHhYhSCJil4)
 - [Script to enable In-Memory OLTP and set recommended options](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
-- [Main In-Memory OLTP documentation](in-memory-oltp-in-memory-optimization.md)
+- [Main In-Memory OLTP documentation]()
 - [Performance and resource utilization benefits of In-Memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Improving temp table and table variable performance using memory optimization](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
 - [Optimize Performance using In-Memory Technologies in SQL Database](/azure/sql-database/sql-database-in-memory)

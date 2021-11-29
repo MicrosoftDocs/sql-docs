@@ -2,7 +2,7 @@
 title: "Before Installing Failover Clustering | Microsoft Docs"
 description: This article describes planning considerations preparing to install a SQL Server failover cluster, including hardware, operating system, and configuration.
 ms.custom: ""
-ms.date: "08/24/2016"
+ms.date: "09/16/2021"
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: failover-cluster-instance
@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "clusters [SQL Server], preinstallation checklist"
   - "installing failover clusters"
   - "failover clustering [SQL Server], preinstallation checklist"
-ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
 ---
@@ -142,9 +141,9 @@ ms.author: chadam
 -   To enable Kerberos authentication with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [How to use Kerberos authentication in SQL Server](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/319723) in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base.  
 
 -   SQL Server failover cluster instance (FCI) requires the cluster nodes to be domain joined. The following configurations are **not supported**: 
-    *	SQL FCI on workgroup clusters. 
-    *	SQL FCI on Multi-Domain cluster.   
-    *	SQL FCI on Domain + Workgroup Clusters. 
+    *    SQL FCI on workgroup clusters. 
+    *    SQL FCI on Multi-Domain cluster.   
+    *    SQL FCI on Domain + Workgroup Clusters. 
 
   
 ##  <a name="Network"></a> Review Network, Port, and Firewall Considerations  
@@ -181,6 +180,18 @@ ms.author: chadam
 ##  <a name="OS_Support"></a> Verify Your Operating System  
  Make sure that your operating system is installed properly and is designed to support failover clustering. The following table is a list of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] editions and the operating systems that support them.  
   
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] edition|Windows Server 2022 Datacenter|Windows Server 2022 Datacenter: Azure Edition|Windows Server 2022 Standard|
+|---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-bit) x64*|No|No|No|
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-bit)|No|No|No|
+|[!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] Enterprise |No|No|No|
+|[!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] Standard |No|No|No|
+|[!INCLUDE[sssql17-md](../../../includes/sssql17-md.md)] Enterprise |Yes|Yes|Yes|
+|[!INCLUDE[sssql17-md](../../../includes/sssql17-md.md)] Standard |Yes|Yes|Yes|
+|[!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] Enterprise |Yes|Yes|Yes|
+|[!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] Standard |Yes|Yes|Yes|
+
+
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] edition|Windows Server 2019 Datacenter|Windows Server 2019 Standard|Windows Server 2016 Datacenter|Windows Server 2016 Standard |  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-bit) x64*|Yes|Yes|Yes|Yes|  

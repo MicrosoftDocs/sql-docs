@@ -135,4 +135,4 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 [Install or uninstall the Reporting Services sdd-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
 [Report Viewer web part on a SharePoint site](./report-viewer-web-part-sharepoint-site.md)
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

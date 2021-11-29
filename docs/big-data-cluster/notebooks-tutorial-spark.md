@@ -2,9 +2,9 @@
 title: Run a sample notebook using Spark
 titleSuffix: SQL Server Big Data Clusters
 description: This tutorial shows how you can load an run a sample Spark notebook on a SQL Server 2019 big data cluster.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mihaelab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: dacoelho
 ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
@@ -55,6 +55,9 @@ The following steps show how to open the notebook file in Azure Data Studio:
 1. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Set the **Kernel** to **PySpark3**, and set **Attach to** to the IP address of your big data cluster endpoint.
 
    ![Set Kernel and Attach to](media/notebook-tutorial-spark/set-kernel-and-attach-to.png)
+
+> [!IMPORTANT]
+> In Azure Data Studio, all Spark notebook types (Scala Spark, PySpark and SparkR) conventionally define some important Spark session related variables upon first cell execution. Those variables are: `spark`, `sc`, and `sqlContext`. When copying logic out of notebooks for batch submission (into a Python file to be run with `azdata bdc spark batch create` for example), make sure you define the variables accordingly.
 
 ## Run the notebook cells
 

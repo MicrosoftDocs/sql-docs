@@ -1,7 +1,7 @@
 ---
-title: "Add a Filter (Report Builder) | Microsoft Docs"
-description: Find out how to add a filter to a dataset, data region, or group when you want to include or exclude specific values for calculations or display.
-ms.date: 03/07/2017
+title: "Add a filter to a paginated report | Microsoft Docs"
+description: Find out how to add a filter to a dataset, data region, or group when you want to include or exclude specific values for calculations or display in a paginated report.
+ms.date: 09/02/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design
@@ -12,8 +12,11 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add a Filter (Report Builder and SSRS)
-  Add a filter to a dataset, data region, or group when you want to include or exclude specific values for calculations or display. Filters are applied at run time first on the dataset, and then on the data region, and then on the group, in top-down order for group hierarchies. In a table, matrix, or list, filters for row groups, column groups, and adjacent groups are applied independently. In a chart, filters for category groups and series groups are applied independently.  
+# Add a filter to a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+Add a filter to a dataset, data region, or group to a paginated report when you want to include or exclude specific values for calculations or display. Filters are applied at run time first on the dataset, and then on the data region, and then on the group, in top-down order for group hierarchies. In a table, matrix, or list, filters for row groups, column groups, and adjacent groups are applied independently. In a chart, filters for category groups and series groups are applied independently.  
   
  To add a filter, you must specify one or more filter equations. A filter equation consists of an expression that identifies the data that you want to filter, an operator, and the value to compare to. The data types of the filtered data and the value must match. Filtering on aggregate values for a dataset or data region is not supported.  
   
@@ -22,9 +25,9 @@ ms.author: maggies
  For more information about filtering embedded and shared datasets, see [Add a Filter to a Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### To set a filter on a data region  
+## Set a filter on a data region  
   
 1.  Open a report in **Design** view.  
   
@@ -49,7 +52,7 @@ ms.author: maggies
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### To set a filter on a Tablix row or column group  
+## Set a filter on a Tablix row or column group  
   
 1.  Open a report in **Design** view.  
   
@@ -73,7 +76,7 @@ ms.author: maggies
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### To set a filter on a Chart category group  
+## Set a filter on a Chart category group  
   
 1.  Open a report in **Design** view.  
   
@@ -97,7 +100,7 @@ ms.author: maggies
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### To set a filter on a Chart series group  
+## Set a filter on a Chart series group  
   
 1.  Open a report in **Design** view.  
   
@@ -121,7 +124,7 @@ ms.author: maggies
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## See Also  
+## See also  
  [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Gauges &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   

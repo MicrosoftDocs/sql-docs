@@ -2,12 +2,12 @@
 description: "TRIM (Transact-SQL)"
 title: "TRIM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/27/2019"
+ms.date: "09/14/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "jrasnick"
 ms.technology: t-sql
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords: 
   - "TRIM"
   - "TRIM_TSQL"

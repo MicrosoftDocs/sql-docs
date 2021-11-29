@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: d9883c25-5c43-4633-874e-4b490e4bccad
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # equals Method (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

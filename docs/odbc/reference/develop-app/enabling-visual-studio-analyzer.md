@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Visual Studio Analyzer [ODBC], enabling"
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Enabling Visual Studio Analyzer
 > [!IMPORTANT]  

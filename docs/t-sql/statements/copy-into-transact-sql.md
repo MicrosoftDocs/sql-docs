@@ -15,8 +15,8 @@ f1_keywords:
   - "LOAD"
 dev_langs: 
   - "TSQL"
-author: anumjs
-ms.author: anjangsh
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azure-sqldw-latest"
 ---
 # COPY (Transact-SQL)
@@ -89,8 +89,8 @@ When a column list is not specified, COPY will map columns based on the source a
 *External locations(s)*</br>
 Is where the files containing the data is staged. Currently Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage are supported:
 
-- *External location* for Blob Storage: https://<account>.blob.core.windows.net/<container>/<path>
-- *External location* for ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
+- *External location* for Blob Storage: https://\<account\>.blob.core.windows.net/\<container\>/\<path\>
+- *External location* for ADLS Gen2: https://\<account\>.dfs.core.windows.net/\<container\>/\<path\>
 
 > [!NOTE]  
 > The .blob endpoint is available for ADLS Gen2 as well and currently yields the best performance. Use the .blob endpoint when .dfs is not required for your authentication method.
@@ -112,7 +112,7 @@ Wildcards cards can be included in the path where
 
 Multiple file locations can only be specified from the same storage account and container via a comma-separated list such as:
 
-- ‘https://<account>.blob.core.windows.net/<container>/<path>’, ‘https://<account>.blob.core.windows.net/<container>/<path>’…
+- ‘https://\<account\>.blob.core.windows.net/\<container\>/\<path\>’, ‘https://\<account\>.blob.core.windows.net\<container\>/\<path\>’…
 
 *FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
 *FILE_TYPE* specifies the format of the external data.
@@ -153,7 +153,7 @@ Multiple file locations can only be specified from the same storage account and 
   
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 
-  - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *IDENTITY: \<ClientID\>@<OAuth_2.0_Token_EndPoint>*
   - *SECRET: AAD Application Service Principal key*
   -  Minimum RBAC roles required: Storage blob data contributor, Storage blob data contributor, Storage blob data owner, or Storage blob data reader
 
@@ -191,7 +191,7 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
   - Minimum permissions required: READ, LIST, WRITE, CREATE, DELETE
   
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
-  - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *IDENTITY: \<ClientID\>@<OAuth_2.0_Token_EndPoint>*
   - *SECRET: AAD Application Service Principal key*
   - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner
   

@@ -1,21 +1,22 @@
 ---
 description: "Installing and Configuring the ODBC Software"
 title: "Installing and Configuring the ODBC Software | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "configuring ODBC [ODBC]"
   - "ODBC [ODBC], installing"
   - "ODBC [ODBC], configuring"
   - "installing ODBC [ODBC]"
 ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Installing and Configuring the ODBC Software
 > [!NOTE]  

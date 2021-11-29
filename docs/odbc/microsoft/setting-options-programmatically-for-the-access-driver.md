@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], Access driver"
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Setting Options Programmatically for the Access Driver
 

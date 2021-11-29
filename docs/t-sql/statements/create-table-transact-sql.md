@@ -229,7 +229,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     [ SYSTEM_VERSIONING = ON 
         [ ( HISTORY_TABLE = schema_name.history_table_name
           [ , DATA_CONSISTENCY_CHECK = { ON | OFF } ] 
-	) ] 
+    ) ] 
     ]
     [ REMOTE_DATA_ARCHIVE =
       {
@@ -238,7 +238,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
       }
     ]   
     [ DATA_DELETION = ON  
-	      { ( 
+          { ( 
              FILTER_COLUMN = column_name,   
              RETENTION_PERIOD = { INFINITE | number { DAY | DAYS | WEEK | WEEKS 
                               | MONTH | MONTHS | YEAR | YEARS }
@@ -687,11 +687,11 @@ Do not specify CASCADE if the table will be included in a merge publication that
 
 `ON DELETE CASCADE` cannot be defined if an `INSTEAD OF` trigger `ON DELETE` already exists on the table.
 
-For example, in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the **ProductVendor** table has a referential relationship with the **Vendor** table. The **ProductVendor.BusinessEntityID** foreign key references the **Vendor.BusinessEntityID** primary key.
+For example, in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the `ProductVendor` table has a referential relationship with the `Vendor` table. The **ProductVendor.BusinessEntityID** foreign key references the **Vendor.BusinessEntityID** primary key.
 
-If a `DELETE` statement is executed on a row in the **Vendor** table, and an `ON DELETE CASCADE` action is specified for **ProductVendor.BusinessEntityID**, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for one or more dependent rows in the **ProductVendor** table. If any exist, the dependent rows in the **ProductVendor** table are deleted, and also the row referenced in the **Vendor** table.
+If a `DELETE` statement is executed on a row in the `Vendor` table, and an `ON DELETE CASCADE` action is specified for **ProductVendor.BusinessEntityID**, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for one or more dependent rows in the `ProductVendor` table. If any exist, the dependent rows in the `ProductVendor` table are deleted, and also the row referenced in the `Vendor` table.
 
-Conversely, if `NO ACTION` is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row if there is at least one row in the **ProductVendor** table that references it.
+Conversely, if `NO ACTION` is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row if there is at least one row in the `ProductVendor` table that references it.
 
 ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT }   
 Specifies what action happens to rows in the table altered when those rows have a referential relationship and the referenced row is updated in the parent table. The default is NO ACTION.
@@ -712,11 +712,11 @@ Do not specify `CASCADE` if the table will be included in a merge publication th
 
 `ON UPDATE CASCADE`, `SET NULL`, or `SET DEFAULT` cannot be defined if an `INSTEAD OF` trigger `ON UPDATE` already exists on the table that is being altered.
 
-For example, in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the **ProductVendor** table has a referential relationship with the **Vendor** table: **ProductVendor.BusinessEntity** foreign key references the **Vendor.BusinessEntityID** primary key.
+For example, in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the `ProductVendor` table has a referential relationship with the `Vendor` table: **ProductVendor.BusinessEntity** foreign key references the **Vendor.BusinessEntityID** primary key.
 
-If an UPDATE statement is executed on a row in the **Vendor** table, and an ON UPDATE CASCADE action is specified for **ProductVendor.BusinessEntityID**, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for one or more dependent rows in the **ProductVendor** table. If any exist, the dependent rows in the **ProductVendor** table are updated, and also the row referenced in the **Vendor** table.
+If an UPDATE statement is executed on a row in the `Vendor` table, and an ON UPDATE CASCADE action is specified for **ProductVendor.BusinessEntityID**, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for one or more dependent rows in the `ProductVendor` table. If any exist, the dependent rows in the `ProductVendor` table are updated, and also the row referenced in the `Vendor` table.
 
-Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the update action on the **Vendor** row if there is at least one row in the **ProductVendor** table that references it.
+Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the update action on the **Vendor** row if there is at least one row in the `ProductVendor` table that references it.
 
 CHECK   
 Is a constraint that enforces domain integrity by limiting the possible values that can be entered into a column or columns. CHECK constraints on computed columns must also be marked PERSISTED.
@@ -922,11 +922,11 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 - Specify `PAUSED` to pause or postpone data migration. For more info, see [Pause and resume data migration -Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
 [ DATA_DELETION = ON  
-	{ ( 
-	   FILTER_COLUMN = column_name,   
+    { ( 
+       FILTER_COLUMN = column_name,   
            RETENTION_PERIOD = { INFINITE | number { DAY | DAYS | WEEK | WEEKS 
                       | MONTH | MONTHS | YEAR | YEARS }
-	) } 
+    ) } 
 ]
 **Applies to:** Azure SQL Edge *only*
 
@@ -1062,7 +1062,7 @@ If more than one temporary table is created inside a single stored procedure or 
 
 If you include a *schema_name* when you create or access a temporary table, it is ignored. All temporary tables are created in the dbo schema.
 
-If a local temporary table is created in a stored procedure or application that can be executed at the same time by several users, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be able to distinguish the tables created by the different users. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does this by internally appending a numeric suffix to each local temporary table name. The full name of a temporary table as stored in the **sysobjects** table in **tempdb** is made up of the table name specified in the CREATE TABLE statement and the system-generated numeric suffix. To allow for the suffix, *table_name* specified for a local temporary name cannot exceed 116 characters.
+If a local temporary table is created in a stored procedure or application that can be executed at the same time by several sessions, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be able to distinguish the tables created by the different sessions. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does this by internally appending a numeric suffix to each local temporary table name. The full name of a temporary table as stored in the `sys.sysobjects` table in `tempdb` is made up of the table name specified in the CREATE TABLE statement and the system-generated numeric suffix. To allow for the suffix, *table_name* specified for a local temporary name cannot exceed 116 characters.
 
 Temporary tables are automatically dropped when they go out of scope, unless explicitly dropped by using DROP TABLE:
 
@@ -1216,7 +1216,7 @@ For a report on a table and its columns, use `sp_help` or `sp_helpconstraint`. T
 
 ## Nullability rules within a table definition
 
-The nullability of a column determines whether that column can allow a null value (NULL) as the data in that column. NULL is not zero or blank: NULL means no entry was made or an explicit NULL was supplied, and it typically implies that the value is either unknown or not applicable.
+The nullability of a column determines whether that column can allow a null value (`NULL`) as the data in that column. `NULL` is not zero or blank: `NULL` means no entry was made or an explicit `NULL` was supplied, and it typically implies that the value is either unknown or not applicable.
 
 When you use `CREATE TABLE` or `ALTER TABLE` to create or alter a table, database and session settings influence and possibly override the nullability of the data type that is used in a column definition. We recommend that you always explicitly define a column as NULL or NOT NULL for noncomputed columns or, if you use a user-defined data type, that you allow the column to use the default nullability of the data type. Sparse columns must always allow NULL.
 
@@ -1224,9 +1224,9 @@ When column nullability is not explicitly specified, column nullability follows 
 
 |Column data type|Rule|
 |----------------------|----------|
-|Alias data type|The [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the nullability that is specified when the data type was created. To determine the default nullability of the data type, use **sp_help**.|
+|Alias data type|The [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the nullability that is specified when the data type was created. To determine the default nullability of the data type, use `sp_help`.|
 |CLR user-defined type|Nullability is determined according to the column definition.|
-|System-supplied data type|If the system-supplied data type has only one option, it takes precedence. **timestamp** data types must be NOT NULL. When any session settings are set ON by using SET:<br />**ANSI_NULL_DFLT_ON** = ON, NULL is assigned. <br />**ANSI_NULL_DFLT_OFF** = ON, NOT NULL is assigned.<br /><br /> When any database settings are configured by using ALTER DATABASE:<br />**ANSI_NULL_DEFAULT_ON** = ON, NULL is assigned. <br />**ANSI_NULL_DEFAULT_OFF** = ON, NOT NULL is assigned.<br /><br /> To view the database setting for ANSI_NULL_DEFAULT, use the **sys.databases** catalog view|
+|System-supplied data type|If the system-supplied data type has only one option, it takes precedence. **timestamp** data types must be NOT NULL. When any session settings are set ON by using SET:<br />**ANSI_NULL_DFLT_ON** = ON, NULL is assigned. <br />**ANSI_NULL_DFLT_OFF** = ON, NOT NULL is assigned.<br /><br /> When any database settings are configured by using ALTER DATABASE:<br />**ANSI_NULL_DEFAULT_ON** = ON, NULL is assigned. <br />**ANSI_NULL_DEFAULT_OFF** = ON, NOT NULL is assigned.<br /><br /> To view the database setting for ANSI_NULL_DEFAULT, use the `sys.databases` catalog view|
 
 When neither of the ANSI_NULL_DFLT options is set for the session and the database is set to the default (ANSI_NULL_DEFAULT is OFF), the default of NOT NULL is assigned.
 
@@ -1848,15 +1848,15 @@ CREATE TABLE [HR].[Employees]
     PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH (
-	SYSTEM_VERSIONING = ON (HISTORY_TABLE = [HR].[EmployeesHistory]),
-	LEDGER = ON ( 
-		LEDGER_VIEW = [HR].[EmployeesLedger] ( 
-			TRANSACTION_ID_COLUMN_NAME = TransactionId,
-			SEQUENCE_NUMBER_COLUMN_NAME = SequenceNumber,
-			OPERATION_TYPE_COLUMN_NAME = OperationId, 
-			OPERATION_TYPE_DESC_COLUMN_NAME = OperationTypeDescription
-		)
-	)
+    SYSTEM_VERSIONING = ON (HISTORY_TABLE = [HR].[EmployeesHistory]),
+    LEDGER = ON ( 
+        LEDGER_VIEW = [HR].[EmployeesLedger] ( 
+            TRANSACTION_ID_COLUMN_NAME = TransactionId,
+            SEQUENCE_NUMBER_COLUMN_NAME = SequenceNumber,
+            OPERATION_TYPE_COLUMN_NAME = OperationId, 
+            OPERATION_TYPE_DESC_COLUMN_NAME = OperationTypeDescription
+        )
+    )
 );
 GO
 ```
@@ -1875,15 +1875,15 @@ CREATE TABLE [AccessControl].[KeyCardEvents]
     StartSequenceNumber BIGINT GENERATED ALWAYS AS SEQUENCE_NUMBER START HIDDEN NOT NULL
 )
 WITH (
-	LEDGER = ON (
-		LEDGER_VIEW = [AccessControl].[KeyCardEventsLedger] (
-			TRANSACTION_ID_COLUMN_NAME = TransactionId,
-			SEQUENCE_NUMBER_COLUMN_NAME = SequenceNumber,
-			OPERATION_TYPE_COLUMN_NAME = OperationId, 
-			OPERATION_TYPE_DESC_COLUMN_NAME = OperationTypeDescription
-		),
-		APPEND_ONLY = ON
-	)
+    LEDGER = ON (
+        LEDGER_VIEW = [AccessControl].[KeyCardEventsLedger] (
+            TRANSACTION_ID_COLUMN_NAME = TransactionId,
+            SEQUENCE_NUMBER_COLUMN_NAME = SequenceNumber,
+            OPERATION_TYPE_COLUMN_NAME = OperationId, 
+            OPERATION_TYPE_DESC_COLUMN_NAME = OperationTypeDescription
+        ),
+        APPEND_ONLY = ON
+    )
 );
 GO
 ```

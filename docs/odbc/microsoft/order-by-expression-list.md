@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQL grammar [ODBC], order by clause"
 ms.assetid: 5ef88186-a99f-4e2c-a3f3-98a42d4f03a5
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ORDER BY expression-list
 Expressions can be used in the ORDER BY clause. For example, in the following clauses the table is ordered by three key expressions: a+b, c+d, and e.  

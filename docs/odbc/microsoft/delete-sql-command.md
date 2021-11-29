@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "DELETE [ODBC]"
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # DELETE - SQL Command
 Marks records for deletion.  

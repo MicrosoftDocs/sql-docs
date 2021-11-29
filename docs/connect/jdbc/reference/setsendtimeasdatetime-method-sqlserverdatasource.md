@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 705a0494-b5e2-43db-940a-1b8cec550cdb
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setSendTimeAsDatetime Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

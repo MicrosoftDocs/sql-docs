@@ -50,6 +50,6 @@ ms.author: maghan
 -   If you create one or more databases with memory-optimized tables, you should enable Instant File Initialization (IFI) by granting the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account the *SE_MANAGE_VOLUME_NAME* user right. Without IFI, memory-optimized storage files (data and delta files) will be initialized upon creation, which can have negative impact on the performance of your workload. For more information about IFI, including how to enable it, see [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).
   
 ## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](./overview-and-usage-scenarios.md)  
  [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)  
  [Memory Architecture guide](../../relational-databases/memory-management-architecture-guide.md)

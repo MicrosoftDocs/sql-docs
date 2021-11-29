@@ -54,28 +54,28 @@ This method throws a **FormatException** if the input isn't well-formatted. Thre
  The following examples use `STLineFromText()` to create a `geometry` instance.
 
 ### Example 1: Two-dimension geometry WKT
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);  
 SELECT @g.ToString();  
 ```  
   
 ### Example 2: Three-dimension geometry WKT
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100 100, 200 200 200)', 0);  
 SELECT @g.ToString();  
 ``` 
 
 ### Example 3: Two-dimension measured geometry WKT
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100 NULL 100, 200 200 NULL 200)', 0);  
 SELECT @g.ToString();  
 ``` 
 
 ### Example 4: Three-dimension measured geometry WKT
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100 100 100, 200 200 200 200)', 0);  
 SELECT @g.ToString();  

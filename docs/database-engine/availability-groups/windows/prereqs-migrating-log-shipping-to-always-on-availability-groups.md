@@ -1,13 +1,15 @@
 ---
 title: "Prerequisites to convert log shipping to availability groups"
 description: "A description of the prerequisites necessary to convert log shipping to an Always On availability group."
-ms.custom: "seodec18"
+ms.custom:
+  - seodec18
+  - intro-migration
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "log shipping [SQL Server], AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b

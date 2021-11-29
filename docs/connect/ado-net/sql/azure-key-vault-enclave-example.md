@@ -9,8 +9,7 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: tutorial
 author: David-Engel
-ms.author: v-daenge
-ms.reviewer: v-jizho2
+ms.author: v-davidengel
 ---
 
 # Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with secure enclaves

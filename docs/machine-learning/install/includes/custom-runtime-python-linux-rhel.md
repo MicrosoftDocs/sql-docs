@@ -5,6 +5,8 @@ ms.date: 02/08/2021
 ms.topic: include
 author: garyericson
 ms.author: garye
+ms.custom:
+  - intro-installation
 ---
 ## Install Language Extensions
 

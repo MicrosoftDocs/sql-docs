@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "application development [ODBC], about application development"
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Developing Applications
 This section contains information about developing applications that use the ODBC interface and drivers that implement it.  

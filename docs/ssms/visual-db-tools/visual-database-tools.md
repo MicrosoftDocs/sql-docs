@@ -14,7 +14,7 @@ ms.date: 01/19/2017
 
 # Visual Database Tools
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
 SQL Server Management Studio includes visual designers for building [!INCLUDE[tsql](../../includes/tsql-md.md)] queries, tables, and diagramming databases.  
   

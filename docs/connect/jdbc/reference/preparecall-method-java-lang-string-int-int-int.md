@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 81104fd5-75b0-4540-9f48-c3dbf59a8564
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # prepareCall Method (java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

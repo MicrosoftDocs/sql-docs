@@ -23,7 +23,7 @@ This SSIS package script code is a code example for using the SSIS PDW destinati
   
 3.  Edit the script to use the code provided below. Customized the script to your environment by making the following changes:  
   
-    -   You must retain the namespace of the script created by the script task. Note the name of the namespace `namespace ST_<GUID>` and edit the script below, changing *ST_<GUID>* to the original *GUID* of the script task.  
+    -   You must retain the namespace of the script created by the script task. Note the name of the namespace `namespace ST_<GUID>` and edit the script below, changing *ST_\<GUID\>* to the original *GUID* of the script task.  
   
     -   Replace four occurrences of the placeholder value *XXXXXXXX* with the values appropriate to your environment and intended action.  
   

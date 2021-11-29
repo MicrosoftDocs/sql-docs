@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: f800c966-3fae-41b3-963a-464988f80da3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # prepare Method (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

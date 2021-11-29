@@ -7,7 +7,9 @@ ms.date: 04/15/2021
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 monikerRange: ">=sql-server-2017"
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Windows

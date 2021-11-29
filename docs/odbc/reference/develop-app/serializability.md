@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "transactions [ODBC], isolation"
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Serializability
 Ideally, transactions should be *serializable*. Transactions are said to be serializable if the results of running transactions simultaneously are the same as the results of running them serially - that is, one after the other. It is not important which transaction executes first, only that the result does not reflect any mixing of the transactions.  

@@ -1,14 +1,16 @@
 ---
 description: "Learn about change data capture (CDC), which records insert, update, and delete activity that applies to a SQL Server table. Use with SQL Server, Azure SQL Managed Instance, and Azure SQL Database (preview)"
 title: "What is change data capture (CDC)?"
-ms.custom: seo-dt-2019
+ms.custom:
+  - seo-dt-2019
+  - intro-overview
 ms.date: "01/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: "vanto"
 ms.technology: 
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "change data capture, about"
   - "change data capture"
   - "22832 (Database Engine error)"
@@ -22,6 +24,9 @@ ms.author: jroth
 Change data capture (CDC) records insert, update, and delete activity that applies to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. This makes the details of the changes available in an easily consumed relational format. Column information and the metadata that is required to apply the changes to a target environment is captured for the modified rows and stored in change tables that mirror the column structure of the tracked source tables. Table-valued functions are provided to allow systematic access to the change data by consumers.  
   
 A good example of a data consumer that this technology targets is an extraction, transformation, and loading (ETL) application. An ETL application incrementally loads change data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source tables to a data warehouse or data mart. Although the representation of the source tables within the data warehouse must reflect changes in the source tables, an end-to-end technology that refreshes a replica of the source is not appropriate. Instead, you need a reliable stream of change data that is structured so that consumers can apply it to dissimilar target representations of the data. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] change data capture provides this technology.  
+
+> [!NOTE]
+> Support for change data capture in Azure SQL Database is currently in [preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
 
 To learn how about Change Data Capture, you can also refer to this Data Exposed episode.
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Track-and-Record-Data-Changes-with-Change-Data-Capture-CDC-in-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
@@ -189,6 +194,9 @@ Configuring the frequency of the capture and the cleanup processes for CDC in Az
 
 **ANSI_WARNINGS on CDC for Azure SQL Databases (Preview)**
 DDL operations bypassing ANSI_WARNINGS will cause the CDC scheduler to fail. 
+
+**Computed columns**
+CDC does not support the values for computed columns even if the computed column is defined as persisted. Computed columns that are included in a capture instance always have a value of NULL. This behavior is intended, and not a bug.
 
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

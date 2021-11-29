@@ -1171,7 +1171,7 @@ ORDER BY message_id
 |    2325    |    16    |    No    |    %sThe end tag '%ls' doesn't match opening tag '%ls:%ls' from line %u    |
 |    2326    |    16    |    No    |    %sThe end tag '%ls:%ls' doesn't match opening tag '%ls:%ls' from line %u    |
 |    2327    |    16    |    No    |    %sThe content or definition of <%ls> is missing.    |
-|    2328    |    16    |    No    |    %sSchema namespace '%ls' doesn't match <include> directive's '%ls'    |
+|    2328    |    16    |    No    |    %sSchema namespace '%ls' doesn't match \<include\> directive's '%ls'    |
 |    2329    |    16    |    No    |    %sThe string "%ls" is not a valid time duration value.    |
 |    2331    |    16    |    No    |    %sRedefinition has to have itself as base type. Location: '%ls'.    |
 |    2332    |    16    |    No    |    %s'%ls' may not be used with an 'empty' operand    |
@@ -2030,12 +2030,12 @@ ORDER BY message_id
 |    4347    |    16    |    No    |    The current restore sequence was previously interrupted during the transition to the online state. RESTORE DATABASE WITH RECOVERY can be used to complete the transition to online.    |
 |    4348    |    16    |    No    |    The online restore to database '%ls' failed. It may be appropriate to perform an offline restore instead. An offline restore is initiated by using BACKUP LOG WITH NORECOVERY.    |
 |    4349    |    16    |    No    |    The log in this backup set begins at LSN %.*ls, which is too recent to apply to the database. This restore sequence needs to initialize the log to start at LSN %.*ls. Reissue the RESTORE LOG statement using an earlier log backup.    |
-|    4350    |    16    |    No    |    The list of pages provided with the RESTORE PAGE statement is incorrectly formatted. Prior to the problem %d pages were correctly identified. The problem was hit at character offset %d. Check that all pages are identified by numeric <file>:<page> pairs with commas separating each pair. For example: PAGE='1:57,2:31'.    |
+|    4350    |    16    |    No    |    The list of pages provided with the RESTORE PAGE statement is incorrectly formatted. Prior to the problem %d pages were correctly identified. The problem was hit at character offset %d. Check that all pages are identified by numeric \<file\>:\<page\> pairs with commas separating each pair. For example: PAGE='1:57,2:31'.    |
 |    4351    |    16    |    No    |    Backups taken on earlier versions of SQL Server are not supported by fn_dump_dblog.    |
 |    4352    |    16    |    No    |    RESTORE LOG is not supported from this data backup because file '%ls' is too old. Use a regular log backup to continue the restore sequence.    |
 |    4353    |    16    |    No    |    Conflicting file relocations have been specified for file '%.*ls'. Only a single WITH MOVE clause should be specified for any logical file name.    |
 |    4354    |    10    |    Yes    |    The file '%.*ls' of restored database '%ls' is being left in the defunct state because the database is being upgraded from a prior version. Piecemeal restore is not supported when an upgrade is involved.    |
-|    4355    |    16    |    No    |    The revert command is incorrectly specified. The RESTORE statement must be of the form: RESTORE DATABASE <x> FROM DATABASE_SNAPSHOT = <y>.    |
+|    4355    |    16    |    No    |    The revert command is incorrectly specified. The RESTORE statement must be of the form: RESTORE DATABASE \<x\> FROM DATABASE_SNAPSHOT = \<y\>.    |
 |    4356    |    10    |    No    |    Restore is complete on database '%ls'. The database is now available.    |
 |    4357    |    16    |    No    |    Restore cannot take '%ls' offline because changes exist that require a log backup. Take a log backup and then retry the RESTORE.    |
 |    4358    |    16    |    No    |    The database can not be brought online because file '%ls' is currently restored to LSN %.*ls but must be restored to LSN %.*ls.    |
@@ -3792,7 +3792,7 @@ ORDER BY message_id
 |    8195    |    16    |    No    |    Cannot create "%.*ls" on "%.*ls". Insert, Update, and Delete triggers can only be created on user tables and views.    |
 |    8196    |    16    |    No    |    Duplicate column specified as ROWGUIDCOL.    |
 |    8197    |    16    |    No    |    The object '%.*ls' does not exist or is invalid for this operation.    |
-|    8199    |    16    |    No    |    In EXECUTE <procname>, procname can only be a literal or variable of type char, varchar, nchar, or nvarchar.    |
+|    8199    |    16    |    No    |    In EXECUTE \<procname\>, procname can only be a literal or variable of type char, varchar, nchar, or nvarchar.    |
 |    8301    |    10    |    No    |    Use of level0type with value 'USER' in procedure sp_addextendedproperty, sp_updateextendedproperty and sp_dropextendedproperty and in table-valued function fn_listextendedproperty has been deprecated and will be removed in a future version of SQL Server. Users are now schema scoped and hence use level0type with value 'SCHEMA' and level1type with value 'USER' for extended properties on USER.    |
 |    8302    |    10    |    No    |    CREATE RULE and DROP RULE will be removed in a future version of SQL Server. Avoid using CREATE RULE and DROP RULE in new development work, and plan to modify applications that currently use them. Use check constraints instead, which are created using the CHECK keyword of CREATE TABLE or ALTER TABLE.    |
 |    8303    |    10    |    No    |    CREATE DEFAULT and DROP DEFAULT will be removed in a future version of SQL Server. Avoid using CREATE DEFAULT and DROP DEFAULT in new development work, and plan to modify applications that currently use them. Instead, use default definitions created using the DEFAULT keyword of ALTER TABLE or CREATE TABLE.    |
@@ -4020,10 +4020,10 @@ ORDER BY message_id
 |    8682    |    16    |    No    |    SELECT via cursor failed because in XML plan provided to USE PLAN hint, neither Populate nor Fetch plans are provided, and at least one must be present. For best likelihood of successful plan forcing, use an XML cursor plan captured from SQL Server without modification.    |
 |    8683    |    16    |    No    |    Could not force query plan because XML showplan provided in USE PLAN hint contains invalid Star Join specification. Consider specifying a USE PLAN hint that contains an unmodified XML showplan produced by SQL Server. This may allow you to force the plan.    |
 |    8684    |    16    |    No    |    A query plan could not be found because optimizer exceeded number of allowed operations while searching for plan specified in USE PLAN hint. First consider removing USE PLAN hint. Then if necessary consider (1) updating statistics, (2) using other hints such as join hints, index hints, or the OPTIMIZE FOR hint, (3) rewriting query or breaking it down into two or more separate queries.    |
-|    8685    |    16    |    No    |    Query cannot be compiled because <CursorStmt> element appears in XML plan provided to USE PLAN but USE PLAN was applied to a non-cursor statement. Consider using an XML plan obtained from SQL Server for statement without modification.    |
-|    8686    |    16    |    No    |    Cursor plan forcing failed because input plan has more than one <Operation> node with OperationType=%ls. Consider using an XML cursor plan captured from SQL Server without modification.    |
+|    8685    |    16    |    No    |    Query cannot be compiled because \<CursorStmt\> element appears in XML plan provided to USE PLAN but USE PLAN was applied to a non-cursor statement. Consider using an XML plan obtained from SQL Server for statement without modification.    |
+|    8686    |    16    |    No    |    Cursor plan forcing failed because input plan has more than one \<Operation\> node with OperationType=%ls. Consider using an XML cursor plan captured from SQL Server without modification.    |
 |    8687    |    16    |    No    |    Cursor plan failed because it is not possible to force the plan for a cursor of type other than FAST_FORWARD or STATIC with a USE PLAN hint. Consider removing USE PLAN hint and updating statistics or using different hints to influence query plan choice.    |
-|    8688    |    16    |    No    |    Cursor plan forcing failed because in XML plan provided to USE PLAN, required element %ls is missing under <CursorPlan> element. Consider using an XML cursor plan captured from SQL Server without modification.    |
+|    8688    |    16    |    No    |    Cursor plan forcing failed because in XML plan provided to USE PLAN, required element %ls is missing under \<CursorPlan\> element. Consider using an XML cursor plan captured from SQL Server without modification.    |
 |    [8689](mssqlserver-8689-database-engine-error.md)    |    16    |    No    |    Database '%.*ls', specified in the USE PLAN hint, does not exist. Specify an existing database.    |
 |    8690    |    16    |    No    |    Query cannot be compiled because USE PLAN hint conflicts with hint %ls. Consider removing hint %ls.    |
 |    8691    |    16    |    No    |    Query cannot be compiled because USE PLAN hint conflicts with SET %ls ON. Consider setting %ls OFF.    |
@@ -4211,7 +4211,7 @@ ORDER BY message_id
 |    9243    |    10    |    No    |    Query notification delivery could not send message on dialog '%.*ls'. Query notification delivery failed because of the following error in service broker: '%.*ls'. See the error log for additional information.    |
 |    9244    |    16    |    No    |    Query notification cleanup could not access metadata for database "%d". Check whether the database is successfully restored and online.    |
 |    9300    |    16    |    No    |    %sIn this version of the server, the 'fn:id()' function only accepts an argument of type 'IDREF *'.    |
-|    9301    |    16    |    No    |    %sIn this version of the server, 'cast as <type>%s' is not available. Please use the 'cast as <type> ?' syntax.    |
+|    9301    |    16    |    No    |    %sIn this version of the server, 'cast as \<type\>%s' is not available. Please use the 'cast as \<type\> ?' syntax.    |
 |    9302    |    16    |    No    |    %sThe context item in which the 'fn:id()' function is used must be a node.    |
 |    9303    |    16    |    No    |    %sSyntax error near '%ls', expected '%ls'.    |
 |    9304    |    16    |    No    |    %sThis version of the server only supports XQuery version '1.0'.    |
@@ -5990,7 +5990,7 @@ ORDER BY message_id
 |    15068    |    16    |    No    |    A remote user '%s' already exists for remote server '%s'.    |
 |    15069    |    16    |    No    |    One or more users are using the database. The requested operation cannot be completed.    |
 |    15070    |    10    |    No    |    Object '%s' was successfully marked for recompilation.    |
-|    15071    |    16    |    No    |    Usage: sp_addmessage <msgnum>,<severity>,<msgtext> [,<language> [,FALSE \| TRUE [,REPLACE]]]    |
+|    15071    |    16    |    No    |    Usage: sp_addmessage \<msgnum\>,\<severity\>,\<msgtext\> [,\<language\> [,FALSE \| TRUE [,REPLACE]]]    |
 |    15072    |    16    |    No    |    Usage: sp_addremotelogin remoteserver [,loginname [,remotename]]    |
 |    15074    |    10    |    No    |    Warning: You must recover this database prior to access.    |
 |    15076    |    16    |    No    |    Default, table, and user data types must be in the current database.    |
@@ -6034,7 +6034,7 @@ ORDER BY message_id
 |    15128    |    16    |    No    |    The CHECK_POLICY and CHECK_EXPIRATION options cannot be turned OFF when MUST_CHANGE is ON.    |
 |    15129    |    16    |    No    |    '%d' is not a valid value for configuration option '%s'.    |
 |    15130    |    16    |    No    |    There already exists a '%s' trigger for '%s'.    |
-|    15131    |    16    |    No    |    Usage: sp_dbremove <dbname> [,dropdev]    |
+|    15131    |    16    |    No    |    Usage: sp_dbremove \<dbname\> [,dropdev]    |
 |    15133    |    16    |    No    |    INSTEAD OF trigger '%s' cannot be associated with an order.    |
 |    15134    |    16    |    No    |    No alias exists for the specified user.    |
 |    15135    |    16    |    No    |    Object is invalid. Extended properties are not permitted on '%s', or the object does not exist.    |
@@ -6076,7 +6076,7 @@ ORDER BY message_id
 |    15174    |    16    |    No    |    Login '%s' owns one or more database(s). Change the owner of the database(s) before dropping the login.    |
 |    15175    |    16    |    No    |    Login '%s' is aliased or mapped to a user in one or more database(s). Drop the user or alias before dropping the login.    |
 |    15176    |    16    |    No    |    The only valid \@parameter value is 'WITH_LOG'.    |
-|    15177    |    16    |    No    |    Usage: sp_dropmessage <msg number> [,<language> \| 'ALL']    |
+|    15177    |    16    |    No    |    Usage: sp_dropmessage \<msg number\> [,\<language\> \| 'ALL']    |
 |    15178    |    16    |    No    |    Cannot drop or alter a message with an ID less than 50,000.    |
 |    15179    |    16    |    No    |    The message number %u or specified language version does not exist.    |
 |    15182    |    16    |    No    |    Cannot disable access to the guest user in master or tempdb.    |
@@ -6142,12 +6142,12 @@ ORDER BY message_id
 |    15253    |    11    |    No    |    Syntax error parsing SQL identifier '%s'.    |
 |    15254    |    16    |    No    |    Users other than the database owner or guest exist in the database. Drop them before removing the database.    |
 |    15255    |    11    |    No    |    '%s' is not a valid value for \@autofix. The only valid value is 'auto'.    |
-|    15256    |    16    |    No    |    Usage: sp_certify_removable <dbname> [,'auto']    |
+|    15256    |    16    |    No    |    Usage: sp_certify_removable \<dbname\> [,'auto']    |
 |    15257    |    16    |    No    |    The database that you are attempting to certify cannot be in use at the same time.    |
 |    15258    |    16    |    No    |    The database must be owned by a member of the sysadmin role before it can be removed.    |
 |    15259    |    16    |    No    |    The DEFAULT_SCHEMA clause cannot be used with a Windows group or with principals mapped to certificates or asymmetric keys.    |
 |    15260    |    16    |    No    |    The format of the security descriptor string '%s' is invalid.    |
-|    15261    |    16    |    No    |    Usage: sp_create_removable <dbname>,<syslogical>,<sysphysical>,<syssize>,<loglogical>,<logphysical>,<logsize>,<datalogical1>,<dataphysical1>,<datasize1> [,<datalogical2>,<dataphysical2>,<datasize2>...<datalogical16>,<dataphysical16>,<datasize16>]    |
+|    15261    |    16    |    No    |    Usage: sp_create_removable \<dbname\>,\<syslogical\>,\<sysphysical\>,\<syssize\>,\<loglogical\>,\<logphysical\>,\<logsize\>,\<datalogical1\>,\<dataphysical1\>,\<datasize1\> [,\<datalogical2\>,\<dataphysical2\>,\<datasize2\>...\<datalogical16\>,\<dataphysical16\>,\<datasize16\>]    |
 |    15262    |    10    |    No    |    Invalid file size entered. All files must be at least 1 MB.    |
 |    15263    |    16    |    No    |    A SID in the security descriptor string '%s' could not be found in an account lookup operation.    |
 |    15264    |    16    |    No    |    Could not create the '%s' portion of the database.    |
@@ -6232,7 +6232,7 @@ ORDER BY message_id
 |    15351    |    10    |    No    |    The CLR procedure/function/type being signed refers to an assembly that is not signed either by a strong name or an assembly.    |
 |    15352    |    16    |    No    |    The %S_MSG cannot be dropped because one or more entities are either signed or encrypted using it.    |
 |    15353    |    16    |    No    |    An entity of type %S_MSG cannot be owned by a role, a group, an approle, or by principals mapped to certificates or asymmetric keys.    |
-|    15354    |    10    |    No    |    Usage: sp_detach_db <dbname>, [TRUE\|FALSE], [TRUE\|FALSE]    |
+|    15354    |    10    |    No    |    Usage: sp_detach_db \<dbname\>, [TRUE\|FALSE], [TRUE\|FALSE]    |
 |    15356    |    16    |    No    |    The current application role has been dropped. The current security context contains no valid database user context.    |
 |    15357    |    16    |    No    |    The current security context was set by "%ls". It cannot be reverted by statement "%ls".    |
 |    15358    |    10    |    No    |    User-defined filegroups should be made read-only.    |
@@ -6447,6 +6447,8 @@ ORDER BY message_id
 
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
+|    [16591](mssqlserver-16591-database-engine-error.md)    |    16    |    No    |    Multiple logical file paths limit has been reached. Statement contains %ld logical file paths, maximum allowed limit is %d.    |
+|    [16594](mssqlserver-16594-database-engine-error.md)    |    16    |    No    |    Path '%ls' was referenced multiple times in result set '%ls'.    |
 |    16901    |    16    |    No    |    %hs: This feature has not been implemented yet.    |
 |    16902    |    16    |    No    |    %ls: The value of the parameter %ls is invalid.    |
 |    16903    |    16    |    No    |    The "%ls" procedure was called with an incorrect number of parameters.    |
@@ -8797,7 +8799,7 @@ ORDER BY message_id
 |    30045    |    17    |    No    |    Fulltext index error during compression or decompression. Full-text index may be corrupted on disk. Run dbcc checkdatabase and re-populate the index.    |
 |    30046    |    16    |    No    |    SQL Server encountered error 0x%x while communicating with full-text filter daemon host (FDHost) process. Make sure that the FDHost process is running. To re-start the FDHost process, run the sp_fulltext_service 'restart_all_fdhosts' command or restart the SQL Server instance.    |
 |    30047    |    16    |    No    |    The user does not have permission to %.*ls stoplist '%.*ls'.    |
-|    30048    |    10    |    No    |    Informational: Ignoring duplicate thesaurus rule '%ls' while loading thesaurus file for LCID %d. A duplicate thesaurus phrase was encountered in either the <sub> section of an expansion rule or the <pat> section of a replacement rule. This causes an ambiguity and hence this phrase will be ignored.    |
+|    30048    |    10    |    No    |    Informational: Ignoring duplicate thesaurus rule '%ls' while loading thesaurus file for LCID %d. A duplicate thesaurus phrase was encountered in either the \<sub\> section of an expansion rule or the \<pat\> section of a replacement rule. This causes an ambiguity and hence this phrase will be ignored.    |
 |    30049    |    17    |    No    |    Fulltext thesaurus internal error (HRESULT = '0x%08x')    |
 |    30050    |    16    |    No    |    Both the thesaurus file for lcid '%d' and the global thesaurus could not be loaded.    |
 |    30051    |    16    |    No    |    Phrases longer than 512 unicode characters are not allowed in a thesaurus file. Phrase: '%ls'.    |

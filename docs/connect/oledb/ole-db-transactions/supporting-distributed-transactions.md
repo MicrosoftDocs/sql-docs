@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "ITransactionJoin interface"
   - "MS DTC, about distributed transaction support"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Supporting Distributed Transactions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

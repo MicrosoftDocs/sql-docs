@@ -8,7 +8,7 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-chojas
-ms.author: v-daenge
+ms.author: v-davidengel
 author: David-Engel
 ---
 # DSN and Connection String Keywords and Attributes

@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Azure Active Directory with the ODBC Driver
 

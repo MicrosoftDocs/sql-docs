@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 04/20/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.suite: "sql"
 ms.technology: connectivity
 ms.tgt_pltfrm: ""
@@ -13,7 +13,7 @@ ms.topic: conceptual
 ms.assetid: ""
 caps.latest.revision: ""
 author: DavidEngel
-ms.author: v-daenge
+ms.author: v-davidengel
 manager: kenvh
 ---
 # Retrieving ParameterMetaData via useFmtOnly

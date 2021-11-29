@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getIdentifierQuoteString Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

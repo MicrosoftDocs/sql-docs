@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Python SQL Driver
 

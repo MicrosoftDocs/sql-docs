@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Oracle data access [ODBC]"
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ODBC Driver for Oracle
 > [!IMPORTANT]  

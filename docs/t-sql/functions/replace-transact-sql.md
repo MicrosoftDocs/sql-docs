@@ -96,12 +96,12 @@ The following example calculates the number of spaces in a sentence using the `R
 
 
 ```sql  
-DECLARE @str NVARCHAR(100), @len1 INT, @len2 INT;
-SET @str = N'This is a sentence with a space in it.';
-SET @len1 = LEN(@str);
-SET @str = REPLACE(@str, N' ', N'');
-SET @len2 = LEN(@str);
-SELECT N'Number of spaces in the string: ' + CONVERT(NVARCHAR(20), @len1 - @len2);
+DECLARE @STR NVARCHAR(100), @LEN1 INT, @LEN2 INT;
+SET @STR = N'This is a sentence with spaces in it.';
+SET @LEN1 = LEN(@STR);
+SET @STR = REPLACE(@STR, N' ', N'');
+SET @LEN2 = LEN(@STR);
+SELECT N'Number of spaces in the string: ' + CONVERT(NVARCHAR(20), @LEN1 - @LEN2);
 
 GO  
 ```  

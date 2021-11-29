@@ -31,7 +31,6 @@ If you don't need all the configuration options available in the Import and Expo
 - [Import Flat File to SQL Wizard](import-flat-file-wizard.md)
 - [What's new in SQL Server Management Studio 17.3
 ](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
-- [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ### Use the SQL Server Import and Export Wizard
 You can import data to, or export data from, a variety of sources and destinations with the SQL Server Import and Export Wizard. To use the wizard, you must have SQL Server Integration Services (SSIS) or SQL Server Data Tools (SSDT) installed. For more info, see [Import and Export Data with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).

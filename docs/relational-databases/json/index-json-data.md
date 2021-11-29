@@ -1,18 +1,17 @@
 ---
 description: "Index JSON data"
-title: "Index JSON data | Microsoft Docs"
+title: "Index JSON data"
 ms.custom: ""
-ms.date: 06/03/2020
+ms.date: 11/29/2021
 ms.prod: sql
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "JSON, indexing JSON data"
   - "indexing JSON data"
-ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
 author: jovanpop-msft
 ms.author: jovanpop
-ms.reviewer: jroth
+ms.reviewer: jroth, wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Index JSON data
@@ -26,7 +25,33 @@ Database indexes improve the performance of filter and sort operations. Without 
 When you store JSON data in SQL Server, typically you want to filter or sort query results by one or more *properties* of the JSON documents.  
 
 ### Example 
-In this example, assume that the AdventureWorks `SalesOrderHeader` table has an `Info` column that contains various information in JSON format about sales orders. For example, it contains information about customer, sales person, shipping and billing addresses, and so forth. You want to use values from the `Info` column to filter sales orders for a customer.
+In this example, assume that the AdventureWorks `SalesOrderHeader` table has an `Info` column that contains various information in JSON format about sales orders. For example, it contains unstructured data about customer, sales person, shipping and billing addresses, and so forth. You could use values from the `Info` column to filter sales orders for a customer. 
+
+By default, the column `Info` used does not exist, it can be created in the `AdventureWorks` database with the following code. Note this does not apply to the AdventureWorksLT series of sample databases.
+
+
+
+```sql  
+IF NOT EXISTS(SELECT * FROM sys.columns WHERE object_id = OBJECT_ID('[Sales].[SalesOrderHeader]') AND name = 'Info')
+	ALTER TABLE [Sales].[SalesOrderHeader] ADD [Info] NVARCHAR(MAX) NULL
+GO
+UPDATE h 
+SET [Info] =
+(
+    SELECT [Customer.Name]	= concat(p.FirstName, N' ', p.LastName), 
+           [Customer.ID]	= p.BusinessEntityID, 
+           [Customer.Type]	= p.[PersonType], 
+           [Order.ID]		= soh.SalesOrderID, 
+           [Order.Number]	= soh.SalesOrderNumber, 
+           [Order.CreationData] = soh.OrderDate, 
+           [Order.TotalDue]	= soh.TotalDue
+    FROM [Sales].SalesOrderHeader AS soh
+         INNER JOIN [Sales].[Customer] AS c ON c.CustomerID = soh.CustomerID
+         INNER JOIN [Person].[Person] AS p ON p.BusinessEntityID = c.CustomerID
+    WHERE soh.SalesOrderID = h.SalesOrderID FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
+)
+FROM [Sales].SalesOrderHeader AS h; 
+```  
 
 ### Query to optimize
 Here's an example of the type of query that you want to optimize by using an index.  
@@ -153,9 +178,12 @@ ORDER BY JSON_VALUE(json,'$.name')
  ![Screenshot showing a different execution plan.](../../relational-databases/json/media/jsonindexblog3.png "Execution plan")  
   
  Since the order of values in the index is not compliant with French collation rules, SQL Server can't use the index to order results. Therefore, it adds a Sort operator that sorts results using French collation rules.  
- 
-## Learn more about JSON in SQL Server and Azure SQL Database  
-  
+
+## Next steps
+
+- [Optimize JSON processing with in-memory OLTP](optimize-json-processing-with-in-memory-oltp.md)
+- [JSON data in SQL Server](json-data-sql-server.md)
+
 ### Microsoft videos
 
 > [!NOTE]

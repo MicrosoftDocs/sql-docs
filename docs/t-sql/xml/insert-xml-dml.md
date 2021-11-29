@@ -91,7 +91,7 @@ SELECT @myDoc ;
 SELECT @myDoc  ;       
 SET @myDoc.modify('         
 insert <BikeFrame>Strong long lasting</BikeFrame>   
-AFTER (/Root/ProductDescription/Features/Material)[1]         
+after (/Root/ProductDescription/Features/Material)[1]         
 ')  ;       
 SELECT @myDoc;  
 GO  

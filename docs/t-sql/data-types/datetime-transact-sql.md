@@ -147,7 +147,7 @@ SELECT @datetime AS '@datetime', @datetimeoffset AS '@datetimeoffset';
 --Result  
 --@datetime               @datetimeoffset  
 ------------------------- ------------------------------  
---1968-10-23 12:45:37.123 1968-10-23 12:45:37.1237 +01:0   
+--1968-10-23 12:45:37.123 1968-10-23 12:45:37.1237 +10:0   
 ```  
   
 When the conversion is from **datetime2(n)**, the date and time are copied. When the fractional precision of the **datetime2(n)** value is greater than three digits, the value will be truncated. The following example shows the results of converting a `datetime2(4)` value to a `datetime` value.  

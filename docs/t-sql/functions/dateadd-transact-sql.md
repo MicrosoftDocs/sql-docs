@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function adds a *number* (a signed integer) to a *datepart* of an input *date*, and returns a modified date/time value. For example, you can use this function to find the date that is 7000 minutes from today: *number* = 7000, *datepart* = minute, *date* = today.
-  
+
 See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) for an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -45,8 +45,9 @@ DATEADD (datepart , number , date )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
+
 *datepart*  
-The part of *date* to which `DATEADD` adds an **integer** *number*. This table lists all valid *datepart* arguments. 
+The part of *date* to which `DATEADD` adds an **integer** *number*. This table lists all valid *datepart* arguments.
 
 > [!NOTE]
 > `DATEADD` does not accept user-defined variable equivalents for the *datepart* arguments. 
@@ -88,7 +89,8 @@ The return value data type for this method is dynamic. The return type depends o
   
 ## Return Value  
   
-## datepart Argument  
+## datepart Argument
+ 
 **dayofyear**, **day**, and **weekday** return the same value.
   
 Each *datepart* and its abbreviations return the same value.
@@ -103,10 +105,11 @@ Then, `DATEADD` returns the last day of the return month. For example, September
   
 ```sql
 SELECT DATEADD(month, 1, '20060830');
-SELECT DATEADD(month, 1, '20060831');
+SELECT DATEADD(month, 1, '2006-08-31');
 ```
   
-## number Argument  
+## number Argument
+
 The *number* argument cannot exceed the range of **int**. In the following statements, the argument for *number* exceeds the range of **int** by 1. These statements both return the following error message: "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
   
 ```sql
@@ -114,7 +117,8 @@ SELECT DATEADD(year,2147483648, '20060731');
 SELECT DATEADD(year,-2147483649, '20060731');  
 ```  
   
-## date Argument  
+## date Argument
+
 `DATEADD` will not accept a *date* argument incremented to a value outside the range of its data type. In the following statements, the *number* value added to the *date* value exceeds the range of the *date* data type. `DATEADD` returns the following error message: "`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`."
   
 ```sql
@@ -123,14 +127,16 @@ SELECT DATEADD(year,-2147483647, '20060731');
 ```  
   
 ## Return Values for a smalldatetime date and a second or Fractional Seconds datepart  
+
 The seconds part of a [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) value is always 00. For a **smalldatetime** *date* value, the following apply: 
 
--   For a *datepart* of **second**, and a *number* value between -30 and +29, `DATEADD` makes no changes.  
--   For a *datepart* of **second**, and a *number* value less than -30, or more than +29, `DATEADD` performs its addition beginning at one minute.  
--   For a *datepart* of **millisecond** and a *number* value between -30001 and +29998, `DATEADD` makes no changes.  
--   For a *datepart* of **millisecond** and a *number* value less than -30001, or more than +29998, `DATEADD` performs its addition beginning at one minute.  
+- For a *datepart* of **second**, and a *number* value between -30 and +29, `DATEADD` makes no changes.  
+- For a *datepart* of **second**, and a *number* value less than -30, or more than +29, `DATEADD` performs its addition beginning at one minute.  
+- For a *datepart* of **millisecond** and a *number* value between -30001 and +29998, `DATEADD` makes no changes.  
+- For a *datepart* of **millisecond** and a *number* value less than -30001, or more than +29998, `DATEADD` performs its addition beginning at one minute.  
   
-## Remarks  
+## Remarks
+
 Use `DATEADD` in the following clauses:
 
 + GROUP BY
@@ -140,6 +146,7 @@ Use `DATEADD` in the following clauses:
 + WHERE
   
 ## Fractional seconds precision
+
 `DATEADD` does not allow addition for a *datepart* of **microsecond** or **nanosecond** for *date* data types **smalldatetime**, **date**, and **datetime**.
   
 Milliseconds have a scale of 3 (.123), microseconds have a scale of 6 (.123456), and nanoseconds have a scale of 9 (.123456789). The **time**, **datetime2**, and **datetimeoffset** data types have a maximum scale of 7 (.1234567). For a *datepart* of **nanosecond**, *number* must be 100 before the fractional seconds of *date* increase. A *number* between 1 and 49 will round down to 0, and a number from 50 to 99 rounds up to 100.
@@ -176,11 +183,13 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
 ```  
   
 ## Time zone offset
+
 `DATEADD` does not allow addition for time zone offset.
   
 ## Examples  
 
 ### A. Incrementing datepart by an interval of 1  
+
 Each of these statements increments *datepart* by an interval of 1:
   
 ```sql
@@ -230,7 +239,8 @@ microsecond  2007-01-01 13:10:10.1111121
 nanosecond   2007-01-01 13:10:10.1111111  
 ```  
   
-### B. Incrementing more than one level of datepart in one statement  
+### B. Incrementing more than one level of datepart in one statement
+
 Each of these statements increments *datepart* by a *number* large enough to additionally increment the next higher *datepart* of *date*:
   
 ```sql
@@ -250,10 +260,12 @@ SELECT DATEADD(second,59,@datetime2);     --2007-01-01 01:02:00.1111111
 SELECT DATEADD(millisecond,1,@datetime2); --2007-01-01 01:01:01.1121111  
 ```  
   
-### C. Using expressions as arguments for the number and date parameters  
+### C. Using expressions as arguments for the number and date parameters
+  
 These examples use different types of expressions as arguments for the *number* and *date* parameters. The examples use the AdventureWorks database.
   
-#### Specifying a column as date  
+#### Specifying a column as date
+
 This example adds `2` (two) days to each value in the `OrderDate` column, to derive a new column named `PromisedShipDate`:
   
 ```sql
@@ -286,7 +298,8 @@ SalesOrderID OrderDate               PromisedShipDate
   
 ```  
   
-#### Specifying user-defined variables as number and date  
+#### Specifying user-defined variables as number and date
+ 
 This example specifies user-defined variables as arguments for *number* and *date*:
   
 ```sql
@@ -304,7 +317,8 @@ SELECT DATEADD(day, @days, @datetime);
 (1 row(s) affected)  
 ```  
   
-#### Specifying scalar system function as date  
+#### Specifying scalar system function as date
+  
 This example specifies `SYSDATETIME` for *date*. The exact value returned depends on the
 day and time of statement execution:
   
@@ -321,7 +335,8 @@ SELECT DATEADD(month, 1, SYSDATETIME());
 (1 row(s) affected)  
 ```  
   
-#### Specifying scalar subqueries and scalar functions as number and date  
+#### Specifying scalar subqueries and scalar functions as number and date
+ 
 This example uses scalar subqueries, `MAX(ModifiedDate)`, as arguments for *number* and *date*. `(SELECT TOP 1 BusinessEntityID FROM Person.Person)` serves as an artificial argument for the number parameter, to show how to select a *number* argument from a value list.
   
 ```sql
@@ -329,14 +344,16 @@ SELECT DATEADD(month,(SELECT TOP 1 BusinessEntityID FROM Person.Person),
     (SELECT MAX(ModifiedDate) FROM Person.Person));  
 ```  
   
-#### Specifying numeric expressions and scalar system functions as number and date  
+#### Specifying numeric expressions and scalar system functions as number and date
+
 This example uses a numeric expression (-`(10/2))`, [unary operators](../../mdx/unary-operators.md) (`-`), an [arithmetic operator](../../mdx/arithmetic-operators.md) (`/`), and scalar system functions (`SYSDATETIME`) as arguments for *number* and *date*.
   
 ```sql
 SELECT DATEADD(month,-(10/2), SYSDATETIME());  
 ```  
   
-#### Specifying ranking functions as number  
+#### Specifying ranking functions as number
+ 
 This example uses a ranking function as an argument for *number*.
   
 ```sql
@@ -352,7 +369,8 @@ WHERE TerritoryID IS NOT NULL
     AND SalesYTD <> 0;  
 ```  
   
-#### Specifying an aggregate window function as number  
+#### Specifying an aggregate window function as number
+
 This example uses an aggregate window function as an argument for *number*.
   
 ```sql
@@ -364,9 +382,8 @@ WHERE SalesOrderID IN(43659,43664);
 GO  
 ```  
   
-  
+
 ## See also
+
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
-  
-

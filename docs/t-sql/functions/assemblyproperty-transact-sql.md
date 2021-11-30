@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "ASSEMBLYPROPERTY statement"
   - "assemblies [CLR integration], properties"
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

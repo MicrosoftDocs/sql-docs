@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "base-10 logarithms"
   - "logarithm of expression"
 ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LOG10 (Transact-SQL)

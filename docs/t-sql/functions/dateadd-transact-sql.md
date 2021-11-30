@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "date and time [SQL Server], DATEADD"
   - "DATEADD function [SQL Server]"
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEADD (Transact-SQL)

@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "comparing dates times [SQL Server]"
   - "dates [SQL Server], dateparts"
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATENAME (Transact-SQL)

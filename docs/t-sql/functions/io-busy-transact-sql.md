@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "input operations [SQL Server]"
   - "time [SQL Server], I/O operations"
 ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

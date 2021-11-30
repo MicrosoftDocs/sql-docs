@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdynamicsnapshotviews system table"
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

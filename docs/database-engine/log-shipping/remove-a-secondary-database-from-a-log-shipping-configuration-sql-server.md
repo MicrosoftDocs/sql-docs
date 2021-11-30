@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "secondary data files [SQL Server], removing"
   - "log shipping [SQL Server], secondary databases"
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Remove a Secondary Database from a Log Shipping Configuration (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

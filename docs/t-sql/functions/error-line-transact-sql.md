@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ERROR_LINE function"
   - "CATCH block"
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 
 # ERROR_LINE (Transact-SQL)

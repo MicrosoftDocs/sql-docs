@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], automatic page repair"
   - "suspect pages [SQL Server]"
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Automatic Page Repair (Availability Groups: Database Mirroring)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "dates [SQL Server], system date and time"
   - "time [SQL Server], system"
 ms.assetid: bebe3b65-2b3e-4c73-bf80-ff1132c680a7
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GETDATE (Transact-SQL)

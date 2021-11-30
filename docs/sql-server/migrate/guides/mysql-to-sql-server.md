@@ -5,8 +5,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: migration-guide
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 10/05/2021
 ms.custom:
   - intro-migration

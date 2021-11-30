@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "uninstalling failover cluster instances"
   - "removing failover cluster instances"
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 
 # Remove a failover cluster instance (Setup)

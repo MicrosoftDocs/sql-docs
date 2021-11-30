@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "& (bitwise AND)"
   - "bitwise AND (&)"
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &amp; (Bitwise AND) (Transact-SQL)

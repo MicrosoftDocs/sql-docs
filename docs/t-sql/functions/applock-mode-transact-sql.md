@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sessions [SQL Server], application locks"
   - "APPLOCK_MODE function"
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

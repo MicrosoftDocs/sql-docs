@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "_ (wildcard - match one character)"
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # _ (Wildcard - Match One Character) (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

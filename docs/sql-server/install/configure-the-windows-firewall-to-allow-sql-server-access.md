@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ports [SQL Server], TCP"
   - "netsh to open firewall ports"
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

@@ -8,8 +8,8 @@ helpviewer_keywords:
   - "feature adding [SQL Server]"
   - " SQL Server, features"
   - "adding features to  SQL Server"
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 10/05/2021

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "SELECT statement [SQL Server], @local_variable"
   - "@local_variable"
   - "local variables [SQL Server]"
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017"
 ---
 

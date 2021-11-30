@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "lowercase characters"
   - "converting uppercase to lowercase characters"
 ms.assetid: 1783352b-6852-4658-9d94-51963c59b9bf
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LOWER (Transact-SQL)

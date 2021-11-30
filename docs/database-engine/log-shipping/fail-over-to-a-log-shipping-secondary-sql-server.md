@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "log shipping [SQL Server], failover"
   - "failover [SQL Server], log shipping"
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Fail Over to a Log Shipping Secondary (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

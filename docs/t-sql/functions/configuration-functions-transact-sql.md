@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "current configuration information"
   - "configuration functions [SQL Server]"
 ms.assetid: 066f15e7-3406-437e-93c4-3f247c529169
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # Configuration Functions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

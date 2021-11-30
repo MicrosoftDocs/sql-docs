@@ -5,8 +5,8 @@ ms.date: 10/05/2021
 ms.prod: sql
 ms.technology: migration-guide
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 
 # Upgrade SQL Server to SQL Server

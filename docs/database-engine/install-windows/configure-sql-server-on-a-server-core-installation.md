@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "IsHadrEnabled server property"
   - "Server Core Installation [SQL Server]"
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016"
 ---
 # Configure SQL Server on a Server Core Installation

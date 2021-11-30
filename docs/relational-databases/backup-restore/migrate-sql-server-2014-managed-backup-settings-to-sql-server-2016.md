@@ -11,8 +11,8 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Migrate managed backup settings
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

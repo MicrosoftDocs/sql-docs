@@ -10,8 +10,8 @@ ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.topic: quickstart
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 
 # Quickstart: SQL backup and restore to Azure Blob storage service

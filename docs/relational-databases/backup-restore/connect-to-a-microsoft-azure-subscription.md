@@ -8,8 +8,8 @@ ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Connect to a Microsoft Azure Subscription
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

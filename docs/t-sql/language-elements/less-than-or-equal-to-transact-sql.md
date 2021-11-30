@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "<= (less than or equal to operator)"
   - "less than or equal to operator (<=)"
 ms.assetid: 1f05474c-0377-48cb-b567-9d85d0c40479
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &lt;= (Less Than or Equal To) (Transact-SQL)

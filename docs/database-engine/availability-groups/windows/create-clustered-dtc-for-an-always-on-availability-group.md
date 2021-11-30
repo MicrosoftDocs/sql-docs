@@ -7,8 +7,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=sql-server-2016"
 ---
 # Create Clustered DTC resource for an Always On availability group

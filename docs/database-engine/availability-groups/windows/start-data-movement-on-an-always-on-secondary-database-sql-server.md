@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Start Data Movement on an Always On Secondary Database (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

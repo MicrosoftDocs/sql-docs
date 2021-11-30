@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "NEXT VALUE FOR function"
   - "sequence number object, NEXT VALUE FOR function"
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

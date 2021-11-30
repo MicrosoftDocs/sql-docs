@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "DECLARE statement"
   - "declaring variables"
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DECLARE @local_variable (Transact-SQL)

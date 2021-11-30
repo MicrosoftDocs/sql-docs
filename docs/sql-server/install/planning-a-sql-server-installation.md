@@ -11,8 +11,8 @@ ms.topic: quickstart
 helpviewer_keywords:
   - "installing SQL Server, planning"
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Planning a SQL Server Installation
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

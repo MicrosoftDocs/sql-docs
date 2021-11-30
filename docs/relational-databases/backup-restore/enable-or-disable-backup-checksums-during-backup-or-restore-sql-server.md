@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "disabling checksums"
   - "checksums [SQL Server]"
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Enable or disable backup checksums during backup or restore (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.resource_stats"
   - "resource_stats"
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ms.reviewer: wiassaf
 monikerRange: "=azuresqldb-current"
 ---

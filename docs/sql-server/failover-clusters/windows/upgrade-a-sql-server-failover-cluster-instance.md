@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "clusters [SQL Server], upgrading"
   - "failover clustering [SQL Server], upgrading"
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 
 # Upgrade a failover cluster instance 

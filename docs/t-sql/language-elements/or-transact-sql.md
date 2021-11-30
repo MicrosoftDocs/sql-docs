@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "combining conditions"
   - "OR operator"
 ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OR (Transact-SQL)

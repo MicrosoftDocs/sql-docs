@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], data movement"
   - "Availability Groups [SQL Server]"
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # What is an Always On availability group?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

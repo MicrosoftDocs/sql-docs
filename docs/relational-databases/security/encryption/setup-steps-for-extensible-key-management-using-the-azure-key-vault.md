@@ -457,12 +457,12 @@ For a note about the minimum permission levels needed for each action in this se
    1. Create a **SQL Server Cryptographic Provider** key on **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\**.
    1. Delegate "Full Control" permissions on the **SQL Server Cryptographic Provider** key to the user account running the SQL Server database engine service.
 
-   > [!NOTE]
-   > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider** to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.
-   >  
-   > To add the registry key to the Cluster Registry Checkpoint routine, in PowerShell, run the following command:
-   > 
-   > `Add-ClusterCheckpoint -RegistryCheckpoint "SOFTWARE\Microsoft\SQL Server Cryptographic Provider" -Resourcename "SQL Server"`
+      > [!NOTE]
+      > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider** to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.
+      >  
+      > To add the registry key to the Cluster Registry Checkpoint routine, in PowerShell, run the following command:
+      > 
+      > `Add-ClusterCheckpoint -RegistryCheckpoint "SOFTWARE\Microsoft\SQL Server Cryptographic Provider" -Resourcename "SQL Server"`
 
 1. Create a new login by using the asymmetric key in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that you created in the preceding step.
 

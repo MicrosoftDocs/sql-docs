@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "clusters [SQL Server], preinstallation checklist"
   - "installing failover clusters"
   - "failover clustering [SQL Server], preinstallation checklist"
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Before Installing Failover Clustering
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

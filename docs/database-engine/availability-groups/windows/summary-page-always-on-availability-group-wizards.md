@@ -13,8 +13,8 @@ f1_keywords:
   - "sql13.swb.addreplicawizard.summary.f1"
   - "sql13.swb.failoverwizard.summary.f1"
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Summary Page (Always On Availability Group Wizards)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

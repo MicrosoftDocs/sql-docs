@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "errors [SQL Server], Transact-SQL"
   - "error numbers [SQL Server]"
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &#x40;&#x40;ERROR (Transact-SQL)

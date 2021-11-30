@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "pattern searching [SQL Server]"
   - "PATINDEX function"
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PATINDEX (Transact-SQL)

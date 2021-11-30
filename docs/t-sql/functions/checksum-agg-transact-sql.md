@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "CHECKSUM_AGG function"
   - "groups [SQL Server], checksum values"
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

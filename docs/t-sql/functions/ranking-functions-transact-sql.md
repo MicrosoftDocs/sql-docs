@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "functions [SQL Server], ranking"
   - "ranking rows"
 ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Ranking Functions (Transact-SQL)

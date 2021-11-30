@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "uniqueidentifier data type"
   - "NEWID function"
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

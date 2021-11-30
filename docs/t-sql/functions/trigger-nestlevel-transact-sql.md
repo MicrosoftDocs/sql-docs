@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "number of triggers"
   - "TRIGGER_NESTLEVEL function"
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

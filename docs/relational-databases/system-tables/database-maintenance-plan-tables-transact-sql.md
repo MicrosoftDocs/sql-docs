@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server], system tables"
   - "system tables [SQL Server], database maintenance plans"
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Database Maintenance Plan Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

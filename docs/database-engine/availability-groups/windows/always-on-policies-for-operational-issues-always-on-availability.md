@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], troubleshooting"
   - "Availability Groups [SQL Server], policies"
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Policy based management for operational issues with Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

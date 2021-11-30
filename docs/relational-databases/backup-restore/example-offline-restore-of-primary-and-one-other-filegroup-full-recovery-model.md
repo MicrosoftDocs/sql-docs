@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "offline restores [SQL Server]"
   - "restore sequences [SQL Server], offline"
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Example: Offline restore of primary and 1 other filegroup (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

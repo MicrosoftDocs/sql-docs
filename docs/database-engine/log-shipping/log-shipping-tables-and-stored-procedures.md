@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "log shipping [SQL Server], stored procedures"
   - "primary servers [SQL Server]"
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Log Shipping Tables and Stored Procedures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

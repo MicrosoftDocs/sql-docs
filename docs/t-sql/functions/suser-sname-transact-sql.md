@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], logins"
   - "names [SQL Server], logins"
 ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SUSER_SNAME (Transact-SQL)

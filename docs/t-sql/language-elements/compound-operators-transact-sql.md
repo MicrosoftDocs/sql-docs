@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "compound operators"
   - "compound operators, described"
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Compound Operators (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

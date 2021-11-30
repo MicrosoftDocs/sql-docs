@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "database backups [SQL Server], disks"
   - "backing up databases [SQL Server], disks"
 ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Define a Logical Backup Device for a Disk File (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

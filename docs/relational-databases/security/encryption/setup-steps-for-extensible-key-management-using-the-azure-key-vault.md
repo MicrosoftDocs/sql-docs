@@ -498,6 +498,7 @@ For a note about the minimum permission levels needed for each action in this se
 1. Create a database encryption key by using the ASYMMETRIC KEY (EKMSampleASYKey).
 
     ```sql  
+    USE <DB Name>;
     --Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
     CREATE DATABASE ENCRYPTION KEY
     WITH ALGORITHM = AES_256

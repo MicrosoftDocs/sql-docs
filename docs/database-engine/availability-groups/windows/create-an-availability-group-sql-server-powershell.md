@@ -10,7 +10,7 @@ ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], creating"
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Create an Always On availability group using PowerShell

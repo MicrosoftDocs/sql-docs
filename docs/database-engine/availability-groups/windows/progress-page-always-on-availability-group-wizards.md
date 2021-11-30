@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.swb.addreplicawizard.progress.f1"
   - "sql13.swb.newagwizard.progress.f1"
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Progress Page (Always On Availability Group Wizards)

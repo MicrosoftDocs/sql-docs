@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], read-only routing"
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Connect to an Always On availability group listener 

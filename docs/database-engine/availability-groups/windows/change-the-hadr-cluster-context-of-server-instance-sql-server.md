@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "Availability replicas [SQL Server], change WSFC cluster context"
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016"
 ---

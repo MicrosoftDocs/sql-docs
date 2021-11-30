@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 

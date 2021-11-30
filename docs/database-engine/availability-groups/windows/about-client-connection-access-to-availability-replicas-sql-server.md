@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], client connectivity"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Types of client connections to replicas within an Always On availability group

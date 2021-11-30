@@ -7,7 +7,7 @@ ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Tune compression for availability group

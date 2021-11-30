@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "High Availability"
   - "SQL Server"
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Availability group database level health detection failover option

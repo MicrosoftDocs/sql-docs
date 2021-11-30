@@ -12,7 +12,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Secondary database is not joined

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "automated backup preference"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Configure backups on secondary replicas of an Always On availability group

@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid:
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Use read-scale with Always On availability groups

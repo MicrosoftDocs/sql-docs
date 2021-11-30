@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Manage logins for jobs using databases in an Always On availability group

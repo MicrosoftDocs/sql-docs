@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Use Remote Blob Store (RBS) with Always On availability groups

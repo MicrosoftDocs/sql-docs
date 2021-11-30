@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], disabling"
   - "Availability Groups [SQL Server], enabling"
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Enable or Disable Always On availability group feature

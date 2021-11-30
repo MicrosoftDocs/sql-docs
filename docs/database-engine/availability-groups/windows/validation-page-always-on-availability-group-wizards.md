@@ -14,7 +14,7 @@ f1_keywords:
 helpviewer_keywords: 
   - ", listeners"
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Validation Page (Always On Availability Group Wizards)

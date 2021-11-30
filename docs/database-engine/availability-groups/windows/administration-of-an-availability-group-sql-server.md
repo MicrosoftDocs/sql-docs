@@ -10,7 +10,7 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], managing"
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Administration of an availability group

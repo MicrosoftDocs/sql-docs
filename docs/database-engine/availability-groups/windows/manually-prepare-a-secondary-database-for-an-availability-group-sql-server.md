@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Prepare a secondary database for an Always On availability group

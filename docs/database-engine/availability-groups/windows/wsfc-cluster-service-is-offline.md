@@ -12,7 +12,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016"
 ---

@@ -2,7 +2,7 @@
 title: "Configure read-scale for an availability group"
 description: "Learn how to configure your SQL Server Always On availability group for read-scale workloads on Windows."
 ms.custom: "seodec18"
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: ""
 ms.date: 05/24/2018

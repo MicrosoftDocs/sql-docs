@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "Availability Groups [SQL Server], troubleshooting"
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # "Tools to monitor Always On availability groups"

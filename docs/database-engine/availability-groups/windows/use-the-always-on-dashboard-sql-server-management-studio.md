@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
   - "Availability Groups [SQL Server], dashboard"
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Use the Always On Availability Group dashboard (SQL Server Management Studio)

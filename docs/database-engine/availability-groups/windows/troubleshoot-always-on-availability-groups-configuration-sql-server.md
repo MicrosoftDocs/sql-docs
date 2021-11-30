@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], troubleshooting"
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Troubleshoot Always On Availability Groups Configuration (SQL Server)

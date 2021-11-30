@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], troubleshooting"
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 
 ---

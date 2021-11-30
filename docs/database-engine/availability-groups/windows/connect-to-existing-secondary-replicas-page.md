@@ -11,7 +11,7 @@ f1_keywords:
   - "sql13.swb.adddatabasewizard.connecttoreplicas.f1"
   - "sql13.swb.addreplicawizard.connecttoreplicas.f1"
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Connect to Existing Secondary Replicas Page - Always On availability groups

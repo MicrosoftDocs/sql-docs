@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Add a secondary replica to an Always On Availability Group

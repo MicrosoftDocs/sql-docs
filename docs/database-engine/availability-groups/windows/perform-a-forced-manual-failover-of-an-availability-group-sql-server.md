@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Perform a Forced Manual Failover of an Always On Availability Group (SQL Server)

@@ -12,7 +12,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Availability replica is disconnected within an Always On availability group

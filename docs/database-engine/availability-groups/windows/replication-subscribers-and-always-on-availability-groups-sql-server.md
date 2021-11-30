@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Replication Subscribers and Always On Availability Groups (SQL Server)

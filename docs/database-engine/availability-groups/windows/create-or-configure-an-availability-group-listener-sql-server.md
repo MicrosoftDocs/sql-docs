@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ---

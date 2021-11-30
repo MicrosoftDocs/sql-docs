@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Basic Always On availability groups for a single database

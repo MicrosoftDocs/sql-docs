@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "TDE, AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Add an encrypted database to an Always On availability group

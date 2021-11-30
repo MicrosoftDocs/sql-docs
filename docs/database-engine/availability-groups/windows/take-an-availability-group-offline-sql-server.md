@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], take offline"
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Take an Availability Group Offline (SQL Server)

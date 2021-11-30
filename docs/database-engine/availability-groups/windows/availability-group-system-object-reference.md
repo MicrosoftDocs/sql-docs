@@ -7,7 +7,7 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: reference
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016"
 ---

@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid:
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups 

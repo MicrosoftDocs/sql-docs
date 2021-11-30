@@ -10,7 +10,7 @@ helpviewer_keywords:
 - "Availability Groups [SQL Server], enhanced database failover"
 - "Availability Groups [SQL Server], failover"
 ms.assetid: 
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.reviewer: "mikeray"
 ms.author: mathoma
 ---

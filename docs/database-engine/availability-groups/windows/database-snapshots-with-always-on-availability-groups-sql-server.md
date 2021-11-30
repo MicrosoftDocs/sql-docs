@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "database snapshots [SQL Server], AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Database Snapshots with Always On Availability Groups (SQL Server)

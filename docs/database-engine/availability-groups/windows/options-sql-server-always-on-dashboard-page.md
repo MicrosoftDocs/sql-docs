@@ -10,7 +10,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Alwayson.Dashboard"
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Options (SQL Server Always On, Dashboard Page)

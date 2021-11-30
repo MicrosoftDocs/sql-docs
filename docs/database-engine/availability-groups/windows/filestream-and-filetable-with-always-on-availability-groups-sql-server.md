@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016"
 ---

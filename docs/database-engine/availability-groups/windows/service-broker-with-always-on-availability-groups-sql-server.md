@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "Service Broker, AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Service Broker with Always On Availability Groups (SQL Server)

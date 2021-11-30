@@ -12,7 +12,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Some availability replicas are disconnected

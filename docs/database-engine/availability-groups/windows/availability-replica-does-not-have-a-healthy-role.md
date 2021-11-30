@@ -12,7 +12,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Availability replica does not have a healthy role for an Always On availability group

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], removing"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Remove a Secondary Database from an Availability Group (SQL Server)

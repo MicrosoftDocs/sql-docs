@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Configure an Always On distributed availability group  

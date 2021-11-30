@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "troubleshooting [SQL Server], cross-database transactions"
 ms.assetid: 
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Configure distributed transactions for an Always On availability group

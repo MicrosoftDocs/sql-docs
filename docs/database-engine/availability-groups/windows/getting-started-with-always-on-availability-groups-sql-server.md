@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], about"
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Getting Started with Always On Availability Groups

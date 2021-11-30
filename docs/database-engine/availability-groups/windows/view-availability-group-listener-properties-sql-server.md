@@ -12,7 +12,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # View Availability Group Listener Properties (SQL Server)

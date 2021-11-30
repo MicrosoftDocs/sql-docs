@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Resume an Availability Database (SQL Server)

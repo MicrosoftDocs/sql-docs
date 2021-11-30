@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Upgrading Always On Availability Group Replica Instances

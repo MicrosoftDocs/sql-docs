@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
   - "Availability Groups [SQL Server]"
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Prerequisites, Restrictions, and Recommendations for Always On availability groups

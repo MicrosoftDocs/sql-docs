@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - ", policies"
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # View Availability Replica Properties (SQL Server)

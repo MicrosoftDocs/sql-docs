@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], wizards"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
-ms.author: MashaMSFT
+author: MashaMSFT
 ms.author: mathoma
 ---
 # Add a database to an Always On availability group with the 'Availability Group Wizard'

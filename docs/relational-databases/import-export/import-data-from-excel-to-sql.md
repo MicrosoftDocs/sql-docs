@@ -8,8 +8,8 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+author: mathoma
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import data from Excel to SQL Server or Azure SQL Database

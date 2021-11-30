@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "OPENROWSET, Azure blob storage"
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
-author: mathoma
+ms.author: mathoma
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---

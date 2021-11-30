@@ -455,7 +455,7 @@ For a note about the minimum permission levels needed for each action in this se
    In the preceding example script, `1a4d3b9b393c4678831ccc60def75379` represents the specific version of the key that will be used. If you use this script, it doesn't matter if you update the key with a new version. The key version (for example) `1a4d3b9b393c4678831ccc60def75379` will always be used for database operations. For this scenario, you must complete two prerequisites:
    
    1. Create a **SQL Server Cryptographic Provider** key on **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\**.
-   1. Delegate access permissions on the **SQL Server Cryptographic Provider** key to the user account running the SQL Server database engine service.
+   1. Delegate "Full Control" permissions on the **SQL Server Cryptographic Provider** key to the user account running the SQL Server database engine service.
 
    > [!NOTE]
    > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider** to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.
@@ -498,6 +498,7 @@ For a note about the minimum permission levels needed for each action in this se
 1. Create a database encryption key by using the ASYMMETRIC KEY (EKMSampleASYKey).
 
     ```sql  
+    USE <DB Name>;
     --Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
     CREATE DATABASE ENCRYPTION KEY
     WITH ALGORITHM = AES_256

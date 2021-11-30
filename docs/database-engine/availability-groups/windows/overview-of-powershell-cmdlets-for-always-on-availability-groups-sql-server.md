@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], about"
   - "PowerShell [SQL Server], cmdlets"
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Overview of PowerShell Cmdlets for Always On Availability Groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], prerequisites and restrictions"
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Driver and client connectivity support for availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

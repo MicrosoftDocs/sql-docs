@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Some synchronous replicas are not synchronized
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

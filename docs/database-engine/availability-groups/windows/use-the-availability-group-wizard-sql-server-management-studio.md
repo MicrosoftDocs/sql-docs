@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], wizards"
   - "Availability Groups [SQL Server], creating"
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Use the Availability Group Wizard (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

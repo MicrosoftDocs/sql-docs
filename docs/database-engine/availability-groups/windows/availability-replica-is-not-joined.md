@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Availability replica is not joined to an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

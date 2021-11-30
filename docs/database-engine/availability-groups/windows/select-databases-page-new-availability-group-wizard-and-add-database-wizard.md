@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.swb.adddatabasewizard.selectdatabases.f1"
   - "sql13.swb.newagwizard.selectdatabases.f1"
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Select Databases Page (New Availability Group Wizard and Add Database Wizard)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

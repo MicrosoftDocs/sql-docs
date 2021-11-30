@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], endpoint"
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Create a database mirroring endpoint for an availability group using PowerShell
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

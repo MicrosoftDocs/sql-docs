@@ -10,9 +10,9 @@ helpviewer_keywords:
 - "Availability Groups [SQL Server], enhanced database failover"
 - "Availability Groups [SQL Server], failover"
 ms.assetid: 
-author: "cawrites"
+ms.author: MashaMSFT
 ms.reviewer: "mikeray"
-ms.author: chadam
+ms.author: mathoma
 ---
 # Enable enhanced database failover to a database in an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

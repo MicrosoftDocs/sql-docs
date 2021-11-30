@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "read-only routing"
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Availability Group Properties: New Availability Group (Backup Preferences Page)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

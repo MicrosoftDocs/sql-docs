@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], Failover Cluster Instances"
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=sql-server-2016"
 ---
 # Failover Clustering and Always On Availability Groups (SQL Server)

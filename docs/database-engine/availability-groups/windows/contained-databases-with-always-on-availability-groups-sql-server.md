@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "contained database, AlwaysOnAvailabilityGroups"
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Use contained databases with Always On availability groups 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

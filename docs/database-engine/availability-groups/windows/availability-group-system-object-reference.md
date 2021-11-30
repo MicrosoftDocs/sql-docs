@@ -7,8 +7,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: reference
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=sql-server-2016"
 ---
 # Always On availability group system object reference

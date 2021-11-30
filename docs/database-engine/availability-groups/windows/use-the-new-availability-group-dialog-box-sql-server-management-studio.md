@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], creating"
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Use the New Availability Group Dialog Box (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

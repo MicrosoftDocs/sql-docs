@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Some availability replicas do not have a healthy role
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

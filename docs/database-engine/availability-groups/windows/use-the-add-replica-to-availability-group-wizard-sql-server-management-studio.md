@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], wizards"
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Add a replica to your Always On Availability group using the Availability Group Wizard in SQL Server Management
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

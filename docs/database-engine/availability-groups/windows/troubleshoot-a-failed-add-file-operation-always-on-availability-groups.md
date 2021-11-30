@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "secondary databases [SQL Server], Availability Groups"
   - "Availability Groups [SQL Server], troubleshooting"
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Troubleshoot a Failed Add-File Operation (Always On Availability Groups)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

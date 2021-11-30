@@ -10,8 +10,8 @@ ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], creating"
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Create an Always On availability group using Transact-SQL (T-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

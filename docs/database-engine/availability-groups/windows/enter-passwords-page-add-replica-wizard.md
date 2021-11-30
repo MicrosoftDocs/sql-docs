@@ -10,8 +10,8 @@ ms.topic: end-user-help
 f1_keywords: 
   - "sql13.swb.addreplicawizard.enterpasswords.f1"
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Enter Passwords Page (Add Replica Wizard) for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

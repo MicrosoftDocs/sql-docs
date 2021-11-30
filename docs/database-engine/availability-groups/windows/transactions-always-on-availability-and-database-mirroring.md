@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "troubleshooting [SQL Server], cross-database transactions"
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Transactions - availability groups and database mirroring
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

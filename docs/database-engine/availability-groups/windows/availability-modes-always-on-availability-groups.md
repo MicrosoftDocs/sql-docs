@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "asynchronous-commit availability mode"
   - "Availability Groups [SQL Server], availability modes"
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-author: cawrites
-ms.author: chadam
+ms.author: MashaMSFT
+ms.author: mathoma
 ---
 # Differences between availability modes for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

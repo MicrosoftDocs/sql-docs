@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublishertables system table"
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # IHpublishertables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

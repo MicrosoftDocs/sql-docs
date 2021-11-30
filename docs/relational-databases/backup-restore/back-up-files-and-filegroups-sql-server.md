@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "backups [SQL Server], creating"
   - "filegroups [SQL Server], backing up"
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Back Up Files and Filegroups
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

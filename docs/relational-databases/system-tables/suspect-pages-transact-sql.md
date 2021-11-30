@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "suspect_pages system table"
   - "suspect pages [SQL Server]"
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # suspect_pages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

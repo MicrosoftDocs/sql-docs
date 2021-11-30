@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "restore sequences [SQL Server], planning for"
   - "full recovery model [SQL Server], planning restore sequences"
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Plan and Perform Restore Sequences (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

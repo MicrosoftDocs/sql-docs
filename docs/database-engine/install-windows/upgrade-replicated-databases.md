@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], upgrading databases"
   - "upgrading replicated databases"
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016"
 ---
 # Upgrade or patch replicated databases

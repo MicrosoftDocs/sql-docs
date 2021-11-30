@@ -10,8 +10,8 @@ ms.reviewer: ""
 ms.technology: failover-cluster-instance
 ms.topic: how-to
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # SQL Server Failover Cluster Installation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

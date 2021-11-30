@@ -8,8 +8,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: migration-guide
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Migration guide: IBM Db2 to SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]

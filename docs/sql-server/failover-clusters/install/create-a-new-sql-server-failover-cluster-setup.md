@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "nodes [Faillover Clustering], adding"
   - "clusters [SQL Server], creating"
   - "removing nodes"
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 
 # Create a New Always On Failover Cluster Instance (Setup)

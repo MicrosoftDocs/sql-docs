@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "PERCENTILE_DISC function"
   - "analytic functions,PERCENTILE_DISC"
 ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PERCENTILE_DISC (Transact-SQL)

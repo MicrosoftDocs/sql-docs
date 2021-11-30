@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "blank characters [SQL Server]"
   - "trailing blanks"
 ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RTRIM (Transact-SQL)

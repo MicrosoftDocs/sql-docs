@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "PERCENT_RANK function"
   - "analytic functions, PERCENT_RANK"
 ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PERCENT_RANK (Transact-SQL)

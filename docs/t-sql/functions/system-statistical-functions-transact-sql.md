@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "system statistical functions [SQL Server]"
   - "functions [SQL Server], statistical"
 ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # System Statistical Functions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

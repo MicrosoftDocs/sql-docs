@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "system usernames [SQL Server]"
   - "users [SQL Server], names"
 ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SYSTEM_USER (Transact-SQL)

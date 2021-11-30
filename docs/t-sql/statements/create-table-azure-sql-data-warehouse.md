@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.topic: reference
 dev_langs: 
   - "TSQL"
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # CREATE TABLE (Azure Synapse Analytics)

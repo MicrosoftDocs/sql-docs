@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "manual checkpoints [SQL Server]"
   - "pages [SQL Server], checkpoints"
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

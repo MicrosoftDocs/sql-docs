@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "character data [SQL Server]"
   - "STR function"
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STR (Transact-SQL)

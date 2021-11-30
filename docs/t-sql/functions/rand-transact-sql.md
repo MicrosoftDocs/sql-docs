@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "values [SQL Server], random float"
   - "random float value"
 ms.assetid: 363c84d6-b9fa-49ba-9a75-e44f27535ff6
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RAND (Transact-SQL)

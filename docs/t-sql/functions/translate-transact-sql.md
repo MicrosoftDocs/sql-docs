@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "TRANSLATE function"
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRANSLATE (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "statements [SQL Server], last statement"
   - "counting rows"
 ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # ROWCOUNT_BIG (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

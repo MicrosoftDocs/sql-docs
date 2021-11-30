@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "repeated spaces"
   - "SPACE function"
 ms.assetid: b4fac3b8-2d47-4c11-a6a6-009e5a538f40
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SPACE (Transact-SQL)

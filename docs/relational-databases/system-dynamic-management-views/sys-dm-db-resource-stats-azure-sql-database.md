@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_resource_stats"
   - "dm_db_resource_stats"
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ms.reviewer: wiassaf
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---

@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # DATEADD (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This function adds a *number* value (a signed integer) to a *datepart* of an input *date* value, and returns a modified date/time value.
+This function adds a *number* (a signed integer) to a *datepart* of an input *date*, and returns a modified date/time value. For example, you can use this function to find the date that is 7000 minutes from today: *number* = 7000, *datepart* = minute, *date* = today.
   
 See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) for an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions.
   

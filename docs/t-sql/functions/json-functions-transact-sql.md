@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: chadam
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 # JSON Functions (Transact-SQL)

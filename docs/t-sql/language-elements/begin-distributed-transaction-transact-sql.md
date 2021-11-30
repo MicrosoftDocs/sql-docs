@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "remote servers [SQL Server], distributed transactions"
   - "starting transactions"
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

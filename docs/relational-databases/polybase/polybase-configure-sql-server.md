@@ -35,7 +35,8 @@ For optimal query performance, create statistics on external table columns, espe
 The following Transact-SQL commands are used in this section:
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 1. Create a database scoped credential for accessing the SQL Server source. The following example creates a credential to the external data source with `IDENTITY = 'username'` and `SECRET = 'password'`.
@@ -60,6 +61,15 @@ The following Transact-SQL commands are used in this section:
         WITH ( LOCATION = 'sqlserver://SqlServer',
         PUSHDOWN = ON,
         CREDENTIAL = SQLServerCredentials);
+    ```
+
+1. Create the external table with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) The statement requires collation and the location requires three-part notation (`<database>.<schema>.<table>`).
+
+    ```sql
+    CREATE EXTERNAL TABLE DatabasesExternal (
+        name VARCHAR(128) COLLATE SQL_Latin1_General_CP1_CI_AS)
+      WITH (LOCATION = 'master.sys.databases',
+      DATA_SOURCE = SQLServerInstance);
     ```
 
 1. Optionally, create statistics on an external table.

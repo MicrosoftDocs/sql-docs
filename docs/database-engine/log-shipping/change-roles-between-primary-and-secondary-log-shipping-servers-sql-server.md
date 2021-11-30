@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "log shipping [SQL Server], failover"
   - "failover [SQL Server], log shipping"
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Change Roles Between Primary and Secondary Log Shipping Servers (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

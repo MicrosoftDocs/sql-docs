@@ -42,8 +42,8 @@ helpviewer_keywords:
   - "cross-language support"
   - "disk space [SQL Server]"
   - "localized SQL Server versions"
-ms.author: mathoma
-author: MashaMSFT
+ms.author: mikeray
+author: MikeRayMSFT
 ---
 # SQL Server 2016 and 2017: Hardware and software requirements
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

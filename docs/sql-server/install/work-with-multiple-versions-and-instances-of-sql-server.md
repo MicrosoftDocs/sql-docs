@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "32-bit edition [SQL Server]"
   - "editions [SQL Server], side-by-side installations"
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Work with multiple versions and instances of SQL Server
 

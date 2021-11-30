@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Instance Name page [SQL Server Installation Wizard]"
   - "SQL Server Installation Wizard, Instance Name page"
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 ROBOTS: noindex,nofollow
 ---
 

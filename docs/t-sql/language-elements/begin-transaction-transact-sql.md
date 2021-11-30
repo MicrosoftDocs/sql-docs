@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "starting point marked for transactions"
   - "starting transactions"
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BEGIN TRANSACTION (Transact-SQL)

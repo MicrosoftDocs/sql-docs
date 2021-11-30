@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysproxies system table"
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # dbo.sysproxies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Availability database is suspended for an availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

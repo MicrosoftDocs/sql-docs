@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # File-Snapshot Backups for Database Files in Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

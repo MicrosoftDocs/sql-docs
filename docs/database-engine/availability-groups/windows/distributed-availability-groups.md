@@ -12,8 +12,8 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "Availability Groups [SQL Server], distributed"
 ms.assetid: 
-author: "cawrites"
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Distributed availability groups
 

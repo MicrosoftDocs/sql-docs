@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: failover-cluster-instance
 ms.topic: how-to
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Configure HealthCheckTimeout Property Settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

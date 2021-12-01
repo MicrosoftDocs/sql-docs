@@ -21,7 +21,7 @@ ms.author: jroth
 # What is change data capture (CDC)?
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-In this article, learn about change data capture, which recorsd activity on a database when tables and rows have been modified. Change data capture is generally available in SQL Server and Azure SQL Managed Instance, but is currently in preview for Azure SQL Database. 
+In this article, learn about change data capture, which records activity on a database when tables and rows have been modified. Change data capture is generally available in SQL Server and Azure SQL Managed Instance, but is currently in preview for Azure SQL Database. 
 
 ## Overview 
 

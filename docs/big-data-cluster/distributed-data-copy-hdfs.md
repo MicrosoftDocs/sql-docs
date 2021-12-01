@@ -5,7 +5,7 @@ description: Use azdata distcp to perform data movement between SQL Server big d
 author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
-ms.date: 10/05/2021
+ms.date: 12/01/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -46,10 +46,10 @@ In this guide we will cover the following data copy scenarios:
 Certificates are required to create a trusted relationship between source and destination clusters. These steps are required only once per source/destination cluster combination.
 
 > [!IMPORTANT]
-> If a SQL Server big data cluster with basic authentication (non-AD) is __upgraded to CU13__, the distcp functionality won't work.
+> If a SQL Server big data cluster with basic authentication (non-AD) is __directly upgraded to CU13 or above__, the distcp functionality won't work. This doesn't affect new CU13+ cluster deployments with basic authentication.
 >
 > To enable the distcp functionality in this scenario execute the following additional steps once:
-> 
+>
 > ```bash
 > kubectl -n $CLUSTER_NAME exec -it nmnode-0-0 -- bash
 > export HADOOP_USER_NAME=hdfs

@@ -37,7 +37,7 @@ This initiates a control plane upgrade, followed by a big data cluster upgrade. 
 
 ### 2. Rotating password for the domain service account (DSA)
 
-Use the ```PASS001 - Update Administrator Domain Controller Password``` notebook in order to update the [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] [DSA password](active-directory-prerequisites.md#ad-account-for-bdc-domain-service-account). For more information on this notebook and other cluster management notebooks, see [Operational notebooks for SQL Server Big Data Clusters](cluster-manage-notebooks.md). The customer can manually update the DSA password as Big Data Clusters does not manage it. Once changed, provide the DSA admin username and password as environment variable parameters to the notebook.
+Use the ```PASS001 - Update Administrator Domain Controller Password``` notebook in order to update the [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] [DSA password](active-directory-prerequisites.md). For more information on this notebook and other cluster management notebooks, see [Operational notebooks for SQL Server Big Data Clusters](cluster-manage-notebooks.md). The customer can manually update the DSA password as Big Data Clusters does not manage it. Once changed, provide the DSA admin username and password as environment variable parameters to the notebook.
 
 >[!IMPORTANT]
 > The password rotation and big data cluster upgrade can take some time to complete depending on network speed, the number of pods, and more. A password rotation is separate process, and cannot be done in parallel with [the cluster upgrade operation](deployment-upgrade.md) or DSA password rotation.

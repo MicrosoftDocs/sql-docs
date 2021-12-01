@@ -92,7 +92,7 @@ Address
 1 Microsoft Way,Redmond,WA,98052
 ```
 
-### C.  Generating CSV file from table
+### C.  Generating CSV formated data from table
 This example uses a comma `,` as the separator value, and adds the carriage return character `char(13)` in the column separated values format of the result set.
 
 ```sql

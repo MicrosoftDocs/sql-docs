@@ -2,7 +2,7 @@
 title: Connecting using Azure Active Directory authentication
 description: Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
 ms.custom: ""
-ms.date: 05/24/2021
+ms.date: 11/30/2021
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
@@ -112,8 +112,10 @@ You have successfully logged on as: <your Managed Identity username>
 
 ## Connecting using ActiveDirectoryIntegrated authentication mode
 
-With version 6.4, Microsoft JDBC Driver adds support for ActiveDirectoryIntegrated Authentication using a Kerberos ticket on multiple platforms (Windows, Linux, and macOS).
-For more information, see [Set Kerberos ticket on Windows, Linux And macOS](#set-kerberos-ticket-on-windows-linux-and-macos). Alternatively, on Windows, mssql-jdbc_auth-\<version>-\<arch>.dll can also be used for ActiveDirectoryIntegrated authentication with JDBC Driver.
+There are two ways to use ActiveDirectoryIntegrated authentication in the Microsoft JDBC Driver for SQL Server:
+
+- On Windows, mssql-jdbc_auth-\<version>-\<arch>.dll from the [downloaded package](download-microsoft-jdbc-driver-for-sql-server.md) can be copied to a location in the system path.
+- If you can't use the DLL, starting with version 6.4, you can configure a Kerberos ticket. This method is supported on multiple platforms (Windows, Linux, and macOS). For more information, see [Set Kerberos ticket on Windows, Linux And macOS](#set-kerberos-ticket-on-windows-linux-and-macos).
 
 > [!NOTE]
 > If you are using an older version of the driver, check this [link](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) for the respective dependencies that are required to use this authentication mode.
@@ -168,6 +170,9 @@ You have successfully logged on as: <your domain user name>
 You must up a Kerberos ticket linking your current user to a Windows domain account. A summary of key steps is included below.
 
 #### Windows
+
+> [!NOTE]
+> On Windows, mssql-jdbc_auth-\<version>-\<arch>.dll from the [downloaded package](download-microsoft-jdbc-driver-for-sql-server.md) can be used instead of these Kerberos configuration steps. These steps are only required if you can't use the DLL.
 
 JDK comes with `kinit`, which you can use to get a TGT from Key Distribution Center (KDC) on a domain joined machine that is federated with Azure Active Directory.
 

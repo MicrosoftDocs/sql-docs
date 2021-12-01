@@ -21,7 +21,7 @@ See what's new in the latest Appliance Updates for Microsoft Analytics Platform 
 ## APS CU7.8
 Release date - November 2021
 
-#### SCVMM2016
+### SCVMM2016
 
 APS CU 7.8 software adds support for offline installation of SCVMM2016.
 

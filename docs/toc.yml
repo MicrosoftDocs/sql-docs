@@ -7287,7 +7287,7 @@ items:
     - name: Create linked server provider
       href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
     - name: Compare remote query methods
-      href: relational-databases/linked-servers/create-linked-servers-openquery-openrowset-exec-at.md
+      href: relational-databases/linked-servers/linked-servers-openquery-openrowset-exec-at.md
   - name: Full-text search
     href: relational-databases/search/full-text-search.md
     items:

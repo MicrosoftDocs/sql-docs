@@ -1,83 +1,129 @@
-# Linked Servers (OPENQUERY, OPENROWSET, EXEC AT)
+---
+description: "Linked Servers (Database Engine)"
+title: "Linked Servers (Database Engine)"
+ms.date: "12/02/2021"
+ms.prod: sql
+ms.technology: 
+ms.prod_service: "database-engine"
+ms.reviewer: ""
+ms.topic: conceptual
+helpviewer_keywords: 
+  - "OLE DB, linked servers"
+  - "OLE DB provider, linked servers"
+  - "server management [SQL Server], linked servers"
+  - "linked servers [SQL Server]"
+  - "distributed queries [SQL Server], linked servers"
+  - "servers [SQL Server], linked"
+  - "remote servers [SQL Server], linked servers"
+  - "linked servers [SQL Server], about linked servers"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.custom: seo-dt-2019
+---
 
-Until 2005 SQL Server, to work with remote data sources (other DBMS or SQL Server), we could use only `OPENQUERY` and `OPENROWSET`, which have a number of limitations. But since SQL Server 2005, there is another `EXEC AT` method.
+# Query remote servers with linked servers
+
+In SQL Server, there are three ways to execute a query remotely on a linked server.
+
+- `OPENQUERY`
+- `OPENROWSET`
+- `EXECUTE AT`
+
+This article describes these three methods.
 
 ## OPENQUERY 
 
 [OPENQUERY (Transact-SQL)](../../t-sql/functions/openquery-transact-sql.md)
 
-Executes the specified pass-through query on the specified linked server. This server is an OLE DB data source. `OPENQUERY` can be referenced in the FROM clause of a query as if it were a table name. OPENQUERY can also be referenced as the target table of an `INSERT`, `UPDATE`, or `DELETE` statement. This is subject to the capabilities of the OLE DB provider. Although the query may return multiple result sets, `OPENQUERY` returns only the first one.
+Executes the specified pass-through query on the specified linked server. This server is an OLE DB data source. In a query, use `OPENQUERY` in the `FROM` as if it were a table name. You can also reference `OPENQUERY` as the target table of an `INSERT`, `UPDATE`, or `DELETE` statement. This is subject to the capabilities of the OLE DB provider. Although the query may return multiple result sets, `OPENQUERY` returns only the first one.
 
-For additional information `OPENQUERY` requires a pre-added and configured Linked Server and a request text to a remote server. No need to follow the fourpart name convention to access objects.
-
+`OPENQUERY` requires a pre-added and configured linked server and a request text to a remote server. `OPENQUERY` does not require a four part name convention to access objects.
   
 ## OPENROWSET
 
-[OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
+[OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
 
-Includes all connection information that is required to access remote data from an OLE DB data source. This method is an alternative to accessing tables in a linked server and is a one-time, ad hoc method of connecting and accessing remote data by using OLE DB. For more frequent references to OLE DB data sources, use linked servers instead. For more information, see [Linked Servers (Database Engine)](https://docs.microsoft.com/en-us/sql/relational-databases/linked-servers/linked-servers-database-engine?view=sql-server-ver15). The OPENROWSET function can be referenced in the FROM clause of a query as if it were a table name. The `OPENROWSET` function can also be referenced as the target table of an `INSERT`, `UPDATE`, or `DELETE` statement, subject to the capabilities of the OLE DB provider. Although the query might return multiple result sets, `OPENROWSET` returns only the first one.
+Includes all connection information that is required to access remote data from an OLE DB data source. This method is an alternative to accessing tables in a linked server and is a one-time, ad-hoc method of connecting and accessing remote data by using OLE DB. For more frequent references to OLE DB data sources, use linked servers instead. For more information, see [Linked Servers (Database Engine)](linked-servers-database-engine.md). 
 
-`OPENROWSET` also supports bulk operations through a built-in BULK provider that enables data from a file to be read and returned as a rowset.
+In a query, use `OPENROWSET`in the `FROM` clause of a query as if it were a table name. You can also use `OPENROWSET` as the target table of an `INSERT`, `UPDATE`, or `DELETE` statement, subject to the capabilities of the OLE DB provider. Although the query might return multiple result sets, `OPENROWSET` returns only the first one.
 
-For additional information `OPENROWSET` use an explicitly written connection string. 
+`OPENROWSET` also supports bulk operations through a built-in `BULK` provider that enables data from a file to be read and returned as a rowset.
+
+For additional information, `OPENROWSET` use an explicitly written connection string. 
   
-## EXEC AT
+## EXECUTE AT
 
-[EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
+[EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
 
-Allows dynamic SQL to run on top of Linked Server. One of the parameters of the EXEC call is EXEC AT, which is designed to bypass the `OPENQUERY` and `OPENROWSET` restrictions. `EXEC AT` is a dynamic SQL on top of a Linked Server that can return any number of result sets.
+Allows dynamic SQL to run on top of Linked Server. One of the parameters of the `EXECUTE` call is `EXECUTE AT`, which is designed to bypass the `OPENQUERY` and `OPENROWSET` restrictions. `EXECUTE AT` is a dynamic SQL on top of a Linked Server that can return any number of result sets.
 
 ## Examples
 
 ### B. Executing a SELECT pass-through query with OPENQUERY
-The following example uses a pass-through SELECT query to select the rows with `OPENQUERY`
+
+The following example uses a pass-through SELECT query to select the rows with `OPENQUERY`:
+
 ```sql
-SELECT * FROM OPENQUERY ([FARAWAYSERVER], 'SELECT * FROM AdventureWorksLT.SalesLT.Customer');  
+SELECT * 
+    FROM OPENQUERY ([linkedserver], 
+        'SELECT * FROM AdventureWorksLT.SalesLT.Customer');  
 ```
 
-### C. Executing a SELECT pass-through query with OPENROW
-The following example uses a pass-through SELECT query to select the rows with `OPENROW`
+### C. Executing a SELECT pass-through query with OPENROWSET
+
+The following example uses a pass-through `SELECT` query to select the rows with `OPENROWSET`
+
 ```sql
 SELECT a.*
 FROM OPENROWSET('SQLNCLI', [FARAWAYSERVER],
      'SELECT * FROM AdventureWorksLT.SalesLT.Customer') AS a;
 ```
 
-### D. Executing a SELECT pass-through query with EXEC AT
-The following example uses a pass-through SELECT query to select the rows with `EXEC AT`
+### D. Executing a SELECT pass-through query with EXECUTE AT
+
+The following example uses a pass-through `SELECT` query to select the rows with `EXECUTE ... AT`
+
 ```sql
-EXEC ('SELECT * FROM AdventureWorksLT.SalesLT.Customer') AT [FARAWAYSERVER]
+EXECUTE ('SELECT * FROM AdventureWorksLT.SalesLT.Customer') AT [FARAWAYSERVER]
 ```
 
 ### E. Executing multiple SELECT
-The following example uses a pass-through SELECT query and getting multiple result sets
+
+The following example uses a pass-through `SELECT` query and getting multiple result sets
+
 ```sql
-EXEC ('SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.Customer;
+EXECUTE ('SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.Customer;
     SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.CustomerAddress;') AT [FARAWAYSERVER];
 ```
 
 ### F. Execute a SELECT and pass two arguments at dynamically
-The following example uses a pass-through SELECT with two arguments
+
+The following example uses a pass-through `SELECT` with two arguments
+
 ```sql
-EXEC ('SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.Customer 
+EXECUTE ('SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.Customer 
 WHERE CustomerID = ? AND LastName = ?', 10, 'Garza') AT [FARAWAYSERVER];
 ```
 
 ### G. Execute a SELECT and pass two arguments at dynamically by using variables
+
 The following example uses a pass-through SELECT with two arguments by using variables
+
 ```sql
 DECLARE @CustomerID AS INT
 DECLARE @LastName AS VARCHAR(100)
 SET @CustomerID = 10
 SET @LastName = 'Garza'
-EXEC ('SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.Customer 
+EXECUTE ('SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.Customer 
 WHERE CustomerID = ? AND LastName = ?', @CustomerID, @LastName) AT [FARAWAYSERVER];
 ```
 
 ### H. Execute a DDL Statement
+
 The following example uses a DDL statement on Linked Server
+
 ```sql
-EXEC (
+EXECUTE (
 'USE TempDB
 IF OBJECT_ID(''dbo.Table1'') IS NOT NULL
 DROP TABLE dbo.Table1
@@ -88,14 +134,16 @@ CREATE TABLE dbo.Table1
 ```
 
 ### I. Execute DROP TABLE
+
 Once you are done with your testing, clean up created objects
+
 ```sql
-EXEC (
+EXECUTE (
 'USE TempDB
 IF OBJECT_ID(''dbo.Table1'') IS NOT NULL
 DROP TABLE dbo.Table1'
 ) AT [FARAWAYSERVER];
-EXEC sp_dropserver 'FARAWAYSERVER'
+EXECUTE sp_dropserver 'FARAWAYSERVER'
 ```
 
 ### Additional Examples

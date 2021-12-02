@@ -1,6 +1,6 @@
 ---
-description: "Linked Servers (Database Engine)"
-title: "Linked Servers (Database Engine)"
+description: "Compares OPENROWSET, OPENQUERY, EXECUTE AT as options for remote execution on linked servers"
+title: "Query remote servers with linked servers (Database Engine)"
 ms.date: "12/02/2021"
 ms.prod: sql
 ms.technology: 

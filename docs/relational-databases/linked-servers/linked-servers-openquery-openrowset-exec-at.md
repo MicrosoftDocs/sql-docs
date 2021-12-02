@@ -75,7 +75,7 @@ The following example uses a pass-through `SELECT` query to select the rows with
 
 ```sql
 SELECT a.*
-FROM OPENROWSET('SQLNCLI', [FARAWAYSERVER],
+FROM OPENROWSET('SQLNCLI', [linkedserver],
      'SELECT * FROM AdventureWorksLT.SalesLT.Customer') AS a;
 ```
 
@@ -84,7 +84,7 @@ FROM OPENROWSET('SQLNCLI', [FARAWAYSERVER],
 The following example uses a pass-through `SELECT` query to select the rows with `EXECUTE ... AT`
 
 ```sql
-EXECUTE ('SELECT * FROM AdventureWorksLT.SalesLT.Customer') AT [FARAWAYSERVER]
+EXECUTE ('SELECT * FROM AdventureWorksLT.SalesLT.Customer') AT [linkedserver]
 ```
 
 ### E. Executing multiple SELECT
@@ -93,7 +93,7 @@ The following example uses a pass-through `SELECT` query and getting multiple re
 
 ```sql
 EXECUTE ('SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.Customer;
-    SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.CustomerAddress;') AT [FARAWAYSERVER];
+    SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.CustomerAddress;') AT [linkedserver];
 ```
 
 ### F. Execute a SELECT and pass two arguments at dynamically
@@ -102,7 +102,7 @@ The following example uses a pass-through `SELECT` with two arguments
 
 ```sql
 EXECUTE ('SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.Customer 
-WHERE CustomerID = ? AND LastName = ?', 10, 'Garza') AT [FARAWAYSERVER];
+WHERE CustomerID = ? AND LastName = ?', 10, 'Garza') AT [linkedserver];
 ```
 
 ### G. Execute a SELECT and pass two arguments at dynamically by using variables
@@ -115,7 +115,7 @@ DECLARE @LastName AS VARCHAR(100)
 SET @CustomerID = 10
 SET @LastName = 'Garza'
 EXECUTE ('SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.Customer 
-WHERE CustomerID = ? AND LastName = ?', @CustomerID, @LastName) AT [FARAWAYSERVER];
+WHERE CustomerID = ? AND LastName = ?', @CustomerID, @LastName) AT [linkedserver];
 ```
 
 ### H. Execute a DDL Statement
@@ -130,7 +130,7 @@ DROP TABLE dbo.Table1
 CREATE TABLE dbo.Table1
 (
     Column1 INT
-)' ) AT [FARAWAYSERVER];
+)' ) AT [linkedserver];
 ```
 
 ### I. Execute DROP TABLE
@@ -142,8 +142,8 @@ EXECUTE (
 'USE TempDB
 IF OBJECT_ID(''dbo.Table1'') IS NOT NULL
 DROP TABLE dbo.Table1'
-) AT [FARAWAYSERVER];
-EXECUTE sp_dropserver 'FARAWAYSERVER'
+) AT [linkedserver];
+EXECUTE sp_dropserver 'linkedserver'
 ```
 
 ### Additional Examples

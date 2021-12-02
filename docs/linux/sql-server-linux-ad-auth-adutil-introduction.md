@@ -31,9 +31,9 @@ Adutil is designed as a series of commands and subcommands, with additional flag
 >               "useLdaps": "true"
 >           }
 >   ```
-> This setting useLDAPS is set to "false" by default. When configuring this setting and using mssql-conf to setup the keytab, you need to ensure that mssql-conf command is running under the user mssql.  You can follow the below steps to setup the keytab using mssql-conf option:
+> By default, the useLDAPS setting is set to "false". When configuring this setting and using mssql-conf to create the keytab, make sure the mssql-conf command is running as the user mssql. To set up the keytab using the mssql-conf option, follow the steps below::
 > 
->    1.	Run as mssql user, you can run the command: “sudo su mssql” 
+>    1.	To run as mssql user, you can run the command: “sudo su mssql” 
 >    2.	Now you can run the command to setup the keytab using the command: “mssql-conf setup-ad-keytab”
 >
 >  If you are using regular LDAP we would like to clarify that passwords are not exchanged in plain text.  For more information on how to configure LDAPS and how it differs from LDAP. Please refer the article [LDAP over SSL (LDAPS) Certificate](https://social.technet.microsoft.com/wiki/contents/articles/2980.ldap-over-ssl-ldaps-certificate.aspx#Enabling_LDAPS_for_Client_Authentication)

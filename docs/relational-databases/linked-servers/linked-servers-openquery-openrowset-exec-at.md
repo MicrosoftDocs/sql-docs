@@ -1,6 +1,6 @@
 ---
-description: "Compares OPENROWSET, OPENQUERY, EXECUTE AT as options for remote execution on linked servers"
-title: "Query remote servers with linked servers (Database Engine)"
+description: "Compares OPENROWSET, OPENQUERY, EXECUTE AT as options for remote execution"
+title: "Query remote servers (Database Engine)"
 ms.date: "12/02/2021"
 ms.prod: sql
 ms.technology: 
@@ -21,9 +21,9 @@ ms.author: wiassaf
 ms.custom: seo-dt-2019
 ---
 
-# Query remote servers with linked servers
+# Query remotely
 
-In SQL Server, there are three ways to execute a query remotely on a linked server.
+In SQL Server, there are three ways to execute a query remotely.
 
 - `OPENQUERY`
 - `OPENROWSET`
@@ -43,7 +43,7 @@ Executes the specified pass-through query on the specified linked server. This s
 
 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
 
-Includes all connection information that is required to access remote data from an OLE DB data source. This method is an alternative to accessing tables in a linked server and is a one-time, ad-hoc method of connecting and accessing remote data by using OLE DB. For more frequent references to OLE DB data sources, use linked servers instead. For more information, see [Linked Servers (Database Engine)](linked-servers-database-engine.md). 
+Includes all connection information that is required to access remote data from an OLE DB data source. This method is an alternative to accessing tables in a linked server and is a one-time, ad-hoc method of connecting and accessing remote data by using OLE DB. For more frequent references to OLE DB data sources, use linked servers instead. For more information, see [Linked servers (Database Engine)](linked-servers-database-engine.md).
 
 In a query, use `OPENROWSET`in the `FROM` clause of a query as if it were a table name. You can also use `OPENROWSET` as the target table of an `INSERT`, `UPDATE`, or `DELETE` statement, subject to the capabilities of the OLE DB provider. Although the query might return multiple result sets, `OPENROWSET` returns only the first one.
 
@@ -55,7 +55,7 @@ For additional information, `OPENROWSET` use an explicitly written connection st
 
 [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
 
-Allows dynamic SQL to run on top of Linked Server. One of the parameters of the `EXECUTE` call is `EXECUTE AT`, which is designed to bypass the `OPENQUERY` and `OPENROWSET` restrictions. `EXECUTE AT` is a dynamic SQL on top of a Linked Server that can return any number of result sets.
+Allows dynamic SQL to run against a linked server. One of the parameters of the `EXECUTE` call is `AT`, which is designed to bypass the `OPENQUERY` and `OPENROWSET` restrictions. `EXECUTE (``<query>``) AT [<linked server>]` is dynamic SQL that can return any number of result sets from a remote server.
 
 ## Examples
 

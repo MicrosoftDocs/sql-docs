@@ -21,6 +21,22 @@ Adutil is designed as a series of commands and subcommands, with additional flag
 
 > [!NOTE]
 > adutil is a tool developed with SQL Server as the application. Hence, support for adutil will be limited for SQL Server use cases only.
+> 
+> For controlled and secure environments where Lightweight Directory Access Protocol (LDAP) over Secure Sockets Layer (SSL) aka LDAPS is preferred over Lightweight Directory Access Protocol (LDAP). 
+> 
+> Please enable or set the “useLdaps“ option to ‘true’ in adutil.json configuration file which is usually located at: “/var/opt/mssql/.adutil/adutil.json” when run under the mssql user.  Here is a sample json with setting:
+>
+>   ```bash
+>           {
+>               "useLdaps": "true"
+>           }
+>   ```
+> By default, the useLDAPS setting is set to "false". When configuring this setting and using mssql-conf to create the keytab, make sure the mssql-conf command is running as the user mssql. To set up the keytab using the mssql-conf option, follow the steps below::
+> 
+>    1.	To run as mssql user, you can run the command: “sudo su mssql” 
+>    2.	Now you can run the command to setup the keytab using the command: “mssql-conf setup-ad-keytab”
+>
+>  If you are using regular LDAP we would like to clarify that passwords are not exchanged in plain text.  For more information on how to configure LDAPS and how it differs from LDAP. Please refer the article [LDAP over SSL (LDAPS) Certificate](https://social.technet.microsoft.com/wiki/contents/articles/2980.ldap-over-ssl-ldaps-certificate.aspx#Enabling_LDAPS_for_Client_Authentication)
 
 ## Installing adutil
 

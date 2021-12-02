@@ -26,12 +26,11 @@ Adutil is designed as a series of commands and subcommands, with additional flag
 > 
 > Please enable or set the “useLdaps“ option to ‘true’ in adutil.json configuration file which is usually located at: “/var/opt/mssql/.adutil/adutil.json” when run under the mssql user.  Here is a sample json with setting:
 >
-> ```bash
->  {
->    "useLdaps": "true"
->  }
-> ```
->
+>   ```bash
+>           {
+>               "useLdaps": "true"
+>           }
+>   ```
 > This setting useLDAPS is set to "false" by default. When configuring this setting and using mssql-conf to setup the keytab, you need to ensure that mssql-conf command is running under the user mssql.  You can follow the below steps to setup the keytab using mssql-conf option:
 > 
 >    1.	Run as mssql user, you can run the command: “sudo su mssql” 

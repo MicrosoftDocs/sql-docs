@@ -250,10 +250,12 @@ The following data types cannot be used in PolyBase external tables:
 - `xml`
 - Any user-defined type
 
-### Data source type specific limitations
-* Oracle
+### Data source specific limitations
 
-    Oracle synonyms are not supported for usage with PolyBase.
+#### Oracle
+
+Oracle synonyms are not supported for usage with PolyBase.
+
 
 ## Locking
 

@@ -5,7 +5,7 @@ description: Spark Library Management
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
-ms.date: 10/05/2021
+ms.date: 12/01/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -32,6 +32,20 @@ Maven packages can be installed onto your Spark cluster using notebook cell conf
 ```python
 %%configure -f \
 {"conf": {"spark.jars.packages": "com.microsoft.azure:azure-eventhubs-spark_2.12:2.3.1"}}
+```
+
+### Multiple packages and additional Spark configurations
+
+In the following sample notebook cell, multiple packages are defined.
+
+```python
+%%configure -f \
+{
+    "conf": {
+        "spark.jars.packages": "com.microsoft.azure:synapseml_2.12:0.9.4,com.microsoft.azure:azure-eventhubs-spark_2.12:2.3.1",
+        "spark.jars.repositories":"https://mmlspark.azureedge.net/maven"
+    }
+}
 ```
 
 ## Install Python packages at PySpark at runtime

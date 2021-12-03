@@ -1,7 +1,7 @@
 ---
 title: Release notes - Azure Synapse Pathway
 description: Azure Synapse Pathway release notes
-author: Priyanka Langade
+author: prlangad
 ms.author: prlangad
 ms.topic: overview 
 ms.date: 12/02/2021
@@ -21,7 +21,7 @@ This article lists the additions in each release of Azure Synapse Pathway.
 ## Azure Synapse Pathway v0.5
 The v0.5 release of Azure Synapse Pathway provides support for:
 - ALTER/CREATE/DROP Procedure, Statistics, and Index objects for Microsoft SQL Server.
-- INSERT, DELETE and EXECUTE statements for Microsoft SQL Server.
+- INSERT, DELETE, and EXECUTE statements for Microsoft SQL Server.
 - ALTER/CREATE/DROP View, and SELECT statement for Snowflake.
 
 ## Azure Synapse Pathway v0.4

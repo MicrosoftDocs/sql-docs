@@ -80,9 +80,9 @@ In the **Add Remote Book** dialogue, select the desired latest version for opera
 Select **Jupyter Books: Add Remote Book**. A window opens that allows you to select a notebook. 
 
    > [!NOTE]
-   > Make sure you select the correct notebook version. It should to match the Cumulative Update version of your big data cluster.
+   > Make sure you select the correct notebook version. It should to match the cumulative update version of your big data cluster.
 
-Select the version of the notebooks base on the Cumulative Update of your big data cluster:
+Select the version of the notebooks base on the cumulative update of your big data cluster:
 
 ![Screenshot that shows how to add a remote notebook.](media/view-cluster-status/bdc-remote-guides.png)
 

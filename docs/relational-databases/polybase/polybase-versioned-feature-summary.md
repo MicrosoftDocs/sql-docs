@@ -58,6 +58,8 @@ PolyBase has the following limitations:
 
 - If you have a default SQL Server instance that is configured to listen on TCP port other than 1433, you cannot use it as a head node in a PolyBase scale-out group. When executing sp_polybase_join_group, if you pass 'MSSQLSERVER' as the instance name, SQL Server will assume port 1433 is the listener port, so the Data Movement service will be unable to connect to the head node when starting.
 
+- Oracle synonyms are not supported for usage with PolyBase.
+
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 "
 

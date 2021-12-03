@@ -2,7 +2,7 @@
 description: "sp_data_source_objects (Transact-SQL)"
 title: "sp_data_source_objects | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/14/2020"
+ms.date: "12/3/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -106,6 +106,10 @@ Use `sp_data_source_objects` and [`sp_data_source_table_columns`](sp-data-source
 * MongoDB
 
    Some earlier versions of MongoDB restrict the ability to list all databases to admin-like users. Users without this permission may get auth errors trying to execute this procedure with a null `@object_root_name`.
+
+* Oracle
+  
+  Oracle synonyms are not supported for usage with PolyBase.
 
 ## Examples  
 

@@ -15,7 +15,7 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: ""
-ms.date: "11/10/2020"
+ms.date: "12/3/2021"
 ---
 
 # sp_data_source_table_columns (Transact-SQL)
@@ -85,6 +85,8 @@ The notion of empty vs. non-empty relates to the behavior of the ODBC driver and
 Use [`sp_data_source_objects`](sp-data-source-objects.md) and `sp_data_source_table_columns` to discover external objects. These system stored procedures return the schema of tables that are available to be virtualized. Azure Data Studio uses these two stored procedures to support [data virtualization](../../azure-data-studio/extensions/data-virtualization-extension.md). Use `sp_data_source_table_columns` to discover external table schemas represented in SQL Server data types.
 
 Due to differences between collations in Hadoop source data and supported collations in SQL Server 2019, the recommended data type lengths for varchar data type columns in external tables may be much larger than expected. This is by design.
+
+Oracle synonyms are not supported for usage with PolyBase.
 
 ## Example  
 

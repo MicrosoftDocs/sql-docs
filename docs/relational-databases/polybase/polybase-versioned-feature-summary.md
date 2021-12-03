@@ -2,13 +2,13 @@
 description: "PolyBase features and limitations"
 title: "PolyBase features and limitations"
 descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
-ms.date: 08/05/2021
+ms.date: 12/03/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PolyBase features and limitations
@@ -56,7 +56,7 @@ PolyBase has the following limitations:
 
 - PolyBase services require Shared Memory protocol to be enabled to function properly.
 
-- If you have a default SQL Server instance that is configured to listen on TCP port other than 1433, you cannot use it as a head node in a PolyBase scale-out group. When executing sp_polybase_join_group, if you pass 'MSSQLSERVER' as the instance name, SQL Server will assume port 1433 is the listener port, so the Data Movement service will be unable to connect to the head node when starting.
+- If you have a default SQL Server instance that is configured to listen on TCP port other than 1433, you cannot use it as a head node in a PolyBase scale-out group. When executing `sp_polybase_join_group`, if you pass 'MSSQLSERVER' as the instance name, SQL Server will assume port 1433 is the listener port, so the Data Movement service will be unable to connect to the head node when starting.
 
 - Oracle synonyms are not supported for usage with PolyBase.
 

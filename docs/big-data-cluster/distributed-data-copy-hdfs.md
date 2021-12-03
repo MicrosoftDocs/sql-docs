@@ -46,7 +46,7 @@ In this guide we will cover the following data copy scenarios:
 Certificates are required to create a trusted relationship between source and destination clusters. These steps are required only once per source/destination cluster combination.
 
 > [!IMPORTANT]
-> If a SQL Server big data cluster with basic authentication (non-AD) is __directly upgraded to CU13 or above__, the distcp functionality won't work. This doesn't affect new CU13+ cluster deployments with basic authentication.
+> If a SQL Server big data cluster with basic authentication (non-AD) is __directly upgraded to CU13 or above__, the distcp functionality requires activation. (This doesn't affect new CU13+ cluster deployments with basic authentication.)  
 >
 > To enable the distcp functionality in this scenario execute the following additional steps once:
 >

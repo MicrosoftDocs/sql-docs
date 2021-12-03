@@ -9,7 +9,10 @@ ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords: 
+  - "sp_data_source_objects_TSQL"
+  - "sys.sp_data_source_objects_TSQL"
   - "sp_data_source_objects"
+  - "sys.sp_data_source_objects"
 helpviewer_keywords: 
   - "PolyBase"
 author: WilliamDAssafMSFT
@@ -70,7 +73,7 @@ This parameter is not used but may be implemented in the future.
 | OBJECT_TYPE | nvarchar(200) | The type of the object (Example: TABLE or DATABASE). |
 | OBJECT_NAME | nvarchar(max) | The fully qualified name of the object. Escaped using backend-specific quote character. |
 | OBJECT_LEAF_NAME | nvarchar(max) | The unqualified object name. |
-| TABLE_LOCATION | nvarchar(max) | A valid table location string that could be used for a CREATE EXTERNAL TABLE statement. Will be `NULL` if it isn't applicable. |
+| TABLE_LOCATION | nvarchar(max) | A valid table location string that could be used for the CREATE EXTERNAL TABLE statement. Will be `NULL` if it isn't applicable. |
   
 ## Permissions
 

@@ -398,7 +398,7 @@ Consider the following options:
 - Set QUERY_CAPTURE_MODE to AUTO to automatically filter out ad-hoc queries with small resource consumption.
 
 > [!TIP]
-> When using an Object-Relational Mapping (ORM) solution such as Entity Framework (EF), application queries like manual LINQ query trees or certain raw SQL queries may not be parameterized, which impacts plan re-use and the ability to track queries in the Query Store. For more information, see [EF Query caching and parameterization](/ef/core/performance/advanced-performance-topics.md#query-caching-and-parameterization) and [EF Raw SQL Queries](/ef/core/querying/raw-sql.md).
+> When using an Object-Relational Mapping (ORM) solution such as Entity Framework (EF), application queries like manual LINQ query trees or certain raw SQL queries may not be parameterized, which impacts plan re-use and the ability to track queries in the Query Store. For more information, see [EF Query caching and parameterization](/ef/core/performance/advanced-performance-topics#query-caching-and-parameterization) and [EF Raw SQL Queries](/ef/core/querying/raw-sql).
 
 ## <a name="Drop"></a> Avoid a DROP and CREATE pattern for containing objects
 

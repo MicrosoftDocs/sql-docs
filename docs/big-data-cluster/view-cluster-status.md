@@ -77,14 +77,18 @@ In the **Add Remote Book** dialogue, select the desired latest version for opera
 
 ![Screenshot that shows the Azure Data Studio palette.](media/view-cluster-status/bdc-ads-palette.png)
 
-Select **Jupyter Books: Add Remote Book**. A window opens that allows you to select a notebook. You can select the version you want:
+Select **Jupyter Books: Add Remote Book**. A window opens that allows you to select a notebook. 
+
+   > [!NOTE]
+   > Make sure you select the correct notebook version. It should to match the cumulative update version of your big data cluster.
+
+Select the version of the notebooks base on the cumulative update of your big data cluster:
 
 ![Screenshot that shows how to add a remote notebook.](media/view-cluster-status/bdc-remote-guides.png)
 
 When you select **Add**, you'll gain access to all the notebooks for your chosen version on the **Notebooks** tab of Azure Data Studio: 
 
 ![Screenshot that shows the notebooks for a specific version.](media/view-cluster-status/bdc-ads-guides.png)
-
 
 ### How to use these notebooks 
 

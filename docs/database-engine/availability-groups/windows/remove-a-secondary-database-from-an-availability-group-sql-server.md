@@ -78,7 +78,7 @@ ms.author: mathoma
   
     ```  
     Remove-SqlAvailabilityDatabase `  
-    -Path SQLSERVER:\Sql\SecondaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb8  
+    -Path SQLSERVER:\Sql\SecondaryComputer\InstanceName\AvailabilityGroups\MyAg\AvailabilityDatabases\MyDb8  
     ```  
   
     > [!NOTE]  

@@ -21,7 +21,7 @@ ms.author: wiassaf
 ms.custom: seo-dt-2019
 ---
 
-# Query remotely
+# Compare query remote execution options
 
 In SQL Server, there are three ways to execute a query remotely:
 

@@ -27,6 +27,7 @@ APS CU 7.8 software adds support for offline installation of SCVMM2016.
 
 Patched VMM with latest SQL Version.
 
+Release also includes additional security updates and bug fixes.
 
 <a name="h2-aps-cu7.7"></a>
 ## APS CU7.7

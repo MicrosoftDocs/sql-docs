@@ -122,19 +122,20 @@ Post-migration, where the second availability group is now the new primary avail
 
 #### Migrate to higher SQL Server versions
 
-During a migration scenario, it's possible to configure a distributed AG to migrate your databases to a SQL Server target that is a higher version than the source. However, such a scenario does not support autoseeding. 
+During a migration scenario, it's possible to configure a distributed AG to migrate your databases to a SQL Server target that is a higher version than the source. However, such a scenario does not support autoseeding so the databases must be restored manually, and has a few additional limitations. 
 
-When you configure the distributed AG, the seeding mode must be `MANUAL`, the failover mode must be `MANUAL`, and you must manually perform a full backup of the source database to then manually restore it, along with the transaction logs, to the secondary AG. To learn more, review the [manual seeding](configure-distributed-availability-groups.md?tabs=manual#create-distributed-availability-group-on-first-cluster) steps to configure your distributed AG. 
+When you configure the distributed AG with a SQL Server migration target that is a higher version than the source, the seeding and failover modes must be set to `MANUAL`. Additionally, you must manually perform a full and transaction log back up of the source database from the primary AG and then manually restore it, along with the transaction log, to the secondary AG. To learn more, review the [manual seeding](configure-distributed-availability-groups.md?tabs=manual#create-distributed-availability-group-on-first-cluster) steps to configure your distributed AG. 
 
 Assuming the secondary AG (AG2) is the migration target and is a higher version than the primary AG (AG1), consider the following limitations: 
 
 - You will not have read access to any of the replica databases on the secondary AG as long as the primary AG is at a lower version.
-- During this time, updates will continue to flow from the Primary AG (AG1) to the Secondary AG (AG2), but the status of the secondary AG will show as Partially Healthy, and databases on secondary replicas of the Secondary AG (AG2) will show as Synchronizing/In Recovery  (even if the AG is in sync Commit).
+- During this time, updates will continue to flow from the Primary AG (AG1) to the Secondary AG (AG2), but the status of the secondary AG will show as Partially Healthy, and databases on secondary replicas of the Secondary AG (AG2) will show as Synchronizing/In Recovery  (even if the AG is in sync commit).
 - Once the distributed AG is failed over to the higher version (AG2), AG2 should become Healthy.
 - During this time, fail-back to AG1 will not be possible, as it is at a lower version.
-- Because AG1 is at a lower version, updates will not be replicated over to it. 
-- From here, if the choice is to decommission the original AG, that can be done, and the process is complete.
-- If the choice is to maintain the distributed AG, then at this time, the first AG (AG1) should be upgraded.  At that point, AG1 should become healthy, and catch up, and fail-back becomes possible.  
+- Because AG1 is at a lower version, updates from AG2 after failover to AG2 will not be replicated over to AG1. 
+- From here, choose if you want to decommission the original (primary) AG, or if you want to upgrade AG1 and maintain the distributed AG.
+   - If you choose to decomission AG1, then remove the original primary AG from the distributed AG, and the process is complete. 
+   - If you choose to maintain the distribed AG, then upgrade the SQL Server version for AG1 to match AG2. Once AG1 is upgraded, AG1 becomes healthy, the distributed AG becomes healthy, the replicas catch up to synchronize, and fail-back becomes possible.  
 
 ### Scale out readable replicas
 

@@ -1,6 +1,6 @@
 ### YamlMime:Hub
 title: Microsoft SQL documentation
-summary: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud."
+summary: "Learn how to use SQL Server and Azure SQL, both on-premises and in the cloud."
 brand: sql
 metadata:
    title: Microsoft SQL documentation | Microsoft Docs
@@ -92,7 +92,7 @@ conceptualContent:
         - text: SQL Server Machine Learning Services
           url: machine-learning/index.yml
           itemType: whats-new
-        - text: SQL Server enabled Azure Arc (preview)
+        - text: Azure Arc-enabled SQL Server
           url: sql-server/azure-arc/overview.md
           itemType: whats-new
     - title: Install 

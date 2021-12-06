@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL TABLE (Transact-SQL)"
 title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 ms.custom: ""
-ms.date: 08/13/2021
+ms.date: 12/3/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -249,6 +249,13 @@ The following data types cannot be used in PolyBase external tables:
 - `nText`
 - `xml`
 - Any user-defined type
+
+### Data source specific limitations
+
+#### Oracle
+
+Oracle synonyms are not supported for usage with PolyBase.
+
 
 ## Locking
 

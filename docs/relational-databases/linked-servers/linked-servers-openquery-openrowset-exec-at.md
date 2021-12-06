@@ -71,7 +71,7 @@ SELECT *
         'SELECT * FROM AdventureWorksLT.SalesLT.Customer');  
 ```
 
-### C. Executing a SELECT pass-through query with OPENROWSET
+### B. Execute a SELECT pass-through query with OPENROWSET
 
 The following example uses a pass-through `SELECT` query to select the rows with `OPENROWSET`
 

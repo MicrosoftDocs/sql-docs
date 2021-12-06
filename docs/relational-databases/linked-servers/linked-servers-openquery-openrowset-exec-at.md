@@ -96,7 +96,7 @@ EXECUTE ('SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.Customer;
     SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.CustomerAddress;') AT [linkedserver];
 ```
 
-### F. Execute a SELECT and pass two arguments at dynamically
+### E. Execute a SELECT and pass two arguments
 
 The following example uses a pass-through `SELECT` with two arguments
 

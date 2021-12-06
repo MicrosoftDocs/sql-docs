@@ -118,7 +118,7 @@ EXECUTE ('SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.Customer
 WHERE CustomerID = ? AND LastName = ?', @CustomerID, @LastName) AT [linkedserver];
 ```
 
-### H. Execute a DDL Statement
+### G. Execute DDL statements with EXECUTE using linked servers
 
 The following example uses a DDL statement on Linked Server
 

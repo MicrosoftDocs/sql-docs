@@ -105,7 +105,7 @@ EXECUTE ('SELECT TOP 10 * FROM AdventureWorksLT.SalesLT.Customer
 WHERE CustomerID = ? AND LastName = ?', 10, 'Garza') AT [linkedserver];
 ```
 
-### G. Execute a SELECT and pass two arguments at dynamically by using variables
+### F. Execute a SELECT and pass two arguments, using variables
 
 The following example uses a pass-through SELECT with two arguments by using variables
 

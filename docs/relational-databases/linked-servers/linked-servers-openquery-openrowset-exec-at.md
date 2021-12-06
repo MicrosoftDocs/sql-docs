@@ -81,7 +81,7 @@ FROM OPENROWSET('SQLNCLI', [linkedserver],
      'SELECT * FROM AdventureWorksLT.SalesLT.Customer') AS a;
 ```
 
-### D. Executing a SELECT pass-through query with EXECUTE AT
+### C. Execute a SELECT pass-through query with EXECUTE AT
 
 The following example uses a pass-through `SELECT` query to select the rows with `EXECUTE ... AT`
 

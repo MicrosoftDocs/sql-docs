@@ -27,7 +27,7 @@ This article describes the distributed availability group feature. To configure 
 
 A distributed availability group is a special type of availability group that spans two separate availability groups. The availability groups that participate in a distributed availability group do not need to be in the same location. They can be physical, virtual, on-premises, in the public cloud, or anywhere that supports an availability group deployment. This includes cross-domain and even cross-platform - such as between an availability group hosted on Linux and one hosted on Windows. As long as two availability groups can communicate, you can configure a distributed availability group with them.
 
-A traditional availability group has resources configured in a Windows Server Failover Cluster (WSFC) or if on Linux, Pacemaker. A distributed availability group does not configure anything in the underlying cluster (WSFC or Pacemaker). Everything about it is maintained within SQL Server. To learn how to view information for a distributed availability group, see [Viewing distributed availability group information](#monitor-distributed-availability-group-health). 
+A traditional availability group has resources configured in a Windows Server Failover Cluster (WSFC) or if on Linux, Pacemaker. A distributed availability group does not configure anything in the underlying cluster (WSFC or Pacemaker). Everything about it is maintained within SQL Server. To learn how to view information for a distributed availability group, see [Viewing distributed availability group information](#monitor-health). 
 
 A distributed availability group requires that the underlying availability groups have a listener. Rather than provide the underlying server name for a standalone instance (or in the case of a SQL Server failover cluster instance [FCI], the value associated with the network name resource) as you would with a traditional availability group, you specify the configured listener for the distributed availability group with the parameter ENDPOINT_URL when you create it. Although each underlying availability group of the distributed availability group has a listener, a distributed availability group has no listener.
 
@@ -124,7 +124,7 @@ Post-migration, where the second availability group is now the new primary avail
 
 During a migration scenario, it's possible to configure a distributed AG to migrate your databases to a SQL Server target that is a higher version than the source. However, such a scenario does not support autoseeding. 
 
-When you configure the distributed AG, the seeding mode must be `MANUAL`, the failover mode must be `MANUAL`, and you must manually perform a full backup of the source database to then manually restore it, along with the transaction logs to the secondary AG. To learn more, review the [manual seeding](configure-distributed-availability-groups.md&tabs=manual) steps to configure your distributed AG. 
+When you configure the distributed AG, the seeding mode must be `MANUAL`, the failover mode must be `MANUAL`, and you must manually perform a full backup of the source database to then manually restore it, along with the transaction logs to the secondary AG. To learn more, review the [manual seeding](configure-distributed-availability-groups.md#manual) steps to configure your distributed AG. 
 
 Assuming the secondary AG (AG2) is the migration target and is a higher version than the primary AG (AG1), consider the following limitations: 
 

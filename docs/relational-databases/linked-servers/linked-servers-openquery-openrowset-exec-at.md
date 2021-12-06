@@ -23,7 +23,7 @@ ms.custom: seo-dt-2019
 
 # Query remotely
 
-In SQL Server, there are three ways to execute a query remotely.
+In SQL Server, there are three ways to execute a query remotely:
 
 - `OPENQUERY`
 - `OPENROWSET`

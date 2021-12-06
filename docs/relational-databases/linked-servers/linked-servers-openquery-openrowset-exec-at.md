@@ -133,7 +133,6 @@ CREATE TABLE dbo.Table1
 )' ) AT [linkedserver];
 ```
 
-### I. Execute DROP TABLE
 
 Once you are done with your testing, clean up created objects
 

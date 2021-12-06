@@ -27,7 +27,7 @@ ms.author: mathoma
   
 ##  <a name="Prerequisites"></a> Prerequisites for Enabling Always On Availability Groups  
   
--   Prior to SQL Server 2017, and Windows Server 2016, the server instance had to reside on a Windows Server Failover Cluster (WSFC) node to enable the Always On availability group feature. Starting with SQL Server 2017, and Windows Server 2016, it's possible to enable the availability group feature even if the SQL Server instance does not reside on a  Windows Server Failover Cluster.
+-   Prior to SQL Server 2017, and Windows Server 2016, the instance had to reside on a Windows Server Failover Cluster (WSFC) node to enable the Always On availability group feature. To support [read-scale availability groups](read-scale-availability-groups.md), starting with SQL Server 2017 and Windows Server 2016, it's possible to enable the availability group feature even if the SQL Server instance does not reside on a Windows Server Failover Cluster.
   
 -   The server instance must be running an edition of SQL Server that supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   

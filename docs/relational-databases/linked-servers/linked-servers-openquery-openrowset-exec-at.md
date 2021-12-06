@@ -89,7 +89,7 @@ The following example uses a pass-through `SELECT` query to select the rows with
 EXECUTE ('SELECT * FROM AdventureWorksLT.SalesLT.Customer') AT [linkedserver]
 ```
 
-### E. Executing multiple SELECT
+### D. Execute multiple SELECT statements
 
 The following example uses a pass-through `SELECT` query and getting multiple result sets
 

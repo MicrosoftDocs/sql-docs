@@ -57,6 +57,8 @@ For additional information, `OPENROWSET` use an explicitly written connection st
 
 Allows dynamic SQL to run against a linked server. One of the parameters of the `EXECUTE` call is `AT`, which is designed to bypass the `OPENQUERY` and `OPENROWSET` restrictions. `EXECUTE (``<query>``) AT [<linked server>]` is dynamic SQL that can return any number of result sets from a remote server.
 
+> [!CAUTION]
+> Avoid the use of dynamic SQL commands in applications, and restrict the permissions on users with access to dynamic SQL commands. Constructing queries to execute via `EXECUTE` can create vulnerabilities to websites and applications via SQL Injection attacks. For more information, see [SQL Injection](../../relational-databases/security/sql-injection.md).  
 ## Examples
 
 ### A. Execute a SELECT pass-through query with OPENQUERY

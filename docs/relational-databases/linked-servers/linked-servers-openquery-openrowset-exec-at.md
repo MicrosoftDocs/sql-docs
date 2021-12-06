@@ -43,7 +43,7 @@ Executes the specified pass-through query on the specified linked server. This s
 
 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
 
-Includes all connection information that is required to access remote data from an OLE DB data source. This method is an alternative to accessing tables in a linked server and is a one-time, ad-hoc method of connecting and accessing remote data by using OLE DB. For more frequent references to OLE DB data sources, use linked servers instead. For more information, see [Linked servers (Database Engine)](linked-servers-database-engine.md).
+Includes all connection information that is required to access remote data from an OLE DB data source. This method is an alternative to accessing tables in a linked server and is a one-time, ad-hoc method of connecting and accessing remote data by using OLE DB. For more frequent references to OLE DB data sources, instead consider using [linked servers](linked-servers-database-engine.md), [PolyBase](../polybase/polybase-guide.md), or direct connections between the two data sources via tools like [SQL Server Integration Services (SSIS)](../../integration-services/sql-server-integration-services.md) or custom applications. 
 
 In a query, use `OPENROWSET`in the `FROM` clause of a query as if it were a table name. You can also use `OPENROWSET` as the target table of an `INSERT`, `UPDATE`, or `DELETE` statement, subject to the capabilities of the OLE DB provider. Although the query might return multiple result sets, `OPENROWSET` returns only the first one.
 

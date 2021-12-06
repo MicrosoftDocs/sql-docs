@@ -122,7 +122,7 @@ Post-migration, where the second availability group is now the new primary avail
 
 #### Migrate to higher SQL Server versions
 
-During a migration scenario, it's possible to configure a distributed AG to migrate your databases to a SQL Server target that is a higher version than the source. However, such a scenario does not support autoseeding so the databases must be restored manually, and has a few additional limitations. 
+During a migration scenario, while it's possible to configure a distributed AG to migrate your databases to a SQL Server target that is a higher version than the source, there are a few limitations. 
 
 When you configure the distributed AG with a SQL Server migration target that is a higher version than the source, the seeding and failover modes must be set to `MANUAL`. Additionally, you must manually perform a full and transaction log back up of the source database from the primary AG and then manually restore it, along with the transaction log, to the secondary AG. To learn more, review the [manual seeding](configure-distributed-availability-groups.md?tabs=manual#create-distributed-availability-group-on-first-cluster) steps to configure your distributed AG. 
 

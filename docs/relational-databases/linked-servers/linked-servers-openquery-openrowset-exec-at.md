@@ -59,7 +59,7 @@ Allows dynamic SQL to run against a linked server. One of the parameters of the 
 
 ## Examples
 
-### B. Executing a SELECT pass-through query with OPENQUERY
+### A. Execute a SELECT pass-through query with OPENQUERY
 
 The following example uses a pass-through SELECT query to select the rows with `OPENQUERY`:
 

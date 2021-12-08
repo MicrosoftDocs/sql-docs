@@ -2,7 +2,7 @@
 title: "Import data from Excel to SQL | Microsoft Docs"
 description: This article describes methods to import data from Excel to SQL Server or Azure SQL Database. Some use a single step, others require an intermediate text file.
 ms.custom: sqlfreshmay19
-ms.date: "09/30/2019"
+ms.date: "12/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -16,9 +16,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-There are several ways to import data from Excel files to SQL Server or to Azure SQL Database. Some methods let you import data in a single step directly from Excel files; other methods require you to export your Excel data as text (CSV file) before you can import it. This article summarizes the frequently used methods and provides links for more detailed information.
+There are several ways to import data from Excel files to SQL Server or to Azure SQL Database. Some methods let you import data in a single step directly from Excel files; other methods require you to export your Excel data as text (CSV file) before you can import it. 
+
+This article summarizes the frequently used methods and provides links for more detailed information. A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this article. To learn more about the solution that interests you, follow the provided links.
 
 ## List of methods
+
+There are a number of methods to import data from Excel. You may need to install [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) to use some of these tools.
 
 You can use the following tools to import data from Excel:
 
@@ -33,52 +37,50 @@ You can use the following tools to import data from Excel:
 
 If you want to import multiple worksheets from an Excel workbook, you typically have to run any of these tools once for each sheet.
 
-A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this list. To learn more about the solution that interests you, follow the provided links.
-
 > [!IMPORTANT]
-> For detailed info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md).
+> To learn more, see [limitations and known issues for loading data](../../integration-services/load-data-to-from-excel-with-ssis.md#issues-types) to or from Excel files. 
 
-If you don't have SQL Server installed, or you have SQL Server but don't have SQL Server Management Studio installed, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-## <a name="wiz"></a> SQL Server Import and Export Wizard
 
-Import data directly from Excel files by stepping through the pages of the SQL Server Import and Export Wizard. Optionally, save the settings as a SQL Server Integration Services (SSIS) package that you can customize and reuse later.
+## <a name="wiz"></a> Import and Export Wizard
+
+Import data directly from Excel files by using the SQL Server Import and Export Wizard. You also have the option to save the settings as a SQL Server Integration Services (SSIS) package that you can customize and reuse later.
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 2. Expand **Databases**.
 3. Right-click a database.
 4. Point to **Tasks**.
-5. Click one of the following options.
+5. Choose to **Import Data** or **Export Data**: 
 
-  - **Import Data**
-  - **Export Data**
+    :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-ssms.jpg" alt-text="Start wizard SSMS":::
 
-    ![Start wizard SSMS](../../integration-services/import-export-data/media/start-wizard-ssms.jpg)
+This launches the wizard: 
 
-![Connect to an Excel data source](media/excel-connection.png)
+:::image type="content" source="media/excel-connection.png" alt-text="Connect to an Excel data source":::
 
-For an example of using the wizard to import from Excel to SQL Server, see [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+To learn more, review: 
 
-To learn about other ways to launch the Import and Export wizard, see [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
+- [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)
+- [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
-## <a name="ssis"></a> SQL Server Integration Services (SSIS)
 
-If you're familiar with SSIS and don't want to run the SQL Server Import and Export Wizard, create an SSIS package that uses the Excel Source and the SQL Server Destination in the data flow.
+## <a name="ssis"></a> Integration Services (SSIS)
 
-For more info about these SSIS components, see the following topics:
+If you're familiar with SQL Server Integration Services (SSIS) and don't want to run the SQL Server Import and Export Wizard, create an SSIS package that uses the Excel Source and the SQL Server Destination in the data flow.
 
+To learn more, review: 
 - [Excel Source](../../integration-services/data-flow/excel-source.md)
 - [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)
 
 To start learning how to build SSIS packages, see the tutorial [How to Create an ETL Package](../../integration-services/ssis-how-to-create-an-etl-package.md).
 
-![Components in the data flow](media/excel-to-sql-data-flow.png)
+:::image type="content" source="media/excel-to-sql-data-flow.png" alt-text="Components in the data flow":::
 
 ## <a name="openrowset"></a> OPENROWSET and linked servers
 
 > [!IMPORTANT]
-> In Azure SQL Database, you cannot import directly from Excel. You must first export the data to a text (CSV) file. For examples, see [Example](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+> In Azure SQL Database, you cannot import directly from Excel. You must first [export the data to a text (CSV) file](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
 > [!NOTE]
 > The ACE provider (formerly the Jet provider) that connects to Excel data sources is intended for interactive client-side use. If you use the ACE provider on SQL Server, especially in automated processes or processes running in parallel, you may see unexpected results.
@@ -88,7 +90,7 @@ To start learning how to build SSIS packages, see the tutorial [How to Create an
 Import data directly into SQL Server from Excel files by using the Transact-SQL `OPENROWSET` or `OPENDATASOURCE` function. This usage is called a *distributed query*.
 
 > [!IMPORTANT]
-> In Azure SQL Database, you cannot import directly from Excel. You must first export the data to a test (CSV) file. For examples, see [Example](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+> In Azure SQL Database, you cannot import directly from Excel. You must first [export the data to a text (CSV) file](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
 Before you can run a distributed query, you have to enable the `ad hoc distributed queries` server configuration option, as shown in the following example. For more info, see [ad hoc distributed queries Server Configuration Option](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).
 
@@ -129,9 +131,9 @@ To query the Excel data without importing it, just use the standard `SELECT ... 
 
 For more info about distributed queries, see the following topics:
 
-- [Distributed Queries](/previous-versions/sql/sql-server-2008-r2/ms188721(v=sql.105)) (Distributed queries are still supported in SQL Server 2016, but the documentation for this feature has not been updated.)
+- [Distributed Queries](/previous-versions/sql/sql-server-2008-r2/ms188721(v=sql.105)) (Distributed queries are still supported in SQL Server 2019, but the documentation for this feature has not been updated.)
 - [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
-- [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
+- [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)
 
 ### Linked servers
 
@@ -238,9 +240,9 @@ For more info about BCP, see the following topics:
 - [bcp Utility](../../tools/bcp-utility.md)
 - [Prepare Data for Bulk Export or Import](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
-## <a name="adf-wiz"></a> Copy Wizard (Azure Data Factory)
+## <a name="adf-wiz"></a> Copy Wizard (ADF)
 
-Import data saved as text files by stepping through the pages of the Azure Data Factory Copy Wizard.
+Import data saved as text files by stepping through the pages of the Azure Data Factory (ADF) Copy Wizard.
 
 As described previously in the [Prerequisite](#prereq) section, you have to export your Excel data as text before you can use Azure Data Factory to import it. Data Factory can't read Excel files directly.
 
@@ -306,7 +308,7 @@ Msg 7438, Level 16, State 1, Line 3
 The 32-bit OLE DB provider "Microsoft.ACE.OLEDB.12.0" cannot be loaded in-process on a 64-bit SQL Server.
 ```
 
-### The OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)" reported an error. The provider did not give any information about the error
+### The OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)" reported an error. 
 
 ### Cannot initialize the data source object of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)"
 
@@ -324,6 +326,9 @@ Msg 7303, Level 16, State 1, Line 3
 Cannot initialize the data source object of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)".
 ```
 
-## See Also
+## Next steps
 
-[Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)
+- [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+- [Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)
+- [bcp Utility](../../tools/bcp-utility.md)
+- [Move data by using Copy Activity](/azure/data-factory/data-factory-data-movement-activities)

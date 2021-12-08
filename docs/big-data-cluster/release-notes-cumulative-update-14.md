@@ -5,7 +5,7 @@ description: This article describes the SQL Server Big Data Clusters Cumulative 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
-ms.date: 11/18/2021
+ms.date: 12/01/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,6 +21,7 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 
    > [!WARNING]
    > On Cumulative Update 14, __the upgrade order is critical__. Upgrade your big data cluster to CU14 __before__ upgrading Kubernetes cluster to version 1.21. If not done in this order, a CU13 cluster upgrade to CU14 on a Kubernetes version 1.21 won't finish. In this case, reverting back to kubernetes version 1.20 will fix the problem.
+   > <br/> This __doesn't affect new deployments__ of SQL Server Big Data Clusters CU14 on Kubernetes API 1.21 clusters.
 
 [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU14 includes important changes and capabilities:
 

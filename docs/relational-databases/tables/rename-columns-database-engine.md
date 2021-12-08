@@ -2,7 +2,7 @@
 description: "Rename Columns (Database Engine)"
 title: "Rename Columns (Database Engine)"
 ms.custom: ""
-ms.date: "11/11/2021"
+ms.date: "12/02/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -54,10 +54,16 @@ Requires ALTER permission on the object.
 
 ### Rename a column
 
-The following example renames the column `TerritoryID` in the table `Sales.SalesTerritory` to `TerrID` in the AdventureWorksLT database.
+The following example renames the column `ErrorTime` in the table `dbo.ErrorLog` to `ErrorDateTime` in the `AdventureWorksLT` database.
 
 ```sql
-EXEC sp_rename 'dbo.ErrorLog.ErrorMessage', 'ErrorMsg', 'COLUMN';
+EXEC sp_rename 'dbo.ErrorLog.ErrorTime', 'ErrorDateTime', 'COLUMN';
+```
+
+Note the output warning, and verify other objects or queries have not been broken:
+
+```output
+Caution: Changing any part of an object name could break scripts and stored procedures.
 ```
 
 For more information, see [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).

@@ -32,7 +32,7 @@ A good example of a data consumer that this technology targets is an extraction,
 To learn how about Change Data Capture, you can also refer to this Data Exposed episode.
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Track-and-Record-Data-Changes-with-Change-Data-Capture-CDC-in-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
-## Azure SQL Database (Preview) 
+## CDC & Azure SQL Database (Preview) 
 
 > [!NOTE]
 > Support for change data capture in Azure SQL Database is currently in [preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 

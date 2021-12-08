@@ -40,7 +40,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 ### 9.4 Releases
 
 Version number: 9.4.1  
-Released: March 02, 2021
+Released: December 07, 2021
 
 Fixed issues in 9.4.1:
 

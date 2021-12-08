@@ -129,7 +129,7 @@ Here are some other basic tasks.
 
 - **See a quick example of how the wizard works.**
 
-  - **If you prefer to see screen shots.** Look at this simple example on a single page - [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+  - **If you prefer to see screenshots.** Look at this simple example on a single page - [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
   - **If you prefer to watch a video.** Watch this four-minute video from YouTube that demonstrates the wizard and explains clearly and simply how to export data to Excel - [Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049).
 

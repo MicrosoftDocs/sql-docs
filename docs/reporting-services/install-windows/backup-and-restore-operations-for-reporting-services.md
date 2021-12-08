@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-ms.date: 05/08/2019
+ms.date: 12/08/2021
 ---
 
 # Backup and Restore Operations for Reporting Services
@@ -68,9 +68,7 @@ For SharePoint mode report servers, see the "Key Management" section of [Manage 
   
 -   Rssvrpolicy.config  
   
--   Rsmgrpolicy.config  
-  
--   Reportingservicesservice.exe.config  
+-   ReportingServicesService.exe.config  
   
 -   Web.config for the Report Server  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] application
   

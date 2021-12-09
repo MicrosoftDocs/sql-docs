@@ -2,7 +2,7 @@
 title: "Apache Spark connector for SQL Server"
 description: "Learn how to use the Apache Spark connector for SQL Server." 
 ms.custom: ""
-ms.date: 08/06/2021
+ms.date: 12/09/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -214,8 +214,9 @@ jdbc_df = spark.read \
         .load()
 ```
 
-A required dependency must be installed in order to authenticate using
-Active Directory.
+A required dependency must be installed in order to authenticate using Active Directory. 
+
+The format of `user` should be username@domainname.com. 
 
 For **Scala,** the `_com.microsoft.aad.adal4j_` artifact will need to be installed.
 

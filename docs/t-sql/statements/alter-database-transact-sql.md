@@ -2,7 +2,7 @@
 description: "ALTER DATABASE (Transact-SQL)"
 title: "ALTER DATABASE (Transact-SQL)"
 ms.custom: "references_regions"
-ms.date: 11/24/2021
+ms.date: 12/09/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql

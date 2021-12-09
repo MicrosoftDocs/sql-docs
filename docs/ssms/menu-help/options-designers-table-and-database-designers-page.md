@@ -16,7 +16,7 @@ ms.author: "maghan"
 # Options (Designers - Table and Database Designers Page)
 [!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
-Use this page to determine the default behavior of the designer. To access the settings, on the **Tools** menu, click **Options**, expand the **Designers** folder, and click **Table Designer**.  
+Use this page to determine the default behavior of the designer. To access the settings, on the **Tools** menu, select **Options**, expand the **Designers** folder, and select **Table Designer**.  
 
 > [!NOTE]
 > The SSMS table designer is not available for tables in Azure Synapse Analytics Dedicated SQL pool (formerly SQL DW).

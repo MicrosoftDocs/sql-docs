@@ -2,7 +2,7 @@
 description: "SQLGetDiagRec Function"
 title: "SQLGetDiagRec Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 12/08/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -83,7 +83,7 @@ SQLRETURN SQLGetDiagRec(
  [Output] Pointer to a buffer in which to return the total number of characters (excluding the number of characters required for the null-termination character) available to return in *\*MessageText*. If the number of characters available to return is greater than *BufferLength*, the diagnostic message text in *\*MessageText* is truncated to *BufferLength* minus the length of a null-termination character.  
   
 ## Returns  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA, or SQL_INVALID_HANDLE.  
   
 ## Diagnostics  
  **SQLGetDiagRec** does not post diagnostic records for itself. It uses the following return values to report the outcome of its own execution:  

@@ -2,7 +2,7 @@
 description: "ALTER DATABASE (Transact-SQL)"
 title: "ALTER DATABASE (Transact-SQL)"
 ms.custom: "references_regions"
-ms.date: 11/24/2021
+ms.date: 12/09/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -1035,13 +1035,18 @@ ALTER DATABASE { database_name | Current }
 
 ## Arguments
 
-*database_name*   
+#### *database_name*   
 Specifies the name of the database to be modified.
 
-MODIFY NAME = *new_database_name*   
-Renames the database with the name specified as *new_database_name*. The 'MODIFY NAME' option is not available for dedicated SQL Pools created in a Synapse Workspace.
+#### MODIFY NAME = *new_database_name*   
+Renames the database with the name specified as *new_database_name*. 
+ 
+The 'MODIFY NAME' option has some support limitations in Azure Synapse:
+ - Unsupported with Azure Synapse serverless pools
+ - Unsupported with SQL dedicated pools created in your Azure Synapse Workspace
+ - Supported with dedicated SQL pools (formerly SQL DW) created via the [Azure portal](https://portal.azure.com/#create/Microsoft.SQLDataWarehouse)
 
-MAXSIZE   
+#### MAXSIZE   
 The default is 245,760 GB (240 TB).
 
 **Applies to:** Optimized for Compute Gen1
@@ -1052,7 +1057,7 @@ The maximum allowable size for the database. The database cannot grow beyond MAX
 
 The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE. Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
 
-SERVICE_OBJECTIVE   
+#### SERVICE_OBJECTIVE   
 Specifies the compute size (service objective). For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## Permissions
@@ -1088,8 +1093,6 @@ You cannot change the database collation.
 Before you run these examples, make sure the database you are altering is not the current database. The current database must be a different database than the one you are altering, therefore ALTER must be run while connected to the `master` database.
 
 ### A. Change the name of the database
-
-The 'MODIFY NAME' option is not available for dedicated SQL Pools created in a Synapse Workspace.
 
 ```sql
 ALTER DATABASE AdventureWorks2012

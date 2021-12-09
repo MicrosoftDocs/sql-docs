@@ -109,7 +109,7 @@ In order to start the SKU recommendation process, specify the `GetSkuRecommendat
 - **databaseDenyList** (_Optional_): Space separated list of names of databases to be excluded for SKU recommendation. Only set one of the following or neither: databaseAllowList, databaseDenyList. (Default: null)
 - **overwrite** (_Optional_): Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
 - **displayResult** (_Optional_): Whether or not to print the SKU recommendation results to the console. (Default: true)
-- **outputFolder** (_Optional_): Folder in which performance data, reports, and logs will be written to/read from. (Default:%LocalAppData%/Microsoft/SqlAssessmentConsole)
+- **outputFolder** (_Optional_): Folder in which performance data, reports, and logs will be written to/read from. (Default:%LocalAppData%\Microsoft\SqlAssessment)
 
 Advanced settings for the SKU recommendations can be found in the `Console.Settings.json` file in the root directory. Currently, it includes the following customizable parameters:
 
@@ -129,9 +129,7 @@ Advanced settings for the SKU recommendations can be found in the `Console.Setti
 Alternatively, the SKU recommendation process can be invoked by providing the appropriate arguments in a JSON configuration file, and passing the configuration file to the tool by running the executable without an action, as follows:
 
 ```
-
  .\SqlAssessment.exe --configFile C:\path\to\config.json
-
 ```
 
 Below is a sample ConfigFile equivalent to the SKU recommendations action described above:
@@ -190,14 +188,14 @@ The following is an example output of a SQL Server on Azure VM recommendation:
 
 :::image type="content" source="media/sku-recommendations-azure-sql-virtual-machine.png" alt-text="Screenshot of SQL Server on Azure VM SKU tier and size recommendations output shown in console.":::
 
-The output of the SKU recommendations covers the following sections:
+The output of the SKU recommendation is saved both as a detailed report in JSON format and a summarized easy to read HTML file. The output covers the following sections:
 
 - **Instance Name**: Name of the on-premises SQL Server instance(s)
 - **Database Name**: Name of the on-premises SQL Server database(s)
 - **SKU Recommendation**: The minimum cost-efficient SKU offering among all the performance eligible SKUs that could accommodate your workloads.
 - **Recommendation Reason**: For each tier that is recommended, we provide the reasons and collected data values driving the recommendations.
 
-The final recommended tier and configuration values for that tier reflect the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is the S4 standard tier, then choosing S3 or below may cause queries to time out or fail to execute.
+The final recommended tier and configuration values for that tier reflect the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases.
 
 ## Next step
 

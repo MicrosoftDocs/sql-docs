@@ -111,37 +111,7 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 
 ### tempdb sizes for DTU-based service tiers
 
-<!-- tempdb being larger for Basic and 50 eDTU pools than for 100-400 eDTU pools reflects actual config (historical reasons) --> 
-
-|Service-level objective|Maximum `tempdb` data file size (GB)|Number of `tempdb` data files|Maximum `tempdb` data size (GB)|
-|---|---:|---:|---:|
-|Basic|13.9|1|13.9|
-|S0|13.9|1|13.9|
-|S1|13.9|1|13.9|
-|S2|13.9|1|13.9|
-|S3|32|1|32
-|S4|32|2|64|
-|S6|32|3|96|
-|S7|32|6|192|
-|S9|32|12|384|
-|S12|32|12|384|
-|P1|13.9|12|166.7|
-|P2|13.9|12|166.7|
-|P4|13.9|12|166.7|
-|P6|13.9|12|166.7|
-|P11|13.9|12|166.7|
-|P15|13.9|12|166.7|
-|Basic Elastic Pools (all DTU configurations)|13.9|12|166.7|
-|Standard Elastic Pools (50 eDTU)|13.9|12|166.7|
-|Standard Elastic Pools (100 eDTU)|32|1|32|
-|Standard Elastic Pools (200 eDTU)|32|2|64|
-|Standard Elastic Pools (300 eDTU)|32|3|96|
-|Standard Elastic Pools (400 eDTU)|32|3|96|
-|Standard Elastic Pools (800 eDTU)|32|6|192|
-|Standard Elastic Pools (1200 eDTU)|32|10|320|
-|Standard Elastic Pools (1600-3000 eDTU)|32|12|384|
-|Premium Elastic Pools (all DTU configurations)|13.9|12|166.7|
-||||
+See Tempdb DTU resource limits for [single databases](/azure/azure-sql/database/resource-limits-dtu-single-databases#tempdb-sizes) and [pooled databases](/azure/azure-sql/database/resource-limits-dtu-elastic-pools#tempdb-sizes) for Azure SQL Database. 
 
 ### tempdb sizes for vCore-based service tiers
 

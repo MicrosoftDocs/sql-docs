@@ -16,13 +16,13 @@ author: aciortea
 ms.author: aciortea
 ---
 
-# Identify the right Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM SKU for your on-premises database
+# Identify the right Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VM SKU for your on-premises database
 
-Migrating  databases to the cloud can be complicated, especially when trying to select the best Azure SQL Database, SQL Managed Instance or SQL Server on Azure VM target and SKU for your database. Our goal with the Database Migration Assistant (DMA) is to help address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output. Using performance data points DMA now recommends an appropriate target Azure SQL SKU, as well as an explanation for the recommendation.
+Migrating databases to the cloud can be complicated. Especially so when trying to select the best Azure SQL Database, SQL Managed Instance, or SQL Server on Azure VM target and SKU for your database. Database Migration Assistant (DMA) helps address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output. Using performance data DMA can now recommend an appropriate target Azure SQL SKU, and an explanation for the recommendation.
 
-The SKU recommendations feature allows you to identify both the minimum recommended Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM SKU based on performance data points collected from your source SQL Server instances hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size. This functionality is currently available only via the Command Line Interface (CLI).
+The SKU recommendations feature allows you to both collect performance data from your source SQL Server instances hosting your databases and recommend minimum Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VM SKU based on the data collected. The feature provides recommendations related to pricing tier, compute level, and data size. This functionality is currently available only via the Command Line Interface (CLI).
 
-The following are instructions to help you determine the SKU recommendations and provision corresponding databases in Azure using DMA.
+The following are instructions to help you determine the SKU recommendations and to provision corresponding databases in Azure using DMA.
 
 [!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
@@ -37,7 +37,7 @@ The following are instructions to help you determine the SKU recommendations and
 
 ## Collect performance data
 
-The collected data includes limited information about the hardware configuration of your server, as well SQL-specific performance data points from system Dynamic Management Views (DMVs)  such as CPU, memory, and storage usage, as well as IO throughput and IO latency. The collected data is stored locally on your machine. The collected data can then be aggregated and analyzed, and by examining the performance characteristics of your source instance, SKU recommendations can be determined for Azure SQL offerings (including SQL Database, SQL Managed Instance, and SQL on Azure VM) that best suit your workload while also being cost-effective.
+The collected data includes limited information about the hardware configuration of your server and aggregated SQL-specific performance data from system Dynamic Management Views (DMVs) such as CPU, memory, storage usage, IO throughput, and IO latency. The collected data is stored locally on your machine for further aggregation and analysis. The performance characteristics of your source instance is analyzed to enable SKU recommendations for Azure SQL offerings (including SQL Database, SQL Managed Instance, and SQL on Azure VM) that best suit your workload while also being cost-effective.
 
 In the DMA installation path, locate the SQLAssessmentConsole folder and the SqlAssessment.exe application
 
@@ -82,7 +82,7 @@ Below is a sample ConfigFile equivalent to the performance data collection actio
 
 Sample config files for all of the actions can be found in the `Example` folder under DMA installation path: AssessSampleConfigFile.json, PerfDataCollectionSampleConfigFile.json, and GetSkuRecommendationSampleConfigFile.json.
 
-After the command executes, the performance and configuration data points are saved as a set of three *_Counters.csv files per target instance, each containing the server and instance name. You can use this file as input for the next part of the process, which will provide SKU recommendations for Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM.
+After the command executes, the performance and configuration data points are saved as a set of three *_Counters.csv files per target instance, each containing the server, and instance name. You can use this file as input for the next part of the process, which will provide SKU recommendations for Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VM.
 
 ## Use the console application to get SKU recommendations
 
@@ -90,17 +90,17 @@ The data points collected by the previous step will be used as the input for the
 
 For the single database option, DMA will provide recommendations for the Azure SQL Database single database tier, the compute level, and the recommended storage configuration for each database on your SQL instance.
 
-For Azure SQL Managed Instance and SQL Server on Azure VM, the recommendations support a lift-and-shift scenario. As a result, SKU recommendations console app can provide you with recommendations for the Azure SQL Managed Instance or SQL Server on Azure VM tier, the compute level, and the recommended storage configuration for the set of databases on your SQL instance. You can also specify only a subset of databases to be included or excluded from the SKU recommendations.
+For Azure SQL Managed Instance and SQL Server on Azure VM, the recommendations support a lift-and-shift scenario. As a result, SKU recommendations console app can provide you with recommendations for the Azure SQL Managed Instance, or SQL Server on Azure VM tier, the compute level, and the recommended storage configuration for the set of databases on your SQL instance. You can also specify only a subset of databases to be included or excluded from the SKU recommendations.
 
-`GetSkuRecommendation` uses by default a baseline strategy which maps collected performance data values representative for the workload (based on the percentile value specified) to the right Azure SQL SKU.
-We also expose an elastic strategy (statistical approach), which generates a unique price-to-performance curve based on the collected performance data, and by analyzing the workload patterns in comparison to customers already migrated to Azure SQL.
+`GetSkuRecommendation` uses by default a baseline strategy, which maps collected performance data values representative for the workload (based on the percentile value specified) to the right Azure SQL SKU.
+We also offer an elastic strategy (statistical approach), which generates a unique price-to-performance curve based on the collected performance data by analyzing the workload patterns against a model based on customers who already migrated to Azure SQL.
 
 In order to start the SKU recommendation process, specify the `GetSkuRecommendation` action in the console application, with the following arguments:
 
-- **perfQueryIntervalInSec** (_Optional_):  Interval at which performance data was queried, in seconds. Note: This must match the value that was originally used during the performance data collection. (Default: 30)
-- **targetPlatform** (_Optional_): Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. If Any is selected, then SKU recommendations for all three target platforms are evaluated, and the best fit is returned. (Default: Any)
+- **perfQueryIntervalInSec** (_Optional_):  Interval at which performance data was queried, in seconds. Note: The value provided must match the value originally used during the performance data collection. (Default: 30)
+- **targetPlatform** (_Optional_): Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any. Choosing Any allows SKU recommendations for all three target platforms to be evaluated, and the best fit is returned. (Default: Any)
 - **targetSqlInstance** (_Optional_): Name of the SQL instance that SKU recommendation targets.  (Default: outputFolder is scanned for files created by the PerfDataCollection action, and recommendations are provided for every instance found)
-- **targetPercentile** (_Optional_): Percentile of data points to be used during aggregation of the performance data. Only used for baseline (non-elastic) strategy).Only used for baseline (non-elastic) strategy. (Default: 95)
+- **targetPercentile** (_Optional_): Percentile of data points to be used during aggregation of the performance data. Only used for baseline (non-elastic) strategy). Only used for baseline (non-elastic) strategy. (Default: 95)
 - **scalingFactor** (_Optional_): Scaling ('comfort') factor used during SKU recommendation. For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores. (Default: 100)
 - **startTime** (_Optional_): UTC start time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. Only used for baseline (non-elastic) strategy. (Default: all data points collected will be considered)
 - **endTime** (_Optional_): UTC end time of performance data points to consider during aggregation, in "YYYY-MM-DD HH:MM" format. Only used for baseline (non-elastic) strategy. (Default: all data points collected will be considered)
@@ -109,7 +109,7 @@ In order to start the SKU recommendation process, specify the `GetSkuRecommendat
 - **databaseDenyList** (_Optional_): Space separated list of names of databases to be excluded for SKU recommendation. Only set one of the following or neither: databaseAllowList, databaseDenyList. (Default: null)
 - **overwrite** (_Optional_): Whether or not to overwrite any existing SKU recommendation reports. (Default: true)
 - **displayResult** (_Optional_): Whether or not to print the SKU recommendation results to the console. (Default: true)
-- **outputFolder** (_Optional_): Folder in which performance data, reports, and logs will be written to/read from. (Default:%LocalAppData%\Microsoft\SqlAssessment)
+- **outputFolder** (_Optional_): Folder in which performance data, reports, and logs will be written to/read from. (Default: %LocalAppData%\Microsoft\SqlAssessment)
 
 Advanced settings for the SKU recommendations can be found in the `Console.Settings.json` file in the root directory. Currently, it includes the following customizable parameters:
 
@@ -149,7 +149,7 @@ Below is a sample ConfigFile equivalent to the SKU recommendations action descri
 }
  ```
 
-In order to get SKU recommendations for a specific Azure SQL platform instead of selecting one automatically, provide a value for the --targetPlatform option, as follows:
+In order to get SKU recommendations for a specific Azure SQL platform instead of selecting one automatically, provide a value for the `--targetPlatform` option, as follows:
 
 **Sample 1: Getting SKU recommendations  for Azure SQL Database.**
 
@@ -199,4 +199,4 @@ The final recommended tier and configuration values for that tier reflect the mi
 
 ## Next step
 
-- For a complete listing of commands for running DMA from the CLI, see the article [Run Data Migration Assistant from the command line](./dma-commandline.md).
+- For a complete list of commands for running DMA from the CLI, see the article [Run Data Migration Assistant from the command line](./dma-commandline.md).

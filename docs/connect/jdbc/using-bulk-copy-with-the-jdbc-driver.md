@@ -673,6 +673,8 @@ public class BulkCopyCSV {
 }
 ```  
 
+Please note that when setting a custom delimiter to escape it if it is a regex character such as '|'.
+
 ### Bulk copy with delimiters as data in CSV file
 
 Driver version 8.4.1 adds a new API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`. When set to true, the following rules will apply:

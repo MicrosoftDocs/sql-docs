@@ -20,7 +20,7 @@ The redistributable installer for Microsoft OLE DB Driver for SQL Server install
 
 Microsoft OLE DB Driver 18.6.3 for SQL Server is the latest general availability (GA) version. If you have a previous version of Microsoft OLE DB Driver 18 for SQL Server installed, installing 18.6.3 upgrades it to 18.6.3.
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2164384)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2183083)**  
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft OLE DB Driver for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2183084)**  
 
 ### Version information

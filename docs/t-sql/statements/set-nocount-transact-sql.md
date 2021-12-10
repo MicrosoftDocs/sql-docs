@@ -47,7 +47,7 @@ SET NOCOUNT { ON | OFF }
   
  The @@ROWCOUNT function is updated even when SET NOCOUNT is ON.  
   
- SET NOCOUNT ON prevents the sending of DONE_IN_PROC messages to the client for each statement in a stored procedure. For stored procedures that contain several statements that do not return much actual data, or for procedures that contain [!INCLUDE[tsql](../../includes/tsql-md.md)] loops, setting SET NOCOUNT to ON can provide a significant performance boost, because network traffic is greatly reduced.  
+ SET NOCOUNT ON prevents the sending of DONEINPROC messages to the client for each statement in a stored procedure. For stored procedures that contain several statements that do not return much actual data, or for procedures that contain [!INCLUDE[tsql](../../includes/tsql-md.md)] loops, setting SET NOCOUNT to ON can provide a significant performance boost, because network traffic is greatly reduced.  
   
  The setting specified by SET NOCOUNT is in effect at execute or run time and not at parse time.  
   

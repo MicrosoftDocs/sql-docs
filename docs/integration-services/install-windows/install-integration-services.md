@@ -40,9 +40,9 @@ Before you install [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE
 
 You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in the following configurations:
 
-- You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on a computer that has no previous instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- Install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on a computer that has no previous instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-- You can install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] side by side with an existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- Install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] side by side with an existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 When you upgrade to the latest version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on a computer that has an earlier version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the current version is installed side by side with the earlier version.
 
@@ -62,7 +62,7 @@ After you review the installation requirements for [!INCLUDE[ssNoVersion](../../
 
    - Under **Instance Features**, optionally select **Database Engine Services** to host the SSIS Catalog database, `SSISDB`, to store, manage, run, and monitor SSIS packages.
 
-   ![Install Integration Services feature selection](install-integration-services/install-integration-services-sql-setup.png)
+   ![Install Integration Services feature selection](install-integration-services/sql-server-setup-feature-selection.png)
 
 3. Consider installation additional components for Integration Services. For more information, see the [Install additional components for Integration Services](#complete) section of this article.
 
@@ -107,7 +107,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
   - SQL Server Import and Export Wizard.
 
-   > ![IMPORTANT]
+   > [!IMPORTANT]
    > Beginning with Visual Studio 2019, there is no standalone installer for SSDT. You now can get the SSIS designer extension from the [VS market place](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 
 - **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server Integration Services Feature Pack for Azure](../azure-feature-pack-for-integration-services-ssis.md). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:
@@ -129,6 +129,8 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
   - Microsoft Connectors for Oracle and Teradata by Attunity. To get these components, see [Attunity connectors](../attunity-connectors.md).
 
 ## Next steps
+
+For more information about Integration Services installation and feature updates, see the following articles:
 
 - [Installing Integration Services Versions Side by Side](installing-integration-services-versions-side-by-side.md)
 

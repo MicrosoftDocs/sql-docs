@@ -2,7 +2,7 @@
 title: System requirements
 description: Find the system requirements for the JDBC driver. Including what Java, operation system, and database versions are supported.
 ms.custom: ""
-ms.date: 07/30/2021
+ms.date: 12/07/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -49,7 +49,7 @@ ms.author: v-davidengel
 
 **Microsoft JDBC Driver 9.4 for SQL Server:**  
 
-  The JDBC Driver 9.4 includes three JAR class libraries in each installation package: **mssql-jdbc-9.4.0.jre8.jar**, **mssql-jdbc-9.4.0.jre11.jar**, and **mssql-jdbc-9.4.0.jre16.jar**.
+  The JDBC Driver 9.4 includes three JAR class libraries in each installation package: **mssql-jdbc-9.4.1.jre8.jar**, **mssql-jdbc-9.4.1.jre11.jar**, and **mssql-jdbc-9.4.1.jre16.jar**.
 
   The JDBC Driver 9.4 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 16.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 16.0.
   
@@ -57,9 +57,9 @@ ms.author: v-davidengel
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|  
-|mssql-jdbc-9.4.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception. |
-|mssql-jdbc-9.4.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception. |
-|mssql-jdbc-9.4.0.jre16.jar|4.3|16|Requires a Java Runtime Environment (JRE) 16.0. Using JRE 15.0 or lower throws an exception. |
+|mssql-jdbc-9.4.1.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception. |
+|mssql-jdbc-9.4.1.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception. |
+|mssql-jdbc-9.4.1.jre16.jar|4.3|16|Requires a Java Runtime Environment (JRE) 16.0. Using JRE 15.0 or lower throws an exception. |
 
   The JDBC Driver 9.4 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML:  
   
@@ -67,7 +67,7 @@ ms.author: v-davidengel
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>9.4.0.jre11</version>
+    <version>9.4.1.jre11</version>
 </dependency>
 ```
 

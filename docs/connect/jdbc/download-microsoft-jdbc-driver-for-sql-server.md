@@ -1,7 +1,7 @@
 ---
 title: Download
 description: Download the Microsoft JDBC Driver for SQL Server to develop Java applications that connect to SQL Server and Azure SQL Database.
-ms.date: 08/04/2021
+ms.date: 12/07/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -19,13 +19,13 @@ The Microsoft JDBC Driver for SQL Server is a Type 4 JDBC driver that provides d
 
 Version 9.4 is the latest general availability (GA) version. It supports Java 8, 11, and 16. If you need to use an older Java runtime, see the [Java and JDBC specification support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support) to see if there's a supported driver version you can use. We're continually improving Java connectivity support. As such we highly recommend that you work with the latest version of Microsoft JDBC driver.
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2168495)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2168494)**
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2183120)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 9.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2183223)**
 
 ### Version information
 
-- Release number: 9.4.0
-- Released: August 4, 2021
+- Release number: 9.4.1
+- Released: December 7, 2021
 
 When you download the driver, there are multiple JAR files. The name of the JAR file indicates the version of Java that it supports.
 
@@ -36,11 +36,11 @@ When you download the driver, there are multiple JAR files. The name of the JAR 
 
 This release of Microsoft JDBC Driver for SQL Server is available in the following languages:
 
-Microsoft JDBC Driver 9.4.0 for SQL Server (zip):
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2168495&clcid=0x40a)
+Microsoft JDBC Driver 9.4.1 for SQL Server (zip):
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2183120&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2183120&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2183120&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2183120&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2183120&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2183120&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2183120&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2183120&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2183120&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2183120&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2183120&clcid=0x40a)
 
-Microsoft JDBC Driver 9.4.0 for SQL Server (tar.gz):
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2168494&clcid=0x40a)
+Microsoft JDBC Driver 9.4.1 for SQL Server (tar.gz):
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2183223&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2183223&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2183223&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2183223&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2183223&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2183223&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2183223&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2183223&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2183223&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2183223&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2183223&clcid=0x40a)
 
 ### Release notes
 
@@ -58,7 +58,7 @@ The JDBC driver can be added to a Maven project by adding it as a dependency in 
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>9.4.0.jre11</version>
+    <version>9.4.1.jre11</version>
 </dependency>
 ```
 

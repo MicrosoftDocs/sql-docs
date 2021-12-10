@@ -7279,12 +7279,15 @@ items:
       - name: Reddit >>
         href: https://www.reddit.com/r/SQLServer
   - name: Linked servers
-    href: relational-databases/linked-servers/linked-servers-database-engine.md
     items:
-    - name: Create Linked Servers
+    - name: Overview
+      href: relational-databases/linked-servers/linked-servers-database-engine.md
+    - name: Create linked servers
       href: relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
-    - name: Create Linked Server Provider
+    - name: Create linked server provider
       href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
+    - name: Compare remote query methods
+      href: relational-databases/linked-servers/linked-servers-openquery-openrowset-exec-at.md
   - name: Full-text search
     href: relational-databases/search/full-text-search.md
     items:

@@ -1,8 +1,8 @@
 ---
-description: "Use the inserted and deleted Tables"
-title: "Use the inserted and deleted Tables | Microsoft Docs"
+description: Use inserted and deleted tables with DML triggers
+title: Learn how to use the inserted and deleted tables with DML triggers to inspect changes.
 ms.custom: ""
-ms.date: "09/05/2021"
+ms.date: 12/10/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -20,9 +20,12 @@ author: "rothja"
 ms.author: "jroth"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Use the inserted and deleted Tables
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  DML trigger statements use two special tables: the deleted table and the inserted tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically creates and manages these tables. You can use these temporary, memory-resident tables to test the effects of certain data modifications and to set conditions for DML trigger actions. You cannot directly modify the data in the tables or perform data definition language (DDL) operations on the tables, such as CREATE INDEX.  
+
+  DML trigger statements use two special tables: the *deleted* and *inserted* tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically creates and manages these tables. You can use these temporary, memory-resident tables to test the effects of certain data modifications and to set conditions for DML trigger actions. You cannot directly modify the data in the tables or perform data definition language (DDL) operations on the tables, such as CREATE INDEX.  
   
  In DML triggers, the inserted and deleted tables are primarily used to perform the following:  
   
@@ -34,11 +37,16 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Find the difference between the state of a table before and after a data modification and take actions based on that difference.  
   
- The deleted table stores copies of the affected rows during DELETE and UPDATE statements. During the execution of a DELETE or UPDATE statement, rows are deleted from the trigger table and transferred to the deleted table. The trigger table is the table on which the DML trigger runs. The deleted table and the trigger table ordinarily have no rows in common.
+ The deleted table stores copies of the original rows in the trigger table before they were changed by a DELETE or UPDATE statement (the trigger table is the table on which the DML trigger runs). During the execution of a DELETE or UPDATE statement, the affected rows are first copied from the trigger table and transferred to the deleted table. The deleted table and the trigger table ordinarily have no rows in common.
   
- The inserted table stores copies of the affected rows during INSERT and UPDATE statements. During an insert or update transaction, new rows are added to both the inserted table and the trigger table. The rows in the inserted table are copies of the new rows in the trigger table.  
+ The inserted table stores copies of the changed rows after an INSERT or UPDATE statement. During the execution of an INSERT or UPDATE statement, the changed rows in the trigger table are copied to the insert table. The rows in the inserted table are copies of the new or updated rows in the trigger table.  
   
- An update transaction is similar to a delete operation followed by an insert operation; the old rows are copied to the deleted table first, and then the new rows are copied to the trigger table and to the inserted table.  
+ An update transaction is similar to a delete operation followed by an insert operation. Consider the following sequence of events:
+ 
+ 1. An UPDATE statement is run against a row in the trigger table. 
+ 2. The original row is copied to the deleted table.
+ 3. The trigger table is updated.
+ 4. The new row in the trigger table is copied to the inserted table.  
   
  When you set trigger conditions, use the inserted and deleted tables appropriately for the action that fired the trigger. Although referencing the deleted table when testing an INSERT or the inserted table when testing a DELETE does not cause any errors, these trigger test tables do not contain any rows in these cases.  
   

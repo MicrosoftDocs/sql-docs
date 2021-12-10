@@ -64,7 +64,7 @@ After you review the installation requirements for [!INCLUDE[ssNoVersion](../../
 
    ![Install Integration Services feature selection](install-integration-services/sql-server-setup-feature-selection.png)
 
-3. Consider installation additional components for Integration Services. For more information, see the [Install additional components for Integration Services](#complete) section of this article.
+3. Consider installation additional components for Integration Services. For more information, see the [Install additional components](#complete) section of this article.
 
 > [!NOTE]
 > Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that you can select for installation on the **Feature Selection** page of the Setup Wizard install a partial subset of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components. These components are useful for specific tasks, but the functionality of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is limited. For example, the **Database Engine Services** option installs the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components required for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard. To ensure a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you must select **Integration Services** on the **Feature Selection** page.
@@ -77,7 +77,7 @@ To use a dedicated server for extraction, transformation, and loading (ETL) proc
 
 By default, in a new installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is configured not to log events that are related to the running of packages to the Application event log. This setting prevents too many event log entries when you use the Data Collector feature of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. The events that aren't logged are EventID 12288, "Package started," and EventID 12289, "Package finished successfully." To log these events to the Application event log, open the registry for editing. Then, in the registry, locate the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS** node, and change the **DWORD** value of the **LogPackageExecutionToEventLog** setting from `0` to `1`.
 
-## <a id="complete"></a>Install additional components for Integration Services
+## <a id="complete"></a>Install additional components
 
 For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], select the components that you need from the following list:
 

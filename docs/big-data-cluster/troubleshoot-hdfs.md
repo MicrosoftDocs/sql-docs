@@ -5,7 +5,7 @@ description: Troubleshoot HDFS in SQL Server Big Data Clusters
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
-ms.date: 11/05/2021
+ms.date: 12/10/2021
 ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster

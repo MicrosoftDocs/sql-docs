@@ -30,7 +30,11 @@ SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platf
 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] can [extract and transform data](./data-flow/data-flow.md) from a wide variety of sources such as XML data files, flat files, and relational data sources, and then load the data into one or more destinations.
 
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes a rich set of built-in [tasks](./control-flow/integration-services-tasks.md) and [transformations](./data-flow/transformations/integration-services-transformations), [graphical tools](ssis-designer.md) for building packages, and the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [Catalog database](./catalog/ssis-catalog.md), where you store, run, and manage packages.
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes:
+
+- A rich set of built-in [tasks](./control-flow/integration-services-tasks.md) and [transformations](./data-flow/transformations/integration-services-transformations.md).
+- [Graphical tools](ssis-designer.md) for building packages.
+- An SSIS [Catalog database](./catalog/ssis-catalog.md) to store, run, and manage packages.
 
 You can use the graphical [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tools to create solutions without writing a single line of code. You can also program the extensive [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model to create packages programmatically and code custom tasks and other package objects.
 

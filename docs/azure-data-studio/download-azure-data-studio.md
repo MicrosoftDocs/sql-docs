@@ -11,7 +11,7 @@ ms.custom:
   - seodec18
   - contperf-fy21q4
   - intro-overview
-ms.date: 12/3/2021
+ms.date: 12/13/2021
 ---
 
 # Download and install Azure Data Studio
@@ -218,6 +218,7 @@ Azure Data Studio runs on Windows, macOS, and Linux and is supported on the foll
 
 ### Windows operating systems
 
+- Windows 11 (64-bit)
 - Windows 10 (64-bit)
 - Windows 8.1 (64-bit)
 - Windows 8 (64-bit)

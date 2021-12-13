@@ -2,7 +2,7 @@
 title: Microsoft JDBC Driver for SQL Server
 description: Microsoft provides a JDBC driver for use with SQL Server and Azure SQL Database, enabling connectivity from any Java application, server, or applet.
 ms.custom: ""
-ms.date: 08/12/2019
+ms.date: 12/10/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -16,9 +16,9 @@ ms.author: v-davidengel
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-In our continued commitment to interoperability, Microsoft provides a Java Database Connectivity (JDBC) driver for use with SQL Server, and Azure SQL Database. The driver is available at no extra charge and provides Java database connectivity from any Java application, application server, or Java-enabled applet. This driver is a Type 4 JDBC driver that provides database connectivity through the standard JDBC application program interfaces (APIs).
+In our continued commitment to interoperability, Microsoft provides a Java Database Connectivity (JDBC) driver for  use with SQL Server, Azure SQL Database, and Azure SQL Managed Instance. The driver is available at no extra charge and provides Java database connectivity from any Java application, application server, or Java-enabled applet. This driver is a Type 4 JDBC driver that provides database connectivity through the standard JDBC application program interfaces (APIs).
 
-The Microsoft JDBC Driver for SQL Server has been tested against major application servers such as IBM WebSphere, and SAP NetWeaver.
+The Microsoft JDBC Driver for SQL Server has been tested against major application servers such as IBM WebSphere and SAP NetWeaver.
 
 ## Getting started
 

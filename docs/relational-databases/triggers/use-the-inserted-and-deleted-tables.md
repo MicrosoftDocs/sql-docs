@@ -37,7 +37,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Find the difference between the state of a table before and after a data modification and take actions based on that difference.  
   
- The *deleted* table stores copies of the original rows in the trigger table before they were changed by a DELETE or UPDATE statement (the trigger table is the table on which the DML trigger runs). During the execution of a DELETE or UPDATE statement, the affected rows are first copied from the trigger table and transferred to the deleted table. The deleted table and the trigger table ordinarily have no rows in common.
+ The *deleted* table stores copies of the affected rows in the trigger table before they were changed by a DELETE or UPDATE statement (the trigger table is the table on which the DML trigger runs). During the execution of a DELETE or UPDATE statement, the affected rows are first copied from the trigger table and transferred to the deleted table.
   
  The *inserted* table stores copies of the new or changed rows after an INSERT or UPDATE statement. During the execution of an INSERT or UPDATE statement, the new or changed rows in the trigger table are copied to the inserted table. The rows in the inserted table are copies of the new or updated rows in the trigger table.  
   

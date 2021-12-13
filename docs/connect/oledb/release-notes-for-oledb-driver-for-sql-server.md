@@ -42,7 +42,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed an issue where string values were being padded with zeros. | Fixed a bug, which resulted in string values being truncated and then padded with zeros in BCP. |
+| Fixed an issue where string values were being padded with zeros. | Fixed a bug, which resulted in empty fixed char fields being padded with zeroes during BCP import. |
 
 ## Previous Releases
 

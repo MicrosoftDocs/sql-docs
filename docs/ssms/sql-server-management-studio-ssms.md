@@ -69,14 +69,14 @@ Use SQL Server Management Studio to enable Reporting Services features, administ
 You manage shared schedules by using the Shared Schedules folder, and manage report server databases (ReportServer, ReportServerTempdb). You also create a RSExecRole in the Master system database when you move a report server database to a new or different SQL Server Database Engine. For more information about these tasks, see the following articles:  
 
 - [Reporting Services in SSMS](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
-- [Administer a Report Server Database](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
+- [Administer a Report Server database](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
 - [Create the RSExecRole](../reporting-services/security/create-the-rsexecrole.md)
 
 You also manage the server by enabling and configuring various features, setting server defaults, and managing roles and jobs. For more information about these tasks, see the following articles:
 
-- [Set Report Server Properties](../reporting-services/tools/set-report-server-properties-management-studio.md)
-- [Create, Delete, or Modify a Role](../reporting-services/security/role-definitions-create-delete-or-modify.md)
-- [Enabling and Disabling Client-Side Printing for Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)
+- [Set Report Server properties](../reporting-services/tools/set-report-server-properties-management-studio.md)
+- [Create, delete, or modify a role](../reporting-services/security/role-definitions-create-delete-or-modify.md)
+- [Enabling and disabling client-side printing for Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)
 
 ## Non-English language versions of SQL Server Management Studio (SSMS)
 

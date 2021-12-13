@@ -21,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   There are three ways of returning data from a procedure to a calling program: result sets, output parameters, and return codes. This article provides information on the three approaches.
   
-## Returning data using result sets
+## Return data using result sets
 
 If you include a SELECT statement in the body of a stored procedure (but not a SELECT ... INTO or INSERT ... SELECT), the rows specified by the SELECT statement will be sent directly to the client. For large result sets, the stored procedure execution won't continue to the next statement until the result set has been completely sent to the client. For small result sets, the results will be spooled for return to the client and execution will continue. If multiple such SELECT statements are run during the execution of the stored procedure, multiple result sets will be sent to the client. This behavior also applies to nested Transact-SQL batches, nested stored procedures, and top-level Transact-SQL batches.
 
@@ -49,7 +49,7 @@ AS
 GO 
 ```  
 
-## Returning data using an output parameter  
+## Return data using an output parameter  
 
  If you specify the output keyword for a parameter in the procedure definition, the procedure can return the current value of the parameter to the calling program when the procedure exits. To save the value of the parameter in a variable that can be used in the calling program, the calling program must use the output keyword when executing the procedure. For more information about what data types can be used as output parameters, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).
   
@@ -100,7 +100,7 @@ GO
   
  If you specify output for a parameter when you call a procedure and that parameter isn't defined by using output in the procedure definition, you get an error message. However, you can execute a procedure with output parameters and not specify output when executing the procedure. No error is returned, but you can't use the output value in the calling program.
   
-### Using the cursor data type in output parameters
+### Use the cursor data type in output parameters
 
  [!INCLUDE[tsql](../../includes/tsql-md.md)] procedures can use the `cursor` data type only for output parameters. If the `cursor` data type is specified for a parameter, both the varying and output keywords must be specified for that parameter in the procedure definition. A parameter can be specified as only output, but if the varying keyword is specified in the parameter declaration, the data type must be `cursor` and the output keyword must also be specified.
 
@@ -182,7 +182,7 @@ DEALLOCATE @MyCursor;
 GO    
 ```  
 
-## Returning data using a return code  
+## Return data using a return code  
 
  A procedure can return an integer value called a return code to indicate the execution status of a procedure. You specify the return code for a procedure using the RETURN statement. As with output parameters, you must save the return code in a variable when the procedure is executed in order to use the return code value in the calling program. For example, the assignment variable `@result` of data type `int` is used to store the return code from the procedure `my_proc`, such as:  
   

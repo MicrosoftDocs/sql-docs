@@ -50,7 +50,7 @@ To access, configure, manage, and administer [!INCLUDE[ssASnoversion](../include
 > [!NOTE]
 > To create and modify Analysis Services, Reporting Services, and Integration Services solutions, use [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)], not SQL Server Management Studio. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)] is a development environment that is based on Microsoft[!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
-### Managing Analysis Services Solutions using SQL Server Management Studio
+### Manage Analysis Services Solutions using SQL Server Management Studio
 
 SQL Server Management Studio enables you to manage [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] objects, such as performing back-ups and processing objects.
 
@@ -58,11 +58,11 @@ SQL Server Management Studio enables you to manage [!INCLUDE[ssASnoversion](../i
   
 For more information about how to use SQL Server Management Studio, see [Developing and Implementing Using SQL Server Management Studio](/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).
   
-### Managing Integration Services Solutions using SQL Server Management Studio
+### Manage Integration Services Solutions using SQL Server Management Studio
 
 SQL Server Management Studio enables you to use the Integration Services service to manage packages and monitor running packages. You can also use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to organize packages into folders, run packages, import and export packages, migrate Data Transformation Services (DTS) packages, and upgrade Integration Services packages.
 
-### Managing Reporting Services Projects using SQL Server Management Studio
+### Manage Reporting Services Projects using SQL Server Management Studio
 
 Use SQL Server Management Studio to enable Reporting Services features, administer the server and databases, and manage roles and jobs.
 

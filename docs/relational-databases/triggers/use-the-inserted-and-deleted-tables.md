@@ -46,7 +46,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  An update transaction is similar to a delete operation followed by an insert operation. During the execution of an UPDATE statement, the following sequence of events occurs:
  
  2. The original row is copied from the trigger table to the deleted table.
- 3. The trigger table is updated with the new values from the UPDATE statment.
+ 3. The trigger table is updated with the new values from the UPDATE statement.
  4. The updated row in the trigger table is copied to the inserted table.
 
  This allows you to compare the contents of the row before the update (in the deleted table) with the new row values after the update (in the inserted table). 

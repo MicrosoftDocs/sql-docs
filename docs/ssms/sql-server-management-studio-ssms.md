@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.custom:
   - seo-lt-2019
   - intro-overview
-ms.date: 09/11/2019
+ms.date: 12/15/2021
 #Customer intent: As a database admin, I want to manage my databases so that I can monitor, track, and maintain the databases for my users.
 ---
 
@@ -25,7 +25,7 @@ ms.date: 09/11/2019
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure. Use SSMS to access, configure, manage, administer, and develop all components of SQL Server, Azure SQL Database, and Azure Synapse Analytics. SSMS provides a single comprehensive utility that combines a broad group of graphical tools with a number of rich script editors to provide access to SQL Server for developers and database administrators of all skill levels.
+SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure. Use SSMS to access, configure, manage, administer, and develop all components of SQL Server, Azure SQL Database, and Azure Synapse Analytics. SSMS provides a single comprehensive utility that combines a broad group of graphical tools with many rich script editors to provide access to SQL Server for developers and database administrators of all skill levels.
 
 - [**Download SQL Server Management Studio (SSMS)**](download-sql-server-management-studio-ssms.md)
 - [**Download SQL Server Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
@@ -38,10 +38,10 @@ SQL Server Management Studio (SSMS) is an integrated environment for managing an
 |Description|Component|  
 |---------------|---------|  
 |Use **Object Explorer** to view and manage all of the objects in one or more instances of SQL Server.|[Object Explorer](../ssms/object/object-explorer.md)|  
-|How to use **Template Explorer** to build and manage files of boilerplate text that you use to speed the development of queries and scripts.|[Template Explorer](../ssms/template/template-explorer.md)|  
-|How to use the deprecated **Solution Explorer** to build projects used to manage administration items such as scripts and queries.|[Solution Explorer](../ssms/solution/solution-explorer.md)|  
-|How to use the visual design tools included in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|How to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors](./f1-help/database-engine-query-editor-sql-server-management-studio.md)
+|Use **Template Explorer** to build and manage files of boilerplate text that you use to speed the development of queries and scripts.|[Template Explorer](../ssms/template/template-explorer.md)|  
+|Use the deprecated **Solution Explorer** to build projects used to manage administration items such as scripts and queries.|[Solution Explorer](../ssms/solution/solution-explorer.md)|  
+|Use the visual design tools included in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to build queries, tables, and diagram databases.|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
+|Use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors](./f1-help/database-engine-query-editor-sql-server-management-studio.md)
 
 ## SQL Server Management Studio for Business Intelligence
 
@@ -50,7 +50,7 @@ To access, configure, manage, and administer [!INCLUDE[ssASnoversion](../include
 > [!NOTE]
 > To create and modify Analysis Services, Reporting Services, and Integration Services solutions, use [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)], not SQL Server Management Studio. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)] is a development environment that is based on Microsoft[!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
-### Managing Analysis Services Solutions Using SQL Server Management Studio
+### Managing Analysis Services Solutions using SQL Server Management Studio
 
 SQL Server Management Studio enables you to manage [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] objects, such as performing back-ups and processing objects.
 
@@ -58,11 +58,11 @@ SQL Server Management Studio enables you to manage [!INCLUDE[ssASnoversion](../i
   
 For more information about how to use SQL Server Management Studio, see [Developing and Implementing Using SQL Server Management Studio](/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).
   
-### Managing Integration Services Solutions Using SQL Server Management Studio
+### Managing Integration Services Solutions using SQL Server Management Studio
 
 SQL Server Management Studio enables you to use the Integration Services service to manage packages and monitor running packages. You can also use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to organize packages into folders, run packages, import and export packages, migrate Data Transformation Services (DTS) packages, and upgrade Integration Services packages.
 
-### Managing Reporting Services Projects Using SQL Server Management Studio
+### Managing Reporting Services Projects using SQL Server Management Studio
 
 Use SQL Server Management Studio to enable Reporting Services features, administer the server and databases, and manage roles and jobs.
 

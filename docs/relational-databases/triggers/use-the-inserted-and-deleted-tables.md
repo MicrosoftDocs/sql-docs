@@ -37,16 +37,17 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Find the difference between the state of a table before and after a data modification and take actions based on that difference.  
   
- The deleted table stores copies of the original rows in the trigger table before they were changed by a DELETE or UPDATE statement (the trigger table is the table on which the DML trigger runs). During the execution of a DELETE or UPDATE statement, the affected rows are first copied from the trigger table and transferred to the deleted table. The deleted table and the trigger table ordinarily have no rows in common.
+ The *deleted* table stores copies of the original rows in the trigger table before they were changed by a DELETE or UPDATE statement (the trigger table is the table on which the DML trigger runs). During the execution of a DELETE or UPDATE statement, the affected rows are first copied from the trigger table and transferred to the deleted table. The deleted table and the trigger table ordinarily have no rows in common.
   
- The inserted table stores copies of the changed rows after an INSERT or UPDATE statement. During the execution of an INSERT or UPDATE statement, the changed rows in the trigger table are copied to the insert table. The rows in the inserted table are copies of the new or updated rows in the trigger table.  
+ The *inserted* table stores copies of the new or changed rows after an INSERT or UPDATE statement. During the execution of an INSERT or UPDATE statement, the new or changed rows in the trigger table are copied to the inserted table. The rows in the inserted table are copies of the new or updated rows in the trigger table.  
   
- An update transaction is similar to a delete operation followed by an insert operation. Consider the following sequence of events:
+ An update transaction is similar to a delete operation followed by an insert operation. During the execution of an UPDATE statement, the following sequence of events occurs:
  
- 1. An UPDATE statement is run against a row in the trigger table. 
- 2. The original row is copied to the deleted table.
- 3. The trigger table is updated.
- 4. The new row in the trigger table is copied to the inserted table.  
+ 2. The original row is copied from the trigger table to the deleted table.
+ 3. The trigger table is updated with the new values from the UPDATE statment.
+ 4. The updated row in the trigger table is copied to the inserted table.
+
+ This allows you to compare the contents of the row before the update (in the deleted table) with the new row values after the update (in the inserted table). 
   
  When you set trigger conditions, use the inserted and deleted tables appropriately for the action that fired the trigger. Although referencing the deleted table when testing an INSERT or the inserted table when testing a DELETE does not cause any errors, these trigger test tables do not contain any rows in these cases.  
   

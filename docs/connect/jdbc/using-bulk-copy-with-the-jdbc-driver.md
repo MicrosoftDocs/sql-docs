@@ -674,9 +674,11 @@ public class BulkCopyCSV {
 ```  
 
 ### Using a regex character as a delimiter
+
 > [!NOTE]
 > When setting a custom delimiter, escape it if it's a regex character such as '|'.
-``` java
+
+```java
 SQLServerBulkCSVFileRecord fileRecord = new SQLServerBulkCSVFileRecord(CSVFilePath, null, "\\|", true);
 ```
 

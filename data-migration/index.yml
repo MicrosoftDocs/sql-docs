@@ -119,6 +119,8 @@ conceptualContent:
           itemType: how-to-guide
         - text: CouchBase to Azure Cosmos DB
           url: /azure/cosmos-db/couchbase-cosmos-migration
+        - text: HBase to Azure Cosmos DB
+          url: /azure/cosmos-db/migrate-hbase-to-cosmos-db
           itemType: how-to-guide      
         - text: Azure Table Storage to Azure Cosmos DB
           url: /azure/cosmos-db/table-import

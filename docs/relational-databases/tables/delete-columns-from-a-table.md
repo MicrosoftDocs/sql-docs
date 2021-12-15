@@ -36,7 +36,9 @@ You can't delete a column that has PRIMARY KEY or FOREIGN KEY constraints or oth
 
 Requires ALTER permission on the table.
 
-## Delete columns using Object Explorer in SSMS
+## Delete columns using Object Explorer
+
+The following steps explain how to delete columns with Object Explorer in SSMS:
 
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 2. In **Object Explorer**, locate the table from which you want to delete columns, and expand to expose the column names.
@@ -45,7 +47,9 @@ Requires ALTER permission on the table.
 
 If the column contains constraints or other dependencies, an error message will display in the **Delete Object** dialog box. Resolve the error by deleting the referenced constraints.
 
-## Delete columns using Table Designer in SSMS
+## Delete columns using Table Designer
+
+The following steps explain how to delete columns with Table Designer in SSMS:
 
 1. In **Object Explorer**, right-click the table from which you want to delete columns and choose **Design**.
 2. Right-click the column you want to delete and choose **Delete Column** from the shortcut menu.
@@ -67,6 +71,8 @@ If the column contains constraints or other dependencies, an error message will 
 For more examples, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).
 
 ## Next steps
+
+For more information about altering tables and related tools, see the following articles:
 
 - [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
 - [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)

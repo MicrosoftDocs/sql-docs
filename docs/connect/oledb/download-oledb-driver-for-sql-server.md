@@ -26,7 +26,7 @@ Microsoft OLE DB Driver 18.6.3 for SQL Server is the latest general availability
 ### Version information
 
 - Release number: 18.6.3
-- Released: December 2021
+- Released: December 15, 2021
 
 > [!Note]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).

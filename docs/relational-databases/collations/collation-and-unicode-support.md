@@ -1,10 +1,9 @@
 ---
-description: "Collation and Unicode support"
-title: "Collation and Unicode support | Microsoft Docs"
+title: Collation and Unicode support
+description: Learn about collation and Unicode support in SQL Server.
 ms.custom: ""
-ms.date: 08/02/2021
+ms.date: 12/10/2021
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -37,7 +36,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 
 # Collation and Unicode support
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 Collations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provide sorting rules, case, and accent sensitivity properties for your data. Collations that are used with character data types, such as **char** and **varchar**, dictate the code page and corresponding characters that can be represented for that data type. 
 
 Whether you're installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restoring a database backup, or connecting server to client databases, it's important to understand the locale requirements, sorting order, and case and accent sensitivity of the data that you're working with. To list the collations that are available on your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
@@ -630,7 +631,7 @@ To change the database collation, allowing new objects to inherit the database c
 |Describes how to set or change the collation of a column in the database|[Set or Change the Column Collation](../../relational-databases/collations/set-or-change-the-column-collation.md)|    
 |Describes how to return collation information at the server, database, or column level|[View Collation Information](../../relational-databases/collations/view-collation-information.md)|    
 |Describes how to write Transact-SQL statements that are more portable from one language to another, or support multiple languages more easily|[Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
-|Describes how to change the language of error messages and preferences for how date, time, and currency data is used and displayed|[Set a Session Language](../../relational-databases/collations/set-a-session-language.md)|    
+|Describes how to change the language of error messages and preferences for how date, time, and currency data are used and displayed|[Set a Session Language](../../relational-databases/collations/set-a-session-language.md)|    
     
 ##  <a name="Related_Content"></a> Related content    
 For more information, see the following related content:

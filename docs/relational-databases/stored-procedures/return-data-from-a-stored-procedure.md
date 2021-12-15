@@ -184,7 +184,7 @@ GO
 
 ## Return data using a return code  
 
-A procedure can return an integer value called a return code to indicate the execution status of a procedure. You specify the return code for a procedure using the RETURN statement. As with output parameters, you must save the return code in a variable when the procedure is executed in order to use the return code value in the calling program. For example, the assignment variable `@result` of data type `int` is used to store the return code from the procedure `my_proc`, such as:  
+A procedure can return an integer value called a return code to indicate the execution status of a procedure. You specify the return code for a procedure using the [RETURN statement](../../t-sql/language-elements/return-transact-sql.md). As with output parameters, you must save the return code in a variable when the procedure is executed in order to use the return code value in the calling program. For example, the assignment variable `@result` of data type `int` is used to store the return code from the procedure `my_proc`, such as:  
   
 ```sql
 DECLARE @result int;

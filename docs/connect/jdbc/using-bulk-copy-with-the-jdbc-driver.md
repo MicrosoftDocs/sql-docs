@@ -673,6 +673,15 @@ public class BulkCopyCSV {
 }
 ```  
 
+### Using a regex character as a delimiter
+
+> [!NOTE]
+> When setting a custom delimiter, escape it if it's a regex character such as '|'.
+
+```java
+SQLServerBulkCSVFileRecord fileRecord = new SQLServerBulkCSVFileRecord(CSVFilePath, null, "\\|", true);
+```
+
 ### Bulk copy with delimiters as data in CSV file
 
 Driver version 8.4.1 adds a new API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`. When set to true, the following rules will apply:

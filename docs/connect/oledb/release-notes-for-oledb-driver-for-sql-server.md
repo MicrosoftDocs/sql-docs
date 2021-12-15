@@ -35,7 +35,8 @@ If you need to download the installer in a language other than the one detected 
 
 | Feature added | Details |
 | :------------ | :------ |
-| Removal of dependency on vcruntime140_1.dll | To remove the requirement to install visual studio in some scenarios, we removed all dependencies to vcruntime140_1.dll. |
+| Removal of dependency on vcruntime140_1.dll | To remove the requirement to install Visual Studio in some scenarios, we removed all dependencies to vcruntime140_1.dll. |
+
 | Enable querying server SPN from connection | During a connection attempt where AAD authentication has been selected, the server will send a FEDAUTHINFO packet. This packet contains the server's SPN that must be used to generate the access token. Client's can query this value after a connection attempt is made (on success of failure) through the SSPROP_INIT_DISCOVERDSERVERSPN property in DBPROPSET_SQLSERVERDBINIT. |
 
 ### Bugs fixed

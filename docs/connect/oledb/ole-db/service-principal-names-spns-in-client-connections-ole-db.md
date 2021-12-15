@@ -2,7 +2,7 @@
 title: "Service Principal Names (SPNs) in Client Connections (OLE DB) | Microsoft Docs"
 description: Learn about OLE DB Driver for SQL Server properties and member functions that support service principal names in client applications.
 ms.custom: ""
-ms.date: "09/30/2020"
+ms.date: "12/08/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -17,7 +17,7 @@ ms.author: v-davidengel
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 
-  This topic describes OLE DB properties and member functions that support service principal names (SPNs) in client applications. For more information about SPNs in client applications, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../../oledb/features/service-principal-name-spn-support-in-client-connections.md). For a sample, see [Integrated Kerberos Authentication &#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md).  
+  This article describes OLE DB properties and member functions that support service principal names (SPNs) in client applications. For more information about SPNs in client applications, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../../oledb/features/service-principal-name-spn-support-in-client-connections.md). For a sample, see [Integrated Kerberos Authentication &#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md).  
   
 ## Provider Initialization String Keywords  
  The following provider initialization string keywords support SPNs in OLE DB applications. In the following table, the values in the keyword column are used for the provider string of IDBInitialize::Initialize. The values in the description column are used in initialization strings when connecting using ADO or IDataInitialize::GetDataSource.  
@@ -28,13 +28,14 @@ ms.author: v-davidengel
 |FailoverPartnerSPN|Failover Partner SPN|The SPN for the failover partner. The default value is an empty string, which causes OLE DB Driver for SQL Server to use the default, provider-generated SPN.|  
   
 ## Data Source Initialization Properties  
- The following properties in the **DBPROPSET_SQLSERVERDBINIT** property set allow applications to specify SPNs.  
+ The following properties in the **DBPROPSET_SQLSERVERDBINIT** property set allow applications to specify or read SPNs.  
   
 |Name|Type|Usage|  
 |----------|----------|-----------|  
-|SSPROP_INIT_SERVERSPN|VT_BSTR, read/write|Specifies the SPN for the server. The default value is an empty string, which causes OLE DB Driver for SQL Server to use the default, provider-generated SPN.|  
-|SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, read/write|Specifies the SPN for the failover partner. The default value is an empty string, which causes OLE DB Driver for SQL Server to use the default, provider-generated SPN.|  
-  
+|SSPROP_INIT_SERVERSPN|VT_BSTR, read/write|Specifies the SPN for the server. The default value is an empty string, which causes OLE DB Driver for SQL Server to use the default, provider-generated SPN.|
+|SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, read/write|Specifies the SPN for the failover partner. The default value is an empty string, which causes OLE DB Driver for SQL Server to use the default, provider-generated SPN.|
+| SSPROP_INIT_DISCOVEREDSERVERSPN | VT_BSTR, read only | Used to query the server SPN of a connection. (Version 18.6.3 or later) |
+
 ## Data Source Properties  
  The following properties in the **DBPROPSET_SQLSERVERDATASOURCEINFO** property set allow applications to discover the authentication method.  
   

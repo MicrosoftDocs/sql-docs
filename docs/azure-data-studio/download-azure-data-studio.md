@@ -35,7 +35,7 @@ Azure Data Studio 1.34.0 is the latest general availability (GA) version.
 |----------|----------|
 | Windows | [User installer](https://go.microsoft.com/fwlink/?linkid=2183280) (recommended)<br>[System installer](https://go.microsoft.com/fwlink/?linkid=2183423)<br>[.zip file](https://go.microsoft.com/fwlink/?linkid=2183190) |
 | macOS | [.zip file](https://go.microsoft.com/fwlink/?linkid=2183189) |
-| Linux | [.deb file](https://go.microsoft.com/fwlink/?linkid=2183341)<br>[.rpm file](https://go.microsoft.com/fwlink/?linkid=2183342)<br>[.tar.gz file](hhttps://go.microsoft.com/fwlink/?linkid=2183277) |
+| Linux | [.deb file](https://go.microsoft.com/fwlink/?linkid=2183341)<br>[.rpm file](https://go.microsoft.com/fwlink/?linkid=2183342)<br>[.tar.gz file](https://go.microsoft.com/fwlink/?linkid=2183277) |
 
 > [!Note]
 > Azure Data Studio currently does not support the ARM architecture.

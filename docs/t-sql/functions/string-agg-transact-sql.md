@@ -79,6 +79,9 @@ Null values are ignored and the corresponding separator is not added. To return 
 
 `STRING_AGG` is available in any compatibility level.
 
+> [!Note]
+> `<order_clause>` is available with database compatibility level 110 and above.
+
 ## Examples
 
 ### A. Generate list of names separated in new lines

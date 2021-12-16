@@ -1,7 +1,7 @@
 ---
-title: "SqlClient driver support lifecycle"
-description: "Page that contains product support lifecycle information."
-ms.date: "06/09/2021"
+title: SqlClient driver support lifecycle
+description: Product support lifecycle information for the Microsoft.Data.SqlClient .NET library.
+ms.date: 12/13/2021
 dev_langs:
   - "csharp"
   - "vb"
@@ -31,8 +31,8 @@ New stable (GA) releases are published every six months on a regular cadence beg
 | -- | -- | -- | -- | -- | -- |
 | 4.0 | November 18, 2021 | - | - | LTS | November 19, 2024 |
 | 3.0 | June 9, 2021 | 3.0.1 | September 24, 2021 | Current | March 10, 2022 |
-| 2.1 | November 19, 2020 | 2.1.3 | May 21, 2021 | LTS | November 20, 2023 |
-| 1.1 | November 20, 2019 | 1.1.3 | May 15, 2020 | LTS | November 21, 2022 |
+| 2.1 | November 19, 2020 | 2.1.4 | September 20, 2021 | LTS | November 20, 2023 |
+| 1.1 | November 20, 2019 | 1.1.4 | March 10, 2021 | LTS | November 21, 2022 |
 
 ### Out of support releases
 

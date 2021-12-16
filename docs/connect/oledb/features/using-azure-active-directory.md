@@ -1,8 +1,8 @@
 ---
-title: "Using Azure Active Directory"
-description: "Learn about the Azure Active Directory authentication methods available in the Microsoft OLE DB Driver for SQL Server that enable connecting to Azure SQL databases."
+title: Using Azure Active Directory
+description: Learn about the Azure Active Directory authentication methods available in the Microsoft OLE DB Driver for SQL Server that enable connecting to Azure SQL databases.
 ms.custom: ""
-ms.date: "09/30/2020"
+ms.date: 12/14/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -12,29 +12,32 @@ author: David-Engel
 ms.author: v-davidengel
 ---
 # Using Azure Active Directory
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 ## Purpose
 
-
 Starting with version [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821), Microsoft OLE DB Driver for SQL Server allows OLE DB applications to connect to an instance of Azure SQL Database using a federated identity. The new authentication methods include:
+
 - Azure Active Directory login ID and password
 - Azure Active Directory access token
 - Azure Active Directory integrated authentication
 - SQL login ID and password
 
-
 Version [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) adds support for the following authentication methods:
+
 - Azure Active Directory interactive authentication
 - Azure Active Directory Managed Identity authentication
 
 Version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) adds support for the following authentication method:
+
 - Azure Active Directory service principal authentication
 
 > [!NOTE]
 > Using the following authentication modes with `DataTypeCompatibility` (or its corresponding property) set to `80` is **not** supported:
+>
 > - Azure Active Directory authentication using login ID and password
 > - Azure Active Directory authentication using access token
 > - Azure Active Directory integrated authentication
@@ -42,7 +45,10 @@ Version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) adds 
 > - Azure Active Directory managed identities authentication
 > - Azure Active Directory service principal authentication
 
+To use Azure Active Directory authentication, you must configure your Azure SQL data source. For more information, see [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
+
 ## Connection string keywords and properties
+
 The following connection string keywords have been introduced to support Azure Active Directory authentication:
 
 |Connection string keyword|Connection property|Description|
@@ -51,30 +57,37 @@ The following connection string keywords have been introduced to support Azure A
 |Authentication|SSPROP_AUTH_MODE|Specifies authentication method to use.|
 
 For more information about the new keywords/properties, see the following pages:
+
 - [Using Connection String Keywords with OLE DB Driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 - [Initialization and Authorization Properties](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
 
 ## Encryption and certificate validation
+
 This section discusses the changes in encryption and certificate validation behavior. These changes are **only** effective when using the new Authentication or Access Token connection string keywords (or their corresponding properties).
 
 ### Encryption
+
 To improve security, when the new connection properties/keywords are used, the driver overrides the default encryption value by setting it to `yes`. Overriding happens at data source object initialization time. If encryption is set before initialization by any means, the value is respected and not overridden.
 
-> [!NOTE]   
+> [!NOTE]
 > In ADO applications and in applications that obtain the `IDBInitialize` interface through `IDataInitialize::GetDataSource`, the Core Component implementing the interface explicitly sets encryption to its default value of `no`. As a result, the new authentication properties/keywords respect this setting and the encryption value **isn't** overridden. Therefore, it is **recommended** that these applications explicitly set `Use Encryption for Data=true` to override the default value.
 
 ### Certificate validation
+
 To improve security, the new connection properties/keywords respect the `TrustServerCertificate` setting (and its corresponding connection string keywords/properties) **independently of the client encryption setting**. As a result, server certificate is validated by default.
 
-> [!NOTE]   
+> [!NOTE]
 > Certificate validation can also be controlled through the `Value` field of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` registry entry. Valid values are `0` or `1`. The OLE DB driver chooses the most secure option between the registry and the connection property/keyword settings. That is, the driver will validate the server certificate as long as at least one of the registry/connection settings enables server certificate validation.
 
 ## GUI additions
+
 The driver graphical user interface has been enhanced to allow Azure Active Directory authentication. For more information, see:
+
 - [SQL Server Login Dialog](../help-topics/sql-server-login-dialog.md)
 - [Universal Data Link (UDL) Configuration](../help-topics/data-link-pages.md)
 
 ## Example connection strings
+
 This section shows examples of new and existing connection string keywords to be used with `IDataInitialize::GetDataSource` and `DBPROP_INIT_PROVIDERSTRING` property.
 
 ### SQL authentication

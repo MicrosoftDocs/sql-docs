@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 ---
 # SQL Server error log (Always On Availability Groups)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

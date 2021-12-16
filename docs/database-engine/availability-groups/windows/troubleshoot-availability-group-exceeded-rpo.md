@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: troubleshooting
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Troubleshoot: Potential data loss with asynchronous-commit availability-group replicas
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

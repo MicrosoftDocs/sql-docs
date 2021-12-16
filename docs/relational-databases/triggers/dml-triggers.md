@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "DML triggers, about DML triggers"
   - "triggers [SQL Server]"
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DML Triggers

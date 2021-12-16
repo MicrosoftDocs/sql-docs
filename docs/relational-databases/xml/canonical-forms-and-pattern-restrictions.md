@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "pattern restrictions"
   - "canonical forms"
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Canonical Forms and Pattern Restrictions
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

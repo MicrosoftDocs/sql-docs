@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "status information [SQL Server], DDL triggers"
   - "DDL triggers, metadata"
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Information About DDL Triggers

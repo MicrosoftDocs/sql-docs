@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture, other features and"
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Change data capture and other features
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "change data capture, disabling databases"
   - "change data capture, disabling tables"
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Enable and disable change data capture
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

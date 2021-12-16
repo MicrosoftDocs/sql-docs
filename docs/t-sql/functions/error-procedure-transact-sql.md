@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "messages [SQL Server], stored procedure where occurred"
   - "errors [SQL Server], trigger where occurred"
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ERROR_PROCEDURE (Transact-SQL)

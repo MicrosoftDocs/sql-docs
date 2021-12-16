@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "KILL STATS JOB statement"
   - "statistics update jobs [SQL Server]"
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # KILL STATS JOB (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

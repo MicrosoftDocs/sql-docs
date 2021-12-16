@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "comparing expressions"
   - "comparison operators [SQL Server]"
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Comparison Operators (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

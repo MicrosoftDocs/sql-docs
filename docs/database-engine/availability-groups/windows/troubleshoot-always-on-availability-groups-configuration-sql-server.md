@@ -1,5 +1,5 @@
 ---
-title: "Common issues & resolutions with availability groups"
+title: "Troubleshoot Always On Availability Groups Configuration (SQL Server)"
 description: Troubleshoot typical problems with configuring server instances for Always On availability groups in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], troubleshooting"
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Troubleshoot Always On Availability Groups Configuration (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "MSOLEDBSQL, database mirroring"
   - "OLE DB Driver for SQL Server, database mirroring"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Database Mirroring
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

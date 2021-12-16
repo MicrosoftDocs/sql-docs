@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SET statement, @local_variable"
   - "local variables [SQL Server]"
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET @local_variable (Transact-SQL)

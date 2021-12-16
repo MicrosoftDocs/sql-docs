@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "FIRST_VALUE function"
   - "analytic functions, FIRST_VALUE"
 ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FIRST_VALUE (Transact-SQL)

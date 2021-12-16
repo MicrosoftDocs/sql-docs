@@ -50,7 +50,7 @@ ms.author: mlandzic
 ## Examples  
  The following example creates a `Point` instance with Z (elevation) and M (measure) values and uses `M` to fetch the M value of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);  
 SELECT @g.M;  

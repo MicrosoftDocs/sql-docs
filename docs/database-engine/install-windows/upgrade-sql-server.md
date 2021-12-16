@@ -1,17 +1,18 @@
 ---
 title: "Upgrade SQL Server | Microsoft Docs"
 description: This article provides links to resources that contain upgrade information for instances of different versions of SQL Server.
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "07/17/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "upgrading SQL Server"
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016"
 ---
 # Upgrade SQL Server

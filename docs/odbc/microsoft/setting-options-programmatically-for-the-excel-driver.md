@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Excel driver [ODBC], setting options programmatically"
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Setting Options Programmatically for the Excel Driver
 

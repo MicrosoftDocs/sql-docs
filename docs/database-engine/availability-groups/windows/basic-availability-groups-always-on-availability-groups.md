@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Basic Always On availability groups for a single database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

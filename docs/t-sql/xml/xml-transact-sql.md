@@ -30,7 +30,7 @@ ms.date: "07/26/2017"
 ## Syntax  
   
 ```
-xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
+xml [ ( [ CONTENT | DOCUMENT ] xml_schema_collection ) ]
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

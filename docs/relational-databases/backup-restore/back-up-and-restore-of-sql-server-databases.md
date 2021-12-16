@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], backups"
   - "databases [SQL Server], backups"
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Back Up and Restore of SQL Server Databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

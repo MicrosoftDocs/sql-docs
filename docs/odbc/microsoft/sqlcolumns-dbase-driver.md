@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "DBase driver [ODBC], SQLColumns"
 ms.assetid: 168171de-ab7d-4b5b-af7f-6e2106adfcce
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLColumns (dBASE Driver)
 > [!NOTE]  

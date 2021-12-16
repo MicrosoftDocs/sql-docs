@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "converting data from SQL to C types [ODBC], numeric"
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQL to C: Numeric
 

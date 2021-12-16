@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "schema-scoped objects [SQL Server]"
   - "objects [SQL Server], schema-scoped"
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OBJECTPROPERTY (Transact-SQL)

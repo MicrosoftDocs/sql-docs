@@ -113,7 +113,7 @@ To give permissions to SQL Server startup account to register and modify SPN do 
 
 2.  Select **View \> Advanced**.
 
-3.  Under **Users**, locate SQL Server startup account, and then right-click and select **Properties**.
+3.  Under **Computers**, locate the SQL Server computer, and then right-click and select **Properties**.
 
 4.  Select the **Security** tab and click **Advanced**.
 

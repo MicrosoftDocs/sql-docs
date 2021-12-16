@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplication_options system table"
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # MSreplication_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -51,7 +51,7 @@ CollectionAggregate ( geometry_operand )
 ## Examples  
  The following example returns a `GeometryCollection` instance that contains a `CurvePolygon` and a `Polygon`.  
   
- ```
+ ```sql
  -- Setup table variable for CollectionAggregate example  
  DECLARE @Geom TABLE  
  (  

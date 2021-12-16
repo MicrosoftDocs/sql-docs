@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "COPY_ONLY option [BACKUP statement]"
   - "backups [SQL Server], copy-only backups"
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Copy-Only Backups

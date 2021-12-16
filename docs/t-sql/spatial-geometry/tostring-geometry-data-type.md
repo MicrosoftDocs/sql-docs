@@ -45,7 +45,7 @@ Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representatio
 ## Examples  
  The following example create a `LineString` instance and uses `ToString()` to fetch the text description of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0);  
 SELECT @g.ToString();  

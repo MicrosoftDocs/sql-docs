@@ -21,18 +21,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 **SQL Server Data Tools (SSDT)** is a modern development tool for building SQL Server relational databases, databases in Azure SQL, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.
 
-## SSDT for Visual Studio 2022 (Preview)
+## SSDT for Visual Studio 2022
 
 ### Changes in SSDT for Visual Studio 2022
 
-The core SSDT functionality to create database projects has remained integral to Visual Studio.  The extensions for Analysis Services, Integration Services, and Reporting Services projects are not available for Visual Studio 2022 (Preview) at this time.
+The core SSDT functionality to create database projects has remained integral to Visual Studio.  The extensions for Analysis Services, Integration Services, and Reporting Services projects are not available for Visual Studio 2022 at this time.
 
 > [!NOTE]
-> There's no SSDT standalone installer for Visual Studio 2022 (Preview).
+> There's no SSDT standalone installer for Visual Studio 2022.
 
-### Install SSDT with Visual Studio 2022 (Preview)
+### Install SSDT with Visual Studio 2022
 
-If [Visual Studio 2022 (Preview)](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2022) is already installed, you can edit the list of workloads to include SSDT. If you don’t have Visual Studio 2022 (Preview) installed, then you can download and install [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/downloads/).
+If [Visual Studio 2022](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2022) is already installed, you can edit the list of workloads to include SSDT. If you don’t have Visual Studio 2022 installed, then you can download and install [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/).
 
 To modify the installed Visual Studio workloads to include SSDT, use the Visual Studio Installer.
 
@@ -165,15 +165,55 @@ First, complete the following steps while **online**:
 2. [Download vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe).
 
 3. While still online, execute one of the following commands to download all the files required for installing offline. Using the `--layout` option is the key, it downloads the actual files for the offline installation. Replace `<filepath>` with the actual layouts path to save the files.
-   1. For a specific language, pass the locale: `vs_sql.exe --layout c:\<filepath> --lang en-us` (a single language is ~1 GB).
-   1. For all languages, omit the `--lang` argument: `vs_sql.exe --layout c:\<filepath>` (all languages are ~3.9 GB).
+  
+   a. For a specific language, pass the locale: `--lang`. A single language is ~1 GB in size.
+   
+   ```dos
+   vs_sql.exe --layout c:\<filepath> --lang en-us
+   ```
+   
+   b. For all languages, omit the `--lang` argument. All languages are ~3.9 GB.
+   
+   ```dos
+   vs_sql.exe --layout c:\<filepath>
+   ```
 
-After completing the previous steps, the following steps below can be done **offline**:
+  After completing the previous steps, the following steps below can be done **offline**:
 
-1. Run `vs_setup.exe --NoWeb` to install the VS2017 Shell and SQL Server Data Project.
+4. Run this command to install the VS2017 Shell and SQL Server Data Project.
 
-2. From the layouts folder, run `SSDT-Setup-ENU.exe /install` and select SSIS/SSRS/SSAS.
-   a. For an unattended installation, run `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`.
+   ```dos
+   vs_setup.exe --NoWeb
+   ```
+
+5. Run this command to install SSDT 
+
+   a. For an interactive installation, from the layouts folder, run this command and select SSIS/SSRS/SSAS
+
+   ```dos
+   SSDT-Setup-ENU.exe /install
+   ```
+
+   b. For an unattended installation, run this command
+   
+   ```dos
+   SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive
+   ```
+   
+   c. For an unattended installation to a specific VS Instance that you may have previously installed, you can query the instance ID of the desired VS instance 
+   
+   ```dos
+   cd C:\Program Files (x86)\Microsoft Visual Studio\Installer
+   C:\Program Files (x86)\Microsoft Visual Studio\Installer> vswhere.exe -all
+   ```
+ 
+    Then run this command by replacing the VS_INSTANCE_ID_HERE with your instanceID (it will look something like this: 49cf420b)
+    
+    ```dos
+    SSDT-Setup-ENU.exe /INSTALLALL[:VS_INSTANCE_ID_HERE] /passive
+    ```
+ 
+   
 
 For available options, run `SSDT-Setup-ENU.exe /help`
 

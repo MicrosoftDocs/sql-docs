@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "suspect pages [SQL Server]"
   - "restoring [SQL Server], pages"
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Manage the suspect_pages Table (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

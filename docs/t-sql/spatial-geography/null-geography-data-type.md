@@ -45,7 +45,7 @@ Null
 ## Examples  
  The following example retrieves a null `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;   
 SET @g = geography::[Null];  
 SELECT @g  

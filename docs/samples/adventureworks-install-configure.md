@@ -4,7 +4,7 @@ description: Follow these instructions to download and install AdventureWorks sa
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
-ms.date: "06/16/2020"
+ms.date: 11/12/2021
 ms.reviewer: ""
 ms.topic: conceptual
 author: MashaMSFT
@@ -66,14 +66,14 @@ To restore your database in SQL Server Management Studio, follow these steps:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
 
-3. Open SQL Server Management Studio (SSMS) and connect to your SQL Server in. 
+3. Open SQL Server Management Studio (SSMS) and connect to your SQL Server. 
 4. Right-click **Databases** in **Object Explorer** > **Restore Database...** to launch the **Restore Database** wizard. 
 
    :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Screenshot showing how to choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database.":::
 
 
 1. Select **Device** and then select the ellipses **(...)** to choose a device. 
-1. Select **Add** and then choose the `.bak` file you recently moved to this location. If you moved your file to this location but you're not able to see it in the wizard, this typically indicates a permissions issue - SQL Server or the user signed into SQL Server does not have permission to this file in this folder. 
+1. Select **Add** and then choose the `.bak` file you recently moved to the backup location. If you moved your file to this location but you're not able to see it in the wizard, this typically indicates a permissions issue - SQL Server or the user signed into SQL Server does not have permission to this file in this folder. 
 1. Select **OK** to confirm your database backup selection and close the **Select backup devices** window. 
 1. Check the **Files** tab to confirm the **Restore as** location and file names match your intended location and file names in the **Restore Database** wizard. 
 1. Select **OK** to restore your database. 
@@ -113,7 +113,7 @@ GO
 
 # [Azure Data Studio](#tab/data-studio)
 
-If you're not familiar using [Azure Data Studio Studio](../azure-data-studio/download-azure-data-studio.md), you can see [connect & query](../azure-data-studio/quickstart-sql-server.md) to get started
+If you're not familiar using [Azure Data Studio Studio](../azure-data-studio/download-azure-data-studio.md), see [connect & query](../azure-data-studio/quickstart-sql-server.md) to get started
 
 To restore your database in Azure Data Studio, follow these steps:
 
@@ -155,9 +155,9 @@ To get sample data for Azure SQL Managed Instance instead, see [restore World Wi
 
 ### Deploy new sample database
 
-When you create a new database in Azure SQL Database, you have the option to create a blank database, or a sample database. 
+When you create a new database in Azure SQL Database, you have the option to create a blank database, restore from a backup or select sample data to populate your new database. 
 
-Follow these steps to use a sample database to create a new database: 
+Follow these steps to add a sample data to your new database: 
 
 1. Connect to your Azure portal.
 1. Select **Create a resource** in the top left of the navigation pane. 
@@ -167,8 +167,7 @@ Follow these steps to use a sample database to create a new database:
 
    :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Choose sample as the data source on the Additional settings tab in the Azure portal when creating your Azure SQL Database":::
 
-1. Select **Create** to create your new SQL Database, which is the restored copy of the AdventureWorksLT database. 
-
+1. Select **Create** to create your new SQL Database, which is the restored copy of the AdventureWorksLT database.
 
 ### Deploy database from SQL Server
 

@@ -3,13 +3,13 @@ title: Install packages with Python tools
 description: Learn how to use standard Python tools to install new Python packages to an instance of SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 09/16/2021
+ms.date: 10/05/2021
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-
 monikerRange: "=sql-server-2017"
+ms.custom:
+  - intro-installation
 ---
 # Install packages with Python tools on SQL Server
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -53,7 +53,7 @@ The package installed in the following examples is [CNTK](/cognitive-toolkit/), 
 
 If you are installing Python packages on a server with no Internet access, you must download the WHL file from a computer with Internet access and then copy the file to the server.
 
-For example, on an Internet-connected computer you can download the file `cntk-2.1-cp35-cp35m-win_amd64.whl` from the site [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), and then copy the file to a local folder on the SQL Server computer.
+For example, on an Internet-connected computer you can download a `.whl` file for CNTK and then copy the file to a local folder on the SQL Server computer. See [Install CNTK from Wheel Files](/cognitive-toolkit/setup-windows-python?tabs=cntkpy26#2-install-from-wheel-files) for a list of available `.whl` files for CNTK.
 
 > [!IMPORTANT]
 > Make sure that you get the Windows version of the package. If the file ends in .gz, it's probably not the right version.

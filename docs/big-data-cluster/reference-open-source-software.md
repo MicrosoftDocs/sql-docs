@@ -2,9 +2,9 @@
 title: Open-source software reference
 titleSuffix: SQL Server Big Data Clusters
 description: Identify open-source software and version used in SQL Server Big Data Clusters.
-author: mihaelablendea 
-ms.author: mihaelab
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: dacoelho
 ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql

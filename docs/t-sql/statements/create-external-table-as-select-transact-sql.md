@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)"
 title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "10/20/2021"
 ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.prod: sql
@@ -31,7 +31,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ## Syntax
 
 ```syntaxsql 
-CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] table_name   
+CREATE EXTERNAL TABLE {[ [database_name  . [ schema_name ] . ] | schema_name . ] table_name }
+    [(column_name [,...n ] ) ]
     WITH (   
         LOCATION = 'hdfs_folder',  
         DATA_SOURCE = external_data_source_name,  
@@ -55,7 +56,10 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
 ## Arguments
  **[ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name***
- is the one- to three-part name of the table to create in the database. For an external table, only the table metadata is stored in the relational database. 
+ is the one- to three-part name of the table to create in the database. For an external table, only the table metadata is stored in the relational database.
+ 
+**[ ( column_name [ ,...n ] ) ]**
+is the name of a table column.
 
  **LOCATION =  '*hdfs_folder*'**
  specifies where to write the results of the SELECT statement on the external data source. The location is a folder name and can optionally include a path that's relative to the root folder of the Hadoop cluster or Blob storage. PolyBase will create the path and folder if it doesn't already exist.
@@ -107,6 +111,13 @@ The external files are written to *hdfs_folder* and named *QueryID_date_time_ID.
 
  **SELECT \<select_criteria>**
  populates the new table with the results from a SELECT statement. *select_criteria* is the body of the SELECT statement that determines which data to copy to the new table. For information about SELECT statements, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).
+
+**Column options**
+
+column_name [ ,...n ]
+Column names do not allow the column options mentioned in CREATE TABLE. Instead, you can provide an optional list of one or more column names for the new table. The columns in the new table will use the names you specify. When you specify column names, the number of columns in the column list must match the number of columns in the select results. If you don't specify any column names, the new target table will use the column names in the select statement results.
+
+You cannot specify any other column options such as data types, collation, or nullability. Each of these attributes is derived from the results of the SELECT statement. However, you can use the SELECT statement to change the attributes. For an example, see [Use CETAS to change column attributes](#c-use-cetas-to-change-column-attributes).
 
 ## Permissions
 
@@ -233,6 +244,30 @@ AS SELECT T1.* FROM dbo.FactInternetSales T1 JOIN dbo.DimCustomer T2
 ON ( T1.CustomerKey = T2.CustomerKey )  
 OPTION ( HASH JOIN );  
 ```
+
+### C. Use CETAS to change column attributes
+This example uses CETAS to change data types, nullability, and collation for several columns in the `FactInternetSales` table.
+
+```sql  
+-- Example is based on AdventureWorks  
+CREATE EXTERNAL TABLE dbo.FactInternetSalesNew  
+WITH   
+    (   
+        LOCATION = '/files/Customer',  
+        DATA_SOURCE = customer_ds,  
+        FILE_FORMAT = customer_ff  
+    )  
+AS SELECT T1.ProductKey AS ProductKeyNoChange,
+          T1.OrderDateKey AS OrderDate,
+          T1.ShipDateKey AS ShipDate,
+          T1.CustomerKey AS CustomerKeyNoChange,
+          T1.OrderQuantity AS Quantity,
+          T1.SalesAmount AS Money
+FROM dbo.FactInternetSales T1 JOIN dbo.DimCustomer T2  
+ON ( T1.CustomerKey = T2.CustomerKey )  
+OPTION ( HASH JOIN ); 
+```
+
 
 ## See also
  - [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)

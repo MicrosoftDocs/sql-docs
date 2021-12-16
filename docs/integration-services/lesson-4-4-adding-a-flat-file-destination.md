@@ -54,7 +54,7 @@ In this task, you save all this information about the failed rows to a delimited
   
     Clearing this check box persists the errors over multiple package executions by appending each new run's error output.
   
-14. In the **Flat File Destination Editor**, select **Mappings** to verify that all the columns are correct. Optionally, you can rename the columns in the destination.  
+14. In the **Flat File Destination Editor**, select **Mappings** to verify that all the columns are correct. Create mappings for any columns that are not mapped. Optionally, you can rename the columns in the destination.  
   
 15. Select **OK**.  
   

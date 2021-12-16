@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 836f1f45-59ed-4a34-9809-2000d3062576
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsFullOuterJoins Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

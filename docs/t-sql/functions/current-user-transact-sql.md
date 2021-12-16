@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "CURRENT_USER"
   - "users [SQL Server], names"
 ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CURRENT_USER (Transact-SQL)

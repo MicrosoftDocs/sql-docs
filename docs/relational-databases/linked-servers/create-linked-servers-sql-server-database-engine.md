@@ -1,7 +1,7 @@
 ---
 description: "Create Linked Servers (SQL Server Database Engine)"
 title: "Create Linked Servers"
-ms.date: "01/24/2020"
+ms.date: "11/03/2021"
 ms.prod: sql
 ms.technology: 
 ms.prod_service: "database-engine"
@@ -13,7 +13,6 @@ f1_keywords:
   - "sql13.swb.linkedserver.properties.options.f1"
 helpviewer_keywords: 
   - "linked servers [SQL Server], creating"
-ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom: seo-dt-2019
@@ -21,16 +20,14 @@ ms.custom: seo-dt-2019
 # Create Linked Servers (SQL Server Database Engine)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  This topic shows how to create a linked server and access data from another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. By creating a linked server,  you can work with data from multiple sources. The linked server does not have to be another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but that is a common scenario.  
+  This article shows how to create a linked server and access data from another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. By creating a linked server,  you can work with data from multiple sources. The linked server does not have to be another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but that is a common scenario.  
   
 ##  <a name="Background"></a> Background  
  A linked server allows for access to distributed, heterogeneous queries against OLE DB data sources. After a linked server is created, distributed queries can be run against this server, and queries can join tables from more than one data source. If the linked server is defined as an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remote stored procedures can be executed.  
   
- The capabilities and required arguments of the linked server can vary significantly. The examples in this topic provide a typical example but all options are not described. For more information, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ The capabilities and required arguments of the linked server can vary significantly. The examples in this article provide a typical example but all options are not described. For more information, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
-##  <a name="Security"></a> Security  
-  
-### Permissions  
+## Permissions  
  When using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, requires **ALTER ANY LINKED SERVER** permission on the server or membership in the **setupadmin** fixed server role. When using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] requires **CONTROL SERVER** permission or membership in the **sysadmin** fixed server role.  
   
 ##  <a name="Procedures"></a> How to Create a Linked Server  
@@ -40,11 +37,11 @@ ms.custom: seo-dt-2019
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Use SQL Server Management Studio  
   
-##### To create a linked server to another instance of SQL Server Using SQL Server Management Studio  
+##### Use SQL Server Management Studio  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open Object Explorer, expand **Server Objects**, right-click **Linked Servers**, and then click **New Linked Server**.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open Object Explorer, expand **Server Objects**, right-click **Linked Servers**, and then select **New Linked Server**.  
   
 2.  On the **General** page, in the **Linked server** box, type the name of the instance of **SQL Server** that you area linking to.  
   
@@ -72,7 +69,7 @@ ms.custom: seo-dt-2019
      **Catalog**  
      Type the name of the catalog to use when making a connection to the OLE DB provider.  
   
-     To test the ability to connect to a linked server, in Object Explorer, right-click the linked server and then click **Test Connection**.  
+     To test the ability to connect to a linked server, in Object Explorer, right-click the linked server and then select **Test Connection**.  
   
     > [!NOTE]  
     >  If the instance of **SQL Server** is the default instance, enter the name of the computer that hosts the instance of **SQL Server**. If the **SQL Server** is a named instance, enter the name of the computer and the name of the instance, such as **Accounting\SQLExpress**.  
@@ -82,7 +79,7 @@ ms.custom: seo-dt-2019
 4.  On the **Security** page, specify the security context that will be used when the original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connects to the linked server. In a domain environment where users are connecting by using their domain logins, selecting **Be made using the login's current security context** is often the best choice. When users connect to the original **SQL Server** by using a **SQL Server** login, the best choice is often to select **By using this security context**, and then providing the necessary credentials to authenticate at the linked server.  
   
      **Local login**  
-     Specify the local login that can connect to the linked server. The local login can be either a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication or a Windows Authentication login. Use this list to restrict the connection to specific logins, or to allow some logins to connect as a different login.  
+     Specify the local login that can connect to the linked server. The local login can be either a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication or a Windows Authentication login. Using a Windows group is not supported. Use this list to restrict the connection to specific logins, or to allow some logins to connect as a different login.  
   
      **Impersonate**  
      Pass the username and password from the local login to the linked server. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, a login with the exact same name and password must exist on the remote server. For Windows logins, the login must be a valid login on the linked server.  
@@ -90,10 +87,7 @@ ms.custom: seo-dt-2019
      To use impersonation, the configuration must meet the requirement for delegation.  
   
      **Remote User**  
-     Use the remote user to map users not defined in **Local login**. The **Remote User** must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
-
-    > [!WARNING]
-    > Only a SQL Server user can be used a "Remote User" in a managed instance deployment.  
+     Use the remote user to map user defined in **Local login**. The **Remote User** must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
 
      **Remote Password**  
      Specify the password of the Remote User.  
@@ -111,12 +105,12 @@ ms.custom: seo-dt-2019
      Specify that a connection will be made without using a security context for logins not defined in the list.  
   
      **Be made using the login's current security context**  
-     Specify that a connection will be made using the current security context of the login for logins not defined in the list. If connected to the local server using Windows Authentication, your windows credentials will be used to connect to the remote server. If connected to the local server using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, login name and password will be used to connect to the remote server. In this case a login with the exact same name and password must exist on the remote server.  
+     Specify that a connection will be made using the current security context of the login for logins not defined in the list. If connected to the local server using Windows Authentication, your Windows credentials will be used to connect to the remote server. If connected to the local server using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, login name and password will be used to connect to the remote server. In this case, a login with the exact same name and password must exist on the remote server.  
   
      **Be made using this security context**  
      Specify that a connection will be made using the login and password specified in the **Remote login** and **With password** boxes for logins not defined in the list. The remote login must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
   
-5.  Optionally, to view or specify server options, click the **Server Options**  page.  
+5.  Optionally, to view or specify server options, select the **Server Options**  page.  
   
      **Collation Compatible**  
      Affects Distributed Query execution against linked servers. If this option is set to true, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumes that all characters in the linked server are compatible with the local server, with regard to character set and collation sequence (or sort order). This enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to send comparisons on character columns to the provider. If this option is not set, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] always evaluates comparisons on character columns locally.  
@@ -149,21 +143,21 @@ ms.custom: seo-dt-2019
      **Connection Timeout**  
      Time-out value in seconds for connecting to a linked server.  
   
-     If 0, use the **sp_configure** default [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) option value.  
+     If 0, use the `sp_configure` default [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) option value.  
   
      **Query Timeout**  
      Time-out value in seconds for queries against a linked server.  
   
-     If 0, use the **sp_configure** default [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) option value.  
+     If 0, use the `sp_configure` default [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) option value.  
   
      **Enable Promotion of Distributed Transactions**  
      Use this option to protect the actions of a server-to-server procedure through a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) transaction. When this option is TRUE, calling a remote stored procedure starts a distributed transaction and enlists the transaction with MS DTC. For more information, see [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).  
   
-6.  Click **OK**.  
+6.  Select **OK**.  
   
 ##### To view the provider options  
   
--   To view the options that the provider makes available, click the **Providers Options** page.  
+-   To view the options that the provider makes available, select the **Providers Options** page.  
   
      All providers do not have the same options available. For example, some types of data have indexes available and some might not. Use this dialog box to help [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] understand the capabilities of the provider. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installs some common data providers, however when the product providing the data changes, the provider installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might not support all the newest features. The best source of information about the capabilities of the product providing the data is the documentation for that product.  
   
@@ -191,63 +185,69 @@ ms.custom: seo-dt-2019
      **Supports 'Like' operator**  
      Indicates that the provider supports queries using the LIKE key word.  
   
-###  <a name="TsqlProcedure"></a> Using Transact-SQL  
+###  <a name="TsqlProcedure"></a> Use Transact-SQL  
  To create a linked server by using [!INCLUDE[tsql](../../includes/tsql-md.md)], use the [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md) and [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) statements.  
   
 ##### To create a linked server to another instance of SQL Server using Transact-SQL  
   
-1.  In Query Editor, enter the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command to link to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named `SRVR002\ACCTG`:  
+1. In Query Editor, enter the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command to link to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named `SRVR002\ACCTG`:  
   
     ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
         @server = N'SRVR002\ACCTG',   
-        @srvproduct=N'SQL Server' ;  
+        @srvproduct=N'SQL Server';  
     GO  
   
     ```  
   
-2.  Execute the following code to configure the linked server to use the domain credentials of the login that is using the linked server.  
+2. Execute the following code to configure the linked server to use the domain credentials of the login that is using the linked server.  
   
     ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
-        @useself = N'True' ;  
+        @useself = N'True';  
     GO  
-  
     ```  
   
 ##  <a name="FollowUp"></a> Follow Up: Steps to take after you create a linked server  
   
-#### To test the linked server  
+### To test the linked server  
   
 -   Execute the following code to test the connection to the linked server. This example returns the names of the databases on the linked server.  
   
     ```sql  
-    SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
+    SELECT name FROM [SRVR002\ACCTG].master.sys.databases;  
     GO  
   
     ```  
   
-#### Writing a query that joins tables from a linked server  
+### To join tables from a linked server  
   
--   Use four-part names to refer to an object on a linked server. Execute the following code to return a list of all logins on the local server and their matching logins on the linked server.  
+Use four-part names to refer to an object on a linked server. Execute the following code to return a list of all logins on the local server and their matching logins on the linked server.  
   
-    ```sql  
-    SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
-    FROM master.sys.server_principals AS local  
-    LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
-        ON local.name = linked.name ;  
-    GO  
-    ```  
+```sql
+SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
+FROM master.sys.server_principals AS local  
+LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
+     ON local.name = linked.name;  
+     GO  
+```
   
-     When NULL is returned for the linked server login it indicates that the login does not exist on the linked server. These logins will not be able to use the linked server unless the linked server is configured to pass a different security context or the linked server accepts anonymous connections.  
-  
-## See Also  
- [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
-  
-  
+When NULL is returned for the linked server login it indicates that the login does not exist on the linked server. These logins will not be able to use the linked server unless the linked server is configured to pass a different security context or the linked server accepts anonymous connections.  
+
+## Linked servers with Azure SQL Managed Instance
+
+If you're using Azure SQL Managed Instance, see the following examples from [sp_addlinkedserver (Transact-SQL)](../system-stored-procedures/sp-addlinkedserver-transact-sql.md):
+
+- [Create SQL Managed Instance linked server with managed identity Azure AD authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#h-create-sql-managed-instance-linked-server-with-managed-identity-azure-ad-authentication)
+
+- [Create SQL Managed Instance linked server with pass-through Azure AD authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#i-create-sql-managed-instance-linked-server-with-pass-through-azure-ad-authentication)
+
+## Next steps  
+
+- [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)
+- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
+- [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)

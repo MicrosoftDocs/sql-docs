@@ -21,12 +21,11 @@ helpviewer_keywords:
   - "scripts [SQL Server], command prompt"
   - "RESET command"
   - "GO command"
-ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 02/24/2021
+ms.date: 09/16/2021
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
@@ -43,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 - At the command prompt.
 - In **Query Editor** in SQLCMD mode.
 - In a Windows script file.
-- In an operating system (Cmd.exe) job step of a  SQL Server  Agent job.
+- In an operating system (Cmd.exe) job step of a SQL Server Agent job.
 
 The utility uses ODBC to execute Transact-SQL batches.
 
@@ -64,7 +63,7 @@ The new version of SQLCMD supports Azure AD authentication, including Multi-Fact
 The new BCP supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database and Azure Synapse Analytics.
 
 **System Requirements**
-Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
+Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2022.
 
 This component requires both the built-in [Windows Installer 5](/windows/win32/msi/what-s-new-in-windows-installer-5-0) and the [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
  
@@ -420,7 +419,7 @@ We recommend that you use a strong password.
 > [!NOTE]  
 >  The actual time out value may vary from the specified *time_out* value by several seconds.  
   
- **-vvar =**  _value_[ **var =** _value_...]  
+ **-v var =**  _value_[ **var =** _value_...]  
  Creates a **sqlcmd**scripting variable that can be used in a **sqlcmd** script. Enclose the value in quotation marks if the value contains spaces. You can specify multiple _**var**_=**"**_values_**"** values. If there are errors in any of the values specified, **sqlcmd** generates an error message and then exits.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  

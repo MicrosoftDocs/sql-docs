@@ -53,7 +53,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
 ## Examples  
  The following example uses `STPointFromWKB()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;   
 SET @g = geometry::STPointFromWKB(0x010100000000000000000059400000000000005940, 0);  
 SELECT @g.STAsText();  

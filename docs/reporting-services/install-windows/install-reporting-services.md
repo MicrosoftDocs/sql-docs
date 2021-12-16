@@ -4,11 +4,12 @@ title: "Install SQL Server Reporting Services | Microsoft Docs"
 ms.date: 12/11/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: ">= sql-server-2016"
+ms.custom:
+  - intro-installation
 ---
 # Install SQL Server Reporting Services
 
@@ -85,7 +86,7 @@ For more information, see [Configure the report server service account](configur
 
 ## Windows Service
 
-A windows service is created as part of the installation. It is displayed as **SQL Server Reporting Services**. The service name is **SQLServerReportingServices**.
+A Windows service is created as part of the installation. It is displayed as **SQL Server Reporting Services**. The service name is **SQLServerReportingServices**.
 
 ## Default URL reservations
 

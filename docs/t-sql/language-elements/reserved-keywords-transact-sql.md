@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "reserved words [SQL Server]"
   - "keywords [SQL Server]"
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

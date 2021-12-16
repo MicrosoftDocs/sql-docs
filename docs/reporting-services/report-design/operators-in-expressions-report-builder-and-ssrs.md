@@ -1,6 +1,6 @@
 ---
-title: "Operators in Expressions (Report Builder) | Microsoft Docs"
-description: Choose from categories of operators that are supported in an expression to represents actions applied to terms in an expression in Report Builder.
+title: "Operators in expressions in a paginated report | Microsoft Docs"
+description: Choose from categories of operators in a paginated report that are supported in an expression to represents actions applied to terms in an expression in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Operators in Expressions (Report Builder and SSRS)
-  An operator is a symbol that represents actions applied to one or more terms in an expression. The following categories of operators are supported in an expression: arithmetic, comparison, concatenation, logical or bitwise, and bit shift.  
+# Operators in expressions in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  An operator is a symbol that represents actions applied to one or more terms in an expression in a paginated report. The following categories of operators are supported in an expression: arithmetic, comparison, concatenation, logical or bitwise, and bit shift.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

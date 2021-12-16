@@ -10,8 +10,7 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
-ms.reviewer: v-chmalh
+ms.author: v-davidengel
 ---
 # Connection strings and configuration files
 

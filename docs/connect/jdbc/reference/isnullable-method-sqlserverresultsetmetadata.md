@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: c0fce3fe-5b16-4f60-9b0e-e9b30a90525e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # isNullable Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

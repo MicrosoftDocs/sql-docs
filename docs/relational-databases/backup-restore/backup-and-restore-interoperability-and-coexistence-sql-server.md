@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "backups [SQL Server], files or filegroups"
   - "file backups [SQL Server], related features"
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Backup and Restore: Interoperability and Coexistence (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

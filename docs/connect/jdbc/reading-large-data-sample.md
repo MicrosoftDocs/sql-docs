@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Reading large data sample

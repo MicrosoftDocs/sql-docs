@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: aba234d9-04ec-46a5-ba9e-7903f48b4ecc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # isReadOnly Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

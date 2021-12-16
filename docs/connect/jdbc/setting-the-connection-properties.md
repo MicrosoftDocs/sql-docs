@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Setting the connection properties

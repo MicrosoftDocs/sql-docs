@@ -1,14 +1,15 @@
 ---
 title: "Getting Started with Database Engine Permissions | Microsoft Docs"
 description: Review some basic security concepts in SQL Server and learn about a typical implementation of Database Engine permissions.
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "01/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "permissions [SQL Server], getting started"
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT

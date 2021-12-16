@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;OPTIONS (Transact-SQL)"
+description: "@@OPTIONS (Transact-SQL)"
 title: "@@OPTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "@@OPTIONS function"
   - "current SET options"
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # &#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

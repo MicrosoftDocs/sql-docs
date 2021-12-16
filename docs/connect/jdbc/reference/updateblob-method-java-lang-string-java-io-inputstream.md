@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 018cd71b-4b58-49a7-990e-d28dbb12da70
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateBlob Method (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

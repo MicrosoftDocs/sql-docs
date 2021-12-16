@@ -2,9 +2,9 @@
 title: "What's New in SSMA for MySQL (MySQLToSql) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for MySQL (MySQLToSQL) for each release.
 author: nahk-ivanov
-
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-whats-new
 ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
@@ -15,6 +15,16 @@ ms.author: alexiva
 # What's New in SSMA for MySQL (MySQLToSql)
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
+
+
+## SSMA v8.23
+
+The v8.23 release of SSMA for MySQL contains the following changes:
+
+* New option "Allow Statements from Files", for adding statements from file system
+* Enhanced XML output when running in console mode
+* New "Feedback" link in reports to send feedback
+* In reports, enhanced visualization experience
 
 ## SSMA v8.22
 

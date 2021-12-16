@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 8886137d-455e-497c-afea-4b326eda52f1
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # allProceduresAreCallable Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

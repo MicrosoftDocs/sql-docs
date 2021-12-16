@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "constant value of PI"
   - "PI function"
 ms.assetid: d7c4575b-ba1c-4ef7-a633-9a379d7f01fd
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PI (Transact-SQL)

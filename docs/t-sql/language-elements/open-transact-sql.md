@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "OPEN statement"
   - "Transact-SQL cursors, opening"
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # OPEN (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

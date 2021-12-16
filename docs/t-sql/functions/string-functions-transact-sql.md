@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "string functions"
   - "strings [SQL Server]"
 ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # String Functions (Transact-SQL)

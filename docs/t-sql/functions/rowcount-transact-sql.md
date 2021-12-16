@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;ROWCOUNT (Transact-SQL)"
+description: "@@ROWCOUNT (Transact-SQL)"
 title: "@@ROWCOUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "statements [SQL Server], last statement"
   - "counting rows"
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # &#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

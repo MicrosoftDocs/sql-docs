@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL TABLE (Transact-SQL)"
 title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 ms.custom: ""
-ms.date: 08/13/2021
+ms.date: 12/3/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -249,6 +249,13 @@ The following data types cannot be used in PolyBase external tables:
 - `nText`
 - `xml`
 - Any user-defined type
+
+### Data source specific limitations
+
+#### Oracle
+
+Oracle synonyms are not supported for usage with PolyBase.
+
 
 ## Locking
 
@@ -845,7 +852,8 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
     WITH ( 
         LOCATION = 'folder_or_filepath',   
         DATA_SOURCE = external_data_source_name,   
-        FILE_FORMAT = external_file_format_name   
+        FILE_FORMAT = external_file_format_name,   
+        TABLE_OPTIONS = table_options_json     
     )   
 [;]   
 <column_definition> ::= 
@@ -884,6 +892,10 @@ Specifies the name of the external data source that contains the location of the
 
 #### FILE_FORMAT = *external_file_format_name*
 Specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+
+#### TABLE_OPTIONS
+
+Specifies the set of options that describe how to read the underlying files. Currently, the only option that is available is `{"READ_OPTIONS":["ALLOW_INCONSISTENT_READS"]}` that instructs the external table to ignore the updates that are made on the underlying files, even if this might cause some inconsistent read operations. Use this option only in special cases where you have frequently appended files. This option is available in serverless SQL pool for CSV format.
 
 #### Reject Options
 You can specify reject parameters that determine how PolyBase will handle *dirty* records it retrieves from the external data source. A data record is considered 'dirty' if it actual data types or the number of columns don't match the column definitions of the external table.

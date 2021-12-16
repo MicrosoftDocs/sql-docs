@@ -1,5 +1,5 @@
 ---
-title: "Avg Function (Report Builder) | Microsoft Docs"
+title: "Avg function in a paginated report | Microsoft Docs"
 description: Learn about the Avg Function in paginated reports, which returns the average of all non-null numeric values specified by the expression in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -12,8 +12,11 @@ ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - Avg Function
-In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, returns the average of all non-null numeric values specified by the expression, evaluated in the given scope.  
+# Report Builder functions - Avg function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+In paginated reports, returns the average of all non-null numeric values specified by the expression, evaluated in the given scope.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -1,5 +1,5 @@
 ---
-title: "Indicators (Report Builder) | Microsoft Docs"
+title: "Indicators in a paginated report| Microsoft Docs"
 description: Learn about indicators, the small gauges that convey the state of a single data value in paginated reports in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -19,8 +19,11 @@ ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Indicators (Report Builder and SSRS)
-  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, indicators are small gauges that convey the state of a single data value at a glance. The icons that represent indicators and their states are simple and visually effective even when used in small sizes.  
+# Indicators in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In paginated reports, indicators are small gauges that convey the state of a single data value at a glance. The icons that represent indicators and their states are simple and visually effective even when used in small sizes.  
   
  You can use state indicators in your reports to show the following:  
   
@@ -36,7 +39,7 @@ ms.author: maggies
    
  ![rs_IndicatorTableTrafficLight](../../reporting-services/report-design/media/rs-indicatortabletrafficlight.gif "rs_IndicatorTableTrafficLight")  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides built-in indicator sets and indicator icons to use as is, and you can also customize individual indicator icons and indicators sets to suit your needs.  
+ Report Builder provides built-in indicator sets and indicator icons to use as is, and you can also customize individual indicator icons and indicators sets to suit your needs.  
   
  For more information about using indicators as KPIs, see [Tutorial: Adding a KPI to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   

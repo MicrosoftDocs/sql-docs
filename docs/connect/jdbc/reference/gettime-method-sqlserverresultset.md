@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 1db346ba-a3bd-4387-a423-72e227346318
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getTime Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

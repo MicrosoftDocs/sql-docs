@@ -6,13 +6,13 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords: 
   - "secondary databases [SQL Server], Availability Groups"
   - "Availability Groups [SQL Server], troubleshooting"
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Troubleshoot a Failed Add-File Operation (Always On Availability Groups)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

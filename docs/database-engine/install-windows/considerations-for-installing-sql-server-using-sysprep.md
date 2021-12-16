@@ -1,15 +1,17 @@
 ---
 title: "Install SQL Server with SysPrep"
 description: SQL Server SysPrep allows you to prepare a stand-alone instance of SQL Server on a computer and to complete the configuration later.
-ms.custom: "seo-lt-2019"
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016"
 ---
 # Considerations for Installing SQL Server Using SysPrep

@@ -1,11 +1,8 @@
 ---
 title: "Connect to SQL Server when system administrators are locked out | Microsoft Docs"
 description: Learn how to regain access to SQL Server as a system administrator if you've been mistakenly locked out. 
-ms.custom: contperf-fy20q4
-ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,9 +12,14 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: contperf-fy20q4
+ms.date: 11/02/2021
 ---
+
 # Connect to SQL Server when system administrators are locked out 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 This article describes how you can regain access to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] as a system administrator if you've been locked out.  A system administrator can lose access to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] due to one of the following reasons:  
   
@@ -54,11 +56,82 @@ The following table summarizes the different ways to start your instance in sing
 |`-f`| Limits connections to a single connection and starts the instance in minimal configuration | When some other configuration is preventing you from starting. |
 | &nbsp; | &nbsp; | &nbsp; |
   
+
+## Step-by-step instructions
+
 For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, see [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).
 
-## Step by step instructions
 
-The following step-by-step instructions describe how to grant system administrator permissions to a SQL Server login that mistakenly no longer has access.
+### Using PowerShell
+
+#### Option 1: Run the steps directly in an executable notebook via Azure Data Studio
+
+> [!NOTE]
+> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
+
+> [!div class="nextstepaction"]
+> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting-SQL-SystemAdmins-Locked-out.ipynb)  
+
+#### Option 2: Follow the step manually
+
+1. Open a Windows PowerShell command - Run as an Administrator
+1. Set up service name and SQL Server instance, and Windows login variables. Replace these with values to match your environment
+
+   ```powershell
+   $service_name = "MSSQL`$instancename"  # for a default instace use: "MSSQLSERVER"
+   $sql_server_instance = "machine_name\instance"
+   $login_to_be_granted_access = "[CONTOSO\PatK]"
+   ```
+
+1. Stop SQL Server service so it can be restarted with single-user mode, using the following command:
+
+   ```powershell
+   net stop $service_name
+   ```
+
+1. Now start your SQL Server instance in a single user mode and only allow SQLCMD.exe to connect (/mSQLCMD)
+
+   > [!NOTE]  
+   > Be sure to use upper-case SQLCMD
+
+   ```powershell
+   net start $service_name /mSQLCMD
+   ```
+
+1. Using **SQLCMD** execute a CREATE LOGIN command followed by ALTER SERVER ROLE command. This step assumes you have logged into Windows with an account that is a member of the Local Administrators group. This assumes you have replaced the domain and login names with the credentials you want to give Sysadmin membership.
+
+   ```powershell
+   sqlcmd.exe -E -S $sql_server_instance -Q "CREATE LOGIN $login_to_be_granted_access FROM WINDOWS;  ALTER SERVER ROLE sysadmin ADD MEMBER $login_to_be_granted_access; "
+   ```
+
+   > [!NOTE]  
+   > If you receive the following error, you must ensure no other SQLCMD has connected to SQL Server: </br>
+   > `Sqlcmd: Error: Microsoft ODBC Driver X for SQL Server : Login failed for user 'CONTOSO\BobD'. Reason: Server is in single user mode. Only one administrator can connect at this time..`
+
+1. **Mixed Mode (optional):** If your SQL Server is running in mixed authentication mode, you can also:
+    1. Grant the Sysadmin role membership to a SQL login. Execute code such as the following to create a new SQL Server authentication login that is a member of the sysadmin fixed server role. Replace "?j8:z$G=JE9" with a strong password of your choice.
+
+       ```powershell
+       $strong_password = "j8:zG=J?E9"
+       sqlcmd.exe -E -S $sql_server_instance -Q "CREATE LOGIN TempLogin WITH PASSWORD = '$strong_password'; ALTER SERVER ROLE sysadmin ADD MEMBER TempLogin; "
+       ```
+
+    1. Also, if your SQL Server is running in mixed authentication mode and you want to reset the password of an enabled **sa** account. Change the password of the sa account with the following syntax. Be sure to replace "j8:zG=J?E9" with a strong password of your choice:
+
+       ```powershell
+       $strong_password = "j8:zG=J?E9"
+       sqlcmd.exe -E -S $sql_server_instance -Q "ALTER LOGIN sa WITH PASSWORD = $strong_password; "
+       ```
+
+1. Stop and restart your SQL Server instance in multi-user mode
+
+   ```powershell
+   net stop $service_name
+   net start $service_name
+   ```
+ 
+### Using SQL Server Configuration Manager and Management Studio (SSMS)
+
 
 These instructions assume,
 
@@ -129,7 +202,7 @@ Perform these instructions while logged in to Windows as a member of the local a
   
 11. Right-click your server name, and then click **Restart**. Make sure to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent again if you stopped it before starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode.
   
-Now you should be able to connect normally with one of the accounts which is now a member of the **sysadmin** fixed server role.  
+Now you should be able to connect normally with one of the accounts that is now a member of the **sysadmin** fixed server role.  
   
 ## See Also  
 

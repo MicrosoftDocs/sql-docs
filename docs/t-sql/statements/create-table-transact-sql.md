@@ -1062,7 +1062,7 @@ If more than one temporary table is created inside a single stored procedure or 
 
 If you include a *schema_name* when you create or access a temporary table, it is ignored. All temporary tables are created in the dbo schema.
 
-If a local temporary table is created in a stored procedure or application that can be executed at the same time by several users, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be able to distinguish the tables created by the different users. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does this by internally appending a numeric suffix to each local temporary table name. The full name of a temporary table as stored in the `sys.sysobjects` table in `tempdb` is made up of the table name specified in the CREATE TABLE statement and the system-generated numeric suffix. To allow for the suffix, *table_name* specified for a local temporary name cannot exceed 116 characters.
+If a local temporary table is created in a stored procedure or application that can be executed at the same time by several sessions, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be able to distinguish the tables created by the different sessions. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does this by internally appending a numeric suffix to each local temporary table name. The full name of a temporary table as stored in the `sys.sysobjects` table in `tempdb` is made up of the table name specified in the CREATE TABLE statement and the system-generated numeric suffix. To allow for the suffix, *table_name* specified for a local temporary name cannot exceed 116 characters.
 
 Temporary tables are automatically dropped when they go out of scope, unless explicitly dropped by using DROP TABLE:
 

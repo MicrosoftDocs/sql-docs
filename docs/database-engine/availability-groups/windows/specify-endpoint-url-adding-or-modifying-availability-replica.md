@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], endpoint"
   - "Endpoint URLs (HADR)"
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Specify Endpoint URL - Adding or Modifying Availability Replica
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

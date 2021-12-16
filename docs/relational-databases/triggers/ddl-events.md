@@ -125,13 +125,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_DATABASE_AUDIT_SPEFICIATION
+        CREATE_DATABASE_AUDIT_SPECIFICATION
     :::column-end:::
     :::column:::
-        ALTER_DATABASE_AUDIT_SPEFICIATION
+        ALTER_DATABASE_AUDIT_SPECIFICATION
     :::column-end:::
     :::column:::
-        DENY_DATABASE_AUDIT_SPEFICIATION
+        DROP_DATABASE_AUDIT_SPECIFICATION
     :::column-end:::
 :::row-end:::  
 :::row:::

@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Cursor Types (SQLSRV Driver)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

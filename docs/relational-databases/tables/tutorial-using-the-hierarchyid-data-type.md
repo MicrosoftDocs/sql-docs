@@ -1,14 +1,15 @@
 ---
 description: "Tutorial: Using the hierarchyid Data Type"
 title: "Tutorial: Using the hierarchyid Data Type | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "tutorials [hierarchyid]"
   - "hierarchyid [Database Engine], tutorial"
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355

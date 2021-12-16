@@ -8,8 +8,9 @@ ms.date: 09/16/2021
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
-
-ms.custom: contperf-fy21q1
+ms.custom:
+  - contperf-fy21q1
+  - intro-quickstart
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

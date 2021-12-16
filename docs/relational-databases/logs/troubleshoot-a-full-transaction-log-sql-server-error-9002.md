@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords: 
   - "logs [SQL Server], full"
   - "troubleshooting [SQL Server], full transaction log"
@@ -24,15 +24,16 @@ ms.custom: "seo-lt-2019"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
  
  
- **Option 1: Follow the steps directly in a notebook via Azure Data Studio**
+ ### Option 1: Run the steps directly in an executable notebook via Azure Data Studio
+
+> [!NOTE]
+> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
  
  > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-Shooting_LogFull_9002.ipynb)  
-
-[Learn how to install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)
  
  
- **Option 2: Follow the step manually**
+ ### Option 2: Follow the step manually
  
  
   This topic discusses possible responses to a full transaction log and suggests how to avoid it in the future. 
@@ -255,7 +256,7 @@ DEALLOCATE no_truncate_db
 > [!IMPORTANT]  
 >  If the database was in recovery when the 9002 error occurred, after resolving the problem, recover the database by using [ALTER DATABASE *database_name* SET ONLINE.](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-### More information on LOG_BACKUP log_reuse_wait
+### LOG_BACKUP log_reuse_wait
 
 The most common actions you can consider here is to review your database recovery model and backup the transaction log of your database. 
 
@@ -298,7 +299,7 @@ AND bs.backup_start_date > DATEADD(month, -2, sysdatetime()) --only look at last
 ORDER BY bs.database_name asc, bs.Backup_Start_Date desc;
 ```
 
-A complete history of all SQL Server backup and restore operations on a server instance is stored in the `msdb` system database. For more information on backup history, see [Backup History and Header Information (SQL Server)](/sql/relational-databases/backup-restore/backup-history-and-header-information-sql-server).
+A complete history of all SQL Server backup and restore operations on a server instance is stored in the `msdb` system database. For more information on backup history, see [Backup History and Header Information (SQL Server)](../backup-restore/backup-history-and-header-information-sql-server.md).
 
 #### Create a transaction log backup
 
@@ -317,7 +318,7 @@ BACKUP LOG [dbname] TO DISK = 'some_volume:\some_folder\dbname_LOG.trn'
 
 
   
-### More information on ACTIVE_TRANSACTION log_reuse_wait
+### ACTIVE_TRANSACTION log_reuse_wait
 
 The steps to troubleshoot ACTIVE_TRANSACTION reason include discovering the long running transaction and resolving it (in some case using the KILL command to do so).
 
@@ -336,9 +337,24 @@ This statement lets you identify the user ID of the owner of the transaction, so
 
 Sometimes you just have to end the transaction; you may have to use the [KILL](../../t-sql/language-elements/kill-transact-sql.md) statement. Please use this statement very carefully,  especially when critical processes are running that you don't want to kill. For more information, see [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
-### More information on AVAILABILITY_REPLICA log_reuse_wait
+### AVAILABILITY_REPLICA log_reuse_wait
 
-When transaction changes at primary Availability replica are not yet hardened on the secondary replica, the transaction log on the primary replica cannot be  truncated. This can cause the log to grow , and can occur whether the secondary replica is set for synchronous or asynchronous commit mode. For information on how to troubleshoot this type of issue see [Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)[Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)
+When transaction changes at primary Availability replica are not yet hardened on the secondary replica, the transaction log on the primary replica cannot be  truncated. This can cause the log to grow , and can occur whether the secondary replica is set for synchronous or asynchronous commit mode. For information on how to troubleshoot this type of issue see [Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)
+
+### CHECKPOINT log_reuse_wait
+
+No checkpoint has occurred since the last log truncation, or the head of the log has not yet moved beyond a virtual log file (VLF). (All recovery models)
+
+This is a routine reason for delaying log truncation. If delayed, consider executing the `CHECKPOINT` command on the database or examining the log [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). 
+
+```TSQL
+USE dbname; CHECKPOINT
+select * from sys.dm_db_log_info(db_id('dbname'))
+```
+
+### For more information on log_reuse_wait factors
+
+For a more details see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)
 
 ## 2. Resolve full disk volume
 
@@ -506,10 +522,10 @@ ELSE
 ### Increase log file size or enable Autogrow
 
 If space is available on the log disk, you can increase the size of the log file. The maximum size for log files is two terabytes (TB) per log file.  
-  
+
 If autogrow is disabled, the database is online, and sufficient space is available on the disk, do either of these:  
   
-- Manually increase the file size to produce a single growth increment.  
+- Manually increase the file size to produce a single growth increment. These are [general recommendations](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations) on log size growth and size.
 - Turn on autogrow by using the ALTER DATABASE statement to set a non-zero growth increment for the FILEGROWTH option. See [Considerations for the autogrow and autoshrink settings in SQL Server](/troubleshoot/sql/admin/considerations-autogrow-autoshrink)  
   
 > [!NOTE]
@@ -521,5 +537,5 @@ If autogrow is disabled, the database is online, and sufficient space is availab
  [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
- [Manage the size of the transaction log file](manage-the-size-of-the-transaction-log-file.md)
- [MSSQLSERVER_9002](../errors-events/mssqlserver-9002-database-engine-error.md)
+ [MSSQLSERVER_9002](../errors-events/mssqlserver-9002-database-engine-error.md)  
+ [How a log file structure can affect database recovery time - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server-support/how-a-log-file-structure-can-affect-database-recovery-time/ba-p/315780)

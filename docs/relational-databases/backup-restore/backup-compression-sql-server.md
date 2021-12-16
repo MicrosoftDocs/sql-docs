@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "backing up [SQL Server], backup compression"
   - "backup compression [SQL Server]"
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Backup Compression (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

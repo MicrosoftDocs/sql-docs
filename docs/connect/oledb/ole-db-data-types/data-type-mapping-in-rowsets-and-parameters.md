@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "GetParameterInfo function"
   - "OLE DB, data types"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Data Type Mapping in Rowsets and Parameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

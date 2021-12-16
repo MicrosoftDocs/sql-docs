@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "logmarkhistory system table"
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # logmarkhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,6 +1,6 @@
 ---
 title: Install SQL Server documentation to view offline
-description: Learn how to install offline documentation for SQL Server 2019, 2017, 2016, 2014, and 2012. Use SQL Server Management Studio (SSMS) to view the offline content. 
+description: Learn how to install offline documentation for SQL Server 2019, 2017, 2016, 2014, and 2012. Use SQL Server Management Studio (SSMS) to view the offline content.
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -9,6 +9,8 @@ author: markingmyname
 ms.author: maghan
 ms.date: 08/12/2020
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
+ms.custom:
+  - intro-installation
 ---
 
 # Install SQL Server documentation to view offline in SSMS

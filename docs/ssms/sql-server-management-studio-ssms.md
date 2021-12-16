@@ -7,16 +7,18 @@ ms.topic: overview
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-f1_keywords: 
+f1_keywords:
   - "sql13.ssms.viewhelp.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Studio"
   - "SQL Server Management Studio for Integration Services"
   - "SQL Server Management Studio for Reporting Services"
   - "SQL Server Management Studio for Analysis Services"
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - intro-overview
 ms.date: 09/11/2019
-#Customer intent: As a database admin, I want to manage my databases so that I can monitor, track, and maintain the databases for my users. 
+#Customer intent: As a database admin, I want to manage my databases so that I can monitor, track, and maintain the databases for my users.
 ---
 
 # What is SQL Server Management Studio (SSMS)?

@@ -49,8 +49,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=s
 |**initial_compile_start_time**|**datetimeoffset**|Plan compilation statistics.|  
 |**last_compile_start_time**|**datetimeoffset**|Plan compilation statistics.|  
 |**last_execution_time**|**datetimeoffset**|Last execution time refers to the last end time of the query/plan.|  
-|**avg_compile_duration**|**float**|Plan compilation statistics. <br/>**Note:** Azure Synapse Analytics will always return zero (0).|  
-|**last_compile_duration**|**bigint**|Plan compilation statistics. <br/>**Note:** Azure Synapse Analytics will always return zero (0).|  
+|**avg_compile_duration**|**float**|Plan compilation statistics.|  
+|**last_compile_duration**|**bigint**|Plan compilation statistics.|  
 |**plan_forcing_type**|**int**|Plan forcing type.<br /><br />0: NONE<br /><br />1: MANUAL<br /><br />2: AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />NONE: No plan forcing<br /><br />MANUAL: Plan forced by user<br /><br />AUTO: Plan forced by automatic tuning|  
 

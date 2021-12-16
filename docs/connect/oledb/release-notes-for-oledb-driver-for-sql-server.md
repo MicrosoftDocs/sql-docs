@@ -1,12 +1,12 @@
 ---
 title: "Release notes for OLE DB Driver"
 description: "This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server."
-ms.date: 06/18/2021
+ms.date: 12/08/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Release notes for the Microsoft OLE DB Driver for SQL Server
 
@@ -20,6 +20,33 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## 18.6.3
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2183083)
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2183084) 
+
+Released: December 15, 2021
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+    For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2183083&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2183083&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2183083&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2183083&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2183083&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2183083&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2183083&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2183083&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2183083&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2183083&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2183083&clcid=0x40a)  
+    For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2183084&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2183084&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2183084&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2183084&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2183084&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2183084&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2183084&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2183084&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2183084&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2183084&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2183084&clcid=0x40a)
+
+### Features added
+
+| Feature added | Details |
+| :------------ | :------ |
+| Removal of dependency on vcruntime140_1.dll | To remove the requirement to install Visual Studio in some scenarios, we removed all dependencies to vcruntime140_1.dll. |
+
+| Enable querying server SPN from connection | During a connection attempt where Azure AD authentication has been selected, the server will send a FEDAUTHINFO packet. This packet contains the server's SPN that must be used to generate the access token. Clients can query this value after a connection attempt is made (on success or failure) through the SSPROP_INIT_DISCOVERDSERVERSPN property in DBPROPSET_SQLSERVERDBINIT. |
+
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| :-------- | :------ |
+| Fixed an issue where string values were being padded with zeros. | Fixed a bug, which resulted in empty fixed char fields being padded with zeroes during BCP import. |
+
+## Previous Releases
 
 ## 18.6.0
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2164384)  
@@ -45,8 +72,6 @@ If you need to download the installer in a language other than the one detected 
 | Fixed an issue with endianness of port numbers in data access trace logs. | Fixed a bug, which resulted in port numbers logged having incorrect endianness while doing [Data Access Tracing](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)). |
 | Fixed an accessibility issue. | Fixed an accessibility issue in the user interface of [Universal Data Link (UDL)](help-topics\data-link-pages.md). This accessibility issue resulted in the *Browse* button not being announced by screen reader software. |
 | Fixed crash in scenarios involving Multiple Active Result Sets. | Fixed a bug, which could result in the driver crashing in some scenarios involving [Multiple Active Result Sets (MARS)](features/using-multiple-active-result-sets-mars.md).|
-
-## Previous Releases
 
 ## 18.5.0
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2135577)  

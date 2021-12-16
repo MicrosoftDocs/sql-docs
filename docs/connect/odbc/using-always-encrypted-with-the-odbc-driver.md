@@ -7,7 +7,7 @@ ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.author: v-chojas
 author: v-chojas
 ---

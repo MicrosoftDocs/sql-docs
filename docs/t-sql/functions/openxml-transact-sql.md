@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "rowsets [SQL Server], XML documents"
   - "XML [SQL Server], rowset views"
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # OPENXML (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

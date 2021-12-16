@@ -2,10 +2,10 @@
 title: Release Notes ODBC Driver for SQL Server on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: 08/02/2021
+ms.date: 11/10/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-chojas
@@ -30,6 +30,13 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 17.8.1.2, October 2021
+
+| New item | Details |
+| :------- | :------ |
+| Package update | Updated RPM packages for Red Hat 7, Red Hat 8, SUSE 12, and SUSE 15 to use SHA256 RPM signing. |
+| &nbsp; | &nbsp; |
 
 ## 17.8, July 2021
 

@@ -28,7 +28,7 @@ The **rxExec** function in **RevoScaleR** provides a mechanism for running any R
   
 + [Database permissions](../security/user-permission.md) and a SQL Server database user login
 
-+ [A development workstation with the RevoScaleR libraries](../r/set-up-a-data-science-client.md)
++ [A development workstation with the RevoScaleR libraries](../r/set-up-data-science-client.md)
 
 The R distribution on the client workstation provides a built-in **Rgui** tool that you can use to run the R script in this tutorial. You can also use an IDE such as RStudio or R Tools for Visual Studio.
 

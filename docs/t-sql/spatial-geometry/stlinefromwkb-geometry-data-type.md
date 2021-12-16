@@ -52,7 +52,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
 ## Examples  
  The following example uses `STLineFromWKB()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;   
 SET @g = geometry::STLineFromWKB(0x0102000000020000000000000000005940000000000000594000000000000069400000000000006940, 0);  
 SELECT @g.STAsText();  

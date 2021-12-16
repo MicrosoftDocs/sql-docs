@@ -46,7 +46,7 @@ Returns the total length of the elements in a **geometry** instance.
 ## Examples  
  The following example creates a `LineString` instance and uses `STLength()` to find the length of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
 SELECT @g.STLength();  

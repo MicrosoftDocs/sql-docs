@@ -2,7 +2,7 @@
 title: "Best practices with Query Store"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
-ms.date: "09/01/2021"
+ms.date: "12/03/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -45,7 +45,7 @@ To adjust these options as your workload grows, see [Keep Query Store adjusted t
 | STALE_QUERY_THRESHOLD_DAYS |Time-based cleanup policy that controls the retention period of persisted runtime statistics and inactive queries |30 |Enforced for new databases and databases with previous default (367) |
 | SIZE_BASED_CLEANUP_MODE |Specifies whether automatic data cleanup takes place when Query Store data size approaches the limit |AUTO |Enforced for all databases |
 | QUERY_CAPTURE_MODE |Specifies whether all queries or only a subset of queries are tracked |AUTO |Enforced for all databases |
-| FLUSH_INTERVAL_SECONDS |Specifies maximum period during which captured runtime statistics are kept in memory, before flushing to disk |900 |Enforced for new databases |
+| DATA_FLUSH_INTERVAL_SECONDS |Specifies maximum period during which captured runtime statistics are kept in memory, before flushing to disk |900 |Enforced for new databases |
 | | | | |
 
 > [!IMPORTANT]
@@ -396,6 +396,9 @@ Consider the following options:
   - Use a [plan guide](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md) to force parameterization only for the selected query.
   - Configure forced parameterization by using the [parameterization database option](../../relational-databases/databases/database-properties-options-page.md#miscellaneous) command, if there are a small number of different query plans in your workload. An example is when the ratio between the count of distinct query_hash and the total number of entries in `sys.query_store_query` is much less than 1.
 - Set QUERY_CAPTURE_MODE to AUTO to automatically filter out ad-hoc queries with small resource consumption.
+
+> [!TIP]
+> When using an Object-Relational Mapping (ORM) solution such as Entity Framework (EF), application queries like manual LINQ query trees or certain raw SQL queries may not be parameterized, which impacts plan re-use and the ability to track queries in the Query Store. For more information, see [EF Query caching and parameterization](/ef/core/performance/advanced-performance-topics) and [EF Raw SQL Queries](/ef/core/querying/raw-sql).
 
 ## <a name="Drop"></a> Avoid a DROP and CREATE pattern for containing objects
 

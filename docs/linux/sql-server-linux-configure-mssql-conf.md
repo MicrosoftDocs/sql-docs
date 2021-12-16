@@ -3,7 +3,7 @@ title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to  configure SQL Server settings on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 08/12/2020
+ms.date: 10/15/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -395,7 +395,13 @@ To set up this new location, use the following commands:
 
 ## <a id="coredump"></a> Specify core dump settings
 
-If an exception occurs in one of the SQL Server processes, SQL Server creates a memory dump.
+If an exception or crash occurs in one of the SQL Server processes, SQL Server creates a memory dump. Capturing a memory dump may take a long time and take up significant space. To save resources and avoid repeated memory dumps, there is a setting to disable automatic dump capture, **coredump.disablecoredump**.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set coredump.disablecoredump <true or false>
+```
+
+Users can still generate memory dumps manually when automatic core dump is disabled (**coredump.disablecoredump** set to `true`).
 
 There are two options for controlling the type of memory dumps that SQL Server collects: **coredump.coredumptype** and **coredump.captureminiandfull**. These relate to the two phases of core dump capture. 
 
@@ -644,7 +650,7 @@ The following options configure TLS for an instance of SQL Server running on Lin
 |**network.tlscert** |The absolute path to the certificate file that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses for TLS. Example:   `/etc/ssl/certs/mssql.pem`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlskey** |The absolute path to the private key file that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses for TLS. Example:  `/etc/ssl/private/mssql.key`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlsprotocols** |A comma-separated list of which TLS protocols are allowed by SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client does not support any allowed protocol, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rejects the connection attempt.  For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0).  If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |
-|**network.tlsciphers** |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). In general, you should not need to change this option. <br /> By default, the following ciphers are allowed: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+|**network.tlsciphers** |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/manmaster/man1/ciphers.html). In general, you should not need to change this option. <br /> By default, the following ciphers are allowed: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Path to the Kerberos keytab file |
 
 For an example of using the TLS settings, see [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).

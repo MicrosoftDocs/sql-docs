@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: a59cfe98-c0f4-46ad-9243-62aa56855f1a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getMaxColumnsInGroupBy Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

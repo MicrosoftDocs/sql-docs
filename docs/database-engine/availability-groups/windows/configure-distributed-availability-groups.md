@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Configure an Always On distributed availability group  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -463,7 +463,7 @@ The listener URL is the VNN of the primary FCI instance.
 
 ## Manually fail over FCI in distributed availability group
 
-To manually fail over the FCI availability group, update the distributed availability group to reflect the change of listener URL. For example, run the following DDL on both the primary AG and the secondary AG of SQLFCIAG:
+To manually fail over the FCI availability group, update the distributed availability group to reflect the change of listener URL. For example, run the following DDL on both the global primary of the distributed AG and the forwarder of the distributed AG of SQLFCIDAG:
 
 ```sql  
 ALTER AVAILABILITY GROUP [SQLFCIDAG]  

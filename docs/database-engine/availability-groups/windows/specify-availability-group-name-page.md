@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.swb.newagwizard.specifyagname.f1"
   - "sql13.swb.adddatabasewizard.specifyagname.f1"
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Specify Availability Group Options Page for an Always On Availability Group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

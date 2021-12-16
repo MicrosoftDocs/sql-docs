@@ -2,7 +2,7 @@
 title: "Shrink a Database"
 description: Learn how to shrink a database by using Object in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
-ms.date: "10/21/2021"
+ms.date: "12/16/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -51,7 +51,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio  
   
-#### To shrink a database  
+#### Shrink a database
   
 1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
@@ -78,7 +78,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 ##  <a name="TsqlProcedure"></a> Use Transact-SQL  
   
-#### To shrink a database  
+#### Shrink a database 
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -90,7 +90,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ## <a name="FollowUp"></a> Follow Up: After you shrink a database  
 
- Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and can slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  
+ Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and can slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking. For more information, see [Rebuild an index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md#rebuild-an-index).
   
 ## Next steps  
  - [Shrink a File](../../relational-databases/databases/shrink-a-file.md)   

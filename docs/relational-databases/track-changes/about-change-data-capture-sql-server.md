@@ -140,7 +140,7 @@ Although it is common for the database validity interval and the validity interv
 > [!NOTE]  
 >  In Azure SQL Database, the Agent Jobs are replaced by an scheduler which runs capture and cleanup automatically. 
  
- ## CDC and cleanup in Azure SQL Database (Preview)
+## CDC and cleanup in Azure SQL Database (Preview)
 
 In Azure SQL Database, a change data capture scheduler takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the change data capture tables. The scheduler runs capture and cleanup automatically within SQL Database, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand using the [sp_cdc_scan](../system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) and [sp_cdc_cleanup_change_tables](../system-stored-procedures/sys-sp-cdc-cleanup-change-table-transact-sql.md) procedures.
 

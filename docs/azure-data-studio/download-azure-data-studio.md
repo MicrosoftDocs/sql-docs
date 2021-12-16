@@ -218,6 +218,7 @@ Azure Data Studio runs on Windows, macOS, and Linux and is supported on the foll
 
 ### Windows operating systems
 
+- Windows 11 (64-bit)
 - Windows 10 (64-bit)
 - Windows 8.1 (64-bit)
 - Windows 8 (64-bit)

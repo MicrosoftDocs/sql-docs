@@ -109,6 +109,10 @@ The following table shows which editions of [!INCLUDE [sssql19-md](../../include
 | Windows Server 2016 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2016 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2016 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows 11 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 11 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 11 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 11 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |

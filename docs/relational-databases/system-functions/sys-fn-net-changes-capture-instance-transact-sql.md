@@ -2,7 +2,7 @@
 description: "sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
 title: "sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
 ms.custom: ""
-ms.date: "08/12/2021"
+ms.date: "09/29/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -119,7 +119,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  The change data capture configuration template 'Instantiate CDC Wrapper TVFs for Schema' shows how to use the `sp_cdc_generate_wrapper_function` stored procedure to obtain CREATE scripts for all of the wrapper functions for a schema's defined query functions. The template then creates those scripts. For more information about templates, see [Template Explorer](../../ssms/template/template-explorer.md).  
 
- The wrapper functions `sys.fn_all_changes_<capture_instance>` and `sys.fn_net_changes_<capture_instance>` are dependent on the system functions `cdc.fn_cdc_get_all_changes_<capture_instance>` and `cdc.fn_cdc_get_net_changes_<capture_instance>`. Error 313 is expected if LSN range supplied is not appropriate when calling `cdc.fn_cdc_get_all_changes_<capture_instance>` or `cdc.fn_cdc_get_net_changes_<capture_instance>`. If the `lsn_value` parameter is beyond the time of lowest LSN or highest LSN, then execution of these functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer.
+ The wrapper functions `sys.fn_all_changes_<capture_instance>` and `sys.fn_net_changes_<capture_instance>` are dependent on the system functions `cdc.fn_cdc_get_all_changes_<capture_instance>` and `cdc.fn_cdc_get_net_changes_<capture_instance>`. Error 313 is expected if LSN range supplied is not appropriate when calling `cdc.fn_cdc_get_all_changes_<capture_instance>` or `cdc.fn_cdc_get_net_changes_<capture_instance>`. If the `lsn_value` parameter is beyond the time of lowest LSN or highest LSN, then execution of these functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer. Sample T-SQL for a workaround can be found [at ReplTalk on GitHub](https://github.com/ReplTalk/ReplScripts/tree/master/CDC). 
   
 ## See Also  
 

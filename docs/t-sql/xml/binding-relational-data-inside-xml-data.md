@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "variables [XML in SQL Server], relational data binding"
   - "columns [XML in SQL Server], relational data binding"
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Binding Relational Data Inside XML Data
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

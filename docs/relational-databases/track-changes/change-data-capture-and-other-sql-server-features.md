@@ -62,7 +62,7 @@ This topic describes how the following features interact with change data captur
   
  You can use [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) to remove change data capture from a restored or attached database.  
  
- After restoring a database on Azure SQL Managed Instance, CDC will remain enabled, but you must ensure that the scan and cleanup jobs are added and running. You can manually add the jobs by running [sys.sp_cdc_add_job](../system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md?view=sql-server-ver15). 
+ After restoring a database on Azure SQL Managed Instance, CDC will remain enabled, but you must ensure that the scan and cleanup jobs are added and running. You can manually add the jobs by running [sys.sp_cdc_add_job](../system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md). 
   
 ##  <a name="Contained"></a> Contained databases  
  Change data capture is not supported in [contained databases](../../relational-databases/databases/contained-databases.md).

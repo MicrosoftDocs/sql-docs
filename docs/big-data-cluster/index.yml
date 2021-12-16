@@ -180,6 +180,8 @@ landingContent:
             url: cluster-troubleshooting-commands.md
           - text: Troubleshoot Active Directory
             url: troubleshoot-active-directory.md
+          - text: Troubleshoot HDFS
+            url: troubleshoot-hdfs.md
     
   # Card (Secure)
   - title: Secure

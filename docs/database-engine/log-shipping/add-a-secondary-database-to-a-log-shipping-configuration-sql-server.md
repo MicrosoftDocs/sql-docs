@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "secondary data files [SQL Server], adding"
   - "log shipping [SQL Server], secondary databases"
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Add a Secondary Database to a Log Shipping Configuration (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

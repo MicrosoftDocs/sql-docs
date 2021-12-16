@@ -11,8 +11,8 @@ f1_keywords:
   - "swb.agdashboard.policyeval.f1"
   - "sql13.swb.agdashboard.policyeval.f1"
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Policy Evaluation Result Page (Always On Dashboard)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

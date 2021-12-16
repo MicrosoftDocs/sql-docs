@@ -8,8 +8,8 @@ ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # SQL Server Backup Applications - Volume Shadow Copy Service (VSS) and SQL Writer
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

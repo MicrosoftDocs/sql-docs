@@ -53,6 +53,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 14
+          href: big-data-cluster/release-notes-cumulative-update-14.md
         - name: Cumulative Update 13
           href: big-data-cluster/release-notes-cumulative-update-13.md
         - name: Cumulative Update 12
@@ -7279,12 +7281,15 @@ items:
       - name: Reddit >>
         href: https://www.reddit.com/r/SQLServer
   - name: Linked servers
-    href: relational-databases/linked-servers/linked-servers-database-engine.md
     items:
-    - name: Create Linked Servers
+    - name: Overview
+      href: relational-databases/linked-servers/linked-servers-database-engine.md
+    - name: Create linked servers
       href: relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
-    - name: Create Linked Server Provider
+    - name: Create linked server provider
       href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
+    - name: Compare remote query methods
+      href: relational-databases/linked-servers/linked-servers-openquery-openrowset-exec-at.md
   - name: Full-text search
     href: relational-databases/search/full-text-search.md
     items:
@@ -11013,7 +11018,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-11001-database-engine-error.md
         - name: 11409
           href: relational-databases/errors-events/mssqlserver-11409-database-engine-error.md
-      - name: Errors 12,300 to 16,000
+      - name: Errors 12,300 to 16,999
         items:
         - name: 12300
           href: relational-databases/errors-events/mssqlserver-12300-database-engine-error.md
@@ -11053,6 +11058,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-15599-database-engine-error.md
         - name: 15661
           href: relational-databases/errors-events/mssqlserver-15661-database-engine-error.md
+        - name: 16591
+          href: relational-databases/errors-events/mssqlserver-16591-database-engine-error.md
+        - name: 16594
+          href: relational-databases/errors-events/mssqlserver-16594-database-engine-error.md
       - name: Errors 17,000 to 19,000
         items:
         - name: 17053
@@ -13451,7 +13460,7 @@ items:
       - name: sp_autostats
         href: relational-databases/system-stored-procedures/sp-autostats-transact-sql.md
       - name: sp_batch_params
-        href: relational-databases/system-stored-procedures/sp-batch-params-transact-sql.md
+        href: ./relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md
       - name: sp_bindefault
         href: relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md
       - name: sp_bindrule

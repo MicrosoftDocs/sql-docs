@@ -1,7 +1,7 @@
 ---
 title: "Browser Support for Reporting Services and Power View | Microsoft Docs"
 description: Learn about what browser versions are supported for managing and viewing SQL Server Reporting Services, the ReportViewer Controls and Power View.
-ms.date: 10/25/2021
+ms.date: 12/01/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -41,7 +41,6 @@ The following is the current list of browsers supported for the web portal.
 *Windows 7, 8.1, 10, 11; Windows Server 2008 R2, 2012, 2012 R2, 2016, 2019*
 
 - Microsoft Edge (+)
-- Microsoft Internet Explorer 10 or 11
 - Google Chrome (+)
 - Mozilla Firefox (+)
 
@@ -69,10 +68,9 @@ The following is the current list of browsers supported for the web portal.
  The following is the current list of browsers supported with the ReportViewer web control (2015). The report viewer supports viewing reports from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] web portal and SharePoint libraries.  
 
 **Microsoft Windows**  
-*Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
+*Windows 7, 8.1, 10, 11; Windows Server 2008 R2, 2012, 2012 R2*
 
 - Microsoft Edge (+)
-- Microsoft Internet Explorer 10 or 11
 - Google Chrome (+)
 - Mozilla Firefox (+)
 
@@ -85,7 +83,7 @@ The following is the current list of browsers supported for the web portal.
 
 ::: moniker range="=sql-server-2016"
 
- If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see  [Plan browser support in SharePoint 2016](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+ If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see  [Plan browser support in SharePoint 2016](/sharepoint/install/browser-support-planning-2016-2019).
 
 ::: moniker-end
 
@@ -123,10 +121,9 @@ The following is the current list of browsers supported for the web portal.
  Use a browser that has script support enabled. If the browser cannot run scripts, you cannot view the report.
 
 **Microsoft Windows**  
-*Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
+*Windows 7, 8.1, 10, 11; Windows Server 2008 R2, 2012, 2012 R2*
 
 - Microsoft Edge (+)
-- Microsoft Internet Explorer 10 or 11
 - Google Chrome (+)
 - Mozilla Firefox (+)
 
@@ -149,7 +146,7 @@ The following is the current list of browsers supported for the web portal.
 
 ::: moniker range="=sql-server-2016"
 
- For more information on the SharePoint 2016 browser support, see [Plan browser support in SharePoint 2013](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+ For more information on the SharePoint 2016 browser support, see [Plan browser support in SharePoint 2013](/sharepoint/install/browser-support-planning-2016-2019).
 
 ::: moniker-end
 

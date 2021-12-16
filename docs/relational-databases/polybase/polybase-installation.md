@@ -196,7 +196,7 @@ At installation, if you use the SQL Server instance as part of a PolyBase scale-
    
 ### PolyBase service accounts
 
-To change the service accounts for the PolyBase Engine and PolyBase Data Movement service, uninstall and reinstall the PolyBase feature.
+To change the service accounts for the PolyBase Engine and PolyBase Data Movement service, uninstall and reinstall the PolyBase feature. If the password for the service account was changed in Active Directory, you can change the service account password with Windows Services Console (services.msc).
 
 ## Next steps  
 

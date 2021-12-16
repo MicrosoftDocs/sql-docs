@@ -1,13 +1,11 @@
 ---
-title: "SQL Server Integration Services | Microsoft Docs"
-description: Learn about SQL Server Integration Services, Microsoft's platform for building enterprise-level data integration and data transformations solutions
-ms.custom: ""
-ms.date: "07/06/2018"
+title: SQL Server Integration Services
+description: Learn about SQL Server Integration Services, Microsoft's platform for building enterprise-level data integration and data transformations solutions.
+ms.date: 12/10/2021
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
+ms.prod_service: integration-services
 ms.technology: integration-services
-ms.topic: conceptual
+ms.topic: overview
 keywords: 
   - "SSIS"
 helpviewer_keywords: 
@@ -21,23 +19,30 @@ helpviewer_keywords:
 author: chugugrace
 ms.author: chugu
 ---
+
 # SQL Server Integration Services
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-
 SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building enterprise-level data integration and data transformations solutions. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to solve complex business problems by copying or downloading files, loading data warehouses, cleansing and mining data, and managing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects and data.
 
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] can extract and transform data from a wide variety of sources such as XML data files, flat files, and relational data sources, and then load the data into one or more destinations.
+## Capabilities
 
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes a rich set of built-in tasks and transformations, graphical tools for building packages, and the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Catalog database, where you store, run, and manage packages.
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] can [extract and transform data](./data-flow/data-flow.md) from a wide variety of sources such as XML data files, flat files, and relational data sources, and then load the data into one or more destinations.
+
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes:
+
+- A rich set of built-in [tasks](./control-flow/integration-services-tasks.md) and [transformations](./data-flow/transformations/integration-services-transformations.md).
+- [Graphical tools](ssis-designer.md) for building packages.
+- An SSIS [Catalog database](./catalog/ssis-catalog.md) to store, run, and manage packages.
 
 You can use the graphical [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tools to create solutions without writing a single line of code. You can also program the extensive [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model to create packages programmatically and code custom tasks and other package objects.
 
-## Get SQL Server Integration Services
+## Get started
 
-For info about installing SQL Server Integration Services with SQL Server, and about additional downloads you may want or need, see [Install Integration Services](install-windows/install-integration-services.md).
+You can start by installing SQL Server Integration Services, which is part of SQL Server setup. 
+
+For installation instructions and guidance, see [Install Integration Services](install-windows/install-integration-services.md).
 
 ##  ![info_tip](../sql-server/media/info-tip.png) Resources
 -   [Get help in the SSIS forum](/answers/topics/sql-server-integration-services.html)

@@ -56,6 +56,9 @@ The following steps show how to open the notebook file in Azure Data Studio:
 
    ![Set Kernel and Attach to](media/notebook-tutorial-spark/set-kernel-and-attach-to.png)
 
+> [!IMPORTANT]
+> In Azure Data Studio, all Spark notebook types (Scala Spark, PySpark and SparkR) conventionally define some important Spark session related variables upon first cell execution. Those variables are: `spark`, `sc`, and `sqlContext`. When copying logic out of notebooks for batch submission (into a Python file to be run with `azdata bdc spark batch create` for example), make sure you define the variables accordingly.
+
 ## Run the notebook cells
 
 You can run each notebook cell by pressing the play button to the left of the cell. The results are shown in the notebook after the cell finishes running.

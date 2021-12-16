@@ -22,7 +22,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 11/1/2021 
+ms.date: 12/3/2021 
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -56,7 +56,7 @@ If a computer contains side-by-side installations of SSMS, verify you start the 
 This release of SSMS can be installed in the following languages:
 
 SQL Server Management Studio 18.10:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x40a)
+[Chinese (Simplified)](https://aka.ms/ssmsfullsetup?clcid=0x804) | [Chinese (Traditional)](https://aka.ms/ssmsfullsetup?clcid=0x404) | [English (United States)](https://aka.ms/ssmsfullsetup?clcid=0x409) | [French](https://aka.ms/ssmsfullsetup?clcid=0x40c) | [German](https://aka.ms/ssmsfullsetup?clcid=0x407) | [Italian](https://aka.ms/ssmsfullsetup?clcid=0x410) | [Japanese](https://aka.ms/ssmsfullsetup?clcid=0x411) | [Korean](https://aka.ms/ssmsfullsetup?clcid=0x412) | [Portuguese (Brazil)](https://aka.ms/ssmsfullsetup?clcid=0x416) | [Russian](https://aka.ms/ssmsfullsetup?clcid=0x419) | [Spanish](https://aka.ms/ssmsfullsetup?clcid=0x40a)
 
 > [!TIP]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).
@@ -125,7 +125,7 @@ These components aren't uninstalled because they can be shared with other produc
 
 ## Supported SQL offerings
 
-- This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics.
+- This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](/lifecycle/products/?products=sql-server.md) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics.
 - Additionally, SSMS 18.x can be installed side by side with SSMS 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
 - SQL Server Integration Services (SSIS) - SSMS version 17.x or later doesn't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side by side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 

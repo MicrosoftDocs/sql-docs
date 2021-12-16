@@ -1,7 +1,7 @@
 ---
-title: "Azure Active Directory"
-description: "Learn how to use Azure Active Directory authentication with the Microsoft Drivers for PHP for SQL Server."
-ms.date: "01/29/2021"
+title: Azure Active Directory
+description: Learn how to use Azure Active Directory authentication with the Microsoft Drivers for PHP for SQL Server.
+ms.date: 12/14/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -13,9 +13,12 @@ author: David-Engel
 ms.author: v-davidengel
 ---
 # Connect Using Azure Active Directory Authentication
+
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) is a central user ID management technology that operates as an alternative to [SQL Server authentication](how-to-connect-using-sql-server-authentication.md). Azure AD allows connections to Microsoft Azure SQL Database and Azure Synapse Analytics with federated identities in Azure AD using a username and password, Windows Integrated Authentication, or an Azure AD access token. The PHP drivers for SQL Server offer partial support for these features.
+
+ You must configure your Azure SQL data source before you can use Azure AD authentication. For more information, see [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 To use Azure AD, use the **Authentication** or **AccessToken** keywords (they are mutually exclusive), as shown in the following table. For more technical details, refer to [Using Azure Active Directory with the ODBC Driver](../odbc/using-azure-active-directory.md).
 

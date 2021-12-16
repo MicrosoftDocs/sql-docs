@@ -4,8 +4,8 @@ titleSuffix: SQL Server Big Data Clusters
 description: This article describes the SQL Server Big Data Clusters Cumulative Update 13 contents.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: melqin,dacoelho
-ms.date: 10/06/2021
+ms.reviewer: dacoelho
+ms.date: 11/18/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -34,6 +34,9 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 
 For detailed SQL Server engine changes, check the [official SQL Server CU13 knowledge base article](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535).
 
+> [!NOTE]
+> Due to the [runtime for Apache Spark](runtime-for-apache-spark.md), starting with SQL Server Big Data Clusters CU13, some container image sizes increased considerably (two fold for the mssql-hadoop container, for example). Average cluster upgrade time might be impacted by this.
+
 ## Tested configurations for CU13
 
 [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU13 was tested on the following environment combinations:
@@ -51,7 +54,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 ## System environment
 
 * __Operating System__: Ubuntu 20.04.3 LTS
-* __SQL Server__: 15.0.4153.1
+* __SQL Server__: 15.0.4178.15
     * __Java__: Azul Zulu JRE 11.0.9.1
     * __Python__: 3.7.2 (miniconda 4.5.12)
     * __R__: Microsoft R 3.5.2

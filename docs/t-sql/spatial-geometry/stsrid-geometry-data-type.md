@@ -43,7 +43,7 @@ STSrid
 ## Examples  
  The first example creates a **geometry** instance with the SRID value 13 and uses `STSrid` to confirm the SRID.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0))', 13);  
 SELECT @g.STSrid;  
@@ -51,7 +51,7 @@ SELECT @g.STSrid;
   
  The second example uses `STSrid` to change the SRID value of the instance to 23 and then confirms the modified SRID value.  
   
-```  
+```sql
 SET @g.STSrid = 23;  
 SELECT @g.STSrid;  
 ```  

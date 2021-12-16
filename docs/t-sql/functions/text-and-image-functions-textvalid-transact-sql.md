@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "text-pointer values"
   - "verifying text pointers"
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # Text and Image Functions - TEXTVALID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Remove a primary database from an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

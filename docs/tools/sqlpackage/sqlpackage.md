@@ -247,7 +247,7 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |ScriptFileSize=(BOOLEAN)| | x | | | x | x |
 |ScriptNewConstraintValidation=(BOOLEAN 'True')| | x | | | x | x |
 |ScriptRefreshModule=(BOOLEAN 'True')| | x | | | x | x |
-|Storage=({File&#124;Memory} 'File')| x | x | x | x | x | x |
+|Storage=({File&#124;Memory})| x | x | x | x | x | x |
 |TableData=(STRING)| x | | x | | | |
 |TargetEngineVersion=(ENUM 'Latest')| | | x | | | |
 |TempDirectoryForTableData=(STRING)| x | | x | | | |

@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 04/21/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707

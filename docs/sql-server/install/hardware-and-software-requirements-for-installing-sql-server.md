@@ -42,8 +42,8 @@ helpviewer_keywords:
   - "cross-language support"
   - "disk space [SQL Server]"
   - "localized SQL Server versions"
-ms.author: chadam
-author: cawrites
+ms.author: mikeray
+author: MikeRayMSFT
 ---
 # SQL Server 2016 and 2017: Hardware and software requirements
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -121,6 +121,10 @@ The following table shows which editions of SQL Server 2017 are compatible with 
 | Windows Server 2012 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2012 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2012 Foundation    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows 11 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 11 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 11 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 11 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
@@ -218,6 +222,10 @@ The following table shows which editions of SQL Server 2016 are compatible with 
 | Windows Server 2012 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2012 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2012 Foundation    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows 11 IoT Enterprise         |    No      |    No     |    No    | No  |   No    |
+| Windows 11 Enterprise             |    No      |    No     |    No    | No  |   No    |
+| Windows 11 Professional           |    No      |    No     |    No    | No  |   No    |
+| Windows 11 Home                   |    No      |    No     |    No    | No  |   No    |
 | Windows 10 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |

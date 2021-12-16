@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "$PARTITION function"
   - "partitions [SQL Server], numbers"
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # $PARTITION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

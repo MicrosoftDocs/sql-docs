@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "database_usage"
   - "sys.database_usage"
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "= azuresqldb-current"
 ---
 # sys.database_usage (Azure SQL Database)

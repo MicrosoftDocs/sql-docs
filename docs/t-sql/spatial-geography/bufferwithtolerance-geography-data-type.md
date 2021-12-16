@@ -74,7 +74,7 @@ This method isn't precise.
 ## Examples  
 The following example creates a `Point` instance and uses `BufferWithTolerance()` to obtain a rough buffer around it.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);  
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  

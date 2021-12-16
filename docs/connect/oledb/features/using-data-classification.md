@@ -5,13 +5,13 @@ ms.custom: ""
 ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OLE DB Driver for SQL Server, data classification"
-author: "bazizi"
-ms.author: v-beaziz
+author: David-Engel
+ms.author: v-davidengel
 manager: kenvh
 ---
 # Using data classification

@@ -45,7 +45,7 @@ Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representatio
 ## Examples  
  The following example creates a `Point` instance that contains **Z** (elevation) and **M** (measure) values. `STAsText()` selects the WKT values, (1 2); `AsTextZM()` selects the same WKT values and also returns the values for **Z** and **M**, yielding (1 2 3 4).  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);  
 SELECT @g.STAsText();  

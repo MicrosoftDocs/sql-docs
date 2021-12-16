@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "removing log shipping"
   - "deleting log shipping"
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Remove Log Shipping (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

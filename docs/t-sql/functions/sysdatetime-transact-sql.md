@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "dates [SQL Server], system date and time"
   - "time [SQL Server], system"
 ms.assetid: cba4999e-a9d4-4742-abc9-4a4f109206b6
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SYSDATETIME (Transact-SQL)

@@ -5,7 +5,7 @@ description: This article describes the updates and known issues for SQL Server 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin,dacoelho
-ms.date: 10/05/2021
+ms.date: 11/18/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -18,6 +18,17 @@ ms.technology: big-data-cluster
 The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The article lists cumulative update information for all the releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 For the latest release notes, see [SQL Server Big Data Clusters platform release notes](release-notes-big-data-cluster.md).
+
+## <a id="cu14"></a> CU14 (November 2021)
+
+Cumulative Update 14 (CU14) release for SQL Server Big Data Clusters.
+
+|Package version | Image tag | Contents |
+|-----|-----| ----- |
+|15.0.4188.2|[2019-CU14-ubuntu-20.04]| [SQL Server Big Data Clusters Cumulative Update 14](release-notes-cumulative-update-14.md) |
+
+> [!WARNING]
+   > On Cumulative Update 14, __the upgrade order is critical__. Upgrade your big data cluster to CU14 __before__ upgrading Kubernetes cluster to version 1.21. If not done in this order, a CU13 cluster upgrade to CU14 on a Kubernetes version 1.21 won't finish. In this case, reverting back to kubernetes version 1.20 will fix the problem.
 
 ## <a id="cu13"></a> CU13 (September 2021)
 
@@ -44,7 +55,7 @@ Cumulative Update 12 (CU12) release for SQL Server Big Data Clusters.
 
 |Package version | Image tag | Contents |
 |-----|-----| ----- |
-|15.0.4153.1|[2019-CU12-ubuntu-20.04]| [SQL Server Big Data Clusters Cumulative Update 12](release-notes-cumulative-update-12.md) |
+|15.0.4153.13|[2019-CU12-ubuntu-20.04]| [SQL Server Big Data Clusters Cumulative Update 12](release-notes-cumulative-update-12.md) |
 
 SQL Server Big Data Clusters CU12 changes the operating system default python version from 3.5 to 3.6 on all its images. This has no impact on Spark and SQL Server Machine Learning Services, as those components use dedicated Python installations and don't rely on OS python.
 

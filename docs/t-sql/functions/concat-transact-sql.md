@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CONCAT function"
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONCAT (Transact-SQL)

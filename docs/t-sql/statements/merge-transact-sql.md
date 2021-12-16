@@ -256,7 +256,7 @@ Specifies the graph match pattern. For more information about the arguments for 
 > - During the preview, MERGE…WHEN NOT MATCHED INSERT is not supported for tables with IDENTITY columns.  
 > - The support for tables with different distribution types is described in this table:
 >
->|MERGE CLAUSE in Azure Synapse Analytics|Supported TARGE distribution table| Supported SOURCE distribution table|Comment|  
+>|MERGE CLAUSE in Azure Synapse Analytics|Supported TARGET distribution table| Supported SOURCE distribution table|Comment|  
 >|-----------------|---------------|-----------------|-----------|  
 >|**WHEN MATCHED**| All distribution types |All distribution types||  
 >|**NOT MATCHED BY TARGET**|HASH |All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables. |

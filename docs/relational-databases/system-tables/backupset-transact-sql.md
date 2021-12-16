@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "backup media [SQL Server], backupset system table"
   - "backup sets [SQL Server]"
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # backupset (Transact-SQL)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "NEWSEQUENTIALID function"
   - "GUIDs [SQL Server]"
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "automated backup preference"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Offload supported backups to secondary replicas of an availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

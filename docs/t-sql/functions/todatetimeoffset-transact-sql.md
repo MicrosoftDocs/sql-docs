@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "time [SQL Server], functions"
 ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TODATETIMEOFFSET (Transact-SQL)

@@ -3,7 +3,7 @@ title: Release notes for SQL Server 2019 on Linux
 description: This article contains the release notes and supported features for SQL Server 2019 running on Linux. Release notes are included for the most recent release and several previous releases.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 10/05/2021
+ms.date: 11/22/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -18,6 +18,8 @@ The following release notes apply to SQL Server 2019 running on Linux. This arti
 > [!TIP]
 > To learn about new Linux features in SQL Server 2019, see [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true#sql-server-on-linux).
 
+## Supported platforms
+
 [!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
 ## Tools
@@ -30,6 +32,7 @@ The following table lists the release history for SQL Server 2019 releases.
 
 | Release                   | Version       | Release date |
 |---------------------------|---------------|--------------|
+| [CU14](#cu14)             | 15.0.4188.2   | 2021-11-22   |
 | [CU13](#cu13)             | 15.0.4178.1   | 2021-10-05   |
 | [CU12](#cu12)             | 15.0.4153.1   | 2021-08-04   |
 | [CU11](#cu11)             | 15.0.4138.2   | 2021-06-10   |
@@ -59,6 +62,27 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](sql-server-linux-setup-machine-learning.md)
 - [Install PolyBase package](../relational-databases/polybase/polybase-linux-setup.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="cu14"></a> CU14 (November 2021)
+
+This is the Cumulative Update 14 (CU14) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4188.2. For information about the fixes and improvements, see <https://support.microsoft.com/help/5007182>.
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+> [!NOTE]
+> Starting with CU1, the offline package installation links for Red Hat are pointing to RHEL 8 packages. If you are looking for RHEL 7 packages, refer to the download path <https://packages.microsoft.com/rhel/7/mssql-server-2019/>
+>
+> **Ubuntu 20.04** is now supported on SQL Server 2019 starting with CU10. The offline package installation links for Ubuntu are pointing to Ubuntu 20.04 packages. If you are looking for Ubuntu 18.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/>
+>
+> **SLES 15** is now supported on SQL Server 2019 starting with CU14. The offline package installation links for SLES are pointing to SLES 15 packages. If you are looking for SLES 12 packages, refer to the download path <https://packages.microsoft.com/sles/12/mssql-server-2019/>
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 15.0.4188.2-3 | [Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4188.2-3.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4188.2-3.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4188.2-3.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4188.2-3.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4188.2-3.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4188.2-3.x86_64.rpm)|
+| SLES RPM package | 15.0.4188.2-3 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-15.0.4188.2-3.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-ha-15.0.4188.2-3.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-fts-15.0.4188.2-3.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-15.0.4188.2-3.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-java-15.0.4188.2-3.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-polybase-15.0.4188.2-3.x86_64.rpm)|
+| Ubuntu 20.04 Debian package | 15.0.4188.2-3 | [Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4188.2-3_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4188.2-3_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4188.2-3_amd64.deb)</br>[Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4188.2-3_amd64.deb)</br>[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4188.2-3_amd64.deb)</br>[PolyBase RPM package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4188.2-3_amd64.deb)|
 
 ## <a id="cu13"></a> CU13 (October 2021)
 

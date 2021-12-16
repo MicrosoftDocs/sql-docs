@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "@@TEXTSIZE function"
   - "text size returned [SQL Server]"
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # &#x40;&#x40;TEXTSIZE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

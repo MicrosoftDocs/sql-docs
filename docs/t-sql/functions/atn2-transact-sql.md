@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "tangent"
   - "ATN2 function"
 ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ATN2 (Transact-SQL)

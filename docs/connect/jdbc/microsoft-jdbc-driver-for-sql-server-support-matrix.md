@@ -2,7 +2,7 @@
 title: Support matrix
 description: This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server.
 ms.custom: ""
-ms.date: 07/30/2021
+ms.date: 12/07/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -28,7 +28,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|
-|Microsoft JDBC Driver 9.4 for SQL Server|9.4|mssql-jdbc-9.4.0.jre16.jar<br> mssql-jdbc-9.4.0.jre11.jar<br> mssql-jdbc-9.4.0.jre8.jar|July 30, 2026|
+|Microsoft JDBC Driver 9.4 for SQL Server|9.4|mssql-jdbc-9.4.1.jre16.jar<br> mssql-jdbc-9.4.1.jre11.jar<br> mssql-jdbc-9.4.1.jre8.jar|July 30, 2026|
 |Microsoft JDBC Driver 9.2 for SQL Server|9.2|mssql-jdbc-9.2.1.jre15.jar<br> mssql-jdbc-9.2.1.jre11.jar<br> mssql-jdbc-9.2.1.jre8.jar|January 29, 2026|
 |Microsoft JDBC Driver 8.4 for SQL Server|8.4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|July 31, 2025|
 |Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|January 31, 2025|
@@ -37,12 +37,12 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|July 31, 2023|
 |Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|February 27, 2023|
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|June 30, 2022|
-|Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|July 14, 2021|
 
  The following Microsoft JDBC Drivers are no longer supported.
 
 |Driver Name|Driver Package Version|End of Mainstream Support|
 |-|-|-|
+|Microsoft JDBC Driver 6.0 for SQL Server|6.0|July 14, 2021|
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|August 24, 2020|
 |Microsoft JDBC Driver 4.1 for SQL Server|4.1|December 12, 2019|
 |Microsoft JDBC Driver 4.0 for SQL Server|4.0|March 6, 2017|

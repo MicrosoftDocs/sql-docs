@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "collations [SQL Server], properties"
   - "COLLATIONPROPERTY function"
 ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Collation Functions - COLLATIONPROPERTY (Transact-SQL)
@@ -78,5 +78,5 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
 ```  
   
 ## See also
-[sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
-  
+[sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
+[Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md)  

@@ -55,7 +55,7 @@ ms.author: mlandzic
 ### A. Computing the difference between two geography instances  
  The following example uses `STDifference()` to compute the difference between two **geography** instances.  
   
-```  
+```sql
 DECLARE @g geography;  
 DECLARE @h geography;  
 SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
@@ -66,12 +66,12 @@ SELECT @g.STDifference(@h).ToString();
 ### B. Using a FullGlobe with STDifference()  
  The following example uses `FullGlobe` instance. The first result is an empty `GeometryCollection` and the second result is a `Polygon` instance. `STDifference()` returns an empty `GeometryCollection` when a `FullGlobe` instance is the parameter. Every point in an invoking `geography` instance is contained in a `FullGlobe` instance.  
   
-```
+```sql
  DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
  DECLARE @h geography = 'FULLGLOBE';  
  SELECT @g.STDifference(@h).ToString(),  
  @h.STDifference(@g).ToString();
- ```  
+```  
   
 ## See Also  
  [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

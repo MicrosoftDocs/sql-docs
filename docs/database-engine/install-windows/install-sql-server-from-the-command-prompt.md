@@ -79,8 +79,8 @@ helpviewer_keywords:
   - "nodes [Faillover Clustering], command prompt"
   - "INSTALLSQLSHAREDDIR parameter"
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: ""
 ms.custom:
   - intro-installation

@@ -137,7 +137,7 @@ The following rules pertain to **cursor** output parameters when the procedure i
   
 ### Examples of cursor output parameters
 
-In the following example, a procedure is created that specified an output parameter, `@currency_cursor` using the **cursor** data type. The procedure is then called in a batch.
+In the following example, a procedure is created that specified an output parameter, `@CurrencyCursor` using the **cursor** data type. The procedure is then called in a batch.
 
 First, create the procedure that declares and then opens a cursor on the `Currency` table.
   
@@ -247,7 +247,7 @@ AS
     END  
  ELSE  
     BEGIN
-   /* Check to see if the ytd_sales value is NULL. */
+   /* Check to see if the @SalesYTD value is NULL. */
    IF @SalesYTD IS NULL  
      RETURN(4)   
    ELSE  

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SqlContext object"
   - "context [CLR integration]"
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # SqlContext Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "context connections [CLR integration]"
   - "regular connections [CLR integration]"
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Context Connections vs. Regular Connections
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

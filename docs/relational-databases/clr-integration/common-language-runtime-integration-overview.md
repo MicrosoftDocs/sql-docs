@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "code access security [CLR integration]"
   - "managed code [SQL Server], CLR integration"
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Common Language Runtime Integration
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

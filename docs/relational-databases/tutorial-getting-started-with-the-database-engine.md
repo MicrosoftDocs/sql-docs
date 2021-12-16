@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "failure to connect [SQL Server]"
   - "connecting tutorial [SQL Server]"
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Getting Started with the Database Engine

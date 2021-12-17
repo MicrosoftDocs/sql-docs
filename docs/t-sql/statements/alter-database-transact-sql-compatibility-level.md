@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # ALTER DATABASE (Transact-SQL) compatibility level
 
-[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)] 
 
 Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the SQL engine. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
 
@@ -350,11 +350,12 @@ Requires `ALTER` permission on the database.
 
 ### A. Change the compatibility level
 
-The following example changes the compatibility level of the [AdventureWorks sample database](../../samples/adventureworks-install-configure.md) database to 150, the default for [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)].
+The following example changes the compatibility level of the **AdventureWorks2019** [sample database](../../samples/adventureworks-install-configure.md) database to 150, the default for [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)].
 
 ```sql
 ALTER DATABASE AdventureWorks2019
 SET COMPATIBILITY_LEVEL = 150;
+GO
 ```
 
 The following example returns the compatibility level of the current database.
@@ -363,62 +364,71 @@ The following example returns the compatibility level of the current database.
 SELECT name, compatibility_level
 FROM sys.databases
 WHERE name = db_name();
+GO
 ```
 
-### B. Ignore the SET LANGUAGE statement except under compatibility level 120
+### B. Ignore the SET LANGUAGE statement except under compatibility level 120 or higher
 
-The following query ignores the `SET LANGUAGE` statement except under compatibility level 120.
+The following query ignores the `SET LANGUAGE` statement except under compatibility level 120 or higher.
 
 ```sql
 SET DATEFORMAT dmy;
 DECLARE @t2 date = '12/5/2011' ;
 SET LANGUAGE dutch;
 SELECT CONVERT(varchar(11), @t2, 106);
-
--- Results when the compatibility level is less than 120.
-12 May 2011
-
--- Results when the compatibility level is set to 120).
-12 mei 2011
+GO
 ```
+
+Results when the compatibility level is less than 120: `12 May 2011`
+
+Results when the compatibility level is set to 120 or higher: `12 mei 2011`
 
 ### C. For compatibility-level setting of 110 or lower, recursive references on the right-hand side of an EXCEPT clause create an infinite loop
 
 ```sql
-WITH
-cte AS (SELECT * FROM (VALUES (1),(2),(3)) v (a)),
-r
-AS (SELECT a FROM Table1
-UNION ALL
-(SELECT a FROM Table1 EXCEPT SELECT a FROM r) )
+WITH cte AS 
+    (SELECT * FROM (VALUES (1),(2),(3)) v (a)),
+r AS 
+    (SELECT a FROM cte
+    UNION ALL
+    (SELECT a FROM cte EXCEPT SELECT a FROM r) 
+)
 SELECT a
 FROM r;
-
+GO
 ```
 
 ### D. The difference between styles 0 and 121
 
+When the compatibility level is lower than 110, the default style for `CAST` and `CONVERT` operations on **time** and **datetime2** data types is 121 except when either type is used in a computed column expression. For computed columns, the default style is 0.
+
+When the compatibility level is 110 or higher, the default style for `CAST` and `CONVERT` operations on **time** and **datetime2** data types is always 121. See [Differences between lower compatibility levels and levels 100 and 110](#differences-between-lower-compatibility-levels-and-levels-100-and-110) for more information.
+
 For more information about date and time styles, see [CAST and CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).
 
 ```sql
+DROP TABLE IF EXISTS t1;
+GO
+
 CREATE TABLE t1 (c1 time(7), c2 datetime2);
+GO
 
 INSERT t1 (c1,c2) VALUES (GETDATE(), GETDATE());
+GO
 
 SELECT CONVERT(nvarchar(16),c1,0) AS TimeStyle0
        ,CONVERT(nvarchar(16),c1,121)AS TimeStyle121
        ,CONVERT(nvarchar(32),c2,0) AS Datetime2Style0
        ,CONVERT(nvarchar(32),c2,121)AS Datetime2Style121
 FROM t1;
-
--- Returns values such as the following.
-TimeStyle0       TimeStyle121
-Datetime2Style0      Datetime2Style121
----------------- ----------------
--------------------- --------------------------
-3:15PM           15:15:35.8100000
-Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
+GO
 ```
+
+This returns results such as the following:
+
+|TimeStyle0 |TimeStyle121 |Datetime2Style0 |Datetime2Style121 |
+|--- |--- |--- |--- |
+|3:15PM |15:15:35.8100000 |Jun  7 2011  3:15PM |2011-06-07 15:15:35.8130000 |
 
 ## Next steps
 

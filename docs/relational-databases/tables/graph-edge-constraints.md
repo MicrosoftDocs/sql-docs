@@ -32,13 +32,40 @@ SQL Graph supports edge constraints, which enable users to add constraints to th
 
 ### Edge Constraint Clauses
 
-Each edge constraint consists of one or more edge constraint clause(s). An edge constraint clause is the pair of FROM and TO nodes that the given edge could connect.
+A single edge constraint consists of one or more edge constraint clause(s). 
+````
+CONSTRAINT constraint_name CONNECTION (cause1[, clause2...])
+````
 
-Consider that you have `Product` and `Customer` nodes in your graph and you use `bought` edge to connect these nodes. The edge constraint clause specifies the FROM and TO node pair and the direction of the edge. In this case the edge constraint clause will be `Customer` TO `Product`. That is, inserting a `bought` that goes from a `Customer` to `Product` will be allowed. Attempts to insert an edge that goes from `Product` to `Customer` fail.
+- An edge constraint clause is a node table (`$node_id`) pair separated by the `TO` keyword.
+- The left node is the FROM node table (`$from_id`) in the edge relationship.
+- The right node is the TO node table (`$to_id`) in the edge relationship.
+- The node pair indicates the _direction_ of the edge relationship.
+- An edge constraint can contain one or more edge constraint clauses.  
 
-- An edge constraint clause contains a pair of FROM and TO node tables that the edge constraint is enforced on.
-- Users may specify multiple edge constraint clauses per edge constraint, which will be applied as a disjunction.
-- If multiple edge constraints are created on a single edge table, edges must satisfy ALL constraints to be allowed. For a detailed explanation of where this scenario could be used, please see the example "Creating a new edge constraint on existing edge table, with new edge constraint clause" later in this page.
+#### Multiple constraints and clauses
+- Multiple edge constraints are enforced with an `AND` operator.
+- Multiple edge constraint _clauses_ are enforced with an `OR` operator.
+
+Consider the `Supplier` and `Customer` nodes in your graph. Each can be related to the `Product` node by a single, shared edge table: `bought`. This supports `Customer  -(bought)-> Product` and `Supplier -(bought)-> Product`. This is accomplished using a single edge constraint with multiple edge constraint clauses.  
+
+**For example:**
+
+```
+CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
+``` 
+In this case, one edge constraint specifies one edge constraint clause. This constraint supports `Customer -(bought)-> Product`. That is, inserting a `bought` edge relationship going from a `Customer` to `Product` would be allowed. Inserting any other combination of nodes, like `Supplier -(bought)-> Product`, even though it may describe a valid relationship in the real world, would fail.
+
+```
+CONSTRAINT EC_BOUGHT CONNECTION (Supplier TO Product, Customer TO Product)
+``` 
+In this case, one edge constraint specifies two edge constraint clauses. The constraint clauses allow the `bought` edge to contain BOTH `Supplier -(bought)-> Product` and `Customer -(bought)-> Product` relationships. Inserting any other node pairs would fail. 
+
+```
+CONSTRAINT EC_BOUGHT1 CONNECTION (Supplier TO Product)
+CONSTRAINT EC_BOUGHT2 CONNECTION (Customer TO Product)
+``` 
+In this case, two constraints specify one constraint clause each. These only allow inserts that satisfy BOTH edge constraint clauses simultaneously. This is, of course, impossible. There is no node pair that can satify both edge constraint clauses. This edge constraint combination makes the edge table unusable.
 
 ### Indexes on edge constraints
 

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_paramtype"
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_paramtype (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "EXTERNAL_ACCESS assemblies"
   - "assemblies [CLR integration], creating"
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Creating an Assembly
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

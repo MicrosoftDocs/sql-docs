@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Dispose method"
   - "System.Transactions namespace"
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Using System.Transactions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

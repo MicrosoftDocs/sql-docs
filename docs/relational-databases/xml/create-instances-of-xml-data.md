@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "XML [SQL Server], generating instances"
   - "white space [XML in SQL Server]"
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Create Instances of XML Data
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

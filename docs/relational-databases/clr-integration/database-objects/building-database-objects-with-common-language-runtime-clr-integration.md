@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "building database objects [CLR integration]"
   - ".NET Framework routines [SQL Server]"
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Building Database Objects with Common Language Runtime (CLR) Integration
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

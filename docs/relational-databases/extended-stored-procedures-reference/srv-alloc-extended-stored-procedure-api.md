@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_alloc"
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_alloc (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

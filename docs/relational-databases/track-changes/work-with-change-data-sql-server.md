@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "change data capture, LSN boundaries"
   - "change data capture, query functions"
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Work with Change Data 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

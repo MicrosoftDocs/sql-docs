@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], creating"
   - "messages [SQL Server], extended stored procedures"
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # Create Extended Stored Procedures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

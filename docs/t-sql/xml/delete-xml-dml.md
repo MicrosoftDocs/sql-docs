@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "delete statement [XML DML]"
   - "deleting nodes"
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # delete (XML DML)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

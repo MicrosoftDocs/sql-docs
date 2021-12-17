@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "strings [SQL Server], XML"
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # FOR XML Support for String Data Types
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

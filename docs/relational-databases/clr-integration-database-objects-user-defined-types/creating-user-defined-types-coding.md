@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "validating UDT values"
   - "exposing UDT properties [CLR integration]"
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Creating User-Defined Types - Coding
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

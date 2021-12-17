@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "credentials [CLR integration]"
   - "database objects [CLR integration], security"
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Impersonation and Credentials for Connections
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

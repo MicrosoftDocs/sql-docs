@@ -8,8 +8,8 @@ ms.date: 07/22/2020
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2012 Service Pack release notes

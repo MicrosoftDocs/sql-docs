@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Unicode [SQL Server], extended stored procedures"
   - "extended stored procedures [SQL Server], metadata"
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # Unicode Data and Server Code Pages
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

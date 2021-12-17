@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "XMLTEXT directive"
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Example: Specifying the XMLTEXT Directive
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

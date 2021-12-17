@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Rebuild Index Task dialog box"
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-author: rothja
-ms.author: jroth
+author: LitKnd
+ms.author: kendralittle
 ---
 # Rebuild Index Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

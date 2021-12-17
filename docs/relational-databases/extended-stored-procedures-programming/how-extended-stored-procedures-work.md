@@ -12,8 +12,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "extended stored procedures [SQL Server], about extended stored procedures"
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # How Extended Stored Procedures Work
 

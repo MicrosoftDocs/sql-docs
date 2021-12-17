@@ -135,8 +135,8 @@ helpviewer_keywords:
   - "ActualRebinds attribute"
   - "execution plans [SQL Server], reading output"
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan Logical and Physical Operators Reference

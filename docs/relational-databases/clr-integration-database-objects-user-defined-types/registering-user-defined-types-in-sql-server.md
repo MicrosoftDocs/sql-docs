@@ -31,8 +31,8 @@ helpviewer_keywords:
   - "UDTs [CLR integration], registering"
   - "ADD FILE clause"
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Registering User-Defined Types in SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

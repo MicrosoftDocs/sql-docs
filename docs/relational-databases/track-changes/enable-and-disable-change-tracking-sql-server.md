@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "change tracking [SQL Server], configuring"
   - "data [SQL Server], changing"
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Enable and Disable Change Tracking (SQL Server)

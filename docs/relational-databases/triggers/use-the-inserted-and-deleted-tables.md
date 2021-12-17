@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "INSERT statement [SQL Server], DML triggers"
   - "DML triggers, deleted or inserted tables"
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

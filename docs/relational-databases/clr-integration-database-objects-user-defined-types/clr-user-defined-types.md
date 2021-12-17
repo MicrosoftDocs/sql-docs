@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "invoking UDT methods"
   - "indexes [CLR integration]"
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # CLR User-Defined Types
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

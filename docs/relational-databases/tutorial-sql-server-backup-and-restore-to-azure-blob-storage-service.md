@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Backup & restore to Azure Blob storage service"
+title: "Quickstart: Backup & restore to Azure Blob Storage Service"
 description: "Quickstart: learn how to write backups to and restore from the Azure Blob Storage Service. Create an Azure Blob Container, write a backup, and then restore."
 ms.custom:
   - seo-dt-2019
@@ -14,7 +14,7 @@ author: LitKnd
 ms.author: kendralittle
 ---
 
-# Quickstart: SQL backup and restore to Azure Blob storage service
+# Quickstart: SQL backup and restore to Azure Blob Storage Service
 
 [!INCLUDE [sqlserver2016-asdbmi](../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
@@ -237,7 +237,7 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
 
 
 ## See also 
-Following is some recommended reading to understand the concepts and best practices when using Azure Blob storage service for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups.  
+Following is some recommended reading to understand the concepts and best practices when using Azure Blob Storage Service for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups.  
   
 -   [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
 -   [SQL Server Backup to URL Best Practices and Troubleshooting](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

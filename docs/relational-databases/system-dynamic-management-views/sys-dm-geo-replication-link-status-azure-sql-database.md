@@ -14,7 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "dm_geo_replication_link_status dynamic management view"
   - "sys.dm_geo_replication_link_status dynamic management view"
-
+dev_langs: 
+  - "TSQL"
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: WilliamDAssafMSFT
 ms.author: wiassaf

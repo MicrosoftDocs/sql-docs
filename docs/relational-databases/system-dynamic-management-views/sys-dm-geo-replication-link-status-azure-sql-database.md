@@ -39,7 +39,7 @@ ms.custom: seo-dt-2019
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |role|**tinyint**|Geo-replication role, one of:<br /><br /> 0 = Primary. The database_id  refers to the primary database in the geo-replication partnership.<br /><br /> 1 = Secondary.  The database_id  refers to the primary database in the geo-replication partnership.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
-|secondary_allow_connections|**tinyint**|The secondary type, one of:<br /><br /> 0 = No direct connections are allowed to the secondary database and the database is not available for read access.<br /><br /> 2 = All connections are allowed to the database in the secondary repl;ication for read-only access.|  
+|secondary_allow_connections|**tinyint**|The secondary type, one of:<br /><br /> 0 = No direct connections are allowed to the secondary database and the database is not available for read access.<br /><br /> 2 = All connections are allowed to the database in the secondary replication for read-only access.|  
 |secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
 |last_commit|**datetimeoffset**|The time of last transaction committed to the database. If retrieved on the primary database, it indicates the last commit time on the primary database. If retrieved on the secondary database, it indicates the last commit time on the secondary database. If retrieved on the secondary database when the primary of the replication link is down, it indicates until what point the secondary has caught up.|
   

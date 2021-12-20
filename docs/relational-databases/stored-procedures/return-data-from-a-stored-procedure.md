@@ -80,21 +80,25 @@ GO
 ```  
   
 The following example calls the procedure created in the first example and saves the output value returned from the called procedure in the `@SalesYTD` variable, which is local to the calling program.
+
+The example:
+
+- Declares the variable `@SalesYTDBySalesPerson` to receive the output value of the procedure.
+- Executes the `Sales.uspGetEmployeeSalesYTD` procedure specifying a last name for the input parameter. Save the output value in the variable `@SalesYTDBySalesPerson`.
+- Calls [PRINT](../../t-sql/language-elements/print-transact-sql.md) to display the value saved to `@SalesYTDBySalesPerson`.
   
 ```sql
-/* Declare the variable to receive the output value of the procedure. */
 DECLARE @SalesYTDBySalesPerson money;
 
-/* Execute the procedure specifying a last name for the input parameter  
-and saving the output value in the variable @SalesYTDBySalesPerson */
 EXECUTE Sales.uspGetEmployeeSalesYTD  
     N'Blythe', @SalesYTD = @SalesYTDBySalesPerson OUTPUT;  
 
-/* Display the value returned by the procedure. */
 PRINT 'Year-to-date sales for this employee is ' +   
     CONVERT(varchar(10),@SalesYTDBySalesPerson);  
 GO
-```  
+``` 
+
+
   
 Input values can also be specified for output parameters when the procedure is executed. This allows the procedure to receive a value from the calling program, change or perform operations with the value, and then return the new value to the calling program. In the previous example, the `@SalesYTDBySalesPerson` variable can be assigned a value before the program calls the `Sales.uspGetEmployeeSalesYTD` procedure. The execute statement would pass the `@SalesYTDBySalesPerson` variable value into the `@SalesYTD` output parameter. Then in the procedure body, the value could be used for calculations that generate a new value. The new value would be passed back out of the procedure through the output parameter, updating the value in the `@SalesYTDBySalesPerson` variable when the procedure exits. This is often referred to as "pass-by-reference capability."  
   
@@ -206,66 +210,65 @@ The following example shows the `usp_GetSalesYTD` procedure with error handling 
 |2|Specified parameter value is not valid.|  
 |3|Error has occurred getting sales value.|  
 |4|NULL sales value found for the salesperson.|  
-  
+
+The example creates a procedure named `Sales.usp_GetSalesYTD`, which:
+
+- Declares the `@SalesPerson` parameter and sets its default value to NULL. This parameter is intended to take the last name of a sales person. 
+- Validates the `@SalesPerson` parameter. 
+    - If `@SalesPerson` is NULL, the procedure prints a message and returns the return code 1.
+    - Otherwise, if the `@SalesPerson` parameter isn't NULL, the procedure checks the count of rows in the `HumanResources.vEmployee` table with a last name equal to the value of `@SalesPerson`. If the count is zero, the procedure returns the return code 2.
+- Queries the year-to-date sales for the sales person with the specified last name and assigns it to the `@SalesYTD` output parameter.
+- Checks for SQL Server errors by testing [&#x40;&#x40;ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md). 
+    - If @@ERROR isn't equal to zero, the procedure returns the return code 3.
+    - If @@ERROR was equal to zero, the procedure checks to see if the `@SalesYTD` parameter value is NULL. If no year to date sales were found, the procedure returns the return code 4.
+    - If neither of the preceding conditions are true, the procedure returns the return code 0.
+- If reached, the final statement in the stored procedure invokes the stored procedure recursively without specifying an input value.
+
+At the end of the example, code is provided to execute the `Sales.usp_GetSalesYTD` procedure while specifying a last name for the input parameter and saving the output value in the variable `@SalesYTD`.
+
 ```sql
 USE AdventureWorks2019;  
-GO  
+GO
+  
+CREATE PROCEDURE Sales.usp_GetSalesYTD 
+    @SalesPerson NVARCHAR(50) = NULL, 
+    @SalesYTD MONEY=NULL OUTPUT
+AS
+    IF @SalesPerson IS NULL 
+    BEGIN
+        PRINT 'ERROR: You must specify a last name for the sales person.'
+        RETURN (1)
+    END
+    ELSE 
+    BEGIN
+        IF(SELECT COUNT(*)FROM HumanResources.vEmployee WHERE LastName=@SalesPerson)=0
+            RETURN (2)
+    END
 
-IF OBJECT_ID('Sales.usp_GetSalesYTD', 'P') IS NOT NULL  
-    DROP PROCEDURE Sales.usp_GetSalesYTD;  
+    SELECT @SalesYTD=SalesYTD
+    FROM Sales.SalesPerson AS sp
+         JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID=sp.BusinessEntityID
+    WHERE LastName=@SalesPerson;
+
+    IF @@ERROR<>0 
+    BEGIN
+        RETURN (3)
+    END 
+    ELSE 
+    BEGIN
+        IF @SalesYTD IS NULL 
+            RETURN (4)
+        ELSE 
+            RETURN (0)
+    END
+
+    EXEC Sales.usp_GetSalesYTD;
 GO
 
-CREATE PROCEDURE Sales.usp_GetSalesYTD  
-    @SalesPerson nvarchar(50) = NULL,  /* NULL default value */
-    @SalesYTD money = NULL OUTPUT  
-AS 
- /* Validate the @SalesPerson parameter.*/
- IF @SalesPerson IS NULL  
-    BEGIN  
-     PRINT 'ERROR: You must specify a last name for the sales person.'  
-     RETURN(1)  
-    END  
- ELSE  
-    BEGIN  
-    -- Make sure the value is valid.
-    IF (SELECT COUNT(*) FROM HumanResources.vEmployee  
-     WHERE LastName = @SalesPerson) = 0  
-    RETURN(2)  
-    END  
 
- /* Get the sales for the specified name and   
- assign it to the output parameter. */
- SELECT @SalesYTD = SalesYTD   
- FROM Sales.SalesPerson AS sp  
- JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
- WHERE LastName = @SalesPerson;  
-
- /* Check for SQL Server errors. */
- IF @@ERROR <> 0   
-    BEGIN  
-    RETURN(3)  
-    END  
- ELSE  
-    BEGIN
-   /* Check to see if the @SalesYTD value is NULL. */
-   IF @SalesYTD IS NULL  
-     RETURN(4)   
-   ELSE  
-   /* SUCCESS!!  */
-   RETURN(0)  
-    END  
-
- /* Run the stored procedure without specifying an input value. */
- EXEC Sales.usp_GetSalesYTD;  
-GO  
-
-/* Run the stored procedure with an input value. */
 DECLARE @SalesYTDForSalesPerson money, @ret_code int;  
 
-/* Execute the procedure specifying a last name for the input parameter  
-and saving the output value in the variable @SalesYTD  */
-EXECUTE Sales.usp_GetSalesYTD  
-    N'Blythe', @SalesYTD = @SalesYTDForSalesPerson OUTPUT;  
+EXECUTE Sales.usp_GetSalesYTD  N'Blythe', @SalesYTD = @SalesYTDForSalesPerson OUTPUT;  
 
 PRINT N'Year-to-date sales for this employee is ' +  
     CONVERT(varchar(10), @SalesYTDForSalesPerson);  
@@ -273,24 +276,25 @@ GO
 ```  
   
 The following example creates a program to handle the return codes that are returned from the `usp_GetSalesYTD` procedure.
-  
+
+The example:
+
+- Declares variables `@SalesYTDForSalesPerson` and `@ret_code` to receive the output value and return code of the procedure.
+- Executes the `Sales.usp_GetSalesYTD` procedure with an input value specified for @SalesPerson and saves the output value and return code in variables.
+- Checks the return code in `@ret_code` and calls [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md) to display an appropriate message.
+
 ```sql
-/* Declare the variables to receive the output value and return code   
-of the procedure. */
+
 DECLARE @SalesYTDForSalesPerson money, @ret_code int;  
   
-/* Execute the procedure with a title_id value  
-and save the output value and return code in variables. */
 EXECUTE @ret_code = Sales.usp_GetSalesYTD  
     N'Blythe', @SalesYTD = @SalesYTDForSalesPerson OUTPUT;  
 
-/* Check the return codes. */
 IF @ret_code = 0  
- BEGIN  
-    PRINT 'Procedure executed successfully';
-    /* Display the value returned by the procedure. */
-    PRINT 'Year-to-date sales for this employee is ' + CONVERT(varchar(10),@SalesYTDForSalesPerson);
- END  
+    BEGIN  
+        PRINT 'Procedure executed successfully';
+        PRINT 'Year-to-date sales for this employee is ' + CONVERT(varchar(10),@SalesYTDForSalesPerson);
+    END  
 ELSE IF @ret_code = 1  
    PRINT 'ERROR: You must specify a last name for the sales person.';
 ELSE IF @ret_code = 2   

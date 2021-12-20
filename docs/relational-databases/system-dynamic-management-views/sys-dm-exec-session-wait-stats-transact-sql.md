@@ -12,6 +12,8 @@ f1_keywords:
   - "sys.dm_exec_session_wait_stats_tsql"
   - "dm_exec_session_wait_stats"
   - "dm_exec_session_wait_stats_tsql"
+dev_langs: 
+  - "TSQL" 
 helpviewer_keywords: 
   - "sys.dm_exec_session_wait_stats"
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc

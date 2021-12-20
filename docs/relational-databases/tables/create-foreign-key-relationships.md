@@ -55,7 +55,7 @@ Creating a foreign key in an existing table requires [ALTER](../../t-sql/stateme
 2. From the **Table Designer** menu, select **Relationships**. (See the **Table Designer** menu in the header, or, right-click in the empty space of the table definition, then select **Relationships...**.)
 3. In the **Foreign-key Relationships** dialog box, select **Add**.
 
-   The relationship appears in the **Selected Relationship** list with a system-provided name in the format FK_\<*tablename*>_\<*tablename*>, where the first *tablename* is the name of the foreign key table, and the second *tablename* is the name of the primary key table. This is simply a default and common naming convention for the **(Name)*** field of the foreign key object.
+   The relationship appears in the **Selected Relationship** list with a system-provided name in the format FK_\<*tablename*>_\<*tablename*>, where the first *tablename* is the name of the foreign key table, and the second *tablename* is the name of the primary key table. This is simply a default and common naming convention for the **(Name)** field of the foreign key object.
      
 4. Select the relationship in the **Selected Relationship** list.
 5. Select **Tables and Columns Specification** in the grid to the right and select the ellipses (**...**) to the right of the property.

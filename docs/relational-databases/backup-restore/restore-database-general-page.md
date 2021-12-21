@@ -1,6 +1,6 @@
 ---
 title: "Restore database (General page) | Microsoft Docs"
-description: While restoring a database using SSMS, use the General page to specify information about the target and source databases for a database restore operation.
+description: While restoring a database using SQL Server Management Studio, use the General page to specify information about the target and source databases for a database restore operation.
 ms.custom: ""
 ms.date: "1/05/2022"
 ms.prod: sql
@@ -28,9 +28,9 @@ When you [restore a database backup using SQL Server Management Studio (SSMS)](.
 
 If the database being restored does not exist, the user must have `CREATE DATABASE` permissions to be able to successfully restore the database. If the database exists, RESTORE permissions default to members of the `sysadmin` and `dbcreator` fixed server roles and the owner (`dbo`) of the database.
 
-RESTORE permissions are given to roles in which membership information is always readily available to the server. Because fixed database role membership can be checked only when the database is accessible and undamaged, which is not always the case when RESTORE is executed, members of the `db_owner` fixed database role do not have RESTORE permissions.
+RESTORE permissions are given to roles in which membership information is always readily available to the server. Because fixed database role membership can be checked only when the database is accessible and undamaged, which isn't always the case when RESTORE is executed, members of the `db_owner` fixed database role don't have RESTORE permissions.
 
-Restoring from an encrypted backup requires **VIEW DEFINITION** permissions to the certificate or asymmetric key used to encrypt the backup.  
+Restoring from an encrypted backup requires the **VIEW DEFINITION** permission to the certificate or asymmetric key used to encrypt the backup.  
   
 ## Options  
   

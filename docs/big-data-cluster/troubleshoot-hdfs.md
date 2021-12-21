@@ -29,7 +29,9 @@ HDFS heap size may not be properly configured. The proper settings of the nameno
 
 In SQL Server Big Data Clusters, the heap size of HDFS namenode process is controlled by BDC configuration hdfs-env.HDFS_NAMENODE_OPTS, the default value is 2 GB as specified in [HDFS configuration properties](reference-config-spark-hadoop.md). This workaround proposes increasing the heap size, which is a global configuration change for the entire big data cluster.
  
-The SQL Server Big Data Clusters runtime configuration feature is enabled after CU9. To proceed, upgrade your cluster to CU9+ (preferably to the latest version available). To increase the heap size of HDFS namenode in CU9+, we can follow the [post deployment configuration guide](configure-bdc-postdeployment.md).
+The SQL Server Big Data Clusters runtime configuration feature is enabled by default after SQL Server 2019 CU9. To proceed, upgrade your cluster to CU9+, preferably to the latest version available. For more information, see [SQL Server Big Data Clusters Release Notes](release-notes-big-data-cluster.md). 
+
+To increase the heap size of HDFS namenode, follow the [post deployment configuration guide](configure-bdc-postdeployment.md).
 
 The following sample uses `azdata` to increase HDFS namenode heap to 4 GB. Note this operation is only available in CU9 or later.
  

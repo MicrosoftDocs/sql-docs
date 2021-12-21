@@ -505,6 +505,8 @@ items:
           href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
         - name: AD login fails
           href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+      - name: Troubleshoot HDFS 
+        href: big-data-cluster/troubleshoot-hdfs.md
       - name: Troubleshoot HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
       - name: Cluster troubleshooting notebooks

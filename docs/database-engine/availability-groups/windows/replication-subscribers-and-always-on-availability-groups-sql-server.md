@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
-author: MashaMSFT
+author: MashaMSFT docs\relational-databases\system-stored-procedures\sp-addpullsubscription-agent-transact-sql.md
 ms.author: mathoma
 ---
 # Replication Subscribers and Always On Availability Groups (SQL Server)
@@ -41,7 +41,7 @@ ms.author: mathoma
    
     2.  After a failover, create the distribution agent job on the new Primary replica using the **sp_addpullsubscription_agent** stored procedure. 
   
- When you create a pull subscription, with the subscription database in an Availability Group, after every failover, it is recommended to disable the distribution agent job on the old Primary replica and enable the job on the new primary replica.  
+ When you create a pull subscription, with the subscription database in an Availability Group, after every failover, it is recommended to disable the distribution agent job on the old Primary replica and enable the job on the new primary replica.
   
 ## Creating a Transactional Replication Push Subscription  
   
@@ -62,8 +62,11 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
 GO  
 ```  
 
-## Creating a Transactional Replication Pull Subscription  
-  
+## Creating a Transactional Replication Pull Subscription
+
+> [!NOTE]
+> When running [sp_addpullsubscription_agent](../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) for a subscriber that is part of an Always On Availability group, you need to pass the *@subscriber parameter* as the AG listener. If you are running SQL 2016 and earlier versions, or SQL 2017 prior to CU16, the SP will execute properly but the **-Subscriber** parameter on the Distribution Agent job will not reference the listener as expected; it will be created using the subscriber server name on which the command is executed. To amend this issue, manually update the [Distribution Agent job](../relational-databases/replication/agents/replication-distribution-agent.md) parameter to the desired listener value.
+
 ```  
 -- commands to execute at the subscriber, in the subscriber database:  
 use [<subscriber database name>]  

@@ -89,13 +89,13 @@ distrib [-?]
  Prints all available parameters.  
   
  **-Publisher** _server_name_[**\\**_instance_name_]  
- Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
-  
+ Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. If your publisher database is in an Always On Availability Group, this will still reflect the original primary publisher server name due to [sp_redirect_publisher](../../system-stored-procedures/sp-redirect-publisher-transact-sql.md) Even if using an Availability Group, the parameter will reflect the original primary publisher node name and not the listener name.  
+ 
  **-PublisherDB** _publisher_database_  
  Is the name of the Publisher database.  
   
  **-Subscriber** _server_name_[**\\**_instance_name_]  
- Is the name of the Subscriber. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ Is the name of the Subscriber. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. If your subscriber database is in an Always On Availability Group, this should reflect the AG listener name.  
   
  **-SubscriberDB** _subscriber_database_  
  Is the name of the Subscriber database.  
@@ -119,7 +119,7 @@ distrib [-?]
  Is the path of the agent definition file. An agent definition file contains command prompt arguments for the agent. The content of the file is parsed as an executable file. Use double quotation marks (") to specify argument values containing arbitrary characters.  
   
  **-Distributor** _distributor_  
- Is the Distributor name. For Distributor (push) distribution, the name defaults to the name of the local Distributor.  
+ Is the Distributor name. For Distributor (push) distribution, the name defaults to the name of the local Distributor. If your distributor database is in an Always On Availability Group, this should reflect the AG listener name.  
   
  **-DistributorLogin** _distributor_login_  
  Is the Distributor login name.  

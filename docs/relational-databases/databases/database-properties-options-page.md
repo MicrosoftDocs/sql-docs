@@ -173,7 +173,8 @@ Enables this feature.
  When **SIMPLE**, queries are parameterized based on the default behavior of the database. When **FORCED**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parameterizes all queries in the database.  
   
  **Quoted Identifiers Enabled**  
- Specifies a database default for the whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] double quote `"` is used to specify delimited identifiers (TRUE) or varchar literals (FALSE). Possible values are **True** and **False**. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  This database will amost always can be overriden for a session, since most client drivers SET QUOTED_IDENTIFIER ON at connection time.
+ Specifies a database default for the whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] double quote `"` is used to specify delimited identifiers (_true_) or varchar literals (_false_). Possible values are _true_ and _false_. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  This database default setting can be overridden by a session's setting, and many client drivers SET QUOTED_IDENTIFIER ON at connection time.
+
   
  **Recursive Triggers Enabled**  
  Specify whether triggers can be fired by other triggers. Possible values are **True** and **False**. When set to **True**, this enables recursive firing of triggers. When set to **False**, only direct recursion is prevented. To disable indirect recursion, set the nested triggers server option to 0 using sp_configure. For more information, see [Create Nested Triggers](../../relational-databases/triggers/create-nested-triggers.md).  

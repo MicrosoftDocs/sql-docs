@@ -30,6 +30,10 @@ Basic structure of the configuration file looks as following:
 ```json
 {
   "options" : <simple-conversion-options>,
+  "dataTypeMappings": [
+    <data-type-mapping>,
+    ...
+  ],
   "nameMappings": [
     <object-name-mapping>,
     ...
@@ -66,6 +70,77 @@ Following table describes all possible configuration options in this region:
 | `msSqlDialect` | Determines which Microsoft SQL platform dialect to use when converting the source object definitions. This option will be derived from the target SQL Database project and you should not need to set it explicitly. |
 | `quoteIdentifiers` | Determines whether all identifiers should be quoted in converted SQL scripts. Default is `true`. It is recommended to set it to `true`, as quotation might be required when special characters are used in identifier names. |
 | `isMsSqlCaseSensitive` | Controls whether [DSCT01000](../conversion-messages/dsct01000.md) conversion message will be produced during conversion. This option will be derived from the default collation of the target SQL Database project and you should not need to set it explicitly. |
+
+### Data type mappings
+
+The `dataTypeMappings` configuration region consists of multiple data type mapping records. Each data type mapping record has the following schema:
+
+```json
+{
+  "source": {
+    "type": "<oracle-data-type-name>",
+    "arguments": [
+      "<argument-value-matching-expression>",
+      ...
+    ]
+  },
+  "target": {
+    "type": "<ms-sql-data-type-name>",
+    "arguments": [
+      "<argument-value-expression>",
+      ...
+    ]
+  }
+}
+```
+
+The `source` section defines the source data type that is being mapped and consists of two parts:
+- `type` is the name of the Oracle data type to map;
+- `arguments` is the collection of matching expressions that will further filter a data type based on its arguments values.
+
+The source `arguments` collection defines matching expressions for data type arguments based on their position. The collection should contain one string expression for each data type argument. Supported expressions are:
+
+| Expression | Meaning |
+| ---------- | ------- |
+| `<number>` | Matches the exact value of an argument. |
+| `*` | Matches any argument value. |
+| `X..Y` | Matches an argument value in the `[X, Y]` range, where `X` and `Y` can either be `<number>` or `*`. |
+
+The `target` section of the data type mapping record defines the Microsoft SQL data type that should be used in the target database and consists of two parts:
+- `type` is the name of the Microsoft SQL data type to map to;
+- `arguments` is the collection of expressions that define values for the target data type arguments.
+
+The `arguments` collection defines data type arguments value expressions based on the arguments position. The collection should contain one string expression for each data type argument. Supported expressions are:
+
+| Expression | Meaning |
+| ---------- | ------- |
+| `<number>` | Specifies an exact value of an argument. |
+| `$<number>` | Specifies that a value of the `<number>` source argument should be used. The index is 1-based. For example, `$2` will be replaced with the value of the second argument of the matched source data type. |
+
+The following example demonstrates how to map the `VARCHAR2` Oracle data type that holds 4000 characters or less, to the `NVARCHAR` Microsoft SQL data type of the same length as the source data type:
+
+```json
+{
+  "source": {
+    "type": "VARCHAR2",
+    "arguments": [
+      "*..4000"
+    ]
+  },
+  "target": {
+    "type": "NVARCHAR",
+    "arguments": [
+      "$1"
+    ]
+  }
+}
+```
+
+> [!IMPORTANT]
+> Data type mappings should be defined from the least specific to the more specific, as they will be applied in reverse order. In other words, every subsequent data type mapping overrides (entirely or in part) previously defined mappings.
+
+> [!NOTE]
+> Database Schema Conversion Toolkit comes with the built-in data type mappings that cover common scenarios, thus custom data type mappings are not required in most cases.
 
 ### Object name mappings
 
@@ -135,10 +210,26 @@ The `target` property is always a simple string that defines new name for the so
 
 ### Examples
 
-Following example demonstrates entire configuration file that maps `HR` Oracle schema to `dbo` in the target database:
+Following example demonstrates entire configuration file that maps the `VARCHAR2` Oracle data type that holds 4000 characters or less, to the `NVARCHAR` Microsoft SQL data type of the same length as the source data type, while also replacing `HR` Oracle schema with `dbo` in the target database:
 
 ```json
 {
+  "dataTypeMappings": [
+    {
+      "source": {
+        "type": "VARCHAR2",
+        "arguments": [
+          "*..4000"
+        ]
+      },
+      "target": {
+        "type": "NVARCHAR",
+        "arguments": [
+          "$1"
+        ]
+      }
+    }
+  ],
   "nameMappings": [
     {
       "source": [
@@ -150,4 +241,4 @@ Following example demonstrates entire configuration file that maps `HR` Oracle s
 }
 ```
 
-When this configuration is used all converted objects from `HR` schema will be defined under the `dbo` schema.
+When this configuration is used all converted objects from `HR` schema will be defined under the `dbo` schema and all matching references to the `VARCHAR2` data type will be replaced with the `NVARCHAR`.

@@ -64,9 +64,6 @@ GO
 
 ## Creating a Transactional Replication Pull Subscription
 
-> [!NOTE]
-> When running [sp_addpullsubscription_agent](../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) for a subscriber that is part of an Always On Availability group, you need to pass the *@subscriber parameter* as the AG listener. If you are running SQL 2016 and earlier versions, or SQL 2017 prior to CU16, the SP will execute properly but the **-Subscriber** parameter on the Distribution Agent job will not reference the listener as expected; it will be created using the subscriber server name on which the command is executed. To amend this issue, manually update the [Distribution Agent job](../relational-databases/replication/agents/replication-distribution-agent.md) parameter to the desired listener value.
-
 ```  
 -- commands to execute at the subscriber, in the subscriber database:  
 use [<subscriber database name>]  
@@ -84,6 +81,8 @@ EXEC sp_addpullsubscription_agent
         @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
 GO
 ```  
+> [!NOTE]
+> When running [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) for a subscriber that is part of an Always On Availability Group, it is necessary to pass the **@Subscriber** parameter value to the stored procedure as the AG Listener name. If you are running [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] and earlier versions, or [!INCLUDE[sssql17-md](../../../includes/sssql17-md.md)] prior to CU16, the stored procedure will not reference the AG Listener name; it will be created with the subscriber server name on which the command is executed. To amend this issue, manually update the **Subscriber** parameter on the [Distribution Agent job](../../../relational-databases/replication/agents/replication-distribution-agent.md) with the AG Listener name value.
   
 ## To Resume the Merge Agents After the Availability Group of the Subscriber Fails Over  
  For merge replication, a replication administrator must manually reconfigure the subscriber with the following steps:  

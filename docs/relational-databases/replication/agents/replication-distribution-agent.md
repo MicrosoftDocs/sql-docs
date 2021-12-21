@@ -89,7 +89,7 @@ distrib [-?]
  Prints all available parameters.  
   
  **-Publisher** _server_name_[**\\**_instance_name_]  
- Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. If your publisher database is in an Always On Availability Group, this will still reflect the original primary publisher server name due to [sp_redirect_publisher](../../system-stored-procedures/sp-redirect-publisher-transact-sql.md) Even if using an Availability Group, the parameter will reflect the original primary publisher node name and not the listener name.  
+ Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. If your publisher database is in an Always On Availability Group, this will still reflect the original primary publisher server name due to [sp_redirect_publisher](../../system-stored-procedures/sp-redirect-publisher-transact-sql.md). It will not reflect the AG listener name.  
  
  **-PublisherDB** _publisher_database_  
  Is the name of the Publisher database.  

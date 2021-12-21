@@ -19,7 +19,7 @@ ms.author: kendralittle
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-When you [restore a database backup using SQL Server Management Studio (SSMS)](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md), the **General** page prompts you to specify information about the target and source databases for a database restore operation. This article provides details on how to use the **General** page.
+When you [restore a full database backup using SQL Server Management Studio](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md) (SSMS), the **General** page prompts you to specify information about the target and source databases for a database restore operation. This article provides details on how to use the **General** page as part of a database restore operations.
 
 > [!NOTE]  
 > When you specify a restore task by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) script by clicking **Script** and then selecting a destination for the script.  

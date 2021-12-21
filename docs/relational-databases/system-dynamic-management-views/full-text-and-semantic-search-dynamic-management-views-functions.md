@@ -17,14 +17,17 @@ author: pmasl
 ms.author: pelopes
 ---
 # Full-Text and Semantic Search Dynamic Management Views - Functions
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This section contains the following dynamic management views and functions that are related to full-text search and semantic search.  
+ This section contains the following dynamic management views and functions that are related to full-text search and semantic search.  
   
 ## Full-Text Search Dynamic Management Views and Functions  
- [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md)  
- Returns information on the full-text catalogs that have some population activity in progress on the server.  
-  
+
+[sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md)  
+Returns information on the full-text catalogs that have some population activity in progress on the server.  
+
+ 
  [sys.dm_fts_fdhosts](../../relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql.md)  
  Returns information on the current activity of the filter daemon host or hosts on the server instance.  
   

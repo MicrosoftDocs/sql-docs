@@ -102,7 +102,9 @@ A rowstore index is no different: it is an ordered list of values and for each v
   
 -   Indexes on views can provide significant performance gains when the view contains aggregations, table joins, or a combination of aggregations and joins. The view does not have to be explicitly referenced in the query for the query optimizer to use it.  
   
--   Use the Database Engine Tuning Advisor to analyze your database and make index recommendations. For more information, see [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md).  
+-   Databases on primary replicas in Azure SQL Database automatically generate [database advisor performance recommendations](/azure/azure-sql/database/database-advisor-implement-performance-recommendations) for indexes. You can optionally [enable automatic index tuning](/azure/azure-sql/database/automatic-tuning-enable).
+
+- [Query Store helps identify queries with sub-optmial performance](performance/best-practice-with-the-query-store.md#start-with-query-performance-troubleshooting) and provides a history of [query execution plans](performance/execution-plans.md) which document indexes selected by the optimizer.
   
 ### Query considerations  
  When you design an index, consider the following query guidelines:  

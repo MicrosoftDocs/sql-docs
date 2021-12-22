@@ -1,5 +1,5 @@
 ---
-title: "SQL Server index architecture and design guide | Microsoft Docs"
+title: "SQL Server and Azure SQL index architecture and design guide"
 description: Learn about designing efficient indexes in SQL Server and Azure SQL to achieve good database and application performance. Read about index architecture and best practices.
 ms.custom: ""
 ms.date: 01/19/2022
@@ -24,22 +24,28 @@ author: LitKnd
 ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# SQL Server index architecture and design guide
+# SQL Server and Azure SQL index architecture and design guide
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks. Designing efficient indexes is paramount to achieving good database and application performance. This [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] index design guide contains information on index architecture, and best practices to help you design effective indexes to meet the needs of your application.  
-    
-This guide assumes the reader has a general understanding of the index types available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a general description of index types, see [Index Types](../relational-databases/indexes/indexes.md).  
+Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks. Designing efficient indexes is paramount to achieving good database and application performance. This index design guide contains information on index architecture, and best practices to help you design effective indexes to meet the needs of your application.
+
+This guide assumes the reader has a general understanding of the index types available. For a general description of index types, see [Index Types](../relational-databases/indexes/indexes.md).  
 
 This guide covers the following types of indexes:
 
--   Clustered
--   Nonclustered
--   Unique
--   Filtered
--   Columnstore
--   Hash
--   Memory-Optimized Nonclustered
+|Primary storage format  | Index type  |
+|---------|---------|
+|**Disk-based rowstore** |         |
+|     | Clustered        |
+|     | Nonclustered        |
+|     | Unique        |
+|     | Filtered        |
+|**Columnstore**     |         |
+|     | Clustered columnstore        |
+|     | Nonclustered columnstore       |
+|**Memory-optimized**  |         |
+|     | Hash        |
+|     | Memory-Optimized nonclustered        |
 
 For information about XML indexes, see [XML Indexes Overview](../relational-databases/xml/xml-indexes-sql-server.md) and [Selective XML Indexes (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md).
 
@@ -48,26 +54,28 @@ For information about Spatial indexes, see [Spatial Indexes Overview](../relatio
 For information about Full-text indexes, see [Populate Full-Text Indexes](../relational-databases/search/populate-full-text-indexes.md).
   
 ##  <a name="Basics"></a> Index design basics
- Think about a regular book: at the end of the book, there is an index that helps to quickly locate information within the book. The index is a sorted list of keywords and next to each keyword is a set of page numbers pointing to the pages where each keyword can be found. A SQL Server index is no different: it is an ordered list of values and for each value there are pointers to the data [pages](../relational-databases/pages-and-extents-architecture-guide.md) where these values are located. The index itself is stored on pages, making up the Index Pages in SQL Server. In a regular book, if the index spans multiple pages and you have to find pointers to all the pages that contain the word "SQL" for example, you would have to leaf through until you locate the index page that contains the keyword "SQL". From there, you follow the pointers to all the book pages.  This could be optimized further if at the very beginning of the index, you create a single page that contains an alphabetical list of where each letter can be found. For example: "A through D -  page 121", "E through G - page 122" and so on. This additional page would eliminate the step of leafing through the index to find the starting place. Such page does not exist in regular books, but it does exist in a SQL Server index. This single page is referred to as the root page of the index. The root page is the starting page of the tree structure used by a SQL Server index. Following the tree analogy, the end pages that contain pointers to the actual data are referred to as "leaf pages" of the tree. 
+ Think about a regular book: at the end of the book, there is an index that helps to quickly locate information within the book. The index is a sorted list of keywords and next to each keyword is a set of page numbers pointing to the pages where each keyword can be found. 
 
- A SQL Server index is an on-disk or in-memory structure associated with a table or view that speeds retrieval of rows from the table or view. An index contains keys built from one or more columns in the table or view. For on-disk indexes, these keys are stored in a tree structure (B-tree) that enables SQL Server to find the row or rows associated with the key values quickly and efficiently.  
+A rowstore index is no different: it is an ordered list of values and for each value there are pointers to the data [pages](../relational-databases/pages-and-extents-architecture-guide.md) where these values are located. The index itself is stored on pages, referred to as Index Pages. In a regular book, if the index spans multiple pages and you have to find pointers to all the pages that contain the word "SQL" for example, you would have to leaf through until you locate the index page that contains the keyword "SQL". From there, you follow the pointers to all the book pages.  This could be optimized further if at the very beginning of the index, you create a single page that contains an alphabetical list of where each letter can be found. For example: "A through D -  page 121", "E through G - page 122" and so on. This additional page would eliminate the step of leafing through the index to find the starting place. Such a page does not exist in regular books, but it does exist in a rowstore index. This single page is referred to as the root page of the index. The root page is the starting page of the tree structure used by an index. Following the tree analogy, the end pages that contain pointers to the actual data are referred to as "leaf pages" of the tree. 
 
- An index stores data logically organized as a table with rows and columns, and physically stored in a row-wise data format called *rowstore* <sup>1</sup>, or stored in a column-wise data format called *[columnstore](#columnstore_index)*.  
+ An index is an on-disk or in-memory structure associated with a table or view that speeds retrieval of rows from the table or view. A rowstore index contains keys built from one or more columns in the table or view. For rowstore indexes, these keys are stored in a tree structure (B-tree) that enables the Database Engine to find the row or rows associated with the key values quickly and efficiently.  
+
+ A rowstore index stores data logically organized as a table with rows and columns, and physically stored in a row-wise data format called *rowstore* <sup>1</sup>, or stored in a column-wise data format called *[columnstore](#columnstore_index)*.  
     
  The selection of the right indexes for a database and its workload is a complex balancing act between query speed and update cost. Narrow indexes, or indexes with few columns in the index key, require less disk space and maintenance overhead. Wide indexes, on the other hand, cover more queries. You may have to experiment with several different designs before finding the most efficient index. Indexes can be added, modified, and dropped without affecting the database schema or application design. Therefore, you should not hesitate to experiment with different indexes.  
   
- The query optimizer in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reliably chooses the most effective index in the vast majority of cases. Your overall index design strategy should provide a variety of indexes for the query optimizer to choose from and trust it to make the right decision. This reduces analysis time and produces good performance over a variety of situations. To see which indexes the query optimizer uses for a specific query, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], on the **Query** menu, select **Include Actual Execution Plan**.  
+ The database engine's query optimizer reliably chooses the most effective index in the vast majority of cases. Your overall index design strategy should provide a variety of indexes for the query optimizer to choose from and trust it to make the right decision. This reduces analysis time and produces good performance over a variety of situations. To see which indexes the query optimizer uses for a specific query, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], on the **Query** menu, select **Include Actual Execution Plan**.  
   
  Do not always equate index usage with good performance, and good performance with efficient index use. If using an index always helped produce the best performance, the job of the query optimizer would be simple. In reality, an incorrect index choice can cause less than optimal performance. Therefore, the task of the query optimizer is to select an index, or combination of indexes, only when it will improve performance, and to avoid indexed retrieval when it will hinder performance.  
 
- <sup>1</sup> Rowstore has been the traditional way to store relational table data. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], rowstore refers to table where the underlying data storage format is a heap, a B-tree ([clustered index](#Clustered)), or a memory-optimized table.
+ <sup>1</sup> Rowstore has been the traditional way to store relational table data. 'Rowstore' refers to table where the underlying data storage format is a heap, a B-tree ([clustered index](#Clustered)), or a memory-optimized table.
 
 ### Index design tasks  
  The following tasks make up our recommended strategy for designing indexes:  
   
 1.  Understand the characteristics of the database itself. 
-    * For example, is it an online transaction processing (OLTP) database with frequent data modifications that must sustain a high throughput? Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], memory-optimized tables and indexes are especially appropriate for this scenario, by providing a latch-free design. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md), or [Nonclustered Index for Memory-Optimized Tables Design Guidelines](#inmem_nonclustered_index) and [Hash Index for Memory-Optimized Tables Design Guidelines](#hash_index) in this guide.
-    * Or is it an example of a Decision Support System (DSS) or data warehousing (OLAP) database that must process very large data sets quickly? Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], columnstore indexes are especially appropriate for typical data warehousing data sets. Columnstore indexes can transform the data warehousing experience for users by enabling faster performance for common data warehousing queries such as filtering, aggregating, grouping, and star-join queries. For more information, see [Columnstore Indexes overview](../relational-databases/indexes/columnstore-indexes-overview.md), or [Columnstore Index Design Guidelines](#columnstore_index) in this guide.  
+    * For example, is it an online transaction processing (OLTP) database with frequent data modifications that must sustain a high throughput? Memory-optimized tables and indexes are especially appropriate for this scenario, by providing a latch-free design. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md), or [Nonclustered Index for Memory-Optimized Tables Design Guidelines](#inmem_nonclustered_index) and [Hash Index for Memory-Optimized Tables Design Guidelines](#hash_index) in this guide.
+    * Or is it an example of a Decision Support System (DSS) or data warehousing (OLAP) database that must process very large data sets quickly? Columnstore indexes are especially appropriate for typical data warehousing data sets. Columnstore indexes can transform the data warehousing experience for users by enabling faster performance for common data warehousing queries such as filtering, aggregating, grouping, and star-join queries. For more information, see [Columnstore Indexes overview](../relational-databases/indexes/columnstore-indexes-overview.md), or [Columnstore Index Design Guidelines](#columnstore_index) in this guide.  
 
 2.  Understand the characteristics of the most frequently used queries. For example, knowing that a frequently used query joins two or more tables will help you determine the best type of indexes to use.  
   
@@ -122,7 +130,7 @@ For information about Full-text indexes, see [Populate Full-Text Indexes](../rel
   
 -   Columns that are of the **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types cannot be specified as index key columns. However, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml** data types can participate in a nonclustered index as nonkey index columns. For more information, see the section ['Index with Included Columns](#Included_Columns)' in this guide.  
   
--   An **xml** data type can only be a key column only in an XML index. For more information, see [XML Indexes &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). SQL Server 2012 SP1 introduces a new type of XML index known as a Selective XML Index. This new index can improve querying performance over data stored as XML in SQL Server, allow for much faster indexing of large XML data workloads, and improve scalability by reducing storage costs of the index itself. For more information, see [Selective XML Indexes &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
+-   An **xml** data type can only be a key column only in an XML index. For more information, see [XML Indexes](../relational-databases/xml/xml-indexes-sql-server.md). SQL Server 2012 SP1 introduced a new type of XML index known as a Selective XML Index. This new index can improve querying performance over data stored as XML, allow for much faster indexing of large XML data workloads, and improve scalability by reducing storage costs of the index itself. For more information, see [Selective XML Indexes &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 -   Examine column uniqueness. A unique index instead of a nonunique index on the same combination of columns provides additional information for the query optimizer that makes the index more useful. For more information, see [Unique Index Design Guidelines](#Unique) in this guide.  
   
@@ -174,7 +182,7 @@ Because you cannot predict what type of access will occur and when it will occur
 For more information, see [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Index sort order design guidelines  
- When defining indexes, consider whether the data for the index key column should be stored in ascending or descending order. Ascending is the default and maintains compatibility with earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The syntax of the CREATE INDEX, CREATE TABLE, and ALTER TABLE statements supports the keywords ASC (ascending) and DESC (descending) on individual columns in indexes and constraints.  
+ When defining indexes, consider whether the data for the index key column should be stored in ascending or descending order. Ascending is the default and maintains compatibility with earlier versions of the database engine. The syntax of the CREATE INDEX, CREATE TABLE, and ALTER TABLE statements supports the keywords ASC (ascending) and DESC (descending) on individual columns in indexes and constraints.  
   
  Specifying the order in which key values are stored in an index is useful when queries referencing the table have ORDER BY clauses that specify different directions for the key column or columns in that index. In these cases, the index can remove the need for a SORT operator in the query plan; therefore, this makes the query more efficient. For example, the buyers in the [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] purchasing department have to evaluate the quality of products they purchase from vendors. The buyers are most interested in finding products sent by these vendors with a high rejection rate. 
 
@@ -318,7 +326,7 @@ Use these metadata views to see attributes of indexes. More architectural inform
 If the clustered index is not created with the `UNIQUE` property, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a 4-byte uniqueifier column to the table. When it is required, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a uniqueifier value to a row to make each key unique. This column and its values are used internally and cannot be seen or accessed by users.  
   
 ### Clustered index architecture  
- In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], indexes are organized as B-Trees. Each page in an index B-tree is called an index node. The top node of the B-tree is called the root node. The bottom nodes in the index are called the leaf nodes. Any index levels between the root and the leaf nodes are collectively known as intermediate levels. In a clustered index, the leaf nodes contain the data pages of the underlying table. The root and intermediate level nodes contain index pages holding index rows. Each index row contains a key value and a pointer to either an intermediate level page in the B-tree, or a data row in the leaf level of the index. The pages in each level of the index are linked in a doubly-linked list.  
+ Indexes are organized as B-Trees. Each page in an index B-tree is called an index node. The top node of the B-tree is called the root node. The bottom nodes in the index are called the leaf nodes. Any index levels between the root and the leaf nodes are collectively known as intermediate levels. In a clustered index, the leaf nodes contain the data pages of the underlying table. The root and intermediate level nodes contain index pages holding index rows. Each index row contains a key value and a pointer to either an intermediate level page in the B-tree, or a data row in the leaf level of the index. The pages in each level of the index are linked in a doubly-linked list.  
   
  Clustered indexes have one row in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md), with **index_id** = 1 for each partition used by the index. By default, a clustered index has a single partition. When a clustered index has multiple partitions, each partition has a B-tree structure that contains the data for that specific partition. For example, if a clustered index has four partitions, there are four B-tree structures; one in each partition.  
   
@@ -353,7 +361,7 @@ If the clustered index is not created with the `UNIQUE` property, the [!INCLUDE[
     For example, an employee ID uniquely identifies employees. A clustered index or [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) constraint on the `EmployeeID` column would improve the performance of queries that search for employee information based on the employee ID number. Alternatively, a clustered index could be created on `LastName`, `FirstName`, `MiddleName` because employee records are frequently grouped and queried in this way, and the combination of these columns would still provide a high degree of difference. 
 
     > [!TIP]
-    > If not specified differently, when creating a [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) constraint, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] creates a [clustered index](#Clustered) to support that constraint.
+    > If not specified differently, when creating a [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) constraint, the database engine creates a [clustered index](#Clustered) to support that constraint.
     > Although a *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* can be used to enforce uniqueness as a PRIMARY KEY, it is not an efficient clustering key.
     > If using a *uniqueidentifier* as PRIMARY KEY, the recommendation is to create it as a nonclustered index, and use another column such as an `IDENTITY` to create the clustered index.   
   
@@ -797,7 +805,7 @@ For more information about rowgroup statuses, see [sys.dm_db_column_store_row_gr
 > Having too many small rowgroups decreases the columnstore index quality. A reorganize operation will merge smaller rowgroups, following an internal threshold policy that determines how to remove deleted rows and combine the compressed rowgroups. After a merge, the index quality should be improved. 
 
 > [!NOTE]
-> Starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted.      
+> Starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted.
 
 Each column has some of its values in each rowgroup. These values are called **column segments**. Each rowgroup contains one column segment for every column in the table. Each column has one column segment in each rowgroup.
 
@@ -846,9 +854,9 @@ Each partition can have more than one delta rowgroups. When the columnstore inde
 #### You can combine columnstore and rowstore indexes on the same table
 A nonclustered index contains a copy of part or all of the rows and columns in the underlying table. The index is defined as one or more columns of the table, and has an optional condition that filters the rows. 
 
-Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], you can create an updatable **nonclustered columnstore index on a rowstore table**. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index will compress to a smaller size than the rowstore table requires.  By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.  
+You can create an updatable **nonclustered columnstore index on a rowstore table**. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index will compress to a smaller size than the rowstore table requires.  By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.  
   
-Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], you can have **one or more nonclustered rowstore indexes on a columnstore index**. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since a non-unique value will fail to insert into the rowstore table, SQL Server cannot insert the value into the columnstore.  
+You can have **one or more nonclustered rowstore indexes on a columnstore index**. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since a non-unique value will fail to insert into the rowstore table, the database engine cannot insert the value into the columnstore.  
  
 ### Performance considerations 
 
@@ -868,8 +876,6 @@ For more information, see [Columnstore indexes - Design Guidance](../relational-
 
 All memory-optimized tables must have at least one index, because it is the indexes that connect the rows together. On a memory-optimized table, every index is also memory-optimized. Hash indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Applies to**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-
 ### Hash index architecture
 A hash index consists of an array of pointers, and each element of the array is called a hash bucket.
 - Each bucket is 8 bytes, which are used to store the memory address of a link list of key entries.  
@@ -887,7 +893,7 @@ The number of buckets must be specified at index definition time:
 The hash function is applied to the index key columns and the result of the function determines what bucket that key falls into. Each bucket has a pointer to rows whose hashed key values are mapped to that bucket.
 
 The hashing function used for hash indexes has the following characteristics:
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has one hash function that is used for all hash indexes.
+- The database engine has one hash function that is used for all hash indexes.
 - The hash function is deterministic. The same input key value is always mapped to the same bucket in the hash index.
 - Multiple index keys may be mapped to the same hash bucket.
 - The hash function is balanced, meaning that the distribution of index key values over hash buckets typically follows a Poisson or bell curve distribution, not a flat linear distribution.
@@ -930,7 +936,7 @@ The performance of a hash index is:
 
 > [!TIP]
 > The predicate must include all columns in the hash index key. The hash index requires a key (to hash) to seek into the index. 
-> If an index key consists of two columns and the `WHERE` clause only provides the first column, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not have a complete key to hash. This will result in an index scan query plan.
+> If an index key consists of two columns and the `WHERE` clause only provides the first column, the database engine does not have a complete key to hash. This will result in an index scan query plan.
 
 If a hash index is used and the number of unique index keys is 100 times (or more) than the row count, consider either increasing to a larger bucket count to avoid large row chains, or use a [nonclustered index](#inmem_nonclustered_index) instead.
 
@@ -960,8 +966,6 @@ Later when the older versions are no longer needed, a garbage collection (GC) th
 ##  <a name="inmem_nonclustered_index"></a> Memory-Optimized Nonclustered Index Design Guidelines 
 
 Nonclustered indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
-
-**Applies to**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ### In-memory nonclustered index architecture
 
@@ -1032,18 +1036,8 @@ The performance of a nonclustered index is better than nonclustered hash indexes
 Learn more about index design and related topics from the following articles:
 
 - [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)
-- [ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)
-- [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)
 - [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
-- [Improving Performance with SQL Server 2008 Indexed Views](/previous-versions/sql/sql-server-2008/dd171921(v=sql.100))
 - [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)
-- [Create a Primary Key](../relational-databases/tables/create-primary-keys.md)
 - [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)
 - [Columnstore Indexes overview](../relational-databases/indexes/columnstore-indexes-overview.md)
-- [Troubleshooting Hash Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
-- [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
-- [Index Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)
 - [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md)
-- [Indexes and ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)
-- [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

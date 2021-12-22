@@ -104,23 +104,9 @@ The source `arguments` collection defines matching expressions for data type arg
 | ---------- | ------- |
 | `"<number>"` | Matches the exact value of an argument. |
 | `"*"` | Matches special `*` argument value. For example, the first argument in the `NUMBER(*, 5)` data type definition. |
-| `"X..Y"` | Matches an argument value in the `[X, Y]` range, where `X` and `Y` can be either `<number>` or `*`. The `*` in the range expression means _any value_. To match any argument value the `"*..*"` range expression can be used. |
-| `null` | Matches the type with no argument provided, for example `NUMBER`. Unlike other expressions, which are strings, this is an actual `null` JSON value. |
+| `"X..Y"` | Matches an argument value in the `[X, Y]` range, where `X` and `Y` can be either `<number>` or `*`. The `*` in the range expression means _unbound_. To match any argument value the `"*..*"` range expression can be used. |
 
-Some data types may have their arguments specified within the type name, for example `INTERVAL DAY (2) TO SECOND (6)`. In such cases, the type name would be `INTERVAL DAY TO SECOND`, while `2` and `6` are considered first and second arguments respectively. If you want to match a data type with the missing optional argument, like `INTERVAL DAY TO SECOND (6)`, then `null` should be used:
-
-```json
-{
-  "type": "INTERVAL DAY TO SECOND",
-  "arguments": [
-    null,
-    "6"
-  ]
-}
-```
-
-> [!IMPORTANT]
-> Keep in mind that `null` and `"*..*"` expressions are different. The former will match the data type with no arguments provided, e.g. `NUMBER`, while the later will match the data type with any value of the argument, but argument has to be specified, e.g. `NUMBER(5)`.
+Some data types may have their arguments specified within the type name, for example `INTERVAL DAY (2) TO SECOND (6)`. In such cases, the type name would be `INTERVAL DAY TO SECOND`, while `2` and `6` are considered first and second arguments respectively.
 
 The `target` section of the data type mapping record defines the Microsoft SQL data type that should be used in the target database and consists of two parts:
 - `type` is the name of the Microsoft SQL data type to map to;

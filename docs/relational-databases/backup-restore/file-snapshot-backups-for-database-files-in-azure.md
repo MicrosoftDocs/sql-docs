@@ -171,5 +171,5 @@ GO
 ```  
   
 ## See Also  
- [Tutorial: Using the Microsoft Azure Blob Storage Service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Tutorial: Using Microsoft Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   

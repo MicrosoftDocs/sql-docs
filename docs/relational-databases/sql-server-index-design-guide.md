@@ -904,6 +904,8 @@ For more information, see [Columnstore indexes - Design Guidance](../relational-
 
 All memory-optimized tables must have at least one index, because it is the indexes that connect the rows together. On a memory-optimized table, every index is also memory-optimized. Hash indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
+[!INCLUDE[SQL Server Azure SQL Database Azure SQL Managed Instances ](../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
 ### Hash index architecture
 A hash index consists of an array of pointers, and each element of the array is called a hash bucket.
 - Each bucket is 8 bytes, which are used to store the memory address of a link list of key entries.  
@@ -994,6 +996,8 @@ Later when the older versions are no longer needed, a garbage collection (GC) th
 ##  <a name="inmem_nonclustered_index"></a> Memory-Optimized nonclustered index design guidelines 
 
 Nonclustered indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
+
+[!INCLUDE[SQL Server Azure SQL Database Azure SQL Managed Instances ](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 ### In-memory nonclustered index architecture
 

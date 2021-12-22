@@ -14,7 +14,7 @@ ms.author: kendralittle
 ---
 # File-Snapshot Backups for Database Files in Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File-snapshot backup uses Azure snapshots to provide nearly instantaneous backups and quicker restores for database files stored using the Azure Blob Storage Service. This capability enables you to simplify your backup and restore policies. For more information on storing database files using the Azure Blob Storage Service, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File-snapshot backup uses Azure snapshots to provide nearly instantaneous backups and quicker restores for database files stored using Azure Blob Storage. This capability enables you to simplify your backup and restore policies. For more information on storing database files using Azure Blob Storage, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
  ![snapshot backup architectural diagram](../../relational-databases/backup-restore/media/snapshotbackups.PNG "snapshot backup architectural diagram")  
   

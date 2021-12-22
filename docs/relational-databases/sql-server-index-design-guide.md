@@ -627,10 +627,9 @@ GO
 -   A unique nonclustered index can contain included nonkey columns. For more information, see [Index with Included Columns](#Included_Columns).  
   
   
-##  <a name="Filtered"></a> Filtered index design guidelines  
+##  <a name="Filtered"></a> Filtered index design guidelines
+
  A filtered index is an optimized nonclustered index, especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance, reduce index maintenance costs, and reduce index storage costs compared with full-table indexes.  
-  
-**Applies to**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Filtered indexes can provide the following advantages over full-table indexes:  
   

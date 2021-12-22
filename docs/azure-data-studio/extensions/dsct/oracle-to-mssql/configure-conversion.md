@@ -80,14 +80,14 @@ The `dataTypeMappings` configuration region consists of multiple data type mappi
   "source": {
     "type": "<oracle-data-type-name>",
     "arguments": [
-      "<argument-value-matching-expression>",
+      <argument-value-matching-expression>,
       ...
     ]
   },
   "target": {
     "type": "<ms-sql-data-type-name>",
     "arguments": [
-      "<argument-value-expression>",
+      <argument-value-expression>,
       ...
     ]
   }

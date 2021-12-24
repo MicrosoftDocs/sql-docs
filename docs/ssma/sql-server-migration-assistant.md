@@ -63,9 +63,7 @@ The following target versions are supported for SSMA.
   - [SQL Server Community](../sql-server/index.yml) -   Newsgroups and forums that are monitored by the SQL Server community. This site also lists community information sources, such as blogs and Web sites.  
   
   - [SQL Server Developer Center Community](../sql-server/index.yml) -  Newsgroups, forums, and other community resources that are useful to SQL Server developers  
-  
-- **Assisted support** - Go to [https://support.microsoft.com/](https://support.microsoft.com/) and search for 'SQL Server Migration Assistant'.  Select your version, then select "start request."  Assisted support is included with the SQL Server Migration Assistant Tool.  
-  
+    
 - **Premier support** - If you have a Premier Contract, you can get Premier support on the [Premier Online portal](https://premier.microsoft.com/).  
   
 - **Consulting services** - For partner assisted migrations, go the [Azure Database Migration Guide](https://datamigration.microsoft.com/).

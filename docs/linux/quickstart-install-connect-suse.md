@@ -3,7 +3,7 @@ title: "SUSE: Install SQL Server on Linux"
 description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/22/2021
+ms.date: 12/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -55,7 +55,7 @@ To install SUSE Linux Enterprise Server on your own machine, go to [https://www.
 If you have previously installed a CTP or RC release of SQL Server, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and 2019](sql-server-linux-change-repo.md).
 
 > [!NOTE]
-> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 is not supported as an installation target.
+> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 or Windows 11 is not supported as an installation target.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 

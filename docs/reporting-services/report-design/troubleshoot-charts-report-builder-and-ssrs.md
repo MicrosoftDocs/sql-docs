@@ -30,7 +30,7 @@ ms.author: maggies
    
   Try:  
  * [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) on Stack Overflow  
- * Log an issue or suggestion at [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
+ * Share [ideas for SQL](https://feedback.azure.com/forums/908035-sql-server).  
   
 ## See Also  
  [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

@@ -1,7 +1,7 @@
 ---
 title: SQL Server help and feedback | Microsoft Docs
 description: A resource for finding ways to get help with your issue or submit feedback for either the SQL Server product, or the SQL Server technical documentation. 
-ms.date: 08/17/2021
+ms.date: 12/20/2021
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: ""
@@ -14,13 +14,13 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 # SQL Server help and feedback
 
-This article explains different ways to get assistance with your issue, or provide feedback for either SQL Server, or the SQL Server technical documentation. 
+This article explains different ways to get assistance with an issue or provide feedback for SQL Server or the SQL Server technical documentation.
 
 ## Contact Microsoft Support
 
 Customers with a support plan can [open a ticket](https://support.microsoft.com/hub/4343728/support-for-business) with Microsoft support.  Review the [support options for businesses](https://support.microsoft.com/help/4341255/support-for-business) for more information. 
 
-## Ask community for help
+## Ask the community for help
 
 If you're interested in engaging the vibrant SQL Server community for assistance, there are multiple options available.
 
@@ -35,14 +35,14 @@ There are a few communities that can help you with your SQL Server issues.
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [Reddit](https://www.reddit.com/r/SQLServer/)
-- [Get help from the community with the #sqlhelp hash tag on twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
+- [Get help from the community with the #sqlhelp hash tag on Twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
  
 ## Feedback suggestions
 
-You can submit suggestions for improvement, as well as submit bugs for:
+You can submit suggestions for improvement and other feedback, including bugs.
 
 - **Azure Data Studio issues**: [Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
-
+- **Ideas for SQL**: [Have suggestions for improving SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
 ###  SQL Server documentation
 
 The best way to reach the SQL Server content team is through Git Issues. You'll find an option to submit a Git Issue at the bottom of most of our pages: 
@@ -59,21 +59,22 @@ There are a few social media outlets to get information about the latest SQL Ser
 
 ### Updates via Twitter
 
-The following Twitter accounts provide updates about SQL Server: 
+The following Twitter accounts provide updates about SQL Server:
 
-- [SQL Docs Twitter](https://twitter.com/sqldocs)
-- [SQL Tiger Team Twitter](https://twitter.com/mssqltiger)
-- [MashaMSFT Twitter](https://twitter.com/mashamsft)
+- [Microsoft SQL Server - @sqlserver](https://twitter.com/sqlserver)
+- [Azure SQL - @AzureSQL](https://twitter.com/azuresql)
+- [Azure Data SQL Team - @mssqltiger ](https://twitter.com/mssqltiger)
+- [SQL Docs Team - @sqldocs](https://twitter.com/sqldocs)
+- [@MashaMSFT](https://twitter.com/mashamsft)
  
 ### Blogs
 
 The following SQL Server blogs provide the latest information about SQL Server: 
 
 - [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
-- [SQL ReplTalk](https://blogs.msdn.microsoft.com/repltalk/)
-- [SQL Tiger Team](/archive/blogs/sql_server_team/)
+- [Azure SQL Blog](https://techcommunity.microsoft.com/t5/azure-sql-blog/bg-p/AzureSQLBlog)
 - [SQL Support Team](https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/)
-
+- [SQL ReplTalk](https://blogs.msdn.microsoft.com/repltalk/)
 
 ## SQL Server license information
 

@@ -13,7 +13,7 @@ ms.date: 12/27/2021
 ---
 
 # SqlPackage Import parameters and properties
-The SqlPackage.exe Import action imports the schema and table data from a BACPAC package - .bacpac file - into a new or empty database in SQL Server or Azure SQL Database. At the time of the import operation to an existing database the target database cannot contain any user-defined schema objects. Alternatively, a new database can be created by the import action when the authenticated user has [create database permissions](../../t-sql/statements/create-database-transact-sql.md#permissions).
+The SqlPackage.exe Import action imports the schema and table data from a BACPAC file (.bacpac) into a new or empty database in SQL Server or Azure SQL Database. At the time of the import operation to an existing database the target database cannot contain any user-defined schema objects. Alternatively, a new database can be created by the import action when the authenticated user has [create database permissions](../../t-sql/statements/create-database-transact-sql.md#permissions).
 
 ## Command-line syntax
 
@@ -27,13 +27,13 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
-|**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
+|**/AccessToken:**|**/at**|{string}| Specifies the token-based authentication access token to use when connect to the target database. |
 |**/Action:**|**/a**|Import|Specifies the action to be performed. |
 |**/AzureCloudConfig:**|**/acc**|{string}|Specifies the custom endpoints for connecting to Azure Active Directory in the format: AzureActiveDirectoryAuthority={value};DatabaseServicePrincipalName={value}" .|
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8.|
-|**/ModelFilePath:**|**/mfp**|{string}|Specifies the file path to override the model.xml in the source file. Use of this setting may result in deployment failure and/or unintended data loss. This setting is intended only for use when troubleshooting issues with publish, import or script generation.|
+|**/ModelFilePath:**|**/mfp**|{string}|Specifies the file path to override the model.xml in the source file. Use of this setting may result in deployment failure and/or unintended data loss. This setting is intended only for use when troubleshooting issues with publish, import, or script generation.|
 |**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an [action-specific property](#properties-specific-to-the-import-action); {PropertyName}={Value}. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action. If this parameter is used, no other source parameter shall be valid. |
@@ -57,13 +57,13 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Defines the edition of an Azure SQL Database. See [Azure SQL Database service tiers](/azure/azure-sql/database/service-tiers-general-purpose-business-critical).|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifies the database lock timeout in seconds when executing queries against SQLServer. Use -1 to wait indefinitely.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Defines the maximum size in GB of an Azure SQL Database.|
-|**/p:**|DatabaseServiceObjective=(STRING)|Defines the performance level of an Azure SQL Database such as"P0" or "S1".|
+|**/p:**|DatabaseServiceObjective=(STRING)|Defines the performance level of an Azure SQL Database such as "P0" or "S1".|
 |**/p:**|DisableIndexesForDataPhase=(BOOLEAN TRUE)|When true (default), disables indexes before importing data. When false, indexes are not rebuilt. |
 |**/p:**|DisableParallelismForEnablingIndexes=(BOOLEAN)|Not using parallelism when rebuilding indexes while importing data into SQL Server.|
 |**/p:**|HashObjectNamesInLogs=(BOOLEAN)|Specifies whether to replace all object names in logs with a random hash value.|
-|**/p:**|ImportContributorArguments=(STRING)|Specifies deployment contributor arguments for the deployment contributors. This should be a semi-colon delimited list of values.|
-|**/p:**|ImportContributorPaths=(STRING)|Specifies paths to load additional deployment contributors. This should be a semi-colon delimited list of values.|
-|**/p:**|ImportContributors=(STRING)|Specifies the deployment contributors, which should run when the bacpac is imported. This should be a semi-colon delimited list of fully qualified build contributor names or IDs.|
+|**/p:**|ImportContributorArguments=(STRING)|Specifies deployment contributor arguments for the deployment contributors. This property should be a semi-colon delimited list of values.|
+|**/p:**|ImportContributorPaths=(STRING)|Specifies paths to load additional deployment contributors. This property should be a semi-colon delimited list of values.|
+|**/p:**|ImportContributors=(STRING)|Specifies the deployment contributors, which should run when the bacpac is imported. This property should be a semi-colon delimited list of fully qualified build contributor names or IDs.|
 |**/p:**|LongRunningCommandTimeout=(INT32)| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|PreserveIdentityLastValues=(BOOLEAN)|Specifies whether last values for identity columns should be preserved during deployment.|
 |**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN FALSE)|When true, rebuilds indexes offline after importing data into SQL Server.|

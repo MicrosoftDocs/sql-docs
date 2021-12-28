@@ -2,7 +2,7 @@
 description: "sys.query_store_runtime_stats (Transact-SQL)"
 title: "sys.query_store_runtime_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2019"
+ms.date: "12/28/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -83,6 +83,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=s
 |**min_rowcount**|**bigint**|Minimum number of returned rows for the query plan within the aggregation interval.<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
 |**max_rowcount**|**bigint**|Maximum number of returned rows for the query plan within the aggregation interval.|  
 |**stdev_rowcount**|**float**|Number of returned rows standard deviation for the query plan within the aggregation interval.|
+|**avg_num_physical_io_reads**|**float**|Average number of physical I/O reads for the query plan within the aggregation interval (expressed as a number of read I/O operations).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**last_num_physical_io_reads**|**bigint**|Last number of physical I/O reads for the query plan within the aggregation interval (expressed as a number of read I/O operations).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**min_num_physical_io_reads**|**bigint**|Minimum number of physical I/O reads for the query plan within the aggregation interval (expressed as a number of read I/O operations).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**max_num_physical_io_reads**|**bigint**|Maximum number of physical I/O reads for the query plan within the aggregation interval (expressed as a number of read I/O operations).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**stdev_physical_io_reads**|**float**|Number of physical I/O reads standard deviation for the query plan within the aggregation interval (expressed as a number of read I/O operations).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
 |**avg_log_bytes_used**|**float**|Average number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
 |**last_log_bytes_used**|**bigint**|Number of bytes in the database log used by the last execution of the query plan, within the aggregation interval.<br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
 |**min_log_bytes_used**|**bigint**|Minimum number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|

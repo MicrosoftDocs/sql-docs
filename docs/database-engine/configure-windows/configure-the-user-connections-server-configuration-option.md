@@ -42,9 +42,9 @@ To determine the maximum number of user connections that your system allows, you
   
 - **Follow Up:**  [After you configure the user connections option](#FollowUp)
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+## <a name="BeforeYouBegin"></a> Before You Begin  
   
-###  <a name="Recommendations"></a> Recommendations  
+### <a name="Recommendations"></a> Recommendations  
   
 - This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional.  
   
@@ -53,12 +53,12 @@ To determine the maximum number of user connections that your system allows, you
    > [!IMPORTANT]  
    >  If you must use this option, do not set the value too high, because each connection has overhead regardless of whether the connection is being used. If you exceed the maximum number of user connections, you receive an error message and are not able to connect until another connection becomes available.  
   
-###  <a name="Security"></a> Security  
+### <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+#### <a name="Permissions"></a> Permissions  
 Execute permissions on **sp_configure** with no parameters or with only the first parameter are granted to all users by default. To execute **sp_configure** with both parameters to change a configuration option or to run the RECONFIGURE statement, a user must be granted the ALTER SETTINGS server-level permission. The ALTER SETTINGS permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+## <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To configure the user connections option  
   
@@ -70,7 +70,7 @@ Execute permissions on **sp_configure** with no parameters or with only the firs
   
 4.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-##  <a name="SSMSProcedure"></a> Using Azure Data Studio  
+## <a name="SSMSProcedure"></a> Using Azure Data Studio  
   
 #### To configure the user connections option  
   
@@ -83,7 +83,7 @@ Execute permissions on **sp_configure** with no parameters or with only the firs
 4.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+## <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To configure the user connections option  
   
@@ -107,14 +107,15 @@ GO
   
 ```  
   
- For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Follow Up: After you configure the user connections option  
- The SQL instance must be restarted before the setting can take effect.  
+## <a name="FollowUp"></a> Follow Up: After you configure the user connections option  
+
+The SQL instance must be restarted before the setting can take effect.  
   
 ## See Also  
- [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+- [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+- [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
+- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

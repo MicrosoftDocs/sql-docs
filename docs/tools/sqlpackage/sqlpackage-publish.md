@@ -125,7 +125,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreColumnOrder=(BOOLEAN)|Specifies whether differences in table column order should be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreComments=(BOOLEAN)|Specifies whether differences in the comments should be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreCryptographicProviderFilePath=(BOOLEAN 'True')|Specifies whether differences in the file path for the cryptographic provider should be ignored or updated when you publish to a database.|
-|**/p:**|IgnoreDatabaseWorkloadGroups=(BOOLEAN 'False')|Specifies whether to exlude workload groups that exist on the target during deployment.|
+|**/p:**|IgnoreDatabaseWorkloadGroups=(BOOLEAN 'False')|Specifies whether to exclude workload groups that exist on the target during deployment.|
 |**/p:**|IgnoreDdlTriggerOrder=(BOOLEAN)|Specifies whether differences in the order of Data Definition Language (DDL) triggers should be ignored or updated when you publish to a database or server.|
 |**/p:**|IgnoreDdlTriggerState=(BOOLEAN)|Specifies whether differences in the enabled or disabled state of Data Definition Language (DDL) triggers should be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreDefaultSchema=(BOOLEAN)|Specifies whether differences in the default schema should be ignored or updated when you publish to a database.|

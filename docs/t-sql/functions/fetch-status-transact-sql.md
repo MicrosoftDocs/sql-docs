@@ -1,6 +1,6 @@
 ---
-description: "&#x40;&#x40;FETCH_STATUS (Transact-SQL)"
 title: FETCH_STATUS (Transact-SQL)
+description: "@@FETCH_STATUS (Transact-SQL)"
 ms.custom: ""
 ms.date: "09/18/2017"
 ms.prod: sql

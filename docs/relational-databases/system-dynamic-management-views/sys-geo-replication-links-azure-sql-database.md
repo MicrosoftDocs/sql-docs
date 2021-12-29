@@ -6,6 +6,8 @@ ms.date: "01/28/2019"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "dm_geo_replication_links_TSQL"
   - "dm_geo_replication_links"

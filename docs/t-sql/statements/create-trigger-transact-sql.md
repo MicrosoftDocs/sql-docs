@@ -61,7 +61,7 @@ ON { table | view }
 { [ INSERT ] [ , ] [ UPDATE ] [ , ] [ DELETE ] }   
 [ WITH APPEND ]  
 [ NOT FOR REPLICATION ]   
-AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }  
+AS { sql_statement  [ ; ] [ ...n ] | EXTERNAL NAME <method_specifier> [ ; ] }  
   
 <dml_trigger_option> ::=  
     [ ENCRYPTION ]  
@@ -82,7 +82,7 @@ ON { table }
 [ WITH <dml_trigger_option> [ ,...n ] ]  
 { FOR | AFTER }   
 { [ INSERT ] [ , ] [ UPDATE ] [ , ] [ DELETE ] }   
-AS { sql_statement  [ ; ] [ ,...n ] }  
+AS { sql_statement  [ ; ] [ ...n ] }  
   
 <dml_trigger_option> ::=  
     [ NATIVE_COMPILATION ]  
@@ -99,7 +99,7 @@ CREATE [ OR ALTER ] TRIGGER trigger_name
 ON { ALL SERVER | DATABASE }   
 [ WITH <ddl_trigger_option> [ ,...n ] ]  
 { FOR | AFTER } { event_type | event_group } [ ,...n ]  
-AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] }  
+AS { sql_statement  [ ; ] [ ...n ] | EXTERNAL NAME <method_specifier>  [ ; ] }  
   
 <ddl_trigger_option> ::=  
     [ ENCRYPTION ]  
@@ -114,7 +114,7 @@ CREATE [ OR ALTER ] TRIGGER trigger_name
 ON ALL SERVER   
 [ WITH <logon_trigger_option> [ ,...n ] ]  
 { FOR| AFTER } LOGON    
-AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] }  
+AS { sql_statement  [ ; ] [ ...n ] | EXTERNAL NAME <method_specifier>  [ ; ] }  
   
 <logon_trigger_option> ::=  
     [ ENCRYPTION ]  
@@ -133,7 +133,7 @@ ON { table | view }
  [ WITH <dml_trigger_option> [ ,...n ] ]   
 { FOR | AFTER | INSTEAD OF }   
 { [ INSERT ] [ , ] [ UPDATE ] [ , ] [ DELETE ] }   
-  AS { sql_statement  [ ; ] [ ,...n ] [ ; ] > }  
+  AS { sql_statement  [ ; ] [ ...n ] }  
   
 <dml_trigger_option> ::=   
         [ EXECUTE AS Clause ]  
@@ -149,7 +149,7 @@ CREATE [ OR ALTER ] TRIGGER trigger_name
 ON { DATABASE }   
  [ WITH <ddl_trigger_option> [ ,...n ] ]   
 { FOR | AFTER } { event_type | event_group } [ ,...n ]   
-AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }  
+AS { sql_statement  [ ; ] [ ...n ] }  
   
 <ddl_trigger_option> ::=   
     [ EXECUTE AS Clause ]  

@@ -6,6 +6,8 @@ ms.date: "02/01/2017"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_execute_remote"
   - "sp_execute_remote_TSQL"

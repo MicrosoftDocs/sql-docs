@@ -29,7 +29,7 @@ The following are instructions to help you determine the SKU recommendations and
 ## Prerequisites
 
 - Download and install the latest version of [DMA](https://aka.ms/get-dma). If you have already an earlier version of the tool, open it, and you'll be prompted to upgrade DMA.
-- Install the minimum version [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) on the tools machine where the SKU recommendations console application is running.
+- Install the minimum version [.NET Core 3.1](https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=3.1.0) on the tools machine where the SKU recommendations console application is running.
 - Ensure the account used to connect to your SQL Server on-premises source has sysadmin permission.
 
 > [!NOTE]

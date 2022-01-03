@@ -33,6 +33,8 @@ This article explains how to use the COPY statement in [!INCLUDE[ssSDW](../../in
 - Specify a custom row terminator for CSV files
 - Leverage SQL Server Date formats for CSV files
 - Specify wildcards and multiple files in the storage location path
+- Automatic schema discovery simplifies the process of defining and mapping source data into target tables.
+- Auto-table creation process automatically creates the tables and works alongside with Automatic schema discovery.  
 
 Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
 
@@ -273,6 +275,80 @@ The user executing the Copy Command must have the following permissions:
 - [INSERT ](grant-database-permissions-transact-sql.md#remarks)
 
 Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
+
+## Syntax for Automatic table creation 
+
+```syntaxsql
+COPY INTO [schema.]table_name
+FROM '<external_location>' [,...n]
+WITH  
+ ( 
+ [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
+ [,CREDENTIAL = (AZURE CREDENTIAL) ]
+ [,AUTO_CREATE_TABLE = { 'On' | 'Off'} ]
+)
+```
+
+## Arguments  
+
+*schema_name*  
+Is optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* is not specified, and the default schema of the user performing the COPY operation is different from the specified table, COPY will be canceled, and an error message will be returned.  
+
+*table_name*  
+Is the name of the table to COPY data into. The target table can be a temporary or permanent table and must already exist in the database. 
+
+*External locations(s)*</br>
+Is where the files containing the data is staged. Currently Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage are supported:
+
+- *External location* for Blob Storage: https://\<account\>.blob.core.windows.net/\<container\>/\<path\>
+- *External location* for ADLS Gen2: https://\<account\>.dfs.core.windows.net/\<container\>/\<path\>
+
+> [!NOTE]  
+> The .blob endpoint is available for ADLS Gen2 as well and currently yields the best performance. Use the .blob endpoint when .dfs is not required for your authentication method.
+
+- *Account* - The storage account name
+
+- *Container* - The blob container name
+
+- *Path* - the folder or file path for the data. The location starts from the container. If a folder is specified, COPY will retrieve all files from the folder and all its subfolders. COPY ignores hidden folders and doesn't return files that begin with an underline (_) or a period (.) unless explicitly specified in the path. This behavior is the same even when specifying a path with a wildcard.
+
+Wildcards cards can be included in the path where
+
+- Wildcard path name matching is case-sensitive
+- Wildcard can be escaped using the backslash character (\\)
+- Wildcard expansion is applied recursively. For instance, all CSV files under Customer1 (including subdirectories of Customer1 will be loaded in the following example: ‘Account/Container/Customer1/*.csv’
+
+> [!NOTE]  
+> For best performance, avoid specifying wildcards that would expand over a larger number of files. If possible, list multiple file locations instead of specifying wildcards.
+
+Multiple file locations can only be specified from the same storage account and container via a comma-separated list such as:
+
+- ‘https://\<account\>.blob.core.windows.net/\<container\>/\<path\>’, ‘https://\<account\>.blob.core.windows.net\<container\>/\<path\>’…
+
+*FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
+*FILE_TYPE* specifies the format of the external data.
+
+- CSV: Specifies a comma-separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
+- PARQUET: Specifies a Parquet format.
+- ORC: Specifies an Optimized Row Columnar (ORC) format.
+
+>[!NOTE]  
+>The file type 'Delimited Text' in Polybase is replaced by the ‘CSV’ file format where the default comma delimiter can be configured via the FIELDTERMINATOR parameter. 
+
+*FILE_FORMAT = external_file_format_name*</br>
+*FILE_FORMAT* applies to Parquet and ORC files only and specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md).
+
+*CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
+*CREDENTIAL* specifies the authentication mechanism to access the external storage account. For more details refer to the Syntax section above.
+
+*AUTO_CREATE_TABLE = { ‘On' | ‘Off’ }*</br>
+*AUTO_CREATE_TABLE* specifies if the table could be automatically created by working alongside with Automatic schema discovery.
+
+- On: Enables the Automatic table creation.
+- Off: Automatic table creation is not enabled.
+
+>[!NOTE]  
+>The Automatic table creation works alongside with Automatic schema discovery. The Automatic table creation is NOT enabled by default.
 
 ## Examples  
 

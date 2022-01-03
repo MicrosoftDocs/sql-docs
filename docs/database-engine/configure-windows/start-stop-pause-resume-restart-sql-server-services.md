@@ -234,7 +234,7 @@ The Microsoft SQL Server services can be started, stopped, or paused by using Mi
 - From a command prompt, enter one of the following commands. Replace *instancename* with the name of the instance you want to manage.  
   
   ```cmd
-  net start "SQL Server Agent(instancename)"
+  net start "SQL Server Agent (instancename)"
   ```
   
    -or-  

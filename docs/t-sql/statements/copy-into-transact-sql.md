@@ -63,8 +63,7 @@ WITH
  [,FIRSTROW = first_row]
  [,DATEFORMAT = 'date_format'] 
  [,ENCODING = {'UTF8'|'UTF16'}] 
- [,IDENTITY_INSERT = {'ON' | 'OFF'}
- [,AUTO_CREATE_TABLE = { ON | OFF } ] 
+ [,IDENTITY_INSERT = {'ON' | 'OFF'}]
 )
 ```
 

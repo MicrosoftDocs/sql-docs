@@ -276,7 +276,7 @@ The user executing the Copy Command must have the following permissions:
 
 Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
 
-## Syntax for Automatic table creation 
+## Syntax for automatic table creation 
 
 ```syntaxsql
 COPY INTO [schema.]table_name
@@ -289,7 +289,7 @@ WITH
 )
 ```
 
-## Arguments for Automatic table creation
+## Arguments for automatic table creation
 
 *schema_name*  
 Is optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* is not specified, and the default schema of the user performing the COPY operation is different from the specified table, COPY will be canceled, and an error message will be returned.  

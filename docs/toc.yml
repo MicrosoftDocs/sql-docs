@@ -1642,6 +1642,15 @@ items:
             href: relational-databases/databases/database-properties-mirroring-page.md
           - name: Query store page
             href: relational-databases/databases/database-properties-query-store-page.md
+  - name: Event notification
+    href: relational-databases/service-broker/event-notifications.md
+    items:
+    - name: Implement
+      href: relational-databases/service-broker/implement-event-notifications.md
+    - name: Configure Dialog Security
+      href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
+    - name: Get Information
+      href: relational-databases/service-broker/get-information-about-event-notifications.md
   - name: Filestream, Filetable & BLOB
     href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
     items:
@@ -1799,17 +1808,7 @@ items:
     - name: Sequence Properties
       href: relational-databases/sequence-numbers/sequence-properties-general-page.md
   - name: Service Broker
-    items:
-    - name: Overview
-      href: database-engine/configure-windows/sql-server-service-broker.md
-    - name: Event notification
-      href: relational-databases/service-broker/event-notifications.md
-    - name: Implement
-      href: relational-databases/service-broker/implement-event-notifications.md
-    - name: Configure Dialog Security
-      href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
-    - name: Get Information
-      href: relational-databases/service-broker/get-information-about-event-notifications.md
+    href: database-engine/configure-windows/sql-server-service-broker.md 
   - name: Spatial data
     href: relational-databases/spatial/spatial-data-sql-server.md
     items:

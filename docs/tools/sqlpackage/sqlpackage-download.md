@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 10/4/2021
+ms.date: 1/4/2022
 ---
 
 # Download and install sqlpackage
@@ -54,7 +54,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
 
 ## Get sqlpackage .NET Core for Windows
 
-1. Download [sqlpackage for Windows](https://go.microsoft.com/fwlink/?linkid=2157302).
+1. Download [sqlpackage for Windows](https://go.microsoft.com/fwlink/?linkid=2165007).
 2. To extract the file by right clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory.
 3. Open a new Terminal window and cd to the location where sqlpackage was extracted:
 
@@ -64,7 +64,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
 
 ## Get sqlpackage .NET Core for macOS
 
-1. Download [sqlpackage for macOS](https://go.microsoft.com/fwlink/?linkid=2157203).
+1. Download [sqlpackage for macOS](https://go.microsoft.com/fwlink/?linkid=2165009).
 2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    ```bash
@@ -91,7 +91,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
 
 ## Get sqlpackage .NET Core for Linux
 
-1. Download [sqlpackage for Linux](https://go.microsoft.com/fwlink/?linkid=2157202) by using one of the installers or the tar.gz archive.
+1. Download [sqlpackage for Linux](https://go.microsoft.com/fwlink/?linkid=2165008) by using one of the installers or the tar.gz archive.
 2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    ```bash

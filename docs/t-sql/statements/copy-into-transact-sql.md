@@ -150,7 +150,7 @@ Multiple file locations can only be specified from the same storage account and 
 
 > [!NOTE]  
 >
-> - When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
+> - When authenticating using Azure Active Directory (AAD) or to a public storage account, CREDENTIAL does not need to be specified. 
 > - If your storage account is associated with a VNet, you must authenticate using MSI (Managed Identity).
 
 - Authenticating with Shared Access Signatures (SAS)
@@ -425,7 +425,7 @@ WITH (
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?
-The COPY command will have better performance depending on your workload. For best loading performance, consider splitting your input into multiple files when loading CSV. This guidance apples to gzip compressed files as well.
+The COPY command will have better performance depending on your workload. For best loading performance, consider splitting your input into multiple files when loading CSV. This guidance applies to gzip compressed files as well.
 
 ### What is the file splitting guidance for the COPY command loading CSV files?
 Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. For a simple file splitting experience, refer to the following [documentation](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 
@@ -451,13 +451,13 @@ Guidance on the number of files is outlined in the table below. Once the recomme
 
 
 ### What is the file splitting guidance for the COPY command loading Parquet or ORC files?
-There is no need to split Parquet and ORC files because the COPY command will automatically split files. Parquet and ORC files in the Azure storage account should be 256MB or larger for best performance. 
+There is no need to split Parquet and ORC files because the COPY command will automatically split files. Parquet and ORC files in the Azure storage account should be 256 MB or larger for best performance. 
 
 ### Are there any limitations on the number or size of files?
-There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4MB.
+There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4 MB.
 
 ### Are there any known issues with the COPY statement?
-If you have a Synapse workspace that was created prior to 12/07/2020, you may run into a similar error message when authenticating using Managed Identity:
+If you have a Azure Synapse workspace that was created prior to 12/07/2020, you may run into a similar error message when authenticating using Managed Identity:
 
 *com.microsoft.sqlserver.jdbc.SQLServerException: Managed Service Identity has not been enabled on this server. Please enable Managed Service Identity and try again.*
 

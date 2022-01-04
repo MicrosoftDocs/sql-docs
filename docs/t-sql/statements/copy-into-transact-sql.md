@@ -280,7 +280,7 @@ IDENTITY_INSERT specifies whether the identity value or values in the imported d
 
 ### Permissions  
 
-The user executing the Copy Command must have the following permissions: 
+The user executing the COPY command must have the following permissions: 
 
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
 - [INSERT ](grant-database-permissions-transact-sql.md#remarks)

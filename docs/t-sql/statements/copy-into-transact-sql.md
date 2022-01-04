@@ -78,7 +78,11 @@ Is optional if the default schema for the user performing the operation is the s
 Is the name of the table to COPY data into. The target table can be a temporary or permanent table and must already exist in the database. For automatic schema detection mode, do not provide a column list.
 
 #### *(column_list)*  
-Is an optional list of one or more columns used to map source data fields to target table columns for loading data. *column_list* must be enclosed in parentheses and delimited by commas. The column list is of the following format:
+Is an optional list of one or more columns used to map source data fields to target table columns for loading data. 
+
+Do not specify a *column_list* when `AUTO_CREATE_TABLE = 'ON'`. 
+
+*column_list* must be enclosed in parentheses and delimited by commas. The column list is of the following format:
 
 [(Column_name [default Default_value] [Field_number] [,...n])]
 

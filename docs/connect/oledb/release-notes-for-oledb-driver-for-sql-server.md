@@ -22,8 +22,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
 
 ## 18.6.3
-![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2183083)
-![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2183084) 
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2183083)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2183084)  
 
 Released: December 15, 2021
 

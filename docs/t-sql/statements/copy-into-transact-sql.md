@@ -64,19 +64,7 @@ WITH
  [,DATEFORMAT = 'date_format'] 
  [,ENCODING = {'UTF8'|'UTF16'}] 
  [,IDENTITY_INSERT = {'ON' | 'OFF'}]
-)
-```
-
-### Syntax for automatic table creation
-
-```syntaxsql
-COPY INTO [schema.]table_name
-FROM '<external_location>' [,...n]
-WITH  
- ( 
- [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
- [,CREDENTIAL = (AZURE CREDENTIAL) ]
- [,AUTO_CREATE_TABLE = { 'On' | 'Off'} ]
+ [,AUTO_CREATE_TABLE = {'ON' | 'OFF'} ]
 )
 ```
 
@@ -287,10 +275,8 @@ IDENTITY_INSERT specifies whether the identity value or values in the imported d
 - ON: Enables automatic table creation. The COPY INTO process will create a new table automatically by discovering the structure of the file to be loaded.
 - OFF: Automatic table creation is not enabled. Default.
 
-When *AUTO_CREATE_TABLE* is desired, specify only the `FILE_TYPE`, `CREDENTIAL`, and `AUTO_CREATE_TABLE = 'YES'` arguments. See Example G later in this article.
-
 >[!NOTE]  
->The automatic table creation works alongside with automatic schema discovery. The automatic table creation is NOT enabled by default.
+> The automatic table creation works alongside with automatic schema discovery. The automatic table creation is NOT enabled by default.
 
 ### Permissions  
 

@@ -5,7 +5,6 @@ description: Use the COPY statement in Azure Synapse Analytics for loading from 
 ms.date: 01/04/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: jrasnick
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords: 
@@ -17,6 +16,7 @@ dev_langs:
   - "TSQL"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: wiassaf
 monikerRange: "=azure-sqldw-latest"
 ---
 # COPY (Transact-SQL)
@@ -33,8 +33,8 @@ This article explains how to use the COPY statement in [!INCLUDE[ssSDW](../../in
 - Specify a custom row terminator for CSV files
 - Leverage SQL Server Date formats for CSV files
 - Specify wildcards and multiple files in the storage location path
-- Automatic schema discovery simplifies the process of defining and mapping source data into target tables.
-- Auto-table creation process automatically creates the tables and works alongside with Automatic schema discovery.  
+- Automatic schema discovery simplifies the process of defining and mapping source data into target tables
+- The automatic table creation process automatically creates the tables and works alongside with automatic schema discovery
 
 Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
 
@@ -51,7 +51,7 @@ FROM '<external_location>' [,...n]
 WITH  
  ( 
  [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
- [,FILE_FORMAT = EXTERNAL FILE FORMAT OBJECT ]	
+ [,FILE_FORMAT = EXTERNAL FILE FORMAT OBJECT ]    
  [,CREDENTIAL = (AZURE CREDENTIAL) ]
  [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]]' 
  [,ERRORFILE_CREDENTIAL = (AZURE CREDENTIAL) ]
@@ -63,19 +63,34 @@ WITH
  [,FIRSTROW = first_row]
  [,DATEFORMAT = 'date_format'] 
  [,ENCODING = {'UTF8'|'UTF16'}] 
- [,IDENTITY_INSERT = {'ON' | 'OFF'}]
+ [,IDENTITY_INSERT = {'ON' | 'OFF'}
+ [,AUTO_CREATE_TABLE = { ON | OFF } ] 
 )
 ```
 
+### Syntax for automatic table creation
+
+```syntaxsql
+COPY INTO [schema.]table_name
+FROM '<external_location>' [,...n]
+WITH  
+ ( 
+ [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
+ [,CREDENTIAL = (AZURE CREDENTIAL) ]
+ [,AUTO_CREATE_TABLE = { 'On' | 'Off'} ]
+)
+```
+
+
 ## Arguments  
 
-*schema_name*  
+#### *schema_name*  
 Is optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* is not specified, and the default schema of the user performing the COPY operation is different from the specified table, COPY will be canceled, and an error message will be returned.  
 
-*table_name*  
-Is the name of the table to COPY data into. The target table can be a temporary or permanent table and must already exist in the database. 
+#### *table_name*  
+Is the name of the table to COPY data into. The target table can be a temporary or permanent table and must already exist in the database. For automatic schema detection mode, do not provide a column list.
 
-*(column_list)*  
+#### *(column_list)*  
 Is an optional list of one or more columns used to map source data fields to target table columns for loading data. *column_list* must be enclosed in parentheses and delimited by commas. The column list is of the following format:
 
 [(Column_name [default Default_value] [Field_number] [,...n])]
@@ -88,7 +103,7 @@ Is an optional list of one or more columns used to map source data fields to tar
 
 When a column list is not specified, COPY will map columns based on the source and target ordinality: Input field 1 will go to target column 1, field 2 will go to column 2, etc.
 
-*External locations(s)*</br>
+#### *External locations(s)*
 Is where the files containing the data is staged. Currently Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage are supported:
 
 - *External location* for Blob Storage: https://\<account\>.blob.core.windows.net/\<container\>/\<path\>
@@ -107,16 +122,16 @@ Wildcards cards can be included in the path where
 
 - Wildcard path name matching is case-sensitive
 - Wildcard can be escaped using the backslash character (\\)
-- Wildcard expansion is applied recursively. For instance, all CSV files under Customer1 (including subdirectories of Customer1 will be loaded in the following example: ‘Account/Container/Customer1/*.csv’
+- Wildcard expansion is applied recursively. For instance, all CSV files under Customer1 (including subdirectories of Customer1) will be loaded in the following example: `Account/Container/Customer1/*.csv`
 
 > [!NOTE]  
 > For best performance, avoid specifying wildcards that would expand over a larger number of files. If possible, list multiple file locations instead of specifying wildcards.
 
 Multiple file locations can only be specified from the same storage account and container via a comma-separated list such as:
 
-- ‘https://\<account\>.blob.core.windows.net/\<container\>/\<path\>’, ‘https://\<account\>.blob.core.windows.net\<container\>/\<path\>’…
+- `https://\<account\>.blob.core.windows.net/\<container\>/\<path\>`, `https://\<account\>.blob.core.windows.net\<container\>/\<path\>`…
 
-*FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
+#### *FILE_TYPE = { 'CSV' | 'PARQUET' | 'ORC' }*
 *FILE_TYPE* specifies the format of the external data.
 
 - CSV: Specifies a comma-separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
@@ -124,12 +139,12 @@ Multiple file locations can only be specified from the same storage account and 
 - ORC: Specifies an Optimized Row Columnar (ORC) format.
 
 >[!NOTE]  
->The file type 'Delimited Text' in Polybase is replaced by the ‘CSV’ file format where the default comma delimiter can be configured via the FIELDTERMINATOR parameter. 
+>The file type 'Delimited Text' in Polybase is replaced by the 'CSV' file format where the default comma delimiter can be configured via the FIELDTERMINATOR parameter. 
 
-*FILE_FORMAT = external_file_format_name*</br>
+#### *FILE_FORMAT = external_file_format_name*
 *FILE_FORMAT* applies to Parquet and ORC files only and specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md).
 
-*CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
+#### *CREDENTIAL (IDENTITY = '', SECRET = '')*
 *CREDENTIAL* specifies the authentication mechanism to access the external storage account. Authentication methods are:
 
 |                          |                CSV                |                      Parquet                       |                        ORC                         |
@@ -149,7 +164,7 @@ Multiple file locations can only be specified from the same storage account and 
 
 - Authenticating with Shared Access Signatures (SAS)
   
-  - *IDENTITY: A constant with a value of ‘Shared Access Signature’*
+  - *IDENTITY: A constant with a value of 'Shared Access Signature'*
   - *SECRET: The* [*shared access signature*](/azure/storage/common/storage-sas-overview) *provides delegated access to resources in your storage account.*
   -  Minimum permissions required: READ and LIST
   
@@ -161,12 +176,12 @@ Multiple file locations can only be specified from the same storage account and 
 
 - Authenticating with Storage account key
   
-  - *IDENTITY: A constant with a value of ‘Storage Account Key’*
+  - *IDENTITY: A constant with a value of 'Storage Account Key'*
   - *SECRET: Storage account key*
   
 - Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
   
-  - *IDENTITY: A constant with a value of ‘Managed Identity’*
+  - *IDENTITY: A constant with a value of 'Managed Identity'*
   - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD registered SQL Database server
   
 - Authenticating with an AAD user
@@ -174,21 +189,21 @@ Multiple file locations can only be specified from the same storage account and 
   - *CREDENTIAL is not required*
   - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD user
 
-*ERRORFILE = Directory Location*</br>
+#### *ERRORFILE = Directory Location*
 *ERRORFILE* only applies to CSV. Specifies the directory within the COPY statement where the rejected rows and the corresponding error file should be written. The full path from the storage account can be specified or the path relative to the container can be specified. If the specified path doesn't exist, one will be created on your behalf. A child directory is created with the name "_rejectedrows". The "_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. 
 
 Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the reason (Error) file and the data (Row) file each pre-appending with the queryID, distributionID, and a file guid. Because the data and the reason are in separate files, corresponding files have a matching prefix.
 
 If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL will be used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL will be used.
 
-*ERRORFILE_CREDENTIAL = (IDENTITY= ‘’, SECRET = ‘’)*</br>
+#### *ERRORFILE_CREDENTIAL = (IDENTITY= '', SECRET = '')*
 *ERRORFILE_CREDENTIAL* only applies to CSV files. Supported data source and authentication methods are:
 
 - Azure Blob Storage  - SAS/SERVICE PRINCIPAL/KEY/AAD
 - Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD
   
 - Authenticating with Shared Access Signatures (SAS)
-  - *IDENTITY: A constant with a value of ‘Shared Access Signature’*
+  - *IDENTITY: A constant with a value of 'Shared Access Signature'*
   - *SECRET: The* [*shared access signature*](/azure/storage/common/storage-sas-overview) *provides delegated access to resources in your storage account.*
   - Minimum permissions required: READ, LIST, WRITE, CREATE, DELETE
   
@@ -201,11 +216,11 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 > Use the OAuth 2.0 token endpoint **V1**
 
 - Authenticating with Storage account key
-  - *IDENTITY: A constant with a value of ‘Storage Account Key’*
+  - *IDENTITY: A constant with a value of 'Storage Account Key'*
   - *SECRET: Storage account key*
   
 - Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
-  - *IDENTITY: A constant with a value of ‘Managed Identity’*
+  - *IDENTITY: A constant with a value of 'Managed Identity'*
   - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD registered SQL Database server
   
 - Authenticating with an AAD user
@@ -215,10 +230,10 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 > [!NOTE]  
 > If you are using the same storage account for your ERRORFILE and specifying the ERRORFILE path relative to the root of the container, you do not need to specify the ERROR_CREDENTIAL.
 
-*MAXERRORS = max_errors*</br>
+#### *MAXERRORS = max_errors*
 *MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation is canceled. Each row that cannot be imported by the COPY operation is ignored and counted as one error. If max_errors is not specified, the default is 0.
 
-*COMPRESSION = { 'DefaultCodec '\| ’Snappy’ \| ‘GZIP’ \| ‘NONE’}*</br>
+#### *COMPRESSION = { 'DefaultCodec '\| 'Snappy' \| 'GZIP' \| 'NONE'}*
 *COMPRESSION* is optional and specifies the data compression method for the external data.
 
 - CSV supports GZIP
@@ -232,32 +247,32 @@ The COPY command will autodetect the compression type based on the file extensio
 - .snappy – **Snappy**
 - .deflate - **DefaultCodec**  (Parquet and ORC only)
 
- *FIELDQUOTE = 'field_quote'*</br>
+#### *FIELDQUOTE = 'field_quote'*
 *FIELDQUOTE* applies to CSV and specifies a single character that will be used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the RFC 4180 standard. Extended ASCII and multi-byte characters and are not supported with UTF-8 for FIELDQUOTE.
 
 > [!NOTE]  
 > FIELDQUOTE characters are escaped in string columns where there is a presence of a double FIELDQUOTE (delimiter). 
 
-*FIELDTERMINATOR = 'field_terminator’*</br>
+#### *FIELDTERMINATOR = 'field_terminator'*
 *FIELDTERMINATOR* Only applies to CSV. Specifies the field terminator that will be used in the CSV file. The field terminator can be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,). Extended ASCII and multi-byte characters and are not supported with UTF-8 for FIELDTERMINATOR.
 
-ROW TERMINATOR = 'row_terminator'</br>
+#### ROW TERMINATOR = 'row_terminator'
 *ROW TERMINATOR* Only applies to CSV. Specifies the row terminator that will be used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. By default, the row terminator is \r\n. 
 
 The COPY command prefixes the \r character when specifying \n (newline) resulting in \r\n. To specify only the \n character, use hexadecimal notation (0x0A). When specifying multi-character row terminators in hexadecimal, do not specify 0x between each character.
 
 Extended ASCII and multi-byte characters and are not supported with UTF-8 for ROW TERMINATOR.
 
-*FIRSTROW  = First_row_int*</br>
+#### *FIRSTROW  = First_row_int*
 *FIRSTROW* applies to CSV and specifies the row number that is read first in all files for the COPY command. Values start from 1, which is the default value. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators.
 
-*DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
+#### *DATEFORMAT = { 'mdy' \| 'dmy' \| 'ymd' \| 'ydm' \| 'myd' \| 'dym' }*</br>
 DATEFORMAT only applies to CSV and specifies the date format of the date mapping to SQL Server date formats. For an overview of all Transact-SQL date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md). DATEFORMAT within the COPY command takes precedence over [DATEFORMAT configured at the session level](set-dateformat-transact-sql.md).
 
-*ENCODING = ‘UTF8’ | ‘UTF16’*</br>
+#### *ENCODING = 'UTF8' | 'UTF16'*
 *ENCODING* only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command. 
 
-*IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
+#### *IDENTITY_INSERT = 'ON' | 'OFF'*
 IDENTITY_INSERT specifies whether the identity value or values in the imported data file are to be used for the identity column. If IDENTITY_INSERT is OFF (default), the identity values for this column are verified, but not imported. Azure Synapse Analytics will automatically assign unique values based on the seed and increment values specified during table creation. Note the following behavior with the COPY command:
 
 - If IDENTITY_INSERT is OFF, and table has an identity column
@@ -267,6 +282,17 @@ IDENTITY_INSERT specifies whether the identity value or values in the imported d
 - Default value is not supported for the IDENTITY COLUMN in the column list.
 - IDENTITY_INSERT can only be set for one table at a time.
 
+#### *AUTO_CREATE_TABLE = { 'ON' | 'OFF' }*
+*AUTO_CREATE_TABLE* specifies if the table could be automatically created by working alongside with automatic schema discovery.
+
+- ON: Enables automatic table creation. The COPY INTO process will create a new table automatically by discovering the structure of the file to be loaded.
+- OFF: Automatic table creation is not enabled. Default.
+
+When *AUTO_CREATE_TABLE* is desired, specify only the `FILE_TYPE`, `CREDENTIAL`, and `AUTO_CREATE_TABLE = 'YES'` arguments. See Example G later in this article.
+
+>[!NOTE]  
+>The automatic table creation works alongside with automatic schema discovery. The automatic table creation is NOT enabled by default.
+
 ### Permissions  
 
 The user executing the Copy Command must have the following permissions: 
@@ -275,80 +301,6 @@ The user executing the Copy Command must have the following permissions:
 - [INSERT ](grant-database-permissions-transact-sql.md#remarks)
 
 Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
-
-## Syntax for automatic table creation 
-
-```syntaxsql
-COPY INTO [schema.]table_name
-FROM '<external_location>' [,...n]
-WITH  
- ( 
- [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
- [,CREDENTIAL = (AZURE CREDENTIAL) ]
- [,AUTO_CREATE_TABLE = { 'On' | 'Off'} ]
-)
-```
-
-## Arguments for automatic table creation
-
-*schema_name*  
-Is optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* is not specified, and the default schema of the user performing the COPY operation is different from the specified table, COPY will be canceled, and an error message will be returned.  
-
-*table_name*  
-Is the name of the table to COPY data into. The target table can be a temporary or permanent table and must already exist in the database. 
-
-*External locations(s)*</br>
-Is where the files containing the data is staged. Currently Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage are supported:
-
-- *External location* for Blob Storage: https://\<account\>.blob.core.windows.net/\<container\>/\<path\>
-- *External location* for ADLS Gen2: https://\<account\>.dfs.core.windows.net/\<container\>/\<path\>
-
-> [!NOTE]  
-> The .blob endpoint is available for ADLS Gen2 as well and currently yields the best performance. Use the .blob endpoint when .dfs is not required for your authentication method.
-
-- *Account* - The storage account name
-
-- *Container* - The blob container name
-
-- *Path* - the folder or file path for the data. The location starts from the container. If a folder is specified, COPY will retrieve all files from the folder and all its subfolders. COPY ignores hidden folders and doesn't return files that begin with an underline (_) or a period (.) unless explicitly specified in the path. This behavior is the same even when specifying a path with a wildcard.
-
-Wildcards cards can be included in the path where
-
-- Wildcard path name matching is case-sensitive
-- Wildcard can be escaped using the backslash character (\\)
-- Wildcard expansion is applied recursively. For instance, all CSV files under Customer1 (including subdirectories of Customer1 will be loaded in the following example: ‘Account/Container/Customer1/*.csv’
-
-> [!NOTE]  
-> For best performance, avoid specifying wildcards that would expand over a larger number of files. If possible, list multiple file locations instead of specifying wildcards.
-
-Multiple file locations can only be specified from the same storage account and container via a comma-separated list such as:
-
-- ‘https://\<account\>.blob.core.windows.net/\<container\>/\<path\>’, ‘https://\<account\>.blob.core.windows.net\<container\>/\<path\>’…
-
-*FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
-*FILE_TYPE* specifies the format of the external data.
-
-- CSV: Specifies a comma-separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
-- PARQUET: Specifies a Parquet format.
-- ORC: Specifies an Optimized Row Columnar (ORC) format.
-
->[!NOTE]  
->The file type 'Delimited Text' in Polybase is replaced by the ‘CSV’ file format where the default comma delimiter can be configured via the FIELDTERMINATOR parameter. 
-
-*FILE_FORMAT = external_file_format_name*</br>
-*FILE_FORMAT* applies to Parquet and ORC files only and specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md).
-
-*CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
-*CREDENTIAL* specifies the authentication mechanism to access the external storage account. For more details refer to the Syntax section above.
-
-*AUTO_CREATE_TABLE = { ‘On' | ‘Off’ }*</br>
-*AUTO_CREATE_TABLE* specifies if the table could be automatically created by working alongside with Automatic schema discovery.
-
-- On: Enables the Automatic table creation.
-- Off: Automatic table creation is not enabled.
-
->[!NOTE]  
->The Automatic table creation works alongside with Automatic schema discovery. The Automatic table creation is NOT enabled by default.
 
 ## Examples  
 
@@ -368,22 +320,22 @@ The default values of the COPY command are:
 
 - COMPRESSION default is uncompressed
 
-- FIELDQUOTE = “” 
+- FIELDQUOTE = "" 
 
-- FIELDTERMINATOR = “,” 
+- FIELDTERMINATOR = "," 
 
-- ROWTERMINATOR = ‘\n'
+- ROWTERMINATOR = '\n'
 
 > [!IMPORTANT]
-> COPY treats ‘\n’ as ‘\r\n’ internally. For more information, see the ROWTERMINATOR section.
+> COPY treats '\n' as '\r\n' internally. For more information, see the ROWTERMINATOR section.
 
 - FIRSTROW = 1
 
-- ENCODING = ‘UTF8’
+- ENCODING = 'UTF8'
 
-- FILE_TYPE = ‘CSV’
+- FILE_TYPE = 'CSV'
 
-- IDENTITY_INSERT = ‘OFF’
+- IDENTITY_INSERT = 'OFF'
 
 ### B. Load authenticating via Share Access Signature (SAS)
 
@@ -395,16 +347,16 @@ FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/'
 WITH (
     FILE_TYPE = 'CSV',
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>'),
-	--CREDENTIAL should look something like this:
+    --CREDENTIAL should look something like this:
     --CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='?sv=2018-03-28&ss=bfqt&srt=sco&sp=rl&st=2016-10-17T20%3A14%3A55Z&se=2021-10-18T20%3A19%3A00Z&sig=IEoOdmeYnE9%2FKiJDSHFSYsz4AkNa%2F%2BTx61FuQ%2FfKHefqoBE%3D'),
     FIELDQUOTE = '"',
     FIELDTERMINATOR=';',
     ROWTERMINATOR='0X0A',
     ENCODING = 'UTF8',
     DATEFORMAT = 'ymd',
-	MAXERRORS = 10,
-	ERRORFILE = '/errorsfolder',--path starting from the storage container
-	IDENTITY_INSERT = 'ON'
+    MAXERRORS = 10,
+    ERRORFILE = '/errorsfolder',--path starting from the storage container
+    IDENTITY_INSERT = 'ON'
 )
 ```
 
@@ -419,7 +371,7 @@ FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/'
 WITH (
     FILE_TYPE = 'CSV',
     CREDENTIAL=(IDENTITY= 'Storage Account Key', SECRET='<Your_Account_Key>'),
-	--CREDENTIAL should look something like this:
+    --CREDENTIAL should look something like this:
     --CREDENTIAL=(IDENTITY= 'Storage Account Key', SECRET='x6RWv4It5F2msnjelv3H4DA80n0PQW0daPdw43jM0nyetx4c6CpDkdj3986DX5AHFMIf/YN4y6kkCnU8lb+Wx0Pj+6MDw=='),
     FIELDQUOTE = '"',
     FIELDTERMINATOR=',',
@@ -448,11 +400,11 @@ WITH (
 COPY INTO t1
 FROM 
 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt', 
-	'https://myaccount.blob.core.windows.net/myblobcontainer/folder1'
+    'https://myaccount.blob.core.windows.net/myblobcontainer/folder1'
 WITH ( 
-	FILE_TYPE = 'CSV',
-	CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
-	FIELDTERMINATOR = '|'
+    FILE_TYPE = 'CSV',
+    CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
+    FIELDTERMINATOR = '|'
 )
 ```
 
@@ -466,6 +418,18 @@ WITH (
     CREDENTIAL = (IDENTITY = 'Managed Identity'),
     FIELDQUOTE = '"',
     FIELDTERMINATOR=','
+)
+```
+
+### G. Load using automatic schema detection
+
+```sql
+COPY INTO [myCOPYDemoTable]
+FROM 'https://myaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.parquet'
+WITH (
+    FILE_TYPE = 'Parquet',
+    CREDENTIAL = ( IDENTITY = 'Shared Access Signature', SECRET = secrethere,
+    AUTO_CREATE_TABLE = 'ON'
 )
 ```
 
@@ -511,8 +475,8 @@ If you have a Synapse workspace that was created prior to 12/07/2020, you may ru
 Follow these steps to work around this issue by re-registering the workspace's managed identity:
 
 1. Go to your Synapse workspace in the Azure portal
-2. Go to the Managed identities blade 
-3. If the “Allow Pipelines” option is already checked, you must uncheck this setting and save
+2. Go to the Managed identities page 
+3. If the "Allow Pipelines" option is already checked, you must uncheck this setting and save
 4. Check the "Allow Pipelines" option and save
 
 

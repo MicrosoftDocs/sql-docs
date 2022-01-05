@@ -6,8 +6,10 @@ ms.technology: ssms
 ms.topic: quickstart
 author: markingmyname
 ms.author: maghan
-ms.reviewer: sstein, mikeray
-ms.custom: contperf-fy21q2
+ms.reviewer: mikeray
+ms.custom:
+  - contperf-fy21q2
+  - intro-quickstart
 ms.date: 12/15/2020
 ---
 

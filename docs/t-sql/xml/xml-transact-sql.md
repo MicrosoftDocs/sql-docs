@@ -13,15 +13,15 @@ dev_langs:
 helpviewer_keywords: 
   - "xml data type [SQL Server], about xml data type"
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "07/26/2017"
 ---
 
 # xml (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Is the data type that stores XML data. You can store **xml** instances in a column, or a variable of **xml** type.  
   
@@ -30,7 +30,7 @@ ms.date: "07/26/2017"
 ## Syntax  
   
 ```
-xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
+xml [ ( [ CONTENT | DOCUMENT ] xml_schema_collection ) ]
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

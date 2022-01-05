@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "default nullability"
   - "database nullability [SQL Server]"
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # GETANSINULL (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the default nullability for the database for this session.  
   

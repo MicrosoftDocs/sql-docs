@@ -1,8 +1,8 @@
 ---
 description: "sp_create_plan_guide (Transact-SQL)"
-title: "sp_create_plan_guide (Transact-SQL) | Microsoft Docs"
+title: "sp_create_plan_guide (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "06/22/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -15,7 +15,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sp_create_plan_guide"
-ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: markingmyname
 ms.author: maghan
 ---
@@ -77,9 +76,9 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 -   \@type = 'SQL' or 'TEMPLATE'. If 'TEMPLATE', \@params must not be NULL.  
   
--   *statement_text* is submitted by using sp_executesql and a value for the \@params parameter is specified, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internally submits a statement after parameterizing it. Submission of parameterized queries from database APIs (including ODBC, OLE DB, and ADO.NET) appear to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as calls to sp_executesql or to API server cursor routines; therefore, they can also be matched by SQL or TEMPLATE plan guides.  
+-   *statement_text* is submitted by using `sp_executesql` and a value for the \@params parameter is specified, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internally submits a statement after parameterizing it. Submission of parameterized queries from database APIs (including ODBC, OLE DB, and ADO.NET) appear to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as calls to `sp_executesql` or to API server cursor routines; therefore, they can also be matched by SQL or TEMPLATE plan guides.  
   
- *\@parameter_name data_type* must be supplied in the exact same format as it is submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] either by using sp_executesql or submitted internally after parameterization. For more information, see the Remarks section. If the batch does not contain parameters, NULL must be specified. The size of \@params is limited only by available server memory.  
+ *\@parameter_name data_type* must be supplied in the exact same format as it is submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] either by using `sp_executesql` or submitted internally after parameterization. For more information, see the Remarks section. If the batch does not contain parameters, NULL must be specified. The size of \@params is limited only by available server memory.  
   
  [\@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
  N'OPTION (*query_hint* [ ,*...n* ] )  
@@ -130,7 +129,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  `N'SELECT * FROM T WHERE b = 10'`  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignores the carriage return, line feed, and space characters inside the first query. In the second query, the sequence `WHERE b = 10` is interpreted differently from `WHERE a = 10`. Matching is case- and accent-sensitive (even when the collation of the database is case-insensitive), except in the case of keywords, where case is insensitive. Matching is insensitive to shortened forms of keywords. For example, the keywords `EXECUTE`, `EXEC`, and `execute` are considered equivalent.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignores the carriage return, line feed, and space characters inside the first query. In the second query, the sequence `WHERE b = 10` is interpreted differently from `WHERE a = 10`. Matching is case- and accent-sensitive (even when the collation of the database is case-insensitive), except in the case of keywords, where case is insensitive. Matching is sensitive to blank spaces. Matching is insensitive to shortened forms of keywords. For example, the keywords `EXECUTE`, `EXEC`, and `execute` are considered equivalent.  
   
 ## Plan Guide effect on the plan cache  
  Creating a plan guide on a module removes the query plan for that module from the plan cache. Creating a plan guide of type OBJECT or SQL on a batch removes the query plan for a batch that has the same hash value. Creating a plan guide of type TEMPLATE removes all single-statement batches from the plan cache within that database.  
@@ -182,7 +181,7 @@ EXEC sp_create_plan_guide
 ```  
   
 ### B. Creating a plan guide of type SQL for a stand-alone query  
- The following example creates a plan guide to match a query in a batch submitted by an application that uses the sp_executesql system stored procedure.  
+ The following example creates a plan guide to match a query in a batch submitted by an application that uses the `sp_executesql` system stored procedure.  
   
  Here is the batch:  
   

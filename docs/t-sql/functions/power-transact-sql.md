@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "POWER function"
 ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # POWER (Transact-SQL)

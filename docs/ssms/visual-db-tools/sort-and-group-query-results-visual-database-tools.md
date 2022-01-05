@@ -26,7 +26,7 @@ ms.reviewer:
 
 ---
 # Sort and Group Query Results (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can create a query result in which each result row corresponds to an entire group of rows from the original data.  
   
 To learn the details about creating such queries, see the topics listed in the following table.  

@@ -16,7 +16,7 @@ ms.reviewer:
 
 ---
 # Page Setup Dialog Box
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can customize your page design by selecting options in the **Page Setup** dialog box. The availability of some options depends on the languages that are installed and enabled for editing.  
   
 ## Paper  

@@ -2,12 +2,13 @@
 title: "Getting Started with SSMA for MySQL (MySQLToSQL) | Microsoft Docs"
 description: Learn about the SQL Server Migration Assistant (SSMA) for MySQL installation process, and familiarize yourself with the SSMA user interface.
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-get-started
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Getting started, MySQL metadata explorer"
   - "Getting started, SQL Server or SQL Azure metadata explorer"
   - "Getting started,Installing and licensing"

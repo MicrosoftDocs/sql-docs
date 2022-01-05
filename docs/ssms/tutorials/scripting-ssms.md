@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "scripts [SQL Server], SQL Server Management Studio"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: sstein
+ms.reviewer: 
 ms.date: 03/13/2018
 ---
 

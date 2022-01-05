@@ -99,4 +99,4 @@ The following software client applications are available on the Microsoft Downlo
 
 * [Plan a SQL Server installation](../sql-server/install/planning-a-sql-server-installation.md).
 
-* More questions? Ask the [SQL Server Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+* More questions? Ask the [SQL Server Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

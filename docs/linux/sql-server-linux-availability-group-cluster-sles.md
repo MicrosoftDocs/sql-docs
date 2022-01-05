@@ -5,7 +5,7 @@ description: Learn how to create availability group clusters for SQL Server on S
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 04/30/2018
+ms.date: 07/09/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -330,7 +330,7 @@ Manually fail over the availability group with `crm`. Don't initiate failover wi
 For more information, see:
 - [Managing cluster resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm).   
 - [HA Concepts](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
-- [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 
+- [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/sphinx/Pacemaker_Administration/pcs-crmsh.rst) 
 
 <!---[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]--->
 

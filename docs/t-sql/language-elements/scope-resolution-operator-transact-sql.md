@@ -11,12 +11,12 @@ ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 
 # :: (Scope Resolution) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The scope resolution operator **::** provides access to static members of a compound data type. A compound data type is one that contains multiple simple data types and methods. Compound data types include the built-in CLR types and custom SQLCLR User-Defined Types (UDTs).  
   

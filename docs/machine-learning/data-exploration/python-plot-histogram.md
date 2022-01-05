@@ -2,8 +2,8 @@
 title: Plot a histogram for data exploration with Python
 titleSuffix: SQL machine learning
 description: Learn how to create a histogram to visualize data using Python.
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.date: 07/14/2020
 ms.topic: how-to
 ms.prod: sql
@@ -82,7 +82,7 @@ password = 'databasename'
 cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 sql = "SELECT DATEDIFF(year, c.BirthDate, GETDATE()) AS Age FROM [dbo].[FactInternetSales] s INNER JOIN dbo.DimCustomer c ON s.CustomerKey = c.CustomerKey"
-df = pd.read_sql(sql, cnxn)
+df = plt.read_sql(sql, cnxn)
 df.hist(bins=10)
 ```
 

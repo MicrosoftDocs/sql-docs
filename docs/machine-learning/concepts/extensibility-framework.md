@@ -78,7 +78,7 @@ In Linux, only one database engine instance is supported and there is one launch
 
 **BxlServer** is an executable provided by Microsoft that manages communication between SQL Server and the language runtime. It creates the Windows job objects for Windows, or the namespaces for Linux, that are used to contain external script sessions. It also provisions secure working folders for each external script job and uses SQL Satellite to manage data transfer between the external runtime and SQL Server. If you run [Process Explorer](/sysinternals/downloads/process-explorer) while a job is running, you might see one or multiple instances of BxlServer.
 
-In effect, BxlServer is a companion to a language runtime environment that works with SQL Server to transfer data and manage tasks. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes. BxlServer is also an important part of related products such as Microsoft R Client and Microsoft R Server.
+In effect, BxlServer is a companion to a language runtime environment that works with SQL Server to transfer data and manage tasks. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes.
 
 **SQL Satellite** is an extensibility API, included in the database engine, that supports external code or external runtimes implemented using C or C++.
 
@@ -93,7 +93,7 @@ BxlServer uses SQL Satellite for these tasks:
 
 SQL Satellite uses a custom data format that is optimized for fast data transfer between SQL Server and external script languages. It performs type conversions and defines the schemas of the input and output datasets during communications between SQL Server and the external script runtime.
 
-The SQL Satellite can be monitored by using windows extended events (xEvents). For more information, see [Extended Events for SQL Server Machine Learning Services](../../machine-learning/administration/extended-events.md).
+The SQL Satellite can be monitored by using Windows extended events (xEvents). For more information, see [Extended Events for SQL Server Machine Learning Services](../../machine-learning/administration/extended-events.md).
 
 ## Communication channels between components
 

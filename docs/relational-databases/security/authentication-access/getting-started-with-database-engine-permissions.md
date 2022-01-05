@@ -1,14 +1,15 @@
 ---
 title: "Getting Started with Database Engine Permissions | Microsoft Docs"
 description: Review some basic security concepts in SQL Server and learn about a typical implementation of Database Engine permissions.
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "01/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "permissions [SQL Server], getting started"
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
@@ -159,7 +160,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  > [!TIP]  
 >  When designing a database and its objects, from the beginning, plan who or which applications will access which objects and based on that place objects, namely tables but also views, functions and stored procedures in schemas according to buckets of access type as much as possible. You can read more about this approach in this blog post by Andreas Wolter [Schema-design for SQL Server: recommendations for Schema design with security in mind](http://andreas-wolter.com/en/schema-design-for-sql-server-recommendations-for-schema-design-with-security-in-mind/). 
   
-## Diagramm of Permissions  
+## Diagram of Permissions  
  
  [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  
@@ -184,10 +185,13 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 -   Server role membership can be examined by using the `sys.server_role_members` view. This view is not available in [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
 -   For additional security related views, see [Security Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md) .  
-  
-### Useful Transact-SQL Statements  
+ 
+ 
+## <a name="_examples"></a> Examples
+
  The following statements return useful information about permissions.  
-  
+ 
+ ### A. List of database-permissions for each user
  To return the explicit permissions granted or denied in a database ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
   
 ```sql  
@@ -202,19 +206,25 @@ JOIN sys.database_principals AS dPrinc
 JOIN sys.objects AS obj  
     ON perms.major_id = obj.object_id;  
 ```  
-  
+ 
+ ### B. List server-role members
  To return the members of the server roles ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] only), execute the following statement.  
   
 ```sql  
-SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
-FROM sys.server_role_members AS sRo  
-JOIN sys.server_principals AS sPrinc  
-    ON sRo.member_principal_id = sPrinc.principal_id  
-JOIN sys.server_principals AS sRole  
-    ON sRo.role_principal_id = sRole.principal_id;  
+SELECT	roles.principal_id							AS RolePrincipalID
+	,	roles.name									AS RolePrincipalName
+	,	server_role_members.member_principal_id		AS MemberPrincipalID
+	,	members.name								AS MemberPrincipalName
+FROM sys.server_role_members AS server_role_members
+INNER JOIN sys.server_principals AS roles
+    ON server_role_members.role_principal_id = roles.principal_id
+LEFT OUTER JOIN sys.server_principals AS members 
+    ON server_role_members.member_principal_id = members.principal_id  
+;
 ```  
   
  
+ ### C. Listing all database-principals which are members of a database-level role
  To return the members of the database roles ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
   
 ```sql  

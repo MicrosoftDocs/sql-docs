@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "minus operator (-)"
   - "subtracting numbers"
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -71,10 +71,9 @@ GO
  Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql  
--- Uses AdventureWorks  
-  
+-- Uses the AdventureWorks sample database
 DECLARE @altstartdate DATETIME;  
-SET @altstartdate = CONVERT(DATETIME, ''January 10, 1900 3:00 AM', 101);  
+SET @altstartdate = CONVERT(DATETIME, 'January 10, 1900 3:00 AM', 101);  
 SELECT @altstartdate - 1.5 AS 'Subtract Date';  
 ```  
   

@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 1c1724bf-b4ec-4ae0-a1c9-63d3f9198a4c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # hashCode Method (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

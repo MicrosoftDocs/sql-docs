@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "DDL event groups"
   - "DDL triggers, event groups"
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DDL Event Groups

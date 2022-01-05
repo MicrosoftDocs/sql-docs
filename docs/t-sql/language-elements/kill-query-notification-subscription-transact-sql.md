@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "subscriptions [SQL Server query notifications], stopping"
   - "query notifications [SQL Server], subscriptions"
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes query notification subscriptions from the instance. This statement can remove a specific subscription or all subscriptions.  
   

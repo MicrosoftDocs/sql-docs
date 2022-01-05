@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "marked transactions [SQL Server], restoring"
   - "database restores [SQL Server], point in time"
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Recovery of Related  Databases That Contain Marked Transaction
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

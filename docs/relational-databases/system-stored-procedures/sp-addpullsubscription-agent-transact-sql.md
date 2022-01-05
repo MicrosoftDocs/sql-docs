@@ -93,6 +93,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is in an availability group. *subscriber* is **sysname**, with a default of NULL.  
+
+> [!NOTE]  
+>  When running **sp_addpullsubscription_agent** for a subscriber that is part of an Always On Availability Group, it is necessary to pass the **@Subscriber** parameter as the AG listener name. If you are running [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] and earlier versions, or [!INCLUDE[sssql14](../../includes/sssql17-md.md)] prior to CU16, the stored procedure will execute without returning an error but the **@Subscriber** parameter on the [Distribution Agent job](../replication/agents/replication-distribution-agent.md) will not reference the AG Listener name; the parameter will be created with the subscriber server name on which the command is executed. To amend this issue, manually update the Distribution Agent job ([Distribution Agent job](../replication/agents/replication-distribution-agent.md#arguments) **@Subscriber** parameter with the AG Listener name value. 
   
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts.  

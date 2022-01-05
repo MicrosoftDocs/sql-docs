@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STTouches (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns 1 if a **geometry** instance spatially touches another **geometry** instance. Returns 0 if it does not.
   
@@ -50,7 +50,7 @@ Returns 1 if a **geometry** instance spatially touches another **geometry** inst
 ## Examples  
  The following example uses `STTouches()` to test two `geometry` instances to see if they touch.  
   
-```  
+```sql
 DECLARE @g geometry;  
 DECLARE @h geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);  

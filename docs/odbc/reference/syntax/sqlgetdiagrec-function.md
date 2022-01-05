@@ -2,7 +2,7 @@
 description: "SQLGetDiagRec Function"
 title: "SQLGetDiagRec Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 12/08/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetDiagRec function [ODBC]"
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetDiagRec Function
 **Conformance**  
@@ -83,14 +83,14 @@ SQLRETURN SQLGetDiagRec(
  [Output] Pointer to a buffer in which to return the total number of characters (excluding the number of characters required for the null-termination character) available to return in *\*MessageText*. If the number of characters available to return is greater than *BufferLength*, the diagnostic message text in *\*MessageText* is truncated to *BufferLength* minus the length of a null-termination character.  
   
 ## Returns  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA, or SQL_INVALID_HANDLE.  
   
 ## Diagnostics  
  **SQLGetDiagRec** does not post diagnostic records for itself. It uses the following return values to report the outcome of its own execution:  
   
 -   SQL_SUCCESS: The function successfully returned diagnostic information.  
   
--   SQL_SUCCESS_WITH_INFO: The \**MessageText* buffer was too small to hold the requested diagnostic message. No diagnostic records were generated. To determine that a truncation occurred, the application must compare *BufferLength* to the actual number of bytes available, which is written to **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO: The \**MessageText* buffer was too small to hold the requested diagnostic message. No diagnostic records were generated. To determine that a truncation occurred, the application must compare *BufferLength* to the actual number of bytes available, which is written to **TextLengthPtr*.  
   
 -   SQL_INVALID_HANDLE: The handle indicated by *HandleType* and *Handle* was not a valid handle.  
   

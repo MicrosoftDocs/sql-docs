@@ -2,7 +2,7 @@
 description: "DROP DATABASE (Transact-SQL)"
 title: "DROP DATABASE (Transact-SQL)"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "06/25/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.reviewer: ""
@@ -94,10 +94,8 @@ If the database is involved in log shipping, remove log shipping before dropping
 
 The DROP DATABASE statement must run in autocommit mode and is not allowed in an explicit or implicit transaction. Autocommit mode is the default transaction management mode.
 
-You cannot drop a database currently being used. This means open for reading or writing by any user. One way to remove users from the database is to use ALTER DATABASE to set the database to SINGLE_USER.
-
 > [!WARNING]
-> This is not a fail-proof approach, since first consecutive connection made by any thread will receive the SINGLE_USER thread, causing your connection to fail. Sql server does not provide a built-in way to drop databases under load.
+> You cannot drop a database currently being used. This means locks being held for reading or writing by any user. One way to remove users from the database is to use ALTER DATABASE to set the database to SINGLE_USER. In this strategy, you should execute the ALTER DATABASE and DROP DATABASE in the same batch, to avoid another connection claiming single user session allowed. See [Example D below](#d-dropping-a-database-after-checking-if-it-exists).
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -161,6 +159,27 @@ The following example removes a database snapshot, named `sales_snapshot0600`, w
 DROP DATABASE sales_snapshot0600;
 ```
 
+### D. Dropping a database after checking if it exists
+
+
+The following example first checks to see if a database named `Sales` exists. If so, the example changes the database named `Sales` to single-user mode to force disconnect of all other sessions, then drops the database. For more information on SINGLE_USER, see [ALTER DATABASE SET options](alter-database-transact-sql-set-options.md).
+
+
+```sql
+USE tempdb;
+GO
+DECLARE @SQL nvarchar(1000);
+IF EXISTS (SELECT 1 FROM sys.databases WHERE [name] = N'Sales')
+BEGIN
+    SET @SQL = N'USE [Sales];
+
+                 ALTER DATABASE Sales SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+                 USE [tempdb];
+
+                 DROP DATABASE Sales;';
+    EXEC (@SQL);
+END;
+```
 ## See Also
 
 - [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)

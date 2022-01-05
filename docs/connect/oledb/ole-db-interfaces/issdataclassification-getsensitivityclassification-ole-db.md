@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: reference
 apiname: 
@@ -13,8 +13,8 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "GetSensitivityClassification method"
-author: bazizi
-ms.author: v-beaziz
+author: David-Engel
+ms.author: v-davidengel
 ---
 # ISSDataClassification::GetSensitivityClassification
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]

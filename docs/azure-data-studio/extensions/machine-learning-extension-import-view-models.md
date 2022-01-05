@@ -6,7 +6,7 @@ ms.technology: machine-learning
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.reviewer: sstein
+ms.reviewer:
 ms.custom: 
 ms.date: 06/09/2020
 ---

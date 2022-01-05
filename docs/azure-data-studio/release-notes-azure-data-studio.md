@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 06/17/2021 
+ms.date: 12/15/2021
 ---
 
 # Release notes for Azure Data Studio
@@ -19,34 +19,38 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### June 2021
+### December 2021
 
-Azure Data Studio 1.30.0 is the latest general availability (GA) release.
+Azure Data Studio 1.34.0 is the latest general availability (GA) release.
 
-- Release number: 1.30.0
-- Release date: June 17, 2021
+- Release number: 1.34.0
+- Release date: December 15, 2021
 
-#### What's new in 1.30.0
+#### What's new in 1.34.0
 
 | New item | Details |
 |----------|---------|
-| Results Grid | Added filtering/sorting feature for query result grid in query editor and notebook, the feature can be invoked from the column headers. note that this feature is only available when you enable the preview features. |
-| Results Grid | Added a status bar item to show summary of the selected cells if there are multiple numeric values |
-| Notebooks | Added new book icon |
-| Notebooks | Notebook URI Handler File Support |
-| Python | Updated Python to 3.8.10 |
+| SQL Migration extension | Added 'Currently restoring backup file' in the migration progress details page of Azure SQL Migration extension when backup files location is Azure Storage blob container |
+| Notebooks | Added undo/redo support |
+| SQL Database Projects extension | Support for project build with .NET 6 in SQL Database Projects extension |
+| SQL Database Projects extension | Publish to container in SQL Database Projects extension |
+| Extension update | [SQL Database Projects](extensions/sql-database-project-extension.md) |
+| Extension update | Lang packs |
+| Extension update | Azure SQL Migration |
 
-#### Bug fixes in 1.30.0
+#### Bug fixes in 1.34.0
 
 | New Item | Details |
 |----------|---------|
-| Notebooks | Fixed WYWIWYG Table cell adding new line in table cell |
-| Notebooks | Fixed issue that Kusto notebook does not change kernels properly |
+| SQL Migration | Fix for multiple database migrations when using network share as backup files location in Azure SQL Migration extension |
+| SQL Migration | Fix for multiple database migrations when using blob storage containers as backup files location in Azure SQL Migration extension |
+| SQL Migration| Fix to pre-populate target database names in the migration wizard in Azure SQL Migration extension |
+| Grid | Fix to column sorting in grids where the presence of null values could lead to unexpected results |
+| Notebooks | Fix for Python upgrades when two or more notebooks were open |
 
+For a full list of bug fixes addressed for the August 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22December+2021+Release%22).
 
-For a full list of bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/73?closed=1).
-
-#### Known issues in 1.30.0
+#### Known issues in 1.34.0
 
 For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
@@ -54,10 +58,14 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 You can reference [Azure Data Studio feedback](https://github.com/microsoft/azuredatastudio/issues/new/choose) for other known issues and to provide feedback to the product team.
 
-## Previous Azure Data Studio releases
+## Previous Azure Data Studio releases and updates
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------
+| [October 2021](#october-2021) | 1.33.0 | October 27, 2021 | N/A |
+| [August 2021](#august-2021) | 1.32.0 | August 18, 2021 | N/A |
+| [July 2021](#july-2021) | 1.31.0 | July 21, 2021 | N/A |
+| [June 2021](#june-2021) | 1.30.0 | June 17, 2021 | N/A |
 | [May 2021](#may-2021) | 1.29.0 | May 19, 2021 | N/A |
 | [April 2021](#april-2021) | 1.28.0 | April 15, 2021 | N/A |
 | [March 2021](#march-2021) | 1.27.0 | March 17, 2021 | N/A |
@@ -81,14 +89,172 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 | [July 2019](#july-2019) | 1.9.0 | July 11, 2019 | N/A |
 | [June 2019](#june-2019) | 1.8.0 | June 6, 2019 | N/A |
 | [May 2019](#may-2019) | 1.7.0 | May 8, 2019 | N/A |
-| [April 2019 ](#april-2019)| 1.6.0 | April 18, 2019 | N/A |
+| [April 2019](#april-2019)| 1.6.0 | April 18, 2019 | N/A |
 | [March 2019](#march-2019) | 1.5.1 | March 18, 2019 | [hotfix](#march-2019-hotfix) |
 | [February 2019](#february-2019) | 1.4.5 | February 13, 2019 | N/A |
 | [January 2019](#january-2019) | 1.3.8 | January 09, 2019 | [hotfix](#january-2019-hotfix) |
 
-### May 2021
+[Download the previous release of Azure Data Studio](https://github.com/microsoft/azuredatastudio/releases).
 
-Azure Data Studio 1.29.0 is the latest general availability (GA) release.
+> [!Note]
+> All previous versions of Azure Data Studio are not supported.
+
+### October 2021
+
+Azure Data Studio 1.33.0 is the latest general availability (GA) release.
+
+- Release number: 1.33.0
+- Release date: October 27, 2021
+
+#### What's new in 1.33.0
+
+| New item | Details |
+|----------|---------|
+| Notebooks | Added Notebook Views support |
+| Notebooks | Added split cell support |
+| Notebooks | Added keyboard shortcuts for Markdown Toolbar cells |
+| Notebooks | Large performance improvement for large notebooks <br/> &bull; &nbsp; Ctrl/Cmd + B = Bold Text <br/> &bull; &nbsp; Ctrl/Cmd + I = Italicize Text <br/> &bull; &nbsp; Ctrl/Cmd + U = Underline Text <br/>  &bull; &nbsp; Ctrl/Cmd + Shift + K = Add Code Block <br/> &bull; &nbsp; Ctrl/Cmd + Shift + H = Highlight Text |
+| Notebooks | Added Book improvements <br/> &bull; &nbsp; Add a new section <br/> &bull; &nbsp; Drag and Drop |
+| Extension update  | [Azure Monitor Logs](extensions/azure-monitor-logs-extension.md) |
+| Extension update | [Schema Compare](extensions/schema-compare-extension.md) |
+| Extension update | [SQL Database Projects](extensions/sql-database-project-extension.md) |
+| Extension update | [Machine Learning](extensions/machine-learning-extension.md) |
+| Extension update | [Profiler](extensions/sql-server-profiler-extension.md) |
+| Extension update | [Import](extensions/sql-server-profiler-extension.md) |
+| Extension update | [Kusto](extensions/kusto-extension.md) |
+| Extension update | [Dacpac](extensions/sql-server-dacpac-extension.md)|
+| Extension update | Lang packs |
+| Extension update | Azure SQL Migration |
+| Extension update | CMS |
+| Extension update | Kusto |
+
+#### Bug fixes in 1.33.0
+
+| New Item | Details |
+|----------|---------|
+| Notebook | Fixed Notebook linking |
+| Notebook | Fixed horizontal scrollbar  (when word wrap is off in MD Splitview / MD mode) in Notebooks |
+| Notebook| Fixed vertical scrollbar for MD Splitview in Notebooks |
+
+For a full list of bug fixes addressed for the August 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22October+2021+Release%22+is%3Aclosed).
+
+#### Known issues in 1.33.0
+
+For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
+
+### August 2021
+
+Azure Data Studio 1.32.0 is the latest general availability (GA) release.
+
+- Release number: 1.32.0
+- Release date: August 18, 2021
+
+#### What's new in 1.32.0
+
+| New item | Details |
+|----------|---------|
+| Notebooks | Large performance improvement for large notebooks |
+| Extension (new)  | [Azure Monitor Logs](extensions/azure-monitor-logs-extension.md) |
+| Extension update | [SchemaCompare](extensions/schema-compare-extension.md) |
+| Extension update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| Extension update | [MachineLearning](extensions/machine-learning-extension.md) |
+| Extension update | [Azure Arc](extensions/azure-arc-extension.md) |
+| Extension update | Lang packs |
+
+#### Bug fixes in 1.32.0
+
+| New Item | Details |
+|----------|---------|
+| Database Projects | Fixed Seeing "Project already opened" message for every project I open or create |
+| Schema Compare | Fixed Schema compare subsequent results after once are not loading in view |
+| Lang packs | Fixed Localization for previously untranslated extensions. |
+| Machine Learning | Fixed Machine Learning - View models dialog is broken |
+
+For a full list of bug fixes addressed for the August 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2021+Release%22+is%3Aclosed).
+
+#### Known issues in 1.32.0
+
+For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
+
+### July Hotfix 2021
+
+Azure Data Studio 1.31.1 is the latest general availability (GA) release.
+
+- Release number: 1.31.1
+- Release date: July 29, 2021
+
+#### Bug fixes in 1.31.1
+
+| New Item | Details |
+|----------|---------|
+| Connections | Fixed Database connection toolbar missing for sql scripts |
+| Connections | Fixed Connection dropped / is not maintained when saving / opening scripts |
+| Connections | Script file opened from command line does not allow DB connection|
+
+For a full list of bug fixes addressed for the July Hotfix 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/75).
+
+#### Known issues in 1.31.1
+
+For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
+
+### July 2021
+
+- Release number: 1.31.0
+- Release date: July 21, 2021
+
+#### What's new in 1.31.0
+
+| New item | Details |
+|----------|---------|
+| Notebooks | WYSIWYG link improvements |
+| Extension update | [SchemaCompare](extensions/schema-compare-extension.md) |
+| Extension update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+
+#### Bug fixes in 1.31.0
+
+| New Item | Details |
+|----------|---------|
+| Import Wizard | Fixed Import extension next button does not work in July release |
+| Schema Compare| Fixed issue that Schema compare Select Source target dialog OK button not enabled |
+| Notebooks | Fixed Export Notebook as SQL file has no query editor toolbar |
+| SQL Server Big Data Clusters | Fixed Can't connect to BDC Clusters |
+| Accessibility bug fixes | |
+
+For a full list of bug fixes addressed for the July 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/75).
+
+#### Known issues in 1.31.0
+
+For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
+
+### June 2021
+
+- Release number: 1.30.0
+- Release date: June 17, 2021
+
+#### What's new in 1.30.0
+
+| New item | Details |
+|----------|---------|
+| Results Grid | Added filtering/sorting feature for query result grid in query editor and notebook, the feature can be invoked from the column headers. note that this feature is only available when you enable the preview features. |
+| Results Grid | Added a status bar item to show summary of the selected cells if there are multiple numeric values |
+| Notebooks | Added new book icon |
+| Notebooks | Notebook URI Handler File Support |
+| Python | Updated Python to 3.8.10 |
+
+#### Bug fixes in 1.30.0
+
+| New Item | Details |
+|----------|---------|
+| Notebooks | Fixed WYWIWYG Table cell adding new line in table cell |
+| Notebooks | Fixed issue that Kusto notebook does not change kernels properly |
+
+For a full list of bug fixes addressed for the May 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/73?closed=1).
+
+#### Known issues in 1.30.0
+
+For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
+
+### May 2021
 
 - Release number: 1.29.0
 - Release date: May 19, 2021
@@ -98,6 +264,7 @@ Azure Data Studio 1.29.0 is the latest general availability (GA) release.
 | New item | Details |
 |----------|---------|
 | Notebooks | Added run with parameters action. Learn more [here](./notebooks/run-with-parameters.md) |
+
 #### Bug fixes in 1.29.0
 
 | New Item | Details |
@@ -730,6 +897,7 @@ January 09, 2019 &nbsp; / &nbsp; version: 1.3.8
 
 See one of the following quickstarts to get started:
 
+- [Download Azure Data Studio](download-azure-data-studio.md)
 - [Connect & Query SQL Server](quickstart-sql-server.md)
 - [Connect & Query Azure SQL Database](quickstart-sql-database.md)
 - [Connect & Query Azure Synapse Analytics](quickstart-sql-dw.md)

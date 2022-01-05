@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "truncation of data [ODBC]"
 ms.assetid: dea05698-527a-41ab-8729-bbed85556185
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # INSERT Statement Limitations
 Inserted data is truncated on the right without warning if it is too long to fit into the column.  

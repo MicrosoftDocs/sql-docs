@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: e8ea50a3-804a-4752-96e5-eb3d521f93c1
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getUnicodeStream Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

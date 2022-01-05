@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "metadata [ODBC]"
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # How is Metadata Used?
 Applications require metadata for most result set operations. For example, the application uses the data type of a column to determine what kind of variable to bind to that column. It uses the byte length of a character column to determine how much space it needs to display data from that column. How an application determines the metadata for a column depends on the type of the application.  

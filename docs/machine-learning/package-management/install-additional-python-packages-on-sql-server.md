@@ -7,8 +7,9 @@ ms.date: 08/26/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+ms.custom:
+  - intro-installation
 ---
 
 # Install Python packages with sqlmlutils
@@ -21,6 +22,10 @@ This article describes how to use functions in the [**sqlmlutils**](https://gith
 
 ::: moniker range="=azuresqldb-mi-current"
 This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install new Python packages to an instance of [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). The packages you install can be used in Python scripts running in-database using the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL statement.
+
+> [!NOTE]
+> You cannot update or uninstall packages that have been preinstalled on an instance of SQL Managed Instance Machine Learning Services. To view a list of packages currently installed, see [List all installed Python packages](python-package-information.md#list-all-installed-python-packages).
+
 ::: moniker-end
 
 For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
@@ -98,7 +103,7 @@ pip install sqlmlutils
 You can also install **sqlmlutils** from a zip file:
 
 1. Make sure you have **pip** installed. See [pip installation](https://pip.pypa.io/en/stable/installing/) for more information.
-1. Download the latest **sqlmlutils** zip file from https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist to the client computer. Don't unzip the file.
+1. Download the latest **sqlmlutils** zip file from https://github.com/microsoft/sqlmlutils/tree/master/R/dist to the client computer. Don't unzip the file.
 1. Open a **Command Prompt** and run the following commands to install the **sqlmlutils** package. Substitute the full path to the **sqlmlutils** zip file you downloaded - this example assumes the downloaded file is `c:\temp\sqlmlutils-1.0.0.zip`.
    ```console
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-1.0.0.zip

@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Working with result sets
 

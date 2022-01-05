@@ -18,7 +18,7 @@ ms.reviewer:
 
 ---
 # Create Full-Text Search Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Full-text searches use the CONTAINS predicate to locate rows that have specified text in a given column. Full-Text searches are only possible on columns that have active full-text indexes. If you attempt to use the CONTAINS clause on a column that does not have a currently active full-text index, you will receive an error. For more information on full-text indexes and the CONTAINS clause, see [Full-Text Search (SQL Server)](../../relational-databases/search/full-text-search.md) and [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md).  
   
 ### To create a full-text search query  

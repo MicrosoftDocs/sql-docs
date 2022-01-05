@@ -4,7 +4,7 @@ title: "Properties Window F1 Help (Management Studio)"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - ".SPID"
   - ".ExecutionTime"
@@ -28,7 +28,7 @@ ms.date: 01/19/2017
 
 # Properties Window F1 Help (Management Studio)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Use the **Properties** window to view properties of selected elements. You can also use the **Properties** window to view file, project, and solution properties. The **Properties** window is available by clicking **Properties Window** on the **View** menu.  
   

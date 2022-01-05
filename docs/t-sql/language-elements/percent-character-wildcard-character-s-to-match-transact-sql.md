@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "characters [SQL Server], wildcard"
 ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Percent character (Wildcard - Character(s) to Match) (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Matches any string of zero or more characters. This wildcard character can be used as either a prefix or a suffix.  
   

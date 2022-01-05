@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetStmtOption function [ODBC]"
 ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetStmtOption Function
 **Conformance**  

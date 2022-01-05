@@ -1,6 +1,6 @@
 ---
-title: "Add a Bookmark to a Report (Report Builder) | Microsoft Docs"
-description: Find out how to add bookmarks to a report to provide a customized table of contents or to provide customized internal navigation links in Report Builder.
+title: "Add a bookmark to a paginated report | Microsoft Docs"
+description: Find out how to add bookmarks to a paginated report to provide a customized table of contents or to provide customized internal navigation links in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add a Bookmark to a Report (Report Builder and SSRS)
-  Add bookmarks and bookmark links to a report when you want to provide a customized table of contents or to provide customized internal navigation links in the report. Typically, you add bookmarks to locations in the report to which you want to direct users, such as to each table or chart or to the unique group values displayed in a table or matrix. You can create your own strings to use as bookmarks, or, for groups, you can set the bookmark to the group expression.  
+# Add a bookmark to a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Add bookmarks and bookmark links to a paginated report when you want to provide a customized table of contents or to provide customized internal navigation links in the report. Typically, you add bookmarks to locations in the report to which you want to direct users, such as to each table or chart or to the unique group values displayed in a table or matrix. You can create your own strings to use as bookmarks, or, for groups, you can set the bookmark to the group expression.  
   
  After you create bookmarks, you can add report items that the user can click to go to each bookmark. These items are typically text boxes or images.  
   

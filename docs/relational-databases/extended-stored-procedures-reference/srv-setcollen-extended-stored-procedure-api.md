@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_setcollen"
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_setcollen (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

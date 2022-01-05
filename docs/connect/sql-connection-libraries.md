@@ -7,7 +7,7 @@ ms.technology: connectivity
 ms.custom: ""
 ms.topic: article
 ms.date: 03/06/2020
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connection modules for Microsoft SQL Database
 
@@ -51,7 +51,7 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 | C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework (6.x or later)](/ef/) |
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, included in Laravel install](https://laravel.com/docs/) |
-| Node.js | [Sequelize ORM](https://sequelize.org/) |
+| Node.js | [Sequelize ORM](https://sequelize.org/)<br/>[Prisma](https://www.prisma.io/) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
 | &nbsp; | &nbsp; |

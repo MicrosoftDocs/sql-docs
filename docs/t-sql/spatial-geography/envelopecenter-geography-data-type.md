@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # EnvelopeCenter (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a point that you can use as the bounding circle's center for the **geography** instance.  
   
@@ -54,7 +54,7 @@ This method isn't precise.
   
 ## Examples  
   
-```  
+```sql
 DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';  
 SELECT @g.EnvelopeCenter().ToString();  
 ```  

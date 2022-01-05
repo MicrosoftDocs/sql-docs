@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "sessions [SQL Server], application locks"
   - "APPLOCK_MODE function"
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # APPLOCK_MODE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the lock mode held by the lock owner on a particular application resource. As an application lock function, APPLOCK_MODE operates on the current database. The database is the scope of the application locks.
   

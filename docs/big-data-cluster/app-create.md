@@ -2,21 +2,23 @@
 title: Deploy applications with azdata
 titleSuffix: SQL Server Big Data Clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster.
-author: cloudmelon 
+author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
 ms.date: 04/13/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # How to deploy an app on SQL Server Big Data Clusters
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Applications deployed on SQL Server Big Data Clusters (BDC) not only benefit from many advantages such as the computational power of the cluster but also access massive data that is available on the cluster. It dramatically improve the performance since your app sits in the same cluster where the data lives.
+Applications deployed on SQL Server Big Data Clusters not only benefit from many advantages such as the computational power of the cluster but also access massive data that is available on the cluster. It dramatically improve the performance since your app sits in the same cluster where the data lives.
 
 Applications are deployed and managed using [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
 
@@ -220,4 +222,4 @@ azdata app delete --name add-app --version v1
 
 Explore how to integrate apps deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in your own applications at [Run applications on big data clusters](app-run.md) and [Consume applications on big data clusters](app-consume.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

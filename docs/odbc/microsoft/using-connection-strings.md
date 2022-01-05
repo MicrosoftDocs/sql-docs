@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Visual FoxPro data source [ODBC], connecting"
 ms.assetid: 57634960-47e9-49bf-95c1-6e3702ac8166
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Connection Strings
 You can use a connection string to connect to a Visual FoxPro data source.  

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "date/time [OLE DB]"
   - "OLE DB, date/time improvements"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Date and Time Improvements in OLE DB
 

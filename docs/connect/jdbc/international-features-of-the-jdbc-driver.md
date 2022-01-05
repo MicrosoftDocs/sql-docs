@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # International features of the JDBC driver
 

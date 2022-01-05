@@ -1,8 +1,8 @@
 ---
 description: "Use Column Sets"
-title: "Use Column Sets | Microsoft Docs"
+title: "Use Column Sets"
 ms.custom: ""
-ms.date: "07/30/2015"
+ms.date: "07/09/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -11,21 +11,20 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "sparse columns, column sets"
   - "column sets"
-ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Use Column Sets
+# Use column sets
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Tables that use sparse columns can designate a column set to return all sparse columns in the table. A column set is an untyped XML representation that combines all the sparse columns of a table into a structured output. A column set is like a calculated column in that the column set is not physically stored in the table. A column set differs from a calculated column in that the column set is directly updatable.  
   
  You should consider using column sets when the number of columns in a table is large, and operating on them individually is cumbersome. Applications might see some performance improvement when they select and insert data by using column sets on tables that have lots of columns. However, the performance of column sets can be reduced when many indexes are defined on the columns in the table. This is because the amount of memory that is required for an execution plan increases.  
   
- To define a column set, use the *<column_set_name>* FOR ALL_SPARSE_COLUMNS keywords in the [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) or [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) statements.  
+ To define a column set, use the `*<column_set_name>* FOR ALL_SPARSE_COLUMNS` keywords in the [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) or [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) statements.  
   
-## Guidelines for Using Column Sets  
+## Guidelines for using column sets  
  When you use column sets, consider the following guidelines:  
   
 -   Sparse columns and a column set can be added as part of the same statement.  
@@ -62,14 +61,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Query notifications that refer to column sets are not permitted.  
   
--   XML data has a size limit of 2 GB. If the combined data of all the nonnull sparse columns in a row exceeds this limit, the query or DML operation will produce an error.  
+-   XML data has a size limit of 2 GB. If the combined data of all the non-NULL sparse columns in a row exceeds this limit, the query or DML operation will produce an error.  
   
--   For information about the data that is returned by the COLUMNS_UPDATED function, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
+-   For information about the data that is returned by the `COLUMNS_UPDATED` function, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Guidelines for Selecting Data from a Column Set  
+## Guidelines for selecting data from a column set  
  Consider the following guidelines for selecting data from a column set:  
   
--   Conceptually, a column set is a type of updatable, computed XML column that aggregates a set of underlying relational columns into a single XML representation. The column set only supports the ALL_SPARSE_COLUMNS property. This property is used to aggregate all nonnull values from all sparse columns for a particular row.  
+-   Conceptually, a column set is a type of updatable, computed XML column that aggregates a set of underlying relational columns into a single XML representation. The column set only supports the ALL_SPARSE_COLUMNS property. This property is used to aggregate all non-NULL values from all sparse columns for a particular row.  
   
 -   In the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] table editor, column sets are displayed as an editable XML field. Define column sets in the format:  
   
@@ -86,9 +85,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 -   Sparse columns that contain null values are omitted from the XML representation for the column set.  
   
 > [!WARNING]  
->  Adding a column set changes the behavior of `SELECT *` queries. The query will return the column set as an XML column and not return the individual sparse columns. Schema designers and software developers must be careful not to break existing applications.  
+>  Adding a column set changes the behavior of `SELECT *` queries. The query will return the column set as an XML column and not return the individual sparse columns. Schema designers and software developers must be careful not to break existing applications. Individual sparse columns can still be queried by name in a SELECT statement.
   
-## Inserting or Modifying Data in a Column Set  
+## Inserting or modifying data in a column set  
  Data manipulation of a sparse column can be performed by using the name of the individual columns, or by referencing the name of the column set and specifying the values of the column set by using the XML format of the column set. Sparse columns can appear in any order in the XML column.  
   
  When sparse column values are inserted or updated by using the XML column set, the values that are inserted into the underlying sparse columns are implicitly converted from the **xml** data type. In the case of numeric columns, a blank value in the XML for the numeric column converts to an empty string. This causes a zero to be inserted into the numeric column as shown in the following example.  
@@ -104,7 +103,7 @@ GO
   
  In this example, no value was specified for the column `i`, but the value `0` was inserted.  
   
-## Using the sql_variant Data Type  
+## Using the sql_variant data type  
  The **sql_variant** date type can store multiple different data types, such as **int**, **char**, and **date**. Column sets output the data type information such as scale, precision, and locale information that is associated with a **sql_variant** value as attributes in the generated XML column. If you try to provide these attributes in a custom-generated XML statement as an input for an insert or update operation on a column set, some of these attributes are required and some of them are assigned a default value. The following table lists the data types and the default values that the server generates when the value is not provided.  
   
 |Data type|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Maximum length|Precision|Scale|  
@@ -124,7 +123,7 @@ GO
  **  Not applicable = No values are output for these attributes during a select operation on the column set. Generates an error when a value is specified for this attribute by the caller in the XML representation provided for a column set in an insert or update operation.  
   
 ## Security  
- The security model for a column set works similar to the security model that exists between table and columns. Column sets can be visualized as a minitable and a select operation is like a SELECT * operation on this minitable. But, the relationship between column set to sparse columns is a grouping relationship instead of strictly a container. The security model checks the security on the column set column, and honors the DENY operations on the underlying sparse columns. Additional characteristics of the security model are as follows:  
+ The security model for a column set works similar to the security model that exists between table and columns. Column sets can be visualized as a mini-table and a select operation is like a `SELECT *` operation on this mini-table. But, the relationship between column set to sparse columns is a grouping relationship instead of strictly a container. The security model checks the security on the column set column, and honors the DENY operations on the underlying sparse columns. Additional characteristics of the security model are as follows:  
   
 -   Security permissions can be granted and revoked from the column set column, similar to any other column in the table.  
   
@@ -252,7 +251,5 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## See Also  
- [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md)  
-  
-  
+## See also  
+ - [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md)  

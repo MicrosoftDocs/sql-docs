@@ -1,30 +1,29 @@
 ---
 description: "Create the Function to Retrieve the Change Data"
-title: "Create the Function to Retrieve the Change Data | Microsoft Docs"
+title: "Create the Function to Retrieve the Change Data"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "07/26/2021"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.reviewer: ""
+ms.reviewer: "wiassaf"
 ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],creating function"
-ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
 ---
-# Create the Function to Retrieve the Change Data
+# Create the function to retrieve the change data
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  After completing the control flow for an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the next task is to create a table-valued function that retrieves the change data. You only have to create this function one time before the first incremental load.  
+  After completing the control flow for an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the next task is to create a table-valued function (TVF) that retrieves the change data. You only have to create this function one time before the first incremental load.  
   
 > [!NOTE]  
 >  The creation of a function to retrieve the change data is the second step in the process of creating a package that performs an incremental load of change data. For a description of the overall process for creating this package, see [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Design Considerations for Change Data Capture Functions  
+## Design considerations for change data capture (CDC) functions  
  To retrieve change data, a source component in the data flow of the package calls one of the following change data capture query functions:  
   
 -   **cdc.fn_cdc_get_net_changes_<capture_instance>** For this query, the single row returned for each update contains the final state of each changed row. In most cases, you only need the data returned by a query for net changes. For more information, see [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
@@ -39,36 +38,32 @@ ms.author: chugu
   
  You have two options for creating the table-valued wrapper function that calls the change data capture query function:  
   
--   You can call the **sys.sp_cdc_generate_wrapper_function** system stored procedure to create the table-valued functions for you.  
+-   You can call the `sys.sp_cdc_generate_wrapper_function` system stored procedure to create the table-valued functions for you.  
   
 -   You can write your own table-valued function by using the guidelines and the example in this topic.  
   
-## Calling a Stored Procedure to Create the Table-valued Function  
- The quickest and easiest way to create the table-valued functions that you need is to call the **sys.sp_cdc_generate_wrapper_function** system stored procedure. This stored procedure generates scripts to create wrapper functions that are designed specifically to meet the needs of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] source component.  
+## Calling a stored procedure to create the table-valued function  
+ The quickest and easiest way to create the table-valued functions that you need is to call the `sys.sp_cdc_generate_wrapper_function` system stored procedure. This stored procedure generates scripts to create wrapper functions that are designed specifically to meet the needs of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] source component.  
   
 > [!IMPORTANT]  
->  The **sys.sp_cdc_generate_wrapper_function** system stored procedure does not directly create the wrapper functions. Instead, the stored procedure generates the CREATE scripts for the wrapper functions. The developer must run the CREATE scripts that the stored procedure generates before an incremental load package can call the wrapper functions.  
+>  The `sys.sp_cdc_generate_wrapper_function` system stored procedure does not directly create the wrapper functions. Instead, the stored procedure generates the CREATE scripts for the wrapper functions. The developer must run the CREATE scripts that the stored procedure generates before an incremental load package can call the wrapper functions.  
   
  To understand how to use this system stored procedure, you should understand what the procedure does, what scripts the procedure generates, and what wrapper functions the scripts create.  
   
-### Understanding and Using the Stored Procedure  
- The **sys.sp_cdc_generate_wrapper_function** system stored procedure generates scripts to create wrapper functions for use by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.  
+### Understanding and using the stored procedure  
+ The `sys.sp_cdc_generate_wrapper_function` system stored procedure generates scripts to create wrapper functions for use by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.  
   
  Here are the first few lines of the definition of the stored procedure:  
-  
- `CREATE PROCEDURE sys.sp_cdc_generate_wrapper_function`  
-  
- `(`  
-  
- `@capture_instance sysname = null`  
-  
- `@closed_high_end_point bit = 1,`  
-  
- `@column_list = null,`  
-  
- `@update_flag_list = null`  
-  
- `)`  
+
+```sql
+CREATE PROCEDURE sys.sp_cdc_generate_wrapper_function
+(
+@capture_instance sysname = null
+@closed_high_end_point bit = 1,
+@column_list = null,
+@update_flag_list = null
+)
+```
   
  All the parameters for the stored procedure are optional. If you call the stored procedure without supplying values for any of the parameters, the stored procedure creates wrapper functions for all the capture instances to which you have access.  
   
@@ -83,10 +78,10 @@ ms.author: chugu
   
 -   The CREATE statement for the wrapper function.  
   
-### Understanding and Using the Scripts Created by the Stored Procedure  
- Typically, a developer would use an INSERT...EXEC statement to call the **sys.sp_cdc_generate_wrapper_function** stored procedure and save the scripts that the stored procedure creates to a temporary table. Each script could then be individually selected and run to create the corresponding wrapper function. However, a developer could also use one set of SQL commands to run all the CREATE scripts, as shown in the following sample code:  
+### Understanding and using the scripts created by the stored procedure  
+ Typically, a developer would use an INSERT...EXEC statement to call the `sys.sp_cdc_generate_wrapper_function` stored procedure and save the scripts that the stored procedure creates to a temporary table. Each script could then be individually selected and run to create the corresponding wrapper function. However, a developer could also use one set of SQL commands to run all the CREATE scripts, as shown in the following sample code:  
   
-```  
+```sql  
 create table #wrapper_functions  
       (function_name sysname, create_stmt nvarchar(max))  
 insert into #wrapper_functions  
@@ -106,7 +101,7 @@ close #hfunctions
 deallocate #hfunctions  
 ```  
   
-### Understanding and Using the Functions Created by the Stored Procedure  
+### Understanding and using the functions created by the stored procedure  
  To systematically walk the timeline of captured change data, the generated wrapper functions expect that the *\@end_time* parameter for one interval will be the *\@start_time* parameter for the subsequent interval. When this convention is followed, the generated wrapper functions can do the following tasks:  
   
 -   Map the date/time values to the LSN values that are used internally.  
@@ -118,8 +113,11 @@ deallocate #hfunctions
 -   If the @start_time parameter is null, the wrapper functions use the lowest LSN value in the capture instance as the lower bound of the query.  
   
 -   If the @end_time parameter is null, the wrapper functions use the highest LSN value in the capture instance as the upper bound of the query.  
+
+-   If the value of either @start_time or @end_time parameter is beyond the time of lowest LSN or highest LSN, then execution of generated wrapper functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer.
+
   
- Most users should be able to use the wrapper functions that the **sys.sp_cdc_generate_wrapper_function** system stored procedure creates without modification. However, to customize the wrapper functions, you have to customize the CREATE scripts before you run the scripts.  
+ Most users should be able to use the wrapper functions that the `sys.sp_cdc_generate_wrapper_function` system stored procedure creates without modification. However, to customize the wrapper functions, you have to customize the CREATE scripts before you run the scripts.  
   
  When your package calls the wrapper functions, the package must supply values for three parameters. These three parameters are like the three parameters that the change data capture functions use. These three parameters are as follows:  
   
@@ -127,7 +125,7 @@ deallocate #hfunctions
   
 -   The row filter. For both the wrapper functions and the change data capture functions, the *\@row_filter_option* parameter is the same. For more information, see [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) and [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
- The result set returned by the wrapper functions includesthe following data:  
+ The result set returned by the wrapper functions includes the following data:  
   
 -   All of the requested columns of change data.  
   
@@ -137,7 +135,7 @@ deallocate #hfunctions
   
  If your package calls a wrapper function that queries for all changes, the wrapper function also returns the columns, __CDC_STARTLSN and \__CDC_SEQVAL. These two columns become the first and second columns, respectively, of the result set. The wrapper function also sorts the result set based on these two columns.  
   
-## Writing Your Own Table-Value Function  
+## Writing your own table-value function  
  You can also use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to write your own table-valued wrapper function that calls the change data capture query function, and store the table-valued wrapper function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about how to create a Transact-SQL function, see [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
  The following example defines a table-valued function that retrieves changes from a Customer table for the specified change interval. This function uses change data capture functions to map the **datetime** values to the binary log sequence number (LSN) values that the change tables use internally. This function also handles several special conditions:  
@@ -148,9 +146,9 @@ deallocate #hfunctions
   
 -   When the starting LSN is equal to the ending LSN, which usually indicates that there are no records for the selected interval, this function exits.  
   
-### Example of a Table-Value Function that Queries for Change Data  
+### Example of a table-value function that queries for change data  
   
-```  
+```sql  
 CREATE function CDCSample.uf_Customer (  
      @start_time datetime  
     ,@end_time datetime  
@@ -202,8 +200,8 @@ go
   
 ```  
   
-### Retrieving Additional Metadata with the Change Data  
- Although the user-created table-valued function shown earlier uses only the **__$operation** column, the **cdc.fn_cdc_get_net_changes_<capture_instance>** function returns four columns of metadata for each change row. If you want to use these values in your data flow, you can return them as additional columns from the table-valued wrapper function.  
+### Retrieving additional metadata with the change data  
+ Although the user-created table-valued function shown earlier uses only the **__$operation** column, the `cdc.fn_cdc_get_net_changes_<capture_instance>` function returns four columns of metadata for each change row. If you want to use these values in your data flow, you can return them as additional columns from the table-valued wrapper function.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

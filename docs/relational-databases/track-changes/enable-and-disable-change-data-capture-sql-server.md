@@ -14,15 +14,15 @@ helpviewer_keywords:
   - "change data capture, disabling databases"
   - "change data capture, disabling tables"
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Enable and disable change data capture
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to enable and disable change data capture for a database and a table.  
 
 > [!NOTE]
-> Support for change data capture in Azure SQL Database is currently in [Preview](https://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/). 
+> Support for change data capture in Azure SQL Database is currently in [preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
   
 ## Enable for a database  
 

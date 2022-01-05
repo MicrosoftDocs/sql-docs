@@ -18,7 +18,7 @@ ms.reviewer:
 
 ---
 # View Join Properties (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can see a collection of properties for a view in the Properties window.  
   
 ### To view join properties  

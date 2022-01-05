@@ -50,8 +50,8 @@ helpviewer_keywords:
   - "functions, ODBC WEEK"
   - "HOUR ODBC function"
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ODBC Scalar Functions (Transact-SQL)
@@ -129,7 +129,7 @@ DECLARE @len INT
 SET @len = (SELECT {fn OCTET_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
-  
+GO
 SELECT dbo.ODBCudf('Returns the length.');  
 --Returns 38  
 ```  
@@ -203,7 +203,7 @@ DECLARE @len INT
 SET @len = (SELECT {fn BIT_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
-  
+GO
 SELECT dbo.ODBCudf('Returns the length in bits.');  
 --Returns 432  
 ```  

@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
-ms.reviewer: "alayu, maghan, sstein"
+ms.reviewer: "maghan"
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ---
@@ -39,7 +39,7 @@ Remove terminal instances by pressing the trash can button.
 
 ## Configuration
 
-The shell used defaults to `$SHELL` on Linux and macOS, PowerShell on Windows 10 and cmd.exe on earlier versions of Windows. These can be overridden manually by setting `terminal.integrated.shell.*` in [settings](settings.md). Arguments can be passed to the terminal shell on Linux and macOS using the `terminal.integrated.shellArgs.*` settings.
+The shell used defaults to `$SHELL` on Linux and macOS, PowerShell on Windows 10 and Windows 11, and `cmd.exe` on earlier versions of Windows. These can be overridden manually by setting `terminal.integrated.shell.*` in [settings](settings.md). Arguments can be passed to the terminal shell on Linux and macOS using the `terminal.integrated.shellArgs.*` settings.
 
 ### Windows
 

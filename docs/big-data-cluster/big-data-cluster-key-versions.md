@@ -39,7 +39,7 @@ The below graphic explains how files are protected by the DEK and how the DEK is
 
 The system managed main encryption key and the HDFS EZ keys are stored inside the controldb, which will be named controldb-<#>, for example `controldb-0`. For more information, see [Resources deployed with Big Data Cluster](concept-architecture-pods.md).
 
-SQL Server databases are encrypted by a symmetric key, also known as a Database encryption key (DEK). The DEK is persisted with the database in an encrypted format. The DEK protector can be a *certificate* or *asymmetric key*. To change the DEK protector use [ALTER DATABSE ENCRYPTION KEY](/sql/t-sql/statements/alter-database-encryption-key-transact-sql) statement. The asymmetric key in SQL Server has metadata containing a URL link to the key inside the control plane. Hence all the encryption and decryption operations of the Database Encryption Key (DEK) are done inside the controller. SQL Server stores the public key, but only to identify the asymmetric key and doesn't encrypt using the public key.
+SQL Server databases are encrypted by a symmetric key, also known as a Database encryption key (DEK). The DEK is persisted with the database in an encrypted format. The DEK protector can be a *certificate* or *asymmetric key*. To change the DEK protector use [ALTER DATABSE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md) statement. The asymmetric key in SQL Server has metadata containing a URL link to the key inside the control plane. Hence all the encryption and decryption operations of the Database Encryption Key (DEK) are done inside the controller. SQL Server stores the public key, but only to identify the asymmetric key and doesn't encrypt using the public key.
 
 :::image type="content" source="media/big-data-cluster-key-versions/sqlkey.png" alt-text="SQL Server Keys":::
 
@@ -147,7 +147,7 @@ USE master;
 select * from sys.asymmetric_keys;
 ```
 
-The asymmetric key will appear with the naming convention "tde_asymmetric_key_<version>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](/sql/t-sql/statements/alter-database-encryption-key-transact-sql). For example, use the following T-SQL command:
+The asymmetric key will appear with the naming convention "tde_asymmetric_key_\<version\>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md). For example, use the following T-SQL command:
 
 ```tsql
 USE db1;
@@ -158,7 +158,7 @@ Now, the DEK protector is changed to use the asymmetric key:
 
 :::image type="content" source="media/big-data-cluster-key-versions/sql-asymmetric.png" alt-text="After the DEK protector is changed to use the asymmetric key":::  
 
-If `azdata bdc kms set` command is re-executed, then the asymmetric keys in SQL Server would show another entry in `sys.asymmetric_keys` with the format "tde_asymmetric_key_<version>". This `azdata` command can be used to again change the DEK protector of a SQL Server database.
+If `azdata bdc kms set` command is re-executed, then the asymmetric keys in SQL Server would show another entry in `sys.asymmetric_keys` with the format "tde_asymmetric_key_\<version\>". This `azdata` command can be used to again change the DEK protector of a SQL Server database.
 
 ## Customer provided key
 

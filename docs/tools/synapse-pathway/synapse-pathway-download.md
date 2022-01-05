@@ -1,34 +1,36 @@
 ---
-title: Azure Synapse Pathway Preview download 
+title: Azure Synapse Pathway download
 description: Learn how to get download Azure Synapse Pathway
-ms.date: 03/02/2021
+ms.date: 09/22/2021
 ms.prod: sql
 ms.technology: tools-other
-ms.topic: conceptual 
-keywords: ""
-helpviewer_keywords: 
+ms.topic: conceptual
+keywords:
+  - ""
+helpviewer_keywords:
   - "Azure Synapse Pathway, download"
 author: anshul82-ms
 monikerRange: "=azure-sqldw-latest"
 ms.author: anrampal
+ms.custom:
+  - intro-installation
 ---
 
-# Azure Synapse Pathway Preview download
+# Azure Synapse Pathway download
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
-This article contains directions to download Azure Synapse Pathway preview.
+This article contains directions to download Azure Synapse Pathway.
 
 ## Prerequisites
 
-Azure Synapse Pathway (Preview) requires [.NET Core Desktop Runtime 3.1.11 or later](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+Azure Synapse Pathway requires [.NET Core Desktop Runtime 5.0.8 or later](https://dotnet.microsoft.com/download/dotnet/5.0).
 
 ## Download
 
-Download the latest version of the tool from the [Microsoft Download Center](https://aka.ms/synapse-pathway-download), and then run the **AzureSynapsePathway.msi** file.
+Download the latest version of Azure Synapse Pathway from the [Microsoft Download Center](https://aka.ms/synapse-pathway-download), and then run the **AzureSynapsePathway.msi** file.
 
 > [!IMPORTANT]
-> Azure Synapse Pathway is currently in public preview.
-> This preview version is provided without a service level agreement, and it's not recommended for production workloads. Certain features might not be supported or might have constrained capabilities. 
+> Azure Synapse Pathway is currently in active development. Certain features might not be supported or might have constrained capabilities.
 > For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 
 ## Install
@@ -43,8 +45,8 @@ Download the latest version of the tool from the [Microsoft Download Center](htt
 ## Pricing
 
 1. Synapse Pathway is **free to download**. There's no associated cost to run your code translation.
-1. Data Ingress: There's no cost associated with bringing your data into Azure. For more information, see the [Bandwidth pricing details](https://azure.microsoft.com/en-us/pricing/details/bandwidth/).
-1. See the [Azure Synapse pricing page](https://azure.microsoft.com/en-us/pricing/calculator/?service=synapse-analytics) to see the cost of provisioning Azure Synapse.
+1. Data Ingress: There's no cost associated with bringing your data into Azure. For more information, see the [Bandwidth pricing details](https://azure.microsoft.com/pricing/details/bandwidth/).
+1. See the [Azure Synapse pricing page](https://azure.microsoft.com/pricing/calculator/?service=synapse-analytics) to see the cost of provisioning Azure Synapse.
 
 ## Next steps
 
@@ -52,4 +54,3 @@ Advance to the tutorial to run your first translation
 
 > [!div class="nextstepaction"]
 > [Start code translation](synapse-pathway-assessment.md)
-

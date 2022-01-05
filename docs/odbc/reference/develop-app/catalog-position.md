@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "catalog position [ODBC]"
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Catalog Position
 The position of a catalog name in an identifier and how it is separated from the rest of the identifier varies from data source to data source. For example, in an Xbase data source, the catalog name is a directory and, in Microsoft® Windows®, is separated from the table name (which is a file name) by a backslash (\\). The following illustration demonstrates this condition.  

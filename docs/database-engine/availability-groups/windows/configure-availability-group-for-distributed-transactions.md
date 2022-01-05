@@ -2,7 +2,7 @@
 title: "Configure distributed transactions for an availability group"
 description: "Describes how to configure distributed transactions for databases within an Always On availability group. "
 ms.custom: "seodec18"
-ms.date: "02/06/2019"
+ms.date: "09/16/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "troubleshooting [SQL Server], cross-database transactions"
 ms.assetid: 
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Configure distributed transactions for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ In a distributed transaction, client applications work with Microsoft Distribute
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However when an availability group is not configured for distributed transactions, failover may not succeed in some situations. Specifically the new primary replica [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] instance may not be able to get the transaction outcome from DTC. To enable the [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] instance to get the outcome of in-doubt transactions from the DTC after failover, configure the availability group for distributed transactions. 
 
-DTC is not involved in availability group processing unless a database is also a member of a Failover Cluster. Within an availability group, the consistency between replicas is maintained by the availability group logic: The primary will not complete the commit and acknowledge the commit to the caller until the secondary has acknowledged that it has persisted the log records in durable storage. Only then does the Primary declare the transaction complete. In async mode, we do not wait for the secondary to ack, and there is explicitly the chance of the loss of a small amount of data.
+DTC is not involved in availability group processing unless a database is also a member of a Failover Cluster. Within an availability group, the consistency between replicas is maintained by the availability group logic: The primary will not complete the commit and acknowledge the commit to the caller until the secondary has acknowledged that it has persisted the log records in durable storage. Only then will the Primary declare the transaction complete. In async mode, we do not wait for the secondary to ack, and there is explicitly the chance of the loss of a small amount of data.
 
 ## Prerequisites
 
@@ -41,13 +41,11 @@ Before you configure an availability group to support distributed transactions, 
 
 * All instances of [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] that participate in the distributed transaction must be  [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] or later.
 
-* Availability groups must be running on Windows Server 2016 or Windows Server 2012 R2. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  
+* Availability groups must be running on Windows Server 2012 R2 or later. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  
 
 ## Create an availability group for distributed transactions
 
 Configure an availability group to support distributed transactions. Set the availability group to allow each database to register as a resource manager. This article explains how to configure an availability group so that each database can be a resource manager in DTC.
-
-
 
 You can create an availability group for distributed transactions on  [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] or later. To create an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the availability group definition. The following script creates an availability group for distributed transactions. 
 
@@ -121,7 +119,7 @@ The following list explains how the application works with DTC to complete distr
 3. The client issues commit or abort for the DTC transaction.
     - If the client issues abort, the transaction is aborted immediately.
     - If the client issues commit, DTC begins the two-phase commit protocol by asking all the resource managers in the transaction to prepare the transaction.
-4. DTC informs all resource managers to commit the transaction after all resource managers successfully acknowledge the prepare phase. If anything prevents successful acknowledgement, DTC aborts the transaction. 
+4. DTC informs all resource managers to commit the transaction after all resource managers successfully acknowledge the prepare phase. If anything prevents successful acknowledgment, DTC aborts the transaction. 
 
 ### Effects of configuring an availability group for distributed transactions
 
@@ -161,7 +159,7 @@ failed to reenlist citing that the database RMID does
 not match the RMID [xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx] 
 associated with the transaction.  Please manually resolve
 the transaction.
-	
+    
 SQL Server detected a DTC/KTM in-doubt transaction with UOW 
 {yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy}.Please resolve it 
 following the guideline for Troubleshooting DTC Transactions.

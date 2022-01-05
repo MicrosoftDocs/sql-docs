@@ -1,6 +1,6 @@
 ---
-title: "Treemap and sunburst charts in SQL Server Reporting Services | Microsoft Docs"
-description: Discover how to visually represent hierarchical data using a treemap or sunburst chart in Report Builder.
+title: "Treemap and sunburst charts in a paginated report in SQL Server Reporting Services | Microsoft Docs"
+description: Discover how to visually represent hierarchical data in a paginated report using a treemap or sunburst chart in Report Builder.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design
@@ -12,9 +12,11 @@ ms.custom: ""
 ms.date: 04/26/2019
 ---
 
-# Treemap and sunburst charts in Reporting Services 
+# Treemap and sunburst charts in a paginated report in SQL Server Reporting Services (Report Builder)
 
-The SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] treemap and sunburst visualizations are great for visually representing hierarchical data. This article is an overview of how to add a treemap or sunburst chart to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report. The article also includes an AdventureWorks sample query to help you get started.  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+The SQL Server Report Builder treemap and sunburst visualizations are great for visually representing hierarchical data in a paginated report. This article is an overview of how to add a treemap or sunburst chart to a report. The article also includes an AdventureWorks sample query to help you get started.  
   
 ##  <a name="bkmk_treemap_chart"></a> Treemap chart  
 

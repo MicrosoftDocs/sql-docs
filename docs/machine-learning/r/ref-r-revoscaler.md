@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # RevoScaleR (R package in SQL Server Machine Learning Services)
@@ -23,7 +23,7 @@ RevoScaleR serves as a platform for distributed data science. For example, you c
 
 ## Full reference documentation
 
-The **RevoScaleR** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) is published to just one location under the [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **RevoScaleR** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) is published to just one location under the [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference). Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Versions and platforms
 
@@ -31,8 +31,7 @@ The **RevoScaleR** package is based on R 3.4.3 and available only when you insta
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server 9.2.0 or later](/machine-learning-server/)
-+ [Microsoft R client](set-up-a-data-science-client.md)
++ [Microsoft R client](set-up-data-science-client.md)
 
 > [!NOTE]
 > Full product release versions are Windows-only in SQL Server 2017. Both Windows and Linux are supported for **RevoScaleR** in [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md).
@@ -56,7 +55,7 @@ SQL Server and R use different data types in some cases. For a list of mappings 
 | [RxXdfData](/machine-learning-server/r-reference/revoscaler/rxxdfdata) | Create a data source based on a local XDF file. XDF files are often used to offload in-memory data to disk. An XDF file can be useful when working with more data than can be transferred from the database in one batch, or more data than can fit in memory. For example, if you regularly move large amounts of data from a database to a local workstation, rather than query the database repeatedly for each R operation, you can use the XDF file as a kind of cache to save the data locally and then work with it in your R workspace.|
 
 > [!TIP]
-> If you are new to the idea of data sources or compute contexts, we recommend that you start with [distributed computing](/machine-learning-server/r/how-to-revoscaler-distributed-computing) in the Microsoft Machine Learning Server documentation.
+> If you are new to the idea of data sources or compute contexts, we recommend that you start with the article [Distributed computing](/machine-learning-server/r/how-to-revoscaler-distributed-computing).
 
 ### Perform DDL statements
 
@@ -147,4 +146,4 @@ When you are ready to encapsulate R script inside a stored procedure, [sp_execut
 + [Learn to use compute contexts](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [R for SQL developers: Train and operationalize a model](../tutorials/r-taxi-classification-introduction.md)
 + [Microsoft product samples on GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
-+ [R reference (Microsoft Machine Learning Server)](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)
++ [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)

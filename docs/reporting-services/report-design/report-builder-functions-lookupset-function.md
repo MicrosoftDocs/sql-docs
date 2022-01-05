@@ -1,6 +1,6 @@
 ---
-title: "LookupSet Function (Report Builder) | Microsoft Docs"
-description: Find out about the LookupSet function, which returns the set of matching values for a specified name from a dataset that contains name or value pairs.
+title: "LookupSet function in a paginated report | Microsoft Docs"
+description: Find out about the LookupSet function in a paginated report, which returns the set of matching values for a specified name from a dataset that contains name or value pairs.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - LookupSet Function
-  Returns the set of matching values for the specified name from a dataset that contains name/value pairs.  
+# Report Builder functions - LookupSet function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the set of matching values for the specified name from a dataset that contains name/value pairs in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

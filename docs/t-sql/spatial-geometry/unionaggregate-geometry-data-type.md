@@ -17,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # UnionAggregate (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Performs a union operation on a set of geometry objects.
   
@@ -50,7 +50,7 @@ UnionAggregate ( geometry_operand )
   
 ## Examples  
  The following example returns the union of a set of **geometry** objects in a table variable.  
- ```
+ ```sql
  -- Setup table variable for UnionAggregate example 
  DECLARE @Geom TABLE 
  ( 

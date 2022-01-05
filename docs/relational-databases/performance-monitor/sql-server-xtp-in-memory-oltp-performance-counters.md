@@ -2,13 +2,12 @@
 title: "XTP (In-Memory OLTP) Performance Counters"
 description: SQL Server provides objects and counters that can be used by Performance Monitor to monitor In-Memory OLTP activity.
 ms.custom: seo-dt-2019
-ms.date: "04/06/2016"
+ms.date: "07/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
-ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -21,7 +20,7 @@ ms.author: wiassaf
   
 -   **SQL Server** *\<version>* **XTP Cursors**  
   
- For *\<version>* the value is something like 2016.  
+ For *\<version>* the value is the SQL Server XTP version year, for example, 2017.  
   
 ##  <a name="SQLServerPOs"></a> SQL Server XTP Performance Objects  
  The following table describes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance objects.  
@@ -37,4 +36,5 @@ ms.author: wiassaf
 |[SQL Server XTP Transaction Log](../../relational-databases/performance-monitor/sql-server-xtp-transaction-log.md)|The SQL Server XTP Transaction Log performance object contains counters related to In-Memory OLTP transaction logging in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQL Server XTP Transactions](../../relational-databases/performance-monitor/sql-server-xtp-transactions.md)|The SQL Server XTP Transactions performance object contains counters related to In-Memory OLTP engine transactions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-  
+## See also
+- [In-Memory OLTP and Memory-Optimization](../in-memory-oltp/overview-and-usage-scenarios.md)

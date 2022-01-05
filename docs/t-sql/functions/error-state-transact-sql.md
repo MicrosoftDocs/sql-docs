@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "CATCH block"
   - "states [SQL Server], error numbers"
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 157882dd-1a96-4501-a895-46e88a49266e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setClob Method (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

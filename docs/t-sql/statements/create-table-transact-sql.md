@@ -101,9 +101,9 @@ column_name <data_type>
     [ FILESTREAM ]
     [ COLLATE collation_name ]
     [ SPARSE ]
-    [ MASKED WITH ( FUNCTION = ' mask_function ') ]
+    [ MASKED WITH ( FUNCTION = 'mask_function') ]
     [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression ]
-    [ IDENTITY [ ( seed,increment ) ]
+    [ IDENTITY [ ( seed , increment ) ]
     [ NOT FOR REPLICATION ]
     [ GENERATED ALWAYS AS { ROW | TRANSACTION_ID | SEQUENCE_NUMBER } { START | END } [ HIDDEN ] ]
     [ NULL | NOT NULL ]
@@ -117,23 +117,24 @@ column_name <data_type>
     [ <column_index> ]
   
 <data_type> ::=
-[ type_schema_name . ] type_name
+[ type_schema_name. ] type_name
     [ ( precision [ , scale ] | max |
         [ { CONTENT | DOCUMENT } ] xml_schema_collection ) ]
   
 <column_constraint> ::=
 [ CONSTRAINT constraint_name ]
-{     { PRIMARY KEY | UNIQUE }
+{ 
+   { PRIMARY KEY | UNIQUE }
         [ CLUSTERED | NONCLUSTERED ]
         [
             WITH FILLFACTOR = fillfactor
-          | WITH ( < index_option > [ , ...n ] )
+          | WITH ( <index_option> [ , ...n ] )
         ]
         [ ON { partition_scheme_name ( partition_column_name )
             | filegroup | "default" } ]
   
   | [ FOREIGN KEY ]
-        REFERENCES [ schema_name . ] referenced_table_name [ ( ref_column ) ]
+        REFERENCES [ schema_name. ] referenced_table_name [ ( ref_column ) ]
         [ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
         [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
         [ NOT FOR REPLICATION ]
@@ -185,7 +186,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         (column [ ASC | DESC ] [ ,...n ] )
         [
             WITH FILLFACTOR = fillfactor
-           |WITH ( <index_option> [ , ...n ] )
+           | WITH ( <index_option> [ , ...n ] )
         ]
         [ ON { partition_scheme_name (partition_column_name)
             | filegroup | "default" } ]
@@ -203,10 +204,10 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
       INDEX index_name  [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ]
          (column_name [ ASC | DESC ] [ ,... n ] )
     | INDEX index_name CLUSTERED COLUMNSTORE
-    | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE (column_name [ ,... n ] )
+    | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE ( column_name [ ,... n ] )
     }
     [ WITH ( <index_option> [ ,... n ] ) ]
-    [ ON { partition_scheme_name (column_name )
+    [ ON { partition_scheme_name ( column_name )
          | filegroup_name
          | default
          }
@@ -217,7 +218,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 
 <table_option> ::=
 {  
-    [DATA_COMPRESSION = { NONE | ROW | PAGE }
+    [ DATA_COMPRESSION = { NONE | ROW | PAGE }
       [ ON PARTITIONS ( { <partition_number_expression> | <range> }
       [ , ...n ] ) ] ]
     [ FILETABLE_DIRECTORY = <directory_name> ]
@@ -225,22 +226,27 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     [ FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = <constraint_name> ]
     [ FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = <constraint_name> ]
     [ FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = <constraint_name> ]
-    [ SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name . history_table_name
-        [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ] ]
+    [ SYSTEM_VERSIONING = ON 
+        [ ( HISTORY_TABLE = schema_name.history_table_name
+          [ , DATA_CONSISTENCY_CHECK = { ON | OFF } ] 
+    ) ] 
+    ]
     [ REMOTE_DATA_ARCHIVE =
       {
-          ON [ ( <table_stretch_options> [,...n] ) ]
+        ON [ ( <table_stretch_options> [,...n] ) ]
         | OFF ( MIGRATION_STATE = PAUSED )
       }
     ]   
     [ DATA_DELETION = ON  
-	      {( 
+          { ( 
              FILTER_COLUMN = column_name,   
-             RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+             RETENTION_PERIOD = { INFINITE | number { DAY | DAYS | WEEK | WEEKS 
                               | MONTH | MONTHS | YEAR | YEARS }
-        )}  
-     ]
-    [ LEDGER = ON [( <ledger_option> [,...n ] ) ] | OFF ]
+        ) }  
+    ]
+    [ LEDGER = ON [ ( <ledger_option> [,...n ] ) ] 
+    | OFF 
+    ]
 }
 
 <ledger_option>::= 
@@ -253,13 +259,13 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 {
     [ TRANSACTION_ID_COLUMN_NAME = transaction_id_column_name ]
     [ SEQUENCE_NUMBER_COLUMN_NAME = sequence_number_column_name ]
-    [ OPERATION_TYPE_COLUMN_NAME = operation_type_id column_name]
+    [ OPERATION_TYPE_COLUMN_NAME = operation_type_id column_name ]
     [ OPERATION_TYPE_DESC_COLUMN_NAME = operation_type_desc_column_name ]
 }
   
 <table_stretch_options> ::=
 {  
-    [ FILTER_PREDICATE = { null | table_predicate_function } , ]
+    [ FILTER_PREDICATE = { NULL | table_predicate_function } , ]
       MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
  }   
   
@@ -273,11 +279,12 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
   | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
-  | COMPRESSION_DELAY= {0 | delay [Minutes]}
+  | COMPRESSION_DELAY= { 0 | delay [ Minutes ] }
   | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }
-       [ ON PARTITIONS ( { <partition_number_expression> | <range> }
+       [ ON PARTITIONS ( { partition_number_expression | <range> }
        [ , ...n ] ) ]
 }
+
 <range> ::=
 <partition_number_expression> TO <partition_number_expression>
 ```
@@ -311,17 +318,17 @@ column_name <data_type>
     [ <column_index> ]
   
 <data_type> ::=
- [type_schema_name . ] type_name [ (precision [ , scale ]) ]
+ [type_schema_name. ] type_name [ (precision [ , scale ]) ]
 
 <column_constraint> ::=
  [ CONSTRAINT constraint_name ]
 {
   { PRIMARY KEY | UNIQUE }
-      {   NONCLUSTERED
-        | NONCLUSTERED HASH WITH (BUCKET_COUNT = bucket_count)
+      { NONCLUSTERED
+        | NONCLUSTERED HASH WITH ( BUCKET_COUNT = bucket_count )
       }
   | [ FOREIGN KEY ]
-        REFERENCES [ schema_name . ] referenced_table_name [ ( ref_column ) ]
+        REFERENCES [ schema_name. ] referenced_table_name [ ( ref_column ) ]
   | CHECK ( logical_expression )
 }
   
@@ -341,14 +348,14 @@ column_name <data_type>
 
 <column_index> ::=
   INDEX index_name
-{ [ NONCLUSTERED ] | [ NONCLUSTERED ] HASH WITH (BUCKET_COUNT = bucket_count)}
+{ [ NONCLUSTERED ] | [ NONCLUSTERED ] HASH WITH ( BUCKET_COUNT = bucket_count ) }
 
 <table_index> ::=
   INDEX index_name
-{   [ NONCLUSTERED ] HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count)
-  | [ NONCLUSTERED ] (column [ ASC | DESC ] [ ,... n ] )
+{   [ NONCLUSTERED ] HASH ( column [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count )
+  | [ NONCLUSTERED ] ( column [ ASC | DESC ] [ ,... n ] )
       [ ON filegroup_name | default ]
-  | CLUSTERED COLUMNSTORE [WITH ( COMPRESSION_DELAY = {0 | delay [Minutes]})]
+  | CLUSTERED COLUMNSTORE [ WITH ( COMPRESSION_DELAY = { 0 | delay [ Minutes ] } ) ]
       [ ON filegroup_name | default ]
   
 }
@@ -356,8 +363,8 @@ column_name <data_type>
 <table_option> ::=
 {  
     MEMORY_OPTIMIZED = ON
-  | DURABILITY = {SCHEMA_ONLY | SCHEMA_AND_DATA}
-  | SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name . history_table_name
+  | DURABILITY = { SCHEMA_ONLY | SCHEMA_AND_DATA }
+  | SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name.history_table_name
         [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ]
   
 }
@@ -367,22 +374,22 @@ column_name <data_type>
 
 ## Arguments
 
-*database_name*
+*database_name*   
 Is the name of the database in which the table is created. *database_name* must specify the name of an existing database. If not specified, *database_name* defaults to the current database. The login for the current connection must be associated with an existing user ID in the database specified by *database_name*, and that user ID must have CREATE TABLE permissions.
 
-*schema_name*
+*schema_name*   
 Is the name of the schema to which the new table belongs.
 
-*table_name*
+*table_name*   
 Is the name of the new table. Table names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). *table_name* can be a maximum of 128 characters, except for local temporary table names (names prefixed with a single number sign (#)) that cannot exceed 116 characters.
 
-AS FileTable
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later).
+AS FileTable   
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).
 
 Creates the new table as a FileTable. You do not specify columns because a FileTable has a fixed schema. For more information, see [FileTables](../../relational-databases/blob/filetables-sql-server.md).
 
-*column_name*
-*computed_column_expression*
+*column_name*   
+*computed_column_expression*   
 Is an expression that defines the value of a computed column. A computed column is a virtual column that is not physically stored in the table, unless the column is marked PERSISTED. The column is computed from an expression that uses other columns in the same table. For example, a computed column can have the definition: **cost** AS **price** \* **qty**. The expression can be a noncomputed column name, constant, function, variable, and any combination of these connected by one or more operators. The expression cannot be a subquery or contain alias data types.
 
 Computed columns can be used in select lists, WHERE clauses, ORDER BY clauses, or any other locations in which regular expressions can be used, with the following exceptions:
@@ -399,10 +406,10 @@ Computed columns can be used in select lists, WHERE clauses, ORDER BY clauses, o
 
 Based on the expressions that are used, the nullability of computed columns is determined automatically by the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. The result of most expressions is considered nullable even if only nonnullable columns are present, because possible underflows or overflows also produce NULL results. Use the `COLUMNPROPERTY` function with the **AllowsNull** property to investigate the nullability of any computed column in a table. An expression that is nullable can be turned into a nonnullable one by specifying `ISNULL` with the *check_expression* constant, where the constant is a nonnull value substituted for any NULL result. REFERENCES permission on the type is required for computed columns based on common language runtime (CLR) user-defined type expressions.
 
-PERSISTED
+PERSISTED   
 Specifies that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will physically store the computed values in the table, and update the values when any other columns on which the computed column depends are updated. Marking a computed column as `PERSISTED` lets you create an index on a computed column that is deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Any computed columns that are used as partitioning columns of a partitioned table must be explicitly marked `PERSISTED`. *computed_column_expression* must be deterministic when `PERSISTED` is specified.
 
-ON { *partition_scheme* | *filegroup* | **"default"** }
+ON { *partition_scheme* | *filegroup* | **"default"** }   
 Specifies the partition scheme or filegroup on which the table is stored. If *partition_scheme* is specified, the table is to be a partitioned table whose partitions are stored on a set of one or more filegroups specified in *partition_scheme*. If *filegroup* is specified, the table is stored in the named filegroup. The filegroup must exist within the database. If **"default"** is specified, or if ON is not specified at all, the table is stored on the default filegroup. The storage mechanism of a table as specified in CREATE TABLE cannot be subsequently altered.
 
 ON {*partition_scheme* | *filegroup* | **"default"**} can also be specified in a PRIMARY KEY or UNIQUE constraint. These constraints create indexes. If *filegroup* is specified, the index is stored in the named filegroup. If **"default"** is specified, or if ON is not specified at all, the index is stored in the same filegroup as the table. If the `PRIMARY KEY` or `UNIQUE` constraint creates a clustered index, the data pages for the table are stored in the same filegroup as the index. If `CLUSTERED` is specified or the constraint otherwise creates a clustered index, and a *partition_scheme* is specified that differs from the *partition_scheme* or *filegroup* of the table definition, or vice-versa, only the constraint definition will be honored, and the other will be ignored.
@@ -412,7 +419,7 @@ ON {*partition_scheme* | *filegroup* | **"default"**} can also be specified in a
 >
 > After you create a partitioned table, consider setting the `LOCK_ESCALATION` option for the table to `AUTO`. This can improve concurrency by enabling locks to escalate to partition (HoBT) level instead of the table. For more information, see [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).
 
-TEXTIMAGE_ON { *filegroup*| **"default"** }
+TEXTIMAGE_ON { *filegroup*| **"default"** }   
 Indicates that the **text**, **ntext**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and CLR user-defined type columns (including geometry and geography) are stored on the specified filegroup.
 
 `TEXTIMAGE_ON` is not allowed if there are no large value columns in the table. `TEXTIMAGE_ON` cannot be specified if *partition_scheme* is specified. If **"default"** is specified, or if `TEXTIMAGE_ON` is not specified at all, the large value columns are stored in the default filegroup. The storage of any large value column data specified in `CREATE TABLE` cannot be subsequently altered.
@@ -424,8 +431,8 @@ Indicates that the **text**, **ntext**, **image**, **xml**, **varchar(max)**, **
 >
 > In this context, default is not a keyword. It is an identifier for the default filegroup and must be delimited, as in `TEXTIMAGE_ON "default"` or `TEXTIMAGE_ON [default]`. If **"default"** is specified, the `QUOTED_IDENTIFIER` option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
-FILESTREAM_ON { *partition_scheme_name* | filegroup | **"**default**"** }
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and later). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support `FILESTREAM`.
+FILESTREAM_ON { *partition_scheme_name* | filegroup | **"**default**"** }   
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] don't support `FILESTREAM`.
 
 Specifies the filegroup for FILESTREAM data.
 
@@ -444,7 +451,7 @@ The filegroup in the `FILESTREAM_ON <filegroup>` clause, or each FILESTREAM file
 
 For related FILESTREAM topics, see [Binary Large Object - Blob Data](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
 
-[ _type\_schema\_name_**.** ] *type_name*
+[ _type\_schema\_name_**.** ] *type_name*   
 Specifies the data type of the column, and the schema to which it belongs. For disk-based tables, the data type can be one of the following:
 
 - A system data type
@@ -459,46 +466,46 @@ If *type_schema_name* is not specified, the [!INCLUDE[ssDEnoversion](../../inclu
 
 For memory-optimized tables, see [Supported Data Types for In-Memory OLTP](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) for a list of supported system types.
 
-*precision*
+*precision*   
 Is the precision for the specified data type. For more information about valid precision values, see [Precision, Scale, and Length](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).
 
-*scale*
+*scale*   
 Is the scale for the specified data type. For more information about valid scale values, see [Precision, Scale, and Length](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).
 
-**max**
+**max**   
 Applies only to the **varchar**, **nvarchar**, and **varbinary** data types for storing 2^31 bytes of character and binary data, and 2^30 bytes of Unicode data.
 
-CONTENT
+CONTENT   
 Specifies that each instance of the **xml** data type in *column_name* can contain multiple top-level elements. CONTENT applies only to the **xml** data type and can be specified only if *xml_schema_collection* is also specified. If not specified, CONTENT is the default behavior.
 
-DOCUMENT
+DOCUMENT   
 Specifies that each instance of the **xml** data type in *column_name* can contain only one top-level element. DOCUMENT applies only to the **xml** data type and can be specified only if *xml_schema_collection* is also specified.
 
-*xml_schema_collection*
+*xml_schema_collection*   
 Applies only to the **xml** data type for associating an XML schema collection with the type. Before typing an **xml** column to a schema, the schema must first be created in the database by using [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).
 
-DEFAULT
+DEFAULT   
 Specifies the value provided for the column when a value is not explicitly supplied during an insert. DEFAULT definitions can be applied to any columns except those defined as **timestamp**, or those with the `IDENTITY` property. If a default value is specified for a user-defined type column, the type should support an implicit conversion from *constant_expression* to the user-defined type. DEFAULT definitions are removed when the table is dropped. Only a constant value, such as a character string; a scalar function (either a system, user-defined, or CLR function); or NULL can be used as a default. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT.
 
-*constant_expression*
+*constant_expression*   
 Is a constant, NULL, or a system function that is used as the default value for the column.
 
-*memory_optimized_constant_expression*
+*memory_optimized_constant_expression*   
 Is a constant, NULL, or a system function that is supported in used as the default value for the column. Must be supported in natively compiled stored procedures. For more information about built-in functions in natively compiled stored procedures, see [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).
 
-IDENTITY
+IDENTITY   
 Indicates that the new column is an identity column. When a new row is added to the table, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] provides a unique, incremental value for the column. Identity columns are typically used with PRIMARY KEY constraints to serve as the unique row identifier for the table. The `IDENTITY` property can be assigned to **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. Both the seed and increment or neither must be specified. If neither is specified, the default is (1,1).
 
-*seed*
+*seed*   
 Is the value used for the very first row loaded into the table.
 
-*increment*
+*increment*   
 Is the incremental value added to the identity value of the previous row loaded.
 
-NOT FOR REPLICATION
+NOT FOR REPLICATION   
 In the `CREATE TABLE` statement, the `NOT FOR REPLICATION` clause can be specified for the IDENTITY property, FOREIGN KEY constraints, and CHECK constraints. If this clause is specified for the `IDENTITY` property, values are not incremented in identity columns when replication agents perform inserts. If this clause is specified for a constraint, the constraint is not enforced when replication agents perform insert, update, or delete operations.
 
-GENERATED ALWAYS AS { ROW | TRANSACTION_ID | SEQUENCE_NUMBER  } { START | END } [ HIDDEN ] [ NOT NULL ] 
+GENERATED ALWAYS AS { ROW | TRANSACTION_ID | SEQUENCE_NUMBER  } { START | END } [ HIDDEN ] [ NOT NULL ]   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies a column used by the system to automatically record information about row versions in the table and its history table (if the table is system versioned and has a history table). Use this argument with the `WITH SYSTEM_VERSIONING = ON` parameter to create system-versioned tables: temporal or ledger tables. For more information, see [updateable ledger tables](/azure/azure-sql/database/ledger-updatable-ledger-tables#updateable-ledger-tables-vs-temporal-tables) and [temporal tables](../../relational-databases/tables/temporal-tables.md).
@@ -514,24 +521,24 @@ If you attempt to specify a column that does not meet the above data type or nul
 
 You can mark one or both period columns with **HIDDEN** flag to implicitly hide these columns such that **SELECT \* FROM**_`<table>`_ does not return a value for those columns. By default, period columns are not hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table. To change the **HIDDEN** attribute for an existing period column, **PERIOD** must be dropped and recreated with a different hidden flag.
 
-INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )
+INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies to create an index on the table. This can be a clustered index, or a nonclustered index. The index will contain the columns listed, and will sort the data in either ascending or descending order.
 
-INDEX *index_name* CLUSTERED COLUMNSTORE
+INDEX *index_name* CLUSTERED COLUMNSTORE   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies to store the entire table in columnar format with a clustered columnstore index. This always includes all columns in the table. The data is not sorted in alphabetical or numeric order since the rows are organized to gain columnstore compression benefits.
 
-INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )
+INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies to create a nonclustered columnstore index on the table. The underlying table can be a rowstore heap or clustered index, or it can be a clustered columnstore index. In all cases, creating a nonclustered columnstore index on a table stores a second copy of the data for the columns in the index.
 
 The nonclustered columnstore index is stored and managed as a clustered columnstore index. It is called a nonclustered columnstore index to because the columns can be limited and it exists as a secondary index on a table.
 
-ON _partition\_scheme\_name_**(**_column\_name_**)**
+ON _partition\_scheme\_name_**(**_column\_name_**)**   
 Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index will be mapped. The partition scheme must exist within the database by executing either [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) or [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. Any column in the base table can be specified, except when partitioning a UNIQUE index, *column_name* must be chosen from among those used as the unique key. This restriction allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to verify uniqueness of key values within a single partition only.
 
 > [!NOTE]
@@ -544,15 +551,15 @@ If *partition_scheme_name* or *filegroup* is not specified and the table is part
 
 For more information about partitioning indexes, [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
-ON *filegroup_name*
+ON *filegroup_name*   
 Creates the specified index on the specified filegroup. If no location is specified and the table or view is not partitioned, the index uses the same filegroup as the underlying table or view. The filegroup must already exist.
 
-ON **"default"**
+ON **"default"**   
 Creates the specified index on the default filegroup.
 
 The term default, in this context, is not a keyword. It is an identifier for the default filegroup and must be delimited, as in ON **"default"** or ON **[default]**. If "default" is specified, the `QUOTED_IDENTIFIER` option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
-[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]
+[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and later).
 
 Specifies the placement of FILESTREAM data for the table when a clustered index is created. The FILESTREAM_ON clause allows FILESTREAM data to be moved to a different FILESTREAM filegroup or partition scheme.
@@ -567,18 +574,18 @@ If the table is not partitioned, the FILESTREAM column cannot be partitioned. FI
 
 For more information, see [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md).
 
-ROWGUIDCOL
+ROWGUIDCOL   
 Indicates that the new column is a row GUID column. Only one **uniqueidentifier** column per table can be designated as the ROWGUIDCOL column. Applying the ROWGUIDCOL property enables the column to be referenced using `$ROWGUID`. The ROWGUIDCOL property can be assigned only to a **uniqueidentifier** column. User-defined data type columns cannot be designated with ROWGUIDCOL.
 
 The ROWGUIDCOL property does not enforce uniqueness of the values stored in the column. ROWGUIDCOL also does not automatically generate values for new rows inserted into the table. To generate unique values for each column, either use the [NEWID](../../t-sql/functions/newid-transact-sql.md) or [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) function on [INSERT](../../t-sql/statements/insert-transact-sql.md) statements or use these functions as the default for the column.
 
-ENCRYPTED WITH
+ENCRYPTED WITH   
 Specifies encrypting columns by using the [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature.
 
-COLUMN_ENCRYPTION_KEY = *key_name*
+COLUMN_ENCRYPTION_KEY = *key_name*   
 Specifies the column encryption key. For more information, see [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md).
 
-ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
+ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }   
 **Deterministic encryption** uses a method which always generates the same encrypted value for any given plain text value. Using deterministic encryption allows searching using equality comparison, grouping, and joining tables using equality joins based on encrypted values, but can also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column. Joining two tables on columns encrypted deterministically is only possible if both columns are encrypted using the same column encryption key. Deterministic encryption must use a column collation with a binary2 sort order for character columns.
 
 **Randomized encryption** uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but it prevents any computations and indexing on encrypted columns, unless your SQL Server instance supports Always Encrypted with secure enclaves. Please see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) for details.
@@ -589,17 +596,17 @@ If you are using Always Encrypted with secure enclaves, randomized encryption is
 
 Columns must be of a qualifying data type.
 
-ALGORITHM
+ALGORITHM   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
 
 Must be **'AEAD_AES_256_CBC_HMAC_SHA_256'**.
 
 For more information including feature constraints, see [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
-SPARSE
+SPARSE   
 Indicates that the column is a sparse column. The storage of sparse columns is optimized for null values. Sparse columns cannot be designated as NOT NULL. For additional restrictions and more information about sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).
 
-MASKED WITH ( FUNCTION = ' *mask_function* ')
+MASKED WITH ( FUNCTION = '*mask_function*')   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
  ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
 
@@ -610,11 +617,11 @@ Specifies a dynamic data mask. *mask_function* is the name of the masking functi
 - partial()
 - random()
 
-Requires ALTER ANY MASK permission.
+Requires `ALTER ANY MASK` permission.
 
 For function parameters, see [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md).
 
-FILESTREAM
+FILESTREAM   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and later)
 
 Valid only for **varbinary(max)** columns. Specifies FILESTREAM storage for the **varbinary(max)** BLOB data.
@@ -625,128 +632,128 @@ The ROWGUIDCOL column cannot be dropped and the related constraints cannot be ch
 
 When the FILESTREAM storage attribute is specified for a column, all values for that column are stored in a FILESTREAM data container on the file system.
 
-COLLATE *collation_name*
+COLLATE *collation_name*   
 Specifies the collation for the column. Collation name can be either a Windows collation name or an SQL collation name. *collation_name* is applicable only for columns of the **char**, **varchar**, **text**, **nchar**, **nvarchar**, and **ntext** data types. If not specified, the column is assigned either the collation of the user-defined data type, if the column is of a user-defined data type, or the default collation of the database.
 
 For more information about the Windows and SQL collation names, see [Windows Collation Name](../../t-sql/statements/windows-collation-name-transact-sql.md) and [SQL Collation Name](../../t-sql/statements/sql-server-collation-name-transact-sql.md).
 
 For more information, see [COLLATE](~/t-sql/statements/collations.md).
 
-CONSTRAINT
+CONSTRAINT   
 Is an optional keyword that indicates the start of the definition of a PRIMARY KEY, NOT NULL, UNIQUE, FOREIGN KEY, or CHECK constraint.
 
-*constraint_name*
+*constraint_name*   
 Is the name of a constraint. Constraint names must be unique within the schema to which the table belongs.
 
-NULL | NOT NULL
+NULL | NOT NULL   
 Determine whether null values are allowed in the column. NULL is not strictly a constraint but can be specified just like NOT NULL. NOT NULL can be specified for computed columns only if PERSISTED is also specified.
 
-PRIMARY KEY
+PRIMARY KEY   
 Is a constraint that enforces entity integrity for a specified column or columns through a unique index. Only one PRIMARY KEY constraint can be created per table.
 
-UNIQUE
+UNIQUE   
 Is a constraint that provides entity integrity for a specified column or columns through a unique index. A table can have multiple UNIQUE constraints.
 
-CLUSTERED | NONCLUSTERED
+CLUSTERED | NONCLUSTERED   
 Indicate that a clustered or a nonclustered index is created for the PRIMARY KEY or UNIQUE constraint. PRIMARY KEY constraints default to CLUSTERED, and UNIQUE constraints default to NONCLUSTERED.
 
 In a `CREATE TABLE` statement, CLUSTERED can be specified for only one constraint. If CLUSTERED is specified for a UNIQUE constraint and a PRIMARY KEY constraint is also specified, the PRIMARY KEY defaults to NONCLUSTERED.
 
-FOREIGN KEY REFERENCES
+FOREIGN KEY REFERENCES   
 Is a constraint that provides referential integrity for the data in the column or columns. FOREIGN KEY constraints require that each value in the column exists in the corresponding referenced column or columns in the referenced table. FOREIGN KEY constraints can reference only columns that are PRIMARY KEY or UNIQUE constraints in the referenced table or columns referenced in a UNIQUE INDEX on the referenced table. Foreign keys on computed columns must also be marked PERSISTED.
 
-[ _schema\_name_**.**] *referenced_table_name*]
+[ _schema\_name**.**] *referenced_table_name*]   
 Is the name of the table referenced by the FOREIGN KEY constraint, and the schema to which it belongs.
 
-**(** *ref_column* [ **,**... *n* ] **)**
+**(** *ref_column* [ **,**... *n* ] **)**   
 Is a column, or list of columns, from the table referenced by the FOREIGN KEY constraint.
 
-ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }   
 Specifies what action happens to rows in the table created, if those rows have a referential relationship and the referenced row is deleted from the parent table. The default is NO ACTION.
 
-NO ACTION
+NO ACTION   
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and the delete action on the row in the parent table is rolled back.
 
-CASCADE
+CASCADE   
 Corresponding rows are deleted from the referencing table if that row is deleted from the parent table.
 
-SET NULL
+SET NULL   
 All the values that make up the foreign key are set to NULL if the corresponding row in the parent table is deleted. For this constraint to execute, the foreign key columns must be nullable.
 
-SET DEFAULT
+SET DEFAULT   
 All the values that make up the foreign key are set to their default values if the corresponding row in the parent table is deleted. For this constraint to execute, all foreign key columns must have default definitions. If a column is nullable, and there is no explicit default value set, NULL becomes the implicit default value of the column.
 
 Do not specify CASCADE if the table will be included in a merge publication that uses logical records. For more information about logical records, see [Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).
 
 `ON DELETE CASCADE` cannot be defined if an `INSTEAD OF` trigger `ON DELETE` already exists on the table.
 
-For example, in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the **ProductVendor** table has a referential relationship with the **Vendor** table. The **ProductVendor.BusinessEntityID** foreign key references the **Vendor.BusinessEntityID** primary key.
+For example, in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the `ProductVendor` table has a referential relationship with the `Vendor` table. The **ProductVendor.BusinessEntityID** foreign key references the **Vendor.BusinessEntityID** primary key.
 
-If a `DELETE` statement is executed on a row in the **Vendor** table, and an `ON DELETE CASCADE` action is specified for **ProductVendor.BusinessEntityID**, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for one or more dependent rows in the **ProductVendor** table. If any exist, the dependent rows in the **ProductVendor** table are deleted, and also the row referenced in the **Vendor** table.
+If a `DELETE` statement is executed on a row in the `Vendor` table, and an `ON DELETE CASCADE` action is specified for **ProductVendor.BusinessEntityID**, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for one or more dependent rows in the `ProductVendor` table. If any exist, the dependent rows in the `ProductVendor` table are deleted, and also the row referenced in the `Vendor` table.
 
-Conversely, if `NO ACTION` is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row if there is at least one row in the **ProductVendor** table that references it.
+Conversely, if `NO ACTION` is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row if there is at least one row in the `ProductVendor` table that references it.
 
-ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT }
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT }   
 Specifies what action happens to rows in the table altered when those rows have a referential relationship and the referenced row is updated in the parent table. The default is NO ACTION.
 
-NO ACTION
+NO ACTION   
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error, and the update action on the row in the parent table is rolled back.
 
-CASCADE
+CASCADE   
 Corresponding rows are updated in the referencing table when that row is updated in the parent table.
 
-SET NULL
+SET NULL   
 All the values that make up the foreign key are set to NULL when the corresponding row in the parent table is updated. For this constraint to execute, the foreign key columns must be nullable.
 
-SET DEFAULT
+SET DEFAULT   
 All the values that make up the foreign key are set to their default values when the corresponding row in the parent table is updated. For this constraint to execute, all foreign key columns must have default definitions. If a column is nullable, and there is no explicit default value set, NULL becomes the implicit default value of the column.
 
 Do not specify `CASCADE` if the table will be included in a merge publication that uses logical records. For more information about logical records, see [Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).
 
 `ON UPDATE CASCADE`, `SET NULL`, or `SET DEFAULT` cannot be defined if an `INSTEAD OF` trigger `ON UPDATE` already exists on the table that is being altered.
 
-For example, in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the **ProductVendor** table has a referential relationship with the **Vendor** table: **ProductVendor.BusinessEntity** foreign key references the **Vendor.BusinessEntityID** primary key.
+For example, in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the `ProductVendor` table has a referential relationship with the `Vendor` table: **ProductVendor.BusinessEntity** foreign key references the **Vendor.BusinessEntityID** primary key.
 
-If an UPDATE statement is executed on a row in the **Vendor** table, and an ON UPDATE CASCADE action is specified for **ProductVendor.BusinessEntityID**, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for one or more dependent rows in the **ProductVendor** table. If any exist, the dependent rows in the **ProductVendor** table are updated, and also the row referenced in the **Vendor** table.
+If an UPDATE statement is executed on a row in the `Vendor` table, and an ON UPDATE CASCADE action is specified for **ProductVendor.BusinessEntityID**, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] checks for one or more dependent rows in the `ProductVendor` table. If any exist, the dependent rows in the `ProductVendor` table are updated, and also the row referenced in the `Vendor` table.
 
-Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the update action on the **Vendor** row if there is at least one row in the **ProductVendor** table that references it.
+Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the update action on the **Vendor** row if there is at least one row in the `ProductVendor` table that references it.
 
-CHECK
+CHECK   
 Is a constraint that enforces domain integrity by limiting the possible values that can be entered into a column or columns. CHECK constraints on computed columns must also be marked PERSISTED.
 
-*logical_expression*
+*logical_expression*   
 Is a logical expression that returns TRUE or FALSE. Alias data types cannot be part of the expression.
 
-*column*
+*column*   
 Is a column or list of columns, in parentheses, used in table constraints to indicate the columns used in the constraint definition.
 
-[ **ASC** | DESC ]
+[ **ASC** | DESC ]   
 Specifies the order in which the column or columns participating in table constraints are sorted. The default is ASC.
 
-*partition_scheme_name*
+*partition_scheme_name*   
 Is the name of the partition scheme that defines the filegroups onto which the partitions of a partitioned table will be mapped. The partition scheme must exist within the database.
 
-[ _partition\_column\_name_**.** ]
+[ _partition\_column\_name**.** ]   
 Specifies the column against which a partitioned table will be partitioned. The column must match that specified in the partition function that *partition_scheme_name* is using in terms of data type, length, and precision. A computed columns that participates in a partition function must be explicitly marked PERSISTED.
 
 > [!IMPORTANT]
 > We recommend that you specify NOT NULL on the partitioning column of partitioned tables, and also nonpartitioned tables that are sources or targets of ALTER TABLE...SWITCH operations. Doing this makes sure that any CHECK constraints on partitioning columns do not have to check for null values.
 
-WITH FILLFACTOR **=**_fillfactor_
+WITH FILLFACTOR **=** _fillfactor_   
 Specifies how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make each index page that is used to store the index data. User-specified *fillfactor* values can be from 1 through 100. If a value is not specified, the default is 0. Fill factor values 0 and 100 are the same in all respects.
 
 > [!IMPORTANT]
 > Documenting WITH FILLFACTOR = *fillfactor* as the only index option that applies to PRIMARY KEY or UNIQUE constraints is maintained for backward compatibility, but will not be documented in this manner in future releases.
 
-*column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
+*column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS   
 Is the name of the column set. A column set is an untyped XML representation that combines all of the sparse columns of a table into a structured output. For more information about column sets, see [Use Column Sets](../../relational-databases/tables/use-column-sets.md).
 
-PERIOD FOR SYSTEM_TIME (*system_start_time_column_name* , *system_end_time_column_name* )
+PERIOD FOR SYSTEM_TIME (*system_start_time_column_name* , *system_end_time_column_name* )   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Specifies the names of the columns that the system will use to record the period for which a record is valid. Use this argument in conjunction with the GENERATED ALWAYS AS ROW { START | END } and WITH SYSTEM_VERSIONING = ON arguments to create a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
+Specifies the names of the columns that the system will use to record the period for which a record is valid. Use this argument in conjunction with the `GENERATED ALWAYS AS ROW { START | END }` and `WITH SYSTEM_VERSIONING = ON` arguments to create a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-COMPRESSION_DELAY
+COMPRESSION_DELAY   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 For a memory-optimized, delay specifies the minimum number of minutes a row must remain in the table, unchanged, before it is eligible for compression into the columnstore index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selects specific rows to compress according to their last update time. For example, if rows are changing frequently during a two-hour period of time, you could set `COMPRESSION_DELAY = 120 Minutes` to ensure updates are completed before SQL Server compresses the row.
@@ -757,35 +764,34 @@ The default is 0 minutes.
 
 For recommendations on when to use `COMPRESSION_DELAY`, please see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
-\< table_option> ::=
+\< table_option> ::=   
 Specifies one or more table options.
 
-DATA_COMPRESSION
+DATA_COMPRESSION   
 Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:
 
-NONE
+NONE   
 Table or specified partitions are not compressed.
 
-ROW
+ROW   
 Table or specified partitions are compressed by using row compression.
 
-PAGE
+PAGE   
 Table or specified partitions are compressed by using page compression.
 
-COLUMNSTORE
-
+COLUMNSTORE   
 **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE specifies to compress with the most performant columnstore compression. This is the typical choice.
 
-COLUMNSTORE_ARCHIVE
+COLUMNSTORE_ARCHIVE   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE_ARCHIVE will further compress the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.
 
 For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { `<partition_number_expression>` | [ **,**...*n* ] **)**
+ON PARTITIONS **(** { `<partition_number_expression>` | [ **,**...*n* ] **)**   
 Specifies the partitions to which the DATA_COMPRESSION setting applies. If the table is not partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause is not provided, the `DATA_COMPRESSION` option will apply to all partitions of a partitioned table.
 
 *partition_number_expression* can be specified in the following ways:
@@ -807,22 +813,22 @@ WITH
 )
 ```
 
-\<index_option> ::=
+\<index_option> ::=   
 Specifies one or more index options. For a complete description of these options, see [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md).
 
-PAD_INDEX = { ON | **OFF** }
+PAD_INDEX = { ON | **OFF** }   
 When ON, the percentage of free space specified by FILLFACTOR is applied to the intermediate level pages of the index. When OFF or a FILLFACTOR value it not specified, the intermediate level pages are filled to near capacity leaving enough space for at least one row of the maximum size the index can have, considering the set of keys on the intermediate pages. The default is OFF.
 
-FILLFACTOR **=**_fillfactor_
+FILLFACTOR **=** _fillfactor_   
 Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make the leaf level of each index page during index creation or alteration. *fillfactor* must be an integer value from 1 to 100. The default is 0. Fill factor values 0 and 100 are the same in all respects.
 
-IGNORE_DUP_KEY = { ON | **OFF** }
+IGNORE_DUP_KEY = { ON | **OFF** }   
 Specifies the error response when an insert operation attempts to insert duplicate key values into a unique index. The IGNORE_DUP_KEY option applies only to insert operations after the index is created or rebuilt. The option has no effect when executing [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), or [UPDATE](../../t-sql/queries/update-transact-sql.md). The default is OFF.
 
-ON
+ON   
 A warning message will occur when duplicate key values are inserted into a unique index. Only the rows violating the uniqueness constraint will fail.
 
-OFF
+OFF   
 An error message will occur when duplicate key values are inserted into a unique index. The entire INSERT operation will be rolled back.
 
 `IGNORE_DUP_KEY` cannot be set to ON for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.
@@ -831,58 +837,57 @@ To view `IGNORE_DUP_KEY`, use [sys.indexes](../../relational-databases/system-ca
 
 In backward compatible syntax, `WITH IGNORE_DUP_KEY` is equivalent to `WITH IGNORE_DUP_KEY = ON`.
 
-STATISTICS_NORECOMPUTE **=** { ON | **OFF** }
+STATISTICS_NORECOMPUTE **=** { ON | **OFF** }   
 When ON, out-of-date index statistics are not automatically recomputed. When OFF, automatic statistics updating are enabled. The default is OFF.
 
-ALLOW_ROW_LOCKS **=** { **ON** | OFF }
+ALLOW_ROW_LOCKS **=** { **ON** | OFF }   
 When ON, row locks are allowed when you access the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines when row locks are used. When OFF, row locks are not used. The default is ON.
 
-ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
+ALLOW_PAGE_LOCKS **=** { **ON** | OFF }   
 When ON, page locks are allowed when you access the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines when page locks are used. When OFF, page locks are not used. The default is ON.
 
-OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later. <BR>
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }   
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. <BR>
 Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](./create-index-transact-sql.md#sequential-keys) section of the CREATE INDEX page for more information.
 
-FILETABLE_DIRECTORY = *directory_name*
-
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later).
+FILETABLE_DIRECTORY = *directory_name*   
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).
 
 Specifies the windows-compatible FileTable directory name. This name should be unique among all the FileTable directory names in the database. Uniqueness comparison is case-insensitive, regardless of collation settings. If this value is not specified, the name of the filetable is used.
 
-FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }
-
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support `FILETABLE`.
+FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }   
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] don't support `FILETABLE`.
 
 Specifies the name of the collation to be applied to the **Name** column in the FileTable. The collation must be case-insensitive to comply with Windows operating system file naming semantics. If this value is not specified, the database default collation is used. If the database default collation is case-sensitive, an error is raised and the CREATE TABLE operation fails.
 
-*collation_name*
+*collation_name*   
 The name of a case-insensitive collation.
 
-database_default
+database_default   
 Specifies that the default collation for the database should be used. This collation must be case-insensitive.
 
-FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = *constraint_name*
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later).
+FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = *constraint_name*   
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] don't support `FILETABLE`.
 
 Specifies the name to be used for the primary key constraint that is automatically created on the FileTable. If this value is not specified, the system generates a name for the constraint.
 
 FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *constraint_name*
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] don't support `FILETABLE`.
 
 Specifies the name to be used for the unique constraint that is automatically created on the **stream_id** column in the FileTable. If this value is not specified, the system generates a name for the constraint.
 
 FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] don't support `FILETABLE`.
 
 Specifies the name to be used for the unique constraint that is automatically created on the **parent_path_locator** and **name** columns in the FileTable. If this value is not specified, the system generates a name for the constraint.
 
 SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ]
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 Enables system versioning of the table if the datatype, nullability constraint, and primary key constraint requirements are met. The system will record the history of each record in the system-versioned table in a separate history table. If the `HISTORY_TABLE` argument is not used, the name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If the name of a history table is specified during history table creation, you must specify the schema and table name. If the history table does not exists, the system generates a new history table matching the schema of the current table in the same filegroup as the current table, creating a link between the two tables and enables the system to record the history of each record in the current table in the history table. By default, the history table is **PAGE** compressed. If the `HISTORY_TABLE` argument is used to create a link to and use an existing history table, the link is created between the current table and the specified table. If current table is partitioned, the history table is created on default file group because partitioning configuration is not replicated automatically from the current table to the history table.  When creating a link to an existing history table, you can choose to perform a data consistency check. This data consistency check ensures that existing records do not overlap. Performing the data consistency check is the default. Use this argument in conjunction with the `PERIOD FOR SYSTEM_TIME` and `GENERATED ALWAYS AS ROW { START | END }` arguments to enable system versioning on a table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md). Use this argument with the `WITH LEDGER = ON` argument to create an updatable ledger table. Using existing history tables with ledger tables is not allowed.
 
 REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]).
 
 Creates the new table with Stretch Database enabled or disabled. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -894,8 +899,8 @@ When you enable Stretch for a table by specifying `ON`, you can optionally speci
 
 **Permissions**. Enabling Stretch for a database or a table requires db_owner permissions. Enabling Stretch for a table also requires ALTER permissions on the table.
 
-[ FILTER_PREDICATE = { null | *predicate* } ]
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
+[ FILTER_PREDICATE = { NULL | *predicate* } ]    
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]).
 
 Optionally specifies a filter predicate to select rows to migrate from a table that contains both historical and current data. The predicate must call a deterministic inline table-valued function. For more info, see [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) and [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
 
@@ -906,8 +911,8 @@ If you don't specify a filter predicate, the entire table is migrated.
 
 When you specify a filter predicate, you also have to specify *MIGRATION_STATE*.
 
-MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }    
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 - Specify `OUTBOUND` to migrate data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 - Specify `INBOUND` to copy the remote data for the table from [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] back to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and to disable Stretch for the table. For more info, see [Disable Stretch Database and bring back remote data](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
@@ -916,12 +921,13 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 
 - Specify `PAUSED` to pause or postpone data migration. For more info, see [Pause and resume data migration -Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
-[DATA_DELETION = ON  
-	{( 
-	   FILTER_COLUMN = column_name,   
-           RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+[ DATA_DELETION = ON  
+    { ( 
+       FILTER_COLUMN = column_name,   
+           RETENTION_PERIOD = { INFINITE | number { DAY | DAYS | WEEK | WEEKS 
                       | MONTH | MONTHS | YEAR | YEARS }
-)}]
+    ) } 
+]
 **Applies to:** Azure SQL Edge *only*
 
 Enables retention policy based cleanup of old or aged data from tables within a database. For more information see [Enable and Disable Data Retention](/azure/azure-sql-edge/data-retention-enable-disable). The following parameters must be specified for data retention to be enabled. 
@@ -938,15 +944,15 @@ Specifies the column, that should be used to determine if the rows in the table 
                   \| MONTH \| MONTHS \| YEAR \| YEARS }}       
 Specifies the retention period policy for the table. The retention period is specified as a combination of an positive integer value and the date part unit.   
 
-MEMORY_OPTIMIZED
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Azure SQL Managed Instance does not support memory optimized tables.
+MEMORY_OPTIMIZED    
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] does not support memory optimized tables in General Purpose tier.
 
 The value ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quickstart 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md).
 
 The default value OFF indicates that the table is disk-based.
 
-DURABILITY
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+DURABILITY    
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 The value of `SCHEMA_AND_DATA` indicates that the table is durable, meaning that changes are persisted on disk and survive restart or failover. SCHEMA_AND_DATA is the default value.
 
@@ -955,31 +961,30 @@ The value of `SCHEMA_ONLY` indicates that the table is non-durable. The table sc
 > [!WARNING]
 > When a table is created with **DURABILITY = SCHEMA_ONLY**, and **READ_COMMITTED_SNAPSHOT** is subsequently changed using **ALTER DATABASE**, data in the table will be lost.
 
-BUCKET_COUNT
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+BUCKET_COUNT    
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 Indicates the number of buckets that should be created in the hash index. The maximum value for BUCKET_COUNT in hash indexes is 1,073,741,824. For more information about bucket counts, see [Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
 Bucket_count is a required argument.
 
-INDEX
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
+INDEX    
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
-Column and table indexes can be specified as part of the CREATE TABLE statement. For details about adding and removing indexes on memory-optimized tables see: [Altering Memory-Optimized Tables](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
+Column and table indexes can be specified as part of the CREATE TABLE statement. For details about adding and removing indexes on memory-optimized tables, see [Altering Memory-Optimized Tables](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
 
-HASH
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+HASH    
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 Indicates that a HASH index is created.
 
 Hash indexes are supported only on memory-optimized tables.
 
-LEDGER = ON ( <ledger_option> [, …n ] ) | OFF
-
-**Applies to:** Azure SQL Database
+LEDGER = ON ( <ledger_option> [, …n ] ) | OFF    
+**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!NOTE]
-> **Permissions**: If the statement creates a ledger table, `ENABLE LEDGER` permission is required.
+> If the statement creates a ledger table, the `ENABLE LEDGER` permission is required.
 
 Indicates whether the table being created is a ledger table (ON) or not (OFF). The default is OFF. If the `APPEND_ONLY = ON` option is specified, the system creates an append-only ledger table allowing only inserting new rows. Otherwise, the system creates an updatable ledger table. An updatable ledger table also requires the `SYSTEM_VERSIONING = ON` argument. An updatable ledger table must also be a system-versioned table. However, an updatable ledger table does not have to be a temporal table (it does not require the `PERIOD FOR SYSTEM_TIME` parameter). If the history table is specified with `LEDGER = ON` and `SYSTEM_VERSIONING = ON`, it must not reference an existing table.
 
@@ -1057,7 +1062,7 @@ If more than one temporary table is created inside a single stored procedure or 
 
 If you include a *schema_name* when you create or access a temporary table, it is ignored. All temporary tables are created in the dbo schema.
 
-If a local temporary table is created in a stored procedure or application that can be executed at the same time by several users, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be able to distinguish the tables created by the different users. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does this by internally appending a numeric suffix to each local temporary table name. The full name of a temporary table as stored in the **sysobjects** table in **tempdb** is made up of the table name specified in the CREATE TABLE statement and the system-generated numeric suffix. To allow for the suffix, *table_name* specified for a local temporary name cannot exceed 116 characters.
+If a local temporary table is created in a stored procedure or application that can be executed at the same time by several sessions, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be able to distinguish the tables created by the different sessions. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does this by internally appending a numeric suffix to each local temporary table name. The full name of a temporary table as stored in the `sys.sysobjects` table in `tempdb` is made up of the table name specified in the CREATE TABLE statement and the system-generated numeric suffix. To allow for the suffix, *table_name* specified for a local temporary name cannot exceed 116 characters.
 
 Temporary tables are automatically dropped when they go out of scope, unless explicitly dropped by using DROP TABLE:
 
@@ -1143,7 +1148,7 @@ Before creating a partitioned table by using CREATE TABLE, you must first create
 - All columns defined within a PRIMARY KEY constraint must be defined as NOT NULL. If nullability is not specified, all columns participating in a PRIMARY KEY constraint have their nullability set to NOT NULL.
 
     > [!NOTE]
-    > For memory-optimized tables, the NULLable key column is allowed.
+    > For memory-optimized tables, the nullable key column is allowed.
 
 - If a primary key is defined on a CLR user-defined type column, the implementation of the type must support binary ordering. For more information, see [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).
 
@@ -1211,7 +1216,7 @@ For a report on a table and its columns, use `sp_help` or `sp_helpconstraint`. T
 
 ## Nullability rules within a table definition
 
-The nullability of a column determines whether that column can allow a null value (NULL) as the data in that column. NULL is not zero or blank: NULL means no entry was made or an explicit NULL was supplied, and it typically implies that the value is either unknown or not applicable.
+The nullability of a column determines whether that column can allow a null value (`NULL`) as the data in that column. `NULL` is not zero or blank: `NULL` means no entry was made or an explicit `NULL` was supplied, and it typically implies that the value is either unknown or not applicable.
 
 When you use `CREATE TABLE` or `ALTER TABLE` to create or alter a table, database and session settings influence and possibly override the nullability of the data type that is used in a column definition. We recommend that you always explicitly define a column as NULL or NOT NULL for noncomputed columns or, if you use a user-defined data type, that you allow the column to use the default nullability of the data type. Sparse columns must always allow NULL.
 
@@ -1219,9 +1224,9 @@ When column nullability is not explicitly specified, column nullability follows 
 
 |Column data type|Rule|
 |----------------------|----------|
-|Alias data type|The [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the nullability that is specified when the data type was created. To determine the default nullability of the data type, use **sp_help**.|
+|Alias data type|The [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the nullability that is specified when the data type was created. To determine the default nullability of the data type, use `sp_help`.|
 |CLR user-defined type|Nullability is determined according to the column definition.|
-|System-supplied data type|If the system-supplied data type has only one option, it takes precedence. **timestamp** data types must be NOT NULL. When any session settings are set ON by using SET:<br />**ANSI_NULL_DFLT_ON** = ON, NULL is assigned. <br />**ANSI_NULL_DFLT_OFF** = ON, NOT NULL is assigned.<br /><br /> When any database settings are configured by using ALTER DATABASE:<br />**ANSI_NULL_DEFAULT_ON** = ON, NULL is assigned. <br />**ANSI_NULL_DEFAULT_OFF** = ON, NOT NULL is assigned.<br /><br /> To view the database setting for ANSI_NULL_DEFAULT, use the **sys.databases** catalog view|
+|System-supplied data type|If the system-supplied data type has only one option, it takes precedence. **timestamp** data types must be NOT NULL. When any session settings are set ON by using SET:<br />**ANSI_NULL_DFLT_ON** = ON, NULL is assigned. <br />**ANSI_NULL_DFLT_OFF** = ON, NOT NULL is assigned.<br /><br /> When any database settings are configured by using ALTER DATABASE:<br />**ANSI_NULL_DEFAULT_ON** = ON, NULL is assigned. <br />**ANSI_NULL_DEFAULT_OFF** = ON, NOT NULL is assigned.<br /><br /> To view the database setting for ANSI_NULL_DEFAULT, use the `sys.databases` catalog view|
 
 When neither of the ANSI_NULL_DFLT options is set for the session and the database is set to the default (ANSI_NULL_DEFAULT is OFF), the default of NOT NULL is assigned.
 
@@ -1517,7 +1522,7 @@ CREATE TABLE T1
 
 ### P. Creating a system-versioned disk-based temporal table
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 The following examples show how to create a temporal table linked to a new history table, and how to create a temporal table linked to an existing history table. Note that the temporal table must have a primary key defined to be enabled for the table to be enabled for system versioning. For examples showing how to add or remove system versioning on an existing table, see System Versioning in [Examples](../../t-sql/statements/alter-table-transact-sql.md#Example_Top). For use cases, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
@@ -1567,7 +1572,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSI
 
 ### Q. Creating a system-versioned memory-optimized temporal table
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 The following example shows how to create a system-versioned memory-optimized temporal table linked to a new disk-based history table.
 
@@ -1843,15 +1848,15 @@ CREATE TABLE [HR].[Employees]
     PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH (
-	SYSTEM_VERSIONING = ON (HISTORY_TABLE = [HR].[EmployeesHistory]),
-	LEDGER = ON ( 
-		LEDGER_VIEW = [HR].[EmployeesLedger] ( 
-			TRANSACTION_ID_COLUMN_NAME = TransactionId,
-			SEQUENCE_NUMBER_COLUMN_NAME = SequenceNumber,
-			OPERATION_TYPE_COLUMN_NAME = OperationId, 
-			OPERATION_TYPE_DESC_COLUMN_NAME = OperationTypeDescription
-		)
-	)
+    SYSTEM_VERSIONING = ON (HISTORY_TABLE = [HR].[EmployeesHistory]),
+    LEDGER = ON ( 
+        LEDGER_VIEW = [HR].[EmployeesLedger] ( 
+            TRANSACTION_ID_COLUMN_NAME = TransactionId,
+            SEQUENCE_NUMBER_COLUMN_NAME = SequenceNumber,
+            OPERATION_TYPE_COLUMN_NAME = OperationId, 
+            OPERATION_TYPE_DESC_COLUMN_NAME = OperationTypeDescription
+        )
+    )
 );
 GO
 ```
@@ -1870,15 +1875,15 @@ CREATE TABLE [AccessControl].[KeyCardEvents]
     StartSequenceNumber BIGINT GENERATED ALWAYS AS SEQUENCE_NUMBER START HIDDEN NOT NULL
 )
 WITH (
-	LEDGER = ON (
-		LEDGER_VIEW = [AccessControl].[KeyCardEventsLedger] (
-			TRANSACTION_ID_COLUMN_NAME = TransactionId,
-			SEQUENCE_NUMBER_COLUMN_NAME = SequenceNumber,
-			OPERATION_TYPE_COLUMN_NAME = OperationId, 
-			OPERATION_TYPE_DESC_COLUMN_NAME = OperationTypeDescription
-		),
-		APPEND_ONLY = ON
-	)
+    LEDGER = ON (
+        LEDGER_VIEW = [AccessControl].[KeyCardEventsLedger] (
+            TRANSACTION_ID_COLUMN_NAME = TransactionId,
+            SEQUENCE_NUMBER_COLUMN_NAME = SequenceNumber,
+            OPERATION_TYPE_COLUMN_NAME = OperationId, 
+            OPERATION_TYPE_DESC_COLUMN_NAME = OperationTypeDescription
+        ),
+        APPEND_ONLY = ON
+    )
 );
 GO
 ```

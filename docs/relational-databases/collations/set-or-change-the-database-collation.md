@@ -81,7 +81,7 @@ When a database collation is changed, only new tables will inherit the new datab
    
    DROP TABLE dbo.MyTable; 
    
-   EXEC sp_rename 'dbo.MyTable2', 'dbo.MyTable’;
+   EXEC sp_rename 'dbo.MyTable2', 'dbo.MyTable';
    ```
 
 -  Copy data to a new database that uses the new collation, and replace the original database. Create a new database using the new collation, and transfer the data from the original database via tools like [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] or the Import/Export Wizard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. This is a simpler approach for complex schemas. It would also require a final data syncronization between the original and the new databases before the final cut-off, if data continues to be changed by applications.

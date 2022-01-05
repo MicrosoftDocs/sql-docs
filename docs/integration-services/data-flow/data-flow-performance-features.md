@@ -193,8 +193,6 @@ ms.author: chugu
   
 -   Video, [Understanding SSIS Data Flow Buffers (SQL Server Video)](/previous-versions/ff686905(v=msdn.10)), on technet.microsoft.com  
   
--   Video, [Microsoft SQL Server Integration Services Performance Design Patterns](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), on channel9.msdn.com.  
-  
 -   Presentation, [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements](https://channel9.msdn.com/Shows/TechNet+Radio/TechNet-Radio-How-Microsoft-IT-Leverages-SQL-Server-2008-SSIS-Dataflow-Engine-Enhancements), on sqlcat.com.  
   
 -   Video, [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.  

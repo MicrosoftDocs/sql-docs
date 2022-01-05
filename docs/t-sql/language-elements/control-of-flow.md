@@ -14,11 +14,11 @@ helpviewer_keywords:
   - "keywords [SQL Server], control-of-flow language"
   - "control-of-flow language [SQL Server], keywords listed"
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Control-of-Flow
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The [!INCLUDE[tsql](../../includes/tsql-md.md)] control-of-flow language keywords are:  
   

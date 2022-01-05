@@ -105,7 +105,7 @@ ms.author: chugu
   
  To open these windows in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the **Debug** menu, point to **Windows**, and then click **Breakpoints**, **Output**, or **Immediate**.  
   
- The following table describes the windows.  
+ The following table describes each window.
   
 |Window|Description|  
 |------------|-----------------|  

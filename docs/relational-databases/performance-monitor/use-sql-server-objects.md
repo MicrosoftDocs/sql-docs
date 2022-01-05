@@ -1,8 +1,8 @@
 ---
-title: "Use SQL Server Objects | Microsoft Docs"
+title: "Use SQL Server Objects"
 description: Learn about the SQL Server objects and counters that System Monitor uses to monitor activity in computers running an instance of SQL Server.
 ms.custom: ""
-ms.date: "03/17/2016"
+ms.date: "07/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -28,7 +28,6 @@ helpviewer_keywords:
   - "Windows System Monitor [SQL Server], counters"
   - "counters [SQL Server]"
   - "performance counters [SQL Server], listed"
-ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -132,10 +131,13 @@ ms.author: wiassaf
 ##  <a name="SsisPipelineCounters"></a> SSIS Pipeline Counters  
  For the **SSIS Pipeline** counter, see [Performance Counters](../../integration-services/performance/performance-counters.md).  
   
-##  <a name="RequiredPermissions"></a> Required Permissions  
+##  <a name="XTP"></a> SQL Server XTP (In-Memory OLTP) Performance Counters
+ For **SQL Server XTP (In-Memory OLTP)** counters, see [SQL Server XTP (In-Memory OLTP) Performance Counters](sql-server-xtp-in-memory-oltp-performance-counters.md).  
+
+##  <a name="RequiredPermissions"></a> Permissions  
  Use of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects depends on Windows permissions, except **SQLAgent:Alerts**. Users must be a member of the **sysadmin** fixed server role to use **SQLAgent:Alerts**.  
   
-## See Also  
- [Use Performance Objects](../../ssms/agent/use-performance-objects.md)   
+## See also  
+ [Use Performance Objects in SQL Agent](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
   

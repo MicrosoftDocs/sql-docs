@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "FILEPROPERTY function"
   - "file names [SQL Server], FILEPROPERTY"
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # FILEPROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the specified file name property value when a file name in the current database and a property name are specified. Returns NULL for files that are not in the current database.  
   

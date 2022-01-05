@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Retrieving result set data sample

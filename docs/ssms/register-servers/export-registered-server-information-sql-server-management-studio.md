@@ -21,7 +21,7 @@ ms.date: 03/01/2017
 
 # Export Registered Server Information (SQL Server Management Studio)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This topic describes how to save and export registered server information in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]and distribute it to other employees or servers. You can use this export feature to present a consistent user interface on multiple computers.  
   

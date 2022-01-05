@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.date: 07/02/2017
+ms.date: 12/28/2021
 ---
 
 # Working with KPIs in Reporting Services
@@ -115,11 +115,11 @@ To remove a KPI, you can do the following steps.
   
 ## Refreshing a KPI  
   
-To refresh the KPI, you will need to configure a caching for the shared dataset. For more information regarding cache refresh plans, see [Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md).  
+To refresh the KPI's data, you will need to configure caching with a cache refresh plan for the shared dataset used by the KPI. For more information regarding cache refresh plans, see [Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## Next steps
   
 [Web portal](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

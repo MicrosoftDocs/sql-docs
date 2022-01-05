@@ -535,7 +535,7 @@ To create a deployment contributor, you must perform the following tasks:
   
 3.  Click **Sign the assembly**.  
   
-4.  In **Choose a strong name key file**, click **<New>**.  
+4.  In **Choose a strong name key file**, click **\<New\>**.  
   
 5.  In the **Create Strong Name Key** dialog box, in **Key file name**, type **MyRefKey**.  
   

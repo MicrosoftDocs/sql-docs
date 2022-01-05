@@ -2,7 +2,7 @@
 description: "syspublications (Transact-SQL)"
 title: "syspublications (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syspublications system table"
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # syspublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.author: chadam
 |**allow_initialize_from_backup**|**bit**|Indicates whether Subscribers can initialize a subscription to this publication from a backup rather than an initial snapshot. **1** means that subscriptions can be initialized from a backup, and **0** means that they cannot. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binary**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Indicates whether schema replication is supported for the publication. **1** indicates that data definition language (DDL) statements executed at the publisher are replicated, and **0** indicates that DDL statements are not replicated. For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
-|**options**|**int**|A bitmap that specifies additional publishing options, where the bitwise option values are as follows:<br /><br /> **0x1** - Enabled for peer-to-peer replication.<br /><br /> **0x2** - Publish only local changes for peer-to-peer replication.<br /><br /> **0x4** - Enabled for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subscribers.<br /><br /> **0x8** - Enabled for peer-to-peer conflict detection.|  
+|**options**|**int**|A bitmap that specifies additional publishing options, where the bitwise option values are as follows:<br /><br /> **0x1** - Enabled for peer-to-peer replication.<br /><br /> **0x2** - Publish only local changes for peer-to-peer replication.<br /><br /> **0x4** - Enabled for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subscribers.<br /><br /> **0x8** - Enabled for peer-to-peer conflict detection. <br /><br /> **0x100** - Starting with SQL Server 2019 CU13, enabled for last writer conflict detection.|  
 |**originator_id**|**smallint**|Identifies each node in a peer-to-peer replication topology for the purposes of conflict detection. For more information, see [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## See Also  

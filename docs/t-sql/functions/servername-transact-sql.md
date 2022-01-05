@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;SERVERNAME (Transact-SQL)"
+description: "@@SERVERNAME (Transact-SQL)"
 title: "@@SERVERNAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # &#x40;&#x40;SERVERNAME (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the name of the local server that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

@@ -5,14 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 03/31/2021
 ms.topic: troubleshooting
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Collect data to troubleshoot Python and R scripts with SQL Server Machine Learning Services
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
 
 This article describes how to collect the data you need when you're attempting to resolve problems in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). This data can be useful whether you're resolving problems on your own or with the help of Microsoft customer support.
 
@@ -228,7 +230,7 @@ For example, the following log messages are related to the extensibility framewo
 
 For example, the following messages are common system errors that are related to the SQL Server extensibility framework:
 
-* *The SQL Server Launchpad (MSSQLSERVER) service failed to start due to the following error:  <text>*
+* *The SQL Server Launchpad (MSSQLSERVER) service failed to start due to the following error:  \<text\>*
 
 * *The service did not respond to the start or control request in a timely fashion.*
 

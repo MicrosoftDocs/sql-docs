@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "schemas [SQL Server], XML"
   - "schema collections [SQL Server], reconstructing schemas"
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # xml_schema_namespace
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Reconstructs all the schemas or a specific schema in the specified XML schema collection. This function returns an **xml** data type instance.  
   

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "TRY_PARSE function"
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # TRY_PARSE (Transact-SQL)

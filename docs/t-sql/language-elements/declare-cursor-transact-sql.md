@@ -23,11 +23,11 @@ helpviewer_keywords:
   - "Transact-SQL cursors, attributes"
   - "global cursors [SQL Server]"
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # DECLARE CURSOR (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Defines the attributes of a [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor, such as its scrolling behavior and the query used to build the result set on which the cursor operates. `DECLARE CURSOR` accepts both a syntax based on the ISO standard and a syntax using a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] extensions.  
   

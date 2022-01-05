@@ -4,24 +4,26 @@ titleSuffix: SQL Server Big Data Cluster
 description: Explains concepts and planning information for how to deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS).
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS)
 
 SQL Server Big Data Clusters support [Active Directory (AD) deployment mode](./active-directory-prerequisites.md) for **Identity and Access Management (IAM)**. IAM for **Azure Kubernetes Service (AKS)** has been challenging because industry-standard protocols such as OAuth 2.0 and OpenID Connect which is widely supported by Microsoft identity platform is not supported by SQL Server.  
 
-This article explains how to deploy a big data cluster (BDC) in AD mode while deploying in [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes). 
+This article explains how to deploy a big data cluster in AD mode while deploying in [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes). 
 
 ## Architecture topologies
 
 **Active Directory Domain Services (AD DS)** runs on an Azure virtual machine (VM) [in the same way](/windows-server/identity/ad-ds/deploy/virtual-dc/adds-on-azure-vm) it runs in many on-premises instances.  After promoting the new domain controllers in Azure, set the primary and secondary DNS Servers for the virtual network, demote any on-premises DNS Servers would be demoted to tertiary or later. AD authentication enables domain-joined clients on [Linux to authenticate to SQL Server](../linux/sql-server-linux-active-directory-auth-overview.md) using their domain credentials and the Kerberos protocol.
 
-There are a few ways to deploy a BDC in AD mode in AKS.  This article introduces two methods, which are easier to implement and integrate with existing enterprise-grade architectures:
+There are a few ways to deploy a big data cluster in AD mode in AKS.  This article introduces two methods, which are easier to implement and integrate with existing enterprise-grade architectures:
 
 * **Extend your on-premises Active Directory domain to Azure.** This method [enables your Active Directory environment](/azure/architecture/reference-architectures/identity/adds-extend-domain) to provide distributed authentication services using Active Directory Domain Services (AD DS) on Azure. You replicate your on-premises Active Directory Domain Services (AD DS) to reduce the latency caused by sending authentication requests from the cloud back to on-premises AD DS. A typical use-case for this solution is when your application is hosted partly on-premises and partly in Azure and your authentication requests need to travel back and forth.
 
@@ -31,7 +33,7 @@ There are a few ways to deploy a BDC in AD mode in AKS.  This article introduces
 
    The trust allows on-premises users access resources in the domain in Azure. See how to deploy this solution step by step [in this reference architecture](https://github.com/mspnp/identity-reference-architectures/tree/master/adds-forest).
 
-The reference architectures described above allow you to create a landing zone, which has all resources to be deployed from scratch or any additional workaround based on existing architecture. In addition to those reference architectures, you should deploy BDC in an AKS cluster on a separate subnet that stays in your target VNet or a peered VNet.
+The reference architectures described above allow you to create a landing zone, which has all resources to be deployed from scratch or any additional workaround based on existing architecture. In addition to those reference architectures, you should deploy the big data cluster in an AKS cluster on a separate subnet that stays in your target VNet or a peered VNet.
 
 The following image represents a typical architecture:
 
@@ -39,7 +41,7 @@ The following image represents a typical architecture:
 
 ## Recommendations
 
-The following recommendations apply for most BDC deployments in AD mode on AKS. Available options will be mentioned in each component to provide guidance for better integration with enterprise-grade architecture.
+The following recommendations apply for most big data cluster deployments in AD mode on AKS. Available options will be mentioned in each component to provide guidance for better integration with enterprise-grade architecture.
 
 ### Networking recommendations
 
@@ -54,10 +56,10 @@ Most customers use a jump-box or [Azure Bastion](/azure/bastion/bastion-overview
 
 On-premises AD DS stores information about user accounts, and enables other authorized users on the same network to access this information by authenticating identities associated with users, computers, applications, or other resources that are included in a security boundary. In most hybrid scenarios, user authentication runs over a VPN Gateway or ExpressRoute connection to the on-premises AD DS environment.  
 
-For a BDC deployment in AD mode, the solution to [integrate on-premises Active Directory with Azure](/azure/architecture/reference-architectures/identity/), must have the following prerequisites:
+For a big data cluster deployment in AD mode, the solution to [integrate on-premises Active Directory with Azure](/azure/architecture/reference-architectures/identity/), must have the following prerequisites:
 
 * An [AD account has specific permission](active-directory-prerequisites.md) to create users, groups, and machine accounts inside the provided organizational unit (OU) in your on-premises Active directory.
-* A DNS server to [resolve internal DNS](active-directory-dns-reconciliation.md). It must contain both **A (forward lookup)** and **PTR (reverse lookup) records** in the DNS server with names in this domain. Specify the Domain DNS settings in the BDC deployment profile.  
+* A DNS server to [resolve internal DNS](active-directory-dns-reconciliation.md). It must contain both **A (forward lookup)** and **PTR (reverse lookup) records** in the DNS server with names in this domain. Specify the Domain DNS settings in the big data cluster deployment profile.  
 
 ## Next steps
 

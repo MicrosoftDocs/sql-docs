@@ -23,7 +23,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # IDENT_CURRENT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns the last identity value generated for a specified table or view. The last identity value generated can be for any session and any scope.  
   

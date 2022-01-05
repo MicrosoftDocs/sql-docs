@@ -18,7 +18,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Parse (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation. Parse() is equivalent to [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md), except that it assumes a spatial reference ID (SRID) of 4326 as a parameter. The input may carry optional Z (elevation) and M (measure) values.
   
@@ -52,7 +52,7 @@ Parse ( 'geography_tagged_text' )
 ## Examples  
  The following example uses `Parse()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;   
 SET @g = geography::Parse('LINESTRING(-122.360 47.656, -122.343 47.656)');  
 SELECT @g.ToString();  

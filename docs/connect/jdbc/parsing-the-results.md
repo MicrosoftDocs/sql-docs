@@ -5,12 +5,12 @@ ms.custom: ""
 ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ""
 author: DavidEngel
-ms.author: v-daenge
+ms.author: v-davidengel
 manager: kenvh
 ---
 # Parsing the results

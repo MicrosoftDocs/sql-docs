@@ -6,8 +6,11 @@ ms.technology: azure-data-studio
 ms.topic: "quickstart"
 author: "yualan"
 ms.author: "alayu"
-ms.reviewer: "alayu, maghan, sstein"
-ms.custom: seodec18, sqlfreshmay19
+ms.reviewer: "maghan"
+ms.custom:
+  - seodec18
+  - sqlfreshmay19
+  - intro-quickstart
 ms.date: 08/02/2019
 ---
 # Quickstart: Use Azure Data Studio to connect and query SQL Server

@@ -4,15 +4,16 @@ title: "Install Reporting Services 2016 native mode report server | Microsoft Do
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "default configuration [Reporting Services]"
   - "report servers [Reporting Services], default configurations"
   - "installation options [Reporting Services]"
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
+ms.custom:
+  - intro-installation
 ---
 
 # Install Reporting Services 2016 native mode report server
@@ -188,4 +189,4 @@ For more information, see the Native section of the following two topics:
 [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
 [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

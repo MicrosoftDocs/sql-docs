@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "clr enabled option"
   - "common language runtime [SQL Server], enabling"
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # CLR Integration - Enabling
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -3,13 +3,13 @@ title: Use RevoScaleR to install R packages
 description: Learn how to use RevoScaleR functions to install R packages on SQL Server with Machine Learning Services or R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-
 ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-
 monikerRange: "=sql-server-2016||=sql-server-2017"
+ms.custom:
+  - intro-installation
 ---
 
 # Use RevoScaleR to install R packages
@@ -17,11 +17,6 @@ monikerRange: "=sql-server-2016||=sql-server-2017"
 [!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
 This article describes how to use [RevoScaleR](../r/ref-r-revoscaler.md) (version 9.0.1 and later) functions to install R packages on SQL Server with Machine Learning Services or R Services. The RevoScaleR functions can be used by remote, non-administrators to install packages on SQL Server without direct access to the server.
-
-::: moniker range="=sql-server-2016"
-> [!NOTE]
-> SQL Server R Services customers must do a [component upgrade](../install/upgrade-r-and-python.md) to get RevoScaleR package management functions. For instructions on how to retrieve package version and contents, see [Get R package information](../package-management/r-package-information.md).
-::: moniker-end
 
 ## RevoScaleR functions for package management
 
@@ -51,6 +46,8 @@ The following table describes the functions used for R package installation and 
   + Database owners can work with shared or private packages.
 
 ## Client connections
+
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
 
 A client workstation can be [Microsoft R Client](/machine-learning-server/r-client/install-on-windows) or a [Microsoft Machine Learning Server](/machine-learning-server/install/machine-learning-server-windows-install) (data scientists often use the free developer edition) on the same network.
 

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 40178471-4f35-4df9-b3fb-80cdf43de274
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getFloat Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

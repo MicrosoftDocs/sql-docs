@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STUnion (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns an object that represents the union of a **geometry** instance with another **geometry** instance.
   
@@ -50,7 +50,7 @@ Returns an object that represents the union of a **geometry** instance with anot
 ### A. Computing the union of two Polygon instances  
  The following example uses `STUnion()` to compute the union of two `Polygon` instances.  
   
-```  
+```sql
 DECLARE @g geometry;  
 DECLARE @h geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);  
@@ -61,7 +61,7 @@ SELECT @g.STUnion(@h).ToString();
 ### B. Computing the union of a Polygon instance with a CurvePolygon instance  
  The following example returns a `GeometryCollection` instance that contains a circular arc segment.  
   
-```
+```sql
  DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';  
  DECLARE @h geometry = 'POLYGON((5 -1, 5 -3, 7 -3, 7 -1, 5 -1))';  
  SELECT @g.STUnion(@h).ToString();

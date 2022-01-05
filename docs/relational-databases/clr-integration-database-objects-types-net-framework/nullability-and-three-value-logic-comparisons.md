@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "data types [CLR integration]"
   - "SqlBoolean data type"
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Nullability and Three-Value Logic Comparisons
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

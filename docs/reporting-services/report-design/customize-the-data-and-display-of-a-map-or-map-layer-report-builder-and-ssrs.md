@@ -1,6 +1,6 @@
 ---
-title: "Customize the Data and Display of a Map or Map Layer (Report Builder) | Microsoft Docs"
-description:  Improve the user experience of data and display with changes to legends, color, labels, and resolution in Report Builder. 
+title: "Customize the display of a map or map layer in a paginated report | Microsoft Docs"
+description:  Improve the user experience of data and display in a paginated report with changes to legends, color, labels, and resolution in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -25,8 +25,11 @@ ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Customize the Data and Display of a Map or Map Layer (Report Builder and SSRS)
-  After you add a map or map layer to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report by using a wizard, you might want to change the way the map looks in the report. You can make improvements by considering the following ideas:  
+# Customize the display of a map or map layer in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  After you add a map or map layer to a paginated report by using a wizard, you might want to change the way the map looks in the report. You can make improvements by considering the following ideas:  
   
 -   To help your users understand how to interpret the data display on a map, you can add legends and a color scale, and add labels and tooltips.  
   

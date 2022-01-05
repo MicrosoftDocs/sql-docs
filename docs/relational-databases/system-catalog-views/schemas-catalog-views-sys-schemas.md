@@ -42,7 +42,7 @@ Database schemas act as namespaces or containers for objects, such as tables, vi
 Each schema has a an owner. The owner is a security [principal](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ## Permissions  
- Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requires membership in the **public** role.
   
 ## See Also  
 [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)

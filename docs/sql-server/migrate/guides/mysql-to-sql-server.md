@@ -4,12 +4,12 @@ description: 'This guide teaches you how to migrate your MySQL databases to Micr
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: migration-guide
-ms.custom:
-ms.devlang:
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
-ms.date: 03/19/2021
+author: MashaMSFT
+ms.author: mathoma
+ms.date: 10/05/2021
+ms.custom:
+  - intro-migration
 ---
 
 # Migration guide: MySQL to SQL Server
@@ -181,7 +181,8 @@ For more assistance with completing this migration scenario, see the following r
 
 | Title                    | Description            |
 | ----------------------------- | ---------------------- |
-| [Data Workload Assessment Model and Tool](https://github.com/Microsoft/DataMigrationTeam/tree/master/Data%20Workload%20Assessment%20Model%20and%20Tool) | This tool provides suggested "best fit" target platforms, cloud readiness, and application or database remediation level for a given workload. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated and uniform target platform decision process.                |
+| [Data Workload Assessment Model and Tool](https://www.microsoft.com/download/details.aspx?id=103130) | This tool provides suggested "best fit" target platforms, cloud readiness, and application or database remediation level for a given workload. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated and uniform target platform decision process.                |
+|[MySQL to SQL Server - Database Compare utility](https://www.microsoft.com/download/details.aspx?id=103016)|The Database Compare utility is a Windows console application that you can use to verify that the data is identical both on source and target platforms. You can use the tool to efficiently compare data down to the row or column level in all or selected tables, rows, and columns.|
 
 The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.
 

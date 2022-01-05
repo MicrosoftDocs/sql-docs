@@ -104,7 +104,7 @@ A connection manager can be created at the package level or at the project level
  The following table lists additional types of connection manager that you can download from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] website.  
   
 > [!IMPORTANT]  
->  The connection managers listed in the following table work only with [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] and [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
+>  The connection managers listed in the following table work only with [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] and SQL Server Developer edition.  
   
 |Type|Description|Topic|  
 |----------|-----------------|-----------|  

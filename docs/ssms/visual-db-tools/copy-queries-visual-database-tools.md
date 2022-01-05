@@ -17,7 +17,7 @@ ms.reviewer:
 
 ---
 # Copy Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can copy the body of a query into a new query to use as a starting point.  
   
 ### To copy a query  

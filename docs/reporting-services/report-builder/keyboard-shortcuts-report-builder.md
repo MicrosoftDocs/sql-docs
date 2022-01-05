@@ -1,5 +1,5 @@
 ---
-title: "Keyboard shortcuts for accessibility Report Builder"
+title: "Keyboard shortcuts for accessibility in paginated reports in Report Builder"
 description: When you create and edit paginated reports in Report Builder and Power BI Report Builder, you can use keyboard shortcuts for accessibility and navigation.
 ms.date: 05/07/2021
 ms.prod: reporting-services
@@ -15,7 +15,7 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Keyboard shortcuts for accessibility in Report Builder
+# Keyboard shortcuts for accessibility in paginated reports in Report Builder
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)]
 

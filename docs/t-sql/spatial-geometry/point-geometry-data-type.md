@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Point (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Constructs a **geometry** instance representing a **Point** instance from its X and Y values and an SRID.
   
@@ -53,7 +53,7 @@ Point ( X, Y, SRID )
 ## Examples  
  The following example uses `Point()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;   
 SET @g = geometry::Point(1, 10, 0);  
 SELECT @g.ToString();  

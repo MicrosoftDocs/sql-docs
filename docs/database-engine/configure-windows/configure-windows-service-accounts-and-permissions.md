@@ -66,6 +66,9 @@ Depending on the components that you decide to install, SQL Server setup install
 
 Startup accounts used to start and run SQL Server can be [domain user accounts](#Domain_User), [local user accounts](#Local_User), [managed service accounts](#MSA), [virtual accounts](#VA_Desc), or [built-in system accounts](#Local_Service). To start and run, each service in SQL Server must have a startup account configured during installation.
 
+  > [!NOTE]
+  > For SQL Server Failover Cluster Instance for SQL Server 2016 and later, [domain user accounts](#Domain_User) or [Group-Managed Service Accounts](#GMSA) can be used as startup accounts for SQL Server.
+
 This section describes the accounts that can be configured to start SQL Server services, the default values used by SQL Server Setup, the concept of per-service SID's, the startup options, and configuring the firewall.
 
 - [Default Service Accounts](#Default_Accts)

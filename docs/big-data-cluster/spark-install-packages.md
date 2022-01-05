@@ -1,11 +1,11 @@
 ---
 title: Spark Library Management
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Spark Library Management
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: rahul.ajmera
-ms.date: 02/25/2021
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: dacoelho
+ms.date: 12/01/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -19,9 +19,9 @@ This article provides guidance on how to import and install packages for a Spark
 
 ## Built-in tools
 
-Scala Spark (Scala 2.11) and Hadoop base packages. 
+Scala Spark (Scala 2.12) and Hadoop base packages. 
 
-PySpark (Python 3.7). Pandas, Sklearn, Numpy, and other data processing and machine learning packages.
+PySpark (Python 3.8). Pandas, Sklearn, Numpy, and other data processing and machine learning packages.
 
 MRO 3.5.2 packages. Sparklyr and SparkR for R Spark workloads.
 
@@ -31,18 +31,31 @@ Maven packages can be installed onto your Spark cluster using notebook cell conf
 
 ```python
 %%configure -f \
-{"conf": {"spark.jars.packages": "com.microsoft.azure:azure-eventhubs-spark_2.11:2.3.1"}}
+{"conf": {"spark.jars.packages": "com.microsoft.azure:azure-eventhubs-spark_2.12:2.3.1"}}
+```
+
+### Multiple packages and additional Spark configurations
+
+In the following sample notebook cell, multiple packages are defined.
+
+```python
+%%configure -f \
+{
+    "conf": {
+        "spark.jars.packages": "com.microsoft.azure:synapseml_2.12:0.9.4,com.microsoft.azure:azure-eventhubs-spark_2.12:2.3.1",
+        "spark.jars.repositories":"https://mmlspark.azureedge.net/maven"
+    }
+}
 ```
 
 ## Install Python packages at PySpark at runtime
 
-Session and Job level package management guarantees library consistency and isolation. The configuration is a Spark standard library configuration that can be applied on Livy sessions. __azdata spark__ support these configurations. The examples bellow are presented as __Azure Data Studio Notebooks__ configure cells that need to be run after attaching to a cluster with the PySpark kernel.
+Session and Job level package management guarantees library consistency and isolation. The configuration is a Spark standard library configuration that can be applied on Livy sessions. __azdata spark__ support these configurations. The examples below are presented as __Azure Data Studio Notebooks__ configure cells that need to be run after attaching to a cluster with the PySpark kernel.
 
 If the __"spark.pyspark.virtualenv.enabled" : "true"__ configuration is not set, the session will use the cluster default python and installed libraries.
 
 ### Session/Job configuration with requirements.txt
 
-If 
 Specify the path to a requirements.txt file in HDFS to use as a reference for packages to install.
 
 ```python
@@ -50,7 +63,7 @@ Specify the path to a requirements.txt file in HDFS to use as a reference for pa
 {
     "conf": {
         "spark.pyspark.virtualenv.enabled" : "true",
-        "spark.pyspark.virtualenv.python_version": "3.7",
+        "spark.pyspark.virtualenv.python_version": "3.8",
         "spark.pyspark.virtualenv.requirements" : "hdfs://user/project-A/requirements.txt"
     }
 }
@@ -65,7 +78,7 @@ Create a conda virtualenv without a requirements file and dynamically add packag
 {
     "conf": {
         "spark.pyspark.virtualenv.enabled" : "true",
-        "spark.pyspark.virtualenv.python_version": "3.6"
+        "spark.pyspark.virtualenv.python_version": "3.7"
     }
 }
 ```
@@ -89,13 +102,6 @@ import xgboost as xgb
 
 ## Import .jar from HDFS for use at runtime
 Import jar at runtime through Azure Data Studio notebook cell configuration.
-
-```python
-%%configure -f
-{"conf": {"spark.jars": "/jar/mycodeJar.jar"}}
-```
-
-### Import .jar at runtime through Azure Data Studio notebook cell configuration
 
 ```python
 %%configure -f

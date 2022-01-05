@@ -1,6 +1,6 @@
 ---
-title: Parameterization of notebooks in Azure Data Studio with URI parameterization
-description: This tutorial shows how you can create a parameterized notebook in ADS with URI parameterization.
+title: Parameterize notebooks in Azure Data Studio with URI parameterization
+description: Learn how to create a parameterized notebook in Azure Data Studio by using URI parameterization.
 ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -11,81 +11,91 @@ ms.custom: ""
 ms.date: 06/14/2021
 ---
 
-# Create a Parameterized Notebook with the Notebook URI
+# Create a parameterized notebook by using the notebook URI
 
-**Parameterization** is the ability to execute the same notebook with different parameters.
+*Parameterization* in Azure Data Studio is running the same notebook with a different set of parameters.
 
-This article shows you how to create and run a parameterized notebook in Azure Data Studio with the python kernel.
+This article shows you how to create and run a parameterized notebook in Azure Data Studio by using the Python kernel.
 
-> [!Note]
-   > Currently parameterization can be used with Python, PySpark, PowerShell, and .Net Interactive Kernels.
+> [!NOTE]
+> Currently, you can use parameterization with Python, PySpark, PowerShell, and .NET Interactive kernels.
 
 ## Prerequisites
 
 - [Azure Data Studio](../download-azure-data-studio.md)
 - [Python](https://www.python.org/downloads/)
 
-## URI Parameterization
+## URI parameterization
 
-URI parameterization programmatically adds parameters to the query of the ADS URI to open the notebook in ADS with new parameters.
+URI parameterization programmatically adds parameters to the query of the Azure Data Studio URI to open the notebook in Azure Data Studio with new parameters.
 
-Azure Data Studio Notebook URI supports HTTPS/HTTP/FILE URI schema and follows the format:
-_azuredatastudio:\/\/microsoft.notebook\/open?url=_
+Azure Data Studio notebook URI supports HTTPS, HTTP, and FILE URI schema and uses this format:  
 
-The format to pass in parameters with the ADS Notebook URI is as follows:
-_azuredatastudio:\/\/microsoft.notebook\/open?url=LinkToNotebook_***?x=1&y=2***
+`azuredatastudio://microsoft.notebook/open?url=`
 
-In the URI query, use **&** to indicate a new parameter to be injected.
+To pass in parameters with an Azure Data Studio notebook URI, use this format:  
 
-## URI Parameterization Example
+`azuredatastudio://microsoft.notebook/open?url=LinkToNotebook?x=1&y=2`
 
-**To open the below notebook example in Azure Data Studio, click [here](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb) and follow along.**
+In the URI query, use `&` to indicate a new parameter to be injected.
 
-Below is the contents and structure of the notebook, you must use a notebook that has a cell tagged with parameters.  
+## Parameterization example
 
-   Tag a code cell in Azure Data Studio as **Parameters Cell**.
-   :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Parameter Cell Notebook":::
+You can use an [example notebook file](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb) to go through the steps in this article:
 
-   Below is the contents of the notebook:
+1. Go to the [notebook file in GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/applications/azure-data-studio/parameterization.ipynb). Select **Raw**.
+1. Select Ctrl+S or right-click, and then save the file with the .ipynb extension.  
+1. Open the file in Azure Data Studio.
 
-   ```python
-   x = 2.0
-   y = 5.0
-   ```
+Here are the contents and structure of the notebook:
 
-   ```python
-   addition = x + y
-   multiply = x * y
-   ```
+```python
+x = 2.0
+y = 5.0
+```
 
-   ```python
-   print("Addition: " + str(addition))
-   print("Multiplication: " + str(multiply))
-   ```
+```python
+addition = x + y
+multiply = x * y
+```
 
-1. We can either use the search bar of any browser or a markdown cell to open up the notebook URI link.
+```python
+print("Addition: " + str(addition))
+print("Multiplication: " + str(multiply))
+```
 
-    Below is the notebook URI for parameterizing the notebook with new x and y values:
-    [_azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb_**?x=10&y=20**](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb?x=10&y=20)
+## Set up a notebook for parameterization
 
-    :::image type="content" source="media/notebooks-parameterization/search-bar.png" alt-text="URI link in Search bar":::
-    
-    When opening the link from the web browser, you will be prompted to open the notebook in Azure Data Studio. Select **Open Azure Data Studio**.
-    
-    :::image type="content" source="media/notebooks-parameterization/donwload-prompt.png" alt-text="Download Prompt":::
+You can begin with the example notebook open in Azure Data Studio or complete the following steps to create a notebook. Then, try using different parameters. All the steps run inside an Azure Data Studio notebook.
 
-2. You will then be prompted to download and open the notebook with new parameters.
+1. The first code cell must be tagged with parameters. If you're using a new notebook file, make a new code cell. Select **Parameters** to tag the cell as a parameters cell.
 
-    Once you select **Yes**, view the new parameterized notebook and **run all cells** to see the new output.
-   
-    You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in.
-    
-    :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
+   :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Screenshot that shows creating a new parameters cell with Parameters selected.":::
+
+1. You can use either the search bar of any browser or a Markdown cell to open the notebook URI link. Using the Azure Data Studio notebook URI (shown next), you can parameterize the example input notebook on GitHub.
+
+   Copy the following notebook URI to parameterize the example input notebook on GitHub with new values for *x* and *y*. Paste the URI in a browser search bar:
+
+   `azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/applications/azure-data-studio/parameterization.ipynb?x=10&y=20`
+
+   :::image type="content" source="media/notebooks-parameterization/search-bar.png" alt-text="Screenshot that shows the URI link in a browser search bar.":::
+
+   When you open the link from the web browser, you're prompted to open the notebook in Azure Data Studio. Select **Open Azure Data Studio**.
+
+   :::image type="content" source="media/notebooks-parameterization/download-prompt.png" alt-text="Screenshot that shows the download prompt.":::
+
+1. You're prompted to download and open the notebook with new parameters.
+
+   Select **Yes**, and then view the new parameterized notebook. On the toolbar, select **Run all** to run all cells and see the new output.
+
+   A new cell labeled `# Injected-Parameters` contains the new parameter values that were passed in:
+ 
+   :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Screenshot that shows the output for new parameters.":::
 
 ## Next steps
 
-Learn more about notebooks and Parameterization:
+Learn more about notebooks and parameterization:
 
 - [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)
-- [Papermill Parameterization](./parameterize-papermill.md)
+- [Papermill parameterization](./parameterize-papermill.md)
 - [Run with Parameters](./run-with-parameters.md)

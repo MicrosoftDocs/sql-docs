@@ -17,7 +17,7 @@ ms.reviewer:
 
 ---
 # Save Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Save your query when you want to work with it later. Note that running your query does not save your changes.  
   
 ### To save a query  

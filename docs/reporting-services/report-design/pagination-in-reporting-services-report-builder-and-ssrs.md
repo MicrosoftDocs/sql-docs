@@ -1,5 +1,5 @@
 ---
-title: "Pagination in reports (Report Builder  and SSRS) | Microsoft Docs"
+title: "Pagination in paginated reports | Microsoft Docs"
 description: Learn about the number of pages within a paginated report and how report items are arranged on these pages in Report Builder.
 ms.date: 12/16/2019
 ms.prod: reporting-services
@@ -11,8 +11,11 @@ ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Pagination in reports (Report Builder  and SSRS)
-  Pagination refers to the number of pages within a paginated report and how report items are arranged on these pages. Pagination in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varies depending on the rendering extension you use to view and deliver the report. When you run a report on the report server, the report uses the HTML renderer. HTML follows a specific set of pagination rules. If you export the same report to PDF, for example, the PDF renderer is used and a different set of rules are applied; therefore, the report paginates differently. To successfully design an easy-to-read report for your users that is optimized for the renderer that you plan to use to deliver your report, you need to understand the rules used to control pagination in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+# Pagination in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Pagination refers to the number of pages within a paginated report and how report items are arranged on these pages. Pagination in Report Builder varies depending on the rendering extension you use to view and deliver the report. When you run a report on the report server, the report uses the HTML renderer. HTML follows a specific set of pagination rules. If you export the same report to PDF, for example, the PDF renderer is used and a different set of rules are applied; therefore, the report paginates differently. To successfully design an easy-to-read report for your users that is optimized for the renderer that you plan to use to deliver your report, you need to understand the rules used to control pagination in Report Builder.  
   
  This topic discusses the impact of the physical page size and the report layout on how hard page break renderers render the report. You can set properties to modify the physical page size and margins, and divide the report into columns, by using the **Report Properties** pane, the **Properties** pane, or the **Page Setup** dialog box. You access the **Report Properties** pane by clicking the blue area outside the report body. You access the **Page Setup** dialog box by clicking **Run** on the Home tab, and then clicking **Page Setup** on the Run tab.  
   

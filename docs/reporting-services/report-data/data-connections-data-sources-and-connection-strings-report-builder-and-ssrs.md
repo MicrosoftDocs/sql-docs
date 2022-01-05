@@ -1,7 +1,7 @@
 ---
 title: "Create data connection strings - Report Builder & SSRS | Microsoft Docs"
 description: Learn how to create data connection strings and learn important information related to data source credentials.
-ms.date: 05/21/2020
+ms.date: 12/02/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data
@@ -28,22 +28,23 @@ ms.author: maggies
   
 |**Data source**|**Example**|**Description**|  
 |---------------------|-----------------|---------------------|  
-|SQL Server database on the local server|`data source="(local)";initial catalog=AdventureWorks`|Set data source type to **Microsoft SQL Server**. For more information, see [SQL Server Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).|  
-|SQL Server Instance<br /><br /> database|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Set data source type to **Microsoft SQL Server**.|  
-|Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Set data source type to **Microsoft Azure SQL Database**. For more information, see [Azure SQL Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
-|SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Set data source type to **Microsoft SQL Server Parallel Data Warehouse**. For more information, see [SQL Server Parallel Data Warehouse Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
-|Analysis Services database on the local server|`data source=localhost;initial catalog=Adventure Works DW`|Set data source type to **Microsoft SQL Server Analysis Services**. For more information, see [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) or [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Analysis Services tabular model database with Sales perspective|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Set data source type to **Microsoft SQL Server Analysis Services**. Specify perspective name in cube= setting. For more information, see [Perspectives &#40;SSAS Tabular&#41;](/analysis-services/tabular-models/perspectives-ssas-tabular).|  
-|Oracle server|`data source=myserver`|Set the data source type to **Oracle**. The Oracle client tools must be installed on the Report Designer computer and on the report server. For more information, see [Oracle Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md).|  
-|SAP NetWeaver BI data source|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Set the data source type to **SAP NetWeaver BI**. For more information, see [SAP NetWeaver BI Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
+|SQL Server database on the local server|`Data Source="(local)"; Initial Catalog=AdventureWorks`|Set data source type to **Microsoft SQL Server**. For more information, see [SQL Server Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).|  
+|SQL Server named instance|`Data Source=<host>\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Set data source type to **Microsoft SQL Server**. For more information, see [SQL Server Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).|  
+|Azure SQL Database|`Data Source=<host>.database.windows.net; Initial Catalog=AdventureWorks; Encrypt=True`|Set data source type to **Microsoft Azure SQL Database**. For more information, see [Azure SQL Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
+|SQL Server Parallel Data Warehouse|`HOST=<IP address>; database=AdventureWorks; port=<port>`|Set data source type to **Microsoft SQL Server Parallel Data Warehouse**. For more information, see [SQL Server Parallel Data Warehouse Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
+|Analysis Services database on the local server|`Data Dource=localhost; Initial Catalog=Adventure Works DW`|Set data source type to **Microsoft SQL Server Analysis Services**. For more information, see [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) or [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
+|Analysis Services tabular model database with Sales perspective|`Data Source=<servername>; Initial Catalog=Adventure Works DW; cube='Sales'`|Set data source type to **Microsoft SQL Server Analysis Services**. Specify perspective name in cube= setting. For more information, see [Perspectives &#40;SSAS Tabular&#41;](/analysis-services/tabular-models/perspectives-ssas-tabular).|  
+|Azure Analysis Services|`Data Source=asazure://aspaaseastus2.asazure.windows.net/<server name>; Initial Catalog=AdventureWorks`|Set data source type to **Microsoft SQL Server Analysis Services**. For more information, see [Microsoft SQL Server Analysis Services Data Processing Extension](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md#AnalysisServices).| 
+|Oracle server|`Data Source=<host>`|Set the data source type to **Oracle**. The Oracle client tools must be installed on the Report Designer computer and on the report server. For more information, see [Oracle Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md).|  
+|SAP NetWeaver BI data source|`Data Source=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Set the data source type to **SAP NetWeaver BI**. For more information, see [SAP NetWeaver BI Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Hyperion Essbase data source|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Set the data source type to **Hyperion Essbase**. For more information, see [Hyperion Essbase Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
-|Teradata data source|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Set the data source type to **Teradata**. The connection string is an Internet Protocol (IP) address in the form of four fields, where each field can be from one to three digits. For more information, see [Teradata Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
-|Teradata data source|`Database=` *\<database name>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Set the data source type to **Teradata**, similar to the previous example. Only use the default database that is specified in the Database tag, and do not automatically discover data relationships.|  
+|Teradata data source|`Data Source=<NNN>.<NNN>.<NNN>.<NNN>;`|Set the data source type to **Teradata**. The connection string is an Internet Protocol (IP) address in the form of four fields, where each field can be from one to three digits. For more information, see [Teradata Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
+|Teradata data source|`Database=<database name>; Data Source=<NNN>.<NNN>.<NNN>.<NNN>; Use X Views=False; Restrict to Default Database=True`|Set the data source type to **Teradata**, similar to the previous example. Only use the default database that is specified in the Database tag, and do not automatically discover data relationships.|  
 |XML data source, Web service|`data source=https://adventure-works.com/results.aspx`|Set the data source type to **XML**. The connection string is a URL for a web service that supports Web Services Definition Language (WSDL). For more information, see [XML Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
 |XML data source, XML document|`https://localhost/XML/Customers.xml`|Set the data source type to **XML**. The connection string is a URL to the XML document. 
 |XML data source, embedded XML document|*Empty*|Set the data source type to **XML**. The XML data is embedded in the report definition.|  
-|SharePoint List|`data source=https://MySharePointWeb/MySharePointSite/`|Set data source type to **SharePoint List**.|  
-| Power BI Premium dataset (Starting with Reporting Services 2019 and Power BI Report Server January 2020) | `Data Source=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;Initial Catalog=<datasetname>` | Set data source type to **Microsoft SQL Server Analysis Services**. |
+|SharePoint List|`Data Source=https://MySharePointWeb/MySharePointSite/`|Set data source type to **SharePoint List**.|  
+| Power BI Premium dataset (Starting with Reporting Services 2019 and Power BI Report Server January 2020) | `Data Source=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;  Initial Catalog=<datasetname>` | Set data source type to **Microsoft SQL Server Analysis Services**. |
 
   
  If you fail to connect to a report server using **localhost**, check that the network protocol for TCP/IP protocol is enabled. For more information, see [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  
@@ -59,7 +60,7 @@ ms.author: maggies
  The following example illustrates the use of a data source expression in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection string. The example assumes you have created a report parameter named `ServerName`:  
   
 ```  
-="data source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks"  
+="Data Source=" & Parameters!ServerName.Value & "; Initial Catalog=AdventureWorks"  
 ```  
   
  Data source expressions are processed at run time or when a report is previewed. The expression must be written in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Use the following guidelines when defining a data source expression:  
@@ -84,4 +85,4 @@ ms.author: maggies
 [Set Deployment Properties](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

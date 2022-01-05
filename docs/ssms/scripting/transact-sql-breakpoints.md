@@ -1,5 +1,5 @@
 ---
-title: Transact-SQL Breakpointsthe
+title: Transact-SQL Breakpoints
 description: When you debug you can use breakpoints to pause execution as needed. Look here for a list of breakpoint tasks with links to articles that describe them.
 titleSuffix: T-SQL debugger
 ms.prod: sql

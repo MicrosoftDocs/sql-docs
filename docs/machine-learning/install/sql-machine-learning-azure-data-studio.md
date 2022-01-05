@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 03/09/2020
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # Run Python and R scripts in Azure Data Studio notebooks with SQL Server Machine Learning Services

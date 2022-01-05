@@ -49,5 +49,7 @@ In this situation, an attempt to run the query may raise either of the two error
 To work around the issue, enclose the distributed query in a 'begin distributed transaction' statement:
 
 ```sql
-BEGIN DISTRIBUTED TRANSACTION <Distributed Query> COMMIT TRANSACTION
+BEGIN DISTRIBUTED TRANSACTION
+/*The actual Distributed Query goes next, outside of comments*/
+COMMIT TRANSACTION
 ```

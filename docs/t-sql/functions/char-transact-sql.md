@@ -2,7 +2,7 @@
 description: "CHAR (Transact-SQL)"
 title: "CHAR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/19/2018"
+ms.date: "11/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -25,14 +25,14 @@ helpviewer_keywords:
   - "line feed"
   - "printing ASCII values"
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This function converts an **int** ASCII code to a character value.
+Returns the single-byte character with the specified integer code, as defined by the character set and encoding of the default collation of the current database.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,10 +46,12 @@ CHAR ( integer_expression )
 
 ## Arguments
 *integer_expression*  
-An integer from 0 through 255. `CHAR` returns a `NULL` value for integer expressions outside this range, or when then integer expresses only the first byte of a double-byte character.
+An integer from 0 through 255. `CHAR` returns a `NULL` value for integer expressions outside this input range or not representing a complete character.
+`CHAR` also returns a `NULL` value when the character exceeds the length of the return type.
+Many common character sets share ASCII as a sub-set and will return the same character for integer values in the range 0 through 127.
 
 > [!NOTE]
-> Some non-European character sets, such as [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), include characters than can be represented in a single-byte coding scheme, but require multibyte encoding. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
+> Some character sets, such as [Unicode](https://en.wikipedia.org/wiki/Unicode#Mapping_and_encodings) and [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), include characters that can be represented in a single-byte coding scheme, but require multibyte encoding. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
   
 ## Return types
 **char(1)**
@@ -179,8 +181,11 @@ single_byte_representing_complete_character single_byte_representing_complete_ch
 ｼ                                           ｼ                                         
 ```
 
-### F. Using CHAR to return multibyte characters  
-This example uses the an integer and hex values in the valid range for ASCII. However, the CHAR function returns NULL because the parameter represents only the first byte of a multibyte character.
+### F. Using CHAR to return multibyte characters
+This example uses integer and hex values in the valid range for Extended ASCII.
+However, the `CHAR` function returns `NULL` because the parameter represents only the first byte of a multibyte character.
+A CHAR(2) double-byte character cannot be partially represented nor divided without some conversion operation.
+The individual bytes of a double-byte character don't generally represent valid CHAR(1) values.
   
 ```sql
 SELECT CHAR(129) AS first_byte_of_double_byte_character, 
@@ -196,6 +201,65 @@ first_byte_of_double_byte_character first_byte_of_double_byte_character
 NULL                                NULL                                         
 ```
   
+### G. Using CONVERT instead of CHAR to return multibyte characters
+This example accepts the binary value as an encoded multibyte character consistent with the default codepage of the current database,
+subject to validation.
+Character conversion is more broadly supported and may be an alternative to working with encoding at a lower level.
+
+```sql
+CREATE DATABASE [multibyte-char-context]
+  COLLATE Japanese_CI_AI
+GO
+USE [multibyte-char-context]
+GO
+SELECT NCHAR(0x266A) AS [eighth-note]
+  , CONVERT(CHAR(2), 0x81F4) AS [context-dependent-convert]
+  , CAST(0x81F4 AS CHAR(2)) AS [context-dependent-cast]
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+eighth-note context-dependent-convert context-dependent-cast
+----------- ------------------------- ----------------------
+♪           ♪                         ♪
+```
+
+### H. Using NCHAR instead of CHAR to look up UTF-8 characters
+This example highlights the distinction the Unicode standard makes between a character's _code point_ and the _code unit sequence_ under a given _encoding form_.
+The binary code assigned to a character in a classic character set is its only numeric identifier.
+In contrast, the UTF-8 byte sequence associated with a character is an algorithmic encoding of its assigned numeric identifier: the code point.
+UTF-8 **char** and UTF-16 **nchar** are different _encoding forms_ using 8-bit and 16-bit _code units_, of the same character set: the Unicode Character Database.
+
+```sql
+; WITH uni(c) AS (
+    -- BMP character
+    SELECT NCHAR(9835)
+    UNION ALL
+    -- non-BMP supplementary character or, under downlevel collation, NULL
+    SELECT NCHAR(127925)
+  ),
+  enc(u16c, u8c) AS (
+    SELECT c, CONVERT(VARCHAR(4), c COLLATE Latin1_General_100_CI_AI_SC_UTF8)
+    FROM uni
+  )
+  SELECT u16c AS [Music note]
+    , u8c AS [Music note (UTF-8)]
+    , UNICODE(u16c) AS [Code Point]
+    , CONVERT(VARBINARY(4), u16c) AS [UTF-16LE bytes]
+    , CONVERT(VARBINARY(4), u8c)  AS [UTF-8 bytes]
+  FROM enc
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] Generated under a `_SC` collation with supplementary character support.
+
+```
+Music note Music note (UTF-8) Code Point  UTF-16LE bytes UTF-8 bytes
+---------- ------------------ ----------- -------------- -----------
+♫          ♫                  9835        0x6B26         0xE299AB
+🎵         🎵                 127925      0x3CD8B5DF     0xF09F8EB5
+```
+
 ## See also
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  

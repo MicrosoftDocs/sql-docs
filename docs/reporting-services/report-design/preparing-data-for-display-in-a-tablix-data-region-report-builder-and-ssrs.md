@@ -1,6 +1,6 @@
 ---
-title: "Preparing Data for Display in a Tablix Data Region (Report Builder) | Microsoft Docs"
-description: Learn how to customize the display of data in Report Builder to show either all data retrieved or a subset of the data.
+title: "Preparing data for display in a tablix data region in a paginated report | Microsoft Docs"
+description: Learn how to customize the paginated report display of data in Report Builder to show either all data retrieved or a subset of the data.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Preparing Data for Display in a Tablix Data Region (Report Builder and SSRS)
-  A tablix data region displays data from a dataset. You can view all the data retrieved for the dataset or you can create filters so that you see only a subset of the data. You can also add conditional expressions to fill in null values or modify the query for a dataset to include columns that define the sort order for an existing column.  
+# Preparing data for display in a tablix data region in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  A tablix data region displays data from a dataset in a paginated report. You can view all the data retrieved for the dataset or you can create filters so that you see only a subset of the data. You can also add conditional expressions to fill in null values or modify the query for a dataset to include columns that define the sort order for an existing column.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

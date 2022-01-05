@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # SQL Server back up to URL best practices and troubleshooting
 
@@ -147,7 +147,7 @@ To avoid this issue, you can include T-SQL statements to create the credential i
 IF NOT EXISTS  
 (SELECT * FROM sys.credentials   
 WHERE credential_identity = 'mycredential')  
-CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
+CREATE CREDENTIAL [<credential name>] WITH IDENTITY = 'mystorageaccount'  
 , SECRET = '<storage access key>' ;  
 ```  
   

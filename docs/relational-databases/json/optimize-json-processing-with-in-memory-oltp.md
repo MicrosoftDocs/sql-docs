@@ -120,6 +120,7 @@ CREATE TABLE xtp.Product(
     INDEX [idx_Product_MadeIn] NONCLUSTERED (MadeIn)
 
 ) WITH (MEMORY_OPTIMIZED=ON)
+GO
 
 ALTER TABLE Product
     ADD INDEX [idx_Product_Cost] NONCLUSTERED HASH(Cost)
@@ -142,6 +143,7 @@ AS BEGIN
 		JOIN OPENJSON(@ProductIds)
 			ON ProductID = value
 END;
+GO
 
 CREATE PROCEDURE xtp.UpdateProductData(@ProductId int, @Property nvarchar(100), @Value nvarchar(100))
 WITH SCHEMABINDING, NATIVE_COMPILATION
@@ -152,16 +154,16 @@ AS BEGIN
 	SET Data = JSON_MODIFY(Data, @Property, @Value)
 	WHERE ProductID = @ProductId;
 END
+GO
 ```
 
 ## Learn more about JSON in SQL Server and Azure SQL Database  
   
 ### Microsoft videos
 
+> [!NOTE]
+> Some of the video links in this section may not work at this time. Microsoft is migrating content formerly on Channel 9 to a new platform. We will update the links as the videos are migrated to the new platform.
+
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
-
--   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
-
--   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
 
 -   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)

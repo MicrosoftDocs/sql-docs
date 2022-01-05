@@ -20,7 +20,7 @@ ms.reviewer:
 
 ---
 # Specify Multiple Search Conditions for One Column (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In some instances, you might want to apply a number of search conditions to the same data column. For example, you might want to:  
   
 -   Search for several different names in an `employee` table or for employees who are in different salary ranges. This type of search requires an OR condition.  

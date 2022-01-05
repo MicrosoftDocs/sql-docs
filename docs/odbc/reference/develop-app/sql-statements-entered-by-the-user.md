@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "SQL statements [ODBC], entered by user"
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQL Statements Entered by the User
 Applications that perform ad hoc analysis also commonly allow the user to enter SQL statements directly. For example:  

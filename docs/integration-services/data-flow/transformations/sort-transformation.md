@@ -52,8 +52,6 @@ ms.author: chugu
 ## Related Tasks  
  For more information about how to set properties of the component, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Related Content  
- Sample, [SortDeDuplicateDelimitedString Custom SSIS Component](https://go.microsoft.com/fwlink/?LinkId=220821), on codeplex.com.  
   
 ## Sort Transformation Editor
   Use the **Sort Transformation Editor** dialog box to select the columns to sort, set the sort order, and specify whether duplicates are removed.  
@@ -89,4 +87,3 @@ ms.author: chugu
 ## See Also  
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  

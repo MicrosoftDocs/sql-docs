@@ -1,6 +1,6 @@
 ---
-description: "Get started by running the Enable Database for Stretch Wizard"
 title: "Get started by running the Enable Database for Stretch Wizard"
+description: "Get started by running the Enable Database for Stretch Wizard"
 ms.date: "08/05/2016"
 ms.service: sql-server-stretch-database
 ms.reviewer: ""
@@ -15,13 +15,15 @@ f1_keywords:
   - "sql13.swb.stretchwizard.Summary.f1"
   - "sql13.swb.stretchwizard.Results.f1"
   - "sql13.swb.stretchwizard.introduction.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Stretch Database, wizard"
   - "Enable Database for Stretch Wizard"
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
-ms.custom: seo-dt-2019
+ms.custom:
+  - seo-dt-2019
+  - intro-quickstart
 ---
 # Get started by running the Enable Database for Stretch Wizard
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]

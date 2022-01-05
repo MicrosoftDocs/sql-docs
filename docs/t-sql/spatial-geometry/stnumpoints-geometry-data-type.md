@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STNumPoints (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the sum of the number of points in each of the figures in a **geometry** instance.  
   
@@ -44,7 +44,7 @@ ms.author: mlandzic
 ## Examples  
  The following example creates a `LineString` instance and uses `STNumPoints()` to determine how many points were used in the description of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
 SELECT @g.STNumPoints();  

@@ -6,6 +6,8 @@
 - name: What's new in APS
   href: ./whats-new-analytics-platform-system.md
   items:
+  - name: APS CU7.8
+    href: ./whats-new-analytics-platform-system.md#h2-aps-cu7.8
   - name: APS CU7.7
     href: ./whats-new-analytics-platform-system.md#h2-aps-cu7.7
   - name: APS CU7.6

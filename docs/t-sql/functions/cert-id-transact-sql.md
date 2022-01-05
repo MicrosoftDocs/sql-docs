@@ -23,7 +23,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CERT_ID (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the ID value of a certificate.
   

@@ -13,12 +13,14 @@ helpviewer_keywords:
   - "MSOLEDBSQL, about OLE DB Driver for SQL Server"
   - "data access [OLE DB Driver for SQL Server], features"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # OLE DB Driver for SQL Server Features
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+For a list of popular features that are supported and not supported in different OLE DB versions, see the [Driver feature matrix](../../driver-feature-matrix.md#table2).
 
   In addition to exposing features of the Windows (formerly Microsoft) Data Access Components (WDAC), OLE DB Driver for SQL Server also implements many other features to expose [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] functionality.  
   

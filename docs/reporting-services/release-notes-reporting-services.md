@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 04/20/2021
+ms.date: 10/20/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -48,6 +48,23 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## SQL Server 2019 Reporting Services
 
+## 15.0.7961.31630, 2021/10/20 
+*(Product Version: 15.0.1102.932)*
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Added `<LINK>` tag in PDFs exported with accessible PDF enabled on textboxs with 'Go to URL' actions.  | &nbsp; |
+| Added `<UL>` and `<LI>` tags in PDFs exported with accessible PDF enabled for textbox Lists | &nbsp; |
+| Fixed an issue with date parameters in Oracle based reports failing with "ORA-01008: not all variables bound"  | &nbsp; |
+
+## 15.0.7842.32355, 2021/06/24 
+*(Product Version: 15.0.1102.911)*
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Fixed an issue for registering Report Server instance to enable Pin to Power BI feature  | &nbsp; |
+| Fixed an issue screen readers reading extra rows and columns for a tablix when exported to MHTML using new HTML DOCTYPE  | &nbsp; |
+
 ## 15.0.7765.17516, 2021/04/7 
 *(Product Version: 15.0.1102.896)*
 
@@ -83,6 +100,13 @@ Initial release.
 
 
 ## SQL Server 2017 Reporting Services
+
+## 14.0.600.1763, 2021/06/28 
+*(Product Version: 14.0.600.1763)*
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Fixed an issue for registering Report Server instance to enable Pin to Power BI feature  | &nbsp; |
 
 ## 14.0.600.1669, 2020/08/31 
 
@@ -214,4 +238,4 @@ Initial release.
 
 [What's New in Reporting Services (SSRS)?](what-s-new-in-sql-server-reporting-services-ssrs.md)
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

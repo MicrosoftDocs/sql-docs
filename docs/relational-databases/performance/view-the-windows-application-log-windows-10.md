@@ -2,7 +2,7 @@
 title: "View the Windows application log (Windows) | Microsoft Docs"
 description: When SQL Server is configured to use the Windows application log, each session writes events to that log. Learn how to view the Windows application log.
 ms.custom: ""
-ms.date: "02/01/2017"
+ms.date: 12/13/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
@@ -16,20 +16,21 @@ helpviewer_keywords:
   - "displaying logs"
   - "monitoring [SQL Server], events"
   - "logs [SQL Server], viewing"
-ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# View the Windows application log (Windows 10)
+# View the Windows application log
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured to use the Windows application log, each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session writes new events to that log. Unlike the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log, a new application log is not created each time you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+  This article covers Windows 10 operating systems and later.
   
 ## View the Windows application log  
   
 1. On the **Search bar**, type **Event Viewer**, and then select the **Event Viewer** desktop app.
   
-2. In **Event Viewer**, open the **Applications and Services Logs**.
+2. In **Event Viewer**, expand the **Windows Logs** folder, and select the **Application** event log.
 
 3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events are identified by the entry **MSSQLSERVER** (named instances are identified with **MSSQL$**_<instance_name>_) in the **Source** column. SQL Server Agent events are identified by the entry SQLSERVERAGENT (for named instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent events are identified with **SQLAgent$**\<*instance_name*>). Microsoft Search service events are identified by the entry **Microsoft Search**.  
   

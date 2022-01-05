@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # ReorientObject (geography Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geography** instance with interchanged interior regions and exterior regions.  
   
@@ -50,7 +50,7 @@ If you pass a **GeometryCollection** to this method, each instance in the collec
   
 ## Examples  
   
-```  
+```sql
 DECLARE @R GEOGRAPHY = GEOGRAPHY::Parse('Polygon((-10 -10, -10 10, 10 10, 10 -10, -10 -10))');  
 SELECT @R.ReorientObject().STAsText();  
 --Result: POLYGON ((10 10, -10 10, -10 -10, 10 -10, 10 10))  

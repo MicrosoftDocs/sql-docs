@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "SQLBindCol function [ODBC], using"
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using SQLBindCol
 The application binds columns by calling **SQLBindCol**. This function binds one column at a time. With it, the application specifies the following:  

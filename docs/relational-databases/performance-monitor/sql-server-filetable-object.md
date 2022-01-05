@@ -1,8 +1,8 @@
 ---
-title: "SQL Server, FileTable Object | Microsoft Docs"
+title: "SQL Server, FileTable object"
 description: Learn about the SQLServer:FileTable performance object, which provides counters for statistics associated with FileTable and non-transacted access.
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "07/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,11 +10,10 @@ ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:FileTable"
-ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# SQL Server, FileTable Object
+# SQL Server, FileTable object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The **SQLServer:FileTable** performance object provides counters for statistics associated with FileTable and non-transacted access.
 
@@ -50,7 +49,17 @@ This following table describes the SQL Server **FileTable** performance objects.
 |**Time per file I/O response BASE**|For internal use only.|
 |**Time rename FileTable item BASE**|For internal use only.|
 |**Time to get FileTable item BASE**|For internal use only.|
-|**Time update FileTable item BASE**|For internal use only.| 
+|**Time update FileTable item BASE**|For internal use only.|
+
+## Example
+
+You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name LIKE '%FileTable%';
+```  
  
-## See Also  
+ 
+## See also  
 [Monitor Resource Usage (System Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

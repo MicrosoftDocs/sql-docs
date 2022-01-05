@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-author: rothja
-ms.author: jroth
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Survey of Initial Areas in In-Memory OLTP
@@ -75,11 +75,6 @@ The present article focuses on OLTP, and not on Analytics. For information on ho
 - [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
 - [Columnstore Indexes Guide](../../relational-databases/indexes/columnstore-indexes-overview.md)  
   
-  
-> [!NOTE]
-> A two minute video about the In-Memory features is available at [Azure SQL Database - In-Memory Technologies](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). The video is dated December 2015.  
-
-
 ### Columnstore
 
 A sequence of excellent blog posts elegantly explains columnstore indexes from several perspectives. The majority of the posts describe further the concept of real-time operational analytics, which columnstore supports.  These posts were authored by Sunil Agarwal, a Program Manager at Microsoft, in March 2016.
@@ -490,7 +485,7 @@ The following article, and its children articles in the table of contents (TOC),
   
 ## Related links  
   
-- Initial article: [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- Initial article: [In-Memory OLTP (In-Memory Optimization)](./overview-and-usage-scenarios.md)  
     
 Here are articles that offer code to demonstrate the performance gains you can achieve by using In-Memory OLTP:  
   

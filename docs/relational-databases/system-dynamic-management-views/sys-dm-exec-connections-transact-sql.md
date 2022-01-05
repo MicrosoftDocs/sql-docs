@@ -37,7 +37,7 @@ Returns information about the connections established to this instance of [!INCL
 |most_recent_session_id|**int**|Represents the session ID for the most recent request associated with this connection. (SOAP connections can be reused by another session.) Is nullable.|  
 |connect_time|**datetime**|Timestamp when connection was established. Is not nullable.|  
 |net_transport|**nvarchar(40)**|Always returns **Session** when a connection has multiple active result sets (MARS) enabled.<br /><br /> **Note:** Describes the physical transport protocol that is used by this connection. Is not nullable.|  
-|protocol_type|**nvarchar(40)**|Specifies the protocol type of the payload. It currently distinguishes between TDS (TSQL) and SOAP. Is nullable.|  
+|protocol_type|**nvarchar(40)**|Specifies the protocol type of the payload. It currently distinguishes between TDS ("TSQL"), "SOAP", and "Database Mirroring". Is nullable.|  
 |protocol_version|**int**|Version of the data access protocol associated with this connection. Is nullable.|  
 |endpoint_id|**int**|An identifier that describes what type of connection it is. This endpoint_id can be used to query the sys.endpoints view. Is nullable.|  
 |encrypt_option|**nvarchar(40)**|Boolean value to describe whether encryption is enabled for this connection. Is not nullable.|  
@@ -59,8 +59,9 @@ Returns information about the connections established to this instance of [!INCL
   
 ## Permissions
 
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.
+
+On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
 
 ## Physical Joins  
  ![Joins for sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "Joins for sys.dm_exec_connections")  

@@ -8,8 +8,8 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
-ms.reviewer: "maghan; sstein"
-ms.date: 3/10/2021
+ms.reviewer: "maghan"
+ms.date: 11/4/2021
 ---
 
 # SqlPackage.exe
@@ -32,7 +32,7 @@ ms.date: 3/10/2021
   
 - [Script](sqlpackage-script.md): Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.  
   
-The **SqlPackage.exe** command line allows you to specify these actions along with action-specific parameters and properties.  
+The **SqlPackage.exe** command line tool allows you to specify these actions along with action-specific parameters and properties.  
 
 **[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
   
@@ -64,9 +64,9 @@ Create a SQL script that generates the differences of two .dacpac files:
 
 ```
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
- ```
+```
 
- ## Version
+## Version
 
 Displays the sqlpackage version as a build number.  Can be used in interactive prompts as well as in [automated pipelines](sqlpackage-pipelines.md).
 
@@ -74,6 +74,19 @@ Displays the sqlpackage version as a build number.  Can be used in interactive p
 sqlpackage.exe /Version
  ```
 
+## Help
+
+You can display sqlpackage usage information by using `/?` or `/help:True`.
+
+```
+sqlpackage.exe /?
+```
+
+For parameter and property information specific to a particular action, use the help parameter in addition to that action's parameter.
+
+```
+sqlpackage.exe /Action:Publish /?
+```
 
 ## Exit codes
 
@@ -145,6 +158,7 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |CommandTimeout=(INT32 '60')| x | x | x | x | x | x |
 |CommentOutSetVarDeclarations=(BOOLEAN)| | x | | | x | x |
 |CompareUsingTargetCollation=(BOOLEAN)| | x | | | x | x |
+|CompressionOption=(ENUM 'Normal')| x | | x | | | | |
 |CreateNewDatabase=(BOOLEAN)| | x | | | x | x |
 |DacApplicationDescription=(STRING)| x | | | | | |
 |DacApplicationName=(STRING)| x | | | | | |
@@ -233,7 +247,7 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |ScriptFileSize=(BOOLEAN)| | x | | | x | x |
 |ScriptNewConstraintValidation=(BOOLEAN 'True')| | x | | | x | x |
 |ScriptRefreshModule=(BOOLEAN 'True')| | x | | | x | x |
-|Storage=({File&#124;Memory} 'File')| x | x | x | x | x | x |
+|Storage=({File&#124;Memory})| x | x | x | x | x | x |
 |TableData=(STRING)| x | | x | | | |
 |TargetEngineVersion=(ENUM 'Latest')| | | x | | | |
 |TempDirectoryForTableData=(STRING)| x | | x | | | |

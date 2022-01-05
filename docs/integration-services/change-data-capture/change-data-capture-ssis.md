@@ -91,12 +91,6 @@ ms.author: chugu
 ### Change Data from Multiple Tables  
  The process outlined in the previous diagram and steps involves an incremental load from a single table. When having to perform an incremental load from multiple tables, the overall process is the same. However, the design of the package needs to be changed to accommodate the processing of multiple tables. For more information on how to create a package that performs an incremental load from multiples tables, see [Perform an Incremental Load of Multiple Tables](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
   
-## Samples of Change Data Capture Packages  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides two samples that demonstrate how to use change data capture in packages. For more information, see the following topics:  
-  
--   [Readme_Change Data Capture for Specified Interval Package Sample](https://go.microsoft.com/fwlink/?LinkId=133507)  
-  
--   [Readme_Change Data Capture since Last Request Package Sample](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## Related Tasks  
   
@@ -117,6 +111,4 @@ ms.author: chugu
 -   [Perform an Incremental Load of Multiple Tables](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## Related Content  
- Blog entry, [SSIS Design Pattern - Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679), on sqlblog.com  
-  
-  
+ Blog entry, [SSIS Design Pattern - Incremental Load](https://andyleonard.blog/2007/07/ssis-design-pattern-incremental-loads), on sqlblog.com  

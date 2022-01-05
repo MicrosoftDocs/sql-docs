@@ -1,8 +1,8 @@
 ---
-title: "Database Properties (Options Page) | Microsoft Docs"
+title: "Database Properties (Options Page)"
 description: "Learn how to use the Options tab in the Database Properties dialog box to view or modify a database's collation, recovery model, and other settings."
 ms.custom: ""
-ms.date: "08/28/2017"
+ms.date: "12/21/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,7 +10,6 @@ ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.options.f1"
-ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -43,13 +42,13 @@ ms.author: wiassaf
  Specify whether to use the incremental option when per partition statistics are created. For information about incremental statistics, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Auto Create Statistics**  
- Specify whether the database automatically creates missing optimization statistics. Possible values are **True** and **False**. When **True**, any missing statistics needed by a query for optimization are automatically built during optimization. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
+ Specify whether the database automatically creates missing optimization statistics. Possible values are **True** and **False**. When **True**, any missing statistics needed by a query for optimization are automatically built during optimization. For more information, see [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics).  
   
  **Auto Shrink**  
  Specify whether the database files are available for periodic shrinking. Possible values are **True** and **False**. For more information, see [Shrink a Database](../../relational-databases/databases/shrink-a-database.md).  
   
  **Auto Update Statistics**  
- Specify whether the database automatically updates out-of-date optimization statistics. Possible values are **True** and **False**. When **True**, any out-of-date statistics needed by a query for optimization are automatically built during optimization. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
+ Specify whether the database automatically updates out-of-date optimization statistics. Possible values are **True** and **False**. When **True**, any out-of-date statistics needed by a query for optimization are automatically built during optimization. For more information, see [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics).
   
  **Auto Update Statistics Asynchronously**  
  When **True**, queries that initiate an automatic update of out-of-date statistics do not wait for the statistics to be updated before compiling. Subsequent queries use the updated statistics when they are available.  
@@ -174,7 +173,8 @@ Enables this feature.
  When **SIMPLE**, queries are parameterized based on the default behavior of the database. When **FORCED**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parameterizes all queries in the database.  
   
  **Quoted Identifiers Enabled**  
- Specify whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keywords can be used as identifiers (an object or variable name) if enclosed in quotation marks. Possible values are **True** and **False**. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Specifies a database default for the whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] double quote `"` is used to specify delimited identifiers (_true_) or varchar literals (_false_). Possible values are _true_ and _false_. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  This database default setting can be overridden by a session's setting, and many client drivers SET QUOTED_IDENTIFIER ON at connection time.
+
   
  **Recursive Triggers Enabled**  
  Specify whether triggers can be fired by other triggers. Possible values are **True** and **False**. When set to **True**, this enables recursive firing of triggers. When set to **False**, only direct recursion is prevented. To disable indirect recursion, set the nested triggers server option to 0 using sp_configure. For more information, see [Create Nested Triggers](../../relational-databases/triggers/create-nested-triggers.md).  

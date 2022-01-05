@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "statement transitions [ODBC]"
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Statement Transitions
 ODBC statements have the following states.  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "failover clustering, troubleshooting"
   - "cluster troubleshooting"
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Failover Cluster Troubleshooting
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,8 +28,8 @@ ms.author: chadam
 -   Using extended stored procedures and COM objects.  
   
 ## Basic Troubleshooting Steps  
- The first diagnostic step is to run a fresh cluster validation check. For details on validation, see [Failover Cluster Step-by-Step Guide: Validating Hardware for a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)).  This can be completed without any interruption of service as it does not affect any online cluster resources. Validation can be run at any time once the Failover Clustering feature has been installed, including before the cluster has been deployed, during cluster creation and while the cluster is running. In fact, additional tests are executed once the cluster is in use, which check that best practices are being followed for highly-available workloads. Across these dozens of tests, only a few of them will impact running cluster workloads and these are all within the storage category, so skipping this entire category is an easy way to avoid disruptive tests.  
-Failover Clustering comes with a built-in safeguard to prevent accidental downtime when running the storage tests during validation. If the cluster has any online groups when validation is initiated, and the storage tests remain selected, it will prompt the user for confirmation whether they want to run all the tests (and cause downtime), or to skip testing the disks of any online groups to avoid downtime. If the entire storage category was excluded from being tested, then this prompt is not displayed. This will enable cluster validation with no downtime.  
+ The first diagnostic step is to run a fresh cluster validation check. For details on validation, see [Create a Failover Cluster: Validate the Configuration](/windows-server/failover-clustering/create-failover-cluster#validate-the-configuration).  This can be completed without any interruption of service as it does not affect any online cluster resources. Validation can be run at any time once the Failover Clustering feature has been installed, including before the cluster has been deployed, during cluster creation and while the cluster is running. In fact, additional tests are executed once the cluster is in use, which check that best practices are being followed for highly-available workloads. Across these dozens of tests, only a few of them will impact running cluster workloads and these are all within the storage category, so skipping this entire category is an easy way to avoid disruptive tests.  
+Failover Clustering comes with a built-in safeguard to prevent accidental downtime when running the storage tests during validation. If the cluster has any online groups when validation is initiated, and the storage tests remain selected, it will prompt the user for confirmation whether they want to run all the tests (and cause downtime), or to skip testing the disks of any online groups to avoid downtime. If the entire storage category was excluded from being tested, then this prompt is not displayed. This will enable cluster validation with no downtime.
   
 #### How to revalidate your cluster  
   

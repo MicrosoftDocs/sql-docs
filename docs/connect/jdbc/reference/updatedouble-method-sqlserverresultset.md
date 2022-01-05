@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: ce4ec01f-87a0-4787-81d4-a4bf490d1331
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateDouble Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "testing column changes"
   - "results [SQL Server], DML triggers"
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create DML Triggers

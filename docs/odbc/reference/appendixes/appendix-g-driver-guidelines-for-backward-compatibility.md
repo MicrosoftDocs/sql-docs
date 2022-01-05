@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "compatibility [ODBC], drivers"
 ms.assetid: 911cd335-f2c0-4d03-9739-1078308a678a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Appendix G: Driver Guidelines for Backward Compatibility
 This appendix provides information for driver writers working on ODBC 3.*x* drivers that need to support ODBC 2.*x* applications. For more information about backward compatibility, see [Backward Compatibility and Standards Compliance](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_fetch_array"
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

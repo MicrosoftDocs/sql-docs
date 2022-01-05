@@ -16,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "PARSE function"
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # PARSE (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the result of an expression, translated to the requested data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

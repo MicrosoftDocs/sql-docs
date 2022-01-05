@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STSrid (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   **STSrid** is an integer representing the spatial reference identifier (SRID) of the instance.  
   
@@ -44,7 +44,7 @@ ms.author: mlandzic
 ## Examples  
  The first example creates a `geography` instance with the SRID value 4326 (WGS84) and uses `STSrid` to confirm the SRID.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
 SELECT @g.STSrid;  
@@ -52,7 +52,7 @@ SELECT @g.STSrid;
   
  The second example uses `STSrid` to change the SRID value of the instance to 4267 (NAD27) and then confirms the modified SRID value.  
   
-```  
+```sql
 SET @g.STSrid = 4267;  
 SELECT @g.STSrid;  
 ```  

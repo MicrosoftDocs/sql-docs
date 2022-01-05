@@ -5,13 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 03/31/2021
 ms.topic: troubleshooting
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Known issues for Python and R in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
 
 This article describes known problems or limitations with the Python and R components that are provided in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 
@@ -258,6 +260,23 @@ Disable FIPS before the installation of SQL Server 2019 with the feature **Machi
 
 **Applies to:** SQL Server 2019
 
+### 16. R libraries using specific algorithms, streaming, or partitioning
+
+- **Issue**: The following limitations apply on  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] with runtime upgrade. This issue applies to Enterprise Edition.
+
+  - Parallelism: `RevoScaleR` and `MicrosoftML` algorithm thread parallelism for scenarios are limited to maximum of 2 threads.
+  - Streaming & partitioning: Scenarios involving `@r_rowsPerRead` parameter passed to T-SQL `sp_execute_external_script` is not applied.
+  - Streaming & partitioning: `RevoScaleR` and `MicrosoftML` data sources (i.e. `ODBC`, `XDF`) does not support reading rows in chunks for training or scoring scenarios. These scenarios always bring all data to memory for computation and the operations are memory bound
+
+- **Solution**: The best solution is to upgrade to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. Alternatively you can continue to use [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] with runtime upgrade configured using [RegisterRext.exe /configure](../install/change-default-language-runtime-version.md), after you complete the following tasks.
+
+   1. Edit registry to create a key `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\150` and add a value `SharedCode` with data `C:\Program Files\Microsoft SQL Server\150\Shared` or the instance shared directory, as configured.
+   1. Create a folder `C:\Program Files\Microsoft SQL Server\150\Shared and copy instapi140.dll` from the folder `C:\Program Files\Microsoft SQL Server\140\Shared` to the newly created folder.
+   1. Rename the `instapi140.dll` to `instapi150.dll` in the new folder `C:\Program Files\Microsoft SQL Server\150\Shared`.
+
+> [!IMPORTANT]
+> If you do the steps above, you must manually remove the added key prior to upgrading to a later version of SQL Server.
+
 ## R script execution issues
 
 This section contains known issues that are specific to running R on SQL Server, as well as some issues that are related to the R libraries and tools published by Microsoft, including RevoScaleR.
@@ -274,7 +293,7 @@ The reason is that an R function attempts to read the path, and fails if the bui
 
 If you have installed SQL Server to the default location, this error does not occur, because all Windows users have read permissions on the `Program Files` folder.
 
-This issue ia addressed in an upcoming service release. As a workaround, provide the group, **SQLRUserGroup**, with read access for all parent folders of `ExternalLibraries`.
+This issue is addressed in an upcoming service release. As a workaround, provide the group, **SQLRUserGroup**, with read access for all parent folders of `ExternalLibraries`.
 
 ### 2. Serialization error between old and new versions of RevoScaleR
 
@@ -362,7 +381,7 @@ You cannot use in an R script the following types of query results:
 
 ### 9. Use of strings as factors can lead to performance degradation
 
-Using string type variables as factors can greatly increase the amount of memory used for R operations. This is a known issue with R in general, and there are many articles on the subject. For example, see [Factors are not first-class citizens in R, by John Mount, in R-bloggers)](https://www.r-bloggers.com/factors-are-not-first-class-citizens-in-r/) or [stringsAsFactors: An unauthorized biography, by Roger Peng](https://simplystatistics.org/2015/07/24/stringsasfactors-an-unauthorized-biography/). 
+Using string type variables as factors can greatly increase the amount of memory used for R operations. This is a known issue with R in general, and there are many articles on the subject. For example, see [Factors are not first-class citizens in R, by John Mount, in R-bloggers)](https://www.r-bloggers.com/factors-are-not-first-class-citizens-in-r/) or stringsAsFactors: An unauthorized biography, by Roger Peng. 
 
 Although the issue is not specific to SQL Server, it can greatly affect performance of R code run in SQL Server. Strings are typically stored as varchar or nvarchar, and if a column of string data has many unique values, the process of internally converting these to integers and back to strings by R can even lead to memory allocation errors.
 

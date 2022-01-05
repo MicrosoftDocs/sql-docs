@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ACOS function"
   - "arccosine"
 ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ACOS (Transact-SQL)
@@ -39,7 +39,7 @@ ACOS ( float_expression )
 
 ## Arguments
 *float_expression*  
-An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of either type **float** or of a type that can implicitly convert to float. Only a value ranging from -1.00 to 1.00 is valid. Values outside this range return NULL, and ASIN will report a domain error.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of either type **float** or of a type that can implicitly convert to float. Only a value ranging from -1.00 to 1.00 is valid. For values outside this range, no value is returned, and ACOS will report a domain error.
   
 ## Return Types  
 **float**

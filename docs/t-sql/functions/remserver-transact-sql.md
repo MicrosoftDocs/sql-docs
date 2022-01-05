@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;REMSERVER (Transact-SQL)"
+description: "@@REMSERVER (Transact-SQL)"
 title: "@@REMSERVER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -18,15 +18,16 @@ helpviewer_keywords:
   - "remote servers [SQL Server], logins"
   - "@@REMSERVER function"
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # &#x40;&#x40;REMSERVER (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
+
 
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Use linked servers and linked server stored procedures instead.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] This function exists for backward compatibility and always returns NULL. Use linked servers and linked server stored procedures instead.  
   
  Returns the name of the remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database server as it appears in the login record.  
   

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_rpcnumber"
 ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_rpcnumber (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "bitwise OR (|)"
   - "| (bitwise OR operator)"
 ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # | (Bitwise OR) (Transact-SQL)

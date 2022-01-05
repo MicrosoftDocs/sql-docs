@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "OLE DB rowsets, about rowsets"
   - "rowsets [OLE DB]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Rowsets
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

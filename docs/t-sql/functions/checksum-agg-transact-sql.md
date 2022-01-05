@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "CHECKSUM_AGG function"
   - "groups [SQL Server], checksum values"
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # CHECKSUM_AGG (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the checksum of the values in a group. `CHECKSUM_AGG` ignores null values. The [OVER clause](../../t-sql/queries/select-over-clause-transact-sql.md) can follow `CHECKSUM_AGG`.
   

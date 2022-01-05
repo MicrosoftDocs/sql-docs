@@ -2,7 +2,7 @@
 title: "Monitor Memory Usage"
 description: "Monitor a SQL Server instance to confirm that memory usage is within typical ranges. Use the Memory: Available Bytes and Memory: Pages/sec counters."
 ms.custom: ""
-ms.date: "01/20/2021"
+ms.date: "07/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -26,6 +26,7 @@ ms.author: wiassaf
 ---
 # Monitor memory usage
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   Monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically to confirm that memory usage is within typical ranges. 
 
 ## Configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] max memory
@@ -86,7 +87,7 @@ This counter measures amount of time in seconds that the oldest page stays in th
 ### Determining current memory allocation  
  The following queries return information about currently allocated memory.  
   
-```  
+```sql  
 SELECT
 (total_physical_memory_kb/1024) AS Total_OS_Memory_MB,
 (available_physical_memory_kb/1024)  AS Available_OS_Memory_MB
@@ -103,7 +104,8 @@ FROM sys.dm_os_process_memory;
 
 ### Determining current SQL Server memory utilization   
  The following query returns information about current SQL Server memory utilization.  
-```  
+
+```sql  
 SELECT
 sqlserver_start_time,
 (committed_kb/1024) AS Total_Server_Memory_MB,
@@ -112,8 +114,9 @@ FROM sys.dm_os_sys_info;
 ```   
 
 ### Determining page life expectancy
- The following query uses **sys.dm_os_performance_counters** to observe the SQL Server instance's current **page life expectancy** value at the overall buffer manager level, and at each NUMA node level.
-```
+ The following query uses `sys.dm_os_performance_counters` to observe the SQL Server instance's current **page life expectancy** value at the overall buffer manager level, and at each NUMA node level.
+
+```sql
 SELECT
 CASE instance_name WHEN '' THEN 'Overall' ELSE instance_name END AS NUMA_Node, cntr_value AS PLE_s
 FROM sys.dm_os_performance_counters    

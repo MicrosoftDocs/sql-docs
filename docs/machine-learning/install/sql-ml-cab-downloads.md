@@ -3,10 +3,10 @@ title: CAB download updates for offline install
 description: Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/25/2021
+ms.date: 10/27/2021
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016"
 ---
@@ -31,7 +31,7 @@ Start with a baseline installation. On SQL Server Machine Learning Services, the
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
-Start with a baseline installation.  On SQL Server 2016 R Services, you can start with the initial release, SP1, or SP2. 
+Start with a baseline installation.  On SQL Server 2016 R Services, you can start with the initial release, SP1, SP2, or SP3. 
 ::: moniker-end
 
 You can also apply cumulative updates.
@@ -85,7 +85,12 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 |Release  |Component | Download link  | Issues addressed | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU22](https://support.microsoft.com/help/4577467/)-[CU23](https://support.microsoft.com/help/5000685/)** |  |  |  |
+|**[SQL Server 2017 CU27](https://support.microsoft.com//help/5006944/)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
+| | R Server              | [SRS_9.4.7.1162_1033.cab](https://go.microsoft.com/fwlink/?linkid=2174362)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Python Server         | [SPS_9.4.7.1162_1033.cab](https://go.microsoft.com/fwlink/?linkid=2174361)  |  |
+|**[SQL Server 2017 CU22](https://support.microsoft.com/help/4577467/)-[CU26](https://support.microsoft.com/help/5005226/)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
 | | R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
 | | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
@@ -158,7 +163,7 @@ For SQL Server 2016 R Services, baseline releases are either the RTM version or 
 
 |Release  |Download link  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU14-CU15**     |
+|**SQL Server 2016 SP2 CU14-CU15** <br>&<br> **SQL Server 2016 SP3**     |
 |Microsoft R Open      |[SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)|
 |Microsoft R Server    |[SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)|
 |**SQL Server 2016 SP2 CU6-CU13**     |
@@ -195,8 +200,6 @@ For SQL Server 2016 R Services, baseline releases are either the RTM version or 
 > [!NOTE]
 > 
 > When installing SQL Server 2016 SP1 CU4 or SP1 CU5 offline, download SRO_3.2.2.16000_1033.cab. If you downloaded SRO_3.2.2.13000_1033.cab from FWLINK 831785 as indicated in the setup dialog box, rename the file as SRO_3.2.2.16000_1033.cab before installing the Cumulative Update.
-
-If you would like to view the source code for Microsoft R, it is available for download as an archive in .tar format: [Download R Server installers](/machine-learning-server/install/r-server-install-windows#download)
 
 ::: moniker-end
 

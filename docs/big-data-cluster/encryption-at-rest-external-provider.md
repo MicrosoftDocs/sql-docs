@@ -2,8 +2,8 @@
 title: External Key Providers
 titleSuffix: SQL Server Big Data Clusters
 description: This article provides details of how to configure external key providers for SQL Big Data Clusters encryption at rest.
-ms.date: 06/11/2021
-author: Danibunny
+ms.date: 07/19/2021
+author: danibunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
 ms.topic: conceptual
@@ -45,20 +45,49 @@ After the key is installed, the encryption and decryption of different payloads 
 
 The provided template application is the plugin used to interface with the external key provider. This application needs to be customized and deployed into BDC to serve as an integration point with the chosen external key provider.
 
-In the template application, there are examples on how to integrate with external provider implementations using the standard PKCS11 protocol using [SoftHSM](https://www.opendnssec.org/softhsm). There is also an example using Hashicorp Vault. The template application is provided as-is as a reference implementation.
+In the template application, there are examples on how to integrate with external provider implementations using the standard PKCS11 protocol using [SoftHSM](https://www.opendnssec.org/softhsm). There are also examples using Azure Key Vault and Hashicorp Vault. The template applications are provided as-is as reference implementations.
 
 The following sections provide the steps required to configure an external key provider to serve as the root key of encryption for SQL Server databases and HDFS encryption zones.
 
 ### 1 - Create an RSA 2048 key in your external key provider
 
-Create a PEM file with 2048-bit RSA key and upload it to the key value store in your external key provider.
+Create a PEM file with a 2048-bit RSA key and upload it to the key value store in your external key provider.
 
 For example: The key file may be added to the KV store in Hashicorp Vault at path bdc-encryption-secret and the name of the secret can be rsa2048.
 
 ### 2 - Customize and deploy the integration application on BDC
 
-1. Unzip kms_plugin_app.zip that contains the BDC AppDeploy to communicate to external providers.
-1. Customize the application. File ```custom.py``` contains the reference SoftHSM code and file ```custom2.py``` has a HashiCorp Vault example. Don't change the function contracts or signatures, as those are the integration points. Change only the function implementations if needed. ```app.py``` is the entry point that will load the application, understand it completely before deploying.
+1. In your local machine, navigate to the folder containing [kms_plugin_app](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/encryption-at-rest-external-key-provider) BDC AppDeploy template applications.
+1. Customize the application by choosing one of the templates and adjusting it to your scenario:
+
+    * File ```custom_softhsm.py``` contains a reference implementation using SoftHSM
+    * File ```custom_akv.py``` contains a Azure Key Vault example
+    * File ```custom_hcv.py``` contains a HashiCorp Vault example.
+
+   > [!CAUTION] 
+   > Don't change the function contracts or signatures, as those are the integration points. Change only the function implementations if needed.
+
+1. Name the file you are creating from the template above accordingly. For example, save ```custom_softhsm.py``` as ```my_custom_integration_v1.py``` and then perform your customizations. This is important for the next step.
+1. ```app.py``` is the entry point that will load the application, understand it completely before deploying. In this file you are __required to change line eleven__ to point to the custom file name (without the .py extension) from the previous step. Per example above, change:
+    ```python
+    ...
+    import utils
+    from json_objects import EncryptDecryptRequest
+    import custom_softhsm as custom
+
+    def handler(operation, payload, pin, key_attributes, version):
+    ...
+    ```
+    into the following:
+    ```python
+    ...
+    import utils
+    from json_objects import EncryptDecryptRequest
+    import my_custom_integration_v1 as custom
+
+    def handler(operation, payload, pin, key_attributes, version):
+    ...
+    ```
 1. From the folder that has the spec.yaml deploy the application to BDC using: ```azdata app create -s```
 1. Wait for the application deployment to complete and the "Ready" status can be checked using ```azdata app list```
 
@@ -93,14 +122,14 @@ In SQL Server a new asymmetric key based on the externally managed key will be i
 
 The asymmetric key can be seen using the following T-SQL query, with the `sys.asymmetric_keys` system catalog view.
 
-```tsql
+```sql
 USE master;
 select * from sys.asymmetric_keys;
 ```
 
-The asymmetric key will appear with the naming convention "tde_asymmetric_key_<version>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](/sql/t-sql/statements/alter-database-encryption-key-transact-sql). For example, use the following T-SQL command:
+The asymmetric key will appear with the naming convention "tde_asymmetric_key_\<version\>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md). For example, use the following T-SQL command:
 
-```tsql
+```sql
 USE db1;
 ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY tde_asymmetric_key_0;
 ```

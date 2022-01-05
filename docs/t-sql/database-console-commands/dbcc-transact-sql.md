@@ -41,7 +41,7 @@ ms.author: umajay
 
 # DBCC (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] programming language provides DBCC statements that act as Database Console Commands for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

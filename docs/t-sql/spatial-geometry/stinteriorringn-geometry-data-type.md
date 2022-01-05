@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STInteriorRingN (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns the specified interior ring of a **Polygongeometry** instance.
   
@@ -50,7 +50,7 @@ Returns the specified interior ring of a **Polygongeometry** instance.
 ## Examples  
  The following example creates a `Polygon` instance and uses `STInteriorRingN()` to return the interior ring of the polygon as a **LineString**.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);  
 SELECT @g.STInteriorRingN(1).ToString();  

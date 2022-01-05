@@ -1,17 +1,17 @@
 ---
 title: SQL Server Big Data Clusters HDFS encryption zones usage guide
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: This article show how to use SQL Server HDFS encryption zones feature of BDC
 author: DaniBunny
 ms.author: dacoelho
-ms.reviewer: mihaelab, wiassaf
+ms.reviewer: wiassaf
 ms.date: 06/14/2021
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# SQL Server Big Data Clusters HDFS Encryption Zones usage guide
+# HDFS Encryption Zones usage guide in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -105,9 +105,7 @@ For more information on the way key versions are used on SQL Server Big Data Clu
 
 ## Next steps
 
-Use azdata with Big Data Clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
-
-Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)
+Use azdata with Big Data Clusters, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
 
 To use an external key provider for encryption at rest, see [External Key Providers in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](encryption-at-rest-external-provider.md).
 

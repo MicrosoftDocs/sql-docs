@@ -1,7 +1,9 @@
 ---
 title: "Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server"
-description: This tutorial teaches you how to create a basic environment for Always Encrypted with secure enclaves in SQL Server, using Virtualization Based Security (VBS) enclaves and Host Guardian Service (HGS) for attestation. You will also learn how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS). 
-ms.custom: seo-lt-2019
+description: This tutorial teaches you how to create a basic environment for Always Encrypted with secure enclaves in SQL Server, using Virtualization Based Security (VBS) enclaves and Host Guardian Service (HGS) for attestation. You will also learn how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
+ms.custom:
+  - seo-lt-2019
+  - intro-get-started
 ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

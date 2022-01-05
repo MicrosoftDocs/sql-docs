@@ -31,7 +31,8 @@ To query the data from a MongoDB data source, you must create external tables to
 The following Transact-SQL commands are used in this section:
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 1. Create a database scoped credential for accessing the MongoDB source.
@@ -43,7 +44,7 @@ The following Transact-SQL commands are used in this section:
     - Replace `<password>` with the appropriate password. 
 
     ```sql
-    CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
+    CREATE DATABASE SCOPED CREDENTIAL [<credential_name>] WITH IDENTITY = '<username>', Secret = '<password>';
     ```
 
    > [!IMPORTANT]
@@ -64,6 +65,24 @@ The following Transact-SQL commands are used in this section:
     [ [ , ] CONNECTION_OPTIONS = '<key_value_pairs>'[,...]]
     [ [ , ] PUSHDOWN = { ON | OFF } ])
     [ ; ]
+    ```
+
+1. Create an external table.
+
+    The following script creates an external table. For reference, see [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). Before you run the script update it for your environment:
+
+    - Update the fields with their name, collation, and if they are collections then specify the collection name and the field name. In the example, `friends` is a custom data type.
+    - Update the location. Set the database name and the table name. Note three-part names are not allowed, so you can't create it for the `system.profile` table. Also you can't specify a view because it can't obtain the metadata from it.
+    - Update the data source with the name of the one you created in the previous step.
+
+    ```sql
+    CREATE EXTERNAL TABLE [MongoDbRandomData](
+      [_id] NVARCHAR(24) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+      [RandomData_friends_id] INT,
+      [RandomData_tags] NVARCHAR(MAX) COLLATE SQL_Latin1_General_CP1_CI_AS)
+    WITH (
+      LOCATION='MyDb.RandomData',
+      DATA_SOURCE=[MongoDb])
     ```
 
 1. **Optional:** Create statistics on an external table.

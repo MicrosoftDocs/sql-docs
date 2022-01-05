@@ -15,7 +15,7 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 11/18/2019
+ms.date: 12/18/2021
 ---
 
 # Start the SQL Server Import and Export Wizard
@@ -52,7 +52,7 @@ If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../incl
 
     Run the 64-bit version of the wizard unless you know that your data source requires a 32-bit data provider.
 
-    ![Start wizard Start](../../integration-services/import-export-data/media/start-wizard-start-64.png)
+    :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-start-64.png" alt-text="Start wizard Start":::
 
 ## Command prompt
 
@@ -68,7 +68,7 @@ In a Command Prompt window, run **DTSWizard.exe** from one of the following loca
 
 Run the 64-bit version of the wizard unless you know that your data source requires a 32-bit data provider.
 
-![Start wizard cmd](../../integration-services/import-export-data/media/start-wizard-cmd.png)
+:::image type="content" source="../../integration-services/import-export-data/media/start-wizard-cmd.png" alt-text="Start wizard cmd":::
   
 ## SQL Server Management Studio (SSMS)
 
@@ -88,7 +88,7 @@ Run the 64-bit version of the wizard unless you know that your data source requi
 
    - **Export Data**  
 
-   ![Start wizard SSMS](../../integration-services/import-export-data/media/start-wizard-ssms.jpg) 
+   :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-ssms.jpg" alt-text="Start wizard SSMS"::: 
 
 If you don't have SQL Server installed, or you have SQL Server but don't have SQL Server Management Studio installed, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
@@ -100,13 +100,13 @@ If you don't have SQL Server installed, or you have SQL Server but don't have SQ
 
 - On the **Project** menu, click **SSIS Import and Export Wizard**.
 
-   ![Start wizard Project](../../integration-services/import-export-data/media/start-wizard-project.png)
+   :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-project.png" alt-text="Start wizard Project":::
 
    \- or -
 
 - In Solution Explorer, right-click the **SSIS Packages** folder, and then click **SSIS Import and Export Wizard**.
 
-    ![Start wizard Packages](../../integration-services/import-export-data/media/start-wizard-packages.png)
+    :::image type="content" source="../../integration-services/import-export-data/media/start-wizard-packages.png" alt-text="Start wizard Packages":::
 
 If you don't have Visual Studio installed, or you have Visual Studio but don't have SQL Server Data Tools installed, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
@@ -129,14 +129,17 @@ Here are some other basic tasks.
 
 - **See a quick example of how the wizard works.**
 
-  - **If you prefer to see screen shots.** Look at this simple example on a single page - [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+  - **If you prefer to see screenshots.** Look at this simple example on a single page - [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
   - **If you prefer to watch a video.** Watch this four-minute video from YouTube that demonstrates the wizard and explains clearly and simply how to export data to Excel - [Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049).
 
   - **Learn more about how the wizard works.**
+     - **Learn more about the wizard.** If you're looking for an overview of the wizard, see [Import and Export Data with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+     - **Learn about the steps in the wizard.** If you're looking for info about the steps in the wizard, see [Steps in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). There's also a separate page of documentation for each page of the wizard.
+     - **Learn how to connect to data sources and destinations.** If you're looking for info about how to connect to your data, select the page you want from the list here - [Connect to data sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). There's a separate page of documentation for each of several commonly used data sources.
 
-  - **Learn more about the wizard.** If you're looking for an overview of the wizard, see [Import and Export Data with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
-  - **Learn about the steps in the wizard.** If you're looking for info about the steps in the wizard, see [Steps in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). There's also a separate page of documentation for each page of the wizard.
+## Next steps 
 
-  - **Learn how to connect to data sources and destinations.** If you're looking for info about how to connect to your data, select the page you want from the list here - [Connect to data sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). There's a separate page of documentation for each of several commonly used data sources.
+- [Import and Export Data with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+- [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

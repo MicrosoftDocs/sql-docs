@@ -24,11 +24,11 @@ helpviewer_keywords:
   - "marked transactions [SQL Server], SAVE TRANSACTION statement"
   - "duplicate savepoints"
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # SAVE TRANSACTION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Sets a savepoint within a transaction.  
   

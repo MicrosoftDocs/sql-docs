@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], creating"
   - "partition functions [SQL Server]"
   - "partition schemes [SQL Server]"
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Partitioned Tables and Indexes

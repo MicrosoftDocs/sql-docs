@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 63397a19-03a2-44bb-b661-7d62c95b6e4e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setBoolean Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

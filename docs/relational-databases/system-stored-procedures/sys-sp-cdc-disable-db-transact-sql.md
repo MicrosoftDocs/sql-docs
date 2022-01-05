@@ -51,7 +51,7 @@ sys.sp_cdc_disable_db
 >  If there are many capture instances defined for the database at the time change data capture is disabled, a long running transaction can cause the execution of sys.sp_cdc_disable_db to fail. This problem can be avoided by disabling the individual capture instances by using sys.sp_cdc_disable_table before running sys.sp_cdc_disable_db.  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role for Change Data Capture on Azure SQL Managed Instance or SQL Server. Requires membership in the **db_owner** for Change Data Capture on Azure SQL Database.  
   
 ## Examples  
  The following example disables change data capture for the `AdventureWorks2012` database.  

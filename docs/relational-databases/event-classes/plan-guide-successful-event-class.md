@@ -1,18 +1,17 @@
 ---
 description: "Plan Guide Successful Event Class"
-title: "Plan Guide Successful Event Class | Microsoft Docs"
+title: "Plan Guide Successful Event Class"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/22/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "Plan Guide Successful event class"
-ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan Guide Successful Event Class
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -23,8 +22,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   The query in the plan guide definition matches the query being executed.  
   
--   The hints in the plan guide definition, including the USE PLAN hint, were applied successfully to the query. That is, the compiled query plan honors the specified hints.  
-  
+-   The hints in the plan guide definition, including the `USE PLAN` hint, were applied successfully to the query. That is, the compiled query plan honors the specified hints.  
+
+> [!NOTE]
+> This event class is not available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+    
 ## Plan Guide Successful Event Class Data Columns  
   
 |Data column name|Data type|Description|Column ID|Filterable|  

@@ -93,7 +93,7 @@ GO
         Here's an example that creates a new credential.
   
         ```sql  
-        CREATE DATABASE SCOPED CREDENTIAL <db_scoped_credential_name>  
+        CREATE DATABASE SCOPED CREDENTIAL [<db_scoped_credential_name>]
             WITH IDENTITY = '<identity>' , SECRET = '<secret>' ;
         GO   
         ```  
@@ -117,11 +117,11 @@ GO
     2.  Provide an existing administrator credential with the CREDENTIAL argument, or specify FEDERATED_SERVICE_ACCOUNT = ON. The following example provides an existing credential.  
   
     ```sql  
-    ALTER DATABASE <database name>  
+    ALTER DATABASE [<database name>]
         SET REMOTE_DATA_ARCHIVE = ON  
             (  
                 SERVER = '<server_name>' ,  
-                CREDENTIAL = <db_scoped_credential_name>  
+                CREDENTIAL = [<db_scoped_credential_name>]
             ) ;  
     GO
     ```  

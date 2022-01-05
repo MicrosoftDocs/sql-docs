@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STIsRing (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns 1 if a **geometry** instance fulfills the following requirements:
 -   It is a **LineString** instance.  
@@ -50,7 +50,7 @@ Returns 1 if a **geometry** instance fulfills the following requirements:
 ## Examples  
  The following example creates a `LineString` instance and uses `STIsRing()` to test whether the instance is a ring.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0, 0 0)', 0);  
 SELECT @g.STIsRing();  

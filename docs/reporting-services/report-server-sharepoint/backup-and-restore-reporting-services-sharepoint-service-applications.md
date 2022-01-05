@@ -28,7 +28,7 @@ This topic describes how to back up and restore a [!INCLUDE[ssRSnoversion](../..
 ### Limitations and restrictions
 
 > [!NOTE]
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications can partially be backed up and restored using the SharePoint backup and restore functionality. **Additional steps are required** and the steps are documented in this topic. Currently the backup process **does not** back up encryption keys and credentials for unattended execution accounts (UEA) or windows authentication to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] database.
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications can partially be backed up and restored using the SharePoint backup and restore functionality. **Additional steps are required** and the steps are documented in this topic. Currently the backup process **does not** back up encryption keys and credentials for unattended execution accounts (UEA) or Windows authentication to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] database.
 
 ### Recommendations
   
@@ -158,4 +158,4 @@ To back up the Service Application, complete the following steps:
   
 6.  Select **Ok**
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

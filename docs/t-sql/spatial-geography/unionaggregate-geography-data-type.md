@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # UnionAggregate (geography Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Performs a union operation on a set of geography objects.
   
@@ -51,7 +51,7 @@ UnionAggregate ( geography_operand )
 ## Examples  
  The following example performs a `UnionAggregate` on a set of **geography** location points within a city.  
   
- ```
+ ```sql
  USE AdventureWorks2012  
  GO  
  SELECT City,  

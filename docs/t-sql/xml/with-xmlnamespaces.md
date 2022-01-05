@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "WITH XMLNAMESPACES clause"
   - "declaring XML namespaces"
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # WITH XMLNAMESPACES
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Declares one or more XML namespaces.  
   

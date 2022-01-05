@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 04/08/2021
 ms.topic: troubleshooting
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
 ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
@@ -162,7 +162,7 @@ This error can happen in many ways:
 
 - You installed a new package on the server, but access was denied, so R installed the package to a user library.
 
-- You installed R Services and then installed another R tool or set of libraries, including Microsoft R Server (Standalone), Microsoft R Client, RStudio, and so forth.
+- You installed R Services and then installed another R tool or set of libraries, such as RStudio.
 
 To determine the location of the R package library that's used by the instance, open SQL Server Management Studio (or any other database query tool), connect to the instance, and then run the following stored procedure:
 
@@ -183,7 +183,7 @@ To resolve the issue, you must reinstall the package to the SQL Server instance 
 
 ::: moniker range=">=sql-server-2016"
 >[!NOTE]
->If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Use SqlBindR to upgrade an instance of R Services](../install/upgrade-r-and-python.md).
+>If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Default R library location](../package-management/r-package-information.md#default-r-library-location).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2016"

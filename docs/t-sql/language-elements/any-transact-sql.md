@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "TRUE"
   - "single-column set of values [SQL Server]"
 ms.assetid: ddadefd7-49ad-4be1-b34d-dcf155558d34
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # ANY (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Compares a scalar value with a single-column set of values. For more information, see [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   

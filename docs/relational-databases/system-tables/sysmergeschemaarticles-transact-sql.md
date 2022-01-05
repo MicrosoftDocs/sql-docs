@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergeschemaarticles system table"
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

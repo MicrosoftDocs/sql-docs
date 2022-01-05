@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-author: rothja
-ms.author: jroth
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sample Database for In-Memory OLTP
@@ -310,7 +310,7 @@ The Books Online provide more information about the following topics:
   
  Installation steps:  
   
-1.  Download and run the x64 installation package for the RML utilities from the following page: [Download RML for SQL Server](https://www.microsoft.com/download/details.aspx?id=4511)
+1.  Download and run the x64 installation package for the RML utilities from the following page: [Download RML for SQL Server](https://www.microsoft.com/download/details.aspx?id=103126)
 
 2.  If there is a dialog box saying certain files are in use, click 'Continue'  
   
@@ -754,4 +754,4 @@ ORDER BY state, file_type
   
 ## See Also
 
-[In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)
+[In-Memory OLTP &#40;In-Memory Optimization&#41;](./overview-and-usage-scenarios.md)

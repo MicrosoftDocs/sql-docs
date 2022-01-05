@@ -1,8 +1,8 @@
 ---
 description: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)"
-title: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL) | Microsoft Docs"
+title: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/29/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "fn_cdc_get_all_changes_<capture_instance>"
   - "change data capture [SQL Server], querying metadata"
   - "cdc.fn_cdc_get_all_changes_<capture_instance>"
-ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -23,13 +22,13 @@ ms.author: wiassaf
 
   Returns one row for each change applied to the source table within the specified log sequence number (LSN) range. If a source row had multiple changes during the interval, each change is represented in the returned result set. In addition to returning the change data, four metadata columns provide the information you need to apply the changes to another data source. Row filtering options govern the content of the metadata columns as well as the rows returned in the result set. When the 'all' row filter option is specified, each change has exactly one row to identify the change. When the 'all update old' option is specified, update operations are represented as two rows: one containing the values of the captured columns before the update and another containing the values of the captured columns after the update.  
   
- This enumeration function is created at the time that a source table is enabled for change data capture. The function name is derived and uses the format **cdc.fn_cdc_get_all_changes_**_capture_instance_ where *capture_instance* is the value specified for the capture instance when the source table is enabled for change data capture.  
+ This enumeration function is created at the time that a source table is enabled for change data capture. The function name is derived and uses the format `cdc.fn_cdc_get_all_changes_<capture_instance>` where *capture_instance* is the value specified for the capture instance when the source table is enabled for change data capture.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
+```syntaxsql  
   
 cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_option>' )  
   
@@ -40,17 +39,18 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ```  
   
 ## Arguments  
- *from_lsn*  
+
+#### *from_lsn*  
  The LSN value that represents the low endpoint of the LSN range to include in the result set. *from_lsn* is **binary(10)**.  
   
  Only rows in the [cdc.&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) change table with a value in **__$start_lsn** greater than or equal to *from_lsn* are included in the result set.  
   
- *to_lsn*  
+#### *to_lsn*  
  The LSN value that represents the high endpoint of the LSN range to include in the result set. *to_lsn* is **binary(10)**.  
   
  Only rows in the [cdc.&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) change table with a value in **__$start_lsn** greater than or equal to *from_lsn* and less than or equal to *to_lsn* are included in the result set.  
   
- <row_filter_option> ::= { all | all update old }  
+#### <row_filter_option> ::= { all | all update old }  
  An option that governs the content of the metadata columns as well as the rows returned in the result set.  
   
  Can be one of the following options:  
@@ -61,7 +61,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  all update old  
  Returns all changes within the specified LSN range. For changes due to an update operation, this option returns both the row containing the column values before the update and the row containing the column values after the update.  
   
-## Table Returned  
+## Table returned  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -72,19 +72,20 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |**\<captured source table columns>**|varies|The remaining columns returned by the function are the captured columns identified when the capture instance was created. If no columns were specified in the captured column list, all columns in the source table are returned.|  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role or **db_owner** fixed database role. For all other users, requires SELECT permission on all captured columns in the source table and, if a gating role for the capture instance was defined, membership in that database role. When the caller does not have permission to view the source data, the function returns error 229 ("The SELECT permission was denied on the object 'fn_cdc_get_all_changes_...', database '\<DatabaseName>', schema 'cdc'.").  
+ Requires membership in the **sysadmin** fixed server role or **db_owner** fixed database role. For all other users, requires SELECT permission on all captured columns in the source table and, if a gating role for the capture instance was defined, membership in that database role. When the caller does not have permission to view the source data, the function returns error 229 `The SELECT permission was denied on the object 'fn_cdc_get_all_changes_...', database '\<DatabaseName>', schema 'cdc'.` 
   
 ## Remarks  
- If the specified LSN range does not fall within the change tracking timeline for the capture instance, the function returns error 208 ("An insufficient number of arguments were supplied for the procedure or function cdc.fn_cdc_get_all_changes.").  
-  
+   
  Columns of data type **image**, **text**, and **ntext** are always assigned a NULL value when **__$operation** = 1 or **__$operation** = 3. Columns of data type **varbinary(max)**, **varchar(max)**, or **nvarchar(max)** are assigned a NULL value when **__$operation** = 3 unless the column changed during the update. When **__$operation** = 1, these columns are assigned their value at the time of the delete. Computed columns that are included in a capture instance always have a value of NULL.  
+
+ Error 313 is expected if LSN range supplied is not appropriate when calling `cdc.fn_cdc_get_all_changes_<capture_instance>` or `cdc.fn_cdc_get_net_changes_<capture_instance>`. If the `lsn_value` parameter is beyond the time of lowest LSN or highest LSN, then execution of these functions will return in error 313: `Msg 313, Level 16, State 3, Line 1 An insufficient number of arguments were supplied for the procedure or function`. This error should be handled by the developer. Sample T-SQL for a workaround can be found [at ReplTalk on GitHub](https://github.com/ReplTalk/ReplScripts/tree/master/CDC). 
   
 ## Examples  
  Several [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] templates are available that show how to use the change data capture query functions. These templates are available on the **View** menu in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Template Explorer](../../ssms/template/template-explorer.md).  
   
  This example shows the `Enumerate All Changes for Valid Range Template`. It uses the function `cdc.fn_cdc_get_all_changes_HR_Department` to report all the currently available changes for the capture instance `HR_Department`, which is defined for the source table HumanResources.Department in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```  
+```sql  
 -- ========  
 -- Enumerate All Changes for Valid Range Template  
 -- ========  
@@ -100,11 +101,11 @@ GO
 ```  
   
 ## See Also  
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
- [sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
+ - [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ - [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ - [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
+ - [sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ - [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ - [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "updating node values"
   - "replace value of XML DML statement"
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # replace value of (XML DML)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Updates the value of a node in the document.  
   

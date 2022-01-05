@@ -1,16 +1,18 @@
 ---
 title: "Install PolyBase on Windows"
 description: Learn to install PolyBase as a single node or PolyBase scale-out group. You can use an installation wizard or a command prompt. Finally, enable PolyBase.
-ms.date: 02/05/2021
+ms.date: 10/05/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-helpviewer_keywords: 
-   - "PolyBase, installation"
+helpviewer_keywords:
+  - "PolyBase, installation"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 monikerRange: ">= sql-server-2016"
+ms.custom:
+  - intro-installation
 ---
 # Install PolyBase on Windows
 
@@ -32,22 +34,29 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
    
 - PolyBase services require SQL Server service to have TCP/IP network protocol enabled to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For PolyBase to function correctly on the Developer and Express editions, you must enable TCP/IP connectivity. See [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md). Additionally, if TCP/IP Protocol configuration setting **Listen All** is set to **No**, you must still have an entry for the correct listener port in either **TCP Dynamic Ports** or **TCP Ports** under **IPAll** in TCP/IP Properties. This is required due to the way PolyBase services resolve the listener port of the SQL Server Engine.
 
->[!NOTE] 
-> PolyBase can be installed on only one SQL Server instance per machine.
+- PolyBase services require Shared Memory protocol to be enabled to function properly.
+
+- PolyBase can be installed on only one SQL Server instance per machine.
+
+- You cannot add features to a failover cluster instance after creation. For example, you cannot add the PolyBase feature to an existing failover cluster instance.
 
  
 ## Single node or PolyBase scale-out group
 
 Before you install PolyBase on your SQL Server instances, decide whether you want a single node installation or a [PolyBase scale-out group](../../relational-databases/polybase/polybase-scale-out-groups.md).
 
+For the PolyBase service account, choose:
+- the default virtual service account (VSA) for stand-alone installations of PolyBase.
+- a domain account, with a group managed service account (gMSA) preferred, for installations in a PolyBase scale-out group. For more information, see [Group Managed Service Accounts Overview](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
+
 For a PolyBase scale-out group, make sure that:
 
 - All the machines are on the same domain.
-- You use the same service account and password during PolyBase installation.
+- You use the same domain service account and password during PolyBase installation.
 - Your SQL Server instances can communicate with one another over the network.
 - The SQL Server instances are all the same version of SQL Server.
 
-After you install PolyBase either standalone or in a scale-out group, you can't change. To change this setting, you have to uninstall and reinstall the feature.
+After installation of PolyBase to either standalone or in a scale-out group, you cannot change to a scale-out group or standalone service. If you need to change an existing installation of PolyBase to a standalone instance or a scale-out group, uninstall and reinstall the PolyBase feature.
 
 ## Use the installation wizard
    
@@ -187,7 +196,7 @@ At installation, if you use the SQL Server instance as part of a PolyBase scale-
    
 ### PolyBase service accounts
 
-To change the service accounts for the PolyBase Engine and PolyBase Data Movement service, uninstall and reinstall the PolyBase feature.
+To change the service accounts for the PolyBase Engine and PolyBase Data Movement service, uninstall and reinstall the PolyBase feature. If the password for the service account was changed in Active Directory, you can change the service account password with Windows Services Console (services.msc).
 
 ## Next steps  
 

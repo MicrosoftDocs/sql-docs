@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, system requirements"
   - "MSOLEDBSQL, system requirements"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # System requirements for OLE DB Driver for SQL Server

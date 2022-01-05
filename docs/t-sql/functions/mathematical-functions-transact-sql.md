@@ -15,8 +15,9 @@ helpviewer_keywords:
   - "mathematical functions [SQL Server]"
   - "functions [SQL Server], mathematical"
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || =azure-sqldw-latest || >=aps-pdw-2016"
 ---
 # Mathematical Functions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

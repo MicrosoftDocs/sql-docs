@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-author: rothja
-ms.author: jroth
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # A Guide to Query Processing for Memory-Optimized Tables
@@ -79,7 +79,7 @@ Query plan for join of disk-based tables.
   
 -   The logical operator **Inner Join** is implemented by the physical operator **Merge Join**. The other physical join types are **Nested Loops** and **Hash Join**. The **Merge Join** operator takes advantage of the fact that both indexes are sorted on the join column CustomerID.  
   
- Consider a slight variation on this query, which returns all rows from the Order table, not only OrderID:  
+ Consider a slight variation on this query, which returns all columns from the Order table, not only OrderID column:  
   
 ```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  

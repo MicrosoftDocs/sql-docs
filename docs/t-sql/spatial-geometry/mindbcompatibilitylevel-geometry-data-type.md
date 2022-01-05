@@ -17,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # MinDbCompatibilityLevel (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns the minimum database compatibility level that recognizes the **geometry** data type instance.
   
@@ -43,7 +43,7 @@ Returns the minimum database compatibility level that recognizes the **geometry*
 ### A. Testing CircularString type for compatibility with compatibility level 110  
  The following example tests a `CircularString` instance for compatibility with an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-```
+```sql
  DECLARE @g geometry = 'CIRCULARSTRING(3 4, 8 9, 5 6)'; 
  IF @g.MinDbCompatibilityLevel() <= 110 
  BEGIN 
@@ -54,7 +54,7 @@ Returns the minimum database compatibility level that recognizes the **geometry*
 ### B. Testing LineString type for compatibility with compatibility level 100  
  The following example tests a `LineString` instance for compatibility with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:  
   
-```
+```sql
  DECLARE @g geometry = 'LINESTRING(3 4, 8 9, 5 6)'; 
  IF @g.MinDbCompatibilityLevel() <= 100 
  BEGIN 

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "backups [SQL Server], creating"
   - "backing up transaction logs [SQL Server], SQL Server Management Studio"
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Back Up a Transaction Log
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

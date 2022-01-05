@@ -8,6 +8,8 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_polybase_join_group"
 helpviewer_keywords: 

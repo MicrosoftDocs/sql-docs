@@ -43,7 +43,7 @@ monikerRange: "= azuresqldb-current"
 
 ## Permissions
 
-This view is only available in the **master** database to the server-level principal login.  
+This view is only available in the **master** database to the server-level principal login. For Azure SQL Database results will only be returned for the server administrator, Azure Active Directory admin, or for a user with the dbmanager role. For Azure SQL Managed Instance results will only be returned for the sysadmin. 
   
 ## Example
 

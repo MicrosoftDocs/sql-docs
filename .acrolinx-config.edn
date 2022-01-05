@@ -1,2 +1,2 @@
-{:allowed-branchname-matches ["master" "release-.*" "sandbox-.*"]
+{:allowed-branchname-matches ["main" "master" "release-.*" "sandbox-.*"]
  :allowed-filename-matches ["docs" "docs-msdn"]}

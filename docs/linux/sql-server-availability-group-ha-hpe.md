@@ -14,7 +14,7 @@ ms.custom:
 
 # Tutorial - Setup a three node Always On availability group with HPE Serviceguard for Linux 
 
-This tutorial explains how to configure SQL Server Always On availability group with HPE Serviceguard for Linux running on on-premises Virtual Machines (VMs).
+This tutorial explains how to configure SQL Server Always On availability group with HPE Serviceguard for Linux running on on-premises Virtual Machines (VMs). The same tutorial can also be followed for Azure based VMs as well. 
 
 Refer to [HPE Serviceguard Clusters](https://h20195.www2.hpe.com/v2/GetPDF.aspx/c04154488.pdf) for an overview of the HPE Serviceguard clusters.
 
@@ -33,7 +33,7 @@ This tutorial consists of the following tasks:
 
 ## Prerequisites
 
-* Three VMs in an on-premises environment, running HPE Serviceguard on a supported Linux distribution.
+* Three VMs(Virtual Machines) in an on-premises environment, running HPE Serviceguard on a supported Linux distribution. If you wish to deploy Azure Linux based VMs(Virtual Machines) then follow the [Quickstart: Create Linux virtual machine in Azure portal](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal) article to create atleast three VMs for this tutorial. 
 
    For an example of a supported distribution, see [HPE Serviceguard for Linux](https://h20195.www2.hpe.com/v2/gethtml.aspx?docname=c04154488).
 

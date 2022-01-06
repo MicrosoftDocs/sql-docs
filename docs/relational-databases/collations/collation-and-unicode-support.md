@@ -382,6 +382,8 @@ To query the server for all available collations, use the following `fn_helpcoll
 ```sql
 SELECT * FROM sys.fn_helpcollations();
 ```
+
+You can not change change or set the instance level collation on Azure SQL Database. For information about SQL Managed Instance and SQL Server, see: [Set or Change the Server Collation](../../relational-databases/collations/set-or-change-the-server-collation.md). 
     
 #### <a name="Database-level-collations"></a> Database-level collations    
 When you create or modify a database, you can use the `COLLATE` clause of the `CREATE DATABASE` or `ALTER DATABASE` statement to specify the default database collation. If no collation is specified, the database is assigned the server collation.    
@@ -389,9 +391,6 @@ When you create or modify a database, you can use the `COLLATE` clause of the `C
 You can't change the collation of system databases unless you change the collation for the server.
     
 The database collation is used for all metadata in the database, and the collation is the default for all string columns, temporary objects, variable names, and any other strings used in the database. When you change the collation of a user database, there can be collation conflicts when queries in the database access temporary tables. Temporary tables are always stored in the *tempdb* system database, which uses the collation for the instance. Queries that compare character data between the user database and *tempdb* might fail if the collations cause a conflict in evaluating the character data. You can resolve this issue by specifying the `COLLATE` clause in the query. For more information, see [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md).    
-
-> [!NOTE]
-> You can't change the collation after the database has been created on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 You can change the collation of a user database by using an `ALTER DATABASE` statement that's similar to the following:
 

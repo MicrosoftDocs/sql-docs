@@ -383,7 +383,7 @@ To query the server for all available collations, use the following `fn_helpcoll
 SELECT * FROM sys.fn_helpcollations();
 ```
 
-You can not change change or set the instance level collation on Azure SQL Database. For information about SQL Managed Instance and SQL Server, see: [Set or Change the Server Collation](../../relational-databases/collations/set-or-change-the-server-collation.md). 
+You can not change or set the instance level collation on Azure SQL Database. For information about SQL Managed Instance and SQL Server, see: [Set or Change the Server Collation](../../relational-databases/collations/set-or-change-the-server-collation.md). 
     
 #### <a name="Database-level-collations"></a> Database-level collations    
 When you create or modify a database, you can use the `COLLATE` clause of the `CREATE DATABASE` or `ALTER DATABASE` statement to specify the default database collation. If no collation is specified, the database is assigned the server collation.    

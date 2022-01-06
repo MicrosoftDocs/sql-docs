@@ -91,7 +91,7 @@ $cd dockerfiles
 $nano Dockerfile  
 # paste the sample dockerfile content shared above 
 # now build the image using the command: 
-$docker build -t <tagname> . 
+$docker build -t <tagname> . (<tagname> should be sqlimage/latest since this is the tag we are using below)
 # you should now be able to see the new image, sqlimage when you run the docker images command 
 ```
 
@@ -107,7 +107,7 @@ $docker push <registry-name>.azurecr.io/sqlimage:latest
 This ensures that the custom image has been pushed to Azure Container Registry (ACR) and that you can now integrate your Azure Kubernetes Service (AKS) with ACR by running the following command. For more information, see this [Integrate ACR with an AKS cluster](/azure/aks/cluster-container-registry-integration).
 
 ```bash
-az aks update -n myAKSCluster -g <myResourceGroup> --attach-acr <registry-name>
+az aks update -n myAKSCluster -g <myResourceGroup> --attach-acr <registry-name> (fully qualified name of registry is not acceptable here, only short name)
 ```
 
 ## Deploy containers on Azure Kubernetes Service
@@ -176,7 +176,7 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
             fsGroup: 10001 
           containers: 
           - name: mssql 
-            image: <registry-name>.azurecr.io/sqldh2i:latest 
+            image: <registry-name>.azurecr.io/sqldh2i:latest (this has to be sqlimage:latest since this is what we created above)
             env: 
             - name: ACCEPT_EULA 
               value: "Y" 
@@ -235,7 +235,7 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
             fsGroup: 10001 
           containers: 
           - name: mssql 
-            image: <registry-name>.azurecr.io/sqldh2i:latest 
+            image: <registry-name>.azurecr.io/sqldh2i:latest (this has to be sqlimage:latest since this is what we created above)
             env: 
             - name: ACCEPT_EULA 
               value: "Y" 

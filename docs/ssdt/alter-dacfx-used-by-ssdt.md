@@ -19,13 +19,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Under specific circumstances you may need to use a different version of [DacFx](../tools/sqlpackage/sqlpackage.md) with the SQL Server Data Tools interface in Visual Studio. When possible, it is recommended to use a standalone version of DacFx if an alternative version from SQL Server Data Tools is required.
 
+Follow the process below to alter the version of DacFx used by SQL Server Data Tools (SSDT).
+
 ## Replace DacFx files in SSDT
 
-SQL Server Data Tools stores the DacFx files in `Common7\IDE\Extensions\Microsoft\SQLDB\DAC`. For Visual Studio 2022 Community, the full path is commonly `C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SQLDB\DAC`.
+SQL Server Data Tools stores the DacFx files under `Common7\IDE\Extensions\Microsoft\SQLDB\DAC` within the Visual Studio program files. For Visual Studio 2022 Community, the full path is commonly `C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SQLDB\DAC`.
 
 Substitution should be done within the same major version of DacFx. For example, if the current DacFx version is 15.0.5149.3, only other 15.x versions should be used.  Select `Microsoft.SqlServer.Dac.dll` file from the SSDT DacFx folder and use the context menu to open the file properties to view the current version.
 
-DacFx is published to [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx). Identify the desired version and follow these steps to use it with SSDT:
+DacFx is published to [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx). Identify the desired version within the Microsoft.SqlServer.DacFx NuGet feed and follow these steps to use it with SSDT:
 
 1. Download the NuGet package for the DacFx version from the web interface.
 2. Change the *nupkg* file to a *zip* file and extract the archive.

@@ -18,7 +18,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: 
 ms.custom: ""
-ms.date: "12/3/2021"
+ms.date: "1/7/2022"
 ---
 
 # sp_data_source_table_columns (Transact-SQL)
@@ -43,10 +43,10 @@ sp_data_source_table_columns
 
 ## Arguments
 
-`[ @data_source = ] 'data_source'`   
+#### `[ @data_source = ] 'data_source'`   
 The name of the external data source to get the metadata from. Type is `sysname`.
 
-`[ @table_location = ] 'table_location'`   
+#### `[ @table_location = ] 'table_location'`   
 The table location string that identifies the table. `table_location` type is `nvarchar(max)`.
 
 ## Returns
@@ -63,7 +63,7 @@ The stored procedure returns the following information:
 |COLLATION|nvarchar(200)|SQL Server collation of column
 |IS_NULLABLE|bit|1 = nullable, 0 = not nullable
 |SOURCE_TYPE_NAME|nvarchar(max)|Backend-specific type name. Mostly used for debugging. For ODBC sources, `SOURCE_TYPE_NAME` will correspond to the `TYPE_NAME` result column for SQLColumns().
-|REMARKS|nvarchar(max)|General comments or description of column. Currently always NULL.|
+|REMARKS|nvarchar(max)|General comments or description of column. Currently always `NULL`.|
 
 ## Permissions  
 
@@ -71,7 +71,7 @@ Requires ALTER ANY EXTERNAL DATA SOURCE permission.
   
 ## Remarks  
 
-The SQL Server instance must have the  [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed.
+The SQL Server instance must have the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed.
 
 This stored procedure supports connectors for:
 
@@ -81,7 +81,7 @@ This stored procedure supports connectors for:
 - MongoDB
 - CosmosDB
 
-The stored procedure does not support generic ODBC dta source connectors.
+The stored procedure does not support generic ODBC data source or Hadoop connectors.
 
 The notion of empty vs. non-empty relates to the behavior of the ODBC driver and the [`SQLTables` function](../native-client-odbc-api/sqltables.md). Non-empty indicates an object contains tables, not rows. For example, an empty schema contains no tables in SQL Server. An empty database contains with no tables inside Teradata.The results are a SQL Server representation of the backend schema as interpreted by the PolyBase connector for the backend. The distinction here is that instead of merely passing along the results of the ODBC call to the backend, the results are based on the outcome of the PolyBase type-mapping code.
 

@@ -34,20 +34,20 @@ DacFx is published to [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer
 3. Close Visual Studio.
 4. Copy the following files from `lib/net46` into the SSDT DacFx folder:
 
-- Microsoft.Data.Tools.Schema.Sql.dll
-- Microsoft.Data.Tools.Utilities.dll
-- Microsoft.SqlServer.Dac.dll
-- Microsoft.SqlServer.Dac.Extensions.dll
-- Microsoft.SqlServer.Dac.Extensions.xml
-- Micrososft.SqlServer.Dac.xml
-- Microsoft.SqlServer.TransactSql.ScriptDom.dll
-- Microsoft.SqlServer.Types.dll
+   - Microsoft.Data.Tools.Schema.Sql.dll
+   - Microsoft.Data.Tools.Utilities.dll
+   - Microsoft.SqlServer.Dac.dll
+   - Microsoft.SqlServer.Dac.Extensions.dll
+   - Microsoft.SqlServer.Dac.Extensions.xml
+   - Micrososft.SqlServer.Dac.xml
+   - Microsoft.SqlServer.TransactSql.ScriptDom.dll
+   - Microsoft.SqlServer.Types.dll
 
 
 SQL Projects will require [Clean or Rebuild](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) after this process to properly incorporate the replaced DacFx version.
 
 
-## Next Steps
+## Next steps
 
 - [SQL Server Data Tools (SSDT) overview](sql-server-data-tools.md)
 - [SqlPackage.exe (DacFx) release notes](../tools/sqlpackage/release-notes-sqlpackage.md)

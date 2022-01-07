@@ -108,7 +108,7 @@ REPLACE
 GeoJSON is a format for encoding a variety of geographic data structures. With the `TRANSLATE` function, developers can easily convert GeoJSON points to WKT format and vice versa. The following query replaces square and curly braces in input  with regular braces:
 
 ```sql
-SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
+SELECT TRANSLATE('[137.4,72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
 

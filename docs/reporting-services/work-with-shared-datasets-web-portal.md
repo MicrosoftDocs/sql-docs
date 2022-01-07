@@ -1,7 +1,7 @@
 ---
 title: "Working with shared datasets (web portal) | Microsoft Docs"
 description: View and manage the properties of a shared dataset within the web portal. Use the web portal to create or edit shared datasets in the Report Builder.
-ms.date: 07/02/2017
+ms.date: 01/06/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -83,7 +83,7 @@ You can control whether you want to expire the cache, for the shared dataset, af
   
 ### Cache Refresh Plans  
   
-You can use Cache Refresh Plans to create schedules for preloading the cache with temporary copies of data for a shared dataset. A refresh plan includes a schedule and the option to specify or override values for parameters. You cannot override values for parameters that are marked read-only. You can create and use more than one refresh plan.   
+You can use Cache refresh plans to create schedules for preloading the cache with temporary copies of data for a shared dataset. A refresh plan includes a schedule and the option to specify or override values for parameters. You cannot override values for parameters that are marked read-only. You can create and use more than one refresh plan. If you create a KPI based on a shared dataset, the dataset has to have a cache refresh plan. Otherwise, it won't update.
   
 Default role assignments that enable you to add, delete, and change shared datasets for cache refresh plans are Content Manager, My Reports, and Publisher.  
   

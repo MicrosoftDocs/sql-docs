@@ -54,7 +54,7 @@ On the **General** page, in the **Linked server** box, type the name of the inst
 Specify the **Server type** and related information if needed:
 
 - **SQL Server**  
-    Identify the linked server as an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you use this method of defining a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] linked server, the name specified in **Linked server** must be the network name of the server. Also, any tables retrieved from the server are from the default database defined for the login on the linked server.  
+    Identify the linked server as an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or an Azure SQL Managed Instance. If you use this method of defining a linked server, the name specified in **Linked server** must be the network name of the server. Also, any tables retrieved from the server are from the default database defined for the login on the linked server.  
 
 - **Other data source**  
     Specify an OLE DB server type other than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clicking this option activates the options below it.  

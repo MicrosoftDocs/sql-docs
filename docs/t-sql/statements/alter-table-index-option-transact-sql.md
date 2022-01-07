@@ -1,6 +1,6 @@
 ---
 description: "ALTER TABLE index_option (Transact-SQL)"
-title: " | Microsoft Docs"
+title: "ALTER TABLE index_option (Transact-SQL)"
 ms.custom: ""
 ms.date: 06/26/2019
 ms.prod: sql

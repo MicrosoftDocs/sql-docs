@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 10/18/2021
+ms.date: 1/7/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -95,7 +95,7 @@ Specifies the user-defined name for the data source. The name must be unique wit
 
 Provides the connectivity protocol and path to the external data source.
 
-| External Data Source    | Location prefix | Location path                                         | Supported locations by product / service |
+| External Data Source    | Connector location prefix | Location path                                         | Supported locations by product / service |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
 | Cloudera CDH or Hortonworks HDP | `hdfs`          | `<Namenode>[:port]`                                   | Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]                       |
 | Azure Storage account(V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]         Hierarchical Namespace **not** supported |
@@ -175,7 +175,7 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-When you connect to the storage or data pool in a SQL Server big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
+When you connect to the storage or data pool in a SQL Server 2019 big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
 ## Examples
 
@@ -348,7 +348,7 @@ Specifies the user-defined name for the data source. The name must be unique wit
 
 Provides the connectivity protocol and path to the external data source.
 
-| External Data Source    | Location prefix | Location path                                         | Supported locations by product / service |
+| External Data Source    | Connector location prefix | Location path                                         | Supported locations by product / service |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
 | Cloudera CDH or Hortonworks HDP | `hdfs`          | `<Namenode>[:port]`                                   | Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]                       |
 | Azure Storage account(V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]         Hierarchical Namespace **not** supported |
@@ -443,7 +443,7 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-When you connect to the storage or data pool in a SQL Server big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
+When you connect to the storage or data pool in a SQL Server 2019 big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
 An SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
 
@@ -631,7 +631,7 @@ Specifies the user-defined name for the data source. The name must be unique wit
 
 Provides the connectivity protocol and path to the external data source.
 
-| External Data Source    | Location prefix | Location path                                         | Supported locations by product / service |
+| External Data Source    | Connector location prefix | Location path                                         | Supported locations by product / service |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
 | Cloudera CDH or Hortonworks HDP | `hdfs`          | `<Namenode>[:port]`                                   | Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]                       |
 | Azure Storage account(V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]         Hierarchical Namespace **not** supported |
@@ -642,8 +642,8 @@ Provides the connectivity protocol and path to the external data source.
 | Generic ODBC                    | `odbc`          | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] - Windows only        |
 | Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
 | Azure Data Lake Storage Gen2 |   `abfs[s]` | `abfss://<container>@<storage _account>.dfs.core.windows.net`  |  Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+. |
-| [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]  data pool | `sqldatapool` | `sqldatapool://controller-svc/default` | Only supported in [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] | 
-| [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]  storage pool | `sqlhdfs` | `sqlhdfs://controller-svc/default` | Only supported in [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]  |
+| [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]  data pool | `sqldatapool` | `sqldatapool://controller-svc/default` | Only supported in [!INCLUDE[ssbigdataclusters-ver15](../../includes/ssbigdataclusters-ver15.md)] | 
+| [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]  storage pool | `sqlhdfs` | `sqlhdfs://controller-svc/default` | Only supported in [!INCLUDE[ssbigdataclusters-ver15](../../includes/ssbigdataclusters-ver15.md)]  |
 |||||
 
 #### Location path:
@@ -659,13 +659,13 @@ Additional notes and guidance when setting the location:
 
 - The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 - Use the same external data source for all tables when querying Hadoop to ensure consistent querying semantics.
-- You can use the `sqlserver` location prefix to connect [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+- You can use the `sqlserver` connector to connect [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
 - Specify the `Driver={<Name of Driver>}` when connecting via `ODBC`.
 - Using `wasbs` or `abfss` is optional but recommended for accessing Azure Storage Accounts as data will be sent using a secure TLS/SSL connection.
 - The `abfs` or `abfss` APIs are supported when accessing Azure Storage Accounts starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11. For more information, see [the Azure Blob Filesystem driver (ABFS)](/azure/storage/blobs/data-lake-storage-abfs-driver).
 - The Hierarchical Namespace option for Azure Storage Accounts(V2) using `abfs[s]` is supported via Azure Data Lake Storage Gen2 starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+. The Hierarchical Namespace option is otherwise not supported, and this option should remain **disabled**.
 - To ensure successful PolyBase queries during a Hadoop `Namenode` fail-over, consider using a virtual IP address for the `Namenode` of the Hadoop cluster. If you don't, execute an [ALTER EXTERNAL DATA SOURCE][alter_eds] command to point to the new location.
-- The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of a big data cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in a SQL Server big data cluster](../../big-data-cluster/tutorial-query-hdfs-storage-pool.md).
+- The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of a SQL Server 2019 big data cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in a SQL Server big data cluster](../../big-data-cluster/tutorial-query-hdfs-storage-pool.md).
 
 #### CONNECTION_OPTIONS = *key_value_pair*
 
@@ -757,7 +757,7 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-When you connect to the storage or data pool in a SQL Server big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
+When you connect to the storage or data pool in a SQL Server 2019 big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
 An SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
 
@@ -1034,7 +1034,7 @@ Specifies the user-defined name for the data source. The name must be unique wit
 
 Provides the connectivity protocol and path to the external data source.
 
-| External Data Source   | Location prefix | Location path                                         | Availability | 
+| External Data Source   | Connector location prefix | Location path                                         | Availability | 
 | ---------------------- | --------------- | ----------------------------------------------------- | ------------ |
 | Bulk Operations        | `https`         | `<storage_account>.blob.core.windows.net/<container>` | |
 | Elastic Query (shard)  | Not required    | `<shard_map_server_name>.database.windows.net`        | | 
@@ -1310,7 +1310,7 @@ Specifies the user-defined name for the data source. The name must be unique wit
 
 Provides the connectivity protocol and path to the external data source.
 
-| External Data Source        | Location prefix | Location path                                         |
+| External Data Source        | Connector location prefix | Location path                                         |
 | --------------------------- | --------------- | ----------------------------------------------------- |
 | Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
 | Azure Data Lake Store Gen 2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
@@ -1360,7 +1360,7 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-When you connect to the storage or data pool in a SQL Server big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
+When you connect to the storage or data pool in a SQL Server 2019 big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
 An SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
 
@@ -1571,7 +1571,7 @@ Specifies the user-defined name for the data source. The name must be unique wit
 
 Provides the connectivity protocol and path to the external data source.
 
-| External Data Source    | Location prefix | Location path                                         |
+| External Data Source    | Connector location prefix | Location path                                         |
 | ----------------------- | --------------- | ----------------------------------------------------- |
 | Cloudera CDH or Hortonworks HDP | `hdfs`          | `<Namenode>[:port]`                                   |
 | Azure Storage Account   | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |

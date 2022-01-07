@@ -1,8 +1,8 @@
 ---
 description: "sp_data_source_objects (Transact-SQL)"
-title: "sp_data_source_objects | Microsoft Docs"
+title: "sp_data_source_objects"
 ms.custom: ""
-ms.date: "12/3/2021"
+ms.date: "1/7/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -44,10 +44,10 @@ sp_data_source_objects
   
 ## Arguments  
 
-`[ @data_source = ] 'data_source'`   
+#### `[ @data_source = ] 'data_source'`   
 The name of the external data source to get the metadata from. `@data_source` is `sysname`.  
 
-`[ @object_root_name = ] 'object_root_name'`   
+#### `[ @object_root_name = ] 'object_root_name'`   
 This parameter is the root of the name of the object(s) to search for. `@object_root_name` is `nvarchar(max)`, with a default of `NULL`.
 
 This call only returns external objects that begin with the value set for `@object_root_name`.
@@ -56,14 +56,14 @@ If an ODBC data source connects to a Relational Database Management System (RDBM
 > [!CAUTION]
 > Due to differences between external data platforms, some platforms do not return any results if the default value of `NULL` is provided. Some treat `NULL` as the lack of a filter. For example, Oracle RDMBS will not return results if `NULL` is provided for `@object_root_name`.
 
-`[ @max_search_depth = ] max_search_depth`   
+#### `[ @max_search_depth = ] max_search_depth`   
 This value specifies the maximum depth (in parts) past the `@object_root_name` that we wish to search. `@max_search_depth` is an `int` with a default of 1.
 
 For example, a `@max_search_depth` of 1, with an `@object_root_name` that is the name of a SQL Server database, would return schemata contained inside the database.
 
 A `@max_search_depth` of `NULL` will return information about `@object_root_name` if it exists and is non-empty, in the case of catalog or schema.
 
-`[ @search_options = ] 'search_options'`   
+#### `[ @search_options = ] 'search_options'`   
 The `search_options` parameter is nvarchar(max) with a default of `NULL`.
 
 This parameter is not used but may be implemented in the future.
@@ -83,7 +83,7 @@ Requires ALTER ANY EXTERNAL DATA SOURCE permission.
 
 ## Remarks  
 
-The SQL Server instance must have the  [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed.
+The SQL Server instance must have the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed.
 
 This stored procedure supports connectors for:
 
@@ -93,7 +93,7 @@ This stored procedure supports connectors for:
 - MongoDB
 - CosmosDB
 
-The stored procedure does not support generic ODBC dta source connectors.
+The stored procedure does not support generic ODBC data source or Hadoop connectors.
 
 The notion of empty vs. non-empty relates to the behavior of the ODBC driver and the [`SQLTables` function](../native-client-odbc-api/sqltables.md). Non-empty indicates an object contains tables, not rows. For example, an empty schema contains no tables in SQL Server. An empty database contains with no tables inside Teradata.
 

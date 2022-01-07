@@ -41,7 +41,7 @@ After you have determined the location of your KPI, go to that folder and select
   
 ![Screenshot Showing the New dropdown list with the KPI option called out.](../reporting-services/media/rscreatekpi1.png)  
   
-This will present you with the **New KPI** screen.  
+The **New KPI** screen opens.  
   
 ![Screenshot showing the New KPI screen.](../reporting-services/media/rscreatekpi2.png)  
   
@@ -53,7 +53,7 @@ You can either assign static values, or use data from a shared dataset. When you
 | Value | The value to display for the KPI. |
 | Goal | Used as a comparison to a numeric value and shown as a percent difference. |
 | Status | Numerical value used to determine the KPI Tile color. Valid values are 1 (green), 0 (amber) and -1 (red). |
-| Trend set | Comma-separated numeric values used for chart visualization. This can also be set to a column of a dataset with values that represent the trend. |
+| Trend set | Comma-separated numeric values used for chart visualization. It can also be set to a column of a dataset with values that represent the trend. |
 | Related content | The ability to set a drill-through link. This link can either be a mobile report published on the portal or a custom URL. |
   
 > **Warning**: While you can use the word value for the **Status** field at design time, you should use the number value if refreshing a dataset. If you refresh a dataset with the word value, instead of the number, it could corrupt the KPIs on your server.  
@@ -66,7 +66,7 @@ To use data from a shared dataset, you can do the following steps.
   
     ![Screenshot showing the Value option set to Dataset field and the Pick dataset field set to Not set.](../reporting-services/media/rscreatekpi3.png)  
   
-2. Select the **ellipsis (...)** in the data box. This will bring up the **Pick a Dataset** screen.  
+2. Select **More options (...)** in the data box to open the **Pick a Dataset** screen.  
   
     ![Screenshot of the Pick a Dataset section with the Finance_KPI option being selected.](../reporting-services/media/rscreatekpi4.png)  
   

@@ -38,7 +38,7 @@ ms.author: wiassaf
   | ONLINE = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
   | DATA_COMPRESSION = { NONE |ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
-      [ ON PARTITIONS ( { <partition_number_expression> | <range> }   
+      [ ON PARTITIONS ({ <partition_number_expression> | <range> }   
       [ , ...n ] ) ]  
   | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }  
 }  

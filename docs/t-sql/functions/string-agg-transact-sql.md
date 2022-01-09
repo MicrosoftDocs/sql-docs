@@ -77,7 +77,7 @@ If the input expression is type `VARCHAR`, the separator cannot be type `NVARCHA
 
 Null values are ignored and the corresponding separator is not added. To return a place holder for null values, use the `ISNULL` function as demonstrated in example B.
 
-`STRING_AGG` is available in any compatibility level.
+`STRING_AGG` is available in any compatibility level. However, the WITHIN GROUP clause is only available in compatibility level 110 or higher.
 
 ## Examples
 

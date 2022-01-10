@@ -105,7 +105,7 @@ Distributed availability groups are loosely coupled, which in this case means th
 * Only manual failover is supported for a distributed availability group. In a disaster recovery situation where you are switching data centers, you should not configure automatic failover (with rare exceptions). 
 * You most likely will not need to set some of the traditional items or parameters for multi-site or subnet WSFCs, such as CrossSubnetThreshold, but you still need to see about network latency at a different layer for the data transport. The difference is that each WSFC maintains its own availability; the cluster isn't one big entity of four nodes. You have two separate two-node WSFCs as shown in the previous figure.  
 * We recommend asynchronous data movement, because this approach would be for disaster-recovery purposes.
-* If you configure synchronous data movement between the primary replica and at least one secondary replica of the second availability group, and you configure synchronous movement on the distributed availability group, a distributed availability group will wait until all synchronous copies acknowledge that they have the data.
+* If you configure synchronous data movement between the primary replica and at least one secondary replica of the second availability group, and you configure synchronous movement on the distributed availability group, a distributed availability group will wait until all synchronous copies acknowledge that they have the data. If multiple distributed availability groups are daisy-chained (AG1 -> AG2 -> AG3) and set to synchronous, a distributed availability group will wait until the last replica of the last availability group has been updated. 
 
 ### Migrate 
 

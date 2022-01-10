@@ -113,7 +113,7 @@ column_name <data_type>
           ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,
           ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
         ) ]
-    [ <column_constraint> [, ...n ] ]
+    [ <column_constraint> [ ...n ] ]
     [ <column_index> ]
   
 <data_type> ::=

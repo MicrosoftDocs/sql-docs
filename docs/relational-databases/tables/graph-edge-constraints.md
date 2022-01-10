@@ -59,7 +59,7 @@ The above example shows one edge constraint, with one edge constraint clause. Th
 ```
 CONSTRAINT EC_BOUGHT CONNECTION (Supplier TO Product, Customer TO Product)
 ``` 
-In this case, one edge constraint specifies two edge constraint clauses. The constraint clauses allow the `bought` edge to contain BOTH `Supplier -(bought)-> Product` and `Customer -(bought)-> Product` relationships. Inserting any other node pairs would fail. 
+The above example defines one edge constraint with two edge constraint clauses. These constraint clauses allow the `bought` edge to contain either `Supplier -(bought)-> Product`, or `Customer -(bought)-> Product` relationships. Inserting any other types of edge relationships into the `bought` table, would fail.
 
 ```
 CONSTRAINT EC_BOUGHT1 CONNECTION (Supplier TO Product)

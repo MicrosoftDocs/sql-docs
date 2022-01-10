@@ -21,11 +21,14 @@ ms.custom: seo-dt-2019
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-This article shows how to create a linked server and access data from another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], an Azure SQL Managed Instance, or another data source by using [SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md) (SSMS) or [!INCLUDE[tsql](../../includes/tsql-md.md)]. By creating a linked server,  you can work with data from multiple sources. The linked server doesn't have to be another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Managed Instance, but that is a common scenario.  
+This article shows how to create a linked server and access data from another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], an Azure SQL Managed Instance, or another data source by using [SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md) (SSMS) or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Linked servers enable the SQL Server database engine and Azure SQL Managed Instance to read data from the remote data sources and execute commands against the remote database servers (for example, OLE DB data sources) outside of the instance of SQL Server.
   
 ## <a name="Background"></a> Background
 
-A linked server allows for access to distributed, heterogeneous queries against OLE DB data sources. After a linked server is created, distributed queries can be run against this server, and queries can join tables from more than one data source. If the linked server is defined as an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or an Azure SQL Managed Instance, remote stored procedures can be executed.  
+
+Linked servers are typically configured to enable the database engine to execute a Transact-SQL statement that includes tables in another instance of SQL Server, or another database product such as Oracle. Many types of data sources can be configured as linked servers, including third-party database providers and Azure CosmosDB.
+
+After a linked server is created, distributed queries can be run against this server, and queries can join tables from more than one data source. If the linked server is defined as an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or an Azure SQL Managed Instance, remote stored procedures can be executed.  
   
 The capabilities and required arguments of the linked server can vary significantly. The examples in this article provide a typical example but all options are not described. For more information, see [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
@@ -35,7 +38,9 @@ When using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, requires **AL
   
 ## Create a linked server with SSMS
 
-### 1. Open the New Linked Server dialog
+Create a linked server with SSMS using the following procedure:
+
+### Open the New Linked Server dialog
 
 In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
@@ -44,7 +49,7 @@ In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 - Right-click **Linked Servers**.
 - Select **New Linked Server**.  
   
-### 2. Edit the General page for the linked server properties
+### Edit the General page for the linked server properties
 
 On the **General** page, in the **Linked server** box, type the name of the instance of **SQL Server** that you area linking to.
 
@@ -77,7 +82,7 @@ Specify the **Server type** and related information if needed:
   - **Catalog**  
         Type the name of the catalog to use when making a connection to the OLE DB provider.  
 
-### 3. Edit the Security page for the linked server properties
+### Edit the Security page for the linked server properties
   
 On the **Security** page, specify the security context that will be used when the original instance connects to the linked server.
 
@@ -128,7 +133,7 @@ Select one of the following options:
 - **Be made using this security context**  
     A connection will be made using the login and password specified in the **Remote login** and **With password** boxes for logins not defined in the list. The remote login must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
 
-### 4. Edit the Server Options page in linked server properties (optional)
+### Edit the Server Options page in linked server properties (optional)
   
 To view or specify server options, select the **Server Options** page. You can edit any of the following options:
   
@@ -173,7 +178,7 @@ To view or specify server options, select the **Server Options** page. You can e
 - **Enable Promotion of Distributed Transactions**  
      Use this option to protect the actions of a server-to-server procedure through a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) transaction. When this option is TRUE, calling a remote stored procedure starts a distributed transaction and enlists the transaction with MS DTC. For more information, see [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).  
   
-### 5. Save the linked server
+### Save the linked server
 
 Select **OK**.
   

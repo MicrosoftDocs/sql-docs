@@ -44,8 +44,8 @@ CONSTRAINT constraint_name CONNECTION (cause1[, clause2...])
 - As stated previously, an edge constraint can contain one or more edge constraint clauses.  
 
 #### Multiple constraints and clauses
-- Multiple edge constraints defined for the same edge table, are enforced with an `AND` operator.
-- Multiple edge constraint _clauses_ are enforced with an `OR` operator.
+- Multiple edge constraints, defined for the same edge table, are enforced with an `AND` operator.
+- Multiple edge constraint _clauses_, defined within the same edge constraint, are enforced with an `OR` operator.
 
 Consider the `Supplier` and `Customer` nodes in your graph. Each can be related to the `Product` node by a single, shared edge table: `bought`. The `bought` edge table supports `Customer-(bought)-> Product` and `Supplier-(bought)->Product` relationship types. This can be accomplished using a single edge constraint with multiple edge constraint clauses.
 
@@ -54,12 +54,12 @@ Consider the `Supplier` and `Customer` nodes in your graph. Each can be related 
 ```
 CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
 ``` 
-The above example shows one edge constraint, with one edge constraint clause. This constraint supports `Customer -(bought)->Product`. That is, inserting a `bought` edge relationship going from a `Customer` to `Product` would be allowed. Inserting any other combination of nodes, like `Supplier -(bought)->Product`, even though it may describe a valid relationship in the real world, would fail.
+The above example shows one edge constraint, with one edge constraint clause. This constraint supports `Customer-(bought)->Product`. That is, inserting a `bought` edge relationship going from a `Customer` to `Product` would be allowed. Inserting any other combination of nodes, like `Supplier-(bought)->Product`, even though it may describe a valid relationship in the real world, would fail.
 
 ```
 CONSTRAINT EC_BOUGHT CONNECTION (Supplier TO Product, Customer TO Product)
 ``` 
-The above example defines one edge constraint with two edge constraint clauses. These constraint clauses allow the `bought` edge to contain either `Supplier -(bought)-> Product`, or `Customer -(bought)-> Product` relationships. Inserting any other types of edge relationships into the `bought` table, would fail.
+The above example defines one edge constraint with two edge constraint clauses. These constraint clauses allow the `bought` edge to contain either `Supplier-(bought)->Product`, or `Customer-(bought)->Product` relationships. Inserting any other types of edge relationships into the `bought` table, would fail.
 
 ```
 CONSTRAINT EC_BOUGHT1 CONNECTION (Supplier TO Product)

@@ -46,7 +46,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
         [, CREDENTIAL = credential_name ] 
 
 -- Modify an external data source pointing to Azure Blob storage or Azure Data Lake storage
--- Applies to: Azure Synapse Analytics
+-- Applies to: Azure Synapse Analytics dedicated SQL pool (serverless SQL pool doesn't support this syntax)
 ALTER EXTERNAL DATA SOURCE data_source_name
     SET
         [LOCATION = '<location prefix>://<location path>']

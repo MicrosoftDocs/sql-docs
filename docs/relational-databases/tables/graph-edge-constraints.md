@@ -65,7 +65,9 @@ The above example defines one edge constraint with two edge constraint clauses. 
 CONSTRAINT EC_BOUGHT1 CONNECTION (Supplier TO Product)
 CONSTRAINT EC_BOUGHT2 CONNECTION (Customer TO Product)
 ``` 
-In this case, two constraints specify one constraint clause each. These only allow inserts that satisfy BOTH edge constraint clauses simultaneously. This is, of course, impossible. There is no node pair that can satify both edge constraint clauses. This edge constraint combination makes the edge table unusable.
+The above example shows two constraints on the same edge table, with each edge constraint specifying one constraint clause. In this situation, SQL would only allow inserts that satisfy BOTH edge constraint clauses simultaneously. This is, of course, impossible. There is no node pair that can satisfy both edge constraint clauses. This edge constraint combination makes the edge table unusable.
+
+For a detailed explanation of where multiple edge constraints can be used in a real-life scenario, please see the example "Creating a new edge constraint on existing edge table, with new edge constraint clause" later in this page.
 
 ### Indexes on edge constraints
 

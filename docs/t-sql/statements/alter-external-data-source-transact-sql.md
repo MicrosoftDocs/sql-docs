@@ -46,7 +46,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
         [, CREDENTIAL = credential_name ] 
 
 -- Modify an external data source pointing to Azure Blob storage or Azure Data Lake storage
--- Applies to: Azure Synapse Analytics dedicated SQL pool (serverless SQL pool doesn't support this syntax)
+-- Applies to: Azure Synapse Analytics dedicated SQL pool only
 ALTER EXTERNAL DATA SOURCE data_source_name
     SET
         [LOCATION = '<location prefix>://<location path>']
@@ -75,6 +75,8 @@ The credential used, must be created using `SHARED ACCESS SIGNATURE` as the iden
 
 ## Remarks
  Only single source can be modified at a time. Concurrent requests to modify the same source cause one statement to wait. However, different sources can be modified at the same time. This statement can run concurrently with other statements.
+ 
+ In Azure Synapse Analytics, connections to external data sources pointing to Azure Blob storage or Azure Data Lake storage are supported in dedicated SQL pool only.
 
 ## Permissions  
  Requires ALTER ANY EXTERNAL DATA SOURCE permission.

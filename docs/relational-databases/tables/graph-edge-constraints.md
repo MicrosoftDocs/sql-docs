@@ -44,7 +44,7 @@ CONSTRAINT constraint_name CONNECTION (cause1[, clause2...])
 - As stated previously, an edge constraint can contain one or more edge constraint clauses.  
 
 #### Multiple constraints and clauses
-- Multiple edge constraints are enforced with an `AND` operator.
+- Multiple edge constraints defined for the same edge table, are enforced with an `AND` operator.
 - Multiple edge constraint _clauses_ are enforced with an `OR` operator.
 
 Consider the `Supplier` and `Customer` nodes in your graph. Each can be related to the `Product` node by a single, shared edge table: `bought`. This supports `Customer  -(bought)-> Product` and `Supplier -(bought)-> Product`. This is accomplished using a single edge constraint with multiple edge constraint clauses.  

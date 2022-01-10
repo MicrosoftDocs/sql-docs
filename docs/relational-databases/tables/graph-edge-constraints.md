@@ -39,7 +39,7 @@ CONSTRAINT constraint_name CONNECTION (cause1[, clause2...])
 
 - An edge constraint clause is a pair of node table names, separated by the `TO` keyword.
 - The first table name in the edge constraint clause is the name of the FROM node table for the edge relationship.
-- The right node is the TO node table (`$to_id`) in the edge relationship.
+- The second table name in the edge constraint clause is the name of the TO node table for the edge relationship.
 - The node pair indicates the _direction_ of the edge relationship.
 - An edge constraint can contain one or more edge constraint clauses.  
 

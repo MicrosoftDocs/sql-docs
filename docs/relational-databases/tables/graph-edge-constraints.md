@@ -54,7 +54,7 @@ Consider the `Supplier` and `Customer` nodes in your graph. Each can be related 
 ```
 CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
 ``` 
-In this case, one edge constraint specifies one edge constraint clause. This constraint supports `Customer -(bought)-> Product`. That is, inserting a `bought` edge relationship going from a `Customer` to `Product` would be allowed. Inserting any other combination of nodes, like `Supplier -(bought)-> Product`, even though it may describe a valid relationship in the real world, would fail.
+The above example shows one edge constraint, with one edge constraint clause. This constraint supports `Customer -(bought)->Product`. That is, inserting a `bought` edge relationship going from a `Customer` to `Product` would be allowed. Inserting any other combination of nodes, like `Supplier -(bought)->Product`, even though it may describe a valid relationship in the real world, would fail.
 
 ```
 CONSTRAINT EC_BOUGHT CONNECTION (Supplier TO Product, Customer TO Product)

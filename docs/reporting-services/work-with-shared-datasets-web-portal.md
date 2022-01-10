@@ -83,7 +83,7 @@ You can control whether you want to expire the cache for the shared dataset afte
   
 ### Cache Refresh Plans  
   
-You can use Cache refresh plans to create schedules for preloading the cache with temporary copies of data for a shared dataset. A refresh plan includes a schedule and the option to specify or override values for parameters. You cannot override values for parameters that are marked read-only. You can create and use more than one refresh plan. If you create a KPI based on a shared dataset, the dataset has to have a cache refresh plan. Otherwise, it won't update.
+You can use Cache refresh plans to create schedules for preloading the cache with temporary copies of data for a shared dataset. A refresh plan includes a schedule and the option to specify or override values for parameters. You cannot override values for parameters that are marked read-only. You can create and use more than one refresh plan.
   
 Default role assignments that enable you to add, delete, and change shared datasets for cache refresh plans are Content Manager, My Reports, and Publisher.  
   
@@ -96,7 +96,9 @@ Once you are done, you can select **Create Cache Refresh Plan**.
 ![Screenshot of the Edit Company Sales dialog box showing the Create Cache Refresh Plan option.](../reporting-services/media/ssrsdataset-caching4.png)  
   
 > [!NOTE]
-> SQL Server Agent needs to be running to create a cache refresh plan.  
+> - SQL Server Agent needs to be running to create a cache refresh plan. 
+> - If you create a KPI based on a shared dataset, the dataset has to have a cache refresh plan. Otherwise, it won't update.
+> 
   
 You can then **Edit** or **Delete** plans that are listed. The **New From Existing** option is enabled when one, and only one, cache refresh plan is selected. This option creates a new refresh plan, which is copied from the original plan. The cache refresh plan page opens pre-populated with details from the plan that was selected. You can then modify the refresh plan options and save the plan with a new description.  
 

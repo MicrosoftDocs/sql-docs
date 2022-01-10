@@ -41,7 +41,7 @@ CONSTRAINT constraint_name CONNECTION (cause1[, clause2...])
 - The first table name in the edge constraint clause is the name of the FROM node table for the edge relationship.
 - The second table name in the edge constraint clause is the name of the TO node table for the edge relationship.
 - The pair of table names therefore indicates the _direction_ of the edge relationship.
-- An edge constraint can contain one or more edge constraint clauses.  
+- As stated previously, an edge constraint can contain one or more edge constraint clauses.  
 
 #### Multiple constraints and clauses
 - Multiple edge constraints are enforced with an `AND` operator.

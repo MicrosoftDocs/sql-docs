@@ -114,7 +114,7 @@ For single and pooled databases in Azure SQL Database, out of all the system dat
 
 To learn more about tempdb sizes in Azure SQL Database, review: 
 
-- vCore purchasing model: [single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases), [pooled databases](/azure/azure-sql/database/resource-limits-vcore-elastic-pools).
+- vCore purchasing model: [single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases), [pooled databases](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)
 - DTU purchasing model: [single databases](/azure/azure-sql/database/resource-limits-dtu-single-databases#tempdb-sizes), [pooled databases](/azure/azure-sql/database/resource-limits-dtu-elastic-pools#tempdb-sizes)
 
 ### tempdb in SQL Managed Instance 

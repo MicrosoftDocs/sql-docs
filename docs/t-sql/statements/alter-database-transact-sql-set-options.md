@@ -511,10 +511,10 @@ You can determine this option's status by examining the `is_local_cursor_default
 
 TEMPORAL_HISTORY_RETENTION { ON | OFF }
 
-ON by default but also automatically set to OFF after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables#how-to-configure-retention-policy).
+ON by default but also automatically set to OFF after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#how-to-configure-retention-policy).
 
 ON 
-Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables).
+Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
 
 OFF 
 Do not perform temporal historical retention policy. 
@@ -2219,10 +2219,10 @@ Specifies that the request will fail if the requested database state or option c
 
 TEMPORAL_HISTORY_RETENTION { ON | OFF }
 
-ON by default but also automatically set to OFF after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables#how-to-configure-retention-policy).
+ON by default but also automatically set to OFF after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#how-to-configure-retention-policy).
 
 ON 
-Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables).
+Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
 
 OFF 
 Do not perform temporal historical retention policy. 
@@ -3057,10 +3057,10 @@ Specifies that the request will fail if the requested database state or option c
 
 TEMPORAL_HISTORY_RETENTION { ON | OFF }
 
-ON by default but also automatically set to OFF after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables#how-to-configure-retention-policy).
+ON by default but also automatically set to OFF after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#how-to-configure-retention-policy).
 
 ON 
-Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables).
+Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
 
 OFF 
 Do not perform temporal historical retention policy. 

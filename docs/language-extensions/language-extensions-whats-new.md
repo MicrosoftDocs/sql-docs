@@ -2,8 +2,8 @@
 title: What's new in SQL Server Language Extensions?
 titleSuffix: 
 description: Learn about what's new in SQL Server Language Extensions that expands, extends, and deepens the integration between external languages and the data platform.
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/28/2021
 ms.topic: conceptual
 ms.prod: sql

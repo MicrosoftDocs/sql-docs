@@ -4,8 +4,8 @@
 title: "avx_math: avx_math" 
 description: "Implementation accelerated with AVX instructions." 
 keywords: "neural network, math, avx" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

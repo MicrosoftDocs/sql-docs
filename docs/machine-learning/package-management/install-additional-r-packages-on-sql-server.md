@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2020
 ms.topic: how-to
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom:
   - seo-lt-2019
   - intro-installation

@@ -1,6 +1,6 @@
 ---
-title: C / C++ ODBC app accessing a SQL database
-description: This C / C++ sample application demonstrates how to use the ODBC APIs to connect to and access a SQL database.
+title: C / C++ ODBC app accessing an SQL database
+description: This C / C++ sample application demonstrates how to use the ODBC APIs to connect to and access an SQL database.
 ms.custom: ""
 ms.date: 01/11/2022
 ms.prod: sql
@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ---
-# C / C++ ODBC example application accesses a SQL database
+# C / C++ ODBC example application accesses an SQL database
 
 [!INCLUDE [sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
-This C / C++ sample application demonstrates how to use the ODBC APIs to connect to and access a SQL database.
+This C / C++ sample application demonstrates how to use the ODBC APIs to connect to and access an SQL database.
 
 Between October 2013 and July 2019, this sample C++ ODBC application was downloaded 47,300 times. In July 2019, this application source was moved from Microsoft's Code Gallery to this webpage.
 

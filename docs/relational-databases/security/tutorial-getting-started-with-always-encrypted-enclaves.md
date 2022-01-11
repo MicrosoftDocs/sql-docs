@@ -4,7 +4,7 @@ description: This tutorial teaches you how to create a basic environment for Alw
 ms.custom:
   - seo-lt-2019
   - intro-get-started
-ms.date: 01/15/2021
+ms.date: 01/11/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -49,7 +49,7 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 As an alternative, you can install SSMS on another machine.
 
 > [!WARNING]
-> In production environments, you should never use SSMS or other tools to manage Always Encrypted keys or run queries on encrypted data on the SQL Server computer, as this may reduce or completely defeat the purpose of using Always Encrypted. See [Security Considerations for Key Management](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management) for details.
+> In production environments,  running SSMS or other key management tools on the SQL Server computer may reduce or completely defeat the security benefits of using Always Encrypted. In general, running such tools on a different machine is recommended. See [Security Considerations for Key Management](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management) for details.
 
 ### HGS computer requirements
 
@@ -97,7 +97,7 @@ In this step, you will configure the HGS computer to run Host Guardian Service s
 In this step, you will configure the SQL Server computer as a guarded host registered with HGS using host key attestation.
 
 > [!WARNING]
-> Host key attestation is only recommended for use in test environments. You should use TPM attestation for production environments.
+> Host key attestation is considered a weaker attestation mode. If possible, you should use TPM attestation for production environments. For more information, see [Attestation modes](encryption/always-encrypted-enclaves-host-guardian-service-plan.md#attestation-modes)
 
 1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and retrieve the name of your computer by accessing the computername variable.
 

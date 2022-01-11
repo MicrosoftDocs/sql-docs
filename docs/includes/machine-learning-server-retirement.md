@@ -1,6 +1,6 @@
 ---
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.prod: mlserver
 ms.topic: include
 ms.date: 06/30/2021

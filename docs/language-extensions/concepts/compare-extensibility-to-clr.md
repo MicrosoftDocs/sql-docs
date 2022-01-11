@@ -2,8 +2,8 @@
 title: Compare SQL Server Language Extensions to SQL CLR
 titleSuffix:
 description: "What's the difference between SQL Server Language Extensions and SQL Common Language Runtime (CLR)? This article compares the two."
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/21/2021
 ms.topic: conceptual
 ms.prod: sql

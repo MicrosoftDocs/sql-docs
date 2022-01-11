@@ -4,8 +4,8 @@
 title: "count_select: Machine Learning Count Mode Feature Selection Transform" 
 description: "Selects the features for which the count of non-default values is greater than or equal to a threshold." 
 keywords: "feature, selection, count" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

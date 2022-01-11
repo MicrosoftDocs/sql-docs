@@ -2,8 +2,8 @@
 title: Insert Python dataframe into SQL table 
 titleSuffix: SQL machine learning
 description: How to insert data from a dataframe into SQL table.
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/16/2021
 ms.topic: how-to
 ms.prod: sql

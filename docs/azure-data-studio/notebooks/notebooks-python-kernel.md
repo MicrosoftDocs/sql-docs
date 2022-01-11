@@ -4,9 +4,9 @@ description: This tutorial shows how you can create and run a Python notebook.
 ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: mikeray, alayu, maghan
+author: markingmyname
+ms.author: maghan
+ms.reviewer: mikeray, alayu
 ms.custom: ""
 ms.date: 07/01/2020
 ---

@@ -5,8 +5,7 @@ title: "ServiceDefinition class"
 description: "The ServiceDefinition class is for SQL Machine Learning Services and Machine Learning Server for managing web services." 
 keywords: "" 
 author: WilliamDAssafMSFT
-author: WilliamDAssafMSFT
-ms.author: jroth 
+ms.author: wiassaf 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"

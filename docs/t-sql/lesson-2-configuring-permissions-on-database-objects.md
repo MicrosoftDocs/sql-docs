@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Configure permissions on db objects"
+title: "T-SQL Tutorial: Configure permissions on db objects"
 description: "Lesson 2: Configure permissions on database objects"
 ms.prod: sql
 ms.technology: t-sql

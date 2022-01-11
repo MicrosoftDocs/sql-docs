@@ -1,5 +1,5 @@
 ---
-title: T-SQL Tutorial: Create & query database objects
+title: "T-SQL Tutorial: Create & query database objects"
 description: "T-SQL Tutorial: Create & query database objects"
 ms.prod: sql
 ms.technology: t-sql

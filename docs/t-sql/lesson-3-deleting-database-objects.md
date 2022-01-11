@@ -1,5 +1,5 @@
 ---
-title: T-SQL Tutorial: Delete database objects
+title: "T-SQL Tutorial: Delete database objects"
 description: "T-SQL Tutorial: Delete database objects"
 ms.prod: sql
 ms.technology: t-sql

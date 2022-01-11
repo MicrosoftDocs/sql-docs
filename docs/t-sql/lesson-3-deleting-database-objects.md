@@ -1,19 +1,19 @@
 ---
+title: T-SQL Tutorial: Delete database objects
 description: "T-SQL Tutorial: Delete database objects"
-title: "T-SQL Tutorial: Delete database objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/30/2018"
 ms.prod: sql
 ms.technology: t-sql
-ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "deleting database objects"
-ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "07/30/2018"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Lesson 3: Delete database objects
 
 [!INCLUDE[sql-asdb-asdbmi-pdw-md](../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]

@@ -1,19 +1,19 @@
 ---
-description: "Lesson 2: Configure permissions on database objects"
 title: "Tutorial: Configure permissions on db objects"
-ms.custom: "seo-lt-2019"
-ms.date: "07/31/2018"
+description: "Lesson 2: Configure permissions on database objects"
 ms.prod: sql
 ms.technology: t-sql
-ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "database permissions"
-ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom: "seo-lt-2019"
+ms.date: "07/31/2018"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Lesson 2: Configure permissions on database objects
 
 [!INCLUDE[sql-asdb-asdbmi-pdw-md](../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]

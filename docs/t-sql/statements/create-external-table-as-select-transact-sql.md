@@ -6,11 +6,13 @@ ms.date: "10/20/2021"
 ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.prod: sql
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords: 
   - "CREATE EXTERNAL TABLE AS SELECT"
   - "CREATE_EXTERNAL_TABLE_AS_SELECT"
   - "CREATE EXTERNAL TABLE AS SELECT_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "External, table"
   - "PolyBase, external table"

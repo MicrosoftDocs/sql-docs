@@ -49,22 +49,25 @@ CONSTRAINT constraint_name CONNECTION (cause1[, clause2...])
 
 Consider the `Supplier` and `Customer` nodes in your graph. Each can be related to the `Product` node by a single, shared edge table: `bought`. The `bought` edge table supports `Customer-(bought)->Product` and `Supplier-(bought)->Product` relationship types. This can be accomplished using a single edge constraint with multiple edge constraint clauses.
 
-**For example:**
+##### Examples
 
-```
+```sql
 CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
-``` 
+```
+
 The above example shows one edge constraint, with one edge constraint clause. This constraint supports `Customer-(bought)->Product`. That is, inserting a `bought` edge relationship going from a `Customer` to `Product` would be allowed. Inserting any other combination of nodes, like `Supplier-(bought)->Product`, even though it may describe a valid relationship in the real world, would fail.
 
-```
+```sql
 CONSTRAINT EC_BOUGHT CONNECTION (Supplier TO Product, Customer TO Product)
-``` 
+```
+
 The above example defines one edge constraint with two edge constraint clauses. These constraint clauses allow the `bought` edge to contain either `Supplier-(bought)->Product` or `Customer-(bought)->Product` relationships. Inserting any other types of edge relationships into the `bought` table would fail.
 
-```
+```sql
 CONSTRAINT EC_BOUGHT1 CONNECTION (Supplier TO Product)
 CONSTRAINT EC_BOUGHT2 CONNECTION (Customer TO Product)
-``` 
+```
+
 The above example shows two constraints on the same edge table, with each edge constraint specifying one constraint clause. In this situation, SQL would only allow inserts that satisfy BOTH edge constraint clauses simultaneously. This is, of course, impossible. There is no node pair that can satisfy both edge constraint clauses. This edge constraint combination makes the edge table unusable.
 
 For a detailed explanation of where multiple edge constraints can be used in a real-life scenario, please see the example "Creating a new edge constraint on existing edge table, with new edge constraint clause" later in this page.

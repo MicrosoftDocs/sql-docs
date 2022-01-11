@@ -4,8 +4,8 @@
 title: "extract_pixels: Machine Learning Extract Pixel Data Transform" 
 description: "Extracts the pixel values from an image." 
 keywords: "transform, image" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

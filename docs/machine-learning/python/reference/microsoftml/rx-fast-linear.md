@@ -4,8 +4,8 @@
 title: "rx_fast_linear: Fast Linear Model - Stochastic Dual Coordinate Ascent" 
 description: "A Stochastic Dual Coordinate Ascent (SDCA) optimization trainer for linear binary classification and regression." 
 keywords: "models, linear, SDCA, stochastic, classification, regression" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

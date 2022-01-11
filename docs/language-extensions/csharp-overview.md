@@ -2,8 +2,8 @@
 title: What is C# Language Extension?
 titleSuffix: SQL Server Language Extensions
 description: C# Language Extension is a feature of SQL Server used for executing external C# code. Relational data can be used in the external C# code using the extensibility framework.
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/28/2021
 ms.topic: overview
 ms.prod: sql

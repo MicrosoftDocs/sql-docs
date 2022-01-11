@@ -4,8 +4,8 @@
 title: "select_columns: Selects a set of columns and drops all others" 
 description: "Selects a set of columns to retrain, dropping all others." 
 keywords: "transform, schema" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

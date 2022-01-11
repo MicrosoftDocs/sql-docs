@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_resource_governor_workload_groups_history_ex dynamic management view"
-author: joesackmsft
-ms.author: josack
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

@@ -1,17 +1,17 @@
 ---
+title: "T-SQL Tutorial: Create & query database objects"
 description: "T-SQL Tutorial: Create & query database objects"
-title: "T-SQL Tutorial: Create & query database objects| Microsoft Docs"
-ms.custom: ""
-ms.date: "07/30/2018"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: conceptual
-ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
+ms.topic: tutorial
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "07/30/2018"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Lesson 1: Create and query database objects
 [!INCLUDE[sql-asdb-asdbmi-pdw-md](../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 

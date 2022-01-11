@@ -1,13 +1,10 @@
 ---
+title: DENY Database Scoped Credential (Transact-SQL)
 description: "DENY Database Scoped Credential (Transact-SQL)"
-title: "DENY Database Scoped Credential (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords: 
   - "DENY DATABASE SCOPED CREDENTIAL"
   - "DENY_DATABASE_SCOPED_CREDENTIAL_TSQL"
@@ -16,15 +13,18 @@ dev_langs:
 helpviewer_keywords: 
   - "DENY statement, database scoped credentials"
   - "denying permissions [SQL Server], database scoped credential"
-ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 author: VanMSFT
+ms.reviewer: ""
 ms.author: vanto
+ms.custom: ""
+ms.date: "12/16/2016"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # DENY Database Scoped Credential (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-  Denies permissions on a database scoped credential.  
+Denies permissions on a database scoped credential.  
 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

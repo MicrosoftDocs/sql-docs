@@ -97,7 +97,7 @@ In this step, you will configure the HGS computer to run Host Guardian Service s
 In this step, you will configure the SQL Server computer as a guarded host registered with HGS using host key attestation.
 
 > [!WARNING]
-> Host key attestation is considered a weaker attestation mode. If possible, you should use TPM attestation for production environments. For more information, see [Attestation modes](encryption/always-encrypted-enclaves-host-guardian-service-plan.md#attestation-modes)
+> Host key attestation is considered a weaker attestation mode. If possible, you should use TPM attestation for production environments. For more information, see [Attestation modes](encryption/always-encrypted-enclaves-host-guardian-service-plan.md#attestation-modes).
 
 1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and retrieve the name of your computer by accessing the computername variable.
 

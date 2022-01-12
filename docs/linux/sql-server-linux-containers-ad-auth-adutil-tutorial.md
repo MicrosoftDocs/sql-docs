@@ -192,9 +192,9 @@ chmod 440 /container/sql1/secrets/mssql.keytab
     
     [realms]
     CONTOSO.COM = {
-    kdc = adVM.contoso.com
-    admin_server = adVM.contoso.com
-    default_domain = CONTOSO.COM
+        kdc = adVM.contoso.com
+        admin_server = adVM.contoso.com
+        default_domain = CONTOSO.COM
     }
     
     [domain_realm]

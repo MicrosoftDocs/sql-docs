@@ -1,7 +1,7 @@
 ---
 description: A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server.
 title: Latest updates for SQL Server
-ms.date: 10/27/2021
+ms.date: 1/12/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -25,7 +25,7 @@ Each of the following links provides information for all of the applicable produ
 |Product Versions   | Latest Service Pack |  Latest GDR | Latest cumulative update | CU Release Date | General Guidance  |
 |--|--|--|--|--|--|
 |SQL Server 2019|N/A|[KB 4583458](https://support.microsoft.com/help/4583458)|CU 14 [(KB 5007182)](https://support.microsoft.com/help/5007182)|11/22/2021|[SQL Server 2019 Installation](./install-sql-server.md)|
-|SQL Server 2017|N/A|[KB 4583456](https://support.microsoft.com/help/4583456)|CU 27 [(KB 5006944)](https://support.microsoft.com/help/5006944)|10/27/2021|[SQL Server 2017 Installation](./install-sql-server.md)|
+|SQL Server 2017|N/A|[KB 4583456](https://support.microsoft.com/help/4583456)|CU 28 [(KB 5008084)](https://support.microsoft.com/help/5008084)|1/13/2022|[SQL Server 2017 Installation](./install-sql-server.md)|
 |SQL Server 2016|SP3 [(KB 5003279)](https://support.microsoft.com/help/5003279)|N/A|N/A|N/A|[SQL Server 2016 Installation](./install-sql-server.md)|
 |SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4583460](https://support.microsoft.com/help/4583460)|CU 17 [(KB 5001092)](https://support.microsoft.com/kb/5001092)|3/29/2021|[SQL Server 2016 Installation](./install-sql-server.md)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|7/9/2019|[SQL Server 2016 Installation](./install-sql-server.md)|

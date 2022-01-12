@@ -39,7 +39,7 @@ If you don't have a SQL Server instance, create one. To create one, select your 
 - **macOS**: [Download SQL Server 2017 on Docker](../linux/quickstart-install-connect-docker.md).
 
 ## Create a database
-Like many [!INCLUDE[tsql](../includes/tsql-md.md)] statements, the [`CREATE DATABASE`](statements/create-database-transact-sql.md) statement has a required parameter: the name of the database.` CREATE DATABASE` also has many optional parameters, such as the disk location where you want to put the database files. When you execute `CREATE DATABASE` without the optional parameters, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses default values for many of these parameters.
+Like many [!INCLUDE[tsql](../includes/tsql-md.md)] statements, the [`CREATE DATABASE`](statements/create-database-transact-sql.md) statement has a required parameter: the name of the database. `CREATE DATABASE` also has many optional parameters, such as the disk location where you want to put the database files. When you execute `CREATE DATABASE` without the optional parameters, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses default values for many of these parameters.
 
 1.  In a Query Editor window, type but do not execute the following code:  
   

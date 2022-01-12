@@ -121,13 +121,12 @@ SELECT
    FROM
                        #tabClass   as c
       RIGHT OUTER JOIN #tabStudent as s ON s.ClassGuid = c.ClassGuid
-   --where
-   --   c.ClassName LIKE '%Math%'
    ORDER BY 
       c.ClassName,
       s.StudentName
    FOR
       JSON AUTO
+      -- To include NULL values in the output, uncomment the following line:
       --, INCLUDE_NULL_VALUES
 ;
 

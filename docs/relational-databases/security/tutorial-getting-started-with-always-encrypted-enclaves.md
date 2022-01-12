@@ -4,7 +4,7 @@ description: This tutorial teaches you how to create a basic environment for Alw
 ms.custom:
   - seo-lt-2019
   - intro-get-started
-ms.date: 01/15/2021
+ms.date: 01/11/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -35,13 +35,13 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 ### SQL Server computer requirements
 
 - [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] or later.
-- Windows 10 Enterprise version 1809 or later; or Windows Server 2019 Datacenter edition. Other editions of Windows 10 and Windows Server don't support attestation with HGS.
+- Windows 10, version 1809 or later - Enterprise edition, Windows 11 or later - Enterprise edition, Windows Server 2019 or later - Datacenter edition. Other editions of Windows 10/11 and Windows Server don't support attestation with HGS.
 - CPU support for virtualization technologies:
   - Intel VT-x with Extended Page Tables.
   - AMD-V with Rapid Virtualization Indexing.
-  - If you're running [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a VM, the hypervisor and physical CPU must offer nested virtualization capabilities. 
-    - On Hyper-V 2016 or later, [enable nested virtualization extensions on the VM processor](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
-    - In Azure, select a VM size that supports nested virtualization. This includes all v3 series VMs, for example Dv3 and Ev3. See [Create a nesting capable Azure VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+  - If you're running [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a VM:
+    - In Azure, use a [Generation 2 VM size](/azure/virtual-machines/generation-2#generation-2-vm-sizes) (recommended) or use a Generation 1 VM size with nested virtualization enabled. Check the [individual VM sizes documentation](/azure/virtual-machines/sizes) to determine which Generation 1 VM sizes support nested virtualization.
+    - On Hyper-V 2016 or later (outside of Azure), make sure your VM is a Generation 2 VM (recommended) or it is a Generation 1 VM with nested virtualization enabled. For more information, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v) and [Configure nested virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - On VMware vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Other hypervisors and public clouds may support nested virtualization capabilities that enable Always Encrypted with VBS Enclaves as well. Check your virtualization solution's documentation for compatibility and configuration instructions.
 - [SQL Server Management Studio (SSMS) 18.3 or later](../../ssms/download-sql-server-management-studio-ssms.md).
@@ -49,7 +49,7 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 As an alternative, you can install SSMS on another machine.
 
 > [!WARNING]
-> In production environments, you should never use SSMS or other tools to manage Always Encrypted keys or run queries on encrypted data on the SQL Server computer, as this may reduce or completely defeat the purpose of using Always Encrypted. See [Security Considerations for Key Management](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management) for details.
+> In production environments,  running SSMS or other key management tools on the SQL Server computer may reduce the security benefits of using Always Encrypted. In general, running such tools on a different machine is recommended. See [Security Considerations for Key Management](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management) for details.
 
 ### HGS computer requirements
 
@@ -97,7 +97,7 @@ In this step, you will configure the HGS computer to run Host Guardian Service s
 In this step, you will configure the SQL Server computer as a guarded host registered with HGS using host key attestation.
 
 > [!WARNING]
-> Host key attestation is only recommended for use in test environments. You should use TPM attestation for production environments.
+> Host key attestation is considered a weaker attestation mode. If possible, you should use TPM attestation for production environments. For more information, see [Attestation modes](encryption/always-encrypted-enclaves-host-guardian-service-plan.md#attestation-modes).
 
 1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and retrieve the name of your computer by accessing the computername variable.
 

@@ -7,7 +7,7 @@
   - name: Getting Started with SSMA for Sybase
     href: getting-started-with-ssma-for-sybase-sybasetosql.md
   - name: Getting Started with SSMA for Sybase Console
-   href: getting-started-with-ssma-for-sybase-console-sybasetosql.md
+    href: getting-started-with-ssma-for-sybase-console-sybasetosql.md
 - name: Legal Notice
   href: legal-notice-ssma-for-sybase.md
 - name: What's New in SSMA

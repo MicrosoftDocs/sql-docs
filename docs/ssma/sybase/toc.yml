@@ -1,5 +1,11 @@
-- name: Sybase
+- name: Overview
   href: sql-server-migration-assistant-for-sybase-sybasetosql.md
+- name: What's New
+  items:
+  - name: What's New in SSMA
+    href: what-s-new-in-ssma-for-sybase-sybasetosql.md
+  - name: New GUI Features in SSMA
+    href: new-gui-features-in-ssma-for-sybase-sybasetosql.md
 - name: Installing SSMA for Sybase
   items:
   - name: Installing SSMA
@@ -8,14 +14,10 @@
     href: getting-started-with-ssma-for-sybase-sybasetosql.md
   - name: Getting Started with SSMA for Sybase Console
     href: getting-started-with-ssma-for-sybase-console-sybasetosql.md
-- name: Legal Notice
-  href: legal-notice-ssma-for-sybase.md
-- name: What's New in SSMA
-  href: what-s-new-in-ssma-for-sybase-sybasetosql.md
-- name: Installing SSMA for Sybase client
-  href: installing-ssma-for-sybase-client-sybasetosql.md
-- name: New GUI Features in SSMA
-  href: new-gui-features-in-ssma-for-sybase-sybasetosql.md
+  - name: Installing SSMA for Sybase client
+    href: installing-ssma-for-sybase-client-sybasetosql.md
+  - name: Legal Notice
+    href: legal-notice-ssma-for-sybase.md
 - name: New Project
   href: new-project-sybasetosql.md
 - name: Initializing Test Cases

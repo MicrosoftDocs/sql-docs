@@ -56,6 +56,10 @@ The following table lists and describes the trace flags that are available in [!
 > [!IMPORTANT]
 > Trace flag behavior may not be supported in future releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
+> [!NOTE]
+> Тrace flags can be referenced directly in the table via a bookmark that you can add to the end of the URL, using this format #tfNNNN. For example, to jump directly to trace flag 1118 in the table, you can use https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver15#tf1118
+
+
 |Trace flag|Description|  
 |---|---|
 |<a name="tf101"></a>**101**|Increases the verboseness of the merge replication agent logging.<br /><br />**IMPORTANT:** Trace flag 101 can only be enabled for the [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md) using the **-T** option when executing **replmerg.exe** from the command prompt.<br /><br />**WARNING:** Trace flag 101 is not meant to be enabled continuously in a production environment, but only for time-limited troubleshooting purposes. For more information, see this [Microsoft Support article](https://mskb.pkisolutions.com/kb/2892633).<br /><br />**Scope**: Replication Merge Agent only|

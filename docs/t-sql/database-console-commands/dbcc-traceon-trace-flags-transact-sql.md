@@ -57,7 +57,7 @@ The following table lists and describes the trace flags that are available in [!
 > Trace flag behavior may not be supported in future releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> Тrace flags can be referenced directly in the table via a bookmark that you can add to the end of the URL, using this format #tfNNNN. For example, to jump directly to trace flag 1118 in the table, you can use https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver15#tf1118
+> Тrace flags can be referenced directly in the table via a bookmark that you can add to the end of the URL, using this format #tfNNNN. For example, to jump directly to trace flag 1118 in the table, you can use https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1118
 
 
 |Trace flag|Description|  

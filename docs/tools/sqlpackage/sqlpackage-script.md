@@ -13,14 +13,14 @@ ms.date: 11/14/2021
 ---
 
 # SqlPackage Script parameters and properties
-The SqlPackage.exe Script action creates a Transact-SQL incremental update script that updates the schema of a target database to match the schema of a source database.
+The SqlPackage.exe Script action creates a Transact-SQL incremental update script that updates the schema of a target database to match the schema of a source database. 
 
 ## Command-line syntax
 
-**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.
-
+**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
+  
 ```bash
-SqlPackage {parameters}{properties}{SQLCMD Variables}
+SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
 
 ## Parameters for the Script action
@@ -67,7 +67,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Specifies additional deployment contributor arguments for the deployment contributors. This should be a semi-colon delimited list of values.
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Specifies additional deployment contributors, which should run when the dacpac is deployed. This should be a semi-colon delimited list of fully qualified build contributor names or IDs.
-|**/p:**|AdditionalDeploymentContributorPaths=(STRING)| Specifies paths to load additional deployment contributors. This should be a semi-colon delimited list of values. |
+|**/p:**|AdditionalDeploymentContributorPaths=(STRING)| Specifies paths to load additional deployment contributors. This should be a semi-colon delimited list of values. | 
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|This property is used by SqlClr deployment to cause any blocking assemblies to be dropped as part of the deployment plan. By default, any blocking/referencing assemblies will block an assembly update if the referencing assembly needs to be dropped.
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Specifies whether to attempt the action despite incompatible SQL Server platforms.
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Do not block data motion on a table that has Row Level Security if this property is set to true. Default is false.

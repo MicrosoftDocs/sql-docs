@@ -17,10 +17,10 @@ The SqlPackage.exe publish operation incrementally updates the schema of a targe
 
 ## Command-line syntax
 
-**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.
-
+**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
+  
 ```bash
-SqlPackage {parameters}{properties}{SQLCMD Variables}
+SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
 
 > [!NOTE]
@@ -186,11 +186,11 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ## SQLCMD Variables
 
-The following table describes the format of the option that you can use to override the value of a SQL command (**sqlcmd**) variable used during a publish action. The values of variable specified on the command line override other values assigned to the variable (for example, in a publish profile).
-
-|Parameter|Default|Description|
-|-------------|-----------|---------------|
-|**/Variables:{PropertyName}={Value}**||Specifies a name value pair for an action-specific variable; {VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error results if a value is not provided for every variable.|
+The following table describes the format of the option that you can use to override the value of a SQL command (**sqlcmd**) variable used during a publish action. The values of variable specified on the command line override other values assigned to the variable (for example, in a publish profile).  
+  
+|Parameter|Default|Description|  
+|-------------|-----------|---------------|  
+|**/Variables:{PropertyName}={Value}**||Specifies a name value pair for an action-specific variable; {VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error results if a value is not provided for every variable.|  
 
 ## Next Steps
 

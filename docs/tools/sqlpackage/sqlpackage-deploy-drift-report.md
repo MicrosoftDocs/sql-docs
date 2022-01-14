@@ -14,14 +14,14 @@ ms.date: 11/14/2021
 
 # SqlPackage deploy report and drift report
 The SqlPackage.exe [DeployReport](#deployreport-action-parameters) action creates an XML report of the changes that would be made by a publish action.
-The SqlPackage.exe [DriftReport](#driftreport-action-parameters) action creates an XML report of the changes that have been made to the registered database since it was last registered.
+The SqlPackage.exe [DriftReport](#driftreport-action-parameters) action creates an XML report of the changes that have been made to the registered database since it was last registered.  
 
 ## Command-line syntax
 
-**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.
-
+**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
+  
 ```bash
-SqlPackage {parameters}{properties}{SQLCMD Variables}
+SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
 
 ## DeployReport action parameters
@@ -66,7 +66,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Specifies additional deployment contributor arguments for the deployment contributors. This should be a semi-colon delimited list of values.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Specifies additional deployment contributors, which should run when the dacpac is deployed. This should be a semi-colon delimited list of fully qualified build contributor names or IDs.|
-|**/p:**|AdditionalDeploymentContributorPaths=(STRING)| Specifies paths to load additional deployment contributors. This should be a semi-colon delimited list of values. |
+|**/p:**|AdditionalDeploymentContributorPaths=(STRING)| Specifies paths to load additional deployment contributors. This should be a semi-colon delimited list of values. | 
 |**/p:**|AllowDropBlocking Assemblies=(BOOLEAN)|This property is used by SqlClr deployment to cause any blocking assemblies to be dropped as part of the deployment plan. By default, any blocking/referencing assemblies will block an assembly update if the referencing assembly needs to be dropped.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Specifies whether to attempt the action despite incompatible SQL Server platforms.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Do not block data motion on a table that has Row Level Security if this property is set to true. Default is false.|
@@ -107,21 +107,21 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreDdlTriggerOrder=(BOOLEAN)|Specifies whether differences in the order of Data Definition Language (DDL) triggers should be ignored or updated when you publish to a database or server.|
 |**/p:**|IgnoreDdlTriggerState=(BOOLEAN)|Specifies whether differences in the enabled or disabled state of Data Definition Language (DDL) triggers should be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreDefaultSchema=(BOOLEAN)|Specifies whether differences in the default schema should be ignored or updated when you publish to a database. |
-|**/p:**|IgnoreDmlTriggerOrder=(BOOLEAN)|Specifies whether differences in the order of Data Manipulation Language (DML) triggers should be ignored or updated when you publish to a database.|
+|**/p:**|IgnoreDmlTriggerOrder=(BOOLEAN)|Specifies whether differences in the order of Data Manipulation Language (DML) triggers should be ignored or updated when you publish to a database.| 
 |**/p:**|IgnoreDmlTriggerState=(BOOLEAN)|Specifies whether differences in the enabled or disabled state of DML triggers should be ignored or updated when you publish to a database. |
 |**/p:**|IgnoreExtendedProperties=(BOOLEAN)|Specifies whether differences in the extended properties should be ignored or updated when you publish to a database. |
 |**/p:**|IgnoreFileAndLogFilePath=(BOOLEAN 'True')|Specifies whether differences in the paths for files and log files should be ignored or updated when you publish to a database. |
-|**/p:**|IgnoreFilegroupPlacement=(BOOLEAN 'True')|Specifies whether differences in the placement of objects in FILEGROUPs should be ignored or updated when you publish to a database.|
+|**/p:**|IgnoreFilegroupPlacement=(BOOLEAN 'True')|Specifies whether differences in the placement of objects in FILEGROUPs should be ignored or updated when you publish to a database.| 
 |**/p:**|IgnoreFileSize=(BOOLEAN 'True')|Specifies whether differences in the file sizes should be ignored or whether a warning should be issued when you publish to a database. |
 |**/p:**|IgnoreFillFactor=(BOOLEAN 'True')|Specifies whether differences in the fill factor for index storage should be ignored or whether a warning should be issued when you publish to a database|
-|**/p:**|IgnoreFullTextCatalogFilePath=(BOOLEAN 'True')|Specifies whether differences in the file path for the full-text catalog should be ignored or whether a warning should be issued when you publish to a database.|
+|**/p:**|IgnoreFullTextCatalogFilePath=(BOOLEAN 'True')|Specifies whether differences in the file path for the full-text catalog should be ignored or whether a warning should be issued when you publish to a database.| 
 |**/p:**|IgnoreIdentitySeed=(BOOLEAN)|Specifies whether differences in the seed for an identity column should be ignored or updated when you publish updates to a database. |
 |**/p:**|IgnoreIncrement=(BOOLEAN)|Specifies whether differences in the increment for an identity column should be ignored or updated when you publish to a database. |
 |**/p:**|IgnoreIndexOptions=(BOOLEAN)|Specifies whether differences in the index options should be ignored or updated when you publish to a database. |
 |**/p:**|IgnoreIndexPadding=(BOOLEAN 'True')|Specifies whether differences in the index padding should be ignored or updated when you publish to a database. |
 |**/p:**|IgnoreKeywordCasing=(BOOLEAN 'True')|Specifies whether differences in the casing of keywords should be ignored or updated when you publish to a database. |
 |**/p:**|IgnoreLockHintsOnIndexes=(BOOLEAN)|Specifies whether differences in the lock hints on indexes should be ignored or updated when you publish to a database. |
-|**/p:**|IgnoreLoginSids=(BOOLEAN 'True')| Specifies whether differences in the security identification number (SID) should be ignored or updated when you publish to a database.|
+|**/p:**|IgnoreLoginSids=(BOOLEAN 'True')| Specifies whether differences in the security identification number (SID) should be ignored or updated when you publish to a database.| 
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|Specifies whether the not for replication settings should be ignored or updated when you publish to a database. |
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|Specifies whether an object's placement on a partition scheme should be ignored or updated when you publish to a database.|
  |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|Specifies whether differences in partition schemes and functions should be ignored or updated when you publish to a database.|
@@ -129,19 +129,19 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|Specifies whether differences in the quoted identifiers setting should be ignored or updated when you publish to a database. |
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|Specifies whether differences in the role membership of logins should be ignored or updated when you publish to a database. |
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Specifies whether differences in the amount of time that SQL Server retains the route in the routing table should be ignored or updated when you publish to a database|
-|**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Specifies whether differences in the semi-colons between T-SQL statements will be ignored or updated when you publish to a database.|
-|**/p:**|IgnoreTableOptions=(BOOLEAN)|Specifies whether differences in the table options will be ignored or updated when you publish to a database.|
+|**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Specifies whether differences in the semi-colons between T-SQL statements will be ignored or updated when you publish to a database.| 
+|**/p:**|IgnoreTableOptions=(BOOLEAN)|Specifies whether differences in the table options will be ignored or updated when you publish to a database.| 
 |**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Specifies whether differences in the table partition options will be ignored or updated when you publish to a database.  This option applies only to Azure Synapse Analytics data warehouse databases.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Specifies whether differences in the user settings objects will be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Specifies whether differences in white space will be ignored or updated when you publish to a database. |
-|**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Specifies whether differences in the value of the WITH NOCHECK clause for check constraints will be ignored or updated when you publish to a database.|
-|**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|Specifies whether differences in the value of the WITH NOCHECK clause for foreign keys will be ignored or updated when you publish to a database.|
+|**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Specifies whether differences in the value of the WITH NOCHECK clause for check constraints will be ignored or updated when you publish to a database.| 
+|**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|Specifies whether differences in the value of the WITH NOCHECK clause for foreign keys will be ignored or updated when you publish to a database.| 
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|Include all composite elements with the same database as part of a single publish operation.|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|Specifies whether transactional statements should be used where possible when you publish to a database.|
 |**/p:**|LongRunningCommandTimeout=(INT32)| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Specifies that publish should always drop and re-create an assembly if there is a difference instead of issuing an ALTER ASSEMBLY statement. |
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Specifies whether a new file is also created when a new FileGroup is created in the target database. |
-|**/p:**|RegisterDataTierApplication=(BOOLEAN)|Specifies whether the schema is registered with the database server.
+|**/p:**|RegisterDataTierApplication=(BOOLEAN)|Specifies whether the schema is registered with the database server. 
 |**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Specifies whether DeploymentPlanExecutor contributors should be run when other operations are executed.|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|Specifies whether differences in the database collation should be ignored or updated when you publish to a database. |
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|Specifies whether differences in the database compatibility should be ignored or updated when you publish to a database. |
@@ -152,10 +152,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|ScriptRefreshModule=(BOOLEAN 'True')|Include refresh statements at the end of the publish script.|
 |**/p:**|Storage=({File&#124;Memory})|Specifies how elements are stored when building the database model. For performance reasons the default is InMemory. For large databases, File backed storage may be required and is only available for .NET Framework version of SqlPackage.|
 |**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|Specifies whether errors encountered during publish verification should be treated as warnings. The check is performed against the generated deployment plan before the plan is executed against your target database. Plan verification detects problems such as the loss of target-only objects (such as indexes) that must be dropped to make a change. Verification will also detect situations where dependencies (such as a table or view) exist because of a reference to a composite project, but do not exist in the target database. You might choose to do this to get a complete list of all issues, instead of having the publish action stop on the first error. |
-|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|Specifies whether warnings should be generated when differences are found in objects that cannot be modified, for example, if the file size or file paths were different for a file.|
-|**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|Specifies whether collation compatibility is verified.|
+|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|Specifies whether warnings should be generated when differences are found in objects that cannot be modified, for example, if the file size or file paths were different for a file.| 
+|**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|Specifies whether collation compatibility is verified.| 
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Specifies whether checks should be performed before publishing that will stop the publish action if issues are present that might block successful publishing. For example, your publish action might stop if you have foreign keys on the target database that do not exist in the database project, and that causes errors when you publish. |
-
+  
 ## DriftReport action parameters
 
 |Parameter|Short Form|Value|Description|

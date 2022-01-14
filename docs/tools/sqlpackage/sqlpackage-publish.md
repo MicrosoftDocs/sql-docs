@@ -17,10 +17,10 @@ The SqlPackage.exe publish operation incrementally updates the schema of a targe
 
 ## Command-line syntax
 
-**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
-  
+**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.
+
 ```bash
-SqlPackage {parameters}{properties}{SQLCMD Variables}  
+SqlPackage {parameters}{properties}{SQLCMD Variables}
 ```
 
 > [!NOTE]
@@ -93,7 +93,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Specifies whether the declaration of SETVAR variables should be commented out in the generated publish script. You might choose to do this if you plan to specify the values on the command line when you publish by using a tool such as SQLCMD.EXE.|
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|This setting dictates how the database's collation is handled during deployment; by default the target database's collation will be updated if it does not match the collation specified by the source. When this option is set, the target database's (or server's) collation should be used.|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|Specifies whether the target database should be updated or whether it should be dropped and re-created when you publish to a database.|
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Defines the edition of an Azure SQL Database. See [Azure SQL Database service tiers](/azure/azure-sql/database/service-tiers-general-purpose-business-critical). |
+|**/p:**|DatabaseEdition=({ Basic &#124; Standard &#124; Premium &#124; DataWarehouse &#124; GeneralPurpose &#124; BusinessCritical &#124; Hyperscale &#124; Default } 'Default')|Defines the edition of an Azure SQL Database. See [Azure SQL Database service tiers](/azure/azure-sql/database/service-tiers-general-purpose-business-critical). |
 |**/p:**|DatabaseLockTimeout=(INT32 '60')|Specifies the database lock timeout in seconds when executing queries against SQLServer. Use -1 to wait indefinitely.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Defines the maximum size in GB of an Azure SQL Database.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Defines the performance level of an Azure SQL Database such as "P0" or "S1".|
@@ -186,11 +186,11 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ## SQLCMD Variables
 
-The following table describes the format of the option that you can use to override the value of a SQL command (**sqlcmd**) variable used during a publish action. The values of variable specified on the command line override other values assigned to the variable (for example, in a publish profile).  
-  
-|Parameter|Default|Description|  
-|-------------|-----------|---------------|  
-|**/Variables:{PropertyName}={Value}**||Specifies a name value pair for an action-specific variable; {VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error results if a value is not provided for every variable.|  
+The following table describes the format of the option that you can use to override the value of a SQL command (**sqlcmd**) variable used during a publish action. The values of variable specified on the command line override other values assigned to the variable (for example, in a publish profile).
+
+|Parameter|Default|Description|
+|-------------|-----------|---------------|
+|**/Variables:{PropertyName}={Value}**||Specifies a name value pair for an action-specific variable; {VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error results if a value is not provided for every variable.|
 
 ## Next Steps
 

@@ -17,10 +17,10 @@ The SqlPackage.exe Import action imports the schema and table data from a BACPAC
 
 ## Command-line syntax
 
-**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
-  
+**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.
+
 ```bash
-SqlPackage {parameters}{properties}{SQLCMD Variables}  
+SqlPackage {parameters}{properties}{SQLCMD Variables}
 ```
 
 ## Parameters for the Import action
@@ -54,7 +54,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |Property|Value|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifies the command timeout in seconds when executing queries against SQL Server.|
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Defines the edition of an Azure SQL Database. See [Azure SQL Database service tiers](/azure/azure-sql/database/service-tiers-general-purpose-business-critical).|
+|**/p:**|DatabaseEdition=({ Basic &#124; Standard &#124; Premium &#124; DataWarehouse &#124; GeneralPurpose &#124; BusinessCritical &#124; Hyperscale &#124; Default } 'Default')|Defines the edition of an Azure SQL Database. See [Azure SQL Database service tiers](/azure/azure-sql/database/service-tiers-general-purpose-business-critical).|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifies the database lock timeout in seconds when executing queries against SQLServer. Use -1 to wait indefinitely.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Defines the maximum size in GB of an Azure SQL Database.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Defines the performance level of an Azure SQL Database such as "P0" or "S1".|

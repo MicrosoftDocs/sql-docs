@@ -13,14 +13,14 @@ ms.date: 11/14/2021
 ---
 
 # SqlPackage Script parameters and properties
-The SqlPackage.exe Script action creates a Transact-SQL incremental update script that updates the schema of a target database to match the schema of a source database. 
+The SqlPackage.exe Script action creates a Transact-SQL incremental update script that updates the schema of a target database to match the schema of a source database.
 
 ## Command-line syntax
 
-**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
-  
+**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.
+
 ```bash
-SqlPackage {parameters}{properties}{SQLCMD Variables}  
+SqlPackage {parameters}{properties}{SQLCMD Variables}
 ```
 
 ## Parameters for the Script action
@@ -67,7 +67,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Specifies additional deployment contributor arguments for the deployment contributors. This should be a semi-colon delimited list of values.
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Specifies additional deployment contributors, which should run when the dacpac is deployed. This should be a semi-colon delimited list of fully qualified build contributor names or IDs.
-|**/p:**|AdditionalDeploymentContributorPaths=(STRING)| Specifies paths to load additional deployment contributors. This should be a semi-colon delimited list of values. | 
+|**/p:**|AdditionalDeploymentContributorPaths=(STRING)| Specifies paths to load additional deployment contributors. This should be a semi-colon delimited list of values. |
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|This property is used by SqlClr deployment to cause any blocking assemblies to be dropped as part of the deployment plan. By default, any blocking/referencing assemblies will block an assembly update if the referencing assembly needs to be dropped.
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Specifies whether to attempt the action despite incompatible SQL Server platforms.
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Do not block data motion on a table that has Row Level Security if this property is set to true. Default is false.
@@ -78,7 +78,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Specifies whether the declaration of SETVAR variables should be commented out in the generated publish script. You might choose to do this if you plan to specify the values on the command line when you publish by using a tool such as SQLCMD.EXE.
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|This setting dictates how the database's collation is handled during deployment; by default the target database's collation will be updated if it does not match the collation specified by the source. When this option is set, the target database's (or server's) collation should be used.|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|Specifies whether the target database should be updated or whether it should be dropped and re-created when you publish to a database.
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Defines the edition of an Azure SQL Database. See [Azure SQL Database service tiers](/azure/azure-sql/database/service-tiers-general-purpose-business-critical).|
+|**/p:**|DatabaseEdition=({ Basic &#124; Standard &#124; Premium &#124; DataWarehouse &#124; GeneralPurpose &#124; BusinessCritical &#124; Hyperscale &#124; Default } 'Default')|Defines the edition of an Azure SQL Database. See [Azure SQL Database service tiers](/azure/azure-sql/database/service-tiers-general-purpose-business-critical).|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifies the database lock timeout in seconds when executing queries against SQLServer. Use -1 to wait indefinitely.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Defines the maximum size in GB of an Azure SQL Database.
 |**/p:**|DatabaseServiceObjective=(STRING)|Defines the performance level of an Azure SQL Database such as "P0" or "S1".

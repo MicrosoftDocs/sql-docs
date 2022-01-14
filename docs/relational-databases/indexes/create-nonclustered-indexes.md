@@ -1,7 +1,7 @@
 ---
 description: "Create Nonclustered Indexes"
 title: "Create Nonclustered Indexes | Microsoft Docs"
-ms.custom: ""
+ms.custom: FY21Q2Fresh
 ms.date: 11/12/2021
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"

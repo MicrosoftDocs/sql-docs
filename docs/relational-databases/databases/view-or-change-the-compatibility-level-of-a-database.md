@@ -1,7 +1,7 @@
 ---
 title: "View or Change the Compatibility Level of a Database"
 description: Learn how to view or change the compatibility level of a database in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+ms.custom: FY21Q2Fresh
 ms.date: "10/21/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

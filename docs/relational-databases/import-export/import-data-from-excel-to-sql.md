@@ -1,7 +1,7 @@
 ---
 title: "Import data from Excel to SQL | Microsoft Docs"
 description: This article describes methods to import data from Excel to SQL Server or Azure SQL Database. Some use a single step, others require an intermediate text file.
-ms.custom: sqlfreshmay19
+ms.custom: sqlfreshmay19, FY21Q2Fresh
 ms.date: "12/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

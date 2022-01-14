@@ -1,7 +1,7 @@
 ---
 title: "View the SQL Server error log (SSMS)"
 description: Learn about the SQL Server error log, which contains user-defined events and certain system events you can use for troubleshooting.
-ms.custom: seo-dt-2019
+ms.custom: seo-dt-2019, FY21Q2Fresh
 ms.date: "10/21/2021"
 ms.prod: sql
 ms.reviewer: ""

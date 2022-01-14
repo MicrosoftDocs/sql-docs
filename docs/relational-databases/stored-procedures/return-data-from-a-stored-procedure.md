@@ -1,7 +1,7 @@
 ---
 title: "Return data from a stored procedure"
 description: Learn how to return data from a procedure to a calling program by using result sets, output parameters, and return codes.
-ms.custom: ""
+ms.custom: FY21Q2Fresh
 ms.date: "12/15/2021"
 ms.prod: sql
 ms.technology: stored-procedures

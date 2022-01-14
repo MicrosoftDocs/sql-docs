@@ -1,7 +1,7 @@
 ---
 description: "Clustered and nonclustered indexes described"
 title: "Clustered and nonclustered indexes described"
-ms.custom: ""
+ms.custom: FY21Q2Fresh
 ms.date: 10/25/2021
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"

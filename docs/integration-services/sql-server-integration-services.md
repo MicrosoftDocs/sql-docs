@@ -1,7 +1,6 @@
 ---
 title: SQL Server Integration Services
 description: Learn about SQL Server Integration Services, Microsoft's platform for building enterprise-level data integration and data transformations solutions.
-ms.date: 12/10/2021
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
@@ -18,6 +17,9 @@ helpviewer_keywords:
   - "Data Transformation Services"
 author: chugugrace
 ms.author: chugu
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: 12/10/2021
 ---
 
 # SQL Server Integration Services
@@ -44,9 +46,10 @@ You can start by installing SQL Server Integration Services, which is part of SQ
 
 For installation instructions and guidance, see [Install Integration Services](install-windows/install-integration-services.md).
 
-##  ![info_tip](../sql-server/media/info-tip.png) Resources
--   [Get help in the SSIS forum](/answers/topics/sql-server-integration-services.html)
--   [Get help on Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  
--   [Follow the SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
--   [Report issues & request features](https://feedback.azure.com/forums/908035-sql-server)
--   [Get the docs on your PC](../sql-server/sql-server-offline-documentation.md)
+## ![info_tip](../sql-server/media/info-tip.png) Resources
+
+- [Get help in the SSIS forum](/answers/topics/sql-server-integration-services.html)
+- [Get help on Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  
+- [Follow the SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
+- [Report issues & request features](https://feedback.azure.com/forums/908035-sql-server)
+- [Get the docs on your PC](../sql-server/sql-server-offline-documentation.md)

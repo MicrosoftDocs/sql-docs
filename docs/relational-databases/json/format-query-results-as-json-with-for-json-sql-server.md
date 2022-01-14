@@ -12,7 +12,7 @@ helpviewer_keywords:
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.custom: seo-dt-2019, FY21Q2Fresh
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Format Query Results as JSON with FOR JSON (SQL Server)

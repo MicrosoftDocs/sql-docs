@@ -1,7 +1,7 @@
 ---
 description: "Specify Computed Columns in a Table"
 title: "Specify Computed Columns in a Table"
-ms.custom: ""
+ms.custom: FY21Q2Fresh
 ms.date: "10/21/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

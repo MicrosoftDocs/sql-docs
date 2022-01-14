@@ -1,7 +1,7 @@
 ---
 title: Collation and Unicode support
 description: Learn about collation and Unicode support in SQL Server.
-ms.custom: ""
+ms.custom: FY21Q2Fresh
 ms.date: 12/10/2021
 ms.prod: sql
 ms.technology: 

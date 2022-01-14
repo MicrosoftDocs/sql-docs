@@ -1,7 +1,7 @@
 ---
 description: "Rename Columns (Database Engine)"
 title: "Rename Columns (Database Engine)"
-ms.custom: ""
+ms.custom: FY21Q2Fresh
 ms.date: "12/02/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

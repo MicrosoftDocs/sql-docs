@@ -1,7 +1,7 @@
 ---
 description: "Create Foreign Key Relationships"
 title: "Create Foreign Key Relationships"
-ms.custom: ""
+ms.custom: FY21Q2Fresh
 ms.date: "12/20/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

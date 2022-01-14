@@ -1,21 +1,23 @@
 ---
-description: "Set a database to single-user mode"
 title: "Set a database to single-user mode"
-ms.custom: FY21Q2Fresh
-ms.date: "10/21/2021"
+description: "Set a database to single-user mode"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "single-user mode [SQL Server], database option"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: "10/21/2021"
 ---
 # Set a database to single-user mode
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This article describes how to set a user-defined database to single-user mode in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Single-user mode specifies that only one user at a time can access the database and is generally used for maintenance actions.  
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+This article describes how to set a user-defined database to single-user mode in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Single-user mode specifies that only one user at a time can access the database and is generally used for maintenance actions.  
   
 ##  <a name="Restrictions"></a> Limitations and restrictions  
   

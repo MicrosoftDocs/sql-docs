@@ -1,18 +1,17 @@
 ---
-description: "Create Primary Keys"
 title: "Create Primary Keys in SQL Server"
-ms.custom: FY21Q2Fresh
-ms.date: 10/25/2021
+description: "Create Primary Keys"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "primary keys [SQL Server], creating"
-ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: 10/25/2021
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Primary Keys

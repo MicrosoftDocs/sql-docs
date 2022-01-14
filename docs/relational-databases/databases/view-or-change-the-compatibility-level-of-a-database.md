@@ -1,11 +1,8 @@
 ---
 title: "View or Change the Compatibility Level of a Database"
 description: Learn how to view or change the compatibility level of a database in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: FY21Q2Fresh
-ms.date: "10/21/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,15 +11,20 @@ helpviewer_keywords:
   - "compatibility levels [SQL Server], changing"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: "10/21/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View or change the compatibility level of a database
+
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  This article describes how to view or change the compatibility level of a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+
+This article describes how to view or change the compatibility level of a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
 > [!IMPORTANT]
 > Before you change the compatibility level of a database, you should understand the impact of the change on your applications. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
-    
+
 ## <a name="Security"></a><a name="Permissions"></a> Permissions  
  Requires ALTER permission on the database.  
   

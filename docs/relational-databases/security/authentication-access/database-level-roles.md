@@ -1,11 +1,8 @@
 ---
 title: "Database-Level Roles"
 description: SQL Server provides several roles that are security principals that group other principals to manage the permissions in your databases.
-ms.custom: FY21Q2Fresh
-ms.date: 12/16/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, azure-synapse, pdw"
-ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
@@ -37,6 +34,9 @@ helpviewer_keywords:
   - "groups [SQL Server], roles"
 author: VanMSFT
 ms.author: vanto
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: 12/16/2021
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database-level roles

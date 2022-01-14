@@ -1,11 +1,8 @@
 ---
-description: "Specify Default Values for Columns"
 title: "Specify Default Values for Columns"
-ms.custom: FY21Q2Fresh
-ms.date: 10/21/2021
+description: "Specify Default Values for Columns"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,6 +10,9 @@ helpviewer_keywords:
   - "default values"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: 10/21/2021
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Default Values for Columns

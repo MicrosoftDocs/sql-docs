@@ -1,11 +1,8 @@
 ---
-description: "Rename a Database"
 title: "Rename a Database"
-ms.custom: FY21Q2Fresh
-ms.date: "10/21/2021"
+description: "Rename a Database"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,6 +10,9 @@ helpviewer_keywords:
   - "renaming databases"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: "10/21/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename a Database

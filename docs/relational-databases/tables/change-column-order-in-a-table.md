@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 #### To change the column order  
   
-1.  In **Object Explorer**, right-click the table with columns you want to reorder and click **Design**.  
+1.  In **Object Explorer**, right-click the table with columns you want to reorder and select **Design**.  
   
 2.  Select the box to the left of the column name that you want to reorder.  
   

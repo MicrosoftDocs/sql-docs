@@ -1,7 +1,7 @@
 ---
 title: "Create a Database"
 description: "Find out how to create a database in SQL Server 2019 by using SQL Server Management Studio or Transact-SQL. View recommendations for the procedure."
-ms.custom: ""
+ms.custom: FY21Q2Fresh
 ms.date: "10/21/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"

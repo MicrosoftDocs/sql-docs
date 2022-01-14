@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "linked servers [SQL Server], creating"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-dt-2019
+ms.custom: seo-dt-2019, FY21Q2Fresh
 ---
 # Create Linked Servers (SQL Server Database Engine)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

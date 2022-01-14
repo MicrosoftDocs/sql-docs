@@ -1,7 +1,7 @@
 ---
 title: "Grant Permissions on a Stored Procedure"
 description: Learn how to grant permissions on a stored procedure in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+ms.custom: FY21Q2Fresh
 ms.date: "10/21/2021"
 ms.prod: sql
 ms.reviewer: ""

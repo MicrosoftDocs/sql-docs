@@ -1,8 +1,6 @@
 ---
 title: Collation and Unicode support
 description: Learn about collation and Unicode support in SQL Server.
-ms.custom: ""
-ms.date: 12/10/2021
 ms.prod: sql
 ms.technology: 
 ms.topic: conceptual
@@ -29,9 +27,11 @@ helpviewer_keywords:
   - "UTF16"
   - "UCS2"
   - "server-level collations [SQL Server]"
-ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: "pmasl"
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: 12/10/2021
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

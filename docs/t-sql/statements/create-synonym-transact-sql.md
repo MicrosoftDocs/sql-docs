@@ -42,7 +42,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>
   
 <object> :: =  
 {  
-    [ server_name.[ database_name ] . [ schema_name_2 ]. object_name   
+    [ server_name.[ database_name ] . [ schema_name_2 ].    
   | database_name . [ schema_name_2 ].| schema_name_2. ] object_name  
 }  
 ```  

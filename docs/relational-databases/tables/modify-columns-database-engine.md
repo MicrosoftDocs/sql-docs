@@ -1,11 +1,8 @@
 ---
-description: "Modify Columns (Database Engine)"
 title: "Modify Columns (Database Engine)"
-ms.custom: ""
-ms.date: "10/21/2021"
+description: "Modify Columns (Database Engine)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,9 +11,13 @@ helpviewer_keywords:
   - "data types [SQL Server], columns"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.custom: FY21Q2Fresh
+ms.reviewer: ""
+ms.date: "10/21/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Columns (Database Engine)
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   You can modify the data type of a column in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

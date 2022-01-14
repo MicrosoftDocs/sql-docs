@@ -1,11 +1,8 @@
 ---
-description: "Rename Columns (Database Engine)"
 title: "Rename Columns (Database Engine)"
-ms.custom: ""
-ms.date: "12/02/2021"
+description: "Rename Columns (Database Engine)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,6 +11,9 @@ helpviewer_keywords:
   - "column names [SQL Server]"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: "12/02/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename columns (Database Engine)

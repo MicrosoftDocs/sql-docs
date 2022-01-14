@@ -1,17 +1,17 @@
 ---
-description: "Specify Computed Columns in a Table"
 title: "Specify Computed Columns in a Table"
-ms.custom: ""
-ms.date: "10/21/2021"
+description: "Specify Computed Columns in a Table"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "computed columns, define"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: "10/21/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Computed Columns in a Table

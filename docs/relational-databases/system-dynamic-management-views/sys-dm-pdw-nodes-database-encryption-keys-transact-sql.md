@@ -40,11 +40,13 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ## Permissions  
  Requires the VIEW SERVER STATE permission on the server.  
 
-The following example joins `sys.dm_pdw_nodes_database_encryption_keys` to other system tables to indicate the encryption state for each node of the TDE protected databases.  
-## Examples: 
+## Examples 
 
-[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-```  
+The following example joins `sys.dm_pdw_nodes_database_encryption_keys` to other system tables to indicate the encryption state for each node of the TDE protected databases.  
+
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+```sql  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
 PD.pdw_node_id AS NodeID, DM.physical_name AS PhysDBName,   
 keys.encryption_state  
@@ -60,7 +62,7 @@ ORDER BY D.database_id, PD.pdw_node_ID;
 
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 
 
-``` 
+```sql
 --Query provides underlying distribution encryption status
 SELECT keys.database_id AS DBIDinPhysicalDatabases,   
 PD.pdw_node_id AS NodeID, PD.physical_name AS PhysDBName,   
@@ -70,7 +72,8 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
     ON keys.database_id = PD.database_id AND keys.pdw_node_id = PD.pdw_node_id  
 ORDER BY keys.database_id, PD.pdw_node_ID;
 ```
-``` 
+
+```sql
 --Query provides the DW encryption status
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
 PD.pdw_node_id AS NodeID, PD.physical_name AS PhysDBName,   

@@ -2,7 +2,7 @@
 title: "Apache Spark connector for SQL Server"
 description: "Learn how to use the Apache Spark connector for SQL Server." 
 ms.custom: ""
-ms.date: 12/09/2021
+ms.date: 01/18/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -26,6 +26,7 @@ There are two versions of the connector available through Maven, a 2.4.x compati
 | --------- | ------------------ |
 | Spark 2.4.x compatible connector | `com.microsoft.azure:spark-mssql-connector:1.0.2` |
 | Spark 3.0.x compatible connector | `com.microsoft.azure:spark-mssql-connector_2.12:1.1.0` |
+| Spark 3.1.x compatible connector | `com.microsoft.azure:spark-mssql-connector_2.12:1.2.0` |
 
 You can also build the connector from source or download the jar from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
 
@@ -39,7 +40,7 @@ You can also build the connector from source or download the jar from the Releas
 
 | Component                            | Versions Supported              |
 |--------------------------------------|---------------------------------|
-| Apache Spark                         | 2.4.x, 3.0.x |
+| Apache Spark                         | 2.4.x, 3.0.x, 3.1.x |
 | Scala                                | 2.11, 2.12                            |
 | Microsoft JDBC Driver for SQL Server | 8.4                             |
 | Microsoft SQL Server                 | SQL Server 2008 or later        |

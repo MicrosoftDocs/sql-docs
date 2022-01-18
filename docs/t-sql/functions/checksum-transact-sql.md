@@ -68,7 +68,7 @@ Therefore, to detect whether values have changed, we recommend use of `CHECKSUM`
 Practical problems:
 1. Checksum ignores negative signature in numeric string
 ```
-SELECT `CHECKSUM(N'1'), CHECKSUM(N'-1');
+SELECT CHECKSUM(N'1'), CHECKSUM(N'-1');
 ```
 2. A checksum comparison cannot detect that code was commented-out in stored proc definition
 ```

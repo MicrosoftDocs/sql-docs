@@ -6,8 +6,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/16/2021
 ms.topic: overview
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=sql-server-2016"
 ms.custom:
   - intro-overview

@@ -4,8 +4,8 @@
 title: "rx_featurize: Data Transformation for revoscalepy data sources" 
 description: "Transforms data from an input data set to an output data set." 
 keywords: "transform, featurizer" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

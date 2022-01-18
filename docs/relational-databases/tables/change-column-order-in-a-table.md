@@ -1,8 +1,8 @@
 ---
 description: "Change Column Order in a Table"
-title: "Change Column Order in a Table | Microsoft Docs"
+title: "Change Column Order in a Table"
 ms.custom: ""
-ms.date: "06/15/2018"
+ms.date: "01/14/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -11,7 +11,6 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [SQL Server], change order in a table"
   - "column order, change"
-ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -34,18 +33,20 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
-  
+
 #### To change the column order  
   
-1.  In **Object Explorer**, right-click the table with columns you want to reorder and click **Design**.  
+1.  In **Object Explorer**, right-click the table with columns you want to reorder and select **Design**.  
   
 2.  Select the box to the left of the column name that you want to reorder.  
   
 3.  Drag the column to another location within the table.  
+
+You may be blocked making these changes by an important safety feature of SSMS, controlled by the setting **Prevent saving changes that require table re-creation**. This setting is enabled to prevent accidental drop/recreate of the table via SSMS dialogues, which may be a disruptive and result in the loss of metadata or permissions. For more information, see [Saving changes is not permitted error message in SSMS](/troubleshoot/sql/ssms/error-when-you-save-table). Instead, it is recommended you execute these type of changes, with full awareness of their impact, via Transact-SQL steps that account for permissions and metadata.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To change the column order**  
   
- This task is not supported using Transact-SQL statements.  
+ This task is not supported using Transact-SQL statements. The table must be dropped and recreated in order to change column order. 
   
 ###  <a name="TsqlExample"></a>  

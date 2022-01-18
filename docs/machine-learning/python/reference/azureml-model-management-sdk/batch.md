@@ -4,8 +4,8 @@
 title: "Batch class"
 description: "The Batch class is for SQL Machine Learning Services and Machine Learning Server for managing web services." 
 keywords: "" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

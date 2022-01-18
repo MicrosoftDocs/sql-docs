@@ -5,10 +5,8 @@ ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 f1_keywords: 
-  - "SQL.DATA.TOOLS.SQLPROJECTIMPORTSNAPSHOTSUMMARYDIALOG.DIALOG"
   - "SQL.DATA.TOOLS.SQLPROJECTIMPORTDATABASESUMMARYDIALOG.DIALOG"
   - "SQL.DATA.TOOLS.IMPORTSCRIPTWIZARD.SUMMARY"
-ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”

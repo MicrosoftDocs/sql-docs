@@ -1,7 +1,7 @@
 ---
 title: "Execute a Stored Procedure"
 description: Learn how to execute a stored procedure by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+ms.custom: FY21Q2Fresh
 ms.date: "11/11/2021"
 ms.prod: sql
 ms.reviewer: ""

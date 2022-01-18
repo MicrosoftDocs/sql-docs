@@ -2,7 +2,7 @@
 title: Driver feature support matrix
 description: Learn which SQL Server features are supported in the drivers for .NET, ODBC, OLE DB, JDBC, Node.js, JavaScript, and Python.
 ms.custom: ""
-ms.date: 05/06/2021
+ms.date: 01/07/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -78,7 +78,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Azure Active Directory Integrated authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | | Yes |
 | [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | | | | Yes<sup>[2](#note2)</sup> |
 | [Azure Active Directory Managed Identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | [Yes](php/azure-active-directory.md) (v5.6+) | [Yes](php/azure-active-directory.md) (v5.6+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes |
-| [Azure Active Directory Service Principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](php/azure-active-directory.md) (v5.9+) | [Yes](php/azure-active-directory.md) (v5.9+) | | |
+| [Azure Active Directory Service Principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](php/azure-active-directory.md) (v5.9+) | [Yes](php/azure-active-directory.md) (v5.9+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes |
 | [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | [Yes](php/how-to-connect-using-windows-authentication.md) | [Yes](odbc/linux-mac/using-integrated-authentication.md) | | Yes |
 | [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | | | [Yes](https://tediousjs.github.io/tedious/bulk-load.html) | |
 | [Data Discovery and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | Yes (v5.8+) | Yes (v5.8+) | | |

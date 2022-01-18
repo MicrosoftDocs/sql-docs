@@ -23,7 +23,7 @@ monikerRange: "= azuresqldb-current"
 ---
 # sys.geo_replication_links (Azure SQL Database)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Contains a row for each replication link between primary and secondary databases in a geo-replication partnership. This view resides in the logical master database.  
   

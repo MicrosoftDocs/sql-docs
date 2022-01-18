@@ -188,20 +188,20 @@ chmod 440 /container/sql1/secrets/mssql.keytab
 
     ```output
     [libdefaults]
-    default_realm = DOMAIN.COM
-
+    default_realm = CONTOSO.COM
+    
     [realms]
-     CONTOSO.COM = {
-         kdc = adVM.contoso.com
-         admin_server = adVM.contoso.com
-         default_domain = CONTOSO.COM
-     }
-
+    CONTOSO.COM = {
+        kdc = adVM.contoso.com
+        admin_server = adVM.contoso.com
+        default_domain = CONTOSO.COM
+    }
+    
     [domain_realm]
-     .contoso.com = CONTOSO.COM
-     contoso.com = CONTOSO.COM
-
-
+    .contoso.com = CONTOSO.COM
+    contoso.com = CONTOSO.COM
+    ```
+    
 1. Copy all files, `mssql.conf`, `krb5.conf`, `mssql.keytab` to a location that will be mounted to the SQL Server container. In this example, these files are placed on the host at the following locations: `mssql.conf` and `krb5.conf` at `/container/sql1/`. `mssql.keytab` is placed at the location `/container/sql1/secrets/`.
 
 1. Make sure there's enough permission on these folders for the user running the docker/podman command. When the container starts, the user needs access to the folder path created. In this example, we provided the below permissions given to the folder path:

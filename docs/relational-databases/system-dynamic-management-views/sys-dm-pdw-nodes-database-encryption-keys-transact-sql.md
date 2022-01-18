@@ -39,11 +39,14 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
   
 ## Permissions  
  Requires the VIEW SERVER STATE permission on the server.  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example joins `sys.dm_pdw_nodes_database_encryption_keys` to other system tables to indicate the encryption state for each node of the TDE protected databases.  
-  
-```  
+
+## Examples 
+
+The following example joins `sys.dm_pdw_nodes_database_encryption_keys` to other system tables to indicate the encryption state for each node of the TDE protected databases.  
+
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+```sql  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
 PD.pdw_node_id AS NodeID, DM.physical_name AS PhysDBName,   
 keys.encryption_state  
@@ -56,6 +59,32 @@ JOIN sys.databases AS D
     ON D.database_id = DM.database_id  
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
+
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 
+
+```sql
+--Query provides underlying distribution encryption status
+SELECT keys.database_id AS DBIDinPhysicalDatabases,   
+PD.pdw_node_id AS NodeID, PD.physical_name AS PhysDBName,   
+keys.encryption_state  
+FROM sys.dm_pdw_nodes_database_encryption_keys AS keys  
+JOIN sys.pdw_nodes_pdw_physical_databases AS PD  
+    ON keys.database_id = PD.database_id AND keys.pdw_node_id = PD.pdw_node_id  
+ORDER BY keys.database_id, PD.pdw_node_ID;
+```
+
+```sql
+--Query provides the DW encryption status
+SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
+PD.pdw_node_id AS NodeID, PD.physical_name AS PhysDBName,   
+keys.encryption_state  
+FROM sys.dm_pdw_nodes_database_encryption_keys AS keys  
+JOIN sys.pdw_nodes_pdw_physical_databases AS PD  
+    ON keys.database_id = PD.database_id AND keys.pdw_node_id = PD.pdw_node_id  
+JOIN sys.databases AS D  
+    ON D.database_id = PD.database_id  
+ORDER BY D.database_id, PD.pdw_node_ID;
+```
   
 ## See Also  
  [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   

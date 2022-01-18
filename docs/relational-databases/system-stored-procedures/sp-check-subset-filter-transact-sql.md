@@ -5,8 +5,6 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: replication
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
 f1_keywords: 
   - "sp_check_subset_filter"
   - "sp_check_subset_filter_TSQL"

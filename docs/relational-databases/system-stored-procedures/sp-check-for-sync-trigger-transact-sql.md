@@ -1,35 +1,34 @@
 ---
+title: sp_check_for_sync_trigger (Transact-SQL)
 description: "sp_check_for_sync_trigger (Transact-SQL)"
-title: "sp_check_for_sync_trigger (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
+f1_keywords: 
+  - "sp_check_for_sync_trigger"
 dev_langs: 
   - "TSQL"
-f1_keywords: 
-  - "filter_TSQL"
-  - "sp_check_for_sync_trigger"
 helpviewer_keywords: 
   - "sp_check_for_sync_trigger"
-ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "03/06/2017"
 ---
+
 # sp_check_for_sync_trigger (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Determines whether a user-defined trigger or stored procedure is being called in the context of a replication trigger that is used for immediate updating subscriptions. This stored procedure is executed at the Publisher on the publication database or at the Subscriber on the subscription database.  
+Determines whether a user-defined trigger or stored procedure is being called in the context of a replication trigger that is used for immediate updating subscriptions. This stored procedure is executed at the Publisher on the publication database or at the Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
-  
+```tsql  
 sp_check_for_sync_trigger [ @tabid = ] 'tabid'   
     [ , [ @trigger_op = ] 'trigger_output_parameters' OUTPUT ]  
     [ , [ @fonpublisher = ] fonpublisher ]  

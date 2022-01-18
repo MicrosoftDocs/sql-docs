@@ -4,7 +4,6 @@ description: "Columns Collection (ADOX)"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
-ms.reviewer: ""
 ms.topic: reference
 apitype: "COM"
 f1_keywords: 

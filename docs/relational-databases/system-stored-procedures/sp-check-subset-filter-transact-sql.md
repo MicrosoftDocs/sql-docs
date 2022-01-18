@@ -1,35 +1,33 @@
 ---
+title: sp_check_subset_filter (Transact-SQL)
 description: "sp_check_subset_filter (Transact-SQL)"
-title: "sp_check_subset_filter (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 f1_keywords: 
-  - "sp_check_TSQL"
   - "sp_check_subset_filter"
-  - "filter"
-  - "subset"
-  - "subset_TSQL"
-  - "sp_check"
   - "sp_check_subset_filter_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "sp_check_subset_filter"
-ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "03/06/2017"
 ---
+
 # sp_check_subset_filter (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Is used to check a filter clause against any table to determine if the filter clause is valid for the table. This stored procedure returns information about the supplied filter, including if the filter qualifies for use with precomputed partitions. This stored procedure is executed at the Publisher on the database containing the publication.  
+Is used to check a filter clause against any table to determine if the filter clause is valid for the table. This stored procedure returns information about the supplied filter, including if the filter qualifies for use with precomputed partitions. This stored procedure is executed at the Publisher on the database containing the publication.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

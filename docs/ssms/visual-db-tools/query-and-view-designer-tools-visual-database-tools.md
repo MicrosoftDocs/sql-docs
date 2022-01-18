@@ -1,8 +1,6 @@
 ---
-description: "Query and View Designer Tools (Visual Database Tools)"
 title: Query and View Designer Tools
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+description: "Query and View Designer Tools (Visual Database Tools)"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -13,17 +11,16 @@ f1_keywords:
   - "vdt.pane.grid"
   - "vdt.dlgbox.querybuilder"
   - "vdt.pane.sql"
-  - "vdt.pane.results"
 helpviewer_keywords: 
   - "Query Designer [SQL Server], panes"
   - "View Designer, panes"
   - "Query Designer [SQL Server], components"
   - "View Designer, components"
-ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: 
-
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
 # Query and View Designer Tools (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

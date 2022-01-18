@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "backup media [SQL Server], backupmediaset system table"
   - "backupmediaset system table"
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # backupmediaset (Transact-SQL)
 

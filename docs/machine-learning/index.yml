@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page 
   author: dphansen
   ms.author: davidph
-  ms.date: 04/28/2021
+  ms.date: 09/10/2021
 
 landingContent:
   - title: Machine learning on SQL Server
@@ -82,16 +82,16 @@ landingContent:
           - text: Deploy and make predictions with an ONNX model in Azure SQL Managed Instance
             url: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context
 
-  - title: Azure SQL Database Edge
+  - title: Azure SQL Edge
     linkLists:
       - linkListType: overview
         links:
-          - text: Machine learning and AI with ONNX in SQL Database Edge
-            url: /azure/sql-database-edge/onnx-overview
+          - text: Machine learning and AI with ONNX in Azure SQL Edge
+            url: /azure/azure-sql-edge/onnx-overview
       - linkListType: how-to-guide
         links:
-          - text: Deploy and make predictions with an ONNX model in SQL Database Edge
-            url: /azure/sql-database-edge/deploy-onnx
+          - text: Deploy and make predictions with an ONNX model in Azure SQL Edge
+            url: /azure/azure-sql-edge/deploy-onnx
 
   - title: Azure Data Studio ML extension
     linkLists:

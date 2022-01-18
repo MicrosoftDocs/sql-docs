@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;LANGID (Transact-SQL)"
+description: "@@LANGID (Transact-SQL)"
 title: "@@LANGID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ID for language in use"
   - "local language IDs [SQL Server]"
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;LANGID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "in-process data access providers [CLR integration]"
   - "extensions [CLR integration]"
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # SQL Server In-Process Specific Extensions to ADO.NET
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

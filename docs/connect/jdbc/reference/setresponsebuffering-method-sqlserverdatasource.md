@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setResponseBuffering Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

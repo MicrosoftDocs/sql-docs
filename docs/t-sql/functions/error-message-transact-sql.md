@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "TRY...CATCH [SQL Server]"
   - "CATCH block"
 ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ERROR_MESSAGE (Transact-SQL)

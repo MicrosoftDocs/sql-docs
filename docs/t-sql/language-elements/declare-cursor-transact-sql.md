@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "Transact-SQL cursors, attributes"
   - "global cursors [SQL Server]"
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # DECLARE CURSOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

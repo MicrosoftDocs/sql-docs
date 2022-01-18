@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLStatistics function [ODBC], Text File Driver"
 ms.assetid: 311afc01-d656-425f-be43-4a8e7cbc9a97
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLStatistics (Text File Driver)
 > [!NOTE]  

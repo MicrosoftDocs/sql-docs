@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL_VARIANT_PROPERTY function"
   - "sql_variant data type"
 ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL_VARIANT_PROPERTY (Transact-SQL)

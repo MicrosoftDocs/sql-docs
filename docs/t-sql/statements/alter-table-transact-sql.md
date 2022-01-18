@@ -1,11 +1,8 @@
 ---
+title: ALTER TABLE (Transact-SQL)
 description: "ALTER TABLE (Transact-SQL)"
-title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -57,9 +54,11 @@ helpviewer_keywords:
   - "dropping columns"
   - "data retention policy"
   - "table changes [SQL Server]"
-ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "05/25/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE (Transact-SQL)
@@ -178,7 +177,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                             [, RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
                                     | MONTH | MONTHS | YEAR | YEARS }}]   
                         )]
-     	           }
+                    }
     | REBUILD
       [ [PARTITION = ALL]
         [ WITH ( <rebuild_option> [ ,...n ] ) ]
@@ -891,10 +890,10 @@ ONLINE **=** { ON | **OFF** } \<as applies to single_partition_rebuild_option>
 Specifies whether a single partition of the underlying tables and associated indexes is available for queries and data modification during the index operation. The default is OFF. You can run REBUILD as an ONLINE operation.
 
 ON  
-Long-term table locks aren't held for the duration of the index operation. S-lock on the table is required in the beginning of the index rebuild and a Sch-M lock on the table at the end of the online index rebuild. Although both locks are short metadata locks, the Sch-M lock must wait for all blocking transactions to be completed. During the wait time,, the Sch-M lock blocks all other transactions that wait behind this lock when accessing the same table.
+Long-term table locks aren't held for the duration of the index operation. S-lock on the table is required in the beginning of the index rebuild and a Sch-M lock on the table at the end of the online index rebuild. Although both locks are short metadata locks, the Sch-M lock must wait for all blocking transactions to be completed. During the wait time, the Sch-M lock blocks all other transactions that wait behind this lock when accessing the same table.
 
 > [!NOTE]
-> Online index rebuild can set the *low_priority_lock_wait* options described later in this section.
+> Online index rebuild can set the `low_priority_lock_wait` options described later in this section.
 
 OFF  
 Table locks are applied for the duration of the index operation. This prevents all user access to the underlying table for the duration of the operation.

@@ -7,6 +7,8 @@ ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
 author: WilliamDAssafMSFT
 ms.author: wiassaf

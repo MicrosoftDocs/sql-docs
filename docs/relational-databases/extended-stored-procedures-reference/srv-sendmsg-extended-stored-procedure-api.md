@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_sendmsg"
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_sendmsg (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

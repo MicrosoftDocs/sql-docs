@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;MAX_PRECISION (Transact-SQL)"
+description: "@@MAX_PRECISION (Transact-SQL)"
 title: "@@MAX_PRECISION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "@@MAX_PRECISION function"
   - "data types [SQL Server], precision"
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;MAX_PRECISION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

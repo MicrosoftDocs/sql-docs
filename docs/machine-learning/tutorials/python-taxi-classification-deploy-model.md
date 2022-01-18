@@ -5,10 +5,10 @@ description: In part five of this five-part tutorial series, you'll operationali
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/29/2020
+ms.date: 09/17/2021
 ms.topic: tutorial
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
 ---
@@ -43,9 +43,9 @@ In [part four](python-taxi-classification-train-model.md), you loaded the module
 
 ## Batch scoring
 
-The first two stored procedures illustrate the basic syntax for wrapping a Python prediction call in a stored procedure. Both stored procedures require a table of data as inputs.
+The first two stored procedures created using the following scripts illustrate the basic syntax for wrapping a Python prediction call in a stored procedure. Both stored procedures require a table of data as inputs.
 
-+ The name of the exact model to use is provided as input parameter to the stored procedure. The stored procedure loads the serialized  model from the database table `nyc_taxi_models`.table, using the SELECT statement in the stored procedure.
++ The name of the model to use is provided as input parameter to the stored procedure. The stored procedure loads the serialized  model from the database table `nyc_taxi_models`.table, using the SELECT statement in the stored procedure.
 + The serialized model is stored in the Python variable `mod` for further processing using Python.
 + The new cases that need to be scored are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@input_data_1`. As the query data is read, the rows are saved in the default data frame, `InputDataSet`.
 + Both stored procedure use functions from `sklearn` to calculate an accuracy metric, AUC (area under curve). Accuracy metrics such as AUC can only be generated if you also provide the target label (the _tipped_ column). Predictions do not need the target label (variable `y`), but the accuracy metric calculation does.
@@ -54,7 +54,7 @@ The first two stored procedures illustrate the basic syntax for wrapping a Pytho
 
 ### PredictTipSciKitPy
 
-Run the following T-SQL statements to create the stored procedures. This stored procedure requires a model based on the scikit-learn package, because it uses functions specific to that package.
+Run the following T-SQL statements to create the stored procedure `PredictTipSciKitPy`. This stored procedure requires a model based on the scikit-learn package, because it uses functions specific to that package.
 
 The data frame containing inputs is passed to the `predict_proba` function of the logistic regression model, `mod`. The `predict_proba` function (`probArray = mod.predict_proba(X)`) returns a **float** that represents the probability that a tip (of any amount) will be given.
 
@@ -100,7 +100,7 @@ GO
 
 ### PredictTipRxPy
 
-This stored procedure uses the same inputs and creates the same type of scores as the previous stored procedure, but uses functions from the **revoscalepy** package provided with SQL Server machine learning.
+Run the following T-SQL statements to create the stored procedure `PredictTipRxPy`. This stored procedure uses the same inputs and creates the same type of scores as the previous stored procedure, but it uses functions from the **revoscalepy** package provided with SQL Server machine learning.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
@@ -182,8 +182,8 @@ Sometimes, instead of batch scoring, you might want to pass in a single case, ge
 
 In this section, you'll learn how to create single predictions by calling two stored procedures:
 
-+ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) is designed for single-row scoring using the scikit-learn model.
-+ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) is designed for single-row scoring using the revoscalepy model.
++ **PredictTipSingleModeSciKitPy** is designed for single-row scoring using the scikit-learn model.
++ **PredictTipSingleModeRxPy** is designed for single-row scoring using the revoscalepy model.
 + If you haven't trained a model yet, return to [part five](python-taxi-classification-train-model.md)!
 
 Both models take as input a series of single values, such as passenger count, trip distance, and so forth. A table-valued function, `fnEngineerFeatures`, is used to convert latitude and longitude values from the inputs to a new feature, direct distance. [Part four](python-taxi-classification-create-features.md) contains a description of this table-valued function.
@@ -196,7 +196,7 @@ Both stored procedures create a score based on the Python model.
 
 ### PredictTipSingleModeSciKitPy
 
-Take a minute to review the code of the stored procedure that performs scoring using the **scikit-learn** model.
+The following stored procedure `PredictTipSingleModeSciKitPy` performs scoring using the **scikit-learn** model.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
@@ -263,7 +263,7 @@ GO
 
 ### PredictTipSingleModeRxPy
 
-The following stored procedure performs scoring using the **revoscalepy** model.
+The following stored procedure `PredictTipSingleModeRxPy` performs scoring using the **revoscalepy** model.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
@@ -334,7 +334,9 @@ GO
 
 ### Generate scores from models
 
-After the stored procedures have been created, it is easy to generate a score based on either model. Just open a new **Query** window, and type or paste parameters for each of the feature columns. The seven required values are for these feature columns, in order:
+After the stored procedures have been created, it's easy to generate a score based on either model. Open a new **Query** window and provide parameters for each of the feature columns. 
+
+The seven required values for these feature columns are, in order:
 
 + *passenger_count*
 + *trip_distance*
@@ -344,21 +346,23 @@ After the stored procedures have been created, it is easy to generate a score ba
 + *dropoff_latitude*
 + *dropoff_longitude*
 
-1. To generate a prediction by using the **revoscalepy** model, run this statement:
+For example:
+
++ To generate a prediction by using the **revoscalepy** model, run this statement:
   
-   ```sql
-   EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
-   ```
+  ```sql
+  EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+  ```
 
-2. To generate a score by using the **scikit-learn** model, run this statement:
++ To generate a score by using the **scikit-learn** model, run this statement:
 
-   ```sql
-   EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
-   ```
+  ```sql
+  EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+  ```
 
 The output from both procedures is a probability of a tip being paid for the taxi trip with the specified parameters or features.
 
-## Conclusions
+## Conclusion
 
 In this tutorial series, you've learned how to work with Python code embedded in stored procedures. The integration with [!INCLUDE[tsql](../../includes/tsql-md.md)] makes it much easier to deploy Python models for prediction and to incorporate model retraining as part of an enterprise data workflow.
 

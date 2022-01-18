@@ -19,8 +19,8 @@ helpviewer_keywords:
 author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: 
-ms.custom: ""
-ms.date: "12/31/2019"
+ms.custom: FY21Q2Fresh
+ms.date: 11/17/2021
 ---
 
 # SQL Server Configuration Manager
@@ -41,8 +41,9 @@ ms.date: "12/31/2019"
 > [!NOTE]
 >  Because [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a snap-in for the [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console program and not a stand-alone program, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager does not appear as an application in newer versions of Windows.  
 > 
->  -   **Windows 10**:  
->          To open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, on the **Start Page**, type SQLServerManager13.msc (for [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]). For other versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], replace 13 with the corresponding number. Clicking SQLServerManager13.msc opens the Configuration Manager. To pin the Configuration Manager to the Start Page or Task Bar, right-click SQLServerManager13.msc, and then click **Open file location**. In the Windows File Explorer, right-click SQLServerManager13.msc, and then click **Pin to Start** or **Pin to taskbar**.  
+>  -   **Windows 10 or 11**:  
+>          To open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, navigate to the file location listed above for your version. Clicking SQLServerManager15.msc opens the Configuration Manager. You can also right-click SQLServerManager15.msc to pin the Configuration Manager to the Start Page or Task Bar.
+
 > -   **Windows 8**:  
 >          To open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, in the **Search** charm, under **Apps**, type **SQLServerManager\<version>.msc** such as **SQLServerManager13.msc**, and then press **Enter**.  
   

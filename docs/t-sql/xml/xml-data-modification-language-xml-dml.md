@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "XQuery, XML DML"
   - "xml data type [SQL Server], XML DML"
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # XML Data Modification Language (XML DML)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

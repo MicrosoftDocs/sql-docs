@@ -2,9 +2,9 @@
 title: Insert Python dataframe into SQL table 
 titleSuffix: SQL machine learning
 description: How to insert data from a dataframe into SQL table.
-author: garyericson
-ms.author: garye
-ms.date: 07/23/2020
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 09/16/2021
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
@@ -31,51 +31,34 @@ This article describes how to insert a [pandas](https://pandas.pydata.org/) data
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
 
-* Azure Data Studio. To install, see [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
+* Azure Data Studio. To install, see [Download and install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
 
-* [Restore sample database](../../samples/adventureworks-install-configure.md) to get sample data used in this article.
+* Follow the steps in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md) to restore the OLTP version of the AdventureWorks sample database for your version of SQL Server.
 
-## Verify restored database
+  You can verify that the database was restored correctly by querying the **HumanResources.Department** table:
 
-You can verify that the restored database exists by querying the **HumanResources.Department** table:
-
-```sql
-USE AdventureWorks;
-SELECT * FROM HumanResources.Department;
-```
+  ```sql
+  USE AdventureWorks;
+  SELECT * FROM HumanResources.Department;
+  ```
 
 ## Install Python packages
 
-* [Download and Install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)
+1. In Azure Data Studio, open a new notebook and connect to the Python 3 kernel.
 
-Install the following Python packages:
-  * pyodbc
-  * pandas
+1. Select **Manage Packages**.
 
-  To install these packages:
+   :::image type="content" source="../media/python-dataframe-sql-server/manage-packages.png" alt-text="Manage packages":::
 
-  1. In your Azure Data Studio notebook, select **Manage Packages**.
-  2. In the **Manage Packages** pane, select the **Add new** tab.
-  3. For each of the following packages, enter the package name, click **Search**, then click **Install**.
+1. In the **Manage Packages** pane, select the **Add new** tab.
 
-## Connect to SQL Server using Azure Data Studio
+1. For each of the following packages, enter the package name, click **Search**, then click **Install**.
+   * pyodbc
+   * pandas
 
-[Connect using Azure Data Studio](../../azure-data-studio/quickstart-sql-server.md).
+## Create a sample CSV file
 
-1. Connect to Adventureworks database to create the new table, HumanResources.DepartmentTest. The SQL table will be used for the dataframe insertion.
-
-```sql
-CREATE TABLE [HumanResources].[DepartmentTest](
-[DepartmentID] [smallint] NOT NULL,
-[Name] [dbo].[Name] NOT NULL,
-[GroupName] [dbo].[Name] NOT NULL
-)
-GO
-```
-
-## Create CSV file
-
-Copy text and save file as department.csv for dataframe.
+Copy the following text and save it to a file named `department.csv`.
 
 ```text
 DepartmentID,Name,GroupName,
@@ -97,48 +80,57 @@ DepartmentID,Name,GroupName,
 16,Executive,Executive General and Administration
 ```
 
-## Connect to SQL using Python
+## Create a new database table
 
-1. Edit the connection string variables 'server','database','username' and 'password' to connect to SQL database.
+1. Follow the steps in [Connect to a SQL Server](../../azure-data-studio/quickstart-sql-server.md?view=sql-server-ver15&preserve-view=true#connect-to-a-sql-server) to connect to the AdventureWorks database.
 
-2. Edit path for CSV file.
+1. Create a table named **HumanResources.DepartmentTest**. The SQL table will be used for the dataframe insertion.
 
-## Load dataframe from CSV file
+   ```sql
+   CREATE TABLE [HumanResources].[DepartmentTest](
+   [DepartmentID] [smallint] NOT NULL,
+   [Name] [dbo].[Name] NOT NULL,
+   [GroupName] [dbo].[Name] NOT NULL
+   )
+   GO
+   ```
 
-Use the Python `pandas` package to create a dataframe and load the CSV file. Connect to SQL to load dataframe into the new SQL table, HumanResources.DepartmentTest.
+## Load a dataframe from the CSV file
 
-To create a new notebook:
+Use the Python `pandas` package to create a dataframe, load the CSV file, and then load the dataframe into the new SQL table, **HumanResources.DepartmentTest**.
 
-1. In Azure Data Studio, select **File**, select **New Notebook**.
-2. In the notebook, select kernel **Python3**, select the **+code**.
-3. Paste code in notebook, select **Run All**.
+1. Connect to the **Python 3** kernel.
 
- ```Python
-import pyodbc
-import pandas as pd
-# insert data from csv file into dataframe.
-# working directory for csv file: type "pwd" in Azure Data Studio or Linux
-# working directory in Windows c:\users\username
-df = pd.read_csv("c:\\user\\username\department.csv")
-# Some other example server values are
-# server = 'localhost\sqlexpress' # for a named instance
-# server = 'myserver,port' # to specify an alternate port
-server = 'yourservername' 
-database = 'AdventureWorks' 
-username = 'username' 
-password = 'yourpassword' 
-cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
-cursor = cnxn.cursor()
-# Insert Dataframe into SQL Server:
-for index, row in df.iterrows():
-     cursor.execute("INSERT INTO HumanResources.DepartmentTest (DepartmentID,Name,GroupName) values(?,?,?)", row.DepartmentID, row.Name, row.GroupName)
-cnxn.commit()
-cursor.close()
-```
+1. Paste the following code into a code cell, updating the code with the correct values for `server`, `database`, `username`, `password`, and the location of the CSV file.
 
-## Confirm row count in SQL
+   ```Python
+   import pyodbc
+   import pandas as pd
+   # insert data from csv file into dataframe.
+   # working directory for csv file: type "pwd" in Azure Data Studio or Linux
+   # working directory in Windows c:\users\username
+   df = pd.read_csv("c:\\user\\username\department.csv")
+   # Some other example server values are
+   # server = 'localhost\sqlexpress' # for a named instance
+   # server = 'myserver,port' # to specify an alternate port
+   server = 'yourservername' 
+   database = 'AdventureWorks' 
+   username = 'username' 
+   password = 'yourpassword' 
+   cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+   cursor = cnxn.cursor()
+   # Insert Dataframe into SQL Server:
+   for index, row in df.iterrows():
+        cursor.execute("INSERT INTO HumanResources.DepartmentTest (DepartmentID,Name,GroupName) values(?,?,?)", row.DepartmentID, row.Name, row.GroupName)
+   cnxn.commit()
+   cursor.close()
+   ```
 
-Execute the SQL statement to confirm the table was successfully loaded with data from the dataframe.
+1. Run the cell.
+
+## Confirm data in the database
+
+Connect to the SQL kernel and AdventureWorks database and run the following SQL statement to confirm the table was successfully loaded with data from the dataframe.
 
 ```sql
 SELECT count(*) from HumanResources.DepartmentTest;

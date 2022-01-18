@@ -1,10 +1,7 @@
 ---
-description: "Collation and Unicode support"
-title: "Collation and Unicode support | Microsoft Docs"
-ms.custom: ""
-ms.date: 12/05/2019
+title: Collation and Unicode support
+description: Learn about collation and Unicode support in SQL Server.
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -25,18 +22,23 @@ helpviewer_keywords:
   - "SQL Server collations"
   - "UTF-8"
   - "UTF-16"
+  - "UCS-2"
   - "UTF8"
   - "UTF16"
   - "UCS2"
   - "server-level collations [SQL Server]"
-ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: "pmasl"
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: 12/10/2021
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Collation and Unicode support
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 Collations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provide sorting rules, case, and accent sensitivity properties for your data. Collations that are used with character data types, such as **char** and **varchar**, dictate the code page and corresponding characters that can be represented for that data type. 
 
 Whether you're installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restoring a database backup, or connecting server to client databases, it's important to understand the locale requirements, sorting order, and case and accent sensitivity of the data that you're working with. To list the collations that are available on your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
@@ -372,7 +374,7 @@ After you've assigned a collation to the server, you can change it only by expor
 To query the server collation for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the `SERVERPROPERTY` function:
 
 ```sql
-SELECT CONVERT(varchar, SERVERPROPERTY('collation'));
+SELECT CONVERT(nvarchar(128), SERVERPROPERTY('collation'));
 ```
 
 To query the server for all available collations, use the following `fn_helpcollations()` built-in function:
@@ -380,6 +382,8 @@ To query the server for all available collations, use the following `fn_helpcoll
 ```sql
 SELECT * FROM sys.fn_helpcollations();
 ```
+
+You can not change or set the instance level collation on Azure SQL Database. For information about SQL Managed Instance and SQL Server, see: [Set or Change the Server Collation](../../relational-databases/collations/set-or-change-the-server-collation.md). 
     
 #### <a name="Database-level-collations"></a> Database-level collations    
 When you create or modify a database, you can use the `COLLATE` clause of the `CREATE DATABASE` or `ALTER DATABASE` statement to specify the default database collation. If no collation is specified, the database is assigned the server collation.    
@@ -387,9 +391,6 @@ When you create or modify a database, you can use the `COLLATE` clause of the `C
 You can't change the collation of system databases unless you change the collation for the server.
     
 The database collation is used for all metadata in the database, and the collation is the default for all string columns, temporary objects, variable names, and any other strings used in the database. When you change the collation of a user database, there can be collation conflicts when queries in the database access temporary tables. Temporary tables are always stored in the *tempdb* system database, which uses the collation for the instance. Queries that compare character data between the user database and *tempdb* might fail if the collations cause a conflict in evaluating the character data. You can resolve this issue by specifying the `COLLATE` clause in the query. For more information, see [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md).    
-
-> [!NOTE]
-> You can't change the collation after the database has been created on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 You can change the collation of a user database by using an `ALTER DATABASE` statement that's similar to the following:
 
@@ -403,7 +404,7 @@ ALTER DATABASE myDB COLLATE Greek_CS_AI;
 You can retrieve the current collation of a database by using a statement that's similar to the following:
 
 ```sql
-SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
+SELECT CONVERT (nvarchar(128), DATABASEPROPERTYEX('database_name', 'collation'));
 ```
 
 #### <a name="Column-level-collations"></a> Column-level collations    
@@ -454,7 +455,7 @@ It would be difficult to select a code page for character data types that will s
 If you store character data that reflects multiple languages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later), use Unicode data types (**nchar**, **nvarchar**, and **ntext**) instead of non-Unicode data types (**char**, **varchar**, and **text**). 
 
 > [!NOTE]
-> For Unicode data types, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can represent up to 65,535 characters using UCS-2, or the full Unicode range (‭1,114,111‬ characters) if supplementary characters are used. For more information about enabling supplementary characters, see [Supplementary Characters](#Supplementary_Characters).
+> For Unicode data types, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can represent up to 65,536 characters using UCS-2, or the full Unicode range (‭1,114,112‬ characters) if supplementary characters are used. For more information about enabling supplementary characters, see [Supplementary Characters](#Supplementary_Characters).
 
 Alternatively, starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], if a UTF-8 enabled collation (\_UTF8) is used, previously non-Unicode data types (**char** and **varchar**) become Unicode data types using UTF-8 encoding. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] doesn't change the behavior of previously existing Unicode data types (**nchar**, **nvarchar**, and **ntext**), which continue to use UCS-2 or UTF-16 encoding. For more information, see [Storage differences between UTF-8 and UTF-16](#storage_differences).
 
@@ -472,15 +473,12 @@ To use the UTF-8 collations that are available in [!INCLUDE[sql-server-2019](../
  
 -   The UTF8 flag can be applied to:    
     -   Linguistic collations that already support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS) awareness
-    -   BIN2<sup>1</sup> binary collation
+    -   BIN2 binary collation
     
 -   The UTF8 flag can't be applied to:    
     -   Linguistic collations that don't support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS) awareness
-    -   The BIN or BIN2<sup>2</sup> binary collations
+    -   The BIN binary collations
     -   The SQL\_* collations  
-    
-<sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 3.0 replaced collation **UTF8_BIN2** with **Latin1_General_100_BIN2_UTF8**.        
-<sup>2</sup> Up to with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3.    
     
 To evaluate issues that are related to using Unicode or non-Unicode data types, test your scenario to measure performance differences in your environment. It's a good practice to standardize the collation that's used on systems across your organization, and to deploy Unicode servers and clients wherever possible.    
     
@@ -499,7 +497,7 @@ The following table provides information about using multilingual data with vari
 |Non-Unicode|Non-Unicode|This is a very limiting scenario for multilingual data. You can use only a single code page.|    
     
 ##  <a name="Supplementary_Characters"></a> Supplementary characters    
-The Unicode Consortium allocates to each character a unique code point, which is a value in the range 000000–10FFFF. The most frequently used characters have code point values in the range 000000–00FFFF (65,535 characters) which fit into an 8-bit or 16-bit word in memory and on-disk. This range is usually designated as the Basic Multilingual Plane (BMP). 
+The Unicode Consortium allocates to each character a unique code point, which is a value in the range 000000–10FFFF. The most frequently used characters have code point values in the range 000000–00FFFF (65,536 characters) which fit into an 8-bit or 16-bit word in memory and on-disk. This range is usually designated as the Basic Multilingual Plane (BMP). 
 
 But the Unicode Consortium has established 16 additional "planes" of characters, each the same size as the BMP. This definition allows Unicode the potential to represent 1,114,112 characters (that is, 2<sup>16</sup> * 17 characters) within the code point range 000000–10FFFF. Characters with code point values larger than 00FFFF require two to four consecutive 8-bit words (UTF-8), or two consecutive 16-bit words (UTF-16). These characters located beyond the BMP are called *supplementary characters*, and the additional consecutive 8-bit or 16-bit words are called *surrogate pairs*. For more information about supplementary characters, surrogates, and surrogate pairs, refer to [the Unicode Standard](http://www.unicode.org/standard/standard.html).    
 
@@ -510,7 +508,7 @@ But the Unicode Consortium has established 16 additional "planes" of characters,
 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] extends supplementary character support to the **char** and **varchar** data types with the new UTF-8 enabled collations ([\_UTF8](#utf8)). These data types are also capable of representing the full Unicode character range.   
 
 > [!NOTE]
-> Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], all new \_140 collations automatically support supplementary characters.
+> Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], all new collations automatically support supplementary characters.
 
 If you use supplementary characters:    
     
@@ -540,7 +538,7 @@ The following table compares the behavior of some string functions and string op
 ## <a name="GB18030"></a> GB18030 support    
 GB18030 is a separate standard that's used in the People's Republic of China for encoding Chinese characters. In GB18030, characters can be 1, 2, or 4 bytes in length. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides support for GB18030-encoded characters by recognizing them when they enter the server from a client-side application and converting and storing them natively as Unicode characters. After they're stored in the server, they're treated as Unicode characters in any subsequent operations. 
 
-You can use any Chinese collation, preferably the latest 100 version. All \_100 level collations support linguistic sorting with GB18030 characters. If the data includes supplementary characters (surrogate pairs), you can use the SC collations that are available in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to improve searching and sorting.    
+You can use any Chinese collation, preferably the latest 100 version. All version 100 collations support linguistic sorting with GB18030 characters. If the data includes supplementary characters (surrogate pairs), you can use the SC collations that are available in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to improve searching and sorting.    
 
 > [!NOTE]
 > Ensure that your client tools, such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], use the Dengxian font to correctly display strings that contain GB18030-encoded characters.
@@ -556,16 +554,17 @@ Database applications that interact with [!INCLUDE[ssNoVersion](../../includes/s
 
 ## <a name="Japanese_Collations"></a> Japanese collations added in  [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
  
-Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], new Japanese collation families are supported, with the permutations of various options (\_CS, \_AS, \_KS, \_WS, and \_VSS). 
+Starting with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], new Japanese collation families are supported, with the permutations of various options (\_CS, \_AS, \_KS, \_WS, and \_VSS), as well as \_BIN and \_BIN2. 
 
 To list these collations, you can query the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:      
 
 ```sql 
-SELECT Name, Description FROM fn_helpcollations()  
-WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
+SELECT name, description
+FROM   sys.fn_helpcollations()  
+WHERE  COLLATIONPROPERTY(name, 'Version') = 3;
 ``` 
 
-All the new collations have built-in support for supplementary characters, so none of the new **\_140** collations has (or needs) the SC flag.
+All the new collations have built-in support for supplementary characters, so none of the new **140** collations has (or needs) the SC flag.
 
 These collations are supported in [!INCLUDE[ssde_md](../../includes/ssde_md.md)] indexes, memory-optimized tables, columnstore indexes, and natively compiled modules.
 
@@ -576,7 +575,7 @@ These collations are supported in [!INCLUDE[ssde_md](../../includes/ssde_md.md)]
 
 UTF-8 is available only to Windows collations that support supplementary characters, as introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. The **nchar** and **nvarchar** data types allow UCS-2 or UTF-16 encoding only, and they remain unchanged.
 
-Azure SQL Database and Azure SQL Managed Instance also support UTF-8.
+Azure SQL Database and Azure SQL Managed Instance also support UTF-8 on database and column level, while Managed Instance supports this on a server level as well.
 
 ### <a name="storage_differences"></a> Storage differences between UTF-8 and UTF-16
 The Unicode Consortium allocates to each character a unique code point, which is a value in the range 000000–10FFFF. With [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], both UTF-8 and UTF-16 encodings are available to represent the full range:    
@@ -631,7 +630,7 @@ To change the database collation, allowing new objects to inherit the database c
 |Describes how to set or change the collation of a column in the database|[Set or Change the Column Collation](../../relational-databases/collations/set-or-change-the-column-collation.md)|    
 |Describes how to return collation information at the server, database, or column level|[View Collation Information](../../relational-databases/collations/view-collation-information.md)|    
 |Describes how to write Transact-SQL statements that are more portable from one language to another, or support multiple languages more easily|[Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
-|Describes how to change the language of error messages and preferences for how date, time, and currency data is used and displayed|[Set a Session Language](../../relational-databases/collations/set-a-session-language.md)|    
+|Describes how to change the language of error messages and preferences for how date, time, and currency data are used and displayed|[Set a Session Language](../../relational-databases/collations/set-a-session-language.md)|    
     
 ##  <a name="Related_Content"></a> Related content    
 For more information, see the following related content:

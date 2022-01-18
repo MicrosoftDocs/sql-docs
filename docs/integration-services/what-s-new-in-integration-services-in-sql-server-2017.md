@@ -1,7 +1,8 @@
 ---
 description: "What&#39;s New in Integration Services in SQL Server 2017"
 title: "What&#39;s New in Integration Services in SQL Server 2017 | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-whats-new
 ms.date: "09/28/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"

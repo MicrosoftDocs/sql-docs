@@ -13,8 +13,8 @@ f1_keywords:
   - "sql13.swb.addreplicawizard.results.f1"
   - "sql13.swb.adddatabasewizard.results.f1"
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Results Page (Always On Availability Group Wizards)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

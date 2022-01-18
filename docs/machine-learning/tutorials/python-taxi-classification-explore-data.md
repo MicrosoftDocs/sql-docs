@@ -5,10 +5,10 @@ description: Explore sample data and generate some plots in preparation for usin
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/29/2020
+ms.date: 09/17/2021
 ms.topic: tutorial
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
 ---
@@ -81,8 +81,9 @@ In this section, you learn how to work with plots using stored procedures. Rathe
 
 The stored procedure returns a serialized Python `figure` object as a stream of **varbinary** data. You cannot view the binary data directly, but you can use Python code on the client to deserialize and view the figures, and then save the image file on a client computer.
 
-1. Create the stored procedure **PyPlotMatplotlib**, if the PowerShell script did not already do so.
+1. Create the stored procedure **PyPlotMatplotlib**.
 
+   In the following script:
     - The variable `@query` defines the query text `SELECT tipped FROM nyctaxi_sample`, which is passed to the Python code block as the argument to the script input variable, `@input_data_1`.
     - The Python script is fairly simple: **matplotlib** `figure` objects are used to make the histogram and scatter plot, and these objects are then serialized using the `pickle` library.
     - The Python graphics object is serialized to a **pandas** DataFrame for output.
@@ -161,7 +162,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
 
 4. From a [Python client](../python/setup-python-client-tools-sql.md), you can now connect to the SQL Server instance that generated the binary plot objects, and view the plots. 
 
-    To do this, run the following Python code, replacing the server name, database name, and credentials as appropriate (for Windows authentication, replace the `UID` and `PWD` parameters with `Trusted_Connection=True`). Make sure the Python version is the same on the client and the server. Also make sure that the Python libraries on your client (such as matplotlib) are the same or higher version relative to the libraries installed on the server.
+    To do this, run the following Python code, replacing the server name, database name, and credentials as appropriate (for Windows authentication, replace the `UID` and `PWD` parameters with `Trusted_Connection=True`). Make sure the Python version is the same on the client and the server. Also make sure that the Python libraries on your client (such as matplotlib) are the same or higher version relative to the libraries installed on the server. To view a list of installed packages and their versions, see [Get Python package information](../package-management/python-package-information.md#list-all-installed-python-packages).
   
     ```python
     %matplotlib notebook

@@ -1,12 +1,14 @@
 ---
 title: "Ubuntu: Install SQL Server on Linux"
 description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Ubuntu and then create and query a database with sqlcmd.
-author: VanMSFT 
+author: VanMSFT
 ms.author: vanto
-ms.date: 04/07/2021
+ms.date: 12/16/2021
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---
@@ -47,7 +49,7 @@ You must have an Ubuntu 16.04 or 18.04 machine with **at least 2 GB** of memory.
 To install Ubuntu 18.04 on your own machine, go to <http://releases.ubuntu.com/bionic/>. You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 is not supported as an installation target for production workloads.
+> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 or Windows 11 is not supported as an installation target for production workloads.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -66,7 +68,7 @@ You must have an Ubuntu 16.04, 18.04, or 20.04 machine with **at least 2 GB** of
 To install Ubuntu 20.04 on your own machine, go to <https://releases.ubuntu.com/20.04/>. You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 is not supported as an installation target for production workloads.
+> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 or Windows 11 is not supported as an installation target for production workloads.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -85,7 +87,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 1. Import the public repository GPG keys:
 
    ```bash
-   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add microsoft.asc
    ```
 
 2. Register the Microsoft SQL Server Ubuntu repository:
@@ -161,7 +163,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 1. Import the public repository GPG keys:
 
    ```bash
-   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add microsoft.asc
    ```
 
 2. Register the Microsoft SQL Server Ubuntu repository for SQL Server 2019:

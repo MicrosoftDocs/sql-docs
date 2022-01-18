@@ -898,6 +898,9 @@ Under the default behavior of simple parameterization, [!INCLUDE[ssNoVersion](..
 
 Alternatively, you can specify that a single query, and any others that are syntactically equivalent but differ only in their parameter values, be parameterized. 
 
+> [!TIP]
+> When using an Object-Relational Mapping (ORM) solution such as Entity Framework (EF), application queries like manual LINQ query trees or certain raw SQL queries may not be parameterized, which impacts plan re-use and the ability to track queries in the Query Store. For more information, see [EF Query caching and parameterization](/ef/core/performance/advanced-performance-topics) and [EF Raw SQL Queries](/ef/core/querying/raw-sql).
+
 ### <a name="ForcedParam"></a> Forced Parameterization
 You can override the default simple parameterization behavior of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by specifying that all `SELECT`, `INSERT`, `UPDATE`, and `DELETE` statements in a database be parameterized, subject to certain limitations. Forced parameterization is enabled by setting the `PARAMETERIZATION` option to `FORCED` in the `ALTER DATABASE` statement. Forced parameterization may improve the performance of certain databases by reducing the frequency of query compilations and recompilations. Databases that may benefit from forced parameterization are generally those that experience high volumes of concurrent queries from sources such as point-of-sale applications.
 
@@ -1008,7 +1011,7 @@ Parameter values are sniffed during compilation or recompilation for the followi
 -  Queries submitted via `sp_executesql` 
 -  Prepared queries
 
-For more information on troubleshooting bad parameter sniffing issues, see [Troubleshoot queries with parameter-sensitive query execution plan issues](/azure/sql-database/sql-database-monitor-tune-overview).
+For more information on troubleshooting bad parameter sniffing issues, see [Troubleshoot queries with parameter-sensitive query execution plan issues](/azure/azure-sql/identify-query-performance-issues#ParamSniffing).
 
 > [!NOTE]
 > For queries using the `RECOMPILE` hint, both parameter values and current values of local variables are sniffed. The values sniffed (of parameters and local variables) are those that exist at the place in the batch just before the statement with the `RECOMPILE` hint. In particular, for parameters, the values that came along with the batch invocation call are not sniffed.

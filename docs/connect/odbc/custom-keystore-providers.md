@@ -5,11 +5,11 @@ ms.custom: ""
 ms.date: "07/12/2017"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-ms.author: v-daenge
+ms.author: v-davidengel
 author: David-Engel
 ---
 # Custom Keystore Providers

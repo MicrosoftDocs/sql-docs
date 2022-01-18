@@ -2,7 +2,7 @@
 description: "Create Indexed Views"
 title: "Create Indexed Views | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/23/2021"
+ms.date: "09/21/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 This article describes how to create indexes on a view. The first index created on a view must be a unique clustered index. After the unique clustered index has been created, you can create more nonclustered indexes. Creating a unique clustered index on a view improves query performance because the view is stored in the database in the same way a table with a clustered index is stored. The query optimizer may use indexed views to speed up the query execution. The view does not have to be referenced in the query for the optimizer to consider that view for a substitution.
 
-## <a name="BeforeYouBegin"></a> Before You Begin
+## Steps
 
 The following steps are required to create an indexed view and are critical to the successful implementation of the indexed view:
 
@@ -43,7 +43,7 @@ The following steps are required to create an indexed view and are critical to t
 >
 > <sup>1</sup> Such as UPDATE, DELETE or INSERT operations.
 
-### <a name="Restrictions"></a> Required SET Options for Indexed Views
+## <a name="Restrictions"></a> Required SET Options for indexed views
 
 Evaluating the same expression can produce different results in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] when different SET options are active when the query is executed. For example, after the SET option `CONCAT_NULL_YIELDS_NULL` is set to ON, the expression `'abc' + NULL` returns the value `NULL`. However, after `CONCAT_NULL_YIELDS_NULL` is set to OFF, the same expression produces `'abc'`.
 
@@ -72,7 +72,7 @@ If you are using an OLE DB or ODBC server connection, the only value that must b
 > [!IMPORTANT]
 > We strongly recommend that you set the `ARITHABORT` user option to ON server-wide as soon as the first indexed view or index on a computed column is created in any database on the server.
 
-### Deterministic Views
+## Deterministic view requirement
 
 The definition of an indexed view must be deterministic. A view is deterministic if all expressions in the select list, as well as the `WHERE` and `GROUP BY` clauses, are deterministic. Deterministic expressions always return the same result any time they are evaluated with a specific set of input values. Only deterministic functions can participate in deterministic expressions. For example, the `DATEADD` function is deterministic because it always returns the same result for any given set of argument values for its three parameters. `GETDATE` is not deterministic because it is always invoked with the same argument, but the value it returns changes each time it is executed.
 
@@ -80,12 +80,12 @@ To determine whether a view column is deterministic, use the **IsDeterministic**
 
 Even if an expression is deterministic, if it contains float expressions, the exact result may depend on the processor architecture or version of microcode. To ensure data integrity, such expressions can participate only as non-key columns of indexed views. Deterministic expressions that do not contain float expressions are called precise. Only precise deterministic expressions can participate in key columns and in `WHERE` or `GROUP BY` clauses of indexed views.
 
-### Additional Requirements
+## Additional Requirements
 
-In addition to the SET options and deterministic function requirements, the following requirements must be met:
+The following requirements must also be met, in addition to the SET options and deterministic function requirements 
 
 - The user that executes `CREATE INDEX` must be the owner of the view.
-- When you create the index, the `IGNORE_DUP_KEY` option must be set to OFF (the default setting).
+- When you create the index, the `IGNORE_DUP_KEY` index option must be set to OFF (the default setting).
 - Tables must be referenced by two-part names, _schema_**.**_tablename_ in the view definition.
 - User-defined functions referenced in the view must be created by using the `WITH SCHEMABINDING` option.
 - Any user-defined functions referenced in the view must be referenced by two-part names, _\<schema\>_**.**_\<function\>_.
@@ -127,39 +127,39 @@ In addition to the SET options and deterministic function requirements, the foll
    > [!IMPORTANT]
    > Indexed views are not supported on top of temporal queries (queries that use `FOR SYSTEM_TIME` clause).
 
-### <a name="Recommendations"></a> Recommendations
+## Datetime/smalldatetime recommendations
 
 When you refer to **datetime** and **smalldatetime** string literals in indexed views, we recommend that you explicitly convert the literal to the date type you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). For more information about deterministic and nondeterministic expressions, see the [Considerations](#nondeterministic) section in this page.
 
-When you execute DML (such as `UPDATE`, `DELETE` or `INSERT`) on a table referenced by a large number of indexed views, or fewer but very complex indexed views, those indexed views will have to be updated as well during DML execution. As a result, DML query performance may degrade significantly, or in some cases, a query plan cannot even be produced. In such scenarios, test your DML queries before production use, analyze the query plan and tune/simplify the DML statement.
-
-### <a name="Considerations"></a> Considerations
-
-The setting of the **large_value_types_out_of_row** option of columns in an indexed view is inherited from the setting of the corresponding column in the base table. This value is set by using [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). The default setting for columns formed from expressions is 0. This means that large value types are stored in-row.
-
-Indexed views can be created on a partitioned table, and can themselves be partitioned.
-
-To prevent the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from using indexed views, include the `OPTION (EXPAND VIEWS)` hint on the query. Also, if any of the listed options are incorrectly set, this will prevent the optimizer from using the indexes on the views. For more information about the `OPTION (EXPAND VIEWS)` hint, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).
-
-All indexes on a view are dropped when the view is dropped. All nonclustered indexes and auto-created statistics on the view are dropped when the clustered index is dropped. User-created statistics on the view are maintained. Nonclustered indexes can be individually dropped. Dropping the clustered index on the view removes the stored result set, and the optimizer returns to processing the view like a standard view.
-
-Indexes on tables and views can be disabled. When a clustered index on a table is disabled, indexes on views associated with the table are also disabled.
-
 <a name="nondeterministic"></a> Expressions that involve implicit conversion of character strings to **datetime** or **smalldatetime** are considered nondeterministic. For more information, see [Nondeterministic conversion of literal date strings into DATE values](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
 
-### <a name="Security"></a> Security
 
-#### <a name="Permissions"></a> Permissions
+## Performance considerations with indexed views
+
+When you execute DML (such as `UPDATE`, `DELETE` or `INSERT`) on a table referenced by a large number of indexed views, or fewer but very complex indexed views, those indexed views will have to be updated as well during DML execution. As a result, DML query performance may degrade significantly, or in some cases, a query plan cannot even be produced. In such scenarios, test your DML queries before production use, analyze the query plan and tune/simplify the DML statement.
+
+To prevent the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from using indexed views, include the `OPTION ([EXPAND VIEWS](/t-sql/queries/hints-transact-sql-query.md#expand-views))` hint on the query.  Also, if any of the listed options are incorrectly set, this will prevent the optimizer from using the indexes on the views. For more information about the `OPTION (EXPAND VIEWS)` hint, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).
+
+
+## Various additional considerations
+
+- The setting of the **large_value_types_out_of_row** option of columns in an indexed view is inherited from the setting of the corresponding column in the base table. This value is set by using [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). The default setting for columns formed from expressions is 0. This means that large value types are stored in-row.
+
+- Indexed views can be created on a partitioned table, and can themselves be partitioned.
+
+- All indexes on a view are dropped when the view is dropped. All nonclustered indexes and auto-created statistics on the view are dropped when the clustered index is dropped. User-created statistics on the view are maintained. Nonclustered indexes can be individually dropped. Dropping the clustered index on the view removes the stored result set, and the optimizer returns to processing the view like a standard view.
+
+- Indexes on tables and views can be disabled. When a clustered index on a table is disabled, indexes on views associated with the table are also disabled.
+
+
+## <a name="Permissions"></a> Permissions
 
 To create the view, a user needs to hold the **CREATE VIEW** permission in the database and **ALTER** permission on the schema in which the view is being created. If the base table resides within a different schema, the **REFERENCES** permission on the table is required as a minimum. If the User creating the Index differs from the Users who created the View, for the Index creation alone the **ALTER**-permission on the View is required (covered by ALTER on the schema).
 
 > [!NOTE]  
 > Indexes can only be created on views which have the same owner as the referenced table or tables. This is also called an intact **ownership-chain** between the view and the table(s). Typically, when table and view reside within the same schema, the same schema-owner applies to all objects within the schema. Therefore its possible to create a view and not be the owner of the view. On the other hand is also possible that individual objects within a schema have different explicit owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
 
-
-## <a name="TsqlProcedure"></a> Using Transact-SQL
-
-### To create an indexed view
+## <a name="TsqlProcedure"></a>Create an indexed view: a T-SQL example
 
 The following example creates a view and an index on that view. Two queries are included that use the indexed view in the AdventureWorks database.
 

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], minimum SQL syntax supported"
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: ""
 ---
 # Parameter Data Types

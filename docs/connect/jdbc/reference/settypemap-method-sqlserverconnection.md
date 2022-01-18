@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setTypeMap Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

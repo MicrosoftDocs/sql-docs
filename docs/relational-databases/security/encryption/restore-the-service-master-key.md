@@ -1,8 +1,8 @@
 ---
-title: "Restore the Service Master Key | Microsoft Docs"
+title: "Restore the service master key"
 description: Learn how to restore the service master key in SQL Server by using Transact-SQL. The service master key is the root of the SQL Server encryption hierarchy. 
 ms.custom: ""
-ms.date: "01/02/2019"
+ms.date: "12/16/2021"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -14,22 +14,24 @@ ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: jaszymas
 ms.author: jaszymas
 ---
-# Restore the Service Master Key
+
+# Restore the service master key
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to restore the service master key in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  This article describes how to restore the service master key in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!WARNING]  
 > It is unlikely that you will ever need to restore the service master key. If you do, you should proceed with extreme caution. For more information, see [Back Up the Service Master Key](../../../relational-databases/security/encryption/back-up-the-service-master-key.md).  
   
-## Before You Begin  
+## Before you begin  
   
-### Limitations and Restrictions  
+### Limitations and restrictions  
   
 - When the service master key is restored, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] decrypts all the keys and secrets that have been encrypted with the current service master key, and then encrypts them with the service master key loaded from the backup file.  
   
 - If any one of the decryptions fails, the restore will fail. You can use the FORCE option to ignore errors, but this option will cause the loss of any data that cannot be decrypted.  
   
-- Regenerating the encryption hierarchy is a resource-intensive operation. You should schedule this during a period of low demand.  
+- Regenerating the encryption hierarchy is a resource-intensive operation. Schedule this during a period of low demand.  
   
 > [!CAUTION]  
 > The service master key is the root of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption hierarchy. The service master key directly or indirectly secures all other keys in the tree. If a dependent key cannot be decrypted during a forced restore, data that is secured by that key will be lost.  
@@ -47,9 +49,9 @@ Requires CONTROL SERVER permission on the server.
   
 2. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-3. On the Standard bar, click **New Query**.  
+3. On the Standard bar, select **New Query**.  
   
-4. Copy and paste the following example into the query window and click **Execute**.  
+4. Copy and paste the following example into the query window and select **Execute**.  
   
     ```sql
     -- Restores the service master key from a backup file.  
@@ -61,3 +63,7 @@ Requires CONTROL SERVER permission on the server.
   
     > [!NOTE]  
     > The file path to the key and the key's password (if it exists) will be different than what is indicated above. Please make sure that both are specific to your server and key set-up.
+
+## See also
+
+- [Back Up the Service Master Key](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)

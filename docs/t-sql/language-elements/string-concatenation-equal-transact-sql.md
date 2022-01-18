@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "string concatenation"
   - "+= (concatenate operator)"
 ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

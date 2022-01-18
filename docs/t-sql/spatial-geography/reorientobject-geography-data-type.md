@@ -50,7 +50,7 @@ If you pass a **GeometryCollection** to this method, each instance in the collec
   
 ## Examples  
   
-```  
+```sql
 DECLARE @R GEOGRAPHY = GEOGRAPHY::Parse('Polygon((-10 -10, -10 10, 10 10, 10 -10, -10 -10))');  
 SELECT @R.ReorientObject().STAsText();  
 --Result: POLYGON ((10 10, -10 10, -10 -10, 10 -10, 10 10))  

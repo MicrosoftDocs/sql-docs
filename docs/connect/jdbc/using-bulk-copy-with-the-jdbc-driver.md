@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using bulk copy with the JDBC driver
 
@@ -672,6 +672,15 @@ public class BulkCopyCSV {
     }
 }
 ```  
+
+### Using a regex character as a delimiter
+
+> [!NOTE]
+> When setting a custom delimiter, escape it if it's a regex character such as '|'.
+
+```java
+SQLServerBulkCSVFileRecord fileRecord = new SQLServerBulkCSVFileRecord(CSVFilePath, null, "\\|", true);
+```
 
 ### Bulk copy with delimiters as data in CSV file
 

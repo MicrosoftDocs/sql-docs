@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: ad538a76-983f-4175-9481-9e7fa9480c71
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getTimestamp Method (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,9 +10,9 @@ helpviewer_keywords:
 - "Availability Groups [SQL Server], enhanced database failover"
 - "Availability Groups [SQL Server], failover"
 ms.assetid: 
-author: "cawrites"
+author: MashaMSFT
 ms.reviewer: "mikeray"
-ms.author: chadam
+ms.author: mathoma
 ---
 # Enable enhanced database failover to a database in an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -23,7 +23,9 @@ SQL Server 2016 introduces a new optional behavior named *enhanced database fail
 
 **Scenario 1**
 
-An availability group is configured between Instance A and Instance B, containing a single database named DB1. DB1's data file is on Drive E and its transaction log file is on Drive F. The availability mode is set to synchronous commit with automatic failover. The new enhanced database failover option is configured on the availability group. The two replicas are currently in a synchronized state. A problem causes Drive E to fail. This scenario will not cause an enhanced database failover, as Drive E does not contain the transaction log.  
+An availability group is configured between Instance A and Instance B, containing a single database named DB1. DB1's data file is on Drive E and its transaction log file is on Drive F. The availability mode is set to synchronous commit with automatic failover. The new enhanced database failover option is configured on the availability group. The two replicas are currently in a synchronized state. A problem causes Drive E to fail. This scenario will not cause an enhanced database failover, as Drive E does not contain the transaction log.
+
+In the above scenario, if error 823 is reported 4 consecutive times while database failover option is set to on, SQL Server will inform Windows Failover Cluster to take appropriate action based on AG Role failover policy, this can be configured to perform a failover, or perform a resource restart.
 
 **Scenario 2**
 

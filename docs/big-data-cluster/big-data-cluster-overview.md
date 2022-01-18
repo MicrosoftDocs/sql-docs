@@ -1,7 +1,7 @@
 ---
 title: Introducing Big Data Clusters
 titleSuffix: SQL Server Big Data Clusters
-description: Learn about SQL Server Big Data Clusters that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
+description: Learn about SQL Server Big Data Clusters that run on Kubernetes and provide scale-out options for both relational and HDFS data.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin
@@ -9,7 +9,9 @@ ms.date: 09/01/2021
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: "contperf-fy22q1"
+ms.custom:
+  - contperf-fy22q1
+  - intro-overview
 ---
 
 # Introducing [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)]

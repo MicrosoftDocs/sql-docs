@@ -55,7 +55,7 @@ GeomFromGml ( GML_input, SRID )
 ## Examples  
  The following example uses `GeomFromGml()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 DECLARE @x xml;  
 SET @x = '<LineString xmlns="https://www.opengis.net/gml"> <posList>100 100 20 180 180 180</posList> </LineString>';  

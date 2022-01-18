@@ -7,6 +7,8 @@ ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sys.elastic_pool_resource_stats catalog view"
 helpviewer_keywords: 

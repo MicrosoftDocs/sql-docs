@@ -12,7 +12,7 @@ f1_keywords:
   - "ALTER INDEX"
   - "ALTER_INDEX_TSQL"
 dev_langs: 
-  - "t-sql"
+  - "TSQL"
 helpviewer_keywords: 
   - "indexes [SQL Server], reorganizing"
   - "ALTER INDEX statement"

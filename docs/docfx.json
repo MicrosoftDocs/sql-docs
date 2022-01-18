@@ -56,7 +56,7 @@
       "toc_preview": true,
       "feedback_system": "None",
       "feedback_github_repo": "MicrosoftDocs/sql-docs",
-      "feedback_product_url": "https://feedback.azure.com/forums/908035-sql-server/",
+      "feedback_product_url": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
       "titleSuffix": "SQL Server",
       "recommendations": true
     },
@@ -136,7 +136,7 @@
       },
       "feedback_product_url": {
         "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/",
-        "big-data-cluster/**/*.md": "https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/"
+        "big-data-cluster/**/*.md": "https://feedback.azure.com/d365community/forum/f453a4de-3425-ec11-b6e6-000d3a4f0f84"
       },
 
       "manager": {
@@ -171,6 +171,8 @@
         "odbc/**/*.md": "Open Database Connectivity (ODBC)",
         "odbc/reference/**/*.md": "ODBC API Reference",
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
+        "reporting-services/report-design/*.md": "Microsoft Report Builder & Power BI Report Builder",
+        "reporting-services/report-builder/*.md": "Microsoft Report Builder & Power BI Report Builder",
         "dea/**/*.md": "Database Experimentation Assistant",
         "sql-server/failover-clusters/**/*.md": "SQL Server Always On",
         "database-engine/availability-groups/**/*.md": "SQL Server Always On",
@@ -287,11 +289,7 @@
           "linux/sql-server-linux-create-availability-group.md",
           "linux/sql-server-linux-ha-basics.md",
           "relational-databases/errors-events/database-engine-events-and-errors.md",
-          "relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md",
-          "relational-databases/maintenance-plans/create-a-maintenance-plan.md",
-          "relational-databases/maintenance-plans/maintenance-plan-servers.md",
-          "relational-databases/maintenance-plans/maintenance-plans.md",
-          "relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md",
+          "relational-databases/maintenance-plans/**/*.md",
           "relational-databases/system-stored-procedures/sp-help-job-transact-sql.md",
           "relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md",
           "relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md",
@@ -301,9 +299,10 @@
           "relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md",
           "relational-databases/system-tables/dbo-sysschedules-transact-sql.md",
           "relational-databases/system-tables/dbo-systargetservers-transact-sql.md",
+          "database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md",
           "sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md",
-          "ssms/agent/**/*.md"
-        ]
+          "ssms/agent/**/*.md",
+          "database-engine/install-windows/**/*.md"        ]
       },
       "sensitive-language-sl": {
         "exclude": [

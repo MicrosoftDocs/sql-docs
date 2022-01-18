@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "overwriting filegroups"
   - "overwriting files"
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Restore Files and Filegroups over Existing Files (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

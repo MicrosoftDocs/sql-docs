@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "database objects [SQL Server], names"
   - "OBJECT_SCHEMA_NAME function"
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || =azure-sqldw-latest"
 ---
 # OBJECT_SCHEMA_NAME (Transact-SQL)

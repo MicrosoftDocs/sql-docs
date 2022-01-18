@@ -103,8 +103,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
- For information about sample applications that demonstrate this feature, see [SQL Server Data Programmability Samples](https://msftdpprodsamples.codeplex.com/).  
-  
 ## See Also  
  [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
 [Register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Replication Subscribers and Always On Availability Groups (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.author: chadam
    
     2.  After a failover, create the distribution agent job on the new Primary replica using the **sp_addpullsubscription_agent** stored procedure. 
   
- When you create a pull subscription, with the subscription database in an Availability Group, after every failover, it is recommended to disable the distribution agent job on the old Primary replica and enable the job on the new primary replica.  
+ When you create a pull subscription, with the subscription database in an Availability Group, after every failover, it is recommended to disable the distribution agent job on the old Primary replica and enable the job on the new primary replica.
   
 ## Creating a Transactional Replication Push Subscription  
   
@@ -62,8 +62,8 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
 GO  
 ```  
 
-## Creating a Transactional Replication Pull Subscription  
-  
+## Creating a Transactional Replication Pull Subscription
+
 ```  
 -- commands to execute at the subscriber, in the subscriber database:  
 use [<subscriber database name>]  
@@ -81,6 +81,8 @@ EXEC sp_addpullsubscription_agent
         @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
 GO
 ```  
+> [!NOTE]
+> When running [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) for a subscriber that is part of an Always On Availability Group, it is necessary to pass the **@Subscriber** parameter value to the stored procedure as the AG Listener name. If you are running [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] and earlier versions, or [!INCLUDE[sssql17-md](../../../includes/sssql17-md.md)] prior to CU16, the stored procedure will not reference the AG Listener name; it will be created with the subscriber server name on which the command is executed. To amend this issue, manually update the **Subscriber** parameter on the [Distribution Agent job](../../../relational-databases/replication/agents/replication-distribution-agent.md) with the AG Listener name value.
   
 ## To Resume the Merge Agents After the Availability Group of the Subscriber Fails Over  
  For merge replication, a replication administrator must manually reconfigure the subscriber with the following steps:  

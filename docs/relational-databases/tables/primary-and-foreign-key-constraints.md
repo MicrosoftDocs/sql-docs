@@ -1,11 +1,8 @@
 ---
+title: "Primary and Foreign Key Constraints"
 description: "Primary and Foreign Key Constraints"
-title: "Primary and Foreign Key Constraints | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,9 +10,11 @@ helpviewer_keywords:
   - "FOREIGN KEY constraints"
   - "foreign keys [SQL Server]"
   - "foreign keys [SQL Server], about foreign key constraints"
-ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: "10/21/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Primary and Foreign Key Constraints
@@ -23,23 +22,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Primary keys and foreign keys are two types of constraints that can be used to enforce data integrity in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables. These are important database objects.  
-  
- This topic contains the following sections.  
-  
- [Primary Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md#PKeys)  
-  
- [Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md#FKeys)  
-  
- [Related Tasks](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
-  
+    
 ##  <a name="PKeys"></a> Primary Key Constraints  
  A table typically has a column or combination of columns that contain values that uniquely identify each row in the table. This column, or columns, is called the primary key (PK) of the table and enforces the entity integrity of the table. Because primary key constraints guarantee unique data, they are frequently defined on an identity column.  
   
  When you specify a primary key constraint for a table, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] enforces data uniqueness by automatically creating a unique index for the primary key columns. This index also permits fast access to data when the primary key is used in queries. If a primary key constraint is defined on more than one column, values may be duplicated within one column, but each combination of values from all the columns in the primary key constraint definition must be unique.  
   
- As shown in the following illustration, the **ProductID** and **VendorID** columns in the **Purchasing.ProductVendor** table form a composite primary key constraint for this table. This makes sure that every row in the **ProductVendor** table has a unique combination of **ProductID** and **VendorID**. This prevents the insertion of duplicate rows.  
+ As shown in the following illustration, the `ProductID` and `VendorID` columns in the `Purchasing.ProductVendor` table form a composite primary key constraint for this table. This makes sure that every row in the `ProductVendor` table has a unique combination of `ProductID` and `VendorID`. This prevents the insertion of duplicate rows.  
   
- ![Composite PRIMARY KEY constraint](../../relational-databases/tables/media/fund04.gif "Composite PRIMARY KEY constraint")  
+:::image type="content" source="../../relational-databases/tables/media/fund04.gif" alt-text="Composite PRIMARY KEY constraint" lightbox="../../relational-databases/tables/media/fund04.gif":::
   
 -   A table can contain only one primary key constraint.  
   
@@ -56,9 +47,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ##  <a name="FKeys"></a> Foreign Key Constraints  
  A foreign key (FK) is a column or combination of columns that is used to establish and enforce a link between the data in two tables to control the data that can be stored in the foreign key table. In a foreign key reference, a link is created between two tables when the column or columns that hold the primary key value for one table are referenced by the column or columns in another table. This column becomes a foreign key in the second table.  
   
- For example, the **Sales.SalesOrderHeader** table has a foreign key link to the **Sales.SalesPerson** table because there is a logical relationship between sales orders and salespeople. The **SalesPersonID** column in the **SalesOrderHeader** table matches the primary key column of the **SalesPerson** table. The **SalesPersonID** column in the **SalesOrderHeader** table is the foreign key to the **SalesPerson** table. By creating this foreign key relationship, a value for **SalesPersonID** cannot be inserted into the **SalesOrderHeader** table if it does not already exist in the **SalesPerson** table.  
+ For example, the `Sales.SalesOrderHeader` table has a foreign key link to the `Sales.SalesPerson` table because there is a logical relationship between sales orders and salespeople. The `SalesPersonID` column in the `SalesOrderHeader` table matches the primary key column of the `SalesPerson` table. The `SalesPersonID` column in the `SalesOrderHeader` table is the foreign key to the `SalesPerson` table. By creating this foreign key relationship, a value for `SalesPersonID` cannot be inserted into the `SalesOrderHeader` table if it does not already exist in the `SalesPerson` table.  
   
- A table can reference a maximum of 253 other tables and columns as foreign keys (outgoing references). [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] increases the limit for the number of other table and columns that can reference columns in a single table (incoming references), from 253 to 10,000. (Requires at least 130 compatibility level.) The increase has the following restrictions:  
+ A table can reference a maximum of 253 other tables and columns as foreign keys (outgoing references). [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] increases the limit for the number of other tables and columns that can reference columns in a single table (incoming references), from 253 to 10,000. (Requires at least 130 compatibility level.) The increase has the following restrictions:  
   
 -   Greater than 253 foreign key references are only supported for DELETE DML operations. UPDATE and MERGE operations are not supported.  
   
@@ -66,19 +57,19 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Greater than 253 foreign key references are not currently available for columnstore indexes, memory-optimized tables, Stretch Database, or partitioned foreign key tables.  
   
-### Indexes on Foreign Key Constraints  
+## Indexes on Foreign Key Constraints  
  Unlike primary key constraints, creating a foreign key constraint does not automatically create a corresponding index. However, manually creating an index on a foreign key is often useful for the following reasons:  
   
 -   Foreign key columns are frequently used in join criteria when the data from related tables is combined in queries by matching the column or columns in the foreign key constraint of one table with the primary or unique key column or columns in the other table. An index enables the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to quickly find related data in the foreign key table. However, creating this index is not required. Data from two related tables can be combined even if no primary key or foreign key constraints are defined between the tables, but a foreign key relationship between two tables indicates that the two tables have been optimized to be combined in a query that uses the keys as its criteria.  
   
 -   Changes to primary key constraints are checked with foreign key constraints in related tables.  
   
-### Referential Integrity  
- Although the main purpose of a foreign key constraint is to control the data that can be stored in the foreign key table, it also controls changes to data in the primary key table. For example, if the row for a salesperson is deleted from the **Sales.SalesPerson** table, and the salesperson's ID is used for sales orders in the **Sales.SalesOrderHeader** table, the relational integrity between the two tables is broken; the deleted salesperson's sales orders are orphaned in the **SalesOrderHeader** table without a link to the data in the **SalesPerson** table.  
+## Referential Integrity  
+ Although the main purpose of a foreign key constraint is to control the data that can be stored in the foreign key table, it also controls changes to data in the primary key table. For example, if the row for a salesperson is deleted from the `Sales.SalesPerson` table, and the salesperson's ID is used for sales orders in the `Sales.SalesOrderHeader` table, the relational integrity between the two tables is broken; the deleted salesperson's sales orders are orphaned in the `SalesOrderHeader` table without a link to the data in the `SalesPerson` table.  
   
  A foreign key constraint prevents this situation. The constraint enforces referential integrity by guaranteeing that changes cannot be made to data in the primary key table if those changes invalidate the link to data in the foreign key table. If an attempt is made to delete the row in a primary key table or to change a primary key value, the action will fail when the deleted or changed primary key value corresponds to a value in the foreign key constraint of another table. To successfully change or delete a row in a foreign key constraint, you must first either delete the foreign key data in the foreign key table or change the foreign key data in the foreign key table, which links the foreign key to different primary key data.  
   
-#### Cascading Referential Integrity  
+### Cascading Referential Integrity  
  By using cascading referential integrity constraints, you can define the actions that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] takes when a user tries to delete or update a key to which existing foreign keys point. The following cascading actions can be defined.  
   
  NO ACTION  
@@ -106,7 +97,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   An AFTER trigger on the table that is the direct target of an UPDATE or DELETE action fires regardless of whether any rows are affected. There are no other tables affected by cascading in this case.  
   
--   If any one of the previous triggers perform UPDATE or DELETE operations on other tables, these actions can start secondary cascading chains. These secondary chains are processed for each UPDATE or DELETE operation at a time after all triggers on all primary chains fire. This process may be recursively repeated for subsequent UPDATE or DELETE operations.  
+-   If any one of the previous triggers performs UPDATE or DELETE operations on other tables, these actions can start secondary cascading chains. These secondary chains are processed for each UPDATE or DELETE operation at a time after all triggers on all primary chains fire. This process may be recursively repeated for subsequent UPDATE or DELETE operations.  
   
 -   Performing CREATE, ALTER, DELETE, or other data definition language (DDL) operations inside the triggers may cause DDL triggers to fire. This may subsequently perform DELETE or UPDATE operations that start additional cascading chains and triggers.  
   
@@ -114,10 +105,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   A table that has an INSTEAD OF trigger cannot also have a REFERENCES clause that specifies a cascading action. However, an AFTER trigger on a table targeted by a cascading action can execute an INSERT, UPDATE, or DELETE statement on another table or view that fires an INSTEAD OF trigger defined on that object.  
   
-##  <a name="Tasks"></a> Related Tasks  
+##  <a name="Tasks"></a> Next steps
  The following table lists the common tasks associated with primary key and foreign key constraints.  
   
-|Task|Topic|  
+|Task|Article|  
 |----------|-----------|  
 |Describes how to create a primary key.|[Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)|  
 |Describes how to delete a primary key.|[Delete Primary Keys](../../relational-databases/tables/delete-primary-keys.md)|  

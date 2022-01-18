@@ -50,7 +50,7 @@ ms.author: mlandzic
 ### A. Computing the symmetric difference of two Polygon instances  
  The following example uses `STSymDifference()` to compute the symmetric difference of two `Polygon` instances.  
   
-```  
+```sql
 DECLARE @g geometry;  
 DECLARE @h geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);  
@@ -61,7 +61,7 @@ SELECT @g.STSymDifference(@h).ToString();
 ### B. Computing the symmetric difference between a CurvePolygon and a Polygon instance  
  The following example returns a `GeometryCollection` that represents the symmetric difference between a `CurvePolygon` and a `Polygon`.  
   
-```
+```sql
  DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
  DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';  
  SELECT @h.STSymDifference(@g).ToString();
@@ -70,7 +70,7 @@ SELECT @g.STSymDifference(@h).ToString();
 ## C. Using STSymDifference() on CurvePolygon instance with an inscribed Polygon instance  
  The following example returns a `CurvePolygon` instance with an interior `Polygon` ring that represents the symmetric difference between the two instances compared.  
   
-```
+```sql
  DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
  DECLARE @h geometry = 'POLYGON ((1 -1, 2 -1, 2 1, 1 1, 1 -1))';  
  SELECT @h.STSymDifference(@g).ToString();

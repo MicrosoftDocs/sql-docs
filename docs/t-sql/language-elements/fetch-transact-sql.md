@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "SCROLL option"
   - "row fetching [SQL Server]"
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # FETCH (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

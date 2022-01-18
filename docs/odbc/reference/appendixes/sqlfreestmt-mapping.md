@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "mapping deprecated functions [ODBC], SQLFreeStmt"
 ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFreeStmt Mapping
 When an application calls **SQLFreeStmt** with an *Option* argument of SQL_DROP through an ODBC *3.x* driver, the call to  

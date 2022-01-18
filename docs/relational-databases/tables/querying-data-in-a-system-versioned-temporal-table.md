@@ -29,7 +29,7 @@ To perform any type of time-based analysis, use the new **FOR SYSTEM_TIME** clau
 - CONTAINED IN (<start_date_time> , <end_date_time>)
 - ALL
 
-**FOR SYSTEM_TIME** can be specified independently for each table in a query. It can be used inside common table expressions, table-valued functions and stored procedures. When using a table alias with a temporal tables, the **FOR SYSTEM_TIME** clause must included between the temporal table name and the alias (see "Query for a specific time using the AS OF sub-clause" second example, below).
+**FOR SYSTEM_TIME** can be specified independently for each table in a query. It can be used inside common table expressions, table-valued functions and stored procedures. When using a table alias with a temporal tables, the **FOR SYSTEM_TIME** clause must be included between the temporal table name and the alias (see "Query for a specific time using the AS OF sub-clause" second example, below).
 
 ## Query for a specific time using the AS OF sub-clause
 

@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "large CLR user-defined types [OLE DB]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Large CLR User-Defined Types (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

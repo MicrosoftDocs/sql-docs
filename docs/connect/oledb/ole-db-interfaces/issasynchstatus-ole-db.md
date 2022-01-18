@@ -14,7 +14,7 @@ apitype: "COM"
 helpviewer_keywords: 
   - "ISSAsynchStatus interface"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ISSAsynchStatus (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

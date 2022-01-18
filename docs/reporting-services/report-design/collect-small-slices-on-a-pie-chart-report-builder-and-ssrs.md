@@ -1,5 +1,5 @@
 ---
-title: "Collect Small Slices on a Pie Chart (Report Builder) | Microsoft Docs"
+title: "Collect small slices on a paginated report pie chart | Microsoft Docs"
 description: Learn about collecting many small slices in a pie chart into one single slice in Report Builder paginated reports. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,8 +12,11 @@ ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Collect Small Slices on a Pie Chart (Report Builder and SSRS)
-Pie charts with too many slices can look cluttered. Learn to collect many small slices in a pie chart into one single slice in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports.
+# Collect small slices on a paginated report pie chart (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+Pie charts with too many slices can look cluttered. Learn to collect many small slices in a pie chart into one single slice in paginated reports.
  
  To collect small slices into one slice, first decide whether your threshold for collecting small slices is measured as a percentage of the pie chart or as a fixed value. 
  

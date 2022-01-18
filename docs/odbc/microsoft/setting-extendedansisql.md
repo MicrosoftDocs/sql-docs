@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "extendedANSISQL [ODBC], setting"
 ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Setting ExtendedAnsiSQL
 The attribute can be controlled in the connection string by adding the ExtendedAnsiSQL attribute:  

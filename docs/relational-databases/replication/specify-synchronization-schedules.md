@@ -37,7 +37,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Specify synchronization schedules on the **Synchronization Schedule** page of the New Subscription Wizard. For more information about accessing this wizard, see [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md) and [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
- Modify synchronization schedules in the **Job Schedule Properties** dialog box, which is available from the **Jobs** folder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and from the agent details windows in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Modify synchronization schedules in the **Job Schedule Properties** dialog box, which is available from the **Jobs** folder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and from the agent detail windows in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
  If you specify schedules from the **Jobs** folder, use the following table to determine the agent job name.  
   

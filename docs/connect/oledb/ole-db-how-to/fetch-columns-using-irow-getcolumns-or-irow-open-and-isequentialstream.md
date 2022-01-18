@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "ISequentialStream interface, samples"
   - "GetColumns method"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Fetch Columns by Using IRow::GetColumns (or IRow::Open) and ISequentialStream
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

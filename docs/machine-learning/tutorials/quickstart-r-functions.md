@@ -1,15 +1,16 @@
 ---
 title: "Quickstart: R functions"
 titleSuffix: SQL machine learning
-description: In this quickstart, you'll learn how to use R mathematical and utility functions with SQL machine learning. 
+description: In this quickstart, you'll learn how to use R mathematical and utility functions with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020 
+ms.date: 05/21/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-
-ms.custom: seo-lt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.custom:
+  - seo-lt-2019
+  - intro-quickstart
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

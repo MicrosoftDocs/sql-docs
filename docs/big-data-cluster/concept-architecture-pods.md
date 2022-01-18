@@ -9,6 +9,8 @@ ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Resources deployed with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]

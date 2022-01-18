@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 88bd8623-889d-4b5d-99ff-c85b32f3ff5c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLServerBlob Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

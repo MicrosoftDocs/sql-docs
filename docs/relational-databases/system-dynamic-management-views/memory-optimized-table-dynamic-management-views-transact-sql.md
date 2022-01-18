@@ -20,7 +20,7 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||
 
   The following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dynamic management views (DMVs) are used with In-Memory OLTP:  
   
- For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
 
 :::row:::
     :::column:::
@@ -76,4 +76,3 @@ There are additional DMVs that are intended for internal use only, and for which
 
 - sys.dm_xtp_threads
 - sys.dm_xtp_transaction_recent_rows
-

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_getbindtoken"
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_getbindtoken (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

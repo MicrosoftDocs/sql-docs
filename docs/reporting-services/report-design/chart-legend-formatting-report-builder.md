@@ -1,6 +1,6 @@
 ---
-title: "Formatting the Legend on a Chart (Report Builder) | Microsoft Docs"
-description: Learn how to format a legend on a chart in Report Builder with the Legend Properties dialog box or by using the Properties pane.
+title: "Formatting the legend on a paginated report chart | Microsoft Docs"
+description: Learn how to format a legend on a paginated report chart in Report Builder with the Legend Properties dialog box or by using the Properties pane.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -29,8 +29,11 @@ ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Chart Legend - Formatting (Report Builder)
-  The chart legend contains descriptions for each category in a chart. A legend always contains one or more legend items, where each legend item consists of a colored box that represents the series, and a text string that describes the series, as indicated in the following illustration.  
+# Chart legend - formatting the legend on a paginated report chart (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  The chart legend contains descriptions for each category in a paginated report chart. A legend always contains one or more legend items, where each legend item consists of a colored box that represents the series, and a text string that describes the series, as indicated in the following illustration.  
   
  ![Diagram of a chart legend](../../reporting-services/report-design/media/rs-legenddiagram.gif "Diagram of a chart legend")  
   
@@ -44,7 +47,7 @@ ms.author: maggies
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## Ordering Legend Items in the Legend  
- Series are ordered in the legend according to the order that they are processed by the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] processing engine. You can change the order by changing the order of fields in the data fields drop-zone. If you are using series grouping, the series data is not known until processing, so that there is no way for you to re-order these items. The changes can be seen in Preview. For more information about series grouping, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+ Series are ordered in the legend according to the order that they are processed by the Report Builder processing engine. You can change the order by changing the order of fields in the data fields drop-zone. If you are using series grouping, the series data is not known until processing, so that there is no way for you to re-order these items. The changes can be seen in Preview. For more information about series grouping, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  You can hide any series from being shown in the legend. If you are using series grouping, all series related to the data field will be hidden. For more information, see [Hide Legend Items on the Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md).  
   

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # executeUpdate Method (java.lang.String)
 

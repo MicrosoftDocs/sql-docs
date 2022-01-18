@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "database recovery [SQL Server]"
   - "database restores [SQL Server], point in time"
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Recover to a Log Sequence Number (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

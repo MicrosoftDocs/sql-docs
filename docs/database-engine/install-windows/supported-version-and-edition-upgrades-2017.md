@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016"
 ---
 # Supported version & edition upgrades (SQL Server 2017)

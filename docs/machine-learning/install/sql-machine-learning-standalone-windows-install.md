@@ -5,9 +5,11 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 01/03/2020
 ms.topic: how-to
-author: garyericson
-ms.author: garye
-ms.custom: seo-lt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 monikerRange: ">=sql-server-2016"
 ---
 # Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup
@@ -215,7 +217,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
 ## Development tools
 
-A development IDE is not installed as part of setup. For more information about configuring a development environment, see [Set up R tools](../r/set-up-a-data-science-client.md) and [Set up Python tools](../python/setup-python-client-tools-sql.md).
+A development IDE is not installed as part of setup. For more information about configuring a development environment, see [Set up R tools](../r/set-up-data-science-client.md) and [Set up Python tools](../python/setup-python-client-tools-sql.md).
 
 ## Next steps
 

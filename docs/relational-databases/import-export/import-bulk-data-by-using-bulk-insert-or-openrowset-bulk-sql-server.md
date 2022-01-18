@@ -17,16 +17,15 @@ helpviewer_keywords:
   - "remote data access [SQL Server], bulk importing"
   - "bulk importing [SQL Server], BULK INSERT statement"
   - "Transact-SQL bulk export/import operations"
-ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
 ms.date: "09/25/2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
+ms.custom: "seo-lt-2019, FY21Q2Fresh"
 ---
 # Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article provides an overview of how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT statement and the INSERT...SELECT * FROM OPENROWSET(BULK...) statement to bulk import data from a data file into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database table. This article also describes security considerations for using BULK INSERT and OPENROWSET(BULK...), and using these methods to bulk import from a remote data source.
 

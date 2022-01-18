@@ -4,8 +4,8 @@
 title: "concat: Machine Learning Concat Transform" 
 description: "Combines several columns into a single vector-valued column." 
 keywords: "transform, schema" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

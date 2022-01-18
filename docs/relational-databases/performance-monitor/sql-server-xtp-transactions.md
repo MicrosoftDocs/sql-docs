@@ -46,8 +46,7 @@ WHERE object_name LIKE '%XTP Transactions%';
 ``` 
 
 ## See also  
-- [In-Memory OLTP and Memory-Optimization](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP and Memory-Optimization](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Databases Object](sql-server-databases-object.md)
 - [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
-  
   

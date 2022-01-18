@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], upgrading databases"
   - "upgrading replicated databases"
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016"
 ---
 # Upgrade or patch replicated databases
@@ -103,7 +103,7 @@ These steps outline the order in which servers in a replication topology should 
 ## Steps for side-by-side migration of the Distributor to Windows Server 2012 R2
 If you are planning to upgrade your SQL Server instance to SQL Server 2016 (or greater), and your current OS is Windows 2008 (or 2008 R2), then you will need to perform a side-by-side upgrade of the OS to Windows Server R2 or greater. The reason for this intermediate OS upgrade is that SQL Server 2016 cannot be installed on a Windows Server 2008/2008 R2, and Windows Server 2008/20008 R2 does not allow in-place upgrades directly to Windows Server 2016. While it's possible to perform an in-place upgrade from Windows Server 2008/2008 R2 to Windows Server 2012, and then to Windows Server 2016, doing so is generally not recommended due the downtime and added complexity preventing an easy roll-back path. A side-by-side upgrade is the only upgrade path available for SQL Server instances participating in a failover cluster.  The following steps can be performed on either a standalone SQL Server instance, or one within an Always On Failover Cluster Instance (FCI).
 
-1. Set up a new SQL Server instance (either standalone, or Always On Failover Cluster), edition, and version as your distributor on Windows Server 2012 R2/2016 with a different windows cluster and SQL Server FCI name or standalone host name. You will need to keep the directory structure same as the old distributor to ensure that the replication agents executables, replication folders, and database file paths are found at the same path on the new environment. This will reduce any post migration/upgrade steps required.
+1. Set up a new SQL Server instance (either standalone, or Always On Failover Cluster), edition, and version as your distributor on Windows Server 2012 R2/2016 with a different Windows cluster and SQL Server FCI name or standalone host name. You will need to keep the directory structure same as the old distributor to ensure that the replication agents executables, replication folders, and database file paths are found at the same path on the new environment. This will reduce any post migration/upgrade steps required.
 1. Ensure that your replication is synchronized and then shut down all of the replication agents. 
 1. Shut down the current SQL Server Distributor instance. If this is a standalone instance, shut down the server. If this is a SQL FCI, then take the entire SQL Server role offline in cluster manager, including the network name. 
 1. Remove the DNS and AD computer object entries for the old (current distributor instance) environment. 

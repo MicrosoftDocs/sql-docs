@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 432901eb-57b6-44ad-98b4-43164bcbc2b6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getNClob Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

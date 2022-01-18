@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: chadam
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 # JSON_VALUE (Transact-SQL)

@@ -46,7 +46,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
         [, CREDENTIAL = credential_name ] 
 
 -- Modify an external data source pointing to Azure Blob storage or Azure Data Lake storage
--- Applies to: Azure Synapse Analytics
+-- Applies to: Azure Synapse Analytics dedicated SQL pool only
 ALTER EXTERNAL DATA SOURCE data_source_name
     SET
         [LOCATION = '<location prefix>://<location path>']
@@ -57,7 +57,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
  data_source_name
  Specifies the user-defined name for the data source. The name must be unique.
 
- LOCATION = '<prefix>://<path>[:<port>]'
+ LOCATION = '\<prefix\>://\<path\>[:\<port\>]'
  Provides the connectivity protocol, path, and port to the external data source. See [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport) for valid location options.
 
  RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (Does not apply to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])
@@ -75,6 +75,8 @@ The credential used, must be created using `SHARED ACCESS SIGNATURE` as the iden
 
 ## Remarks
  Only single source can be modified at a time. Concurrent requests to modify the same source cause one statement to wait. However, different sources can be modified at the same time. This statement can run concurrently with other statements.
+ 
+ In Azure Synapse Analytics, connections to external data sources pointing to Azure Blob storage or Azure Data Lake storage are supported in dedicated SQL pool only.
 
 ## Permissions  
  Requires ALTER ANY EXTERNAL DATA SOURCE permission.

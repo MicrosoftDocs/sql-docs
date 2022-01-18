@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 66bcc445-9226-4419-b845-e0334875c80b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # isNamed Method (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

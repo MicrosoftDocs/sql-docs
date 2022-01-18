@@ -31,7 +31,7 @@ This procedure explains how to create a test condition to appear in the SQL Serv
   
 6.  On the **Project** menu, click **Unload Project**.  
   
-7.  Right-click on the project in **Solution Explorer** and choose **Edit <project name>.csproj**.  
+7.  Right-click on the project in **Solution Explorer** and choose **Edit \<project name\>.csproj**.  
   
 8.  Add the following Import statements after the import of Microsoft.CSharp.targets:  
   
@@ -48,7 +48,7 @@ This procedure explains how to create a test condition to appear in the SQL Serv
   
 12. Build the class library.  
   
-13. Before you can use the new test condition, you must copy your signed assembly to the %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions folder. If this folder does not exist, create it. You need administrative privileges on your machine to copy to this directory.  
+13. Before you can use the new test condition, you must copy your signed assembly to the %Program Files%\Microsoft Visual Studio \<Version\>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions folder. If this folder does not exist, create it. You need administrative privileges on your machine to copy to this directory.  
   
 14. Install the test condition. For more information, see [Custom Test Conditions  for SQL Server Unit Tests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
   

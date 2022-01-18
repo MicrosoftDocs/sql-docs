@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 19c0c15d-223f-45bd-a215-2867dfefecb0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getDatabaseProductVersion Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

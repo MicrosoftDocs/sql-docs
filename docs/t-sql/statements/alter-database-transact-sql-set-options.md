@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL)"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 ms.custom: ""
-ms.date: 09/01/2021
+ms.date: 01/10/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -506,6 +506,19 @@ When GLOBAL is specified, and a cursor isn't defined as LOCAL when created, the 
 The cursor is implicitly deallocated only at disconnect. For more information, see [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md).
 
 You can determine this option's status by examining the `is_local_cursor_default` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsLocalCursorsDefault` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
+
+#### **\<temporal_history_retention> ::=**
+
+TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+ON by default but also automatically set to OFF after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#how-to-configure-retention-policy).
+
+ON 
+Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
+
+OFF 
+Do not perform temporal historical retention policy. 
+
 
 #### **\<data_retention_policy> ::=**
 **Applies to**: Azure SQL Edge *Only*
@@ -2202,6 +2215,19 @@ Specifies whether to roll back after the specified number of seconds or immediat
 NO_WAIT     
 Specifies that the request will fail if the requested database state or option change can't complete immediately. Completing immediately means not waiting for transactions to commit or roll back on their own.
 
+#### **\<temporal_history_retention> ::=**
+
+TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+ON by default but also automatically set to OFF after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#how-to-configure-retention-policy).
+
+ON 
+Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
+
+OFF 
+Do not perform temporal historical retention policy. 
+
+
 ## <a name="SettingOptions"></a> Setting options
 
 To retrieve current settings for database options, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
@@ -3026,6 +3052,19 @@ Specifies whether to roll back after the specified number of seconds or immediat
 
 NO_WAIT     
 Specifies that the request will fail if the requested database state or option change can't complete immediately. Completing immediately means not waiting for transactions to commit or roll back on their own.
+
+#### **\<temporal_history_retention> ::=**
+
+TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+ON by default but also automatically set to OFF after point in time restore operation. For more information including how to enable this setting, see [How to configure retention policy](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#how-to-configure-retention-policy).
+
+ON 
+Default. Enables temporal table retention policy. For more information, see [Manage retention of historical data in system-versioned temporal tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
+
+OFF 
+Do not perform temporal historical retention policy. 
+
 
 ## <a name="SettingOptions"></a> Setting options
 To retrieve current settings for database options, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)

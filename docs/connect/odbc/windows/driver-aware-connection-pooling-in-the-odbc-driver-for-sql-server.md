@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Driver-Aware Connection Pooling in the ODBC Driver for SQL Server
 

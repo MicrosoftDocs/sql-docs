@@ -2,7 +2,7 @@
 description: "SELECT - GROUP BY- Transact-SQL"
 title: "GROUP BY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2019"
+ms.date: "10/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -30,11 +30,12 @@ helpviewer_keywords:
   - "groups [SQL Server], tables divided into groups"
   - "summary values [SQL Server]"
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-author: shkale-msft
-ms.author: shkale
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - GROUP BY- Transact-SQL
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A SELECT statement clause that divides the query result into groups of rows, usually for the purpose of performing one or more aggregations on each group. The SELECT statement returns one row per group.  
@@ -73,9 +74,10 @@ GROUP BY {
 -- For backward compatibility only.
 -- Non-ISO-Compliant Syntax for SQL Server and Azure SQL Database 
   
-GROUP BY 
-      [ ALL ] column-expression [ ,...n ] 
-    | column-expression [ ,...n ] [ WITH { CUBE | ROLLUP } ]   
+GROUP BY {
+       ALL column-expression [ ,...n ] 
+    | column-expression [ ,...n ]  WITH { CUBE | ROLLUP }    
+       }
 
 ```  
   
@@ -269,18 +271,26 @@ FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
 ```
 
-### GROUP BY [ ALL ] column-expression [ ,...n ] 
+### GROUP BY ALL column-expression [ ,...n ] 
 
 Applies to: SQL Server and Azure SQL Database
 
-NOTE: This syntax is provided for backward compatibility only. It will be removed in a future version. Avoid using this syntax in new development work, and plan to modify applications that currently use this syntax.
+>[!NOTE]
+>This syntax is provided for backward compatibility only. It will be removed in a future version. Avoid using this syntax in new development work, and plan to modify applications that currently use this syntax.
 
-Specifies to include all groups in the results regardless of whether they meet the search criteria in the WHERE clause. Groups that don't meet the search criteria have NULL for the aggregation. 
+Specifies to include all groups in the results regardless of whether they meet the search criteria in the WHERE clause. Groups that don't meet the search criteria have NULL for the aggregation.
 
 GROUP BY ALL:
 - Is not supported in queries that access remote tables if there is also a WHERE clause in the query.
 - Will fail on columns that have the FILESTREAM attribute.
-  
+
+### GROUP BY column-expression [ ,...n ] WITH { CUBE | ROLLUP }
+
+Applies to: SQL Server and Azure SQL Database
+
+>[!NOTE]
+>This syntax is provided for backward compatibility only. Avoid using this syntax in new development work, and plan to modify applications that currently use this syntax.
+
 ### WITH (DISTRIBUTED_AGG)
 Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 

@@ -53,7 +53,7 @@ Point ( X, Y, SRID )
 ## Examples  
  The following example uses `Point()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;   
 SET @g = geometry::Point(1, 10, 0);  
 SELECT @g.ToString();  

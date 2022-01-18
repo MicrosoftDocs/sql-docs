@@ -6,8 +6,8 @@ ms.technology: machine-learning-services
 
 ms.date: 11/27/2018  
 ms.topic: tutorial
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
@@ -37,7 +37,7 @@ If you need to put client and server on the same computer, be sure to install a 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
-For instructions on client configuration, see [Set up a data science client for R development](../r/set-up-a-data-science-client.md).
+For instructions on client configuration, see [Set up a data science client for R development](../r/set-up-data-science-client.md).
 
 
 ## R development tools
@@ -50,7 +50,7 @@ R developers typically use IDEs for writing and debugging R code. Here are some 
 
 - Basic R tools (R.exe, RTerm.exe, RScripts.exe) are also installed by default when you install R in SQL Server or R Client. If you do not wish to install an IDE, you can use built-in R tools to execute the code in this tutorial.
 
-Recall that **RevoScaleR** is required on both local and remote computers. You cannot complete this tutorial using a generic installation of RStudio or other environment that's missing the Microsoft R libraries. For more information, see [Set Up a Data Science Client](../r/set-up-a-data-science-client.md).
+Recall that **RevoScaleR** is required on both local and remote computers. You cannot complete this tutorial using a generic installation of RStudio or other environment that's missing the Microsoft R libraries. For more information, see [Set Up a Data Science Client](../r/set-up-data-science-client.md).
 
 ## Summary of tasks
 

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "drivers subkey [ODBC]"
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ODBC Drivers Subkey
 The values under the ODBC Drivers subkey list the installed drivers. The format of these values is shown in the following table.  

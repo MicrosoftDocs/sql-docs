@@ -450,50 +450,9 @@ Because CHECK constraints reference only the columns on which the column-level o
   
 The following example creates a DML trigger in the AdventureWorks2012 database. This trigger checks to make sure the credit rating for the vendor is good (not 5) when there's an attempt to insert a new purchase order into the `PurchaseOrderHeader` table. To get the credit rating of the vendor, the `Vendor` table must be referenced. If the credit rating is too low, a message appears and the insertion doesn't happen.  
   
-```sql  
--- This trigger prevents a row from being inserted in the Purchasing.PurchaseOrderHeader 
--- table when the credit rating of the specified vendor is set to 5 (below average).  
-  
-CREATE TRIGGER Purchasing.LowCredit ON Purchasing.PurchaseOrderHeader  
-AFTER INSERT  
-AS  
-IF (ROWCOUNT_BIG() = 0)
-RETURN;
-IF EXISTS (SELECT 1  
-           FROM inserted AS i   
-           JOIN Purchasing.Vendor AS v   
-           ON v.BusinessEntityID = i.VendorID  
-           WHERE v.CreditRating = 5  
-          )  
-BEGIN  
-RAISERROR ('A vendor''s credit rating is too low to accept new  
-purchase orders.', 16, 1);  
-ROLLBACK TRANSACTION;  
-RETURN   
-END;  
-GO  
-  
--- This statement attempts to insert a row into the PurchaseOrderHeader table  
--- for a vendor that has a below average credit rating.  
--- The AFTER INSERT trigger is fired and the INSERT transaction is rolled back.  
-  
-INSERT INTO Purchasing.PurchaseOrderHeader (RevisionNumber, Status, EmployeeID,  
-VendorID, ShipMethodID, OrderDate, ShipDate, SubTotal, TaxAmt, Freight)  
-VALUES (  
-2  
-,3  
-,261  
-,1652  
-,4  
-,GETDATE()  
-,GETDATE()  
-,44594.55  
-,3567.564  
-,1114.8638 );  
-GO  
-  
-```  
-  
+:::code language="sql" source="../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql":::
+
+
 ### D. Using a database-scoped DDL trigger  
 The following example uses a DDL trigger to prevent any synonym in a database from being dropped.  
   

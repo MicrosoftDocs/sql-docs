@@ -1,11 +1,8 @@
 ---
+title: Create Nonclustered Indexes
 description: "Create Nonclustered Indexes"
-title: "Create Nonclustered Indexes | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,12 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: 11/12/2021
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Nonclustered Indexes
+
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  You can create nonclustered indexes in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A nonclustered index is an index structure separate from the data stored in a table that reorders one or more selected columns. Nonclustered indexes can often help you find data more quickly than searching the underlying table; queries can sometimes be answered entirely by the data in the nonclustered index, or the nonclustered index can point the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to the rows in the underlying table. Generally, nonclustered indexes are created to improve the performance of frequently used queries not covered by the clustered index or to locate rows in a table without a clustered index (called a heap). You can create multiple nonclustered indexes on a table or indexed view.  
+You can create nonclustered indexes in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A nonclustered index is an index structure separate from the data stored in a table that reorders one or more selected columns. Nonclustered indexes can often help you find data more quickly than searching the underlying table; queries can sometimes be answered entirely by the data in the nonclustered index, or the nonclustered index can point the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to the rows in the underlying table. Generally, nonclustered indexes are created to improve the performance of frequently used queries not covered by the clustered index or to locate rows in a table without a clustered index (called a heap). You can create multiple nonclustered indexes on a table or indexed view.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -56,7 +57,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 3.  Right-click the table on which you want to create a nonclustered index and select **Design**.  
   
-4.  On the **Table Designer** menu, click **Indexes/Keys**.  
+4.  Right-click on the column you want to create the nonclustered index on and select **Indexes/Keys**.  
   
 5.  In the **Indexes/Keys** dialog box, click **Add**.  
   
@@ -92,14 +93,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 #### To create a nonclustered index on a table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] with AdventurWorks2019 installed. See [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md?view=sql-server-ver15&tabs=ssms&preserve-view=true) to download AdventureWorks2019.
 2.  On the Standard bar, click **New Query**.  
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2019;  
     GO  
     -- Find an existing index named IX_ProductVendor_VendorID and delete it if found.   
     IF EXISTS (SELECT name FROM sys.indexes  
@@ -113,6 +113,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     GO  
     ```  
   
-## Related content  
+## Next steps
+  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
 [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md) 

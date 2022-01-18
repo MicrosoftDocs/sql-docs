@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], upgrading"
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Upgrading Log Shipping to SQL Server 2016 (Transact-SQL)
 

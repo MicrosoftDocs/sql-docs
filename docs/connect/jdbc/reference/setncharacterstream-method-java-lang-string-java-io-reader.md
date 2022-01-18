@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: fd19fbb8-a878-4d98-a584-e4969d649844
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setNCharacterStream Method (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

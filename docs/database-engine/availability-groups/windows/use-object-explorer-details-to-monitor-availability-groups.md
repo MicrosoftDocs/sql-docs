@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
   - "Availability Groups [SQL Server]"
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Use Object Explorer Details to Monitor Availability Groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

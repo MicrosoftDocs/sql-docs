@@ -5,10 +5,11 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/26/2020
 ms.topic: how-to
-author: garyericson
-ms.author: garye
-
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+ms.custom:
+  - intro-installation
 ---
 
 # Install Python packages with sqlmlutils
@@ -102,7 +103,7 @@ pip install sqlmlutils
 You can also install **sqlmlutils** from a zip file:
 
 1. Make sure you have **pip** installed. See [pip installation](https://pip.pypa.io/en/stable/installing/) for more information.
-1. Download the latest **sqlmlutils** zip file from https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist to the client computer. Don't unzip the file.
+1. Download the latest **sqlmlutils** zip file from https://github.com/microsoft/sqlmlutils/tree/master/R/dist to the client computer. Don't unzip the file.
 1. Open a **Command Prompt** and run the following commands to install the **sqlmlutils** package. Substitute the full path to the **sqlmlutils** zip file you downloaded - this example assumes the downloaded file is `c:\temp\sqlmlutils-1.0.0.zip`.
    ```console
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-1.0.0.zip

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "isolation levels [SQL Server], metadata access"
   - "hints [SQL Server], locking"
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Transaction Isolation Levels
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

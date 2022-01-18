@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "value method"
   - "value() method"
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # value() Method (xml Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -73,7 +73,7 @@ SELECT @ProdID
   
 ```sql
 SELECT CatalogDescription.value('             
-    declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";             
+    declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";             
        (/PD:ProductDescription/@ProductModelID)[1]', 'int') AS Result             
 FROM Production.ProductModel             
 WHERE CatalogDescription IS NOT NULL             
@@ -102,12 +102,12 @@ ORDER BY Result DESC
   
 ```sql
 SELECT CatalogDescription.value('  
-     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            (/PD:ProductDescription/@ProductModelID)[1] ', 'int') AS Result  
 FROM  Production.ProductModel  
 WHERE CatalogDescription.exist('  
-     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-     declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
   
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  
@@ -139,7 +139,7 @@ GO
   
 SELECT c1, c2, c3   
 FROM T  
-WHERE c3.value( '/root[1]/@a', 'integer') = c1  
+WHERE c3.value( '(/root[@a=sql:column("c1")]/@a)[1]', 'integer') = c1  
 GO  
 ```  
   

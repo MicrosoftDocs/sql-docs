@@ -1,8 +1,8 @@
 ---
 description: "CREATE QUEUE (Transact-SQL)"
-title: "CREATE QUEUE (Transact-SQL) | Microsoft Docs"
+title: "CREATE QUEUE (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/06/2021"
+ms.date: "10/21/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "unavailable queues [Service Broker]"
   - "activation stored procedures [Service Broker]"
   - "queues [Service Broker], creating"
-ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -66,31 +65,31 @@ CREATE QUEUE <object>
 
 ## Arguments
 
-*database_name* (object)
+#### *database_name* (object)
 Is the name of the database within which to create the new queue. *database_name* must specify the name of an existing database. When *database_name* is not provided, the queue is created in the current database.
 
-*schema_name* (object)
+#### *schema_name* (object)
 Is the name of the schema to which the new queue belongs. The schema defaults to the default schema for the user that executes the statement. If the CREATE QUEUE statement is executed by a member of the sysadmin fixed server role, or a member of the db_dbowner or db_ddladmin fixed database roles in the database specified by *database_name*, *schema_name* can specify a schema other than the one associated with the login of the current connection. Otherwise, *schema_name* must be the default schema for the user who executes the statement.
 
-*queue_name*
+#### *queue_name*
 Is the name of the queue to create. This name must meet the guidelines for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers.
 
-STATUS (Queue)
+#### STATUS (Queue)
 Specifies whether the queue is available (ON) or unavailable (OFF). When the queue is unavailable, no messages can be added to the queue or removed from the queue. You can create the queue in an unavailable state to keep messages from arriving on the queue until the queue is made available with an ALTER QUEUE statement. If this clause is omitted, the default is ON, and the queue is available.
 
-RETENTION
+#### RETENTION
 Specifies the retention setting for the queue. If RETENTION = ON, all messages sent or received on conversations that use this queue are retained in the queue until the conversations have ended. This lets you retain messages for auditing purposes, or to perform compensating transactions if an error occurs. If this clause is not specified, the retention setting defaults to OFF.
 
 > [!NOTE]
 > Setting RETENTION = ON can decrease performance. This setting should only be used if it is required for the application.
 
-ACTIVATION
+#### ACTIVATION
 Specifies information about which stored procedure you have to start to process messages in this queue.
 
-STATUS (Activation)
+#### STATUS (Activation)
 Specifies whether [!INCLUDE[ssSB](../../includes/sssb-md.md)] starts the stored procedure. When STATUS = ON, the queue starts the stored procedure specified with PROCEDURE_NAME when the number of procedures currently running is less than MAX_QUEUE_READERS and when messages arrive on the queue faster than the stored procedures receive messages. When STATUS = OFF, the queue does not start the stored procedure. If this clause is not specified, the default is ON.
 
-PROCEDURE_NAME = \<procedure>
+#### PROCEDURE_NAME = \<procedure>
 Specifies the name of the stored procedure to start to process messages in this queue. This value must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier.
 
 *database_name*(procedure)
@@ -102,10 +101,10 @@ Is the name of the schema that contains the stored procedure.
 *procedure_name*
 Is the name of the stored procedure.
 
-MAX_QUEUE_READERS =*max_readers*
+#### MAX_QUEUE_READERS =*max_readers*
 Specifies the maximum number of instances of the activation stored procedure that the queue starts at the same time. The value of *max_readers* must be a number between **0** and **32767**.
 
-EXECUTE AS
+#### EXECUTE AS
 Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database user account under which the activation stored procedure runs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to check the permissions for this user at the time that the queue starts the stored procedure. For a domain user, the server must be connected to the domain when the procedure is started or activation fails. For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user, the server can always check permissions.
 
 SELF
@@ -117,12 +116,12 @@ Is the name of the user who the stored procedure executes as. The *user_name* pa
 OWNER
 Specifies that the stored procedure executes as the owner of the queue.
 
-POISON_MESSAGE_HANDLING
+#### POISON_MESSAGE_HANDLING
 Specifies whether poison message handling is enabled for the queue. The default is ON.
 
 A queue that has poison message handling set to OFF will not be disabled after five consecutive transaction rollbacks. This allows for a custom poison message handing system to be defined by the application.
 
-ON *filegroup |* [**DEFAULT**]
+#### ON *filegroup |* [**DEFAULT**]
 Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup on which to create this queue. You can use the *filegroup* parameter to identify a filegroup, or use the DEFAULT identifier to use the default filegroup for the service broker database. In the context of this clause, DEFAULT is not a keyword, and must be delimited as an identifier. When no filegroup is specified, the queue uses the default filegroup for the database.
 
 ## Remarks
@@ -137,9 +136,9 @@ Creating a queue in an inactive state lets you get the infrastructure in place f
 
 Permissions for the activation stored procedure are checked when [!INCLUDE[ssSB](../../includes/sssb-md.md)] starts the stored procedure, not when the queue is created. The CREATE QUEUE statement does not verify that the user specified in the EXECUTE AS clause has permission to execute the stored procedure specified in the PROCEDURE NAME clause.
 
-When a queue is unavailable, [!INCLUDE[ssSB](../../includes/sssb-md.md)] holds messages for services that use the queue in the transmission queue for the database. The sys.transmission_queue catalog view provides a view of the transmission queue.
+When a queue is unavailable, [!INCLUDE[ssSB](../../includes/sssb-md.md)] holds messages for services that use the queue in the transmission queue for the database. The `sys.transmission_queue` catalog view provides a view of the transmission queue.
 
-A queue is a schema-owned object. Queues appear in the sys.objects catalog view.
+A queue is a schema-owned object. Queues appear in the `sys.objects` catalog view.
 
 The following table lists the columns in a queue.
 
@@ -171,23 +170,23 @@ Permission for creating a queue uses members of the `db_ddladmin` or `db_owner` 
 
 ## Examples
 
-### A. Creating a queue with no parameters
+### A. Create a queue with no parameters
 
 The following example creates a queue that is available to receive messages. No activation stored procedure is specified for the queue.
 
 ```sql
-CREATE QUEUE ExpenseQueue ;
+CREATE QUEUE ExpenseQueue;
 ```
 
-### B. Creating an unavailable queue
+### B. Create an unavailable queue
 
 The following example creates a queue that is unavailable to receive messages. No activation stored procedure is specified for the queue.
 
 ```sql
-CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;
+CREATE QUEUE ExpenseQueue WITH STATUS=OFF;
 ```
 
-### C. Creating a queue and specify internal activation information
+### C. Create a queue and specify internal activation information
 
 The following example creates a queue that is available to receive messages. The queue starts the stored procedure `expense_procedure` when a message enters the queue. The stored procedure executes as the user `ExpenseUser`. The queue starts a maximum of `5` instances of the stored procedure.
 
@@ -197,21 +196,21 @@ CREATE QUEUE ExpenseQueue
     ACTIVATION (
         PROCEDURE_NAME = expense_procedure
         , MAX_QUEUE_READERS = 5
-        , EXECUTE AS 'ExpenseUser' ) ;
+        , EXECUTE AS 'ExpenseUser' );
 ```
 
-### D. Creating a queue on a specific filegroup
+### D. Create a queue on a specific filegroup
 
 The following example creates a queue on the filegroup `ExpenseWorkFileGroup`.
 
 ```sql
 CREATE QUEUE ExpenseQueue
-    ON ExpenseWorkFileGroup ;
+    ON ExpenseWorkFileGroup;
 ```
 
-### E. Creating a queue with multiple parameters
+### E. Create a queue with multiple parameters
 
-The following example creates a queue on the `DEFAULT` filegroup. The queue is unavailable. Messages are retained in the queue until the conversation that they belong to ends. When the queue is made available through ALTER QUEUE, the queue starts the stored procedure `2008R2.dbo.expense_procedure` to process messages. The stored procedure executes as the user who ran the `CREATE QUEUE` statement. The queue starts a maximum of `10` instances of the stored procedure.
+The following example creates a queue on the `DEFAULT` filegroup. The queue is unavailable. Messages are retained in the queue until the conversation that they belong to ends. When the queue is made available through `ALTER QUEUE`, the queue starts the stored procedure `AdventureWorks2012.dbo.expense_procedure` to process messages. The stored procedure executes as the user who ran the `CREATE QUEUE` statement. The queue starts a maximum of `10` instances of the stored procedure.
 
 ```sql
 CREATE QUEUE ExpenseQueue
@@ -224,7 +223,7 @@ CREATE QUEUE ExpenseQueue
     ON [DEFAULT];
 ```
 
-## See Also
+## Next steps
 
 - [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)
 - [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)

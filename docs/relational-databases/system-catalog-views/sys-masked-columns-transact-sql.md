@@ -8,6 +8,8 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sys.masked_columns"
   - "masked_columns_tsql"

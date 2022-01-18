@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "RPC syntax"
   - "stored procedures [SQL Server], RPC syntax"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Execute Stored Procedure with RPC and Process Output
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

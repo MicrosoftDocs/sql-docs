@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sine"
   - "arcsine"
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ASIN (Transact-SQL)

@@ -11,7 +11,7 @@ metadata:
   ms.technology: big-data-cluster
   author: WilliamDAssafMSFT
   ms.author: wiassaf
-  ms.date: 07/19/2021
+  ms.date: 09/07/2021
   ms.prod: sql
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -180,6 +180,8 @@ landingContent:
             url: cluster-troubleshooting-commands.md
           - text: Troubleshoot Active Directory
             url: troubleshoot-active-directory.md
+          - text: Troubleshoot HDFS
+            url: troubleshoot-hdfs.md
     
   # Card (Secure)
   - title: Secure
@@ -202,6 +204,8 @@ landingContent:
           url: active-directory-deploy.md
         - text: Manage HDFS permissions
           url: hdfs-tiering-manage-permissions.md
+        - text: AD password rotation
+          url: active-directory-password-rotation.md          
       - linkListType: tutorial
         links:
         - text: HDFS Encryption Zones usage guide

@@ -1,5 +1,5 @@
 ---
-title: "Rectangles and Lines (Report Builder) | Microsoft Docs"
+title: "Rectangles and lines in a paginated report | Microsoft Docs"
 description: Discover how to create visual effects within a paginated report in Report Builder. Add features such as color or an image, a tooltip, or a bookmark.   
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,8 +12,11 @@ ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Rectangles and Lines (Report Builder and SSRS)
-  Rectangles and lines can create visual effects within a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report. You can set display properties on these report items from the Border section of the Home tab, and set other properties in the Properties pane. You can add features like a background color or image, a tooltip, or a bookmark to a rectangle.  
+# Rectangles and lines in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Rectangles and lines can create visual effects within a paginated report. You can set display properties on these report items from the Border section of the Home tab, and set other properties in the Properties pane. You can add features like a background color or image, a tooltip, or a bookmark to a rectangle.  
   
 ##  <a name="RectanglesLinesReportParts"></a> Rectangles and Lines as Report Parts  
  You can publish rectangles with the items that they contain separately from the report as report parts. Report parts are self-contained report items that are stored on the report server and can be included in other reports.  

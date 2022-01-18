@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=sql-server-2016"
 ---
 # Configure replication with Always On availability groups

@@ -11,8 +11,8 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.custom: sqlfreshmay19
-ms.date: "11/25/2019"
+ms.custom: sqlfreshmay19, FY21Q2Fresh
+ms.date: "12/02/2021"
 ---
 # Troubleshoot connecting to the SQL Server Database Engine
 
@@ -25,7 +25,7 @@ This article lists troubleshooting techniques to use when you can't connect to a
 >- [Availability group listener](../availability-groups/windows/listeners-client-connectivity-application-failover.md)
 >- [Failover cluster instances](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
-These steps aren't in the order of the most likely problems which you probably already tried. These steps are in order of the most basic problems to more complex problems. These steps assume that you're connecting to SQL Server instance from another computer by using the TCP/IP protocol, which is the most common situation.
+These steps are in order of the most basic problems to more complex problems. These steps assume that you're connecting to SQL Server instance from another computer by using the TCP/IP protocol, which is the most common situation.
 
 These instructions are useful when troubleshooting the "**Connect to Server**" error, which can be `Error Number: 11001 (or 53), Severity: 20, State: 0`. The following is an example of an error message:
 
@@ -35,10 +35,9 @@ These instructions are useful when troubleshooting the "**Connect to Server**" e
 >
 > `(provider: TCP Provider, error: 0 - No such host is known.) (Microsoft SQL Server, Error: 11001)`
 
-This error usually means that the client can't find the SQL Server instance. This normally happens when at least one of the following problems exists:
+This error means that the client can't find the SQL Server instance. This can happen when at least one of the following problems exists:
 
-- The name of the computer hosting the SQL Server
-- Instance doesn't resolve the correct IP
+- The name of the computer hosting the SQL Server instance doesn't resolve the correct IP
 - The TCP port number isn't specified correctly
 
 > [!TIP]
@@ -75,41 +74,49 @@ If the instance is stopped, right-click the instance and then click **Start**. T
 
 ## <a name = "startbrowser"></a> Verify - SQL Server Browser service is running
 
-To connect to a named instance, SQL Server Browser service must be running. In Configuration Manager, locate **SQL Server Browser** service and verify that it's running. If it'sn't running, start it. SQL Server Browser service isn't required for default instances.
+To connect to a named instance, SQL Server Browser service must be running. In Configuration Manager, locate **SQL Server Browser** service and verify that it's running. If it isn't running, start it. SQL Server Browser service isn't required for default instances.
 
 A default instance of SQL Server doesn't require SQL Server Browser service.
 
 ## Testing a local connection
 
-Before troubleshooting a connection problem from another computer, first test your ability to connect from a client application installed locally on the computer that is running SQL Server. Connecting locally avoids issues with networks and firewalls. 
+Before troubleshooting a connection problem from another computer, first test your ability to connect from a client application installed locally. A local connection avoids issues with networks and firewalls.
 
-This procedure uses SQL Server Management Studio. If you don't have Management Studio installed, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md). If you'ren't able to install Management Studio, you can test the connection using the `sqlcmd.exe` utility. `sqlcmd.exe` is installed with the Database Engine. For information about `sqlcmd.exe`, see [sqlcmd Utility](../../tools/sqlcmd-utility.md).)
+This procedure uses SQL Server Management Studio as a local client. If you don't have Management Studio installed, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md). If you aren't able to install Management Studio, you can test the connection using the `sqlcmd.exe` utility. `sqlcmd.exe` is installed with the Database Engine. For information about `sqlcmd.exe`, see [sqlcmd Utility](../../tools/sqlcmd-utility.md).)
 
-1. Sign in to the computer where SQL Server is installed, using a login that has permission to access SQL Server. (During installation, SQL Server requires at least one login to be specified as a SQL Server Administrator. If you don't know an administrator, see [Connect to SQL Server When System Administrators Are Locked Out](connect-to-sql-server-when-system-administrators-are-locked-out.md).)
-2. On the Start page, type **SQL Server Management Studio**, or on older versions of Windows on the Start menu, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Management Studio**.
-3. In the **Connect to Server** dialog box, in the **Server** type box, select **Database Engine**. In the **Authentication** box, select **Windows Authentication**. In the **Server name** box, type one of the following connection types:
+1. Sign in to the computer where SQL Server is installed, using a login that has permission to access SQL Server.
+
+   During installation, SQL Server requires at least one login to be specified as a SQL Server Administrator. If you don't know an administrator, see [Connect to SQL Server When System Administrators Are Locked Out](connect-to-sql-server-when-system-administrators-are-locked-out.md).
+
+1. On the Start page, type **SQL Server Management Studio**, or on older versions of Windows on the Start menu, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Management Studio**.
+
+1. Under **Connect to Server** > **Server**, select **Database Engine**. In the **Authentication** box, select **Windows Authentication**. In the **Server name** box, type one of the following connection types:
 
    |Connecting to|Type|Example|
    |:-----------------|:---------------|:-----------------|
    |Default instance|`<computer name>`|`ACCNT27`|
-   |Named Instance|`<computer name\instance name>`|`ACCNT27\PAYROLL`|
+   |Named Instance|`<computer name>`\\`<instance name>`|`ACCNT27\PAYROLL`|
 
    > [!NOTE]
-   > When connecting to a SQL Server from a client application on the same computer, the shared memory protocol is used. Shared memory is a type of local named pipe, so sometimes errors regarding pipes are encountered.
+   > When you connect to a SQL Server instance from a client application on the same computer, the shared memory protocol is used. Shared memory is a type of local named pipe, so sometimes errors regarding pipes are encountered.
 
    If you receive an error at this point, you need have to resolve it before proceeding. There are many possible things that could be a problem. Your login might not be authorized to connect. Your default database might be missing.
 
    > [!NOTE]
-   > Some error messages passed to the client intentionally don't give enough information to troubleshoot the problem. This is a security feature to avoid providing an attacker with information about SQL Server. To view the complete information about the error, look in the SQL Server error log. The details are provided there. 
+   > Some error messages passed to the client intentionally don't give enough information to troubleshoot the problem. This is a security feature to avoid providing an attacker with information. To view the complete information about the error, look in the SQL Server error log. The details are provided there.
 
-4. If you receive error `18456 Login failed for user`, Books Online topic [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contains additional information about error codes. And Aaron Bertrand's blog has a extensive list of error codes at [Troubleshooting Error 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456). You can view the error log with SSMS (if you can connect), in the Management section of the Object Explorer. Otherwise, you can view the error log with the Windows Notepad program. The default location varies with your version and can be changed during setup. The default location for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG`. 
+4. If you receive error `18456 Login failed for user`, see [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md).
+
+   You can see other log failure states in this [blog post](https://sqlblog.org/2020/07/28/troubleshooting-error-18456).
+
+   You can view the error log with SSMS (if you can connect), in the Management section of the Object Explorer. Otherwise, you can view the error log with the Windows Notepad program. The default location varies with your version and can be changed during setup. The default location for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG`. 
 
 5. If you can connect using shared memory, test connecting using TCP. You can force a TCP connection by specifying `tcp:` before the name. For example:
 
    |Connecting to:|Type:|Example:|
    |-----------------|---------------|-----------------|
    |Default instance|`tcp:<computer name>`|`tcp:ACCNT27`|
-   |Named Instance|`tcp:<computer name/instance name>`|`tcp:ACCNT27\PAYROLL`|
+   |Named Instance|`tcp:<computer name>`\\`<instance name>`|`tcp:ACCNT27\PAYROLL`|
 
 6. If you can connect with shared memory but not TCP, then you must fix the TCP problem. The most likely issue is that TCP isn't enabled. To enable TCP, See the [Enable protocols](#enableprotocols) steps above.
 
@@ -128,7 +135,7 @@ Get the IP Address of the computer hosting the instance of SQL Server.
 
 In most cases, you connect to the Database Engine from another computer using the TCP protocol.
 
-1. Using SQL Server Management Studio on the computer running SQL Server, connect to the instance of SQL Server. In Object Explorer, expand **Management**, expand **SQL Server Logs**, and then double-click the current log.
+1. Using SQL Server Management Studio on the computer running SQL Server, connect to the instance of SQL Server. In Object Explorer, expand **Management**>**SQL Server Logs**, and then double-click the current log.
 2. In the Log Viewer, click the **Filter** button on the toolbar. In the **Message contains text** box, type `server is listening on`, click **Apply filter**, and then click **OK**.
 3. A message similar to `Server is listening on [ 'any' <ipv4> 1433]` should be listed. 
 

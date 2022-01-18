@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "DML triggers, CLR triggers"
   - "DDL triggers, CLR triggers"
 ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Create CLR Triggers
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

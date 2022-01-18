@@ -5,10 +5,8 @@ ms.date: 05/06/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "reports [Reporting Services]"
   - "SSRS"
   - "reports [Reporting Services], about reports"
@@ -17,6 +15,8 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
+ms.custom:
+  - intro-overview
 ---
 
 # What is SQL Server Reporting Services (SSRS)?
@@ -119,4 +119,4 @@ More [Reporting Services Developer Documentation](../reporting-services/reportin
 * [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 * [Install Report Builder](../reporting-services/install-windows/install-report-builder.md)
 
-* More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+* More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid:
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups 
 
@@ -63,7 +63,7 @@ When the cluster fails over, the instance of SQL Server that hosts the previous 
 
 ### Health check timeout operation 
 
-The health check timeout is more flexible because no other failover mechanism depends on it directly. The default value of 30 seconds sets the `sp_server_diagnostics` interval at 10 seconds, with a minimum value for 15 seconds for timeout and a 5 second interval. More generally, the `sp_server_diagnositcs` update interval is always 1/3 \* `HealthCheckTimeout`. When the resource DLL does not receive a new set of health data at an interval, it will continue to use the health data from the previous interval to determine the current AG and instance health. Increasing the health check timeout value will make the primary more tolerant of CPU pressure, which can prevent `sp_server_diagnostics` from providing new data at each interval, however, it will rely on outdated data health checks for longer. Regardless of the timeout value, once data is received indicating the replica is not healthy, the next `IsAlive` call will return that the instance is unhealthy and the cluster service will initiate a failover. 
+The health check timeout is more flexible because no other failover mechanism depends on it directly. The default value of 30 seconds sets the `sp_server_diagnostics` interval at 10 seconds, with a minimum value for 15 seconds for timeout and a 5 second interval. More generally, the `sp_server_diagnostics` update interval is always 1/3 \* `HealthCheckTimeout`. When the resource DLL does not receive a new set of health data at an interval, it will continue to use the health data from the previous interval to determine the current AG and instance health. Increasing the health check timeout value will make the primary more tolerant of CPU pressure, which can prevent `sp_server_diagnostics` from providing new data at each interval, however, it will rely on outdated data health checks for longer. Regardless of the timeout value, once data is received indicating the replica is not healthy, the next `IsAlive` call will return that the instance is unhealthy and the cluster service will initiate a failover. 
 
 The failure condition level of the AG changes the failure conditions for the health check. For any failure level, if the AG element is reported unhealthy by `sp_server_diagnostics` then the health check will fail. Each level inherits all the failure conditions from the levels below it. 
 

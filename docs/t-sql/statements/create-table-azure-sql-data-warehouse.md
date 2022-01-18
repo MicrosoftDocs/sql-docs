@@ -1,16 +1,16 @@
 ---
+title: CREATE TABLE (Azure Synapse Analytics)
 description: "CREATE TABLE (Azure Synapse Analytics)"
-title: "CREATE TABLE (Azure Synapse Analytics) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2021"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: ""
 ms.topic: reference
 dev_langs: 
   - "TSQL"
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "03/30/2021"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # CREATE TABLE (Azure Synapse Analytics)
@@ -329,7 +329,8 @@ To change a rowstore table to a columnstore table, drop all existing indexes on 
 
 For more information, see these articles:
 - [Columnstore indexes versioned feature summary](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
-- [Indexing tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
+- [Indexing tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index)
+
 - [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
 <a name="LimitationsRestrictions"></a>  

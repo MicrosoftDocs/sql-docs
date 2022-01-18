@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;SPID (Transact-SQL)"
+description: "@@SPID (Transact-SQL)"
 title: "@@SPID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "session IDs [SQL Server]"
   - "process ID of current user process"
 ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &#x40;&#x40;SPID (Transact-SQL)

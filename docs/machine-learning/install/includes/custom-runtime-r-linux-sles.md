@@ -3,8 +3,10 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 03/16/2021
 ms.topic: include
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.custom:
+  - intro-installation
 ---
 ## Install Language Extensions
 

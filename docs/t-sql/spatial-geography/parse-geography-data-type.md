@@ -52,7 +52,7 @@ Parse ( 'geography_tagged_text' )
 ## Examples  
  The following example uses `Parse()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;   
 SET @g = geography::Parse('LINESTRING(-122.360 47.656, -122.343 47.656)');  
 SELECT @g.ToString();  

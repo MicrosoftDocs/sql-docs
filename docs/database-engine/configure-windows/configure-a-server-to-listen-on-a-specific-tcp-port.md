@@ -1,8 +1,8 @@
 ---
-title: "Configure a Server to Listen on a Specific TCP Port | Microsoft Docs"
+title: "Configure a Server to Listen on a Specific TCP Port"
 description: Learn how to use SQL Server Configuration Manager to configure the Database Engine to listen on a specific fixed port other than the default port, 1433.
-ms.custom: ""
-ms.date: "04/25/2017"
+ms.custom: FY21Q2Fresh
+ms.date: 11/17/2021
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -39,7 +39,7 @@ Because port 1433 is the known standard for [!INCLUDE[ssNoVersion](../../include
   
 #### To assign a TCP/IP port number to the SQL Server Database Engine  
   
-1.  In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**, expand **Protocols for \<instance name>**, and then double-click **TCP/IP**.  
+1.  In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**, select **Protocols for \<instance name>**, and then in the right pane double-click **TCP/IP**.  
   
     > [!NOTE]  
     >  If you are having trouble opening [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
@@ -50,7 +50,7 @@ Because port 1433 is the known standard for [!INCLUDE[ssNoVersion](../../include
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  In the **IP**_n_ **Properties** area box, in the **TCP Port** box, type the port number you want this IP address to listen on, and then click **OK**. Multiple ports may be specified by separating them with a comma.
+4.  In the **IP**_n_ **Properties** area box, in the **TCP Port** box, type the port number you want this IP address to listen on, and then click **OK**. Multiple ports may be specified by separating them with a comma. Select **OK**.
 
     > [!NOTE] 
     > If the **Listen All** setting on the **Protocol** tab is set to "Yes", then only **TCP Port** and **TCP Dynamic Port** values under the **IPAll** section will be used and individual **IP**_n_ sections will be ignored in their entirety. If the **Listen All** setting is set to "No", then the **TCP Port** and **TCP Dynamic Port** settings under the **IPAll** section will be ignored and the **TCP Port**, **TCP Dynamic Port**, and **Enabled** settings on the individual **IP**_n_ sections will be used instead.

@@ -2,12 +2,14 @@
 description: "sp_helppublication (Transact-SQL)"
 title: "sp_helppublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/18/2019
+ms.date: 10/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_helppublication_TSQL"
   - "sp_helppublication"
@@ -98,6 +100,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |p2p_continue_onconflict|**int**|Specifies whether The Distribution Agent continues to process changes when a conflict is detected. A value of **1** means that the agent continues to process changes.<br /><br /> **\*\* Caution \*\*** We recommend that you use the default value of **0**. When this option is set to **1**, the Distribution Agent tries to converge data in the topology by applying the conflicting row from the node that has the highest originator ID. This method does not guarantee convergence. You should make sure that the topology is consistent after a conflict is detected. For more information, see "Handling Conflicts" in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |allow_partition_switch|**int**|Specifies whether ALTER TABLE...SWITCH statements can be executed against the published database. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
 |replicate_partition_switch|**int**|Specifies whether ALTER TABLE...SWITCH statements that are executed against the published database should be replicated to Subscribers. This option is valid only if *allow_partition_switch* is set to **1**.|  
+|enabled_for_p2p_lastwriter_conflictdetection|**int**| Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 13, specifies whether the Distribution Agent detects [last writer](../../relational-databases/replication/transactional/peer-to-peer/configure-last-writer.md) conflicts for a publication that is enabled for peer-to-peer replication. A value of **1** means that last writer conflicts are detected. | 
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

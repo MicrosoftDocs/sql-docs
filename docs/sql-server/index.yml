@@ -2,7 +2,6 @@
 
 title: SQL Server technical documentation
 summary: Technical documentation to help you get started, administer, develop, and work with SQL Server and associated products. 
-
 metadata:
   title: SQL Server technical documentation 
   description: Choose the area of SQL Server you are interested in.
@@ -10,8 +9,8 @@ metadata:
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.date: 10/14/2019  
-
+  ms.date: 12/02/2021
+  ms.custom: FY21Q2Fresh
 
 landingContent:
 
@@ -19,7 +18,7 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
-      - text: Azure SQL Database single database
+      - text: Azure SQL Database
         url: /azure/sql-database/sql-database-single-database
       - text: Azure SQL Managed Instance
         url: /azure/sql-database/sql-database-managed-instance
@@ -38,9 +37,9 @@ landingContent:
       links:
       - text: Migration content
         url:  migrate/index.yml
-      - text: Data Migration Guide
+      - text: Data migration guide
         url:  https://datamigration.microsoft.com/
-      - text: Database Compatibility Certification
+      - text: Database compatibility certification
         url: ../database-engine/install-windows/compatibility-certification.md
       - text: Data Migration Assistant (DMA)
         url: ../dma/dma-overview.md
@@ -60,7 +59,7 @@ landingContent:
         url: ../azure-data-studio/what-is-azure-data-studio.md
       - text: SQL Server on Linux
         url: ../linux/sql-server-linux-overview.md
-      - text: SQL Server on Azure Arc-enabled servers  (preview)
+      - text: SQL Server on Azure Arc-enabled servers
         url: azure-arc/overview.md
     - linkListType: quickstart
       links:
@@ -127,7 +126,7 @@ landingContent:
         url: ../relational-databases/security/dynamic-data-masking.md
       - text: Transparent Data Encryption (TDE)
         url: ../relational-databases/security/encryption/transparent-data-encryption.md
-      - text: Row-level Security
+      - text: Row-level security
         url: ../relational-databases/security/row-level-security.md
 
   - title: Database Design 
@@ -166,13 +165,8 @@ landingContent:
         url: ../relational-databases/track-changes/track-data-changes-sql-server.md
       - text: Data compression
         url: ../relational-databases/data-compression/data-compression.md
-      - text: Extended Events
+      - text: Extended events
         url: ../relational-databases/extended-events/extended-events.md
-      - text: SQLdiag
-        url: ../tools/sqldiag-utility.md
-      - text: SQL Profiler
-        url: ../tools/sql-server-profiler/sql-server-profiler.md
-
 
   - title: Tune
     linkLists:
@@ -182,12 +176,12 @@ landingContent:
         url: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
       - text: Intelligent Query Processing
         url: ../relational-databases/performance/intelligent-query-processing.md
-      - text: Automatic Tuning
+      - text: Automatic tuning
         url: ../relational-databases/automatic-tuning/automatic-tuning.md
       - text: Database Tuning Advisor 
         url: ../relational-databases/performance/database-engine-tuning-advisor.md
       - text: In-memory OLTP
-        url: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+        url: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
     - linkListType: concept
       links:
       - text: Cardinality estimation
@@ -219,15 +213,12 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
-      - text: SQL Server Big Data Clusters
-        url: ../big-data-cluster/big-data-cluster-overview.md
       - text: Analytics Platform System 
         url: https://www.microsoft.com/sql/analytics-platform-system/
       - text: SQL Server Machine Learning (R & Python)
         url: ../machine-learning/index.yml
       - text: Data virtualization with Polybase
         url: ../relational-databases/polybase/polybase-guide.md
-
 
   - title: Business Intelligence 
     linkLists:

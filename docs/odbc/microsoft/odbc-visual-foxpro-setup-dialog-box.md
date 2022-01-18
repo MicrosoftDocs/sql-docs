@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], installing"
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ODBC Visual FoxPro Setup Dialog Box
 The **ODBC Visual FoxPro Setup** dialog box enables you to add or change a Visual FoxPro data source.  

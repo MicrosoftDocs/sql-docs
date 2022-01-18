@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "executing Transact-SQL statements together [SQL Server]"
   - "statements [SQL Server], grouping"
 ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BEGIN...END (Transact-SQL)

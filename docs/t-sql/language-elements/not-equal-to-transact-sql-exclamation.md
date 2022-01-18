@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "!= (not equal to)"
   - "not equal to operator (!=)"
 ms.assetid: f1054809-04f2-4995-9ebd-cb67098e6708
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Not Equal To (Transact SQL) - exclamation

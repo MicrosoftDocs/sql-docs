@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Using Always Encrypted with the JDBC driver
@@ -86,7 +86,7 @@ CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',
-    KEY_PATH = N'https://<MyKeyValutName>.vault.azure.net:443/keys/Always-Encrypted-Auto1/c61f01860f37302457fa512bb7e7f4e8'
+    KEY_PATH = N'https://<MyKeyVaultName>.vault.azure.net:443/keys/Always-Encrypted-Auto1/c61f01860f37302457fa512bb7e7f4e8'
 );
 
 CREATE COLUMN ENCRYPTION KEY [MyCEK]

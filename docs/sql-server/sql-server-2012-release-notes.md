@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Release Notes, SQL Server"
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2012 Release Notes
@@ -156,7 +156,7 @@ The following items describe the prerequisite installation behavior during SQL S
   
         **Use Deployment Image Servicing and Management (DISM.exe) to enable .NET Framework 3.5 SP1:**  
   
-        You can also enable .NET Framework 3.5 SP1 using Deployment Image Servicing and Management (DISM.exe). For more information about enabling windows features online, see [Enable or Disable Windows Features Online](/previous-versions/windows/it-pro/windows-7/dd744582(v=ws.10)). The following are the instructions to enable .NET Framework 3.5 SP1:  
+        You can also enable .NET Framework 3.5 SP1 using Deployment Image Servicing and Management (DISM.exe). For more information about enabling Windows features online, see [Enable or disable Windows features online](/previous-versions/windows/it-pro/windows-7/dd744582(v=ws.10)). The following are the instructions to enable .NET Framework 3.5 SP1:  
   
         1.  At the command prompt, type the following command to list all of the features available in the operating system.  
   

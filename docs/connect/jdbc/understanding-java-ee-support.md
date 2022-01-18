@@ -2,7 +2,7 @@
 description: Learn how the JDBC driver supports Java EE and the JBDC API and the packages Java applications need to use to take advantage of that functionality.
 title: Understanding Java EE support
 ms.custom: ""
-ms.date: 07/30/2021
+ms.date: 12/07/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Understanding Java EE support
 
@@ -40,7 +40,7 @@ For JDBC Driver 8.4, the driver is contained in **mssql-jdbc-8.4.1.jre8.jar**, *
 
 For JDBC Driver 9.2, the driver is contained in **mssql-jdbc-9.2.1.jre8.jar**, **mssql-jdbc-9.2.1.jre11.jar**, or **mssql-jdbc-9.2.1.jre15.jar**.
 
-For JDBC Driver 9.4, the driver is contained in **mssql-jdbc-9.4.0.jre8.jar**, **mssql-jdbc-9.4.0.jre11.jar**, or **mssql-jdbc-9.4.0.jre16.jar**.
+For JDBC Driver 9.4, the driver is contained in **mssql-jdbc-9.4.1.jre8.jar**, **mssql-jdbc-9.4.1.jre11.jar**, or **mssql-jdbc-9.4.1.jre16.jar**.
 
 The class name is used whenever you load the driver with the JDBC DriverManager class, and whenever you specify the class name of the driver in any driver configuration. For example, configuring a data source within a Java EE application server might require you enter the driver class name.
 

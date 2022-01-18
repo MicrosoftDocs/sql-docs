@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 03/31/2021
 ms.topic: troubleshooting
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
@@ -33,7 +33,7 @@ We also recommend that you review and slightly rewrite the script to correct any
 
 Additionally, you can use the sqlrutils package to bundle your R script in a format that is more easily consumed as a stored procedure. For more information, see:
 * [sqlrutils package](../r/ref-r-sqlrutils.md)
-* [Create a stored procedure by using sqlrutils](/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r)
+* [Create a stored procedure by using sqlrutils](../r/reference/sqlrutils/how-to-create-stored-procedure-from-r.md)
 
 ## Script returns inconsistent results
 

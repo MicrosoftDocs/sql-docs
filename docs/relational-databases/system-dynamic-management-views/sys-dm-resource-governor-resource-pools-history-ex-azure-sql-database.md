@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.resource_governor catalog view"
 ms.assetid: 
-author: joesackmsft
-ms.author: josack
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)

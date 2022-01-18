@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Backup Timeline"
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Backup Timeline
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

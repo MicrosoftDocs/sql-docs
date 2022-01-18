@@ -16,7 +16,7 @@
     href: installing-ssma-for-sybase-client-sybasetosql.md
   - name: Installing SSMA components on SQL Server
     href: installing-ssma-components-on-sql-server-sybasetosql.md
-  - name: Explore SSMA Interface
+  - name: Exploring SSMA Interface
     href: user-interface-reference-sybasetosql.md
   - name: Removing SSMA for Sybase Components
     href: removing-ssma-for-sybase-components-sybasetosql.md
@@ -44,8 +44,6 @@
     href: assessment-report-sybasetosql.md
   - name: Assessing Sybase ASE Database Objects for Conversion
     href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
-  - name: Edit Type Mapping
-    href: edit-type-mapping-sybasetosql.md
   - name: Mapping Sybase ASE & SQL Server Data Types
     href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
   - name: Mapping Sybase ASE Schemas to SQL Server Schemas
@@ -108,6 +106,8 @@
     href: generating-reports-sybasetosql.md
   - name: Troubleshooting
     href: troubleshooting-sybasetosql.md  
+  - name: Appendix - 1
+    href: appendix-1-sybasetosql.md
 - name: Reference
   items:
   - name: Project Settings
@@ -123,6 +123,8 @@
     - name: Azure SQL Database
       href: project-settings-azure-sql-db-sybasetosql.md
     - name: Migration
+    - name: Edit Type Mapping
+      href: edit-type-mapping-sybasetosql.md
       href: project-settings-migration-sybasetosql.md
     - name: Data Migration Settings
       href: data-migration-settings-sybasetosql.md
@@ -148,5 +150,3 @@
       href: global-settings-tester-sybasetosql.md
   - name: Conversion messages
     href: messages/toc.yml
-- name: Appendix - 1
-  href: appendix-1-sybasetosql.md

@@ -8,7 +8,7 @@
     href: new-gui-features-in-ssma-for-sybase-sybasetosql.md
 - name: Installing SSMA for Sybase
   items:
-  - name: Installing SSMA
+  - name: Install SSMA
     href: installing-ssma-for-sybase-sybasetosql.md
   - name: Getting Started with SSMA for Sybase
     href: getting-started-with-ssma-for-sybase-sybasetosql.md
@@ -16,64 +16,72 @@
     href: getting-started-with-ssma-for-sybase-console-sybasetosql.md
   - name: Installing SSMA for Sybase client
     href: installing-ssma-for-sybase-client-sybasetosql.md
+  - name: Removing SSMA for Sybase Components
+    href: removing-ssma-for-sybase-components-sybasetosql.md
   - name: Legal Notice
     href: legal-notice-ssma-for-sybase.md
-- name: New Project
-  href: new-project-sybasetosql.md
-- name: Initializing Test Cases
-  href: initializing-test-cases-sybasetosql.md
-- name: Working with the Sample Console Script Files
-  href: working-with-the-sample-console-script-files-sybasetosql.md
-- name: Migrating Sybase ASE Databases to Azure SQL Database
-  href: migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
-- name: Assessing Sybase ASE Database Objects for Conversion
-  href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
-- name: Executing the SSMA Console
-  href: executing-the-ssma-console-sybasetosql.md
-- name: Creating Script Files
-  href: creating-script-files-sybasetosql.md
+    
+- name: Migrate Sybase Databases
+  items: 
+  - name: New Project
+    href: new-project-sybasetosql.md
+  - name: Connecting to Sybase ASE
+    href: connecting-to-sybase-ase-sybasetosql.md
+  - name: Connecting to SQL Server
+    href: connecting-to-sql-server-sybasetosql.md
+  - name: Connecting to Azure SQL Database
+    href: connecting-to-azure-sql-db-sybasetosql.md
+  - name: Assessing Sybase ASE Database Objects for Conversion
+    href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
+  - name: Migrating Sybase ASE Databases to Azure SQL Database
+    href: migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
+  - name: Save Metadata
+    href: save-metadata-sybasetosql.md
+  - name: Assessment Report
+    href: assessment-report-sybasetosql.md
+  - name: Data Migration Report
+    href: data-migration-report-sybasetosql.md
+- name: Validate Migrated Objects
+  items:
+  - name: Initializing Test Cases
+    href: initializing-test-cases-sybasetosql.md
+  - name: Creating Test Cases
+    href: creating-test-cases-sybasetosql.md
+  - name: Selecting & Configuring Objects to Test
+    href: selecting-and-configuring-objects-to-test-sybasetosql.md
+  - name: Finishing Test Case Preparation
+    href: finishing-test-case-preparation-sybasetosql.md
+  - name: Using Test Repositories
+    href: using-test-repositories-sybasetosql.md
+  - name: Viewing Test Case Reports
+    href: viewing-test-case-reports-sybasetosql.md
+
+- name: Working with SSMA Console for Sybase
+  items:
+  - name: Working with SSMA for Sybase Console
+    href: working-with-ssma-for-sybase-console-sybasetosql.md
+  - name: Creating Script Files
+    href: creating-script-files-sybasetosql.md
+  - name: Executing the SSMA Console
+    href: executing-the-ssma-console-sybasetosql.md
+  - name: Managing Passwords
+    href: managing-passwords-sybasetosql.md
+  - name: Working with the Sample Console Script Files
+    href: working-with-the-sample-console-script-files-sybasetosql.md
+
 - name: Global Settings
   href: global-settings-dialogs-sybasetosql.md
-- name: Connecting to SQL Server
-  href: connecting-to-sql-server-sybasetosql.md
+- name: Setting Project Options
+  href: setting-project-options-sybasetosql.md
 - name: Advanced Object Selection
   href: advanced-object-selection-sybasetosql.md
 - name: Project Settings (GUI)
   href: project-settings-gui-sybasetosql.md
-- name: Viewing Test Case Reports
-  href: viewing-test-case-reports-sybasetosql.md
-- name: Working with SSMA for Sybase Console
-  href: working-with-ssma-for-sybase-console-sybasetosql.md
-- name: Using Test Repositories
-  href: using-test-repositories-sybasetosql.md
-- name: Data Migration Report
-  href: data-migration-report-sybasetosql.md
-- name: Creating Test Cases
-  href: creating-test-cases-sybasetosql.md
-- name: Save Metadata
-  href: save-metadata-sybasetosql.md
-- name: Assessment Report
-  href: assessment-report-sybasetosql.md
-- name: Removing SSMA for Sybase Components
-  href: removing-ssma-for-sybase-components-sybasetosql.md
-- name: Connecting to Sybase ASE
-  href: connecting-to-sybase-ase-sybasetosql.md
 - name: Selecting & Configuring Affected Objects
   href: selecting-and-configuring-affected-objects-sybasetosql.md
-- name: Connecting to Azure SQL Database
-  href: connecting-to-azure-sql-db-sybasetosql.md
-- name: Managing Passwords
-  href: managing-passwords-sybasetosql.md
-- name: Setting Project Options
-  href: setting-project-options-sybasetosql.md
-- name: Connect to Azure SQL Database
-  href: connect-to-azure-sql-db-sybasetosql.md
 - name: Data Migration Settings
   href: data-migration-settings-sybasetosql.md
-- name: Finishing Test Case Preparation
-  href: finishing-test-case-preparation-sybasetosql.md
-- name: Selecting & Configuring Objects to Test
-  href: selecting-and-configuring-objects-to-test-sybasetosql.md
+
 - name: Troubleshooting
   href: troubleshooting-sybasetosql.md
 - name: Mapping Sybase ASE & SQL Server Data Types

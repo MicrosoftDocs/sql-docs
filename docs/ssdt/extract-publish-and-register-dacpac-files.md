@@ -8,9 +8,7 @@ f1_keywords:
   - "sql.data.tools.DacTableChooser"
   - "sql.data.tools.DacPublishDialog"
   - "sql.data.tools.DacPropertiesDialog"
-  - "sql.data.tools.publishdacproject"
   - "sql.data.tools.DacExtractDialog"
-ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”

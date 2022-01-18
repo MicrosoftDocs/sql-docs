@@ -8,8 +8,6 @@ ms.technology: tools-other
 ms.topic: conceptual
 f1_keywords:
   - sql13.swb.registerserver.general.analysisservices.f1
-  - SQL13.SWB.REGISTERSERVER.GENERAL.ANALYSISSERVICES.F1
-ms.assetid: 88e0f096-d746-4b7d-a5a4-73c5dc139f30
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019

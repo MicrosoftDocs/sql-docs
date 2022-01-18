@@ -6,8 +6,6 @@ ms.technology: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.SQLEDITOR"
-  - "sql.data.tools.sqleditor"
-ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”

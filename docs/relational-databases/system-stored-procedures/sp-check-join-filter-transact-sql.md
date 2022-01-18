@@ -50,7 +50,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Is if the publication qualifies for precomputed partitions; where **1** means that precomupted partitions can be used, and **0** means that they cannot be used.|  
+|**can_use_partition_groups**|**bit**|Is if the publication qualifies for precomputed partitions; where **1** means that precomputed partitions can be used, and **0** means that they cannot be used.|  
 |**has_dynamic_filters**|**bit**|Is if the supplied filter clause includes at least one parameterized filtering function; where **1** means that a parameterized filtering function is used, and **0** means that such a function is not used.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|List of the functions in the filter clause that define a parameterized filter for an article, where each function is separated by a semi-colon.|  
 |**uses_host_name**|**bit**|If the [HOST_NAME()](../../t-sql/functions/host-name-transact-sql.md) function is used in the filter clause, where **1** means that this function is present.|  

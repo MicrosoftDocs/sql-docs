@@ -22,8 +22,8 @@ The v8.24 release of SSMA for Oracle contains the following changes:
 
 * Add support for LISTAGG function
 * Add support for Oracle compound triggers
-* Improved "Save As" option for Statements to use display name as default file name
-* Improved support for JOIN clause and PIPELINED functions
+* Improve detection logic for JOIN clause and PIPELINED functions
+* Improve naming for "Save As" statements
 
 ## SSMA v8.23
 

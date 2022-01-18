@@ -30,7 +30,7 @@ ms.author: maggies
  For a page number, you may want to add the word "Page" before the number. You may also want to show the total number of pages.  
   
 > [!NOTE]  
-> - Calculating the total number of pages may slow performance when you run or preview your report. We don't fully paginated the report unless you go to the end, as the tooltip states. The question mark (**?**) is by design, but you can force full pagination. One way to force it is to add a hidden text box in the footer or header with the expression "=Globals!OverallTotalPages". The report has to generate every page to answer that expression. 
+> - Calculating the total number of pages may slow performance when you run or preview your report. We don't fully paginate the report unless you go to the end, as the tooltip states. The question mark (**?**) is by design, but you can force full pagination. One way to force it is to add a hidden text box in the footer or header with the expression "=Globals!OverallTotalPages". The report has to generate every page to answer that expression. 
 > 
 > - [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   

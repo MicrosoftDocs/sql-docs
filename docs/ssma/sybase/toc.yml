@@ -16,8 +16,8 @@
     href: installing-ssma-for-sybase-client-sybasetosql.md
   - name: Installing SSMA components on SQL Server
     href: installing-ssma-components-on-sql-server-sybasetosql.md
-  - name: User Interface Reference
-  href: user-interface-reference-sybasetosql.md
+  - name: Explore SSMA Interface
+    href: user-interface-reference-sybasetosql.md
   - name: Removing SSMA for Sybase Components
     href: removing-ssma-for-sybase-components-sybasetosql.md
   - name: Legal Notice
@@ -108,44 +108,46 @@
     href: generating-reports-sybasetosql.md
   - name: Troubleshooting
     href: troubleshooting-sybasetosql.md  
-- name: Project Settings
+- name: Reference
   items:
-  - name: Conversion
-    href: project-settings-conversion-sybasetosql.md
-  - name: Setting Project Options
-    href: setting-project-options-sybasetosql.md
-  - name: Type-Mapping
-    href: project-settings-type-mapping-sybasetosql.md
-  - name: Synchronization
-    href: project-settings-synchronization-sybasetosql.md
-  - name: Azure SQL Database
-    href: project-settings-azure-sql-db-sybasetosql.md
-  - name: (Migration
-    href: project-settings-migration-sybasetosql.md
-  - name: Data Migration Settings
-    href: data-migration-settings-sybasetosql.md
-  - name: Project Settings (GUI)
-    href: project-settings-gui-sybasetosql.md
-  - name: Advanced Object Selection
-    href: advanced-object-selection-sybasetosql.md
-  - name: Shortcut Keys
-    href: shortcut-keys-sybase-to-sql.md
-  - name: Menu commands & other shortcut keys
-    href: menu-commands-and-other-shortcut-keys-sybase-to-sql.md
-- name: Global settings
-  items:
-  - name: Global Settings
-  href: global-settings-dialogs-sybasetosql.md
-  - name: Global Settings Output
-  href: global-settings-output-window-sybasetosql.md
-  items:
-  - name: Editor
-    href: global-settings-editor-sybasetosql.md
-  - name: Logging
-    href: global-settings-logging-sybasetosql.md
-  - name: Tester
-    href: global-settings-tester-sybasetosql.md
-- name: Conversion messages
-  href: messages/toc.yml
+  - name: Project Settings
+    items:
+    - name: Conversion
+      href: project-settings-conversion-sybasetosql.md
+    - name: Setting Project Options
+      href: setting-project-options-sybasetosql.md
+    - name: Type-Mapping
+      href: project-settings-type-mapping-sybasetosql.md
+    - name: Synchronization
+      href: project-settings-synchronization-sybasetosql.md
+    - name: Azure SQL Database
+      href: project-settings-azure-sql-db-sybasetosql.md
+    - name: Migration
+      href: project-settings-migration-sybasetosql.md
+    - name: Data Migration Settings
+      href: data-migration-settings-sybasetosql.md
+    - name: Project Settings (GUI)
+      href: project-settings-gui-sybasetosql.md
+    - name: Advanced Object Selection
+      href: advanced-object-selection-sybasetosql.md
+    - name: Shortcut Keys
+      href: shortcut-keys-sybase-to-sql.md
+    - name: Menu commands & other shortcut keys
+      href: menu-commands-and-other-shortcut-keys-sybase-to-sql.md
+  - name: Global settings
+    items:
+    - name: Global Settings
+    href: global-settings-dialogs-sybasetosql.md
+    - name: Global Settings Output
+    href: global-settings-output-window-sybasetosql.md
+    items:
+    - name: Editor
+      href: global-settings-editor-sybasetosql.md
+    - name: Logging
+      href: global-settings-logging-sybasetosql.md
+    - name: Tester
+      href: global-settings-tester-sybasetosql.md
+  - name: Conversion messages
+    href: messages/toc.yml
 - name: Appendix - 1
   href: appendix-1-sybasetosql.md

@@ -68,11 +68,11 @@ These options identify the location of the backup sets for the database and whic
   
  After you restore an earlier version database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database internal version is automatically upgraded. Typically, the database becomes available immediately. However, if a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending upon the amount of data being indexed, importing can take several hours, and rebuilding can take up to 10 times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt.  
   
-## Restoring from an encrypted backup  
+## Restore from an encrypted backup  
 
  Restore requires that the certificate or asymmetric key that was originally used to create the backup is available on the instance you're restoring to. The account performing the restore should have the **VIEW DEFINITION** permission on the certificate or asymmetric key. Don't renew or update certificates used to encrypt backups.  
   
-## Restoring from Microsoft Azure Storage  
+## Restore from Microsoft Azure Storage  
 
 Select **URL** from the **Backup media type:** drop-down list from the **Select backup devices** dialog box.  Next, select **Add** to open the **Select a Backup File Location**. Select an existing SQL Server credential and Azure storage container. Add a new Azure storage container with a shared access signature, or generate a shared access signature and SQL Server credential for an existing storage container. Once connected to the storage account, the backup files are displayed in the **Locate Backup File in Microsoft Azure** dialog where you can select the file to use for the restore.  Find more information in [Connect to A Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
   

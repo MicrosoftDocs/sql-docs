@@ -61,10 +61,10 @@ The following table lists all the valid _datepart_ values. **DATEDIFF** accepts 
 
 |*datepart* name|*datepart* abbreviation|  
 |-----------|------------|
-|**year**|**yy, yyyy**|  
+|**year**|**y, yy, yyyy**|  
 |**quarter**|**qq, q**|  
 |**month**|**mm, m**|  
-|**dayofyear**|**dy, y**|  
+|**dayofyear**|**dy**|  
 |**day**|**dd, d**|  
 |**week**|**wk, ww**|  
 |**hour**|**hh**|  

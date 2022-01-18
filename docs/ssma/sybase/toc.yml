@@ -137,9 +137,9 @@
   - name: Global settings
     items:
     - name: Global Settings
-    href: global-settings-dialogs-sybasetosql.md
+      href: global-settings-dialogs-sybasetosql.md
     - name: Global Settings Output
-    href: global-settings-output-window-sybasetosql.md
+      href: global-settings-output-window-sybasetosql.md
     items:
     - name: Editor
       href: global-settings-editor-sybasetosql.md

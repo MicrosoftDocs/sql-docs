@@ -52,5 +52,5 @@ ms.reviewer: mikeray
 
 ## See Also  
 
- [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
  [OLE DB how-to topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

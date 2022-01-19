@@ -1,12 +1,10 @@
 ---
 title: "Sample Reporting Services rs.exe Script to Copy Content between Report Servers | Microsoft Docs"
 description: Learn how to copy content items and settings from one SQL Server Reporting Services report server to another by using the RS.exe utility to run a Reporting Services RSS script.
-ms.date: 05/23/2019
+ms.date: 01/18/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: tools
-
-
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
@@ -16,9 +14,12 @@ ms.author: maggies
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2008r2-and-later](../../includes/ssrs-appliesto-2008r2-and-later.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
-This article includes and describes a sample [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS script that copies content items and settings from one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe is installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], both native and SharePoint mode. The script copies [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] items, for example reports and subscriptions, from server to another server. The script supports both SharePoint mode and Native mode report servers.  
+This article includes and describes a sample [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS script that copies content items and settings from one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe is installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], both native and SharePoint mode. The script copies [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] items, for example reports and subscriptions, from server to another server. The script supports both SharePoint mode and Native mode report servers.
 
-##  <a name="bkmk_download_script"></a> To Download the ssrs_migration.rss Script  
+> [!NOTE]  
+>The open-source [ReportingServicesTools PowerShell module](https://www.powershellgallery.com/packages/ReportingServicesTools/0.0.6.7) is also available.
+
+##  <a name="bkmk_download_script"></a> Download the ssrs_migration.rss Script  
  Download the script from the GitHub site [Reporting Services RS.exe migration script](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/reporting-services/ssrs-migration-rss) to a local folder. For more information, see the section [How to use the script](#bkmk_how_to_use_the_script) in this article.  
   
 ##  <a name="bkmk_supported_scenarios"></a> Supported Scenarios  

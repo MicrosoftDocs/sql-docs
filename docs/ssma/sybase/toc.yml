@@ -122,9 +122,9 @@
       href: project-settings-synchronization-sybasetosql.md
     - name: Azure SQL Database
       href: project-settings-azure-sql-db-sybasetosql.md
-    - name: Migration
     - name: Edit Type Mapping
       href: edit-type-mapping-sybasetosql.md
+    - name: Migration
       href: project-settings-migration-sybasetosql.md
     - name: Data Migration Settings
       href: data-migration-settings-sybasetosql.md

@@ -21,7 +21,7 @@ This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each
 The v8.24 release of SSMA for DB2 contains the following changes:
 
 * Add support for ORDER BY clause in subquery
-* Add support for ROW_NUMBER function</li>
+* Add support for ROW_NUMBER function
 * Improve conversion for UNION/UNION ALL statements
 * Improve naming for "Save As" statements
 

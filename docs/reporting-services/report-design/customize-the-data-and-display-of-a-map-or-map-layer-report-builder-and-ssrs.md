@@ -12,7 +12,6 @@ f1_keywords:
   - "10521"
   - "sql13.rtp.rptdesigner.mapgroupproperties.filter.f1"
   - "10515"
-  - "10512"
   - "10520"
   - "sql13.rtp.rptdesigner.shared.font.f1"
   - "10523"

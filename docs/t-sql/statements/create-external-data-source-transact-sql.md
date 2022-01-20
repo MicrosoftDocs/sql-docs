@@ -892,12 +892,30 @@ WITH (
 ) ;
 ```
 
+### G. Create external data source to reference a readable secondary replica of Always On Availability Group
+**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later
+
+To create an external data source that references a readable secondary replica of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use `CONNECTION_OPTIONS` to specify the `ApplicationIntent=ReadOnly`. 
+
+Database key word is optional. If Database is not specified, the default database defined for the `CREDENTIAL` account is used. The defined database in the `CONNECTION_OPTIONS` overrides the default database defined for the `CREDENTIAL` account.  
+
+In example below, `WINSQL2019AGL` is the Always On Availability Group listener name. 
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH (
+  LOCATION = 'sqlserver://WINSQL2019AGL' ,
+  CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly,Database=dbname' ,
+  CREDENTIAL = SQLServerCredentials
+) ;
+```
+
 ## Examples: Bulk Operations
 
 > [!IMPORTANT]
 > Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 
-### G. Create an external data source for bulk operations retrieving data from Azure Storage
+### H. Create an external data source for bulk operations retrieving data from Azure Storage
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later. 
 
 Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
@@ -920,7 +938,7 @@ WITH
 To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
 
-### H. Create external data source to access data in Azure Storage using the abfs:// interface
+### I. Create external data source to access data in Azure Storage using the abfs:// interface
 **Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU11 and later 
 
 In this example, the external data source is an Azure Data Lake Storage Gen2 account `logs`, using [the Azure Blob Filesystem driver (ABFS)](/azure/storage/blobs/data-lake-storage-abfs-driver). The storage container is called `daily`. The Azure Data Lake Storage Gen2 external data source is for data transfer only, as predicate push-down is not supported. 

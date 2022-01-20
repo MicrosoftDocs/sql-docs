@@ -1,7 +1,7 @@
 ---
-title: Big data options on the Microsoft SQL Server Platform
+title: Big data options on the Microsoft SQL Server platform
 titleSuffix: SQL Server
-description: This article discusses migration strategies for Microsoft SQL Server 2019 Big Clusters
+description: This article discusses migration strategies for SQL Server 2019 Big Clusters
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
@@ -17,15 +17,15 @@ ms.technology: big-data-cluster
 
 Microsoft SQL Server 2019 Big Clusters is an add-on for the SQL Server Platform that allows you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data using Transact-SQL or Spark libraries, allowing you to easily combine and analyze your high-value relational data with non-relational high-volume big data. Big data clusters also allow you to virtualize data with PolyBase, so that you can query data from external SQL Server, Oracle, Teradata, MongoDB, and other data sources using external tables. The Microsoft SQL Server 2019 Big Clusters add-on provides high availability for the SQL Server master instance and all databases by using Always On availability group technology.
 
-The Microsoft SQL Server 2019 Big Data Clusters add-on runs on-premises and in the cloud using the Kubernetes platform, for any standard deployment of Kubernetes. Additionally, the Microsoft SQL Server 2019 Big Data Clusters add-on integrates with Active Directory and includes role-based access control to satisfy security and compliance needs of your enterprise.
+The [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] add-on runs on-premises and in the cloud using the Kubernetes platform, for any standard deployment of Kubernetes. Additionally, the [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] add-on integrates with Active Directory and includes role-based access control to satisfy security and compliance needs of your enterprise.
 
-## Retirement of the SQL Server 2019 Big Data Clusters add-on
+## Retirement of the [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] add-on
 
-On January 31, 2025, we will be retiring SQL Server 2019 Big Data Clusters. All existing users of SQL Server 2019 with Software Assurance will be fully supported on the platform and the software will continue to be maintained through SQL Server cumulative updates until that time. **For more information, see [the announcement blog post](https://aka.ms/sqlserver_bigdataclusters).**
+On January 31, 2025, we will be retiring [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)]. All existing users of SQL Server 2019 with Software Assurance will be fully supported on the platform and the software will continue to be maintained through SQL Server cumulative updates until that time. **For more information, see [the announcement blog post](https://aka.ms/sqlserver_bigdataclusters).**
 
-## Understanding the SQL Server 2019 Big Data Clusters architecture for replacement and migration options
+## Understanding the Big Data Clusters architecture for replacement and migration options
 
-To create your replacement solution for a Big Data storage and processing system, it's important to understand what SQL Server 2019 Big Data Clusters provides, and its architecture can help inform your choices. The architecture of a big data cluster is as follows:
+To create your replacement solution for a Big Data storage and processing system, it's important to understand what [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] provides, and its architecture can help inform your choices. The architecture of a big data cluster is as follows:
 
 :::image type="content" source="media/big-data-options/architecture-diagram-overview.png" alt-text="Big data clusters architecture overview" lightbox="media/big-data-options/architecture-diagram-overview.png":::
 
@@ -41,7 +41,7 @@ This architecture provides the following functionality mapping:
 | App Pool | Enables the deployment of applications on a big data cluster by providing interfaces to create, manage, and run applications.|
 |||
 
-For more information on these functions, see [SQL Server 2019 Big Data Clusters Overview](big-data-cluster-overview.md).
+For more information on these functions, see [Introducing [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
 
 ## Functionality replacement options for Big Data and SQL Server
 
@@ -75,7 +75,7 @@ You can replace the functionality of SQL Server Big Data Clusters by using one o
 
 Microsoft Azure Synapse is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems, using distributed processing and data constructs. Azure Synapse brings together SQL technologies used in enterprise data warehousing, Spark technologies used for big data, Pipelines for data integration and ETL/ELT, and deep integration with other Azure services such as Power BI, Cosmos DB, and Azure Machine Learning. 
 
-Use Microsoft Azure Synapse as a replacement for SQL Server 2019 Big Data Clusters when you need to:
+Use Microsoft Azure Synapse as a replacement for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need to:
 
 -   Leverage both serverless and dedicated resource models. For predictable performance and cost, create dedicated SQL pools to reserve processing power for data stored in SQL tables.
 -   Process unplanned or "burst" workloads, access an always-available, serverless SQL endpoint.
@@ -107,7 +107,7 @@ You can replace the functionality of SQL Server Big Data Clusters by using one o
 
 Azure Machine Learning is a cloud-based service that can be used for any kind of machine learning, from classical ML to deep learning, supervised, and unsupervised learning. Whether you prefer to write Python or R code with the SDK or work with no-code/low-code options in the studio, you can build, train, and track machine learning and deep-learning models in an Azure Machine Learning Workspace. With Azure Machine Learning, you can start training on your local machine and then scale out to the cloud. The service also interoperates with popular deep learning and reinforcement open-source tools such as PyTorch, TensorFlow, scikit-learn, and Ray RLlib.
 
-Use Microsoft Azure Machine Learning as a replacement for SQL Server 2019 Big Data Clusters when you need:
+Use Microsoft Azure Machine Learning as a replacement for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need:
 
 -   A designer-based web environment for Machine Learning: drag-n-drop modules to build your experiments and then deploy pipelines in a    low-code environment.
 -   Jupyter notebooks: use our example notebooks or create your own notebooks to leverage our SDK for Python samples for your machine    learning.
@@ -135,7 +135,7 @@ Azure Databricks SQL Analytics provides an easy-to-use platform for analysts who
 
 Azure Databricks Workspace provides an interactive workspace that enables collaboration between data engineers, data scientists, and machine learning engineers. For a big data pipeline, the data (raw or structured) is ingested into Azure through Azure Data Factory in batches, or streamed near real-time using Apache Kafka, Event Hub, or IoT Hub. This data lands in a data lake for long term persisted storage, in Azure Blob Storage or Azure Data Lake Storage. As part of your analytics workflow, use Azure Databricks to read data from multiple data sources and turn it into breakthrough insights using Spark.
 
-Use Microsoft Azure Databricks as a replacement for SQL Server 2019 Big Data Clusters when you need:
+Use Microsoft Azure Databricks as a replacement for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need:
 
 -   Fully managed Spark clusters with Spark SQL and DataFrames.
 -   Streaming for real-time data processing and analysis for analytical and interactive applications, Integrating with HDFS, Flume, and Kafka.
@@ -188,7 +188,7 @@ The Microsoft Apache Spark connector for SQL Server and Azure SQL also has that 
 
 You can also use the Kubernetes container orchestration system for your deployment. This allows a declarative-architecture that can run on-premises or in any Cloud that supports Kubernetes or the Red Hat OpenShift platform. To learn more about deploying SQL Server into a Kubernetes environment, see [Deploy a SQL Server container in Kubernetes with Azure Kubernetes Services (AKS)](../linux/tutorial-sql-server-containers-kubernetes.md) or watch [Deploying SQL Server 2019 in Kubernetes](/shows/data-exposed/deploying-sql-server-2019-in-kubernetes).
 
-Use SQL Server and Hadoop/Spark on-premises as a replacement for SQL Server 2019 Big Data Clusters when you need to:
+Use SQL Server and Hadoop/Spark on-premises as a replacement for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need to:
 
 -   Retain the entire solution on-premises
 -   Use dedicated hardware for all parts of the solution
@@ -237,7 +237,7 @@ There are two common approaches for data movement in a large-scale analytic syst
 
 In some cases, all data needs to move from the legacy system to the new system. In this case, you can mount the original file stores from SQL Server Big Data Clusters if the new system supports it and then copy the data piecewise to the new system, or you can create a physical move.
 
-Migrating your current data from SQL Server 2019 Big Data Clusters to another system is highly dependent on two factors: the location of your current data, and the destination being on-premises or to-cloud.
+Migrating your current data from [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] to another system is highly dependent on two factors: the location of your current data, and the destination being on-premises or to-cloud.
 
 #### On-Premises Data Migration
 

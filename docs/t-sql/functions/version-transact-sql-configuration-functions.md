@@ -31,11 +31,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 > [!NOTE]  
-> We are aware of an issue where the product version reported by @@VERSION is incorrect for **Azure SQL Database**.
+> We are aware of an issue where the product version reported by @@VERSION is incorrect for **Azure SQL Database**, **Azure SQL Managed Instance** and **Azure Synapse Analytics**.
 > 
-> The version of the SQL Server database engine run by Azure SQL Database is always ahead of the on-premises version of SQL Server, and includes the latest security fixes. This means that the patch level is always on par with or ahead of the on-premises version of SQL Server, and that the latest features available in SQL Server are available in Azure SQL Database.
+> The version of the SQL Server database engine run by Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics is always ahead of the on-premises version of SQL Server, and includes the latest security fixes. This means that the patch level is always on par with or ahead of the on-premises version of SQL Server, and that the latest features available in SQL Server are available in these services.
 >
-> To programmatically determine the engine edition, use SELECT SERVERPROPERTY('EngineEdition'). This query will return '5' for Azure SQL Database and '8' for Azure SQL Managed Instance.
+> To programmatically determine the engine edition, use SELECT SERVERPROPERTY('EngineEdition'). This query will return '5' for Azure SQL Database, '8' for Azure SQL Managed Instance and '6' for Azure Synapse Analytics.
 >
 > We will update the documentation once this issue is resolved.
 ## Syntax  
@@ -66,7 +66,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Operating system version  
   
- For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the following information is returned.  
+ For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsmifull-md.md)], the following information is returned.  
   
 -   Edition- "Microsoft SQL Azure"  
   

@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/22/2021
+ms.date: 01/20/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.custom:
@@ -43,7 +43,7 @@ SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterpris
 
 | Platform | Supported version(s) | Get |
 |-----|-----|----- |
-| **Red Hat Enterprise Linux** | 7.7 - 7.9, 8.0 - 8.3  | [Get RHEL](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
+| **Red Hat Enterprise Linux** | 7.7 - 7.9, 8.0 - 8.5  | [Get RHEL](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
 | **SUSE Linux Enterprise Server** | v12 SP3 - SP5 | [Get SLES v12](https://www.suse.com/products/server) |
 | **Ubuntu** | 16.04, 18.04 | [Get Ubuntu 18.04](https://releases.ubuntu.com/bionic/) |
 | **Docker Engine** | 1.8+ | [Get Docker](https://www.docker.com/get-started) |

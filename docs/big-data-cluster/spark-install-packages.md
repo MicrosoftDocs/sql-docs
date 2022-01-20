@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article provides guidance on how to import and install packages for a Spark session through session and notebook configurations.
 
 ## Built-in tools

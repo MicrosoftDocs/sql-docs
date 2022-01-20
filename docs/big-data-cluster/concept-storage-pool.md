@@ -17,6 +17,8 @@ ms.technology: big-data-cluster
 
 This article describes the role of the *SQL Server storage pool* in a SQL Server big data cluster. The following sections describe the architecture and functionality of a storage pool.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Storage pool architecture
 
 The storage pool is the local HDFS (Hadoop) cluster in a SQL Server big data cluster. It provides persistent storage for unstructured and semi-structured data. Data files, such as Parquet or delimited text, can be stored in the storage pool. To persist storage each pod in the pool has a persistent volume attached to it. The storage pool files are accessible via [PolyBase](../relational-databases/polybase/polybase-guide.md) through SQL Server or directly using an Apache Knox Gateway.

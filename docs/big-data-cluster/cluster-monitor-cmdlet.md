@@ -14,6 +14,8 @@ ms.technology: big-data-cluster
 
 # Monitor Big Data Clusters by using azdata and kubectl
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Use azdata
 
 You can also use [azdata](../azdata/install/deploy-install-azdata.md) commands to view both endpoints and the cluster status.

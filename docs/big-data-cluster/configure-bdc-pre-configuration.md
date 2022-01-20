@@ -15,13 +15,15 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
+In SQL Server 2019 Big Data Clusters releases CU8 and earlier, you can configure big data cluster settings at deployment time through the deployment `bdc.json` file. The SQL Server master instance can be configured post-deployment only using mssql-conf.
+
 > [!NOTE]
-> Prior to the CU9 release and support for configuration-enabled clusters, Big Data Clusters could be configured at deployment time only, with exception to the SQL Server master instance - which could be configured post-deployment only using mssql-conf. Instructions to configure a CU9 and later release of BDC can be found [here](configure-bdc-overview.md).
-
-
-In BDC releases CU8 and earlier, you can configure BDC settings at deployment time through the deployment `bdc.json` file. The SQL Server master instance can be configured post-deployment only using mssql-conf.
+> Prior to the CU9 release and support for configuration-enabled clusters, Big Data Clusters could be configured at deployment time only, with exception to the SQL Server master instance - which could be configured post-deployment only using mssql-conf. For instructions to configure a CU9 and later release, see [Configure a SQL Server Big Data Cluster](configure-bdc-overview.md).
 
 ## Configuration Scopes
+
 Big Data Clusters configuration pre-CU9 has two scoping levels: `service`, and `resource`. The hierarchy of the settings follows in this order as well, from highest to lowest. BDC components will take the value of the setting defined at the lowest scope. If the setting is not defined at a given scope, it will inherit the value from its higher parent scope.
 
 For example, you may want to define the default number of cores the Spark driver will use in the storage pool and `Sparkhead` resources. You can do this in two ways:

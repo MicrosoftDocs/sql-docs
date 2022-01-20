@@ -15,6 +15,9 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+> [!IMPORTANT]
+> The Microsoft SQL Server 2019 Big Data Clusters add-on has been retired. Support for SQL Server 2019 Big Data Clusters will end on January 14, 2025. All existing users of SQL Server 2019 with Software Assurance will be fully supported on the platform and the software will continue to be maintained through SQL Server cumulative updates until that time. For more information, see [the announcement blog post](https://aka.ms/sqlserver_bigdataclusters) and [Big data options on the Microsoft SQL Server platform](../big-data-cluster/big-data-options.md). 
+
 The following release notes apply to [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]. This article is broken into sections for each release describing the CU changes. The article also lists [known issues](#known-issues) for the most recent releases of [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)].
 
 ## Tested configurations

@@ -17,6 +17,8 @@ ms.custom:
 
 This article describes how to deploy SQL Server Big Data Cluster in Active Directory mode. The steps in this article require access to an Active Directory domain. Before you proceed, you need to complete the requirements explained in [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-prerequisites.md).
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Prepare deployment
 
 For deployment of a big data cluster with AD integration, there is some additional information that needs to be provided for creating the big data clusters-related objects in AD.

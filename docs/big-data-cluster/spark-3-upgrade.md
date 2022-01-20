@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article contains important information and guidance for migrating Apache Spark 2.4 workloads to Spark version 3.1. This is required in order to upgrade from [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU12 to CU13, and above.
 
 ## Introduction of Apache Spark 3 on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]

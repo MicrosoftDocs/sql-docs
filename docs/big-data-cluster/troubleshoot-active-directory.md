@@ -17,6 +17,8 @@ ms.technology: big-data-cluster
 
 This article explains how to troubleshoot deployment of a SQL Server Big Data Cluster in Active Directory mode.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Symptom
 
 You started deploying SQL Server Big Data Clusters with AD mode however the deployment is stuck and not moving forward.

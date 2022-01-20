@@ -19,6 +19,8 @@ ms.custom:
 
 This article describes how to deploy applications to a SQL Server big data cluster using Microsoft Visual Studio Code with the App Deployment extension.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Prerequisites
 
 - [Visual Studio Code](https://code.visualstudio.com/)

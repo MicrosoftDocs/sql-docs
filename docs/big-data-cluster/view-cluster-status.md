@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article explains how to view the status of a big data cluster by using Azure Data Studio, notebooks, and Azure Data CLI (azdata) commands.
 
 ## Know your architecture

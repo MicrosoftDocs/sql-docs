@@ -15,10 +15,12 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-> [!NOTE]
-> Post-deployment settings configuration is only available in [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU9 and later deployments. Settings configuration does not include scale, storage, or endpoint configuration. Options and instructions to configure [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] prior to CU9 can be found [here](configure-bdc-pre-configuration.md).
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Cluster, service, and resource scoped settings for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be configured post-deployment through the `azdata` CLI. This functionality allows [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] administrators to adjust configurations to always meet workload requirements. This article goes over example scenarios on how to configure timezone and Spark workload requirements. The post-deployment configuration functionality follows a set, diff, apply flow.
+
+> [!NOTE]
+> Post-deployment settings configuration is only available in [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU9 and later deployments. Settings configuration does not include scale, storage, or endpoint configuration. Options and instructions to configure [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] prior to CU9 can be found [here](configure-bdc-pre-configuration.md).
 
 ## Step by Step Scenario: Configure timezone on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]
 

@@ -17,6 +17,8 @@ ms.custom:
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article describes the resources a SQL Server Big Data Cluster deploys.
 
 A big data cluster deploys pods based on the deployment profile. For details see [Default configurations](deployment-guidance.md#configfile). 

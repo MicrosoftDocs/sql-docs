@@ -15,6 +15,8 @@ ms.custom:
 
 # Deploy BDC in Azure Kubernetes Service (AKS) private cluster
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article explains how to deploy SQL Server Big Data Clusters on Azure Kubernetes Service (AKS) private cluster. This configuration supports restricted use of public IP addresses in enterprise networking environment.
 
 A private deployment provides the following benefits:

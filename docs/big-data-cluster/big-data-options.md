@@ -21,9 +21,9 @@ The Microsoft SQL Server 2019 Big Data Clusters add-on runs on-premises and in t
 
 ## Retirement of the SQL Server 2019 Big Data Clusters add-on
 
-On January 31, 2025, we will be retiring SQL Server 2019 Big Data Clusters. All existing users of SQL Server 2019 with Software Assurance will be fully supported on the platform and the software will continue to be maintained through SQL Server cumulative updates until that time. For more information, see [the announcement blog post](https://aka.ms/sqlserver_bigdataclusters).
+On January 31, 2025, we will be retiring SQL Server 2019 Big Data Clusters. All existing users of SQL Server 2019 with Software Assurance will be fully supported on the platform and the software will continue to be maintained through SQL Server cumulative updates until that time. **For more information, see [the announcement blog post](https://aka.ms/sqlserver_bigdataclusters).**
 
-## Understanding the Big Data Clusters architecture for replacement and migration options
+## Understanding the SQL Server 2019 Big Data Clusters architecture for replacement and migration options
 
 To create your replacement solution for a Big Data storage and processing system, it's important to understand what SQL Server 2019 Big Data Clusters provides, and its architecture can help inform your choices. The architecture of a big data cluster is as follows:
 
@@ -34,7 +34,7 @@ This architecture provides the following functionality mapping:
 | **Component** | **Benefit**|
 |:--|:--|
 |Kubernetes| Open-source orchestrator for deploying and managing container-based applications at scale. Provides a declarative method to create and control resiliency, redundancy, and portability for the entire environment with elastic scale.|
-|SQL Server 2019 Big Data Clusters Controller | Provides management and security for the cluster. It contains the control service, the configuration store, and other cluster-level services such as Kibana, Grafana, and Elastic Search. |
+|Big Data Clusters Controller | Provides management and security for the cluster. It contains the control service, the configuration store, and other cluster-level services such as Kibana, Grafana, and Elastic Search. |
 |Compute Pool | Provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute pool are divided into SQL Compute instances for specific processing tasks. This component also provides Data Virtualization using PolyBase to query external data sources without moving or copying the data.|
 |Data Pool | Provides data persistence for the cluster. The data pool consists of one or more pods running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs.|
 |Storage Pool | The storage pool consists of storage pool pods comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Server big data cluster are members of an HDFS cluster.|

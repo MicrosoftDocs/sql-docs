@@ -164,7 +164,7 @@ The architecture of a Microsoft Azure Databricks deployment is as follows:
 
 :::image type="content" source="media/big-data-options/azure-databricks-overview.png" alt-text="Diagram: architecture of an Azure Databricks workspace and its components and data flows, from People to Applications" lightbox="media/big-data-options/azure-databricks-overview.png":::
 
-For more information on Microsoft Azure Databricks, see [What is Databricks Data Science & Engineering?](azure/databricks/scenarios/what-is-azure-databricks)
+For more information on Microsoft Azure Databricks, see [What is Databricks Data Science & Engineering?](/azure/databricks/scenarios/what-is-azure-databricks)
 
 ## Hybrid
 

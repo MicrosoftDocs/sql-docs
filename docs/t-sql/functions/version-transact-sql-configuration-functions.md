@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > 
 > The version of the SQL Server database engine run by Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics is always ahead of the on-premises version of SQL Server, and includes the latest security fixes. This means that the patch level is always on par with or ahead of the on-premises version of SQL Server, and that the latest features available in SQL Server are available in these services.
 >
-> To programmatically determine the engine edition, use SELECT SERVERPROPERTY('EngineEdition'). This query will return '5' for Azure SQL Database, '8' for Azure SQL Managed Instance and '6' for Azure Synapse Analytics.
+> To programmatically determine the engine edition, use SELECT SERVERPROPERTY('EngineEdition'). This query will return '5' for Azure SQL Database, '8' for Azure SQL Managed Instance, and '6' or '11' for Azure Synapse.
 >
 > We will update the documentation once this issue is resolved.
 ## Syntax  

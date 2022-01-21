@@ -74,7 +74,7 @@ Jump to [Simple Examples](#Simple) to skip the details of the syntax and get to 
 
 CREATE [ OR ALTER ] { PROC | PROCEDURE }
     [schema_name.] procedure_name [ ; number ]
-    [ { @parameter [ type_schema_name. ] data_type }
+    [ { @parameter_name [ type_schema_name. ] data_type }
         [ VARYING ] [ = default ] [ OUT | OUTPUT | [READONLY]
     ] [ ,...n ]
 [ WITH <procedure_option> [ ,...n ] ]
@@ -93,7 +93,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
 
 CREATE [ OR ALTER ] { PROC | PROCEDURE }
     [schema_name.] procedure_name [ ; number ]
-    [ { @parameter [ type_schema_name. ] data_type }
+    [ { @parameter_name [ type_schema_name. ] data_type }
         [ = default ] [ OUT | OUTPUT ] [READONLY]
     ] [ ,...n ]
 [ WITH EXECUTE AS Clause ]
@@ -173,7 +173,7 @@ An optional integer that is used to group procedures of the same name. These gro
 
 Numbered procedures cannot use the **xml** or CLR user-defined types and cannot be used in a plan guide.
 
-#### *@parameter*
+#### @*parameter_name*
 A parameter declared in the procedure. Specify a parameter name by using the at sign (**@**) as the first character. The parameter name must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). Parameters are local to the procedure; the same parameter names can be used in other procedures.
 
 One or more parameters can be declared; the maximum is 2,100. The value of each declared parameter must be supplied by the user when the procedure is called unless a default value for the parameter is defined or the value is set to equal another parameter. If a procedure contains [table-valued parameters](../../relational-databases/tables/use-table-valued-parameters-database-engine.md), and the parameter is missing in the call, an empty table is passed in. Parameters can take the place only of constant expressions; they cannot be used instead of table names, column names, or the names of other database objects. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).

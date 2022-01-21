@@ -89,7 +89,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- **@** *parameter*  
+ *@parameter*  
  A parameter in the procedure. Up to 2,100 parameters can be specified.  
   
  [ _type\_schema\_name_**.** ] _data\_type_  

@@ -137,8 +137,9 @@ The following types of customers should consider enabling ADR:
 - Customers that have experienced long periods of database unavailability due to SQL Server long running recovery (such as unexpected SQL Server restart or manual transaction rollback).
 
 >[!IMPORTANT]
->ADR is not supported for databases enrolled in database mirroring.
+> ADR is not supported for databases enrolled in database mirroring.
 
-## See Also  
+## Next steps 
 
-[Manage accelerated database recovery](accelerated-database-recovery-management.md)
+- [Manage accelerated database recovery](accelerated-database-recovery-management.md)
+- [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md)

@@ -99,45 +99,29 @@ Changing the location of the PVS is a three-step process.
    (PERSISTENT_VERSION_STORE_FILEGROUP = [VersionStoreFG])
    ```
 
-## Troubleshooting
+## Best practices for ADR
+
+This section contains guidance and recommendations for ADR. 
 
 > [!NOTE]
-> This section also applies to Azure SQL Database.
+> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled. If you observe issues either with storage usage, high abort transaction and other factors, please contact [Azure Support](https://azure.microsoft.com/support/options/). 
 
-Query `sys.dm_tran_persistent_version_store_stats` to check PVS sizes.
+1. ADR is not recommended for databases larger than 100 terabytes due to the single-threaded PVS version cleaner.  
 
-Check `% of DB` size. Also note the difference from typical size.
+2. ADR is not recommended for database environments with a high count of update/deletes, such as high-volume OLTP, without a period of rest/recovery for the PVS cleanup process to reclaim space. Typically, business operation cycles allow for this time, but in some scenarios you may want to initiate the PVS cleanup process manually to take advantage of application activity conditions.
 
-PVS is considered large if it's significantly larger than baseline or if it is close to 50% of the size of the database. 
+- To activate the PVS cleanup process manually between workloads or during maintenance windows, use `sys.sp_persistent_version_cleanup`. For more information, see [sys.sp_persistent_version_cleanup](../../relational-databases/system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md). 
 
-1. Retrieve `oldest_active_transaction_id` and check whether this transaction has been active for a really long time by querying `sys.dm_tran_database_transactions` based on the transaction ID.
+- If the PVS cleanup process is running for a long period time, you may find that the count of aborted transactions will grow which will also cause the PVS size to increase. Leverage the `sys.dm_tran_aborted_transactions` DMV to report the aborted transaction count, and leverage `sys.dm_tran_persistent_version_store_stats` to report the cleanup start/end times along with the PVS size.
 
-   Active transactions prevent cleaning up PVS.
+3. If your application performs many non-batched, incremental updates, such as updating a record every time there is a row accessed/inserted, your workload may not be optimal for ADR. Consider rewriting the application queries to batch updates, where possible, until the end of the command and reduce a high number of small update transactions.
 
-2. If the database is part of an availability group, check the `secondary_low_water_mark`. This is the same as the `low_water_mark_for_ghosts` reported by `sys.dm_hadr_database_replica_states`. Query `sys.dm_hadr_database_replica_states` to see whether one of the replicas is holding this value behind, since this will also prevent PVS cleanup.
-3. Check `min_transaction_timestamp` (or `online_index_min_transaction_timestamp` if the online PVS is holding up) and based on that check `sys.dm_tran_active_snapshot_database_transactions` for the column `transaction_sequence_num` to find the session that has the old snapshot transaction holding up PVS cleanup.
-4. If none of the above applies, then it means that the cleanup is held by aborted transactions. Check the last time the `aborted_version_cleaner_last_start_time`  and `aborted_version_cleaner_last_end_time` to see if the aborted transaction cleanup has completed. The `oldest_aborted_transaction_id` should be moving higher after the aborted transaction cleanup completes.
-5. If the aborted transaction hasn’t completed successfully recently, check the error log for messages reporting `VersionCleaner` issues.
+4. For SQL Server, isolate the PVS version store to a filegroup on higher tier storage, such as high-end SSD or advanced SSD or Persistent Memory (PMEM), sometimes referred to as Storage Class Memory (SCM). For more information, see the previous section on how to [Change the location of the PVS to a different filegroup](#change-the-location-of-the-pvs-to-a-different-filegroup).
 
-Use the sample query below as a troubleshooting aid:
+5. Ensure there is sufficient space on the database to account for PVS usage.
 
-```sql
-SELECT pvss.persistent_version_store_size_kb / 1024. / 1024 AS persistent_version_store_size_gb,
-       pvss.online_index_version_store_size_kb / 1024. / 1024 AS online_index_version_store_size_gb,
-       pvss.current_aborted_transaction_count,
-       pvss.aborted_version_cleaner_start_time,
-       pvss.aborted_version_cleaner_end_time,
-       dt.database_transaction_begin_time AS oldest_transaction_begin_time,
-       asdt.session_id AS active_transaction_session_id,
-       asdt.elapsed_time_seconds AS active_transaction_elapsed_time_seconds
-FROM sys.dm_tran_persistent_version_store_stats AS pvss
-LEFT JOIN sys.dm_tran_database_transactions AS dt
-ON pvss.oldest_active_transaction_id = dt.transaction_id
-   AND
-   pvss.database_id = dt.database_id
-LEFT JOIN sys.dm_tran_active_snapshot_database_transactions AS asdt
-ON pvss.min_transaction_timestamp = asdt.transaction_sequence_num
-   OR
-   pvss.online_index_min_transaction_timestamp = asdt.transaction_sequence_num
-WHERE pvss.database_id = DB_ID();
-```
+For more troubleshooting options, see [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md).
+
+## Next steps 
+
+- [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md)

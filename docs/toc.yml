@@ -6234,12 +6234,14 @@ items:
   items:
   - name: Manage
     items:
-    - name: Accelerated Database Recovery
+    - name: Accelerated database recovery
       items:
       - name: Overview
         href: relational-databases/accelerated-database-recovery-concepts.md
       - name: Management
         href: relational-databases/accelerated-database-recovery-management.md
+      - name: Troubleshooting
+        href: relational-databases/accelerated-database-recovery-troubleshooting.md        
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager
@@ -13068,6 +13070,10 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md
       - name: sys.dm_tran_version_store_space_usage
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md
+      - name: sys.dm_tran_aborted_transactions
+        href: relational-databases/system-dynamic-management-views/sys-dm-tran-aborted-transactions.md
+      - name: sys.dm_tran_persistent_version_store_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md
   - name: System functions
     href: relational-databases/system-functions/system-functions-category-transact-sql.md
     items:
@@ -13589,6 +13595,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-lock-transact-sql.md
       - name: sp_monitor
         href: relational-databases/system-stored-procedures/sp-monitor-transact-sql.md
+      - name: sp_persistent_version_cleanup
+        href: relational-databases/system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md
       - name: sp_procoption
         href: relational-databases/system-stored-procedures/sp-procoption-transact-sql.md
       - name: sp_recompile

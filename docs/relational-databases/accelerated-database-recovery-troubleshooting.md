@@ -119,7 +119,7 @@ WHERE pvss.database_id = DB_ID();
 
 ADR is not recommended for database environments with a high transaction count of update/deletes, such as high-volume OLTP, without a period of rest/recovery for the PVS cleanup process to reclaim space. 
 
-To activate the PVS cleanup process manually between workloads or during maintenance windows, use the system stored procedure [sys.sp_persistent_version_cleanup](../../relational-databases/system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md). 
+To activate the PVS cleanup process manually between workloads or during maintenance windows, use the system stored procedure [sys.sp_persistent_version_cleanup](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md). 
 
 ```sql
 EXEC sys.sp_persistent_version_cleanup [database_name]; 

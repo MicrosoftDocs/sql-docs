@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 ---
 
 # sys.sp_persistent_version_cleanup (Transact-SQL)
-[!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
 
 Manually starts persistent version store (PVS) cleanup process, a key element of accelerated database recovery (ADR). This cleaner rolls back uncommitted data in the PVS from aborted transactions. 
 
@@ -88,6 +88,6 @@ EXEC sys.sp_persistent_version_cleanup [WideWorldImporters];
 
 ## See also
 
-- [Accelerated database recovery](accelerated-database-recovery-concepts.md)
-- [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md)
-- [Manage accelerated database recovery](accelerated-database-recovery-management.md)
+- [Accelerated database recovery](../accelerated-database-recovery-concepts.md)
+- [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshooting.md)
+- [Manage accelerated database recovery](../accelerated-database-recovery-management.md)

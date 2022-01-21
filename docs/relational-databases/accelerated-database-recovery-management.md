@@ -25,7 +25,7 @@ This article contains information on best practices for managing and configuing 
 This section contains guidance and recommendations for ADR. 
 
 > [!NOTE]
-> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled. If you observe issues either with storage usage, high abort transaction and other factors, please contact [Azure Support](https://azure.microsoft.com/support/options/). 
+> In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled. If you observe issues either with storage usage, high abort transaction and other factors, please contact [Azure Support](https://azure.microsoft.com/support/options/). 
 
 1. ADR is not recommended for databases larger than 100 terabytes due to the single-threaded PVS version cleaner.  
 
@@ -37,7 +37,7 @@ This section contains guidance and recommendations for ADR.
     
 3. If your application performs many non-batched, incremental updates, such as updating a record every time there is a row accessed/inserted, your workload may not be optimal for ADR. Consider rewriting the application queries to batch updates, where possible, until the end of the command and reduce a high number of small update transactions.
 
-4. For SQL Server, isolate the PVS version store to a filegroup on higher tier storage, such as high-end SSD or advanced SSD or Persistent Memory (PMEM), sometimes referred to as Storage Class Memory (SCM). For more information, see [Change the location of the PVS to a different filegroup](#change-the-location-of-the-pvs-to-a-different-filegroup). This option is not available for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+4. For SQL Server, isolate the PVS version store to a filegroup on higher tier storage, such as high-end SSD or advanced SSD or Persistent Memory (PMEM), sometimes referred to as Storage Class Memory (SCM). For more information, see [Change the location of the PVS to a different filegroup](#change-the-location-of-the-pvs-to-a-different-filegroup). This option is not available for [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)].
 
 5. Ensure there is sufficient space on the database to account for PVS usage. If the database does not have enough room for the PVS to grow, ADR will fail to generate versions. ADR saves space in the version store compared to `tempdb` version store. 
 
@@ -56,7 +56,7 @@ This section contains guidance and recommendations for ADR.
 ## Enabling and controlling ADR
 
 > [!NOTE]
-> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled or moved to a different filegroup.
+> In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled or moved to a different filegroup.
 
 ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], and can be controlled using DDL syntax:
 

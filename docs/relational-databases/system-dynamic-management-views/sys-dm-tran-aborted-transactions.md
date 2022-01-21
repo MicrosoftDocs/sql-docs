@@ -22,7 +22,7 @@ ms.author: wiassaf
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # sys.dm_tran_aborted_transactions (Transact-SQL)
-[!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
 
   Returns information about unresolved, aborted transactions on the SQL Server instance.
     
@@ -44,9 +44,9 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
 
 ## Remarks   
 
-Unresolved, aborted transactions will be removed by the persistent version store (PVS) cleanup process. See [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md).
+Unresolved, aborted transactions will be removed by the persistent version store (PVS) cleanup process. See [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshooting.md).
 
 ## See also
 
-- [Accelerated database recovery](accelerated-database-recovery-concepts.md)
-- [Manage accelerated database recovery](accelerated-database-recovery-management.md)
+- [Accelerated database recovery](../accelerated-database-recovery-concepts.md)
+- [Manage accelerated database recovery](../accelerated-database-recovery-management.md)

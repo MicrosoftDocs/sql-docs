@@ -22,7 +22,7 @@ ms.author: wiassaf
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # sys.dm_tran_persistent_version_store_stats (Transact-SQL)
-[!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
 
   Returns information for accelerated database recovery (ADR) persistent version store (PVS) metrics. 
     
@@ -59,9 +59,9 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
   
 ## Examples
 
-For example usage in troubleshooting, see [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md).
+For example usage in troubleshooting, see [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshooting.md).
 
 ## See also
 
-- [Accelerated database recovery](accelerated-database-recovery-concepts.md)
-- [Manage accelerated database recovery](accelerated-database-recovery-management.md)
+- [Accelerated database recovery](../accelerated-database-recovery-concepts.md)
+- [Manage accelerated database recovery](../accelerated-database-recovery-management.md)

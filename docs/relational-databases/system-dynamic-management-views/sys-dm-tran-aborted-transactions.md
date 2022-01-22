@@ -22,9 +22,11 @@ ms.author: wiassaf
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # sys.dm_tran_aborted_transactions (Transact-SQL)
-[!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server 2019, ASDB, ASDBMI ](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   Returns information about unresolved, aborted transactions on the SQL Server instance.
+
+## Table returned  
     
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

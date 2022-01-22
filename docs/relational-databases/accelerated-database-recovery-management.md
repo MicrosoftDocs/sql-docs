@@ -16,9 +16,9 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 ---
 # Manage accelerated database recovery
 
-[!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server 2019, ASDB, ASDBMI ](../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
-This article contains information on best practices for managing and configuing accelerated database recovery (ADR).
+This article contains information on best practices for managing and configuring accelerated database recovery (ADR).
 
 ## Best practices for accelerated database recovery
 
@@ -45,7 +45,7 @@ This section contains guidance and recommendations for ADR.
 
 7. Avoid large transactions with data definition changes or DDL operations. ADR uses a SLOG (system log stream) mechanism to track DDL operations used in recovery. The SLOG is only used while the transaction active. Two scenarios can cause the SLOG to take up more space:
 
-    - A lot of DDLs are executed in one transaction. For example, in one transaction, rapidly creating and dropping temp tables. 
+    - Many DDLs are executed in one transaction. For example, in one transaction, rapidly creating and dropping temp tables. 
     
     - A table has very large number of partitions/indexes <!TODO>. For example, a drop table operation on such table would require a large reservation of SLOG memory. The workaround can be drop the indexes individually and gradually, then drop the table. 
     
@@ -67,7 +67,7 @@ ALTER DATABASE [DB] SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 Use this syntax to control whether the feature is on or off, and designate a specific filegroup for the *persistent version store* (PVS) data. If no filegroup is specified, the PVS will be stored in the PRIMARY filegroup. 
 
-Note that SQL will take an exclusive lock on the database to change this state.  That means that the ALTER DATABASE command will stall until all active sessions are gone, and that any new sessions will wait behind the ALTER DATABASE command.  If it is important to complete the operation and remove the lock, you can use the termination clause, WITH ROLLBACK [IMMEDIATE | AFTER {number} SECONDS | NO_WAIT] to abort any active sessions in the database.
+An exclusive lock is necessary on the database to change this state.  That means that the ALTER DATABASE command will stall until all active sessions are gone, and that any new sessions will wait behind the ALTER DATABASE command.  If it is important to complete the operation and remove the lock, you can use the termination clause, `WITH ROLLBACK [IMMEDIATE | AFTER {number} SECONDS | NO_WAIT]` to abort any active sessions in the database. For more information, see [ALTER DATABASE set options](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 ## Managing the persistent version store filegroup
 
@@ -107,7 +107,7 @@ In SQL Server, you may need to move the location of the PVS to a different fileg
 
 Changing the location of the PVS is a three-step process.
 
-1. Turn the ADR feature off.
+1. Turn off the ADR feature.
 
    ```sql
    ALTER DATABASE [MyDatabase] SET ACCELERATED_DATABASE_RECOVERY = OFF;

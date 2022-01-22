@@ -22,14 +22,16 @@ ms.author: wiassaf
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # sys.dm_tran_persistent_version_store_stats (Transact-SQL)
-[!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server 2019, ASDB, ASDBMI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   Returns information for accelerated database recovery (ADR) persistent version store (PVS) metrics. 
     
+## Table returned  
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id  |  int|  The database id of this row.  |
-|pvs_filegroup_id  |  smallint |  The file group id which hosts PVS version store. |
+|database_id  |  int|  The database of this row.  |
+|pvs_filegroup_id  |  smallint |  The filegroup that hosts PVS version store. |
 |persistent_version_store_size_kb|    bigint | The PVS size in kilobytes. This value is used to determine current space used by PVS. |
 |online_index_version_store_size_kb|    bigint | This is special version store size, in kilobytes, used during online index rebuild.|
 |current_aborted_transaction_count|    bigint | The number of abort transactions in the database. Detail of the abort transactions can be viewed in `sys.dm_tran_aborted_transactions`. |
@@ -38,7 +40,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 |min_transaction_timestamp|    bigint | The minimum useful timestamp in the system from snapshot scans.  |
 |online_index_min_transaction_timestamp|    bigint | The minimum useful timestamp in the system to hold up the PVS cleanup. This corresponds to `online_index_version_store_size_kb`. |
 |secondary_low_water_mark|    bigint | The low water mark aggregated for queries on readable secondaries. It is a transaction id and can be used to compare with `oldest_active_transaction_id` and `oldest_aborted_transaction_id`. |
-|offrow_version_cleaner_start_time   | datetime2(7) |  The start time of the off-row PVS clean up process. |
+|offrow_version_cleaner_start_time   | datetime2(7) |  The start time of the off-row PVS cleanup process. |
 |offrow_version_cleaner_end_time   | datetime2(7) | The last end time of the off-row PVS cleanup process. |
 |aborted_version_cleaner_start_time   | datetime2(7) | The start timestamp of a full sweep. |
 |aborted_version_cleaner_end_time   | datetime2(7) |  The end timestamp of last full sweep. If start time has value but the end time does not, it means PVS cleanup is ongoing on this database. |
@@ -56,9 +58,7 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
 
 ## Remarks   
-  
-## Examples
-
+ 
 For example usage in troubleshooting, see [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshooting.md).
 
 ## See also

@@ -85,7 +85,7 @@ WHERE pvss.database_id = DB_ID();
     
     With the session(s) identified, consider killing the session, if allowed. Also, review the application to determine the nature of the problematic active transaction(s). 
 
-3. The persistent version cleanup may be held up due to long active snapshot scan(s). If `pvs_off_row_page_skipped_min_useful_xts` shows a a large value <!TODO>, it means there is a long snapshot scan preventing PVS cleanup. Below query can be used to decide which is the session,  
+3. The persistent version cleanup may be held up due to long active snapshot scan(s). If `pvs_off_row_page_skipped_min_useful_xts` shows a large value <!TODO>, it means there is a long snapshot scan preventing PVS cleanup. Below query can be used to decide which is the session,  
 
     ```sql
     SELECT snap.transaction_id, snap.transaction_sequence_num, session.session_id, session.login_time, GETUTCDATE() as now, session.host_name, session.program_name, session.login_name, session.last_request_start_time 

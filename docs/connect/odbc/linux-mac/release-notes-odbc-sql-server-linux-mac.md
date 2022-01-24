@@ -31,6 +31,18 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## 18.0, February 2022
+
+| New item | Details |
+| :------- | :------ |
+| New distributions supported. | Debian 11, Ubuntu 21.10, MacOS 12 |
+| Added compatibility with OpenSSL 3.0 | See [To Do]. |
+| Ability to send long types as max types | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Support for TDS8 | See [To Do]. |
+| Compatibility extensions for SQLGetData | See [To Do] |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## 17.8.1.2, October 2021
 
 | New item | Details |

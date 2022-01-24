@@ -68,7 +68,16 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 ```  
   
 There is more than one Driver Manager installed and your application is using the wrong one, or the Driver Manager was not built correctly.  
-  
+
+Some users encounter the following issue: `OperationalError: (‘08001’, ‘[08001] [Microsoft][ODBC Driver 17 for SQL Server]Client unable to establish connection (0) (SQLDriverConnect)’)`. This has to do with the version of OpenSSL that MacOS uses. Normally OpenSSL is installed through brew and will contain the openssl, openssl@1.1 and openssl@3 binaries. 
+
+The error is resolved by changing the symlink of the openssl binary to openssl@1.1 by doing:
+``` shell
+rm -rf /usr/local/opt/openssl
+version=$(ls /usr/local/Cellar/openssl@1.1 | grep "1.1")
+ln -s /usr/local/Cellar/openssl@1.1/$version /usr/local/opt/openssl
+```
+
 For more information about resolving connection failures, see:  
 
 - [Steps to troubleshoot SQL connectivity issues](/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  

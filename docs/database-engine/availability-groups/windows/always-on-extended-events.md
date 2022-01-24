@@ -31,8 +31,6 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
 2.  Right-click **Alwayson_health**, then point to **Script Session as**, then point to **CREATE To**, and then click **New Query Editor Window**.  
 
-For information on some of the events covered by alwayson_health, see the [extended events reference](always-on-extended-events.md#BKMK_Reference).  
-
 
 ##  <a name="BKMK_Debugging"></a> Extended events for debugging  
  In addition to the extended events covered by the Alwayson_health session, SQL Server defines an extensive set of debug events for availability groups. To harness these additional extended events in a session, follow the procedures below:  
@@ -169,7 +167,7 @@ GO
 |35204|Connection between instance '%ls' and '%ls' has been disabled due to endpoint shutdown.|  
 |Timeout + connected|  
 |35207|Connection attempt on availability group ID '%ls' from replica ID '%ls' to replica ID '%ls' failed because of error %d severity %d state %d.  severity %d state %d. (this may not have a good DBA use. Check and remove later in that case)|  
-|35217| (Starting with SQL Server 2019 CU15) The thread pool for Always On Availability Groups was unable to start a new worker thread because there are not enough available worker threads. This may degrade Always On Availability Groups performance.  Use the "max worker threads" configuration option to increase number of allowable threads. | 
+|35217| (Starting with SQL Server 2019 CU15 (15.0.4198.2)) The thread pool for Always On Availability Groups was unable to start a new worker thread because there are not enough available worker threads. This may degrade Always On Availability Groups performance.  Use the "max worker threads" configuration option to increase number of allowable threads. | 
 |9642|An error occurred in a Service Broker/Database Mirroring transport connection endpoint  Error: %i  State: %i. (Near endpoint role: %S_MSG  far endpoint address: '%.*hs') Error: %i State: %i. (Near endpoint role: %S_MSG far endpoint address: '%.\*hs')|  
 |9666|The %S_MSG endpoint is in disabled or stopped state.|  
 |9691|The %S_MSG endpoint has stopped listening for connections.|  
@@ -354,7 +352,7 @@ GO
 
 ## sqlserver.sp_server_diagnostics_component_result  
 
-Captures diagnostic data and health information about SQL Server to detect potential failures. The procedure runs in repeat mode and sends results periodically. This extended event session is available starting with SQL Server 2019 CU15. 
+Captures diagnostic data and health information about SQL Server to detect potential failures. The procedure runs in repeat mode and sends results periodically. This extended event session is available starting with SQL Server 2019 CU15 (15.0.4198.2). 
   
 #### Event information  
   
@@ -391,7 +389,7 @@ GO
 
 ## ucs.ucs_connection_setup
 
-Dump connectivity or network related logs between primary and secondary replicas. This extended event session is available starting with SQL Server 2019 CU15. 
+Dump connectivity or network related logs between primary and secondary replicas. This extended event session is available starting with SQL Server 2019 CU15 (15.0.4198.2). 
   
 #### Event information  
   
@@ -432,7 +430,7 @@ GO
 
 ##  sqlserver.hadr_trace_message
 
-When traceflag 3605 is enabled, this extended event prints HADR related logs to the Alwayson_health session logs.  This extended event session is available starting with SQL Server 2019 CU15. 
+When traceflag 3605 is enabled, this extended event prints HADR related logs to the Alwayson_health session logs.  This extended event session is available starting with SQL Server 2019 CU15 (15.0.4198.2). 
   
 #### Event information  
   

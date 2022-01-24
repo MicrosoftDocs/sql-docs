@@ -1,6 +1,6 @@
 ---
 title: "Using Table-valued parameters with the PHP Drivers"
-description: "Learn how to use Always Encrypted with secure enclaves with the Microsoft Drivers for PHP for SQL Server."
+description: "Learn how to use Table-valued parameters with the Microsoft Drivers for PHP for SQL Server."
 ms.date: 01/24/2022
 ms.prod: sql
 ms.prod_service: connectivity

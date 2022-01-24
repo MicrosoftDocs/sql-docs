@@ -446,7 +446,7 @@ GO
 
 ##  sqlserver.hadr_trace_message
 
-When traceflag 3605 is enabled, this extended event prints HADR related logs to the Alwayson_health session logs.  This extended event session is available starting with SQL Server 2019 CU15 (15.0.4198.2). 
+Redirects the output of some DBCC commands and HADR log information to the extended event session (similar to trace flag 3605). This extended event session is available starting with SQL Server 2019 CU15 (15.0.4198.2).  
   
 #### Event information  
   
@@ -461,7 +461,7 @@ When traceflag 3605 is enabled, this extended event prints HADR related logs to 
   
 |Name|Type_name|Description|  
 |----------|----------------|-----------------|  
-|hadr_message|unicode_string |Message from traceflag 3605|  
+|hadr_message|unicode_string |Redirects the output of some DBCC commands and HADR log information to the extended event session (similar to trace flag 3605).|  
 ||||  
  
   

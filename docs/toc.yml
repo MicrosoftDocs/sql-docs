@@ -1808,6 +1808,8 @@ items:
     - name: Sequence Properties
       href: relational-databases/sequence-numbers/sequence-properties-general-page.md
   - name: Service Broker
+    item:
+  - name: Overview  
     href: database-engine/configure-windows/sql-server-service-broker.md 
   - name: Spatial data
     href: relational-databases/spatial/spatial-data-sql-server.md

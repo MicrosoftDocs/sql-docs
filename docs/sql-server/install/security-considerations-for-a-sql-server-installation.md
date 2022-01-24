@@ -83,7 +83,7 @@ Use the NT file system (NTFS) or Resilient File System (ReFS). NTFS and ReFS are
  > If you use EFS, database files will be encrypted under the identity of the account running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Only this account will be able to decrypt the files. If you must change the account that runs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must first decrypt the files under the old account and then re-encrypt them under the new service account.  
 
  > [!WARNING]
- > Using file encryption via EFS may lead to slower I/O performance because encryption causes asynchronous I/O to become synchronous. See [Asynchronous disk I/O appears as synchronous on Windows](/troubleshoot/windows/win32/asynchronous-disk-io-synchronous#ntfs-encryption). Instead, you can sonsider using SQL Server encryption technologies like [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption), [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine), and column-level encryption [T-SQL functions](/sql/t-sql/functions/cryptographic-functions-transact-sql).
+ > Using file encryption via EFS may lead to slower I/O performance because encryption causes asynchronous I/O to become synchronous. See [Asynchronous disk I/O appears as synchronous on Windows](/troubleshoot/windows/win32/asynchronous-disk-io-synchronous#ntfs-encryption). Instead, you can sonsider using SQL Server encryption technologies like [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md), and column-level encryption [T-SQL functions](../../t-sql/functions/cryptographic-functions-transact-sql.md).
 
 ### <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block
 
@@ -153,4 +153,3 @@ Use the NT file system (NTFS) or Resilient File System (ReFS). NTFS and ReFS are
  [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
-  

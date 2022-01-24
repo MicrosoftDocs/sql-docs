@@ -40,8 +40,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 FREETEXTTABLE (table , { column_name | (column_list) | * }   
           , 'freetext_string'   
      [ , LANGUAGE language_term ]   
@@ -99,7 +98,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ### A. Simple Example  
  The following example creates and populates a simple table of two columns, listing 3 counties and the colors in their flags. The it creates and populates a full-text catalog and index on the table. Then the **FREETEXTTABLE** syntax is demonstrated.  
   
-```  
+```sql
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
 CREATE UNIQUE CLUSTERED INDEX FlagKey ON Flags(Country);  
 INSERT Flags VALUES ('France', 'Blue and White and Red');  
@@ -120,7 +119,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ### B. Using FREETEXT in an INNER JOIN  
  The following example returns the description and rank of any products with a description that matches the meaning of `high level of performance`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -138,7 +137,7 @@ GO
 ### C. Specifying Language and Highest Ranked Matches  
  The following example is identical and shows the use of the `LANGUAGE`*language_term* and *top_n_by_rank* parameters.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   

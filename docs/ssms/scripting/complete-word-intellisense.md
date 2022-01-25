@@ -11,8 +11,9 @@ helpviewer_keywords:
   - "text completion [IntelliSense]"
   - "Complete Word option [IntelliSense]"
 author: markingmyname
-ms.author: maghanms.custom: seo-lt-2019
+ms.author: maghan
 ms.reviewer: ""
+ms.custom: seo-lt-2019
 ms.date: "01/25/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

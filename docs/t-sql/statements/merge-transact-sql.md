@@ -2,7 +2,7 @@
 description: "MERGE (Transact-SQL)"
 title: "MERGE (Transact-SQL)"
 ms.custom: ""
-ms.date: "06/22/2021"
+ms.date: "01/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
@@ -165,8 +165,14 @@ An alternative name to reference a table for the *target_table*.
 #### USING \<table_source>  
 Specifies the data source that's matched with the data rows in *target_table* based on \<merge_search condition>. The result of this match dictates the actions to take by the WHEN clauses of the MERGE statement. \<table_source> can be a remote table or a derived table that accesses remote tables.
   
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 \<table_source> can be a derived table that uses the [!INCLUDE[tsql](../../includes/tsql-md.md)] [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to construct a table by specifying multiple rows.  
-  
+::: moniker-end
+
+::: moniker range="=azure-sqldw-latest"
+\<table_source> can be a derived table that uses `SELECT ... UNION ALL` to construct a table by specifying multiple rows.  
+::: moniker-end
+
  #### [ AS ] *table_alias*  
 An alternative name to reference a table for the table_source.   
   
@@ -254,6 +260,7 @@ Specifies the graph match pattern. For more information about the arguments for 
 > In Azure Synapse Analytics, the MERGE command (preview) has following differences compared to SQL server and Azure SQL database.  
 > - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
 > - During the preview, MERGE…WHEN NOT MATCHED INSERT is not supported for tables with IDENTITY columns.  
+> - Table value constructor cannot be used in the USING clause for the source table. Use `SELECT ... UNION ALL` to create a derived source table with multiple rows.
 > - The support for tables with different distribution types is described in this table:
 >
 >|MERGE CLAUSE in Azure Synapse Analytics|Supported TARGET distribution table| Supported SOURCE distribution table|Comment|  
@@ -570,6 +577,7 @@ EXECUTE Production.usp_UpdateInventory '20030501';
 
 The following example uses MERGE to modify the `SalesReason` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by either updating or inserting rows. 
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 When the value of `NewName` in the source table matches a value in the `Name` column of the target table, (`SalesReason`), the `ReasonType` column is updated in the target table. When the value of `NewName` doesn't match, the source row is inserted into the target table. The source table is a derived table that uses the [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor to specify multiple rows for the source table. For more information about using the table value constructor in a derived table, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). 
 
 The OUTPUT clause can be useful to query the result of MERGE statements, for more information, see [OUTPUT Clause](../../t-sql/queries/output-clause-transact-sql.md). The example also shows how to store the results of the OUTPUT clause in a table variable. And, then you summarize the results of the MERGE statement by running a simple select operation that returns the count of inserted and updated rows.  
@@ -594,7 +602,27 @@ SELECT Change, COUNT(*) AS CountPerChange
 FROM @SummaryOfChanges  
 GROUP BY Change;  
 ```  
+::: moniker-end
+
+::: moniker range="=azure-sqldw-latest"
+When the value of `NewName` in the source table matches a value in the `Name` column of the target table, (`SalesReason`), the `ReasonType` column is updated in the target table. When the value of `NewName` doesn't match, the source row is inserted into the target table. The source table is a derived table that uses `SELECT ... UNION ALL` to specify multiple rows for the source table.
   
+```sql  
+MERGE INTO Sales.SalesReason AS tgt  
+USING (SELECT 'Recommendation','Other' UNION ALL 
+       SELECT 'Review', 'Marketing' UNION ALL 
+       SELECT 'Internet', 'Promotion')
+   as src (NewName, NewReasonType)  
+ON tgt.Name = src.NewName  
+WHEN MATCHED THEN  
+UPDATE SET ReasonType = src.NewReasonType  
+WHEN NOT MATCHED BY TARGET THEN  
+INSERT (Name, ReasonType) VALUES (NewName, NewReasonType);  
+```  
+::: moniker-end
+
+
+
 ### D. Inserting the results of the MERGE statement into another table
 
 The following example captures data returned from the OUTPUT clause of a MERGE statement and inserts that data into another table. The MERGE statement updates the `Quantity` column of the `ProductInventory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, based on orders that are processed in the `SalesOrderDetail` table. The example captures the updated rows and inserts them into another table that's used to track inventory changes. 
@@ -626,6 +654,7 @@ FROM
 GO  
 ```  
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"  
 ### E. Using MERGE to do INSERT or UPDATE on a target edge table in a graph database
 
 In this example, you create node tables `Person` and `City` and an edge table `livesIn`. You use the MERGE statement on the `livesIn` edge and insert a new row if the edge doesn't already exist between a `Person` and `City`. If the edge already exists, then you just update the StreetAddress attribute on the `livesIn` edge.
@@ -702,6 +731,7 @@ FROM Person , City , livesIn
 WHERE MATCH(Person-(livesIn)->city)
 GO
 ```
+::: moniker-end
   
 ## See also
 

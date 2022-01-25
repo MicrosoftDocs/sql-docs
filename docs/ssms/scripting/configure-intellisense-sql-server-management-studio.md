@@ -4,7 +4,6 @@ description: Most IntelliSense options are on by default. Learn how you can turn
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
-ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Options [SQL Server Management Studio], IntelliSense"
@@ -12,8 +11,9 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], modifying options"
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: "01/25/2021"
+ms.date: "01/25/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

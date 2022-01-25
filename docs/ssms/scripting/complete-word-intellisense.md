@@ -4,7 +4,6 @@ description: The Microsoft IntelliSense Complete Word feature can complete what 
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
-ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "word completion [IntelliSense]"
@@ -13,7 +12,8 @@ helpviewer_keywords:
   - "Complete Word option [IntelliSense]"
 author: markingmyname
 ms.author: maghanms.custom: seo-lt-2019
-ms.date: "01/25/2021"
+ms.reviewer: ""
+ms.date: "01/25/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

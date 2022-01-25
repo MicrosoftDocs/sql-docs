@@ -18,6 +18,8 @@ ms.technology: big-data-cluster
 
 This article describes how to consume an app deployed on a SQL Server big data cluster using a RESTful web service.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Prerequisites
 
 - [SQL Server big data cluster](deployment-guidance.md)

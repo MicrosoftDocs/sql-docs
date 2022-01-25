@@ -13,6 +13,8 @@ ms.technology: big-data-cluster
 
 # Troubleshoot HDFS
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article contains troubleshooting scenarios for HDFS errors in SQL Server 2019 Big Data Clusters.
 
 ## Troubleshoot HDFS heap size

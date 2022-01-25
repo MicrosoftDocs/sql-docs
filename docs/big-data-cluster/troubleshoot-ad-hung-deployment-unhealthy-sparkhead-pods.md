@@ -13,6 +13,8 @@ ms.technology: big-data-cluster
 
 # AD mode deployment becomes unresponsive - unhealthy `sparkhead` pods
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 Deployment in Active Directory (AD) mode freezes. Check symptoms to see if the cause is a missing reverse lookup zone entry for the domain controller on the different networks of the cluster nodes.
 
 ## Symptom

@@ -49,6 +49,8 @@ items:
     items:
     - name: Introducing SQL Server Big Data Clusters
       href: big-data-cluster/big-data-cluster-overview.md
+    - name: Big data options on the Microsoft SQL Server platform
+      href: big-data-cluster/big-data-options.md
     - name: Release notes
       items:
         - name: Platform release notes

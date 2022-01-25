@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This guide demonstrates how to use Encryption at Rest capabilities of SQL Server Big Data Clusters to encrypt HDFS folders using Encryption Zones. It also covers HDFS key management tasks.
 
 Note that there is a default encryption zone mounted at __```/securelake```__ ready to be used. It was created with a system generated 256-bit key named __securelakekey__. This key can be used to create additional encryption zones.

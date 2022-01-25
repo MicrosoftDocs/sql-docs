@@ -17,6 +17,8 @@ ms.technology: big-data-cluster
 
 This article explains how to use **curl** to load data into HDFS on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## <a id="prereqs"></a> Prerequisites
 
 - [Load sample data into your big data cluster](tutorial-load-sample-data.md)

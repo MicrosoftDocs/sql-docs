@@ -17,6 +17,8 @@ ms.technology: big-data-cluster
 
 This article provides guidance about how to use command-line tools to run Spark jobs on SQL Server Big Data Clusters.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Prerequisites
 
 * [SQL Server 2019 big data tools](deploy-big-data-tools.md) configured and logged in to the cluster:

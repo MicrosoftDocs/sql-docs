@@ -14,6 +14,8 @@ ms.technology: big-data-cluster
 
 # Encryption at rest concepts and configuration guide
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 Starting with Microsoft SQL Server 2019 CU8 Big Data Clusters, the encryption at rest feature is available to provide application-level encryption to all data stored in the platform. This guide documents the concepts, architecture, and configuration for the encryption at rest feature set for Big Data Clusters.
 
 SQL Server Big Data Clusters stores data in the following two locations:

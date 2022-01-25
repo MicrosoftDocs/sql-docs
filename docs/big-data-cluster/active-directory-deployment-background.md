@@ -19,6 +19,8 @@ ms.custom:
 
 This article explains the updates to SQL Server 2019 CU5 that enables the capability for multiple SQL Server 2019 Big Data Clusters to be deployed and integrated with the same Active Directory Domain.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 Prior to SQL 2019 CU5 there were two issues preventing deployment of multiple big data clusters in an AD domain.
 
 - Naming conflict for service principal names and DNS domain

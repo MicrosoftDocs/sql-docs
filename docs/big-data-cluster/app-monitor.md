@@ -14,6 +14,8 @@ ms.technology: big-data-cluster
 
 # Monitor applications with azdata and Grafana Dashboard
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 Grafana is one of the best cloud-native virtualization tools, which can be used to provide various monitoring metrics of your application running in Kubernetes.  
 
 This article describes how to monitor an application inside a SQL Server Big Data Cluster.

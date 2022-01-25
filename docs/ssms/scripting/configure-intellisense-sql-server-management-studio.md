@@ -1,8 +1,6 @@
 ---
 title: "Configure IntelliSense (SQL Server Management Studio)"
 description: Most IntelliSense options are on by default. Learn how you can turn off an IntelliSense option and invoke it instead through a menu command or keystroke combination.
-ms.custom: seo-lt-2019
-ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
@@ -12,14 +10,18 @@ helpviewer_keywords:
   - "Options [SQL Server Management Studio], IntelliSense"
   - "modifying IntelliSense options"
   - "IntelliSense [SQL Server], modifying options"
-ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: "01/25/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Configure IntelliSense (SQL Server Management Studio)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Most [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense options are on by default. You can turn off an IntelliSense option and instead invoke it through a menu command or keystroke combination.  
+
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server](./_ssnoversion.md)]  [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)] [!INCLUDE [SQL Managed Instance](../../includes/applies-to-version/_asdbmi.md)]
+
+Most [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense options are on by default. You can turn off an IntelliSense option and instead invoke it through a menu command or keystroke combination.  
   
 > [!IMPORTANT]  
 >  Some changes will not take effect in your current editor session.  You must open a new Transact-SQL editor session to see the change.
@@ -28,8 +30,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 > [!NOTE]
 > Azure Synapse Analytics does not support IntelliSense.
->
->
   
 1.  On the **Tools** menu, click **Options**.  
   

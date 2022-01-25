@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 12/27/2021
+ms.date: 1/25/2022
 ---
 
 # SqlPackage Publish parameters, properties, and SQLCMD variables

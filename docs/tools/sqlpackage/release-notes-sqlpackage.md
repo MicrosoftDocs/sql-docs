@@ -2,7 +2,7 @@
 title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft sqlpackage.
 ms.custom: "tools|sos"
-ms.date: 10/04/2021
+ms.date: 01/25/2022
 ms.prod: sql
 ms.reviewer: "llali"
 ms.prod_service: sql-tools
@@ -15,6 +15,50 @@ ms.author: drskwier
 **[Download the latest version](sqlpackage-download.md)**
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.exe.
+
+## 19.0 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2185764)|January 25, 2022|19.0|16.0.5400.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185765)|January 25, 2022| 19.0|16.0.5400.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185670)|January 25, 2022| 19.0|16.0.5400.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185669)|January 25, 2022| 19.0|16.0.5400.1|
+
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+|Always Encrypted|Adds support for in-place encryption for Always Encrypted columns.|
+|Azure Synapse Analytics|Adds support for column-level symmetric encryption.|
+|Ledger|Adds supports for exporting and importing databases with ledger tables. See Known Issues for export limitations.|
+|Platform|Adds support for .NET 6 as the target framework|
+|Platform|References Microsoft.Data.SqlClient (3.0) instead of System.Data.SqlClient in .NET Framework version. Upgrade Microsoft.Data.SqlClient from 2.1.3 to 3.0 for .NET Core version.|
+|Platform|Upgrades .NET Framework target version to .NET 4.6.2|
+|ScriptDOM|Adds support for Sql160 parser.|
+
+
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Deployment |Fixes issue with interpretation of table distribution on column within a stored procedure. |
+| Deployment |Fixes issue with "Drop objects not in source" option during publish operation. |
+| Deployment |Fixes for Deploying a dacpac with temporal table having sensitivity classification.  |
+| Deployment |Fixes a bug when variables are verified even when DoNotEvaluateSqlCmdVariables is set to true|
+| Extract |Fix for Refactor log of referenced dacpac according to includeCompositeObjects selection. |
+| Import |Fixes issue with importing database scope configurations that are not supported in target server|
+| SQL Project |Fixes issue where incremental statistics caused an issue with the project build when applied to a primary key. |
+| SQL Project |Fixes building a project with file tables. |
+
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported. | N/A |
+| Deployment | The Azure SQL ledger table feature is not yet supported for extract and publish. | N/A |
+| Ledger | The following limitations apply to Export: Ledger history tables and dropped ledger tables are not migrated, the values of GENERATED ALWAYS columns and the data in ledger system views is not migrated, and the value of the database-level Ledger property is ignored.|
+
 
 ## 18.8 sqlpackage
 

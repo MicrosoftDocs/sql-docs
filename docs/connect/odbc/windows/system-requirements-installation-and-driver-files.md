@@ -2,7 +2,7 @@
 title: "System Requirements, Installation, and Driver Files | Microsoft Docs"
 description: "This article describes the system requirements for the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "02/15/2021"
+ms.date: "02/15/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

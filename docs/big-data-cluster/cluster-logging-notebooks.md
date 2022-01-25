@@ -40,13 +40,13 @@ This section contains a set of notebooks useful for getting logs from a SQL Serv
 
 
 
-## Analyse logs from Big Data Clusters
+## Analyze logs from Big Data Clusters
 
 A set of notebooks to gather and analyze logs from a SQL Server big data cluster.  The analysis process will suggest follow-on notebooks to run for known issue found in the logs.
 
 |Name|Description |
 |---|---|
-|TSG030 - SQL Server errorlog files|Get SQL Server errorlog files and analyze log entries and suggest further relevant troubleshooting guides. |
+|TSG030 - SQL Server error log files|Get SQL Server error log files and analyze log entries and suggest further relevant troubleshooting guides. |
 |TSG031 - SQL Server PolyBase logs|Get SQL Server PolyBase logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG034 - Livy logs|Get Livy logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG035 - Spark History logs|Get Spark History logs and analyze log entries and suggest further relevant troubleshooting guides.|

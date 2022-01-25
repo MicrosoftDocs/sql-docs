@@ -27,7 +27,7 @@ On January 31, 2025, we will be retiring [!INCLUDE[ssbigdataclusters-ver15](../i
 
 To create your replacement solution for a Big Data storage and processing system, it's important to understand what [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] provides, and its architecture can help inform your choices. The architecture of a big data cluster is as follows:
 
-:::image type="content" source="media/big-data-options/architecture-diagram-overview.png" alt-text="Big data clusters architecture overview" lightbox="media/big-data-options/architecture-diagram-overview.png":::
+:::image type="content" source="media/big-data-options/architecture-diagram-overview.png" alt-text="Diagram that shows the SQL Server 2019 Big Data Clusters architecture overview" lightbox="media/big-data-options/architecture-diagram-overview.png":::
 
 This architecture provides the following functionality mapping:
 
@@ -97,11 +97,11 @@ Use Microsoft Azure Synapse as a replacement for [!INCLUDE[ssbigdataclusters-ver
 
 The architecture of Microsoft Azure Synapse is as follows:
 
-:::image type="content" source="media/big-data-options/synapse-architecture.png" alt-text="Azure Synapse architecture overview" lightbox="media/big-data-options/synapse-architecture.png":::
+:::image type="content" source="media/big-data-options/synapse-architecture.png" alt-text="Diagram that shows Azure Synapse architecture overview" lightbox="media/big-data-options/synapse-architecture.png":::
 
 For more information on Microsoft Azure Synapse, see [What is Azure Synapse Analytics?](/azure/synapse-analytics/overview-what-is)
 
-### Azure SQL From Azure ML
+### Azure SQL plus Azure Machine Learning
 
 You can replace the functionality of SQL Server Big Data Clusters by using one or more Azure SQL database options for operational data, and Microsoft Azure Machine Learning for your predictive workloads.
 
@@ -121,11 +121,11 @@ Use Microsoft Azure Machine Learning as a replacement for [!INCLUDE[ssbigdataclu
 
 The architecture of a Microsoft Azure Machine Learning deployment is as follows:
 
-:::image type="content" source="media/big-data-options/azure-machine-learning-architecture.svg" alt-text="Diagram: Azure Machine Learning architecture of a workspace and its components" lightbox="media/big-data-options/azure-machine-learning-architecture.svg":::
+:::image type="content" source="media/big-data-options/azure-machine-learning-architecture.svg" alt-text="Diagram that shows Azure Machine Learning architecture of a workspace and its components" lightbox="media/big-data-options/azure-machine-learning-architecture.svg":::
 
 For more information on Microsoft Azure Machine Learning, see [How Azure Machine Learning works](/azure/machine-learning/overview-what-is-azure-ml).
 
-### Azure SQL From Databricks
+### Azure SQL from Databricks
 
 You can replace the functionality of SQL Server Big Data Clusters by using one or more Azure SQL database options for operational data, and Microsoft Azure Databricks for your analytic workloads. 
 
@@ -133,7 +133,7 @@ Azure Databricks is a data analytics platform optimized for the Microsoft Azure 
 
 Azure Databricks SQL Analytics provides an easy-to-use platform for analysts who want to run SQL queries on their data lake, create multiple visualization types to explore query results from different perspectives, and build and share dashboards.
 
-Azure Databricks Workspace provides an interactive workspace that enables collaboration between data engineers, data scientists, and machine learning engineers. For a big data pipeline, the data (raw or structured) is ingested into Azure through Azure Data Factory in batches, or streamed near real-time using Apache Kafka, Event Hub, or IoT Hub. This data lands in a data lake for long term persisted storage, in Azure Blob Storage or Azure Data Lake Storage. As part of your analytics workflow, use Azure Databricks to read data from multiple data sources and turn it into breakthrough insights using Spark.
+Azure Databricks Workspace provides an interactive workspace that enables collaboration between data engineers, data scientists, and machine learning engineers. For a big data pipeline, the data (raw or structured) is ingested into Azure through Azure Data Factory in batches, or streamed near real-time using Apache Kafka, Event Hubs, or IoT Hub. This data lands in a data lake for long term persisted storage, in Azure Blob Storage or Azure Data Lake Storage. As part of your analytics workflow, use Azure Databricks to read data from multiple data sources and turn it into breakthrough insights using Spark.
 
 Use Microsoft Azure Databricks as a replacement for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need:
 
@@ -162,7 +162,7 @@ Use Microsoft Azure Databricks as a replacement for [!INCLUDE[ssbigdataclusters-
 
 The architecture of a Microsoft Azure Databricks deployment is as follows:
 
-:::image type="content" source="media/big-data-options/azure-databricks-overview.png" alt-text="Diagram: architecture of an Azure Databricks workspace and its components and data flows, from People to Applications" lightbox="media/big-data-options/azure-databricks-overview.png":::
+:::image type="content" source="media/big-data-options/azure-databricks-overview.png" alt-text="Diagram: architecture of an Azure Databricks workspace and its components and data flows, from people to applications" lightbox="media/big-data-options/azure-databricks-overview.png":::
 
 For more information on Microsoft Azure Databricks, see [What is Databricks Data Science & Engineering?](/azure/databricks/scenarios/what-is-azure-databricks)
 
@@ -194,8 +194,8 @@ Use SQL Server and Hadoop/Spark on-premises as a replacement for [!INCLUDE[ssbig
 -   Use dedicated hardware for all parts of the solution
 -   Access relational and non-relational data from the same architecture, in both directions
 -   Share a single set of non-relational data between SQL Server and the scale-out non-relational system
-- 
-## Performing the Migration
+
+## Performing the migration
 
 Once you pick a location (In-Cloud or Hybrid) for your migration, you should weigh the downtime and cost vectors to determine whether you will run a new system and move the data from the previous system to the new in real-time (side-by-side migration) or a backup and restore, or a new-start of the system from existing data sources (in-place migration). 
 

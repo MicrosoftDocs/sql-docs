@@ -26,7 +26,7 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense Complete Wo
   
 There are four ways to invoke the Complete Word feature:  
   
-- On the **Edit** menu, point to **IntelliSense**, and then Select **Complete Word**.  
+- On the **Edit** menu, point to **IntelliSense**, and then select **Complete Word**.  
   
 - Press ALT+RIGHT ARROW.  
   

@@ -19,7 +19,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Complete Word (IntelliSense)
 
-[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server](./_ssnoversion.md)]  [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)] [!INCLUDE [SQL Managed Instance](../../includes/applies-to-version/_asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense Complete Word option types the rest of a variable, command, or function name once you have entered enough characters to uniquely identify the term.  
   
@@ -29,7 +29,7 @@ There are four ways to invoke the Complete Word feature:
   
 - Press ALT+RIGHT ARROW.  
   
-- Right-Select the text editor, and Select **Complete Word**.  
+- Right-click the text editor, and select **Complete Word**.  
   
 - Select the **Complete Word** button on the **Text Editor** toolbar.  
   

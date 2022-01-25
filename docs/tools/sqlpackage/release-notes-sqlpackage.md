@@ -29,9 +29,9 @@ This article lists the features and fixes delivered by the released versions of 
 ### Features
 | Feature | Details |
 | :------ | :------ |
-|Always Encrypted|Adds support for in-place encryption for Always Encrypted columns.|
+|Always Encrypted|Adds support for in-place encryption for Always Encrypted columns. Publish can now leverage a server-side secure enclave to encrypt, decrypt and re-encrypt database columns in-place. This avoids the expense of moving the data outside of the database. See pre-requisites for in-place encryption in [Configure column encryption in-place using Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md). Note: In-place encryption is supported only with the offline approach. |
 |Azure Synapse Analytics|Adds support for column-level symmetric encryption.|
-|Ledger|Adds supports for exporting and importing databases with ledger tables. See Known Issues for export limitations.|
+|Ledger|Adds supports for exporting and importing databases with ledger tables. The following limitations apply to Export: Ledger history tables and dropped ledger tables are not migrated, the values of GENERATED ALWAYS columns and the data in ledger system views is not migrated, and the value of the database-level Ledger property is ignored.|
 |Platform|Adds support for .NET 6 as the target framework|
 |Platform|References Microsoft.Data.SqlClient (3.0) instead of System.Data.SqlClient in .NET Framework version. Upgrade Microsoft.Data.SqlClient from 2.1.3 to 3.0 for .NET Core version.|
 |Platform|Upgrades .NET Framework target version to .NET 4.6.2|
@@ -57,7 +57,6 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported. | N/A |
 | Deployment | The Azure SQL ledger table feature is not yet supported for extract and publish. | N/A |
-| Ledger | The following limitations apply to Export: Ledger history tables and dropped ledger tables are not migrated, the values of GENERATED ALWAYS columns and the data in ledger system views is not migrated, and the value of the database-level Ledger property is ignored.|
 
 
 ## 18.8 sqlpackage

@@ -65,7 +65,7 @@ Use the following steps to rename a SQL Server database using T-SQL in SQL Serve
 3. Copy and paste the following example into the query window and select **Execute**. This example changes the name of the `MyTestDatabase` database to `MyTestDatabaseCopy`.
   
 > [!WARNING]
-> To quickly obtain exclusive access, the code sample uses the termination option `WITH ROLLBACK IMMEDIATE`. This will cause all incomplete transactions to be rolled back and any other connections to the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to be immediately disconnected.  
+> To quickly obtain exclusive access, the code sample uses the termination option `WITH ROLLBACK IMMEDIATE`. This will cause all incomplete transactions to be rolled back and any other connections to the `MyTestDatabase` database to be immediately disconnected.  
 
    ```sql
    USE master;  

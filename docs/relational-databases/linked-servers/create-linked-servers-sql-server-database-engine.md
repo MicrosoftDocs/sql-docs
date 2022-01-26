@@ -84,8 +84,7 @@ Specify the **Server type** and related information if needed:
 
 ### Edit the Security page for the linked server properties
   
-On the **Security** page, specify the security context that will be used when the original instance connects to the linked server.
-
+On the **Security** page, specify the security context that will be used when the original instance connects to the linked server. There are two strategies to configure here that can be used alone or combined. The first is to map logins from the local server to the remote server, and the second is how the linked server should treat logins that are not mapped. 
 #### Add login mappings
 
 You can optionally specify how specific local server logins will authenticate using the linked server.
@@ -97,6 +96,9 @@ Under **Local server login to remote server login mappings**, repeat the followi
 - Specify a **Local login**.
 
     Specify the local login that can connect to the linked server. The local login can be either a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication or a Windows Authentication login. Using a Windows group is not supported. Use this list to restrict the connection to specific logins, or to allow some logins to connect as a different login.  
+    
+> [!NOTE]
+> Common issues with linked servers using Windows Authentication to a remote SQL Server instance arise from issues with service principal names (SPNs). For more information, see [Service Principal Name (SPN) Support in Client Connections](../../connect/oledb/features/service-principal-name-spn-support-in-client-connections.md). **Microsoft Kerberos Configuration Manager for SQL Server** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with SQL Server. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).
 
 - Select **Impersonate** (optional).
 
@@ -111,7 +113,6 @@ Under **Local server login to remote server login mappings**, repeat the followi
 - Specify a **Remote Password** if you aren't using impersonation.
   - Specify the password of the Remote User.  
 
-#### Remove login mappings
 
 Select **Remove** to remove an existing local login, if desired.
 
@@ -146,7 +147,8 @@ To view or specify server options, select the **Server Options** page. You can e
      Enables and disables a linked server for distributed query access.  
   
 - **RPC**  
-     Enables RPC from the specified server.  
+     Enables remote procedure calls (RPC) from the specified server.  
+
   
 - **RPC Out**  
      Enables RPC to the specified server.  
@@ -253,9 +255,13 @@ The following steps help you validate a linked server.
   
 ### Test the linked server  
 
-To test the ability to connect to a linked server, in Object Explorer, right-click the linked server and then select **Test Connection**.  
+ Considering either of the following two approaches to test a linked server's authentication in your current security context.
+ 
+   - To test the ability to connect to a linked server in SSMS, browse to the linked server in Object Explorer, right-click the linked server and then select **Test Connection**.  
 
-- Execute the following code to test the connection to the linked server. This example returns the names of the databases on the linked server.  
+
+- To test the ability to connect to a linked server in T-SQL , execute a simple SELECT statement, for example, to retrieve basic database catalog information. This example returns the names of the databases on the linked server.  
+
   
     ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases;  
@@ -275,7 +281,8 @@ LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked
 GO  
 ```
 
-When NULL is returned for the linked server login, it indicates that the login does not exist on the linked server. These logins will not be able to use the linked server unless the linked server is configured to pass a different security context or the linked server accepts anonymous connections.  
+When `NULL` is returned for the linked server login, it indicates that the login does not exist on the linked server. These logins will not be able to use the linked server unless the linked server is configured to pass a different security context or the linked server accepts anonymous connections.  
+
 
 ## Linked servers with Azure SQL Managed Instance
 

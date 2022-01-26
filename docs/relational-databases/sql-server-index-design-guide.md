@@ -737,7 +737,7 @@ For example, the columnstore index performs these operations on rowgroups:
 * Creates new rowgroups during an `ALTER INDEX ... REBUILD` operation.
 * Reports on rowgroup health and fragmentation in the dynamic management views (DMVs).
 
-The deltastore is comprised of one or more rowgroups called **delta rowgroups**. Each delta rowgroup is a clustered B-tree index that stores small bulk loads and inserts until the rowgroup contains 1,048,576 rows, at which time a process called the **tuple-mover** automatically compresses the closed rowgroup into the columnstore. 
+The deltastore is comprised of one or more rowgroups called **delta rowgroups**. Each delta rowgroup is a clustered B+ tree index that stores small bulk loads and inserts until the rowgroup contains 1,048,576 rows, at which time a process called the **tuple-mover** automatically compresses the closed rowgroup into the columnstore. 
 
 For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
 

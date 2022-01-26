@@ -115,6 +115,8 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|Count of version records being kept outside the original data row. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|Count of version records considered long term. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+
 ## Remarks  
  The sys.dm_db_index_physical_stats dynamic management function replaces the DBCC SHOWCONTIG statement.  
   

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "FOR XML clause, TYPE directive"
   - "TYPE directive"
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # TYPE Directive in FOR XML Queries
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

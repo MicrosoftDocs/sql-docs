@@ -121,6 +121,10 @@ The following table shows which editions of SQL Server 2017 are compatible with 
 | Windows Server 2012 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2012 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2012 Foundation    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows 11 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 11 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 11 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 11 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
@@ -218,6 +222,10 @@ The following table shows which editions of SQL Server 2016 are compatible with 
 | Windows Server 2012 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2012 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2012 Foundation    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows 11 IoT Enterprise         |    No      |    No     |    No    | No  |   No    |
+| Windows 11 Enterprise             |    No      |    No     |    No    | No  |   No    |
+| Windows 11 Professional           |    No      |    No     |    No    | No  |   No    |
+| Windows 11 Home                   |    No      |    No     |    No    | No  |   No    |
 | Windows 10 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
@@ -329,7 +337,7 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
  The supported storage types for data files are:  
   
 -   Local Disk 
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently supports disk drives that have standard native sector sizes of 512 bytes and 4 KB.  Hard disks with sector sizes larger than 4 KB may cause errors when attempting to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data files on them.  See [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/kb/926930) for more information on hard disk sector-size support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently supports disk drives that have standard native sector sizes of 512 bytes and 4 KB.  Hard disks with sector sizes larger than 4 KB may cause errors when attempting to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data files on them.  See [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/kb/926930) for more information on hard disk sector-size support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Troubleshoot errors related to system disk sector size greater than 4 KB](/troubleshoot/sql/admin/troubleshoot-os-4kb-disk-sector-size).
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the tempdb files. Ensure that the path specified for the tempdb data and log files is valid on all the cluster nodes. During failover, if the tempdb directories are not available on the failover target node, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource will fail to come online.
 -   Shared Storage  
 -   [Storage Spaces Direct \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  

@@ -9,7 +9,6 @@ ms.technology: report-data
 
 ms.topic: reference
 f1_keywords: 
-  - "10150"
   - "sql13.rtp.rptdesigner.datasetproperties.parameters.f1"
   - "10023"
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed

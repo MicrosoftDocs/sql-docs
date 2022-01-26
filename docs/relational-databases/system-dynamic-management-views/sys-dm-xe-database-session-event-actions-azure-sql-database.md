@@ -7,6 +7,8 @@ ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
 author: WilliamDAssafMSFT
 ms.author: wiassaf

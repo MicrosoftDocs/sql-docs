@@ -6,7 +6,6 @@ ms.date: "`12/16/2021"
 
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,6 +14,9 @@ helpviewer_keywords:
   - "compatibility levels [SQL Server], changing"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: FY21Q2Fresh
+ms.date: "10/21/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View or change the compatibility level of a database
@@ -23,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 > [!IMPORTANT]
 > Before you change the compatibility level of a database, you should understand the impact of the change on your applications. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
-    
+
 ## <a name="Security"></a><a name="Permissions"></a> Permissions  
  Requires ALTER permission on the database.  
   

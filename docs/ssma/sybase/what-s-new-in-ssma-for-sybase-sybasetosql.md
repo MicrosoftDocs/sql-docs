@@ -16,6 +16,13 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
 
+
+## SSMA v8.24
+
+The v8.24 release of SSMA for SAP ASE contains the following changes:
+
+* Minor performance improvements and bug fixes
+
 ## SSMA v8.23
 
 The v8.23 release of SSMA for SAP ASE contains the following changes:

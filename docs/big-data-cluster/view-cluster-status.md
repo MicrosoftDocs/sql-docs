@@ -60,6 +60,7 @@ The following articles describe how to troubleshoot Big Data Clusters:
 - [Troubleshoot a pyspark notebook](troubleshoot-pyspark-notebook.md)
 - [Troubleshoot Big Data Clusters by using Juypter Notebooks and Azure Data Studio](cluster-troubleshooter-notebooks.md)
 - [Restore HDFS permissions](troubleshoot-hdfs-restore-admin.md)
+- [Troubleshoot HDFS in SQL Server Big Data Clusters](troubleshoot-hdfs.md)
 
 The following articles describe how to troubleshoot big data clusters deployed in Active Directory mode:
 - [Troubleshoot SQL Server Big Data Clusters Active Directory integration](troubleshoot-active-directory.md) 

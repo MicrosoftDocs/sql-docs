@@ -1,6 +1,6 @@
 ---
+title: sys.tables (Transact-SQL)
 description: "sys.tables (Transact-SQL)"
-title: "sys.tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/25/2021"
 ms.prod: sql
@@ -9,10 +9,8 @@ ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
-  - "tables_TSQL"
   - "sys.tables_TSQL"
   - "sys.tables"
-  - "tables"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

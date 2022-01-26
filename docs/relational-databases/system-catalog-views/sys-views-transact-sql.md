@@ -1,27 +1,25 @@
 ---
+title: sys.views (Transact-SQL)
 description: "sys.views (Transact-SQL)"
-title: "sys.views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/25/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
-  - "views_TSQL"
-  - "views"
   - "sys.views_TSQL"
   - "sys.views"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "sys.views catalog view"
-ms.assetid: f8a8ea39-5a09-4662-801e-b43519467def
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "05/25/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # sys.views (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

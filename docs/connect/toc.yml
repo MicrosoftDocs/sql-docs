@@ -3021,7 +3021,7 @@
       href: ../connect/odbc/use-xa-with-dtc.md
     - name: Bug Fixes
       href: ../connect/odbc/bug-fixes.md
-  - name: C++ sample application
+  - name: C / C++ sample application
     href: ../connect/odbc/cpp-code-example-app-connect-access-sql-db.md
   # docs/odbc/
   - name: ODBC advanced

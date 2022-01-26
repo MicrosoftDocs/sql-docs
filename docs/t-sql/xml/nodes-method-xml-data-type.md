@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "nodes() method"
   - "nodes method"
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # nodes() Method (xml Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

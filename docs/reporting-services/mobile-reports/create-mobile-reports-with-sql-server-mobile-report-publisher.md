@@ -23,7 +23,7 @@ With [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], you can 
 
 * Connect your mobile reports to a range of data sources, including on-premises SQL Server and Analysis Services data. 
 * Lay out your mobile reports on a design surface with adjusting grid rows and columns, and flexible mobile report elements that scale well to any screen size. 
-* Then save these mobile reports to a Reporting Services server, and view and interact with them in a browser or in the Power BI mobile app on iPads, iPhones, Android phones and tablets, and Windows 10 devices.
+* Then save these mobile reports to a Reporting Services server, and view and interact with them in a browser or in the Power BI mobile app on iPads, iPhones, Android phones and tablets, and Windows devices.
   
 ## Create [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  mobile reports  
   
@@ -42,7 +42,7 @@ These articles will help you get started.
 ## SSRS mobile reports in the Power BI mobile apps
 
 -  View [Reporting Services mobile reports and KPIs](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) in the Power BI mobile apps for iOS and Android
--  View [Reporting Services  mobile reports and KPIs](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/) in the Power BI app for Windows 10 devices   
+-  View [Reporting Services  mobile reports and KPIs](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/) in the Power BI app for Windows devices   
 
 ## See Also  
   

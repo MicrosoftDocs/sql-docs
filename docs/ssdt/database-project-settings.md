@@ -8,7 +8,6 @@ f1_keywords:
   - "sql.data.tools.DebugProperties"
   - "sql.data.tools.dacsettings.dialog"
   - "sql.data.tools.dbsqlclrlanguagevb"
-  - "SQL.DATA.TOOLS.DBADVANCEDBUILDSETTINGSCS"
   - "sql.data.tools.dbadvancedbuildsettingscs"
   - "ql.data.tools.criticalerror.dialog"
   - "sql.data.tools.dbassemblysigningchangekeypassword"
@@ -34,7 +33,8 @@ f1_keywords:
   - "sql.data.tools.csadvancedsettings.dialog"
   - "sql.data.tools.dbassemblyinfo"
   - "sql.data.tools.extendedpropertieseditor.dialog"
-ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
+dev_langs: 
+  - "TSQL"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”

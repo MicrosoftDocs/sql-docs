@@ -1,21 +1,20 @@
 ---
-description: "Create Foreign Key Relationships"
 title: "Create Foreign Key Relationships"
-ms.custom: ""
-ms.date: "10/21/2021"
+description: "Create Foreign Key Relationships"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: "vanto"
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "relationships [SQL Server], creating"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: "vanto"
+ms.custom: FY21Q2Fresh
+ms.date: "12/20/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Foreign Key Relationships
-
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -52,10 +51,11 @@ Creating a foreign key in an existing table requires [ALTER](../../t-sql/stateme
 1. In Object Explorer, right-click the table that will be on the foreign-key side of the relationship and select **Design**.
 
    The table opens in [**Table Designer**](../../ssms/visual-db-tools/design-tables-visual-database-tools.md).
-2. From the **Table Designer** menu, select **Relationships**.
+2. From the **Table Designer** menu, select **Relationships**. (See the **Table Designer** menu in the header, or, right-click in the empty space of the table definition, then select **Relationships...**.)
 3. In the **Foreign-key Relationships** dialog box, select **Add**.
 
-   The relationship appears in the **Selected Relationship** list with a system-provided name in the format FK_\<*tablename*>_\<*tablename*>, where *tablename* is the name of the foreign key table.
+   The relationship appears in the **Selected Relationship** list with a system-provided name in the format FK_\<*tablename*>_\<*tablename*>, where the first *tablename* is the name of the foreign key table, and the second *tablename* is the name of the primary key table. This is simply a default and common naming convention for the **(Name)** field of the foreign key object.
+     
 4. Select the relationship in the **Selected Relationship** list.
 5. Select **Tables and Columns Specification** in the grid to the right and select the ellipses (**...**) to the right of the property.
 6. In the **Tables and Columns** dialog box, in the **Primary Key** drop-down list, choose the table that will be on the primary-key side of the relationship.

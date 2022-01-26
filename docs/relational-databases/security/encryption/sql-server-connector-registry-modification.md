@@ -2,7 +2,6 @@
 title: SQL Server Connector error and information logging
 description: This article describes enabling errors and logging for SQL Server Connector by modifying registry entries
 ms.date: 08/23/2021
-ms.localizationpriority: medium
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -91,7 +90,7 @@ Modify registry entries to enable SQL Server Connector logging error and informa
 > [!CAUTION]
 > Follow the steps in this section carefully and at your own risk. Serious problems might occur if you modify the registry incorrectly. Before you modify the registry, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-1. There are two ways to open Registry Editor in Windows 10:
+1. There are two ways to open Registry Editor in Windows:
     - In the search box on the taskbar, type **regedit**. Then, select the top result for Registry Editor (Desktop app).
 
     ![ekm regedit open](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-open.png "ekm regedit open")

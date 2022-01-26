@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: troubleshooting
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Troubleshoot: Availability group exceeded RTO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

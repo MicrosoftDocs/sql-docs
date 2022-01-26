@@ -11,7 +11,7 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.custom: sqlfreshmay19
+ms.custom: sqlfreshmay19, FY21Q2Fresh
 ms.date: "12/02/2021"
 ---
 # Troubleshoot connecting to the SQL Server Database Engine

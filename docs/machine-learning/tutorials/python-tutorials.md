@@ -6,8 +6,8 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/21/2020
 ms.topic: tutorial
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Python tutorials for SQL machine learning

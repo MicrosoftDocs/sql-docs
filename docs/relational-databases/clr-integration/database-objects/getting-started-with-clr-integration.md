@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "Hello World example [CLR integration]"
   - "library [CLR integration]"
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Getting Started with CLR Integration
 

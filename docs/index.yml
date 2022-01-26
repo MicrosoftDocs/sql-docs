@@ -7,6 +7,7 @@ metadata:
    description: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud."
    ms.topic: hub-page
    ms.prod: sql
+   ms.custom: FY21Q2Fresh
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

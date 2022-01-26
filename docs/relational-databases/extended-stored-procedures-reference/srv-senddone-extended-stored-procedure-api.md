@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_senddone"
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_senddone (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

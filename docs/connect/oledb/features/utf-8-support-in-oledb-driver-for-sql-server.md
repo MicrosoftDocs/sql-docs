@@ -2,7 +2,7 @@
 title: UTF-8 Support in OLE DB Driver for SQL Server
 description: Learn about OLE DB Driver for SQL Server support for the UTF-8 server encoding and UTF-8 client encoding.
 ms.custom: ""
-ms.date: "05/25/2020"
+ms.date: "12/13/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -23,12 +23,12 @@ Microsoft OLE DB Driver for SQL Server (version 18.2.1) adds support for the UTF
 - [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [UTF-8 support](../../../relational-databases/collations/collation-and-unicode-support.md#utf8)
 
-Version 18.4.0 of the driver adds support for the UTF-8 client encoding (enabled with the "Use Unicode UTF-8 for worldwide language support" checkbox under Region Settings in Windows 10).
+Version 18.4.0 of the driver adds support for the UTF-8 client encoding (enabled with the "Use Unicode UTF-8 for worldwide language support" checkbox under Region Settings in Windows 10 and Windows 11).
 
 > [!NOTE]  
 > Microsoft OLE DB Driver for SQL Server uses the [GetACP](/windows/win32/api/winnls/nf-winnls-getacp) function to determine the encoding of the DBTYPE_STR input buffer.
 >
-> Scenarios in which GetACP returns a UTF-8 encoding (enabled with the "Use Unicode UTF-8 for worldwide language support" checkbox under Region Settings in Windows 10) are supported starting with version 18.4. In previous versions, if the buffer needs to store Unicode data, the buffer data type should be set to *DBTYPE_WSTR* (UTF-16 encoded).
+> Scenarios in which GetACP returns a UTF-8 encoding (enabled with the "Use Unicode UTF-8 for worldwide language support" checkbox under Region Settings in Windows 10 and Windows 11) are supported starting with version 18.4. In previous versions, if the buffer needs to store Unicode data, the buffer data type should be set to *DBTYPE_WSTR* (UTF-16 encoded).
 
 ## Data insertion into a UTF-8 encoded CHAR or VARCHAR column
 

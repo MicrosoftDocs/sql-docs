@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "denying permissions [SQL Server], XML server collections"
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Deny Permissions on an XML Schema Collection
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

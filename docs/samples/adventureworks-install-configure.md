@@ -12,6 +12,7 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # AdventureWorks sample databases
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This article provides direct links to download AdventureWorks sample databases, as well as instructions for restoring them to SQL Server and Azure SQL Database. 
@@ -22,7 +23,6 @@ For more information about samples, see the [Samples GitHub repository](https://
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
-
 
 ## Download backup files 
 

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SqlPipe object"
   - "tabular results"
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # SqlPipe Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

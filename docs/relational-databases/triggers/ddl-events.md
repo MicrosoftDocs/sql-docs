@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "DDL triggers, events"
   - "events [SQL Server], DDL"
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DDL Events

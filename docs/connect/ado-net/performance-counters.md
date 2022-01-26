@@ -51,8 +51,8 @@ The performance counters `NumberOfFreeConnections`, `NumberOfActiveConnections`,
 ```xml  
 <system.diagnostics>  
   <switches>  
-    <add name="ConnectionPoolPerformanceCounterDetail"  
-         value="4"/>  
+    <add name="ConnectionPoolPerformanceCounterDetail" value="4"/>  
+    <!-- A value of 4 corresponds to System.Diagnostics.TraceLevel.Verbose -->
   </switches>  
 </system.diagnostics>  
 ```  

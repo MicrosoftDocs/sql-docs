@@ -146,6 +146,18 @@ You can use the Azure portal to create the key vault and then add an Azure AD pr
   
    ![Screenshot of the Save button on the "Add access policy" pane](../../../relational-databases/security/encryption/media/ekm/ekm-part2-save-access-policy.png)  
 
+### Best practices
+
+To ensure quick key recovery and be able to access your data outside of Azure, we recommend the following best practices:
+
+- Create your encryption key locally on a local hardware security module (HSM) device. Be sure to use an asymmetric RSA 2048 or 3072 key so that it's supported by SQL Server.
+- Import the encryption key to your Azure key vault. This process is described in the next sections.
+- Before you use the key in your Azure key vault for the first time, do an Azure key vault key backup. For more information, see the [Backup-AzureKeyVaultKey]() command.
+- Whenever you make any changes to the key (for example, adding ACLs, tags, or key attributes), be sure to do another Azure key vault key backup.
+
+  > [!NOTE]
+  > Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere.
+
 ## [PowerShell](#tab/powershell)
 
 ### Create a key vault and key by using PowerShell

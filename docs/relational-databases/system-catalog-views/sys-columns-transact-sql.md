@@ -1,44 +1,44 @@
 ---
-description: "sys.columns (Transact-SQL)"
 title: "sys.columns (Transact-SQL)"
-ms.custom: ""
-ms.date: "08/05/2021"
+description: "sys.columns (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sys.columns_TSQL"
   - "sys.columns"
-  - "columns_TSQL"
-  - "columns"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "sys.columns catalog view"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "08/05/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # sys.columns (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns a row for each column of an object that has columns, such as views or tables. The following is a list of object types that have columns:  
+Returns a row for each column of an object that has columns, such as views or tables. The following is a list of object types that have columns:  
   
--   Table-valued assembly functions (FT)  
+- Table-valued assembly functions (FT)  
   
--   Inline table-valued SQL functions (IF)  
+- Inline table-valued SQL functions (IF)  
   
--   Internal tables (IT)  
+- Internal tables (IT)  
   
--   System tables (S)  
+- System tables (S)  
   
--   Table-valued SQL functions (TF)  
+- Table-valued SQL functions (TF)  
   
--   User tables (U)  
+- User tables (U)  
   
--   Views (V)  
+- Views (V)  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

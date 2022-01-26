@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ELEMENT directive"
   - "entity encoding [XML]"
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.custom: "seo-lt-2019"
 ---
 # Example: Specifying the ELEMENT Directive and Entity Encoding

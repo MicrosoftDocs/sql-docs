@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "change data capture, administering"
   - "change data capture, jobs"
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.custom: seo-dt-2019
 ---
 # Administer and monitor change data capture 

@@ -6,6 +6,8 @@ ms.date: "03/06/2017"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: WilliamDAssafMSFT
 ms.author: wiassaf

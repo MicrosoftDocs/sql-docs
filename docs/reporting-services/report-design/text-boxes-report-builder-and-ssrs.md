@@ -10,7 +10,6 @@ ms.technology: report-design
 ms.topic: conceptual
 f1_keywords: 
   - "10134"
-  - "10120"
   - "sql13.rtp.rptdesigner.textproperties.general.f1"
   - "sql13.rtp.rptdesigner.textboxproperties.general.f1"
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2

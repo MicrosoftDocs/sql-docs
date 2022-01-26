@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "insert keyword [XML DML]"
   - "insert XML DML statement"
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # insert (XML DML)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

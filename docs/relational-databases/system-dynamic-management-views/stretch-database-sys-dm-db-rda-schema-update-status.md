@@ -7,6 +7,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sys.dm_db_rda_schema_update_status"
   - "sys.dm_db_rda_schema_update_status_TSQL"

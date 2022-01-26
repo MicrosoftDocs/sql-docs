@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "lock escalation, [SQL Server]"
   - "lock partitioning, [SQL Server]"
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transaction Locking and Row Versioning Guide

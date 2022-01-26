@@ -101,7 +101,7 @@ The first class that you must define is the WaitForDelayVisitor class, derived f
   
     ```  
     public WaitForDelayVisitor() {  
-       WaitForDelayStatments = new List<WaitForStatement>();  
+       WaitForDelayStatements = new List<WaitForStatement>();  
     }  
     ```  
   
@@ -111,7 +111,7 @@ The first class that you must define is the WaitForDelayVisitor class, derived f
     public override void ExplicitVisit(WaitForStatement node) {  
        // We are only interested in WAITFOR DELAY occurrences  
        if (node.WaitForOption == WaitForOption.Delay)  
-          WaitForDelayStatments.Add(node);  
+          WaitForDelayStatements.Add(node);  
     }  
     ```  
   

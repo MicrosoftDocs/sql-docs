@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "exist() method"
   - "exist method"
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # exist() Method (xml Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

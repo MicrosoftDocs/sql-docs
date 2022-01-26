@@ -1,7 +1,7 @@
 ---
 title: "Working with subscriptions (web portal) | Microsoft Docs"
 description: Learn how to use the Subscriptions page to list all of the subscriptions for the current report in Reporting Services. 
-ms.date: 01/31/2020
+ms.date: 01/24/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -17,11 +17,14 @@ ms.author: maggies
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Use the Subscriptions page to list all of the subscriptions for the current report. If you have sufficient permission (as conveyed by the "Manage all subscriptions" task), you can view the subscriptions of all users. Otherwise, this page shows only the subscriptions that you own.  
+
+> [!NOTE]
+> This page is not supported in the mobile layout.
   
 Before you can create a new subscription, you must verify that the report data source uses stored credentials. Use the Data Sources properties page to store credentials.  
   
 > [!NOTE]
-> The SQL Server Agent service needs to be started.   
+> The SQL Server Agent service needs to be started.
   
 ![Manage subscriptions](../reporting-services/media/working-with-subscriptions-web-portal/ssrs-manage-subscriptions.png)  
 You get to the Subscriptions page by selecting the **ellipsis (...)** of a report, selecting **Manage** and selecting **Subscriptions**.  

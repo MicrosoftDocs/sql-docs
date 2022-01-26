@@ -9,8 +9,8 @@ ms.reviewer: "wiassaf"
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
-author: "joesackmsft"
-ms.author: "josack"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Intelligent query processing in SQL databases

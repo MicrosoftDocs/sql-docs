@@ -1,7 +1,7 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (macOS)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on macOS clients to enable database connectivity.
-ms.date: 08/02/2021
+ms.date: 01/26/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -21,7 +21,7 @@ This article explains how to install the Microsoft ODBC Driver for SQL Server on
 This article provides commands for installing the ODBC driver from the bash shell. If you want to download the packages directly, see [Download ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md).
 
 > [!Note]
-> The Microsoft ODBC driver for SQL Server on macOS is only supported on the x64 architecture through version 17.7. The Apple M1 (ARM64) is supported starting with version 17.8. The architecture will be detected and the correct package will be automatically installed by the Homebrew formula. If your command prompt is running in x64 emulation mode on the M1, the x64 package will be installed. If you're not running in emulation mode in your command prompt, the ARM64 package will be installed.
+> The Microsoft ODBC driver for SQL Server on macOS is only supported on the x64 architecture through version 17.7. Apple M1 (ARM64) support was added starting with version 17.8. The architecture will be detected and the correct package will be automatically installed by the Homebrew formula. If your command prompt is running in x64 emulation mode on the M1, the x64 package will be installed. If you're not running in emulation mode in your command prompt, the ARM64 package will be installed.
 
 ## Microsoft ODBC 17
 

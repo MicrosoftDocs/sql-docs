@@ -1,9 +1,6 @@
 ---
 title: "View or change the compatibility level of a database"
 description: Learn how to view or change the compatibility level of a database in SQL Server or Azure SQL by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
-ms.date: "`12/16/2021"
-
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: supportability
@@ -16,7 +13,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ""
 ms.custom: FY21Q2Fresh
-ms.date: "10/21/2021"
+ms.date: "01/26/2022"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View or change the compatibility level of a database

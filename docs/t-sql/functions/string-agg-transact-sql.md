@@ -2,7 +2,7 @@
 description: "STRING_AGG (Transact-SQL)"
 title: "STRING_AGG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2021"
+ms.date: "01/26/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

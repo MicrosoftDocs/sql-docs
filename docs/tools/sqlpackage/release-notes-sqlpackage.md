@@ -29,7 +29,7 @@ This article lists the features and fixes delivered by the released versions of 
 ### Features
 | Feature | Details |
 | :------ | :------ |
-|Always Encrypted|Adds support for in-place encryption for Always Encrypted columns. Publish can now leverage a server-side secure enclave to encrypt, decrypt and re-encrypt database columns in-place. This avoids the expense of moving the data outside of the database. See pre-requisites for in-place encryption in [Configure column encryption in-place using Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md). Note: In-place encryption is supported only with the offline approach. |
+|Always Encrypted|Adds support for in-place encryption for Always Encrypted columns. Publish can now leverage a server-side secure enclave to encrypt, decrypt, and re-encrypt database columns in-place. This avoids the expense of moving the data outside of the database. See pre-requisites for in-place encryption in [Configure column encryption in-place using Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md). Note: In-place encryption is supported only with the offline approach. |
 |Azure Synapse Analytics|Adds support for column-level symmetric encryption.|
 |Ledger|Adds supports for exporting and importing databases with ledger tables. The following limitations apply to Export: Ledger history tables and dropped ledger tables are not migrated, the values of GENERATED ALWAYS columns and the data in ledger system views is not migrated, and the value of the database-level Ledger property is ignored.|
 |Platform|Adds support for .NET 6 as the target framework|
@@ -178,7 +178,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | N/A |
-| Deployment | In an incremental deploy scenario when the user is dropping a temporal table along with dropping objects that are dependent on it, like functions, stored procs etc. the deployment can fail. The script generation order tries to turn off SYSTEM_VERSIONING on the table which is a pre-req for dropping the table, but the order of steps generated is incorrect. [Work item](https://github.com/microsoft/azuredatastudio/issues/14655) | Generate the deployment script, move the System_Versioning OFF step to just before the table being dropped and then run the script. |
+| Deployment | In an incremental deploy scenario when the user is dropping a temporal table along with dropping objects that are dependent on it, like functions, stored procedures etc. the deployment can fail. The script generation order tries to turn off SYSTEM_VERSIONING on the table that is a pre-req for dropping the table, but the order of steps generated is incorrect. [Work item](https://github.com/microsoft/azuredatastudio/issues/14655) | Generate the deployment script, move the System_Versioning OFF step to just before the table being dropped and then run the script. |
 
 ## 18.6 sqlpackage
 

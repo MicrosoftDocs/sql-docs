@@ -2,7 +2,8 @@
 title: "View or change the compatibility level of a database"
 description: Learn how to view or change the compatibility level of a database in SQL Server or Azure SQL by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
-ms.date: "10/21/2021"
+ms.date: "`12/16/2021"
+
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -75,7 +76,8 @@ GO
   
 2.  From the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and select **Execute**. This example changes the compatibility level of the **AdventureWorks2019** database to `150`, which is the compatibility level for [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)].  
+3.  Copy and paste the following example into the query window and select **Execute**. This example changes the compatibility level of the `AdventureWorks2019` database to `150`, which is the compatibility level for [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)].  
+
   
 ```sql  
 ALTER DATABASE AdventureWorks2019  

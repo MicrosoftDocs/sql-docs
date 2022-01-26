@@ -24,8 +24,7 @@ Use the Subscriptions page to list all of the subscriptions for the current repo
 Before you can create a new subscription, you must verify that the report data source uses stored credentials. Use the Data Sources properties page to store credentials.  
   
 > [!NOTE]
-> The SQL Server Agent service needs to be started.  
-
+> The SQL Server Agent service needs to be started.
   
 ![Manage subscriptions](../reporting-services/media/working-with-subscriptions-web-portal/ssrs-manage-subscriptions.png)  
 You get to the Subscriptions page by selecting the **ellipsis (...)** of a report, selecting **Manage** and selecting **Subscriptions**.  

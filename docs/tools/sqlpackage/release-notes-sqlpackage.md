@@ -31,7 +31,7 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |
 |Always Encrypted|Adds support for in-place encryption for Always Encrypted columns. Publish can now leverage a server-side secure enclave to encrypt, decrypt, and re-encrypt database columns in-place. This avoids the expense of moving the data outside of the database. See pre-requisites for in-place encryption in [Configure column encryption in-place using Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md). Note: In-place encryption is supported only with the offline approach. |
 |Azure Synapse Analytics|Adds support for column-level symmetric encryption.|
-|Ledger|Adds supports for exporting and importing databases with ledger tables. The following limitations apply to Export: Ledger history tables and dropped ledger tables are not migrated, the values of GENERATED ALWAYS columns and the data in ledger system views is not migrated, and the value of the database-level Ledger property is ignored.|
+|Ledger|Adds supports for exporting and importing databases with ledger tables. The following limitations apply to Export: Ledger history tables and dropped ledger tables aren't migrated; the values of `GENERATED ALWAYS` columns and the data in ledger system views isn't migrated; the value of the database-level Ledger property is ignored.|
 |Platform|Adds support for .NET 6 as the target framework|
 |Platform|References Microsoft.Data.SqlClient (3.0) instead of System.Data.SqlClient in .NET Framework version. Upgrade Microsoft.Data.SqlClient from 2.1.3 to 3.0 for .NET Core version.|
 |Platform|Upgrades .NET Framework target version to .NET 4.6.2|
@@ -55,8 +55,8 @@ This article lists the features and fixes delivered by the released versions of 
 ### Known Issues
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
-| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported. | N/A |
-| Deployment | The Azure SQL ledger table feature is not yet supported for extract and publish. | N/A |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| Deployment | The Azure SQL ledger table feature isn't yet supported for extract and publish. | N/A |
 
 
 ## 18.8 sqlpackage
@@ -73,7 +73,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details |
 | :------ | :------ |
 | Export | Adds option VerifyExtraction to change behavior of schema model validation on export |
-| Azure SQL | Support for ledger database and tables, import and export |
+| Azure SQL | Support for ledger database and tables, including import and export actions. |
 | Platform | Upgrade Microsoft.Data.SqlClient from 2.0.0 to 2.1.3 for .NET Core version |
 | Azure Synapse Analytics | Support for column encryption with symmetric key  |
 | Azure Synapse Analytics | Support for column encryption with CREATE CERTIFICATE |
@@ -107,8 +107,8 @@ This article lists the features and fixes delivered by the released versions of 
 ### Known Issues
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
-| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | N/A |
-| Deployment | The Azure SQL ledger table feature is not yet supported | N/A |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported | N/A |
+| Deployment | The Azure SQL ledger table feature isn't yet supported | N/A |
 
 ## 18.7.1 sqlpackage
 
@@ -130,7 +130,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details |
 | :------ | :------ | 
 | Export | Fixed an issue where exporting a table with text or image in the first column would fail without a clustered index. |
-| Export | Fixed an issue where exporting a table that has the order of columns in a statistic in a different order than the table create script would fail without a clustered index. |
+| Export | Fixed an issue where exporting a table  without a clustered index that has the order of columns in a statistic in a different order than the table create script would fail. |
 
 ## 18.7 sqlpackage
 
@@ -145,7 +145,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details |
 | :------ | :------ |
 | Deployment | Extract/Publish Big Data to/from Azure Storage. For more info, see [SqlPackage for Big Data](sqlpackage-for-azure-synapse-analytics.md) |
-| Azure Synapse Analytics | Row level security support (inline table valued function, security policy, security predicate)  |
+| Azure Synapse Analytics | Row level security support (inline table-valued function, security policy, security predicate)  |
 | Azure Synapse Analytics | Workload classification support |
 | Azure SQL Edge | External streaming job support |
 | Azure SQL Edge | Added table and database options for data retention. |
@@ -177,8 +177,8 @@ This article lists the features and fixes delivered by the released versions of 
 ### Known Issues
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
-| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | N/A |
-| Deployment | In an incremental deploy scenario when the user is dropping a temporal table along with dropping objects that are dependent on it, like functions, stored procedures etc. the deployment can fail. The script generation order tries to turn off SYSTEM_VERSIONING on the table that is a pre-req for dropping the table, but the order of generated steps is incorrect. [Work item](https://github.com/microsoft/azuredatastudio/issues/14655) | Generate the deployment script, move the System_Versioning OFF step to just before the table being dropped and then run the script. |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported | N/A |
+| Deployment | In an incremental deploy scenario, when the user is dropping a temporal table along with dropping objects that are dependent on it, like functions, stored procedures etc. the deployment can fail. The script generation order tries to turn off SYSTEM_VERSIONING on the table that is a pre-req for dropping the table, but the order of generated steps is incorrect. [Work item](https://github.com/microsoft/azuredatastudio/issues/14655) | Generate the deployment script, move the System_Versioning OFF step to just before the table being dropped and then run the script. |
 
 ## 18.6 sqlpackage
 
@@ -213,7 +213,7 @@ This article lists the features and fixes delivered by the released versions of 
 ### Known Issues
 | Feature | Details |
 | :------ | :------ |
-| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | 
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported | 
 
 ## 18.5.1 sqlpackage
 
@@ -244,7 +244,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | Data Sensitivity classification now supported for SQL Server 2008 and up, Azure SQL Database, and Azure Synapse Analytics |
 | Deployment | Add Azure Synapse Analytics support for table constraints |
 | Deployment | Add Azure Synapse Analytics support for ordered clustered column store index |
-| Deployment | Add support for External Data Source (for Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster) and External Table for SQL Server 2019 Big Data Cluster |
+| Deployment | Add support for External Data Source (Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster) and External Table for SQL Server 2019 Big Data Cluster |
 | Deployment | Add SQL Database Edge Instance as supported edition |
 | Deployment | Support Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |
 | Deployment | Add support for copy command in Azure Synapse Analytics |
@@ -259,7 +259,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | Fix generating GRANT statements for AlterAnyDatabaseScopedConfiguration and AlterAnySensitivityClassification permissions |
 | Deployment | Fix External Script permission not being recognized |
 | Deployment | Fix for inline property - the implicit addition of the property should not show in difference but explicit mention should show through script |
-| Deployment | Resolved an issue where changing a Table referenced by a Materialized View (MV) causes Alter View statements to be generated which is not supported for MVs for Azure Synapse Analytics |
+| Deployment | Resolved an issue where changing a Table referenced by a Materialized View (MV) causes Alter View statements to be generated. Alter View statements are not supported for MVs for Azure Synapse Analytics. |
 | Deployment | Fix publish failing when adding column to a table with data for Azure Synapse Analytics |
 | Deployment | Fix update script should move data to a new table when changing the distribution column type (data loss scenario) for Azure Synapse Analytics |
 | ScriptDom | Fix ScriptDom bug where it couldn't recognize inline constraints defined after an inline index |
@@ -293,7 +293,7 @@ This article lists the features and fixes delivered by the released versions of 
 
 | Feature | Details |
 | :------ | :------ |
-| Deployment |  A regression was introduced in 18.4.1 causing there to be a "Object reference not set to an instance of an object." error when deploying a dacpac or importing a bacpac with a user with external login. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
+| Deployment |  A regression was introduced in 18.4.1 causing there to be an "Object reference not set to an instance of an object." error when deploying a dacpac or importing a bacpac with a user with external login. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
 | &nbsp; | &nbsp; |
 
 ## 18.4 sqlpackage
@@ -310,7 +310,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details |
 | :------ | :------ |
 | Deployment | Add support to deploy to Azure Synapse Analytics. | 
-| Platform | sqlpackage .NET Core GA for macOS, Linux, and Windows. | 
+| Platform | sqlpackage .NET Core generally available for macOS, Linux, and Windows. | 
 | Security | Remove SHA1 code signing. |
 | Deployment | Add support for new Azure database editions: GeneralPurpose, BusinessCritical, Hyperscale |
 | Deployment | Add Managed Instance support for Azure Active Directory user and groups. |
@@ -329,10 +329,10 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details |
 | :------ | :------ |
 | Import |  For .bacpac files with compressed files over 4GB in size, you might need to use the .NET Core version of sqlpackage to perform the import.  This behavior is due to how .NET Core generates zip headers, which although valid, are not readable by the .NET Full Framework version of sqlpackage. | 
-| Deployment | The parameter /p:Storage=File is not supported. Only Memory is supported on .NET Core. | 
-| Always Encrypted | sqlpackage .NET Core does not support Always Encrypted columns. | 
-| Security | sqlpackage .NET Core does not support the /ua parameter for multi-factor authentication. | 
-| Deployment | Older V2 .dacpac and .bacpac files that use json data serialization aren't supported. |
+| Deployment | The parameter /p:Storage=File isn't supported. Only Memory is supported on .NET Core. | 
+| Always Encrypted | sqlpackage .NET Core doesn't support Always Encrypted columns. | 
+| Security | sqlpackage .NET Core doesn't support the /ua parameter for multi-factor authentication. | 
+| Deployment | Older V2 dacpac and bacpac files that use json data serialization aren't supported. |
 | &nbsp; | &nbsp; |
 
 ## 18.3.1 sqlpackage
@@ -364,7 +364,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Always Encrypted | Fix for handling Always Encrypted varchar columns. | 
 | Build/Deployment | Fix to resolve the nodes() method for xml column sets.| 
 | ScriptDom | Fix additional cases where the 'URL' string was interpreted as a top level token. | 
-| Graph | Fix generated TSQL for pseudo column references in constraints.  | 
+| Graph | Fix generated SQL for pseudo column references in constraints.  | 
 | Export | Generate random passwords that meet complexity requirements. | 
 | Deployment | Fix to honor command timeouts when retrieving constraints. | 
 | .NET Core (preview) | Fix diagnostic logging to a file. | 
@@ -432,8 +432,8 @@ This release includes cross-platform preview builds of sqlpackage that target .N
 | Known issue | Details |
 | :---------- | :------ |
 | Deployment | For .NET Core, build and deployment contributors aren't supported. | 
-| Deployment | For .NET Core, older .dacpac and .bacpac files that use json data serialization aren't supported. | 
-| Deployment | For .NET Core referenced .dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
+| Deployment | For .NET Core, older dacpac and bacpac files that use json data serialization aren't supported. | 
+| Deployment | For .NET Core referenced dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
 | &nbsp; | &nbsp; |
 
 ## 18.0 sqlpackage
@@ -501,7 +501,7 @@ Build: &nbsp; 14.0.3917.1
 
 | Fix | Details |
 | :-- | :------ |
-| Import | When importing an Azure SQL Database .bacpac to an on-premises instance, fixed errors due to _Database master keys without password are not supported in this version of SQL Server_. |
+| Import | When importing an Azure SQL Database bacpac to an on-premises instance, fixed errors due to _Database master keys without password are not supported in this version of SQL Server_. |
 | Graph | Fixed an unresolved pseudo column error for graph tables. |
 | Schema Compare | Fixed SQL authentication to compare schemas. | 
 | &nbsp; | &nbsp; |
@@ -524,5 +524,5 @@ Build: &nbsp; 14.0.3881.1
 
 | Fix | Details |
 | :-- | :------ |
-| Deployment | Do not block when encountering a database compatibility level that is not understood. Instead, the latest Azure SQL Database or on-premises platform will be assumed. |
+| Deployment | Do not block when encountering a database compatibility level that isn't understood. Instead, the latest Azure SQL Database or on-premises platform will be assumed. |
 | &nbsp; | &nbsp; |

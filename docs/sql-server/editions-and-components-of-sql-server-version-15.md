@@ -85,13 +85,13 @@ On an internet server, such as a server that is running Internet Information Ser
 >[!NOTE]
 >Although you can install an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a computer that is running IIS, this is typically done only for small Web sites that have a single server computer. Most Web sites have their middle-tier IIS systems on one server or a cluster of servers, and their databases on a separate server or federation of servers.
 
-## Deciding among [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components
+## Choosing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features
 
 Use the Feature Selection page of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Installation Wizard to select the components to include in an installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. By default, none of the features in the tree are selected.
 
 Use the information in the following tables to determine the set of features that best fits your needs.
 
-|Server components|Description|
+|Server features|Description|
 |-----------------------|-----------------|
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE[ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, full-text search, tools for managing relational and XML data, in database analytics integration, and PolyBase integration for access to Hadoop and other heterogeneous data sources, and Machine Learning Services to run Python and R scripts with relational data.|
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] includes the tools for creating and managing online analytical processing (OLAP) and data mining applications.|

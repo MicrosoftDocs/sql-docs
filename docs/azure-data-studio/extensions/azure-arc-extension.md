@@ -46,7 +46,7 @@ The [Azure Arc extension (preview)](/azure/azure-arc/data/) is an extension for 
 
 ## Create a resource
 
-This extension supports deployment of Azure Arc data controllers, Postgres for Azure Arc, and SQL Managed Instance for Azure Arc. Deployments can be done through the built-in Deployment wizard.
+This extension supports deployment of Azure Arc data controllers, PostgreSQL for Azure Arc, and SQL Managed Instance for Azure Arc. Deployments can be done through the built-in Deployment wizard.
 
 1. Select Connections viewlet on left Activity Bar
 1. Select the three dots and select **New Deployment**

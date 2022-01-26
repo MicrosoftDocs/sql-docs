@@ -3,7 +3,7 @@ title: Release notes for SQL Server 2017 on Linux
 description: This article contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for the most recent release and several previous releases.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 01/13/2022
+ms.date: 01/20/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -22,7 +22,7 @@ The following release notes apply to [!INCLUDE[ssSQL17](../includes/sssql17-md.m
 
 | Platform | File System | Installation Guide |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.7 - 7.9, or 8.0 - 8.3 Server | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux 7.7 - 7.9, or 8.0 - 8.5 Server | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP3 - SP5 | XFS or EXT4 | [Installation guide](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04 LTS, 18.04 LTS | XFS or EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
 | Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 

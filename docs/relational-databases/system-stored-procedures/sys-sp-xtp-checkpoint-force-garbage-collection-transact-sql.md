@@ -30,7 +30,7 @@ ms.author: maghan
 ## Syntax  
   
 ```  
-sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]  
+sys.sp_xtp_checkpoint_force_garbage_collection [ @dbname=database_name ]  
 ```  
   
 ## Arguments  

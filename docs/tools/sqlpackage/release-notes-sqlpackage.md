@@ -91,7 +91,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | Fix for deployment order involving temporal tables to drop dependencies before turning system versioning off |
 | Deployment | Fix for Always Encrypted deployment bug with error "Invalid object name '#tmpErrors'"  |
 | Export | Validation for SqlPackage parameters ExcludeObjectType(s) and DoNotDropObjectType(s) |
-| Export | Fixed export failure when there are CDC objects in database by excluding |
+| Export | Fixed export failure when there are change data capture (CDC) objects in database by excluding |
 | Extract | Adds a retry to extract validation when first time fails due to race condition |
 | Import | Fixed occasional deadlocks when importing to Azure by setting MAXDOP to 1 |
 | Import | Fixed import failure when temporal table has dependency on security policy with schema binding on |
@@ -178,7 +178,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | N/A |
-| Deployment | In an incremental deploy scenario when the user is dropping a temporal table along with dropping objects that are dependent on it, like functions, stored procedures etc. the deployment can fail. The script generation order tries to turn off SYSTEM_VERSIONING on the table that is a pre-req for dropping the table, but the order of steps generated is incorrect. [Work item](https://github.com/microsoft/azuredatastudio/issues/14655) | Generate the deployment script, move the System_Versioning OFF step to just before the table being dropped and then run the script. |
+| Deployment | In an incremental deploy scenario when the user is dropping a temporal table along with dropping objects that are dependent on it, like functions, stored procedures etc. the deployment can fail. The script generation order tries to turn off SYSTEM_VERSIONING on the table that is a pre-req for dropping the table, but the order of generated steps is incorrect. [Work item](https://github.com/microsoft/azuredatastudio/issues/14655) | Generate the deployment script, move the System_Versioning OFF step to just before the table being dropped and then run the script. |
 
 ## 18.6 sqlpackage
 
@@ -227,7 +227,7 @@ This article lists the features and fixes delivered by the released versions of 
 ### Fixes
 | Feature | Details |
 | :------ | :------ |
-| Deployment | Fixed a regression that was introduced in 18.5 causing there to be an “Incorrect syntax near 'type'” error when deploying a dacpac or importing a bacpac with a user with external login to on premise | 
+| Deployment | Fixed a regression that was introduced in 18.5 causing there to be an "Incorrect syntax near 'type'" error when deploying a dacpac or importing a bacpac with a user with external login to on premise | 
 
 ## 18.5 sqlpackage
 
@@ -270,8 +270,8 @@ This article lists the features and fixes delivered by the released versions of 
 ### Known Issues
 | Feature | Details |
 | :------ | :------ |
-| Deployment |  A regression was introduced in 18.5 causing there to be an “Incorrect syntax near 'type'” error when deploying a dacpac or importing a bacpac with a user with external login to on premise. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
-| .NET Core | Importing bacpacs with Sensitivity Classification fails with "Internal connection fatal error" because of this [known issue](https://github.com/dotnet/SqlClient/issues/559) in Microsoft.Data.SqlClient. This will be fixed in the next sqlpackage release. |
+| Deployment |  A regression was introduced in 18.5 causing there to be an "Incorrect syntax near 'type'" error when deploying a dacpac or importing a bacpac with a user with external login to on premise. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
+| .NET Core | Importing bacpacs with sensitivity classification fails with "Internal connection fatal error" because of this [known issue](https://github.com/dotnet/SqlClient/issues/559) in Microsoft.Data.SqlClient. This will be fixed in the next sqlpackage release. |
 | &nbsp; | &nbsp; |
 
 ## 18.4.1 sqlpackage
@@ -293,7 +293,7 @@ This article lists the features and fixes delivered by the released versions of 
 
 | Feature | Details |
 | :------ | :------ |
-| Deployment |  A regression was introduced in 18.4.1 causing there to be a “Object reference not set to an instance of an object.” error when deploying a dacpac or importing a bacpac with a user with external login. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
+| Deployment |  A regression was introduced in 18.4.1 causing there to be a "Object reference not set to an instance of an object." error when deploying a dacpac or importing a bacpac with a user with external login. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
 | &nbsp; | &nbsp; |
 
 ## 18.4 sqlpackage
@@ -309,7 +309,7 @@ This article lists the features and fixes delivered by the released versions of 
 
 | Feature | Details |
 | :------ | :------ |
-| Deployment | Add support to deploy to Azure Synapse Analytics (GA). | 
+| Deployment | Add support to deploy to Azure Synapse Analytics. | 
 | Platform | sqlpackage .NET Core GA for macOS, Linux, and Windows. | 
 | Security | Remove SHA1 code signing. |
 | Deployment | Add support for new Azure database editions: GeneralPurpose, BusinessCritical, Hyperscale |

@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 12/27/2021
+ms.date: 1/25/2022
 ---
 
 # SqlPackage Publish parameters, properties, and SQLCMD variables
@@ -33,6 +33,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |---|---|---|---|
 |**/AccessToken:**|**/at**|{string}| Specifies the token-based authentication access token to use when connect to the target database. |
 |**/Action:**|**/a**|Publish|Specifies the action to be performed. |
+|**/AzureCloudConfig:**|**/acc**|{string}|Specifies the custom endpoints for connecting to Azure Active Directory in the format: AzureActiveDirectoryAuthority={value};DatabaseServicePrincipalName={value}" .|
 |**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Specifies what authentication method is used for accessing Azure KeyVault if a publish operation includes modifications to an encrypted table/column. |
 |**/ClientId:**|**/cid**|{string}|Specifies the Client ID to be used in authenticating against Azure KeyVault, when necessary |
 |**/DeployReportPath:**|**/drp**|{string}|Specifies an optional file path to output the deployment report xml file. |
@@ -116,9 +117,12 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DropPermissionsNotInSource=(BOOLEAN)|Specifies whether permissions that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you publish updates to a database.|
 |**/p:**|DropRoleMembersNotInSource=(BOOLEAN)|Specifies whether role members that are not defined in the database snapshot (.dacpac) file will be dropped from the target database when you publish updates to a database.|
 |**/p:**|DropStatisticsNotInSource=(BOOLEAN 'True')|Specifies whether statistics that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you publish to a database.|
+|**/p:**|EnclaveAttestationProtocol=(STRING)|Specifies an attestation protocol to be used with enclave based Always Encrypted.|
+|**/p:**|EnclaveAttestationUrl=(STRING)|Specifies the enclave attestation URL (an attestation service endpoint) to be used with enclave based Always Encrypted.|
 |**/p:**|ExcludeObjectType=(STRING)|An object type that should be ignored during deployment. Valid object type names are Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.|
 |**/p:**|ExcludeObjectTypes=(STRING)|A semicolon-delimited list of object types that should be ignored during deployment. Valid object type names are Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.|
 |**/p:**|GenerateSmartDefaults=(BOOLEAN)|Automatically provides a default value when updating a table that contains data with a column that does not allow null values.|
+|**/p:**|HashObjectNamesInLogs=(BOOLEAN)|Specifies whether to replace all object names in logs with a random hash value.|
 |**/p:**|IgnoreAnsiNulls=(BOOLEAN 'True')|Specifies whether differences in the ANSI NULLS setting should be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreAuthorizer=(BOOLEAN)|Specifies whether differences in the Authorizer should be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreColumnCollation=(BOOLEAN)|Specifies whether differences in the column collations should be ignored or updated when you publish to a database.|

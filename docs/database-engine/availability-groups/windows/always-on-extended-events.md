@@ -2,7 +2,7 @@
 title: "Configure extended events for availability groups"
 description: "SQL Server defines extended events that are specific to Always On availability groups. You can monitor these extended events in a session to help with root-cause diagnosis when you troubleshoot an availability group."
 ms.custom: "ag-guide, seodec18"
-ms.date: "02/01/2022"
+ms.date: "01/27/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups

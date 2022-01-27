@@ -11,5 +11,7 @@ Tools/NuGet/
 .openpublishing.build.mdproj
 .openpublishing.buildcore.ps1
 packages.config
+.docIndex/*
+
 
 **/.vscode/settings.json

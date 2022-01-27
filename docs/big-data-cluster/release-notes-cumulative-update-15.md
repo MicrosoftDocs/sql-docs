@@ -25,7 +25,7 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 
 [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU15 includes important changes and capabilities:
 
-* [Apache Spark 3.1.2](spark-3-upgrade.md) and the [SQL Server Big Data Clusters runtime for Apache Spark](runtime-for-apache-spark.md) where brought in on Cumulative Update 13. If you are migrating from CU12 or earlier, beware of the Spark 3 upgrade.
+* [Apache Spark 3.1.2](spark-3-upgrade.md) and the [SQL Server Big Data Clusters runtime for Apache Spark](runtime-for-apache-spark.md) were brought in on Cumulative Update 13. If you are migrating from CU12 or earlier, beware of the Spark 3 upgrade.
 
     > [!CAUTION]
     > Before upgrading directly from CU12 or earlier, make sure to review the [Spark 3 upgrade guide](spark-3-upgrade.md).

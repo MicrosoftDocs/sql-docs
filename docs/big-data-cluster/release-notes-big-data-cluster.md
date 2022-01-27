@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
-ms.date: 11/22/2021
+ms.date: 01/27/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -25,12 +25,13 @@ The following release notes apply to [!INCLUDE[big-data-clusters-nover](../inclu
    > Kubernetes is a fast paced ecosystem. It is key to keep your platform updated in order to be secure, and to be on a tested configuration for SQL Server Big Data Clusters.
 
    > [!WARNING]
-   > On Cumulative Update 14, __the upgrade order is critical__. Upgrade your big data cluster to CU14 __before__ upgrading Kubernetes cluster to version 1.21. If not done in this order, a CU13 cluster upgrade to CU14 on a Kubernetes version 1.21 won't finish. In this case, reverting back to kubernetes version 1.20 will fix the problem.
+   > On Cumulative Update 15, __the upgrade order is critical__. Upgrade your big data cluster to CU15 __before__ upgrading the Kubernetes cluster to version 1.21. If the Kubernetes cluster is upgraded to version 1.21 before BDC is upgraded to CU14 or CU15 then the cluster will end up in error state and the BDC upgrade will not succeed. In this case, reverting back to kubernetes version 1.20 will fix the problem.
 
 The following table contains the tested configuration matrix for each release of SQL Server Big Data Clusters:
 
 | Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ----------- | ------------ | ------- | ------- | ------------ | ----------- |
+| CU15 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU14 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU13 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.6<br/>CRI-O 1.20.0 | Block only | Block only |
 | CU12 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.3<br/>docker 20.10.2<br/>CRI-O 1.20.0 | Block only | Block only |
@@ -53,6 +54,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-no
 
 | Release <sup>1</sup> | [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
+| [CU15](release-notes-cumulative-update-15.md) |  15.0.4198.2  | 20.3.10   | Jan 27 2022 |
 | [CU14](release-notes-cumulative-update-14.md) |  15.0.4188.2  | 20.3.9    | Nov 22 2021 |
 | [CU13](release-notes-cumulative-update-13.md) |  15.0.4178.15 | 20.3.8    | Sept 9 2021 |
 | [CU12](release-notes-cumulative-update-12.md) |  15.0.4153.13 | 20.3.7    | Aug 4 2021 |

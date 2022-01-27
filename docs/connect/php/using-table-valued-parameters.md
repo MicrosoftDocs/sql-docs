@@ -72,7 +72,7 @@ BEGIN
 END
 ```
 
-The PHP drivers use row-wise binding for Table-valued parameters (TVPs), and you must provide the type name as a non-empty string. In this example, the name is `TVPParam`. The TVP input is essentially a key-value pair with TVP type name as the key and the input data as a nested array. For example:
+The PHP drivers use row-wise binding for table-valued parameters (TVPs), and you must provide the type name as a non-empty string. In this example, the name is `TVPParam`. The TVP input is essentially a key-value pair with TVP type name as the key and the input data as a nested array. For example:
 
 ```php
 $image1 = fopen($pic1, 'rb');
@@ -133,7 +133,7 @@ sqlsrv_next_result($stmt);
 
 ### Using the PDO_SQLSRV driver
 
-This is an equivalent example when using the PDO_SQLSRV driver. You can use prepare/execute with [bindParam](../../connect/php/pdostatement-bindparam.md) and specify the TVP input as a `PDO::PARAM_LOB`. If not, you will get this error: `Operand type clash: nvarchar is incompatible with …`.
+This is an equivalent example when using the PDO_SQLSRV driver. You can use prepare/execute with [bindParam](../../connect/php/pdostatement-bindparam.md) and specify the TVP input as a `PDO::PARAM_LOB`. If not, you'll get this error: `Operand type clash: nvarchar is incompatible with …`.
 
 ```php
 try {
@@ -154,7 +154,7 @@ If your stored procedure only takes input parameters, you can use [bindValue](..
 
 ### When not using the default dbo schema
 
-If you are not using the default dbo schema, then you should provide the schema name. Even if the schema name contains space character, do not use delimiters like `[` or `]`.
+If you're not using the default dbo schema, then you should provide the schema name. Even if the schema name contains a space character, do not use delimiters like `[` or `]`.
 
 ```php
     $inputs = [

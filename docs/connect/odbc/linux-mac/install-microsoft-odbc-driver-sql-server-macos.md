@@ -79,6 +79,8 @@ sudo ln -s /usr/local/etc/odbc.ini /etc/odbc.ini
 
 For additional cases where you're unable to make a connection to SQL Server using the ODBC driver, see the known issues article on [troubleshooting connection problems](known-issues-in-this-version-of-the-driver.md#connectivity).
 
+If brew is having trouble finding the formulas, make sure you didn't skip the install step: `brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release`
+
 ## Next steps
 
 After installing the driver, you can try the [C++ ODBC example application](../cpp-code-example-app-connect-access-sql-db.md). For more information about developing ODBC applications, see [Developing Applications](../../../odbc/reference/develop-app/developing-applications.md).

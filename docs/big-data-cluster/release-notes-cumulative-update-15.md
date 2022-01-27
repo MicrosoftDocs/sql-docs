@@ -219,7 +219,9 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 
 _Packages from [CRAN Snapshot 2021-09-21](https://cran.microsoft.com/snapshot/2021-09-21)_
 
-|  |  |  |  |  |  |
+The following table lists packages available in this release.
+
+|package|package|package|package|package|package|
 |--|--|--|--|--|--|
 sparklyr | earth | lifecycle | bit | markdown | reshape2 |
 devtools | forecast | ellipsis | bit64 | parallelly | rmarkdown |

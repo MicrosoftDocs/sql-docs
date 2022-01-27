@@ -1,7 +1,7 @@
 ---
-title: "Using Table-valued parameters with the PHP Drivers"
-description: "Learn how to use Table-valued parameters with the Microsoft Drivers for PHP for SQL Server."
-ms.date: 01/24/2022
+title: Using table-valued parameters
+description: Learn how to use table-valued parameters with the Microsoft Drivers for PHP for SQL Server.
+ms.date: 01/27/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -11,7 +11,7 @@ ms.reviewer: ""
 ms.author: v-davidengel
 author: David-Engel
 ---
-# Using Table-valued parameters with the PHP Drivers for SQL Server
+# Using table-valued parameters (PHP)
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
@@ -21,53 +21,53 @@ author: David-Engel
 
 ## Introduction
 
-You can use [Table-valued parameters](../../relational-databases/tables/use-table-valued-parameters-database-engine.md) to send multiple rows of data to a Transact-SQL statement or a stored procedure. You do not need to create a temporary table. To use a Table-valued parameter with the PHP drivers, declare a user-defined table type with a name, as shown in the examples on this page.
+You can use [table-valued parameters](../../relational-databases/tables/use-table-valued-parameters-database-engine.md) to send multiple rows of data to a Transact-SQL statement or a stored procedure. You don't need to create a temporary table. To use a table-valued parameter with the PHP drivers, declare a user-defined table type with a name, as shown in the examples on this page.
 
-## Using a Table-valued parameter with a stored procedure
+## Using a table-valued parameter with a stored procedure
 
 The following examples assume the following tables, table type, and stored procedure exist:
 
 ```sql
 CREATE TABLE TVPOrd(
-    OrdNo INTEGER IDENTITY(1,1), 
-    OrdDate DATETIME, 
+    OrdNo INTEGER IDENTITY(1,1),
+    OrdDate DATETIME,
     CustID VARCHAR(10))
 
 
 CREATE TABLE TVPItem(
-    OrdNo INTEGER, 
-    ItemNo INTEGER IDENTITY(1,1), 
-    ProductCode CHAR(10), 
-    OrderQty INTEGER, 
-    SalesDate DATE, 
-    Label NVARCHAR(30), 
-    Price DECIMAL(5,2), 
+    OrdNo INTEGER,
+    ItemNo INTEGER IDENTITY(1,1),
+    ProductCode CHAR(10),
+    OrderQty INTEGER,
+    SalesDate DATE,
+    Label NVARCHAR(30),
+    Price DECIMAL(5,2),
     Photo VARBINARY(MAX))
 
 
 --Create TABLE type for use as a TVP
 CREATE TYPE TVPParam AS TABLE(
-                ProductCode CHAR(10), 
-                OrderQty INTEGER, 
-                SalesDate DATE, 
-                Label NVARCHAR(30), 
-                Price DECIMAL(5,2), 
+                ProductCode CHAR(10),
+                OrderQty INTEGER,
+                SalesDate DATE,
+                Label NVARCHAR(30),
+                Price DECIMAL(5,2),
                 Photo VARBINARY(MAX))
 
 
 --Create procedure with TVP parameters
 CREATE PROCEDURE TVPOrderEntry(
-        @CustID VARCHAR(10), 
+        @CustID VARCHAR(10),
         @Items TVPParam READONLY,
-        @OrdNo INTEGER OUTPUT, 
+        @OrdNo INTEGER OUTPUT,
         @OrdDate DATETIME OUTPUT)
 AS
 BEGIN
-    SET @OrdDate = GETDATE(); SET NOCOUNT ON; 
+    SET @OrdDate = GETDATE(); SET NOCOUNT ON;
     INSERT INTO TVPOrd (OrdDate, CustID) VALUES (@OrdDate, @CustID);
     SELECT @OrdNo = SCOPE_IDENTITY();
     INSERT INTO TVPItem (OrdNo, ProductCode, OrderQty, SalesDate, Label, Price, Photo)
-    SELECT @OrdNo, ProductCode, OrderQty, SalesDate, Label, Price, Photo 
+    SELECT @OrdNo, ProductCode, OrderQty, SalesDate, Label, Price, Photo
     FROM @Items
 END
 ```
@@ -89,7 +89,7 @@ $items = [
 $tvpType = 'TVPParam';
 $tvpInput = array($tvpType => $items);
 
-// To execute the stored procedure, either execute a direct query or prepare this query: 
+// To execute the stored procedure, either execute a direct query or prepare this query:
 $callTVPOrderEntry = "{call TVPOrderEntry(?, ?, ?, ?)}";
 ```
 
@@ -168,9 +168,9 @@ If you are not using the default dbo schema, then you should provide the schema 
     $tvpInput = array($tvpType => $inputs, $schema);
 ```
 
-## Using a Table-valued parameter without a stored procedure
+## Using a table-valued parameter without a stored procedure
 
-You may use Table-valued parameters without stored procedures. Consider the following example:
+You may use table-valued parameters without stored procedures. Consider the following example:
 
 ```sql
 CREATE TYPE id_table_type AS TABLE(id INT PRIMARY KEY)
@@ -211,13 +211,9 @@ $stmt->bindParam(1, $tvpInput, PDO::PARAM_LOB);
 $result = $stmt->execute();
 ```
 
-## See Also  
-[PDO](https://php.net/manual/book.pdo.php)  
-
-[PDOStatement Class](../../connect/php/pdostatement-class.md)  
-
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-
-[How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)  
-
-[How to: Send Data as a Stream](../../connect/php/how-to-send-data-as-a-stream.md)  
+## See Also
+[PDO](https://php.net/manual/book.pdo.php)
+[PDOStatement Class](../../connect/php/pdostatement-class.md)
+[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+[How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)
+[How to: Send Data as a Stream](../../connect/php/how-to-send-data-as-a-stream.md)

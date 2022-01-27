@@ -17,7 +17,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 # Client Protocols - Shared Memory Properties (Protocol Tab)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager use the **Protocol** tab on the **Shared Memory Properties** dialog box to view or modify shared memory. For more information about connection strings, see [Creating a Valid Connection String Using Shared Memory Protocol](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
   
 ## Options  

@@ -2,7 +2,7 @@
 title: Release notes
 description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 ms.custom: ""
-ms.date: 01/31/2022
+ms.date: 12/07/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -15,65 +15,6 @@ ms.author: v-davidengel
 # Release notes for the Microsoft JDBC Driver for SQL Server
 
 This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. For each release version, the changes are named and described.
-
-## <a id="94"></a> 10.2
-
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 10.2.0 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2186163)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 10.2.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2186164)**
-
-Release number: 10.2.0  
-Released: January 31, 2022
-
-If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
-For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x40a)  
-For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x40a)
-
-### 10.2 Compliance
-
-| Compliance change | Details |
-| :---------------- | :------ |
-| Download the latest updates for JDBC Driver 10.2. | &bull; &nbsp; [GitHub, 10.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v10.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| Fully compliant with JDBC API Specification 4.2. | The jars in the 10.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-10.20.jre17.jar file from the 10.2 package should be used with Java 17. |
-| Compatible with Java Development Kit (JDK) version 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 10.2 for SQL Server is now compatible with Java Development Kit (JDK) version 17.0 in addition to JDK 11.0 and 1.8. |
-| &nbsp; | &nbsp; |
-
-### New features in 10.2
-
-| Feature | Details |
-| :---------- | :----------- |
-| Java 17 support | The driver is now compatible with Java Development Kit (JDK) version 17.0 in addition to JDK 11.0 and 1.8. |
-| Idle Connection Resiliiency support | Idle Connection Resiliiency is now supported. See [Idle Connection Resiliency](connection-resiliency.md). |
-| Multi-user Key Store Providers | The driver now supports multi-user Key Store providers. See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
-| &nbsp; | &nbsp; |
-
-### Changes in 10.2
-
-| Change | Details |
-| :---------- | :----------- |
-| Default TLS encryption | TLS encryption is enabled by default. |
-| AADSecurePrincipalId/AADSecurePrincipalSecret deprecated | The AADSecurePrincipalId/AADSecurePrincipalSecret connection properrties have been deprecated and replaced with username/password. |
-| getAADSecretPrincipalId API removed | The getAADSecretPrincipalId API has been removed for security reasons. |
-| SQL_Variant support | Added support for SQL_Variant datatype when retrieving DateTimeOffset. |
-| Non-blocking random in Linux | Updated to use non-blocking call when generating random GUID for Enclave package. |
-| Enable CNAME resolution for realm | Enabled CNAME resolution when realm is specified. |
-| Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`, `gson`, and `bouncycastle`. |
-| &nbsp; | &nbsp; |
-
-### Fixes in 10.2
-
-| Fix | Details |
-| :---------- | :----------- |
-| [GitHub Issue #1661](https://github.com/microsoft/mssql-jdbc/issues/1661) | Fixed: TDSParser stuck on TDS_COLMETADATA. |
-| [Multi-byte in BulkCopy](https://github.com/microsoft/mssql-jdbc/pull/1671) | Fixed: Bulkcopy handling for multi-byte chars in char/varchar columns. |
-| [Azure SQL Server warning](https://github.com/microsoft/mssql-jdbc/pull/1510) | Fixed: Warning when retrieving architecture from Microsoft SQL Azure server. |
-| [NPE Statment.closeOnCompletion](https://github.com/microsoft/mssql-jdbc/pull/1639) | Fixed: NPE with Statement.closeOnCompletion(). |
-| [ActiveDirectoryInteractive Timeout](https://github.com/microsoft/mssql-jdbc/pull/1696) | Fixed: ActiveDirectoryInteractive authentication timeout issue. |
-| [Certificate Validation Behavior](https://github.com/microsoft/mssql-jdbc/pull/1696) | Fixed: Change certificate validation behavior. |
-
-| &nbsp; | &nbsp; |
-
-
-## Previous releases
 
 ## <a id="94"></a> 9.4
 
@@ -148,6 +89,8 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | [GitHub Issue #1568](https://github.com/microsoft/mssql-jdbc/issues/1568) | Fixed an issue where redirected token contains named instance in servername |
 | [GitHub Issue #1531](https://github.com/microsoft/mssql-jdbc/issues/1531) | Fixed potential integer overflow in TDSWriter.writeString() |
 | &nbsp; | &nbsp; |
+
+## Previous releases
 
 ## <a id="92"></a> 9.2
 

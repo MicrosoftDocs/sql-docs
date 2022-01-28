@@ -15,7 +15,7 @@ helpviewer_keywords:
 author: chugugrace
 ms.author: chugu
 ms.reviewer: ""
-ms.custom: intro-installation, FY21Q2Fresh
+ms.custom: intro-installation, FY22Q2Fresh
 ms.date: 12/10/2021
 ---
 

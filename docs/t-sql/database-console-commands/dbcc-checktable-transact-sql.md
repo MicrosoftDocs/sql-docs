@@ -109,7 +109,9 @@ PHYSICAL_ONLY
  -   The logical checks are more comprehensive.  
  -   Some of the underlying structures to be checked are more complex.  
  -   Many new checks have been introduced to include the new features.  
-   
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+
 Therefore, using the PHYSICAL_ONLY option may cause a much shorter run-time for DBCC CHECKTABLE on large tables and is therefore recommended for frequent use on production systems. We still recommend that a full run of DBCC CHECKTABLE be performed periodically. The frequency of these runs depends on factors specific to individual businesses and production environments. PHYSICAL_ONLY always implies NO_INFOMSGS and is not allowed with any one of the repair options.  
     
  > [!NOTE]  

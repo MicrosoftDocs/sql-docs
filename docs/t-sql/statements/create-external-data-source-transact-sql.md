@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 1/24/2022
+ms.date: 1/27/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -791,6 +791,18 @@ WITH
     CREDENTIAL = OracleProxyAccount,
     PUSHDOWN = ON
   ) ;
+```
+
+Optionally, the external data source to Oracle can use proxy authentication to provide fine grain access control. A proxy user can be configured to have limited access compared to the user being impersonated.
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL [OracleProxyCredential]
+WITH IDENTITY = 'oracle_username', SECRET = 'oracle_password';
+
+CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
+WITH (LOCATION = 'oracle://145.145.145.145:1521',
+CONNECTION_OPTIONS = 'ImpersonateUser=%CURRENT_USER',
+CREDENTIAL = [OracleProxyCredential]);
 ```
 
 For additional examples to other data sources such as MongoDB, see [Configure PolyBase to access external data in MongoDB][mongodb_pb].

@@ -10,7 +10,7 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ""
-ms.custom: FY21Q2Fresh
+ms.custom: FY22Q2Fresh
 ms.date: 10/25/2021
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

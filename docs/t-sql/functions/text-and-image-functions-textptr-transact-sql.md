@@ -58,8 +58,8 @@ TEXTPTR ( column )
   
 |Function or statement|Description|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|Returns the character position of a specified character string in **text** or **ntext** columns.|  
-|DATALENGTH<b>(</b>_expression_**)**|Returns the length of data in **text**, **ntext**, and **image** columns.|  
+|PATINDEX ( *'_%pattern%_'*, *_expression_* )|Returns the character position of a specified character string in **text** or **ntext** columns.|  
+|DATALENGTH ( *_expression_* )|Returns the length of data in **text**, **ntext**, and **image** columns.|  
 |SET TEXTSIZE|Returns the limit, in bytes, of the **text**, **ntext**, or **image** data to be returned with a SELECT statement.|  
 |SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|Returns a **varchar** string specified by the specified *start* offset and *length*. The length should be less than 8 KB.|  
   

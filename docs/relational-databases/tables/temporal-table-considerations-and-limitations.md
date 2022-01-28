@@ -68,6 +68,8 @@ Consider the following when working with temporal tables:
 
 - A history table cannot be configured as current table in a chain of history tables.
 
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+
 ## See Also
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)

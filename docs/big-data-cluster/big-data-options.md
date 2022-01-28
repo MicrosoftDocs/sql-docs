@@ -5,7 +5,7 @@ description: This article discusses migration strategies for SQL Server 2019 Big
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
-ms.date: 01/26/2022
+ms.date: 02/15/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -45,12 +45,12 @@ For more information on these functions, see [Introducing [!INCLUDE[big-data-clu
 
 ## Functionality replacement options for Big Data and SQL Server
 
-The *operational* data function facilitated by SQL Server inside the Big Data Clusters can be replaced by SQL Server on premises in a hybrid configuration or using the Microsoft Azure platform. Microsoft Azure offers a choice of fully managed relational, NoSQL, and in-memory databases, spanning proprietary and open-source engines, to fit the needs of modern app developers. Infrastructure management — including scalability, availability, and security — is automated, saving you time and money, and allows you to focus on building applications while Azure-managed databases make your job simpler by surfacing performance insights through embedded intelligence, scaling without limits, and managing security threats. For more information, see [Azure databases](https://azure.microsoft.com/product-categories/databases/).
+The *operational* data function facilitated by SQL Server inside the Big Data Clusters can be replaced by SQL Server on premises in a hybrid configuration or using the Microsoft Azure platform. Microsoft Azure offers a choice of fully managed relational, NoSQL, and in-memory databases, spanning proprietary and open-source engines, to fit the needs of modern app developers. Infrastructure management—including scalability, availability, and security—is automated, saving you time and money, and allows you to focus on building applications while Azure-managed databases make your job simpler by surfacing performance insights through embedded intelligence, scaling without limits, and managing security threats. For more information, see [Azure databases](https://azure.microsoft.com/product-categories/databases/).
 
 The next decision point is the locations of compute and data storage for *analytics*. The two architecture choices are in-cloud and hybrid
 deployments. Most analytic workloads can be migrated to the Microsoft Azure platform. Data "born in the cloud" (originated in Cloud-based
 applications) are prime candidates for these technologies, and data movement services can migrate large-scale on-premises data securely and
-quickly. For more on data movement options see [Data transfer solutions](/azure/storage/common/storage-choose-data-transfer-solution).
+quickly. For more on data movement options, see [Data transfer solutions](/azure/storage/common/storage-choose-data-transfer-solution).
 
 Microsoft Azure has systems and certifications allowing secure data and data processing in a variety of tools. For more information on these certifications, see the [Trust Center](https://www.microsoft.com/trust-center).
 
@@ -174,7 +174,7 @@ SQL Server 2022 (either on-premises, in-cloud, or both) contains a new feature t
 
 For your operational and even much of your analytic workloads, SQL Server can handle massive database sizes - for more information on maximum capacity specifications for SQL Server, see [Compute capacity limits by edition of SQL Server]()../sql-server/maximum-capacity-specifications-for-sql-server.md). Using multiple SQL Server Instances on separate machines with partitioned T-SQL requests allow a scale-out environment for applications. 
 
-Using PolyBase enables your SQL Server instance to query data with T-SQL directly from SQL Server, Oracle, Teradata, MongoDB, commercial Hadoop clusters, and Cosmos DB without separately installing client connection software. You can also use the generic ODBC connector on a Microsoft Windows-based Instance to connect to additional providers using third-party ODBC drivers. PolyBase allows T-SQL queries to join the data from external sources to relational tables in an instance of SQL Server. This allows the data to stay in its original location and format. You can virtualize the external data through the SQL Server instance, so that it can be queried in place like any other table in SQL Server. SQL Server 2022 also allows ad-hoc queries, backup and restore operations over Object-Store (using the S3-API) hardware or software storage options.
+Using PolyBase enables your SQL Server instance to query data with T-SQL directly from SQL Server, Oracle, Teradata, MongoDB, commercial Hadoop clusters, and Cosmos DB without separately installing client connection software. You can also use the generic ODBC connector on a Microsoft Windows-based Instance to connect to additional providers using third-party ODBC drivers. PolyBase allows T-SQL queries to join the data from external sources to relational tables in an instance of SQL Server. This allows the data to stay in its original location and format. You can virtualize the external data through the SQL Server instance, so that it can be queried in place like any other table in SQL Server. SQL Server 2022 also allows ad-hoc queries and backup/restore over Object-Store (using the S3-API) hardware or software storage options.
 
 Two general reference architectures are to use SQL Server on a stand-alone server for structured data queries and a separate installation of a scale-out non-relational system (such as Apache Hadoop or Apache Spark) for on-premises Link to Synapse, and the other option is to use a set of containers in a Kubernetes cluster with all components for your solution.
 
@@ -228,7 +228,7 @@ However, a migration from a previous technology is often an optimal time to upda
 
 In either case, you have two primary factors involved in the migration: the code and languages the new system supports, and the choices around data movement. Usually, you should be able to simply change connection strings from the current big data cluster to the SQL Server instance and Spark environment. Any data connection information and the code cutover should be minimal.
 
-If you are envisioning a rewrite of your current functionality, map the new libraries, packages, and DLL's to the architecture you chose for your migration. You will find a list of each of the libraries, languages, and functions that each solution offers in the documentation references shown in the previous sections. Map out any suspect or unsupported languages and plan for the replacement with the chosen
+If you are envisioning a rewrite of your current functionality, map the new libraries, packages, and DLL's to the architecture you chose for your migration. You'll find a list of each of the libraries, languages, and functions that each solution offers in the documentation references shown in the previous sections. Map out any suspect or unsupported languages and plan for the replacement with the chosen
 architecture.
 
 ### Data Migration Options

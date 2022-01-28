@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: ""
-ms.custom: FY21Q2Fresh
+ms.custom: FY22Q2Fresh
 ms.date: 12/10/2021
 ---
 # Microsoft JDBC Driver for SQL Server

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "listing databases"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: "seo-lt-2019, FY21Q2Fresh"
+ms.custom: "seo-lt-2019, FY22Q2Fresh"
 ms.date: "10/21/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -176,16 +176,16 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 > [!NOTE]
 > The following commands for SQL Server 2019 points to the RHEL 8 repository. RHEL 8 does not come preinstalled with python2, which is required by SQL Server. For more information, see the following blog on installing python2 and configuring it as the default interpreter: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
 >
-> Starting with SQL Server 2017 CU20, RHEL 8 is supported.
+> Starting with SQL Server 2017 CU20, RHEL 8 is supported. GDR releases do not support RHEL 8. 
 >
 > If you are using RHEL 7 or RHEL 8, ensure the paths match `/rhel/7` or `/rhel/8`. Our packages are agnostic to RHEL minor versions. This means that if you are using RHEL 7.7, you will need to use the path `/rhel/7` to configure your repository.
 
 | Repository | Version | Command |
 |---|---|---|
 | **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
-| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo` |
-| **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017-gdr.repo` |
+| **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
 ::: zone-end
 

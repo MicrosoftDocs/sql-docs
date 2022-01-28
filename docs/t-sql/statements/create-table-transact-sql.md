@@ -198,7 +198,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         [ NOT FOR REPLICATION ]
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )
 
-< table_index > ::=
+<table_index> ::=
 {  
     {  
       INDEX index_name  [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ]

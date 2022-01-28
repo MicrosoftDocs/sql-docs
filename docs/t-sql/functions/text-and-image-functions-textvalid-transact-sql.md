@@ -62,8 +62,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |Function or statement|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**(**'_%pattern%_'**,** _expression_**)**|Returns the character position of a specified character string in **text** and **ntext** columns.|  
-|DATALENGTH**(**_expression_**)**|Returns the length of data in **text**, **ntext**, and **image** columns.|  
+|PATINDEX ( *'_%pattern%_'*, *_expression_* )|Returns the character position of a specified character string in **text** and **ntext** columns.|  
+|DATALENGTH ( *_expression_* )|Returns the length of data in **text**, **ntext**, and **image** columns.| 
 |SET TEXTSIZE|Returns the limit, in bytes, of the **text**, **ntext**, or **image** data to be returned with a SELECT statement.|  
   
 ## Examples  

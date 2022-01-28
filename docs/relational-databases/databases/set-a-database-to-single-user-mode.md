@@ -10,7 +10,7 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ""
-ms.custom: FY21Q2Fresh
+ms.custom: FY22Q2Fresh
 ms.date: "10/21/2021"
 ---
 # Set a database to single-user mode

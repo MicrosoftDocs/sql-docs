@@ -2,7 +2,7 @@
 description: "Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)"
 title: Use HAVING and WHERE Clauses in the Same Query
 ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+ms.date: 01/28/2022
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -17,13 +17,13 @@ helpviewer_keywords:
   - "search conditions [SQL Server], WHERE clause"
   - "WHERE clause, search criteria"
   - "excluding rows"
-ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: markingmyname
 ms.author: maghan
 ms.reviewer: 
 ---
 # Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)
-[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw)]
+
 In some instances, you might want to exclude individual rows from groups (using a WHERE clause) before applying a condition to groups as a whole (using a HAVING clause).  
   
 A HAVING clause is like a WHERE clause, but applies only to groups as a whole (that is, to the rows in the result set representing groups), whereas the WHERE clause applies to individual rows. A query can contain both a WHERE clause and a HAVING clause. In that case:  
@@ -32,28 +32,28 @@ A HAVING clause is like a WHERE clause, but applies only to groups as a whole (t
   
 -   The HAVING clause is then applied to the rows in the result set. Only the groups that meet the HAVING conditions appear in the query output. You can apply a HAVING clause only to columns that also appear in the GROUP BY clause or in an aggregate function.  
   
-For example, imagine that you are joining the `titles` and `publishers` tables to create a query showing the average book price for a set of publishers. You want to see the average price for only a specific set of publishers - perhaps only the publishers in the state of California. And even then, you want to see the average price only if it is over $10.00.  
+For example, imagine that you're joining the `titles` and `publishers` tables to create a query showing the average book price for a set of publishers. You want to see the average price for only a specific set of publishers - perhaps only the publishers in the state of California. And even then, you want to see the average price only if it is over $10.00.  
   
 You can establish the first condition by including a WHERE clause, which discards any publishers that are not in California, before calculating average prices. The second condition requires a HAVING clause, because the condition is based on the results of grouping and summarizing the data. The resulting SQL statement might look like this:  
   
-```  
+```sql
 SELECT titles.pub_id, AVG(titles.price)  
 FROM titles INNER JOIN publishers  
    ON titles.pub_id = publishers.pub_id  
 WHERE publishers.state = 'CA'  
 GROUP BY titles.pub_id  
-HAVING AVG(price) > 10  
+HAVING AVG(price) > 10;  
 ```  
   
-You can create both HAVING and WHERE clauses in the Criteria pane. By default, if you specify a search condition for a column, the condition becomes part of the HAVING clause. However, you can change the condition to be a WHERE clause.  
+In the Visual Database Tools of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can create both HAVING and WHERE clauses in the **Criteria** pane. By default, if you specify a search condition for a column, the condition becomes part of the HAVING clause. However, you can change the condition to be a WHERE clause.  
   
-You can create a WHERE clause and HAVING clause involving the same column. To do so, you must add the column twice to the Criteria pane, then specify one instance as part of the HAVING clause and the other instance as part of the WHERE clause.  
+You can create a WHERE clause and HAVING clause involving the same column. To do so, you must add the column twice to the **Criteria** pane, then specify one instance as part of the HAVING clause and the other instance as part of the WHERE clause.  
   
 ### To specify a WHERE condition in an aggregate query  
   
 1.  Specify the groups for your query. For details, see [Group Rows in Query Results](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
   
-2.  If it is not already in the Criteria pane, add the column on which you want to base the WHERE condition.  
+2.  If it is not already in the **Criteria** pane, add the column on which you want to base the WHERE condition.  
   
 3.  Clear the **Output** column unless the data column is part of the GROUP BY clause or included in an aggregate function.  
   
@@ -64,7 +64,7 @@ You can create a WHERE clause and HAVING clause involving the same column. To do
   
     At this point in the query, the SQL statement contains a HAVING clause:  
   
-    ```  
+    ```sql  
     SELECT titles.pub_id, AVG(titles.price)  
     FROM titles INNER JOIN publishers   
        ON titles.pub_id = publishers.pub_id  
@@ -76,7 +76,7 @@ You can create a WHERE clause and HAVING clause involving the same column. To do
   
     The SQL statement changes to include a WHERE clause instead:  
   
-    ```  
+    ```sql  
     SELECT titles.pub_id, AVG(titles.price)  
     FROM titles INNER JOIN publishers   
        ON titles.pub_id = publishers.pub_id  
@@ -84,7 +84,12 @@ You can create a WHERE clause and HAVING clause involving the same column. To do
     GROUP BY titles.pub_id  
     ```  
   
-## See Also  
-[Sort and Group Query Results](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[Summarize Query Results](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
-  
+## See also
+
+- [SELECT - HAVING](../../t-sql/queries/select-having-transact-sql.md)
+
+## Next steps
+
+- [Sort and Group Query Results](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+- [Summarize Query Results](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+

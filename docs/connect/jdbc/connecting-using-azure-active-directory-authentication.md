@@ -2,7 +2,7 @@
 title: Connecting using Azure Active Directory authentication
 description: Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
 ms.custom: ""
-ms.date: 11/30/2021
+ms.date: 01/31/2022
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
@@ -408,8 +408,8 @@ public class AADServicePrincipal {
         ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database
         ds.setAuthentication("ActiveDirectoryServicePrincipal");
-        ds.setAADSecurePrincipalId(principalId);
-        ds.setAADSecurePrincipalSecret(principalSecret);
+        ds.setUser(principalId); // setAADSecurePrincipalId for JDBC Driver 9.4 and below
+        ds.setPassword(principalSecret); // setAADSecurePrincipalSecret for JDBC Driver 9.4 and below 
 
         try (Connection connection = ds.getConnection();
                 Statement stmt = connection.createStatement();

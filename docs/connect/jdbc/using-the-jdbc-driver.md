@@ -2,7 +2,7 @@
 title: "Using the JDBC driver | Microsoft Docs"
 description: "This section provides quick start instructions for making a simple connection to a SQL Server database by using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: 12/07/2021
+ms.date: 01/31/2022
 
 ms.prod: sql
 ms.prod_service: connectivity
@@ -22,6 +22,8 @@ This section provides quickstart instructions for making a simple connection to 
 ## Choosing the right JAR file
 
 The Microsoft JDBC Driver provides different Jars to be used in correspondence with your preferred Java Runtime Environment (JRE) settings, as under:
+
+The Microsoft JDBC Driver 9.4 for SQL Server provides **mssql-jdbc-10.2.0.jre8.jar**, **mssql-jdbc-10.2.0.jre11.jar**, and **mssql-jdbc-10.2.0.jre17.jar** class library files.
 
 The Microsoft JDBC Driver 9.4 for SQL Server provides **mssql-jdbc-9.4.1.jre8.jar**, **mssql-jdbc-9.4.1.jre11.jar**, and **mssql-jdbc-9.4.1.jre16.jar** class library files.
 
@@ -51,6 +53,8 @@ Your choice will also determine available features. For more information about w
 
 The Microsoft JDBC driver jars are not part of the Java SDK and must be included in Classpath of user application.
 
+If using JDBC Driver 10.2, set the classpath to include the **mssql-jdbc-10.2.0.jre8.jar**, **mssql-jdbc-10.2.0.jre11.jar**, or **mssql-jdbc-10.2.0.jre17.jar**.
+
 If using JDBC Driver 9.4, set the classpath to include the **mssql-jdbc-9.4.1.jre8.jar**, **mssql-jdbc-9.4.1.jre11.jar**, or **mssql-jdbc-9.4.1.jre16.jar**.
 
 If using JDBC Driver 9.2, set the classpath to include the **mssql-jdbc-9.2.1.jre8.jar**, **mssql-jdbc-9.2.1.jre11.jar**, or **mssql-jdbc-9.2.1.jre15.jar**.
@@ -72,6 +76,29 @@ If using JDBC Driver 6.2, set the classpath to include the **mssql-jdbc-6.2.2.jr
 If using JDBC Driver 4.1 or 4.2, set the classpath to include **sqljdbc41.jar** or **sqljdbc42.jar** file from the respective driver download.
 
 If the classpath is missing an entry for the right Jar file, an application will throw the common `Class not found` exception.  
+
+
+### For Microsoft JDBC Driver 10.2
+
+The **mssql-jdbc-10.2.0.jre8.jar**, **mssql-jdbc-10.2.0.jre11.jar**, or **mssql-jdbc-10.2.0.jre17.jar** files are installed in the following locations:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-10.2.0.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-10.2.0.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-10.2.0.jre17.jar
+```
+
+The following snippet is an example of the CLASSPATH statement that is used for a Windows application:
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 10.2 for SQL Server\sqljdbc_10.2\enu\mssql-jdbc-10.2.0.jre11.jar`
+
+The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_10.2/enu/mssql-jdbc-10.2.0.jre11.jar`
+
+Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-10.2.0.jre8.jar**, **mssql-jdbc-10.2.0.jre11.jar**, or **mssql-jdbc-10.2.0.jre17.jar**.
 
 
 ### For Microsoft JDBC Driver 9.4

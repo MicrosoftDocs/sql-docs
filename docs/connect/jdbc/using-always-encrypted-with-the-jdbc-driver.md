@@ -2,7 +2,7 @@
 title: Using Always Encrypted with the JDBC driver
 description: Learn how to use Always Encrypted in your Java application with the JDBC driver for SQL Server to encrypt sensitive data on the server.
 ms.custom: ""
-ms.date: 04/29/2021
+ms.date: 01/31/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -292,7 +292,11 @@ The SQL Server Management Studio or any other tool can't be used to create colum
 
 ### Implementing a custom column master key store provider
 
-If you want to store column master keys in a keystore that is not supported by an existing provider, you can implement a custom provider by extending the `SQLServerColumnEncryptionKeyStoreProvider` Class and registering the provider using the `SQLServerConnection.registerColumnEncryptionKeyStoreProviders()` method.
+If you want to store column master keys in a keystore that is not supported by an existing provider, you can implement a custom provider by extending the `SQLServerColumnEncryptionKeyStoreProvider` Class and registering the provider using one of the following methods:
+
+- [SQLServerConnection.registerColumnEncryptionKeyStoreProviders](public api link)
+- [SQLServerConnection.registerColumnEncryptionKeyStoreProvidersOnConnection](public api link) (Added in some JDBC version)
+- [SQLServerStatement.registerColumnEncryptionKeyStoreProvidersOnStatement](public api link) (Added in some JDBC version)
 
 ```java
 public class MyCustomKeyStore extends SQLServerColumnEncryptionKeyStoreProvider{
@@ -320,13 +324,106 @@ public class MyCustomKeyStore extends SQLServerColumnEncryptionKeyStoreProvider{
 }
 ```
 
-Register the provider:
+Register the provider using `SQLServerConnection.registerColumnEncryptionKeyStoreProviders`:
 
 ```java
 SQLServerColumnEncryptionKeyStoreProvider storeProvider = new MyCustomKeyStore();
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
 keyStoreMap.put(storeProvider.getName(), storeProvider);
 SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
+```
+
+#### Column encryption key cache precedence
+
+This section applies to some JDBC version and higher.
+
+The column encryption keys (CEK) decrypted by custom key store providers registered on a connection or statement instance will not be cached by the **Microsoft JDBC Driver for SQL Server**. Custom key store providers should implement their own CEK caching mechanism. 
+
+Starting with **some version**, the `SQLServerColumnEncryptionAzureKeyVaultProvider` has its own CEK caching implementation. When registered on a connection or statement instance, CEKs decrypted by an instance of `SQLServerColumnEncryptionAzureKeyVaultProvider` will be cleared when that instance goes out of scope:
+
+```java
+try (SQLServerConnection conn = getConnection(); SQLServerStatement stmt = (SQLServerStatement) conn.createStatement()) {
+
+    Map<String, SQLServerColumnEncryptionKeyStoreProvider> customKeyStoreProviders = new HashMap<>();
+    SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
+    customKeyStoreProviders.put(akvProvider.getName(), akvProvider);
+    stmt.registerColumnEncryptionKeyStoreProvidersOnStatement(customKeyStoreProviders);
+    // Perform database operation using Azure Key Vault Provider
+    // Any decrypted column encryption keys will be cached              
+} // Column encryption key cache of "akvProvider" is cleared when "akvProvider" goes out of scope
+```
+
+> [!NOTE]
+> CEK caching implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver globally using the [SQLServerConnection.registerColumnEncryptionKeyStoreProviders](public api link) method. Any CEK caching implementation should reference the value of time-to-live duration before caching a CEK and not cache it if the value is zero. This will avoid duplicate caching and possible user confusion when they are trying to configure key caching. The time-to-live value for the cache can be set using the [SQLServerColumnEncryptionKeyStoreProvider.setColumnEncryptionCacheTtl](public api link) method.
+
+### Registering a custom column master key store provider
+
+This section applies to some JDBC version and higher.
+
+Custom master key store providers can be registered with the driver at three different layers. The precedence of the three registrations is as follows:
+
+- The per-statement registration will be checked if it is not empty.
+- If the per-statement registration is empty, the per-connection registration will be checked if it is not empty.
+- If the per-connection registration is empty, the global registration will be checked.
+
+Once any key store provider is found at a registration level, the driver will **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider is not found at a level, an exception will be thrown containing only the registered providers in the registration that was checked.
+
+The built-in column master key store provider that are available for the Windows Certificate Store is pre-registered. The Microsoft Java Keystore provider and Azure Key Vault Keystore provider can be implicitly pre-registered with a connection instance if crendentials are provided in advance. 
+
+The three registration levels support different scenarios when querying encrypted data. The appropriate method can be used to ensure that a user of an application can access the plaintext data if they can provide the required column master key, by authenticating against the key store containing the column master key.
+
+Applications that share a `SQLServerConnection` instance between multiple users may want to use [SQLServerStatement.registerColumnEncryptionKeyStoreProvidersOnStatement](public api link). Each user must register a key store provider on a `SQLServerStatement` instance before executing a query to access an encrypted column. If the key store provider is able to access the required column master key in the key store using the user's given credentials, the query will succeed.
+
+Applications that create a `SQLServerConnection` instance for each user may want to use [SQLServerConnection.registerColumnEncryptionKeyStoreProvidersOnConnection](public api link). Key store providers registered with this method can be used by the connection for any query accessing encrypted data.
+
+Key store providers registered using [SQLServerConnection.registerColumnEncryptionKeyStoreProviders](public api link) will use the identity given by the application when authenticating against the key store.
+
+The following example shows the precedence of custom column master key store providers registered on a connection instance:
+
+```java
+Map<String, SQLServerColumnEncryptionKeyStoreProvider> customKeyStoreProviders = new HashMap<>();
+MyCustomKeyStore myProvider = new MyCustomKeyStore();
+customKeyStoreProviders.put(myProvider.getName(), myProvider);
+// Registers the provider globally
+SQLServerConnection.registerColumnEncryptionKeyStoreProviders(customKeyStoreProviders);
+
+try (SQLServerConnection conn = getConnection()) {
+    customKeyStoreProviders.clear();
+    SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
+    customKeyStoreProviders.put(akvProvider.getName(), akvProvider);
+    
+    // Registers the provider on the connection
+    // These providers will take precedence over globally registered providers
+    conn.registerColumnEncryptionKeyStoreProvidersOnConnection(customKeyStoreProviders);              
+}
+```
+
+The following example shows the precedence of custom column master key store providers registered on a statement instance:
+
+```java
+Map<String, SQLServerColumnEncryptionKeyStoreProvider> customKeyStoreProviders = new HashMap<>();
+MyCustomKeyStore firstProvider = new MyCustomKeyStore();
+customKeyStoreProviders.put("FIRST_CUSTOM_STORE", firstProvider);
+// Registers the provider globally
+SQLServerConnection.registerColumnEncryptionKeyStoreProviders(customKeyStoreProviders);
+
+try (SQLServerConnection conn = getConnection()) {
+    customKeyStoreProviders.clear();
+    MyCustomKeyStore secondProvider = new MyCustomKeyStore();
+    customKeyStoreProviders.put("SECOND_CUSTOM_STORE", secondProvider);    
+    // Registers the provider on the connection
+    conn.registerColumnEncryptionKeyStoreProvidersOnConnection(customKeyStoreProviders);
+
+    try (SQLServerStatement stmt = (SQLServerStatement) conn.createStatement()) {
+        customKeyStoreProviders.clear();
+        SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
+        customKeyStoreProviders.put(akvProvider.getName(), akvProvider);
+
+        // Registers the provider on the statement
+        // These providers will take precedence over connection-level providers and globally registered providers
+        stmt.registerColumnEncryptionKeyStoreProvidersOnStatement(customKeyStoreProviders);
+    }             
+}
 ```
 
 ## Using column master key store providers for programmatic key provisioning

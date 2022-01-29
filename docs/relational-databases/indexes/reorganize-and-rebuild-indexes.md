@@ -45,6 +45,9 @@ This article helps you decide when and how to perform index maintenance. It cove
 What is **index fragmentation** and how it impacts performance:
 
 - In B-tree (rowstore) indexes, fragmentation exists when indexes have pages in which the logical ordering within the index, based on the key values of the index, does not match the physical ordering of index pages.
+
+   [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+
 - The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically modifies indexes whenever insert, update, or delete operations are made to the underlying data. For example, the addition of rows in a table may cause existing pages in [rowstore indexes](clustered-and-nonclustered-indexes-described.md) to split, making room for the insertion of new rows. Over time these modifications can cause the data in the index to become scattered in the database (fragmented).
 - For queries that read many pages using full or range index scans, heavily fragmented indexes can degrade query performance because additional I/O may be required to read the data required by the query. Instead of a small number of large I/O requests, the query would require a larger number of small I/O requests to read the same amount of data.
 - When the storage subsystem provides better sequential I/O performance than random I/O performance, index fragmentation can degrade performance because more random I/O is required to read fragmented indexes.

@@ -9,8 +9,8 @@ ms.reviewer: "wiassaf"
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
-author: "joesackmsft"
-ms.author: "josack"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Intelligent query processing in SQL databases
@@ -356,6 +356,8 @@ For more information, see [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/fun
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Batch mode on rowstore enables batch mode execution for analytic workloads without requiring columnstore indexes.  This feature supports batch mode execution and bitmap filters for on-disk heaps and B-tree indexes. Batch mode on rowstore enables support for all existing batch mode-enabled operators.
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
 ### Background
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduced a new feature to accelerate analytical workloads: columnstore indexes. We expanded the use cases and improved the performance of columnstore indexes in each subsequent release. Until now, we surfaced and documented all these capabilities as a single feature. You create columnstore indexes on your tables. And your analytical workload goes faster. However, there are two related but distinct sets of technologies:

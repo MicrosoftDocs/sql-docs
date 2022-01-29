@@ -67,7 +67,7 @@ Run this code to create a database certificate and secure it using a password.
 CREATE CERTIFICATE TestCreditRatingCer  
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
       WITH SUBJECT = 'Credit Rating Records Access',   
-      EXPIRY_DATE = '12/31/2021';  -- Error 3701 will occur if this date is not in the future
+      EXPIRY_DATE = '12/31/2022';  -- Error 3701 will occur if this date is not in the future
 GO  
 ```  
   

@@ -55,6 +55,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 15
+          href: big-data-cluster/release-notes-cumulative-update-15.md
         - name: Cumulative Update 14
           href: big-data-cluster/release-notes-cumulative-update-14.md
         - name: Cumulative Update 13

@@ -33,7 +33,7 @@ Connection properties to support Azure Active Directory authentication in the Mi
   - **ActiveDirectoryInteractive**
     - Supported since driver version **v9.2**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Synapse Analytics using an interactive authentication flow (multi-factor authentication).
   - **ActiveDirectoryServicePrincipal**
-    - Supported since driver version **v9.2**, `authentication=ActiveDirectoryServicePrincipal` can be used to connect to an Azure SQL Database/Synapse Analytics using the application/client ID and secret of a service principal identity.
+    - Supported since driver version **v9.2**, `authentication=ActiveDirectoryServicePrincipal` can be used to connect to an Azure SQL Database/Synapse Analytics by specifying the application/client ID in the userName property and secret of a service principal identity in the password property.
   - **SqlPassword**
     - Use `authentication=SqlPassword` to connect to a SQL Server using userName/user and password properties.
   - **NotSpecified**
@@ -390,6 +390,9 @@ Before building and running the example:
     String principalSecret = "..."; // Replace with your AAD principal secret.
     ```
 
+4. Set the principalId and principal Secret using `setUser` and `setPassword` in version 10.2 and up, and `setAADSecurePrincipalId` and `setAADSecurePrincipalSecret` in version 9.4 and below.
+
+ 
 The example to use ActiveDirectoryInteractive authentication mode:
 
 ```java

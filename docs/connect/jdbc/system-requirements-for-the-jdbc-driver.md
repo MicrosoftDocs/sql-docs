@@ -61,7 +61,7 @@ ms.author: v-davidengel
 |---------|-----------------------------|----------------------|-----------------|  
 |mssql-jdbc-10.2.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception. |
 |mssql-jdbc-10.2.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception. |
-|mssql-jdbc-10.2.0.jre16.jar|4.3|17|Requires a Java Runtime Environment (JRE) 17.0. Using JRE 16.0 or lower throws an exception. |
+|mssql-jdbc-10.2.0.jre17.jar|4.3|17|Requires a Java Runtime Environment (JRE) 17.0. Using JRE 17.0 or lower throws an exception. |
 
   The JDBC Driver 10.2 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML:  
   

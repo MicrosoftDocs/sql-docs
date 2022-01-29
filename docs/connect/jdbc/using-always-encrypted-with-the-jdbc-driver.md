@@ -335,11 +335,11 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 #### Column encryption key cache precedence
 
-This section applies to some JDBC version and higher.
+This section applies to JDBC driver version 10.2 and higher.
 
 The column encryption keys (CEK) decrypted by custom key store providers registered on a connection or statement instance will not be cached by the **Microsoft JDBC Driver for SQL Server**. Custom key store providers should implement their own CEK caching mechanism. 
 
-Starting with **some version**, the `SQLServerColumnEncryptionAzureKeyVaultProvider` has its own CEK caching implementation. When registered on a connection or statement instance, CEKs decrypted by an instance of `SQLServerColumnEncryptionAzureKeyVaultProvider` will be cleared when that instance goes out of scope:
+Starting with version 10.2, the `SQLServerColumnEncryptionAzureKeyVaultProvider` has its own CEK caching implementation. When registered on a connection or statement instance, CEKs decrypted by an instance of `SQLServerColumnEncryptionAzureKeyVaultProvider` will be cleared when that instance goes out of scope:
 
 ```java
 try (SQLServerConnection conn = getConnection(); SQLServerStatement stmt = (SQLServerStatement) conn.createStatement()) {
@@ -354,11 +354,11 @@ try (SQLServerConnection conn = getConnection(); SQLServerStatement stmt = (SQLS
 ```
 
 > [!NOTE]
-> CEK caching implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver globally using the [SQLServerConnection.registerColumnEncryptionKeyStoreProviders](public api link) method. Any CEK caching implementation should reference the value of time-to-live duration before caching a CEK and not cache it if the value is zero. This will avoid duplicate caching and possible user confusion when they are trying to configure key caching. The time-to-live value for the cache can be set using the [SQLServerColumnEncryptionKeyStoreProvider.setColumnEncryptionCacheTtl](public api link) method.
+> CEK caching implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver globally using the `SQLServerConnection.registerColumnEncryptionKeyStoreProviders` method. Any CEK caching implementation should reference the value of time-to-live duration before caching a CEK and not cache it if the value is zero. This will avoid duplicate caching and possible user confusion when they are trying to configure key caching. The time-to-live value for the cache can be set using the `SQLServerColumnEncryptionKeyStoreProvider.setColumnEncryptionCacheTtl` method.
 
 ### Registering a custom column master key store provider
 
-This section applies to some JDBC version and higher.
+This section applies to JDBC driver version 10.2 and higher.
 
 Custom master key store providers can be registered with the driver at three different layers. The precedence of the three registrations is as follows:
 
@@ -368,15 +368,15 @@ Custom master key store providers can be registered with the driver at three dif
 
 Once any key store provider is found at a registration level, the driver will **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider is not found at a level, an exception will be thrown containing only the registered providers in the registration that was checked.
 
-The built-in column master key store provider that are available for the Windows Certificate Store is pre-registered. The Microsoft Java Keystore provider and Azure Key Vault Keystore provider can be implicitly pre-registered with a connection instance if crendentials are provided in advance. 
+The built-in column master key store provider that is available for the Windows Certificate Store is pre-registered. The Microsoft Java Keystore provider and Azure Key Vault Keystore provider can be implicitly pre-registered with a connection instance if credentials are provided in advance. 
 
-The three registration levels support different scenarios when querying encrypted data. The appropriate method can be used to ensure that a user of an application can access the plaintext data if they can provide the required column master key, by authenticating against the key store containing the column master key.
+The three registration levels support different scenarios when querying encrypted data. The appropriate method can be used to ensure that a user of an application can access the plaintext data. Access to the unencrypted data only happens if they can provide the required column master key, by authenticating against the key store containing the column master key.
 
-Applications that share a `SQLServerConnection` instance between multiple users may want to use [SQLServerStatement.registerColumnEncryptionKeyStoreProvidersOnStatement](public api link). Each user must register a key store provider on a `SQLServerStatement` instance before executing a query to access an encrypted column. If the key store provider is able to access the required column master key in the key store using the user's given credentials, the query will succeed.
+Applications that share a `SQLServerConnection` instance between multiple users may want to use `SQLServerStatement.registerColumnEncryptionKeyStoreProvidersOnStatement`. Each user must register a key store provider on a `SQLServerStatement` instance before executing a query to access an encrypted column. If the key store provider is able to access the required column master key in the key store using the user's given credentials, the query will succeed.
 
-Applications that create a `SQLServerConnection` instance for each user may want to use [SQLServerConnection.registerColumnEncryptionKeyStoreProvidersOnConnection](public api link). Key store providers registered with this method can be used by the connection for any query accessing encrypted data.
+Applications that create a `SQLServerConnection` instance for each user may want to use `SQLServerConnection.registerColumnEncryptionKeyStoreProvidersOnConnection`. Key store providers registered with this method can be used by the connection for any query accessing encrypted data.
 
-Key store providers registered using [SQLServerConnection.registerColumnEncryptionKeyStoreProviders](public api link) will use the identity given by the application when authenticating against the key store.
+Key store providers registered with `SQLServerConnection.registerColumnEncryptionKeyStoreProviders` will use the identity given by the application when authenticating against the key store.
 
 The following example shows the precedence of custom column master key store providers registered on a connection instance:
 

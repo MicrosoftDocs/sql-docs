@@ -294,9 +294,9 @@ The SQL Server Management Studio or any other tool can't be used to create colum
 
 If you want to store column master keys in a keystore that is not supported by an existing provider, you can implement a custom provider by extending the `SQLServerColumnEncryptionKeyStoreProvider` Class and registering the provider using one of the following methods:
 
-- [SQLServerConnection.registerColumnEncryptionKeyStoreProviders](public api link)
-- [SQLServerConnection.registerColumnEncryptionKeyStoreProvidersOnConnection](public api link) (Added in some JDBC version)
-- [SQLServerStatement.registerColumnEncryptionKeyStoreProvidersOnStatement](public api link) (Added in some JDBC version)
+- `SQLServerConnection.registerColumnEncryptionKeyStoreProviders`
+- `SQLServerConnection.registerColumnEncryptionKeyStoreProvidersOnConnection` (Added in JDBC version 10.2)
+- `SQLServerStatement.registerColumnEncryptionKeyStoreProvidersOnStatement` (Added in JDBC version 10.2)
 
 ```java
 public class MyCustomKeyStore extends SQLServerColumnEncryptionKeyStoreProvider{

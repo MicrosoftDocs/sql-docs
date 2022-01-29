@@ -54,8 +54,10 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | AADSecurePrincipalId/AADSecurePrincipalSecret deprecated | The AADSecurePrincipalId/AADSecurePrincipalSecret connection properrties have been deprecated and replaced with username/password. |
 | getAADSecretPrincipalId API removed | The getAADSecretPrincipalId API has been removed for security reasons. |
 | SQL_Variant support | Added support for SQL_Variant datatype when retrieving DateTimeOffset. |
-| Non-blocking random in Linux | Updated to use non-blocking call when generating random GUID for enclave package. |
+| Non-blocking random in Linux | Updated to use non-blocking call when generating random GUID for Enclave package. |
 | Enable CNAME resolution for realm | Enabled CNAME resolution when realm is specified. |
+
+
 | Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`, `gson`, and `bouncycastle`. |
 | &nbsp; | &nbsp; |
 
@@ -64,12 +66,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Fix | Details |
 | :---------- | :----------- |
 | [GitHub Issue #1661](https://github.com/microsoft/mssql-jdbc/issues/1661) | Fixed: TDSParser stuck on TDS_COLMETADATA. |
-| [Multi-byte in BulkCopy](https://github.com/microsoft/mssql-jdbc/pull/1671) | Fixed: Bulkcopy handling for multi-byte chars in char/varchar columns. |
-| [Azure SQL Server warning](https://github.com/microsoft/mssql-jdbc/pull/1510) | Fixed: Warning when retrieving architecture from Microsoft SQL Azure server. |
-| [NPE Statment.closeOnCompletion](https://github.com/microsoft/mssql-jdbc/pull/1639) | Fixed: NPE with Statement.closeOnCompletion(). |
-| [ActiveDirectoryInteractive Timeout](https://github.com/microsoft/mssql-jdbc/pull/1696) | Fixed: ActiveDirectoryInteractive authentication timeout issue. |
-| [Certificate Validation Behavior](https://github.com/microsoft/mssql-jdbc/pull/1696) | Fixed: Change certificate validation behavior. |
-
 | &nbsp; | &nbsp; |
 
 

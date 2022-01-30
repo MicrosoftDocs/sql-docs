@@ -58,16 +58,17 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *database_name*  
+
+#### *database_name*  
  Is the name of the database.  
   
- *schema_name*  
+#### *schema_name*  
  Is the name of the schema to which the table belongs.  
   
- *table_name*  
+#### *table_name*  
  Is the name of the table to truncate or from which all rows are removed. *table_name* must be a literal. *table_name* cannot be the **OBJECT_ID()** function or a variable.  
   
- WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
+#### WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level))
   
  Specifies the partitions to truncate or from which all rows are removed. If the table is not partitioned, the `WITH PARTITIONS` argument will generate an error. If the `WITH PARTITIONS` clause is not provided, the entire table will be truncated.  

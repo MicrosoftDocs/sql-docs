@@ -2,7 +2,7 @@
 title: "Supported version and edition upgrades (SQL Server 2019)"
 description: The supported version and edition upgrades for SQL Server 2019. 
 ms.custom: ""
-ms.date: 11/04/2019
+ms.date: 01/28/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "versions [SQL Server], upgrading"
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
-ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: ">=sql-server-2017"
@@ -23,7 +22,7 @@ monikerRange: ">=sql-server-2017"
   
   You can upgrade from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], and [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]. This article lists the supported upgrade paths from these [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, and the supported edition upgrades for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].  
   
-## Pre upgrade Checklist  
+## Pre-upgrade Checklist  
 
 - Before upgrading from one edition of [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] to another, verify that the functionality you are currently using is supported in the edition to which you are moving.  
 - Verify supported [hardware and software](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).
@@ -36,7 +35,7 @@ monikerRange: ">=sql-server-2017"
 
 - Cross-version instances of [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] are not supported. Version numbers of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] components must be the same in an instance of [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].  
   
-- [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] is only available for 64-bit platforms. Cross-platform upgrade is not supported. You cannot upgrade a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to native 64-bit using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. However, you can back up or detach databases from a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then restore or attach them to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-bit) if the databases are not published in replication. You must re-create any logins and other user objects in master, msdb, and model system databases.  
+- [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] is only available for 64-bit platforms. Cross-platform upgrade is not supported. You cannot upgrade a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to native 64-bit using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. However, you can back up or detach databases from a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then restore or attach them to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-bit) if the databases are not published in replication. You must re-create any logins and other user objects in `master`, `msdb`, and `model` system databases.  
   
 - You cannot add new features during the upgrade of your existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], you can add features by using the [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Setup. For more information, see [Add Features to an Instance of SQL Server &#40;Setup&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
  
@@ -49,7 +48,7 @@ monikerRange: ">=sql-server-2017"
 - [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 or later
 - [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
-The table below lists the supported upgrade scenarios from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].  
+The following table lists the supported upgrade scenarios from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].  
   
 |Upgrade from|Supported upgrade path|  
 |:------|:------|  
@@ -103,16 +102,16 @@ The following tips and tools can help you plan and implement your migration.
 
 - Bulk load: Tables can be bulk copied from SQL Server 2008 or SQL Server 2008 R2 to SQL Server 2019.
 
-## [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Edition Upgrade 
+## [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Edition upgrade 
 
 The following table lists the supported edition upgrade scenarios in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].  
 
 For step-by-step instructions on how to perform an edition upgrade, see [Upgrade to a Different Edition of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
   
-|Upgrade From|Upgrade To|  
+|**Upgrade From**|**Upgrade To**|  
 |------------------|----------------|  
 |[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise (Server+CAL and Core)**|[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise |  
-|[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Evaluation Enterprise**|[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise (Server+CAL or Core License) <br/><br/> [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Standard <br/> <br/> [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Developer <br/> <br/> [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Web <br/> <br/> Upgrading from Evaluation (a free edition) to any of the paid editions is supported for stand-alone installations, but is not supported for clustered installations. This limitation does not apply to stand-alone instances installed on a Windows Failover Cluster participating in an availability group. |  
+|[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Evaluation Enterprise**|[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise (Server+CAL or Core License) <br/><br/> [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Standard <br/> <br/> [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Developer <br/> <br/> [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Web <br/> <br/> Upgrading from Evaluation (a free edition) to any of the paid editions is supported for stand-alone installations, but isn't supported for clustered installations. This limitation does not apply to stand-alone instances installed on a Windows Failover Cluster participating in an availability group. |  
 |[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Standard**|[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise (Server+CAL or Core License)|  
 |[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Developer**|[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise (Server+CAL or Core License) <br/><br/> [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Web <br/> <br/> [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Standard|  
 |[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Web|[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise (Server+CAL or Core License) <br/><br/> [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Standard|  
@@ -120,7 +119,7 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
   
  Additionally you can also perform an edition upgrade between [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise (Server+CAL license) and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise (Core License):  
   
-|Edition Upgrade From|Edition Upgrade To|  
+|**Edition Upgrade From**|**Edition Upgrade To**|  
 |--------------------------|------------------------|  
 |[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise (Server+CAL License)**|[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise (Core License)|  
 |[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise (Core License)|[!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Enterprise (Server+CAL License)|  
@@ -137,10 +136,13 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
   
 - [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Evaluation to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Standard.  
   
-## See Also  
+## See also  
 
- [Editions and supported features of [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md)
+- [Editions and supported features of [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md)
+- [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
- [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
+## Next steps
 
- [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
+- [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
+- [Upgrade Database Engine](upgrade-database-engine.md)
+- [Upgrade to a Different Edition of SQL Server (Setup)](upgrade-to-a-different-edition-of-sql-server-setup.md)

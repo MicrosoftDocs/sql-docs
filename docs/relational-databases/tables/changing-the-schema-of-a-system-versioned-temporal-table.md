@@ -65,7 +65,7 @@ ALTER TABLE dbo.Department
 
   - Adding a computed column
   - Adding an **IDENTITY** column
-  - Adding a **SPARSE** column or changing existing column to be **SPARSE**when the history table is set to **DATA_COMPRESSION = PAGE** or **DATA_COMPRESSION = ROW**, which is the default for the history table.
+  - Adding a **SPARSE** column or changing existing column to be **SPARSE** when the history table is set to **DATA_COMPRESSION = PAGE** or **DATA_COMPRESSION = ROW**, which is the default for the history table.
   - Adding a **COLUMN_SET**
   - Adding a **ROWGUIDCOL** column or changing existing column to be **ROWGUIDCOL**
 

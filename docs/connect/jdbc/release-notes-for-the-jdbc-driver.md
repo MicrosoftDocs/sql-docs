@@ -42,22 +42,22 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Feature | Details |
 | :---------- | :----------- |
 | Java 17 support | The driver is now compatible with Java Development Kit (JDK) version 17.0 in addition to JDK 11.0 and 1.8. |
-| Idle Connection Resiliiency support | Idle Connection Resiliiency is now supported. See [Idle Connection Resiliency](connection-resiliency.md). |
-| Multi-user Key Store Providers | The driver now supports multi-user Key Store providers. See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
+| Idle Connection Resiliency support | Idle Connection Resiliency is now supported. See [Idle Connection Resiliency](connection-resiliency.md). |
+| Multi-user Key Store Providers | The driver now supports Key Store providers at the connection and statement level to support multi-user scenarios. See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Changes in 10.2
 
 | Change | Details |
 | :---------- | :----------- |
-| Default TLS encryption | TLS encryption is enabled by default. |
-| AADSecurePrincipalId/AADSecurePrincipalSecret deprecated | The AADSecurePrincipalId/AADSecurePrincipalSecret connection properrties have been deprecated and replaced with username/password. |
-| getAADSecretPrincipalId API removed | The getAADSecretPrincipalId API has been removed for security reasons. |
+| Default encrypt to true | **BREAKING CHANGE** TLS encryption is enabled by default. |
+| Certificate validation when encrypt = false | **BREAKING CHANGE** When encrypt = false but the server requires encryption, the certificate will be validated based on the trustServerCertificate connection setting.
+| aadSecurePrincipalId and aadSecurePrincipalSecret deprecated | The aadSecurePrincipalId and aadSecurePrincipalSecret connection properties have been deprecated.  Use username and password instead. |
+| getAADSecretPrincipalId API removed | **BREAKING CHANGE** The getAADSecretPrincipalId API has been removed for security reasons. |
 | SQL_Variant support | Added support for SQL_Variant datatype when retrieving DateTimeOffset. |
-| Non-blocking random in Linux | Updated to use non-blocking call when generating random GUID for Enclave package. |
-| Enable CNAME resolution for realm | Enabled CNAME resolution when realm is specified. |
+| Non-blocking random in Linux | Updated to use a non-blocking random call when generating a GUID for enclave packages. |
 
-
+| CNAME resolution for realm | Added CNAME resolution when realm is specified. |
 | Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`, `gson`, and `bouncycastle`. |
 | &nbsp; | &nbsp; |
 
@@ -65,7 +65,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Fix | Details |
 | :---------- | :----------- |
-| [GitHub Issue #1661](https://github.com/microsoft/mssql-jdbc/issues/1661) | Fixed: TDSParser stuck on TDS_COLMETADATA. |
+| TDSParser stuck on TDS_COLMETADATA | Fixed: TDSParser stuck on TDS_COLMETADATA, which could result in a hang for certain queries. [GitHub Issue #1661](https://github.com/microsoft/mssql-jdbc/issues/1661) |
 | &nbsp; | &nbsp; |
 
 

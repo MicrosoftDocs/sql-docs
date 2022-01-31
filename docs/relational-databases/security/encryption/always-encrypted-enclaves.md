@@ -198,4 +198,5 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 
 ## See also
 
+- [Azure SQL Database Always Encrypted, SIGMOD '20: Proceedings of the 2020 ACM SIGMOD International Conference on Management of Data](https://dl.acm.org/doi/abs/10.1145/3318464.3386141)
 - [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)

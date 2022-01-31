@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
-ms.date: 01/27/2022
+ms.date: 01/31/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -80,6 +80,22 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-no
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
 ## Known issues
+
+### HDFS copy of large files using azdata with random failures
+
+- **Affected releases**: CU14
+
+- **Issue and customer effect**: This was a bug causing random failus on ```azdata bdc cp``` commands between HDFS paths. The bug affects larger file copies more often.
+
+- **Solution**: Update to Cumulative Update 15 (CU15).
+
+### Log4j security
+
+- **Affected releases**: None
+
+- **Issue and customer effect**: After a thorough assessment of the Big Data Clusters codebase, no risk associated with the log4j vulnerability reported in December was identified. CU15 includes an updated version of log4j (2.17) for the ElasticSearch instance in the control plane to ensure that image scan alerts are not triggered by static code analysis of Big Data Cluster containers.
+
+- **Solution**: Always keep your SQL Server big data cluster updated to the lastest release.
 
 ### Cluster upgrade from a CU8 and previous release to a post-CU9 release is not supported
 

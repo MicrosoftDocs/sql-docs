@@ -5,7 +5,7 @@ description: This article describes the updates and known issues for SQL Server 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: melqin,dacoelho
-ms.date: 11/18/2021
+ms.date: 01/31/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -18,6 +18,17 @@ ms.technology: big-data-cluster
 The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The article lists cumulative update information for all the releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 For the latest release notes, see [SQL Server Big Data Clusters platform release notes](release-notes-big-data-cluster.md).
+
+## <a id="cu15"></a> CU15 (January 2022)
+
+Cumulative Update 15 (CU15) release for SQL Server Big Data Clusters.
+
+|Package version | Image tag | Contents |
+|-----|-----| ----- |
+|15.0.4198.2|[2019-CU15-ubuntu-20.04]| [SQL Server Big Data Clusters Cumulative Update 15](release-notes-cumulative-update-15.md) |
+
+> [!WARNING]
+   > On Cumulative Update 15, __the upgrade order is critical__. Upgrade your big data cluster to CU15 __before__ upgrading the Kubernetes cluster to version 1.21. If the Kubernetes cluster is upgraded to version 1.21 before BDC is upgraded to CU14 or CU15 then the cluster will end up in error state and the BDC upgrade will not succeed. In this case, reverting back to Kubernetes version 1.20 will fix the problem.
 
 ## <a id="cu14"></a> CU14 (November 2021)
 

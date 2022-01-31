@@ -11,17 +11,17 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# SQL Server Big Data Clusters cumulative updates history
+# SQL Server 2019 Big Data Clusters cumulative updates history
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The article lists cumulative update information for all the releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
-For the latest release notes, see [SQL Server Big Data Clusters platform release notes](release-notes-big-data-cluster.md).
+For the latest release notes, see [SQL Server 2019 Big Data Clusters platform release notes](release-notes-big-data-cluster.md).
 
 ## <a id="cu15"></a> CU15 (January 2022)
 
-Cumulative Update 15 (CU15) release for SQL Server Big Data Clusters.
+Cumulative Update 15 (CU15) release for SQL Server 2019 Big Data Clusters.
 
 |Package version | Image tag | Contents |
 |-----|-----| ----- |

@@ -5781,8 +5781,8 @@
       href: ../connect/php/using-always-encrypted-php-drivers.md
     - name: Always Encrypted with secure enclaves with the PHP Drivers for SQL Server
       href: ../connect/php/always-encrypted-secure-enclaves.md
-    - name: Using table-valued parameters (PHP)
-      href: ../connect/php/using-table-valued-parameters.md
+    - name: Use table-valued parameters (PHP)
+      href: ../connect/php/use-table-valued-parameters.md
     - name: Non-System Locale Settings
       href: ../connect/php/non-system-locale-settings.md
     - name: Constants (Microsoft Drivers for PHP for SQL Server)

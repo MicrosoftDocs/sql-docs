@@ -43,7 +43,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | :---------- | :----------- |
 | Java 17 support | The driver is now compatible with Java Development Kit (JDK) version 17.0 in addition to JDK 11.0 and 1.8. |
 | Idle Connection Resiliency support | Idle Connection Resiliency is now supported. See [Idle Connection Resiliency](connection-resiliency.md). |
-| Multi-user Key Store Providers | The driver now supports multi-user Key Store providers. See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
+| Multi-user Key Store Providers | The driver now supports Key Store providers are the connection and statement level to support multi-user scenarios. See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Changes in 10.2
@@ -55,7 +55,8 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | aadSecurePrincipalId and aadSecurePrincipalSecret deprecated | The aadSecurePrincipalId and aadSecurePrincipalSecret connection properties have been deprecated.  Use username and password instead. |
 | getAADSecretPrincipalId API removed | **BREAKING CHANGE** The getAADSecretPrincipalId API has been removed for security reasons. |
 | SQL_Variant support | Added support for SQL_Variant datatype when retrieving DateTimeOffset. |
-| Non-blocking random in Linux | Updated to use non-blocking call when generating random GUID for enclave packages. |
+| Non-blocking random in Linux | Updated to use a non-blocking random call when generating a GUID for enclave packages. |
+
 | CNAME resolution for realm | Added CNAME resolution when realm is specified. |
 | Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`, `gson`, and `bouncycastle`. |
 | &nbsp; | &nbsp; |
@@ -64,7 +65,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Fix | Details |
 | :---------- | :----------- |
-| [GitHub Issue #1661](https://github.com/microsoft/mssql-jdbc/issues/1661) | Fixed: TDSParser stuck on TDS_COLMETADATA. |
+| TDSParser stuck on TDS_COLMETADATA | Fixed: TDSParser stuck on TDS_COLMETADATA, which could result in a hang for certain queries. [GitHub Issue #1661](https://github.com/microsoft/mssql-jdbc/issues/1661) |
 | &nbsp; | &nbsp; |
 
 

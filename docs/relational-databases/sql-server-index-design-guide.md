@@ -421,7 +421,7 @@ Row locators also ensure uniqueness for nonclustered index rows. The following t
 | | Non-unique | Clustered index keys and uniqueifier (when present) added to key columns|
 | | Unique | Clustered index keys and uniqueifier (when present) added to included  columns|
 
-The database engine will never store a given column twice in a nonclustered index. The index key order specified by the user when they create a nonclustered index is always honored: any row locator columns which need to be added to the key of a nonclustered index will be added at the end of the key, following the columns specified in the index definition. Row locator columns in a nonclustered index can be used by the query optimizer, regardless of whether they were explicitly specified in the index definition. 
+The database engine will never store a given column twice in a nonclustered index. The index key order specified by the user when they create a nonclustered index is always honored: any row locator columns which need to be added to the key of a nonclustered index will be added at the end of the key, following the columns specified in the index definition. Clustered index key-based row locator columns in a nonclustered index can be used by the query optimizer, regardless of whether they were explicitly specified in the index definition. 
 
 The following examples shows how row locators are implemented in nonclustered indexes:
 
@@ -569,7 +569,7 @@ When you design nonclustered indexes with included columns consider the followin
 ```sql
 SELECT AddressLine1, AddressLine2, City, StateProvinceID, PostalCode  
 FROM Person.Address  
-WHERE PostalCode BETWEEN N'98000' and N'99999';  
+WHERE PostalCode BETWEEN N'98000' AND N'99999';  
 GO
 ```  
   
@@ -583,7 +583,7 @@ ON Person.Address (PostalCode)
 INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
 ```  
 
-To validate that the index covers the query, create the index, then run the query and [display an Actual Execution Plan](performance/display-an-actual-execution-plan.md). 
+To validate that the index covers the query, create the index, then [display the estimated execution plan](performance/display-the-estimated-execution-plan.md).
 
 If the execution plan shows only a SELECT operator and an Index Seek operator for the `IX_Address_PostalCode` index, the query has been "covered" by the index.
 
@@ -680,7 +680,7 @@ CREATE NONCLUSTERED INDEX FIBillOfMaterialsWithEndDate
 GO  
 ```  
   
-The filtered index `FIBillOfMaterialsWithEndDate` is valid for the following query. [Display the actual execution plan](performance/display-an-actual-execution-plan.md) to determine if the query optimizer used the filtered index.  
+The filtered index `FIBillOfMaterialsWithEndDate` is valid for the following query. [Display the estimated execution plan](performance/display-the-estimated-execution-plan.md) to determine if the query optimizer used the filtered index.  
   
 ```sql  
 SELECT ProductAssemblyID, ComponentID, StartDate   
@@ -1017,7 +1017,7 @@ There are no in-place updates of index pages. New delta pages are introduced for
 
 The key value in each non-leaf level page depicted is the highest value that the child that it points to contains and each row also contains that page logical page ID. On the leaf-level pages, along with the key value, it contains the physical address of the data row.
 
-Point lookups are similar to B+ trees except that because pages are linked in only one direction, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] follows right page pointers, where each non-leaf pages has the highest value of its child, rather than lowest value as in a B+ tree.
+Point lookups are similar to B-trees except that because pages are linked in only one direction, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] follows right page pointers, where each non-leaf pages has the highest value of its child, rather than lowest value as in a B-tree.
 
 If a Leaf-level page has to change, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] does not modify the page itself. Rather, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] creates a delta record that describes the change, and appends it to the previous page. Then it also updates the page map table address for that previous page, to the address of the delta record that now becomes the physical address for this page.
 

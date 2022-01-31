@@ -27,7 +27,6 @@ Version 10.2 is the latest general availability (GA) version. It supports Java 8
 - Release number: 10.2.0
 - Released: January 31, 2022
 
-
 When you download the driver, there are multiple JAR files. The name of the JAR file indicates the version of Java that it supports.
 
 > [!Note]

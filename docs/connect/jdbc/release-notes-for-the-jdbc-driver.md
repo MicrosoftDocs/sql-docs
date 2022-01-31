@@ -56,7 +56,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | getAADSecretPrincipalId API removed | **BREAKING CHANGE** The getAADSecretPrincipalId API has been removed for security reasons. |
 | SQL_Variant support | Added support for SQL_Variant datatype when retrieving DateTimeOffset. |
 | Non-blocking random in Linux | Updated to use a non-blocking random call when generating a GUID for enclave packages. |
-
 | CNAME resolution for realm | Added CNAME resolution when realm is specified. |
 | Updated dependencies | Updated dependency versions for `azure-identity`, `azure-security-keyvault-keys`, `gson`, and `bouncycastle`. |
 | &nbsp; | &nbsp; |

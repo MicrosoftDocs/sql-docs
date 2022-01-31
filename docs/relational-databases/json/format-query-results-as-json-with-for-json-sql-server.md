@@ -12,14 +12,17 @@ helpviewer_keywords:
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.custom: seo-dt-2019, FY22Q2Fresh
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Format Query Results as JSON with FOR JSON (SQL Server)
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
-Format query results as JSON, or export data from SQL Server as JSON, by adding the `FOR JSON` clause to a `SELECT` statement. Use the `FOR JSON` clause to simplify client applications by delegating the formatting of JSON output from the app to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) is the recommended query editor for JSON queries because it auto-formats the JSON results (as seen in this article) instead of displaying a flat string.
+Format query results as JSON, or export data from SQL Server as JSON, by adding the `FOR JSON` clause to a `SELECT` statement. Use the `FOR JSON` clause to simplify client applications by delegating the formatting of JSON output from the app to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+> [!NOTE]
+> [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) is the recommended query editor for JSON queries because it auto-formats the JSON results (as seen in this article) instead of displaying a flat string.
   
  When you use the `FOR JSON` clause, you can specify the structure of the JSON output explicitly, or let the structure of the SELECT statement determine the output.  
   
@@ -121,13 +124,12 @@ SELECT
    FROM
                        #tabClass   as c
       RIGHT OUTER JOIN #tabStudent as s ON s.ClassGuid = c.ClassGuid
-   --where
-   --   c.ClassName LIKE '%Math%'
    ORDER BY 
       c.ClassName,
       s.StudentName
    FOR
       JSON AUTO
+      -- To include NULL values in the output, uncomment the following line:
       --, INCLUDE_NULL_VALUES
 ;
 

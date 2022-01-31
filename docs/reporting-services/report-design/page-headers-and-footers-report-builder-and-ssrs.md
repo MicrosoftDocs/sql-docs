@@ -11,11 +11,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "10125"
   - "sql13.rtp.rptdesigner.pagefooter.border.f1"
-  - "10121"
   - "10120"
   - "10122"
   - "sql13.rtp.rptdesigner.pageheader.general.f1"
-  - "10123"
   - "sql13.rtp.rptdesigner.pageheader.fill.f1"
   - "sql13.rtp.rptdesigner.pageheader.border.f1"
   - "sql13.rtp.rptdesigner.pagefooter.fill.f1"

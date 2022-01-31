@@ -9,7 +9,6 @@ ms.technology: tools
 
 ms.topic: conceptual
 f1_keywords: 
-  - "10033"
   - "sql13.rtp.rptdesigner.group.f1"
 helpviewer_keywords: 
   - "Grouping Pane dialog box"

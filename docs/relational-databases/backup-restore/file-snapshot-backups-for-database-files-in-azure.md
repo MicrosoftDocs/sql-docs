@@ -14,7 +14,7 @@ ms.author: kendralittle
 ---
 # File-Snapshot Backups for Database Files in Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File-snapshot backup uses Azure snapshots to provide nearly instantaneous backups and quicker restores for database files stored using the Azure Blob storage service. This capability enables you to simplify your backup and restore policies. For more information on storing database files using the Azure Blob storage service, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File-snapshot backup uses Azure snapshots to provide nearly instantaneous backups and quicker restores for database files stored using Azure Blob Storage. This capability enables you to simplify your backup and restore policies. For more information on storing database files using Azure Blob Storage, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
  ![snapshot backup architectural diagram](../../relational-databases/backup-restore/media/snapshotbackups.PNG "snapshot backup architectural diagram")  
   
@@ -38,10 +38,10 @@ ms.author: kendralittle
  **Transaction log backup:** Performing a transaction log backup using file-snapshot backup creates a file-snapshot of each database file (not just the transaction log), records the file-snapshot location information into the backup file, and truncates the transaction log file.  
   
 > [!IMPORTANT]  
->  After the initial full backup that is required to establish the transaction log backup chain (which can be a file-snapshot backup), you only need to perform transaction log backups because each transaction log file-snapshot backup set contains file-snapshots of all database files and can be used to perform a database restore or a log restore. After the initial full database backup, you do not need additional full or differential backups because the Azure Blob storage service handles the differences between each file-snapshot and the current state of the base blob for each database file.  
+>  After the initial full backup that is required to establish the transaction log backup chain (which can be a file-snapshot backup), you only need to perform transaction log backups because each transaction log file-snapshot backup set contains file-snapshots of all database files and can be used to perform a database restore or a log restore. After the initial full database backup, you do not need additional full or differential backups because Azure Blob Storage handles the differences between each file-snapshot and the current state of the base blob for each database file.  
   
 > [!NOTE]  
->  For a tutorial on using SQL Server 2016 with the Microsoft Azure Blob storage service, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+>  For a tutorial on using SQL Server 2016 with Microsoft Azure Blob Storage, see [Tutorial: Using Microsoft Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ### Restore using file-snapshot backups  
  Because each file-snapshot backup set contains a file-snapshot of each database file, a restore process requires at most adjacent two file-snapshot backup sets. This is true regardless of whether the backup set is from a full database backup or a log backup. This is very different than the restore process when using traditional streaming backup files to perform the restore process. With traditional streaming backup, the restore process requires the use of an entire chain of backup sets: the full backup, a differential backup and one or more transaction log backups. The recovery portion of the restore process remains the same regardless of whether the restore is using a file-snapshot backup or a streaming backup set.  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ## Viewing database backup file-snapshots  
- To view file-snapshots of the base blob for each database file, use the **sys.fn_db_backup_file_snapshots** system function. This system function enables you to view all backup file-snapshots of each base blob for a database stored using the Azure Blob storage service. A primary use case for this function is to identify backup file-snapshots of a database that remain when the backup file for a file-snapshot backup set is deleted using a mechanism other than the **sys.sp_delete_backup** system stored procedure. To determine the backup file-snapshots that are part of intact backup sets and the ones that are not part of intact backup sets, use the **RESTORE FILELISTONLY**  system stored procedure to list the file-snapshots belonging to each backup file. For more information, see [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) and [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ To view file-snapshots of the base blob for each database file, use the **sys.fn_db_backup_file_snapshots** system function. This system function enables you to view all backup file-snapshots of each base blob for a database stored using the Azure Blob Storage Service. A primary use case for this function is to identify backup file-snapshots of a database that remain when the backup file for a file-snapshot backup set is deleted using a mechanism other than the **sys.sp_delete_backup** system stored procedure. To determine the backup file-snapshots that are part of intact backup sets and the ones that are not part of intact backup sets, use the **RESTORE FILELISTONLY**  system stored procedure to list the file-snapshots belonging to each backup file. For more information, see [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) and [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  The following example returns the list of all backup file-snapshots for the specified database.  
   
@@ -171,5 +171,5 @@ GO
 ```  
   
 ## See Also  
- [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Tutorial: Using Microsoft Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   

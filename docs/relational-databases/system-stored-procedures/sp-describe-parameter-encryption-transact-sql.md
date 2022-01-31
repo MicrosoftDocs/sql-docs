@@ -8,6 +8,8 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
 ms.technology: system-objects
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_describe_parameter_encryption"
   - "sp_describe_parameter_encryption_TSQL"

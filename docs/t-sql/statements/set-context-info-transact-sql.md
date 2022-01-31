@@ -1,11 +1,8 @@
 ---
+title: SET CONTEXT_INFO (Transact-SQL)
 description: "SET CONTEXT_INFO (Transact-SQL)"
-title: "SET CONTEXT_INFO (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -17,16 +14,20 @@ helpviewer_keywords:
   - "context information [SQL Server]"
   - "CONTEXT_INFO option"
   - "SET CONTEXT_INFO statement"
-ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "07/26/2017"
 ---
+
 # SET CONTEXT_INFO (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Associates up to 128 bytes of binary information with the current session or connection.  
+Associates up to 128 bytes of binary information with the current session or connection.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

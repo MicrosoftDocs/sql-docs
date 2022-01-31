@@ -125,7 +125,9 @@ sys.dm_db_index_operational_stats (
 |**tree_page_io_latch_wait_in_ms**|**bigint**|Subset of **page_io_latch_wait_in_ms** that includes only the upper-level B-tree pages. Always 0 for a heap or columnstore index.|    
 |**page_compression_attempt_count**|**bigint**|Number of pages that were evaluated for PAGE level compression for specific partitions of a table, index, or indexed view. Includes pages that were not compressed because significant savings could not be achieved. Always 0 for  columnstore index.|    
 |**page_compression_success_count**|**bigint**|Number of data pages that were compressed by using PAGE compression for specific partitions of a table, index, or indexed view. Always 0 for  columnstore index.|    
-    
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+  
 ## Remarks    
  This dynamic management object does not accept correlated parameters from `CROSS APPLY` and `OUTER APPLY`.    
     

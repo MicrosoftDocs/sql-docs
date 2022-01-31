@@ -2,7 +2,6 @@
 title: SQL Server Connector error and information logging
 description: This article describes enabling errors and logging for SQL Server Connector by modifying registry entries
 ms.date: 08/23/2021
-ms.localizationpriority: medium
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security

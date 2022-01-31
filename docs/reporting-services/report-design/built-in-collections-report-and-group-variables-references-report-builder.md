@@ -11,12 +11,10 @@ ms.topic: conceptual
 f1_keywords: 
   - "10404"
   - "10083"
-  - "sql13.rtp.rptdesigner.groupproperties.variables.f1"
   - "sql13.rtp.rptdesigner.categorygroupproperties.variables.f1"
   - "sql13.rtp.rptdesigner.reportproperties.variables.f1"
   - "10292"
   - "sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1"
-  - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies

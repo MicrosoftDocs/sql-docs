@@ -5,8 +5,8 @@ description: This article describes R tutorials for SQL machine learning. Learn 
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: garye, davidph
 ms.date: 05/07/2021
 ms.custom: seo-lt-2019

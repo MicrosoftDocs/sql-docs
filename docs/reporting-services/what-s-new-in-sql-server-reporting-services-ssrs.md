@@ -132,7 +132,7 @@ Reporting Services mobile reports are dedicated reports optimized for a wide var
 - iPad
 - iPhones
 - Android phones
-- or any Windows 10 device
+- or any Windows device
 
 #### Mobile Report Publisher  
 

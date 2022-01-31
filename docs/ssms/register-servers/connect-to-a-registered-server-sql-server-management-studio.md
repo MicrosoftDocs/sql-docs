@@ -26,4 +26,5 @@ This topic describes how to connect to a registered server in [!INCLUDE[ssnovers
 
 ### To connect to a registered server
 
-1. In Registered Servers, right-click a server, point to **Connect**, and then click **Object Explorer**.
+1. If the Registered Servers pane is not visible, select **View** > **Registered Servers**.
+1. In Registered Servers, right-click a server, point to **Connect**, and then select **Object Explorer**.

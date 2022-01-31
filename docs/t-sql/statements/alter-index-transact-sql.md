@@ -12,7 +12,7 @@ f1_keywords:
   - "ALTER INDEX"
   - "ALTER_INDEX_TSQL"
 dev_langs: 
-  - "t-sql"
+  - "TSQL"
 helpviewer_keywords: 
   - "indexes [SQL Server], reorganizing"
   - "ALTER INDEX statement"
@@ -633,6 +633,8 @@ For more information, see [Reorganize and Rebuild Indexes](../../relational-data
   
 ## <a name="disabling-indexes"></a> Disabling Indexes  
 Disabling an index prevents user access to the index, and for clustered indexes, to the underlying table data. The index definition remains in the system catalog. Disabling a nonclustered index or clustered index on a view physically deletes the index data. Disabling a clustered index prevents access to the data, but the data remains unmaintained in the B-tree until the index is dropped or rebuilt. To view the status of an enabled or disabled index, query the `is_disabled` column in the `sys.indexes` catalog view.  
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
   
 If a table is in a transactional replication publication, you cannot disable any indexes that are associated with primary key columns. These indexes are required by replication. To disable an index, you must first drop the table from the publication. For more information, see [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   

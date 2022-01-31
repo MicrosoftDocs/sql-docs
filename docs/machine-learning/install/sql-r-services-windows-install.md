@@ -6,8 +6,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/06/2020
 ms.topic: how-to
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom:
   - contperf-fy20q4
   - intro-installation

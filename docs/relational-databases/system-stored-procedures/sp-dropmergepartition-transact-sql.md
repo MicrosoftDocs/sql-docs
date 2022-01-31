@@ -8,6 +8,8 @@ ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_dropmergepartition_TSQL"
   - "sp_dropmergepartition"

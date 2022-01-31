@@ -53,6 +53,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 15
+          href: big-data-cluster/release-notes-cumulative-update-15.md
         - name: Cumulative Update 14
           href: big-data-cluster/release-notes-cumulative-update-14.md
         - name: Cumulative Update 13
@@ -505,6 +507,8 @@ items:
           href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
         - name: AD login fails
           href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+      - name: Troubleshoot HDFS 
+        href: big-data-cluster/troubleshoot-hdfs.md
       - name: Troubleshoot HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
       - name: Cluster troubleshooting notebooks
@@ -8639,6 +8643,8 @@ items:
         href: ssdt/required-permissions-for-sql-server-data-tools.md
       - name: DAC Framework Compatibility
         href: ssdt/dac-framework-compatibility.md
+    - name: Alter DacFx Used by SSDT
+      href: ssdt/alter-dacfx-used-by-ssdt.md
   - name: SQL Server Management Studio (SSMS)
     items:
     - name: Download SSMS

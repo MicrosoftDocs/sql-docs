@@ -1,11 +1,8 @@
 ---
+title: TABLES (Transact-SQL)
 description: "TABLES (Transact-SQL)"
-title: "TABLES (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/20/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
@@ -16,17 +13,21 @@ dev_langs:
 helpviewer_keywords: 
   - "TABLES view"
   - "INFORMATION_SCHEMA.TABLES view"
-ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "05/20/2019"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # TABLES (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns one row for each table or view in the current database for which the current user has permissions.  
+Returns one row for each table or view in the current database for which the current user has permissions.  
   
- To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.**_view_name_.  
+To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.**_view_name_.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

@@ -1,24 +1,24 @@
 ---
 title: Subqueries
 description: Subqueries in Azure Synapse Analytics and Parallel Data Warehouse
-ms.custom: "seo-lt-2019"
 titleSuffix: "Azure Synapse Analytics"
-ms.date: "03/03/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: conceptual
-ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
+ms.topic: reference
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom: "seo-lt-2019"
+ms.date: "03/03/2017"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
+
 # Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  This topic gives examples of using subqueries in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+This topic gives examples of using subqueries in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- For the SELECT statement, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+For the SELECT statement, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
 ## Contents  
   

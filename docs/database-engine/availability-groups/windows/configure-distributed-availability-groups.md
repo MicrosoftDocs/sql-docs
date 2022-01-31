@@ -24,7 +24,7 @@ For a technical overview of distributed availability groups, see [Distributed av
 
 Make sure the endpoints can communicate between the different availability groups in the distributed availability group. If one availability group is set to a specific network on the endpoint, the distributed availability group does not work properly. On each server that hosts a replica in the distributed availability group, set the listener to listen on all IP addresses (`LISTENER_IP = ALL`).
 
-#### Create a listener to listen to all IP addresses
+#### Create an endpoint to listen to all IP addresses
 
 For example, the following script creates a listener endpoint on TCP port 5022 that listens on all IP addresses.  
 
@@ -40,7 +40,7 @@ FOR DATA_MIRRORING (
 GO
 ```
 
-#### Alter a listener to listen to all IP addresses
+#### Alter an endpoint to listen to all IP addresses
 
 For example, the following script changes a listener endpoint to listen on all IP addresses.  
 

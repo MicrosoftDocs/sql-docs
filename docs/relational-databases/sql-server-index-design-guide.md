@@ -56,9 +56,9 @@ For information about Full-text indexes, see [Populate Full-Text Indexes](../rel
 ##  <a name="Basics"></a> Index design basics
  Think about a regular book: at the end of the book, there is an index that helps to quickly locate information within the book. The index is a sorted list of keywords and next to each keyword is a set of page numbers pointing to the pages where each keyword can be found. 
 
-A rowstore index is no different: it is an ordered list of values and for each value there are pointers to the data [pages](../relational-databases/pages-and-extents-architecture-guide.md) where these values are located. The index itself is stored on pages, referred to as Index Pages. In a regular book, if the index spans multiple pages and you have to find pointers to all the pages that contain the word "SQL" for example, you would have to leaf through until you locate the index page that contains the keyword "SQL". From there, you follow the pointers to all the book pages.  This could be optimized further if at the very beginning of the index, you create a single page that contains an alphabetical list of where each letter can be found. For example: "A through D -  page 121", "E through G - page 122" and so on. This additional page would eliminate the step of leafing through the index to find the starting place. Such a page does not exist in regular books, but it does exist in a rowstore index. This single page is referred to as the root page of the index. The root page is the starting page of the tree structure used by an index. Following the tree analogy, the end pages that contain pointers to the actual data are referred to as "leaf pages" of the tree. 
+A rowstore index is no different: it is an ordered list of values and for each value there are pointers to the data [pages](../relational-databases/pages-and-extents-architecture-guide.md) where these values are located. The index itself is stored on pages, referred to as Index Pages. In a regular book, if the index spans multiple pages and you have to find pointers to all the pages that contain the word "SQL" for example, you would have to leaf through until you locate the index page that contains the keyword "SQL". From there, you follow the pointers to all the book pages.  This could be optimized further if at the very beginning of the index, you create a single page that contains an alphabetical list of where each letter can be found. For example: "A through D -  page 121", "E through G - page 122" and so on. This additional page would eliminate the step of leafing through the index to find the starting place. Such a page does not exist in regular books, but it does exist in a rowstore index. This single page is referred to as the root page of the index. The root page is the starting page of the tree structure used by an index. Following the tree analogy, the end pages that contain pointers to the actual data are referred to as "leaf pages" of the tree.
 
- An index is an on-disk or in-memory structure associated with a table or view that speeds retrieval of rows from the table or view. A rowstore index contains keys built from one or more columns in the table or view. For rowstore indexes, these keys are stored in a tree structure (B-tree) that enables the Database Engine to find the row or rows associated with the key values quickly and efficiently.  
+An index is an on-disk or in-memory structure associated with a table or view that speeds retrieval of rows from the table or view. A rowstore index contains keys built from one or more columns in the table or view. For rowstore indexes, these keys are stored in a tree structure (B+ tree) that enables the Database Engine to find the row or rows associated with the key values quickly and efficiently.  
 
  A rowstore index stores data logically organized as a table with rows and columns, and physically stored in a row-wise data format called *rowstore* <sup>1</sup>, or stored in a column-wise data format called *[columnstore](#columnstore_index)*.  
     
@@ -68,7 +68,8 @@ A rowstore index is no different: it is an ordered list of values and for each v
   
  Do not always equate index usage with good performance, and good performance with efficient index use. If using an index always helped produce the best performance, the job of the query optimizer would be simple. In reality, an incorrect index choice can cause less than optimal performance. Therefore, the task of the query optimizer is to select an index, or combination of indexes, only when it will improve performance, and to avoid indexed retrieval when it will hinder performance.  
 
- <sup>1</sup> Rowstore has been the traditional way to store relational table data. 'Rowstore' refers to table where the underlying data storage format is a heap, a B-tree ([clustered index](#Clustered)), or a memory-optimized table. 'Disk-based rowstore' excludes memory-optimized tables.
+<sup>1</sup> Rowstore has been the traditional way to store relational table data. 'Rowstore' refers to table where the underlying data storage format is a heap, a B+ tree ([clustered index](#Clustered)), or a memory-optimized table. 'Disk-based rowstore' excludes memory-optimized tables.
+
 
 ### Index design tasks  
  The following tasks make up our recommended strategy for designing indexes:  
@@ -328,9 +329,9 @@ Use these metadata views to see attributes of indexes. More architectural inform
 If the clustered index is not created with the `UNIQUE` property, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a 4-byte uniqueifier column to the table. When it is required, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a uniqueifier value to a row to make each key unique. This column and its values are used internally and cannot be seen or accessed by users.  
   
 ### Clustered index architecture  
-Rowstore indexes are organized as B-Trees. Each page in an index B-tree is called an index node. The top node of the B-tree is called the root node. The bottom nodes in the index are called the leaf nodes. Any index levels between the root and the leaf nodes are collectively known as intermediate levels. In a clustered index, the leaf nodes contain the data pages of the underlying table. The root and intermediate level nodes contain index pages holding index rows. Each index row contains a key value and a pointer to either an intermediate level page in the B-tree, or a data row in the leaf level of the index. The pages in each level of the index are linked in a doubly-linked list.  
+Rowstore indexes are organized as B+ trees. Each page in an index B+ tree is called an index node. The top node of the B+ tree is called the root node. The bottom nodes in the index are called the leaf nodes. Any index levels between the root and the leaf nodes are collectively known as intermediate levels. In a clustered index, the leaf nodes contain the data pages of the underlying table. The root and intermediate level nodes contain index pages holding index rows. Each index row contains a key value and a pointer to either an intermediate level page in the B+ tree, or a data row in the leaf level of the index. The pages in each level of the index are linked in a doubly-linked list.  
   
- Clustered indexes have one row in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md), with **index_id** = 1 for each partition used by the index. By default, a clustered index has a single partition. When a clustered index has multiple partitions, each partition has a B-tree structure that contains the data for that specific partition. For example, if a clustered index has four partitions, there are four B-tree structures; one in each partition.  
+ Clustered indexes have one row in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md), with **index_id** = 1 for each partition used by the index. By default, a clustered index has a single partition. When a clustered index has multiple partitions, each partition has a B+ tree structure that contains the data for that specific partition. For example, if a clustered index has four partitions, there are four B+ tree structures; one in each partition.  
   
  Depending on the data types in the clustered index, each clustered index structure will have one or more allocation units in which to store and manage the data for a specific partition. At a minimum, each clustered index will have one IN_ROW_DATA allocation unit per partition. The clustered index will also have one *LOB_DATA* allocation unit per partition if it contains large object (LOB) columns. It will also have one *ROW_OVERFLOW_DATA* allocation unit per partition if it contains variable length columns that exceed the 8,060-byte row size limit.  
   
@@ -394,7 +395,7 @@ Rowstore indexes are organized as B-Trees. Each page in an index B-tree is calle
   
 ### Nonclustered index architecture  
 
-Disk-based rowstore nonclustered indexes have the same B-tree structure as clustered indexes, except for the following significant differences:  
+Disk-based rowstore nonclustered indexes have the same B+ tree structure as clustered indexes, except for the following significant differences:  
   
 -   The data rows of the underlying table are not sorted and stored in order based on their nonclustered keys.  
   
@@ -431,9 +432,9 @@ The following examples shows how row locators are implemented in nonclustered in
 | Unique clustered index with key column (`A`,`B`) | Unique nonclustered index with key column (`C`) | Key column (`C`) and included columns (`A`,`B`) | The nonclustered index is unique, so the row locator is added to the included columns.   |
 
 
-Nonclustered indexes have one row in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) with **index_id** > 1 for each partition used by the index. By default, a nonclustered index has a single partition. When a nonclustered index has multiple partitions, each partition has a B-tree structure that contains the index rows for that specific partition. For example, if a nonclustered index has four partitions, there are four B-tree structures, with one in each partition.  
+Nonclustered indexes have one row in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) with **index_id** > 1 for each partition used by the index. By default, a nonclustered index has a single partition. When a nonclustered index has multiple partitions, each partition has a B+ tree structure that contains the index rows for that specific partition. For example, if a nonclustered index has four partitions, there are four B+ tree structures, with one in each partition.  
   
-Depending on the data types in the nonclustered index, each nonclustered index structure will have one or more allocation units in which to store and manage the data for a specific partition. At a minimum, each nonclustered index will have one *IN_ROW_DATA* allocation unit per partition that stores the index B-tree pages. The nonclustered index will also have one *LOB_DATA* allocation unit per partition if it contains large object (LOB) columns. Additionally, it will have one *ROW_OVERFLOW_DATA* allocation unit per partition if it contains variable length columns that exceed the 8,060-byte row size limit.  
+Depending on the data types in the nonclustered index, each nonclustered index structure will have one or more allocation units in which to store and manage the data for a specific partition. At a minimum, each nonclustered index will have one *IN_ROW_DATA* allocation unit per partition that stores the index B+ tree pages. The nonclustered index will also have one *LOB_DATA* allocation unit per partition if it contains large object (LOB) columns. Additionally, it will have one *ROW_OVERFLOW_DATA* allocation unit per partition if it contains variable length columns that exceed the 8,060-byte row size limit.  
   
 The following illustration shows the structure of a nonclustered index in a single partition.  
 
@@ -806,9 +807,9 @@ When discussing columnstore indexes, we use the terms *rowstore* and *columnstor
   
   A columnstore index physically stores most of the data in columnstore format. In columnstore format, the data is compressed and uncompressed as columns. There is no need to uncompress other values in each row that are not requested by the query. This makes it fast to scan an entire column of a large table. 
 
-- A **rowstore** is data that is logically organized as a table with rows and columns, and then physically stored in a row-wise data format. This has been the traditional way to store relational table data such as a heap or clustered B-tree index.
+- A **rowstore** is data that is logically organized as a table with rows and columns, and then physically stored in a row-wise data format. This has been the traditional way to store relational table data such as a heap or clustered B+ tree index.
 
-  A columnstore index also physically stores some rows in a rowstore format called a deltastore. The deltastore, also called delta rowgroups, is a holding place for rows that are too few in number to qualify for compression into the columnstore. Each delta rowgroup is implemented as a clustered B-tree index. 
+  A columnstore index also physically stores some rows in a rowstore format called a deltastore. The deltastore,also called delta rowgroups, is a holding place for rows that are too few in number to qualify for compression into the columnstore. Each delta rowgroup is implemented as a clustered B+ tree index. 
 
 - The **deltastore** is a holding place for rows that are too few in number to be compressed into the columnstore. The deltastore stores the rows in rowstore format. 
 
@@ -825,7 +826,7 @@ For example, the columnstore index performs these operations on rowgroups:
 * Creates new rowgroups during an `ALTER INDEX ... REBUILD` operation.
 * Reports on rowgroup health and fragmentation in the dynamic management views (DMVs).
 
-The deltastore is comprised of one or more rowgroups called **delta rowgroups**. Each delta rowgroup is a clustered B-tree index that stores small bulk loads and inserts until the rowgroup contains 1,048,576 rows, at which time a process called the **tuple-mover** automatically compresses the closed rowgroup into the columnstore. 
+The deltastore is comprised of one or more rowgroups called **delta rowgroups**. Each delta rowgroup is a clustered B+ tree index that stores small bulk loads and inserts until the rowgroup contains 1,048,576 rows, at which time a process called the **tuple-mover** automatically compresses the closed rowgroup into the columnstore. 
 
 For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
 
@@ -1001,11 +1002,12 @@ Nonclustered indexes are one of the possible index types in a memory-optimized t
 
 ### In-memory nonclustered index architecture
 
-In-memory nonclustered indexes are implemented using a data structure called a Bw-Tree, originally envisioned and described by Microsoft Research in 2011. A Bw-Tree is a lock and latch-free variation of a B-Tree. For more information, see [The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
+In-memory nonclustered indexes are implemented using a data structure called a Bw-tree, originally envisioned and described by Microsoft Research in 2011. A Bw-tree is a lock and latch-free variation of a B-tree. For more details please see [The Bw-tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
 
-At a very high level the Bw-Tree can be understood as a map of pages organized by page ID (PidMap), a facility to allocate and reuse page IDs (PidAlloc) and a set of pages linked in the page map and to each other. These three high level subcomponents make up the basic internal structure of a Bw-Tree.
+At a very high level the Bw-tree can be understood as a map of pages organized by page ID (PidMap), a facility to allocate and reuse page IDs (PidAlloc) and a set of pages linked in the page map and to each other. These three high level sub-components make up the basic internal structure of a Bw-tree.
 
-The structure is similar to a normal B-Tree in the sense that each page has a set of key values that are ordered and there are levels in the index each pointing to a lower level and the leaf levels point to a data row. However there are several differences.
+
+The structure is similar to a normal B-tree in the sense that each page has a set of key values that are ordered and there are levels in the index each pointing to a lower level and the leaf levels point to a data row. However there are several differences.
 
 Just like hash indexes, multiple data rows can be linked together (versions). The page pointers between the levels are logical page IDs, which are offsets into a page mapping table, that in turn has the physical address for each page.
 
@@ -1015,7 +1017,7 @@ There are no in-place updates of index pages. New delta pages are introduced for
 
 The key value in each non-leaf level page depicted is the highest value that the child that it points to contains and each row also contains that page logical page ID. On the leaf-level pages, along with the key value, it contains the physical address of the data row.
 
-Point lookups are similar to B-Trees except that because pages are linked in only one direction, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] follows right page pointers, where each non-leaf page has the highest value of its child, rather than lowest value as in a B-Tree.
+Point lookups are similar to B+ trees except that because pages are linked in only one direction, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] follows right page pointers, where each non-leaf pages has the highest value of its child, rather than lowest value as in a B+ tree.
 
 If a Leaf-level page has to change, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] does not modify the page itself. Rather, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] creates a delta record that describes the change, and appends it to the previous page. Then it also updates the page map table address for that previous page, to the address of the delta record that now becomes the physical address for this page.
 

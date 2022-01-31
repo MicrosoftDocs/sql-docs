@@ -85,7 +85,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Affected releases**: CU14
 
-- **Issue and customer effect**: This was a bug causing random failus on ```azdata bdc cp``` commands between HDFS paths. The bug affects larger file copies more often.
+- **Issue and customer effect**: This was a bug causing random failures on `azdata bdc cp` commands between HDFS paths. The bug affects larger file copies more often.
 
 - **Solution**: Update to Cumulative Update 15 (CU15).
 
@@ -93,9 +93,9 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Affected releases**: None
 
-- **Issue and customer effect**: After a thorough assessment of the Big Data Clusters codebase, no risk associated with the log4j vulnerability reported in December was identified. CU15 includes an updated version of log4j (2.17) for the ElasticSearch instance in the control plane to ensure that image scan alerts are not triggered by static code analysis of Big Data Cluster containers.
+- **Issue and customer effect**: After a thorough assessment of the SQL Server 2019 Big Data Clusters codebase, no risk associated with the log4j vulnerability reported in December was identified. CU15 includes an updated version of log4j (2.17) for the ElasticSearch instance in the control plane to ensure that image scan alerts are not triggered by static code analysis of Big Data Cluster containers.
 
-- **Solution**: Always keep your SQL Server big data cluster updated to the lastest release.
+- **Solution**: Always keep your big data cluster updated to the lastest release.
 
 ### Cluster upgrade from a CU8 and previous release to a post-CU9 release is not supported
 

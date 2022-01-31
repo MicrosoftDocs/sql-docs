@@ -43,7 +43,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | :---------- | :----------- |
 | Java 17 support | The driver is now compatible with Java Development Kit (JDK) version 17.0 in addition to JDK 11.0 and 1.8. |
 | Idle Connection Resiliency support | Idle Connection Resiliency is now supported. See [Idle Connection Resiliency](connection-resiliency.md). |
-| Multi-user Key Store Providers | The driver now supports Key Store providers are the connection and statement level to support multi-user scenarios. See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
+| Multi-user Key Store Providers | The driver now supports Key Store providers at the connection and statement level to support multi-user scenarios. See [Using Always Encrypted with the JDBC driver](using-always-encrypted-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Changes in 10.2

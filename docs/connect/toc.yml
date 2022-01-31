@@ -2907,6 +2907,8 @@
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
       - name: Client Certificate Authentication for Loopback Scenarios
         href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
+      - name: Connection resiliency
+        href: ../connect/jdbc/connection-resiliency.md
       - name: Azure Key Vault samples, for 7.0 and others
         href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
         items:

@@ -26,6 +26,8 @@ The JDBC driver has two connection options that control connection resiliency be
 | `connectRetryCount` | Integer between 0 and 255 (inclusive) | 1 | The maximum number of attempts to establish or reestablish a connection before giving up. By default, a single retry attempt is made. A value of `0` means that a retry won't be attempted. |
 | `connectRetryInterval` | Integer between 1 and 60 (inclusive) | 10 | The time, in seconds, between connection retry attempts. The driver will attempt to reconnect immediately upon detecting a broken idle connection, and will then wait `connectRetryInterval` seconds before trying again. This keyword is ignored if `connectRetryCount` is 0. |
 
+If the product of `connectRetryCount` multiplied by `connectRetryInterval` is larger than `loginTimeout`, then the driver will stop attempting to connect once `loginTimeout` is reached. Otherwise, it will continue to try to reconnect until `connectRetryCount` is reached.
+
 To detect broken idle connections, the driver relies on TCP keepalive packets at the socket level. On Linux and Java 11+, the driver automatically enables keepalive packets at a 30-second interval (`KeepAliveTime`) with a 1-second delay between retries when a failure occurs (`KeepAliveInterval`).
 
 > [!IMPORTANT]

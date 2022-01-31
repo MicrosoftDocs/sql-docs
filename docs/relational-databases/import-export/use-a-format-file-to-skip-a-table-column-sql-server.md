@@ -74,7 +74,7 @@ The previous command creates a non-XML format file, `myTestSkipCol_Default.fmt`.
   
  The following screenshot shows the values in this sample default format files. 
   
- ![default non-XML format file for myTestSkipCol](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "default non-XML format file for myTestSkipCol")  
+ ![default non-XML format file for myTestSkipCol](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.png "default non-XML format file for myTestSkipCol")  
   
 > [!NOTE]  
 >  For more information about the format-file fields, see [Non-XML Format Files &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  

@@ -33,7 +33,7 @@ To detect broken idle connections, the driver relies on TCP keepalive packets at
 
 ## Limitations
 
-Idle connection resiliency isn't supported when:
+Broken idle connections can't be restored when:
 
 - There's an open result set that hasn't been completely parsed or buffered
 - Switching databases against Azure SQL

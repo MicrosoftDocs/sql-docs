@@ -72,8 +72,6 @@ Note:
 
 - Increase the value of **loginTimeout** to accommodate for failover time and reduce application connection retry attempts.
 
-- Distributed transactions aren't supported.
-
 If read-only routing isn't in effect, connecting to a secondary replica location in an availability group will fail in the following situations:
 
 - If the secondary replica location isn't configured to accept connections.

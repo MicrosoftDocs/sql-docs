@@ -70,14 +70,14 @@ When using Azure Key Vault provider, the JDBC driver validates the column master
 
 The default, trusted endpoints are:
 
-- *vault.azure.net
-- *vault.azure.cn
-- *vault.usgovcloudapi.net
-- *vault.microsoftazure.de
-- *managedhsm.azure.net (v9.2+)
-- *managedhsm.azure.cn (v9.2+)
-- *managedhsm.usgovcloudapi.net (v9.2+)
-- *managedhsm.microsoftazure.de (v9.2+)
+- **`*vault.azure.net`**
+- **`*vault.azure.cn`**
+- **`*vault.usgovcloudapi.net`**
+- **`*vault.microsoftazure.de`**
+- **`*managedhsm.azure.net`** (v9.2+)
+- **`*managedhsm.azure.cn`** (v9.2+)
+- **`*managedhsm.usgovcloudapi.net`** (v9.2+)
+- **`*managedhsm.microsoftazure.de`** (v9.2+)
 
 For the examples on this page, if you've created an Azure Key Vault based column master key and column encryption key by using SQL Server Management Studio, the T-SQL script to re-create them might look similar to this example with its own specific **KEY_PATH** and **ENCRYPTED_VALUE**:
 
@@ -292,7 +292,7 @@ The SQL Server Management Studio or any other tool can't be used to create colum
 
 ### Implementing a custom column master key store provider
 
-If you want to store column master keys in a keystore that is not supported by an existing provider, you can implement a custom provider by extending the `SQLServerColumnEncryptionKeyStoreProvider` Class and registering the provider using one of the following methods:
+If you want to store column master keys in a keystore that isn't supported by an existing provider, you can implement a custom provider by extending the `SQLServerColumnEncryptionKeyStoreProvider` Class and registering the provider using one of the following methods:
 
 - `SQLServerConnection.registerColumnEncryptionKeyStoreProviders`
 - `SQLServerConnection.registerColumnEncryptionKeyStoreProvidersOnConnection` (Added in JDBC version 10.2)
@@ -337,7 +337,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 This section applies to JDBC driver version 10.2 and higher.
 
-The column encryption keys (CEK) decrypted by custom key store providers registered on a connection or statement instance will not be cached by the **Microsoft JDBC Driver for SQL Server**. Custom key store providers should implement their own CEK caching mechanism. 
+The column encryption keys (CEK) decrypted by custom key store providers registered on a connection or statement instance won't be cached by the **Microsoft JDBC Driver for SQL Server**. Custom key store providers should implement their own CEK caching mechanism.
 
 Starting with version 10.2, the `SQLServerColumnEncryptionAzureKeyVaultProvider` has its own CEK caching implementation. When registered on a connection or statement instance, CEKs decrypted by an instance of `SQLServerColumnEncryptionAzureKeyVaultProvider` will be cleared when that instance goes out of scope:
 
@@ -362,15 +362,15 @@ This section applies to JDBC driver version 10.2 and higher.
 
 Custom master key store providers can be registered with the driver at three different layers. The precedence of the three registrations is as follows:
 
-- The per-statement registration will be checked if it is not empty.
-- If the per-statement registration is empty, the per-connection registration will be checked if it is not empty.
+- The per-statement registration will be checked if it isn't empty.
+- If the per-statement registration is empty, the per-connection registration will be checked if it isn't empty.
 - If the per-connection registration is empty, the global registration will be checked.
 
-Once any key store provider is found at a registration level, the driver will **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider is not found at a level, an exception will be thrown containing only the registered providers in the registration that was checked.
+Once any key store provider is found at a registration level, the driver will **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider isn't found at a level, an exception will be thrown containing only the registered providers in the registration that was checked.
 
-The built-in column master key store provider that is available for the Windows Certificate Store is pre-registered. The Microsoft Java Keystore provider and Azure Key Vault Keystore provider can be implicitly pre-registered with a connection instance if credentials are provided in advance. 
+The built-in column master key store provider that is available for the Windows Certificate Store is pre-registered. The Microsoft Java Keystore provider and Azure Key Vault Keystore provider can be implicitly pre-registered with a connection instance if credentials are provided in advance.
 
-The three registration levels support different scenarios when querying encrypted data. The appropriate method can be used to ensure that a user of an application can access the plaintext data. Access to the unencrypted data only happens if they can provide the required column master key, by authenticating against the key store containing the column master key.
+The three registration levels support different scenarios when querying encrypted data. The appropriate method can be used to ensure a user of an application can access the plaintext data. Access to the unencrypted data only happens if they can provide the required column master key, by authenticating against the key store containing the column master key.
 
 Applications that share a `SQLServerConnection` instance between multiple users may want to use `SQLServerStatement.registerColumnEncryptionKeyStoreProvidersOnStatement`. Each user must register a key store provider on a `SQLServerStatement` instance before executing a query to access an encrypted column. If the key store provider is able to access the required column master key in the key store using the user's given credentials, the query will succeed.
 
@@ -526,7 +526,7 @@ public class AlwaysEncrypted {
 
 ## Enabling Always Encrypted for application queries
 
-The easiest way to enable the encryption of parameters and the decryption of query results that target encrypted columns is by setting the value of the **`columnEncryptionSetting`** connection string keyword to **`Enabled`**.
+The easiest way to enable the encryption of parameters and the decryption of query results of encrypted columns is by setting the value of the **`columnEncryptionSetting`** connection string keyword to **`Enabled`**.
 
 The following connection string is an example of enabling Always Encrypted in the JDBC driver:
 
@@ -568,7 +568,7 @@ The **`sendStringParametersAsUnicode`** connection property is used to configure
 
 ## Retrieving and modifying data in encrypted columns
 
-Once you enable Always Encrypted for application queries, you can use standard JDBC APIs to retrieve or modify data in encrypted database columns. If your application has the required database permissions and can access the column master key, the driver will encrypt any query parameters that target encrypted columns and will decrypt data that's retrieved from encrypted columns.
+Once you enable Always Encrypted for application queries, you can use standard JDBC APIs to retrieve or modify data in encrypted database columns. If your application has the required database permissions and can access the column master key, the driver will encrypt any query parameters that target encrypted columns, and decrypt data that's retrieved from encrypted columns.
 
 If Always Encrypted isn't enabled, queries with parameters that target encrypted columns will fail. Queries can still retrieve data from encrypted columns as long as the query has no parameters targeting encrypted columns. However, the driver won't attempt to decrypt any values that are retrieved from encrypted columns and the application will receive binary encrypted data (as byte arrays).
 

@@ -21,7 +21,7 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 ## Compile time
 
  - `com.azure:azure-security-keyvault-keys`: Microsoft Azure Client Library For KeyVault Keys for JDBC driver version 9.2 and above or `com.microsoft.azure:azure-keyvault`: Microsoft Azure SDK For Key Vault for JDBC driver version 8.4 and below for Always Encrypted Azure Key Vault feature. (optional)
- - `com.azure:azure-identity`: Microsoft Azure Client Library For Identity for JDBC driver version 9.2 and above or `com.microsoft.azure:adal4j`: Microsoft Azure Active Directory Authentication Library for JDBC driver version 8.4 and below for Azure Active Directory Authentication features and Azure Key Vault feature. (optional) 
+ - `com.azure:azure-identity`: Microsoft Azure Client Library For Identity for JDBC driver version 9.2 and above or `com.microsoft.azure:adal4j`: Microsoft Microsoft Authentication Library for JDBC driver version 8.4 and below for Azure Active Directory Authentication features and Azure Key Vault feature. (optional) 
  - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly feature. (optional)
  - `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.
  - `org.osgi:org.osgi.compendium`: OSGi Compendium library for OSGi Framework support.
@@ -123,7 +123,7 @@ Projects that require any of the preceding features need to explicitly declare t
 > [!NOTE]
 > Make sure to use the version of the POM file that's shipped with the version of the JDBC driver you're using. The dependencies and versions may have changed.
 
-If you're using Maven to build or test your project, Maven will automatically download dependent libraries declared in the POM file along with their transitive libraries. You can also use the [Maven Dependency Plugin](https://maven.apache.org/plugins/maven-dependency-plugin/copy-dependencies-mojo.html) to download all project dependencies to a desired location. If you're not using Maven, you'll have to download dependencies and transitive dependencies manually and make sure you have all the correct versions of each library. Once you've downloaded the required dependent libraries, add them to your project's classpath before running your application.
+If you're using Maven to build or test your project, Maven will automatically download dependent libraries in the POM file along with their transitive libraries. You can also use the [Maven Dependency Plugin](https://maven.apache.org/plugins/maven-dependency-plugin/copy-dependencies-mojo.html) to download all project dependencies to a desired location. If you're not using Maven, you'll have to download dependencies and transitive dependencies manually and make sure you have all the correct versions of each library. Once you've downloaded the required dependent libraries, add them to your project's classpath before running your application.
 
 ## Dependency requirements for the JDBC driver
 
@@ -132,9 +132,9 @@ If you're using Maven to build or test your project, Maven will automatically do
 - JDBC driver version 10.2.0 - Dependency versions: Azure-security-keyvault-keys (version 4.3.6), and Azure-identity(version 1.4.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 9.4.1 - Dependency versions: Azure-security-keyvault-keys (version 4.2.8), and Azure-identity(version 1.3.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 9.2.1 - Dependency versions: Azure-security-keyvault-keys (version 4.2.1), and Azure-identity(version 1.1.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
-- JDBC driver version 8.4.1 - Dependency versions: Azure-Keyvault (version 1.2.4), Adal4j (version 1.6.5), Client-Runtime-for-AutoRest (1.7.4), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
-- JDBC driver version 8.2.2 - Dependency versions: Azure-Keyvault (version 1.2.2), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
-- JDBC driver version 7.4.1 - Dependency versions: Azure-Keyvault (version 1.2.1), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
+- JDBC driver version 8.4.1 - Dependency versions: Azure-Keyvault (version 1.2.4), Adal4j (version 1.6.5), Client-Runtime-for-AutoRest (version 1.7.4), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
+- JDBC driver version 8.2.2 - Dependency versions: Azure-Keyvault (version 1.2.2), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (version 1.7.0), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
+- JDBC driver version 7.4.1 - Dependency versions: Azure-Keyvault (version 1.2.1), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (version 1.6.10), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 7.2.2 - Dependency versions: Azure-Keyvault (version 1.2.0), Azure-Keyvault-Webkey (version 1.2.0), Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 7.0.0 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.6.0), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 6.4.0 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0), and their dependencies ([sample application](azure-key-vault-sample-version-6.2.2.md))
@@ -166,7 +166,7 @@ For *Windows operating systems*, the driver looks for sqljdbc_auth.dll by defaul
 
 From driver version 8.2.2 onward, 'sqljdbc_auth.dll' is renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'. For example, 'mssql-jdbc_auth-8.2.2.x64.dll'.
 
-In addition to the **mssql-jdbc_auth-\<version>-\<arch>.dll** (available in the JDBC driver package), the Azure Active Directory Authentication Library (**ADAL.DLL**) also needs to be installed for Active Directory Integrated authentication. ADAL can be installed from [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) or [Microsoft OLE DB Driver for SQL Server](../oledb/download-oledb-driver-for-sql-server.md). The JDBC driver only supports version **1.0.2028.318 and higher** for ADAL.DLL.
+In addition to the **mssql-jdbc_auth-\<version>-\<arch>.dll** (available in the JDBC driver package), the Microsoft Authentication Library (**ADAL.DLL**) also needs to be installed for Active Directory Integrated authentication. Microsoft Authentication Library can be installed from [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) or [Microsoft OLE DB Driver for SQL Server](../oledb/download-oledb-driver-for-sql-server.md). The JDBC driver only supports version **1.0.2028.318 and higher** for ADAL.DLL.
 
 You can get a [sample application](connecting-using-azure-active-directory-authentication.md) that uses this feature.
 

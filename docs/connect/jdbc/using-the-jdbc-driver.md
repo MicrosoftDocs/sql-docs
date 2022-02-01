@@ -51,7 +51,7 @@ Your choice will also determine available features. For more information about w
   
 ## Setting the classpath
 
-The Microsoft JDBC driver jars are not part of the Java SDK and must be included in Classpath of user application.
+The Microsoft JDBC driver jars aren't part of the Java SDK and must be included in Classpath of user application.
 
 If using JDBC Driver 10.2, set the classpath to include the **mssql-jdbc-10.2.0.jre8.jar**, **mssql-jdbc-10.2.0.jre11.jar**, or **mssql-jdbc-10.2.0.jre17.jar**.
 
@@ -328,11 +328,11 @@ The classpath is configured in the operating system. Append sqljdbc.jar, sqljdbc
   
 ### Applications that run in an IDE  
 
-Each IDE vendor provides a different method for setting the classpath in its IDE. Just setting the classpath in the operating system will not work. You must add sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to the IDE classpath.  
+Each IDE vendor provides a different method for setting the classpath in its IDE. Just setting the classpath in the operating system won't work. You must add sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to the IDE classpath.  
   
 ### Servlets and JSPs  
 
-Servlets and JSPs are run in a servlet/JSP engine such as Tomcat. The classpath must be set according to the servlet/JSP engine documentation. Just setting the classpath in the operating system will not work. Some servlet/JSP engines provide setup screens that you can use to set the classpath of the engine. In that situation, you must append the correct JDBC Driver JAR file to the existing engine classpath and restart the engine. In other situations, you can deploy the driver by copying sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to a specific directory, such as lib, during engine installation. The engine driver classpath can also be specified in an engine-specific configuration file.  
+Servlets and JSPs are run in a servlet/JSP engine such as Tomcat. The classpath must be set according to the servlet/JSP engine documentation. Just setting the classpath in the operating system won't work. Some servlet/JSP engines provide setup screens that you can use to set the classpath of the engine. In that situation, you must append the correct JDBC Driver JAR file to the existing engine classpath and restart the engine. In other situations, you can deploy the driver by copying sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to a specific directory, such as lib, during engine installation. The engine driver classpath can also be specified in an engine-specific configuration file.  
   
 ### Enterprise Java Beans  
 
@@ -351,7 +351,7 @@ String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=AdventureWo
 Connection con = DriverManager.getConnection(connectionUrl);  
 ```
 
-Starting from JDBC API 4.0, the `DriverManager.getConnection()` method is enhanced to load JDBC drivers automatically. Therefore, applications do not need to call the `Class.forName` method to register or load the driver when using driver jar libraries.  
+Starting from JDBC API 4.0, the `DriverManager.getConnection()` method is enhanced to load JDBC drivers automatically. Therefore, applications don't need to call the `Class.forName` method to register or load the driver when using driver jar libraries.  
   
 When the getConnection method of the DriverManager class is called, an appropriate driver is located from the set of registered JDBC drivers. sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar file includes "META-INF/services/java.sql.Driver" file, which contains the **com.microsoft.sqlserver.jdbc.SQLServerDriver** as a registered driver. The existing applications, which currently load the drivers by using the Class.forName method, will continue to work without modification.  
   

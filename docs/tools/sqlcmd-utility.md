@@ -238,7 +238,7 @@ This switch is used by the client when connecting to SQL Database or Azure Synap
 
     The Azure AD Interactive authentication for Azure SQL Database and Azure Synapse Analytics, allows you to use an interactive method supporting multi-factor authentication. For more information, see [Active Directory Interactive Authentication](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
-   Azure AD interactive requires **sqlcmd** [version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) or later as well as [ODBC version 17.2 or later](../connect/odbc/download-odbc-driver-for-sql-server.md).  
+   Azure AD interactive requires **sqlcmd** [version 15.0.1000.34](#install-sqlcmd) or later as well as [ODBC version 17.2 or later](../connect/odbc/download-odbc-driver-for-sql-server.md).  
 
    To enable interactive authentication, provide -G option with user name (-U) only, without a password.
 

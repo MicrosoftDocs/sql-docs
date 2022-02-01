@@ -16,7 +16,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-The [sqlcmd Utility](../../tools/sqlcmd-utility.md) lets you enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, system procedures, and script files at the command prompt, in [SQL Server Management Studio](../menu-help/about-sql-server-management-studio.md)'s Query Editor in [SQLCMD mode](edit-sqlcmd-scripts-with-query-editor.md), and in a Windows script file or in [an operating system (Cmd.exe) job step](../agent/create-a-cmdexec-job-step.md) of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.
+The [sqlcmd Utility](../../tools/sqlcmd-utility.md) lets you enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, system procedures, and script files at the command prompt, in [SQLCMD mode](edit-sqlcmd-scripts-with-query-editor.md) in [SQL Server Management Studio](../menu-help/about-sql-server-management-studio.md), and in a Windows script file or in [an operating system (Cmd.exe) job step](../agent/create-a-cmdexec-job-step.md) of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.
 
 > [!NOTE]
 >  Windows Authentication is the default authentication mode for **sqlcmd**. To use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, you must specify a user name and password by using the **-U** and **-P** options.  

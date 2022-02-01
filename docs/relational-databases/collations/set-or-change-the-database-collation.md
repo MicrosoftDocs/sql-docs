@@ -53,7 +53,7 @@ When a database collation is changed, only new tables will inherit the new datab
 
    ```sql
    ALTER TABLE dbo.MyTable
-   ALTER COLUMN MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8;
+       ALTER COLUMN MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8;
    ```
 
 -  Copy data to new tables that use the new collation, and replace original tables in the same database. Create a new table in the current database that will inherit the database collation, copy the data between the old table and the new table, drop the original table, and rename the new table to the name of the original table. This is a faster operation than an in-place conversion, but may become a challenge when handling complex schemas with dependencies such as Foreign Key constraints, Primary Key constraints, and Triggers. It would also require a final data synchronization between the original and the new table before the final cut-off, if data continues to be changed by applications. See the following example for a "copy and replace" conversion of the `MyString` column to a new collation:
@@ -99,10 +99,11 @@ USE master;
 GO
 
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
-DROP DATABASE MyOptionsTest;  
-GO  
+    DROP DATABASE MyOptionsTest;  
+GO
+
 CREATE DATABASE MyOptionsTest  
-COLLATE Latin1_General_100_CS_AS_SC;  
+    COLLATE Latin1_General_100_CS_AS_SC;  
 GO  
   
 SELECT name, collation_name  
@@ -121,9 +122,10 @@ GO
   
 ```sql  
 USE master;  
-GO  
+GO
+
 ALTER DATABASE MyOptionsTest  
-COLLATE French_CI_AS ;  
+    COLLATE French_CI_AS ;  
 GO  
   
 SELECT name, collation_name  

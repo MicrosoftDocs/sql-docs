@@ -2,7 +2,7 @@
 title: Driver feature support matrix
 description: Learn which SQL Server features are supported in the drivers for .NET, ODBC, OLE DB, JDBC, Node.js, JavaScript, and Python.
 ms.custom: ""
-ms.date: 01/07/2022
+ms.date: 01/31/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -53,7 +53,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | :-- | :-- | :-- | :-- | :-- |
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Yes](odbc/using-always-encrypted-with-the-odbc-driver.md) (v13.1+) | [Yes](odbc/using-always-encrypted-with-the-odbc-driver.md) (v13.1+) | [Yes](jdbc/using-always-encrypted-with-the-jdbc-driver.md) (v6.0+) |
 | [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Yes](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) (v17.4+) | [Yes](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) (v17.4+) | [Yes](jdbc/using-always-encrypted-with-the-jdbc-driver.md) (v8.2+) | |
-| [Azure Active Directory Access Token authentication](/azure/active-directory/develop/access-tokens) | [Yes](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) (v13.1+) | [Yes](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) (v13.1+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md#connecting-using-access-token) (v6.0+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.2+) |
+| [Azure Active Directory Access Token authentication](/azure/active-directory/develop/access-tokens) | [Yes](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) (v13.1+) | [Yes](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) (v13.1+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md#connect-using-access-token) (v6.0+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.2+) |
 | [Azure Active Directory Password authentication](/azure/sql-database/sql-database-aad-authentication) |  [Yes](odbc/using-azure-active-directory.md) (v13.1+) | [Yes](odbc/using-azure-active-directory.md) (v13.1+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v6.0+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.2+) |
 | [Azure Active Directory Integrated authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](odbc/using-azure-active-directory.md) (v13.1+) | [Yes](odbc/using-azure-active-directory.md) (v17.6+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v6.0+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.2+) |
 | [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](odbc/using-azure-active-directory.md) (v17.1+) | | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v9.2+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.3+) |

@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
  [!INCLUDE [SQL Server, Azure SQL Database Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
-This article describes how set and change the database collation by using [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If no collation is specified, the [server collation](set-or-change-the-server-collation.md) is used.  
+This article describes how to set or change the database collation by using [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If no collation is specified, the [server collation](set-or-change-the-server-collation.md) is used.  
   
 ## <a name="Restrictions"></a> Limitations and restrictions
   

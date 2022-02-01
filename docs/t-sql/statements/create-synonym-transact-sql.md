@@ -2,7 +2,7 @@
 description: "CREATE SYNONYM (Transact-SQL)"
 title: CREATE SYNONYM (Transact-SQL)
 ms.custom: ""
-ms.date: "04/11/2017"
+ms.date: "02/01/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "names [SQL Server], synonyms"
   - "CREATE SYNONYM statement"
   - "synonyms [SQL Server], creating"
-ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -42,12 +41,16 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>
   
 <object> :: =  
 {  
-    [ server_name.[ database_name ] . [ schema_name_2 ].    
-  | database_name . [ schema_name_2 ].| schema_name_2. ] object_name  
+  [ 
+    server_name.[database_name].[schema_name_2].
+  | database_name.[schema_name_2].
+  | schema_name_2. 
+  ] 
+  object_name  
 }  
 ```  
   
-```  
+```syntaxsql  
 -- Azure SQL Database Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >  
@@ -61,27 +64,28 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *schema_name_1*  
- Specifies the schema in which the synonym is created. If *schema* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the default schema of the current user.  
+
+#### *schema_name_1*  
+ Specifies the schema in which the synonym is created. If `schema_name` isn't specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the default schema of the current user.  
   
- *synonym_name*  
+#### *synonym_name*  
  Is the name of the new synonym.  
   
- *server_name*  
+#### *server_name*  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Is the name of the server on which base object is located.  
   
- *database_name*  
- Is the name of the database in which the base object is located. If *database_name* is not specified, the name of the current database is used.  
+#### *database_name*  
+ Is the name of the database in which the base object is located. If `database_name` isn't specified, the name of the current database is used.  
   
- *schema_name_2*  
- Is the name of the schema of the base object. If *schema_name* is not specified the default schema of the current user is used.  
+#### *schema_name_2*  
+ Is the name of the schema of the base object. If `schema_name` isn't specified, the default schema of the current user is used.  
   
- *object_name*  
+#### *object_name*  
  Is the name of the base object that the synonym references.  
   
- Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports the three-part name format `database_name.[schema_name].object_name` when the `database_name` is the current database or the `database_name` is `tempdb` and the `object_name` starts with #.  
   
 ## Remarks  
  The base object need not exist at synonym create time. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] checks for the existence of the base object at run time.  
@@ -120,7 +124,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## Examples  
   
-### A. Creating a synonym for a local object  
+### A. Create a synonym for a local object  
  The following example first creates a synonym for the base object, `Product` in the `AdventureWorks2012` database, and then queries the synonym.  
   
 ```sql 
@@ -138,7 +142,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```output
  ----------------------- 
  ProductID   Name 
  ----------- -------------------------- 
@@ -150,7 +154,7 @@ GO
  (4 row(s) affected)
 ``` 
   
-### B. Creating a synonym to remote object  
+### B. Create a synonym to remote object  
  In the following example, the base object, `Contact`, resides on a remote server named `Server_Remote`.  
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
@@ -164,8 +168,8 @@ CREATE SYNONYM MyEmployee FOR Server_Remote.AdventureWorks2012.HumanResources.Em
 GO  
 ```  
   
-### C. Creating a synonym for a user-defined function  
- The following example creates a function named `dbo.OrderDozen` that increases order amounts to an even dozen units. The example then creates the synonym `dbo.CorrectOrder` for the `dbo.OrderDozen` function.  
+### C. Create a synonym for a user-defined function  
+ The following example creates a function named `dbo.OrderDozen` that increases order amounts to 12 units. The example then creates the synonym `dbo.CorrectOrder` for the `dbo.OrderDozen` function.  
   
 ```sql  
 -- Creating the dbo.OrderDozen function  
@@ -198,9 +202,13 @@ SET @Amt = 15;
 SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;  
 ```  
   
-## See Also  
- [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
+## See also  
+
+- [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
+- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
+- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+- [Synonyms (Database Engine)](../../relational-databases/synonyms/synonyms-database-engine.md)
+
+## Next steps  
+
+- [Create Synonyms](../../relational-databases/synonyms/create-synonyms.md)

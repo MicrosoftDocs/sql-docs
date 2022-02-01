@@ -127,7 +127,7 @@ If you're using Maven to build or test your project, Maven automatically downloa
 
 ## Dependency requirements for the JDBC driver
 
-### Working with the Azure Key Vault provider
+### Work with the Azure Key Vault provider
 
 - JDBC driver version 10.2.0 — Dependency versions: Azure-security-keyvault-keys (version 4.3.6), and Azure-identity(version 1.4.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 9.4.1 — Dependency versions: Azure-security-keyvault-keys (version 4.2.8), and Azure-identity(version 1.3.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))

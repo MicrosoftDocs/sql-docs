@@ -288,7 +288,7 @@ WITH
 
 ### Create a column encryption key for the Java Key Store
 
-The SQL Server Management Studio or any other tool can't be used to create column encryption keys using column master keys in the Java Key Store. The client application must create the column encryption key programmatically with the `SQLServerColumnEncryptionJavaKeyStoreProvider` class. For more information, see [Using column master key store providers for programmatic key provisioning](#using-column-master-key-store-providers-for-programmatic-key-provisioning).
+The SQL Server Management Studio or any other tool can't be used to create column encryption keys using column master keys in the Java Key Store. The client application must create the column encryption key programmatically with the `SQLServerColumnEncryptionJavaKeyStoreProvider` class. For more information, see [Use column master key store providers for programmatic key provisioning](#use-column-master-key-store-providers-for-programmatic-key-provisioning).
 
 ### Implementing a custom column master key store provider
 
@@ -551,7 +551,7 @@ SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 Always Encrypted can also be enabled for individual queries. For more information, see [Controlling the performance impact of Always Encrypted](#controlling-the-performance-impact-of-always-encrypted). Enabling Always Encrypted isn't sufficient for encryption or decryption to succeed. You also need to make sure:
 
 - The application has the *`VIEW ANY COLUMN MASTER KEY DEFINITION`* and *`VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`* database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Permissions in Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
-- The application can access the column master key that protects the column encryption keys, which encrypt the queried database columns. To use the Java Key Store provider, you need to provide extra credentials in the connection string. For more information, see [Use Java Key Store provider](#using-java-key-store-provider).
+- The application can access the column master key that protects the column encryption keys, which encrypt the queried database columns. To use the Java Key Store provider, you need to provide extra credentials in the connection string. For more information, see [Use Java Key Store provider](#use-java-key-store-provider).
 
 ### Configuring how java.sql.Time values are sent to the server
 

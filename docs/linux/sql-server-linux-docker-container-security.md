@@ -124,6 +124,9 @@ chown -R 10001:0 <database file dir>
 
 ## Encrypting connections to SQL Server Linux Containers
 
+> [!NOTE]
+> When configuring Active Directory (AD) authentication or encryption option .viz TDE (Transparent Data Encryption, SSL, and so on) for SQL Server on Linux or Containers. There are several files, such as the keytab, certificates, and machine key, that are created by default under the folder "/var/opt/mssql/secrets," and access to which is restricted by default to mssql and root users. When configuring persistant storage for SQL Server containers, please use the same access strategy, ensuring that the path on the host or shared volume that is mapped to the "/var/opt/mssql/secrets" folder inside the container is protected and accessible only to the mssql and root users on the host as well. If the access to this path/folder is compromised, a malicious user can gain access to these critical files, compromising the encryption hierarchy and/or Active Directory (AD) configurations.
+
 To encrypt connections to SQL Server Linux containers, you will need a certificate with the following [requirements](sql-server-linux-encrypted-connections.md).
 
 Below is an example of how the connection can be encrypted to SQL Server Linux Containers. Here we use a Self-Signed Certificate, this should not be used for production scenarios for such environments, you should use CA certificates.

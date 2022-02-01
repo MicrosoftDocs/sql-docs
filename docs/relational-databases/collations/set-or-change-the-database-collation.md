@@ -88,7 +88,7 @@ When a database collation is changed, only new tables will inherit the new datab
   
 ## <a name="TsqlProcedure"></a> Set the database collation using Transact-SQL
   
-1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
   
 1. From the Standard bar, select **New Query**.  
   

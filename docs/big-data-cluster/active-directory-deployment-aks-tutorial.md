@@ -39,7 +39,7 @@ Before deploying a SQL Server big data cluster, you need to:
 
 1. Create the AKS subnet
 
-   ```console
+   ```azurecli
    SUBNET_ID=$(az network vnet subnet show \
     --resource-group $RESOURCE_GROUP \
     --vnet-name $VNet_NAME \

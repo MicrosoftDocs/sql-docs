@@ -46,7 +46,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 The utility uses ODBC to execute Transact-SQL batches.
 
-## Download the latest version of sqlcmd Utility
+## Install sqlcmd
+
+### Windows
 
 **[![Download sqlcmd for x64](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**
 <br>**[![Download sqlcmd for x86](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
@@ -66,28 +68,50 @@ The new BCP supports Azure AD authentication, including Multi-Factor Authenticat
 Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2022.
 
 This component requires both the built-in [Windows Installer 5](/windows/win32/msi/what-s-new-in-windows-installer-5-0) and the [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
- 
+
+### Linux/macOS
+
+See [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md) for instructions to install sqlcmd on Linux and macOS.
+
+## Check version
+
 To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.2000.5 version or higher is in use.
 
 > [!NOTE]
 > You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)
 
-You can try the sqlcmd utility from Azure Cloud Shell as it is pre-installed by default: [![Launch Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com)
 
-To run sqlcmd statements in SSMS, select SQLCMD Mode from the top navigation Query Menu dropdown.  
+## Preinstalled
+
+### Azure Cloud Shell
+
+You can try the sqlcmd utility from Azure Cloud Shell as it is pre-installed by default: [Launch Cloud Shell](https://shell.azure.com)
+
+
+### Azure Data Studio
+
+To run sqlcmd statements in [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), select "Enable SQLCMD" from the editor toolbar. 
+
+
+### SQL Server Management Studio (SSMS)
+
+To run sqlcmd statements in [SSMS](../ssms/download-sql-server-management-studio-ssms.md), select SQLCMD Mode from the top navigation Query Menu dropdown.  
 
 > [!IMPORTANT]
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) uses the Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient for execution in regular and SQLCMD mode in **Query Editor**. When **sqlcmd** is run from the command-line, **sqlcmd** uses the ODBC driver. Because different default options may apply, you might see different behavior when you execute the same query in [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] in SQLCMD Mode and in the **sqlcmd** utility.  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) uses the Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient for execution in regular and SQLCMD mode in **Query Editor**. When **sqlcmd** is run from the command-line, **sqlcmd** uses the ODBC driver. Because different default options may apply, you might see different behavior when you execute the same query in [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] in SQLCMD Mode and in the **sqlcmd** utility.
 >
+
+
+
+## Syntax
 
 Currently, **sqlcmd** doesn't require a space between the command-line option and the value. However, in a future release, a space may be required between the command-line option and the value.  
 
- Other topics: 
+For more in-depth information on sqlcmd syntax and use, see: 
 
 - [Start the sqlcmd Utility](../ssms/scripting/sqlcmd-start-the-utility.md)
 - [Use the sqlcmd Utility](../ssms/scripting/sqlcmd-use-the-utility.md)
-  
-## Syntax
+
 
 ```cmd
 sqlcmd
@@ -265,9 +289,10 @@ Prints raw error messages to the screen.
 
 - **-P ""**
 
-We recommend that you use a strong password.
+  >[!IMPORTANT]
+  >The use of -P should be considered insecure.  Avoid giving the password on the command line. Alternatively, use the SQLCMDPASSWORD environment variable or interactively input the password by omitting the -P option.
 
-#### [**Use a strong password!**](../relational-databases/security/strong-passwords.md)
+We recommend that you use a [strong password](../relational-databases/security/strong-passwords.md).
 
  The password prompt is displayed by printing the password prompt to the console, as follows: `Password:`  
   

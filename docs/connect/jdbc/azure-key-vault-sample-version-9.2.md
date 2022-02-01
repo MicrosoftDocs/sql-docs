@@ -1,6 +1,6 @@
 ---
 title: Azure Key Vault sample
-description: This JDBC code example demonstrates how to use Azure Key Vault as your key store provider when using Always Encrypted.
+description: This JDBC code example demonstrates how to use Azure Key Vault as your key store provider for Always Encrypted.
 ms.custom: ""
 ms.date: 01/31/2022
 ms.prod: sql
@@ -17,7 +17,7 @@ ms.author: v-susanh
 
 ## Sample application using Azure Key Vault
 
-This application is runnable using JDBC Driver 10.2 and above, Azure-Security-Keyvault (version 4.3.6), Azure-Identity (version 1.4.3), and their dependencies. The underlying dependencies can be resolved by adding these libraries to the Project Object Model (POM) file of the project. For more information on feature dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+This application is runnable using JDBC Driver 10.2 and above, Azure-Security-Keyvault (version 4.3.6), Azure-Identity (version 1.4.3), and their dependencies. To resolve the underlying dependencies, add these libraries to the Project Object Model (POM) file of the project. For more information on feature dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ```java
 import java.net.URISyntaxException;

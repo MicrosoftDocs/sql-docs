@@ -338,7 +338,7 @@ Servlets and JSPs are run in a servlet/JSP engine such as Tomcat. The classpath 
 
 Enterprise Java Beans (EJB) are run in an EJB container. EJB containers are sourced from various vendors. Java applets run in a browser but are downloaded from a web server. Copy sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to the web server root and specify the name of the JAR file in the HTML archive tab of the applet, for example, `<applet ... archive=mssql-jdbc-***.jar>`.  
   
-## Making a simple connection to a database
+## Make a simple connection to a database
 
 To use the sqljdbc.jar class library, applications must first register the driver as follows:  
   

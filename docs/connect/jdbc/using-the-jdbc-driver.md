@@ -1,6 +1,6 @@
 ---
 title: "Using the JDBC driver | Microsoft Docs"
-description: "This section provides quick start instructions for making a simple connection to a SQL Server database by using the Microsoft JDBC Driver for SQL Server."
+description: "This section provides quick start instructions to make a simple connection to a SQL Server database using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: 01/31/2022
 
@@ -17,9 +17,9 @@ ms.author: v-davidengel
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This section provides quickstart instructions for making a simple connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Before you connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must first be installed on either your local computer or a server, and the JDBC driver must be installed on your local computer.  
+This section provides quickstart instructions to make a simple connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Before you connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must first be installed on either your local computer or a server, and the JDBC driver must be installed on your local computer.  
   
-## Choosing the right JAR file
+## Choose the right JAR file
 
 The Microsoft JDBC Driver provides different Jars to be used in correspondence with your preferred Java Runtime Environment (JRE) settings, as under:
 
@@ -47,7 +47,7 @@ The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server provide **sqljdbc41.jar**,
   
 The Microsoft JDBC Driver 4.1 for SQL Server provides the **sqljdbc41.jar** class library file.
 
-Your choice will also determine available features. For more information about which JAR file to choose, see [System requirements for the JDBC driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+Your choice will determines the available features. For more information about which JAR file to choose, see [System requirements for the JDBC driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## Setting the classpath
 
@@ -324,11 +324,11 @@ Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion
   
 ### Applications that are run directly at the command prompt
 
-The classpath is configured in the operating system. Append sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to the classpath of the system. Alternatively, you can specify the classpath on the Java command line that runs the application by using the `java -classpath` option.  
+The classpath is configured in the operating system. Append sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to the classpath of the system. Alternatively, you can specify the classpath on the Java command line that runs the application with the `java -classpath` option.  
   
 ### Applications that run in an IDE  
 
-Each IDE vendor provides a different method for setting the classpath in its IDE. Just setting the classpath in the operating system won't work. You must add sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to the IDE classpath.  
+Each IDE vendor provides a different method to set the classpath in its IDE. Just setting the classpath in the operating system won't work. You must add sqljdbc.jar, sqljdbc4.jar, or sqljdbc41.jar to the IDE classpath.  
   
 ### Servlets and JSPs  
 
@@ -340,11 +340,11 @@ Enterprise Java Beans (EJB) are run in an EJB container. EJB containers are sour
   
 ## Making a simple connection to a database
 
-Using the sqljdbc.jar class library, applications must first register the driver as follows:  
+To use the sqljdbc.jar class library, applications must first register the driver as follows:  
   
 `Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");`  
 
-When the driver is loaded, you can establish a connection by using a connection URL and the getConnection method of the DriverManager class:
+When the driver is loaded, you can establish a connection with a connection URL and the getConnection method of the DriverManager class:
 
 ```java
 String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;user=MyUserName;password=*****;";  

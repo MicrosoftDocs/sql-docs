@@ -46,7 +46,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 The utility uses ODBC to execute Transact-SQL batches.
 
-## Install sqlcmd
+## Download and install sqlcmd
 
 ### Windows
 
@@ -78,7 +78,7 @@ See [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md) 
 To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.2000.5 version or higher is in use.
 
 > [!NOTE]
-> You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)
+> You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.
 
 
 ## Preinstalled
@@ -87,19 +87,17 @@ To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.20
 
 You can try the sqlcmd utility from Azure Cloud Shell as it is pre-installed by default: [Launch Cloud Shell](https://shell.azure.com)
 
-
 ### Azure Data Studio
 
-To run sqlcmd statements in [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), select "Enable SQLCMD" from the editor toolbar. 
+To run sqlcmd statements in [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), select "Enable SQLCMD" from the editor toolbar.
 
 
 ### SQL Server Management Studio (SSMS)
 
-To run sqlcmd statements in [SSMS](../ssms/download-sql-server-management-studio-ssms.md), select SQLCMD Mode from the top navigation Query Menu dropdown.  
+To run sqlcmd statements in [SSMS](../ssms/download-sql-server-management-studio-ssms.md), select SQLCMD Mode from the top navigation Query Menu dropdown.
 
 > [!IMPORTANT]
 > [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) uses the Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient for execution in regular and SQLCMD mode in **Query Editor**. When **sqlcmd** is run from the command-line, **sqlcmd** uses the ODBC driver. Because different default options may apply, you might see different behavior when you execute the same query in [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] in SQLCMD Mode and in the **sqlcmd** utility.
->
 
 
 

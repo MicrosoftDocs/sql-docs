@@ -45,6 +45,8 @@ ms.author: "mathoma"
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   Article names cannot include any of the following characters: % , * , [ , ] , | , : , " , ? , ' , \ , / , < , >. If objects in the database include any of these characters and you want to replicate them, you must specify an article name that is different from the object name.  
+
+-   Merge publications are limited to a maximum of 2,048 articles. Transactional/Snapshot publications are limited to 32,767 articles. For more information, see [Maximum Capacity Specifications: Replication Objects](https://docs.microsoft.com/sql/sql-server/maximum-capacity-specifications-for-sql-server#replication-objects).
   
 ##  <a name="Security"></a> Security  
  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](/previous-versions/aa719848(v=vs.71)) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
@@ -54,45 +56,48 @@ ms.author: "mathoma"
   
 #### To create a publication and define articles  
   
-1.  Connect to the Publisher in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1. Connect to the Publisher in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
-2.  Expand the **Replication** folder, and then right-click the **Local Publications** folder.  
+2. Expand the **Replication** folder, and then right-click the **Local Publications** folder.  
   
-3.  Click **New Publication**.  
+3. Click **New Publication**.   
   
+
 4.  Follow the pages in the New Publication Wizard to:  
 
-    -   Specify a Distributor if distribution has not been configured on the server. For more information about configuring distribution, see [Configure Publishing and Distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md).  
+   -  Specify a Distributor if distribution has not been configured on the server. For more information about configuring distribution, see [Configure Publishing and Distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
-         If you specify on the **Distributor** page that the Publisher server will act as its own Distributor (a local Distributor), and the server is not configured as a Distributor, the New Publication Wizard will configure the server. You will specify a default snapshot folder for the Distributor on the **Snapshot Folder** page. The snapshot folder is simply a directory that you have designated as a share; agents that read from and write to this folder must have sufficient permissions to access it. For more information about securing the folder appropriately, see [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
+       If you specify on the **Distributor** page that the Publisher server will act as its own Distributor (a local Distributor), and the server is not configured as a Distributor, the New Publication Wizard will configure the server. You will specify a default snapshot folder for the Distributor on the **Snapshot Folder** page. The snapshot folder is simply a directory that you have designated as a share; agents that read from and write to this folder must have sufficient permissions to access it. For more information about securing the folder appropriately, see [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
-         If you specify that another server should act as the Distributor, you must enter a password on the **Administrative Password** page for connections made from the Publisher to the Distributor. This password must match the password specified when the Publisher was enabled at the remote Distributor.  
+       If you specify that another server should act as the Distributor, you must enter a password on the **Administrative Password** page for connections made from the Publisher to the Distributor. This password must match the password specified when the Publisher was enabled at the remote Distributor.  
   
-         For more information, see [Configure Distribution](../../../relational-databases/replication/configure-distribution.md).  
+       For more information, see [Configure Distribution](../../../relational-databases/replication/configure-distribution.md).  
   
-    -   Choose a publication database.  
+   -   Choose a publication database.  
   
-    -   Select a publication type. For more information, see [Types of Replication](../../../relational-databases/replication/types-of-replication.md).  
+   -   Select a publication type. For more information, see [Types of Replication](../../../relational-databases/replication/types-of-replication.md).  
   
-    -   Specify data and database objects to publish; optionally filter columns from table articles, and set article properties.  
+   -   Specify data and database objects to publish; optionally filter columns from table articles, and set article properties.  
   
-    -   Optionally filter rows from table articles. For more information, see [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md).  
+   -   Optionally filter rows from table articles. For more information, see [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md).  
   
-    -   Set the Snapshot Agent schedule.  
+   -   Set the Snapshot Agent schedule.  
   
-    -   Specify the credentials under which the following replication agents run and make connections:  
+   -   Specify the credentials under which the following replication agents run and make connections:  
   
-         \- Snapshot Agent for all publications.  
+        \- Snapshot Agent for all publications.  
   
-         \- Log Reader Agent for all transactional publications.  
+        \- Log Reader Agent for all transactional publications.  
   
-         \- Queue Reader Agent for transactional publications that allow updating subscriptions.  
+        \- Queue Reader Agent for transactional publications that allow updating subscriptions.  
   
-         For more information, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) and [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md).  
+        For more information, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) and [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md).  
   
-    -   Optionally script the publication. For more information, see [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+   -   Optionally script the publication. For more information, see [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
-    -   Specify a name for the publication.  
+   -   Specify a name for the publication.  
+   
+   [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  After a publication has been created, articles can be created programmatically using replication stored procedures. The stored procedures used to create an article will depend on the type of publication for which the article is being defined. For more information, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  

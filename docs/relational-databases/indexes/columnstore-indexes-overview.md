@@ -101,6 +101,10 @@ A nonclustered columnstore index and a clustered columnstore index function the 
 The nonclustered index contains a copy of part or all of the rows and columns in the underlying table. The index is defined as one or more columns of the table and has an optional condition that filters the rows.  
   
 A nonclustered columnstore index enables real-time operational analytics where the OLTP workload uses the underlying clustered index while analytics run concurrently on the columnstore index. For more information, see [Get started with columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
+
+>[!Note]
+>Unlike SQL server, the nonclustered columnstore index in Synapse SQL cannot be used to enforce primary key or unique constraint on the base table with clustered columnstore index.  This is because the primary key and unique constraints in Synapse SQL are only supported as NOT ENFORCED.  For details, check [Primary key, foreign key, and unique key using dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-table-constraints).
+
   
 #### Batch mode execution
 Batch mode execution is a query processing method that's used to process multiple rows together. Batch mode execution is closely integrated with, and optimized around, the columnstore storage format. Batch mode execution is sometimes known as *vector-based* or *vectorized* execution. Queries on columnstore indexes use batch mode execution, which improves query performance typically by two to four times. For more information, see the [Query processing architecture guide](../query-processing-architecture-guide.md#execution-modes). 

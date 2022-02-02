@@ -12,8 +12,8 @@ f1_keywords:
   - "APPROX_COUNT_DISTINCT"
 dev_langs: 
   - "TSQL"
-author: "MrJoeSack"
-ms.author: "josack"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # APPROX_COUNT_DISTINCT (Transact-SQL)

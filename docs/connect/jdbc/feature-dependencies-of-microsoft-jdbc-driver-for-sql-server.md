@@ -20,13 +20,13 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 
 ## Compile time
 
- - `com.azure:azure-security-keyvault-keys`: Microsoft Azure Client Library For KeyVault Keys for JDBC driver version 9.2 and above or `com.microsoft.azure:azure-keyvault`: Microsoft Azure SDK For Key Vault for JDBC driver version 8.4 and below for Always Encrypted Azure Key Vault feature. (optional)
- - `com.azure:azure-identity`: Microsoft Azure Client Library For Identity for JDBC driver version 9.2 and above or `com.microsoft.azure:adal4j`: Microsoft Authentication Library for JDBC driver version 8.4 and below for Azure Active Directory Authentication features and Azure Key Vault feature. (optional) 
- - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly feature. (optional)
- - `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.
- - `org.osgi:org.osgi.compendium`: OSGi Compendium library for OSGi Framework support.
- - `com.google.code.gson`: JSON parser for Always Encrypted with secure enclaves feature. (optional)
- - `org.bouncycastle.bcprov-jdk15on`: Bouncy Castle Provider for Always Encrypted with secure enclaves feature for JAVA 8 only. (optional)
+- `com.azure:azure-security-keyvault-keys`: Microsoft Azure Client Library For KeyVault Keys for JDBC driver version 9.2 and above or `com.microsoft.azure:azure-keyvault`: Microsoft Azure SDK For Key Vault for JDBC driver version 8.4 and below for Always Encrypted Azure Key Vault feature. (optional)
+- `com.azure:azure-identity`: Microsoft Azure Client Library For Identity for JDBC driver version 9.2 and above or `com.microsoft.azure:adal4j`: Microsoft Azure Active Directory Authentication Library for JDBC driver version 8.4 and below for Azure Active Directory Authentication features and Azure Key Vault feature. (optional)
+- `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly feature. (optional)
+- `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.
+- `org.osgi:org.osgi.compendium`: OSGi Compendium library for OSGi Framework support.
+- `com.google.code.gson`: JSON parser for Always Encrypted with secure enclaves feature. (optional)
+- `org.bouncycastle.bcprov-jdk15on`: Bouncy Castle Provider for Always Encrypted with secure enclaves feature for JAVA 8 only. (optional)
 
 ## Run time
 
@@ -166,7 +166,7 @@ For *Windows operating systems*, the driver looks for sqljdbc_auth.dll by defaul
 
 From driver version 8.2.2 onward, 'sqljdbc_auth.dll' is renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'. For example, 'mssql-jdbc_auth-8.2.2.x64.dll'.
 
-In addition to the **mssql-jdbc_auth-\<version>-\<arch>.dll** (available in the JDBC driver package), the Microsoft Authentication Library (**ADAL.DLL**) also must be installed for Active Directory Integrated authentication. Microsoft Authentication Library can be installed from [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) or [Microsoft OLE DB Driver for SQL Server](../oledb/download-oledb-driver-for-sql-server.md). The JDBC driver only supports version **1.0.2028.318 and higher** for ADAL.DLL.
+In addition to the **mssql-jdbc_auth-\<version>-\<arch>.dll** (available in the JDBC driver package), the Azure Active Directory Authentication Library (**ADAL.DLL**) also must be installed for Active Directory Integrated authentication. Microsoft Azure Active Directory Authentication Library can be installed from [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) or [Microsoft OLE DB Driver for SQL Server](../oledb/download-oledb-driver-for-sql-server.md). The JDBC driver only supports version **1.0.2028.318 and higher** for ADAL.DLL.
 
 You can get a [sample application](connecting-using-azure-active-directory-authentication.md) that uses this feature.
 

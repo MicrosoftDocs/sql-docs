@@ -67,7 +67,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | TDSParser stuck on TDS_COLMETADATA | Fixed: TDSParser stuck on TDS_COLMETADATA, which could result in a hang for certain queries. [GitHub Issue #1661](https://github.com/microsoft/mssql-jdbc/issues/1661) |
 | &nbsp; | &nbsp; |
 
-
 ## Previous releases
 
 ## <a id="94"></a> 9.4
@@ -172,7 +171,7 @@ Released: March 02, 2021
 
 Fixed issues in 9.2.1:
 
-* Fixed an issue with client secret being empty during ActiveDirectoryServicePrincipal authentication in Azure environment.
+- Fixed an issue with client secret being empty during ActiveDirectoryServicePrincipal authentication in Azure environment.
 
 Version number: 9.2.0  
 Released: January 29, 2021

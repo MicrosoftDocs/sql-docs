@@ -67,7 +67,6 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | TDSParser stuck on TDS_COLMETADATA | Fixed: TDSParser stuck on TDS_COLMETADATA, which could result in a hang for certain queries. [GitHub Issue #1661](https://github.com/microsoft/mssql-jdbc/issues/1661) |
 | &nbsp; | &nbsp; |
 
-
 ## Previous releases
 
 ## <a id="94"></a> 9.4

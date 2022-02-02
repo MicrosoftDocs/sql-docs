@@ -39,9 +39,9 @@ When you connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle c
   
 To address the second point and avoid the Gateway terminating idle connections, you can:
 
-* Use the **Redirect** [connection policy](/azure/azure-sql/database/connectivity-architecture#connection-policy) to configure your Azure SQL data source.
+- Use the **Redirect** [connection policy](/azure/azure-sql/database/connectivity-architecture#connection-policy) to configure your Azure SQL data source.
 
-* Keep connections active via lightweight activity. This method isn’t recommended and should only be used if there are no other possible options.
+- Keep connections active via lightweight activity. This method isn’t recommended and should only be used if there are no other possible options.
 
 To address the first point and avoid dropping idle connections by a network component, set the following registry settings or their non-Windows equivalents on the operating system where the driver is loaded:  
   
@@ -53,13 +53,12 @@ To address the first point and avoid dropping idle connections by a network comp
   
 Restart the computer for the registry settings to take effect.  
 
-The KeepAliveTime and KeepAliveInterval values are in milliseconds. These settings will have the effect to disconnect an unresponsive connection within 10 to 40 seconds. If no response is received after a keep alive packet is sent, it will be retried every second up to 10 times. If no response is received during that time, the client-side socket is disconnected. Depending on your environment, you might want to increase the KeepAliveInterval to accommodate known disruptions (for example, virtual machine migrations), that might cause a server to be unresponsive for longer than 10 seconds.
+The KeepAliveTime and KeepAliveInterval values are in milliseconds. These settings cause an unresponsive connection to disconnect within 10 to 40 seconds. If no response is received after a keep alive packet is sent, it will be retried every second up to 10 times. If no response is received during that time, the client-side socket is disconnected. Depending on your environment, you might want to increase the KeepAliveInterval to accommodate known disruptions (for example, virtual machine migrations), that might cause a server to be unresponsive for longer than 10 seconds.
 
 > [!NOTE]
 > TcpMaxDataRetransmissions isn't controllable on Windows Vista or Windows 2008 and higher.
 
-To perform this configuration to run in Azure, create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
-
+To configure this in an Azure VM, create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
 
 ```xml
 <Startup>  

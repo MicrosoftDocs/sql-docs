@@ -172,7 +172,7 @@ Released: March 02, 2021
 
 Fixed issues in 9.2.1:
 
-* Fixed an issue with client secret being empty during ActiveDirectoryServicePrincipal authentication in Azure environment.
+- Fixed an issue with client secret being empty during ActiveDirectoryServicePrincipal authentication in Azure environment.
 
 Version number: 9.2.0  
 Released: January 29, 2021

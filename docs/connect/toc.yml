@@ -2813,11 +2813,11 @@
           items:
           - name: Using Kerberos integrated authentication
             href: ../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md
-          - name: Connect using Azure Active Directory authentication
+          - name: Using Azure Active Directory authentication
             href: ../connect/jdbc/connecting-using-azure-active-directory-authentication.md
           - name: Using NTLM authentication
             href: ../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md
-          - name: Client Certificate Authentication for Loopback Scenarios
+          - name: Client certificate authentication for loopback
             href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
       - name: Data types
         items:
@@ -2835,7 +2835,7 @@
           href: ../connect/jdbc/use-spatial-datatypes.md
         - name: User defined types
           href: ../connect/jdbc/user-defined-types.md
-        - name: Configuring how java.sql.Time values are sent to the server
+        - name: Configuring how java.sql.Time values are sent
           href: ../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md
         - name: Programming with SQLXML
           href: ../connect/jdbc/programming-with-sqlxml.md

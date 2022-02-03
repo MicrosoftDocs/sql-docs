@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: lilgreenbird
 ms.author: v-susanh
 ---
-# Azure Key Vault sample
+# Azure Key Vault sample version 9.2
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

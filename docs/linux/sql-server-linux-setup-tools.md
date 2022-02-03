@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: Learn how to install the SQL Server command-line tools, Microsoft ODBC drivers, and their dependencies on Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/07/2021
+ms.date: 02/01/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.custom:
@@ -13,7 +13,7 @@ ms.custom:
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ---
-# Install sqlcmd and bcp the SQL Server command-line tools on Linux
+# Install the SQL Server command-line tools sqlcmd and bcp on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
@@ -31,6 +31,9 @@ Install the tools for your platform:
 - [Docker](#docker)
 
 This article describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [links](#next-steps) at the end of this topic.
+
+> [!Note]
+> sqlcmd and bcp are available in mssql-tools for x64 architecture. An alternative for both arm64 and x64 environments is in preview across Linux, macOS, and Windows, [go-sqlcmd on GitHub](https://github.com/microsoft/go-sqlcmd).
 
 ## <a id="RHEL"><a/>Install tools on RHEL 8
 
@@ -88,7 +91,7 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Install tools on Ubuntu 16.04
+## <a id="ubuntu"></a>Install tools on Ubuntu 20.04
 
 Use the following steps to install the **mssql-tools** on Ubuntu.
 
@@ -96,7 +99,7 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
 >
 > - Ubuntu 18.04 is supported starting with SQL Server 2019 CU3.
 > - Ubuntu 20.04 is supported starting with SQL Server 2019 CU10.
-> - If you are using Ubuntu 18.04 or Ubuntu 20.04, change the repository path in step 2 below from `/ubuntu/16.04` to `/ubuntu/18.04` or `/ubuntu/20.04`.
+> - If you are using Ubuntu 16.04 or Ubuntu 18.04, change the repository path in step 2 below from `/ubuntu/20.04` to `/ubuntu/16.04` or `/ubuntu/18.04`.
 
 1. Import the public repository GPG keys.
 
@@ -107,7 +110,7 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
 1. Register the Microsoft Ubuntu repository.
 
    ```bash
-   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
 1. Update the sources list and run the installation command with the unixODBC developer package.
@@ -211,7 +214,7 @@ If you [run SQL Server in a Docker container](quickstart-install-connect-docker.
    |---|---|
    | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
-   | Ubuntu 16.04 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools) |
+   | Ubuntu 20.04 | [https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/mssql-tools](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/mssql-tools) |
 
 1. Also locate and copy the **msodbcsql** package, which is a dependency. The **msodbcsql** package also has a dependency on either **unixODBC-devel** (Red Hat and SLES) or **unixodbc-dev** (Ubuntu). The location of the **msodbcsql** packages are listed in the following table:
 
@@ -219,7 +222,7 @@ If you [run SQL Server in a Docker container](quickstart-install-connect-docker.
    |---|---|
    | Red Hat | [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod) |
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
-   | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
+   | Ubuntu 20.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/u/unixodbc/) |
 
 1. **Move the downloaded packages to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** command.
 

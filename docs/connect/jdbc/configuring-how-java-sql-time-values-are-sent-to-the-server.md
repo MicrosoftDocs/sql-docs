@@ -1,5 +1,5 @@
 ---
-title: Configuring how java.sql.Time values are sent to the server
+title: Configuring how java.sql.Time values are sent
 description: Learn how to configure how java.sql.Time values are sent to the server using the sendTimeAsDatetime connection option.
 ms.custom: ""
 ms.date: 08/12/2019
@@ -12,7 +12,7 @@ ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: David-Engel
 ms.author: v-davidengel
 ---
-# Configuring how java.sql.Time values are sent to the server
+# Configuring how java.sql.Time values are sent
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

@@ -81,9 +81,9 @@ The error can happen when OpenSSL 3.0 is installed. OpenSSL typically is install
 To resolve this error, change the symlink of the openssl binary to openssl@1.1:
 
 ```shell
-rm -rf /usr/local/opt/openssl
-version=$(ls /usr/local/Cellar/openssl@1.1 | grep "1.1")
-ln -s /usr/local/Cellar/openssl@1.1/$version /usr/local/opt/openssl
+rm -rf $(brew --prefix)/opt/openssl
+version=$(ls $(brew --prefix)/Cellar/openssl@1.1 | grep "1.1")
+ln -s $(brew --prefix)/Cellar/openssl@1.1/$version $(brew --prefix)/opt/openssl
 ```
 
 For more information about resolving connection failures, see:

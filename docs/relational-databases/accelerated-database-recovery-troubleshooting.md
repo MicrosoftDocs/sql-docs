@@ -39,7 +39,8 @@ SELECT
  dt.database_transaction_begin_time AS oldest_transaction_begin_time,
  asdt.session_id AS active_transaction_session_id,
  asdt.elapsed_time_seconds AS active_transaction_elapsed_time_seconds,
- pvss.pvs_off_row_page_skipped_low_water_mark
+ pvss.pvs_off_row_page_skipped_low_water_mark,
+ pvss.pvs_off_row_page_skipped_min_useful_xts
 
 FROM sys.dm_tran_persistent_version_store_stats AS pvss
 CROSS APPLY (SELECT SUM(size*8.) AS total_db_size_kb FROM sys.database_files WHERE [state] = 0 and [type] = 0 ) AS df 
@@ -86,13 +87,12 @@ WHERE pvss.database_id = DB_ID();
     
     With the session(s) identified, consider killing the session, if allowed. Also, review the application to determine the nature of the problematic active transaction(s).
 
-3. The persistent version cleanup may be held up due to long active snapshot scan(s). The `pvs_off_row_page_skipped_min_useful_xts` value shows the number of pages skipped for reclaim due to a long snapshot scan. If `pvs_off_row_page_skipped_min_useful_xts` shows a larger value than normal, it means there is a long snapshot scan preventing PVS cleanup. This sample query can be used to decide which is the problematic session:
+3. The persistent version cleanup may be held up due to long active snapshot scan(s). In the original troubleshooting query earlier in this article, the `pvs_off_row_page_skipped_min_useful_xts` value shows the number of pages skipped for reclaim due to a long snapshot scan. If `pvs_off_row_page_skipped_min_useful_xts` shows a larger value than normal, it means there is a long snapshot scan preventing PVS cleanup. This sample query can be used to decide which is the problematic session:
 
     ```sql
     SELECT 
         snap.transaction_id, snap.transaction_sequence_num, session.session_id, session.login_time, 
         GETUTCDATE() as now, session.host_name, session.program_name, session.login_name, session.last_request_start_time
-        pvs_off_row_page_skipped_min_useful_xts
     FROM sys.dm_tran_active_snapshot_database_transactions AS snap
     INNER JOIN sys.dm_exec_sessions AS session ON snap.session_id = session.session_id  
     ORDER BY snap.transaction_sequence_num asc;

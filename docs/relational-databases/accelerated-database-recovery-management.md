@@ -20,30 +20,40 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 
 This article contains information on best practices for managing and configuring accelerated database recovery (ADR).
 
+> [!NOTE]
+> In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled. If you observe issues either with storage usage, high abort transaction and other factors, please contact [Azure Support](https://azure.microsoft.com/support/options/). 
+
+## Who should consider accelerated database recovery
+
+- ADR is recommended for workloads with long running transactions.
+
+- ADR is recommended for workloads that have seen cases where active transactions are causing the transaction log to grow significantly.  
+
+- ADR is recommended for workloads that have experienced long periods of database unavailability due to SQL Server long running recovery (such as unexpected SQL Server restart or manual transaction rollback).
+
+- ADR is not supported for databases enrolled in database mirroring.
+
+- ADR is not recommended for databases larger than 100 terabytes due to the single-threaded PVS version cleaner.  
+
+- ADR is not recommended for database environments with a high count of update/deletes, such as high-volume OLTP, without a period of rest/recovery for the PVS cleanup process to reclaim space. Typically, business operation cycles allow for this time, but in some scenarios you may want to initiate the PVS cleanup process manually to take advantage of application activity conditions.
+
+   - To activate the PVS cleanup process manually between workloads or during maintenance windows, use `sys.sp_persistent_version_cleanup`. For more information, see [sys.sp_persistent_version_cleanup](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md). 
+
+   - If the PVS cleanup process is running for a long period time, you may find that the count of aborted transactions will grow which will also cause the PVS size to increase. Leverage the `sys.dm_tran_aborted_transactions` DMV to report the aborted transaction count, and leverage `sys.dm_tran_persistent_version_store_stats` to report the cleanup start/end times along with the PVS size. For more information, see [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md). For more troubleshooting options, see [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md).
+    
+- If your application performs many non-batched, incremental updates, such as updating a record every time there is a row accessed/inserted, your workload may not be optimal for ADR. Consider rewriting the application queries to batch updates, where possible, until the end of the command and reduce a high number of small update transactions.
+
 ## Best practices for accelerated database recovery
 
 This section contains guidance and recommendations for ADR. 
 
-> [!NOTE]
-> In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled. If you observe issues either with storage usage, high abort transaction and other factors, please contact [Azure Support](https://azure.microsoft.com/support/options/). 
+- For SQL Server, isolate the PVS version store to a [filegroup on higher tier storage](#managing-the-persistent-version-store-filegroup), such as high-end SSD or advanced SSD or Persistent Memory (PMEM), sometimes referred to as Storage Class Memory (SCM). For more information, see [Change the location of the PVS to a different filegroup](#change-the-location-of-the-pvs-to-a-different-filegroup). This option is not available for [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)].
 
-1. ADR is not recommended for databases larger than 100 terabytes due to the single-threaded PVS version cleaner.  
+- Ensure there is sufficient space on the database to account for PVS usage. If the database does not have enough room for the PVS to grow, ADR will fail to generate versions. ADR saves space in the version store compared to `tempdb` version store. 
 
-2. ADR is not recommended for database environments with a high count of update/deletes, such as high-volume OLTP, without a period of rest/recovery for the PVS cleanup process to reclaim space. Typically, business operation cycles allow for this time, but in some scenarios you may want to initiate the PVS cleanup process manually to take advantage of application activity conditions.
+- Avoid long-running transactions in the database. Though one objective of ADR is to speed up database recovery due to redo long active transactions, long-running transactions can delay version cleanup and increase the size of the PVS.
 
-    - To activate the PVS cleanup process manually between workloads or during maintenance windows, use `sys.sp_persistent_version_cleanup`. For more information, see [sys.sp_persistent_version_cleanup](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md). 
-    
-    - If the PVS cleanup process is running for a long period time, you may find that the count of aborted transactions will grow which will also cause the PVS size to increase. Leverage the `sys.dm_tran_aborted_transactions` DMV to report the aborted transaction count, and leverage `sys.dm_tran_persistent_version_store_stats` to report the cleanup start/end times along with the PVS size. For more information, see [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md). For more troubleshooting options, see [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md).
-    
-3. If your application performs many non-batched, incremental updates, such as updating a record every time there is a row accessed/inserted, your workload may not be optimal for ADR. Consider rewriting the application queries to batch updates, where possible, until the end of the command and reduce a high number of small update transactions.
-
-4. For SQL Server, isolate the PVS version store to a filegroup on higher tier storage, such as high-end SSD or advanced SSD or Persistent Memory (PMEM), sometimes referred to as Storage Class Memory (SCM). For more information, see [Change the location of the PVS to a different filegroup](#change-the-location-of-the-pvs-to-a-different-filegroup). This option is not available for [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)].
-
-5. Ensure there is sufficient space on the database to account for PVS usage. If the database does not have enough room for the PVS to grow, ADR will fail to generate versions. ADR saves space in the version store compared to `tempdb` version store. 
-
-6. Avoid long-running transactions in the database. Though one objective of ADR is to speed up database recovery due to redo long active transactions, long-running transactions can delay version cleanup and increase the size of the PVS.
-
-7. Avoid large transactions with data definition changes or DDL operations. ADR uses a SLOG (system log stream) mechanism to track DDL operations used in recovery. The SLOG is only used while the transaction active. Two scenarios can cause the SLOG to take up more space:
+- Avoid large transactions with data definition changes or DDL operations. ADR uses a SLOG (system log stream) mechanism to track DDL operations used in recovery. The SLOG is only used while the transaction active. Two scenarios can cause the SLOG to take up more space:
 
     - Many DDLs are executed in one transaction. For example, in one transaction, rapidly creating and dropping temp tables. 
     
@@ -51,7 +61,7 @@ This section contains guidance and recommendations for ADR.
     
     SLOG is checkpointed, so avoiding large transactions that use SLOG can help overall performance. 
 
-8. Prevent or reduce unnecessary aborted situations. A high abort rate will put pressure on the PVS cleaner and lower ADR performance. The aborts may come from a high rate of deadlocks, duplicate keys, or other constraint violations.  
+- Prevent or reduce unnecessary aborted situations. A high abort rate will put pressure on the PVS cleaner and lower ADR performance. The aborts may come from a high rate of deadlocks, duplicate keys, or other constraint violations.  
 
 ## Enabling and controlling ADR
 
@@ -131,7 +141,7 @@ Changing the location of the PVS is a three-step process.
 
    When the value of `persistent_version_store_size_kb` is 0, you can re-enable the ADR feature, configuring the PVS to be located in the new filegroup.
 
-3. Turn on ADR specifying the new location for PVS
+3. Turn on ADR, specifying the new location for the PVS:
 
    ```sql
    ALTER DATABASE [MyDatabase] SET ACCELERATED_DATABASE_RECOVERY = ON

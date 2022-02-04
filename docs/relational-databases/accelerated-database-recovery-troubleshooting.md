@@ -24,11 +24,10 @@ This article helps administrators diagnose issues with accelerated database reco
 
 Leverage the `sys.dm_tran_persistent_version_store_stats` DMV to identify if the size of the PVS is growing larger than expected, and then to determine which factor is preventing persistent version store (PVS) cleanup.
 
-The sample query shows all information about the cleanup processes and shows the current PVS size, oldest aborted transaction_id, and other details:
+The sample query shows all information about the cleanup processes and shows the current PVS size, oldest aborted `transaction_id`, and other details:
 
 ```sql
-
-SELECT 
+SELECT
  db_name(pvss.database_id) AS DBName,
  pvss.persistent_version_store_size_kb / 1024. / 1024 AS persistent_version_store_size_gb,
  100 * pvss.persistent_version_store_size_kb / df.total_db_size_kb AS pvs_pct_of_database_size,
@@ -39,7 +38,9 @@ SELECT
  pvss.aborted_version_cleaner_end_time,
  dt.database_transaction_begin_time AS oldest_transaction_begin_time,
  asdt.session_id AS active_transaction_session_id,
- asdt.elapsed_time_seconds AS active_transaction_elapsed_time_seconds
+ asdt.elapsed_time_seconds AS active_transaction_elapsed_time_seconds,
+ pvss.pvs_off_row_page_skipped_low_water_mark
+
 FROM sys.dm_tran_persistent_version_store_stats AS pvss
 CROSS APPLY (SELECT SUM(size*8.) AS total_db_size_kb FROM sys.database_files WHERE [state] = 0 and [type] = 0 ) AS df 
 LEFT JOIN sys.dm_tran_database_transactions AS dt
@@ -64,7 +65,7 @@ WHERE pvss.database_id = DB_ID();
     SELECT
         dbtr.database_id, 
         transess.session_id,  
-        transess.transaction_id , 
+        transess.transaction_id, 
         atr.name, 
         sess.login_time,  
         dbtr.database_transaction_log_bytes_used, 
@@ -83,12 +84,15 @@ WHERE pvss.database_id = DB_ID();
           dbtr.database_transaction_log_bytes_used >= @longTransactionLogBytes );
     ```
     
-    With the session(s) identified, consider killing the session, if allowed. Also, review the application to determine the nature of the problematic active transaction(s). 
+    With the session(s) identified, consider killing the session, if allowed. Also, review the application to determine the nature of the problematic active transaction(s).
 
-3. The persistent version cleanup may be held up due to long active snapshot scan(s). If `pvs_off_row_page_skipped_min_useful_xts` shows a large value <!TODO>, it means there is a long snapshot scan preventing PVS cleanup. Below query can be used to decide which is the session,  
+3. The persistent version cleanup may be held up due to long active snapshot scan(s). The `pvs_off_row_page_skipped_min_useful_xts` value shows the number of pages skipped for reclaim due to a long snapshot scan. If `pvs_off_row_page_skipped_min_useful_xts` shows a larger value than normal, it means there is a long snapshot scan preventing PVS cleanup. This sample query can be used to decide which is the problematic session:
 
     ```sql
-    SELECT snap.transaction_id, snap.transaction_sequence_num, session.session_id, session.login_time, GETUTCDATE() as now, session.host_name, session.program_name, session.login_name, session.last_request_start_time 
+    SELECT 
+        snap.transaction_id, snap.transaction_sequence_num, session.session_id, session.login_time, 
+        GETUTCDATE() as now, session.host_name, session.program_name, session.login_name, session.last_request_start_time
+        pvs_off_row_page_skipped_min_useful_xts
     FROM sys.dm_tran_active_snapshot_database_transactions AS snap
     INNER JOIN sys.dm_exec_sessions AS session ON snap.session_id = session.session_id  
     ORDER BY snap.transaction_sequence_num asc;
@@ -113,7 +117,7 @@ WHERE pvss.database_id = DB_ID();
 
 8. If the aborted transaction hasn't completed successfully recently, check the error log for messages reporting `VersionCleaner` issues.
 
-9. Monitor the SQL Server error log for 'PreallocatePVS' entries. If there are 'PreallocatePVS' entries present, then this means you may need to increase the ADR ability to preallocate pages for background tasks as performance can be improved when the ADR background thread preallocates enough pages and the percentage of foreground PVS allocations is close to 0. You can use the `sp_configure 'ADR Preallocation Factor'` to increase this amount. For more information, see [ADR preallocation factor server configuration option](../database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md).
+9. Monitor the SQL Server error log for 'PreallocatePVS' entries. If there are 'PreallocatePVS' entries present, then this means you may need to increase the ADR ability to preallocate pages for background tasks as performance can be improved when the ADR background thread preallocates enough pages and the percentage of foreground PVS allocations is close to 0. You can use the `sp_configure 'ADR Preallocation Factor'` to increase this amount. For more information, see [ADR preallocation factor server configuration option](../database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md). 
 
 ## Start PVS cleanup process manually 
 

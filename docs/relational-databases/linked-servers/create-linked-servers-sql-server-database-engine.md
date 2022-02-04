@@ -26,7 +26,8 @@ This article shows how to create a linked server and access data from another [!
 ## <a name="Background"></a> Background
 
 
-Linked servers are typically configured to enable the database engine to execute a Transact-SQL statement that includes tables in another instance of SQL Server, or another database product such as Oracle. Many types of data sources can be configured as linked servers, including third-party database providers and Azure CosmosDB.
+Linked servers are typically configured to enable the database engine to execute a Transact-SQL statement that includes tables in another instance of SQL Server, or another database product such as Oracle. Many types of data sources can be configured as linked servers, including third-party database providers and Azure Cosmos DB.
+
 
 After a linked server is created, distributed queries can be run against this server, and queries can join tables from more than one data source. If the linked server is defined as an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or an Azure SQL Managed Instance, remote stored procedures can be executed.  
   

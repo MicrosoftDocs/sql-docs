@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Guidelines for online index operations
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Database MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 When you perform online index operations, the following guidelines apply:  
 

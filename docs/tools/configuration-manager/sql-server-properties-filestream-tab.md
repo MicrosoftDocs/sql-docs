@@ -14,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Properties (FILESTREAM Tab)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ## UI element list  

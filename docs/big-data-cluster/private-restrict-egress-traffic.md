@@ -90,7 +90,7 @@ The following steps provide details.
 
 1. Define a set of environment variables for creating resources.
 
-   ```console
+   ```azurecli
    export FWNAME=bdcaksazfw
    export FWPUBIP=$FWNAME-ip
    export FWIPCONFIG_NAME=$FWNAME-config

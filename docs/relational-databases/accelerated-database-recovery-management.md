@@ -148,4 +148,5 @@ Changing the location of the PVS is a three-step process.
 
 ## Next steps 
 
+- [Accelerated database recovery concepts](accelerated-database-recovery-concepts.md)
 - [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md)

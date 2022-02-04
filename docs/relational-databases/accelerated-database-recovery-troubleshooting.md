@@ -117,11 +117,11 @@ WHERE pvss.database_id = DB_ID();
 
 8. If the aborted transaction hasn't completed successfully recently, check the error log for messages reporting `VersionCleaner` issues.
 
-9. Monitor the SQL Server error log for 'PreallocatePVS' entries. If there are 'PreallocatePVS' entries present, then this means you may need to increase the ADR ability to preallocate pages for background tasks as performance can be improved when the ADR background thread preallocates enough pages and the percentage of foreground PVS allocations is close to 0. You can use the `sp_configure 'ADR Preallocation Factor'` to increase this amount. For more information, see [ADR preallocation factor server configuration option](../database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md). 
+9. Monitor the SQL Server error log for 'PreallocatePVS' entries. If there are 'PreallocatePVS' entries present, then this means you may need to increase the ADR ability to preallocate pages for background tasks as performance can be improved when the ADR background thread preallocates enough pages and the percentage of foreground PVS allocations is close to 0. You can use the `sp_configure 'ADR Preallocation Factor'` to increase this amount. For more information, see [ADR preallocation factor server configuration option](../database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md).
 
-## Start PVS cleanup process manually 
+## Start PVS cleanup process manually
 
-ADR is not recommended for database environments with a high transaction count of update/deletes, such as high-volume OLTP, without a period of rest/recovery for the PVS cleanup process to reclaim space. 
+ADR is not recommended for database environments with a high transaction count of update/deletes, such as high-volume OLTP, without a period of rest/recovery for the PVS cleanup process to reclaim space.
 
 To activate the PVS cleanup process manually between workloads or during maintenance windows, use the system stored procedure [sys.sp_persistent_version_cleanup](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md). 
 
@@ -137,4 +137,5 @@ EXEC sys.sp_persistent_version_cleanup [WideWorldImporters];
 
 ## Next steps 
 
+- [Accelerated database recovery concepts](accelerated-database-recovery-concepts.md)
 - [Manage accelerated database recovery](accelerated-database-recovery-management.md)

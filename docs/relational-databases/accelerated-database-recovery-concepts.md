@@ -88,13 +88,13 @@ The ADR recovery process has the same three phases as the current recovery proce
 
   - Sub phase 2
 
-     Redo from transaction log starts from last checkpoint (instead of oldest uncommitted transaction)
+     Redo from transaction log starts from last checkpoint (instead of oldest uncommitted transaction).
      
 - **Undo phase**
 
    The undo phase with ADR completes almost instantaneously by using SLOG to undo non-versioned operations and persisted version store (PVS) with logical revert to perform row level version-based undo.
 
-You can also watch this 8-minute video that explains Accelerated Database Recovery
+You can also watch this eight-minute video that explains Accelerated Database Recovery:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Advanced-Database-Recovery--Data-Exposed/player?WT.mc_id=dataexposed-c9-niner]
 

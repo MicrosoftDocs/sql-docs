@@ -25,7 +25,9 @@ This article describes how to set or change the database collation by using [SQL
   
 - Windows Unicode-only collations can only be used with [the COLLATE clause](../../t-sql/statements/collations.md) to apply collations to the **nchar**, **nvarchar**, and **ntext** data types on column level and expression-level data. They can’t be used with the COLLATE clause to change the collation of a database or server instance.  
   
-- If the specified collation or the collation used by the referenced object uses a code page that isn’t supported by Windows, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error.  
+- If the specified collation or the collation used by the referenced object uses a code page that isn’t supported by Windows, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error.
+
+- Server-level collation in Azure SQL Managed Instance can be specified when the instance is created and cannot be changed later. Learn more in [Set or change the server collation](set-or-change-the-server-collation.md#setting-the-server-collation-in-managed-instance).
 
 > [!IMPORTANT]
 > The `ALTER DATABASE COLLATE` statement is not supported on Azure SQL Database.

@@ -20,7 +20,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 # Creating a Valid Connection String Using TCP IP
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   To create a valid connection string using TCP/IP, you must:  
   
 -   Specify an **Alias Name**.  

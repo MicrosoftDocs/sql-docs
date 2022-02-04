@@ -1,7 +1,7 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (macOS)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on macOS clients to enable database connectivity.
-ms.date: 08/02/2021
+ms.date: 02/15/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -23,7 +23,22 @@ This article provides commands for installing the ODBC driver from the bash shel
 > [!Note]
 > The Microsoft ODBC driver for SQL Server on macOS is only supported on the x64 architecture through version 17.7. The Apple M1 (ARM64) is supported starting with version 17.8. The architecture will be detected and the correct package will be automatically installed by the Homebrew formula. If your command prompt is running in x64 emulation mode on the M1, the x64 package will be installed. If you're not running in emulation mode in your command prompt, the ARM64 package will be installed.
 
-## Microsoft ODBC 17
+## Microsoft ODBC 18
+
+To install Microsoft ODBC driver 18 for SQL Server on macOS, run the following commands:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
+brew update
+HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql18 mssql-tools18
+```
+
+## Previous versions
+
+The following sections provide instructions for installing previous versions of the Microsoft ODBC driver on macOS.
+
+## <a id="17"></a> Microsoft ODBC 17
 
 To install Microsoft ODBC driver 17 for SQL Server on macOS, run the following commands:
 
@@ -37,9 +52,6 @@ HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 > [!IMPORTANT]
 > If you installed the v17 `msodbcsql` package that was briefly available, you should remove it before installing the `msodbcsql17` package. This will avoid conflicts. The `msodbcsql17` package can be installed side by side with the `msodbcsql` v13 package.
 
-## Previous versions
-
-The following sections provide instructions for installing previous versions of the Microsoft ODBC driver on macOS.
 
 ## <a id="13.1"></a> ODBC 13.1
 

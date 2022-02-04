@@ -53,13 +53,11 @@ This section contains guidance and recommendations for ADR.
 
 - Avoid long-running transactions in the database. Though one objective of ADR is to speed up database recovery due to redo long active transactions, long-running transactions can delay version cleanup and increase the size of the PVS.
 
-- Avoid large transactions with data definition changes or DDL operations. ADR uses a SLOG (system log stream) mechanism to track DDL operations used in recovery. The SLOG is only used while the transaction active. Two scenarios can cause the SLOG to take up more space:
+- Avoid large transactions with data definition changes or DDL operations. ADR uses a SLOG (system log stream) mechanism to track DDL operations used in recovery. The SLOG is only used while the transaction active. SLOG is checkpointed, so avoiding large transactions that use SLOG can help overall performance. These scenarios can cause the SLOG to take up more space:
 
-    - Many DDLs are executed in one transaction. For example, in one transaction, rapidly creating and dropping temp tables. 
-    
-    - A table has very large number of partitions/indexes <!TODO>. For example, a drop table operation on such table would require a large reservation of SLOG memory. The workaround can be drop the indexes individually and gradually, then drop the table. 
-    
-    SLOG is checkpointed, so avoiding large transactions that use SLOG can help overall performance. 
+   - Many DDLs are executed in one transaction. For example, in one transaction, rapidly creating and dropping temp tables. 
+
+   - A table has very large number of partitions/indexes that are modified. For example, a DROP TABLE operation on such table would require a large reservation of SLOG memory, which would delay truncation of the transaction log and delay undo/redo operations. The workaround can be drop the indexes individually and gradually, then drop the table. For more information on the SLOG, see [ADR recovery components](accelerated-database-recovery-concepts.md#adr-recovery-components).
 
 - Prevent or reduce unnecessary aborted situations. A high abort rate will put pressure on the PVS cleaner and lower ADR performance. The aborts may come from a high rate of deadlocks, duplicate keys, or other constraint violations.  
 

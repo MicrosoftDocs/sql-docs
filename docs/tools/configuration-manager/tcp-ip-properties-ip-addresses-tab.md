@@ -16,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # TCP/IP Properties (IP Addresses Tab)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   Use the **TCP/IP Properties (IP Addresses Tab)** dialog box to configure the TCP/IP protocol options for a specific IP address. Only **TCP Dynamic Ports** and **TCP Port** can be configured for all addresses at once by selecting **IP All**.  
   
  Changes take effect when SQL Server SQL Server is restarted. For information about starting and stopping the SQL Server Browser service, see [Start and Stop the SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  

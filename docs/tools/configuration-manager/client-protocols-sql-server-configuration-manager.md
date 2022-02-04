@@ -14,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 # Client Protocols (SQL Server Configuration Manager)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   To configure the order that protocols are used by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients on this computer, right-click **ClientProtocols** in the console pane, and then click **Properties**, or right-click the a protocol in the details pane, and then click **Order**.  
   
  To configure the properties of the client protocols used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients on this computer, in the console pane click **ClientProtocols**, in the details pane right-click the desired protocol, and then click **Properties**.  

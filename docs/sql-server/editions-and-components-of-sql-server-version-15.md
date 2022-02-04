@@ -39,12 +39,14 @@ monikerRange: ">= sql-server-ver15"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/applies-to-version/sqlserver.md)]
 
-This topic provides details of features supported by the various editions of [!INCLUDE[sssql19-md](../includes/sssql19-md.md)].
+This article provides details of features supported by the various editions of [!INCLUDE[sssql19-md](../includes/sssql19-md.md)].
 
 For information about older versions, see:
 
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md)
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md)
+
+For information about Azure SQL, see [Features comparison: Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/features-comparison)
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

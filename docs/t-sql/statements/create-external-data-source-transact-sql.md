@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 1/7/2022
+ms.date: 1/27/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -24,14 +24,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)] ([!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]), or Azure SQL Edge.
+Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)] ([!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]), or Azure SQL Edge.
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
 <!-- In addition to moniker ranges for SQL Server, SQL DB, APS, Synapse, and SQL MI, 
-     this article has version moniker rangers for SQL Server 2016, 2017, and 2019 due to the syntax differences between each. 
+     this article has version moniker ranges for SQL Server 2016, 2017, and 2019 due to the syntax differences between each. 
      Use of the version selector above the TOC is important for this document.-->
 <!-- At this time the Azure SQL Edge moniker azuresqledge-current is not functional in sql-docs. 
      Per PMs, we have added Azure SQL Edge content to Azure SQL DB range. -->
@@ -44,6 +44,9 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
     :::column-end:::
     :::column:::
         [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Managed<BR>Instance](create-external-data-source-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
@@ -790,6 +793,18 @@ WITH
   ) ;
 ```
 
+Optionally, the external data source to Oracle can use proxy authentication to provide fine grain access control. A proxy user can be configured to have limited access compared to the user being impersonated.
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL [OracleProxyCredential]
+WITH IDENTITY = 'oracle_username', SECRET = 'oracle_password';
+
+CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
+WITH (LOCATION = 'oracle://145.145.145.145:1521',
+CONNECTION_OPTIONS = 'ImpersonateUser=%CURRENT_USER',
+CREDENTIAL = [OracleProxyCredential]);
+```
+
 For additional examples to other data sources such as MongoDB, see [Configure PolyBase to access external data in MongoDB][mongodb_pb].
 
 ### B. Create external data source to reference Hadoop
@@ -989,6 +1004,9 @@ WITH
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Managed<BR>Instance](create-external-data-source-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
@@ -1258,6 +1276,9 @@ go
     :::column-end:::
     :::column:::
         [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
+        [SQL Managed<BR>Instance](create-external-data-source-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -1532,6 +1553,9 @@ WITH
         [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
+        [SQL Managed<BR>Instance](create-external-data-source-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+    :::column-end:::
+    :::column:::
         [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
@@ -1773,7 +1797,6 @@ WITH
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
-
 ::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
@@ -1784,6 +1807,9 @@ WITH
         [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
+        **_\* SQL Managed Instance \*_** &nbsp;
+    :::column-end:::
+    :::column:::
         [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
@@ -1791,9 +1817,133 @@ WITH
     :::column-end:::
 :::row-end:::
 
+## Overview: Azure SQL Managed Instance
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE[asdbmi](../../includes/applies-to-version/_asdbmi.md)]
+
+Creates an external data source [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. 
 
 > [!NOTE]
 > Some functionality of the PolyBase feature is in private preview for **Azure SQL managed instances**, including the ability to query external data (Parquet files) in Azure Data Lake Storage (ADLS) Gen2. Private preview includes access to client libraries and documentation for testing purposes that are not yet available publicly. If you are interested and ready to invest some time in trying out the functionalities and sharing your feedback and questions, please review the [Azure SQL Managed Instance PolyBase Private Preview Guide](https://sqlmipg.blob.core.windows.net/azsqlpolybaseshare/Azure_SQL_Managed_Instance_Polybase_Private_Preview_Onboarding_Guide.pdf).
 
+In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], external data sources are used to establish connectivity and support:
+
+- Bulk load operations using `BULK INSERT` or `OPENROWSET`
+
+## <a id="syntax"></a> Syntax
+
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+
+```syntaxsql
+CREATE EXTERNAL DATA SOURCE <data_source_name>
+WITH
+  ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
+    [ [ , ] CREDENTIAL = <credential_name> ]
+    [ [ , ] TYPE = { BLOB_STORAGE } ]
+  )
+[ ; ]
+```
+
+## Arguments
+
+#### data_source_name
+
+Specifies the user-defined name for the data source. The name must be unique within the database in SQL Database.
+
+#### LOCATION = *`'<prefix>://<path[:port]>'`*
+
+Provides the connectivity protocol and path to the external data source.
+
+| External Data Source   | Location prefix | Location path                                         | Availability | 
+| ---------------------- | --------------- | ----------------------------------------------------- | ------------ |
+| Bulk Operations        | `https`         | `<storage_account>.blob.core.windows.net/<container>` | |
+||||
+
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
+
+#### CREDENTIAL = *credential_name*
+
+Specifies a database-scoped credential for authenticating to the external data source.
+
+Additional notes and guidance when creating a credential:
+
+- To load data from Azure Storage into [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], use a Shared Access Signature (SAS token).
+- `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
+- When the `TYPE` = `BLOB_STORAGE`, the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. Furthermore, the SAS token should be configured as follows:
+  - Exclude the leading `?` when configured as the secret
+  - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
+  - Use a valid expiration period (all dates are in UTC time).
+  - `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
+-  Note that when connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
+
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL MI](#a-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
+
+To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
+
+#### TYPE = *[ BLOB_STORAGE ]*
+
+Specifies the type of the external data source being configured. This parameter isn't always required.
+
+- Use `BLOB_STORAGE` when executing bulk operations with [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset]. 
+
+## Permissions
+
+Requires `CONTROL` permission on database in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+
+## Locking
+
+Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
+
+## Examples: Bulk Operations
+
+> [!IMPORTANT]
+> Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
+
+### A. Create an external data source for bulk operations retrieving data from Azure Storage
+
+Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
+WITH
+  IDENTITY = 'SHARED ACCESS SIGNATURE',
+  -- Remove ? from the beginning of the SAS token
+  SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************' ;
+
+CREATE EXTERNAL DATA SOURCE MyAzureInvoices
+WITH
+  ( LOCATION = 'https://newinvoices.blob.core.windows.net/week3' ,
+    CREDENTIAL = AccessAzureInvoices ,
+    TYPE = BLOB_STORAGE
+  ) ;
+```
+
+To see this example in use, see [BULK INSERT][bulk_insert_example].
+
+## See also
+
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
+- [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
+- [sys.external_data_sources (Transact-SQL)][cat_eds]
+- [Using Shared Access Signatures (SAS)][sas_token]
+
+<!-- links to external pages -->
+<!-- SQL Docs -->
+[bulk_insert]: ./bulk-insert-transact-sql.md
+[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage
+[openrowset]: ../functions/openrowset-transact-sql.md
+[create_dsc]: ./create-database-scoped-credential-transact-sql.md
+[create_etb]: /sql/t-sql/statements/create-external-data-source
+[alter_eds]: ./alter-external-data-source-transact-sql.md
+[cat_eds]: ../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md
+<!-- PolyBase docs -->
+[intro_pb]: ../../relational-databases/polybase/polybase-guide.md
+[mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
+[connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
+[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
+[hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
+
+<!-- Azure Docs -->
+[azure_ad]: /azure/data-lake-store/data-lake-store-authenticate-using-active-directory
+[sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end

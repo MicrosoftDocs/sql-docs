@@ -1,5 +1,5 @@
 ---
-title: Azure Arc extension (preview)
+title: Azure Arc extension
 description: Learn how to install and use the Azure Arc extension to try out Azure Arc data services.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -11,9 +11,9 @@ ms.custom:
 ms.date: 08/02/2021
 ---
 
-# Azure Arc extension for Azure Data Studio (Preview)
+# Azure Arc extension for Azure Data Studio
 
-The [Azure Arc extension (preview)](/azure/azure-arc/data/) is an extension for creating and managing Azure Arc data services resources.
+The [Azure Arc extension](/azure/azure-arc/data/) is an extension for creating and managing Azure Arc data services resources.
 
 **Key actions include:**
 - Create a resource
@@ -46,7 +46,7 @@ The [Azure Arc extension (preview)](/azure/azure-arc/data/) is an extension for 
 
 ## Create a resource
 
-This extension supports deployment of Azure Arc data controllers, Postgres for Azure Arc, and SQL Managed Instance for Azure Arc. Deployments can be done through the built-in Deployment wizard.
+This extension supports deployment of Azure Arc data controllers, PostgreSQL for Azure Arc, and SQL Managed Instance for Azure Arc. Deployments can be done through the built-in Deployment wizard.
 
 1. Select Connections viewlet on left Activity Bar
 1. Select the three dots and select **New Deployment**

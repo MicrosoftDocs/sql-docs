@@ -3,13 +3,13 @@ title: "Deploy Host Guardian Service"
 description: "Deploy the Host Guardian Service for Always Encrypted with Secure Enclaves."
 ms.custom:
   - intro-deployment
-ms.date: "01/15/2021"
+ms.date: "01/13/2022"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
-author: rpsqrd
-ms.author: ryanpu
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -29,7 +29,7 @@ The Host Guardian Service (HGS) runs as a clustered service on one or more compu
 In this step, you will set up a new HGS cluster on the first computer.
 If you already have an HGS cluster and are adding additional computers to it for high availability, skip to [Step 2: Add more HGS computers to the cluster](#step-2-add-more-hgs-computers-to-the-cluster).
 
-Before you start, ensure the computer you're using is running Windows Server 2019 Standard or Datacenter edition, you have local administrator privileges, and the computer is not already joined to an Active Directory domain.
+Before you start, ensure the computer you're using is running Windows Server 2019 or later - Standard or Datacenter edition, you have local administrator privileges, and the computer is not already joined to an Active Directory domain.
 
 1. Sign in to the first HGS computer as a local administrator and open an elevated Windows PowerShell console. Run the following command to install the Host Guardian Service role. The computer will automatically restart to apply the changes.
 
@@ -67,7 +67,7 @@ Before you start, ensure the computer you're using is running Windows Server 201
 Once your first HGS computer and cluster is set up, you can add additional HGS servers to provide high availability.
 If you are only setting up one HGS server (in a dev/test environment, for example), you can skip to Step 3.
 
-As with the first HGS computer, ensure the computer you're joining to the cluster is running Windows Server 2019 Standard or Datacenter edition, you have local administrator privileges, and the computer is not already joined to an Active Directory domain.
+As with the first HGS computer, ensure the computer you're joining to the cluster is running Windows Server 2019 or later - Standard or Datacenter edition, you have local administrator privileges, and the computer is not already joined to an Active Directory domain.
 
 1. Sign in to the computer as a local administrator and open an elevated Windows PowerShell console. Run the following command to install the Host Guardian Service role. The computer will restart automatically to apply the changes.
 

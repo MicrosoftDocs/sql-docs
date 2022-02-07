@@ -1,19 +1,18 @@
 ---
-description: "Clustered and nonclustered indexes described"
 title: "Clustered and nonclustered indexes described"
-ms.custom: ""
-ms.date: 10/25/2021
+description: "Clustered and nonclustered indexes described"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query optimizer [SQL Server], index usage"
   - "index concepts [SQL Server]"
-ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom: FY22Q2Fresh
+ms.date: 10/25/2021
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Clustered and nonclustered indexes described
@@ -21,6 +20,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 An index is an on-disk structure associated with a table or view that speeds retrieval of rows from the table or view. An index contains keys built from one or more columns in the table or view. These keys are stored in a structure (B-tree) that enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to find the row or rows associated with the key values quickly and efficiently.
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
 A table or view can contain the following types of indexes:
 

@@ -14,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Browser Properties (Service Tab)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser program runs as a service on the server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser listens for incoming requests for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources and provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances installed on the computer.  
   
  Use the **Service** tab on the **SQL Server Browser Properties** dialog box to view the following options. All properties except **Start Mode** are read-only.  

@@ -147,7 +147,7 @@ The following are examples of **float** or **real** values:
 ```  
   
 ## money constants
-**money** constants are represented as string of numbers with an optional decimal point and an optional currency symbol as a prefix. **money** constantsare not enclosed in quotation marks.
+**money** constants are represented as string of numbers with an optional decimal point and an optional currency symbol as a prefix. **money** constants are not enclosed in quotation marks.
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not enforce any kind of grouping rules such as inserting a comma (,) every three digits in strings that represent money.
   
@@ -159,6 +159,7 @@ The following are examples of **money** constants:
 ```
 $12  
 $542023.14  
+$-23  
 ```  
   
 ## uniqueidentifier constants

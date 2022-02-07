@@ -183,6 +183,8 @@ The following table lists the memory clerk types:
 |USERSTORE_SXC     |    This user store is used for allocations to store all [RPC](/openspecs/windows_protocols/ms-tds/619c43b6-9495-4a58-9e49-a4950db245b3) parameters.     |
 |USERSTORE_TOKENPERM     |    TokenAndPermUserStore is a single SOS user store that keeps track of security entries for security context, login, user, permission, and audit. Multiple hash tables are allocated to store these objects.    |
 
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+
 ## See Also  
 
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   

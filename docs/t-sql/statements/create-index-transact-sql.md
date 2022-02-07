@@ -61,10 +61,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Creates a relational index on a table or view. Also called a rowstore index because it is either a clustered or nonclustered B-tree index. You can create a rowstore index before there is data in the table. Use a rowstore index to improve query performance, especially when the queries select from specific columns or require values to be sorted in a particular order.
 
-> [!NOTE]
-> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] currently do not support Unique constraints. Any examples referencing Unique Constraints are only applicable to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
-> [!TIP]
-> For information on index design guidelines, refer to the [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md).
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] currently do not support unique constraints. Any examples referencing unique constraints are only applicable to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+
+For information on index design guidelines, refer to the [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md).
 
  **Simple examples:**
 
@@ -393,7 +394,7 @@ For more information, see [Specify Fill Factor for an Index](../../relational-da
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Specifies whether to store temporary sort results in **tempdb**. The default is OFF except for Azure SQL Database Hyperscale.For all index build operations in Hyperscale, `SORT_IN_TEMPDB` is always ON, regardless of the option specified unless resumable index rebuild is used.
+Specifies whether to store temporary sort results in **tempdb**. The default is OFF except for Azure SQL Database Hyperscale. For all index build operations in Hyperscale, `SORT_IN_TEMPDB` is always ON, regardless of the option specified unless resumable index rebuild is used.
 
 ON      
 The intermediate sort results that are used to build the index are stored in **tempdb**. This may reduce the time required to create an index if **tempdb** is on a different set of disks than the user database. However, this increases the amount of disk space that is used during the index build.
@@ -841,6 +842,8 @@ When `ALLOW_ROW_LOCKS = OFF` and `ALLOW_PAGE_LOCK = OFF`, only a table-level loc
 Last-page insert contention is a common performance problem that occurs when a large number of concurrent threads attempt to insert rows into an index with a sequential key. An index is considered sequential when the leading key column contains values that are always increasing (or decreasing), such as an identity column or a date that defaults to the current date/time. Because the keys being inserted are sequential, all new rows will be inserted at the end of the index structure - in other words, on the same page. This leads to contention for the page in memory which can be observed as several threads waiting on PAGELATCH_EX for the page in question.
 
 Enabling the `OPTIMIZE_FOR_SEQUENTIAL_KEY` index option enables an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. It is intended for indexes that have a sequential key and thus are prone to last-page insert contention, but it may also help with indexes that have hot spots in other areas of the B-Tree index structure.
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
 ## Viewing Index Information
 To return information about indexes, you can use catalog views, system functions, and system stored procedures.

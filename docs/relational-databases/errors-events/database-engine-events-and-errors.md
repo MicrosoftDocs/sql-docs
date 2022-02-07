@@ -459,7 +459,7 @@ ORDER BY message_id
 |    [605](mssqlserver-605-database-engine-error.md)    |    21    |    Yes    |    Attempt to fetch logical page %S_PGID in database %d failed. It belongs to allocation unit %I64d not to %I64d.    |
 |    606    |    21    |    Yes    |    Metadata inconsistency. Filegroup id %ld specified for table '%.*ls' does not exist. Run DBCC CHECKDB or CHECKCATALOG.    |
 |    608    |    16    |    Yes    |    No catalog entry found for partition ID %I64d in database %d. The metadata is inconsistent. Run DBCC CHECKDB to check for a metadata corruption.    |
-|    609    |    16    |    No    |    BTree is not empty when waking up on RowsetBulk.    |
+|    609    |    16    |    No    |    B+ tree is not empty when waking up on RowsetBulk.    |
 |    610    |    16    |    Yes    |    Invalid header value from a page. Run DBCC CHECKDB to check for a data corruption.    |
 |    [611](mssqlserver-611-database-engine-error.md)    |    16    |    No    |    Cannot insert or update a row because total variable column size, including overhead, is %d bytes more than the limit.    |
 |    613    |    21    |    No    |    Could not find an entry for worktable rowset with partition ID %I64d in database %d.    |

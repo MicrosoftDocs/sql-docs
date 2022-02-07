@@ -35,6 +35,8 @@ The following table lists the types of indexes available in [!INCLUDE[ssNoVersio
 |Spatial|A spatial index provides the ability to perform certain operations more efficiently on spatial objects (*spatial data*) in a column of the **geometry** data type. The spatial index reduces the number of objects on which relatively costly spatial operations need to be applied.|[Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)|  
 |XML|A shredded, and persisted, representation of the XML binary large objects (BLOBs) in the **xml** data type column.|[XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)|  
 |Full-text|A special type of token-based functional index that is built and maintained by the Microsoft Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It provides efficient support for sophisticated word searches in character string data.|[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)|  
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
   
 ## Related Content  
  [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)      

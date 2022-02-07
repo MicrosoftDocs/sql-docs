@@ -3,9 +3,8 @@
 # required metadata
 title: "Deploy & manage Machine Learning Server web services in Python"
 description: "This class is for SQL Machine Learning Services and Machine Learning Server for managing web services."
-author: "garyericson"
-ms.author: "garye"
-manager: "cgronlun"
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 ms.date: 2/16/2018
 ms.topic: "reference"
 ms.prod: "sql"

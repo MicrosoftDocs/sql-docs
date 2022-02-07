@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ---
-# Azure Key Vault sample 7.0, 8.0
+# Azure Key Vault sample versions 7.0, 8.0
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

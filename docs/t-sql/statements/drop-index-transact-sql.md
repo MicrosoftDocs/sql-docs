@@ -216,6 +216,8 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
 ## Remarks  
  When a nonclustered index is dropped, the index definition is removed from metadata and the index data pages (the B-tree) are removed from the database files. When a clustered index is dropped, the index definition is removed from metadata and the data rows that were stored in the leaf level of the clustered index are stored in the resulting unordered table, a heap. All the space previously occupied by the index is regained. This space can then be used for any database object.  
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
   
  An index cannot be dropped if the filegroup in which it is located is offline or set to read-only.  
   

@@ -1,19 +1,19 @@
 ---
-description: "Lesson 1: Connecting to the Database Engine"
 title: "Lesson 1: Connecting to the Database Engine"
-ms.custom:
-  - intro-quickstart
-ms.date: "12/16/2021"
+description: "Lesson 1: Connecting to the Database Engine"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: quickstart
-ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
+ms.reviewer: ""
+ms.custom: intro-quickstart, FY22Q2Fresh
+ms.date: "12/16/2021"
 ---
+
 # Lesson 1: Connecting to the Database Engine
+
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 When you install the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], the tools that are installed depend upon the edition and your setup choices. This lesson reviews the principal tools, and shows you how to connect and perform a basic function (authorizing more users).  

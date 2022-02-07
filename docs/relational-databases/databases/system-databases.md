@@ -1,11 +1,8 @@
 ---
-description: "System Databases"
-title: "System Databases | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/28/2019"
+title: System Databases
+description: System Databases
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,15 +10,19 @@ helpviewer_keywords:
   - "displaying system database data"
   - "modifying system data"
   - "viewing system database data"
-ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "01/28/2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # System Databases
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the following system databases.  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the following system databases.  
   
 |System database|Description|  
 |---------------------|-----------------|  
@@ -35,41 +36,45 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 > For Azure SQL Database single databases and elastic pools, only master Database and tempdb Database apply. For more information, see [What is an Azure SQL Database server](/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). For a discussion of tempdb in the context of Azure SQL Database, see [tempdb Database in Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database). For Azure SQL Managed Instance, all system databases apply. For more information on Managed Instances in Azure SQL Database, see [What is a Managed Instance](/azure/sql-database/sql-database-managed-instance)
   
 ## Modifying System Data  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support users directly updating the information in system objects such as system tables, system stored procedures, and catalog views. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a complete set of administrative tools that let users fully administer their system and manage all users and objects in a database. These include the following:  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support users directly updating the information in system objects such as system tables, system stored procedures, and catalog views. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a complete set of administrative tools that let users fully administer their system and manage all users and objects in a database. These include the following:  
   
--   Administration utilities, such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+- Administration utilities, such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   SQL-SMO API. This lets programmers include complete functionality for administering [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in their applications.  
+- SQL-SMO API. This lets programmers include complete functionality for administering [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in their applications.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts and stored procedures. These can use system stored procedures and [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statements.  
+- [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts and stored procedures. These can use system stored procedures and [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statements.  
   
- These tools shield applications from changes in the system objects. For example, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sometimes has to change the system tables in new versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to support new functionality that is being added in that version. Applications issuing SELECT statements that directly reference system tables are frequently dependent on the old format of the system tables. Sites may not be able to upgrade to a new version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] until they have rewritten applications that are selecting from system tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers the system stored procedures, DDL, and SQL-SMO published interfaces, and works to maintain the backward compatibility of these interfaces.  
+These tools shield applications from changes in the system objects. For example, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sometimes has to change the system tables in new versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to support new functionality that is being added in that version. Applications issuing SELECT statements that directly reference system tables are frequently dependent on the old format of the system tables. Sites may not be able to upgrade to a new version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] until they have rewritten applications that are selecting from system tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers the system stored procedures, DDL, and SQL-SMO published interfaces, and works to maintain the backward compatibility of these interfaces.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support triggers defined on the system tables, because they might modify the operation of the system.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support triggers defined on the system tables, because they might modify the operation of the system.  
   
 > [!NOTE]  
->  System databases cannot reside on UNC share directories.  
+> System databases cannot reside on UNC share directories.  
   
 ## Viewing System Database Data  
- You should not code [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that directly query the system tables, unless that is the only way to obtain the information that is required by the application. Instead, applications should obtain catalog and system information by using the following:  
+
+You should not code [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that directly query the system tables, unless that is the only way to obtain the information that is required by the application. Instead, applications should obtain catalog and system information by using the following:  
   
--   System catalog views  
+- System catalog views  
   
--   SQL-SMO  
+- SQL-SMO  
   
--   Windows Management Instrumentation (WMI) interface  
+- Windows Management Instrumentation (WMI) interface  
   
--   Catalog functions, methods, attributes, or properties of the data API used in the application, such as ADO, OLE DB, or ODBC.  
+- Catalog functions, methods, attributes, or properties of the data API used in the application, such as ADO, OLE DB, or ODBC.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] system stored procedures and built-in functions.  
+- [!INCLUDE[tsql](../../includes/tsql-md.md)] system stored procedures and built-in functions.  
   
 ## Related Tasks  
- [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
+
+- [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [Hide System Objects in Object Explorer](../../ssms/object/hide-system-objects-in-object-explorer.md)  
+- [Hide System Objects in Object Explorer](../../ssms/object/hide-system-objects-in-object-explorer.md)  
   
 ## Related Content  
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
+
+- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
- [Databases](../../relational-databases/databases/databases.md)  
+- [Databases](../../relational-databases/databases/databases.md)  
   

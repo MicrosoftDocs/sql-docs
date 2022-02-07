@@ -14,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 # Report Server Properties (Advanced Tab)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   This service is the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. If custom properties are defined, they appear on this tab, with their values.  
   
 ## Options  

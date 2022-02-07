@@ -2,7 +2,7 @@
 title: Improving performance and reliability
 description: Learn about various techniques for improving application performance and reliability when using the Microsoft JDBC driver for SQL Server.
 ms.custom: ""
-ms.date: 07/31/2020
+ms.date: 01/12/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -13,11 +13,11 @@ author: David-Engel
 ms.author: v-davidengel
 ---
 
-# Improving performance and reliability with the JDBC driver
+# Improving performance and reliability (JDBC)
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-One aspect of application development that is common to all applications is the constant need to improve performance and reliability. There are a number of techniques for doing this with the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+One aspect of application development that is common to all applications is the constant need to improve performance and reliability. There are many techniques to satisfy this need with the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
 The articles in this section describe various techniques for improving application performance and reliability when using the JDBC driver.
 
@@ -25,7 +25,7 @@ The articles in this section describe various techniques for improving applicati
 
 |Article|Description|
 |-----------|-----------------|
-|[Closing objects when not in use](closing-objects-when-not-in-use.md)|Describes the importance of closing JDBC driver objects when they are no longer needed.|
+|[Closing objects when not in use](closing-objects-when-not-in-use.md)|Describes the importance of closing JDBC driver objects when they're no longer needed.|
 |[Managing transaction size](managing-transaction-size.md)|Describes techniques for improving transaction performance.|
 |[Working with statements and result sets](working-with-statements-and-result-sets.md)|Describes techniques for improving performance when using the Statement or ResultSet objects.|
 |[Using adaptive buffering](using-adaptive-buffering.md)|Describes an adaptive buffering feature, which is designed to retrieve any kind of large-value data without the overhead of server cursors.|

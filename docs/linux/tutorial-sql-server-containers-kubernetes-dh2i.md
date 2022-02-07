@@ -106,7 +106,7 @@ $docker push <registry-name>.azurecr.io/sqlimage:latest
 
 This ensures that the custom image has been pushed to Azure Container Registry (ACR) and that you can now integrate your Azure Kubernetes Service (AKS) with ACR by running the following command. For more information, see this [Integrate ACR with an AKS cluster](/azure/aks/cluster-container-registry-integration).
 
-```bash
+```azurecli
 az aks update -n myAKSCluster -g <myResourceGroup> --attach-acr <registry-name>
 ```
 

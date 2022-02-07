@@ -1,8 +1,8 @@
 ---
-title: Connecting to an Azure SQL database
-description: This article discusses issues when using the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database.
+title: Connect to an Azure SQL database
+description: This article discusses issues when you use the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database.
 ms.custom: ""
-ms.date: 12/18/2020
+ms.date: 01/31/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -12,38 +12,38 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-davidengel
 ---
-# Connecting to an Azure SQL database
+# Connect to an Azure SQL database
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This article discusses issues when using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. For more information about connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], see:  
+This article discusses issues when you use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. For more information to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], see:  
   
 - [Azure SQL Database](/azure/sql-database/sql-database-technical-overview)  
   
 - [How to: Connect to Azure SQL Using JDBC](/azure/sql-database/sql-database-connect-query-java)  
 
-- [Connecting using Azure Active Directory Authentication](connecting-using-azure-active-directory-authentication.md)  
+- [Connect using Azure Active Directory Authentication](connecting-using-azure-active-directory-authentication.md)  
   
 ## Details
 
-When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
+To connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Refer to the discussion of permissions in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## Connections dropped
 
-When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle connections may be terminated by a network component (such as a firewall) after a period of inactivity. There are two types of idle connections, in this context:  
+When you connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle connections may be terminated by a network component (such as a firewall) after a period of inactivity. There are two types of idle connections, in this context:  
 
 - Idle at the TCP layer, where connections can be dropped by any number of network devices.  
 
-- Idle by the Azure SQL Gateway, where TCP **keepalive** messages might be occurring (making the connection not idle from a TCP perspective), but not had an active query in 30 minutes. In this scenario, the Gateway will determine that the TDS connection is idle at 30 minutes and terminate the connection.  
+- Idle by the Azure SQL Gateway, where TCP **keepalive** messages might be occurring (which makes the connection not idle from a TCP perspective), but not had an active query in 30 minutes. In this scenario, the Gateway will determine that the TDS connection is idle at 30 minutes and terminates the connection.  
   
 To address the second point and avoid the Gateway terminating idle connections, you can:
 
-* Use the **Redirect** [connection policy](/azure/azure-sql/database/connectivity-architecture#connection-policy) when configuring your Azure SQL data source.
+- Use the **Redirect** [connection policy](/azure/azure-sql/database/connectivity-architecture#connection-policy) to configure your Azure SQL data source.
 
-* Keep connections active via lightweight activity. This method is not recommended and should only be used if there are no other possible options.
+- Keep connections active via lightweight activity. This method isn’t recommended and should only be used if there are no other possible options.
 
-To address the first point and avoid dropping idle connections by a network component, the following registry settings (or their non-Windows equivalents) should be set on the operating system where the driver is loaded:  
+To address the first point and avoid dropping idle connections by a network component, set the following registry settings or their non-Windows equivalents on the operating system where the driver is loaded:  
   
 |Registry Setting|Recommended Value|  
 |----------------------|-----------------------|  
@@ -53,13 +53,12 @@ To address the first point and avoid dropping idle connections by a network comp
   
 Restart the computer for the registry settings to take effect.  
 
-The KeepAliveTime and KeepAliveInterval values are in milliseconds. These settings will have the effect of disconnecting an unresponsive connection within 10 to 40 seconds. After a keep alive packet is sent, if no response is received, it will be retried every second up to 10 times. If no response is received during that time, the client-side socket is disconnected. Depending on your environment, you may want to increase the KeepAliveInterval to accommodate known disruptions (like virtual machine migrations) that might cause a server to be unresponsive for longer than 10 seconds.
+The KeepAliveTime and KeepAliveInterval values are in milliseconds. These settings cause an unresponsive connection to disconnect within 10 to 40 seconds. If no response is received after a keep alive packet is sent, it will be retried every second up to 10 times. If no response is received during that time, the client-side socket is disconnected. Depending on your environment, you might want to increase the KeepAliveInterval to accommodate known disruptions (for example, virtual machine migrations), that might cause a server to be unresponsive for longer than 10 seconds.
 
 > [!NOTE]
-> TcpMaxDataRetransmissions is not controllable on Windows Vista or Windows 2008 and higher.
+> TcpMaxDataRetransmissions isn't controllable on Windows Vista or Windows 2008 and higher.
 
-To perform this configuration when running in Azure, create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
-
+To configure this in an Azure VM, create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
 
 ```xml
 <Startup>  
@@ -81,13 +80,13 @@ shutdown /r /t 1
 :done  
 ```
 
-## Appending the server name to the userId in the connection string  
+## Append the server name to the userId in the connection string  
 
-Prior to the 4.0 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], when connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you were required to append the server name to the UserId in the connection string. For example, user@servername. Beginning in version 4.0 of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], it's no longer necessary to append @servername to the UserId in the connection string.  
+Prior to the 4.0 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you were required to append the server name to the UserId in the connection string. For example, user@servername. Beginning in version 4.0 of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], it's no longer necessary to append @servername to the UserId in the connection string.  
 
 ## Using encryption requires setting hostNameInCertificate
 
-Prior to the 7.2 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], when connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should specify **hostNameInCertificate** if you specify **encrypt=true** (If the server name in the connection string is *shortName*.*domainName*, set the **hostNameInCertificate** property to \*.*domainName*.). This property is optional as of version 7.2 of the driver.
+Prior to the 7.2 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should specify **hostNameInCertificate** if you specify **encrypt=true** (If the server name in the connection string is *shortName*.*domainName*, set the **hostNameInCertificate** property to \*.*domainName*.). This property is optional as of version 7.2 of the driver.
 
 For example:
 

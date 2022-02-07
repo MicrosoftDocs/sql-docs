@@ -2,7 +2,7 @@
 title: Statistics
 description: The Query Optimizer uses statistics to create query plans that improve query performance. Learn about concepts and guidelines for using query optimization.
 ms.custom: ""
-ms.date: "1/26/2022"
+ms.date: "2/07/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
@@ -32,7 +32,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The Query Optimizer uses statistics to create query plans that improve query performance. For most queries, the Query Optimizer already generates the necessary statistics for a high-quality query plan; in some cases, you need to create additional statistics or modify the query design for best results. This article discusses statistics concepts and provides guidelines for using query optimization statistics effectively.  
   
-##  <a name="DefinitionQOStatistics"></a> Components and Concepts  
+##  <a name="DefinitionQOStatistics"></a> Components and concepts  
+
 ### Statistics  
  Statistics for query optimization are binary large objects (BLOBs) that contain statistical information about the distribution of values in one or more columns of a table or indexed view. The Query Optimizer uses these statistics to estimate the *cardinality*, or number of rows, in the query result. These *cardinality estimates* enable the Query Optimizer to create a high-quality query plan. For example, depending on your predicates, the Query Optimizer could use cardinality estimates to choose the index seek operator instead of the more resource-intensive index scan operator, if doing so improves query performance.  
   
@@ -104,7 +105,7 @@ ORDER BY s.name;
   
 ### AUTO_UPDATE_STATISTICS Option  
  When the automatic update statistics option, [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) is ON, the Query Optimizer determines when statistics might be out-of-date and then updates them when they are used by a query. This action is also known as statistics recompilation. Statistics become out-of-date after modifications from insert, update, delete, or merge operations change the data distribution in the table or indexed view. The Query Optimizer determines when statistics might be out-of-date by counting the number of row modifications since the last statistics update and comparing the number of row modifications to a threshold. The threshold is based on the table cardinality, which can be defined as the number of rows in the table or indexed view.  
-  
+ 
 - Up to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] uses a recompilation threshold based on the number of rows in the table or indexed view at the time statistics were evaluated. The threshold is different whether a table is temporary or permanent.
 
   |Table type|Table cardinality (*n*)|Recompilation threshold (# modifications)|
@@ -132,15 +133,16 @@ ORDER BY s.name;
 
 While recommended for all scenarios, enabling the trace flag is optional. However, you can use the following guidance for enabling the trace flag 2371 in your pre-[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] environment:
 
- - If you are on an SAP system, enable this trace flag. Refer to this [blog](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371) for additional information.
+ - If you are on an SAP system, enable this trace. For more information, see this [blog on trace flag 2371](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
  - If you have to rely on nightly job to update statistics because current automatic update isn't triggered frequently enough, consider enabling trace flag 2371 to adjust the threshold to table cardinality.
- - AUTO_UPDATE_STATISTICS is always OFF for memory-optimized tables.
   
 The Query Optimizer checks for out-of-date statistics before compiling a query and before executing a cached query plan. Before compiling a query, the Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.  
   
 The AUTO_UPDATE_STATISTICS option applies to statistics objects created for indexes, single-columns in query predicates, and statistics created with the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement. This option also applies to filtered statistics.  
  
 You can use the [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) to accurately track the number of rows changed in a table and decide if you wish to update statistics manually.
+
+AUTO_UPDATE_STATISTICS is always OFF for memory-optimized tables.
 
 ### AUTO_UPDATE_STATISTICS_ASYNC  
 The asynchronous statistics update option, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determines whether the Query Optimizer uses synchronous or asynchronous statistics updates. By default, the asynchronous statistics update option is OFF, and the Query Optimizer updates statistics synchronously. The AUTO_UPDATE_STATISTICS_ASYNC option applies to statistics objects created for indexes, single columns in query predicates, and statistics created with the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement.  
@@ -154,7 +156,7 @@ Statistics updates can be either synchronous (the default) or asynchronous.
 
 * With asynchronous statistics updates, queries compile with existing statistics even if the existing statistics are out-of-date. The Query Optimizer could choose a suboptimal query plan if statistics are out-of-date when the query compiles. Statistics are typically updated soon thereafter. Queries that compile after the stats updates complete will benefit from using the updated statistics.   
 
-Consider using synchronous statistics when you perform operations that change the distribution of data, such as truncating a table or performing a bulk update of a large percentage of the rows. If you do not manually update the statistics after completing the operation, using synchronous statistics will ensure statistics are up-to-date before executing queries on the changed data.  
+Consider using synchronous statistics when you perform operations that change the distribution of data, such as truncating a table or performing a bulk update of a large percentage of the rows. If you do not manually update the statistics after completing the operation, using synchronous statistics will ensure statistics are up-to-date before queries are executed on the changed data.  
   
 Consider using asynchronous statistics to achieve more predictable query response times for the following scenarios:  
   
@@ -180,7 +182,7 @@ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfu
   
  When new partitions are added to a large table, statistics should be updated to include the new partitions. However the time required to scan the entire table (FULLSCAN or SAMPLE option) might be quite long. Also, scanning the entire table isn't necessary because only the statistics on the new partitions might be needed. The incremental option creates and stores statistics on a per partition basis, and when updated, only refreshes statistics on those partitions that need new statistics  
   
- If per partition statistics are not supported the option is ignored and a warning is generated. Incremental stats are not supported for following statistics types:  
+ If per partition statistics are not supported, the option is ignored and a warning is generated. Incremental stats are not supported for following statistics types:  
   
 * Statistics created with indexes that are not partition-aligned with the base table.  
 * Statistics created on Always On readable secondary databases.  
@@ -269,27 +271,32 @@ Missing statistics are indicated as warnings (table name in red text) when the e
   
  If statistics are missing, perform the following steps:  
   
-* Verify that [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) and [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) are on.  
+* Verify that [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) and [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) are ON.  
 * Verify that the database is not read-only. If the database is read-only, a new statistics object cannot be saved.  
 * Create the missing statistics by using the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement.  
   
-When statistics on a read-only database or read-only snapshot are missing or stale, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates and maintains temporary statistics in **tempdb**. When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates temporary statistics, the statistics name is appended with the suffix *_readonly_database_statistic* to differentiate the temporary statistics from the permanent statistics. The suffix *_readonly_database_statistic* is reserved for statistics generated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scripts for the temporary statistics can be created and reproduced on a read-write database. When scripted, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] changes the suffix of the statistics name from *_readonly_database_statistic* to *_readonly_database_statistic_scripted*.  
+When statistics on a read-only database or read-only snapshot are missing or stale, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates and maintains temporary statistics in `tempdb`. When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates temporary statistics, the statistics name is appended with the suffix *_readonly_database_statistic* to differentiate the temporary statistics from the permanent statistics. The suffix *_readonly_database_statistic* is reserved for statistics generated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scripts for the temporary statistics can be created and reproduced on a read-write database. When scripted, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] changes the suffix of the statistics name from *_readonly_database_statistic* to *_readonly_database_statistic_scripted*.  
   
 Only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can create and update temporary statistics. However, you can delete temporary statistics and monitor statistics properties using the same tools that you use for permanent statistics:  
   
 * Delete temporary statistics using the [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) statement.  
-* Monitor statistics using the **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** and **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)** catalog views. **sys_stats** includes the **is_temporary** column, to indicate which statistics are permanent and which are temporary.  
+* Monitor statistics using the **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** and **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)** catalog views. The `sys.stats` system catalog view includes the `is_temporary` column, to indicate which statistics are permanent and which are temporary.  
   
- Because temporary statistics are stored in **tempdb**, a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service causes all temporary statistics to disappear.  
+ Because temporary statistics are stored in `tempdb`, a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service causes all temporary statistics to disappear.  
     
 ## <a name="UpdateStatistics"></a> When to update statistics  
  The Query Optimizer determines when statistics might be out-of-date and then updates them when they are needed for a query plan. In some cases, you can improve the query plan and therefore improve query performance by updating statistics more frequently than occur when [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) is on. You can update statistics with the UPDATE STATISTICS statement or the stored procedure `sp_updatestats`.  
   
- Updating statistics ensures that queries compile with up-to-date statistics. Updating statistics may cause query plans to recompile. We recommend not updating statistics too frequently because there is a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application.  
+ Updating statistics ensures that queries compile with up-to-date statistics. Updating statistics via any process may cause query plans to recompile automatically. We recommend not manually updating statistics too frequently because there is a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application.  
   
- When updating statistics with UPDATE STATISTICS or `sp_updatestats`, we recommend keeping AUTO_UPDATE_STATISTICS set to ON so that the Query Optimizer continues to routinely update statistics. For more information about how to update statistics on a column, an index, a table, or an indexed view, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md). For information about how to update statistics for all user-defined and internal tables in the database, see the stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).  
+ When updating statistics with UPDATE STATISTICS or `sp_updatestats`, we recommend keeping AUTO_UPDATE_STATISTICS set to ON so that the Query Optimizer routinely updates statistics. 
+     - For more information about how to update statistics on a column, an index, a table, or an indexed view, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md). 
+     - For information about how to update statistics for all user-defined and internal tables in the database, see the stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). 
+     - For more information on the thresholds for automatic statistics updates, see [AUTO_UPDATE_STATISTICS Option](#auto_update_statistics-option).
 
- When AUTO_UPDATE_STATISTICS is set to OFF, plan recompilation will not occur automatically, even if they are out of date. Statistics updates only occur via manually scheduled processes, such maintenance plans. Setting AUTO_UPDATE_STATISTICS to OFF can therefore cause suboptimal query plans and degraded query performance.
+ When AUTO_UPDATE_STATISTICS is set to OFF, plan recompilation can still occur for a variety of other reasons, but will not occur automatically due to out-of-date statistics updates. When AUTO_UPDATE_STATISTICS is set to OFF, statistics updates will only occur via other manually scheduled processes, such as maintenance plans. Setting AUTO_UPDATE_STATISTICS to OFF can therefore cause suboptimal query plans and degraded query performance. 
+
+### Detecting out-of-date statistics
 
  To determine when statistics were last updated, use the [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) or [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) functions.  
   
@@ -298,6 +305,8 @@ Only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can create and up
 * Query execution times are slow.  
 * Insert operations occur on ascending or descending key columns.  
 * After maintenance operations.  
+
+For examples update statistics manually, see [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md).
 
 ### Query execution times are slow  
  If query response times are slow or unpredictable, ensure that queries have up-to-date statistics before performing additional troubleshooting steps.  
@@ -393,7 +402,7 @@ To improve the cardinality estimates for variables and functions, follow these g
 ### Improving cardinality estimates with query hints  
  To improve cardinality estimates for local variables, you can use the `OPTIMIZE FOR <value>` or `OPTIMIZE FOR UNKNOWN` query hints with RECOMPILE. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
- For some applications, recompiling the query each time it executes might take too much time. The `OPTIMIZE FOR` query hint can help even if you don't use the `RECOMPILE` option. For example, you could add an `OPTIMIZE FOR` option to the stored procedure Sales.GetRecentSales to specify a specific date. The following example adds the `OPTIMIZE FOR` option to the Sales.GetRecentSales procedure.  
+ For some applications, recompiling the query each time it executes might take too much time. The `OPTIMIZE FOR` query hint can help even if you don't use the `RECOMPILE` option. For example, you could add an `OPTIMIZE FOR` option to the stored procedure `Sales.GetRecentSales` to specify a specific date. The following example adds the `OPTIMIZE FOR` option to the `Sales.GetRecentSales` procedure.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -413,9 +422,10 @@ END;
 GO  
 ```  
   
-### Improving cardinality estimates with Plan Guides  
+### Improving cardinality estimates with plan guides  
  For some applications, query design guidelines might not apply because you cannot change the query or the RECOMPILE query hint might cause too many recompiles. You can use plan guides to specify other hints, such as USE PLAN, to control the behavior of the query while investigating application changes with the application vendor. For more information about plan guides, see [Plan Guides](../../relational-databases/performance/plan-guides.md).  
-  
+
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consider Query Store hints to force plans, instead of plan guides. For more information, see [Query Store hints (Preview)](../performance/query-store-hints.md).
   
 ## See Also  
 
@@ -438,4 +448,4 @@ GO
 
 ## Next steps
 
-* [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)
+* [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) from the Microsoft SQL Server Tiger team toolbox

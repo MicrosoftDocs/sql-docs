@@ -23,10 +23,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
-This topic describes how to create a filtered index using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A filtered index is an optimized disk-based rowstore nonclustered index especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance as well as reduce index maintenance and storage costs compared with full-table indexes.  
+This article describes how to create a filtered index using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A filtered index is an optimized disk-based rowstore nonclustered index especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance and reduce index maintenance and storage costs compared with full-table indexes.  
   
 Filtered indexes can provide the following advantages over full-table indexes:  
-  
+
 1. Improved query performance and plan quality.
 
     A well-designed filtered index improves query performance and execution plan quality because it is smaller than a full-table nonclustered index and has filtered statistics. The filtered statistics are more accurate than full-table statistics because they cover only the rows in the filtered index.  
@@ -79,33 +79,33 @@ When a table has heterogeneous data rows, you can create a filtered index for on
 Requires ALTER permission on the table or view. User must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles. To modify the filtered index expression, use CREATE INDEX WITH DROP_EXISTING. 
 ##  <a name="SSMSProcedure"></a> Create a filtered index with SSMS 
   
-1. In Object Explorer, click the plus sign to expand the database that contains the table on which you want to create a filtered index.  
+1. In Object Explorer, select the plus sign to expand the database that contains the table on which you want to create a filtered index.  
   
-1. Click the plus sign to expand the **Tables** folder.  
+1. Select the plus sign to expand the **Tables** folder.  
   
-1. Click the plus sign to expand the table on which you want to create a filtered index.  
+1. Select the plus sign to expand the table on which you want to create a filtered index.  
   
 1. Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index...**.  
   
 1. In the **New Index** dialog box, on the **General** page, enter the name of the new index in the **Index name** box.  
   
-1. Under **Index key columns**, click **Add...**.  
+1. Under **Index key columns**, select **Add...**.  
   
 1. In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
   
-1. Click **OK**.  
+1. Select **OK**.  
   
 1. On the **Filter** page, under **Filter Expression**, enter SQL expression that you'll use to create the filtered index.  
   
-1. Click **OK**.  
+1. Select **OK**.  
 
 ##  <a name="TsqlProcedure"></a> Create a filtered index with Transact-SQL
   
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-1. On the Standard bar, click **New Query**.  
+1. On the Standard bar, select **New Query**.  
   
-1. Copy and paste the following example into the query window and click **Execute**.  
+1. Copy and paste the following example into the query window and select **Execute**.  
   
 ```sql
 USE AdventureWorks2019;  
@@ -137,7 +137,7 @@ GO
 
 ## Next steps
   
-To learn more about creating indexes and related topics, see the following articles:
+To learn more about creating indexes and related concepts, see the following articles:
 
 - [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
 - [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)

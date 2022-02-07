@@ -306,7 +306,7 @@ Only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can create and up
 * Insert operations occur on ascending or descending key columns.  
 * After maintenance operations.  
 
-For examples update statistics manually, see [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md).
+For examples updating statistics manually, see [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md).
 
 ### Query execution times are slow  
  If query response times are slow or unpredictable, ensure that queries have up-to-date statistics before performing additional troubleshooting steps.  

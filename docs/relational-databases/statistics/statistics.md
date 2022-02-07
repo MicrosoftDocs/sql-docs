@@ -87,7 +87,7 @@ The density vector contains one density for each prefix of columns in the statis
 ## Statistics options  
  There are options that affect when and how statistics are created and updated. These options are configurable at the database level only.  
   
-### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS Option  
+### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS option  
  When the automatic create statistics option, [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) is ON, the Query Optimizer creates statistics on individual columns in the query predicate, as necessary, to improve cardinality estimates for the query plan. These single-column statistics are created on columns that don't already have a [histogram](#histogram) in an existing statistics object. The AUTO_CREATE_STATISTICS option does not determine whether statistics get created for indexes. This option also does not generate filtered statistics. It applies strictly to single-column statistics for the full table.  
   
  When the Query Optimizer creates statistics as a result of using the AUTO_CREATE_STATISTICS option, the statistics name starts with `_WA`. You can use the following query to determine if the Query Optimizer has created statistics for a query predicate column.  
@@ -103,8 +103,10 @@ WHERE s.name like '_WA%'
 ORDER BY s.name;  
 ```  
   
-### AUTO_UPDATE_STATISTICS Option  
+### AUTO_UPDATE_STATISTICS option  
  When the automatic update statistics option, [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) is ON, the Query Optimizer determines when statistics might be out-of-date and then updates them when they are used by a query. This action is also known as statistics recompilation. Statistics become out-of-date after modifications from insert, update, delete, or merge operations change the data distribution in the table or indexed view. The Query Optimizer determines when statistics might be out-of-date by counting the number of row modifications since the last statistics update and comparing the number of row modifications to a threshold. The threshold is based on the table cardinality, which can be defined as the number of rows in the table or indexed view.  
+
+ Recompliation thresholds for row modifications, and marking statistics as out-of-date, occurs even when the AUTO_UPDATE_STATISTICS option is OFF. When OFF, statistics objects will not be updated automatically when they are marked out-of-date. For more information on detecting out-of-date statistics, see [Detecting out-of-date statistics](#detecting-out-of-date-statistics). When AUTO_UPDATE STATISTICS option is OFF, statistics are not updated, even when they are marked as out-of-date. Plans will continue to use the out-of-date statistics objects. Setting AUTO_UPDATE_STATISTICS to OFF can cause suboptimal query plans and degraded query performance.
  
 - Up to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] uses a recompilation threshold based on the number of rows in the table or indexed view at the time statistics were evaluated. The threshold is different whether a table is temporary or permanent.
 
@@ -131,7 +133,7 @@ ORDER BY s.name;
 > [!IMPORTANT]
 > In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 and lower, enable [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) so that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a decreasing, dynamic statistics update threshold.
 
-While recommended for all scenarios, enabling the trace flag is optional. However, you can use the following guidance for enabling the trace flag 2371 in your pre-[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] environment:
+While recommended for all scenarios, enabling trace flag 2371 is optional. However, you can use the following guidance for enabling the trace flag 2371 in your pre-[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] environment:
 
  - If you are on an SAP system, enable this trace. For more information, see this [blog on trace flag 2371](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
  - If you have to rely on nightly job to update statistics because current automatic update isn't triggered frequently enough, consider enabling trace flag 2371 to adjust the threshold to table cardinality.
@@ -144,7 +146,7 @@ You can use the [sys.dm_db_stats_properties](../../relational-databases/system-d
 
 AUTO_UPDATE_STATISTICS is always OFF for memory-optimized tables.
 
-### AUTO_UPDATE_STATISTICS_ASYNC  
+### AUTO_UPDATE_STATISTICS_ASYNC
 The asynchronous statistics update option, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determines whether the Query Optimizer uses synchronous or asynchronous statistics updates. By default, the asynchronous statistics update option is OFF, and the Query Optimizer updates statistics synchronously. The AUTO_UPDATE_STATISTICS_ASYNC option applies to statistics objects created for indexes, single columns in query predicates, and statistics created with the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement.  
  
 > [!NOTE]
@@ -288,8 +290,8 @@ Only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can create and up
  The Query Optimizer determines when statistics might be out-of-date and then updates them when they are needed for a query plan. In some cases, you can improve the query plan and therefore improve query performance by updating statistics more frequently than occur when [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) is on. You can update statistics with the UPDATE STATISTICS statement or the stored procedure `sp_updatestats`.  
   
  Updating statistics ensures that queries compile with up-to-date statistics. Updating statistics via any process may cause query plans to recompile automatically. We recommend not manually updating statistics too frequently because there is a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application.  
-  
- When updating statistics with UPDATE STATISTICS or `sp_updatestats`, we recommend keeping AUTO_UPDATE_STATISTICS set to ON so that the Query Optimizer routinely updates statistics. 
+ 
+ When updating statistics with `UPDATE STATISTICS` or `sp_updatestats`, we recommend keeping AUTO_UPDATE_STATISTICS set to ON so that the Query Optimizer routinely updates statistics. 
      - For more information about how to update statistics on a column, an index, a table, or an indexed view, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md). 
      - For information about how to update statistics for all user-defined and internal tables in the database, see the stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). 
      - For more information on the thresholds for automatic statistics updates, see [AUTO_UPDATE_STATISTICS Option](#auto_update_statistics-option).

@@ -71,7 +71,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 
    ```console
    oc create clusterrole bdc-role --verb=use --resource=scc --resource-name=bdc-scc -n <namespaceName>
-   oc create rolebinding bdc-rbac --clusterrole=bdc-role --group=system:serviceaccounts:mssql-bdc
+   oc create rolebinding bdc-rbac --clusterrole=bdc-role --group=system:serviceaccounts:<namespaceName>
    ```
 
 5. Assign appropriate permission to the user deploying BDC. Do one of the following. 

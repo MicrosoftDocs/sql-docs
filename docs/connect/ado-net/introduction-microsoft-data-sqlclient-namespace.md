@@ -18,9 +18,7 @@ ms.author: v-davidengel
 
 Release notes are also available in the GitHub Repository: [4.1 Release Notes](https://github.com/dotnet/SqlClient/tree/main/release-notes/4.1).
 
-### Breaking changes in 4.1
-
-- Added new Attestation Protocol `None` for `VBS` enclave types. This protocol will allow users to forgo enclave attestation for VBS enclaves. [#1419](https://github.com/dotnet/SqlClient/pull/1419) [#1425](https://github.com/dotnet/SqlClient/pull/1425) [Read more](#introduce-attestation-protocol-none)
+### New features in 4.1
 
 ### Introduce Attestation Protocol None
 

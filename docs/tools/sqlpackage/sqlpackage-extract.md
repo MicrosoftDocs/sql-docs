@@ -81,6 +81,13 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**| TempDirectoryForTableData=(STRING)|Specifies the temporary directory used to buffer table data before being written to the package file.|
 |**/p:**|VerifyExtraction=(BOOLEAN 'True')|Specifies whether the extracted schema model should be verified.|
 
+## Examples
+
+Create a schema-only .dacpac for database upgrades, etc.
+```cmd
+sqlpackage.exe extract /TargetFile:{filename}.dacpac /DiagnosticsFile:{logFile}.log /p:ExtractAllTableData=false /p:VerifyExtraction=true /SourceServerName:{serverFQDN} /SourceDatabaseName:{databaseName} /SourceUser:{username} /SourcePassword{password}
+```
+
 ## Next Steps
 
 - Learn more about [sqlpackage](sqlpackage.md)

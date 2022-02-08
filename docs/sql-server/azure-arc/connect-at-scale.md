@@ -58,7 +58,7 @@ Each machine must have [Azure PowerShell](/powershell/azure/install-az-ps) insta
 
    > [!NOTE]
    > 1. When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [Required permissions](overview.md#required-permissions). 
-    > 1. The service principal must have *Directory.ReadAll* permissions in Microsoft graph. For instructions how to assign [Directory permissions](/graph/permissions-reference.md#directory-permissions) to a service principal, see [Manage API permissions](/graph/migrate-azure-ad-graph-configure-permissions.md#option-1-use-the-azure-portal-to-find-the-apis-your-organization-uses).
+    > 2. The service principal must have *Directory.ReadAll* permissions in Microsoft graph. For instructions how to assign [Directory permissions](/graph/permissions-reference.md#directory-permissions) to a service principal, see [Manage API permissions](/graph/migrate-azure-ad-graph-configure-permissions.md#option-1-use-the-azure-portal-to-find-the-apis-your-organization-uses).
 
 2. Give the service principle permissions to access Microsoft Graph:
     ```azurepowershell-interactive

@@ -83,7 +83,8 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ## Examples
 
-Create a schema-only .dacpac for database upgrades, etc. using SQL authentication.
+Create a schema-only .dacpac file to use for database upgrades, for example, by using SQL authentication:
+
 ```cmd
 sqlpackage.exe extract /TargetFile:{filename}.dacpac /DiagnosticsFile:{logFile}.log /p:ExtractAllTableData=false /p:VerifyExtraction=true /SourceServerName:{serverFQDN} /SourceDatabaseName:{databaseName} /SourceUser:{username} /SourcePassword:{password}
 ```

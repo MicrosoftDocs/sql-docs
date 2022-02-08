@@ -19,6 +19,7 @@ The previous topic discussed [Creating and Executing a Simple Command](./creatin
   
 ```VBA
 'BeginManualParamCmd  
+Public Sub ManualParamCmd
     On Error GoTo ErrHandler:  
   
     Dim objConn As New ADODB.Connection  
@@ -95,6 +96,7 @@ ErrHandler:
         MsgBox Err.Source & "-->" & Err.Description, , "Error"  
     End If  
 'EndManualParamCmd  
+End Sub  
   
 'BeginNewConnection  
 Private Function GetNewConnection() As ADODB.Connection  

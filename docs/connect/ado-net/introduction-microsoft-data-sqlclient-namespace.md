@@ -14,7 +14,25 @@ ms.author: v-davidengel
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-### Release notes for Microsoft.Data.SqlClient 4.0
+## Release notes for Microsoft.Data.SqlClient 4.1
+
+Release notes are also available in the GitHub Repository: [4.1 Release Notes](https://github.com/dotnet/SqlClient/tree/main/release-notes/4.1).
+
+### New features in 4.1
+
+### Introduce Attestation Protocol None
+
+A new attestation protocol called `None` will be allowed in the connection string. This protocol will allow users to forgo enclave attestation for `VBS` enclaves. When this protocol is set, the enclave attestation URL property is optional.  
+
+Connection string example:
+
+```cs
+//Attestation protocol NONE with no URL
+"Data Source = {server}; Initial Catalog = {db}; Column Encryption Setting = Enabled; Attestation Protocol = None;"
+
+```
+
+## Release notes for Microsoft.Data.SqlClient 4.0
 
 Release notes are also available in the GitHub Repository: [4.0 Release Notes](https://github.com/dotnet/SqlClient/tree/main/release-notes/4.0).
 

@@ -7843,6 +7843,8 @@ items:
   items:
   - name: Overview
     href: relational-databases/security/securing-sql-server.md
+  - name: Best practices
+    href: relational-databases/security/sql-server-security-best-practices.md
   - name: How-to
     items:
     - name: Secure SQL Server

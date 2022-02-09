@@ -77,11 +77,13 @@ To enable enclave computations for a database connection, you need to set the fo
 - `Attestation Protocol` - specifies an attestation protocol.
   - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), the value of this keyword should be `HGS`.
   - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, the value of this keyword should be `AAS`.
+  - If you're using Virtualization-based security (VBS) enclaves and want to forgo attestation, the value of this keyword should be `None`. This option is less secure than the others and should only be used when attestation isn't possible in your environment and you trust the server. Skipping attestation opens the application up to the possibility of a malicious server making claims that results in exposure of column encryption keys to the server.
 
 - `Enclave Attestation URL` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
 
   - If you're using [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
   - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
+  - If you're using the `None` Attestation Protocol, an attestation URL is not required. 
 
 For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md).
 

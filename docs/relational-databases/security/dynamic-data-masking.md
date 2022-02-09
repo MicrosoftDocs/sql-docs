@@ -168,12 +168,12 @@ REVERT;
   
  `1    Rxxxxxo    Tamburello    xxxx            RXXX@XXXX.com            91`
  
- where the number in DiscountCode is random for every query result
+ where the number in DiscountCode is random for every query result.
   
-### Adding or Editing a Mask on an Existing Column  
+### Adding or Editing a Mask on an Existing Column
  Use the **ALTER TABLE** statement to add a mask to an existing column in the table, or to edit the mask on that column.  
 The following example adds a masking function to the `LastName` column:  
-  
+
 ```sql  
 ALTER TABLE Data.Membership  
 ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"xxxx",0)');  

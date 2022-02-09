@@ -90,7 +90,8 @@ WHERE is_masked = 1;
  Adding a dynamic data mask is implemented as a schema change on the underlying table, and therefore cannot be performed on a column with dependencies. To work around this restriction, you can first remove the dependency, then add the dynamic data mask and then re-create the dependency. For example, if the dependency is due to an index dependent on that column, you can drop the index, then add the mask, and then re-create the dependent index.
  
 Whenever you project an expression referencing a column for which a data masking function is defined, the expression will also be masked. Regardless of the function (default, email, random, custom string) used to mask the referenced column, the resulting expression will always be masked with the default function.
- 
+
+Cross database queries spanning two different Azure SQL databases or databases hosted on different SQL Server Instances and involve any kind of comparison or join operation on MASKED columns will not provide correct results because the results returned from the remote server is already in MASKED form and not suitable for any kind of comparison or join operation locally.
 
 ## Security Note: Bypassing masking using inference or brute-force techniques
 
@@ -168,12 +169,12 @@ REVERT;
   
  `1    Rxxxxxo    Tamburello    xxxx            RXXX@XXXX.com            91`
  
- where the number in DiscountCode is random for every query result
+ where the number in DiscountCode is random for every query result.
   
-### Adding or Editing a Mask on an Existing Column  
+### Adding or Editing a Mask on an Existing Column
  Use the **ALTER TABLE** statement to add a mask to an existing column in the table, or to edit the mask on that column.  
 The following example adds a masking function to the `LastName` column:  
-  
+
 ```sql  
 ALTER TABLE Data.Membership  
 ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"xxxx",0)');  

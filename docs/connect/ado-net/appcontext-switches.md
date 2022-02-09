@@ -125,6 +125,18 @@ Starting in version 3.0, when a rowversion has a value of null, `SqlDataReader` 
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior", true);
 ```
 
+## Suppress insecure TLS warning
+
+[!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
+
+(Available starting with version 4.0.1)
+
+When using `Encrypt=false` in the connection string, a security warning is output to the console if the TLS version is 1.2 or lower. This warning can be suppressed by enabling the following AppContext switch on application startup:
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.SuppressInsecureTLSWarning", true);
+```
+
 ## See also
 
 [AppContext Class](/dotnet/api/system.appcontext?view=netcore-3.1&preserve-view=true)

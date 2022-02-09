@@ -27,7 +27,7 @@ Learn how the Customer Experience Improvement Program (CEIP) helps Microsoft ide
 
 ### Choice and Control over  CEIP and SQL Server Data Tools for Visual Studio 2017
 
- SSDT for Visual Studio 2017 is the data modeling tool that ships with SQL Server 2017. It uses the CEIP options  that are built into Visual Studio 2017. You can learn more about how to submit feedback through  CEIP in Visual Studio 2017 from this [help document from Visual Studio](https://docs.microsoft.com/visualstudio/ide/visual-studio-experience-improvement-program?view=vs-2017).  
+ SSDT for Visual Studio 2017 is the data modeling tool that ships with SQL Server 2017. It uses the CEIP options  that are built into Visual Studio 2017. You can learn more about how to submit feedback through  CEIP in Visual Studio 2017 from this [help document from Visual Studio](/visualstudio/ide/visual-studio-experience-improvement-program?view=vs-2017).  
   
  For preview versions of SQL Server 2017, CEIP is turned on by default. You can turn it off, or back on again, by following the instructions below.  
   

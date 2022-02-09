@@ -14729,6 +14729,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md
       - name: sp_purge_jobhistory
         href: relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md
+      - name: sp_readerrorlog
+        href: relational-databases/system-stored-procedures/sp-readerrorlog-transact-sql.md
       - name: sp_remove_job_from_targets
         href: relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md
       - name: sp_resync_targetserver

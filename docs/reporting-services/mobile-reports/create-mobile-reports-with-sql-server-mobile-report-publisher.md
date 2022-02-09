@@ -14,7 +14,10 @@ ms.author: maggies
 # Create mobile reports with SQL Server Mobile Report Publisher
 Learn about [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports, optimized for mobile devices and connected to on-premises data, with an assortment of data visualizations. 
 
+
 >[!NOTE]
+>  This feature is deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019. 
+>  
 >  Do you need to migrate Datazen Server content such as dashboards and KPIs to a SQL Server  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] server? Try the [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
@@ -28,7 +31,6 @@ With [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], you can 
 ## Create [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  mobile reports  
   
 These articles will help you get started.
--  Download [SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [Create a Reporting Services mobile report](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
 -  [End-to-end walkthrough: Create mobile reports and KPIs in SQL Server Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan's blog)  
 - [Design first, or data first](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): Decide whether to design your report first with simulated data, or start with your own data.  

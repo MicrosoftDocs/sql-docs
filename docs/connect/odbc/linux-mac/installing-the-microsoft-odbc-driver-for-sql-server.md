@@ -1,7 +1,7 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (Linux)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on Linux clients to enable database connectivity.
-ms.date: 07/30/2021
+ms.date: 02/15/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -35,22 +35,22 @@ The following sections explain how to install the Microsoft ODBC driver 18 from 
 
 ```bash
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.8.1.1-1_amd64.apk
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.8.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da08869c6486/msodbcsql18_18.0.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da08869c6486/mssql-tools18_18.0.1.1-1_amd64.apk
 
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.8.1.1-1_amd64.sig
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.8.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da08869c6486/msodbcsql18_18.0.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da08869c6486/mssql-tools18_18.0.1.1-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql17_17.8.1.1-1_amd64.sig msodbcsql17_17.8.1.1-1_amd64.apk
-gpg --verify mssql-tools_17.8.1.1-1_amd64.sig mssql-tools_17.8.1.1-1_amd64.apk
+gpg --verify msodbcsql18_18.0.1.1-1_amd64.sig msodbcsql18_18.0.1.1-1_amd64.apk
+gpg --verify mssql-tools_18.0.1.1-1_amd64.sig mssql-tools_18.0.1.1-1_amd64.apk
 
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql17_17.8.1.1-1_amd64.apk
-sudo apk add --allow-untrusted mssql-tools_17.8.1.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql18_18.0.1.1-1_amd64.apk
+sudo apk add --allow-untrusted mssql-tools18_18.0.1.1-1_amd64.apk
 ```
 
 > [!NOTE]
@@ -76,7 +76,7 @@ sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y apt-get install -y mssql-tools18
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install -y unixodbc-dev
@@ -103,10 +103,10 @@ curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/m
 
 exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
-sudo ACCEPT_EULA=Y yum install -y msodbcsql17
+sudo ACCEPT_EULA=Y yum install -y msodbcsql18
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y yum install -y mssql-tools
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+sudo ACCEPT_EULA=Y yum install -y mssql-tools18
+echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo yum install -y unixODBC-devel
@@ -135,10 +135,10 @@ zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
 SUSEConnect -p sle-module-legacy/15/x86_64
 
 exit
-sudo ACCEPT_EULA=Y zypper install -y msodbcsql17
+sudo ACCEPT_EULA=Y zypper install -y msodbcsql18
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y zypper install -y mssql-tools
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+sudo ACCEPT_EULA=Y zypper install -y mssql-tools18
+echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo zypper install -y unixODBC-devel
@@ -167,10 +167,10 @@ curl https://packages.microsoft.com/config/ubuntu/21.04/prod.list > /etc/apt/sou
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y apt-get install -y mssql-tools
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+sudo ACCEPT_EULA=Y apt-get install -y mssql-tools18
+echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install -y unixodbc-dev

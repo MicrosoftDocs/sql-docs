@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLGetStmtOption function [ODBC], Cursor Library"
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetStmtOption (Cursor Library)
 > [!IMPORTANT]  

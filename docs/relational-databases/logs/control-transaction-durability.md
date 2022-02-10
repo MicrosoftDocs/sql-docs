@@ -88,7 +88,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ###  <a name="bkmk_DbControl"></a> Database level control    
  You, the DBA, can control whether users can use delayed transaction durability on a database with the following statement. You must set the delayed durability setting with ALTER DATABASE.    
     
-```sql    
+```syntaxsql
 ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
@@ -104,7 +104,7 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
 ###  <a name="CompiledProcControl"></a> Atomic block level control - Natively Compiled Stored Procedures    
  The following code goes inside the atomic block.    
     
-```sql    
+```syntaxsql    
 DELAYED_DURABILITY = { OFF | ON }    
 ```    
     
@@ -117,15 +117,15 @@ DELAYED_DURABILITY = { OFF | ON }
  **Example Code:**    
     
 ```sql    
-CREATE PROCEDURE <procedureName> ...    
+CREATE PROCEDURE [<procedureName>] /* parameters go here */
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
 (    
     DELAYED_DURABILITY = ON,    
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,    
     LANGUAGE = N'English'    
-    ...    
 )    
+/* procedure body goes here */
 END    
 ```    
     
@@ -139,9 +139,8 @@ END
 ###  <a name="bkmk_T-SQLControl"></a> COMMIT level control -[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  The COMMIT syntax is extended so you can force delayed transaction durability. If DELAYED_DURABILITY is DISABLED or FORCED at the database level (see above) this COMMIT option is ignored.    
     
-```sql    
+```syntaxsql    
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]    
-    
 ```    
     
  **OFF**    

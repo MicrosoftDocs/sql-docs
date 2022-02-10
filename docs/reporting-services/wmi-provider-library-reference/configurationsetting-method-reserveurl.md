@@ -52,7 +52,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ## Remarks  
  *UrlString* does not include the virtual directory name. The [SetVirtualDirectory](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) method is provided for that purpose.  
   
- URL reservations are created for the current windows service account. Changing the windows service account requires updating all the URL reservations manually.  
+ URL reservations are created for the current Windows service account. Changing the Windows service account requires updating all the URL reservations manually.  
   
  This method causes all application domains to hard recycle. Application domains are restarted after this operation is complete.  
   

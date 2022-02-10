@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "drivers [ODBC], tasks"
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Driver Tasks
 Specific tasks performed by drivers include:  

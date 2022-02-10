@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-author: rothja
-ms.author: jroth
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan your adoption of In-Memory OLTP Features in SQL Server
@@ -108,7 +108,7 @@ You work with .dacpac files in the context of a Visual Studio project of type *D
 
 For guidance on whether In-Memory OLTP features can improve the performance of your particular application, see:
 
-- [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (In-Memory Optimization)](./overview-and-usage-scenarios.md)
 
 
 
@@ -197,7 +197,9 @@ This section describes situations where the excellent performance of memory-opti
 
 All indexes on a memory-optimized table are created and managed by the table-related statements CREATE TABLE and ALTER TABLE. You cannot target a memory-optimized table with a CREATE INDEX statement.
 
-The traditional b-tree nonclustered index is often the sensible and simple choice when you first implement a memory-optimized table. Later, after you see how your application performs, you can consider swapping another index type.
+The traditional B-tree nonclustered index is often the sensible and simple choice when you first implement a memory-optimized table. Later, after you see how your application performs, you can consider swapping another index type.
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
 Two special types of indexes need discussion in the context of a memory-optimized table: Hash indexes, and Columnstore indexes.
 
@@ -297,4 +299,4 @@ You can make your Transact-SQL scripts more robust against a possible transactio
 
 ## Related links
 
-- [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (In-Memory Optimization)](./overview-and-usage-scenarios.md)

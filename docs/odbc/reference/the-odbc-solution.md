@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "standardizing database access [ODBC], using ODBC"
 ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # The ODBC Solution
 The question, then, is how does ODBC standardize database access? There are two architectural requirements:  

@@ -7,8 +7,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.design.table.columnspecification.index.dialog"
   - "sql.data.tools.design.table.columnsgrid.view"
-  - "sql.data.tools.design.table.scriptpanel"
-ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
+dev_langs: 
+  - "TSQL"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”

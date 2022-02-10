@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "IRow interface"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Fetch Columns Using IRow::GetColumns (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

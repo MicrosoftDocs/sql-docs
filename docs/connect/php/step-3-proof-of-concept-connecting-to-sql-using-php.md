@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Step 3: Proof of concept connecting to SQL using PHP
 

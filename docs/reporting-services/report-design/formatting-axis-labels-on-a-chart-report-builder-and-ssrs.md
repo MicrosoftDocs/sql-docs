@@ -1,6 +1,6 @@
 ---
-title: "Formatting Axis Labels on a Chart (Report Builder) | Microsoft Docs"
-description: Learn how to format axis labels on a chart using a dialog box or by using the properties pane to categorize and display relationships in Report Builder.
+title: "Formatting axis labels on a paginated report chart | Microsoft Docs"
+description: Learn how to format axis labels on a paginated report chart using a dialog box or by using the properties pane to categorize and display relationships in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -29,8 +29,11 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Formatting Axis Labels on a Chart (Report Builder and SSRS)
-  Coordinate-based chart types (column, bar, area, point, line, and range) have two axes that are used to categorize and display data relationships. Different types of formatting will be applied to each axis.  
+# Formatting axis labels on a paginated report chart (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Coordinate-based chart types (column, bar, area, point, line, and range) have two axes that are used to categorize and display data relationships in a paginated report. Different types of formatting will be applied to each axis.  
   
  You can format axes by using the **Axis Properties** dialog box or by using the Properties pane. Right-click the axis you want to format and click **Axis Properties** to change values for the axis text, numeric and date formats, major and minor tick marks, auto-fitting for labels, and the thickness, color, and style of the axis line. To change values for the axis title, right-click the axis title, and click **Axis Title Properties**.  
   

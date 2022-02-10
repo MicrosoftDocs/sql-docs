@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "batches [ODBC], interoperable applications"
 ms.assetid: 3fa4eca8-691c-467d-bfa7-39c59cdb9c8d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Batch Processing
 Support for batches of SQL statements is not widespread, so interoperable applications should use them conditionally or not at all. For more information, see [Executing Batches](../../../odbc/reference/develop-app/executing-batches.md).

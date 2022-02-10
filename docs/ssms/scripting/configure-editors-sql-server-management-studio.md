@@ -16,9 +16,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Configure Editors (SQL Server Management Studio)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-You can customize the operation of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editors by configuring the options for each editor.  
+You can customize the operation of the SQL Server Management Studio editors by configuring the options for each editor.  
   
 ## Setting Editor Options  
  Most of the editor options are set by using the **Tools** menu and selecting **Options...** to display an **Options** dialog. In the **Options** dialog, open the **Text Editor** node in the left pane to set code and text editing options. The nodes under Text Editor apply to specific editors:  

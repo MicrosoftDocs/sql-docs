@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "rounding expressions"
   - "ROUND function [Transact-SQL]"
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROUND (Transact-SQL)

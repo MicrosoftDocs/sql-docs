@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "indirect recursion [SQL Server]"
   - "nested DML triggers"
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Nested Triggers

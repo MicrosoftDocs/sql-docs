@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-author: rothja
-ms.author: jroth
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Targets for Extended Events in SQL Server

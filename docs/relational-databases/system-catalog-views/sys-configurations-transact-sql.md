@@ -64,13 +64,13 @@ There are  configuration options where the value and value_in_use may not be the
 "min server memory (MB)" - The default configured value of 0 may show up as **value_in_use** = 8 (32bit) or 16 (64bit). In some cases, the **value_in_use** is 0. In this situation, the "true" **value_in_use** is 8 (32bit) or 16 (64bit).
 
 
-The **is_dynamic** column can be used to determine if the configuration option requires a restart. is_dynamic=1 means that when the RECONFIGURE(T-SQL) commnad is executed, the new value will take effect "immediately" (in some cases the server engine may not evaluate the new value immediately but will do so in the normal course of its execution). is_dynamic=0 means the the changed configuration value will not take effect until the server is restarted even though the RECONFIGURE(T-SQL) command was executed.
+The **is_dynamic** column can be used to determine if the configuration option requires a restart. is_dynamic=1 means that when the RECONFIGURE(T-SQL) command is executed, the new value will take effect "immediately" (in some cases the server engine may not evaluate the new value immediately but will do so in the normal course of its execution). is_dynamic=0 means the the changed configuration value will not take effect until the server is restarted even though the RECONFIGURE(T-SQL) command was executed.
 
 For a configuration option that is not dynamic there is no way to tell if the RECONFIGURE(T-SQL) command has been run to perform the first step of installing the configuration change. Before you restart SQL Server to install a configuration change, run the RECONFIGURE(T-SQL) command to ensure all configuration changes will take effect after a SQL Server restart. 
  
  
 ## Permissions  
- Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requires membership in the **public** role.
   
 ## See Also  
  [Server-wide Configuration Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   

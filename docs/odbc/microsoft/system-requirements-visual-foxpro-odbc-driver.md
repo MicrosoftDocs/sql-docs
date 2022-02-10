@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], installing"
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # System Requirements (Visual FoxPro ODBC Driver)
 The system requirements for installation provide the minimum operating system and disk space needed to successfully install the driver. After you've installed the driver, you can select the specific application software you want to use to access Visual FoxPro data.  

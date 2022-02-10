@@ -120,7 +120,7 @@ Before performing these steps, you need to:
   
 5.  In the **Status** drop-down menu, select **Any** and click **Refresh**.  
   
-6.  Expand **Update Services**, *<appliance name>*-VMM, **Updates**, **All Updates**, where *<appliance name>* is your appliance name.  
+6.  Expand **Update Services**, *\<appliance name\>*-VMM, **Updates**, **All Updates**, where *\<appliance name\>* is your appliance name.  
   
 7.  In the **All Updates** window set **Approval** to **Any Except Declined**.  
   
@@ -144,7 +144,7 @@ Follow these instructions to run the Analytics Platform System Update program.
   
 1.  Make sure you are logged into the HST01 node as the Fabric Domain Administrator.  
   
-2.  Open a Command Prompt window and enter the following commands. Replace *<parameter>* with the designated information.  
+2.  Open a Command Prompt window and enter the following commands. Replace *\<parameter\>* with the designated information.  
   
 **To Run the Microsoft Update:**  
   

@@ -1,11 +1,11 @@
 ---
 title: Configure deployments
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Learn how to customize a big data cluster deployment with configuration files that are built into the azdata management tool.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: rajmera3
-ms.date: 02/11/2021
+author: DaniBunny
+ms.author: dacoelho
+ms.reviewer: wiassaf
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -179,6 +179,9 @@ To customize your cluster deployment configuration files, you can use any JSON f
    ```bash
    azdata bdc config init --source aks-dev-test --target custom-bdc
    ```
+
+> [!WARNING]
+> The parameter ```imagePullPolicy``` is required to be set as ```"Always"``` in the deployment profile control.json file.
 
 ## <a id="docker"></a> Change default Docker registry, repository, and images tag
 

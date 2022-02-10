@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "switching execution context"
   - "EXECUTE statement"
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -115,7 +115,7 @@ The following code block shows the syntax in SQL Server 2017 and earlier. Altern
 
 
 ```syntaxsql
--- Syntax for SQL Server 2017 and earleir  
+-- Syntax for SQL Server 2017 and earlier  
   
 Execute a stored procedure or function  
 [ { EXEC | EXECUTE } ]  

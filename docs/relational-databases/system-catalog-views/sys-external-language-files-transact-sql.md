@@ -39,8 +39,8 @@ The catalog view sys.external_language_files lists a row for each external langu
 |content|varbinary(max) |Content of the external language extension file|
 |file_name|sysname|Name of the language extension file|
 |platform|tinyint|ID of the host platform on which SQL Server is installed|
-|platform_desc |nvarchar(60)|Name of the host platform. Valid values are 'WINDOWS', 'LINUX'.|
-|parameters|sysname|External language prameters|
+|platform_desc |nvarchar(60)|Name of the host platform. Valid values are `WINDOWS`, `LINUX`.|
+|parameters|sysname|External language parameters|
 |environment_variables|sysname|External language environment variables|
 
 ## See also  

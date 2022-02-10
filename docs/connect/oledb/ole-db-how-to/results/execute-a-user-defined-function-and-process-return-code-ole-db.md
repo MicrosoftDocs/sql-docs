@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "user-defined functions [OLE DB]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Execute a User-Defined Function and Process Return Code (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

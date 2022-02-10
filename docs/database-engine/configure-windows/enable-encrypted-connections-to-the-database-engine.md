@@ -85,7 +85,7 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load a TLS cert
 
 - The certificate must be meant for server authentication. This requires the **Enhanced Key Usage** property of the certificate to specify **Server Authentication (1.3.6.1.5.5.7.3.1)**.
 
-- The certificate must be created by using the **KeySpec** option of **AT_KEYEXCHANGE**. Usually, the certificate's key usage property (**KEY_USAGE**) will also include key encipherment (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
+- The certificate must be created by using the **KeySpec** option of **AT_KEYEXCHANGE**. This requires a legacy certificate. Usually, the certificate's key usage property (**KEY_USAGE**) will also include key encipherment (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
 
 - The **Subject** property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. When using the host name, the DNS suffix must be specified in the certificate. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  is running on a failover cluster, the common name must match the host name or FQDN of the virtual server and the certificates must be provisioned on all nodes in the failover cluster.
 

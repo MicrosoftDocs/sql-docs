@@ -14,8 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "DECOMPRESS function"
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || =azure-sqldw-latest"
 ---
 # DECOMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -43,6 +44,8 @@ A value of data type **varbinary(max)**. `DECOMPRESS` will use the ZIP algorithm
   
 ### A. Decompress Data at Query Time  
 This example shows how to return compressed table data:  
+
+
   
 ```sql  
 SELECT _id, name, surname, datemodified,  
@@ -50,7 +53,11 @@ SELECT _id, name, surname, datemodified,
 FROM player;  
 ```  
   
-### B. Display Compressed Data Using Computed Column  
+### B. Display Compressed Data Using Computed Column
+
+> [!NOTE]
+> This example does not apply to Azure Synapse Analytics.
+
 This example shows how to create a table for decompressed data storage:  
   
 ```sql  

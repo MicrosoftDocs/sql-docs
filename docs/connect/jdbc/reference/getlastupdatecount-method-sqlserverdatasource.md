@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 4c4fbb24-0b02-42da-928c-a903bb591cc7
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getLastUpdateCount Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "displaying database properties"
   - "database properties [SQL Server]"
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATABASEPROPERTYEX (Transact-SQL)

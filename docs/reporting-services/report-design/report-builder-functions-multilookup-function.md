@@ -1,6 +1,6 @@
 ---
-title: "Multilookup Function (Report Builder) | Microsoft Docs"
-description: The Multilookup Function returns the set of first-match values for the specified set of names from a dataset that contains name/value pairs in Report Builder.
+title: "Multilookup function in a paginated report | Microsoft Docs"
+description: The Multilookup Function returns the set of first-match values for the specified set of names from a dataset that contains name/value pairs in a paginated report in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - Multilookup Function
-  Returns the set of first-match values for the specified set of names from a dataset that contains name/value pairs.  
+# Report Builder functions - Multilookup function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the set of first-match values for the specified set of names from a dataset that contains name/value pairs in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -83,7 +86,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## Examples
 
 ### A. Use MultiLookup function
- Assume a dataset called "Category" contains the field CategoryList, which is a field that contains a comma-separated list of category identifers, for example, "2, 4, 2, 1".  
+ Assume a dataset called "Category" contains the field CategoryList, which is a field that contains a comma-separated list of category identifiers, for example, "2, 4, 2, 1".  
   
  The dataset CategoryNames contains the category identifier and category name, as shown in the following table.  
   

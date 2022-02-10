@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "ConfigDSN [ODBC]"
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ConfigDSN Function
 **Conformance**  

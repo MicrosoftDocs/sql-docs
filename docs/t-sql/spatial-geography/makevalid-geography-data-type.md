@@ -17,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # MakeValid (geography Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Converts a **geography** instance that is not valid into a valid **geography** instance with a valid Open Geospatial Consortium (OGC) type.  
   
@@ -52,7 +52,7 @@ ms.author: mlandzic
 ## Examples  
  The first example creates an invalid `LineString` instance that overlaps itself and uses `STIsValid()` to confirm that it is an invalid instance. `STIsValid()` returns the value of 0 for an invalid instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('LINESTRING(0 2, 1 1, 1 0, 1 1, 2 2)', 4326);  
 SELECT @g.STIsValid();  
@@ -60,20 +60,20 @@ SELECT @g.STIsValid();
   
  The second example uses `MakeValid()` to make the instance valid and to test that the instance is indeed valid. `STIsValid()` returns the value of 1 for a valid instance.  
   
-```  
+```sql
 SET @g = @g.MakeValid();  
 SELECT @g.STIsValid();  
 ```  
   
  The third example verifies how the instance has been changed to make it a valid instance.  
   
-```  
+```sql
 SELECT @g.ToString();  
 ```  
   
  In this example, when the `LineString` instance is selected, the values are returned as a valid `MultiLineString` instance.  
   
-```  
+```sql
 MULTILINESTRING ((0 2, 1 1, 2 2), (1 1, 1 0))  
 ```  
   

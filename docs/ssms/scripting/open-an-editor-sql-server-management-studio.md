@@ -15,9 +15,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Open an Editor (SQL Server Management Studio)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This topic describes how to open the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query, MDX, DMX, or XML/A editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. When opened, each editor window appears as a tab in the central pane of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+This topic describes how to open the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query, MDX, DMX, or XML/A editors in SQL Server Management Studio. When opened, each editor window appears as a tab in the central pane of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## Before You Begin  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] supports four editors: the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor for editing [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, the DMX and MDX editors for editing scripts using those languages, and the XML/A editor for editing XML/A scripts or XML files. Any of the editors can also be used to edit text files.  
@@ -29,7 +29,7 @@ This topic describes how to open the [!INCLUDE[ssDE](../../includes/ssde-md.md)]
  Operations you perform in a code editor are subject to the permissions granted to the authentication account you used to log in. For example, if you open a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window using Windows Authentication, you cannot execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that reference objects your Windows login account does not have permissions to access.  
   
 ## How to: Open Editors  
- This section explains how to open the various editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ This section explains how to open the various editors in SQL Server Management Studio.  
   
 ### Using the File/New Menu  
  On the **File** menu, click **New**, and then select one of the query editor options:  

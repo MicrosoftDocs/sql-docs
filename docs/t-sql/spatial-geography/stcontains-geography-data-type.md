@@ -17,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STContains  (geography Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Specifies whether the calling **geography** instance spatially contains the **geography** instance passed to the method.  
   

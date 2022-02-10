@@ -37,7 +37,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC CHECKDB (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Checks the logical and physical integrity of all the objects in the specified database by performing the following operations:    
     

@@ -15,7 +15,7 @@ ms.author: xiaoyul
 monikerRange: "=azure-sqldw-latest"
 ---
 
-# sys.pdw_nodes_dm_exec_sql_text (Transact-SQL)
+# sys.dm_pdw_nodes_exec_sql_text (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Returns the text of the SQL batch that is identified by the specified *sql_handle*. This table-valued function replaces the system function **fn_get_sql**.

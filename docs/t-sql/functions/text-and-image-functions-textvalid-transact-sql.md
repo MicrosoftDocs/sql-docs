@@ -21,11 +21,11 @@ helpviewer_keywords:
   - "text-pointer values"
   - "verifying text pointers"
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # Text and Image Functions - TEXTVALID (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   A **text**, **ntext**, or **image** function that checks whether a specific text pointer is valid.  
   
@@ -62,8 +62,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |Function or statement|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**(**'_%pattern%_'**,** _expression_**)**|Returns the character position of a specified character string in **text** and **ntext** columns.|  
-|DATALENGTH**(**_expression_**)**|Returns the length of data in **text**, **ntext**, and **image** columns.|  
+|PATINDEX ( *'_%pattern%_'*, *_expression_* )|Returns the character position of a specified character string in **text** and **ntext** columns.|  
+|DATALENGTH ( *_expression_* )|Returns the length of data in **text**, **ntext**, and **image** columns.| 
 |SET TEXTSIZE|Returns the limit, in bytes, of the **text**, **ntext**, or **image** data to be returned with a SELECT statement.|  
   
 ## Examples  

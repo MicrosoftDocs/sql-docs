@@ -79,4 +79,4 @@ To learn more about some of our other partners, see [High availability and disas
 <!--LinkedIn-->
 [sentryone_linkedin]:https://www.linkedin.com/company/sentryone
 [redgate_linkedin]:https://www.linkedin.com/company/red-gate-software/
-[solarwinds_linkedin]:https://linkedin.com/showcase/solarwinds-database-performance
+[solarwinds_linkedin]:https://pe.linkedin.com/products/solarwinds-database-performance-solarwinds-database-performance-analyzer/

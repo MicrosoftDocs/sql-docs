@@ -2,7 +2,7 @@
 title: Support for High Availability, disaster recovery
 description: This article discusses Microsoft JDBC Driver for SQL Server support for high-availability, disaster recovery (AlwaysOn Availability Groups).
 ms.custom: ""
-ms.date: 07/13/2020
+ms.date: 01/26/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # JDBC driver support for High Availability, disaster recovery
@@ -71,8 +71,6 @@ Note:
 - Behavior of an application that uses the **multiSubnetFailover** connection property isn't affected based on the type of authentication: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, Kerberos Authentication, or Windows Authentication.
 
 - Increase the value of **loginTimeout** to accommodate for failover time and reduce application connection retry attempts.
-
-- Distributed transactions aren't supported.
 
 If read-only routing isn't in effect, connecting to a secondary replica location in an availability group will fail in the following situations:
 

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 04eebd6a-016f-4462-82f5-ab34b945eec4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # beforeFirst Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

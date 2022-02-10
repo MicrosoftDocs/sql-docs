@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "transactions [OLE DB]"
   - "OLE DB Driver for SQL Server, transactions"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Isolation Levels (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

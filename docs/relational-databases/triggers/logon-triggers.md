@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "triggers [SQL Server], logon"
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Logon Triggers
 [!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

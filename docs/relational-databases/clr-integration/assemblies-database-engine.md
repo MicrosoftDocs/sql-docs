@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "assemblies [CLR integration], about assemblies"
   - "managed code [SQL Server], assemblies"
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Assemblies (Database Engine)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

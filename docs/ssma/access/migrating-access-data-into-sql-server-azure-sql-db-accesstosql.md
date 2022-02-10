@@ -2,12 +2,13 @@
 description: "Migrating Access Data into SQL Server - Azure SQL Database (AccessToSQL)"
 title: "Migrating Access Data into SQL Server - Azure SQL Database (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bulk loading data"
   - "data, loading into SQL Azure"
   - "data, loading into SQL Server"

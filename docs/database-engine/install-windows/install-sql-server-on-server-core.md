@@ -1,15 +1,15 @@
 ---
 title: "Install SQL Server on Server Core | Microsoft Docs"
 description: You can install SQL Server on a Server Core installation. The Server Core installation option provides a minimal environment for running specific server roles.
-ms.custom: ""
-ms.date: 06/29/2020
+ms.custom:
+  - intro-installation
+ms.date: 09/16/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server on Server Core
@@ -65,7 +65,7 @@ The Server Core installation option provides a minimal environment for running s
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 64-bit editions |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language|All languages|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language on OS language/locale (combination)|ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on JPN (Japanese) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on GER (German) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on CHS (Chinese-China) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on ARA (Arabic (SA)) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on THA (Thai) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on TRK (Turkish) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on pt-PT (Portuguese Portugal) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on ENG (English) Windows|  
-|Windows edition|Windows Server 2019 Datacenter <br/><br/> Windows Server 2019 Standard <br /><br />  [!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]
+|Windows edition|Windows Server 2022 Datacenter <br/><br/> Windows Server 2022 Datacenter: Azure edition <br/><br/>Windows Server 2022 Standard <br /><br />Windows Server 2019 Datacenter <br/><br/> Windows Server 2019 Standard <br /><br />  [!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]
   
 ## Upgrade 
  On Server Core installations, upgrading from [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] is supported.  

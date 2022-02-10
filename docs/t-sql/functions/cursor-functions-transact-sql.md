@@ -14,11 +14,11 @@ helpviewer_keywords:
   - "functions [SQL Server], cursors"
   - "cursor functions"
 ms.assetid: 7d9daa10-4c50-4212-9400-42120222b2b8
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # Cursor Functions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 These scalar functions return information about cursors:
   

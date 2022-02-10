@@ -8,10 +8,7 @@ f1_keywords:
   - "sql.data.tools.dbprojectwizard.importschema"
   - "sql.data.tools.SqlProjectImportDatabaseDialog.dialog"
   - "sql.data.tools.importscriptwizard.welcome"
-  - "sql.data.tools.importscriptwizard.summary"
-  - "sql.data.tools.SqlProjectImportDatabaseSummaryDialog.dialog"
   - "sql.data.tools.importscriptwizard.fileselection"
-ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], SET commands"
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Supported SET Commands (Visual FoxPro ODBC Driver)
 Your application can send the following Visual FoxPro **SET** commands to a data source:  

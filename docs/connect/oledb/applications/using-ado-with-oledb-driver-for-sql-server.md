@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ADO [OLE DB Driver for SQL Server]"
   - "MSOLEDBSQL, ADO"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using ADO with OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -6,7 +6,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dacoelho
 ms.metadata: seo-lt-2019
-ms.date: 07/12/2021
+ms.date: 10/05/2021
 ms.topic: guide
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -258,7 +258,7 @@ Set up your Kafka client libraries with your application before you submit the j
 
 Both libraries must:
 
-* Target Scala 2.11 and Spark 2.4.7. This SQL Server Big Data Cluster requirement is for Cumulative Update package 9 (CU9) or later.
+* Target Scala 2.12 and Spark 3.1.2. This SQL Server Big Data Cluster requirement is for Cumulative Update  13 (CU13) or later.
 * Be compatible with your Streaming server.
 
 > [!CAUTION]
@@ -273,8 +273,8 @@ If multiple applications connect to the same Kafka cluster, or if your organizat
 Copy the libraries to the common location:
 
 ```bash
-azdata bdc hdfs cp --from-path kafka-clients-2.7.0.jar --to-path "hdfs:/apps/jars/kafka-clients-2.7.0.jar"
-azdata bdc hdfs cp --from-path spark-sql-kafka-0-10_2.11-2.4.7.jar --to-path "hdfs:/apps/jars/spark-sql-kafka-0-10_2.11-2.4.7.jar"
+azdata bdc hdfs cp --from-path kafka-clients-2.7.0.jar --to-path "hdfs:/apps/jars/kafka-clients-3.0.0.jar"
+azdata bdc hdfs cp --from-path spark-sql-kafka-0-10_2.11-2.4.7.jar --to-path "hdfs:/apps/jars/spark-sql-kafka-0-10_2.12-3.1.2.jar"
 ```
 
 #### Dynamically install the libraries
@@ -287,7 +287,7 @@ The following example uses the shared library JAR files on HDFS:
 
 ```bash
 azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/sample-spark-streaming-python.py \
--j '["/apps/jars/kafka-clients-2.7.0.jar","/apps/jars/spark-sql-kafka-0-10_2.11-2.4.7.jar"]' \
+-j '["/apps/jars/kafka-clients-3.0.0.jar","/apps/jars/spark-sql-kafka-0-10_2.12-3.1.2.jar"]' \
 --config '{"spark.streaming.concurrentJobs":"3","spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"}' \
 -n MyStreamingETLPipelinePySpark --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
@@ -296,7 +296,7 @@ This example uses dynamic package management to install the dependencies:
 
 ```bash
 azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/sample-spark-streaming-python.py \
---config '{"spark.jars.packages": "org.apache.kafka:kafka-clients:2.7.0,org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.7","spark.streaming.concurrentJobs":"3","spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"}' \
+--config '{"spark.jars.packages": "org.apache.kafka:kafka-clients:3.0.0,org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.2","spark.streaming.concurrentJobs":"3","spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"}' \
 -n MyStreamingETLPipelinePySpark --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
 

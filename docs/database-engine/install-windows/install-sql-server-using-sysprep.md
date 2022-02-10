@@ -1,15 +1,16 @@
 ---
 title: "Install SQL Server Using SysPrep | Microsoft Docs"
 description: This article describes how to prepare and complete images by using SysPrep in SQL Server installation.
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "09/07/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server with SysPrep
@@ -34,7 +35,7 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 ### To Prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster (Unattended)  
   
-1. Prepare the image (as discussed in [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)) and capture the windows image through SysPrep Generalization. The following sample prepares the image:  
+1. Prepare the image (as discussed in [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)) and capture the Windows image through SysPrep Generalization. The following sample prepares the image:  
   
     ```  
     Setup.exe /q /ACTION=PrepareImage l /FEATURES=SQLEngine /InstanceID =<MYINST> /IACCEPTSQLSERVERLICENSETERMS  

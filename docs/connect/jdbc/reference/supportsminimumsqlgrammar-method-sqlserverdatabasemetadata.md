@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 40f5d727-1ce7-414d-867d-589ead7b2a29
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsMinimumSQLGrammar Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

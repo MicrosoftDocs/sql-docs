@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ODBC subkey [ODBC]"
 ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ODBC Subkey
 The values under the ODBC subkey specify ODBC tracing options. These options are set through the Tracing tab of the ODBC Data Source Administrator dialog box displayed by **SQLManageDataSources**. The ODBC subkey itself is optional. The format of these values is as shown in the following table.  

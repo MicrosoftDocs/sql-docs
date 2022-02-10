@@ -17,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Extended Methods on Geometry Instances
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a number of extended methods on Open Geospatial Consortium (OGC) geometry instances.  
   

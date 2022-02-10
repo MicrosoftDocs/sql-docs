@@ -10,8 +10,8 @@ ms.topic: how-to
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], domain independent"
 ms.assetid: 
-author: "cawrites"
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Create a domain-independent availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

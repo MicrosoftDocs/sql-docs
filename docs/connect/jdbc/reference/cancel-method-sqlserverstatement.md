@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 276bd9c1-9329-4fc9-9622-ed673c83a12d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # cancel Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

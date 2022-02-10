@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLFreeEnv function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 83011775-e31d-4663-b68b-999113a20d5b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFreeEnv (Visual FoxPro ODBC Driver)
 > [!NOTE]  

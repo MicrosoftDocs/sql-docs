@@ -1,24 +1,41 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
 description: Learn about the new features in each release of Data Migration Assistant for SQL Server and Azure SQL Database.
-ms.custom: ""
+ms.custom:
+  - intro-whats-new
 ms.date: "11/05/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
 ms.technology: dma
 ms.topic: conceptual
-keywords: ""
-helpviewer_keywords: 
+keywords:
+  - ""
+helpviewer_keywords:
   - "Data Migration Assistant, new features"
 ms.assetid: ""
-author: rajeshsetlem
-ms.author: rajpo
+author: aciortea
+ms.author: aciortea
 ---
 
 # What's new in Data Migration Assistant
 
 This article lists the additions in each release of Data Migration Assistant.
+
+## Data Migration Assistant v 5.5
+
+The v5.5 release of the Data Migration Assistant provides support for:
+
+- Elastic SKU recommendations option that generates an unique price-to-performance curve based on heuristic analysis of the collected performance data and workload pattern comparison with workloads in Azure SQL.
+- Improved user experience with the new HTML report for SKU recommendation results, in addition to the existing JSON file output.
+- Connection string wizard to enable users to intuitively provide SQL connection information for single SQL instances.
+- Enabling user selection of databases to include/exclude in the SKU recommendations.
+
+In addition, this release of Data Migration Assistant provides bug fixes and improvements for the following issues:
+
+- Fixed an error preventing collected performance data being read correctly in certain locales.
+- Fixed an issue related to incorrect SKU recommendations for environments with highly variable workload patterns.
+- Fixed an issue affecting data collection in high memory environments.
 
 ## Data Migration Assistant v 5.4
 

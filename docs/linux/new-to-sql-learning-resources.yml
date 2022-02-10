@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.date: 07/25/2020  
+  ms.date: 10/21/2021  
 
 landingContent:
   - title: "Module 1: Basics of SQL Server"
@@ -58,8 +58,6 @@ landingContent:
         url: ../azure-data-studio/what-is-azure-data-studio.md
       - text: Write basic Transact-SQL (T-SQL)
         url: ../t-sql/tutorial-writing-transact-sql-statements.md
-      - text: Channel 9 - Cross-platform SQL tools (optional)
-        url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
 
   - title: "Module 4: Configure SQL Server on Linux"
     linkLists:

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLExtendedFetch function [ODBC], Cursor Library"
 ms.assetid: 06fbf06f-127b-475c-b636-7b784918475d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLExtendedFetch (Cursor Library)
 > [!IMPORTANT]  

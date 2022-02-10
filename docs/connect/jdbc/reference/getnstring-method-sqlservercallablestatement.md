@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 5ac360e8-a1ee-4577-93b4-bb2018f1087a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getNString Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

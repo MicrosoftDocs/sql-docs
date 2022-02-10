@@ -27,7 +27,7 @@ ms.author: maggies
   
 1. In the web portal, navigate to the desired report, right-click on it and  select **Manage** from the drop down menu.
 
-2. On the **Manage <reportname>** page, select **Create linked report**.  
+2. On the **Manage \<reportname\>** page, select **Create linked report**.  
   
 3. Enter a name for the new linked report. Optionally enter a description.  
   

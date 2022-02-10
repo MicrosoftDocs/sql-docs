@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "driver setup DLL [ODBC]"
 ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Driver Setup DLL
 > [!NOTE]  

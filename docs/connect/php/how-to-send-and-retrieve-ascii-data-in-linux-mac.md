@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "linux"
   - "macOS"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # How to: Send and Retrieve ASCII Data in Linux and macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

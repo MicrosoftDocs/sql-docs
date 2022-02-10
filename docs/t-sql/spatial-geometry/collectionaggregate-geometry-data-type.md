@@ -17,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # CollectionAggregate (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Creates a **GeometryCollection** instance from a set of **geometry** types.
   
@@ -51,7 +51,7 @@ CollectionAggregate ( geometry_operand )
 ## Examples  
  The following example returns a `GeometryCollection` instance that contains a `CurvePolygon` and a `Polygon`.  
   
- ```
+ ```sql
  -- Setup table variable for CollectionAggregate example  
  DECLARE @Geom TABLE  
  (  

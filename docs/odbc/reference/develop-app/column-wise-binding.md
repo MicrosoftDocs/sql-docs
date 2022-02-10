@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "binding columns [ODBC]"
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Column-Wise Binding
 When using column-wise binding, an application binds one or two, or in some cases three, arrays to each column for which data is to be returned. The first array holds the data values, and the second array holds length/indicator buffers. Indicators and length values can be stored in separate buffers by setting the SQL_DESC_INDICATOR_PTR and SQL_DESC_OCTET_LENGTH_PTR descriptor fields to different values; if this is done, a third array is bound. Each array contains as many elements as there are rows in the rowset.  

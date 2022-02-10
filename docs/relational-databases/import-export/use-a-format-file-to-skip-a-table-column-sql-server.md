@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "skipping columns when importing"
   - "format files [SQL Server], skipping columns"
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use a Format File to Skip a Table Column (SQL Server)
@@ -74,7 +74,7 @@ The previous command creates a non-XML format file, `myTestSkipCol_Default.fmt`.
   
  The following screenshot shows the values in this sample default format files. 
   
- ![default non-XML format file for myTestSkipCol](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "default non-XML format file for myTestSkipCol")  
+ ![default non-XML format file for myTestSkipCol](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.png "default non-XML format file for myTestSkipCol")  
   
 > [!NOTE]  
 >  For more information about the format-file fields, see [Non-XML Format Files &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  

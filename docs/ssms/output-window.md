@@ -1,23 +1,24 @@
 ---
-description: "Output Window in SQL Server Management Studio"
 title: "SSMS Output Window"
-ms.custom: seo-lt-2019
-ms.date: "08/09/2017"
+description: "Output Window in SQL Server Management Studio"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 helpviewer_keywords: 
   - "Output Window [SQL Server Management Studio]"
   - "Activity Monitor [SQL Server Management Studio]"
   - "Object Explorer [SQL Server Management Studio]"  
-ms.assetid: a2ce1a07-b4e2-471c-87d2-b8de5e6c6864
 author: "markingmyname"
 ms.author: "maghan"
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: "08/09/2017"
 ---
 # Output Window in SQL Server Management Studio
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 The Output Window can be opened from the View menu or by using the key combination Ctrl+Alt+O. There are multiple channels of output available.
 
 The following table gives an overview of the types of messages associated with each output channel.

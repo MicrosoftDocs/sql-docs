@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 60abf83d-6f97-4e47-b9d3-5072bd09d869
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getDateTimeOffset(int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

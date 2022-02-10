@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "page and extent architecture guide"
   - "guide, page and extent architecture"
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Pages and Extents Architecture Guide

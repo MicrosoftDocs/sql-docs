@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetInfo function [ODBC]"
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # SQLGetInfo Function

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "strings [SQL Server], comparing"
   - "SOUNDEX values"
 ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SOUNDEX (Transact-SQL)

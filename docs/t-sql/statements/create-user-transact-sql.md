@@ -2,7 +2,7 @@
 description: "CREATE USER (Transact-SQL)"
 title: CREATE USER (Transact-SQL)
 ms.custom: ""
-ms.date: "07/07/2021"
+ms.date: "08/11/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -197,7 +197,7 @@ CREATE USER user_name
   - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
   - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
 
-- Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database via Security Groups in SQL Database, Managed Instance, or Azure Synapse.
+- Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, Managed Instance, or Azure Synapse.
 - DisplayName of Azure AD object for Azure AD Groups and Azure AD Applications. If you had the *Nurses* security group, you would use:  
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  

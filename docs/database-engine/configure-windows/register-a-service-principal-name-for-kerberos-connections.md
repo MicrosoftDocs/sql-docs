@@ -58,12 +58,10 @@ Windows Authentication is the preferred method for users to authenticate to SQL 
 
 ##  <a name="Permissions"></a> Permissions
 
-When the Database Engine service starts, it attempts to register the Service Principal Name (SPN). Suppose the account starting SQL Server doesn't have permission to register an SPN in Active Directory Domain Services. In that case, this call fails, and a warning message is logged in the Application event log as well as the SQL Server error log. To register the SPN, the Database Engine must be running under a built-in account, such as Local System (not recommended), or NETWORK SERVICE, or an account that has permission to register an SPN. You can register an SPN using a domain administrator account, but this is not recommended in a production environment. When SQL Server runs on the Windows 7 or Windows Server 2008 R2 operating system, you can run SQL Server using a virtual account or a managed service account (MSA). Both virtual accounts and MSA's can register an SPN. If SQL Server isn't running under one of these accounts, the SPN isn't registered at startup, and the domain administrator must register the SPN manually.
+When the Database Engine service starts, it attempts to register the Service Principal Name (SPN). Suppose the account starting SQL Server doesn't have permission to register an SPN in Active Directory Domain Services. In that case, this call fails, and a warning message is logged in the Application event log as well as the SQL Server error log. To register the SPN, the Database Engine must be running under a built-in account, such as Local System (not recommended), or NETWORK SERVICE, or an account that has permission to register an SPN. You can register an SPN using a domain administrator account, but this is not recommended in a production environment. When SQL Server runs on the Windows 7 or Windows Server 2008 R2 or later versions of operating system, you can run SQL Server using a virtual account or a managed service account (MSA). Both virtual accounts and MSA's can register an SPN. If SQL Server isn't running under one of these accounts, the SPN isn't registered at startup, and the domain administrator must register the SPN manually.
 
 > [!NOTE]  
 >  When the Windows domain is configured to run at less than the Windows Server 2008 R2 Windows Server 2008 R2 functional level, then the Managed Service Account will not have the necessary permissions to register the SPNs for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. If Kerberos authentication is required, the Domain Administrator should manually register the SQL Server SPNs on the Managed Service Account.
-
-Additional information is available at [How to Implement Kerberos Constrained Delegation with SQL Server 2008](/previous-versions/sql/sql-server-2008/ee191523(v=sql.100))  
 
 ##  <a name="Formats"></a> SPN Formats
 
@@ -109,13 +107,39 @@ When an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md
   
 For other connections that support Kerberos the SPN is registered in the format *MSSQLSvc/\<FQDN>*/*\<instancename>* for a named instance. The format for registering the default instance is *MSSQLSvc/\<FQDN>*.  
 
+To give permissions to SQL Server startup account to register and modify SPN do the following:
+
+1.  On the Domain Controller machine, start **Active Directory Users and Computers**.
+
+2.  Select **View \> Advanced**.
+
+3.  Under **Computers**, locate the SQL Server computer, and then right-click and select **Properties**.
+
+4.  Select the **Security** tab and click **Advanced**.
+
+5.  In the list, if SQL Server startup account is not listed, click **Add** to add it and once it is added do the following:
+
+    a.  Select the account and click **Edit**.
+
+    b.  Under Permissions select **Validate Write servicePrincipalName**.
+
+    d.  Scroll down and under **Properties** select:
+
+       -  **Read servicePrincipalName**
+
+       -  **Write servicePrincipalName**
+
+    e.  Click **OK** twice.
+
+6.  Close **Active Directory Users and Computers**.
+
 Manual intervention might be required to register or unregister the SPN if the service account lacks the permissions that are required for these actions.  
 
 ##  <a name="Manual"></a> Manual SPN Registration  
 
-To register the SPN manually, the administrator must use the Setspn.exe tool that is provided with the Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] Support Tools. For more information, see the [Windows Server 2003 Service Pack 1 Support Tools](https://support.microsoft.com/kb/892777) KB article.  
+To register the SPN manually, you can use Setspn tool that is built into Windows. Setspn.exe is a command-line tool that enables you to read, modify, and delete the Service Principal Names (SPN) directory property. This tool also enables you to view the current SPNs, reset the account's default SPNs, and add or delete supplemental SPNs.  
 
-Setspn.exe is a command-line tool that enables you to read, modify, and delete the Service Principal Names (SPN) directory property. This tool also enables you to view the current SPNs, reset the account's default SPNs, and add or delete supplemental SPNs.  
+For more information on the Setspn tool, required permissions and examples on how to use it, review [Setspn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).
 
 The following example illustrates the syntax used to manually register an SPN for a TCP/IP connection using a domain user account:  
 

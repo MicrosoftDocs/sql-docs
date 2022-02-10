@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "data conversions from C to SQL types [ODBC], date"
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # C to SQL: Date
 The identifier for the date ODBC C data type is:  

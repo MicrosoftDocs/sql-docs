@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLSetPos function [ODBC], Cursor Library"
 ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetPos (Cursor Library)
 > [!IMPORTANT]  

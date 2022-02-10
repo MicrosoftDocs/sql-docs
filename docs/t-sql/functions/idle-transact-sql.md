@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "status information [SQL Server], idle time"
   - "idle time [SQL Server]"
 ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;IDLE (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the time that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has been idle since it was last started. The result is in CPU time increments, or "ticks," and is cumulative for all CPUs, so it may exceed the actual elapsed time. Multiply by @@TIMETICKS to convert to microseconds.  
   

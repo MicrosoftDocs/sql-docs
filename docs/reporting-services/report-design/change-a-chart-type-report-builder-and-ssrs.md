@@ -1,6 +1,6 @@
 ---
-title: "Change a Chart Type (Report Builder) | Microsoft Docs"
-description: Learn how to change your chart type at any point in report design. Improve interpretation with characteristics appropriate for your data in Report Builder.
+title: "Change a chart type in a paginated report | Microsoft Docs"
+description: Learn how to change your paginated report chart type at any point in report design. Improve interpretation with characteristics appropriate for your data in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Change a Chart Type (Report Builder and SSRS)
-When you first insert a chart into a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report, the **Select Chart Type** dialog appears. If you cancel this dialog, a Column chart type is added by default.  
+# Change a chart type in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+When you first insert a chart into a paginated report, the **Select Chart Type** dialog appears. If you cancel this dialog, a Column chart type is added by default.  
   
  At any point when designing the report, you can change the chart type to something more suitable to the report. It is important to select the correct chart type for your data so that it can be interpreted correctly. You should understand each chart type's characteristics to determine what chart type is best suited for your data. For more information, see [Chart Types &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
   

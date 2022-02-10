@@ -5,7 +5,7 @@ ms.date: 09/30/2020
 ms.prod: sql
 ms.reviewer: wiassaf
 ms.technology: performance
-ms.topic: how-to
+ms.topic: troubleshooting
 author: bluefooted
 ms.author: pamela
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

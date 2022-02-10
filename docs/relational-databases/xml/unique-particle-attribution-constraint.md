@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "UPA constraint rule"
   - "unique particle attribution constraint rule"
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Unique Particle Attribution Constraint
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

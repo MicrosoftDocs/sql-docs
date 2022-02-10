@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLConfigDataSource function [ODBC]"
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLConfigDataSource Function
 **Conformance**  

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "registry entries for data sources [ODBC], subkeys"
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ODBC Data Sources subkey
 

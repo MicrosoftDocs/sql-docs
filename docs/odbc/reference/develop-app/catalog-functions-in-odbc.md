@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "functions [ODBC], catalog functions"
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Catalog Functions in ODBC
 ODBC contains the following catalog functions:  

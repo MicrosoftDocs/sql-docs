@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLAllocEnv function [ODBC]"
 ms.assetid: 00bac0c1-346b-4e48-901a-06ba4557b944
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLAllocEnv Function
 **Conformance**  

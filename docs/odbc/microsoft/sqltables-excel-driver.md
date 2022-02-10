@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLTables function [ODBC], Excel Driver"
 ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLTables (Excel Driver)
 > [!NOTE]  

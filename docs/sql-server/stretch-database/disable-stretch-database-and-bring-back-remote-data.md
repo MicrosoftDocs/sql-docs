@@ -59,9 +59,9 @@ ms.custom: seo-dt-2019
     This command can't be canceled.  
   
     ```sql  
-    USE <Stretch-enabled database name>;
+    USE [<Stretch-enabled database name>];
     GO
-    ALTER TABLE <Stretch-enabled table name>  
+    ALTER TABLE [<Stretch-enabled table name>]
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ; 
     GO 
     ```  
@@ -98,7 +98,7 @@ ms.custom: seo-dt-2019
  Run the following command.  
   
 ```sql  
-ALTER DATABASE <Stretch-enabled database name>  
+ALTER DATABASE [<Stretch-enabled database name>]
     SET REMOTE_DATA_ARCHIVE = OFF ;  
 GO 
 ```  

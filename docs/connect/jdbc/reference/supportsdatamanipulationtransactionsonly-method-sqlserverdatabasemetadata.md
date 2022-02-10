@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: bdc182db-4518-4bf2-b63a-05f58fdb4eb8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsDataManipulationTransactionsOnly Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

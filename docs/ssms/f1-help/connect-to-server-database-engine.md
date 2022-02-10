@@ -1,10 +1,10 @@
 ---
-description: "Connect to Server (Database Engine)"
 title: Connect to Server (Database Engine)
+description: "Connect to Server (Database Engine)"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - "sql13.swb.connectoserverunknownservertype.f1"
   - "sql13.swb.connection.login.sqlce.f1"
@@ -13,7 +13,6 @@ f1_keywords:
   - "sql13.swb.connection.login.sqlserver.f1"
   - "sql13.swb.manageSS2k.f1"
   - "connect-to-server-database-engine"
-ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
@@ -23,7 +22,8 @@ ms.date: 04/07/2020
 
 # Connect to Server (Database Engine)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 Use this dialog to view or specify options when connecting to [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. In most cases, you can connect by entering the computer name of the database server in the **Server name** box and then clicking **Connect**. If you are connecting to a named instance, use the computer name followed by a backslash, and then the instance name. For example, `mycomputer\myinstance`. If you are connecting to [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], use the computer name followed by **\sqlexpress**.
   
 Many factors can affect your ability to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For help, see the following resources:

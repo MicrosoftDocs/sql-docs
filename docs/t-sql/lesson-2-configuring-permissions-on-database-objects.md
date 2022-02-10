@@ -1,21 +1,23 @@
 ---
+title: "T-SQL Tutorial: Configure permissions on db objects"
 description: "Lesson 2: Configure permissions on database objects"
-title: "Tutorial: Configure permissions on db objects"
-ms.custom: "seo-lt-2019"
-ms.date: "07/31/2018"
 ms.prod: sql
 ms.technology: t-sql
-ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "database permissions"
-ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.reviewer: ""
+ms.custom: "seo-lt-2019"
+ms.date: "07/31/2018"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Lesson 2: Configure permissions on database objects
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE[sql-asdb-asdbmi-pdw-md](../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
 Granting a user access to a database involves three steps. First, you create a login. The login lets the user connect to the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Then you configure the login as a user in the specified database. And finally, you grant that user permission to database objects. This lesson shows you these three steps, and shows you how to create a view and a stored procedure as the object.  
 
   >[!NOTE]

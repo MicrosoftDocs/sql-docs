@@ -2,7 +2,8 @@
 description: "Getting Started with SSMA  for DB2 Console (DB2ToSQL)"
 title: "Getting Started with SSMA  for DB2 Console (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-get-started
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setLong Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

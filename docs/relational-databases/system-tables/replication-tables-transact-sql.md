@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "system tables [SQL Server], replication"
   - "replication [SQL Server], system tables"
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Replication Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -312,6 +312,8 @@ ms.author: chadam
         [MSmerge_tombstone](msmerge-tombstone-transact-sql.md)
 
         [MSpeer_lsns](mspeer-lsns-transact-sql.md)
+
+        [MSredirected_publishers](msredirected-publishers.md)
 
         [MSrepl_identity_range](msrepl-identity-range-transact-sql.md)
 

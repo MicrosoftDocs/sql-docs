@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # unwrap Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

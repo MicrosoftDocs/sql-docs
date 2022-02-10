@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Updating data (Microsoft Drivers for PHP for SQL Server)
 

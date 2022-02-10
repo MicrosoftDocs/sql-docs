@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "encryption [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, encryption"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Encryption Without Validation
 

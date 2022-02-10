@@ -8,6 +8,8 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
+ms.custom:
+  - intro-installation
 ---
 
 # Install SQL Server Agent on Linux
@@ -49,6 +51,9 @@ sudo systemctl restart mssql-server
 
 > [!NOTE]
 > If you are upgrading from 2017 CU3 or below with Agent installed, SQL Server Agent will be enabled automatically and previous Agent packages will be uninstalled.  
+
+> [!NOTE]
+> SQL Server Management Studio Object Explorer does not display the contents of the SQL Server Agent node unless *Agent XPs* extended stored procedures are enabled, regardless of the SQL Server Agent service state. For more information, see [Agent XPs Server Configuration Option](../database-engine/configure-windows/agent-xps-server-configuration-option.md)
 
 ## <a name="InstallAgentBelowCU4"></a>Install the SQL Server Agent
 

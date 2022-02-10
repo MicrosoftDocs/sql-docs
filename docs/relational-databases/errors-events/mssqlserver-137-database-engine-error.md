@@ -64,7 +64,7 @@ DECLARE @mycol nvarchar(20) ;
   
 SET @mycol = 'Name';  
   
-EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;
+EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product;') ;
 ```
   
 ## See Also  

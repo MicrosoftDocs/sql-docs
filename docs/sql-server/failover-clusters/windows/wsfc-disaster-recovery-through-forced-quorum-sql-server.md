@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # WSFC Disaster Recovery through Forced Quorum (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

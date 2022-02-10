@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "differential backups"
   - "differential backups, about"
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Differential Backups (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

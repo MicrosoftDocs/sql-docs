@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "adding tables"
   - "CreateTable function"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Creating SQL Server Tables
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

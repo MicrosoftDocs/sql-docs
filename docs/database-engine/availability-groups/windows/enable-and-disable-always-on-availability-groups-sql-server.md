@@ -13,10 +13,10 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], disabling"
   - "Availability Groups [SQL Server], enabling"
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
-# Enable or Disable Always On availability group feature
+# Enable or disable Always On availability group feature
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Enabling [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is a prerequisite for a server instance to use availability groups. Before you can create and configure any availability group, the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must have been enabled on the each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that will host an availability replica for one or more availability groups.  
@@ -25,9 +25,9 @@ ms.author: chadam
 >  If you delete and re-create a WSFC cluster, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosted an availability replica on the original WSFC cluster.  
   
   
-##  <a name="Prerequisites"></a> Prerequisites for Enabling Always On Availability Groups  
+##  <a name="Prerequisites"></a> Prerequisites
   
--   The server instance must reside on a Windows Server Failover Clustering (WSFC) node.  
+-   Prior to SQL Server 2017, and Windows Server 2016, the instance had to reside on a Windows Server Failover Cluster (WSFC) node to enable the Always On availability group feature. To support [read-scale availability groups](read-scale-availability-groups.md), starting with SQL Server 2017 and Windows Server 2016, it's possible to enable the availability group feature even if the SQL Server instance does not reside on a Windows Server Failover Cluster.
   
 -   The server instance must be running an edition of SQL Server that supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -42,7 +42,7 @@ ms.author: chadam
   
  Requires Active Directory Create Objects and Manage Objects permissions.  
   
-##  <a name="IsEnabled"></a> Determine Whether Always On Availability Groups is Enabled  
+##  <a name="IsEnabled"></a> Determine if feature is enabled 
   
 -   [SQL Server Management Studio](#SSMS1Procedure)  
   
@@ -97,7 +97,7 @@ ms.author: chadam
   
 -   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="EnableAOAG"></a> Enable Always On Availability Groups  
+##  <a name="EnableAOAG"></a> Enable feature
  **To enable Always On, using:**  
   
 -   [SQL Server Configuration Manager](#SQLCM2Procedure)  
@@ -144,7 +144,7 @@ ms.author: chadam
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
 ```  
   
-##  <a name="DisableAOAG"></a> Disable Always On Availability Groups  
+##  <a name="DisableAOAG"></a> Disable feature 
   
 -   **Before you disable Always On:**  
   

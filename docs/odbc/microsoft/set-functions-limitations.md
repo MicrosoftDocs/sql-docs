@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC]"
 ms.assetid: 18e7a0fd-cc5d-4109-b542-cac6893a29c3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Set Functions Limitations
 The set functions (AVG, MAX, MIN, and SUM) do not support the DISTINCT keyword.

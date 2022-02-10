@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLGetTypeInfo function [ODBC], Access Driver"
 ms.assetid: a28b16eb-ca36-4297-9297-ecd7c107a84e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetTypeInfo (Access Driver)
 > [!NOTE]  

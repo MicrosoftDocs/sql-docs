@@ -1,5 +1,5 @@
 ---
-description: "Creating Extended Stored Procedures"
+description: "Create Extended Stored Procedures"
 title: "Creating Extended Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -15,20 +15,20 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], creating"
   - "messages [SQL Server], extended stored procedures"
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
-# Creating Extended Stored Procedures
+# Create Extended Stored Procedures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
   
- An extended stored procedure is a function with a prototype:  
+ An extended stored procedure is a C/C++ function with a prototype:  
   
  SRVRETCODE *xp_extendedProcName* **(**SRVPROC **\*);**  
   
- Using the prefix xp_ is optional. Extended stored procedure names are case sensitive when referenced in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, regardless of code page/sort order installed on the server. When you build a DLL:  
+ Using the prefix xp_ is optional. Extended stored procedure names are case-sensitive when referenced in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, regardless of code page/sort order installed on the server. When you build a DLL:  
   
 -   If an entry point is necessary, write a DllMain function.  
   

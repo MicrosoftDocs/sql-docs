@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "database restores [SQL Server], full differential backups"
   - "backing up databases [SQL Server], full differential backups"
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Restore a differential database backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

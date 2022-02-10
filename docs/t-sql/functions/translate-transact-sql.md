@@ -2,25 +2,26 @@
 description: "TRANSLATE (Transact-SQL)"
 title: "TRANSLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 04/16/2020
+ms.date: 09/14/2021
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords: 
   - "TRANSLATE"
   - "TRANSLATE_TSQL"
 helpviewer_keywords: 
   - "TRANSLATE function"
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRANSLATE (Transact-SQL)
 
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
+
 
 Returns the string provided as a first argument after some characters specified in the second argument are translated into a destination set of characters specified in the third argument.
 
@@ -107,7 +108,7 @@ REPLACE
 GeoJSON is a format for encoding a variety of geographic data structures. With the `TRANSLATE` function, developers can easily convert GeoJSON points to WKT format and vice versa. The following query replaces square and curly braces in input  with regular braces:
 
 ```sql
-SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
+SELECT TRANSLATE('[137.4,72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
 

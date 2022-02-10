@@ -1,5 +1,5 @@
 ---
-title: "Formatting Pointers on a Gauge (Report Builder) | Microsoft Docs"
+title: "Formatting pointers on a gauge in a paginated report | Microsoft Docs"
 description: Find out how to indicate the current value of a gauge in a paginated report in Report Builder by formatting points on the gauge. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,8 +12,11 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Formatting Pointers on a Gauge (Report Builder and SSRS)
- In a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, the gauge pointer indicates the current value of the gauge.   
+# Formatting pointers on a gauge in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+ In a paginated report, the gauge pointer indicates the current value of the gauge.   
    
  By default, when a field is added, the values that are contained in the field are aggregated into one value that is shown by the pointer on the gauge. You can add multiple pointers to the gauge to point at multiple values on the same scale, or add multiple scales and a pointer for every scale you have added. After you add a field to a gauge, you must set the maximum and minimum values on the corresponding scale to give context to the pointer value. You also have the option of setting the minimum and maximum values on a range, which shows a critical area on the scale.  
   

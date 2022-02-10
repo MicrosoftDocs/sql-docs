@@ -6,7 +6,7 @@ author: DaniBunny
 ms.author: dacoelho
 ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 06/14/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -39,7 +39,7 @@ For more information, see [Key Versions in [!INCLUDE[big-data-clusters-2019](../
 
 ### SQL Server Big Data Clusters key management service (KMS)
 
-A Controller hosted service responsible for managing keys and certificates for the Encryption at Rest feature set for the SQL Server BDC cluster. It's a service that supports the following features:
+A Controller hosted service responsible for managing keys and certificates for the Encryption at Rest feature set for the SQL Server Big Data Clusters. It's a service that supports the following features:
 
 * Secure management and storage of keys and certificates used for encryption at rest.
 * Hadoop KMS compatibility. It acts as the key management service for HDFS component on BDC.
@@ -123,7 +123,7 @@ On existing clusters, the upgrade process won't enforce new encryption or re-enc
 
 * __SQL Server__
 
-    1. __SQL Server master instance__. The upgrade process won't affect any master instance databases and installed TDE certificates, but it is highly encouraged to back up your databases and your manually installed TDE certificates before the upgrade process. It is also advised to store those artifacts outside the SQL Server BDC cluster.
+    1. __SQL Server master instance__. The upgrade process won't affect any master instance databases and installed TDE certificates, but it is highly encouraged to back up your databases and your manually installed TDE certificates before the upgrade process. It is also advised to store those artifacts outside the big data cluster.
     1. __Compute and storage pool__. Those databases are system-managed, volatile and will be recreated and automatically encrypted on cluster upgrade.
     1. __Data pool__. Upgrade does not impact databases in the SQL Server instances part of data pool.
 
@@ -148,7 +148,7 @@ __Encryption Zones won't be configured__. The Hadoop KMS component won't be conf
 If you upgraded your cluster to CU8 (`azdata upgrade`) and want to enable HDFS encryption zones there are two options available:
 
 * Execution of the Azure Data Studio [Operational Notebook](cluster-manage-notebooks.md) named __SOP0128 - Enable HDFS Encryption zones in Big Data Clusters__ to perform the configuration.
-* Script execution as described bellow.
+* Script execution as described below.
 
 Requirements:
 
@@ -291,4 +291,4 @@ To learn more about how to effectively use encryption at rest [!INCLUDE[ssbigdat
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 
-- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)

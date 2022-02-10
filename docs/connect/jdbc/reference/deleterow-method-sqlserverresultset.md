@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: aa04a644-c7c2-4738-8b6e-7fea566d2c16
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # deleteRow Method (SQLServerResultSet)
 

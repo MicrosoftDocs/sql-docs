@@ -2,14 +2,16 @@
 title: Deployment configuration file
 titleSuffix: SQL Server Big Data Clusters
 description: Learn about a JSON file that documents the structure of a SQL Server 2019 Big Data Cluster deployment configuration file.
-author: mihaelablendea 
-ms.author: mihaelab
-ms.reviewer: mikeray
+author: DaniBunny
+ms.author: dacoelho
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 2/19/2020
+ms.date: 09/21/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Deployment configuration file reference for big data clusters
@@ -20,6 +22,9 @@ This article provides a JSON file that documents the structure of a SQL Server 2
 
 > [!TIP]
 > Do not use this as your actual deployment configuration file. Instead, follow the instructions in the [deployment guidance](deployment-guidance.md#configfile) for how to work with configuration files.
+
+> [!WARNING]
+> The parameter ```imagePullPolicy``` is required to be set as ```"Always"``` in the deployment profile control.json file.
 
 ## Deployment configuration file
 

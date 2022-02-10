@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "alignment issues [ODBC]"
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Alignment
 The alignment issues in an ODBC application are generally no different than they are in any other application. That is, most ODBC applications have few or no problems with alignment. The penalties for not aligning addresses vary with the hardware and operating system and might be as minor as a slight performance penalty or as major as a fatal run-time error. Therefore, ODBC applications, and portable ODBC applications in particular, should be careful to align data properly.  

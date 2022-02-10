@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_next_result"
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

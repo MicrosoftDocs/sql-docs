@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "application process [ODBC], initializing applications"
 ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Step 2: Initialize the Application
 The second step is to initialize the application, as shown in the following illustration. Exactly what is done here varies with the application.  

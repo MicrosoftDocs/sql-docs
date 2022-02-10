@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getSubString Method (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

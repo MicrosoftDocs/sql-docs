@@ -5,8 +5,8 @@ ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
-f1_keywords: 
-- "sql13.swb.serverproperties.processor.f1"
+f1_keywords:
+  - "sql13.swb.serverproperties.processor.f1"
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
 author: markingmyname
 ms.author: maghan

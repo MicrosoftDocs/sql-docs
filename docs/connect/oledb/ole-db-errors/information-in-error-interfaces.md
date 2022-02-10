@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "ISQLErrorInfo interface"
   - "errors [OLE DB], error interfaces"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Information in Error Interfaces
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

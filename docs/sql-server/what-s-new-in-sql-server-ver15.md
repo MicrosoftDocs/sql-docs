@@ -9,6 +9,8 @@ ms.topic: "article"
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: ">=sql-server-ver15"
+ms.custom:
+  - intro-whats-new
 ---
 # What's new in [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]
 

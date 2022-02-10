@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "designing assemblies [SQL Server]"
   - "assemblies [CLR integration], designing"
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Assemblies - Designing
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

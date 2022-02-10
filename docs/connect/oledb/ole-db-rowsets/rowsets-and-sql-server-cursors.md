@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "cursors [OLE DB]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Rowsets and SQL Server Cursors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

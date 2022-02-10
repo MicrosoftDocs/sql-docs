@@ -16,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "CURRENT_REQUEST_ID"
 ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # CURRENT_REQUEST_ID (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the ID of the current request within the current session.
   

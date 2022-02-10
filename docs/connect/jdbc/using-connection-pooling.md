@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using connection pooling
 

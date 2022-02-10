@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid:
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Prepared statement metadata caching for the JDBC driver
 

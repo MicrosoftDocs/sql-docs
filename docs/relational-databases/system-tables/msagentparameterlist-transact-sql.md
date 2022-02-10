@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Msagentparameterlist system table"
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # MSagentparameterlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

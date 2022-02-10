@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "column names [SQL Server]"
   - "names [SQL Server], columns"
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # INDEX_COL (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the indexed column name. Returns NULL for XML indexes.  
   

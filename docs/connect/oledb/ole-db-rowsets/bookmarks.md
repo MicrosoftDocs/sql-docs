@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "rowsets [OLE DB], bookmarks"
   - "OLE DB rowsets, bookmarks"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Bookmarks
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

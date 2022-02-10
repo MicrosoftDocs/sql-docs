@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ERROR_NUMBER function"
   - "CATCH block"
 ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ERROR_NUMBER (Transact-SQL)

@@ -4,7 +4,7 @@ description: Troubleshoot Microsoft SQL Server running on Linux or in a Docker c
 author: VanMSFT 
 ms.author: vanto
 ms.date: 05/01/2018
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S

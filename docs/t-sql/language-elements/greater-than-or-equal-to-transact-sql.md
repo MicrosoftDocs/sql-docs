@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "greater than or equal to operator (>=)"
   - ">= (greater than or equal to operator)"
 ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &gt;= (Greater Than or Equal To) (Transact-SQL)

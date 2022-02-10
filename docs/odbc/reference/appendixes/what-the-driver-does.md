@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "block cursors [ODBC]"
 ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # What the Driver Does
 The following table summarizes what functions and statement attributes an ODBC *3.x* driver should implement for block and scrollable cursors.  

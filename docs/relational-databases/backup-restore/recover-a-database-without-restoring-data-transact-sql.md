@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "database restores [SQL Server], recovery-only"
   - "recovery [SQL Server], without restoring data"
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Recover a database without restoring data (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

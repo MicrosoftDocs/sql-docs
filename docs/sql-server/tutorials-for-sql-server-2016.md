@@ -6,8 +6,8 @@ ms.prod: sql
 ms.technology:
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Tutorials for SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

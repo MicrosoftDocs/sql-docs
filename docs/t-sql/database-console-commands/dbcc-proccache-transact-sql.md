@@ -26,7 +26,7 @@ ms.author: umajay
 
 # DBCC PROCCACHE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Displays information in a table format about the procedure cache.
   

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 85bb1bcc-31ae-4f6b-a103-699724bbb0aa
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsCorrelatedSubqueries Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "16-bit applications with 32-bit drivers [ODBC]"
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using 16-Bit Applications with 32-Bit Drivers
 > [!IMPORTANT]  

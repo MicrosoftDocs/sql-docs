@@ -17,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STIsValid (geography Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns true if a **geography** instance is well-formed and recognized as a valid geography object based on its Open Geospatial Consortium (OGC) type. Returns false if a **geography** instance is not well-formed. This method is precise.  
   
@@ -45,7 +45,7 @@ ms.author: mlandzic
 ## Examples  
  The following example creates a `geography` instance and uses `STIsValid()` to test if the instance is valid.  
   
-```  
+```sql
 DECLARE @g geography = geography::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 4326);  
 SELECT @g.STIsValid();  
 DECLARE @g geography  

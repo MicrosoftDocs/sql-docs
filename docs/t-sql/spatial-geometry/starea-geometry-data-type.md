@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STArea (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the total surface area of a **geometry** instance.  
   
@@ -46,7 +46,7 @@ ms.author: mlandzic
 ### A. Computing the area of a Polygon instance  
  The following example creates a `Polygon``geometry` instance and computes the area of the polygon.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);  
 SELECT @g.STArea();  
@@ -55,7 +55,7 @@ SELECT @g.STArea();
 ### B. Computing the area of a CurvePolygon instance  
  The following example computes the area of a `CurvePolygon` instance.  
   
-```
+```sql
  DECLARE @g geometry;  
  SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 2, 2 0, 4 2, 4 2, 0 2))');  
  SELECT @g.STArea() AS Area;

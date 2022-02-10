@@ -1,23 +1,23 @@
 ---
+title: Creating a System-Versioned Temporal Table
 description: "Creating a System-Versioned Temporal Table"
-title: "Creating a System-Versioned Temporal Table | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/15/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
+ms.reviewer: ""
 ms.author: maghan
+ms.custom: ""
+ms.date: 11/18/2021
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Creating a system-versioned temporal table
 
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
-
 
 There are three ways to create a system-versioned temporal table with regards to how the history table is specified:
 
@@ -82,7 +82,7 @@ The history table is created using the same rules as apply to creating an "anony
 
 ## Creating a temporal table with a user-defined history table
 
-Creating a temporal table with user-defined history table is a convenient option when the user wants to specify a history table with specific storage options and additional indexes. In the example below, a user-defined history table is created with a schema that is aligned with the temporal table that will be created. To this user-defined history table, a clustered columnstore index and additional non clustered rowstore (B-tree) index is created for point lookups. After this user-defined history table is created, the system-versioned temporal table is created specifying the user-defined history table as the default history table.
+Creating a temporal table with user-defined history table is a convenient option when the user wants to specify a history table with specific storage options and additional indexes. In the example below, a user-defined history table is created with a schema that is aligned with the temporal table that will be created. To this user-defined history table, a clustered columnstore index and additional non clustered rowstore (B+ tree) index is created for point lookups. After this user-defined history table is created, the system-versioned temporal table is created specifying the user-defined history table as the default history table.
 
 ```sql
 CREATE TABLE DepartmentHistory
@@ -131,7 +131,7 @@ For example, you may have a set of tables where versioning is implemented with t
 - Better DML performance
 - Minimal maintenance costs
 
- When converting an existing table, consider using the **HIDDEN** clause to hide the new **PERIOD** columns (the datetime2 columns **SysStartTime** and **SysEndTime**) to avoid impacting existing applications that do not explicitly specify column names (e.g. SELECT * or INSERT without column list) are not designed to handle new columns.
+When converting an existing table, consider using the **HIDDEN** clause to hide the new **PERIOD** columns (the datetime2 columns **SysStartTime** and **SysEndTime**) to avoid impacting existing applications that do not explicitly specify column names (e.g. SELECT * or INSERT without column list) are not designed to handle new columns.
 
 ### Adding versioning to non-temporal tables
 

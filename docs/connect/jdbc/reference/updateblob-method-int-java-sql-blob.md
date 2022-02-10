@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 1e86f588-1365-4011-9412-f0acf7009880
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateBlob Method (int, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

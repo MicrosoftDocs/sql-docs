@@ -1,6 +1,6 @@
 ---
-title: "Add, Move, or Delete a Text Box (Report Builder) | Microsoft Docs"
-description: Add a text box to the report body to display information such as titles, parameter choices, built-in fields, and dates in Report Builder. 
+title: "Add, move, or delete a text box in a paginated report | Microsoft Docs"
+description: Add a text box to the paginated report body to display information such as titles, parameter choices, built-in fields, and dates in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add, Move, or Delete a Text Box (Report Builder and SSRS)
-  Text boxes are the most commonly used report item in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports. You can add a text box to the report body to display information such as titles, parameter choices, built-in fields, and dates.  
+# Add, move, or delete a text box in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Text boxes are the most commonly used report item in paginated reports. You can add a text box to the report body to display information such as titles, parameter choices, built-in fields, and dates.  
   
  Every cell in a table or matrix is really a text box. Almost all report data displayed in a report with tables and matrices is the result of the report processor evaluating the contents of each text box in the report. As such, you can format cells in the same way you would format other text boxes outside the data region.  
   

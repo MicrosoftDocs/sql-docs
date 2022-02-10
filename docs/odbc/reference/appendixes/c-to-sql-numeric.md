@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "converting data from c to SQL types [ODBC], numeric"
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # C to SQL: Numeric
 The identifiers for the numeric ODBC C data types are:  

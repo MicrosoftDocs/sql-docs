@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "AUTO FOR XML mode"
   - "XML [SQL Server], construction"
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
-author: RothJa
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: ""
 ms.custom: "fresh2019may"
 ms.date: 04/03/2020

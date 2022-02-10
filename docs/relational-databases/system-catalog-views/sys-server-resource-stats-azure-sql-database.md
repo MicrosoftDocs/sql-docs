@@ -1,34 +1,38 @@
 ---
-description: "sys.server_resource_stats (Azure SQL Database)"
-title: "sys.server_resource_stats (Azure SQL Database) | Microsoft Docs"
+description: "sys.server_resource_stats (Azure SQL Managed Instance)"
+title: "sys.server_resource_stats (Azure SQL Managed Instance)"
 ms.custom: ""
-ms.date: "06/28/2018"
+ms.date: "08/19/2021"
 ms.service: sql-database
 ms.topic: "reference"
 f1_keywords: 
-  - "resource_stats"
-  - "sys.resource_stats"
-  - "sys.resource_stats_TSQL"
-  - "resource_stats_TSQL"
+  - "server_resource_stats"
+  - "sys.server_resource_stats"
+  - "sys.server_resource_stats_TSQL"
+  - "server_resource_stats_TSQL"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "sys.resource_stats"
-  - "resource_stats"
+  - "sys.server_resource_stats"
+  - "server_resource_stats"
 ms.assetid: 
-author: jovanpop-msft
-ms.author: jovanpop
-monikerRange: "=azuresqldb-current"
+author: danimir
+ms.author: danil
+ms.reviewer: mathoma, urmilano, wiassaf
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
-# sys.server_resource_stats (Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+# sys.server_resource_stats (Azure SQL Managed Instance)
 
-Returns CPU usage, IO, and storage data for Azure SQL Managed Instance. The data is collected and aggregated within five-minute intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and SKU. Historical data is retained for approximately 14 days.
+[!INCLUDE[Azure SQL Managed Instance](../../includes/applies-to-version/_asdbmi.md)]
 
-The **sys.server_resource_stats** view has different definitions depending on the version of the Azure SQL Managed Instance that the database is associated with. Consider these differences and any modifications your application requires when upgrading to a new server version.
- 
-  
- The following table describes the columns available in a v12 server:  
+Returns CPU usage, IO, and storage data for Azure SQL Managed Instance. The data is collected, aggregated and updated within 5 to 10 minutes intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and SKU. Historical data is retained for approximately 14 days.
+
+The `sys.server_resource_stats` view has different definitions depending on the version of the Azure SQL Managed Instance that the database is associated with. Consider these differences and any modifications your application requires when upgrading to a new server version.
+
+> [!NOTE]
+> This dynamic management view applies to Azure SQL Managed Instance only. For an equivalent view for Azure SQL Database, use [sys.resource_stats](sys-resource-stats-azure-sql-database.md).
+
+The following table describes the columns available:  
   
 |Columns|Data Type|Description|  
 |----------------------------|---------------|-----------------|  
@@ -51,11 +55,14 @@ The **sys.server_resource_stats** view has different definitions depending on th
 >  For more context about these limits and service tiers, see the topics [Managed Instance service tiers](/azure/azure-sql/managed-instance/service-tiers-managed-instance-vcore).  
     
 ## Permissions  
- This view is available to all user roles with permissions to connect to the **master** database.  
-  
+ Querying a dynamic management view requires **VIEW SERVER STATE** permissions. 
+
 ## Remarks  
- The data returned by **sys.server_resource_stats** are expressed as the total used in either bytes or megabytes (stated in column names) other than avg_cpu, which is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
+ The data returned by `sys.server_resource_stats` are expressed as the total used in either bytes or megabytes (stated in column names) other than avg_cpu, which is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
  
+> [!NOTE]
+> For more information on troubleshooting CPU utilization using dynamic management views, see [Identify CPU performance issues in Microsoft Azure SQL Database and Azure SQL Managed Instance performance](/azure/azure-sql/database/monitoring-with-dmvs#identify-cpu-performance-issues). 
+
 ## Examples  
 The following example returns the average CPU usage over the last seven days.  
   
@@ -66,11 +73,11 @@ SET @s= DateAdd(d,-7,GetUTCDate());
 SET @e= GETUTCDATE();  
 SELECT AVG(avg_cpu_percent) AS Average_Compute_Utilization   
 FROM sys.server_resource_stats   
-WHERE start_time BETWEEN @s AND @e  
-GO;
+WHERE start_time BETWEEN @s AND @e;
+GO
 ```  
     
 ## See Also  
- [Managed Instance Compute Hardware in the vCore Service Tier](/azure/azure-sql/managed-instance/service-tiers-managed-instance-vcore)
- 
- [Managed Instance Resource Limits](/azure/azure-sql/managed-instance/resource-limits)
+ - [Managed Instance Compute Hardware in the vCore Service Tier](/azure/azure-sql/managed-instance/service-tiers-managed-instance-vcore)
+ - [Managed Instance Resource Limits](/azure/azure-sql/managed-instance/resource-limits)
+ - [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview)

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "Access driver [ODBC], SQLGetInfo"
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetInfo Returned Values for Access
 The following table lists the C-language #defines for the *fInfoType* argument and the corresponding values returned by **SQLGetInfo**. This information can be retrieved by passing the listed C-language #defines to **SQLGetInfo** in the *fInfoType* argument. For more information about the values returned by **SQLGetInfo**, see the *ODBC Programmer's Reference*.  

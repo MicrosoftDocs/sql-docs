@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ABS function"
   - "absolute positive value"
 ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ABS (Transact-SQL)

@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;TRANCOUNT (Transact-SQL)"
+description: "@@TRANCOUNT (Transact-SQL)"
 title: "@@TRANCOUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "connections [SQL Server], active transactions"
   - "active transactions"
 ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &#x40;&#x40;TRANCOUNT (Transact-SQL)
@@ -99,9 +99,9 @@ PRINT @@TRANCOUNT
 ```  
   
 ## See Also  
- [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
+ [BEGIN TRANSACTION \(Transact-SQL\)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
+ [COMMIT TRANSACTION \(Transact-SQL\)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
+ [ROLLBACK TRANSACTION \(Transact-SQL\)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
+ [System Functions \(Transact-SQL\)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

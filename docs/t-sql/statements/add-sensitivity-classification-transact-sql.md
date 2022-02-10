@@ -1,6 +1,6 @@
 ---
-description: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL)"
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
+description: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL)"
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -10,6 +10,8 @@ ms.reviewer: vanto
 f1_keywords:
   - "ADD SENSITIVITY CLASSIFICATION"
   - "ADD_SENSITIVITY_CLASSIFICATION"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords:
   - "ADD SENSITIVITY CLASSIFICATION statement"
   - "add labels"
@@ -22,7 +24,7 @@ helpviewer_keywords:
   - "rank"
 ms.custom: ""
 ms.date: 06/10/2020
-monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current"
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || =azure-sqldw-latest"
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)

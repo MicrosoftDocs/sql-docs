@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Diagnosing problems with the JDBC driver
 

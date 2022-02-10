@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Understanding encryption support
 

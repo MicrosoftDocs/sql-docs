@@ -7,6 +7,8 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
+ms.custom:
+  - intro-migration
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)
@@ -297,4 +299,4 @@ Once you have successfully migrated your report server to a new instance, you mi
 * [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md)   
 * [Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

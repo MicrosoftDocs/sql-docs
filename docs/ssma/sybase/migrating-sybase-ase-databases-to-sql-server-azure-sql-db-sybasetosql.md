@@ -1,7 +1,8 @@
 ---
 title: "Migrate Sybase ASE Databases to SQL Server - Azure SQL Database | Microsoft Docs"
 description: Use this recommended process to migrate SAP Adaptive Server Enterprise databases to SQL Server or Azure SQL Database using SQL Server Migration Assistant (SSMA).
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.date: "11/30/2017"
 ms.prod: sql
 ms.reviewer: ""

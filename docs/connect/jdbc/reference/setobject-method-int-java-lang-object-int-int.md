@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: d190ee20-d669-4c6f-a081-d5cfec2f72ca
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setObject Method (int, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

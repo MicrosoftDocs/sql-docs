@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns without"
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Columns without a Name
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

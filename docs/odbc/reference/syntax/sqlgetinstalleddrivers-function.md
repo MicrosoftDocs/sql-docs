@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetInstalledDrivers function [ODBC]"
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetInstalledDrivers Function
 **Conformance**  

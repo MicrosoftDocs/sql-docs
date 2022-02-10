@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], renaming"
   - "database creation [SQL Server], restoring with move"
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Restore a Database to a New Location (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -103,7 +103,7 @@ ms.author: chadam
 2.  Use the [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) statement to restore the full database backup. By default, data and log files are restored to their original locations. To relocate a database, use the MOVE option to relocate each of the database files and to avoid collisions with existing files.  
 
   The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
-  ```sql
+  ```syntaxsql
   RESTORE DATABASE *new_database_name*  
   
   FROM *backup_device* [ ,...*n* ]  

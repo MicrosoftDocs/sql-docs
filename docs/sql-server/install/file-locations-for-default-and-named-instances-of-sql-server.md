@@ -7,9 +7,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # File Locations for Default and Named Instances of SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

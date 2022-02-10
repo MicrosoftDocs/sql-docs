@@ -10,8 +10,8 @@ ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # CREATE TABLE AS SELECT (Azure Synapse Analytics)

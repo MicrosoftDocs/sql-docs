@@ -32,8 +32,8 @@ helpviewer_keywords:
   - "restore history tables [SQL Server]"
   - "listing backed up files"
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Backup History and Header Information (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

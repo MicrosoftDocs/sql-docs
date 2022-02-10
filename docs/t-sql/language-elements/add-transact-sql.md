@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "plus sign (+)"
   - "add operator (+)"
 ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

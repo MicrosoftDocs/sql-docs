@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "rowsets [SQL Server], results processing"
   - "results [OLE DB Driver for SQL Server]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Processing Results
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

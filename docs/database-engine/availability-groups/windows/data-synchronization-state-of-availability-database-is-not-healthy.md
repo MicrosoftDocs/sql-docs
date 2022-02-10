@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 manager: erikre
 ---
 # Data synchronization state of availability database is not healthy for an Always On availability group

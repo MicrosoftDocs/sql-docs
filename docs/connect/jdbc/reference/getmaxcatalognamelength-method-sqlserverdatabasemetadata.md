@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 89c11327-eae1-4178-9e26-4b484d521c65
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getMaxCatalogNameLength Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

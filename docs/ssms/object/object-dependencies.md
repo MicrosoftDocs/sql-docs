@@ -15,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Object Dependencies
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Some database objects have dependencies upon other database objects. For example, views and stored procedures depend upon the existence of tables that contain the data returned by the view or procedure. The **Object Dependencies (General Page)** for the current object lists both the database objects that must be present for the object to function properly and the objects that depend upon the selected object. An object that references another object in its definition and that definition is stored in the system catalog is called a *referencing entity*. An object that is referred to by another object is called a *referenced entity*.  
   
 The **Object Dependencies (Advanced Page)** for the current object lists the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] objects that depend on the object. The objects may be stored on different servers.  
@@ -30,7 +30,7 @@ Clicking this button displays a list of those objects that are dependency-tracke
 Clicking this button displays a list of those objects that are dependency-tracked, on which the selected object depends.  
   
 **Dependencies**  
-If **Objects that depend on** *<selected object>* is clicked, this displays an hierarchical view of objects that depend on the selected object. If **Objects on which** *<selected object>* **depends** is clicked, this displays an hierarchical view of objects on which the selected object depends.  
+If **Objects that depend on** *\<selected object\>* is clicked, this displays an hierarchical view of objects that depend on the selected object. If **Objects on which** *\<selected object\>* **depends** is clicked, this displays an hierarchical view of objects on which the selected object depends.  
   
 **Name**  
 Displays the name of the object selected in the **Dependencies** tree view above.  

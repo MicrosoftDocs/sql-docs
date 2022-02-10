@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "installing SQL Server, preparing to install"
   - "installation [SQL Server]"
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server installation guide

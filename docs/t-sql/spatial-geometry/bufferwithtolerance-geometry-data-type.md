@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # BufferWithTolerance (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a geometric object that represents the union of all point values whose distance from a **geometry** instance is less than or equal to a specified value, allowing for a specified tolerance.
   
@@ -82,7 +82,7 @@ Returns a geometric object that represents the union of all point values whose d
 ## Examples  
  The following example creates a `Point` instance and uses `BufferWithTolerance()` to obtain a rough buffer around it.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT(3 3)', 0);  
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  

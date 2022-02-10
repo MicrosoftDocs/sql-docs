@@ -28,7 +28,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 Checks the allocation and structural integrity of all tables and indexed views in the specified filegroup of the current database.
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -82,7 +82,10 @@ DBCC CHECKFILEGROUP
  -   The logical checks are more comprehensive.  
  -   Some of the underlying structures to be checked are more complex.  
  -   Many new checks have been introduced to include the new features.  
- Therefore, using the PHYSICAL_ONLY option may cause a much shorter run-time for DBCC CHECKFILEGROUP on large filegroups and is therefore recommended for frequent use on production systems. We still recommend that a full run of DBCC CHECKFILEGROUP be performed periodically. The frequency of these runs depends on factors specific to individual businesses and production environments. PHYSICAL_ONLY always implies NO_INFOMSGS and is not allowed with any one of the repair options.  
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+
+Therefore, using the PHYSICAL_ONLY option may cause a much shorter run-time for DBCC CHECKFILEGROUP on large filegroups and is therefore recommended for frequent use on production systems. We still recommend that a full run of DBCC CHECKFILEGROUP be performed periodically. The frequency of these runs depends on factors specific to individual businesses and production environments. PHYSICAL_ONLY always implies NO_INFOMSGS and is not allowed with any one of the repair options.  
   
 > [!NOTE]  
 >  Specifying PHYSICAL_ONLY causes DBCC CHECKFILEGROUP to skip all checks of FILESTREAM data.  

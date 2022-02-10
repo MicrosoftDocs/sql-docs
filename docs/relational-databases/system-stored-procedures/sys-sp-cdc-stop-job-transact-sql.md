@@ -52,7 +52,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
  Requires membership in the db_owner fixed database role.  
   
 ## Examples  
- The following example stops the cleanup job for the `AdventureWorks2012` database.  
+ The following example stops the capture job for the `AdventureWorks2012` database.  
   
 ```  
 USE AdventureWorks2012;  

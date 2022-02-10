@@ -314,11 +314,11 @@ RESTORE LOG can include a file list to allow for creation of files during rollfo
 ### Comparison of RECOVERY and NORECOVERY
 Rollback is controlled by the RESTORE statement through the [ RECOVERY | NORECOVERY ] options:
 
-- NORECOVERY specifies that rollback doesn't occur. This allows rollforward to continue with the next statement in the sequence.
+- NORECOVERY specifies that rollback doesn't occur. This allows rollforward to continue with the next statement in the sequence. 
 
   In this case, the restore sequence can restore other backups and roll them forward.
 
-- RECOVERY (the default) indicates that rollback should be performed after rollforward is completed for the current backup.
+- RECOVERY (the default) indicates that rollback should be performed after rollforward is completed for the current backup. No further backups can be restored. Select this option once you have restored all of the necessary backups.
 
   Recovering the database requires that the entire set of data being restored (the *rollforward set*) is consistent with the database. If the rollforward set has not been rolled forward far enough to be consistent with the database and RECOVERY is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] issues an error. For more information about the recovery process, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 

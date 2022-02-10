@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [XML]"
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Change Existing Columns to XML Columns
 

@@ -2,9 +2,9 @@
 title: HDFS tiering permissions for SQL Server Big Data Clusters
 titleSuffix: Manage HDFS tiering permissions for SQL Server Big Data Clusters
 description: Manage security for HDFS tiering on SQL Server Big Data Clusters like permissions on other Linux-based systems.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -130,4 +130,4 @@ azdata bdc hdfs acl set --path '/sale' --aclspec  'user::rw-,user:tom:rwx,group:
 
 - [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] reference](../azdata/reference/reference-azdata.md)
 
-- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)

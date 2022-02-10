@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 737c3785-e2d4-4b5c-8718-c0e435b50599
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # addBatch Method ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

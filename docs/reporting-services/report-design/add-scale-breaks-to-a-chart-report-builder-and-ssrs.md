@@ -1,6 +1,6 @@
 ---
-title: "Add Scale Breaks to a Chart (Report Builder) | Microsoft Docs"
-description: Find out about using a scale break to display two distinct ranges in the same chart area in Report Builder.
+title: "Add scale breaks to a paginated report chart | Microsoft Docs"
+description: Find out about using a scale break to display two distinct ranges in the same paginated report chart area in Report Builder.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -13,9 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Add Scale Breaks to a Chart (Report Builder and SSRS)
+# Add scale breaks to a paginated report chart (Report Builder)
 
-  A scale break is a stripe drawn across the plotting area of a chart to denote a break in continuity between the high and low values on a value axis (usually the vertical, or y-axis). Use a scale break to display two distinct ranges in the same chart area.  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  A scale break is a stripe drawn across the plotting area of a chart to denote a break in continuity between the high and low values on a value axis (usually the vertical, or y-axis). Use a scale break to display two distinct ranges in the same chart area in a paginated report.  
   
  ![Chart with scale break](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "Chart with scale break")  
   

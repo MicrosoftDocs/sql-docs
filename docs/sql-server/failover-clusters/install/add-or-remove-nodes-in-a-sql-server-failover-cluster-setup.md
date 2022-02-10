@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "cluster maintenance [SQL Server]"
   - "removing nodes"
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 
 # Add or remove nodes in a failover cluster instance (Setup)

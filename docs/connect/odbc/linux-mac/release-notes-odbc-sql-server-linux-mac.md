@@ -1,11 +1,11 @@
 ---
-title: "Release Notes ODBC Driver for SQL Server on Linux and macOS"
+title: Release Notes ODBC Driver for SQL Server on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "01/29/2021"
+ms.date: 11/10/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-chojas
@@ -30,6 +30,24 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 17.8.1.2, October 2021
+
+| New item | Details |
+| :------- | :------ |
+| Package update | Updated RPM packages for Red Hat 7, Red Hat 8, SUSE 12, and SUSE 15 to use SHA256 RPM signing. |
+| &nbsp; | &nbsp; |
+
+## 17.8, July 2021
+
+| New item | Details |
+| :------- | :------ |
+| New distributions supported. | Ubuntu 21.04, Alpine 3.13 |
+| Support for Apple M1 ARM64 hardware | See [Install the ODBC driver (macOS)](install-microsoft-odbc-driver-sql-server-macos.md). |
+| Replication option added to the connection string | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| KeepAlive and KeepAliveInterval options added to the connection string | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## 17.7.2, March 2021
 
@@ -127,7 +145,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 | Support UTF-8 server encoding. | &nbsp; |
 | `SQLBrowseConnect` | &nbsp; |
 | Dynamic dependency on `libcurl`. | Starting with this version, the `libcurl` package is not an explicit dependency.<br/>The `libcurl` package for OpenSSL or NSS is required when using Azure Key Vault or Azure Active Directory authentication.<br/>If you encounter an error regarding `libcurl`, ensure it is installed. |
-| Idle Connection Resiliency with ConnectRetryCount and ConnectRetryInterval keywords in connection string. | &bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_COUNT`(read only) to retrieve the number of connection retry attempts.<br/><br/>&bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_INTERVAL`(read only) to retrieve the length of the connection retry interval.<br/><br/>See [Connection Resiliency in the Windows ODBC Driver](../windows/connection-resiliency-in-the-windows-odbc-driver.md). |
+| Idle Connection Resiliency with ConnectRetryCount and ConnectRetryInterval keywords in connection string. | &bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_COUNT`(read only) to retrieve the number of connection retry attempts.<br/><br/>&bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_INTERVAL`(read only) to retrieve the length of the connection retry interval.<br/><br/>See [Connection Resiliency](../connection-resiliency.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -175,8 +193,8 @@ Support for Azure SQL Managed Instance.
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adds support for Always Encrypted and Azure Active Directory when used in conjunction with Microsoft SQL Server 2016.
 
 **New distributions supported**:
-OS X 10.11 and macOS 10.12 are supported in the first release of the ODBC Driver on macOS. Ubuntu 16.10 is now also supported, along with Red Hat 6, 7, and SUSE 12. Each platform has a platform-relevant package (RPM or DEB) to ease installation and configuration. For more information, see the ODBC driver installation instructions for [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-and [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
+OS X 10.11 and macOS 10.12 are supported in the first release of the ODBC Driver on macOS. Ubuntu 16.10 is now also supported, along with Red Hat 6, 7, and SUSE 12. Each platform has a platform-relevant package (RPM or DEB) to ease installation and configuration. For more information, see the ODBC driver installation instructions for [Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
+and [macOS](install-microsoft-odbc-driver-sql-server-macos.md).
 
 **unixODBC Driver Manager 2.3.1 Support Changes**: The ODBC driver no longer depends on custom packaging for the unixODBC driver manager (except on Red Hat 6), and instead relies on the distribution package manager to resolve the UnixODBC dependency from the distribution's repositories.
 
@@ -188,7 +206,7 @@ With Microsoft ODBC Driver 13.0 for SQL Server, SQL Server 2014 and SQL Server 2
 
 **New distributions supported**:
 
-Ubuntu is now supported, along with Red Hat and SUSE. Each platform has a platform-relevant package (RPM or DEB) to ease installation and configuration.  See [Installing the Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) for installation instructions.
+Ubuntu is now supported, along with Red Hat and SUSE. Each platform has a platform-relevant package (RPM or DEB) to ease installation and configuration.  See [Installing the Driver](installing-the-microsoft-odbc-driver-for-sql-server.md) for installation instructions.
 
 **unixODBC Driver Manager 2.3.1 Support**: In addition to a newer driver manager, there is also a package for installing this dependency that eases installation and configuration.  
 
@@ -198,10 +216,10 @@ Ubuntu is now supported, along with Red Hat and SUSE. Each platform has a platfo
 
 ## 11, for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux
 
-The ODBC driver on SUSE Linux (Preview) supports 64-bit SUSE Linux Enterprise 11 Service Pack 2. For more information, see [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md).  
+The ODBC driver on SUSE Linux (Preview) supports 64-bit SUSE Linux Enterprise 11 Service Pack 2. For more information, see [System Requirements](system-requirements.md).  
 
-The ODBC driver on Linux supports [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. For more information, see [ODBC Driver on Linux Support for High Availability, Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+The ODBC driver on Linux supports [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. For more information, see [ODBC Driver on Linux Support for High Availability, Disaster Recovery](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
 The ODBC driver on Linux supports connections to Azure SQL Database.
 
-The `-l` option (login timeout) has been added to `bcp`. For more information, see [Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).
+The `-l` option (login timeout) has been added to `bcp`. For more information, see [Connecting with **bcp**](connecting-with-bcp.md).

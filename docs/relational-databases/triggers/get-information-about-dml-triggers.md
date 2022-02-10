@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "status information [SQL Server], triggers"
   - "DML triggers, viewing"
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Information About DML Triggers

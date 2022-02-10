@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "date functions [ODBC]"
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Time, Date, and Interval Functions
 The following table lists time and date functions that are included in the ODBC scalar function set. An application can determine which time and date functions are supported by a driver by calling **SQLGetInfo** with an *information type* of SQL_TIMEDATE_FUNCTIONS.  

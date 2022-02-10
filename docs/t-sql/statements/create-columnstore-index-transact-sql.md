@@ -694,7 +694,7 @@ AS SELECT ProductKey, ProductAlternateKey, ProductSubcategoryKey FROM DimProduct
 --Change the existing clustered index   
 --to a clustered columnstore index with the same name.  
 --Look up the name of the index before running this statement.  
-CREATE CLUSTERED COLUMNSTORE INDEX <index_name>   
+CREATE CLUSTERED COLUMNSTORE INDEX [<index_name>]
 ON xdimProduct   
 WITH ( DROP_EXISTING = ON );  
 ```  

@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: This article shows how to use SQL Server TDE Encryption at Rest feature of BDC
 author: DaniBunny
 ms.author: dacoelho
-ms.reviewer: mihaelab, wiassaf
+ms.reviewer: wiassaf
 ms.date: 06/14/2021
 ms.topic: tutorial
 ms.prod: sql

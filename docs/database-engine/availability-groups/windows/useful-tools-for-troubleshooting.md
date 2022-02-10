@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Useful tools for troubleshooting
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

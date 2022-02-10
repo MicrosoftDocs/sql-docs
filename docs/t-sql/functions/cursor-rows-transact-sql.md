@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;CURSOR_ROWS (Transact-SQL)"
+description: "@@CURSOR_ROWS (Transact-SQL)"
 title: "@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "last-opened cursor"
   - "asynchronous cursors [SQL Server]"
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;CURSOR_ROWS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This returns the number of qualifying rows currently in the last cursor opened on the connection. To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can populate large keyset and static cursors asynchronously. `@@CURSOR_ROWS` can be called to determine that the number of the rows that qualify for a cursor are retrieved at the time of the @@CURSOR_ROWS call.
   

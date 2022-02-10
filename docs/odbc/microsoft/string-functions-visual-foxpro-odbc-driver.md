@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], string functions"
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # String Functions (Visual FoxPro ODBC Driver)
 The following table lists ODBC string manipulation functions supported by the Visual FoxPro ODBC Driver; when the Visual FoxPro grammar for the same function differs from the ODBC syntax, the Visual FoxPro equivalent is listed.  

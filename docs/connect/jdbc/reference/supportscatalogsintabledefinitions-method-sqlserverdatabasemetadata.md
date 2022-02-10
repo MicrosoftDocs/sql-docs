@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 1e1e50ac-f3d4-416a-8a69-d8b7b4f30bf3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsCatalogsInTableDefinitions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: "Set a Minimum or Maximum on a Gauge (Report Builder) | Microsoft Docs"
+title: "Set a minimum or maximum on a gauge in a paginated report | Microsoft Docs"
 description: Learn how the gauge differs from the charts in a paginated report. In Report Builder, you define the minimum and maximum of the scale.
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,8 +12,11 @@ ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Set a Minimum or Maximum on a Gauge (Report Builder and SSRS)
-  Unlike charts in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, where multiple groups are defined, gauges show only one value. Because Report Builder and Report Designer determine the context or relative significance of the one value that you are trying to show on the gauge, you must define the minimum and maximum of the scale.   
+# Set a minimum or maximum on a gauge in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Unlike charts in a paginated report, where multiple groups are defined, gauges show only one value. Because Report Builder and Report Designer determine the context or relative significance of the one value that you are trying to show on the gauge, you must define the minimum and maximum of the scale.   
     
   For example, if your data values are rankings between 0 and 10, you will want to set the minimum to 0 and maximum to 10. The interval numbers are calculated automatically based on the values specified for the minimum and maximum. By default, the minimum and maximum are set to 0 and 100, but this is an arbitrary value that you should change. The application does not calculate your value as a percentage.  
   

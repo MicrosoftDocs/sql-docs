@@ -1,6 +1,6 @@
 ---
-description: "Data Type Precedence (Transact-SQL)"
-title: "Data Type Precedence (Transact-SQL) | Microsoft Docs"
+description: "Explains data type precedence for Transact-SQL"
+title: "Data type precedence (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/23/2017
 ms.prod: sql
@@ -19,9 +19,11 @@ helpviewer_keywords:
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || =azure-sqldw-latest"
+
 ---
 # Data type precedence (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md.md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 When an operator combines expressions of different data types, the data type with the lower precedence is first converted to the data type with the higher precedence. If the conversion isn't a supported implicit conversion, an error is returned. For an operator combining operand expressions having the same data type, the result of the operation has that data type.
   
@@ -59,7 +61,7 @@ When an operator combines expressions of different data types, the data type wit
 1. **binary** (lowest)  
   
 ## See also
-[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
+[Data types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   

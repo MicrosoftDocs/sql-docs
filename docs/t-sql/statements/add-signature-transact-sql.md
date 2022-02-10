@@ -200,7 +200,7 @@ CREATE USER Alice;
 EXECUTE AS LOGIN = 'Alice';  
     SELECT * FROM T1;  
 REVERT;  
-  
+GO  
 -- Create a procedure that directly accesses T1  
 CREATE PROCEDURE procSelectT1 AS  
 BEGIN  
@@ -209,7 +209,7 @@ BEGIN
 END;  
 GO  
 GRANT EXECUTE ON ProcSelectT1 to public;  
-  
+GO
 -- Create special procedure for accessing T1  
 CREATE PROCEDURE  ProcForAlice AS  
 BEGIN  

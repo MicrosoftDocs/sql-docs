@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0ac8dc45-373c-4ac6-92fc-34b8455e5654
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # JDBC specification compliance
 

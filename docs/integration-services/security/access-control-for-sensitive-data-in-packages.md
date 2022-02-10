@@ -84,7 +84,7 @@ ms.author: chugu
 ## <a name="set_protection"></a> Set or Change the Protection Level of Packages
   To control access to the contents of packages and to the sensitive values that they contain, such as passwords, set the value of the **ProtectionLevel** property. The packages contained in a project need to have the same protection level as the project, to build the project. If you change the **ProtectionLevel** property setting on the project, you need to manually update the property setting for the packages.  
   
- For an overview of security features in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
+ For an overview of security features in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Security Overview \(Integration Services\)](../../integration-services/security/security-overview-integration-services.md).  
   
  The procedures in this topic describe how to use either [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or the dtutil command prompt utility to change the **ProtectionLevel** property.  
   
@@ -134,7 +134,7 @@ ms.author: chugu
 ## <a name="protection_dialog"></a> Package Project Protection Level Dialog Box
   Use the **Package Protection Level** dialog box to update the protection level of a package. The protection level determines the protection method, the password or user key, and the scope of package protection. Protection can include all data or sensitive data only.  
   
- To understand the requirements and options for package security, you may find it useful to see [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
+ To understand the requirements and options for package security, you may find it useful to see [Security Overview \(Integration Services\)](../../integration-services/security/security-overview-integration-services.md).  
   
 ### Options  
  **Package protection level**  
@@ -154,6 +154,6 @@ ms.author: chugu
  Enter the password.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)   
- [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [Integration Services \(SSIS\) Packages](../../integration-services/integration-services-ssis-packages.md)   
+ [Security Overview \(Integration Services\)](../../integration-services/security/security-overview-integration-services.md)  
  [dtutil Utility](../../integration-services/dtutil-utility.md)  

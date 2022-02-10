@@ -25,13 +25,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Manage the Editor and View Mode
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The Editor gives you a number of ways to control the view of your code.  
 
 ## Changing the View Mode  
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] features a view mode called **Tabbed Documents**, which allows you to open multiple editors and documents simultaneously and access them through tabs at the top of the Editor. You can alternatively open the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] environment in Multiple Document Interface (MDI) mode, which joins windows without the tabs, and allows each window to be tiled, minimized, and so on.  
+SQL Server Management Studio features a view mode called **Tabbed Documents**, which allows you to open multiple editors and documents simultaneously and access them through tabs at the top of the Editor. You can alternatively open the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] environment in Multiple Document Interface (MDI) mode, which joins windows without the tabs, and allows each window to be tiled, minimized, and so on.  
   
 #### To switch between view modes  
   
@@ -42,7 +42,7 @@ The Editor gives you a number of ways to control the view of your code.
 3.  Click **Tabbed documents** or **MDI environment**.  
   
     > [!NOTE]  
-    >  The changes will not take effect until [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is restarted.  
+    >  The changes will not take effect until SQL Server Management Studio is restarted.  
   
 ## Splitting the View  
  An Editor window can be split into two separate parts for easier editing.  

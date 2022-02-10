@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "BEGIN TRY statement"
   - "CATCH block"
 ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRY...CATCH (Transact-SQL)

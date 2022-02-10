@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: a444da82-c1af-40a5-9774-02476416c92c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getColumnTypeName Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

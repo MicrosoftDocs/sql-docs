@@ -1,7 +1,7 @@
 ---
 title: Using Azure Active Directory authentication with SqlClient
 description: Describes how to use supported Azure Active Directory authentication modes to connect to Azure SQL data sources with SqlClient
-ms.date: 06/3/2021
+ms.date: 12/14/2021
 dev_langs: 
   - "csharp"
 ms.prod: sql
@@ -9,8 +9,8 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
-ms.reviewer: v-daenge
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
 ---
 
 # Using Azure Active Directory authentication with SqlClient
@@ -21,7 +21,7 @@ ms.reviewer: v-daenge
 
 This article describes how to connect to Azure SQL data sources by using Azure Active Directory (Azure AD) authentication from a .NET application with SqlClient.
 
-Azure AD authentication uses identities in Azure AD to access Azure SQL data sources such as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The **Microsoft.Data.SqlClient** namespace allows client applications to specify Azure AD credentials in different authentication modes when they're connecting to Azure SQL Database.
+Azure AD authentication uses identities in Azure AD to access Azure SQL data sources such as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The **Microsoft.Data.SqlClient** namespace allows client applications to specify Azure AD credentials in different authentication modes when they're connecting to Azure SQL Database. To use Azure AD authentication, you must configure your Azure SQL data source. For more information, see [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 When you set the `Authentication` connection property in the connection string, the client can choose a preferred Azure AD authentication mode according to the value provided:
 

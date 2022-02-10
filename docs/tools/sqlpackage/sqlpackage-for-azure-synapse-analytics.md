@@ -4,7 +4,7 @@ description: Tips for using SqlPackage in Azure Synapse Analytics scenarios
 ms.custom: "tools|sos"
 ms.date: 03/10/2021
 ms.prod: sql
-ms.reviewer: "llali; sstein"
+ms.reviewer: "llali"
 ms.prod_service: sql-tools
 ms.topic: conceptual
 author: dzsquared

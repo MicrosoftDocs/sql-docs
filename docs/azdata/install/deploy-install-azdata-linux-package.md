@@ -1,13 +1,15 @@
 ---
 title: Install Azure Data CLI (azdata) with apt
-description: Learn how to install the Azure Data CLI (azdata) tool with apt. 
-author: MikeRayMSFT 
+description: Learn how to install the Azure Data CLI (azdata) tool with apt.
+author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 04/07/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-installation
 ---
 
 # Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] with apt
@@ -111,5 +113,3 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ## Next steps
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
-
-Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)

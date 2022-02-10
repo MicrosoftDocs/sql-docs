@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, stored procedures"
   - "stored procedures [OLE DB], command syntax"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Command Syntax
 

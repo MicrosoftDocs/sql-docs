@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "errors [OLE DB], SQL Server message results"
   - "OLE DB error handling, SQL Server message results"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQL Server Message Results
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

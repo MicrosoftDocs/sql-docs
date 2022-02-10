@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getSubString Method (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

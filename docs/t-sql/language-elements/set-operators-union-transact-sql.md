@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "combining query results"
   - "UNION operator [SQL Server]"
 ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set Operators - UNION (Transact-SQL)

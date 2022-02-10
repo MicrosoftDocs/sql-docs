@@ -1,22 +1,21 @@
 ---
-title: "C++ ODBC app accessing a SQL database"
-description: "This C++ sample application demonstrates how to use the ODBC APIs to connect to and access a SQL database."
+title: C / C++ ODBC app accessing an SQL database
+description: This C / C++ sample application demonstrates how to use the ODBC APIs to connect to and access an SQL database.
 ms.custom: ""
-ms.date: "06/19/2020"
+ms.date: 01/11/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
-# C++ ODBC example application accesses a SQL database
+# C / C++ ODBC example application accesses an SQL database
 
 [!INCLUDE [sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
-
-This C++ sample application demonstrates how to use the ODBC APIs to connect to and access a SQL database.
+This C / C++ sample application demonstrates how to use the ODBC APIs to connect to and access an SQL database.
 
 Between October 2013 and July 2019, this sample C++ ODBC application was downloaded 47,300 times. In July 2019, this application source was moved from Microsoft's Code Gallery to this webpage.
 
@@ -29,7 +28,7 @@ Was:  https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecod
 
 ## A. ReadMe.txt
 
-```
+```text
 Environment Where Tested
 ===============================
 Visual Studio 2012
@@ -733,7 +732,7 @@ void HandleDiagnosticRecord (SQLHANDLE      hHandle,
 
 ## C. odbcsql.sln code
 
-```
+```text
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
@@ -741,28 +740,28 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "odbcsql", "odbcsql.vcxproj", "{C5948D2C-C53D-4933-9AC5-48066AD6A560}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x64.ActiveCfg = Debug|x64
-		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x64.Build.0 = Debug|x64
-		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x86.ActiveCfg = Debug|Win32
-		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x86.Build.0 = Debug|Win32
-		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x64.ActiveCfg = Release|x64
-		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x64.Build.0 = Release|x64
-		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x86.ActiveCfg = Release|Win32
-		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {32894C74-C0AE-427F-969B-5F757A98EAFF}
-	EndGlobalSection
+  GlobalSection(SolutionConfigurationPlatforms) = preSolution
+    Debug|x64 = Debug|x64
+    Debug|x86 = Debug|x86
+    Release|x64 = Release|x64
+    Release|x86 = Release|x86
+  EndGlobalSection
+  GlobalSection(ProjectConfigurationPlatforms) = postSolution
+    {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x64.ActiveCfg = Debug|x64
+    {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x64.Build.0 = Debug|x64
+    {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x86.ActiveCfg = Debug|Win32
+    {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x86.Build.0 = Debug|Win32
+    {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x64.ActiveCfg = Release|x64
+    {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x64.Build.0 = Release|x64
+    {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x86.ActiveCfg = Release|Win32
+    {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x86.Build.0 = Release|Win32
+  EndGlobalSection
+  GlobalSection(SolutionProperties) = preSolution
+    HideSolutionNode = FALSE
+  EndGlobalSection
+  GlobalSection(ExtensibilityGlobals) = postSolution
+    SolutionGuid = {32894C74-C0AE-427F-969B-5F757A98EAFF}
+  EndGlobalSection
 EndGlobal
 ```
 

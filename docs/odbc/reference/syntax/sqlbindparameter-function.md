@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "SQLBindParameter function [ODBC]"
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLBindParameter Function
 

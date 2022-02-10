@@ -1,7 +1,8 @@
 ---
 title: "Migrating Computed Columns | Microsoft Docs"
 description: Learn how to simulate computed columns in memory-optimized tables. Evaluate whether computed column functionality is necessary after migration.
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.date: "12/17/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -9,8 +10,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
-author: rothja
-ms.author: jroth
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=sql-server-2016"
 ---
 # Migrating Computed Columns

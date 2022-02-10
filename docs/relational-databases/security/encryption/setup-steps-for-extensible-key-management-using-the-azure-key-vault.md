@@ -40,7 +40,7 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
   SQL Server version  | Visual Studio C++ Redistributable version
   ---------|---------
   2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
-  2016 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
+  2016, 2017, 2019 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
 
 ## Step 1: Set up an Azure AD service principal
 
@@ -145,6 +145,18 @@ You can use the Azure portal to create the key vault and then add an Azure AD pr
 1. On the **Access policies** pane, select **Save**.
   
    ![Screenshot of the Save button on the "Add access policy" pane](../../../relational-databases/security/encryption/media/ekm/ekm-part2-save-access-policy.png)  
+
+### Best practices
+
+To ensure quick key recovery and be able to access your data outside of Azure, we recommend the following best practices:
+
+- Create your encryption key locally on a local hardware security module (HSM) device. Be sure to use an asymmetric RSA 2048 or 3072 key so that it's supported by SQL Server.
+- Import the encryption key to your Azure key vault. This process is described in the next sections.
+- Before you use the key in your Azure key vault for the first time, do an Azure key vault key backup. For more information, see the [Backup-AzureKeyVaultKey]() command.
+- Whenever you make any changes to the key (for example, adding ACLs, tags, or key attributes), be sure to do another Azure key vault key backup.
+
+  > [!NOTE]
+  > Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere.
 
 ## [PowerShell](#tab/powershell)
 
@@ -455,14 +467,14 @@ For a note about the minimum permission levels needed for each action in this se
    In the preceding example script, `1a4d3b9b393c4678831ccc60def75379` represents the specific version of the key that will be used. If you use this script, it doesn't matter if you update the key with a new version. The key version (for example) `1a4d3b9b393c4678831ccc60def75379` will always be used for database operations. For this scenario, you must complete two prerequisites:
    
    1. Create a **SQL Server Cryptographic Provider** key on **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\**.
-   1. Delegate access permissions on the **SQL Server Cryptographic Provider** key to the user account running the SQL Server database engine service.
+   1. Delegate "Full Control" permissions on the **SQL Server Cryptographic Provider** key to the user account running the SQL Server database engine service.
 
-   > [!NOTE]
-   > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider** to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.
-   >  
-   > To add the registry key to the Cluster Registry Checkpoint routine, in PowerShell, run the following command:
-   > 
-   > `Add-ClusterCheckpoint -RegistryCheckpoint "SOFTWARE\Microsoft\SQL Server Cryptographic Provider" -Resourcename "SQL Server"`
+      > [!NOTE]
+      > If you use TDE with EKM or Azure Key Vault on a failover cluster instance, you must complete an additional step to add **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQL Server Cryptographic Provider** to the Cluster Registry Checkpoint routine, so the registry can sync across the nodes. Syncing facilitates database recovery after failover and key rotation.
+      >  
+      > To add the registry key to the Cluster Registry Checkpoint routine, in PowerShell, run the following command:
+      > 
+      > `Add-ClusterCheckpoint -RegistryCheckpoint "SOFTWARE\Microsoft\SQL Server Cryptographic Provider" -Resourcename "SQL Server"`
 
 1. Create a new login by using the asymmetric key in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that you created in the preceding step.
 
@@ -498,6 +510,7 @@ For a note about the minimum permission levels needed for each action in this se
 1. Create a database encryption key by using the ASYMMETRIC KEY (EKMSampleASYKey).
 
     ```sql  
+    USE <DB Name>;
     --Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
     CREATE DATABASE ENCRYPTION KEY
     WITH ALGORITHM = AES_256
@@ -528,6 +541,21 @@ For a note about the minimum permission levels needed for each action in this se
     DROP ASYMMETRIC KEY [EKMSampleASYKey]
     DROP CRYPTOGRAPHIC PROVIDER [AzureKeyVault_EKM]
     ```  
+      > [!NOTE]
+      > If the credential has a client secret that is about to expire, a new secret can be assigned to the credential.
+      > <ol>1. Update the secret originally create in <b>Step 1: Set up an Azure AD service principal.</b>
+      >
+      >    Alter the credential using the same identity and new secret using the following code:
+      >
+      >    ```sql
+      >    ALTER CREDENTIAL CREDName
+      >    WITH IDENTITY = 'Original Identity',
+      >    SECRET = 'New Secret';
+      >    ```
+      >
+      ></ol>
+      > <ol>2. Restart the SQL service</ol>
+      > <ol>3. Steps 2 and 3 need to be done on all nodes of an Availability Group</ol>
 
 For sample scripts, see the blog at [SQL Server Transparent Data Encryption and Extensible Key Management with Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
 

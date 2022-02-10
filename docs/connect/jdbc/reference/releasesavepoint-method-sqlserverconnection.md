@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: b6b625ea-c7ce-4a32-a9e0-6d2b4321bfd8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # releaseSavepoint Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

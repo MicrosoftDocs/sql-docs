@@ -1,15 +1,17 @@
 ---
 title: "Install Failover Cluster Instance"
 description: Learn to install a SQL Server failover cluster. Create and configure a failover cluster instance by running SQL Server Setup.
-ms.custom: "seo-lt-2019"
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: failover-cluster-instance
 ms.topic: how-to
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # SQL Server Failover Cluster Installation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

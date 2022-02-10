@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # IntelliSense (SQL Server Management Studio)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  The editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] support [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense options that reduce typing, provide quick access to syntax information, or make it easier to view the delimiters of complex expressions.  
+  The editors in SQL Server Management Studio support [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense options that reduce typing, provide quick access to syntax information, or make it easier to view the delimiters of complex expressions.  
   
 ## Benefits of IntelliSense  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense provides an array of options that make language references easily accessible. When coding, you do not need to leave the editor to perform searches on language elements. You can keep your context, find the information you need, insert language elements directly into your code, and even have IntelliSense complete your typing for you.  

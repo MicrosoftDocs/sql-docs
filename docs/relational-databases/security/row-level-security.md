@@ -253,7 +253,7 @@ Allow SELECT permissions to the fn_securitypredicate function
 ```sql
 GRANT SELECT ON Security.tvf_securitypredicate TO Manager;  
 GRANT SELECT ON Security.tvf_securitypredicate TO SalesRep1;  
-GRANT SELECT ON Security.tvf_securitypredicate TO SalesRep1;  
+GRANT SELECT ON Security.tvf_securitypredicate TO SalesRep2;  
 
 ```
 
@@ -396,7 +396,7 @@ ON dbo.Sales_ext
 WITH (STATE = ON);
 ```
 
-Now test the filtering predicate, by selecting from the Sales_ext external table. Sign in as each user, Sales1, Sales2, and manager. Run the following command as each user.
+Now test the filtering predicate, by selecting from the Sales_ext external table. Sign in as each user, Sales1, Sales2, and Manager. Run the following command as each user.
 
 ```sql
 SELECT * FROM Sales_ext;
@@ -554,7 +554,7 @@ Create a sample schema and a fact table to hold data.
 
 ```sql
 CREATE SCHEMA Sample;
-
+GO
 CREATE TABLE Sample.Sales  
     (  
     OrderID int,  
@@ -606,7 +606,7 @@ Create a new schema, and an inline table-valued function. The function returns 1
 
 ```sql
 CREATE SCHEMA Security ;
-
+GO
 CREATE FUNCTION Security.fn_securitypredicate
          (@Product AS varchar(10))
 RETURNS TABLE

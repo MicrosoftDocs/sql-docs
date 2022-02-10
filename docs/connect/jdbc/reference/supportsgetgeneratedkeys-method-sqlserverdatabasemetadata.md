@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 4f0e4659-14e7-4743-aed8-1768ee2b29dd
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsGetGeneratedKeys Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

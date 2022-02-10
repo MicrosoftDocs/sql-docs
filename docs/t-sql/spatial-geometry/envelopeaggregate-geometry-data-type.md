@@ -17,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # EnvelopeAggregate (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a bounding box for a given set of **geometry** objects.
   
@@ -51,7 +51,7 @@ EnvelopeAggregate ( geometry_operand )
 ## Examples  
  The following example returns a bounding box for a set of objects in a table variable column.  
   
- ```
+ ```sql
  -- Setup table variable for EnvelopeAggregate example 
 DECLARE @Geom TABLE 
 ( 
@@ -63,7 +63,7 @@ INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1,
 -- Perform EnvelopeAggregate on @Geom.shape column 
 SELECT geometry::EnvelopeAggregate(shape).ToString() 
 FROM @Geom;
- ```  
+```  
   
 ## See Also  
  [Extended Static Geometry Methods](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

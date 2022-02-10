@@ -2,25 +2,27 @@
 title: "Deploy: Azure Data Studio notebook"
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to use the code and documentation in a notebook from Azure Data Studio to deploy a SQL Server Big Data Cluster.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mihaelab
+author: DaniBunny
+ms.author: dacoelho
+ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy SQL Server big data cluster with Azure Data Studio notebook
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] provides an extension for Azure Data Studio that includes deployment notebooks. A deployment notebook includes documentation and code that you can use in Azure Data Studio to create a SQL Server big data cluster.
+SQL Server provides an extension for Azure Data Studio that includes deployment notebooks. A deployment notebook includes documentation and code that you can use in Azure Data Studio to create a SQL Server big data cluster.
 
 Implemented initially as an open-source project, [notebooks](../azure-data-studio/notebooks/notebooks-guidance.md) have been implemented into [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). You can use markdown for text in the text cells and one of the available kernels to write code in the code cells.
 
-You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
+You can use notebooks to deploy [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)].
 
 ## Prerequisites
 
@@ -28,7 +30,7 @@ Following prerequisites are required to also launch the notebook:
 
 * Latest version of [Azure Data Studio Insiders build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master) installed
 
-In addition to above, deploying SQL Server 2019 big data cluster also requires:
+In addition to above, deploying a big data cluster also requires:
 
 * [azdata](../azdata/install/deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
@@ -46,7 +48,7 @@ In addition to above, deploying SQL Server 2019 big data cluster also requires:
 
 4. From the **Deployment Target**, under **Options**, select either **New Azure Kubernetes Cluster** or **Existing Azure Kubernetes Service cluster**.
 
-5. Accept the Privacy and license terms
+5. Accept the Privacy and license terms.
 
 6. This dialog also checks whether the required tools for the chosen type of SQL deployment exist on the host. The **Select** button isn't enabled until the tools check is successful.
 
@@ -64,7 +66,7 @@ Select the target configuration template from the available templates. The avail
 
 ### Azure settings
 
-If the deployment target is a new AKS, additional information such as Azure Subscription ID, resource group, AKS cluster name, VM count, size, and other additional information are required to create the AKS cluster.
+If the deployment target is a new [Azure Kubernetes Service (AKS)](/azure/aks/), additional information such as Azure Subscription ID, resource group, AKS cluster name, VM count, size, and other additional information are required to create the AKS cluster.
 
    ![Azure settings](media/notebooks-deploy/azure-settings.png)
 
@@ -74,22 +76,24 @@ If the deployment target is an existing Kubernetes cluster, the wizard prompts f
 
 ### Cluster, docker, and AD settings
 
-1. Enter the cluster name for the SQL Server 2019 BDC, admin username, and password.
-Note: The same account is used for controller and SQL Server.
+1. Enter the cluster name for the big data cluster, an admin username, and password. This same account is used for the controller and SQL Server.
 
    ![Cluster settings](media/notebooks-deploy/cluster-settings.png)
 
-2. Enter the Docker settings as appropriate
+2. Enter the Docker settings as appropriate.
+
+   > [!IMPORTANT]
+   > Make sure image tag field is latest: __2019-CU13-ubuntu-20.04__
 
    ![Docker settings](media/notebooks-deploy/docker-settings.png)
 
-3. If the AD authentication is available, enter the AD settings
+3. If the AD authentication is available, enter the AD settings.
 
    ![Active Directory settings](media/notebooks-deploy/active-directory-settings.png)
 
 ### Service settings
 
-This screen has inputs for various settings such as **Scale**, **Endpoints**, **Storage**, and other **Advanced storage settings**. Please enter the appropriate values and select **Next**.
+This screen has inputs for various settings such as **Scale**, **Endpoints**, **Storage**, and other **Advanced storage settings**. Enter the appropriate values and select **Next**.
 
 #### Scale settings
 
@@ -125,10 +129,10 @@ You can add additional storage settings under **Advanced storage settings**
 
 ### Summary
 
-This screen summarizes all the input that was provided to deploy SQL Server 2019 Big Data Cluster. The config files can be downloaded via the **Save config files** button. Select **Script to Notebook** to script out the entire deployment configuration to a Notebook. Once the Notebook is open, select **Run Cells** to start deploying the SQL Server 2019 BDC to the selected target.
+This screen summarizes all the input that was provided to deploy the big data cluster. The config files can be downloaded via the **Save config files** button. Select **Script to Notebook** to script out the entire deployment configuration to a notebook. Once the notebook is open, select **Run Cells** to start deploying the big data cluster to the selected target.
 
    ![Summary](media/notebooks-deploy/deploy-sql-server-big-data-cluster-on-a-new-AKS-cluster.png)
 
 ## Next steps
 
-For more information about deployment, see [deployment guidance for SQL Server big data clusters](deployment-guidance.md).
+For more information about deployment, see [deployment guidance for SQL Server Big Data Clusters](deployment-guidance.md).

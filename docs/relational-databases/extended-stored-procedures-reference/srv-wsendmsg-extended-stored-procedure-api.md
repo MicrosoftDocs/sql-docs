@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_wsendmsg"
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_wsendmsg (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

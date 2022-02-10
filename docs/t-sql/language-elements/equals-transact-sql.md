@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "equals operator (=)"
   - "= (equals operator)"
 ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # = (Equals) (Transact-SQL)

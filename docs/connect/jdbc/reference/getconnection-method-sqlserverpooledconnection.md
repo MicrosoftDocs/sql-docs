@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 05bdb61f-26e8-480f-a1c1-1e46a8ed4b70
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getConnection Method (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -21,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This window displays status messages for various features in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Output is delivered to special panes in the **Output** window from the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger, external tools features, or commands that are run in the debugger **Command Window**. Output that is usually displayed in the Command Prompt window from external tools, such as .bat or .com files, is also available.
+This window displays status messages for various features in SQL Server Management Studio. Output is delivered to special panes in the **Output** window from the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger, external tools features, or commands that are run in the debugger **Command Window**. Output that is usually displayed in the Command Prompt window from external tools, such as .bat or .com files, is also available.
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   

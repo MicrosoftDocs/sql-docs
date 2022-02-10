@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "PUBLISHINGSERVERNAME function"
   - "Publishers [SQL Server replication], names"
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # Replication Functions - PUBLISHINGSERVERNAME
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the name of the originating Publisher for a published database participating in a database mirroring session. This function is executed at a Publisher instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the publication database. Use it to determine the original Publisher of the published database.  
   

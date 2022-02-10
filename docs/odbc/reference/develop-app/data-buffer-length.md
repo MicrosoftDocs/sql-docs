@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "buffers [ODBC], length"
 ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Data Buffer Length
 The application passes the byte length of the data buffer to the driver in an argument, named *BufferLength* or a similar name. For example, in the following call to **SQLBindCol**, the application specifies the length of the *ValuePtr* buffer (**sizeof(***ValuePtr***)**):  

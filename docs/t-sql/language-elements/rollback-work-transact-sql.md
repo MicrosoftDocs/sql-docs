@@ -25,7 +25,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # ROLLBACK WORK (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Rolls back a user-specified transaction to the beginning of the transaction.  
   

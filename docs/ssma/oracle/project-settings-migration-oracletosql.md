@@ -2,7 +2,8 @@
 description: "Project Settings (Migration) (OracleToSQL)"
 title: "Project Settings (Migration) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma

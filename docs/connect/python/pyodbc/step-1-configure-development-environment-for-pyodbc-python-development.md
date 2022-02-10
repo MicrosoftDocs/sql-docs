@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Step 1: Configure development environment for pyodbc Python development
 

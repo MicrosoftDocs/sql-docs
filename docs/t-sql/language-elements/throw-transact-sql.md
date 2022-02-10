@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "THROW statement"
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # THROW (Transact-SQL)

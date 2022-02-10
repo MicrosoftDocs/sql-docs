@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLConfigDataSource function [ODBC], dBASE Driver"
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLConfigDataSource (dBASE Driver)
 > [!NOTE]  

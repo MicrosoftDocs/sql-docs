@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "data conversions from SQL to C types [ODBC], character"
 ms.assetid: 7fdb7f38-b64d-48f2-bcb4-1ca96b2bbdb6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQL to C: Character
 

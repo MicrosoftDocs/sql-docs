@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLConnect function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 49cbfafa-b21e-4e89-b248-9c7098f46b20
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "second string expressions [SQL Server]"
   - "REPLACE function"
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REPLACE (Transact-SQL)
@@ -91,6 +91,31 @@ GO
 This is a desk  
 (1 row(s) affected)  
 ```  
+
+The following example calculates the number of spaces in a sentence using the `REPLACE` function. First, it calculates the length of the sentence with the `LEN` function. It then replaces the ' ' characters with '' with `REPLACE`. After this process, it calculates the length of the sentence again. The resulting difference is the number of space characters in the sentence.
+
+
+```sql  
+DECLARE @STR NVARCHAR(100), @LEN1 INT, @LEN2 INT;
+SET @STR = N'This is a sentence with spaces in it.';
+SET @LEN1 = LEN(@STR);
+SET @STR = REPLACE(@STR, N' ', N'');
+SET @LEN2 = LEN(@STR);
+SELECT N'Number of spaces in the string: ' + CONVERT(NVARCHAR(20), @LEN1 - @LEN2);
+
+GO  
+```  
+
+
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+------------  
+Number of spaces in the sentence: 8  
+
+(1 row(s) affected)  
+```  
+
 
   
 ## See Also  

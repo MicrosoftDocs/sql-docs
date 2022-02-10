@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "date/time [OLE DB], data type support"
   - "OLE DB, date/time improvements"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Data Type Support for OLE DB Date and Time Improvements
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

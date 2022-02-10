@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "MSOLEDBSQL, about OLE DB Driver for SQL Server"
   - "data access [OLE DB Driver for SQL Server], features"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # OLE DB Driver for SQL Server Features
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

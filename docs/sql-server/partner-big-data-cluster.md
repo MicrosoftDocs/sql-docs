@@ -3,12 +3,13 @@ title: SQL Server Big Data Clusters partners
 description: Lists of third-party partners for implementing SQL Server Big Data Clusters.
 ms.topic: conceptual
 ms.custom: seo-dt-2019
-ms.date: 03/16/2020    
+ms.date: 08/20/2021
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.prod_service: "database-engine"
-ms.author: mikeray
-author: MikeRayMSFT
+ms.author: wiassaf
+ms.reviewer: dacoelho
+author: WilliamDAssafMSFT
 ---
 # SQL Server Big Data Clusters partners
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -23,6 +24,7 @@ For support implementing solutions with SQL Server Big Data Clusters, you can wo
 |![NetApp][3] |NetApp StorageGRID is software-defined object storage. It can be deployed as combinations of software-only, purpose-built appliances, and in virtualized environments.<br/><br/>In a single namespace, StorageGRID can scale across multiple data centers located around the world. StorageGRID offers massive S3 object storage with dynamic data management, enabling customers to run next-generation workflows on premises while taking advantage of public cloud resources. The StorageGRID unique data management policy engine ensures optimized levels of performance and durability, and adherence to data locality requirements. |[Website][netapp_website]<br>[Datasheet][netapp_datasheet]<br>[Twitter][netapp_twitter]<br>[Video][netapp_youtube]<br>[Docs][netapp_docs]|
 |![PureStorage][5] |Pure Storage empowers innovation to build a better world with data by delivering a simple, Evergreen&trade; platform that enables organizations to turn data into intelligence and advantage.  Big Data Cluster (BDC) ready, Pure Storage has a highly scalable storage fabric for any Kubernetes compatible container orchestration platform. FlashBlade by Pure is a simple to manage, high performance, storage platform that can be used by SQL Server 2019 Big Data Cluster HDFS tiering, allowing, scaling to petabytes of usable storage and IO bandwidth of the order of tens of gigabytes. The FlashArray and  FlashBlade is a match made for Big Data Cluster success. |[Website][purestorage_website]<br>[Datasheet][purestorage_datasheet]<br>[Twitter][purestorage_twitter]<br>[Docs][purestorage_docs]|
 |![StreamSets][4] |StreamSets provides a no-code solution for operating data pipelines for Big Data Clusters: <br/><ul><li> Design and operate continuous data flows with intuitive, visual tools, eliminating the need to know how to code for big data systems</li><li>Develop complex analytics applications on Apache Spark using an intuitive drag-and-drop user interface </li><li>Ingest and process data at scale from a wide variety of data sources with native integration into SQL Server and HDFS</li><li>Accelerate the migration from relational databases, Hadoop clusters, and NoSQL stores into Big Data Clusters</li></ul>   | [Website][streamsets_website]<br>[Blog][streamsets_blog]<br>[Video][streamsets_youtube]<br>[Documentation][streamsets_docs]|
+|![vmware][7] |VMware enables our customers to run both virtualized and containerized SQL Server workloads on a trusted digital foundation empowered by any cloud. Running SQL Server Big Data Clusters on Tanzu is a compelling way to utilize SQL Server to bring high-value relational data and high-volume big data together on a unified, scalable data platform managed by VMware Tanzu portfolio.| [Website][vmware_website]<br>[Datasheet][vmware_datasheet]<br>[Video][vmware_youtube]<br>[Documentation][vmware_docs]<br>[Twitter][vmware_twitter]<br>[Blog][vmware_blog]|
 |![azuredatalake][6] |Azure Data Lake Analytics<br><br>An on-demand analytics job service to power intelligent action<br><br>Easily develop and run massively parallel data transformation and processing programs in U-SQL, R, Python, and .NET over petabytes of data. With no infrastructure to manage, you can process data on demand, scale instantly, and only pay per job.|[Website][azuredatalake_website]<br>[Datasheet](/azure/data-lake-analytics/data-lake-analytics-overview/)<br>[Twitter][azuredatalake_twitter]<br>[Blog][azuredatalake_blog]|
 
 ## Next steps
@@ -35,6 +37,7 @@ To learn more about some of our other partners, see [High availability, and disa
 [4]: ./media/partner-hadr-sql-server/streamsets-logo.png
 [5]: ./media/partner-hadr-sql-server/purestorage-logo.png
 [6]: ./media/partner-hadr-sql-server/azure-datalake-analytics.png
+[7]: ./media/partner-hadr-sql-server/vmware-logo.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md
@@ -48,6 +51,7 @@ To learn more about some of our other partners, see [High availability, and disa
 [netapp_website]: https://www.netapp.com/us/products/data-management-software/object-storage-grid-sds.aspx
 [streamsets_website]: https://streamsets.com/
 [purestorage_website]: https://www.purestorage.com/
+[vmware_website]: https://www.vmware.com/
 
 <!--Get Started Links-->
 
@@ -56,6 +60,7 @@ To learn more about some of our other partners, see [High availability, and disa
 [hpe_datasheet]:https://www.hpe.com/h20195/v2/default.aspx?cc=us&lc=en&oid=376220
 [netapp_datasheet]:https://www.netapp.com/us/media/ds-3613.pdf
 [purestorage_datasheet]:https://www.purestorage.com/content/dam/pdf/en/datasheets/ds-pure-service-orchestrator.pdf
+[vmware_datasheet]:https://d1fto35gcfffzn.cloudfront.net/tanzu/VMware-Tanzu-Solution-Brief-0121.pdf
 
 <!--Marketplace Links -->
 [delltech_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/dellemc.ppdm_ddve_0_0_1?tab=Overview
@@ -65,6 +70,7 @@ To learn more about some of our other partners, see [High availability, and disa
 [hpe_youtube]:https://www.hpe.com/h22228/video-gallery/us/en/products/data-storage-hybrid-cloud/storage-multi/95fd26db-e6ea-44ca-b727-c84d2ef1d446/big-data-clusters-and-hpe-storage-for-microsoft-sql-server-2019/video
 [netapp_youtube]:https://www.youtube.com/watch?v=304z8j7aLpc
 [streamsets_youtube]:https://www.youtube.com/watch?v=OtNrTBLooBw
+[vmware_youtube]:https://www.youtube.com/watch?v=KlsprTBsGTE&list=RDCMUCzd8R3vkpllD4CJn_5g5sKg&start_radio=1
 
 <!--Twitter links-->
 [delltech_twitter]:https://twitter.com/DellTech
@@ -72,6 +78,7 @@ To learn more about some of our other partners, see [High availability, and disa
 [azuredatalake_twitter]:https://twitter.com/azuredatalake
 [netapp_twitter]:https://twitter.com/hashtag/storagegrid
 [purestorage_twitter]:https://twitter.com/PureStorage
+[vmware_twitter]:https://twitter.com/VMware
 
 <!--Supported Systems-->
 [partner_requirements]:https://www.microsoft.com
@@ -83,8 +90,10 @@ To learn more about some of our other partners, see [High availability, and disa
 [azuredatalake_blog]:https://azureinfohub.azurewebsites.net/Service?serviceTitle=Azure%20Data%20Lake%20Analytics
 [streamsets_blog]:https://streamsets.com/blog/sentiment-analysis-microsoft-sql-server-2019-big-data-cluster-and-streamsets-dataops-platform/
 [purestorage_blog]:https://blog.purestorage.com/storage-as-a-service-for-sql-server-2019-big-data-clusters/
+[vmware_blog]:https://blogs.vmware.com/virtualblocks/2021/08/18/microsoft-sql-server-big-data-clusters-on-vmware-tkg/
 
 <!--Docs-->
 [netapp_docs]:https://blog.netapp.com/microsoft-sql-server-big-data-clusters-with-storagegrid/
 [streamsets_docs]:https://streamsets.com/documentation/datacollector/latest/help/datacollector/UserGuide/Destinations/SQLServerBDCBulk.html#concept_hjv_5nn_r3b
 [purestorage_docs]:https://www.purestorage.com/docs.html?item=/type/pdf/subtype/doc/path/content/dam/purestorage/pdf/datasheets/ps_ds3p_entry-level-storage_03.pdf
+[vmware_docs]: https://core.vmware.com/resource/running-microsoft-sql-server-big-data-clusters-vmware-tanzu-kubernetes-grid

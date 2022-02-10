@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Null (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 A read-only property providing a null instance of the **geography** type.
   
@@ -45,7 +45,7 @@ Null
 ## Examples  
  The following example retrieves a null `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;   
 SET @g = geography::[Null];  
 SELECT @g  

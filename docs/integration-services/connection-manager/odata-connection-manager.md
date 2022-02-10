@@ -30,7 +30,9 @@ ms.author: chugu
 -   Right-click the **Connection Managers** folder in **Solution Explorer**, and then click **New Connection Manager**. Select **ODATA** for **Connection manager type**.  
   
 -   Right-click in the **Connection Managers** pane at the bottom of the package designer, and then select **New Connection**. Select **ODATA** for **Connection manager type**.  
-  
+> [!NOTE]
+> Make sure that the international settings language in your Visual Studio / SQL Server Data Tools (SSDT) is aligned to the default language of the target SQL Server instance where the SSIS packages are deployed.
+>   
 ## Connection Manager Authentication  
  The OData connection manager supports five modes of authentication.  
   

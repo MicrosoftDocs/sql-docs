@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "connecting to the server, specifying a port"
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # How to: Connect on a Specified Port
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

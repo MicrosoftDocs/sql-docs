@@ -38,12 +38,9 @@ ms.author: maghan
   
 -   Data movement with a memory-optimized filegroup is optimized in an Always On Availability Group configuration. Unlike filestream files that are sent to secondary replicas, the checkpoint files (both data and delta) within the memory-optimized filegroup are not sent to secondary replicas. The data and delta files are constructed using the transaction log on the secondary replica.  
   
-The following limitations apply to a memory-optimized filegroup:  
-  
--   Once you use a memory-optimized filegroup, you can only remove it by dropping the database. In a production environment, it is unlikely that you will need to remove the memory-optimized filegroup.  
-  
--   You cannot drop a non-empty container or move data and delta file pairs to another container in the memory-optimized filegroup.    
-  
+> [!Note]
+> Once you use a memory-optimized filegroup, **you can only remove it by dropping the database**. In a production environment, it is unlikely that you need to remove the memory-optimized filegroup. You can't drop a non-empty container or move data and delta file pairs to another container in the memory-optimized filegroup.    
+ 
 ## Configuring a Memory-Optimized Filegroup  
 Consider creating multiple containers in the memory-optimized filegroup and distribute them on different drives to achieve more bandwidth to stream the data into memory. 
  

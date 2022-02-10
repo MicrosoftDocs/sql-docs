@@ -33,7 +33,7 @@ To follow along, you need these products:
 *  OR: World Wide Importers sample database, available from the [Microsoft SQL Server Samples](../../samples/sql-samples-where-are.md) page.
 * To view the result: 
   *   [Sign up for the Power BI service](https://go.microsoft.com/fwlink/?LinkID=513879) and
-  *  [Download the Power BI mobile app](/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) to your mobile device: iOS, Android phone, or Windows 10 device.  
+  *  [Download the Power BI mobile app](/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) to your mobile device: iOS, Android phone, or Windows device.  
 
   
 ## Create a shared data source  
@@ -298,5 +298,5 @@ The KPIs and mobile reports are displayed in the same folders they're in on the 
 ## See also  
  
 -  View [on-premises report server mobile reports and KPIs in the Power BI mobile app](/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) for iOS and Android devices
--  View [on-premises report server mobile reports and KPIs in the Power BI mobile app for Windows 10 devices](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
+-  View [on-premises report server mobile reports and KPIs in the Power BI mobile app for Windows devices](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   

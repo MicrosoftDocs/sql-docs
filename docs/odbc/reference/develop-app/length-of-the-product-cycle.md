@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "length of the product cycle [ODBC]"
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Length of the Product Cycle
 The final question about interoperability is time. Developing an interoperable application usually takes longer than developing a noninteroperable one. The reason is that the application must check DBMS capabilities, perform the same tasks differently for different DBMSs, work around functionality supported by some DBMSs but not others, and so on.  

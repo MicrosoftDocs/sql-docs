@@ -17,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # ConvexHullAggregate (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a convex hull for a given set of **geometry** objects.
   
@@ -51,7 +51,7 @@ ConvexHullAggregate ( geometry_operand )
 ## Examples  
  The following example returns a convex hull of the set of geometry objects in a table variable column.  
   
- ```
+ ```sql
  -- Setup table variable for ConvexHullAggregate example  
  DECLARE @Geom TABLE  
  (  

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: b343b2b2-7215-4bcd-b12d-de4a9662e536
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getClob Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

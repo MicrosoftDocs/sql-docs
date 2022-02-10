@@ -127,11 +127,14 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
  
  > [!NOTE]
  > If the table is truncated, all statistics built on the truncated HoBT will revert to using the default sampling percentage.
+
+ > [!NOTE]
+ > In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], when rebuilding an index which previously had statistics updated with PERSIST_SAMPLE_PERCENT, the persisted sample percent is reset back to default. Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU17, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU26, and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU10, the persisted sample percent is kept even when rebuilding an index.
  
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) and [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expose the persisted sample percent value for the selected statistic.
  
- **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4) and later (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 
  Forces the leaf-level statistics covering the partitions specified in the ON PARTITIONS clause to be recomputed, and then merged to build the global statistics. WITH RESAMPLE is required because partition statistics built with different sample rates cannot be merged together.  

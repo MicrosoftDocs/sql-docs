@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "commands [OLE DB]"
   - "multiple-rowset results"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Commands Generating Multiple-Rowset Results
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

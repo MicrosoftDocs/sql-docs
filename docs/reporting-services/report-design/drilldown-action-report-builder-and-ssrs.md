@@ -1,6 +1,6 @@
 ---
-title: "Drilldown Action (Report Builder) | Microsoft Docs"
-description: Enable users with Drilldown Action to hide and display items interactively in Report Builder by providing plus and minus icons on a text box.
+title: "Drilldown action in a paginated report | Microsoft Docs"
+description: Enable users with drilldown action in a paginated report to hide and display items interactively in Report Builder by providing plus and minus icons on a text box.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -42,8 +42,11 @@ ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Drilldown Action (Report Builder and SSRS)
-By providing plus and minus icons on a text box, you can enable users to hide and display items interactively. This is called a *drilldown* action. For a table or matrix, you can show or hide static rows and columns, or rows and columns that are associated with groups.  
+# Drilldown action in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+By providing plus and minus icons on a text box, you can enable users in a paginated report to hide and display items interactively. This is called a *drilldown* action. For a table or matrix, you can show or hide static rows and columns, or rows and columns that are associated with groups.  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
   

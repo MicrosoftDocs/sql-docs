@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Finding additional JDBC driver information
 

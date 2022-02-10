@@ -32,8 +32,8 @@ helpviewer_keywords:
   - "KILL statement"
   - "terminating process"
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # KILL (Transact-SQL)

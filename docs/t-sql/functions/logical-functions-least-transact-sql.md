@@ -17,6 +17,7 @@ helpviewer_keywords:
 author: jmsteen
 ms.author: josteen
 ms.reviewer: wiassaf
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || =azure-sqldw-latest"
 ---
 # Logical Functions - LEAST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-svrless-poolonly.md)]

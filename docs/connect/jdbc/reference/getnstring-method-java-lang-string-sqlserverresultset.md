@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 546d77e2-723a-42ac-ba3f-fabf2395d376
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getNString Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

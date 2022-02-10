@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setDouble Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

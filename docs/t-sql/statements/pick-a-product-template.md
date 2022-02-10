@@ -12,8 +12,8 @@ ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # Title (Transact-SQL)

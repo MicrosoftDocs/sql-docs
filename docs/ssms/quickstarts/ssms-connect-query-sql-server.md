@@ -7,7 +7,9 @@ ms.topic: quickstart
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray
-ms.custom: contperf-fy21q2
+ms.custom:
+  - contperf-fy21q2
+  - intro-quickstart
 ms.date: 12/15/2020
 ---
 

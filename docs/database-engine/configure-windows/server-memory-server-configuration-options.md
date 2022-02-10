@@ -1,7 +1,7 @@
 ---
 title: "Server memory configuration options | Microsoft Docs"
 ms.custom: contperf-fy20q4
-ms.date: "08/14/2019"
+ms.date: "08/10/2021"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -54,9 +54,10 @@ The server options **min server memory** and **max server memory** can be set to
 >[!NOTE]
 >[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not guaranteed to allocate the amount of memory specified in **min server memory**. If the load on the server never requires allocating the amount of memory specified in **min server memory**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will run with less memory.
 
-<a name="max_server_memory"></a> Use **max_server_memory** to guarantee the OS does not experience detrimental memory pressure. To set max server memory configuration, monitor overall consumption of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process in order to determine memory requirements. To be more accurate with these calculations for a single instance:
-- From the total OS memory, reserve 1GB-4GB to the OS itself.
-- Then subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory allocations outside the **max server memory** control, which is comprised of **stack size <sup>1</sup> \* calculated max worker threads <sup>2</sup>**. What remains should be the max_server_memory setting for a single instance setup.
+<a name="max_server_memory"></a> Use **max_server_memory** to guarantee the OS does not experience detrimental memory pressure. To set max server memory configuration, monitor overall consumption of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process in order to determine memory requirements. For an initial configuration or when there was no opportunity to collect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process memory usage over time, use the following generalized best practice approach to configure **max_server_memory** for a single instance:
+- From the total OS memory, subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] thread memory allocations outside the **max server memory** control, which is comprised of **stack size <sup>1</sup> \* calculated max worker threads <sup>2</sup>**. 
+- Then subtract 25% for other memory allocations outside the **max server memory** control, such as backup buffers, extended stored procedure DLLs, objects that are created by using Automation procedures (sp_OA calls), and allocations from linked server providers. This is a generic approximation, mileage may vary.
+- What remains should be the max_server_memory setting for a single instance setup.
 
 <sup>1</sup> Refer to the [Memory Management Architecture guide](../../relational-databases/memory-management-architecture-guide.md#stacksizes) for information on thread stack sizes per architecture.
 
@@ -82,16 +83,21 @@ The following screenshot demonstrates all three steps:
 
   
 ## Lock Pages in Memory (LPIM) 
-This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The **Lock Pages in Memory** option is set to ON in instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and higher when the account with privileges to run sqlservr.exe has been granted the Windows *Lock Pages in Memory* (LPIM) user right.  
+This Windows policy determines which accounts can access the API to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The **Lock Pages in Memory** option is set to ON in instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and higher when the account with privileges to run sqlservr.exe has been granted the Windows *Lock Pages in Memory* (LPIM) user right.  
   
 To disable the **Lock Pages In Memory** option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remove the *Lock Pages in Memory* user right for the account with privileges to run sqlservr.exe (the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup account) startup account.  
  
-Setting this option does not affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [dynamic memory management](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management), allowing it to expand or shrink at the request of other memory clerks. When using the *Lock Pages in Memory* user right it is recommended to set an upper limit for **max server memory** as [detailed above](#max_server_memory).
+Using LPIM does not affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [dynamic memory management](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management), allowing it to expand or shrink at the request of other memory clerks. When using the *Lock Pages in Memory* user right it is recommended to set an upper limit for **max server memory** as [detailed above](#max_server_memory).
 
 > [!IMPORTANT]
-> Setting this option should only be used when necessary, namely if there are signs that sqlservr process is being paged out.
+> LPIM should be used when there are signs that the `sqlservr` process is being paged out.
 > In this case, error 17890 will be reported in the Errorlog, resembling the below example:
 > `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+
+> [!IMPORTANT]
+> Using LPIM with an incorrectly configured max server memory setting that does not account for other memory consumers in the system may cause instability, depending on the amount of memory required by other processes, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory requirements outside the scope of max server memory. For more information, see [max server memory](#max_server_memory).
+
+> [!NOTE]
 > Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [trace flag 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is not needed for Standard Edition to use Locked Pages. 
   
 ### To enable Lock Pages in Memory  

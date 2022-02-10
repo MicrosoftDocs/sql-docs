@@ -1,6 +1,6 @@
 ---
-title: "Add, Move, or Delete a Table, Matrix, or List (Report Builder) | Microsoft Docs"
-description: Arrange your table or matrix data regions by using the New Table Wizard or New Matrix Wizard in Report Builder. 
+title: "Add, move, or delete a table, matrix, or list in a paginated report | Microsoft Docs"
+description: Arrange your table or matrix data regions in a paginated report by using the New Table Wizard or New Matrix Wizard in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add, Move, or Delete a Table, Matrix, or List (Report Builder and SSRS)
-  In a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, a data region displays data from a report dataset. Data regions include table, matrix, list, chart, and gauge. To nest one data region inside another, add each data region separately, and then drag the child data region onto the parent data region.  
+# Add, move, or delete a table, matrix, or list in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In a paginated report, a data region displays data from a report dataset. Data regions include table, matrix, list, chart, and gauge. To nest one data region inside another, add each data region separately, and then drag the child data region onto the parent data region.  
   
  The simplest way to add a table or matrix data region to your report is to run the New Table or New Matrix Wizard. These wizards will guide you through the process of choosing a connection to a data source, arranging fields, and choosing the layout and style. The wizards are only available in Report Builder.  
   

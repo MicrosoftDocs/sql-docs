@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLGetInfo function [ODBC], Excel Driver"
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetInfo (Excel Driver)
 > [!NOTE]  

@@ -1,7 +1,7 @@
 ---
-title: Monitor cluster with Grafana Dashboard
+title: Monitor Big Data Clusters with Grafana Dashboard
 titleSuffix: SQL Server Big Data Clusters
-description: Monitoring cluster with Grafana Dashboard on SQL Server 2019 big data cluster.
+description: Monitoring cluster with Grafana Dashboard on SQL Server 2019 Big Data Clusters.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: wiassaf
@@ -12,9 +12,9 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitor cluster with azdata and Grafana Dashboard
+# Monitor Big Data Clusters by using azdata and Grafana Dashboard
 
-This article describes how to monitor an application inside [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]. SQL Server Big Data Cluster exposes Grafana Dashboard for monitoring, those metrics are stored in influxDB. Those metrics are categorized as either: 
+This article describes how to monitor an application inside [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]. SQL Server Big Data Clusters expose Grafana Dashboard for monitoring, those metrics are stored in influxDB. Those metrics are categorized as either: 
 - Kubernetes host-related metrics collected by Telegraf, an agent for collecting, processing, aggregating, and writing metrics.
 - Workload-related metrics: those metrics related to SQL Server, Spark and HDFS are collected by CollectD, including such as SQL Server DMV metrics and [SQL server extended events (XEvents)](../relational-databases/extended-events/extended-events.md). 
 
@@ -36,7 +36,7 @@ The following metrics are available in [!INCLUDE[ssbigdataclusters-ss-nover](../
 
 ## Prerequisites
 
-- [SQL Server 2019 Big Data Cluster](deployment-guidance.md)
+- [SQL Server 2019 Big Data Clusters](deployment-guidance.md)
 - [azdata command-line utility](../azdata/install/deploy-install-azdata.md)
 
 ## Capabilities
@@ -45,7 +45,7 @@ In SQL Server 2019 you can create, delete, describe, initialize, list, run, and 
 
 |Command |Description |
 |:---|:---|
-|`azdata bdc endpoint list` | Lists the endpoints for Big Data Cluster. |
+|`azdata bdc endpoint list` | Lists the endpoints for Big Data Clusters. |
 
 
 You can use the following example to list the endpoint of **Grafana dashboard**:
@@ -58,7 +58,7 @@ The output will give you the endpoint, which you can use your cluster username a
 
 ![Grafana Dashboard](media/big-data-cluster-monitor-apps/grafana-dashboard-endpoint.png)
 
-The `nodeMetricsUrl` and `sqlMetricsUrl` values link to a Grafana dashboard for monitoring Kubernetes node metrics and big data cluster service metrics:
+The `nodeMetricsUrl` and `sqlMetricsUrl` values link to a Grafana dashboard for monitoring Kubernetes node metrics and Big Data Clusters service metrics:
 
 ![Grafana dashboard](./media/view-cluster-status/grafana-dashboard.png)
 
@@ -68,4 +68,4 @@ The `nodeMetricsUrl` and `sqlMetricsUrl` values link to a Grafana dashboard for 
 
 ## Next steps
 
-For more information about [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

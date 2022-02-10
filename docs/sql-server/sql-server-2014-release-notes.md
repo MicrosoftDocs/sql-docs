@@ -8,8 +8,8 @@ ms.technology: release-landing
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2014 Release Notes

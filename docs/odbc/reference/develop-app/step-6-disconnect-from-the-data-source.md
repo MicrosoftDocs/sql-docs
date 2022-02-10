@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "disconnecting from data source [ODBC]"
 ms.assetid: 6ad759ba-4721-4d8f-9b26-de976d4fc1a0
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Step 6: Disconnect from the Data Source
 The final step is to disconnect from the data source, as shown in the following illustration. First, the application frees any statement handles by calling **SQLFreeHandle**. For more information, see [Freeing a Statement Handle](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  

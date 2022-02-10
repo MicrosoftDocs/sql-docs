@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Use ring buffers to obtain health information about Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

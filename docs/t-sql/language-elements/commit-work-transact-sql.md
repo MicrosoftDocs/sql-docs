@@ -25,7 +25,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # COMMIT WORK (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Marks the end of a transaction.  
   

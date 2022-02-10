@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "cache [ODBC]"
 ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Location of Cache
 > [!IMPORTANT]  

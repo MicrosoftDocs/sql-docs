@@ -8,7 +8,7 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 02/05/2021
+ms.date: 08/24/2021
 ms.author: datrigan
 author: DavidTrigano
 ---
@@ -95,7 +95,7 @@ You can manage the information protection policy using [SSMS 18.4](../../ssms/do
 
    The following menu options allow you to manage the information protection policy:
 
-* **Set Information Protection Policy File**: uses the information protection policy as defined in the selected JSON file.
+* **Set Information Protection Policy File**: uses the information protection policy as defined in the selected JSON file. (See the default [Information Protection Policy File](https://github.com/Azure-Samples/sql-data-classification/blob/main/sql_information_protection_default.json))
 
 * **Export Information Protection Policy**: exports the information protection policy to a JSON file.
 

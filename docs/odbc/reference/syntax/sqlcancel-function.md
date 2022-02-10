@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLCancel function [ODBC]"
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLCancel Function
 **Conformance**  

@@ -2,13 +2,10 @@
 title: "ALTER DATABASE SCOPED CONFIGURATION"
 description: Enable several database configuration settings at the individual database level.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
-ms.date: 02/08/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords: 
   - "ALTER_DATABASE_SCOPED_CONFIGURATION"
   - "ALTER_DATABASE_SCOPED_CONFIGURATION_TSQL"
@@ -17,17 +14,21 @@ f1_keywords:
   - "SCOPED_TSQL"
   - "ALTER_DATABASE_SCOPED_TSQL"
   - "DATABASE_SCOPED_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "ALTER DATABASE SCOPED CONFIGURATION statement"
   - "configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement"
-ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: "seo-lt-2019"
+ms.date: 10/12/2021
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest"
 ---
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[sqlserver2016-asdb-asdbmi-asa.md](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 This command enables several database configuration settings at the **individual database** level. 
 
@@ -253,7 +254,10 @@ Allows you to select options to cause the engine to automatically elevate suppor
 
 FAIL_UNSUPPORTED
 
-This value elevates all supported DDL operations to ONLINE. Operations that do not support online execution will fail and throw a warning.
+This value elevates all supported DDL operations to ONLINE. Operations that do not support online execution will fail and throw an error.
+
+> [!NOTE]
+> Adding a column to a table is an online operation in the general case. In some scenarios, for example when [adding a non nullable column](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation), a column cannot be added online. In those cases, if FAIL_UNSUPPORTED is set, the operation will fail.
 
 WHEN_SUPPORTED
 
@@ -270,7 +274,7 @@ Allows you to select options to cause the engine to automatically elevate suppor
 
 FAIL_UNSUPPORTED
 
-This value elevates all supported DDL operations to RESUMABLE. Operations that do not support resumable execution fail and throw a warning.
+This value elevates all supported DDL operations to RESUMABLE. Operations that do not support resumable execution fail and throw an error.
 
 WHEN_SUPPORTED
 

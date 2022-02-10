@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_willconvert"
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_willconvert (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

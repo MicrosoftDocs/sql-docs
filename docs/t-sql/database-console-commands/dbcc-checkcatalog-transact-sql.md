@@ -26,7 +26,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC CHECKCATALOG (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Checks for catalog consistency within the specified database. The database must be online.  
   

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: eb4339b0-383b-4337-a935-e8ec3f0d4123
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getWarnings Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

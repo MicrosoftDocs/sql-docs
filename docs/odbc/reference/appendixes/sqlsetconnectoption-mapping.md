@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "mapping deprecated functions [ODBC], SQLSetConnectOption"
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetConnectOption Mapping
 When an ODBC 2.*x* application calls **SQLSetConnectOption** through an ODBC 3*.x* driver, the call to  

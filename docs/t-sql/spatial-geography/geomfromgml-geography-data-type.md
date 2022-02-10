@@ -21,7 +21,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # GeomFromGML (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Constructs a **geography** instance given a representation in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subset of the Geography Markup Language (GML).
   
@@ -58,7 +58,7 @@ GeomFromGml ( GML_input, SRID )
 ## Examples  
  The following example uses `GeomFromGml()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 DECLARE @x xml;  
 SET @x = '<LineString xmlns="https://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>';  
@@ -68,7 +68,7 @@ SELECT @g.ToString();
   
  The following example uses `GeomFromGml()` to create a `FullGlobe``geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 DECLARE @x xml;  
 SET @x = '<FullGlobe xmlns="https://schemas.microsoft.com/sqlserver/2011/geography" />';  

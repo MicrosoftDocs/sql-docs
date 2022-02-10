@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "text-pointer values"
   - "displaying text pointer values"
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # Text and Image Functions - TEXTPTR (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the text-pointer value that corresponds to a **text**, **ntext**, or **image** column in **varbinary** format. The retrieved text pointer value can be used in READTEXT, WRITETEXT, and UPDATETEXT statements.  
   

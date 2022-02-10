@@ -15,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Add Objects
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Limits the object selection dialog boxes to the types of objects you want to see.  
   
 ## Options  
@@ -25,7 +25,7 @@ Open the **Select Objects** dialog box for you to further define your search for
 **All objects of the types**  
 Open the **Select Object Types** dialog box to specify the type of objects that should be included in the underlying list.  
   
-**The server** *<servername>*  
+**The server** *\<servername\>*  
 Add all appropriate objects on the specified server. Only appears when opened from server scoped dialog boxes such as the **Login - New** dialog box.  
   
 **All objects belonging to the schema**  

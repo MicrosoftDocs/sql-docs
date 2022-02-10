@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "bitwise operators"
   - "bit manipulations"
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bitwise Operators (Transact-SQL)

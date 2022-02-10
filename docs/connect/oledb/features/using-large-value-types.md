@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], large value types"
   - "OLE DB Driver for SQL Server, large value data types"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using large value types
 

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "functions [ODBC], explicit data type conversion functions"
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Explicit Data Type Conversion Function
 Explicit data type conversion is specified in terms of SQL data type definitions.  

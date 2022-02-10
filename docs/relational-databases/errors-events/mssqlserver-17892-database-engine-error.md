@@ -101,7 +101,7 @@ Another situation where log on triggers fail is when using the `EVENTDATA` funct
 User didn't maintain case when copying this script from the internet on this part of the trigger:
 
 ```sql
- SELECT EVENTDATA ().value ( '(/event_instance/clienthost)[1]' , 'NVARCHAR(15)' ));  
+ SELECT EVENTDATA().value ( '(/event_instance/clienthost)[1]' , 'NVARCHAR(15)');
 ```
 
 As a consequence, `EVENTDATA` always returned **NULL**, and all his SA equivalent logins were denied access. In this case, the DAC connection was not enabled, so we had no choice but to restart the server with the startup parameters listed above to drop the trigger.

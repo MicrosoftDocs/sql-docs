@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STIsEmpty (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns 1 if a **geography** instance is empty. Returns 0 if a **geography** instance is not empty.  
   
@@ -41,7 +41,7 @@ ms.author: mlandzic
 ## Examples  
  The following example creates an empty `geography` instance and uses `STIsEmpty()` to verify that the instance is empty.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('POLYGON EMPTY', 4326);  
 SELECT @g.STIsEmpty();  

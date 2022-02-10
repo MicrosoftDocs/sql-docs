@@ -46,7 +46,7 @@ A fast volatile cache that fronts a considerably slower but durable media has be
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-[In-memory OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) is a database technology available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios.
+[In-memory OLTP](./in-memory-oltp/overview-and-usage-scenarios.md) is a database technology available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios.
 
 ## Configuring persistent memory support for Linux
 

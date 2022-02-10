@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "EVENTDATA function"
   - "DDL triggers, EVENTDATA function"
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the EVENTDATA Function

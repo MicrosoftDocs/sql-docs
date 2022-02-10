@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Securing connection strings

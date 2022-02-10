@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
 ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Configure Cluster Quorum NodeWeight Settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

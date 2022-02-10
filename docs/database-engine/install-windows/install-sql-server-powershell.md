@@ -1,15 +1,16 @@
 ---
 title: "Install SQL Server PowerShell | Microsoft Docs"
 description: This article describes the SQL Server PowerShell components that Setup installs when you select SQL Server features that require PowerShell support.
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "09/05/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server PowerShell

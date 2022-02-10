@@ -6,8 +6,8 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/06/2019
 ms.topic: how-to
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---

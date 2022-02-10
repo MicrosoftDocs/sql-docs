@@ -127,7 +127,7 @@ USE master;
 select * from sys.asymmetric_keys;
 ```
 
-The asymmetric key will appear with the naming convention "tde_asymmetric_key_<version>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md). For example, use the following T-SQL command:
+The asymmetric key will appear with the naming convention "tde_asymmetric_key_\<version\>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md). For example, use the following T-SQL command:
 
 ```sql
 USE db1;

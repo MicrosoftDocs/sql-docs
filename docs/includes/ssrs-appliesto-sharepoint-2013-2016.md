@@ -9,4 +9,4 @@
  ms.author: maggies
  ms.custom: include file
 ---
-✔ SharePoint
+✔️ SharePoint

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "tracing options [ODBC], enabling"
 ms.assetid: 48e318bd-2487-4708-a698-ea01f36a45e9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Enabling Tracing
 Tracing can be enabled in the following three ways:  

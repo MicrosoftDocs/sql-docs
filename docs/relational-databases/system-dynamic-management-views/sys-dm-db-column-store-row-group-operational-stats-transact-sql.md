@@ -31,12 +31,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**partition_number**|**int**|1-based partition number within the index or heap.|  
 |**row_group_id**|**int**|ID of the rowgroup in the columnstore index. This is unique within a partition.|  
 |**scan_count**|**int**|Number of scans through the rowgroup since the last SQL restart.|  
-|**delete_buffer_scan_count**|**int**|Number of times the delete buffer was used to determine deleted rows in this rowgroup. This includes accessing the in-memory hashtable and the underlying btree.|  
+|**delete_buffer_scan_count**|**int**|Number of times the delete buffer was used to determine deleted rows in this rowgroup. This includes accessing the in-memory hashtable and the underlying B-tree.|  
 |**index_scan_count**|**int**|Number of times the columnstore index partition was scanned. This is the same for all rowgroups in the partition.|  
 |**rowgroup_lock_count**|**bigint**|Cumulative count of lock requests for this rowgroup since the last SQL restart.|  
 |**rowgroup_lock_wait_count**|**bigint**|Cumulative number of times the database engine waited on this rowgroup lock since the last SQL restart.|  
 |**rowgroup_lock_wait_in_ms**|**bigint**|Cumulative number of milliseconds the database engine waited on this rowgroup lock since the last SQL restart.|  
-  
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+
 ## Permissions  
  Requires the following permissions:  
   

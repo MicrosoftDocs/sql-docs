@@ -7,7 +7,7 @@ ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.author: v-chojas
 author: v-chojas
 ---
@@ -467,6 +467,8 @@ To allow the driver to use CMKs stored in AKV for column encryption, use the fol
 | Client ID/secret | `KeyVaultClientSecret` | Client ID | Secret |
 | Managed Identity | `KeyVaultManagedIdentity` | Object ID (optional, for user-assigned only) | (not specified) |
 | AKV Interactive | `KeyVaultInteractive` | (not set) | (not set) |
+
+Starting in v17.8, the KeystoreAuthentication and KeystorePrincipalId can be edited using the DSN configuration UI in the ODBC Datasource Administrator.
 
 #### Example connection strings
 

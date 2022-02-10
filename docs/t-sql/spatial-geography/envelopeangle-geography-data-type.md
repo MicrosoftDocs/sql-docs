@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # EnvelopeAngle (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the maximum angle between the point returned by `EnvelopeCenter()` and a point in the **geography** instance in degrees.  
   
@@ -49,7 +49,7 @@ EnvelopeAngle( )
   
 ## Examples  
   
-```  
+```sql
 DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';   
 SELECT @g.EnvelopeAngle();  
 ```  

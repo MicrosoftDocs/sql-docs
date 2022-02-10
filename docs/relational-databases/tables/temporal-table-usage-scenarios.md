@@ -117,7 +117,7 @@ System-versioned temporal tables store values for period columns in UTC time zon
 /*Add offset of the local time zone to current time*/
 DECLARE @asOf DATETIMEOFFSET = GETDATE() AT TIME ZONE 'Pacific Standard Time'
 /*Convert AS OF filter to UTC*/
-SET @asOf = DATEADD (MONTH, -9, @asOf) AT TIME ZONE 'UTC';
+SET @asOf = DATEADD (HOUR, -9, @asOf) AT TIME ZONE 'UTC';
 
 SELECT
     EmployeeID

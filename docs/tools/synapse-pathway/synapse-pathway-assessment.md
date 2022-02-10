@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Pathway Preview assessment.
+title: Azure Synapse Pathway assessment.
 description: Perform a data warehouse code translation with Azure Synapse Pathway 
 author: anshul82-ms
 ms.author: anrampal
@@ -11,12 +11,12 @@ monikerRange: "=azure-sqldw-latest"
 ms.custom: template-tutorial 
 ---
 
-# Tutorial to perform your first code translation with Azure Synapse Pathway Preview
+# Tutorial to perform your first code translation with Azure Synapse Pathway
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
-Azure Synapse Pathway Preview introduces support for translating schemas, tables, views, functions, etc. from **Netezza**, **Snowflake**, and **Microsoft SQL Server** into T-SQL complaint code that automates migration to Azure Synapse Analytics.
+Azure Synapse Pathway introduces support for translating schemas, tables, views, functions, etc. from **Amazon Redshift**, **Google BigQuery**, **IBM Netezza**, **Microsoft SQL Server**, **Snowflake**, and **Teradata** into T-SQL complaint code that automates migration to Azure Synapse Analytics.
 
-For more information, see [Azure Synapse Pathway Preview overview](azure-synapse-pathway-overview.md).
+For more information, see [Azure Synapse Pathway overview](azure-synapse-pathway-overview.md).
 
 In this tutorial, you learn how to:
 
@@ -59,7 +59,7 @@ To complete this tutorial, make sure you've installed [Azure Synapse Pathway](sy
 1. A results file, which will have a list of errors and warnings, will be uploaded in the same output directory.
 
 ## Run the translation using command line
-1. On installation, AspCmd.exe will be available in C:\Program Files (x86)\Azure Synapse Pathway (Preview)
+1. On installation, AspCmd.exe will be available in C:\Program Files (x86)\Azure Synapse Pathway
 1. Launch the command prompt and go to the file location 
 1. Type aspcmd.exe --help for a list of commands
 

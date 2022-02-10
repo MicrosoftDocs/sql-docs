@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 134f1455-c98c-4112-ab2d-9205a0db73df
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # addBatch Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

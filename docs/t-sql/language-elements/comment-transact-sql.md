@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "-- (comment character)"
   - "comments [SQL Server]"
 ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # -- (Comment) (Transact-SQL)

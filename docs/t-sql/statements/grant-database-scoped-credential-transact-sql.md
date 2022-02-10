@@ -1,13 +1,10 @@
 ---
+title: GRANT Database Scoped Credential (Transact-SQL)
 description: "GRANT Database Scoped Credential Permissions (Transact-SQL)"
-title: "GRANT Database Scoped Credential (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/19/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords: 
   - "GRANT DATABASE SCOPED CREDENTIAL"
   - "GRANT_DATABASE_SCOPED_CREDENTIAL_TSQL"
@@ -18,17 +15,20 @@ helpviewer_keywords:
   - "permissions [SQL Server], database scoped credential"
   - "database scoped credential [SQL Server], permissions"
   - "GRANT statement, database scoped credentials"
-ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
 author: VanMSFT
 ms.author: vanto
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "06/19/2017"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # GRANT Database Scoped Credential Permissions (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-  Grants permissions on a database scoped credential. 
+Grants permissions on a database scoped credential. 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

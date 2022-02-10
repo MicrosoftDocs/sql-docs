@@ -45,7 +45,7 @@ For example, **-m"SQLCMD"** limits connections to a single connection and that c
 The following example starts the SQL Server instance in single-user mode and only allows connection through the SQL Server Management Studio Query Editor.
 
 ```console
-net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+net start "SQL Server (MSSQLSERVER)" /m"Microsoft SQL Server Management Studio - Query"
 ```
 
 ## Note for Clustered installations  

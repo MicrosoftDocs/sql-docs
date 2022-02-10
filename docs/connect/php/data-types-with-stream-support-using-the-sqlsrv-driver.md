@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "streaming data"
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Data Types with Stream Support Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

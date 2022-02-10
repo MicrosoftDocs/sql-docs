@@ -7,6 +7,8 @@ ms.prod: sql
 ms.reviewer: "vanto"
 ms.technology: system-objects
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15"

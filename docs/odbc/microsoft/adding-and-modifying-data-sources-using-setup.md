@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], adding data sources"
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Adding and Modifying Data Sources Using Setup
 > [!IMPORTANT]  

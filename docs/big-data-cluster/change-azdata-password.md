@@ -110,7 +110,7 @@ Follow these options for manually updating the password for [Grafana](app-monito
     admin:{SHA}<secret>
     ```
     
-    Replace values for /<username/>, /<password/>, /<secret/> as appropriate, for example:
+    Replace values for \<username\>, \<password\>, \<secret\> as appropriate, for example:
     
     ```bash
     htpasswd -nbs admin Test@12345

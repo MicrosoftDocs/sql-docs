@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 helpviewer_keywords: 
   - "Options [SQL Server Management Studio], dialog boxes"
   - "Options [SQL Server Management Studio]"
@@ -16,7 +16,8 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options Dialog Boxes F1 Help
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 This section contains the F1 Help for the dialog boxes available by clicking **Options** on the **Tools** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Options &#40;Designers - Analysis Services Designers - General&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  

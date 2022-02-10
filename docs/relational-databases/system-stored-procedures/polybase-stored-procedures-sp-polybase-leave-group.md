@@ -6,6 +6,8 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_polybase_leave_group"
   - "sp_polybase_leave_group_TSQL"

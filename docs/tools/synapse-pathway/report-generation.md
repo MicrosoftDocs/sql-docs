@@ -1,17 +1,17 @@
 ---
-title: Azure Synapse Pathway Preview Report Generation
+title: Azure Synapse Pathway Report Generation
 description: Azure Synapse Pathway provides comprehensive reporting on scripts translated.
 author: anshul82-ms
 ms.author: anrampal
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: tools-other 
-ms.date: 03/02/2021
+ms.date: 09/09/2021
 monikerRange: "=azure-sqldw-latest"
 ms.custom: template-tutorial 
 ---
 
-# Report Generation for Azure Synapse Pathway Preview
+# Report Generation for Azure Synapse Pathway
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 Azure Synapse Pathway provides a comprehensive report of the number of scripts that were successfully translated. The report also shows the number of errors and warnings on statements that didn't get translated.

@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 70bbdde0-75f7-4169-88c5-dbbe2c4bcd03
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setSQLXML Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

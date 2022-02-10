@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Retrieving Data as a Stream Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +25,7 @@ The following steps summarize how to retrieve data as a stream:
   
 2.  Use [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) to move to the next row in the result set.  
   
-3.  Use [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) to retrieve a field from the row. Specify that the data is to be retrieved as a stream by using **SQLSRV_PHPTYPE_STREAM(<encoding>)** as the third parameter in the function call. This table lists the constants used to specify encodings and their descriptions:  
+3.  Use [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) to retrieve a field from the row. Specify that the data is to be retrieved as a stream by using **SQLSRV_PHPTYPE_STREAM(\<encoding\>)** as the third parameter in the function call. This table lists the constants used to specify encodings and their descriptions:  
   
     |SQLSRV Constant|Description|  
     |-------------------|---------------|  

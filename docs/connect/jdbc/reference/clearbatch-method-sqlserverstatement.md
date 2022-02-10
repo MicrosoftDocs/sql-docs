@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: e6fc1461-bbc6-45ae-85b1-a824aba51085
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # clearBatch Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

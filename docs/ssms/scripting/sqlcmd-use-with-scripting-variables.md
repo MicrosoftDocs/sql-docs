@@ -2,7 +2,7 @@
 title: "Use sqlcmd with Scripting Variables"
 description: Learn how to use scripting variables to make a script that that can be used in multiple scenarios.
 ms.custom: seo-lt-2019
-ms.date: "08/09/2016"
+ms.date: "10/14/2021"
 ms.prod: sql
 ms.technology: ssms
 ms.reviewer: ""
@@ -15,13 +15,12 @@ helpviewer_keywords:
   - "scripting variables [SQL Server]"
   - "sqlcmd utility, scripts"
   - "setvar command"
-ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sqlcmd - Use with Scripting Variables
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Variables that are used in scripts are called scripting variables. Scripting variables enable one script to be used in multiple scenarios. For example, if you want to run one script against multiple servers, instead of modifying the script for each server, you can use a scripting variable for the server name. By changing the server name supplied to the scripting variable, the same script can be executed on different servers.  
   
  Scripting variables can be defined explicitly by using the **setvar** command, or implicitly by using the **sqlcmd -v** option.  
@@ -277,7 +276,7 @@ VALUES('$(tablename)');
 GO
 ```
   
- At the `sqlcmd` prompt, when no variable is set equal to `$(tablename)`, the following statements return the row.  
+ At the `sqlcmd` prompt, when no variable is set equal to `$(tablename)`, the following statements return the row and also return the message "'tablename' scripting variable not defined." By default, the **sqlcmd** flag `-b` is not set. If `-b` is set, **sqlcmd** will terminate after the "variable not defined" error.
   
 ```
 C:\> sqlcmd

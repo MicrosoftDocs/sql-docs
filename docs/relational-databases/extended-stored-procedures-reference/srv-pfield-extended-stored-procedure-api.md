@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_pfield"
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_pfield (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

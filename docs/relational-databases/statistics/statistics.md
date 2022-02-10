@@ -123,7 +123,7 @@ ORDER BY s.name;
   |Temporary|*n* < 6|6|
   |Temporary|6 <= *n* <= 500|500|
   |Permanent|*n* <= 500|500|
-  |Temporary or permanent|*n* >= 500|MIN ( 500 + (0.20 * *n*), SQRT(1,000 * *n*) ) |
+  |Temporary or permanent|*n* > 500|MIN ( 500 + (0.20 * *n*), SQRT(1,000 * *n*) ) |
 
   For example if your table contains 2 million rows, then the calculation is the minimum of `500 + (0.20 * 2,000,000) = 400,500` and `SQRT(1,000 * 2,000,000) = 44,721`. This means the statistics will be updated every 44,721 modifications.
 
@@ -207,7 +207,10 @@ Consider creating statistics with the CREATE STATISTICS statement when any of th
 * The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor suggests creating statistics. 
 * The query predicate contains multiple correlated columns that are not already in the same index.  
 * The query selects from a subset of data.  
-* The query has missing statistics.  
+* The query has missing statistics. 
+
+> [!NOTE]
+> For information specific to In-Memory OLTP related tables and statistics, see [Statistics for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md) .
   
 ### Query Predicate contains multiple correlated columns  
 When a query predicate contains multiple columns that have cross-column relationships and dependencies, statistics on the multiple columns might improve the query plan. Statistics on multiple columns contain cross-column correlation statistics, called *densities*, that are not available in single-column statistics. Densities can improve cardinality estimates when query results depend on data relationships among multiple columns.  
@@ -409,6 +412,7 @@ GO
   
   
 ## See Also  
+ [Statistics for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   

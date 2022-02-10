@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
-author: rothja
-ms.author: jroth
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the remote data archive Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

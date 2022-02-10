@@ -9,7 +9,6 @@ ms.technology: report-data
 
 ms.topic: conceptual
 f1_keywords: 
-  - "10012"
   - "sql13.rtp.rptdesigner.dataview.vdtquerydesigner.f1"
 helpviewer_keywords: 
   - "graphical query designer [Reporting Services]"

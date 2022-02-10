@@ -52,8 +52,6 @@ ms.author: maghan
 
         [sp_cycle_agent_errorlog](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md)
 
-        [sp_cycle_errorlog](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)
-
         [sp_delete_alert](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)
 
         [sp_delete_category](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)

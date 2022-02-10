@@ -20,13 +20,13 @@ helpviewer_keywords:
   - "remarks [SQL Server]"
   - "comments [SQL Server]"
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || =azure-sqldw-latest ||>= aps-pdw-2016 "
 ---
 
 # Slash Star (Block Comment) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Indicates user-provided text. The text between the /* and \*/ is not evaluated by the server.  
   

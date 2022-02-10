@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-ms.reviewer: alanyu, maghan, sstein
+ms.reviewer: alayu, maghan
 ms.custom: 
 ms.date: 10/07/2019
 ---

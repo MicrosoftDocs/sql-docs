@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "full recovery model [SQL Server]"
   - "backing up transaction logs [SQL Server], recovery models"
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Recovery Models (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

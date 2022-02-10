@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "SqlChars data type"
   - "SqlInt32 data type"
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Mapping CLR Parameter Data
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

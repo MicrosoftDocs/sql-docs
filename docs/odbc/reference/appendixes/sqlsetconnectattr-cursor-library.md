@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLSetConnectAttr function [ODBC], Cursor Library"
 ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetConnectAttr (Cursor Library)
 > [!IMPORTANT]  

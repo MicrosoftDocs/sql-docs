@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "column properties [SQL Server]"
   - "column length [SQL Server]"
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # COL_LENGTH (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the defined length of a column, in bytes.
   

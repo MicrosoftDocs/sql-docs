@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: f3fce8bf-8d6e-476f-aa6d-992daa79b899
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getString Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

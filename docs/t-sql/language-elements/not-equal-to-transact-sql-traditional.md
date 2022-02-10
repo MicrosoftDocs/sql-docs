@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "not equal to operator (<>)"
   - "<> (not equal to operator)"
 ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Not Equal To (Transact SQL) - traditional

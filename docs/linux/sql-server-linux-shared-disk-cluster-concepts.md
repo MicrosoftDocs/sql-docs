@@ -20,7 +20,7 @@ To create a SQL Server FCI on Linux, see [Configure SQL Server FCI on Linux](sql
 
 ## The Clustering Layer
 
-* In RHEL, the clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf). 
+* In RHEL, the clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/high_availability_add-on_overview/red_hat_enterprise_linux-7-high_availability_add-on_overview-en-us.pdf). 
 
     > [!NOTE] 
     > Access to Red Hat HA add-on and documentation requires a subscription. 

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_free_stmt"
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

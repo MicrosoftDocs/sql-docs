@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLParamData function [ODBC]"
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLParamData Function
 **Conformance**  

@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STX (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The  X-coordinate property of a **Point** instance.
   
@@ -46,7 +46,7 @@ The  X-coordinate property of a **Point** instance.
 ## Examples  
  The following example creates a `Point` instance and uses `STX` to retrieve the X-coordinate of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT(3 8)', 0);  
 SELECT @g.STX;  

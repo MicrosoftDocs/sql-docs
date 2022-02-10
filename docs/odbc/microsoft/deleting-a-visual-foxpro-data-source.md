@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "deleting data sources [ODBC], Visual FoxPro"
 ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Deleting a Visual FoxPro Data Source
 ### To delete a Visual FoxPro data source  

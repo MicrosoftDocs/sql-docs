@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, password expiration"
   - "modifying passwords"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Changing Passwords Programmatically
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: e0f5dc57-07b8-4811-ab1a-80a524bfdb42
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getTableTypes Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

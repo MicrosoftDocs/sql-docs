@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "triggers [SQL Server], security"
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Trigger Security

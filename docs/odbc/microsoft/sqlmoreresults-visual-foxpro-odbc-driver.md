@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLMoreResults function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLMoreResults (Visual FoxPro ODBC Driver)
 > [!NOTE]  

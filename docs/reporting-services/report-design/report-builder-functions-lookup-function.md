@@ -1,6 +1,6 @@
 ---
-title: "Lookup Function (Report Builder) | Microsoft Docs"
-description:  Use the Lookup function to return the first matching value for the specified name from a dataset that contains name or value pairs.
+title: "Lookup function in a paginated report | Microsoft Docs"
+description:  Use the Lookup function in a paginated report to return the first matching value for the specified name from a dataset that contains name or value pairs.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - Lookup Function
-  Returns the first matching value for the specified name from a dataset that contains name/value pairs.  
+# Report Builder functions - Lookup function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the first matching value for the specified name from a dataset that contains name/value pairs in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

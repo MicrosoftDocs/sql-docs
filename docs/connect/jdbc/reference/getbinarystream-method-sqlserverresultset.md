@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 2bcccb16-007f-4a34-a449-61fc89e99218
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getBinaryStream Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

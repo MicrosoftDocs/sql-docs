@@ -20,9 +20,9 @@ ms.date: 03/14/2017
 
 # Create a New Registered Server (SQL Server Management Studio)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This topic describes how to save the connection information for servers that you access frequently, by registering the server in the Registered Servers component of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. A server can be registered before connecting, or when connecting from Object Explorer. There is a special menu option to register the server instances on the local computer.  
+This topic describes how to save the connection information for servers that you access frequently, by registering the server in the Registered Servers component of SQL Server Management Studio in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. A server can be registered before connecting, or when connecting from Object Explorer. There is a special menu option to register the server instances on the local computer.  
   
  There are two kinds of registered servers:  
   
@@ -45,7 +45,7 @@ This topic describes how to save the connection information for servers that you
   
 #### To create a new registered server  
   
-1.  If Registered Servers is not visible in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], on the **View** menu, click **Registered Servers**.  
+1.  If Registered Servers is not visible in SQL Server Management Studio, on the **View** menu, click **Registered Servers**.  
   
      **Server type**  
      When a server is registered from Registered Servers, the **Server type** box is read-only, and matches the type of server displayed in the Registered Servers pane. To register a different type of server, click **Database Engine**, **Analysis Server**, **Reporting Services**, or **Integration Services** on the **Registered Servers** toolbar before starting to register a new server.  
@@ -93,7 +93,7 @@ This topic describes how to save the connection information for servers that you
      Click to save the registered server settings.  
   
 ## Multiserver Queries  
- The Query Editor window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can connect to and query multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] at the same time. The results that are returned by the query can be merged into a single results pane, or they can be returned in separate results panes. As an option, Query Editor can include columns that provide the name of the server that produced each row, and also the login that was used to connect to the server that provided each row. For more information about how to execute multiserver queries, see [Execute Statements Against Multiple Servers Simultaneously &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md).  
+ The Query Editor window in SQL Server Management Studio can connect to and query multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] at the same time. The results that are returned by the query can be merged into a single results pane, or they can be returned in separate results panes. As an option, Query Editor can include columns that provide the name of the server that produced each row, and also the login that was used to connect to the server that provided each row. For more information about how to execute multiserver queries, see [Execute Statements Against Multiple Servers Simultaneously &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md).  
   
  To execute queries against all the servers in a local server group, right-click the server group, point to click **Connect**, and then click **New Query**. When queries are executed in the new Query Editor window, they will execute against all servers in the group, using the stored connection information including the user authentication context. Servers registered by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication but not saving the password will fail to connect.  
   
@@ -103,4 +103,4 @@ This topic describes how to save the connection information for servers that you
  [Hide System Objects in Object Explorer](../object/hide-system-objects-in-object-explorer.md)   
  [Export Registered Server Information &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)   
  [Import Registered Server Information &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)  
-  
+ [Administer multiple servers using Central Management Servers](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  

@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQLNumParams function [ODBC]"
 ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLNumParams Function
 **Conformance**  

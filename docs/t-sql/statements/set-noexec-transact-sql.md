@@ -78,7 +78,7 @@ GO
 -- SET NOEXEC to ON.  
 SET NOEXEC ON;  
 GO  
--- Function name uses is a reserved keyword.  
+-- Function name used is a reserved keyword.  
 USE AdventureWorks2012;  
 GO  
 CREATE FUNCTION dbo.Values(@BusinessEntityID int)  

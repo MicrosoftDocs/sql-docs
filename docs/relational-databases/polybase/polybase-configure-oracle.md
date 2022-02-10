@@ -30,7 +30,8 @@ To query the data from an Oracle data source, you must create external tables to
 The following Transact-SQL commands are used in this section:
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 
@@ -60,6 +61,22 @@ The following Transact-SQL commands are used in this section:
     WITH ( LOCATION = 'oracle://<server address>[:<port>]',
     -- PUSHDOWN = ON | OFF,
     CREDENTIAL = credential_name)
+    ```
+
+1. Create an external table with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+
+    ```sql
+    /*
+    * LOCATION: Three-part identifier indicating database & domain or only database, schema, and table name.
+    * DATA_SOURCE: The data source created above.
+    */
+    CREATE EXTERNAL TABLE [T1] (
+      [KEY] DECIMAL(38) NOT NULL,
+      [RANDOM_INT] DECIMAL(38),
+      [RANDOM_FLOAT] FLOAT(53))
+    WITH (
+      LOCATION = '[ORCLCDB.localdomain].SYS.T1',
+      DATA_SOURCE = external_data_source_name)
     ```
 
 1. **Optional:** Create statistics on an external table.

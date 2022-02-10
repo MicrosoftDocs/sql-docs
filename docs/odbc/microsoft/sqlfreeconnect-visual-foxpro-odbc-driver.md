@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLFreeConnect function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 5ecfbbed-43f6-4875-a6a7-732f36431e91
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFreeConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

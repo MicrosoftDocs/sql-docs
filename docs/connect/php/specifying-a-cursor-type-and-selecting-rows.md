@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "scrollable cursors"
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Specifying a cursor type and selecting rows
 

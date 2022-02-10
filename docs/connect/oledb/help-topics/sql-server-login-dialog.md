@@ -5,11 +5,11 @@ ms.custom: ""
 ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
-ms.author: "v-beaziz"
-author: bazizi
+ms.author: v-davidengel
+author: David-Engel
 ---
 # SQL Server Login dialog box
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SqlClient provider"
   - "in-process data access providers [CLR integration]"
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Data Access from CLR Database Objects
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

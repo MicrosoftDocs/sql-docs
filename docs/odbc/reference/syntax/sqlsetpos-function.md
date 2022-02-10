@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQLSetPos function [ODBC]"
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetPos Function
 **Conformance**  

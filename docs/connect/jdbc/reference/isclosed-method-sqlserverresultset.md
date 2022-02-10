@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 6081aa34-fc88-4dd0-9a3f-05e8488219dc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # isClosed Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

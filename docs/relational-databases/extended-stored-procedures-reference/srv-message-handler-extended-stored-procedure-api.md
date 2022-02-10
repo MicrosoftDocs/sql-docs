@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_message_handler"
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_message_handler (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

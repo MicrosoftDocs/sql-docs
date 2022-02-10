@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "feature variability in interoperable applications [ODBC]"
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Writing an Interoperable Application
 Whenever an application uses the same code against more than one driver, that code must be interoperable among those drivers. In most cases, this is an easy task. For example, the code to fetch rows with a forward-only cursor is the same for all drivers. In some cases, this can be more difficult. For example, the code to construct identifiers for use in SQL statements needs to consider identifier case, quoting, and one-part, two-part, and three-part naming conventions.  

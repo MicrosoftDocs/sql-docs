@@ -2,7 +2,7 @@
 title: "SQL Server 2016 & 2017: Hardware & software requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2016 and SQL Server 2017. 
 ms.custom: "seo-lt-2019"
-ms.date: "02/19/2020"
+ms.date: "09/16/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -42,9 +42,8 @@ helpviewer_keywords:
   - "cross-language support"
   - "disk space [SQL Server]"
   - "localized SQL Server versions"
-ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
-ms.author: chadam
-author: cawrites
+ms.author: mikeray
+author: MikeRayMSFT
 ---
 # SQL Server 2016 and 2017: Hardware and software requirements
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -99,12 +98,15 @@ The following software requirements apply to all installations:
 
 
 
-## Operating System support
+## Operating System support for SQL Server 2017
 
-The following table shows which editions of SQL Server 2016 and 2017 are compatible with which versions of Windows:  
+The following table shows which editions of SQL Server 2017 are compatible with which versions of Windows:  
   
 | SQL Server edition:               | Enterprise | Developer | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
+| Windows Server 2022 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2022 Datacenter: Azure Edition|    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2022 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
@@ -119,6 +121,111 @@ The following table shows which editions of SQL Server 2016 and 2017 are compati
 | Windows Server 2012 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2012 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2012 Foundation    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows 11 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 11 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 11 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 11 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 10 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 10 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8.1 Enterprise            |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8.1 Pro                   |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8.1 Enterprise            |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8 Pro                     |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8                         |    No      |    Yes    |    Yes   | No  |   Yes   | 
+
+### Server Core support for SQL Server 2017
+
+Installing SQL Server 2017 on Server Core mode is supported by the following editions of Windows Server:
+
+:::row:::
+    :::column:::
+        Windows Server 2022 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2022 Datacenter
+    :::column-end:::
+    :::column:::
+        Windows Server 2022 Datacenter: Azure edition
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2019 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2019 Datacenter
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2016 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2016 Datacenter
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2012 R2 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2012 R2  Datacenter
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2012 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2012 Datacenter
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+
+## Operating System support for SQL Server 2016
+
+The following table shows which editions of SQL Server 2016 are compatible with which versions of Windows:  
+
+| SQL Server edition:               | Enterprise | Developer | Standard | Web | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ |
+| Windows Server 2022 Datacenter    |    No     |    No    |    No   | No |   No   |
+| Windows Server 2022 Datacenter: Azure Edition|    No     |    No    |    No   | No |   No   | 
+| Windows Server 2022 Standard      |    No     |    No    |    No   | No |   No   |
+| Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2016 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2016 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2016 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 R2 Datacenter |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 R2 Standard   |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 R2 Essentials |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 R2 Foundation |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 Foundation    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows 11 IoT Enterprise         |    No      |    No     |    No    | No  |   No    |
+| Windows 11 Enterprise             |    No      |    No     |    No    | No  |   No    |
+| Windows 11 Professional           |    No      |    No     |    No    | No  |   No    |
+| Windows 11 Home                   |    No      |    No     |    No    | No  |   No    |
 | Windows 10 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
@@ -131,10 +238,9 @@ The following table shows which editions of SQL Server 2016 and 2017 are compati
 
 For minimum version requirements to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on [!INCLUDE[win8srv](../../includes/win8srv-md.md)] or [!INCLUDE[win8](../../includes/win8-md.md)], see [Installing SQL Server on Windows Server 2012 or Windows 8](https://support.microsoft.com/kb/2681562). 
 
+### Server Core support for SQL Server 2016
 
-### Server Core support
-
-Installing SQL Server 2016 and 2017 on Server Core mode is supported by the following editions of Windows Server:
+Installing SQL Server 2016 on Server Core mode is supported by the following editions of Windows Server:
 
 :::row:::
     :::column:::
@@ -231,7 +337,7 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
  The supported storage types for data files are:  
   
 -   Local Disk 
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently supports disk drives that have standard native sector sizes of 512 bytes and 4 KB.  Hard disks with sector sizes larger than 4 KB may cause errors when attempting to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data files on them.  See [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/kb/926930) for more information on hard disk sector-size support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently supports disk drives that have standard native sector sizes of 512 bytes and 4 KB.  Hard disks with sector sizes larger than 4 KB may cause errors when attempting to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data files on them.  See [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/kb/926930) for more information on hard disk sector-size support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Troubleshoot errors related to system disk sector size greater than 4 KB](/troubleshoot/sql/admin/troubleshoot-os-4kb-disk-sector-size).
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the tempdb files. Ensure that the path specified for the tempdb data and log files is valid on all the cluster nodes. During failover, if the tempdb directories are not available on the failover target node, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource will fail to come online.
 -   Shared Storage  
 -   [Storage Spaces Direct \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  

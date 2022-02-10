@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], configuring"
 ms.assetid: 0a5f827c-0b80-4627-85cb-f10292b9fb33
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Configuring the ODBC Driver for Oracle
 > [!IMPORTANT]  

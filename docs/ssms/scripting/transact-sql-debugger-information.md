@@ -29,9 +29,9 @@ Every time that the debugger pauses execution on a specific [!INCLUDE[tsql](../.
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
-## Debugger Windows  
+## Debugger windows  
 
-In debugger mode, the debugger opens two windows at the bottom of the main [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] window. The debugger displays all its information in these two windows. Each of the debugger windows has tabs that you can select to control which set of information is displayed in the window. The left debugger window contains the **Locals**, **Watch1**, **Watch2**, **Watch3**, and **Watch4** tabs. The right debugger window contains the **Call Stack**, **Threads**, **Breakpoints**, **Command Window**, and **Output** tabs.  
+In debugger mode, the debugger opens two windows at the bottom of the main SQL Server Management Studio window. The debugger displays all its information in these two windows. Each of the debugger windows has tabs that you can select to control which set of information is displayed in the window. The left debugger window contains the **Locals**, **Watch1**, **Watch2**, **Watch3**, and **Watch4** tabs. The right debugger window contains the **Call Stack**, **Threads**, **Breakpoints**, **Command Window**, and **Output** tabs.  
   
 > [!NOTE]  
 >  The previous descriptions apply to the default locations of the debugger windows. You can drag a tab to move it from one window to another, or you can undock a tab to create a new window that you can put wherever you want.  

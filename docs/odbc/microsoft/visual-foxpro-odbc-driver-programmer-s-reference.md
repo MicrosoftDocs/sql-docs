@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], technical reference"
 ms.assetid: 00d722d4-ce99-4dbe-a503-1ab27cb6fe0a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Visual FoxPro ODBC Driver Programmer&#39;s Reference
 This section of the Visual FoxPro ODBC Driver documentation contains the following topics:  

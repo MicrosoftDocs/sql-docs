@@ -19,8 +19,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_rpcoptions"
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_rpcoptions (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

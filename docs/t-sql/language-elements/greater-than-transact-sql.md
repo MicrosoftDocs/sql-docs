@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "greater than operator (>)"
   - "> (greater than operator)"
 ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &gt; (Greater Than) (Transact-SQL)

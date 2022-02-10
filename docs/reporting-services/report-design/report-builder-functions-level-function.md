@@ -1,6 +1,6 @@
 ---
-title: "Level Function (Report Builder) | Microsoft Docs"
-description: Discover the Level function in Report Builder. This function returns the current level of depth in a recursive hierarchy.
+title: "Level function in a paginated report | Microsoft Docs"
+description: Discover the Level function in Report Builder. This function returns the current level of depth in a recursive hierarchy in a paginated report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - Level Function
-  Returns the current level of depth in a recursive hierarchy.  
+# Report Builder functions - Level function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the current level of depth in a recursive hierarchy in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

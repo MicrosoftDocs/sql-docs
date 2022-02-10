@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, library files"
   - "MSOLEDBSQL, library files"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using the OLE DB Driver for SQL Server header and library files
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

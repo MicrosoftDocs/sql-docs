@@ -2,13 +2,15 @@
 title: Deploy on Azure Red Hat OpenShift python script
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to use a deployment script to deploy SQL Server Big Data Clusters on Azure Red Hat OpenShift (ARO).
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
+ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Use a python script to deploy a SQL Server Big Data Cluster on Azure Red Hat OpenShift (ARO)
@@ -29,11 +31,11 @@ The default big data cluster deployment used here consists of a SQL Master insta
 ## Prerequisites
 
 - An Azure subscription.
-- [oc](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)
+- [OpenShift CLI (oc)](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)
 - [Python minimum version 3.0](https://www.python.org/downloads)
 - [`az` CLI](/cli/azure/install-azure-cli/)
 - [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
-- **Azure Data Studio**
+- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
 ## Log in to your Azure account
 
@@ -60,10 +62,10 @@ python deploy-sql-big-data-aro.py
 When prompted, provide your input for Azure subscription ID and the Azure resource group to create the resources in. Optionally, you can also provide your input for other configurations or use the defaults provided. For example:
 
 - `azure_region`
-- `vm_size` for OpenShift worker nodes. For an optimal experience while you are validating basic scenarios, we recommend at least 8 vCPUs and 64 GB memory across all worker nodes in the cluster. The script uses `Standard_D8s_v3` and 3 worker nodes as default. A default size configuration for big data clusters also uses about 24 disks for persistent volume claims across all components.
+- `vm_size` for OpenShift worker nodes. For an optimal experience while you are validating basic scenarios, we recommend at least 8 vCPUs and 64-GB memory across all worker nodes in the cluster. The script uses `Standard_D8s_v3` and three worker nodes as default. A default size configuration for big data clusters also uses about 24 disks for persistent volume claims across all components.
 - network configuration for OpenShift cluster deployment - see the [ARO deployment article](\azure\openshift\tutorial-create-cluster) for more details on each parameter.
 - `cluster_name` - this value is used for both ARO cluster and SQL Server Big Data Cluster created on top of ARO. Note that the name of the SQL Big Data Cluster is going to be a Kubernetes namespace.
-- `username `- this is the username for the accounts provisioned during deployment for the controller admin account, SQL Server master instance account and gateway. Note that `sa` SQL Server account is disabled automatically for you, as a best practice.
+- `username `- this is the username for the accounts provisioned during deployment for the controller admin account, SQL Server master instance account, and gateway. Note that `sa` SQL Server account is disabled automatically for you, as a best practice.
 - `password` - same value is going to be used for all accounts.
 
 The SQL Server Big Data Cluster is now deployed on ARO. You can now use Azure Data Studio to connect to the cluster. For more information, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
@@ -89,7 +91,7 @@ The script in this section deploys the SQL Server Big Data Cluster to Azure Red 
 #
 # Prerequisites: 
 # 
-# Azure CLI (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli), Azure Data CLI (`azdata`) (https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-install-azdata), oc CLI (https://www.openshift.com/blog/installing-oc-tools-windows)
+# Azure CLI, Azure Data CLI (`azdata`), OpenShift CLI (oc)  
 #
 # Run `az login` at least once BEFORE running this script
 #
@@ -204,7 +206,7 @@ executeCmd (command)
 # Create BDC
 command = "azdata bdc create --config-profile custom --accept-eula yes"
 executeCmd(command)
-#login into BDC cluster and list endpoints
+#login into big data cluster and list endpoints
 command="azdata login -n " + CLUSTER_NAME
 executeCmd (command)
 print("")
@@ -215,7 +217,7 @@ executeCmd(command)
 
 ## `bdc-scc.yaml`
 
-The following .yaml manifest defines a custom security context constraints (SCC) for the Big Data Cluster deployment. Copy it to the same directory as `deploy-sql-big-data-aro.py`.
+The following .yaml manifest defines a custom security context constraint (SCC) for the Big Data Cluster deployment. Copy it to the same directory as `deploy-sql-big-data-aro.py`.
 
 ```yaml
 allowHostDirVolumePlugin: false

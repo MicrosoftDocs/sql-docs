@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: 05/14/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz

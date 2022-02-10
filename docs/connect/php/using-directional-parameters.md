@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using directional parameters
 

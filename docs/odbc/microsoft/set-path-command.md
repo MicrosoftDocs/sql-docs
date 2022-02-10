@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SET PATH command [ODBC]"
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SET PATH Command
 Specifies a path for file searches. For driver-specific information, see the Remarks.  

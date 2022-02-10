@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], tables"
   - "trace_xe_action_map"
 ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Extended Events Tables - trace_xe_action_map
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 372515da-3b0e-46f6-8c0b-01b1b45c5a2f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # nullsAreSortedAtStart Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

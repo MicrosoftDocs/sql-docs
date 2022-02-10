@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.date: 07/25/2020  
+  ms.date: 10/21/2021  
 
 landingContent:
   - title: "Module 1: Introduction to SQL Server on Linux"
@@ -21,10 +21,6 @@ landingContent:
         url: new-to-linux-resources.md
       - text: "Learn: SQL Server on Linux"
         url: /learn/modules/introduction-sql-server-linux/
-      - text: "Channel 9 - How SQL Server runs on Linux (optional)"
-        url: https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-on-Linux-The-HOW?term=sql%20server%20on%20Linux&lang-en=true
-      - text: "Channel 9 - SQL Server on Linux (optional)"
-        url: https://channel9.msdn.com/events/Connect/2016/101?term=sql%20server%20on%20Linux&lang-en=true 
 
 
   - title: "Module 2: Planning SQL Server on Linux"
@@ -55,8 +51,6 @@ landingContent:
         url: ../tools/overview-sql-tools.md
       - text: Azure Data Studio (tool)
         url: ../azure-data-studio/what-is-azure-data-studio.md
-      - text: Channel 9 - Cross-platform SQL tools (optional)
-        url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
 
 
   - title: "Module 4: Configure SQL Server on Linux"

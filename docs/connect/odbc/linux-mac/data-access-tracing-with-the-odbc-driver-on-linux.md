@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "tracing"
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Data access tracing on Linux and macOS
 

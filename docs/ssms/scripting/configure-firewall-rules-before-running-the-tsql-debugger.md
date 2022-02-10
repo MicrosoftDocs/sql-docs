@@ -43,7 +43,7 @@ The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger includes both server-si
 
 - When you install [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] from the web download.
 
-There are no configuration requirements to run the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger when [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is running on the same computer as the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. However, to run the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger when connected to a remote instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], program and port rules in the Windows Firewall must be enabled on both computers. These rules may be created by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup. If you get errors attempting to open a remote debugging session, ensure the following firewall rules are defined on your computer.
+There are no configuration requirements to run the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger when SQL Server Management Studio or [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is running on the same computer as the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. However, to run the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger when connected to a remote instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], program and port rules in the Windows Firewall must be enabled on both computers. These rules may be created by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup. If you get errors attempting to open a remote debugging session, ensure the following firewall rules are defined on your computer.
 
 Use the **Windows Firewall with Advanced Security** application to manage the firewall rules. In both [!INCLUDE[win7](../../includes/win7-md.md)] and [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], open **Control Panel**, open **Windows Firewall**, and select **Advanced settings**. In [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] you can also open **Service Manager**, expand **Configuration** in the left pane, and expand **Windows Firewall with Advanced Security**.
 
@@ -121,7 +121,7 @@ If you get errors attempting to open a remote debugging session, you can manuall
 
    9. Select **TCP** in the **Protocol type:** box, select **RPC Endpoint Mapper** in the **Local port:** box, click **Apply**, and then click **OK**.
 
-- Add a program entry for the application hosting the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor. If you need to open remote debugging sessions from both [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] on the same computer, you must add a program rule for both:
+- Add a program entry for the application hosting the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor. If you need to open remote debugging sessions from both SQL Server Management Studio and [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] on the same computer, you must add a program rule for both:
 
    1. In **Windows Firewall with Advanced Security**, in the left pane, right-click **Inbound Rules**, and then select **New Rule** in the action pane.
 
@@ -129,7 +129,7 @@ If you get errors attempting to open a remote debugging session, you can manuall
 
    3. In the **Program** dialog, select **This program path:** and enter one of these three values.
 
-       - For [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], enter the full path to ssms.exe. By default, ssms.exe is installed in C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\Management Studio.
+       - For SQL Server Management Studio, enter the full path to ssms.exe. By default, ssms.exe is installed in C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\Management Studio.
 
        - For [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] enter the full path to devenv.exe:
 
@@ -137,7 +137,7 @@ If you get errors attempting to open a remote debugging session, you can manuall
 
             2. By default, the devenv.exe for Visual Studio 2012 is in C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE
 
-            3. You can find the path to ssms.exe from the shortcut you use to launch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can find the path to devenv.exe from the shortcut you use to launch [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Right click the shortcut and select **Properties**. The executable and path are listed in the **Target** box.
+            3. You can find the path to ssms.exe from the shortcut you use to launch SQL Server Management Studio. You can find the path to devenv.exe from the shortcut you use to launch [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Right click the shortcut and select **Properties**. The executable and path are listed in the **Target** box.
 
    4. In the **Action** dialog, select **Allow the connection**, and click **Next**.
 
@@ -155,7 +155,7 @@ If you get errors attempting to open a remote debugging session, you can manuall
 
 All attempts to start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger must also meet the following requirements:
 
-- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] must be running under a Windows account that is a member of the sysadmin fixed server roll.
+- SQL Server Management Studio or [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] must be running under a Windows account that is a member of the sysadmin fixed server roll.
 
 - The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window must be connected by using either a Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login that is a member of the sysadmin fixed server role.
 

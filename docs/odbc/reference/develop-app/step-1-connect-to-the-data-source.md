@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "connecting to data source [ODBC], steps"
 ms.assetid: 84298664-4523-4149-b821-7b2e42c85281
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Step 1: Connect to the Data Source
 The first step in any application is to connect to the data source. This phase, including the functions it requires, is shown in the following illustration.  

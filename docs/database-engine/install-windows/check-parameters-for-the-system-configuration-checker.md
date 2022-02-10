@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "configuration checkers [SQL Server]"
   - "Setup [SQL Server], system configuration checker"
 ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
-author: cawrites
-ms.author: chadam
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016"
 ---
 # Check parameters for the System Configuration Checker

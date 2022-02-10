@@ -1,17 +1,18 @@
 ---
 title: Learn SQL Server Master Data Services
 description: Explore features and capabilities of SQL Server 2019 Master Data Services through self-paced training, videos, samples, and SQL Server Certification.
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "02/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: quickstart
-keywords: 
+keywords:
   - "learn sql"
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
-author: chugugrace 
+author: chugugrace
 ms.author: lle
 ---
 # Learn SQL Server Master Data Services
@@ -54,4 +55,3 @@ ms.author: lle
   
   
   
-

@@ -1,6 +1,6 @@
 ---
-title: "Previous Function (Report Builder) | Microsoft Docs"
-description: The Previous Function in Report Builder returns the value or the specified aggregate value for the previous instance of an item. 
+title: "Previous function in a paginated report | Microsoft Docs"
+description: The Previous Function in Report Builder returns the value or the specified aggregate value for the previous instance of an item in a paginated report. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - Previous Function
-  Returns the value or the specified aggregate value for the previous instance of an item within the specified scope.  
+# Report Builder functions - Previous function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the value or the specified aggregate value for the previous instance of an item within the specified scope in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -49,7 +52,7 @@ Previous(expression, scope)
   
  If *expression* contains an aggregate function that specifies a scope other than the default, the *scope* parameter for the **Previous** function must be a containing scope for the scope specified in the aggregate function call.  
   
- The functions **Level**, **InScope**, **Aggregate** and **Previous** cannot be used in the *expression*parameter. Specifying the *recursive* parameter for any aggregate function is not supported.  
+ The functions **Level**, **InScope**, **Aggregate** and **Previous** cannot be used in the *expression* parameter. Specifying the *recursive* parameter for any aggregate function is not supported.  
   
  For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   

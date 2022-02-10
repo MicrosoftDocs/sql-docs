@@ -5,7 +5,7 @@ ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords: 
   - "architecture [SQL Server], Database Mail"
   - "Database Mail [SQL Server], architecture"

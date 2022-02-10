@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 ---
 # SQL Server resource DLL health diagnostic logs for availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

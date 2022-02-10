@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "data types [ODBC], about data types"
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Appendix D: Data Types
 ODBC defines two sets of data types: SQL data types and C data types. SQL data types indicate the data type of data stored at the data source. C data types indicate the data type of data stored in application buffers.  

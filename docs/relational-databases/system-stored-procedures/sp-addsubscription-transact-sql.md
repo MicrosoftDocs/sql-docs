@@ -8,6 +8,8 @@ ms.reviewer: ""
 ms.custom: ""
 ms.technology: replication
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_addsubscription"
   - "sp_addsubscription_TSQL"

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "error messages [ODBC], diagnostic messages"
 ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # DBMS-Based Driver Diagnostic Example
 A DBMS-based driver sends requests to a DBMS and returns information to the application through the Driver Manager. Because the driver is the component that interfaces with the Driver Manager, it formats and returns arguments for **SQLGetDiagRec**.  

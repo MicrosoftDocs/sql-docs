@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Always On availability group is not ready for automatic failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

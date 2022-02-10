@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 10dfa251-9408-469e-ae2a-1acf3917cf47
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getNClob Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

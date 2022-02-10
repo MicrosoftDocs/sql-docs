@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "connections [CLR integration]"
   - "context [CLR integration]"
 ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Context Connection
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

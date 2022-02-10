@@ -2,7 +2,7 @@
 title: "Connect to the Database Engine Using Extended Protection | Microsoft Docs"
 description: Learn how Extended Protection uses service binding and channel binding to help prevent authentication relay attacks. See how to enable this feature.
 ms.custom: ""
-ms.date: "05/21/2019"
+ms.date: "08/11/2021"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -44,7 +44,7 @@ ms.author: vanto
  Channel binding establishes a secure channel (Schannel) between a client and an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. The service verifies the authenticity of the client by comparing the client's channel binding token (CBT) specific to that channel, with its own CBT. Channel binding addresses both luring and spoofing attacks. However, it incurs a larger runtime cost, because it requires Transport Layer Security (TLS) encryption of all the session traffic. Channel Binding occurs when a client application uses encryption to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], regardless of whether encryption is enforced by the client or by the server.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] data providers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 and SSL 3.0. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might fail.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] data providers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 and SSL 3.0. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might fail. Make sure that you have the latest build of SQL Server to Support TLS 1.1 or TLS 1.2. For more information, see <https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe>.
   
 ### Operating System Support  
  The following links provide more information about how Windows supports **Extended Protection**:  

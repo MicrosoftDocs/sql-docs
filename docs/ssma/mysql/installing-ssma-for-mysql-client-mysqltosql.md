@@ -2,12 +2,13 @@
 title: "Installing SSMA for MySQL client (MySQLToSQL) | Microsoft Docs"
 description: Learn about installation prerequisites for the SQL Server Migration Assistant (SSMA) for MySQL client and how to install.
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "07/14/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Installing client,Licensing"
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: "nahk-ivanov"

@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQLSetDescRec function [ODBC]"
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetDescRec Function
 **Conformance**  

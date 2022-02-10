@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.backupdevice.general.f1"
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Backup Device (General Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

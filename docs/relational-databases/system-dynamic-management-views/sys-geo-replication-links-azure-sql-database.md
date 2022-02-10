@@ -6,6 +6,8 @@ ms.date: "01/28/2019"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "dm_geo_replication_links_TSQL"
   - "dm_geo_replication_links"
@@ -21,7 +23,7 @@ monikerRange: "= azuresqldb-current"
 ---
 # sys.geo_replication_links (Azure SQL Database)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Contains a row for each replication link between primary and secondary databases in a geo-replication partnership. This view resides in the logical master database.  
   
@@ -43,7 +45,7 @@ monikerRange: "= azuresqldb-current"
 
 ## Permissions
 
-This view is only available in the **master** database to the server-level principal login.  
+This view is only available in the **master** database to the server-level principal login. For Azure SQL Database results will only be returned for the server administrator, Azure Active Directory admin, or for a user with the dbmanager role. For Azure SQL Managed Instance results will only be returned for the sysadmin. 
   
 ## Example
 

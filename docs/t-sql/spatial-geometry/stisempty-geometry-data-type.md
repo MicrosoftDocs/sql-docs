@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STIsEmpty (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns 1 if a **geometry** instance is empty. Returns 0 if a **geometry** instance is not empty.
   
@@ -41,7 +41,7 @@ Returns 1 if a **geometry** instance is empty. Returns 0 if a **geometry** insta
 ## Examples  
  The following example creates an empty `geometry` instance and uses `STIsEmpty()` to test whether the instance is empty.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POLYGON EMPTY', 0);  
 SELECT @g.STIsEmpty();  

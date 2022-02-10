@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "integers [SQL Server]"
   - "CEILING function [Transact-SQL]"
 ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CEILING (Transact-SQL)

@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, rowset creation"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Table-Valued Parameter Rowset Creation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

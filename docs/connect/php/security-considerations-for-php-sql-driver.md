@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "security considerations"
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Security Considerations for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

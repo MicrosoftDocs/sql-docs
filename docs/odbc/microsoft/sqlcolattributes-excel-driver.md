@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLColAttribute function [ODBC], Excel Driver"
 ms.assetid: 7c4833e3-ff0c-4313-9ab8-21379ceab656
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLColAttributes (Excel Driver)
 > [!NOTE]  

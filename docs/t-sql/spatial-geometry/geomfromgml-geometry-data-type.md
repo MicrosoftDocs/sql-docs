@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # GeomFromGml (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Construct a **geometry** instance given a representation in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subset of the Geography Markup Language (GML).
   
@@ -55,7 +55,7 @@ GeomFromGml ( GML_input, SRID )
 ## Examples  
  The following example uses `GeomFromGml()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 DECLARE @x xml;  
 SET @x = '<LineString xmlns="https://www.opengis.net/gml"> <posList>100 100 20 180 180 180</posList> </LineString>';  

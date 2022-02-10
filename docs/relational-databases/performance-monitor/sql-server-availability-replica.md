@@ -29,7 +29,7 @@ ms.author: wiassaf
 |**Flow Control Time (ms/sec)**|Time in milliseconds that log stream messages waited for send flow control, in the last second.|  
 |**Flow Control/sec**|Number of times flow-control initiated in the last second. **Flow Control Time (ms/sec)** divided by **Flow Control/sec** is the average time per wait.|  
 |**Receives from Replica/sec**|Number of Always On messages received from the replica per second.|  
-|**Resent Messages/sec**|Number of Always On messages resent in the last second.|  
+|**Resent Messages/sec**|Number of Always On messages resent in the last second. A resent message is a message that was attempted to be sent but was unable to complete and must be attempted to be sent again. While this could occur due to different reasons, it is not the same as a TCP retransmission.|  
 |**Sends to Replica/sec**|Number of Always On messages sent to this availability replica per second.|  
 |**Sends to Transport/sec**|Actual number of Always On messages sent per second over the network to the remote availability replica. On the primary replica this is the number of messages sent to the secondary replica. On the secondary replica this is the number of messages sent to the primary replica.|  
 

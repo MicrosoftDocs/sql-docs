@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "sqlsrv_client_info"
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

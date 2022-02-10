@@ -2,13 +2,13 @@
 title: "Release Notes for ODBC Driver for SQL Server on Windows"
 description: "This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows."
 ms.custom: ""
-ms.date: "01/29/2021"
+ms.date: "07/30/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 author: v-chojas
 ms.author: v-chojas
 manager: kenvh
@@ -37,6 +37,28 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## 17.8
+
+![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2168524)  
+![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2168713)  
+
+Version number: 17.8.1.1  
+Released: July 30, 2021  
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x40a)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x40a)  
+
+| Feature added | Details |
+| :------- | :------ |
+| Ability to modify KeyStoreAuthentication and KeyStorePrincipalId in DSN configuration UI | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Replication option added to the connection string | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| KeepAlive and KeepAliveInterval options added to the connection string | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## Previous Releases
+
 ## 17.7.2
 
 ![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2156851)  
@@ -53,8 +75,6 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------- | :------ |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
-
-## Previous Releases
 
 ## 17.7
 

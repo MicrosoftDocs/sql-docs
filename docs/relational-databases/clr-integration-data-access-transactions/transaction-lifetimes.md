@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "lifetimes [SQL Server]"
   - "Transact-SQL vs. managed code"
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Transaction Lifetimes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

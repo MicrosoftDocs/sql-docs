@@ -86,7 +86,7 @@ The following software client applications are available on the Microsoft Downlo
 | Power BI Desktop optimized for Power BI Report Server, **.pbix** | Yes, with Software Assurance | | | | Yes |
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** and **.rds**|Yes|Yes|Yes|Yes|Yes|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|Yes||||Yes|  
-|Power BI apps for mobile devices (iOS, Windows 10, and Android), **.rsmobile**|Yes||||Yes|  
+|Power BI apps for mobile devices (iOS, Windows, and Android), **.rsmobile**|Yes||||Yes|  
   
 > [!NOTE]  
 > * The preceding table identifies the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions that are required to enable these client tools. However, these tools can access data hosted on any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -99,4 +99,4 @@ The following software client applications are available on the Microsoft Downlo
 
 * [Plan a SQL Server installation](../sql-server/install/planning-a-sql-server-installation.md).
 
-* More questions? Ask the [SQL Server Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).
+* More questions? Ask the [SQL Server Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

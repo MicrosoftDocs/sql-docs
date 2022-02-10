@@ -1,6 +1,6 @@
 ---
-title: "Subreports (Report Builder) | Microsoft Docs"
-description: Display a report inside another report. Display and store them both in the same server folder in Report Builder.
+title: "Subreports in paginated reports | Microsoft Docs"
+description: Display a report inside another paginated report. Display and store them both in the same server folder in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Subreports (Report Builder and SSRS)
-  A subreport is a report item that displays another report inside the body of a main report. Conceptually, a subreport in a report is similar to a frame in a Web page. It is used to embed a report within a report. Any report can be used as a subreport. The report that is displayed as the subreport is stored on a report server, usually in the same folder as the parent report. You can design the parent report to pass parameters to the subreport. A subreport can be repeated within data regions, using a parameter to filter data in each instance of the subreport.  
+# Subreports in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  A subreport is a report item that displays another report inside the body of a main paginated report. Conceptually, a subreport in a report is similar to a frame in a Web page. It is used to embed a report within a report. Any report can be used as a subreport. The report that is displayed as the subreport is stored on a report server, usually in the same folder as the parent report. You can design the parent report to pass parameters to the subreport. A subreport can be repeated within data regions, using a parameter to filter data in each instance of the subreport.  
   
 > [!NOTE]  
 >  If you use a subreport in a tablix data region, the subreport and its parameters will be processed for every row. If there are many rows, consider whether a drillthrough report is more appropriate.  

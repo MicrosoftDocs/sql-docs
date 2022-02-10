@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "large data"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Set Large Data (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

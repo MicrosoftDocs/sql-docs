@@ -2,7 +2,7 @@
 description: "FREETEXTTABLE (Transact-SQL)"
 title: "FREETEXTTABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "10/05/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -36,14 +36,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 > [!NOTE]  
 >  For information about the forms of full-text searches that are supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).  
   
-(https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 FREETEXTTABLE (table , { column_name | (column_list) | * }   
           , 'freetext_string'   
      [ , LANGUAGE language_term ]   
@@ -101,7 +98,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ### A. Simple Example  
  The following example creates and populates a simple table of two columns, listing 3 counties and the colors in their flags. The it creates and populates a full-text catalog and index on the table. Then the **FREETEXTTABLE** syntax is demonstrated.  
   
-```  
+```sql
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
 CREATE UNIQUE CLUSTERED INDEX FlagKey ON Flags(Country);  
 INSERT Flags VALUES ('France', 'Blue and White and Red');  
@@ -122,7 +119,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ### B. Using FREETEXT in an INNER JOIN  
  The following example returns the description and rank of any products with a description that matches the meaning of `high level of performance`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -140,7 +137,7 @@ GO
 ### C. Specifying Language and Highest Ranked Matches  
  The following example is identical and shows the use of the `LANGUAGE`*language_term* and *top_n_by_rank* parameters.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -173,4 +170,5 @@ GO
  [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [precompute rank Server Configuration Option](/docs/database-engine/discontinued-database-engine-functionality-in-sql-server)  
+ [precompute rank Server Configuration Option](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
+ [Compare features in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)

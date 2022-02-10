@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: failover-cluster-instance
 ms.topic: how-to
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Configure FailureConditionLevel property settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

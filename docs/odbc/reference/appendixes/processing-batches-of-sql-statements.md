@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "batches [ODBC], processing batches of SQL statements"
 ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Processing Batches of SQL Statements
 > [!IMPORTANT]  

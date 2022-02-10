@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio"
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
-author: "dnethi"
-ms.author: "dinethi"
+author: "dzsquared"
+ms.author: "drskwier"
 ---
 # SQL Server Management Studio (SSMS) Support Policy
 
@@ -23,7 +23,7 @@ The support policy for SQL Server Management Studio is stated as follows.
 
 ## SSMS Updates 
 
-Microsoft plans to release updates for SQL Server Management Studio (SSMS) a few times per year. Beginning with version 18.0, all security updates, critical updates, hotfixes, as well as any new features will be released only in the latest point version of the major version. Once a new version of SSMS is released for public, whether it's a point version within a major version or a major version itself, all prior versions are out of support, as per the [Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+Beginning with version 18.0, all security updates, critical updates, hotfixes, as well as any new features will be released only in the latest point version of the major version. Once a new version of SSMS is released for public, whether it's a point version within a major version or a major version itself, all prior versions are out of support, as per the [Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
 
 For instance, SSMS 17.7 was released in May 2018. 17.7 got full support until June 2018 when 17.8.1 was released. At this point, 17.7 would be out of support. When 17.9 was released in September 2018, all prior versions are out of support. 

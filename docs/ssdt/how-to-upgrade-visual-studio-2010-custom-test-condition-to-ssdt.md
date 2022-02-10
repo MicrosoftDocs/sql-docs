@@ -128,7 +128,7 @@ In previous versions of database unit testing, you may have been required to ins
   
 After you update your references, verify that your assembly is signed and compiled.  
   
-Next, copy the assembly file from the output directory, by default, My Documents\Visual Studio 2010\Projects\\<yoursolutionname>\\<yourprojectname>\bin\Debug\\) to %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions directory. When Visual Studio starts, it will identify any extensions in the TestConditions directory and make them available for use in the session:  
+Next, copy the assembly file from the output directory, by default, My Documents\Visual Studio 2010\Projects\\\\<yoursolutionname\>\\\\<yourprojectname\>\bin\Debug\\\\) to %Program Files%\Microsoft Visual Studio \<Version\>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions directory. When Visual Studio starts, it will identify any extensions in the TestConditions directory and make them available for use in the session:  
   
 ## Upgrade Existing Tests that Need to Use the New Test Condition  
 Locate all test projects that use the old test condition and that need to use the new condition. Make sure these test projects are upgraded. For more information, see [Upgrade an Older Test Project Containing Database Unit Tests](../ssdt/upgrade-an-older-test-project-containing-database-unit-tests.md).  

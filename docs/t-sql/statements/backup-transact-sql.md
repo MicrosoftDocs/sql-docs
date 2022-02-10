@@ -183,7 +183,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 ## Arguments
 
-DATABASE
+DATABASE    
 Specifies a complete database backup. If a list of files and filegroups is specified, only those files and filegroups are backed up. During a full or differential database backup, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backs up enough of the transaction log to produce a consistent database when the backup is restored.
 
 When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. Only a log backup can be restored to a specific time or transaction within the backup.
@@ -191,8 +191,7 @@ When you restore a backup created by BACKUP DATABASE (a *data backup*), the enti
 > [!NOTE]
 > Only a full database backup can be performed on the **master** database.
 
-LOG
-
+LOG    
 Specifies a backup of the transaction log only. The log is backed up from the last successfully executed log backup to the current end of the log. Before you can create the first log backup, you must create a full backup.
 
 You can restore a log backup to a specific time or transaction within the backup by specifying `WITH STOPAT`, `STOPATMARK`, or `STOPBEFOREMARK` in your [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) statement.
@@ -200,42 +199,42 @@ You can restore a log backup to a specific time or transaction within the backup
 > [!NOTE]
 > After a typical log backup, some transaction log records become inactive, unless you specify `WITH NO_TRUNCATE` or `COPY_ONLY`. The log is truncated after all the records within one or more virtual log files become inactive. If the log is not being truncated after routine log backups, something might be delaying log truncation. For more information, see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).
 
-{ _database\_name_ | **@**_database\_name\_var_ }
+{ _database\_name_ | **@**_database\_name\_var_ }    
 Is the database from which the transaction log, partial database, or complete database is backed up. If supplied as a variable (**@**_database\_name\_var_), this name can be specified either as a string constant (**@**_database\_name\_var_**=**_database name_) or as a variable of character string data type, except for the **ntext** or **text** data types.
 
 > [!NOTE]
 > The mirror database in a database mirroring partnership cannot be backed up.
 
-\<file_or_filegroup> [ **,**...*n* ]
+\<file_or_filegroup> [ **,**...*n* ]    
 Used only with BACKUP DATABASE, specifies a database file or filegroup to include in a file backup, or specifies a read-only file or filegroup to include in a partial backup.
 
-FILE **=** { *logical_file_name* | **@**_logical\_file\_name\_var_ }
+FILE **=** { *logical_file_name* | **@**_logical\_file\_name\_var_ }    
 Is the logical name of a file or a variable whose value equates to the logical name of a file that is to be included in the backup.
 
-FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ }
+FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ }    
 Is the logical name of a filegroup or a variable whose value equates to the logical name of a filegroup that is to be included in the backup. Under the simple recovery model, a filegroup backup is allowed only for a read-only filegroup.
 
 > [!NOTE]
 > Consider using file backups when the database size and performance requirements make a database backup impractical. The NUL device can be used to test the performance of backups, but should not be used in production environments.
 
-*n*
+*n*    
 Is a placeholder that indicates that multiple files and filegroups can be specified in a comma-separated list. The number is unlimited.
 
 For more information, see [Full File Backups](../../relational-databases/backup-restore/full-file-backups-sql-server.md) and [Back Up Files and Filegroups](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).
 
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } [ **,**..._n_ ] ]
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } [ **,**..._n_ ] ]    
 Specifies a partial backup. A partial backup includes all the read/write files in a database: the primary filegroup and any read/write secondary filegroups, and also any specified read-only files or filegroups.
 
-READ_WRITE_FILEGROUPS
+READ_WRITE_FILEGROUPS    
 Specifies that all read/write filegroups be backed up in the partial backup. If the database is read-only, READ_WRITE_FILEGROUPS includes only the primary filegroup.
 
 > [!IMPORTANT]
 > Explicitly listing the read/write filegroups by using FILEGROUP instead of READ_WRITE_FILEGROUPS creates a file backup.
 
-FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }
+FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }    
 Is the logical name of a read-only filegroup or a variable whose value equates to the logical name of a read-only filegroup that is to be included in the partial backup. For more information, see "\<file_or_filegroup>," earlier in this topic.
 
-*n*
+*n*    
 Is a placeholder that indicates that multiple read-only filegroups can be specified in a comma-separated list.
 
 For more information about partial backups, see [Partial Backups](../../relational-databases/backup-restore/partial-backups-sql-server.md).
@@ -243,24 +242,23 @@ For more information about partial backups, see [Partial Backups](../../relation
 TO \<backup_device> [ **,**...*n* ]
 Indicates that the accompanying set of [backup devices](../../relational-databases/backup-restore/backup-devices-sql-server.md) is either an unmirrored media set or the first of the mirrors within a mirrored media set (for which one or more MIRROR TO clauses are declared).
 
-\<backup_device>
-
+\<backup_device>    
 Specifies a logical or physical backup device to use for the backup operation.
 
-{ *logical_device_name* \| **@**_logical\_device\_name\_var_ }
-**Applies to:** SQL Server
+{ *logical_device_name* \| **@**_logical\_device\_name\_var_ }    
+**Applies to:** SQL Server    
 Is the logical name of the backup device to which the database is backed up. The logical name must follow the rules for identifiers. If supplied as a variable (@*logical_device_name_var*), the backup device name can be specified either as a string constant (@_logical\_device\_name\_var_**=** logical backup device name) or as a variable of any character string data type except for the **ntext** or **text** data types.
 
-{ DISK \| TAPE \| URL} **=** { **'**_physical\_device\_name_**'** \| **@**_physical\_device\_name\_var_ \| 'NUL' }
-**Applies to:** DISK, TAPE, and URL apply to SQL Server.
+{ DISK \| TAPE \| URL} **=** { **'**_physical\_device\_name_**'** \| **@**_physical\_device\_name\_var_ \| 'NUL' }    
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (URL starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2)
+
 Specifies a disk file or tape device, or a Microsoft Azure Blob storage service. The URL format is used for creating backups to the Microsoft Azure storage service. For more information and examples, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Microsoft Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).
 
 > [!NOTE]
 > The NUL disk device will discard all information sent to it and should only be used for testing. This is not for production use.
+
 > [!IMPORTANT]
 > Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL, you must use [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).
-
-**URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 and later).
 
 A disk device does not have to exist before it is specified in a BACKUP statement. If the physical device exists and the INIT option is not specified in the BACKUP statement, the backup is appended to the device.
 
@@ -272,43 +270,43 @@ For more information, see [Backup Devices](../../relational-databases/backup-res
 > [!NOTE]
 > The TAPE option will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.
 
-*n*
+*n*    
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.
 
-MIRROR TO \<backup_device> [ **,**...*n* ]
+MIRROR TO \<backup_device> [ **,**...*n* ]    
 Specifies a set of up to three secondary backup devices, each of which mirrors the backups devices specified in the TO clause. The MIRROR TO clause must specify the same type and number of the backup devices as the TO clause. The maximum number of MIRROR TO clauses is three.
 
 This option is available only in the Enterprise edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> For MIRROR TO = DISK, BACKUP automatically determines the appropriate block size for disk devices based on the sector size of the disk. If the MIRROR TO disk is formatted with a different sector size than the disk specified as the primary backup device, the backup command will fail. In order to mirror backups to devices that have different sector sizes, the BLOCKSIZE parameter must be specified, and should be set to the highest sector size amongst all the target devices. For more information about block size, see "BLOCKSIZE" later in this topic.
+> For `MIRROR TO = DISK`, BACKUP automatically determines the appropriate block size for disk devices based on the sector size of the disk. If the MIRROR TO disk is formatted with a different sector size than the disk specified as the primary backup device, the backup command will fail. In order to mirror backups to devices that have different sector sizes, the BLOCKSIZE parameter must be specified, and should be set to the highest sector size amongst all the target devices. For more information about block size, see "BLOCKSIZE" later in this topic.
 
-\<backup_device>
+\<backup_device>    
 See "\<backup_device>," earlier in this section.
 
-*n*
+*n*    
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list. The number of devices in the MIRROR TO clause must equal the number of devices in the TO clause.
 
 For more information, see "Media Families in Mirrored Media Sets" in the [Remarks](#general-remarks) section, later in this topic.
 
-[ *next-mirror-to* ]
+[ *next-mirror-to* ]    
 Is a placeholder that indicates that a single BACKUP statement can contain up to three MIRROR TO clauses, in addition to the single TO clause.
 
 ### WITH Options
 
 Specifies options to be used with a backup operation.
 
-CREDENTIAL
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 and later).
+CREDENTIAL    
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2).
+
 Used only when creating a backup to the Microsoft Azure Blob storage service.
 
-FILE_SNAPSHOT
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
+FILE_SNAPSHOT    
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]).
 
 Used to create an Azure snapshot of the database files when all of the SQL Server database files are stored using the Azure Blob storage service. For more information, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup takes Azure snapshots of the database files (data and log files) at a consistent state. A consistent set of Azure snapshots make up a backup and are recorded in the backup file. The only difference between `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` and `BACKUP LOG TO URL WITH FILE_SNAPSHOT` is that the latter also truncates the transaction log while the former does not. With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup, after the initial full backup that is required by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to establish the backup chain, only a single transaction log backup is required to restore a database to the point in time of the transaction log backup. Furthermore, only two transaction log backups are required to restore a database to a point in time between the time of the two transaction log backups.
 
-DIFFERENTIAL
-
+DIFFERENTIAL    
 Used only with BACKUP DATABASE, specifies that the database or file backup should consist only of the portions of the database or file changed since the last full backup. A differential backup usually takes up less space than a full backup. Use this option so that all individual log backups performed since the last full backup do not have to be applied.
 
 > [!NOTE]
@@ -316,7 +314,7 @@ Used only with BACKUP DATABASE, specifies that the database or file backup shoul
 
 For more information, see [Differential Backups](../../relational-databases/backup-restore/differential-backups-sql-server.md).
 
-ENCRYPTION
+ENCRYPTION    
 Used to specify encryption for a backup. You can specify an encryption algorithm to encrypt the backup with or specify `NO_ENCRYPTION` to not have the backup encrypted. Encryption is recommended practice to help secure backup files. The list of algorithms you can specify are:
 
 - `AES_128`
@@ -342,7 +340,7 @@ These options operate on the backup set that is created by this backup operation
 > [!NOTE]
 > To specify a backup set for a restore operation, use the `FILE = <backup_set_file_number>` option. For more information about how to specify a backup set, see "Specifying a Backup Set" in [RESTORE Arguments](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
 
-COPY_ONLY
+COPY_ONLY    
 Specifies that the backup is a *copy-only backup*, which does not affect the normal sequence of backups. A copy-only backup is created independently of your regularly scheduled, conventional backups. A copy-only backup does not affect your overall backup and restore procedures for the database.
 
 Copy-only backups should be used in situations in which a backup is taken for a special purpose, such as backing up the log before an online file restore. Typically, a copy-only log backup is used once and then deleted.
@@ -356,26 +354,26 @@ Copy-only backups should be used in situations in which a backup is taken for a 
 
 For more information, see [Copy-Only Backups](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
 
-{ COMPRESSION | NO_COMPRESSION }
+{ COMPRESSION | NO_COMPRESSION }    
 In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later versions only, specifies whether [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) is performed on this backup, overriding the server-level default.
 
 At installation, the default behavior is no backup compression. But this default can be changed by setting the [backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) server configuration option. For information about viewing the current value of this option, see [View or Change Server Properties](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
 For information about using backup compression with [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases, see the [Remarks](#general-remarks) section.
 
-COMPRESSION
+COMPRESSION    
 Explicitly enables backup compression.
 
-NO_COMPRESSION
+NO_COMPRESSION    
 Explicitly disables backup compression.
 
-DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }    
 Specifies the free-form text describing the backup set. The string can have a maximum of 255 characters.
 
-NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }
+NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }    
 Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.
 
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }    
 Specifies when the backup set for this backup can be overwritten. If these options are both used, RETAINDAYS takes precedence over EXPIREDATE.
 
 If neither option is specified, the expiration date is determined by the **mediaretention** configuration setting. For more information, see [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
@@ -383,7 +381,7 @@ If neither option is specified, the expiration date is determined by the **media
 > [!IMPORTANT]
 > These options only prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from overwriting a file. Tapes can be erased using other methods, and disk files can be deleted through the operating system. For more information about expiration verification, see SKIP and FORMAT in this topic.
 
-EXPIREDATE **=** { **'**_date_**'** | **@**_date\_var_ }
+EXPIREDATE **=** { **'**_date_**'** | **@**_date\_var_ }    
 Specifies when the backup set expires and can be overwritten. If supplied as a variable (@_date\_var_), this date must follow the configured system **datetime** format and be specified as one of the following:
 
 - A string constant (@_date\_var_ **=** date)
@@ -401,25 +399,25 @@ For information about how to specify **datetime** values, see [Date and Time Typ
 > [!NOTE]
 > To ignore the expiration date, use the `SKIP` option.
 
-RETAINDAYS **=** { *days* | **@**_days\_var_ }
+RETAINDAYS **=** { *days* | **@**_days\_var_ }    
 Specifies the number of days that must elapse before this backup media set can be overwritten. If supplied as a variable (**@**_days\_var_), it must be specified as an integer.
 
 **Media Set Options**
 
 These options operate on the media set as a whole.
 
-{ **NOINIT** | INIT }
+{ **NOINIT** | INIT }    
 Controls whether the backup operation appends to or overwrites the existing backup sets on the backup media. The default is to append to the most recent backup set on the media (NOINIT).
 
 > [!NOTE]
 > For information about the interactions between { **NOINIT** | INIT } and { **NOSKIP** | SKIP }, see [Remarks](#general-remarks) later in this topic.
 
-NOINIT
+NOINIT    
 Indicates that the backup set is appended to the specified media set, preserving existing backup sets. If a media password is defined for the media set, the password must be supplied. NOINIT is the default.
 
 For more information, see [Media Sets, Media Families, and Backup Sets](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).
 
-INIT
+INIT    
 Specifies that all backup sets should be overwritten, but preserves the media header. If INIT is specified, any existing backup set on that device is overwritten, if conditions permit. By default, BACKUP checks for the following conditions and does not overwrite the backup media if either condition exists:
 
 - Any backup set has not yet expired. For more information, see the `EXPIREDATE` and `RETAINDAYS` options.
@@ -429,26 +427,26 @@ To override these checks, use the `SKIP` option.
 
 For more information, see [Media Sets, Media Families, and Backup Sets](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).
 
-{ **NOSKIP** | SKIP }
+{ **NOSKIP** | SKIP }    
 Controls whether a backup operation checks the expiration date and time of the backup sets on the media before overwriting them.
 
 > [!NOTE]
 > For information about the interactions between { **NOINIT** | INIT } and { **NOSKIP** | SKIP }, see "Remarks," later in this topic.
 
-NOSKIP
+NOSKIP    
 Instructs the BACKUP statement to check the expiration date of all backup sets on the media before allowing them to be overwritten. This is the default behavior.
 
-SKIP
+SKIP    
 Disables the checking of backup set expiration and name that is usually performed by the BACKUP statement to prevent overwrites of backup sets. For information about the interactions between { INIT | NOINIT } and { NOSKIP | SKIP }, see "Remarks," later in this topic.
 To view the expiration dates of backup sets, query the **expiration_date** column of the [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) history table.
 
-{ **NOFORMAT** | FORMAT }
+{ **NOFORMAT** | FORMAT }    
 Specifies whether the media header should be written on the volumes used for this backup operation, overwriting any existing media header and backup sets.
 
-NOFORMAT
+NOFORMAT    
 Specifies that the backup operation preserves the existing media header and backup sets on the media volumes used for this backup operation. This is the default behavior.
 
-FORMAT
+FORMAT    
 Specifies that a new media set be created. FORMAT causes the backup operation to write a new media header on all media volumes used for the backup operation. The existing contents of the volume become invalid, because any existing media header and backup sets are overwritten.
 
 > [!IMPORTANT]
@@ -456,13 +454,13 @@ Specifies that a new media set be created. FORMAT causes the backup operation to
 
 Specifying FORMAT implies `SKIP`; `SKIP` does not need to be explicitly stated.
 
-MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }
+MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }    
 Specifies the free-form text description, maximum of 255 characters, of the media set.
 
-MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }
+MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }    
 Specifies the media name for the entire backup media set. The media name must be no longer than 128 characters, If `MEDIANAME` is specified, it must match the previously specified media name already existing on the backup volumes. If it is not specified, or if the SKIP option is specified, there is no verification check of the media name.
 
-BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }    
 Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 2048, 4096, 8192, 16384, 32768, and 65536 (64 KB) bytes. The default is 65536 for tape devices and 512 otherwise. Typically, this option is unnecessary because BACKUP automatically selects a block size that is appropriate to the device. Explicitly stating a block size overrides the automatic selection of block size.
 
 If you are taking a backup that you plan to copy onto and restore from a CD-ROM, specify BLOCKSIZE=2048.
@@ -472,7 +470,7 @@ If you are taking a backup that you plan to copy onto and restore from a CD-ROM,
 
 **Data Transfer Options**
 
-BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }    
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.
 
 The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFERSIZE`.
@@ -480,7 +478,7 @@ The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFER
 > [!NOTE]
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition) blog.
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ }
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ }    
 Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).
 
 > [!NOTE]
@@ -494,26 +492,26 @@ Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssN
 
 These options allow you to determine whether backup checksums are enabled for the backup operation and whether the operation stops on encountering an error.
 
-{ **NO_CHECKSUM** | CHECKSUM }
+{ **NO_CHECKSUM** | CHECKSUM }    
 Controls whether backup checksums are enabled.
 
-NO_CHECKSUM
+NO_CHECKSUM    
 Explicitly disables the generation of backup checksums (and the validation of page checksums). This is the default behavior.
 
-CHECKSUM
+CHECKSUM    
 Specifies that the backup operation verifies each page for checksum and torn page, if enabled and available, and generate a checksum for the entire backup.
 
 Using backup checksums may affect workload and backup throughput.
 
 For more information, see [Possible Media Errors During Backup and Restore](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).
 
-{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }
+{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }    
 Controls whether a backup operation stops or continues after encountering a page checksum error.
 
-STOP_ON_ERROR
+STOP_ON_ERROR    
 Instructs BACKUP to fail if a page checksum does not verify. This is the default behavior.
 
-CONTINUE_AFTER_ERROR
+CONTINUE_AFTER_ERROR    
 Instructs BACKUP to continue despite encountering errors such as invalid checksums or torn pages.
 
 If you are unable to back up the tail of the log using the NO_TRUNCATE option when the database is damaged, you can attempt a [tail-log log backup](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) by specifying CONTINUE_AFTER_ERROR instead of NO_TRUNCATE.
@@ -522,12 +520,12 @@ For more information, see [Possible Media Errors During Backup and Restore](../.
 
 **Compatibility Options**
 
-RESTART
+RESTART    
 Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], has no effect. This option is accepted by the version for compatibility with previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 **Monitoring Options**
 
-STATS [ **=** _percentage_ ]
+STATS [ **=** _percentage_ ]    
 Displays a message each time another *percentage* completes, and is used to gauge progress. If *percentage* is omitted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays a message after each 10 percent is completed.
 
 The STATS option reports the percentage complete as of the threshold for reporting the next interval. This is at approximately the specified percentage; for example, with STATS=10, if the amount completed is 40 percent, the option might display 43 percent. For large backup sets, this is not a problem, because the percentage complete moves very slowly between completed I/O calls.
@@ -536,13 +534,12 @@ The STATS option reports the percentage complete as of the threshold for reporti
 
 These options are used only for TAPE devices. If a nontape device is being used, these options are ignored.
 
-{ **REWIND** | NOREWIND }
-REWIND
-
+{ **REWIND** | NOREWIND }   
+ 
+REWIND    
 Specifies that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] releases and rewinds the tape. REWIND is the default.
 
-NOREWIND
-
+NOREWIND    
 Specifies that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will keep the tape open after the backup operation. You can use this option to help improve performance when performing multiple backup operations to a tape.
 
 NOREWIND implies NOUNLOAD, and these options are incompatible within a single BACKUP statement.
@@ -550,17 +547,15 @@ NOREWIND implies NOUNLOAD, and these options are incompatible within a single BA
 > [!NOTE]
 > If you use `NOREWIND`, the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retains ownership of the tape drive until a BACKUP or RESTORE statement that is running in the same process uses either the `REWIND` or `UNLOAD` option, or the server instance is shut down. Keeping the tape open prevents other processes from accessing the tape. For information about how to display a list of open tapes and to close an open tape, see [Backup Devices](../../relational-databases/backup-restore/backup-devices-sql-server.md).
 
-{ **UNLOAD** | NOUNLOAD }
+{ **UNLOAD** | NOUNLOAD }    
 
 > [!NOTE]
 > `UNLOAD` and `NOUNLOAD` are session settings that persist for the life of the session or until it is reset by specifying the alternative.
 
-UNLOAD
-
+UNLOAD    
 Specifies that the tape is automatically rewound and unloaded when the backup is finished. UNLOAD is the default when a session begins.
 
-NOUNLOAD
-
+NOUNLOAD    
 Specifies that after the BACKUP operation the tape remains loaded on the tape drive.
 
 > [!NOTE]
@@ -575,22 +570,19 @@ These options are only used with `BACKUP LOG`.
 
 { NORECOVERY | STANDBY **=** _undo_file_name_ }
 
-NORECOVERY
-
+NORECOVERY    
 Backs up the tail of the log and leaves the database in the RESTORING state. NORECOVERY is useful when failing over to a secondary database or when saving the tail of the log before a RESTORE operation.
 
 To perform a best-effort log backup that skips log truncation and then take the database into the RESTORING state atomically, use the `NO_TRUNCATE` and `NORECOVERY` options together.
 
-STANDBY **=** _standby_file_name_
-
+STANDBY **=** _standby_file_name_    
 Backs up the tail of the log and leaves the database in a read-only and STANDBY state. The STANDBY clause writes standby data (performing rollback, but with the option of further restores). Using the STANDBY option is equivalent to BACKUP LOG WITH NORECOVERY followed by a RESTORE WITH STANDBY.
 
 Using standby mode requires a standby file, specified by *standby_file_name*, whose location is stored in the log of the database. If the specified file already exists, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] overwrites it; if the file does not exist, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates it. The standby file becomes part of the database.
 
 This file holds the rolled back changes, which must be reversed if RESTORE LOG operations are to be subsequently applied. There must be enough disk space for the standby file to grow so that it can contain all the distinct pages from the database that were modified by rolling back uncommitted transactions.
 
-NO_TRUNCATE
-
+NO_TRUNCATE    
 Specifies that the is log not truncated and causes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to attempt the backup regardless of the state of the database. Consequently, a backup taken with `NO_TRUNCATE` might have incomplete metadata. This option allows backing up the log in situations where the database is damaged.
 
 The NO_TRUNCATE option of BACKUP LOG is equivalent to specifying both COPY_ONLY and CONTINUE_AFTER_ERROR.
@@ -657,9 +649,9 @@ The following example writes a backup of the [!INCLUDE[ssSampleDBUserInputNonLoc
 
 ```sql
 BACKUP DATABASE AdventureWorks2012
-TO DISK='X:\SQLServerBackups\AdventureWorks1.bak',
-DISK='Y:\SQLServerBackups\AdventureWorks2.bak',
-DISK='Z:\SQLServerBackups\AdventureWorks3.bak'
+TO DISK = 'X:\SQLServerBackups\AdventureWorks1.bak',
+DISK = 'Y:\SQLServerBackups\AdventureWorks2.bak',
+DISK = 'Z:\SQLServerBackups\AdventureWorks3.bak'
 WITH FORMAT,
   MEDIANAME = 'AdventureWorksStripedSet0',
   MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database';
@@ -680,12 +672,12 @@ For a mirrored media set, each `MIRROR TO` clause must list the same number and 
 
 ```sql
 BACKUP DATABASE AdventureWorks2012
-TO DISK='X:\SQLServerBackups\AdventureWorks1a.bak',
-  DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',
-  DISK='Z:\SQLServerBackups\AdventureWorks3a.bak'
+TO DISK = 'X:\SQLServerBackups\AdventureWorks1a.bak',
+  DISK = 'Y:\SQLServerBackups\AdventureWorks2a.bak',
+  DISK = 'Z:\SQLServerBackups\AdventureWorks3a.bak'
 MIRROR TO DISK='X:\SQLServerBackups\AdventureWorks1b.bak',
-  DISK='Y:\SQLServerBackups\AdventureWorks2b.bak',
-  DISK='Z:\SQLServerBackups\AdventureWorks3b.bak';
+  DISK = 'Y:\SQLServerBackups\AdventureWorks2b.bak',
+  DISK = 'Z:\SQLServerBackups\AdventureWorks3b.bak';
 GO
 ```
 
@@ -788,9 +780,9 @@ Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the `PASSWORD`
 
 ### Permissions
 
-BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles.
+`BACKUP DATABASE` and `BACKUP LOG` permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles.
 
-Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. Such problems on the backup device's physical file may not appear until the physical resource is accessed when the backup or restore is attempted.
+Ownership and permission problems on the backup device's physical file can interfere with a backup operation. Ensure SQL Server startup account needs to have read and write permissions to the backup device and the folder where the backup files are written to. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. Such problems on the backup device's physical file may not appear until the physical resource is accessed when the backup or restore is attempted.
 
 ## <a name="examples"></a> Examples
 
@@ -1003,7 +995,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 Backs up a SQL database in Azure SQL Managed Instance. SQL [Managed Instance](/azure/sql-database/sql-database-managed-instance) has automatic backups. You can create full database `COPY_ONLY` backups. Differential, log, and file snapshot backups are not supported.
 
-This also applies to [Azure Arc enabled SQL Managed Instance](/azure/azure-arc/data/managed-instance-overview).
+Also applies to [Azure Arc-enabled SQL Managed Instance](/azure/azure-arc/data/managed-instance-overview).
 
 ## Syntax
 
@@ -1041,7 +1033,7 @@ BACKUP DATABASE { database_name | @database_name_var }
 
 ## Arguments
 
-DATABASE
+DATABASE    
 Specifies a complete database backup. During a database backup, Azure SQL Managed Instance backs up enough of the transaction log to produce a consistent database when the backup is restored.
 
 > [!IMPORTANT]
@@ -1054,22 +1046,21 @@ Is the database from which the complete database is backed up. If supplied as a 
 
 For more information, see [Full File Backups](../../relational-databases/backup-restore/full-file-backups-sql-server.md) and [Back Up Files and Filegroups](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).
 
-TO URL
-
+TO URL    
 Specifies the URL to use for the backup operation. The URL format is used for creating backups to the Microsoft Azure storage service.
 
 > [!IMPORTANT]
 > In order to backup to multiple devices when backing up to URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).
 
-*n*
+*n*    
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.
 
 ### WITH OptionsSpecifies options to be used with a backup operation
 
-CREDENTIAL
+CREDENTIAL    
 Used only when creating a backup to the Microsoft Azure Blob storage service.
 
-ENCRYPTION
+ENCRYPTION    
 Used to specify encryption for a backup. You can specify an encryption algorithm to encrypt the backup with or specify `NO_ENCRYPTION` to not have the backup encrypted. Encryption is recommended practice to help secure backup files. The list of algorithms you can specify are:
 
 - `AES_128`
@@ -1085,38 +1076,38 @@ If you choose to encrypt you will also have to specify the encryptor using the e
 
 **Backup Set Options**
 
-COPY_ONLY
+COPY_ONLY    
 Specifies that the backup is a *copy-only backup*, which does not affect the normal sequence of backups. A copy-only backup is created independently of the Azure SQL Database automatic backups. For more information, see [Copy-Only Backups](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
 
-{ COMPRESSION | NO_COMPRESSION }
+{ COMPRESSION | NO_COMPRESSION }    
 Specifies whether [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) is performed on this backup, overriding the server-level default.
 
 The default behavior is no backup compression. But this default can be changed by setting the [backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) server configuration option. For information about viewing the current value of this option, see [View or Change Server Properties](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
-COMPRESSION
+COMPRESSION    
 Explicitly enables backup compression.
 
-NO_COMPRESSION
+NO_COMPRESSION    
 Explicitly disables backup compression.
 
-DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }    
 Specifies the free-form text describing the backup set. The string can have a maximum of 255 characters.
 
-NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }
+NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }    
 Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.
 
-MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }
+MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }    
 Specifies the free-form text description, maximum of 255 characters, of the media set.
 
-MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }
+MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }    
 Specifies the media name for the entire backup media set. The media name must be no longer than 128 characters, If `MEDIANAME` is specified, it must match the previously specified media name already existing on the backup volumes. If it is not specified, or if the SKIP option is specified, there is no verification check of the media name.
 
-BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }    
 Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 2048, 4096, 8192, 16384, 32768, and 65536 (64 KB) bytes. The default is 65536 for tape devices and 512 otherwise. Typically, this option is unnecessary because BACKUP automatically selects a block size that is appropriate to the device. Explicitly stating a block size overrides the automatic selection of block size.
 
 **Data Transfer Options**
 
-BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }    
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.
 
 The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFERSIZE`.
@@ -1124,7 +1115,7 @@ The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFER
 > [!NOTE]
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition) blog.
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ }
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ }    
 Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).
 
 > [!NOTE]
@@ -1134,26 +1125,26 @@ Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssN
 
 These options allow you to determine whether backup checksums are enabled for the backup operation and whether the operation stops on encountering an error.
 
-{ **NO_CHECKSUM** | CHECKSUM }
+{ **NO_CHECKSUM** | CHECKSUM }    
 Controls whether backup checksums are enabled.
 
-NO_CHECKSUM
+NO_CHECKSUM    
 Explicitly disables the generation of backup checksums (and the validation of page checksums). This is the default behavior.
 
-CHECKSUM
+CHECKSUM    
 Specifies that the backup operation verifies each page for checksum and torn page, if enabled and available, and generate a checksum for the entire backup.
 
 Using backup checksums may affect workload and backup throughput.
 
 For more information, see [Possible Media Errors During Backup and Restore](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).
 
-{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }
+{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }    
 Controls whether a backup operation stops or continues after encountering a page checksum error.
 
-STOP_ON_ERROR
+STOP_ON_ERROR    
 Instructs BACKUP to fail if a page checksum does not verify. This is the default behavior.
 
-CONTINUE_AFTER_ERROR
+CONTINUE_AFTER_ERROR    
 Instructs BACKUP to continue despite encountering errors such as invalid checksums or torn pages.
 
 If you are unable to back up the tail of the log using the NO_TRUNCATE option when the database is damaged, you can attempt a [tail-log log backup](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) by specifying CONTINUE_AFTER_ERROR instead of NO_TRUNCATE.
@@ -1162,12 +1153,12 @@ For more information, see [Possible Media Errors During Backup and Restore](../.
 
 **Compatibility Options**
 
-RESTART
+RESTART    
 Has no effect. This option is accepted by the version for compatibility with previous versions of SQL Server.
 
 **Monitoring Options**
 
-STATS [ **=** _percentage_ ]
+STATS [ **=** _percentage_ ]    
 Displays a message each time another *percentage* completes, and is used to gauge progress. If *percentage* is omitted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays a message after each 10 percent is completed.
 
 The STATS option reports the percentage complete as of the threshold for reporting the next interval. This is at approximately the specified percentage; for example, with STATS=10, if the amount completed is 40 percent, the option might display 43 percent. For large backup sets, this is not a problem, because the percentage complete moves very slowly between completed I/O calls.
@@ -1180,7 +1171,7 @@ Max backup stripe size is 195 GB (maximum blob size). Increase the number of str
 
 ### Permissions
 
-BACKUP DATABASE permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles.
+`BACKUP DATABASE` permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles.
 
 Ownership and permission problems on the URL can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have write permissions.
 
@@ -1251,7 +1242,7 @@ BACKUP DATABASE database_name
 *database_name*
 The name of the database on which to create a backup. The database can be the master database or a user database.
 
-TO DISK = '\\\\*UNC_path*\\*backup_directory*'
+TO DISK = '\\\\*UNC_path*\\*backup_directory*'    
 The network path and directory to which [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will write the backup files. For example, '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.
 
 - The path to the backup directory name must already exist and must be specified as a fully qualified universal naming convention (UNC) path.
@@ -1260,12 +1251,12 @@ The network path and directory to which [!INCLUDE[ssPDW](../../includes/sspdw-md
 - The maximum length of the UNC path and backup directory name is 200 characters.
 - The server or host must be specified as an IP address. You cannot specify it as the host or server name.
 
-DESCRIPTION = **'**_text_**'**
+DESCRIPTION = **'**_text_**'**    
 Specifies a textual description of the backup. The maximum length of the text is 255 characters.
 
 The description is stored in the metadata, and will be displayed when the backup header is restored with RESTORE HEADERONLY.
 
-NAME = **'**_backup \_name_**'**
+NAME = **'**_backup \_name_**'**    
 Specifies the name of the backup. The backup name can be different from the database name.
 
 - Names can have a maximum of 128 characters.
@@ -1275,7 +1266,7 @@ Specifies the name of the backup. The backup name can be different from the data
 
 This name is stored in the metadata, and will be displayed when the backup header is restored with RESTORE HEADERONLY.
 
-DIFFERENTIAL
+DIFFERENTIAL    
 Specifies to perform a differential backup of a user database. If omitted, the default is a full database backup. The name of the differential backup does not need to match the name of the full backup. For keeping track of the differential and its corresponding full backup, consider using the same name with 'full' or 'diff' appended.
 
 For example:
@@ -1286,7 +1277,7 @@ For example:
 
 ## Permissions
 
-Requires the **BACKUP DATABASE** permission or membership in the **db_backupoperator** fixed database role. The master database cannot be backed up but by a regular user that was added to the **db_backupoperator** fixed database role. The master database can only be backed up by **sa**, the fabric administrator, or members of the **sysadmin** fixed server role.
+Requires the `BACKUP DATABASE` permission or membership in the **db_backupoperator** fixed database role. The master database cannot be backed up but by a regular user that was added to the **db_backupoperator** fixed database role. The master database can only be backed up by **sa**, the fabric administrator, or members of the **sysadmin** fixed server role.
 
 Requires a Windows account that has permission to access, create, and write to the backup directory. You must also store the Windows account name and password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. To add these network credentials to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) stored procedure.
 
@@ -1362,7 +1353,7 @@ Takes an ExclusiveUpdate lock on the DATABASE object.
 
 **Manage Network Credentials**
 
-Network access to the backup directory is based on standard operating system file sharing security. Before performing a backup, you need to create or designate a Windows account that will be used for authenticating [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] to the backup directory. This windows account must have permission to access, create, and write to the backup directory.
+Network access to the backup directory is based on standard operating system file sharing security. Before performing a backup, you need to create or designate a Windows account that will be used for authenticating [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] to the backup directory. This Windows account must have permission to access, create, and write to the backup directory.
 
 > [!IMPORTANT]
 > To reduce security risks with your data, we advise that you designate one Windows account solely for the purpose of performing backup and restore operations. Allow this account to have permissions to the backup location and nowhere else.

@@ -32,16 +32,24 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  This procedure assumes that the following [!INCLUDE[tsql](../../includes/tsql-md.md)] has been executed on the server:  
   
 ```sql
-create type TVParam as table(ProdCode integer, Qty integer)  
-create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
-            @OrdNo integer output, @OrdDate datetime output)  
-         as   
-         set @OrdDate = GETDATE();  
-         insert into TVPOrd (OrdDate, CustCode) values (@OrdDate, @CustCode) output OrdNo);   
-         select @OrdNo = SCOPE_IDENTITY();   
-         insert into TVPItem (OrdNo, ProdCode, Qty)  
-select @OrdNo, @Items.ProdCode, @Items.Qty   
-from @Items  
+CREATE TYPE TVParam AS TABLE (
+    ProdCode INT,
+    Qty      INT);
+GO
+
+CREATE PROCEDURE TVPOrderEntry
+@CustCode VARCHAR (5), @Items TVPParam, @OrdNo INT OUTPUT, @OrdDate DATETIME OUTPUT
+AS
+SET @OrdDate = GETDATE();
+INSERT  INTO TVPOrd (OrdDate, CustCode)
+OUTPUT  inserted.OrdNo
+VALUES             (@OrdDate, @CustCode);
+SELECT @OrdNo = SCOPE_IDENTITY();
+INSERT INTO TVPItem (OrdNo, ProdCode, Qty)
+SELECT @OrdNo,
+       @Items.ProdCode,
+       @Items.Qty
+FROM   @Items; 
 ```  
   
 ## To Send the Data  
@@ -67,7 +75,7 @@ from @Items
   
 2.  Bind the parameters. *ColumnSize* is 1, meaning that at most one row is passed at a time.  
   
-    ```sql
+    ```cpp
     // Bind parameters for call to TVPOrderEntryByRow.  
     r = SQLBindParameter(hstmt, 1, SQL_C_CHAR, SQL_PARAM_INPUT,SQL_VARCHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
   

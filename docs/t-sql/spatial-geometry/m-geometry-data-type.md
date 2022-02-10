@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # M (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   The **M** (measure) value of the **geometry** instance. The semantics of the measure value are user-defined.  
 
@@ -50,7 +50,7 @@ ms.author: mlandzic
 ## Examples  
  The following example creates a `Point` instance with Z (elevation) and M (measure) values and uses `M` to fetch the M value of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);  
 SELECT @g.M;  

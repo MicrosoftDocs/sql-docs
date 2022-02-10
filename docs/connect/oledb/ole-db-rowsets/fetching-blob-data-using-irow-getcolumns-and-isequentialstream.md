@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "GetColumns method"
   - "BLOBs, fetching"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Fetching BLOB Data by Using IRow::GetColumns and ISequentialStream
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

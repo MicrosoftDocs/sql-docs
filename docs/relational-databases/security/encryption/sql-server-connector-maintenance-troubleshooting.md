@@ -2,16 +2,16 @@
 title: "SQL Server Connector maintenance & troubleshooting"
 description: Learn about maintenance instructions and common troubleshooting steps for the SQL Server Connector. 
 ms.custom: seo-lt-2019
-ms.date: "10/08/2019"
+ms.date: "08/25/2021"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "SQL Server Connector, appendix"
+  - "SQL Server Connector, appendix, EKM"
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-author: jaszymas
-ms.author: jaszymas
+author: Rupp29
+ms.author: arupp
 ---
 # SQL Server Connector Maintenance & Troubleshooting
 
@@ -95,12 +95,12 @@ Versions 1.0.0.440 and older have been replaced and are no longer supported in p
 ### Upgrade
 
 1. Stop SQL Server service using SQL Server Configuration Manager
-1. Uninstall the old version using Control Panel\Programs\Programs and Features
+1. Uninstall the old version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
     1. Version: 15.0.300.96 (or older)
     1. DLL file date: 01/30/2018 3:00 PM (or older)
 1. Install (upgrade) new SQL Server Connector for Microsoft Azure Key Vault
-    1. Version: 15.0.2000.367
+    1. Version: 15.0.2000.440
     1. DLL file date: 09/11/2020 ‏‎5:17 AM
 1. Start SQL Server service
 1. Test encrypted DB(s) is/are accessible
@@ -109,9 +109,9 @@ Versions 1.0.0.440 and older have been replaced and are no longer supported in p
 
 1. Stop SQL Server service using SQL Server Configuration Manager
 
-1. Uninstall the new version using Control Panel\Programs\Programs and Features
+1. Uninstall the new version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
-    1. Version: 15.0.2000.367
+    1. Version: 15.0.2000.440
     1. DLL file date: 09/11/2020 ‏‎5:17 AM
 
 1. Install old version of SQL Server Connector for Microsoft Azure Key Vault
@@ -127,9 +127,9 @@ Versions 1.0.0.440 and older have been replaced and are no longer supported in p
   
 Deep links to older versions of the SQL Server Connector
 
-- Current: [1.0.5.0 (version 15.0.2000.367) – File date September 11, 2020](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/1033_15.0.2000.367/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
-- [1.0.5.0 (version 15.0.300.96) – File date January 30, 2018](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/ENU/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
-- [1.0.4.0: (version 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- Current: [1.0.5.0 (version 15.0.2000.440) – File date September 11, 2020](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/1033_15.0.2000.440/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- [1.0.5.0 (version 15.0.300.96) – File date January 30, 2018](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/SQL%20Server%20Connector%20for%20Microsoft%20Azure%20Key%20Vault%201.0.5.0.msi)
+- [1.0.4.0: (version 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/SQL%20Server%20Connector%20for%20Microsoft%20Azure%20Key%20Vault%201.0.4.0.msi)
 
 ### Rolling the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Principal
 
@@ -194,7 +194,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 
 ![aad change default directory helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
-1. Go to the Azure classic portal: [https://manage.windowsazure.com](https://manage.windowsazure.com)  
+1. Go to the Azure classic portal: [https://portal.azure.com/](https://portal.azure.com/)  
 2. On the left-hand menu, select **Settings**.
 3. Select the Azure subscription you are currently using, and click **Edit Directory** from the commands at the bottom of the screen.
 4. In the pop-up window, use the **Directory** dropdown to select the Active Directory you'd like to use. This will make it the default Directory.
@@ -369,11 +369,17 @@ If you don't see your error code in this table, here are some other reasons the 
 
 The Windows event log also logs errors associated with the SQL Server Connector, which can help with additional context on why the error is actually happening. The source in the Windows Application Event Log will be "SQL Server Connector for Microsoft Azure Key Vault".
   
-SQL Server Version  |Redistributable Install Link
+#### C++ Runtime Libraries for SQL Server Connector 1.0.5.0
+SQL Server Version  |Redistributable Install Link if using SQL Server Connector 1.0.5.0
 ---------|---------
 2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
-2016 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
-  
+2016, 2017, 2019 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
+
+#### C++ Runtime Libraries for SQL Server Connector 1.0.4.0
+SQL Server Version  |Redistributable Install Link if using SQL Server Connector 1.0.4.0
+---------|---------
+2008, 2008 R2, 2012, 2014, 2016, 2017, 2019 | [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
+
 ## Additional References
 
  More About Extensible Key Management:  

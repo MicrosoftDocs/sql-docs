@@ -20,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DECRYPTBYKEYAUTOCERT (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function decrypts data with a symmetric key. That symmetric key automatically decrypts with a certificate.  
 

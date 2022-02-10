@@ -3,7 +3,7 @@ title: Active Directory and Kubernetes DNS Reconciliation in Big Data Clusters d
 description: Configure DNS reconciliation for SQL Server Big Data Cluster in Active Directory mode
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
@@ -12,7 +12,7 @@ ms.technology: big-data-cluster
 
 # Active Directory and Kubernetes DNS reconciliation in Big Data Clusters deployments
 
-This article describes some of the challenges and the solutions to accommodate Active Directory integration when deploying Big Data Clusters (BDC).
+This article describes some of the challenges and the solutions to accommodate Active Directory integration when deploying Big Data Clusters.
 
 ## Overview
 
@@ -22,7 +22,7 @@ However, when Active Directory mode is enabled, a new domain comes into the pict
 
 ## Challenges
 
-* When new Kubernetes pods are deployed, DNS entries will need to be added in both sets of DNS servers. Kubernetes takes care of recording the entries in its CoreDNS, however, BDC  deployment workflow is responsible for adding the required entries in Active Directory Domain Controller DNS servers. Similarly, when a BDC cluster is deleted, the workflow must ensure these entries are removed.
+* When new Kubernetes pods are deployed, DNS entries will need to be added in both sets of DNS servers. Kubernetes takes care of recording the entries in its CoreDNS, however, BDC  deployment workflow is responsible for adding the required entries in Active Directory Domain Controller DNS servers. Similarly, when a big data cluster is deleted, the workflow must ensure these entries are removed.
 * Active Directory DNS servers are external to Kubernetes cluster. But BDC has its own IP space inside Kubernetes and cannot create records for this IP space in an externally situated DNS server since this IP space is not visible outside of the cluster boundaries.
 * When failover events occur within the Kubernetes cluster, records in AD DNS servers must be updated as well.
 * In addition to pod names, Kubernetes service names must also be addressable through the AD domain name lookups. This creates an additional challenge in Active Directory DNS since one service name can map to multiple pod IP addresses.

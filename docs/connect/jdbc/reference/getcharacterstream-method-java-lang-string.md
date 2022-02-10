@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getCharacterStream Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

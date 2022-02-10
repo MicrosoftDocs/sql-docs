@@ -2,7 +2,8 @@
 description: "Getting Started with SSMA for Access Console (AccessToSQL)"
 title: "Getting Started with SSMA for Access Console (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-get-started
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma

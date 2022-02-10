@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getColumnPrivileges Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

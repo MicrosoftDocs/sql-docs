@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # ToString (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a geometry instance augmented with any Z (elevation) and M (measure) values carried by the instance.
   
@@ -45,7 +45,7 @@ Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representatio
 ## Examples  
  The following example create a `LineString` instance and uses `ToString()` to fetch the text description of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0);  
 SELECT @g.ToString();  

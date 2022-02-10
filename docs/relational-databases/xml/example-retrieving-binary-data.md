@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, retrieving binary data example"
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
-author: RothJa
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 # monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Example: Retrieving Binary Data

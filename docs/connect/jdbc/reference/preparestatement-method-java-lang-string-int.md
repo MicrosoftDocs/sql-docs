@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # prepareStatement Method (java.lang.String)
 

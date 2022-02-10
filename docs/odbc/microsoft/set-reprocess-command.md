@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SET REPROCESS command [ODBC]"
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SET REPROCESS Command
 Specifies how many times or for how long to lock a file or record after an unsuccessful locking attempt.  

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "text file driver [ODBC], SQLGetInfo"
 ms.assetid: 6b7a630e-47f8-4ee1-b2a7-476bc1d0b0d4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetInfo (Text File Driver)
 > [!NOTE]  

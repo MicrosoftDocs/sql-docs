@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 2adb2b88-96d6-4645-86d0-0388c8186691
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setBinaryStream Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

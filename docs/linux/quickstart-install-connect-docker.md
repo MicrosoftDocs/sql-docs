@@ -1,11 +1,14 @@
 ---
 title: "Docker: Install containers for SQL Server on Linux"
-description: This quickstart shows how to use Docker to run the SQL Server 2017 and 2019 container images. You then create and query a database with sqlcmd.
-ms.custom: seo-lt-2019, contperf-fy21q1
+description: This quickstart shows how to use Docker to run the SQL Server 2017 and 2019 container images. You then connect to a database and run a query with sqlcmd.
+ms.custom:
+  - seo-lt-2019
+  - contperf-fy21q1
+  - intro-quickstart
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
-ms.date: 06/11/2021
+ms.date: 12/16/2021
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: linux
@@ -17,9 +20,6 @@ zone_pivot_groups: cs1-command-shell
 
 # Quickstart: Run SQL Server container images with Docker
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
-
-> [!NOTE]
-> The examples shown below use the docker.exe but most of these commands also work with Podman. It provides the CLI similar to Docker container Engine. You can read more about podman [here](http://docs.podman.io/en/latest).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -36,6 +36,8 @@ In this quickstart, you use Docker to pull and run the SQL Server 2017 container
 > [!NOTE]
 > - Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported.
 > - Starting with SQL Server 2019 CU10, Ubuntu 20.04 is supported.
+>
+> For more information on supported platforms, see [SQL Server 2019 on Linux release notes](sql-server-linux-release-notes-2019.md).
 
 In this quickstart, you use Docker to pull and run the SQL Server 2019 container image, [mssql-server](https://hub.docker.com/r/microsoft/mssql-server). Then connect with **sqlcmd** to create your first database and run queries.
 
@@ -46,10 +48,13 @@ In this quickstart, you use Docker to pull and run the SQL Server 2019 container
 
 This image consists of SQL Server running on Linux based on Ubuntu 20.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. This quickstart specifically focuses on using the SQL Server on **Linux** image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows-developer Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
+> [!NOTE]
+> The examples shown below use docker.exe, but most of these commands also work with Podman. It provides a CLI similar to the Docker container Engine. You can read more about podman [here](http://docs.podman.io/en/latest).
+
 ## <a id="requirements"></a> Prerequisites
 
 - Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/). For more information on hardware requirements and processor support, see [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md#pmosr).
-- Docker **overlay2** storage driver. This is the default for most users. If you find that you are not using this storage provider and need to change, see the instructions and warnings in the [docker documentation for configuring overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
+- Docker **overlay2** storage driver. This is the default for most users. If you find that you aren't using this storage provider and need to change, see the instructions and warnings in the [docker documentation for configuring overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
 - Minimum of 2 GB of disk space.
 - Minimum of 2 GB of RAM.
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
@@ -60,7 +65,7 @@ any changes to one section should be duplicated in the other-->
 
 ## <a id="pullandrun2017"></a> Pull and run the 2017 container image
 
-Before starting the following steps, make sure that you have selected your preferred shell (bash, PowerShell, or cmd) at the top of this article.
+Before starting the following steps, make sure that you've selected your preferred shell (bash, PowerShell, or cmd) at the top of this article.
 
 1. Pull the SQL Server 2017 Linux container image from Microsoft Container Registry.
 
@@ -88,7 +93,7 @@ Before starting the following steps, make sure that you have selected your prefe
    The previous command pulls the latest SQL Server 2017 container image. If you want to pull a specific image, you add a colon and the tag name (for example, `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`). To see all available images, see [the mssql-server Docker hub page](https://hub.docker.com/r/microsoft/mssql-server).
 
    ::: zone pivot="cs1-bash"
-   For the bash commands in this article, `sudo` is used. On macOS, `sudo` might not be required. On Linux, if you do not want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
+   For the bash commands in this article, `sudo` is used. On macOS, `sudo` might not be required. On Linux, if you don't want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
    ::: zone-end
 
@@ -135,10 +140,10 @@ Before starting the following steps, make sure that you have selected your prefe
    | Parameter | Description |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the SQL Server image. |
-   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least 8 characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
+   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
-   | **-h sql1** | Used to explicitly set the container hostname, if you don't specify it, it defaults to the container ID which is a randomly generated system GUID. |
+   | **-h sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
    | **-d** | Run the container in the background (daemon) |
    | **mcr.microsoft.com/mssql/server:2017-latest** | The SQL Server 2017 Linux container image. |
 
@@ -167,7 +172,11 @@ Before starting the following steps, make sure that you have selected your prefe
 
    ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md).
+4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). It will be ready for connection, once the SQL Server error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the SQL Server error log inside the container using the command:
+
+   ```bash
+   docker exec -t sqlrhel cat /var/opt/mssql/log/errorlog | grep connection
+   ```
 
 The `-h` (host name) parameter as discussed above, changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
 
@@ -190,7 +199,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 ## <a id="pullandrun2019"></a> Pull and run the 2019 container image
 
-Before starting the following steps, make sure that you have selected your preferred shell (bash, PowerShell, or cmd) at the top of this article.
+Before starting the following steps, make sure that you've selected your preferred shell (bash, PowerShell, or cmd) at the top of this article.
 
 1. Pull the SQL Server 2019 Linux container image from Microsoft Container Registry.
 
@@ -222,7 +231,7 @@ Before starting the following steps, make sure that you have selected your prefe
    The previous command pulls the SQL Server 2019 container image based on Ubuntu. To instead use container images based on RedHat, see [Run RHEL-based container images](./sql-server-linux-docker-container-deployment.md#rhel). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/_/microsoft-mssql-server).
 
    ::: zone pivot="cs1-bash"
-   For the bash commands in this article, `sudo` is used. On macOS, `sudo` might not be required. On Linux, if you do not want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
+   For the bash commands in this article, `sudo` is used. On macOS, `sudo` might not be required. On Linux, if you don't want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
    ::: zone-end
 
 2. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS) or elevated PowerShell command prompt.
@@ -261,10 +270,10 @@ Before starting the following steps, make sure that you have selected your prefe
    | Parameter | Description |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the SQL Server image. |
-   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least 8 characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
+   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
-   | **-h sql1** | Used to explicitly set the container hostname, if you don't specify it, it defaults to the container ID which is a randomly generated system GUID. |
+   | **-h sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
    | **mcr.microsoft.com/mssql/server:2019-latest** | The SQL Server 2019 Ubuntu Linux container image. |
 
 3. To view your Docker containers, use the `docker ps` command.
@@ -319,19 +328,25 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 The **SA** account is a system administrator on the SQL Server instance that gets created during setup. After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, change your SA password.
 
+   ::: zone pivot="cs1-bash"
 1. Choose a strong password to use for the SA user.
 
-1. Use `docker exec` to run **sqlcmd** to change the password using Transact-SQL. In the following example, replace the old password, `<YourStrong!Passw0rd>`, and the new password, `<YourNewStrong!Passw0rd>`, with your own password values.
+1. Use `docker exec` to run **sqlcmd** to change the password using Transact-SQL. In the following example, the old and new passwords are read from user input. 
 
-   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
-      -S localhost -U SA -P "<YourStrong@Passw0rd>" \
-      -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong@Passw0rd>"'
+   -S localhost -U SA \
+    -P "$(read -sp "Enter current SA password: "; echo "${REPLY}")" \
+    -Q "ALTER LOGIN SA WITH PASSWORD=\"$(read -sp "Enter new SA password: "; echo "${REPLY}")\""
+
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
+1. Choose a strong password to use for the SA user.
+
+1. In the following example, replace the old password, `<YourStrong@Passw0rd>`, and the new password, `<YourNewStrong@Passw0rd>`, with your own password values.
+
    ```PowerShell
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -S localhost -U SA -P "<YourStrong@Passw0rd>" `
@@ -340,9 +355,13 @@ The **SA** account is a system administrator on the SQL Server instance that get
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
+1. Choose a strong password to use for the SA user.
+
+1. In the following example, replace the old password, `<YourStrong@Passw0rd>`, and the new password, `<YourNewStrong@Passw0rd>`, with your own password values.
+
    ```cmd
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
-      -S localhost -U SA -P "<YourStrong!Passw0rd>" `
+      -S localhost -U SA -P "<YourStrong@Passw0rd>" `
       -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong@Passw0rd>'"
    ```
    ::: zone-end
@@ -371,7 +390,7 @@ The following steps use the SQL Server command-line tool, [**sqlcmd**](../tools/
    ```
    ::: zone-end
 
-2. Once inside the container, connect locally with sqlcmd. Sqlcmd is not in the path by default, so you have to specify the full path.
+2. Once inside the container, connect locally with sqlcmd. Sqlcmd isn't in the path by default, so you have to specify the full path.
 
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourNewStrong@Passw0rd>"
@@ -402,7 +421,7 @@ The following steps create a new database named `TestDB`.
    SELECT Name from sys.Databases
    ```
 
-3. The previous two commands were not executed immediately. Type `GO` on a new line to execute the previous commands:
+3. The previous two commands weren't executed immediately. Type `GO` on a new line to execute the previous commands:
 
    ```sql
    GO
@@ -472,7 +491,7 @@ The following steps use **sqlcmd** outside of your container to connect to SQL S
 
 1. For this example, install the **sqlcmd** tool on your client machine. For more information, see [Install sqlcmd on Windows](../tools/sqlcmd-utility.md) or [Install sqlcmd on Linux](sql-server-linux-setup-tools.md).
 
-1. Run sqlcmd specifying the IP address and the port mapped to port 1433 in your container. In this example, that is the same port, 1433, on the host machine. If you specified a different mapped port on the host machine, you would use it here. You will also need to open the appropriate inbound port on your firewall to allow the connection.
+1. Run sqlcmd specifying the IP address and the port mapped to port 1433 in your container. In this example, that is the same port, 1433, on the host machine. If you specified a different mapped port on the host machine, you would use it here. You'll also need to open the appropriate inbound port on your firewall to allow the connection.
 
    ::: zone pivot="cs1-bash"
    ```bash

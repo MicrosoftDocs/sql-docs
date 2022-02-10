@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], assemblies"
   - "assemblies [CLR integration], managing"
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Managing CLR Integration Assemblies
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

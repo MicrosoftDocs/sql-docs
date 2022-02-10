@@ -1,9 +1,9 @@
 ---
 title: SQL Server Big Data Clusters Configuration Pre CU9
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Big Data Clusters Configuration Pre CU9
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: rahul.ajmera
 ms.date: 02/11/2021
 ms.topic: reference

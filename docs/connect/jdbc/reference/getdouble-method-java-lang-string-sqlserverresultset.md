@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 3ee26412-43d2-404b-bc05-ffd0fc75805c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getDouble Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

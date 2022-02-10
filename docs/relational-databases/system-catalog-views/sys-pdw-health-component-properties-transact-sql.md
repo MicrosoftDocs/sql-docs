@@ -7,6 +7,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 ms.assetid: 66999c0c-dc43-4327-99fb-8366f465e69d
 author: ronortloff
 ms.author: rortloff

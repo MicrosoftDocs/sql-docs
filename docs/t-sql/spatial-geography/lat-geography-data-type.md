@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Lat (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   The latitude property of the **geography** instance.  
   
@@ -43,7 +43,7 @@ ms.author: mlandzic
 ## Examples  
  This example creates a point and returns the latitude of the point.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);  
 SELECT @g.Lat;  

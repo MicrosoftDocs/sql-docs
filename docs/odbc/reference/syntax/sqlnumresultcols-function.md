@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQLNumResultCols function [ODBC]"
 ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLNumResultCols Function
 **Conformance**  

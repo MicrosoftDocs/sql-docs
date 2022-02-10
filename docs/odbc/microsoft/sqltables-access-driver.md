@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Access driver [ODBC], SQLTables"
 ms.assetid: 94423cf9-341a-4db6-bb10-8f5448df7fc3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLTables (Access Driver)
 > [!NOTE]  

@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "master database [SQL Server], restoring"
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Restore the master Database (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

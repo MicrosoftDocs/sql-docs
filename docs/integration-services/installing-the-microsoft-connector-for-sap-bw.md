@@ -1,7 +1,8 @@
 ---
 description: "Installing the Microsoft Connector for SAP BW"
 title: "Installing the Microsoft Connector for SAP BW | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"

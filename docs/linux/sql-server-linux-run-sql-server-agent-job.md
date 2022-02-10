@@ -151,7 +151,7 @@ You can also create and manage jobs remotely using SQL Server Management Studio 
 
 1. Verify that you have created a sample database named **SampleDB**.
 
-   <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
+   <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database"/>
 
 1. Verify that SQL Agent was [installed](sql-server-linux-setup-sql-agent.md) and configured correctly. Look for the plus sign next to SQL Server Agent in the Object Explorer. If SQL Server Agent is not enabled, try restarting the **mssql-server** service on Linux.
 
@@ -179,7 +179,7 @@ You can also create and manage jobs remotely using SQL Server Management Studio 
 
 1. Start your job.
 
-   <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png" alt="Start the SQL Server Agent job" style="width: 550px;"/>
+   <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png" alt="Start the SQL Server Agent job"/>
 
 ## Next Steps
 

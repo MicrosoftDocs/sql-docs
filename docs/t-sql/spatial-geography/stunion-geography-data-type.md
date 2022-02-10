@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STUnion (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns an object that represents the union of a **geography** instance with another **geography** instance.  
   
@@ -59,7 +59,7 @@ ms.author: mlandzic
 ### A. Computing the union of two polygons  
  The following example uses `STUnion()` to compute the union of two `Polygon` instances.  
   
-```  
+```sql
 DECLARE @g geography;  
 DECLARE @h geography;  
 SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
@@ -70,20 +70,20 @@ SELECT @g.STUnion(@h).ToString();
 ### B. Producing a FullGlobe result  
  The following example produces a `FullGlobe` when `STUnion()` combines two `Polygon` instances.  
   
-```
+```sql
  DECLARE @g geography = 'POLYGON ((-122.358 47.653, -122.358 47.658,-122.348 47.658, -122.348 47.649, -122.358 47.653))';  
  DECLARE @h geography = 'POLYGON ((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
  SELECT @g.STUnion(@h).ToString();
- ```  
+```  
   
 ### C. Producing a triagonal hole from a union of a CurvePolygon and a triagonal hole.  
  The following example produces a triagonal hole from the union of a `CurvePolygon` with a `Polygon` instance.  
   
-```
+```sql
  DECLARE @g geography = 'POLYGON ((-0.5 0, 0 1, 0.5 0.5, -0.5 0))';  
  DECLARE @h geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 0, 0.7 0.7, 0 1), (0 1, 0 0)))';  
  SELECT @g.STUnion(@h).ToString();
- ```  
+```  
   
 ## See Also  
  [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

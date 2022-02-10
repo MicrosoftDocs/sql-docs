@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "BEGIN...END keyword"
   - "END (BEGIN...END) keyword"
 ms.assetid: 354c4935-1375-4141-8195-61326662f4d2
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # END (BEGIN...END) (Transact-SQL)

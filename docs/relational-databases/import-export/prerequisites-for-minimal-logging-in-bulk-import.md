@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "minimally logged operations [SQL Server]"
   - "bulk importing [SQL Server], minimal logging"
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Prerequisites for Minimal Logging in Bulk Import
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,9 @@ ms.author: chadam
   
     -   If table is non-empty, index pages are fully logged.    
 
--   If the table has a clustered index and is empty, both data and index pages are minimally logged. In contrast, if a table has a btree based clustered index and is non-empty, data pages and index pages are both fully logged regardless of the recovery model. If you start with an empty table  rowstore table and bulk import the data in batches, both index and data pages are minimally logged for the first batch, but from the second batch onwards, only data pages are bulk logged.
+-   If the table has a clustered index and is empty, both data and index pages are minimally logged. In contrast, if a table has a B-tree based clustered index and is non-empty, data pages and index pages are both fully logged regardless of the recovery model. If you start with an empty table  rowstore table and bulk import the data in batches, both index and data pages are minimally logged for the first batch, but from the second batch onwards, only data pages are bulk logged.
+
+   [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
 - For information about logging for a clustered columnstore index (CCI), see [Columnstore index data loading guidance](../indexes/columnstore-indexes-data-loading-guidance.md#plan-bulk-load-sizes-to-minimize-delta-rowgroups).
   

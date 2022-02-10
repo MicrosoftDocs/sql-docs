@@ -26,7 +26,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC INPUTBUFFER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Displays the last statement sent from a client to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -85,10 +85,9 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, use [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) to return information about statements submitted to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## Permissions  
-On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires one of the following:
--   User must be a member of the **sysadmin** fixed server role.  
--   User must have VIEW SERVER STATE permission.  
--   *session_id* must be the same as the session ID on which the command is being run. To determine the session ID execute the following query:  
+On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires the VIEW SERVER STATE permission or membership in the **sysadmin** fixed server role.
+
+Without any of these, users can only view the inputbuffer of their own session. That means the *session_id* must be the same as the session ID on which the command is being run. To determine the session ID execute the following query:  
   
 ```sql
 SELECT @@spid;  

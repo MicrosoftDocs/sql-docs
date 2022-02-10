@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: ed8344eb-4d1d-43d3-ade8-935ec677f73c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsUnionAll Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

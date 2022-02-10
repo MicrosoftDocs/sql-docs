@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-ms.date: 05/08/2019
+ms.date: 12/08/2021
 ---
 
 # Backup and Restore Operations for Reporting Services
@@ -35,7 +35,7 @@ ms.date: 05/08/2019
     ::: moniker-end
   
 ## Backing Up the Report Server Databases  
- Because a report server is a stateless server, all application data is stored in the **reportserver** and **reportservertempdb** databases that run on a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance. You can back up the **reportserver** and **reportservertempdb** databases using one of the supported methods for backing up [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases. Here are some recommendations specific to the report server databases:  
+ Because a report server is a stateless server, all application data is stored in the **reportserver** and **reportservertempdb** databases that run on an [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance. You can back up the **reportserver** and **reportservertempdb** databases using one of the supported methods for backing up [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases. Here are some recommendations specific to the report server databases:  
   
 -   Use the full recovery model to back up the **reportserver** database.  
   
@@ -53,7 +53,7 @@ ms.date: 05/08/2019
 ::: moniker-end
   
 ## Backing Up the Encryption Keys  
- You should back up the encryption keys when you configure a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation for the first time. You should also back up the keys any time you change the identity of the service accounts or rename the computer. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). 
+ You should back up the encryption keys when you configure a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation for the first time. You should also back up the keys anytime you change the identity of the service accounts or rename the computer. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). 
 
 ::: moniker range="=sql-server-2016"
 
@@ -68,9 +68,7 @@ For SharePoint mode report servers, see the "Key Management" section of [Manage 
   
 -   Rssvrpolicy.config  
   
--   Rsmgrpolicy.config  
-  
--   Reportingservicesservice.exe.config  
+-   ReportingServicesService.exe.config  
   
 -   Web.config for the Report Server  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] application
   

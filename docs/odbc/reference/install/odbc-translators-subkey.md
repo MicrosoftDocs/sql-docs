@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "registry entries for components [ODBC], translator subkey"
 ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ODBC Translators Subkey
 The values under the ODBC Translators subkey list the installed translators. The format of these values is shown in the following table.  

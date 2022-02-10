@@ -10,8 +10,8 @@ ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.assemblies.general.f1"
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Assemblies - Properties
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

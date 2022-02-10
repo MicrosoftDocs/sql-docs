@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Paradox driver [ODBC], create index"
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # CREATE INDEX for Paradox
 The syntax of the CREATE INDEX statement for the ODBC Paradox driver is:  

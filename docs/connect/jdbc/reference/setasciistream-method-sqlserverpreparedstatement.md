@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 91df14fb-ff92-457f-ad51-50da7a254630
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setAsciiStream Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -27,7 +27,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SUSER_SID (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the security identification number (SID) for the specified login name.  
   

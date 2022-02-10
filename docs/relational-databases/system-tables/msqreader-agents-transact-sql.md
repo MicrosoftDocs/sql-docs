@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSqreader_agents system table"
 ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # MSqreader_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

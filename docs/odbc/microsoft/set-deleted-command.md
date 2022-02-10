@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SET DELETED command [ODBC]"
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SET DELETED Command
 Specifies whether records marked for deletion are processed and whether they are available for use in other commands.  

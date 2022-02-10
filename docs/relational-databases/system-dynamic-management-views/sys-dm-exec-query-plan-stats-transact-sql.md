@@ -12,6 +12,8 @@ f1_keywords:
   - "sys.dm_exec_query_plan_stats_TSQL"
   - "dm_exec_query_plan_stats_TSQL"
   - "dm_exec_query_plan_stats"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_exec_query_plan_stats management view"
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "drivers [ODBC], architecture"
 ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Driver Architecture
 Driver architecture falls into two categories, depending on which software processes SQL statements:  

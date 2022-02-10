@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using statements with SQL
 

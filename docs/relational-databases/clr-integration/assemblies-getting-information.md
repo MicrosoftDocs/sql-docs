@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "status information [SQL Server], assemblies"
   - "metadata [SQL Server], assemblies"
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Assemblies - Getting Information
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

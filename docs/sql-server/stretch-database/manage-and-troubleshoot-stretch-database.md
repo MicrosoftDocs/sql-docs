@@ -109,9 +109,12 @@ If you have accidentally deleted columns from the remote table, run **sp_rda_rec
 For example, the following query returns local results only.  
   
  ```sql  
-USE <Stretch-enabled database name>;
+USE [<Stretch-enabled database name>];
 GO
-SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = LOCAL_ONLY) WHERE ... ;
+SELECT * 
+FROM [<Stretch_enabled table name>]
+WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = LOCAL_ONLY)
+WHERE someCol = 1 /* sample predicate only, please replace with an appropriate one */ ;
 GO
 ```  
    

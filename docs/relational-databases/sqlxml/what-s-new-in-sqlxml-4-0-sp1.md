@@ -1,14 +1,15 @@
 ---
 title: "What&#39;s New in SQLXML 4.0 SP1"
 description: View a summary of the updates and enhancements in SQLXML 4.0 SP1 with links to more detailed information.
-ms.custom: ""
+ms.custom:
+  - intro-whats-new
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "registry keys [SQLXML]"
   - "SQLNCLI, SQLXML"
   - "what's new [SQLXML]"

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.resource_governance catalog view"
 ms.assetid: 
-author: joesackmsft
-ms.author: josack
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_user_db_resource_governance (Transact-SQL)

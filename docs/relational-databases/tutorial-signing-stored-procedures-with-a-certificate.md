@@ -1,14 +1,16 @@
 ---
 description: "Tutorial: Signing Stored Procedures with a Certificate"
 title: "Tutorial: Signing Stored Procedures with a Certificate"
-ms.custom: seo-dt-2019
+ms.custom:
+  - seo-dt-2019
+  - intro-quickstart
 ms.date: "08/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "signing stored procedures tutorial [SQL Server]"
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: "MashaMSFT"
@@ -65,7 +67,7 @@ Run this code to create a database certificate and secure it using a password.
 CREATE CERTIFICATE TestCreditRatingCer  
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
       WITH SUBJECT = 'Credit Rating Records Access',   
-      EXPIRY_DATE = '12/31/2021';  -- Error 3701 will occur if this date is not in the future
+      EXPIRY_DATE = '12/31/2022';  -- Error 3701 will occur if this date is not in the future
 GO  
 ```  
   

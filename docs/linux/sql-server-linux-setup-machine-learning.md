@@ -10,6 +10,8 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
+ms.custom:
+  - intro-installation
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Linux
 

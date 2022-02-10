@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # Setting the data source properties

@@ -1,24 +1,25 @@
 ---
-description: "Properties Window (Management Studio)"
 title: "Properties Window (Management Studio)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+description: "Properties Window (Management Studio)"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 helpviewer_keywords: 
   - "viewing properties"
   - "sorting properties [SQL Server]"
   - "Properties window [SQL Server Management Studio]"
   - "modifying properties"
-ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: "markingmyname"
 ms.author: "maghan"
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: "01/19/2017"
 ---
 # Properties Window (Management Studio)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 Use this window to view properties of selected elements. You can also use the Properties window to view file, project, and solution properties. The Properties window is available by clicking **Properties Window** on the **View** menu.  
   
 The Properties window displays different types of editing fields, depending on the needs of a particular property. Properties shown in gray are read-only.  
@@ -33,6 +34,6 @@ The Properties window displays different types of editing fields, depending on t
 |**Properties**|Displays the properties for an object.|  
 |**Description pane**|The description pane appears at the bottom of the Properties window and shows the property type and a short description of the property. You can turn the description of the property off and on using the **Description** command on the shortcut menu.|  
   
-## See Also  
-[General User Interface Elements](../ssms/general-user-interface-elements.md)  
-  
+## See Also
+
+[General User Interface Elements](../ssms/general-user-interface-elements.md)

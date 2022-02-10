@@ -2,12 +2,14 @@
 title: Install Azure Data CLI (azdata)
 titleSuffix: 
 description: Learn how to install the Azure Data CLI azdata) tool.
-author: MikeRayMSFT 
+author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
+ms.custom:
+  - intro-installation
 ---
 
 # Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
@@ -37,5 +39,3 @@ To find your installed version and see if you need to update, run `azdata --vers
 ## Next steps
 
 Use azdata with Big Data Clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
-
-Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)

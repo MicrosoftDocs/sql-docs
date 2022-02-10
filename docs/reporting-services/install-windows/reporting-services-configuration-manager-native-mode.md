@@ -65,7 +65,7 @@ The Report Server Configuration Manager is installed automatically when you inst
 
 1.  Use the following step that is appropriate for your version of Microsoft Windows:
 
-    - From the Windows start screen, type **Reporting** and select **Report Server Configuration Manager** from the search results.
+    - From the Windows Start menu, type **Reporting** and select **Report Server Configuration Manager** from the search results.
 
     - Select **Start**, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then point to **Configuration Tools**.
 
@@ -91,4 +91,4 @@ The Report Server Configuration Manager is installed automatically when you inst
 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
 [Configure and Administer a Report Server](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

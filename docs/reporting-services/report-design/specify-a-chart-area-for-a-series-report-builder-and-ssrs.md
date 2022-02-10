@@ -1,6 +1,6 @@
 ---
-title: "Specify a Chart Area for a Series (Report Builder) | Microsoft Docs"
-description: Find out about the chart area as a top-level container that includes the outer border, the chart title, and the legend in Report Builder.
+title: "Specify a chart area for a series in a paginated report | Microsoft Docs"
+description: Find out about the chart area as a top-level container in a paginated report that includes the outer border, the chart title, and the legend in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -15,8 +15,11 @@ ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Specify a Chart Area for a Series (Report Builder and SSRS)
-  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, the *chart* is the top-level container that includes the outer border, the chart title, and the legend. By default, the chart contains one *chart area*. The chart area is not visible on the chart surface, but you can think of the chart area as a container that encompasses only the axis labels, the axis title and the plotting area of one or more series. The following illustration shows the concept of multiple chart areas within a single chart.  
+# Specify a chart area for a series in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In paginated reports, the *chart* is the top-level container that includes the outer border, the chart title, and the legend. By default, the chart contains one *chart area*. The chart area is not visible on the chart surface, but you can think of the chart area as a container that encompasses only the axis labels, the axis title and the plotting area of one or more series. The following illustration shows the concept of multiple chart areas within a single chart.  
   
  ![Shows a diagram of a chart area](../../reporting-services/report-design/media/chartareasdiagram.gif "Shows a diagram of a chart area")  
   

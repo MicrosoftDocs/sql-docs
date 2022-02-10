@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "rowset cursors [ODBC]"
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Supported Cursor Model (Visual FoxPro ODBC Driver)
 The Visual FoxPro ODBC Driver supports both *block* (*rowset*) and *static* cursors. Static cursors are supported for any driver that conforms to Level 1 ODBC compliance. The driver does not support dynamic, keyset-driven, or mixed (keyset and dynamic) cursors.  

@@ -17,7 +17,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Manage Files with Encoding
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 To facilitate the display of your code in a particular language and on a particular platform, you can associate a particular character encoding with a file.  
   
 ## Opening Files  
@@ -38,7 +38,7 @@ You can also save your code with a Unicode encoding or a different code page to 
   
 #### To save a file with a different encoding or line ending type  
   
-1.  On the **File** menu, click **Save <filename> As**.  
+1.  On the **File** menu, click **Save \<filename\> As**.  
   
 2.  In the **Save File As** dialog, expand the **Save** button, and then click **Save with Encoding**.  
   

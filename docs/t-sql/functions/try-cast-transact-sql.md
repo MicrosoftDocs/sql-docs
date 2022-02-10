@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "TRY_CAST function"
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||>= aps-pdw-2016||= azure-sqldw-latest"
 ---
 # TRY_CAST (Transact-SQL)

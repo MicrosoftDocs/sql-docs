@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: e1d7e267-d9de-407a-b1a9-abdc2623478d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setNull Method (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: ui-reference
 f1_keywords: 
   - "VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL"
   - "VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard"
@@ -16,10 +16,10 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options (Environment - Keyboard Page)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The **Options** dialog box lets you customize the keyboard scheme for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use this option to choose a keyboard scheme. To access this page, click **Options** on the **Tools** menu, select the **Environment** folder, and then click **Keyboard**.  
   
-The **Keyboard scheme** drop-down list provides the available collections of shortcut keys. To load a specific scheme, select it from the list. When you are ready to leave the **Options** dialog box, click **OK**. Your selected scheme will be loaded into [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+The **Keyboard scheme** drop-down list provides the available collections of shortcut keys. To load a specific scheme, select it from the list. When you are ready to leave the **Options** dialog box, click **OK**. Your selected scheme will be loaded into SQL Server Management Studio.  
   
 **Standard**  
 The Standard scheme is the default in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and closely resembles the [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio shortcut keys.  

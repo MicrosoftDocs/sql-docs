@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLTables function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLTables (Visual FoxPro ODBC Driver)
 > [!NOTE]  

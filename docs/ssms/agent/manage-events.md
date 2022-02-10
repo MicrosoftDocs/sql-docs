@@ -58,7 +58,7 @@ When configuring an alerts management server, follow these guidelines:
   
 -   Carefully plan for the network traffic involved in configuring many servers to share the same alerts management server. If congestion results, reduce the number of servers that use a particular alerts management server.  
   
-    The servers that are registered within [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] constitute the list of servers available to be chosen by that server as the alerts-forwarding server.  
+    The servers that are registered within SQL Server Management Studio constitute the list of servers available to be chosen by that server as the alerts-forwarding server.  
   
 -   Define alerts on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that require a server-specific response, instead of forwarding the alerts to the alerts management server.  
   

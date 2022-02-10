@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "converting data types"
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Default PHP Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

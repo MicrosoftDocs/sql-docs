@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergesubscriptions system table"
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # sysmergesubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,9 +57,12 @@ ms.author: chadam
 |supportability_mode|**int**|Internal use only.|  
 |application_name|**nvarchar(128)**|Internal use only.|  
 |subscriber_number|**int**|Internal use only.|  
-|last_makegeneration_datetime|**datetime**|The last **datetime** that the makegeneration process ran for the Publisher. For more information, see the -MakeGenerationInterval parameter in [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).|  
+|last_makegeneration_datetime|**datetime**|The last **datetime** that the makegeneration process ran for the Publisher. For more information, see the -MakeGenerationInterval parameter in [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).|
+|last_local_sentgen|**bigint**|Stores the last generation that was sent by the previous merge agent sync.|
+|last_local_recguid|**uniqueidentifier**|Stores the last local received generation GUID from previous merge agent sync.|
+|last_local_recgen|**bigint**|Set by merge cleanup. Stores the last local generation received.|
   
 ## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md) 
   
   

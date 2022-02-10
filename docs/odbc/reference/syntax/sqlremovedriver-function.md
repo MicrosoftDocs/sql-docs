@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLRemoveDriver function [ODBC]"
 ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLRemoveDriver Function
 **Conformance**  

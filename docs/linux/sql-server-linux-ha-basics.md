@@ -66,7 +66,8 @@ scp MyAGCert.cer username@servername:/folder/subfolder
 copies the file MyAGCert.cer to the folder specified on the other server. Note that you must have permissions - and possibly ownership - of the file to copy it, so `chown` may also need to be employed before copying. Similarly, on the receiving side, the right user needs access to manipulate the file. For example, to restore that certificate file, the `mssql` user must be able to access it.
 
 Samba, which is the Linux variant of server message block (SMB), can also be used to create shares accessed by UNC paths such as `\\SERVERNAME\SHARE`. For more information on configuring Samba, see the information at the following links for each distribution:
--   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/chap-managing_confined_services-samba)
+
 -   [SLES](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html)
 -   [Ubuntu](https://help.ubuntu.com/community/Samba)
 
@@ -146,7 +147,7 @@ This solution is in some ways similar to, but in many ways different from deploy
 On Linux, while each supported distribution has Pacemaker available, each distribution can customize and have slightly different implementations and versions. Some of the differences will be reflected in the instructions in this article. The clustering layer is open source, so even though it ships with the distributions, it is not tightly integrated in the same way a WSFC is under Windows. This is why Microsoft provides *mssql-server-ha*, so that [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] and the Pacemaker stack can provide close to, but not exactly the same, experience for AGs and FCIs as under Windows.
 
 For full documentation on Pacemaker, including a more in-depth explanation of what everything is with full reference information, for RHEL and SLES:
--   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-overview-HAAR.html)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/ch-overview-haar)
 -   [SLES](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html)
 
 Ubuntu does not have a guide for availability.
@@ -166,7 +167,7 @@ Pacemaker has standard and clone resources. Clone resources are ones that run si
 
 [!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
-When an AG is created, it requires a specialized form of a clone resource called a multi-state resource. While an AG only has one primary replica, the AG itself is running across all nodes that it is configured to work on, and can potentially allow things such as read-only access. Because this is a "live" use of the node, the resources have the concept of two states: master and slave. For more information, see [Multi-state resources: Resources that have multiple modes](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
+When an AG is created, it requires a specialized form of a clone resource called a multi-state resource. While an AG only has one primary replica, the AG itself is running across all nodes that it is configured to work on, and can potentially allow things such as read-only access. Because this is a "live" use of the node, the resources have the concept of two states: master and slave. For more information, see [Multi-state resources: Resources that have multiple modes](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-multistateresource-haar).
 
 #### Resource groups/sets
 

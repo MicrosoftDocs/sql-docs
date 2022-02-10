@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "SQLGetInfo function [ODBC], multiple results"
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Multiple Results
 A *result* is something returned by the data source after a statement is executed. ODBC has two types of results: result sets and row counts. *Row counts* are the number of rows affected by an update, delete, or insert statement. Batches, described in [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), can generate multiple results.  

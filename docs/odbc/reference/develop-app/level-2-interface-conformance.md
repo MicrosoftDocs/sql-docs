@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "conformance levels [ODBC], interface"
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Level 2 Interface Conformance
 The Level 2 interface conformance level includes the Level 1 interface conformance-level functionality plus the following features:  

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_setcoldata"
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_setcoldata (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

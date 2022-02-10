@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "testing ODBC drivers [ODBC]"
 ms.assetid: 7f13894c-5697-436c-be3d-fe16e1a02325
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # ODBC Test

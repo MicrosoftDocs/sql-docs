@@ -11,8 +11,8 @@ ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # CREATE FUNCTION (Azure Synapse Analytics)

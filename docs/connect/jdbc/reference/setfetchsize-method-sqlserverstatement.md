@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 760e555e-9667-4b40-b0ba-778026ff2923
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setFetchSize Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

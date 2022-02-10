@@ -44,7 +44,6 @@ SQL Server 2016 introduced support for temporal tables (also known as system-ver
   - [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
   - [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
   - [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)
-- **Video:** For a 20 minute discussion of temporal, see [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).
 
 ## What is a system-versioned temporal table
 

@@ -2,12 +2,12 @@
 description: "CONCAT_WS (Transact-SQL)"
 title: "CONCAT_WS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/25/2018"
+ms.date: "09/14/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords: 
   - "CONCAT_WS"
   - "CONCAT_WS_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CONCAT_WS function"
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # CONCAT_WS (Transact-SQL)
@@ -92,7 +92,7 @@ Address
 1 Microsoft Way,Redmond,WA,98052
 ```
 
-### C.  Generating CSV file from table
+### C.  Generating CSV-formatted data from table
 This example uses a comma `,` as the separator value, and adds the carriage return character `char(13)` in the column separated values format of the result set.
 
 ```sql

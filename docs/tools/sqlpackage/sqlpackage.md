@@ -8,8 +8,8 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
-ms.reviewer: "maghan; sstein"
-ms.date: 7/2/2021
+ms.reviewer: "maghan"
+ms.date: 1/25/2022
 ---
 
 # SqlPackage.exe
@@ -158,6 +158,7 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |CommandTimeout=(INT32 '60')| x | x | x | x | x | x |
 |CommentOutSetVarDeclarations=(BOOLEAN)| | x | | | x | x |
 |CompareUsingTargetCollation=(BOOLEAN)| | x | | | x | x |
+|CompressionOption=(ENUM 'Normal')| x | | x | | | | |
 |CreateNewDatabase=(BOOLEAN)| | x | | | x | x |
 |DacApplicationDescription=(STRING)| x | | | | | |
 |DacApplicationName=(STRING)| x | | | | | |
@@ -182,6 +183,8 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |DropPermissionsNotInSource=(BOOLEAN)| | x | | | x | x |
 |DropRoleMembersNotInSource=(BOOLEAN)| | x | | | x | x |
 |DropStatisticsNotInSource=(BOOLEAN 'True')| | x | | | x | x |
+|EnclaveAttestationProtocol=(STRING)| | x | | | | |
+|EnclaveAttestationUrl=(STRING)| | x | | | | |
 |ExcludeObjectType=(STRING)| | x | | | x | x |
 |ExcludeObjectTypes=(STRING)| | x | | | x | x |
 |ExtractAllTableData=(BOOLEAN)| x | | | | | |
@@ -246,7 +249,7 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |ScriptFileSize=(BOOLEAN)| | x | | | x | x |
 |ScriptNewConstraintValidation=(BOOLEAN 'True')| | x | | | x | x |
 |ScriptRefreshModule=(BOOLEAN 'True')| | x | | | x | x |
-|Storage=({File&#124;Memory} 'File')| x | x | x | x | x | x |
+|Storage=({File&#124;Memory})| x | x | x | x | x | x |
 |TableData=(STRING)| x | | x | | | |
 |TargetEngineVersion=(ENUM 'Latest')| | | x | | | |
 |TempDirectoryForTableData=(STRING)| x | | x | | | |

@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-author: cawrites
-ms.author: "chadam"
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Use automatic seeding to initialize an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ Databases in an availability group must be in full recovery model. The database 
 
 To create an availability group with automatic seeding, set `SEEDING_MODE=AUTOMATIC`. 
 
-The following example creates an availability group on a two node windows server failover cluster. Before running the scripts, update the values for your environment.
+The following example creates an availability group on a two-node Windows Server failover cluster. Before running the scripts, update the values for your environment.
 
 1. Create the endpoints. Each server needs an endpoint. The following script creates an endpoint that uses TCP port 5022 for the listener. Set `<endpoint_name>` and `LISTENER_PORT` to match your environment and run the script on both servers:
 

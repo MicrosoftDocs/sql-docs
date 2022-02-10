@@ -15,7 +15,7 @@ ms.custom:
 # Snowflake data type mapping
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
-Azure Synapse Pathway transpiles SQL code from source systems such as IBM Netezza, Microsoft SQL Server, Snowflake, and Teradata Vantage to T-SQL compliant with Azure Synapse SQL. Synapse Pathway utilizes an Abstract Syntax Tree (AST) model for mapping source data types into supported types.
+Azure Synapse Pathway transpiles SQL code from source systems such as IBM Netezza, Microsoft SQL Server and Snowflake to T-SQL compliant with Azure Synapse SQL. Synapse Pathway utilizes an Abstract Syntax Tree (AST) model for mapping source data types into supported types.
 
 The following set of links shows the source and target data type mappings for each of the supported source systems.
 
@@ -58,7 +58,7 @@ The following set of links shows the source and target data type mappings for ea
 - [IBM Netezza data type mapping](data-type-mappings-ibm-netezza.md)
 - [Microsoft SQL Server data type mapping](data-type-mappings-microsoft-sql-server.md)
 - [Snowflake data type mapping](data-type-mappings-snowflake.md)
-- [Teradata Vantage data type mapping](data-type-mappings-teradata-vantage.md)
+
 
 ## Next steps
 

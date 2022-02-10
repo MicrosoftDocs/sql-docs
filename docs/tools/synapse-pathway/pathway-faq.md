@@ -4,7 +4,7 @@ description: Frequently asked question for Azure Synapse Pathway
 author: charlesfeddersen
 ms.author: charlesf
 ms.topic: overview 
-ms.date: 09/22/2021
+ms.date: 02/10/2022
 ms.prod: sql
 ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
@@ -33,13 +33,10 @@ A. There is no cost associated with downloading and running your code translatio
 
 ### Q. What source/target pairs does Azure Synapse Pathway currently support?
 
-A. As of version 0.4 of Synapse Pathway, following data warehouses are included as sources:
-- Amazon Redshift
-- Google BigQuery
+A. As of version 0.5 of Synapse Pathway, following data warehouses are included as sources:
 - IBM Netezza
 - Microsoft SQL Server
 - Snowflake
-- Teradata
 
 ### Q. What is included as part of the code conversion?
 
@@ -47,12 +44,9 @@ A. Synapse Pathway version supports code translation of databases, schemas, tabl
 
 | Source Platform| Statement Types Supported | 
 |:-------------------:|:------------------|
-| Amazon Redshift | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
-| Google BigQuery | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
 | IBM Netezza  | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
 | Microsoft SQL Server  | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table <br /> Create/Alter/Drop View | 
-| Snowflake |  Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
-| Teradata | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
+| Snowflake |  Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Drop Table |
   
 ### Q. Can it also scan my environment and provide an assessment report of all the objects that need to be converted/translated?
 
@@ -65,6 +59,16 @@ A. Since you can run Synapse Pathway in your local environment, there is no data
 ### Q. Where can I raise issues encountered in Azure Synapse Pathway?
 
 A. Support for Synapse Pathway is available through Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
+
+### Q. What is not included as part of the code conversion?
+
+The basic DDL, DML, Stored Procedures and Views are part of the code conversion. Complex functions present in the source code is currently not supported.
+
+| Source Platform | DDL | DML | Stored Procedure | Views |
+|:-------------------|:------------------|:-------------------|:------------------|:-------------------|
+|Microsoft SQL Server | Partial | Partial | Partial | Yes |
+|IBM Netezza | Yes | Partial | No | No |
+|Snowflake | Partial | No | No | Partial |
 
 ## Next steps
 

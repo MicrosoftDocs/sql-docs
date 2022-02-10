@@ -44,15 +44,15 @@ Is the integer (int) value of the log you want to view. The current error log ha
 
 #### [@p2 = ] 'product ID'
 
-Is the integer (int) value for the product whose log you want to view. Use 1 for SQL Server or 2 SQL Server Agent. If a value is not specified, the SQL Server product is used
+Is the integer (int) value for the product whose log you want to view. Use 1 for SQL Server or 2 SQL Server Agent. If a value isn't specified, the SQL Server product is used
 
 #### [@p3 = ] 'string_to_search'
 
-Is the string value for a string you want to filter on when viewing the errorlog. This value is **nvarchar(4000)** and has a default of NULL.
+Is the string value for a string you want to filter on when viewing the error log. This value is **nvarchar(4000)** and has a default of NULL.
 
 #### [@p4 = ] 'string_to_search'
 
-Is the string value for an additional string you want to filter on to further refine the search when viewing the errorlog. This value is **nvarchar(4000)** and has a default of NULL. This provides an additional filter to the first string search @p3.
+Is the string value for an additional string you want to filter on to further refine the search when viewing the error log. This value is **nvarchar(4000)** and has a default of NULL. This provides an additional filter to the first string search @p3.
 
 ## Return Code Values
 
@@ -64,7 +64,7 @@ Displays the content of the requested error log. If filter strings are used only
   
 ## Remarks
 
-Every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, the current error log is renamed to **errorlog.1**; **errorlog.1** becomes **errorlog.2**, **errorlog.2** becomes **errorlog.3**, and so on. **sp_readerrorlog** enables you read any of these error log files as long as the files exist.  
+Every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, the current error log is renamed to **errorlog.1**; **errorlog.1** becomes **errorlog.2**, **errorlog.2** becomes **errorlog.3**, and so on. **sp_readerrorlog** enables you to read any of these error log files as long as the files exist.  
   
 ## Permissions
 

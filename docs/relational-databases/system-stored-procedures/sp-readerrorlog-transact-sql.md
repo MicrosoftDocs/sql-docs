@@ -12,7 +12,7 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sp_readerrorlog"
-author: markingmyname
+author: pijocoder
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""

@@ -38,7 +38,7 @@ A. As of version 0.5 of Synapse Pathway, following data warehouses are included 
 - Microsoft SQL Server
 - Snowflake
 
-### Q. What is included as part of the code conversion?
+### Q. What is included as part of the DDL conversion?
 
 A. Synapse Pathway version supports code translation of databases, schemas, tables, and views.
 

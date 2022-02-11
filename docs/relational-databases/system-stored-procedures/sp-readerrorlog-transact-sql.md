@@ -33,14 +33,14 @@ sp_readerrorlog
 	@p1		int = 0,
 	@p2		int = NULL,
 	@p3		nvarchar(4000) = NULL,
-	@p4		nvarchar(4000) = NULL)
+	@p4		nvarchar(4000) = NULL
 ```  
 
 ## Arguments
 
 #### [@p1 = ] 'log_number'
 
-Is the integer (int) value of the log you want to view. The current error log has a value of 0, the previous is 1 (Errorlog.1), 2 for Errorlog.2 and so on.
+Is the integer (int) value of the log you want to view. The current error log has a value of 0, the previous is 1 (Errorlog.1), the one before previous is 2 (Errorlog.2), and so on.
 
 #### [@p2 = ] 'product ID'
 

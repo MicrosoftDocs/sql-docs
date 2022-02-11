@@ -60,7 +60,7 @@ sections:
         answer: |
               Support for Synapse Pathway is available through the Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
       - question: |
-         What isn't included as part of the code conversion? 
+         What is included as part of the code conversion? 
         answer: |
               The basic DDL, DML, stored procedures, and views are part of the code conversion. Migration of complex functions in the source code is currently not supported.
 

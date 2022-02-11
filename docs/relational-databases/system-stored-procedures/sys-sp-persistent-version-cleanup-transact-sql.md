@@ -97,6 +97,13 @@ For example,
 EXEC sys.sp_persistent_version_cleanup [WideWorldImporters];
 ```
 
+Or to assume the current database context,
+
+```sql
+USE [WideWorldImporters];
+EXEC sys.sp_persistent_version_cleanup;
+```
+
 ## See also
 
 - [Accelerated database recovery](../accelerated-database-recovery-concepts.md)

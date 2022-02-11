@@ -22,7 +22,7 @@ This article lists and describes what's new in the versioned releases of the [!I
 
 | New item | Details |
 | :------- | :------ |
-|  |  |
+| Sqlcmd Bugfix | Fixed extraneous trailing bytes after encoding conversion. |
 | &nbsp; | &nbsp; |
 
 ## 17.8.1.2, October 2021

@@ -2,7 +2,7 @@
 title: Connecting with sqlcmd
 description: Learn the options and commands available in the sqlcmd utility, available in the mssql-tools package on Linux and macOS.
 ms.custom: ""
-ms.date: 09/30/2021
+ms.date: 02/15/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -101,8 +101,8 @@ Always specify **-M** when connecting to the availability group listener of a [!
 > [!NOTE]
 > **-M** isn't supported in the CTP for SUSE Linux. You can, however, specify the **MultiSubnetFailover=Yes** keyword in a DSN file passed to `sqlcmd`. For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this article.
 
-**-N**  
-Encrypt connection.
+**-N[s|m|o]**  
+Set the connection encryption mode to be Strict, Mandatory, or Optional respectively. Defaults to mandatory if not specified. ([s|m|o] added in ODBC 18.0)
 
 **-o** *output_file*  
 Identify the file that receives output from `sqlcmd`.

@@ -28,7 +28,7 @@ sections:
       - question: |
          How much does Azure Synapse Pathway cost? 
         answer: |
-              There is no cost associated with downloading and running your code translations using Synapse Pathway.
+              There's no cost associated with downloading and running your code translations using Synapse Pathway.
       - question: |
          What source/target pairs does Azure Synapse Pathway currently support? 
         answer: |
@@ -42,7 +42,7 @@ sections:
               Synapse Pathway version supports code translation of databases, schemas, tables, and views.
               
               | Source Platform | Statement Types Supported|
-              | -- | -- |
+              |--|--|
               | IBM Netezza | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
               | Microsoft SQL Server | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table <br /> Create/Alter/Drop View|
               | Snowflake | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Drop Table |
@@ -50,7 +50,7 @@ sections:
       - question: |
          Can it also scan my environment and provide an assessment report of all the objects that need to be converted/translated? 
         answer: |
-              In this version of Synapse Pathway, you will have to provide the link to the DDL/DML scripts that needs to be translated. Synapse Pathway will not scan your current environment to identify the objects that need to be translated.
+              In this version of Synapse Pathway, you'll have to provide the link to the DDL/DML scripts that needs to be translated. Synapse Pathway won't scan your current environment to identify the objects that need to be translated.
       - question: |
          What information does Azure Synapse Pathway capture about my current data warehouse instance? 
         answer: |
@@ -62,12 +62,12 @@ sections:
       - question: |
          What is not included as part of the code conversion? 
         answer: |
-              The basic DDL, DML, stored procedures, and views are part of the code conversion. Migration of complex functions present in the source code are currently not supported.
+              The basic DDL, DML, stored procedures, and views are part of the code conversion. Migration of complex functions in the source code is currently not supported.
 
               |Source Platform | DDL | DML | Stored Procedure | Views |
               |-------------------|:------------------|:-------------------|:------------------|:-------------------|
-              |Microsoft SQL Server | Partial | Partial | Partial | Yes |
               |IBM Netezza | Yes | Partial | No | No |
+              |Microsoft SQL Server | Partial | Partial | Partial | Yes |
               |Snowflake | Partial | No | No | Partial |
       - question: |
          Next steps

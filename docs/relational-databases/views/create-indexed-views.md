@@ -138,7 +138,7 @@ When you refer to **datetime** and **smalldatetime** string literals in indexed 
 
 When you execute DML (such as `UPDATE`, `DELETE` or `INSERT`) on a table referenced by a large number of indexed views, or fewer but very complex indexed views, those indexed views will have to be updated as well during DML execution. As a result, DML query performance may degrade significantly, or in some cases, a query plan cannot even be produced. In such scenarios, test your DML queries before production use, analyze the query plan and tune/simplify the DML statement.
 
-To prevent the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from using indexed views, include the `OPTION ([EXPAND VIEWS](/t-sql/queries/hints-transact-sql-query.md#expand-views))` hint on the query.  Also, if any of the listed options are incorrectly set, this will prevent the optimizer from using the indexes on the views. For more information about the `OPTION (EXPAND VIEWS)` hint, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).
+To prevent the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from using indexed views, include the `[OPTION (EXPAND VIEWS)](/t-sql/queries/hints-transact-sql-query.md#expand-views)` hint on the query.  Also, if any of the listed options are incorrectly set, this will prevent the optimizer from using the indexes on the views. For more information about the `OPTION (EXPAND VIEWS)` hint, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).
 
 
 ## Various additional considerations

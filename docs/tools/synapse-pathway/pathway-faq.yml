@@ -45,8 +45,11 @@ sections:
               |--|--|
               | IBM Netezza | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
               | Microsoft SQL Server | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table <br /> Create/Alter/Drop View|
-              | Snowflake |  Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Drop Table |
-
+              | Snowflake |  Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Drop Table <br /> Create View |
+       - question: |
+         What is included as part of the DML conversion? 
+        answer: |
+              'Insert' statement in Microsoft SQL Server and 'Select' statement in Snowflake is included as part of DML conversion.
       - question: |
          Can it also scan my environment and provide an assessment report of all the objects that need to be converted/translated? 
         answer: |
@@ -60,16 +63,9 @@ sections:
         answer: |
               Support for Synapse Pathway is available through the Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
       - question: |
-         Is Stored Procedure creation supported?
+         Is stored procedure creation supported? 
         answer: |
-              The basic DDL, DML, stored procedures, and views are part of the code conversion. Migration of complex functions in the source code is currently not supported.
-
-              |Source Platform | DDL | DML | Stored Procedure | Views |
-              |-------------------|:------------------|:-------------------|:------------------|:-------------------|
-              |Microsoft SQL Server | Partial | Partial | Partial | Yes |
-              |IBM Netezza | Yes | Partial | No | No |
-              |Snowflake | Partial | No | No | Partial |
-              
+              Creation of stored procedures and statistics is supported for Microsoft SQL Server. Few complex statements are not supported.       
       - question: |
          Next steps
         answer: |

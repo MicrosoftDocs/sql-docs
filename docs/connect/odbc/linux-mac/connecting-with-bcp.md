@@ -136,7 +136,7 @@ Uses Unicode characters to do the bulk copy operation.
 In this release, Latin-1 and UTF-16 characters are supported.
 
 **-Y**[s|m|o]  
-Specifies the connection encryption mode. The options are strict, mandatory, and optional. When -Y is used alone, mandatory is the default. (available since `bcp` version 18)
+Specifies the connection encryption mode. The options are Strict, Mandatory, and Optional. Using -Y without any parameters uses the Mandatory encryption mode, and is equivalent to -Ym. (available since `bcp` version 18)
 
 ## Unavailable options
 

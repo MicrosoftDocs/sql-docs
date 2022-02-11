@@ -40,15 +40,15 @@ sections:
          What is included as part of the code conversion? 
         answer: |
               Synapse Pathway version supports code translation of databases, schemas, tables, and views.
-              -
-                Source Platform: IBM Netezza
-                Statement Types Supported: Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table
-              -
-                Source Platform: Microsoft SQL Server
-                Statement Types Supported: Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table <br /> Create/Alter/Drop View
-              -
-                Source Platform: Snowflake
-                Statement Types Supported: Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Drop Table
+-
+  Source Platform: IBM Netezza
+  Statement Types Supported: Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table
+-
+  Source Platform: Microsoft SQL Server
+  Statement Types Supported: Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table <br /> Create/Alter/Drop View
+-
+  Source Platform: Snowflake
+  Statement Types Supported: Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Drop Table
 
       - question: |
          Can it also scan my environment and provide an assessment report of all the objects that need to be converted/translated? 
@@ -66,24 +66,24 @@ sections:
          What is not included as part of the code conversion? 
         answer: |
               The basic DDL, DML, stored procedures, and views are part of the code conversion. Migration of complex functions present in the source code are currently not supported.
-              -
-                Source Platform: Microsoft SQL Server
-                DDL: Partial
-                DML: Partial
-                Stored Procedure: Partial
-                Views: Yes
-              -
-                Source Platform: IBM Netezza
-                DDL: Yes
-                DML: Partial
-                Stored Procedure: No
-                Views: No
-              -
-                Source Platform: Snowflake
-                DDL: Partial
-                DML: No
-                Stored Procedure: No
-                Views: Partial
+-
+  Source Platform: Microsoft SQL Server
+  DDL: Partial
+  DML: Partial
+  Stored Procedure: Partial
+  Views: Yes
+-
+  Source Platform: IBM Netezza
+  DDL: Yes
+  DML: Partial
+  Stored Procedure: No
+  Views: No
+-
+  Source Platform: Snowflake
+  DDL: Partial
+  DML: No
+  Stored Procedure: No
+  Views: Partial
       - question: |
          Next steps
         answer: |

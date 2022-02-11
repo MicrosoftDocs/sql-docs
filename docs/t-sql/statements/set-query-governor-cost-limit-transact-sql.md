@@ -41,12 +41,15 @@ SET QUERY_GOVERNOR_COST_LIMIT value
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *value*  
+
+#### value
+  
  Is a numeric or integer value specifying the highest estimated cost allowed for a given query to run. Values are rounded down to the nearest integer. Negative values are rounded up to 0. The query governor disallows execution of any query that has an estimated cost exceeding that value. Specifying 0 (the default) for this option turns off the query governor, and all queries of any cost are allowed to execute.  
   
  Query cost is an abstract figure determined by the query optimizer based on estimated execution requirements such as cpu time, memory, and disk IO and refers to the estimated elapsed time, in seconds, that would be required to complete a query on a specific hardware configuration. This abstract figure does not equate to the time required to complete a query on the running instance, and should instead be treated as a relative measure.
   
 ## Remarks  
+
  Using SET QUERY_GOVERNOR_COST_LIMIT applies to the current connection only and lasts the duration of the current connection. Use the [Configure the query governor cost limit Server Configuration Option](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md)option of **sp_configure** to change the server-wide query governor cost limit value. For more information about configuring this option, see [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) and [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
  The setting of SET QUERY_GOVERNOR_COST_LIMIT is set at execute or run time and not at parse time.  
@@ -56,5 +59,3 @@ SET QUERY_GOVERNOR_COST_LIMIT value
   
 ## See Also  
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  

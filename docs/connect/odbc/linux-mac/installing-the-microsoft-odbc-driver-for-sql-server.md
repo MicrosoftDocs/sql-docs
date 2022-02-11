@@ -165,6 +165,9 @@ curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sou
 #Ubuntu 21.04
 curl https://packages.microsoft.com/config/ubuntu/21.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
+#Ubuntu 21.10
+curl https://packages.microsoft.com/config/ubuntu/21.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18

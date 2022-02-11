@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 
 [!INCLUDE [SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article contains information on best practices for managing and configuring accelerated database recovery (ADR) for SQL Server. For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](azure/azure-sql/accelerated-database-recovery).
+This article contains information on best practices for managing and configuring accelerated database recovery (ADR) for SQL Server. For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
 
 > [!NOTE]
 > In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled. If you observe issues either with storage usage, high abort transaction and other factors, please contact [Azure Support](https://azure.microsoft.com/support/options/). 

@@ -50,7 +50,7 @@ sections:
       - question: |
          What is included as part of the DML conversion? 
         answer: |
-              `INSERT`` statements in Microsoft SQL Server and `SELECT` statements in Snowflake are included as part of DML conversion.
+              `INSERT` statements in Microsoft SQL Server and `SELECT` statements in Snowflake are included as part of DML conversion.
       - question: |
          Can it also scan my environment and provide an assessment report of all the objects that need to be converted/translated? 
         answer: |

@@ -33,7 +33,7 @@ To translate this critical SQL code, customers have to either manually rewrite e
 - Significant reduced migration costs
 - Accelerated migration time from months to minutes
 
-:::image type="content" source="./media/azure-synapse-pathway-overview/azure-synapse-pathway-overview.svg" alt-text="Diagram explaining the Azure Synapse Pathway supported vendors and advantages of the Pathway migration to Azure Synapse" lightbox="./media/azure-synapse-pathway-overview/azure-synapse-pathway-overview.svg":::
+:::image type="content" source="./media/azure-synapse-pathway-overview/azure-synapse-pathway-overview.svg" alt-text="Diagram explaining the Azure Synapse Pathway supported vendors and advantages of the Pathway migration to Azure Synapse":::
 
 Synapse Pathway translates Data Definition Language (DDL) and Data Manipulation Language (DML) statements into T-SQL compliant language that is compatible with Azure Synapse SQL.
 

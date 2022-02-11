@@ -59314,6 +59314,16 @@
       "source_path": "docs/relational-databases/system-stored-procedures/sp-batch-params-transact-sql.md",
       "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/synapse-pathway/data-type-mappings-teradata-vantage.md",
+      "redirect_url": "/tools/synapse-pathway/dataazure-synapse-pathway-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/synapse-pathway/pathway-faq.md",
+      "redirect_url": "/tools/synapse-pathway/pathway-faq",
+      "redirect_document_id": false
     }
   ]
 }

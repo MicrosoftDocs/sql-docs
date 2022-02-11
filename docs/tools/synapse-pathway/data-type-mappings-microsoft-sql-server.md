@@ -62,7 +62,6 @@ The following set of links shows the source and target data type mappings for ea
 - [IBM Netezza data type mapping](data-type-mappings-ibm-netezza.md)
 - [Microsoft SQL Server data type mapping](data-type-mappings-microsoft-sql-server.md)
 - [Snowflake data type mapping](data-type-mappings-snowflake.md)
-- [Teradata Vantage data type mapping](data-type-mappings-teradata-vantage.md)
 
 ## Next steps
 

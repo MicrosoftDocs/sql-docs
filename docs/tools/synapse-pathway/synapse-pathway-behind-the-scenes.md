@@ -86,4 +86,4 @@ AS SELECT  * FROM staging.table2;
 ## Next steps
 
 - [Download Azure Synapse Pathway](synapse-pathway-download.md)
-- [FAQ](pathway-faq.md)
+- [FAQ](pathway-faq.yml)

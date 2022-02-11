@@ -29,9 +29,6 @@ Describes the data type mappings between Microsoft SQL Server and Azure Synapse 
 [Snowflake data type mapping](data-type-mappings-snowflake.md)<br/>
 Describes the data type mappings between Snowflake and Azure Synapse SQL.
 
-[Teradata Vantage data type mapping](data-type-mappings-teradata-vantage.md)<br/>
-Describes the data type mappings between Teradata Vantage and Azure Synapse SQL.
-
 ## Next steps
 
 [Download Azure Synapse Pathway](synapse-pathway-download.md)

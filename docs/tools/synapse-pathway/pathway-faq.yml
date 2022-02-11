@@ -1,0 +1,90 @@
+### YamlMime:FAQ
+metadata:
+  title: Azure Synapse Pathway FAQ
+  description: Frequently asked question for Azure Synapse Pathway
+  author: charlesfeddersen
+  ms.prod: sql
+  ms.topic: faq
+  ms.date: 02/10/2022
+  ms.author: charlesf
+  ms.technology: tools-other
+  monikerRange: "=azure-sqldw-latest"
+  ms.reviewer: 
+    
+title: Azure Synapse Pathway FAQ
+summary: In this guide, you'll find the most frequently asked questions on Azure Synapse Pathway.
+
+sections:
+  - name: General
+    questions:
+      - question: |
+         What is Azure Synapse Pathway?
+        answer: |
+              Azure Synapse Pathway is code translation tool that helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse to make it compliant with T-SQL based Azure Synapse SQL.
+      - question: |
+         How can I download Azure Synapse Pathway?
+        answer: |
+              Synapse Pathway is available to download from the [Microsoft Download Center](https://aka.ms/synapse-pathway-download).
+      - question: |
+         How much does Azure Synapse Pathway cost? 
+        answer: |
+              There is no cost associated with downloading and running your code translations using Synapse Pathway.
+      - question: |
+         What source/target pairs does Azure Synapse Pathway currently support? 
+        answer: |
+              As of version 0.5 of Synapse Pathway, the following data warehouses are included as sources:
+              - IBM Netezza
+              - Microsoft SQL Server
+              - Snowflake
+      - question: |
+         What is included as part of the code conversion? 
+        answer: |
+              Synapse Pathway version supports code translation of databases, schemas, tables, and views.
+              -
+                Source Platform: IBM Netezza
+                Statement Types Supported: Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table
+              -
+                Source Platform: Microsoft SQL Server
+                Statement Types Supported: Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table <br /> Create/Alter/Drop View
+              -
+                Source Platform: Snowflake
+                Statement Types Supported: Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Drop Table
+
+      - question: |
+         Can it also scan my environment and provide an assessment report of all the objects that need to be converted/translated? 
+        answer: |
+              In this version of Synapse Pathway, you will have to provide the link to the DDL/DML scripts that needs to be translated. Synapse Pathway will not scan your current environment to identify the objects that need to be translated.
+      - question: |
+         What information does Azure Synapse Pathway capture about my current data warehouse instance? 
+        answer: |
+              Since you can run Synapse Pathway in your local environment, there is no data captured except your name and organization, which is required when you download the MSI from the Microsoft download center.
+      - question: |
+         Where can I raise issues encountered in Azure Synapse Pathway? 
+        answer: |
+              Support for Synapse Pathway is available through the Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
+      - question: |
+         What is not included as part of the code conversion? 
+        answer: |
+              The basic DDL, DML, stored procedures, and views are part of the code conversion. Migration of complex functions present in the source code are currently not supported.
+              -
+                Source Platform: Microsoft SQL Server
+                DDL: Partial
+                DML: Partial
+                Stored Procedure: Partial
+                Views: Yes
+              -
+                Source Platform: IBM Netezza
+                DDL: Yes
+                DML: Partial
+                Stored Procedure: No
+                Views: No
+              -
+                Source Platform: Snowflake
+                DDL: Partial
+                DML: No
+                Stored Procedure: No
+                Views: Partial
+      - question: |
+         Next steps
+        answer: |
+              [Download Azure Synapse Pathway](synapse-pathway-download.md)

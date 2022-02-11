@@ -6,19 +6,20 @@ ms.author: anrampal
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual 
-ms.date: 09/09/2021
+ms.date: 02/11/2022
 monikerRange: "=azure-sqldw-latest"
 ms.custom: template-concept 
+ms.reviewer: wiassaf
 ---
 
 # Azure Synapse Pathway behind the scenes
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
-Azure Synapse Pathway’s goal is to preserve the functional intent of the original code while optimizing for Synapse SQL. Synapse Pathway uses a three-stage process for translating SQL code from a source system to Azure Synapse SQL.
+Azure Synapse Pathway's goal is to preserve the functional intent of the original code while optimizing for Synapse SQL. Synapse Pathway uses a three-stage process for translating SQL code from a source system to Azure Synapse SQL.
 
 Each of the stages preserves and augments the knowledge of the source including source-specific metadata to ensure the highest quality in translation.
 
- ![Azure Synapse Pathway.](./media/synapse-pathway-behind-the-scenes/behind-the-scene.png)
+:::image type="content" source="./media/synapse-pathway-behind-the-scenes/azure-synapse-pathway-behind-the-scenes.svg" alt-text="Diagram explaining the Azure Synapse Pathway source, translation, and output " lightbox="./media/synapse-pathway-behind-the-scenes/azure-synapse-pathway-behind-the-scenes.svg":::
 
 ## Stage 1 – Lexing and parsing
 

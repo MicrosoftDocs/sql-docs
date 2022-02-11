@@ -4,14 +4,16 @@ description: Azure Synapse Pathway is a tool to migrate a data warehouse to Azur
 author: anshul82-ms
 ms.author: anrampal
 ms.topic: overview
-ms.date: 02/10/2022
+ms.date: 02/11/2022
 ms.prod: sql
 ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
 ms.custom:
   - template-overview
   - intro-overview
+ms.reviewer: wiassaf
 ---
+
 # Azure Synapse Pathway overview
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
@@ -31,7 +33,7 @@ To translate this critical SQL code, customers have to either manually rewrite e
 - Significant reduced migration costs
 - Accelerated migration time from months to minutes
 
- ![Azure Synapse pathway overview.](./media/azure-synapse-pathway-overview/pathway-overview.png) 
+:::image type="content" source="./media/azure-synapse-pathway-overview/azure-synapse-pathway-overview.svg" alt-text="Diagram explaining the Azure Synapse Pathway supported vendors and advantages of the Pathway migration to Azure Synapse" lightbox="./media/azure-synapse-pathway-overview/azure-synapse-pathway-overview.svg":::
 
 Synapse Pathway translates Data Definition Language (DDL) and Data Manipulation Language (DML) statements into T-SQL compliant language that is compatible with Azure Synapse SQL.
 

@@ -26,7 +26,7 @@ Microsoft OLE DB Driver 19.0.0 for SQL Server is the latest general availability
 ### Version information
 
 - Release number: 19.0.0
-- Released: Feburary 15, 2022
+- Released: February 15, 2022
 
 > [!Note]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).

@@ -25,7 +25,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2186934)  
 ![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2186855)  
 
-Released: Feburary 15, 2022
+Released: February 15, 2022
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
     For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x40a)  
@@ -35,7 +35,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support TDS 8 encryption | The encryption property now includes the option for strict encryption which encrypts login packets. In addition the driver now defaults to using encrypted connections. |
+| Support TDS 8 encryption | The encryption property now includes the option for strict encryption, which encrypts PRELOGIN packets. In addition, the driver now defaults to using encrypted connections. |
 | Host Name In Certificate | The user may now specify the host name on the certificate that requires validation. |
 
 
@@ -43,7 +43,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed an issue with partial packet reads | Fixed a bug, in which rare occasions packet reads were incomplete. |
+| Partial read issue | Fixed a bug, in which on rare occasions packet reads were incomplete. |
 
 ## Previous Releases
 

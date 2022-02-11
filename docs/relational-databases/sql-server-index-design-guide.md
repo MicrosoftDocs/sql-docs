@@ -838,7 +838,7 @@ For more information about rowgroup statuses, see [sys.dm_db_column_store_row_gr
 
 Each column has some of its values in each rowgroup. These values are called **column segments**. Each rowgroup contains one column segment for every column in the table. Each column has one column segment in each rowgroup.
 
-![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
+![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.png "Column segment") 
  
 When the columnstore index compresses a rowgroup, it compresses each column segment separately. To uncompress an entire column, the columnstore index only needs to uncompress one column segment from each rowgroup. 
 

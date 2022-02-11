@@ -30,7 +30,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id  |  int|  The database of this row.  |
+|database_id  |  int|  The `database_id` of this row.  |
 |pvs_filegroup_id  |  smallint |  The filegroup that hosts PVS version store. |
 |persistent_version_store_size_kb|    bigint | The PVS size in kilobytes. This value is used to determine current space used by PVS. |
 |online_index_version_store_size_kb|    bigint | This is special version store size, in kilobytes, used during online index rebuild.|

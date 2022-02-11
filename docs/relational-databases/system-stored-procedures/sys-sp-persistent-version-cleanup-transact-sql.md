@@ -72,6 +72,15 @@ The `sys.sp_persistent_version_cleanup` stored procedure is synchronous, meaning
 
 Database Mirroring cannot be set for a database where ADR is enabled or there are still versions in the persisted version store (PVS). If ADR is disabled, run `sys.sp_persistent_version_cleanup` to clean up previous versions still in the PVS.
 
+In SQL Server 2019, the PVS cleanup process only executes for one database at a time. In Azure SQL Database and Azure SQL Managed Instance, the PVS cleanup process can execute in parallel against multiple databases in the same instance.
+
+If the PVS cleanup process is already running against the desired database, this stored procedure will be blocked and wait for completion before starting another PVS cleanup process. You can monitor the version cleaner task by looking for its process with the following sample query: 
+
+```sql
+SELECT * FROM sys.dm_exec_requests
+WHERE command LIKE '%PERSISTED_VERSION_CLEANER%';
+```
+
 ## Example
 
 To activate the PVS cleanup process manually between workloads or during maintenance windows, use:

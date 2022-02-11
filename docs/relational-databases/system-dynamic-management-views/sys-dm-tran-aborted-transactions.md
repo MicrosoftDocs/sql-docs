@@ -30,12 +30,12 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
     
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|transaction_id  |  int|  The transaction id of this row.  |
-|database_id  |  int|  The database id of this row.  |
+|transaction_id  |  int|  The `transaction_id` of the aborted transaction.  |
+|database_id  |  int|  The `database_id` of the aborted transaction.  |
 |begin_xact_lsn |   numeric(25,0) | The starting LSN of the aborted transaction. |
 |end_xact_lsn |  numeric(25,0) | The ending LSN of the aborted transaction. |
 |begin_time |   datetime  | The begin time of the aborted transaction. |
-|nest_aborted  |  bit | When 1, indicates that the transaction committed but there are portions that aborted. |
+|nest_aborted  |  bit | When 1, indicates that the transaction has a nested aborted transaction. |
 |||
   
 ## Permissions
@@ -46,7 +46,9 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
 
 ## Remarks   
 
-Unresolved, aborted transactions will be removed by the persistent version store (PVS) cleanup process. See [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshooting.md).
+The `sys.dm_tran_aborted_transactions` DMV shows all aborted transactions on the SQL Server instance. The `nest_aborted` column indicates that the transaction committed but there are portions that aborted (savepoints or nested transactions) which can block the PVS cleanup process. For more information, see [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshooting.md). 
+
+Unresolved, aborted transactions will be removed by the persistent version store (PVS) cleanup process. 
 
 ## See also
 

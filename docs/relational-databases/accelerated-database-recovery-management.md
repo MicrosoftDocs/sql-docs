@@ -11,21 +11,21 @@ helpviewer_keywords:
   - "database recovery [SQL Server]"
 author: mashamsft
 ms.author: mathoma
-ms.reviewer: kfarlee
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
+ms.reviewer: kfarlee, wiassaf
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Manage accelerated database recovery
 
-[!INCLUDE [SQL Server 2019, ASDB, ASDBMI ](../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article contains information on best practices for managing and configuring accelerated database recovery (ADR).
+This article contains information on best practices for managing and configuring accelerated database recovery (ADR) for SQL Server. For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](azure/azure-sql/accelerated-database-recovery).
 
 > [!NOTE]
 > In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], accelerated database recovery (ADR) is enabled on all databases and cannot be disabled. If you observe issues either with storage usage, high abort transaction and other factors, please contact [Azure Support](https://azure.microsoft.com/support/options/). 
 
 ## Who should consider accelerated database recovery
 
-- ADR is recommended for workloads with long running transactions.
+- ADR is recommended for workloads with long running transactions. 
 
 - ADR is recommended for workloads that have seen cases where active transactions are causing the transaction log to grow significantly.  
 
@@ -40,7 +40,7 @@ This article contains information on best practices for managing and configuring
    - To activate the PVS cleanup process manually between workloads or during maintenance windows, use `sys.sp_persistent_version_cleanup`. For more information, see [sys.sp_persistent_version_cleanup](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md). 
 
    - If the PVS cleanup process is running for a long period time, you may find that the count of aborted transactions will grow which will also cause the PVS size to increase. Leverage the `sys.dm_tran_aborted_transactions` DMV to report the aborted transaction count, and leverage `sys.dm_tran_persistent_version_store_stats` to report the cleanup start/end times along with the PVS size. For more information, see [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md). For more troubleshooting options, see [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md).
-    
+      
 - If your application performs many non-batched, incremental updates, such as updating a record every time there is a row accessed/inserted, your workload may not be optimal for ADR. Consider rewriting the application queries to batch updates, where possible, until the end of the command and reduce a high number of small update transactions.
 
 ## Best practices for accelerated database recovery
@@ -60,6 +60,8 @@ This section contains guidance and recommendations for ADR.
    - A table has very large number of partitions/indexes that are modified. For example, a DROP TABLE operation on such table would require a large reservation of SLOG memory, which would delay truncation of the transaction log and delay undo/redo operations. The workaround can be drop the indexes individually and gradually, then drop the table. For more information on the SLOG, see [ADR recovery components](accelerated-database-recovery-concepts.md#adr-recovery-components).
 
 - Prevent or reduce unnecessary aborted situations. A high abort rate will put pressure on the PVS cleaner and lower ADR performance. The aborts may come from a high rate of deadlocks, duplicate keys, or other constraint violations.  
+
+    - The `sys.dm_tran_aborted_transactions` DMV shows all aborted transactions on the SQL Server instance. The `nested_abort` column indicates that the transaction committed but there are portions that aborted (savepoints or nested transactions) which can block the PVS cleanup process. For more information, see [sys.dm_tran_aborted_transactions (Transact-SQL)](system-dynamic-management-views/sys-dm-tran-aborted-transactions.md). 
 
 ## Enabling and controlling ADR
 

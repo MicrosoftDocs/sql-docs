@@ -1,7 +1,7 @@
 ---
 description: "Troubleshoot accelerated database recovery"
 title: "Troubleshoot accelerated database recovery"
-ms.date: "01/20/2022"
+ms.date: "02/11/2022"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -24,7 +24,7 @@ This article helps administrators diagnose issues with accelerated database reco
 
 Leverage the `sys.dm_tran_persistent_version_store_stats` DMV to identify if the size of the PVS is growing larger than expected, and then to determine which factor is preventing persistent version store (PVS) cleanup.
 
-The sample query shows all information about the cleanup processes and shows the current PVS size, oldest aborted `transaction_id`, and other details:
+The sample query shows all information about the cleanup processes and shows the current PVS size, oldest aborted transaction, and other details:
 
 ```sql
 SELECT
@@ -41,7 +41,6 @@ SELECT
  asdt.elapsed_time_seconds AS active_transaction_elapsed_time_seconds,
  pvss.pvs_off_row_page_skipped_low_water_mark,
  pvss.pvs_off_row_page_skipped_min_useful_xts
-
 FROM sys.dm_tran_persistent_version_store_stats AS pvss
 CROSS APPLY (SELECT SUM(size*8.) AS total_db_size_kb FROM sys.database_files WHERE [state] = 0 and [type] = 0 ) AS df 
 LEFT JOIN sys.dm_tran_database_transactions AS dt
@@ -87,6 +86,8 @@ WHERE pvss.database_id = DB_ID();
     
     With the session(s) identified, consider killing the session, if allowed. Also, review the application to determine the nature of the problematic active transaction(s).
 
+    For more information on troubleshooting long-running queries, see [Troubleshooting slow running queries in SQL Server](/troubleshoot/sql/performance/troubleshoot-slow-running-queries) or [Identify query performance issues in Azure SQL](/azure/azure-sql/identify-query-performance-issues).
+
 3. The persistent version cleanup may be held up due to long active snapshot scan(s). In the original troubleshooting query earlier in this article, the `pvs_off_row_page_skipped_min_useful_xts` value shows the number of pages skipped for reclaim due to a long snapshot scan. If `pvs_off_row_page_skipped_min_useful_xts` shows a larger value than normal, it means there is a long snapshot scan preventing PVS cleanup. This sample query can be used to decide which is the problematic session:
 
     ```sql
@@ -100,7 +101,7 @@ WHERE pvss.database_id = DB_ID();
     
     The solution is same as long active transaction, consider killing the session, if allowed. Also, review the application to determine the nature of the problematic active snapshot scan. 
 
-4. When the PVS size is growing due to long running transactions on primary or secondary replicas, investigate the long running queries and address the bottleneck. The `sys.dm_tran_aborted_transactions` DMV shows all aborted transactions. The `is_nest_abort` column indicates that the transaction was committed, but there are portions that aborted (savepoints/nested transactions) which can block the PVS cleanup process. 
+4. When the PVS size is growing due to long running transactions on primary or secondary replicas, investigate the long running queries and address the bottleneck. The `sys.dm_tran_aborted_transactions` DMV shows all aborted transactions. The `is_nest_abort` column indicates that the transaction was committed, but there are portions that aborted (savepoints or nested transactions) which can block the PVS cleanup process. 
 
 5. If the database is part of an availability group, check the `secondary_low_water_mark`. This is the same as the `low_water_mark_for_ghosts` reported by `sys.dm_hadr_database_replica_states`. Query `sys.dm_hadr_database_replica_states` to see whether one of the replicas is holding this value behind, since this will also prevent PVS cleanup. The version cleanup is held up due to read queries on readable secondaries. Both SQL Server on-premise and Azure SQL DB support readable secondaries. In the `sys.dm_tran_persistent_version_store_stats` DMV, the `pvs_off_row_page_skipped_low_water_mark` can also give indications of a secondary replica delay. 
 

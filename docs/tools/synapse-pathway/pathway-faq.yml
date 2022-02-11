@@ -37,7 +37,7 @@ sections:
               - Microsoft SQL Server
               - Snowflake
       - question: |
-         What is included as part of the code conversion? 
+         What is included as part of the DDL conversion? 
         answer: |
               Synapse Pathway version supports code translation of databases, schemas, tables, and views.
               
@@ -45,7 +45,7 @@ sections:
               |--|--|
               | IBM Netezza | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
               | Microsoft SQL Server | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table <br /> Create/Alter/Drop View|
-              | Snowflake | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Drop Table |
+              | Snowflake |  Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Drop Table |
 
       - question: |
          Can it also scan my environment and provide an assessment report of all the objects that need to be converted/translated? 
@@ -54,21 +54,22 @@ sections:
       - question: |
          What information does Azure Synapse Pathway capture about my current data warehouse instance? 
         answer: |
-              Since you can run Synapse Pathway in your local environment, there is no data captured except your name and organization, which is required when you download the MSI from the Microsoft download center.
+              Since you can run Synapse Pathway in your local environment, there's no data captured except your name and organization, which is required when you download the MSI from the Microsoft download center.
       - question: |
          Where can I raise issues encountered in Azure Synapse Pathway? 
         answer: |
               Support for Synapse Pathway is available through the Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
       - question: |
-         What is not included as part of the code conversion? 
+         What isn't included as part of the code conversion? 
         answer: |
               The basic DDL, DML, stored procedures, and views are part of the code conversion. Migration of complex functions in the source code is currently not supported.
 
               |Source Platform | DDL | DML | Stored Procedure | Views |
               |-------------------|:------------------|:-------------------|:------------------|:-------------------|
-              |IBM Netezza | Yes | Partial | No | No |
               |Microsoft SQL Server | Partial | Partial | Partial | Yes |
+              |IBM Netezza | Yes | Partial | No | No |
               |Snowflake | Partial | No | No | Partial |
+              
       - question: |
          Next steps
         answer: |

@@ -4,7 +4,7 @@ description: data type mappings for IBM Netezza within Azure Synapse Pathway
 author: charlesfeddersen
 ms.author: charlesf
 ms.topic: overview
-ms.date: 07/15/2021
+ms.date: 02/10/2022
 ms.prod: sql
 ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"

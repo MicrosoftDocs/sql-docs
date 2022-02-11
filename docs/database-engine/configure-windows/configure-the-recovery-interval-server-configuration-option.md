@@ -100,7 +100,7 @@ GO
   
  For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Follow Up: After you configure the recovery internal option  
+##  <a name="FollowUp"></a> Follow Up: After you configure the recovery interval option  
  The setting takes effect immediately without restarting the server.  
   
 ## See Also  

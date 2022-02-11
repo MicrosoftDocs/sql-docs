@@ -66,7 +66,7 @@ A column segment is a column of data from within the rowgroup.
 -   Each rowgroup contains one column segment for every column in the table.  
 -   Each column segment is compressed together and stored on physical media.  
   
-![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.png "Column segment")  
   
 #### Clustered columnstore index
 A clustered columnstore index is the physical storage for the entire table.    

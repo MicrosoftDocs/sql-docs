@@ -28,6 +28,8 @@ It is not typically necessary to start the PVS cleanup process manually using `s
 
 Currently the version cleaner is a single threaded background task.
 
+For more information on ADR on Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
+
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
 ## Syntax  
@@ -100,3 +102,4 @@ EXEC sys.sp_persistent_version_cleanup [WideWorldImporters];
 - [Accelerated database recovery](../accelerated-database-recovery-concepts.md)
 - [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshooting.md)
 - [Manage accelerated database recovery](../accelerated-database-recovery-management.md)
+- [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery)

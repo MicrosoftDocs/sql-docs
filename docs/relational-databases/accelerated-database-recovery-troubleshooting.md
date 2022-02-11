@@ -140,3 +140,4 @@ EXEC sys.sp_persistent_version_cleanup [WideWorldImporters];
 
 - [Accelerated database recovery concepts](accelerated-database-recovery-concepts.md)
 - [Manage accelerated database recovery](accelerated-database-recovery-management.md)
+- [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery)

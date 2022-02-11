@@ -152,3 +152,4 @@ Changing the location of the PVS is a three-step process.
 
 - [Accelerated database recovery concepts](accelerated-database-recovery-concepts.md)
 - [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md)
+- [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery)

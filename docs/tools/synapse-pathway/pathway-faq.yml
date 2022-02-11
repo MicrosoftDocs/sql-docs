@@ -63,7 +63,7 @@ sections:
          Where can I raise issues encountered in Azure Synapse Pathway? 
         answer: |
               Support for Synapse Pathway is available through the Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
-      - question: |
+      - question: |gi
          Is stored procedure creation supported as part of DML conversion? 
         answer: |
               Creation of stored procedures and statistics is supported for Microsoft SQL Server. Some complex statements are not supported.       

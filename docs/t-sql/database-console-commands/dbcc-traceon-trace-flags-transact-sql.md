@@ -25,6 +25,7 @@ ms.author: "pelopes"
 
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
+TEST TEST TEST
 Trace flags are used to set specific server characteristics or to alter a particular behavior. For example, trace flag 3226 is a commonly used startup trace flag which suppresses successful backup messages in the error log. Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems, but they may also be recommended by Microsoft Support to address behavior that is negatively impacting a specific workload. All documented trace flags and those recommended by Microsoft Support are fully supported in a production environment when used as directed. Note that trace flags in this list may have additional considerations regarding their particular usage, so it is advisable to carefully review all the recommendations given here and/or by your support engineer. Also, as with any configuration change in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it is always best to thoroughly test the flag in a non-production environment before deploying.
 
 ## Remarks  

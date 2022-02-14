@@ -20,6 +20,8 @@ ms.author: v-davidengel
 
 The ODBC Driver 18.0 allows users to send long data types as max data types using the keyword `LongAsMax` to toggle the setting on or off. When enabled, the SQL types SQL_LONGVARCHAR, SQL_LONGVARBINARY, and SQL_LONGWVARCHAR will be sent as varchar(max), varbinary(max), and nvarchar(max) instead of text, image, and ntext respectively.
 
+The connection encryption defaults have changed. The default value of Encrypt is now Yes, and the new keywords Optional and Mandatory have been introduced as synonyms for No and Yes, respectively. For connecting to SQL Server 2022 using the new TDS 8.0 protocol, the Strict mode (`Encrypt=Strict`) has been added. In this mode, the server certificate is always verified (`TrustServerCertificate` is ignored). A new keyword, `HostnameInCertificate`, can be used to specify the expected hostname found in the certificate if it differs from the specified server. `HostnameInCertificate` is usable in all encryption modes and is also applicable if the server-side `Force Protocol Encryption` option is enabled, which will cause the driver to verify the certificate in Optional or Mandatory modes unless disabled using `TrustServerCertificate`.
+
 ## Microsoft ODBC Driver 17.4 for SQL Server on Windows
 
 The ODBC Driver 17.4 includes the ability to adjust TCP Keep-Alive settings. They can be modified by adding values to the Driver or DSN registry keys. The keys are located in `HKEY_LOCAL_MACHINE\Software\ODBC\` for system data sources, and in  `HKEY_CURRENT_USER\Software\ODBC\` for user data sources. For DSN, the values need to be added to `...\Software\ODBC\ODBC.INI\<DSN Name>` and for the Driver to `...\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`.

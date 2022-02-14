@@ -21,7 +21,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 18.0 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Fix UI issues where text was cutoff and position of items was off.
+- Fix UI issues where text was cut off and position of items was off.
 - Fix issue with ADAL Interactive login where attempting to login after closing the window of the first failure would automatically succeed in an AADJ environment
 - Fixed use of XADTC with SQL MI
 - Fixed loss of AAD authentication mode when reconnecting with idle connection.

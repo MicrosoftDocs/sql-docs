@@ -45,7 +45,7 @@ curl -O https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
 gpg --verify msodbcsql18_18.0.1.1-1_amd64.sig msodbcsql18_18.0.1.1-1_amd64.apk
-gpg --verify mssql-tools_18.0.1.1-1_amd64.sig mssql-tools_18.0.1.1-1_amd64.apk
+gpg --verify mssql-tools18_18.0.1.1-1_amd64.sig mssql-tools_18.0.1.1-1_amd64.apk
 
 
 #Install the package(s)
@@ -71,6 +71,9 @@ curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources
 #Debian 10
 curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
+#Debian 11	
+curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
@@ -85,7 +88,7 @@ sudo apt-get install -y libgssapi-krb5-2
 ```
 
 > [!NOTE]
-> You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
+> You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql18 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
 
 ### <a id="redhat18"></a> Red Hat Enterprise Server and Oracle Linux
 
@@ -180,7 +183,7 @@ sudo apt-get install -y unixodbc-dev
 ```
 
 > [!NOTE]
-> You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
+> You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql18 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
 
 ## Previous versions
 

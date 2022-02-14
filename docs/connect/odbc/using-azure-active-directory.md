@@ -67,7 +67,7 @@ It's possible to use the new Azure AD authentication options when creating or ed
 ![The DSN creation and editing screen with Azure Active Directory Interactive authentication selected.](windows/create-dsn-ad-interactive.png)
 
 > [!NOTE]
-> As of driver version 18.0, the interactive authentication behavior has changed. Users will always be prompted for credentials unless the driver has a valid access token cached. This change prevents users on Azure Active Directory joined devices from skipping the prompt and automatically signing in when using `ActiveDirectoryInteractive` authentication. 
+> As of driver version 18.0, the interactive authentication behavior has changed. Users will always be prompted for credentials unless the driver has a valid access token cached. This change prevents users on Azure Active Directory joined devices from skipping the prompt and automatically signing in with cached credentials when using `ActiveDirectoryInteractive` authentication. 
 
 `Authentication=SqlPassword` for username/password authentication to SQL Server (Azure or otherwise)
 

@@ -2,7 +2,7 @@
 title: Features of the Microsoft ODBC Driver
 description: Learn about the different features supported by the Microsoft ODBC Driver for SQL Server on Windows.
 ms.custom: ""
-ms.date: 07/23/2021
+ms.date: 02/15/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -15,6 +15,10 @@ ms.author: v-davidengel
 # Features of the Microsoft ODBC Driver for SQL Server on Windows
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## Microsoft ODBC Driver 18.0 for SQL Server on Windows
+
+The ODBC Driver 18.0 allows users to send long data types as max data types using the keyword `LongAsMax` to toggle the setting on or off. When enabled, the SQL types SQL_LONGVARCHAR, SQL_LONGVARBINARY, and SQL_LONGWVARCHAR will be sent as varchar(max), varbinary(max), and nvarchar(max) instead of text, image, and ntext respectively.
 
 ## Microsoft ODBC Driver 17.4 for SQL Server on Windows
 

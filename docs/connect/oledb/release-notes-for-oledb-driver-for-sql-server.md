@@ -45,7 +45,6 @@ If you need to download the installer in a language other than the one detected 
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Partial read issue | Fixed a bug, in which on rare occasions packet reads were incomplete. |
 
 ## Previous Releases
 

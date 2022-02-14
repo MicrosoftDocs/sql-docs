@@ -36,15 +36,13 @@ If you need to download the installer in a language other than the one detected 
 | Feature added | Details |
 | :------------ | :------ |
 | TDS 8.0 support | The encryption connection string keyword/property now includes the option for strict encryption, which encrypts the whole connection (including PRELOGIN packets). In addition, the driver now defaults to using encrypted connections. |
-
 | Support for the `Host Name In Certificate` connection string keyword, and the `SSPROP_INIT_HOST_NAME_CERTIFICATE` initialization property. | The user may now specify the host name to be used when validating the SQL Server TLS/SSL certificate. |
-
-
 
 ### Bugs fixed
 
 | Bug fixed | Details |
 | :-------- | :------ |
+| N/A | N/A |
 
 ## Previous Releases
 

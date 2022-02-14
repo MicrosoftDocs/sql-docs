@@ -193,7 +193,7 @@ These logical consistency checks cross check the internal index table of the ind
 DBCC CHECKDB uses an internal database snapshot for the transactional consistency needed to perform these checks. This prevents blocking and concurrency problems when these commands are executed. For more information, see [View the Size of the Sparse File of a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) and the DBCC Internal Database Snapshot Usage section in [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md). If a snapshot cannot be created, or TABLOCK is specified, DBCC CHECKDB acquires locks to obtain the required consistency. In this case, an exclusive database lock is required to perform the allocation checks, and shared table locks are required to perform the table checks.
 DBCC CHECKDB fails when run against master if an internal database snapshot cannot be created.
 Running DBCC CHECKDB against tempdb does not perform any allocation or catalog checks and must acquire shared table locks to perform table checks. This is because, for performance reasons, database snapshots are not available on tempdb. This means that the required transactional consistency cannot be obtained.
-In Microsoft SQL Server 2012 or an earlier version of SQL Server, you may encounter error messages when you run the DBCC CHECKDB command for a database that has its files located on an ReFS-formatted volume. For more information, see Knowledge Base article 2974455: [DBCC CHECKDB behavior when the SQL Server database is located on an ReFS volume.](https://support.microsoft.com/kb/2974455).
+
 
 ### How DBCC CHECKDB creates an internal snapshot database beginning with SQL Server 2014
 
@@ -211,7 +211,7 @@ In Microsoft SQL Server 2012 or an earlier version of SQL Server, you may encoun
 The new files are visible by using ordinary file utilities such as Windows Explorer.
 
 > [!NOTE]
-> In SQL Server versions 2012 and earlier named [file streams](/windows/win32/fileio/file-streams) were used to create the internal snapshot files. Named file streams are not visible by using ordinary file utilities such as Windows Explorer.
+> In SQL Server versions 2012 and earlier, named [file streams](/windows/win32/fileio/file-streams) were used instead to create the internal snapshot files. Named file streams are not visible by using ordinary file utilities such as Windows Explorer. Therefore, in SQL Server 2012 or an earlier version, you may encounter error messages 7926 and 5030 when you run the DBCC CHECKDB command for database files located on an [ReFS](/windows-server/storage/refs/refs-overview)-formatted volume. This is because file streams cannot be created on [Resilient File System (RefS)](/windows-server/storage/refs/refs-overview). For more information, see Knowledge Base article 2974455: [DBCC CHECKDB behavior when the SQL Server database is located on an ReFS volume.](https://support.microsoft.com/kb/2974455).
     
 ## Checking and Repairing FILESTREAM Data    
 When FILESTREAM is enabled for a database and table, you can optionally store **varbinary(max)** binary large objects (BLOBs) in the file system. When using DBCC CHECKDB on a database that stores BLOBs in the file system, DBCC checks link-level consistency between the file system and database.

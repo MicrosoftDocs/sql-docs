@@ -25,7 +25,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fix issue with Active Directory Interactive login where attempting to login after closing the window of the first failure would automatically succeed if cached credentials were available.
 - Fixed use of XADTC with Azure SQL Managed Instance.
 - Fixed loss of AAD authentication mode when reconnecting with idle connection.
-- Fix an issue with federated authentication when using PingFed
+- Fix an issue with federated authentication when using PingFed.
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.8 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

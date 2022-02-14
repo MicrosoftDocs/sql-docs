@@ -52,7 +52,7 @@ This architecture provides the following functionality mapping:
 |Big Data Clusters Controller | Provides management and security for the cluster. It contains the control service, the configuration store, and other cluster-level services such as Kibana, Grafana, and Elastic Search. |
 |Compute Pool | Provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute pool are divided into SQL Compute instances for specific processing tasks. This component also provides Data Virtualization using PolyBase to query external data sources without moving or copying the data.|
 |Data Pool | Provides data persistence for the cluster. The data pool consists of one or more pods running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs.|
-|Storage Pool | The storage pool consists of storage pool pods comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Server big data cluster are members of an HDFS cluster.|
+|Storage Pool | The storage pool consists of storage pool pods comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a big data cluster are members of an HDFS cluster.|
 | App Pool | Enables the deployment of applications on a big data cluster by providing interfaces to create, manage, and run applications.|
 |||
 
@@ -189,13 +189,13 @@ SQL Server 2022 (either on-premises, in-cloud, or both) contains a new feature t
 
 For your operational and even much of your analytic workloads, SQL Server can handle massive database sizes - for more information on maximum capacity specifications for SQL Server, see [Compute capacity limits by edition of SQL Server]()../sql-server/maximum-capacity-specifications-for-sql-server.md). Using multiple SQL Server Instances on separate machines with partitioned T-SQL requests allow a scale-out environment for applications. 
 
-Using PolyBase enables your SQL Server instance to query data with T-SQL directly from SQL Server, Oracle, Teradata, MongoDB, commercial Hadoop clusters, and Cosmos DB without separately installing client connection software. You can also use the generic ODBC connector on a Microsoft Windows-based Instance to connect to additional providers using third-party ODBC drivers. PolyBase allows T-SQL queries to join the data from external sources to relational tables in an instance of SQL Server. This allows the data to stay in its original location and format. You can virtualize the external data through the SQL Server instance, so that it can be queried in place like any other table in SQL Server. SQL Server 2022 also allows ad-hoc queries and backup/restore over Object-Store (using the S3-API) hardware or software storage options.
+Using PolyBase enables your SQL Server instance to query data with T-SQL directly from SQL Server, Oracle, Teradata, MongoDB, and Cosmos DB without separately installing client connection software. You can also use the generic ODBC connector on a Microsoft Windows-based Instance to connect to additional providers using third-party ODBC drivers. PolyBase allows T-SQL queries to join the data from external sources to relational tables in an instance of SQL Server. This allows the data to stay in its original location and format. You can virtualize the external data through the SQL Server instance, so that it can be queried in place like any other table in SQL Server. SQL Server 2022 also allows ad-hoc queries and backup/restore over Object-Store (using the S3-API) hardware or software storage options.
 
 Two general reference architectures are to use SQL Server on a stand-alone server for structured data queries and a separate installation of a scale-out non-relational system (such as Apache Hadoop or Apache Spark) for on-premises Link to Synapse, and the other option is to use a set of containers in a Kubernetes cluster with all components for your solution.
 
 ### Microsoft SQL Server on Windows, Apache Spark, and Object Storage On-Premises
 
-You can install SQL Server on Windows or Linux, and scale up the hardware architecture, leveraging the SQL Server 2022 object-storage query capability and the PolyBase Feature to enable queries across all data in your system.
+You can install SQL Server on Windows or Linux, and scale up the hardware architecture, leveraging the SQL Server 2022 object-storage query capability and the PolyBase feature to enable queries across all data in your system.
 
 Installing and configuring a scale-out platform such as Apache Hadoop or Apache Spark allows for querying non-relational data at scale. Using a central set of Object-Storage systems that support the S3-API allows both SQL Server 2022 and Spark to access the same set of data across all systems.
 

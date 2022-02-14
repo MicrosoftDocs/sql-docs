@@ -193,7 +193,25 @@ These logical consistency checks cross check the internal index table of the ind
 DBCC CHECKDB uses an internal database snapshot for the transactional consistency needed to perform these checks. This prevents blocking and concurrency problems when these commands are executed. For more information, see [View the Size of the Sparse File of a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) and the DBCC Internal Database Snapshot Usage section in [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md). If a snapshot cannot be created, or TABLOCK is specified, DBCC CHECKDB acquires locks to obtain the required consistency. In this case, an exclusive database lock is required to perform the allocation checks, and shared table locks are required to perform the table checks.
 DBCC CHECKDB fails when run against master if an internal database snapshot cannot be created.
 Running DBCC CHECKDB against tempdb does not perform any allocation or catalog checks and must acquire shared table locks to perform table checks. This is because, for performance reasons, database snapshots are not available on tempdb. This means that the required transactional consistency cannot be obtained.
-In Microsoft SQL Server 2012 or an earlier version of SQL Server, you may encounter error messages when you run the DBCC CHECKDB command for a database that has its files located on an ReFS-formatted volume. For more information, see Knowledge Base article 2974455: [DBCC CHECKDB behavior when the SQL Server database is located on an ReFS volume.](https://support.microsoft.com/kb/2974455)    
+In Microsoft SQL Server 2012 or an earlier version of SQL Server, you may encounter error messages when you run the DBCC CHECKDB command for a database that has its files located on an ReFS-formatted volume. For more information, see Knowledge Base article 2974455: [DBCC CHECKDB behavior when the SQL Server database is located on an ReFS volume.](https://support.microsoft.com/kb/2974455).
+
+### How DBCC CHECKDB creates an internal snapshot database beginning with SQL Server 2014
+
+1. DBCC CHECKDB creates an internal snapshot database.
+
+1. The internal snapshot database is created by using physical files. For example, for a database with database_ID = 10 that has three files `E:\Data\my_DB.mdf`, `E:\Data\my_DB.ndf`, and `E:\Data\my_DB.ldf`, the internal snapshot database will be created using `E:\Data\my_DB.mdf_MSSQL_DBCC10` and `E:\Data\my_DB.ndf_MSSQL_DBCC10` files. Note that the new files are created in the same folder using the naming convention <filename.extension>_MSSQL_DBCC<database_id_of_snapshot>. No sparse file is created for the transaction log.
+
+1. The new files are marked as [sparse files](/windows/win32/fileio/sparse-files) at the file system level. The *Size on Disk* used by the new files will increase based on how much data is updated in the source database during the DBCC CHECKDB command. The *Size* of the new files will be the same file as the .mdf or .ndf file.
+
+1. The new files are deleted at the end of DBCC CHECKDB processing. These sparse files that are created by DBCC CHECKDB have the "Delete on Close" attributes set.
+
+> [!WARNING]
+> If the operating system encounters an unexpected shutdown while the DBCC CHECKDB command is in progress, then these files will not be cleaned up. They will take up space, and can potentially cause failures on future DBCC CHECKDB executions. In that case, you can delete these new files after you confirm that there is no DBCC CHECKDB command currently being executed.
+
+The new files are visible by using ordinary file utilities such as Windows Explorer.
+
+> [!NOTE]
+> In SQL Server versions 2012 and earlier named [file streams](/windows/win32/fileio/file-streams) were used to create the internal snapshot files. Named file streams are not visible by using ordinary file utilities such as Windows Explorer.
     
 ## Checking and Repairing FILESTREAM Data    
 When FILESTREAM is enabled for a database and table, you can optionally store **varbinary(max)** binary large objects (BLOBs) in the file system. When using DBCC CHECKDB on a database that stores BLOBs in the file system, DBCC checks link-level consistency between the file system and database.

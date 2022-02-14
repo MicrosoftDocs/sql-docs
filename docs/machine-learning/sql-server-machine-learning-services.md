@@ -6,8 +6,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/28/2021
 ms.topic: overview
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ms.custom:
   - intro-overview

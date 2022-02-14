@@ -15,7 +15,13 @@ ms.author: alexiva
 # What's New in SSMA for MySQL (MySQLToSql)
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
+## SSMA v8.24
 
+The v8.24 release of SSMA for MySQL contains the following changes:
+
+* Add support for YEAR datatype
+* Improve conversion of comment styles
+* Improve naming for "Save As" statements 
 
 ## SSMA v8.23
 

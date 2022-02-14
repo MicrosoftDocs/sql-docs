@@ -24,7 +24,9 @@ Specifically, Microsoft does not send any of the following types of information 
 
 The following sample scenario includes feature usage information that helps improve the product.
 
-SQL Server 2017 supports columnstore indexes to enable fast analytics scenarios. Columnstore indexes combine a traditional "B-tree" index structure for newly inserted data with a special column-oriented compressed structure to compress data and speed query execution. The product contains heuristics to migrate data from the B-tree structure to the compressed structure in the background, thereby speeding up future query results.
+SQL Server 2017 and later support columnstore indexes to enable fast analytics scenarios. Columnstore indexes combine a traditional B-tree index structure for newly inserted data with a special column-oriented compressed structure to compress data and speed query execution. The product contains heuristics to migrate data from the B-tree structure to the compressed structure in the background, thereby speeding up future query results.
+
+[!INCLUDE [sql-b-tree](../includes/sql-b-tree.md)]
 
 If the background operation does not keep pace with the rate at which data is inserted, query performance may be slower than expected. To improve the product, Microsoft collects information about how well SQL Server is keeping up with the automatic data compression process. The product team uses this information to fine-tune the frequency and parallelism of the code that performs compression. This query is run occasionally to collect this information so that we (Microsoft) can evaluate the data movement rate. This helps us optimize the product heuristics.  
 

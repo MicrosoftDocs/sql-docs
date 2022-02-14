@@ -8,6 +8,8 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "dynamic management objects [Azure SQL Database]"
   - "geo-replication"

@@ -8,8 +8,6 @@ ms.technology: tools-other
 ms.topic: conceptual
 f1_keywords:
   - sql13.swb.registerserver.general.analysisservices.f1
-  - SQL13.SWB.REGISTERSERVER.GENERAL.ANALYSISSERVICES.F1
-ms.assetid: 88e0f096-d746-4b7d-a5a4-73c5dc139f30
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
@@ -19,7 +17,7 @@ monikerRange: ">=sql-server-2016"
 
 # Analysis Server &lt;server&gt; (SQL Server Configuration Manager)
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This is the service that supports Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.
 

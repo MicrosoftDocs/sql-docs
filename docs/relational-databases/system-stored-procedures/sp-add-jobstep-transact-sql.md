@@ -6,6 +6,8 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_add_jobstep_TSQL"
   - "sp_add_jobstep"

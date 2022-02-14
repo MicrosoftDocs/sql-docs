@@ -4,8 +4,8 @@
 title: "clr_math: clr_math" 
 description: "Default .NET math." 
 keywords: "neural network, math, clr" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

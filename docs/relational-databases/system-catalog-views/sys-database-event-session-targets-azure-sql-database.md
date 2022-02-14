@@ -8,6 +8,8 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 author: WilliamDAssafMSFT
 ms.author: wiassaf

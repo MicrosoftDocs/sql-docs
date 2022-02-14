@@ -1,44 +1,39 @@
 ---
+title: sp_check_dynamic_filters (Transact-SQL)
 description: "sp_check_dynamic_filters (Transact-SQL)"
-title: "sp_check_dynamic_filters (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
 f1_keywords: 
   - "dynamic_filters_TSQL"
-  - "sp_check_TSQL"
-  - "check"
   - "sp_check_dynamic filter"
-  - "check_TSQL"
-  - "filters_TSQL"
   - "check_dynamic_filters_TSQL"
   - "dynamic filters"
-  - "filters"
   - "check dynamic filters"
   - "sp_check_dynamic filter_TSQL"
-  - "sp_check_for_sync_trigger_TSQL"
-  - "sp_check"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "sp_check_dynamic_filters"
-ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "03/06/2017"
 ---
+
 # sp_check_dynamic_filters (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Displays information on parameterized row filter properties for a publication, in particular the functions used to generate a filtered data partition for a publication and whether the publication qualifies for using precomputed partitions. This stored procedure is executed at the Publisher on the publication database.  
+Displays information on parameterized row filter properties for a publication, in particular the functions used to generate a filtered data partition for a publication and whether the publication qualifies for using precomputed partitions. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 sp_check_dynamic_filters [ @publication = ] 'publication'  
 ```  
   

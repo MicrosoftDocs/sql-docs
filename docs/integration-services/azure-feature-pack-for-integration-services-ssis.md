@@ -189,6 +189,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 ## Release Notes
 
+### Version 1.21.0
+
+#### Improvements
+
+1. Upgraded log4j from version 1.2.17 to 2.17.1.
+
 ### Version 1.20.0
 
 #### Improvements

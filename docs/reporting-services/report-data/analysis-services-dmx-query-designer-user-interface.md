@@ -8,9 +8,6 @@ ms.technology: report-data
 
 
 ms.topic: conceptual
-f1_keywords: 
-  - "10012"
-  - "sql13.rtp.rptdesigner.dataview.asquerydesigner.f1"
 helpviewer_keywords: 
   - "Analysis Services [DMX]"
   - "DMX [Analysis Services], user interface"

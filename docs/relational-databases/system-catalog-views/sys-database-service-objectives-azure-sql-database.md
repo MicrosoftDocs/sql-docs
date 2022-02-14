@@ -7,6 +7,8 @@ ms.service: sql-database
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 keywords: 
   - "elastic pool"
   - "elastic pool, management"

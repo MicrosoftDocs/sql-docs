@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 11/4/2021
+ms.date: 1/25/2022
 ---
 
 # SqlPackage.exe
@@ -183,6 +183,8 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |DropPermissionsNotInSource=(BOOLEAN)| | x | | | x | x |
 |DropRoleMembersNotInSource=(BOOLEAN)| | x | | | x | x |
 |DropStatisticsNotInSource=(BOOLEAN 'True')| | x | | | x | x |
+|EnclaveAttestationProtocol=(STRING)| | x | | | | |
+|EnclaveAttestationUrl=(STRING)| | x | | | | |
 |ExcludeObjectType=(STRING)| | x | | | x | x |
 |ExcludeObjectTypes=(STRING)| | x | | | x | x |
 |ExtractAllTableData=(BOOLEAN)| x | | | | | |

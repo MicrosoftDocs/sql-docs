@@ -4,8 +4,8 @@
 title: "sgd_optimizer: sgd_optimizer" 
 description: "Stochastic gradient descent optimizer." 
 keywords: "optimizer, sgd" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

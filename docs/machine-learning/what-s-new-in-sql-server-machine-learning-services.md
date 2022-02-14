@@ -4,8 +4,8 @@ titleSuffix:
 description: New feature announcements for each release of SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.date: 11/17/2020
 ms.topic: overview
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom:
   - sqlseattle
   - intro-whats-new

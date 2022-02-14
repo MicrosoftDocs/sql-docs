@@ -71,19 +71,19 @@ how to use them.
 This folder can be found at the following path:
 
 ```powershell
-$HOME/.azuredatastudio/extensions/ms-vscode.PowerShell-<version>/examples
+$HOME/.azuredatastudio/extensions/microsoft.powershell-<version>/examples
 ```
 
 or if you're using the preview version of the extension
 
  ```powershell
-$HOME/.azuredatastudio/extensions/ms-vscode.powershell-preview-<version>/examples
+$HOME/.azuredatastudio/extensions/microsoft.powershell-preview-<version>/examples
 ```
 
 To open/view the extension's examples in Azure Data Studio, run the following code from your PowerShell command prompt:
 
 ```powershell
-azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\ms-vscode.PowerShell-*\examples)[-1]
+azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\microsoft.powershell-*\examples)[-1]
 ```
 
 ### Creating and opening files

@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "04/29/2020"
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "sql13.tsqlref.f1"
   - "devlang-tsql"

@@ -5,8 +5,8 @@ description: In this four-part tutorial series, you'll develop a model to perfor
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: garye, davidph
 ms.date: 05/26/2020
 ms.custom: seo-lt-2019

@@ -4,8 +4,8 @@
 title: "gpu_math: gpu_math" 
 description: "NVidia CUDA implementation." 
 keywords: "neural network, math, gpu" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

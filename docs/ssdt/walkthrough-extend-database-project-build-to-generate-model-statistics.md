@@ -474,11 +474,14 @@ You can do this in one of two ways:
 -   You can manually modify the .sqlproj file to add the required arguments. You might choose to do this if you do not intend to reuse the build contributor across a large number of projects. If you choose this option, add the following statements to the .sqlproj file after the first Import node in the file  
   
     ```  
-    /// <PropertyGroup>  
-    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
-    ///         $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy="name";  
-    ///     </ContributorArguments>  
-    /// <PropertyGroup>  
+    <PropertyGroup>  
+        <BuildContributors>  
+            $(BuildContributors);ExampleContributors.ModelStatistics  
+        </BuildContributors>  
+        <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
+            $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy=name;  
+        </ContributorArguments>  
+    </PropertyGroup>  
   
     ```  
   

@@ -16,6 +16,15 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
 
+## SSMA v8.24
+
+The v8.24 release of SSMA for Oracle contains the following changes:
+
+* Add support for LISTAGG function
+* Add support for Oracle compound triggers
+* Improve detection logic for JOIN clause and PIPELINED functions
+* Improve naming for "Save As" statements
+
 ## SSMA v8.23
 
 The v8.23 release of SSMA for Oracle contains the following changes:

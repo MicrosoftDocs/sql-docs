@@ -2,7 +2,7 @@
 description: "sys.dm_exec_requests (Transact-SQL)"
 title: "sys.dm_exec_requests (Transact-SQL)"
 ms.custom: ""
-ms.date: 11/05/2021
+ms.date: 1/18/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
@@ -44,7 +44,7 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 |database_id|**smallint**|ID of the database the request is executing against. Is not nullable.|  
 |user_id|**int**|ID of the user who submitted the request. Is not nullable.|  
 |connection_id|**uniqueidentifier**|ID of the connection on which the request arrived. Is nullable.|  
-|blocking_session_id|**smallint**|ID of the session that is blocking the request. If this column is NULL or equal to 0, the request is not blocked, or the session information of the blocking session is not available (or cannot be identified). For more information, see [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking).<br /><br /> -2 = The blocking resource is owned by an orphaned distributed transaction.<br /><br /> -3 = The blocking resource is owned by a deferred recovery transaction.<br /><br /> -4 = Session ID of the blocking latch owner could not be determined at this time because of internal latch state transitions.<br /><br /> -5 = Session ID of the blocking latch owner could not be determined because it is not tracked for this latch type (for example, for an SH latch).|  
+|blocking_session_id|**smallint**|ID of the session that is blocking the request. If this column is NULL or equal to 0, the request is not blocked, or the session information of the blocking session is not available (or cannot be identified). For more information, see [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking).<br /><br /> -2 = The blocking resource is owned by an orphaned distributed transaction.<br /><br /> -3 = The blocking resource is owned by a deferred recovery transaction.<br /><br /> -4 = Session ID of the blocking latch owner could not be determined at this time because of internal latch state transitions.<br /><br /> -5 = Session ID of the blocking latch owner could not be determined because it is not tracked for this latch type (for example, for an SH latch).<br /><br />By itself, blocking_session_id -5 does not indicate a performance problem. -5 is an indication that the session is waiting on an asynchronous action to complete. Before -5 was introduced, the same session would have shown blocking_session_id 0, even though it was still in a wait state.<br /><br />Depending on workload, observing -5 as blocking_session_id may be a common occurrence.|  
 |wait_type|**nvarchar(60)**|If the request is currently blocked, this column returns the type of wait. Is nullable.<br /><br /> For information about types of waits, see [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|If the request is currently blocked, this column returns the duration in milliseconds, of the current wait. Is not nullable.|  
 |last_wait_type|**nvarchar(60)**|If this request has previously been blocked, this column returns the type of the last wait. Is not nullable.|  

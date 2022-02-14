@@ -1,11 +1,8 @@
 ---
-description: "CONTEXT_INFO  (Transact-SQL)"
-title: "CONTEXT_INFO  (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/24/2017"
+title: CONTEXT_INFO (Transact-SQL)
+description: "CONTEXT_INFO (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -19,11 +16,14 @@ helpviewer_keywords:
   - "context information [SQL Server]"
   - "MARS [SQL Server]"
   - "session context information [SQL Server]"
-ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "07/24/2017"
 ---
-# CONTEXT_INFO  (Transact-SQL)
+# CONTEXT_INFO (Transact-SQL)
+
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the **context_info** value either set for the current session or batch, or derived through use of the [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) statement.

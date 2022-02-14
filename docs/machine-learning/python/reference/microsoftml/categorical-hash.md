@@ -4,8 +4,8 @@
 title: "categorical_hash: Machine Learning Categorical HashData Transform" 
 description: "Categorical hash transform that can be performed on data before training a model." 
 keywords: "transform, catagory, hash" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

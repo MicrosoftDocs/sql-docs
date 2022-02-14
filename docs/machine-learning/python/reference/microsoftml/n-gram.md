@@ -4,8 +4,8 @@
 title: "n_gram: n_gram" 
 description: "Extracts NGrams from text and convert them to vector using dictionary." 
 keywords: "N-Grams" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

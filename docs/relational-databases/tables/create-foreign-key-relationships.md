@@ -1,21 +1,20 @@
 ---
-description: "Create Foreign Key Relationships"
 title: "Create Foreign Key Relationships"
-ms.custom: ""
-ms.date: "12/20/2021"
+description: "Create Foreign Key Relationships"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: "vanto"
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "relationships [SQL Server], creating"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: "vanto"
+ms.custom: FY22Q2Fresh
+ms.date: "12/20/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Foreign Key Relationships
-
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 

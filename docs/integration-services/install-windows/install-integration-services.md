@@ -1,9 +1,6 @@
 ---
 title: Install SQL Server Integration Services
 description: Learn how to install Microsoft SQL Server Integration Services (SSIS) and how to get other downloads for SSIS.
-ms.custom:
-  - intro-installation
-ms.date: 12/10/2021
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
@@ -15,9 +12,11 @@ helpviewer_keywords:
   - "Setup [Integration Services], about installing Integration Services"
   - "installing Integration Services"
   - "Setup [Integration Services]"
-ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
+ms.reviewer: ""
+ms.custom: intro-installation, FY22Q2Fresh
+ms.date: 12/10/2021
 ---
 
 # Install Integration Services (SSIS)

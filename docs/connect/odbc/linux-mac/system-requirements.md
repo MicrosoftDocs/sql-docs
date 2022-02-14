@@ -31,7 +31,8 @@ The Linux and macOS drivers SQL version compatibility is the same as the [Window
 Versions 18, 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x64 architecture of the following operating systems. The ARM64 architecture on macOS is supported starting with version 17.8.
 
 |Driver version&nbsp;&#8594;<br />&#8595; Operating System     |18.0|17.8|17.7|17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
-|-------------------------------|----|----|----|----|----|----|----|----|----|----|---|
+|-------------------------------|----|----|----|----|----|----|----|----|----|----|----|---|
+
 |Apple OS X 10.11 (El Capitan)  |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Apple macOS 10.12 (Sierra)     |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Apple macOS 10.13 (High Sierra)|    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|

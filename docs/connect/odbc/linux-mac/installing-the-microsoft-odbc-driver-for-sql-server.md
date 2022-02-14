@@ -156,6 +156,13 @@ sudo zypper install -y unixODBC-devel
 ### <a id="ubuntu17"></a> Ubuntu
 
 ```bash
+
+if ! [[ "16.04 18.04 20.04 21.04" == *"$(lsb_release -rs)"* ]];
+then
+    echo "Ubuntu $(lsb_release -rs) is not currently supported.";
+    exit;
+fi
+
 sudo su
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 

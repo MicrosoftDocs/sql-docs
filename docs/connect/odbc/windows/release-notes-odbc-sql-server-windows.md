@@ -51,10 +51,10 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------- | :------ |
-| Added compatibility with OpenSSL 3.0 | See [To Do]. |
+| Added compatibility with OpenSSL 3.0 | See [Connection String Keywords and Data Source Names](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md#using-tlsssl). |
 | Ability to send long types as max types | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
-| Support for TDS8 | See [To Do]). |
-| Compatibility extensions for SQLGetData | See [To Do]. |
+| Support for TDS8 | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
+| Compatibility extensions for SQLGetData | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

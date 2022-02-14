@@ -23,7 +23,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 
 - Fix UI issues where text was cut off and position of items was off.
 - Fix issue with Active Directory Interactive login where attempting to login after closing the window of the first failure would automatically succeed if cached credentials were available.
-- Fixed use of XADTC with SQL MI
+- Fixed use of XADTC with Azure SQL Managed Instance.
 - Fixed loss of AAD authentication mode when reconnecting with idle connection.
 - Fix an issue with federated authentication when using PingFed
 

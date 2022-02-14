@@ -291,7 +291,7 @@ Allows long type data to be sent to servers as max type data.
 
 | Attribute Value | Description |
 |-|-|
-|No|(Default) Do no convert long types to max types when sending. |
+|No|(Default) Don't convert long types to max types when sending. |
 |Yes| Converts data from long types to max types when sending. |
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Release notes for OLE DB Driver"
 description: "This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server."
-ms.date: 12/08/2021
+ms.date: 02/15/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -20,6 +20,25 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## 19.0.0
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2186934)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2186855)  
+
+Released: February 15, 2022
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+    For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2186934&clcid=0x40a)  
+    For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2186855&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2186855&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2186855&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2186855&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2186855&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2186855&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2186855&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2186855&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2186855&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2186855&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2186855&clcid=0x40a)
+
+### Features added
+
+| Feature added | Details |
+| :------------ | :------ |
+| TDS 8.0 support | The encryption connection string keyword/property now includes the option for strict encryption, which encrypts the whole connection (including PRELOGIN packets). In addition, the driver now defaults to using encrypted connections. |
+| Support for the `Host Name In Certificate` connection string keyword, and the `SSPROP_INIT_HOST_NAME_CERTIFICATE` initialization property. | The user may now specify the host name to be used when validating the SQL Server TLS/SSL certificate. |
+
+## Previous Releases
 
 ## 18.6.3
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2183083)  
@@ -44,8 +63,6 @@ If you need to download the installer in a language other than the one detected 
 | Bug fixed | Details |
 | :-------- | :------ |
 | Fixed an issue where string values were being padded with zeros. | Fixed a bug, which resulted in empty fixed char fields being padded with zeroes during BCP import. |
-
-## Previous Releases
 
 ## 18.6.0
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2164384)  

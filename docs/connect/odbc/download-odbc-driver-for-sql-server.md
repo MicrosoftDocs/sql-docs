@@ -1,7 +1,7 @@
 ---
 title: Download ODBC Driver for SQL Server
 description: Download the Microsoft ODBC Driver for SQL Server to develop native-code applications that connect to SQL Server and Azure SQL Database.
-ms.date: 07/30/2021
+ms.date: 02/15/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -16,21 +16,21 @@ ms.author: v-davidengel
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Microsoft ODBC Driver for SQL Server is a single dynamic-link library (DLL) containing run-time support for applications using native-code APIs to connect to SQL Server. Use Microsoft ODBC Driver 17 for SQL Server to create new applications or enhance existing applications that need to take advantage of newer SQL Server features.
+Microsoft ODBC Driver for SQL Server is a single dynamic-link library (DLL) containing run-time support for applications using native-code APIs to connect to SQL Server. Use Microsoft ODBC Driver 18 for SQL Server to create new applications or enhance existing applications that need to take advantage of newer SQL Server features.
 
 ## Download for Windows
 
-The redistributable installer for Microsoft ODBC Driver 17 for SQL Server installs the client components, which are required during run time to take advantage of newer SQL Server features. It optionally installs the header files needed to develop an application that uses the ODBC API. Starting with version 17.4.2, the installer also includes and installs the Microsoft Active Directory Authentication Library (ADAL.dll).
+The redistributable installer for Microsoft ODBC Driver 18 for SQL Server installs the client components, which are required during run time to take advantage of newer SQL Server features. It optionally installs the header files needed to develop an application that uses the ODBC API. Starting with version 17.4.2, the installer also includes and installs the Microsoft Active Directory Authentication Library (ADAL.dll).
 
-Version 17.8.1 is the latest general availability (GA) version. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.8.1 upgrades it to 17.8.1.
+Version 18.0.1.1 is the latest general availability (GA) version. The Microsoft ODBC Driver 18 for SQL Server will install side by side with Microsoft ODBC Driver 17 for SQL Server.
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2168524)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2168713)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 18 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2186919)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 18 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2187028)**  
 
 ### Version information
 
-- Release number: 17.8.1.1
-- Released: July 30, 2021
+- Release number: 18.0.1.1
+- Released: February 15, 2022
 
 > [!Note]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).
@@ -39,11 +39,11 @@ Version 17.8.1 is the latest general availability (GA) version. If you have a pr
 
 This release of Microsoft ODBC Driver for SQL Server can be installed in the following languages:
 
-Microsoft ODBC Driver 17.8.1 for SQL Server (x64):  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2168524&clcid=0x40a)
+Microsoft ODBC Driver 18.0.1.1 for SQL Server (x64):  
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2186919&clcid=0x40a)
 
-Microsoft ODBC Driver 17.8.1 for SQL Server (x86):  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2168713&clcid=0x40a)
+Microsoft ODBC Driver 18.0.1.1 for SQL Server (x86):  
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x40a)
 
 ### Release notes for Windows
 
@@ -66,6 +66,7 @@ If you need to download the packages for offline installation, all versions are 
 
 ### Alpine
 
+- [18.0.1.1 Alpine package](https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da08869c6486/msodbcsql18_18.0.1.1-1_amd64.apk) ([PGP Signature](https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da08869c6486/msodbcsql18_18.0.1.1-1_amd64.sig))
 - [17.8.1.1 Alpine package](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.8.1.1-1_amd64.apk) ([PGP Signature](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.8.1.1-1_amd64.sig))
 - [17.7.2.1 Alpine package](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.7.2.1-1_amd64.apk) ([PGP Signature](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.7.2.1-1_amd64.sig))
 - [17.7.1.1 Alpine package](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.7.1.1-1_amd64.apk) ([PGP Signature](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.7.1.1-1_amd64.sig))

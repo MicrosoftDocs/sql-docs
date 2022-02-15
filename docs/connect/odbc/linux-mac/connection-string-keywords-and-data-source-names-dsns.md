@@ -58,12 +58,18 @@ You can optionally specify the protocol and port to connect to the server. For e
 To connect to a named instance on a static port, use <b>Server=</b>*servername*,**port_number**. Connecting to a dynamic port is not supported before version 17.4.
 
 Alternatively, you can add the DSN information to a template file, and execute the following command to add it to `~/.odbc.ini` :
- - **odbcinst -i -s -f** _template_file_  
+
+```bash
+odbcinst -i -s -f <template_file>
+```
 
 For complete documentation on ini files and `odbcinst`, see the [unixODBC documentation](http://www.unixodbc.org/odbcinst.html). For entries in the `odbc.ini` file specific to the ODBC Driver for SQL Server, see [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) for ones supported on Linux and macOS.
 
 You can verify that your driver is working by using `isql` to test the connection, or you can use this command:
- - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S \<server\> -U \<name\> -P \<password\>**  
+
+```bash
+bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>
+```
 
 ## Using TLS/SSL  
 
@@ -73,10 +79,9 @@ Enabling encryption increases security at the expense of performance.
 
 For more information, see [Encrypting Connections to SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) and [Using Encryption Without Validation](../../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
-
 Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the server login credentials (user name and password) are always encrypted. The following tables shows the effect of the **Encrypt** and **TrustServerCertificate** settings.  
 
-**ODBC 18 Driver and newer**
+### ODBC 18 Driver and newer
 
 | **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encrypt** | **Result** |
 |---------------------|------------------------------|--------------------------|------------|
@@ -90,9 +95,10 @@ Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the s
 | Yes | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
 | Strict | - | - | TrustServerCertificate is ignored. Server certificate is checked.<br/>Data sent between client and server is encrypted. |
 
-**(Strict is only avaliable for TDS 8.0  with SQL Server 2022 only)**
+> [!NOTE]
+> Strict is only available against servers that support TDS 8.0 connections.
 
-**ODBC 17 Driver and older**
+### ODBC 17 Driver and older
 
 | **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encrypt** | **Result** |
 |---------------------|------------------------------|--------------------------|------------|
@@ -105,16 +111,14 @@ Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the s
 | Yes | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
 | Yes | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
 
-
-
 When using connection encryption, the name (or IP address) in a Subject Common Name (CN) or Subject Alternative Name (SAN) in a SQL Server TLS/SSL certificate should exactly match the server name (or IP address) specified in the connection string.
-
 
 By default, encrypted connections always verify the server's certificate. However, if you connect to a server that has a self-signed certificate, and are not using the strict encryption mode, you can add the `TrustServerCertificate` option to bypass checking the certificate against the list of trusted certificate authorities:  
 
-```
+```ini
 Driver={ODBC Driver 17 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
-```  
+```
+
 In the strict encryption mode, the certificate is always verified. <br/><br/>
 TLS uses the OpenSSL library. The following table shows the minimum supported versions of OpenSSL and the default Certificate Trust Store locations for each platform:
 

@@ -2,7 +2,7 @@
 title: Release notes for mssql-tools on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
 ms.custom: ""
-ms.date: 02/15/2022
+ms.date: 02/17/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -24,6 +24,13 @@ This article lists and describes what's new in the versioned releases of the [!I
 | :------- | :------ |
 | Sqlcmd Bugfix | Fixed extraneous trailing bytes after encoding conversion. |
 | TDS 8.0 | Add support for TDS 8.0 Strict encryption when connecting to SQL Server 2022 |
+| &nbsp; | &nbsp; |
+
+## 17.9.1.1, February 2022
+
+| New item | Details |
+| :------- | :------ |
+| Sqlcmd Bugfix | Fixed extraneous trailing bytes after encoding conversion. |
 | &nbsp; | &nbsp; |
 
 ## 17.8.1.2, October 2021

@@ -211,22 +211,22 @@ The following sections explain how to install the Microsoft ODBC driver 17 from 
 
 ```bash
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.8.1.1-1_amd64.apk
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.8.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.9.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.9.1.1-1_amd64.apk
 
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.8.1.1-1_amd64.sig
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.8.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.9.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.9.1.1-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql17_17.8.1.1-1_amd64.sig msodbcsql17_17.8.1.1-1_amd64.apk
-gpg --verify mssql-tools_17.8.1.1-1_amd64.sig mssql-tools_17.8.1.1-1_amd64.apk
+gpg --verify msodbcsql17_17.9.1.1-1_amd64.sig msodbcsql17_17.9.1.1-1_amd64.apk
+gpg --verify mssql-tools_17.9.1.1-1_amd64.sig mssql-tools_17.9.1.1-1_amd64.apk
 
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql17_17.8.1.1-1_amd64.apk
-sudo apk add --allow-untrusted mssql-tools_17.8.1.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql17_17.9.1.1-1_amd64.apk
+sudo apk add --allow-untrusted mssql-tools_17.9.1.1-1_amd64.apk
 ```
 
 > [!NOTE]
@@ -249,6 +249,9 @@ curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources
 
 #Debian 10
 curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#Debian 11
+curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 exit
 sudo apt-get update
@@ -330,7 +333,7 @@ sudo zypper install -y unixODBC-devel
 
 ```bash
 
-if ! [[ "16.04 18.04 20.04 21.04" == *"$(lsb_release -rs)"* ]];
+if ! [[ "16.04 18.04 20.04 21.04 21.10" == *"$(lsb_release -rs)"* ]];
 then
     echo "Ubuntu $(lsb_release -rs) is not currently supported.";
     exit;

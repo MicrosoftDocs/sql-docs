@@ -66,6 +66,9 @@ This topic describes how the following features interact with change data captur
   
 ##  <a name="Contained"></a> Contained databases  
  Change data capture is not supported in [contained databases](../../relational-databases/databases/contained-databases.md).
+ 
+##  <a name="Serverless"></a> Serverless databases  
+  If a serverless database enabled for Change Data Capture (CDC) is in pause state, CDC will not run. The CDC scan shall not affect auto-pause. 
   
 ## <a name="AlwaysOn"></a> Availability groups 
  

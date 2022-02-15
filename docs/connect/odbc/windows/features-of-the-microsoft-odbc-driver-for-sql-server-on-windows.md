@@ -18,10 +18,12 @@ ms.author: v-davidengel
 
 ## Microsoft ODBC Driver 18.0 for SQL Server on Windows
 
+<a id="longasmax"></a>
 The ODBC Driver 18.0 allows users to send long data types as max data types using the keyword `LongAsMax` to toggle the setting on or off. When enabled, the SQL types SQL_LONGVARCHAR, SQL_LONGVARBINARY, and SQL_LONGWVARCHAR will be sent as varchar(max), varbinary(max), and nvarchar(max) instead of text, image, and ntext respectively.
 
 The connection encryption defaults have changed. The default value of Encrypt is now Yes, and the new keywords Optional and Mandatory have been introduced as synonyms for No and Yes, respectively. For connecting to SQL Server 2022 using the new TDS 8.0 protocol, the Strict mode (`Encrypt=Strict`) has been added. In this mode, the server certificate is always verified (`TrustServerCertificate` is ignored). A new keyword, `HostnameInCertificate`, can be used to specify the expected hostname found in the certificate if it differs from the specified server. `HostnameInCertificate` is usable in all encryption modes and is also applicable if the server-side `Force Protocol Encryption` option is enabled, which will cause the driver to verify the certificate in Optional or Mandatory modes unless disabled using `TrustServerCertificate`.
 
+<a id="getdataextensions"></a>
 The ODBC Driver 18 includes SQLGetData extensions. When enabled, SQLGetData can be used to retrieve column data in any order within a row, including going backwards. The feature is provided for compatibility purposes and will significantly degrade performance and increase memory usage. It is highly recommended that application always access the columns in ascending order. To enable SQLGetData extensions one can either use the `GetDataExtensions` connection string attribute, or use the `SQLSetConnectAttr` function to set `SQL_COPT_SS_GETDATA_EXTENSIONS` to `SQL_EN_ON`.
 
 ## Microsoft ODBC Driver 17.4 for SQL Server on Windows

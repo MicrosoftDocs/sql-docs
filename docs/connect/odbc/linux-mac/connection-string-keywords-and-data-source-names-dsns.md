@@ -91,17 +91,17 @@ Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the s
 
 **ODBC 18 Driver and newer**
 
-|**Encrypt Setting**| **Trust Server Certificate** | **Server Force Encrypt** | **Result**|
-|-|-----------------|-------------------------|---------------------------------------|
-| No  | No  | No  | Server certificate is checked <br/> Data sent between client and server is not encrypted |
-| No  | Yes | No  | Server certificate is not checked.<br/> Data sent between client and server is not encrypted|
-| Yes | No  | No  | Server certificate is checked.<br/> Data sent between client and server is encrypted|
-| Yes | Yes | No  | Server certificate is not checked<br/> Data sent between client and server is encrypted|
-| No  | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted  |
-| No  | Yes | Yes | Server certificate is not checked.<br/> data sent between client and server is encrypted |
-| Yes | No  | Yes | Server certificate is checked.<br/> Data sent between client and server is encrypted |
-| Yes | Yes | Yes | Server certificate is not checked.<br/> Data sent between client and server is encrypted|
-| Strict | No | - | TrustServerCertificate is ignored. <br/> Data sent between client and server is encrypted|
+| **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encrypt** | **Result** |
+|---------------------|------------------------------|--------------------------|------------|
+| No  | No  | No  | Server certificate is not checked.<br/>Data sent between client and server is not encrypted. |
+| No  | Yes | No  | Server certificate is not checked.<br/>Data sent between client and server is not encrypted. |
+| Yes | No  | No  | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | No  | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| No  | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+| No  | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| Yes | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| Strict | - | - | TrustServerCertificate is ignored. Server certificate is checked.<br/>Data sent between client and server is encrypted. |
 
 **(Strict is only avaliable for TDS 8.0  with SQL Server 2022 only)**
 

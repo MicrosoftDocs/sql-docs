@@ -4,11 +4,11 @@ description: This article has release notes for Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: yualan
-ms.author: alayu
+author: tdoshin
+ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 12/15/2021
+ms.date: 02/23/2022
 ---
 
 # Release notes for Azure Data Studio
@@ -19,14 +19,14 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### December 2021
+### February 2022
 
-Azure Data Studio 1.34.0 is the latest general availability (GA) release.
+Azure Data Studio 1.35.0 is the latest general availability (GA) release.
 
-- Release number: 1.34.0
-- Release date: December 15, 2021
+- Release number: 1.35.0
+- Release date: February 23, 2022
 
-#### What's new in 1.34.0
+#### What's new in 1.35.0
 
 | New item | Details |
 |----------|---------|
@@ -38,7 +38,7 @@ Azure Data Studio 1.34.0 is the latest general availability (GA) release.
 | Extension update | Lang packs |
 | Extension update | Azure SQL Migration |
 
-#### Bug fixes in 1.34.0
+#### Bug fixes in 1.35.0
 
 | New Item | Details |
 |----------|---------|
@@ -50,7 +50,7 @@ Azure Data Studio 1.34.0 is the latest general availability (GA) release.
 
 For a full list of bug fixes addressed for the August 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22December+2021+Release%22).
 
-#### Known issues in 1.34.0
+#### Known issues in 1.35.0
 
 For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
@@ -61,7 +61,8 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 ## Previous Azure Data Studio releases and updates
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
-|---------------------------|--------------|--------------|---------
+|---------------------------|--------------|--------------|---------|
+| [December 2021](#december-2021) | 1.34.0 | December 15, 2021 | N/A |  
 | [October 2021](#october-2021) | 1.33.0 | October 27, 2021 | N/A |
 | [August 2021](#august-2021) | 1.32.0 | August 18, 2021 | N/A |
 | [July 2021](#july-2021) | 1.31.0 | July 21, 2021 | N/A |
@@ -98,6 +99,35 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 > [!Note]
 > All previous versions of Azure Data Studio are not supported.
+
+### December 2021
+
+Azure Data Studio 1.34.0 is the latest general availability (GA) release.
+
+- Release number: 1.34.0
+- Release date: December 15, 2021
+
+#### What's new in 1.34.0
+
+| New item | Details |
+|----------|---------|
+| SQL Migration extension | Added 'Currently restoring backup file' in the migration progress details page of Azure SQL Migration extension when backup files location is Azure Storage blob container |
+| Notebooks | Added undo/redo support |
+| SQL Database Projects extension | Support for project build with .NET 6 in SQL Database Projects extension |
+| SQL Database Projects extension | Publish to container in SQL Database Projects extension |
+| Extension update | [SQL Database Projects](extensions/sql-database-project-extension.md) |
+| Extension update | Lang packs |
+| Extension update | Azure SQL Migration |
+
+#### Bug fixes in 1.34.0
+
+| New Item | Details |
+|----------|---------|
+| SQL Migration | Fix for multiple database migrations when using network share as backup files location in Azure SQL Migration extension |
+| SQL Migration | Fix for multiple database migrations when using blob storage containers as backup files location in Azure SQL Migration extension |
+| SQL Migration| Fix to pre-populate target database names in the migration wizard in Azure SQL Migration extension |
+| Grid | Fix to column sorting in grids where the presence of null values could lead to unexpected results |
+| Notebooks | Fix for Python upgrades when two or more notebooks were open |
 
 ### October 2021
 

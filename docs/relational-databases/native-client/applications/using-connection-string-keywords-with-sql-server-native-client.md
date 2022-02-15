@@ -2,7 +2,7 @@
 title: "Using connection string keywords"
 description: Some SQL Server Native Client APIs use connection strings to specify connection attributes. Connection strings are keyword/value pairs.
 ms.custom: ""
-ms.date: "03/05/2021"
+ms.date: "02/15/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: native-client
@@ -64,7 +64,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**Database**|Name of the default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database for the connection. If **Database** is not specified, the default database defined for the login is used. The default database from the ODBC data source overrides the default database defined for the login. The database must be an existing database unless **AttachDBFileName** is also specified. If **AttachDBFileName** is also specified, the primary file it points to is attached and given the database name specified by **Database**.|  
 |**Driver**|Name of the driver as returned by [SQLDrivers](../../../relational-databases/native-client-odbc-api/sqldrivers.md). The keyword value for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver is "{SQL Server Native Client 11.0}". The **Server** keyword is required if **Driver** is specified and **DriverCompletion** is set to SQL_DRIVER_NOPROMPT.<br /><br /> For more information about driver names, see [Using the SQL Server Native Client Header and Library Files](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md).|  
 |**DSN**|Name of an existing ODBC user or system data source. This keyword overrides any values that might be specified in the **Server**, **Network**, and **Address** keywords.|  
-|**Encrypt**|Specifies whether data should be encrypted before sending it over the network. Possible values are "yes" and "no". The default value is "no".|  
+|**Encrypt**|Specifies whether data should be encrypted before sending it over the network. Possible values are "yes"/"mandatory"(18.0+), "no"/"optional"(18.0+), and "strict"(18.0+). The default value is "yes" in version 18.0+ and "no" in previous versions.|  
 |**Fallback**|This keyword is deprecated, and its setting is ignored by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver.|  
 |**Failover_Partner**|Name of the failover partner server to be used if a connection cannot be made to the primary server.|  
 |**FailoverPartnerSPN**|The SPN for the failover partner. The default value is an empty string. An empty string causes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to use the default, driver-generated SPN.|  

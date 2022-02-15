@@ -121,12 +121,12 @@ In ODBC Driver 13 and 13.1, when UTF-8 multibyte characters or UTF-16 surrogates
 
 ## <a name="bkmk-openssl"></a>OpenSSL
 
-Starting with version 17.4, the driver loads OpenSSL dynamically, which allows it to run on systems that have either version 1.0 or 1.1 without a need for separate driver files. Starting with version 18.0, the driver supports OpenSSL 3.0 in addition to the previous versions. When multiple versions of OpenSSL are present, the driver will attempt to load the latest one.
+Starting with version 17.4, the driver loads OpenSSL dynamically, which allows it to run on systems that have either version 1.0 or 1.1 without a need for separate driver files. Starting with version 17.9, the driver supports OpenSSL 3.0 in addition to the previous versions. When multiple versions of OpenSSL are present, the driver will attempt to load the latest one.
 
 | Driver version      | Supported OpenSSL versions |
 |---------------------|----------------------------|
 | 17.4+               | 1.0, 1.1                   |
-| 18.0                | 1.0, 1.1, 3.0              |
+| 17.9, 18.0+         | 1.0, 1.1, 3.0              |
 
 
 > [!NOTE]

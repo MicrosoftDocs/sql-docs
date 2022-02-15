@@ -2,7 +2,7 @@
 title: "List of bugs fixed"
 description: "This page contains a listing of bugs fixed in each release, starting with Microsoft ODBC Driver 17 for SQL Server."
 ms.custom: ""
-ms.date: "02/15/2022"
+ms.date: "02/17/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel

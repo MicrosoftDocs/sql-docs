@@ -3,7 +3,7 @@ title: Programming guidelines
 
 description: The programming features of the ODBC Driver for SQL Server on macOS and Linux contain some differences from the Windows versions.
 ms.custom: ""
-ms.date: 05/14/2021
+ms.date: 02/15/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -121,7 +121,13 @@ In ODBC Driver 13 and 13.1, when UTF-8 multibyte characters or UTF-16 surrogates
 
 ## <a name="bkmk-openssl"></a>OpenSSL
 
-Starting with version 17.4, the driver loads OpenSSL dynamically, which allows it to run on systems that have either version 1.0 or 1.1 without a need for separate driver files. When multiple versions of OpenSSL are present, the driver will attempt to load the latest one. The driver currently supports OpenSSL 1.0.x and 1.1.x
+Starting with version 17.4, the driver loads OpenSSL dynamically, which allows it to run on systems that have either version 1.0 or 1.1 without a need for separate driver files. Starting with version 18.0, the driver supports OpenSSL 3.0 in addition to the previous versions. When multiple versions of OpenSSL are present, the driver will attempt to load the latest one.
+
+| Driver version      | Supported OpenSSL versions |
+|---------------------|----------------------------|
+| 17.4+               | 1.0, 1.1                   |
+| 18.0                | 1.0, 1.1, 3.0              |
+
 
 > [!NOTE]
 > A potential conflict may occur if the application that uses the driver (or one of its components) is linked with or dynamically loads a different version of OpenSSL. If several versions of OpenSSL are present on the system and the application uses it, it is highly recommended that one be extra careful in making sure that the version loaded by the application and the driver do not mismatch, as the errors could corrupt memory and thus will not necessarily manifest in obvious or consistent ways.

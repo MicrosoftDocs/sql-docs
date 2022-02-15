@@ -76,19 +76,6 @@ For more information, see [Encrypting Connections to SQL Server](/previous-versi
 
 Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the server login credentials (user name and password) are always encrypted. The following tables shows the effect of the **Encrypt** and **TrustServerCertificate** settings.  
 
-**ODBC 17 Driver and older**
-
-| **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encrypt** | **Result** |
-|---------------------|------------------------------|--------------------------|------------|
-| No  | No  | No  | Server certificate is not checked.<br/>Data sent between client and server is not encrypted. |
-| No  | Yes | No  | Server certificate is not checked.<br/>Data sent between client and server is not encrypted. |
-| Yes | No  | No  | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
-| Yes | Yes | No  | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
-| No  | No  | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
-| No  | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
-| Yes | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
-| Yes | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
-
 **ODBC 18 Driver and newer**
 
 | **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encrypt** | **Result** |
@@ -104,6 +91,21 @@ Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the s
 | Strict | - | - | TrustServerCertificate is ignored. Server certificate is checked.<br/>Data sent between client and server is encrypted. |
 
 **(Strict is only avaliable for TDS 8.0  with SQL Server 2022 only)**
+
+**ODBC 17 Driver and older**
+
+| **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encrypt** | **Result** |
+|---------------------|------------------------------|--------------------------|------------|
+| No  | No  | No  | Server certificate is not checked.<br/>Data sent between client and server is not encrypted. |
+| No  | Yes | No  | Server certificate is not checked.<br/>Data sent between client and server is not encrypted. |
+| Yes | No  | No  | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | No  | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| No  | No  | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| No  | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| Yes | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+
+
 
 When using connection encryption, the name (or IP address) in a Subject Common Name (CN) or Subject Alternative Name (SAN) in a SQL Server TLS/SSL certificate should exactly match the server name (or IP address) specified in the connection string.
 

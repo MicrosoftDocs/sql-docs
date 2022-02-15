@@ -1,6 +1,6 @@
 ---
-title: "Release notes for OLE DB Driver"
-description: "This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server."
+title: Release notes for OLE DB Driver
+description: This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server.
 ms.date: 02/15/2022
 ms.prod: sql
 ms.technology: connectivity
@@ -10,7 +10,7 @@ ms.author: v-davidengel
 ---
 # Release notes for the Microsoft OLE DB Driver for SQL Server
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This page discusses what was added in each version of the Microsoft OLE DB Driver for SQL Server.
 
@@ -22,6 +22,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
 
 ## 19.0.0
+
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2186934)  
 ![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2186855)  
 
@@ -38,9 +39,10 @@ If you need to download the installer in a language other than the one detected 
 | TDS 8.0 support | The encryption connection string keyword/property now includes the option for strict encryption, which encrypts the whole connection (including PRELOGIN packets). In addition, the driver now defaults to using encrypted connections. |
 | Support for the `Host Name In Certificate` connection string keyword, and the `SSPROP_INIT_HOST_NAME_CERTIFICATE` initialization property. | The user may now specify the host name to be used when validating the SQL Server TLS/SSL certificate. |
 
-## Previous Releases
+## Previous releases
 
 ## 18.6.3
+
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2183083)  
 ![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2183084)  
 
@@ -57,7 +59,6 @@ If you need to download the installer in a language other than the one detected 
 | Removal of dependency on vcruntime140_1.dll | To remove the requirement to install Visual Studio in some scenarios, we removed all dependencies to vcruntime140_1.dll. |
 | Enable querying server SPN from connection | During a connection attempt where Azure AD authentication has been selected, the server will send a FEDAUTHINFO packet. This packet contains the server's SPN that must be used to generate the access token. Clients can query this value after a connection attempt is made (on success or failure) through the SSPROP_INIT_DISCOVERDSERVERSPN property in DBPROPSET_SQLSERVERDBINIT. |
 
-
 ### Bugs fixed
 
 | Bug fixed | Details |
@@ -65,6 +66,7 @@ If you need to download the installer in a language other than the one detected 
 | Fixed an issue where string values were being padded with zeros. | Fixed a bug, which resulted in empty fixed char fields being padded with zeroes during BCP import. |
 
 ## 18.6.0
+
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2164384)  
 ![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2164408)  
 
@@ -90,6 +92,7 @@ If you need to download the installer in a language other than the one detected 
 | Fixed crash in scenarios involving Multiple Active Result Sets. | Fixed a bug, which could result in the driver crashing in some scenarios involving [Multiple Active Result Sets (MARS)](features/using-multiple-active-result-sets-mars.md).|
 
 ## 18.5.0
+
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2135577)  
 ![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2135722)  
 
@@ -116,6 +119,7 @@ If you need to download the installer in a language other than the one detected 
 | Fixed a linked server remote table insert bug. | Fixed a bug which caused a linked server remote table insert to fail if the [NOCOUNT server configuration option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) has been enabled. |
 
 ## 18.4.0
+
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2129954)  
 ![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2131003)  
 

@@ -78,16 +78,16 @@ Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the s
 
 **ODBC 17 Driver and older**
 
-|**Encrypt Setting**| **Trust Server Certificate** | **Server Force Encrypt** | **Result**|
-|-|-----------------|-------------------------|---------------------------------------|
-| No | No  | No  | Server certificate is checked <br/> Data sent between client and server is not encrypted |
-| No | Yes | No  | Server certificate is not checked.<br/> data sent between client and server is not encrypted|
-| Yes | No | No  | Server certificate is checked.<br/> data sent between client and server is encrypted|
-| Yes | Yes| No  | Server certificate is not checked.<br/> data sent between client and server is encrypted|
-| No | No  | Yes | Server certificate is checked.<br/> data sent between client and server is encrypted  |
-| No | Yes | Yes | Server certificate is not checked.<br/> data sent between client and server is encrypted |
-| Yes | No | Yes | Server certificate is checked.<br/> data sent between client and server is encrypted |
-| Yes | Yes| Yes | Server certificate is not checked.<br/> data sent between client and server is encrypted|
+| **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encrypt** | **Result** |
+|---------------------|------------------------------|--------------------------|------------|
+| No  | No  | No  | Server certificate is not checked.<br/>Data sent between client and server is not encrypted. |
+| No  | Yes | No  | Server certificate is not checked.<br/>Data sent between client and server is not encrypted. |
+| Yes | No  | No  | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | No  | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| No  | No  | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| No  | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| Yes | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
 
 **ODBC 18 Driver and newer**
 

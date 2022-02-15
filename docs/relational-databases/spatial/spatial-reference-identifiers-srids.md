@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  `geometry1.STIntersects(geometry2) = 1`  
   
 > [!NOTE]  
->  The spatial reference identification system is defined by the [European Petroleum Survey Group (EPSG)](https://go.microsoft.com/fwlink/?LinkId=99349) standard, which is a set of standards developed for cartography, surveying, and geodetic data storage. This standard is owned by the Oil and Gas Producers (OGP) Surveying and Positioning Committee.  
+>  The spatial reference identification system is defined by the [European Petroleum Survey Group (EPSG)](https://epsg.org/home.html) standard, which is a set of standards developed for cartography, surveying, and geodetic data storage. This standard is owned by the Oil and Gas Producers (OGP) Surveying and Positioning Committee.  
   
 ## See Also  
  [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)  

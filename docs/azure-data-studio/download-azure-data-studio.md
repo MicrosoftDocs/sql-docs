@@ -11,7 +11,7 @@ ms.custom:
   - seodec18
   - contperf-fy21q4
   - intro-overview
-ms.date: 12/15/2021
+ms.date: 02/02/2022
 ---
 
 # Download and install Azure Data Studio
@@ -42,7 +42,7 @@ Azure Data Studio 1.34.0 is the latest general availability (GA) version.
 
 If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
 
-## Install Azure Data Studio
+## Install Azure Data Studio 
 
 ### Windows installation
 

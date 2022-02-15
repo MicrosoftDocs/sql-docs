@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 03/05/2020
 ms.topic: how-to
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=sql-server-ver15"
 ---
 # SQL Server 2019 on Windows: Isolation changes for Machine Learning Services

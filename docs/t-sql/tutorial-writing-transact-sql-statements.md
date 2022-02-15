@@ -1,11 +1,7 @@
 ---
+title: "T-SQL Tutorial: Writing Transact-SQL Statements"
 description: "Tutorial: Writing Transact-SQL Statements"
-title: "Tutorial: Writing Transact-SQL Statements | Microsoft Docs"
-ms.custom:
-  - intro-quickstart
-ms.date: "08/03/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: quickstart
 helpviewer_keywords:
@@ -15,6 +11,10 @@ helpviewer_keywords:
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom:
+  - intro-quickstart
+ms.date: "08/03/2016"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Writing Transact-SQL Statements

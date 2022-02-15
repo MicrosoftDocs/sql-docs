@@ -113,6 +113,8 @@ SQL Server query processing pipeline.
 6.  Access Methods retrieves the rows from the index and data pages in the buffer pool and loads pages from disk into the buffer pool as needed.  
 
  For the first example query, the execution engine requests rows in the clustered index on Customer and the nonclustered index on Order from Access Methods. Access Methods traverses the B-tree index structures to retrieve the requested rows. In this case all rows are retrieved as the plan calls for full index scans.  
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
   
 ## Interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] Access to Memory-Optimized Tables  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc batches and stored procedures are also referred to as interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)]. Interpreted refers to the fact that the query plan is interpreted by the query execution engine for each operator in the query plan. The execution engine reads the operator and its parameters and performs the operation.  

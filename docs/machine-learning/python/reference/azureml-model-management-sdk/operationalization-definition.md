@@ -4,9 +4,8 @@
 title: "OperationalizationDefinition class"
 description: "The OperationalizationDefinition class is for SQL Machine Learning Services and Machine Learning Server for managing web services." 
 keywords: "" 
-author: "garyericson"
-ms.author: "garye"
-manager: "cgronlun" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"

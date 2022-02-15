@@ -1,6 +1,6 @@
 ---
-description: "Data Type Precedence (Transact-SQL)"
-title: "Data Type Precedence (Transact-SQL) | Microsoft Docs"
+description: "Explains data type precedence for Transact-SQL"
+title: "Data type precedence (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/23/2017
 ms.prod: sql
@@ -61,7 +61,7 @@ When an operator combines expressions of different data types, the data type wit
 1. **binary** (lowest)  
   
 ## See also
-[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
+[Data types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   

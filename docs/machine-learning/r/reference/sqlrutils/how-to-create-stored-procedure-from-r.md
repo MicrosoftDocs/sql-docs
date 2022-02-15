@@ -8,8 +8,8 @@ ms.technology:
 
 ms.date: 03/04/2021  
 ms.topic: "how-to"
-author: "garyericson"
-ms.author: "garye"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: garye, davidph
 ms.custom: 
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"

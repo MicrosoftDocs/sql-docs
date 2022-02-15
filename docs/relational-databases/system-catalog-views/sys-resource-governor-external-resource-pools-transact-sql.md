@@ -8,6 +8,8 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sys.resource_governor_external_resource_pools"
   - "sys.resource_governor_external_resource_pools_TSQL"

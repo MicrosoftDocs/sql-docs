@@ -14,9 +14,7 @@ helpviewer_keywords:
   - "SQL Server Management Studio for Integration Services"
   - "SQL Server Management Studio for Reporting Services"
   - "SQL Server Management Studio for Analysis Services"
-ms.custom:
-  - seo-lt-2019
-  - intro-overview
+ms.custom: intro-overview, seo-lt-2019, FY22Q2Fresh
 ms.date: 12/15/2021
 #Customer intent: As a database admin, I want to manage my databases so that I can monitor, track, and maintain the databases for my users.
 ---

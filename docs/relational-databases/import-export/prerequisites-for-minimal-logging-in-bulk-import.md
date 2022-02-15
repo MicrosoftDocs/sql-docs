@@ -48,7 +48,9 @@ ms.author: mathoma
   
     -   If table is non-empty, index pages are fully logged.    
 
--   If the table has a clustered index and is empty, both data and index pages are minimally logged. In contrast, if a table has a btree based clustered index and is non-empty, data pages and index pages are both fully logged regardless of the recovery model. If you start with an empty table  rowstore table and bulk import the data in batches, both index and data pages are minimally logged for the first batch, but from the second batch onwards, only data pages are bulk logged.
+-   If the table has a clustered index and is empty, both data and index pages are minimally logged. In contrast, if a table has a B-tree based clustered index and is non-empty, data pages and index pages are both fully logged regardless of the recovery model. If you start with an empty table  rowstore table and bulk import the data in batches, both index and data pages are minimally logged for the first batch, but from the second batch onwards, only data pages are bulk logged.
+
+   [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
 - For information about logging for a clustered columnstore index (CCI), see [Columnstore index data loading guidance](../indexes/columnstore-indexes-data-loading-guidance.md#plan-bulk-load-sizes-to-minimize-delta-rowgroups).
   

@@ -43,8 +43,9 @@ There is no time delay when analytics and OLTP workloads run on the same underly
   
 1.  Identify the tables in your operational schema that contain data required for analytics.  
   
-2.  For each table, drop all btree indexes that are primarily designed to speed up existing analytics on your OLTP workload. Replace them with a single columnstore index.  This can improve the overall performance of your OLTP workload since there will be fewer indexes to maintain.  
-  
+2.  For each table, drop all B-tree indexes that are primarily designed to speed up existing analytics on your OLTP workload. Replace them with a single columnstore index.  This can improve the overall performance of your OLTP workload since there will be fewer indexes to maintain.  
+
+
     ```sql  
     --This example creates a nonclustered columnstore index on an existing OLTP table.  
     --Create the table  
@@ -76,11 +77,11 @@ There is no time delay when analytics and OLTP workloads run on the same underly
     GO  
   
     ```  
-  
-3.  This is all you need to do!  
+ 
+ You are now ready to run  real-time operational analytics without making any changes to your application.  Analytics queries will run against the columnstore index and OLTP operations will keep running against your OLTP B-tree indexes. The OLTP workloads will continue to perform, but will incur some additional overhead to maintain the columnstore index. See the performance optimizations in the next section.  
 
- You are now ready to run  real-time operational analytics without making any changes to your application.  Analytics queries will run against the columnstore index and OLTP operations will keep running against your OLTP btree indexes. The OLTP workloads will continue to perform, but will incur some additional overhead to maintain the columnstore index. See the performance optimizations in the next section.  
-  
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+
 ## Blog Posts  
  Read the following blog posts to learn more about real-time operational analytics. It might be easier to understand the performance tips sections if you look at the blog posts first.  
   
@@ -113,13 +114,13 @@ There is no time delay when analytics and OLTP workloads run on the same underly
   
  To minimize the overhead  of maintaining a nonclustered columnstore index  on an operational workload, you can use a filtered condition to create a nonclustered columnstore index only on the *warm* or slowly changing data. For example, in an order management application, you can create a nonclustered columnstore index on the orders that have already been shipped. Once the order has shipped, it  rarely changes and therefore can be considered warm data. With Filtered index, the data in nonclustered columnstore index requires fewer updates thereby lowering the impact on transactional workload.  
   
- Analytics queries transparently access both warm and hot data as needed to provide real-time analytics. If a significant part of the operational workload is touching the 'hot' data, those operations will not require additional maintenance of the columnstore index. A best practice is to have a rowstore clustered index on the column(s) used in the filtered index definition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  uses the clustered index to quickly scan the rows that did not meet the filtered condition. Without this clustered index, a full table scan of the rowstore table will be required to find these rows, which can negatively impact the performance of analytics query significantly. In the absence of clustered index, you could create a complementary filtered nonclustered btree  index to identify such rows but it is not recommended because accessing large range of rows through  nonclustered btree indexes is expensive.  
+ Analytics queries transparently access both warm and hot data as needed to provide real-time analytics. If a significant part of the operational workload is touching the 'hot' data, those operations will not require additional maintenance of the columnstore index. A best practice is to have a rowstore clustered index on the column(s) used in the filtered index definition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  uses the clustered index to quickly scan the rows that did not meet the filtered condition. Without this clustered index, a full table scan of the rowstore table will be required to find these rows, which can negatively impact the performance of analytics query significantly. In the absence of clustered index, you could create a complementary filtered nonclustered B-tree index to identify such rows but it is not recommended because accessing large range of rows through  nonclustered B-tree indexes is expensive.  
   
 > [!NOTE]  
 >  A filtered nonclustered columnstore index is only supported on disk-based tables. It is not supported on memory-optimized tables  
   
-### Example A: Access hot data from btree index, warm data from columnstore index  
- This example uses a filtered condition (accountkey > 0) to establish which rows will be in the columnstore index. The goal is to design the filtered condition and subsequent queries to access frequently changing "hot" data from the btree index, and to access the more stable "warm" data from the columnstore index.  
+### Example A: Access hot data from B-tree index, warm data from columnstore index  
+ This example uses a filtered condition (accountkey > 0) to establish which rows will be in the columnstore index. The goal is to design the filtered condition and subsequent queries to access frequently changing "hot" data from the B+ tree index, and to access the more stable "warm" data from the columnstore index.  
   
  ![Combined indexes for warm and hot data](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Combined indexes for warm and hot data")  
   
@@ -162,7 +163,7 @@ WHERE purchaseprice > 100.0
 Group By customername  
 ```  
   
- The analytics query will execute with the following query plan. You can see that the rows not meeting the filtered condition are accessed through clustered btree index.  
+ The analytics query will execute with the following query plan. You can see that the rows not meeting the filtered condition are accessed through clustered B-tree index.  
   
  ![Query plan](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
   

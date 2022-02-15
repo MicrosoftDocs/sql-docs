@@ -4,8 +4,8 @@
 title: "Service class"
 description: "The Service class is for SQL Machine Learning Services and Machine Learning Server for managing web services." 
 keywords: "" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: "09/20/2017" 
 ms.topic: "reference" 

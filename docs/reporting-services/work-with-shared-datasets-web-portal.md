@@ -1,7 +1,7 @@
 ---
 title: "Working with shared datasets (web portal) | Microsoft Docs"
 description: View and manage the properties of a shared dataset within the web portal. Use the web portal to create or edit shared datasets in the Report Builder.
-ms.date: 07/02/2017
+ms.date: 01/06/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -21,7 +21,7 @@ You can view and manage the properties of a shared dataset within the web portal
 
 ## Create a shared dataset
   
-To create a new shared dataset, you can do the following.  
+To create a new shared dataset, do the following steps.  
   
 1.  Select new from the menu bar.  
   
@@ -39,7 +39,7 @@ To create a new shared dataset, you can do the following.
   
 ## Manage an existing shared dataset
   
-To manage an existing shared dataset, you can do the following.  
+To manage an existing shared dataset, do the following steps.  
   
 > [!NOTE]
 > If you don't see the shared dataset in the folder, make sure you are viewing datasets. You can select **View** from the menu bar in the upper right of the web portal. Make sure **Datasets** is checked.  
@@ -74,7 +74,7 @@ Selecting **Cache Copies of this report and use them when available** will prese
   
 ### Cache Expiration  
   
-You can control whether you want to expire the cache, for the shared dataset, after a certain amount of time, or if you would prefer to do that on a schedule. You can use a shared schedule.  
+You can control whether you want to expire the cache for the shared dataset after a certain amount of time, or if you'd prefer, you can make it expire on a schedule. You can use a shared schedule.  
   
 ![Screenshot showing the Cache expires on a schedule option selected.](../reporting-services/media/ssrsdataset-caching3.png)  
   
@@ -83,21 +83,23 @@ You can control whether you want to expire the cache, for the shared dataset, af
   
 ### Cache Refresh Plans  
   
-You can use Cache Refresh Plans to create schedules for preloading the cache with temporary copies of data for a shared dataset. A refresh plan includes a schedule and the option to specify or override values for parameters. You cannot override values for parameters that are marked read-only. You can create and use more than one refresh plan.   
+You can use Cache refresh plans to create schedules for preloading the cache with temporary copies of data for a shared dataset. A refresh plan includes a schedule and the option to specify or override values for parameters. You cannot override values for parameters that are marked read-only. You can create and use more than one refresh plan.
   
 Default role assignments that enable you to add, delete, and change shared datasets for cache refresh plans are Content Manager, My Reports, and Publisher.  
   
-After you apply the cache option above, you can then define a cache refresh plan. To do that select the **Manage Refresh Plans** link that appears after you apply the cache settings. This will take you to the cache refresh plan page.   
+After you apply the cache option above, you can define a cache refresh plan. Select the **Manage Refresh Plans** link that appears after you apply the cache settings. The cache refresh plan page opens.
   
-To create a new cache refresh plan, select **New Cache Refresh Plan**. You can then enter a name for the plan and specify a schedule. If the dataset has parameters defined, you will see those listed and be able to provide values unless they are marked as read-only.  
+To create a new cache refresh plan, select **New Cache Refresh Plan**. You can then enter a name for the plan and specify a schedule. If the dataset has parameters defined, you see them listed and can provide values, unless they are marked as read-only.  
   
 Once you are done, you can select **Create Cache Refresh Plan**.  
   
 ![Screenshot of the Edit Company Sales dialog box showing the Create Cache Refresh Plan option.](../reporting-services/media/ssrsdataset-caching4.png)  
   
 > [!NOTE]
-> SQL Server Agent needs to be running to create a cache refresh plan.  
+> - SQL Server Agent needs to be running to create a cache refresh plan. 
+> - If you create a KPI based on a shared dataset, the dataset has to have a cache refresh plan. Otherwise, it won't update.
+> 
   
-You can then **Edit** or **Delete** plans that are listed. The **New From Existing** option is enabled when one, and only one, cache refresh plan is selected. This option will create a new refresh plan which is copied from the original plan. The cache refresh plan page opens pre-populated with details from the plan that was selected. You can then modify the refresh plan options and save the plan with a new description.  
+You can then **Edit** or **Delete** plans that are listed. The **New From Existing** option is enabled when one, and only one, cache refresh plan is selected. This option creates a new refresh plan, which is copied from the original plan. The cache refresh plan page opens pre-populated with details from the plan that was selected. You can then modify the refresh plan options and save the plan with a new description.  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

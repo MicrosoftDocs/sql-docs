@@ -3,8 +3,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 04/07/2021
 ms.topic: include
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 
 ## Prerequisites

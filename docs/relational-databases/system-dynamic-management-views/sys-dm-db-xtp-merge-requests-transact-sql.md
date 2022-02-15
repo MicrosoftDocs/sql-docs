@@ -7,6 +7,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf

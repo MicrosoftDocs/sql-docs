@@ -1,7 +1,7 @@
 ---
 title: "Display page numbers or other paginated report properties | Microsoft Docs"
 description:  Add properties of your paginated report including page numbers, filenames, and titles, for display in page headers or footers. 
-ms.date: 03/01/2017
+ms.date: 01/18/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design
@@ -18,45 +18,36 @@ ms.author: maggies
 
   It's easy to add page numbers, a report title, file name, and other report properties to the page headers or footers of your paginated report. These properties are stored as fields in the Built-in Fields folder in the Report Data pane:  
   
--   Execution time  
-  
+-   Execution time    
 -   Page number  
-  
--   Report folder  
-  
--   Report name  
-  
+-   Report folder   
+-   Report name   
 -   Report server URL  
-  
 -   Total pages  
-  
--   User ID  
-  
+-   User ID   
 -   Language  
   
  For a page number, you may want to add the word "Page" before the number. You may also want to show the total number of pages.  
   
 > [!NOTE]  
->  Adding the total number of pages to the footer may slow performance when you run or preview your report.  
+> - Calculating the total number of pages may slow performance when you run or preview your report. We don't fully paginate the report unless you go to the end, as the tooltip states. The question mark (**?**) is by design, but you can force full pagination. One way to force it is to add a hidden text box in the footer or header with the expression "=Globals!OverallTotalPages". The report has to generate every page to answer that expression. 
+> 
+> - [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
-### To add a page number or other report properties  
+## To add a page number or other report properties  
   
 1.  In the Report Data pane, expand the Built-in Fields folder.  
   
-    > [!NOTE]  
-    >  If you don't see the Report Data pane, on the View tab, check **Report Data**.  
+    If you don't see the Report Data pane, on the View tab, check **Report Data**.  
   
 2.  Drag the **Page Number** field from the Report Data pane to the report header or footer.  
-  
+
+    A text box that contains the simple expression [&PageNumber] is added. 
+
     > [!NOTE]  
     >  The page footer is added to the report automatically. To add a page header, on the **Insert** tab, click **Header**, and then click **Add Header**.  
-    >   
-    >  A text box that contains the simple expression [&PageNumber] is added.  
   
-### To add the word "Page" before the page number  
+## To add the word "Page" before the page number  
   
 1.  Right-click the text box that contains [&PageNumber] and click **Expressions**.  
   
@@ -68,7 +59,7 @@ ms.author: maggies
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### To add total number of pages after the page number  
+## To add total number of pages after the page number  
   
 1.  Right click the text box with the expression and click **Expressions**.  
   
@@ -79,8 +70,9 @@ ms.author: maggies
      The expression is now ="Page "&Globals!PageNumber &" of "&Globals!TotalPages  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-## See Also  
+
+
+## See also  
  [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

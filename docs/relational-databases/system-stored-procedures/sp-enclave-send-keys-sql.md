@@ -10,6 +10,8 @@ ms.suite: "sql"
 ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_enclave_send_keys"
   - "sp_enclave_send_keys_TSQL"

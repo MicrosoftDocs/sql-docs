@@ -6,8 +6,8 @@ ms.technology: machine-learning-services
 
 ms.date: 11/04/2019
 ms.topic: how-to
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---

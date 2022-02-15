@@ -201,7 +201,7 @@ You can launch the Kubernetes dashboard for additional information about the clu
 
 To launch the Kubernetes dashboard run:
 
-```bash
+```azurecli
 az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 

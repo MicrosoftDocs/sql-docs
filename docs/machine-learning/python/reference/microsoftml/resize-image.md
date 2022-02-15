@@ -4,8 +4,8 @@
 title: "resize_image: Machine Learning Resize Image Transform" 
 description: "Resizes an image to a specified dimension using a specified resizing method." 
 keywords: "transform, image" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

@@ -8,7 +8,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 02/23/2022
+ms.date: 02/23/2022 
 ---
 
 # Release notes for Azure Data Studio

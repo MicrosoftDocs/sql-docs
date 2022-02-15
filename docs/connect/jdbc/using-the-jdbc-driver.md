@@ -23,7 +23,7 @@ This section provides quickstart instructions to make a simple connection to a [
 
 The Microsoft JDBC Driver provides different Jars to be used in correspondence with your preferred Java Runtime Environment (JRE) settings, as under:
 
-The Microsoft JDBC Driver 9.4 for SQL Server provides **mssql-jdbc-10.2.0.jre8.jar**, **mssql-jdbc-10.2.0.jre11.jar**, and **mssql-jdbc-10.2.0.jre17.jar** class library files.
+The Microsoft JDBC Driver 10.2 for SQL Server provides **mssql-jdbc-10.2.0.jre8.jar**, **mssql-jdbc-10.2.0.jre11.jar**, and **mssql-jdbc-10.2.0.jre17.jar** class library files.
 
 The Microsoft JDBC Driver 9.4 for SQL Server provides **mssql-jdbc-9.4.1.jre8.jar**, **mssql-jdbc-9.4.1.jre11.jar**, and **mssql-jdbc-9.4.1.jre16.jar** class library files.
 

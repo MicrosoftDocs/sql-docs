@@ -2,7 +2,7 @@
 title: Using Always Encrypted
 description: Learn how to develop ODBC applications using Always Encrypted and the Microsoft ODBC Driver for SQL Server.
 ms.custom: ""
-ms.date: 05/19/2021
+ms.date: 02/15/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -17,8 +17,7 @@ author: v-chojas
 
 ## Applicable to
 
-- ODBC Driver 13.1 for SQL Server
-- ODBC Driver 17 for SQL Server
+- ODBC Driver 13.1+ for SQL Server
 
 ## Introduction
 

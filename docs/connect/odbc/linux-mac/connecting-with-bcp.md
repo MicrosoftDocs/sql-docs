@@ -2,7 +2,7 @@
 title: Connecting with bcp
 description: Learn the options and commands available in the bcp utility, available in the mssql-tools package on Linux and macOS.
 ms.custom: ""
-ms.date: 09/30/2021
+ms.date: 02/15/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -121,6 +121,9 @@ Specifies the field terminator.
 **-T**  
 Specifies that the `bcp` utility connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with a trusted connection (integrated security).
 
+**-u**  
+Trust server certificate. (available since `bcp` version 18)
+
 **-U** *login_id*  
 Specifies the login ID used to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
@@ -131,6 +134,9 @@ Reports the `bcp` utility version number and copyright.
 Uses Unicode characters to do the bulk copy operation.
 
 In this release, Latin-1 and UTF-16 characters are supported.
+
+**-Y**[s|m|o]  
+Specifies the connection encryption mode. The options are Strict, Mandatory, and Optional. Using -Y without any parameters uses the Mandatory encryption mode, and is equivalent to -Ym. (available since `bcp` version 18)
 
 ## Unavailable options
 

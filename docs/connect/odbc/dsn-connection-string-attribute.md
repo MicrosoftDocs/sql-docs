@@ -235,7 +235,7 @@ In case if private key file is password protected then password keyword is requi
 
 ### HostnameInCertificate
 
-Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) is negotiated, if it is different from the default value derived from Addr/Address/Server.
+Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) is negotiated, if it is different from the default value derived from Addr/Address/Server.
 
 ### SQL_COPT_SS_ACCESS_TOKEN
 

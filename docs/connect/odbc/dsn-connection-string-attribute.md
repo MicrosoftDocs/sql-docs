@@ -2,7 +2,7 @@
 title: ODBC DSN and connection string keywords
 description: How to connect using the ODBC driver. Find keywords for connection strings and DSNs, and connection attributes for SQLSetConnectAttr and SQLGetConnectAttr.
 ms.custom: ""
-ms.date: 07/30/2021
+ms.date: 02/15/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -36,7 +36,7 @@ The following table lists the available keywords and the attributes for each pla
 | [Description](dsn-connection-string-attribute.md#description) | | LMW |
 | [Driver](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [DSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [Encrypt](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ENCRYPT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssencrypt) | LMW |
+| [Encrypt](#encrypt) | [SQL_COPT_SS_ENCRYPT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssencrypt) | LMW |
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -184,6 +184,44 @@ Controls transparent column encryption (Always Encrypted). For more information,
 |Disabled|SQL_CE_DISABLED|(Default) Disables Always Encrypted.|
 | |SQL_CE_RESULTSETONLY|Enables decryption only (results and return values).|
 
+### Encrypt
+
+Specifies whether connections use TLS encryption over the network. Possible values are `yes`/`mandatory`(18.0+), `no`/`optional`(18.0+), and `strict`(18.0+). The default value is `yes` in version 18.0+ and `no` in previous versions.
+
+Regardless of the setting for `Encrypt`, the server login credentials (user name and password) are always encrypted.
+
+`Encrypt`, `TrustServerCertificate`, and server-side `Force Encryption` settings play a part in whether connections are encrypted over the network. The following tables show the effect of these settings.
+
+#### ODBC Driver 18 and newer
+
+| **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encryption** | **Result** |
+|---------------------|------------------------------|--------------------------|------------|
+| No  | No  | No  | Server certificate isn't checked.<br/>Data sent between client and server isn't encrypted. |
+| No  | Yes | No  | Server certificate isn't checked.<br/>Data sent between client and server isn't encrypted. |
+| Yes | No  | No  | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | No  | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
+| No  | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+| No  | Yes | Yes | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
+| Yes | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | Yes | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
+| Strict | - | - | TrustServerCertificate is ignored. Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+
+> [!NOTE]
+> Strict is only available against servers that support TDS 8.0 connections.
+
+### ODBC Driver 17 and older
+
+| **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encryption** | **Result** |
+|---------------------|------------------------------|--------------------------|------------|
+| No  | No  | No  | Server certificate isn't checked.<br/>Data sent between client and server isn't encrypted. |
+| No  | Yes | No  | Server certificate isn't checked.<br/>Data sent between client and server isn't encrypted. |
+| Yes | No  | No  | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | No  | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
+| No  | No  | Yes | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
+| No  | Yes | Yes | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
+| Yes | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | Yes | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
+
 ### TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
 Controls the Transparent Network IP Resolution feature, which interacts with MultiSubnetFailover to allow faster reconnection attempts. For more information, see [Using Transparent Network IP Resolution](using-transparent-network-ip-resolution.md).
@@ -208,7 +246,7 @@ Specifies the use of a replication login on ODBC Driver version 17.8 and newer.
 
 | Keyword Value | Description |
 |-|-|
-|No|(Default) Replication login will not be used. |
+|No|(Default) Replication login won't be used. |
 |Yes| Triggers with the `NOT FOR REPLICATION` option won't fire on the connection. |
 
 ## ClientCertificate
@@ -225,7 +263,7 @@ In case if certificate is in PFX format and private key inside the PFX certifica
 
 ## ClientKey
 
-Specifies a file location of the private key for PEM or DER certificates that are specified by the ClientCertificate attribute. Format:
+Specifies a file location of the private key for `PEM` or `DER` certificates that are specified by the ClientCertificate attribute. Format:
 
 | Option Value | Description |
 |-|-|
@@ -235,7 +273,7 @@ In case if private key file is password protected then password keyword is requi
 
 ### HostnameInCertificate
 
-Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) is negotiated, if it is different from the default value derived from Addr/Address/Server.
+Specifies the hostname to be expected in the server's certificate when [encryption](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) is negotiated, if it's different from the default value derived from Addr/Address/Server.
 
 ### SQL_COPT_SS_ACCESS_TOKEN
 
@@ -270,7 +308,7 @@ To enable XA transactions with an XA-compliant Transaction Processor (TP), the a
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ```
 
-To associate an XA transaction with an ODBC connection only, provide TRUE or FALSE with SQL_COPT_SS_ENLIST_IN_XA instead of the pointer when calling **`SQLSetConnectAttr`**. This setting is only valid on Windows and cannot be used to specify XA operations through a client application.
+To associate an XA transaction with an ODBC connection only, provide TRUE or FALSE with SQL_COPT_SS_ENLIST_IN_XA instead of the pointer when calling **`SQLSetConnectAttr`**. This setting is only valid on Windows and can't be used to specify XA operations through a client application.
 
 ```cpp
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
@@ -282,8 +320,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 |TRUE|Associates the XA transaction with the ODBC connection. All related database activities will be performed under the protection of the XA transaction.|Windows|
 |FALSE|Disassociates the transaction with the ODBC connection.|Windows|
 
- For more information about XA transactions, see [Using XA Transactions](use-xa-with-dtc.md).
-
+For more information about XA transactions, see [Using XA Transactions](use-xa-with-dtc.md).
 
 ### SQL_COPT_SS_LONGASMAX
 
@@ -293,7 +330,6 @@ Allows long type data to be sent to servers as max type data.
 |-|-|
 |No|(Default) Don't convert long types to max types when sending. |
 |Yes| Converts data from long types to max types when sending. |
-
 
 ### SQL_COPT_SS_SPID
 

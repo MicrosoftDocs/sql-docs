@@ -14,7 +14,7 @@ ms.custom: template-tutorial
 # Tutorial to perform your first code translation with Azure Synapse Pathway
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
-Azure Synapse Pathway introduces support for translating schemas, tables, views, functions, etc. from **Amazon Redshift**, **Google BigQuery**, **IBM Netezza**, **Microsoft SQL Server**, **Snowflake**, and **Teradata** into T-SQL complaint code that automates migration to Azure Synapse Analytics.
+Azure Synapse Pathway introduces support for translating schemas, tables, views, functions, etc. from **IBM Netezza**, **Microsoft SQL Server** and **Snowflake** into T-SQL complaint code that automates migration to Azure Synapse Analytics.
 
 For more information, see [Azure Synapse Pathway overview](azure-synapse-pathway-overview.md).
 

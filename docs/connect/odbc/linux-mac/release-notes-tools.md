@@ -23,7 +23,7 @@ This article lists and describes what's new in the versioned releases of the [!I
 | New item | Details |
 | :------- | :------ |
 | Sqlcmd Bugfix | Fixed extraneous trailing bytes after encoding conversion. |
-| TDS 8.0 | Add support for TDS 8.0 Strict encryption when connecting to SQL Server 2022 |
+| TDS 8.0 | Add support for TDS 8.0 strict encryption |
 | &nbsp; | &nbsp; |
 
 ## 17.8.1.2, October 2021

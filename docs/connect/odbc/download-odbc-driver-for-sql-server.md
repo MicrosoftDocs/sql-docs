@@ -64,7 +64,6 @@ Microsoft ODBC Driver 17.9.1.1 for SQL Server (x64):
 Microsoft ODBC Driver 17.9.1.1 for SQL Server (x86):  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x40a)
 
-
 ### Release notes for Windows
 
 For details about this release on Windows, see [the Windows release notes](windows\release-notes-odbc-sql-server-windows.md).

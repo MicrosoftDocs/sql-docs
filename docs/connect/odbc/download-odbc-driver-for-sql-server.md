@@ -48,6 +48,16 @@ Microsoft ODBC Driver 18.0.1.1 for SQL Server (x64):
 Microsoft ODBC Driver 18.0.1.1 for SQL Server (x86):  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2187028&clcid=0x40a)
 
+Version 17.9.1 is the latest general availability (GA) version of the 17.x driver. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.9.1 upgrades it to 17.9.1.
+
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2187214)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2187215)**  
+
+- Release number: 17.9.1.1
+- Released: February 17, 2022
+
+This release of Microsoft ODBC Driver for SQL Server can be installed in the following languages:
+
 Microsoft ODBC Driver 17.9.1.1 for SQL Server (x64):  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x40a)
 

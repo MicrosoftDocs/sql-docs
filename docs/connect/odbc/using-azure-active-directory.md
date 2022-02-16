@@ -2,7 +2,7 @@
 title: Using Azure Active Directory with the ODBC Driver
 description: The Microsoft ODBC Driver for SQL Server allows ODBC applications to connect to an instance of Azure SQL Database using Azure Active Directory.
 ms.custom: ""
-ms.date: 02/15/2022
+ms.date: 02/17/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -67,7 +67,7 @@ It's possible to use the new Azure AD authentication options when creating or ed
 ![The DSN creation and editing screen with Azure Active Directory Interactive authentication selected.](windows/create-dsn-ad-interactive.png)
 
 > [!NOTE]
-> As of driver version 18.0, the interactive authentication behavior has changed. Users will always be prompted for credentials unless the driver has a valid access token cached. This change prevents users on Azure Active Directory joined devices from skipping the prompt and automatically signing in with cached credentials when using `ActiveDirectoryInteractive` authentication. 
+> As of driver version 17.9, the interactive authentication behavior has changed. Users will always be prompted for credentials unless the driver has a valid access token cached. This change prevents users on Azure Active Directory joined devices from skipping the prompt and automatically signing in with cached credentials when using `ActiveDirectoryInteractive` authentication. 
 
 `Authentication=SqlPassword` for username/password authentication to SQL Server (Azure or otherwise)
 

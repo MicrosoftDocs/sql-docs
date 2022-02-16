@@ -1,6 +1,6 @@
 ---
-title: "Connecting from Linux or macOS"
-description: "Learn how to create a connection to a database from Linux or macOS using the Microsoft ODBC Driver for SQL Server."
+title: Connecting from Linux or macOS
+description: Learn how to create a connection to a database from Linux or macOS using the Microsoft ODBC Driver for SQL Server.
 ms.custom: ""
 ms.date: 02/15/2022
 ms.prod: sql
@@ -20,7 +20,7 @@ ms.author: v-davidengel
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-This topic discusses how you can create a connection to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.  
+This article discusses how you can create a connection to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.  
   
 ## Connection Properties  
 
@@ -35,7 +35,7 @@ The value passed to the **Driver** keyword can be one of the following:
 
 - The path to the driver library, which was specified in the template .ini file used to install the driver.  
 
-DSNs are optional. You can use a DSN to define connection string keywords under a `DSN` name that you can then reference in the connection string. To create a DSN, create (if necessary) and edit the file **~/.odbc.ini** (`.odbc.ini` in your home directory) for a User DSN only accessible to the current user, or `/etc/odbc.ini` for a System DSN (administrative privileges required.) The following is a sample file that shows the minimal required entries for a DSN:  
+DSNs are optional. You can use a DSN to define connection string keywords under a `DSN` name that you can then reference in the connection string. To create a DSN, create (if necessary) and edit the file **~/.odbc.ini** (`.odbc.ini` in your home directory) for a User DSN only accessible to the current user, or `/etc/odbc.ini` for a System DSN (administrative privileges required.) The following odbc.ini is a sample that shows the minimal required entries for a DSN:
 
 ```ini
 # [DSN name]
@@ -45,7 +45,7 @@ Driver = ODBC Driver 17 for SQL Server
 Server = tcp:localhost,1433
 #
 # Note:  
-# Port is not a valid keyword in the odbc.ini file  
+# Port isn't a valid keyword in the odbc.ini file  
 # for the Microsoft ODBC driver on Linux or macOS
 #  
 ```  
@@ -53,9 +53,9 @@ Server = tcp:localhost,1433
 To connect using the above DSN in a connection string, you would specify the `DSN` keyword like: `DSN=MSSQLTest;UID=my_username;PWD=my_password`  
 The above connection string would be the equivalent of specifying a connection string without the `DSN` keyword like: `Driver=ODBC Driver 17 for SQL Server;Server=tcp:localhost,1433;UID=my_username;PWD=my_password`
 
-You can optionally specify the protocol and port to connect to the server. For example, **Server=tcp:**_servername_**,12345**. Note that the only protocol supported by the Linux and macOS drivers is `tcp`.
+You can optionally specify the protocol and port to connect to the server. For example, **Server=tcp:**_servername_**,12345**. The only protocol supported by the Linux and macOS drivers is `tcp`.
 
-To connect to a named instance on a static port, use <b>Server=</b>*servername*,**port_number**. Connecting to a dynamic port is not supported before version 17.4.
+To connect to a named instance on a static port, use <b>Server=</b>_servername_,**port_number**. Connecting to a dynamic port isn't supported before version 17.4.
 
 Alternatively, you can add the DSN information to a template file, and execute the following command to add it to `~/.odbc.ini` :
 
@@ -79,48 +79,48 @@ Enabling encryption increases security at the expense of performance.
 
 For more information, see [Encrypting Connections to SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) and [Using Encryption Without Validation](../../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
-Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the server login credentials (user name and password) are always encrypted. The following tables shows the effect of the **Encrypt** and **TrustServerCertificate** settings.  
+Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the server login credentials (user name and password) are always encrypted. The following tables show the effect of the **Encrypt** and **TrustServerCertificate** settings.  
 
-### ODBC 18 Driver and newer
+### ODBC Driver 18 and newer
 
-| **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encrypt** | **Result** |
+| **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encryption** | **Result** |
 |---------------------|------------------------------|--------------------------|------------|
-| No  | No  | No  | Server certificate is not checked.<br/>Data sent between client and server is not encrypted. |
-| No  | Yes | No  | Server certificate is not checked.<br/>Data sent between client and server is not encrypted. |
+| No  | No  | No  | Server certificate isn't checked.<br/>Data sent between client and server isn't encrypted. |
+| No  | Yes | No  | Server certificate isn't checked.<br/>Data sent between client and server isn't encrypted. |
 | Yes | No  | No  | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
-| Yes | Yes | No  | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | No  | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
 | No  | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
-| No  | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| No  | Yes | Yes | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
 | Yes | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
-| Yes | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | Yes | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
 | Strict | - | - | TrustServerCertificate is ignored. Server certificate is checked.<br/>Data sent between client and server is encrypted. |
 
 > [!NOTE]
 > Strict is only available against servers that support TDS 8.0 connections.
 
-### ODBC 17 Driver and older
+### ODBC Driver 17 and older
 
-| **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encrypt** | **Result** |
+| **Encrypt Setting** | **Trust Server Certificate** | **Server Force Encryption** | **Result** |
 |---------------------|------------------------------|--------------------------|------------|
-| No  | No  | No  | Server certificate is not checked.<br/>Data sent between client and server is not encrypted. |
-| No  | Yes | No  | Server certificate is not checked.<br/>Data sent between client and server is not encrypted. |
+| No  | No  | No  | Server certificate isn't checked.<br/>Data sent between client and server isn't encrypted. |
+| No  | Yes | No  | Server certificate isn't checked.<br/>Data sent between client and server isn't encrypted. |
 | Yes | No  | No  | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
-| Yes | Yes | No  | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
-| No  | No  | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
-| No  | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | No  | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
+| No  | No  | Yes | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
+| No  | Yes | Yes | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
 | Yes | No  | Yes | Server certificate is checked.<br/>Data sent between client and server is encrypted. |
-| Yes | Yes | Yes | Server certificate is not checked.<br/>Data sent between client and server is encrypted. |
+| Yes | Yes | Yes | Server certificate isn't checked.<br/>Data sent between client and server is encrypted. |
 
 When using connection encryption, the name (or IP address) in a Subject Common Name (CN) or Subject Alternative Name (SAN) in a SQL Server TLS/SSL certificate should exactly match the server name (or IP address) specified in the connection string.
 
-By default, encrypted connections always verify the server's certificate. However, if you connect to a server that has a self-signed certificate, and are not using the strict encryption mode, you can add the `TrustServerCertificate` option to bypass checking the certificate against the list of trusted certificate authorities:  
+By default, encrypted connections always verify the server's certificate. However, if you connect to a server that has a self-signed certificate, and aren't using strict encryption mode, you can add the `TrustServerCertificate` option to bypass checking the certificate against the list of trusted certificate authorities:  
 
 ```ini
 Driver={ODBC Driver 17 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```
 
-In the strict encryption mode, the certificate is always verified. <br/><br/>
-TLS uses the OpenSSL library. The following table shows the minimum supported versions of OpenSSL and the default Certificate Trust Store locations for each platform:
+In strict encryption mode, the certificate is always verified. <br/><br/>
+TLS on Linux and macOS uses the OpenSSL library. The following table shows the minimum supported versions of OpenSSL and the default Certificate Trust Store locations for each platform:
 
 |Platform|Minimum OpenSSL Version|Default Certificate Trust Store Location|  
 |------------|---------------------------|--------------------------------------------|
@@ -142,10 +142,10 @@ You can also specify encryption in the connection string using the `Encrypt` opt
 
 ## Adjusting the TCP Keep-Alive Settings
 
-Starting in ODBC Driver 17.4, how often the driver sends keep-alive packets and retransmits them when a response is not received is configurable.
+Starting with ODBC Driver 17.4, how often the driver sends keep-alive packets and retransmits them when a response isn't received is configurable.
 To configure, add the following settings to either the driver's section in `odbcinst.ini`, or the DSN's section in `odbc.ini`. When connecting
 with a DSN, the driver will use the settings in the DSN's section if present; otherwise, or if connecting with a connection string only, it will use the
-settings in the driver's section in `odbcinst.ini`. If the setting is not present in either location, the driver uses the default value.
+settings in the driver's section in `odbcinst.ini`. If the setting isn't present in either location, the driver uses the default value.
 Beginning with ODBC Driver 17.8, `KeepAlive` and `KeepAliveInterval` keywords can be specified in the connection string.
 
 - `KeepAlive=<integer>` controls how often TCP attempts to verify that an idle connection is still intact by sending a keep-alive packet. The default is **30** seconds.

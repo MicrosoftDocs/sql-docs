@@ -27,9 +27,6 @@ Version 18.0.1.1 is the latest general availability (GA) version. The Microsoft 
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 18 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2186919)**  
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 18 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2187028)**  
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2187214)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2187215)**  
-
 ### Version information
 
 - Release number: 18.0.1.1

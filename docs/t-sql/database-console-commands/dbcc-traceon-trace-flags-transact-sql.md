@@ -2,7 +2,7 @@
 description: "DBCC TRACEON - Trace Flags (Transact-SQL)"
 title: "Trace Flags (Transact-SQL)"
 ms.custom: ""
-ms.date: 05/21/2021
+ms.date: 02/15/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -57,7 +57,7 @@ The following table lists and describes the trace flags that are available in [!
 > Trace flag behavior may not be supported in future releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> Тrace flags can be referenced directly in the table via a bookmark that you can add to the end of the URL, using this format #tfNNNN. For example, to jump directly to trace flag 1118 in the table, you can use https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1118
+> Тrace flags can be referenced directly in the table via a bookmark that you can add to the end of the URL, using this format #tfNNNN. For example, to jump directly to trace flag 1118 in the table, use `https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1118`.
 
 
 |Trace flag|Description|  

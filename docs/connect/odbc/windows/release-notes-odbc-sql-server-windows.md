@@ -63,7 +63,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 ![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2187214)  
 ![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2187215)  
 
-Version number: 17.9.1.1
+Version number: 17.9.1.1  
 Released: February 17, 2022  
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  

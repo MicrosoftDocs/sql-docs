@@ -290,7 +290,9 @@ On its TARGET...SET clause, the following Transact-SQL CREATE EVENT SESSION stat
 
 In the present example, the EVENT...ACTION clause offer happens to offer only one action for the target to choose, namely **sqlos.system_thread_id**. On the TARGET...SET clause, we see the assignment **source=N'sqlos.system_thread_id'** assignment.
 
-- To track more than one source action, you can add a second histogram target to your CREATE EVENT SESSION statement.
+> [!NOTE]
+> It is not possible to add more than one target of the same type (including the histogram target) per event session. It is also not possible to have more than one source (action / event field) per histogram target. Therefore, a new event session is required to track any additional action (or event) fields in a new histogram target.
+
 
 
 ```sql

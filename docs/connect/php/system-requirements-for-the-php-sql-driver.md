@@ -44,7 +44,7 @@ If you're downloading the Windows version of the driver on a 64-bit version of W
 |PHP driver version &#8594;<br />&#8595; ODBC driver version|5.10|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |ODBC Driver 18  |Yes|   |   |   |   |   |   |   |   |
-|ODBC Driver 17 |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
+|ODBC Driver 17  |Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 |ODBC Driver 13.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
 |ODBC Driver 13  |   |   |   |   |   |   |   |Yes|   |
 |ODBC Driver 11  |   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|

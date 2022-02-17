@@ -13,7 +13,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # What&#39;s New in SQL Server Installation
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
  Installation is supported on x64 processors only. For more information, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
   

@@ -2,7 +2,7 @@
 title: "Release Notes for ODBC Driver for SQL Server on Windows"
 description: "This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows."
 ms.custom: ""
-ms.date: "02/15/2022"
+ms.date: "02/17/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -53,9 +53,27 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------- | :------ |
 | Added compatibility with OpenSSL 3.0 | See [Connection String Keywords and Data Source Names](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md#using-tlsssl). |
 | Ability to send long types as max types | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
-| Support for TDS8 | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
+| Support for TDS 8.0 | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Compatibility extensions for SQLGetData | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## 17.9
+
+![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2187214)  
+![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2187215)  
+
+Version number: 17.9.1.1  
+Released: February 17, 2022  
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x40a)  
+
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x40a)  
+
+| Feature added | Details |
+| :------- | :------ |
+| Added compatibility with OpenSSL 3.0 | See [Connection String Keywords and Data Source Names](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md#using-tlsssl). |
 | &nbsp; | &nbsp; |
 
 ## Previous Releases
@@ -153,7 +171,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Feature added | Details |
 | :------------ | :------ |
 | Support authentication with Managed Identity for Azure Key Vault | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
-| Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Support for more Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -195,7 +213,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Support for more Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Support for setting data classification version | See [Data Classification](../data-classification.md#bkmk-version). |
 | Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, the ODBC installer will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
@@ -282,7 +300,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes. | &bull; &nbsp; `SQL_COPT_SS_CEKCACHETTL`<br/>Allows controlling the time that the local cache of Column Encryption Keys exists, as well as flushing it.<br/><br/>&bull; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS`<br/>Allows the application to restrict AE operations to only use the specified list of Column Master Keys.<br/><br/> For more information, see [Using Always Encrypted with the ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
+| Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes. | &bull; &nbsp; `SQL_COPT_SS_CEKCACHETTL`<br/>Allows controlling the time that the local cache of Column Encryption Keys exists, and flushing it.<br/><br/>&bull; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS`<br/>Allows the application to restrict AE operations to only use the specified list of Column Master Keys.<br/><br/> For more information, see [Using Always Encrypted with the ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
 | Azure Active Directory Interactive Authentication Support | &nbsp; |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |

@@ -2,7 +2,7 @@
 title: "List of bugs fixed"
 description: "This page contains a listing of bugs fixed in each release, starting with Microsoft ODBC Driver 17 for SQL Server."
 ms.custom: ""
-ms.date: "02/15/2022"
+ms.date: "02/17/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -20,6 +20,14 @@ manager: kenvh
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 18.0 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix UI issues where text was cut off and position of items was off.
+- Fix issue with Active Directory Interactive login where attempting to login after closing the window of the first failure would automatically succeed if cached credentials were available.
+- Fixed use of XADTC with Azure SQL Managed Instance.
+- Fixed loss of Azure Active Directory authentication mode when reconnecting an idle connection.
+- Fix an issue with federated authentication when using PingFed.
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.9 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Fix UI issues where text was cut off and position of items was off.
 - Fix issue with Active Directory Interactive login where attempting to login after closing the window of the first failure would automatically succeed if cached credentials were available.

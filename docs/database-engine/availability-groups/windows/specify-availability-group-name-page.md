@@ -32,6 +32,9 @@ ms.author: mathoma
    * **EXTERNAL**
       
       Use when the availability group is hosted on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is managed by an external cluster technology for high availability and disaster recovery, for example Pacemaker on Linux. Applies to [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] and later.
+      
+>[!IMPORTANT]
+> Do not choose **cluster type** = `EXTERNAL` on a Windows platform. Doing so will result in the availability group going into a resolving state and will prevent you from removing databases from the availability group. 
 
    * **NONE**
       

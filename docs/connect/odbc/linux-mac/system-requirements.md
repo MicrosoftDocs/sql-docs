@@ -35,13 +35,15 @@ Versions 18, 17, 13.1, and 13 of the Linux and macOS drivers are supported on th
 |Apple OS X 10.11 (El Capitan)  |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Apple macOS 10.12 (Sierra)     |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Apple macOS 10.13 (High Sierra)|    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Apple macOS 10.14 (Mojave)     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |   |
+|Apple macOS 10.14 (Mojave)     |    |    |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |   |
 |Apple macOS 10.15 (Catalina)   |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |   |
 |Apple macOS 11.0 (Big Sur)     |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
 |Apple macOS 12.0 (Monterey)    |Yes |Yes |    |    |    |    |    |    |    |    |    |    |   |
-|Alpine Linux 3.11              |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |   |
+|Alpine Linux 3.11              |    |    |Yes |Yes |Yes |Yes |    |    |    |    |    |    |   |
 |Alpine Linux 3.12              |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
 |Alpine Linux 3.13              |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
+|Alpine Linux 3.14              |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
+|Alpine Linux 3.15              |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |    |   |
 |Debian Linux 8                 |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Debian Linux 9                 |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Debian Linux 10                |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
@@ -55,7 +57,7 @@ Versions 18, 17, 13.1, and 13 of the Linux and macOS drivers are supported on th
 |SUSE Linux Enterprise Server 12|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |SUSE Linux Enterprise Server 15|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |    |   |
 |Ubuntu Linux 14.04             |    |    |    |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Ubuntu Linux 16.04             |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Ubuntu Linux 16.04             |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Ubuntu Linux 18.04             |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |    |    |    |   |
 |Ubuntu Linux 20.04             |Yes |Yes |Yes |Yes |Yes |    |    |    |    |    |    |    |   |
 |Ubuntu Linux 21.04             |Yes |Yes |Yes |Yes |    |    |    |Yes |    |    |    |    |   |

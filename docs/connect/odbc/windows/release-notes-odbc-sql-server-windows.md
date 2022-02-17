@@ -2,7 +2,7 @@
 title: "Release Notes for ODBC Driver for SQL Server on Windows"
 description: "This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows."
 ms.custom: ""
-ms.date: "02/15/2022"
+ms.date: "02/17/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -56,6 +56,24 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Support for TDS 8.0 | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Compatibility extensions for SQLGetData | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## 17.9
+
+![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2187214)  
+![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2187215)  
+
+Version number: 17.9.1.1  
+Released: February 17, 2022  
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2187214&clcid=0x40a)  
+
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2187215&clcid=0x40a)  
+
+| Feature added | Details |
+| :------- | :------ |
+| Added compatibility with OpenSSL 3.0 | See [Connection String Keywords and Data Source Names](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md#using-tlsssl). |
 | &nbsp; | &nbsp; |
 
 ## Previous Releases

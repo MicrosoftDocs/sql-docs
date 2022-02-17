@@ -927,7 +927,8 @@ CREATE DATABASE SCOPED CREDENTIAL SQLServerCredentials
 WITH IDENTITY = 'username', SECRET = 'password';
 ```
 
-The ODBC `Database` parameter is optional. If `Database` is not specified, the default database defined for the account used in the database scoped credential is used. You can provide the database name instead via a three-part name in the CREATE EXTERNAL TABLE statement, with the LOCATION parameter. For an example, see [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true#h-create-an-external-table-for-sql-server). 
+Next, create the new external data source. The ODBC `Database` parameter is optional. If `Database` is not specified, the default database defined for the account used in the database scoped credential is used. You can provide the database name instead via a three-part name in the CREATE EXTERNAL TABLE statement, with the LOCATION parameter. For an example, see [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true#h-create-an-external-table-for-sql-server). 
+
 
 In example below, `WINSQL2019AGL` is the availability group listener name. 
 

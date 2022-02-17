@@ -26,7 +26,7 @@ Second, the default value has changed from `no`/`false` to `Mandatory`. This cha
 
 ## Driver name changes
 
-The new Microsoft OLE DB Driver 19 for SQL Server supports side by side installation with the older Microsoft OLE DB Driver for SQL Server. To be able to differentiate the drivers, the name was changed to include the major version number. To use the new driver in an application the user must specify the new driver name. When connecting through the `IDBInitialize` interface, the call to `CoCreateInstance` must use the value `CLSID_MSOLEDBSQL19` as the CLSID to specify use of the OLE DB Driver 19 for SQL Server. For example:
+The new Microsoft OLE DB Driver 19 for SQL Server supports side by side installation with the older Microsoft OLE DB Driver for SQL Server. To be able to differentiate the drivers, the name was changed to include the major version number. To use the new driver in an application, the user must specify the new driver name. When connecting through the `IDBInitialize` interface, the call to `CoCreateInstance` must use the value `CLSID_MSOLEDBSQL19` as the CLSID to specify use of the OLE DB Driver 19 for SQL Server. For example:
 
 ```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL19,

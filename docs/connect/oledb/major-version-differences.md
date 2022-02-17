@@ -35,7 +35,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL19,
                  IID_IDBInitialize,
                  static_cast<void**>(&pIDBInitialize))
 ```
-To connect to the old driver with this method use `CLSID_MSOLEDBSQL`.
+To connect to the old driver with this method, use `CLSID_MSOLEDBSQL`.
 
 Connections through the `IDataInitialize` interface replace the value of the `Provider` keyword with `MSOLEDBSQL19` to specify the driver Microsoft OLE DB Driver 19 for SQL Server.
 

@@ -1,4 +1,5 @@
 ---
+description: "Median (MDX)"
 title: "Median (MDX) | Microsoft Docs"
 ms.date: 02/17/2022
 ms.prod: sql

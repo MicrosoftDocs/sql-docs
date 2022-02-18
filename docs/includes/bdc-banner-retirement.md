@@ -4,7 +4,7 @@ ms.author: wiassaf
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.topic: include
-ms.date: 01/26/2022
+ms.date: 02/22/2022
 ---
 
 > [!IMPORTANT]

@@ -1,7 +1,7 @@
 ---
 description: "Manage accelerated database recovery"
 title: "Manage accelerated database recovery | Microsoft Docs"
-ms.date: "02/02/2021"
+ms.date: "02/18/2021"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -25,6 +25,8 @@ This article contains information on best practices for managing and configuring
 
 ## Who should consider accelerated database recovery
 
+Many customers find accelerated database recovery (ADR) a valuable technology to improve recovery time. An accumulation of the factors below should be considered before deciding which databases should use ADR, evaluate the factors below and if the accumulation of factors weighs in favor or against using ADR. 
+
 - ADR is recommended for workloads with long running transactions. 
 
 - ADR is recommended for workloads that have seen cases where active transactions are causing the transaction log to grow significantly.  
@@ -33,15 +35,19 @@ This article contains information on best practices for managing and configuring
 
 - ADR is not supported for databases enrolled in database mirroring.
 
-- ADR is not recommended for databases larger than 100 terabytes due to the single-threaded PVS version cleaner.  
+- ADR is not recommended for databases larger than 100 terabytes due to the single-threaded persistent version store (PVS) version cleaner.  
 
-- ADR is not recommended for database environments with a high count of update/deletes, such as high-volume OLTP, without a period of rest/recovery for the PVS cleanup process to reclaim space. Typically, business operation cycles allow for this time, but in some scenarios you may want to initiate the PVS cleanup process manually to take advantage of application activity conditions.
+- If your application performs many non-batched, incremental updates, such as updating a record every time there is a row accessed/inserted, your workload may not be optimal for ADR. Consider rewriting the application queries to batch updates, where possible, until the end of the command and reduce a high number of small update transactions.
+
+### Evaluate whether your workload is a good fit for ADR
+
+Once you have enabled ADR in your workload, look for signs that the persistent version store (PVS) is unable to keep up. It is recommended to monitor ADR health using the methods found in [Troubleshooting accelerated database recovery](accelerated-database-recovery-troubleshooting.md). 
+
+ADR is not recommended for database environments with a high count of update/deletes, such as high-volume OLTP, without a period of rest/recovery for the PVS cleanup process to reclaim space. Typically, business operation cycles allow for this time, but in some scenarios you may want to initiate the PVS cleanup process manually to take advantage of application activity conditions.
+
+   - If the PVS cleanup process is running for a long period time, you may find that the count of aborted transactions will grow which will also cause the PVS size to increase. Leverage the `sys.dm_tran_aborted_transactions` DMV to report the aborted transaction count, and leverage `sys.dm_tran_persistent_version_store_stats` to report the cleanup start/end times along with the PVS size. For more information, see [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md).  
 
    - To activate the PVS cleanup process manually between workloads or during maintenance windows, use `sys.sp_persistent_version_cleanup`. For more information, see [sys.sp_persistent_version_cleanup](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md). 
-
-   - If the PVS cleanup process is running for a long period time, you may find that the count of aborted transactions will grow which will also cause the PVS size to increase. Leverage the `sys.dm_tran_aborted_transactions` DMV to report the aborted transaction count, and leverage `sys.dm_tran_persistent_version_store_stats` to report the cleanup start/end times along with the PVS size. For more information, see [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md). For more troubleshooting options, see [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md).
-      
-- If your application performs many non-batched, incremental updates, such as updating a record every time there is a row accessed/inserted, your workload may not be optimal for ADR. Consider rewriting the application queries to batch updates, where possible, until the end of the command and reduce a high number of small update transactions.
 
 ## Best practices for accelerated database recovery
 

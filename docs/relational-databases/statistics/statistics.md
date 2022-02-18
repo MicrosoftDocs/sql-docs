@@ -86,7 +86,7 @@ The density vector contains one density for each prefix of columns in the statis
 ### Statistics Options  
  There are three options that affect when and how statistics are created and updated. These options are configurable at the database level only.  
   
-#### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS Option  
+#### AUTO_CREATE_STATISTICS Option  
  When the automatic create statistics option, [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) is ON, the Query Optimizer creates statistics on individual columns in the query predicate, as necessary, to improve cardinality estimates for the query plan. These single-column statistics are created on columns that do not already have a [histogram](#histogram) in an existing statistics object. The AUTO_CREATE_STATISTICS option does not determine whether statistics get created for indexes. This option also does not generate filtered statistics. It applies strictly to single-column statistics for the full table.  
   
  When the Query Optimizer creates statistics as a result of using the AUTO_CREATE_STATISTICS option, the statistics name starts with `_WA`. You can use the following query to determine if the Query Optimizer has created statistics for a query predicate column.  

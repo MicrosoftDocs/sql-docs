@@ -86,7 +86,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 Create a schema-only .dacpac file to use for database upgrades, for example, by using SQL authentication:
 
 ```cmd
-sqlpackage.exe extract /TargetFile:{filename}.dacpac /DiagnosticsFile:{logFile}.log /p:ExtractAllTableData=false /p:VerifyExtraction=true /SourceServerName:{serverFQDN} /SourceDatabaseName:{databaseName} /SourceUser:{username} /SourcePassword:{password}
+sqlpackage.exe /Action:Extract /TargetFile:{filename}.dacpac /DiagnosticsFile:{logFile}.log /p:ExtractAllTableData=false /p:VerifyExtraction=true /SourceServerName:{serverFQDN} /SourceDatabaseName:{databaseName} /SourceUser:{username} /SourcePassword:{password}
 ```
 
 ## Next Steps

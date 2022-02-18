@@ -62,7 +62,7 @@ To install the Azure SQL Migration extension in Azure Data Studio, follow the st
 
 ### Azure SQL target readiness assessment and database migrations
 
-The Azure SQL Migration extension supports target readiness and database migrations for the following Azure SQL targets.
+The Azure SQL Migration extension supports assessment, generate Azure recommendations and database migrations for the following Azure SQL targets.
 
 - SQL Server on Azure Virtual Machines (SQL VM)
 - Azure SQL Managed Instance (SQL MI)

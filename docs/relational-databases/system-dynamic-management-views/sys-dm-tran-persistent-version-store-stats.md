@@ -2,7 +2,7 @@
 description: "sys.dm_tran_persistent_version_store_stats (Transact-SQL)"
 title: "sys.dm_tran_persistent_version_store_stats (Transact-SQL)"
 ms.custom: ""
-ms.date: "01/21/2022"
+ms.date: "02/18/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -59,7 +59,7 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
 
 ## Remarks   
  
-For example usage in troubleshooting, see [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshooting.md).
+For example usage in troubleshooting, see [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshoot.md).
 
 ## See also
 

@@ -135,5 +135,5 @@ For guidance on workloads that are and are not recommended for ADR, see [Manage 
 ## Next steps 
 
 - [Manage accelerated database recovery](accelerated-database-recovery-management.md)
-- [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md)
+- [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md)
 - [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery)

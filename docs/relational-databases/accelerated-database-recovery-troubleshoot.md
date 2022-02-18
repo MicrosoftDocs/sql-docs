@@ -1,7 +1,7 @@
 ---
 description: "Troubleshoot accelerated database recovery"
 title: "Troubleshoot accelerated database recovery"
-ms.date: "02/11/2022"
+ms.date: "02/18/2022"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -14,7 +14,8 @@ ms.author: wiassaf
 ms.reviewer: kfarlee
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
-# Troubleshooting accelerated database recovery
+
+# Troubleshoot accelerated database recovery
 
 [!INCLUDE [SQL Server 2019, ASDB, ASDBMI ](../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 

@@ -2,7 +2,7 @@
 description: "sys.dm_tran_aborted_transactions (Transact-SQL)"
 title: "sys.dm_tran_aborted_transactions (Transact-SQL)"
 ms.custom: ""
-ms.date: "01/21/2022"
+ms.date: "02/18/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -46,7 +46,7 @@ On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databa
 
 ## Remarks   
 
-The `sys.dm_tran_aborted_transactions` DMV shows all aborted transactions on the SQL Server instance. The `nest_aborted` column indicates that the transaction has been committed or is active, but there are portions that aborted (savepoints or nested transactions) which can block the PVS cleanup process. For more information, see [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshooting.md). 
+The `sys.dm_tran_aborted_transactions` DMV shows all aborted transactions on the SQL Server instance. The `nest_aborted` column indicates that the transaction has been committed or is active, but there are portions that aborted (savepoints or nested transactions) which can block the PVS cleanup process. For more information, see [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshoot.md). 
 
 Unresolved, aborted transactions will be removed by the persistent version store (PVS) cleanup process. 
 

@@ -41,7 +41,7 @@ Many customers find accelerated database recovery (ADR) a valuable technology to
 
 ### Evaluate whether your workload is a good fit for ADR
 
-Once you have enabled ADR in your workload, look for signs that the persistent version store (PVS) is unable to keep up. It is recommended to monitor ADR health using the methods found in [Troubleshooting accelerated database recovery](accelerated-database-recovery-troubleshooting.md). 
+Once you have enabled ADR in your workload, look for signs that the persistent version store (PVS) is unable to keep up. It is recommended to monitor ADR health using the methods found in [Troubleshooting accelerated database recovery](accelerated-database-recovery-troubleshoot.md). 
 
 ADR is not recommended for database environments with a high count of update/deletes, such as high-volume OLTP, without a period of rest/recovery for the PVS cleanup process to reclaim space. Typically, business operation cycles allow for this time, but in some scenarios you may want to initiate the PVS cleanup process manually to take advantage of application activity conditions.
 
@@ -157,5 +157,5 @@ Changing the location of the PVS is a three-step process.
 ## Next steps 
 
 - [Accelerated database recovery concepts](accelerated-database-recovery-concepts.md)
-- [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshooting.md)
+- [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md)
 - [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery)

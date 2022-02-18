@@ -6243,7 +6243,7 @@ items:
       - name: Management
         href: relational-databases/accelerated-database-recovery-management.md
       - name: Troubleshooting
-        href: relational-databases/accelerated-database-recovery-troubleshooting.md        
+        href: relational-databases/accelerated-database-recovery-troubleshoot.md        
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager

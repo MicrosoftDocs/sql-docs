@@ -2,7 +2,7 @@
 description: "sys.sp_persistent_version_cleanup (Transact-SQL)"
 title: "sys.sp_persistent_version_cleanup (Transact-SQL)"
 ms.custom: ""
-ms.date: "01/21/2022"
+ms.date: "02/18/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -52,11 +52,13 @@ Optional. Default is 0. When 1, forces cleanup of all database pages even if not
 
 Optional. Possible options determine whether or not to reclaim off-row PVS page:
 
-0 - Default, no option specified
-1 - off-row version store without checking individual PVS page contents
-2 - off-row version store with each PVS page visited
-3 - in-row version store only
-4 - internal use only
+| Value | Description |
+|:--|:--|
+|0 | Default, no option specified |
+|1 | off-row version store without checking individual PVS page contents |
+|2 | off-row version store with each PVS page visited |
+|3 | in-row version store only |
+|4 | internal use only |
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  
@@ -107,6 +109,6 @@ EXEC sys.sp_persistent_version_cleanup;
 ## See also
 
 - [Accelerated database recovery](../accelerated-database-recovery-concepts.md)
-- [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshooting.md)
+- [Troubleshoot accelerated database recovery](../accelerated-database-recovery-troubleshoot.md)
 - [Manage accelerated database recovery](../accelerated-database-recovery-management.md)
 - [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery)

@@ -51,9 +51,6 @@ To install the Azure SQL Migration extension in Azure Data Studio, follow the st
 
     :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-landing-page.png" alt-text="Landing page":::
 
-> [!NOTE]
-> The Azure SQL Migration extension requires Azure Data Studio on a Windows operating system.
-
 ### Set up auto update for the extension
 
 [!INCLUDE [auto-update-extension](../../includes/auto-update-extension.md)]

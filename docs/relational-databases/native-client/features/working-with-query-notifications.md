@@ -55,11 +55,11 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 CREATE QUEUE myQueue  
 CREATE SERVICE myService ON QUEUE myQueue   
   
-([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
+([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
 ```  
   
 > [!NOTE]  
->  The service must use the predefined contract `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` as shown above.  
+>  The service must use the predefined contract `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` as shown above.  
   
 ## SQL Server Native Client OLE DB Provider  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports consumer notification on rowset modification. The consumer receives notification at every phase of rowset modification and on any attempted change.  

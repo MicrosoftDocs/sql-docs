@@ -2,7 +2,7 @@
 title: "SQL Server Login Dialog Box (ODBC)"
 description: "The SQL Server Login dialog may appear when an application makes an ODBC connection without specifying enough information to connect to the database."
 ms.custom: ""
-ms.date: "01/29/2021"
+ms.date: "02/15/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -93,11 +93,19 @@ Specifies the national language to use for SQL Server system messages. The compu
 
 ### Use strong encryption for data
 
-When selected, data that is passed through the connection will be encrypted. Logins are encrypted by default, even if the check box is cleared.
+When selected, data that is passed through the connection will be encrypted. Logins are encrypted by default, even if the check box is cleared. This option is available in ODBC Driver 17 and older.
+
+### Connection Encryption
+
+Declares the connection encryption mode to be used. Selecting the **Optional** or **Mandatory** option is equivalent to having **Use strong encryption for data** unselected or selected, respectively. When **Strict** is used, the connection will be encrypted using TDS 8.0. This option is available in ODBC Driver 18 and newer.
+
+### Hostname in certificate (optional)
+
+Specifies the hostname to be used when validating the server's certificate. When left blank, the server name is used as the hostname for validation. A hostname can only be specified when **Trust server certificate** is unselected. This option is available in ODBC Driver 18 and newer.
 
 ### Trust server certificate
 
-This option is applicable only when **Use strong encryption for data** is enabled. When selected, the server's certificate will not be validated to have the correct hostname of the server and be issued by a trusted certificate authority.
+This option is applicable only when **Use strong encryption for data** is enabled (ODBC Driver 17 and older), or when **Connection Encryption** is set to **Optional** or **Mandatory** (ODBC Driver 18 and newer). When selected, the server's certificate won't be validated to have the correct hostname of the server and be issued by a trusted certificate authority. The server's certificate will always be validated when using the **Strict** encryption mode.
 
 ## See Also
 

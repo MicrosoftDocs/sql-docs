@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "data types [SQL Server], columns"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: FY21Q2Fresh
+ms.custom: FY22Q2Fresh
 ms.reviewer: ""
 ms.date: "10/21/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

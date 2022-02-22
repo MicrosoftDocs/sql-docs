@@ -2,7 +2,7 @@
 title: Connecting with bcp
 description: Learn the options and commands available in the bcp utility, available in the mssql-tools package on Linux and macOS.
 ms.custom: ""
-ms.date: 09/30/2021
+ms.date: 02/15/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -99,7 +99,7 @@ Specifies the password for the login ID. When used with the -G option without -U
 
 Access tokens can be obtained via various methods. It's important to ensure the access token is correct byte-for-byte, as it will be sent as-is. Below is an example command that obtains an access token. The command uses the Azure CLI and Linux commands and saves it to a file in the proper format. If your system or terminal's default encoding isn't ASCII or UTF-8, you may need to adjust the `iconv` options. Be sure to carefully secure the resulting file and delete it when it's no longer required.
 
-```bash
+```azurecli
 az account get-access-token --resource https://database.windows.net --output tsv | cut -f 1 | tr -d '\n' | iconv -f ascii -t UTF-16LE > /tmp/tokenFile
 ```
 
@@ -121,6 +121,9 @@ Specifies the field terminator.
 **-T**  
 Specifies that the `bcp` utility connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with a trusted connection (integrated security).
 
+**-u**  
+Trust server certificate. (available since `bcp` version 18)
+
 **-U** *login_id*  
 Specifies the login ID used to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
@@ -131,6 +134,9 @@ Reports the `bcp` utility version number and copyright.
 Uses Unicode characters to do the bulk copy operation.
 
 In this release, Latin-1 and UTF-16 characters are supported.
+
+**-Y**[s|m|o]  
+Specifies the connection encryption mode. The options are Strict, Mandatory, and Optional. Using -Y without any parameters uses the Mandatory encryption mode, and is equivalent to -Ym. (available since `bcp` version 18)
 
 ## Unavailable options
 

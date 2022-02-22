@@ -45,7 +45,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 >  Either *job_id* or *job_name* must be specified; both cannot be specified.  
   
 `[ @server_name = ] 'server'`
- The name of the target server to remove from the specified job. *server* is **nvarchar(30)**, with no default. *server* can be **(LOCAL)**or the name of a remote target server.  
+ The name of the target server to remove from the specified job. *server* is **nvarchar(30)**, with no default. *server* can be **\(LOCAL\)** or the name of a remote target server.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

@@ -14,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 # NS$&lt;service name&gt; Properties (Advanced Tab)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   [!INCLUDE[ssNS](../../includes/ssns-md.md)] is implemented as a service named in the format **NS$**_<user_configured name>_. If custom properties are defined, they appear on this tab, with their values. This tab may have no properties listed.  
   
   

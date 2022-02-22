@@ -60,7 +60,7 @@ azdata bdc spark session create [--session-kind -k]
 ### Examples
 Create a session.
 ```bash
-azdata spark session create --session-kind pyspark
+azdata bdc spark session create --session-kind pyspark
 ```
 ### Optional Parameters
 #### `--session-kind -k`

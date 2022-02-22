@@ -1,6 +1,6 @@
 ---
 title: "Back up multiple databases: Azure Blob Storage"
-description: This article provides sample scripts that can be used to automate backups in SQL Server to Azure Blob storage service using PowerShell cmdlets.
+description: This article provides sample scripts that can be used to automate backups in SQL Server to Azure Blob Storage using PowerShell cmdlets.
 titleSuffix: "PowerShell"
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
@@ -17,7 +17,7 @@ ms.author: kendralittle
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This topic provides sample scripts that can be used to automate backups to Azure Blob storage service using PowerShell cmdlets.  
+This topic provides sample scripts that can be used to automate backups to Azure Blob Storage using PowerShell cmdlets.  
   
 ## Overview of PowerShell cmdlets for Backup and Restore
 
@@ -28,7 +28,7 @@ In addition, there are other cmdlets that may be required to automate backups to
 For a list of all available cmdlets, see [SqlServer cmdlets](/powershell/module/sqlserver).
   
 > [!TIP]  
-> The **SqlCredential** cmdlets are used in Backup and Restore to Azure Blob storage scenarios. For more information on credentials and their use, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
+> The **SqlCredential** cmdlets are used in Backup and Restore to Azure Blob storage scenarios. For more information on credentials and their use, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
   
 ### PowerShell for Multi-Database, Multi-Instance Backup Operations
 
@@ -42,7 +42,7 @@ The following are considerations for the sample scripts:
 
 - **Get-ChildItem** cmdlet: The information returned by the **Get-ChildItem** depends on the location in a SQL Server PowerShell path. For example, if the location is at the computer level, this cmdlet returns all the SQL Server database engine instances installed on the computer. Or, if the location is at the object level such as databases, then it returns a list of database objects. By default the **Get-ChildItem** cmdlet does not return system objects. Use the `–Force` parameter to see the system objects.
 
-- An Azure storage account and SQL credential are required prerequisites and for all backup and restore operations to the Azure Blob storage service.
+- An Azure storage account and SQL credential are required prerequisites and for all backup and restore operations to Azure Blob Storage.
   
 ### Create a SQL credential on all instances of SQL Server
 
@@ -163,6 +163,6 @@ foreach ($database in $databases) {
   
 ## See also
 
-[SQL Server Backup and Restore with Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)
+[SQL Server Backup and Restore with Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)
 
 [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

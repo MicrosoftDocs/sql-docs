@@ -46,7 +46,7 @@ By using the [script](/azure/devops/pipelines/yaml-schema#script) keyword in an 
 
 ```yaml
 - script: sqlpackage.exe /version
-  workingDirectory: C:\Program Files\Microsoft SQL Server\150\DAC\bin\
+  workingDirectory: C:\Program Files\Microsoft SQL Server\160\DAC\bin\
   displayName: 'get sqlpackage version'
 ```
 
@@ -56,7 +56,7 @@ By using the [run](https://docs.github.com/en/free-pro-team@latest/actions/refer
 
 ```yaml
 - name: get sqlpackage version
-  working-directory: C:\Program Files\Microsoft SQL Server\150\DAC\bin\
+  working-directory: C:\Program Files\Microsoft SQL Server\160\DAC\bin\
   run: ./sqlpackage.exe /version
 ```
 

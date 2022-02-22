@@ -13,7 +13,7 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ""
-ms.custom: seo-dt-2019, FY21Q2Fresh
+ms.custom: seo-dt-2019, FY22Q2Fresh
 ms.date: "10/21/2021"
 ---
 # View the SQL Server error log in SQL Server Management Studio (SSMS)

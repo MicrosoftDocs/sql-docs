@@ -52,7 +52,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 - Application Role
   
 ## sa Login  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` log in is a server-level principal. By default, it is created when an instance is installed. Beginning in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the default database of sa is master. This is a change of behavior from earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The `sa` login is a member of the `sysadmin` fixed server-level role. The `sa` login has all permissions on the server and cannot be limited. The `sa` login cannot be dropped, but it can be disabled so that no one can use it.
+ The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` login is a server-level principal. By default, it is created when an instance is installed. Beginning in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the default database of sa is master. This is a change of behavior from earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The `sa` login is a member of the `sysadmin` fixed server-level role. The `sa` login has all permissions on the server and cannot be limited. The `sa` login cannot be dropped, but it can be disabled so that no one can use it.
 
 ## dbo User and dbo Schema
 

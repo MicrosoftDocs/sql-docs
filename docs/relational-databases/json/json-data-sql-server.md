@@ -10,7 +10,7 @@ helpviewer_keywords:
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019, intro-quickstart, FY21Q2Fresh
+ms.custom: seo-dt-2019, intro-quickstart, FY22Q2Fresh
 ms.date: 10/21/2021
 monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

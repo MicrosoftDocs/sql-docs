@@ -189,6 +189,8 @@ GO
 |VERSIONING_STATE|Internal use only.|  
 |VERSIONING_STATE_CHANGE|Internal use only.|  
 |KTM_VIRTUAL_CLOCK|Internal use only.|  
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
   
 ## See Also  
 [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       

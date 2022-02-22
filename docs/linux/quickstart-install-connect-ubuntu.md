@@ -87,7 +87,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 1. Import the public repository GPG keys:
 
    ```bash
-   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add microsoft.asc
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 2. Register the Microsoft SQL Server Ubuntu repository:
@@ -163,7 +163,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 1. Import the public repository GPG keys:
 
    ```bash
-   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add microsoft.asc
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 2. Register the Microsoft SQL Server Ubuntu repository for SQL Server 2019:

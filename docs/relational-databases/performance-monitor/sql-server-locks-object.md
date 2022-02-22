@@ -41,7 +41,7 @@ ms.author: wiassaf
 |**Database**|A lock on a database, including all objects in the database.|  
 |**Extent**|A lock on a contiguous group of 8 pages.|  
 |**File**|A lock on a database file.|  
-|**Heap/BTree**|Heap or BTree (HOBT). A lock on a heap of data pages, or on the BTree structure of an index.|  
+|**Heap/B-tree**|Heap or B-tree. A lock on a heap of data pages, or on the B-tree structure of an index.|  
 |**Key**|A lock on a row in an index.|  
 |**Metadata**|A lock on a piece of catalog information, also called metadata.|  
 |**Object**|A lock on table, stored procedure, view, etc, including all data and indexes. The object can be anything that has an entry in **sys.all_objects**.|  
@@ -50,7 +50,9 @@ ms.author: wiassaf
 |**RID**|Row ID. A lock on a single row in a heap.|  
 |**RowGroup**|Lock resource for a columnstore index rowgroup.|
 |**Xact**|Lock resource for a transactions.|
-  
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+
 ## Example
 
 You begin to explore the query performance counters in this object using this T-SQL query on the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view:

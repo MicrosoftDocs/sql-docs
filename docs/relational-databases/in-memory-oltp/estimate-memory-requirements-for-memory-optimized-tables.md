@@ -140,8 +140,8 @@ Since we have three hash indexes, the memory needed for the hash indexes is 3 * 
   
 #### Memory for nonclustered indexes  
   
-Nonclustered indexes are implemented as BTrees with the inner nodes containing the index value and pointers to subsequent nodes.  Leaf nodes contain the index value and a pointer to the table row in memory.  
-  
+Nonclustered indexes are implemented as Bw-trees with the inner nodes containing the index value and pointers to subsequent nodes.  Leaf nodes contain the index value and a pointer to the table row in memory.
+
 Unlike hash indexes, nonclustered indexes do not have a fixed bucket size. The index grows and shrinks dynamically with the data.  
   
 Memory needed by nonclustered indexes can be computed as follows:  

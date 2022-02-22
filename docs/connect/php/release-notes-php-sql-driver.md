@@ -2,7 +2,7 @@
 title: Release Notes for the Microsoft Drivers for PHP
 description: This page discusses what was changed in each version of the Microsoft Drivers for PHP for SQL Server.
 ms.custom: ""
-ms.date: 01/29/2021
+ms.date: 01/18/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-davidengel
@@ -34,6 +34,33 @@ For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
 
+## 5.10
+![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2185805)  
+[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.0)
+
+### Version information
+
+- Release number: 5.10.0<sup>1</sup>
+- Released: January 31, 2022
+
+### What's new in 5.10
+
+| New item | Details |
+| :------- | :------ |
+| Added support for PHP 8.1. | &nbsp; |
+| Dropped support for PHP 7.3. | &nbsp; |
+| Dropped support for macOS Mojave, Ubuntu 16.04, Alpine 3.11 and 3.12. | &nbsp; |
+| Added support for Windows 11 and Windows Server 2022. | &nbsp; |
+| Added support for macOS Monterey, Debian 11, Ubuntu 21.04 and 21.10, Alpine 3.13, 3.14 and 3.15. | &nbsp; |
+| Added support for Apple M1 ARM64 hardware. | Requires ODBC Driver 17.8 or above. |
+| Added support for Table-valued Parameters. | &nbsp; |
+| Allowed setting PDO::ATTR_EMULATE_PREPARES at the connection level. | &nbsp; |
+| Adjusted connection keyword and value validation for more flexibility. | &nbsp; |
+
+<sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute will occur. This warning may be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](./logging-activity.md) for details.
+
+## Previous releases
+
 ## 5.9
 
 ![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2152937)  
@@ -63,8 +90,6 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | &nbsp; | &nbsp; |
 
 <sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute will occur. This warning may be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](./logging-activity.md) for details.
-
-## Previous releases
 
 ## 5.8.1
 

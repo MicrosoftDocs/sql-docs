@@ -53,6 +53,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 15
+          href: big-data-cluster/release-notes-cumulative-update-15.md
         - name: Cumulative Update 14
           href: big-data-cluster/release-notes-cumulative-update-14.md
         - name: Cumulative Update 13
@@ -6181,7 +6183,7 @@ items:
     - name: Release notes
       href: tools/synapse-pathway/pathway-release-notes.md
     - name: Azure Synapse Pathway FAQ
-      href: tools/synapse-pathway/pathway-faq.md
+      href: tools/synapse-pathway/pathway-faq.yml
     - name: Installation
       href: tools/synapse-pathway/synapse-pathway-download.md
     - name: Behind the scenes
@@ -6204,8 +6206,6 @@ items:
           href: tools/synapse-pathway/data-type-mappings-microsoft-sql-server.md
         - name: Snowflake
           href: tools/synapse-pathway/data-type-mappings-snowflake.md
-        - name: Teradata Vantage
-          href: tools/synapse-pathway/data-type-mappings-teradata-vantage.md
     - name: Errors and Warnings
       items:
         - name: ASP0001
@@ -6234,12 +6234,14 @@ items:
   items:
   - name: Manage
     items:
-    - name: Accelerated Database Recovery
+    - name: Accelerated database recovery
       items:
       - name: Overview
         href: relational-databases/accelerated-database-recovery-concepts.md
       - name: Management
         href: relational-databases/accelerated-database-recovery-management.md
+      - name: Troubleshooting
+        href: relational-databases/accelerated-database-recovery-troubleshoot.md        
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager
@@ -10618,6 +10620,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-855-database-engine-error.md
         - name: 856
           href: relational-databases/errors-events/mssqlserver-856-database-engine-error.md
+        - name: 898
+          href: relational-databases/errors-events/mssqlserver-898-database-engine-error.md
         - name: 905
           href: relational-databases/errors-events/mssqlserver-905-database-engine-error.md
         - name: 912
@@ -13068,6 +13072,10 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md
       - name: sys.dm_tran_version_store_space_usage
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md
+      - name: sys.dm_tran_aborted_transactions
+        href: relational-databases/system-dynamic-management-views/sys-dm-tran-aborted-transactions.md
+      - name: sys.dm_tran_persistent_version_store_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md
   - name: System functions
     href: relational-databases/system-functions/system-functions-category-transact-sql.md
     items:
@@ -13589,6 +13597,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-lock-transact-sql.md
       - name: sp_monitor
         href: relational-databases/system-stored-procedures/sp-monitor-transact-sql.md
+      - name: sp_persistent_version_cleanup
+        href: relational-databases/system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md
       - name: sp_procoption
         href: relational-databases/system-stored-procedures/sp-procoption-transact-sql.md
       - name: sp_recompile
@@ -14727,6 +14737,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md
       - name: sp_purge_jobhistory
         href: relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md
+      - name: sp_readerrorlog
+        href: relational-databases/system-stored-procedures/sp-readerrorlog-transact-sql.md
       - name: sp_remove_job_from_targets
         href: relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md
       - name: sp_resync_targetserver

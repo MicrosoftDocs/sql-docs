@@ -1,7 +1,7 @@
 ---
 description: "Set or Change the Server Collation"
 title: "Set or Change the Server Collation"
-ms.custom: FY21Q2Fresh
+ms.custom: FY22Q2Fresh
 ms.date: "10/21/2021"
 ms.prod: sql
 ms.technology: 

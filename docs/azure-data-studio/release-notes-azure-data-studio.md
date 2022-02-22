@@ -30,25 +30,19 @@ Azure Data Studio 1.35.0 is the latest general availability (GA) release.
 
 | New item | Details |
 |----------|---------|
-| SQL Migration extension | Added 'Currently restoring backup file' in the migration progress details page of Azure SQL Migration extension when backup files location is Azure Storage blob container |
-| Notebooks | Added undo/redo support |
-| SQL Database Projects extension | Support for project build with .NET 6 in SQL Database Projects extension |
-| SQL Database Projects extension | Publish to container in SQL Database Projects extension |
-| Extension update | [SQL Database Projects](extensions/sql-database-project-extension.md) |
-| Extension update | Lang packs |
-| Extension update | Azure SQL Migration |
+| Table Designer | Added functionality for creation and management of tables for SQL Servers. Built using DacFx framework |
+| Query Plan Viewer | Added functionality for users to view a graphic view of estimated and actual query plans without need for an extension |
+| Azure Arc Extension | Updated the Data Controller deployment wizard and the SQL Managed Instance - Azure Arc deployment wizard to reflect the deployment experience in Azure Portal |
+| Dynamic Options | Added the option to use CategoryValue type objects when implementing Dynamic Options. For further explanation on how Dynamic Options work, refer to https://github.com/microsoft/azuredatastudio/blob/main/extensions/resource-deployment/DEVELOPER_GUIDE.md#options |
 
 #### Bug fixes in 1.35.0
 
 | New Item | Details |
 |----------|---------|
-| SQL Migration | Fix for multiple database migrations when using network share as backup files location in Azure SQL Migration extension |
-| SQL Migration | Fix for multiple database migrations when using blob storage containers as backup files location in Azure SQL Migration extension |
-| SQL Migration| Fix to pre-populate target database names in the migration wizard in Azure SQL Migration extension |
-| Grid | Fix to column sorting in grids where the presence of null values could lead to unexpected results |
-| Notebooks | Fix for Python upgrades when two or more notebooks were open |
+| Azure Arc Extension | SQL Managed Instance-Azure Arc is now fixed for both indirect connectivity mode and direct connectivity mode |
+| Notebooks | Support for keyboard navigation between cells to minimize mouse clicking |
 
-For a full list of bug fixes addressed for the August 2021 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22December+2021+Release%22).
+For a full list of bug fixes addressed for the February 2022 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2022+Release%22+is%3Aclosed).
 
 #### Known issues in 1.35.0
 

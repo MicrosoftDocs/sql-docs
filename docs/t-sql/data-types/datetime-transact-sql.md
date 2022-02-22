@@ -97,7 +97,7 @@ This section describes what occurs when other date and time data types are conve
 When the conversion is from **date**, the year, month, and day are copied. The time component is set to 00:00:00.000. The following code shows the results of converting a `date` value to a `datetime` value.  
   
 ```sql
-DECLARE @date date = '12-21-16';  
+DECLARE @date date = '16-12-21';
 DECLARE @datetime datetime = @date;  
   
 SELECT @datetime AS '@datetime', @date AS '@date';  

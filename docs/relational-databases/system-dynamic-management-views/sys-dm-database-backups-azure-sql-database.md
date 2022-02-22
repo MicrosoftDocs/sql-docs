@@ -25,7 +25,7 @@ monikerRange: "= azuresqldb-current"
 
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Returns information about all active backups ofa  database in a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server.
+  Returns information about backups of a databases in a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server.  
 
 
 > [!NOTE]

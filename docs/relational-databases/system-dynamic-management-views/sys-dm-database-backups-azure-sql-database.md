@@ -24,7 +24,9 @@ monikerRange: "= azuresqldb-current"
 # sys.dm_database_backups
 
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+
     Returns information about all active backups ofa  database in a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server.
+
 
 > [!NOTE]
 > sys.dm_database_backups is introduced as part of Backup History for Azure SQL Database which is currently in preview.

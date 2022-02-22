@@ -47,3 +47,11 @@ monikerRange: "= azuresqldb-current"
 
 ## Remarks
 Backups retained and shown in Backup history view depend on configured backup retention. Some backups older than the retention period, in_retention=0, are also shown in dm_database_backups view. They're needed to do point in restore within the configured retention. 
+
+## Example
+ Show list of all active backups for the current database ordered by backup finish date.
+  
+```  
+SELECT * FROM sys.dm_database_backups     
+   ORDER BY backup_finish_date DESC;  
+```  

@@ -9,8 +9,8 @@ ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
 ms.date: 02/22/2022
-ms.author: datrigan
-author: DavidTrigano
+ms.author: matripathy
+author: Madhumitatripathy
 ---
 # SQL Data Discovery and Classification
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

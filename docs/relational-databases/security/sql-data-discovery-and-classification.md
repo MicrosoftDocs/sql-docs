@@ -64,22 +64,30 @@ The classification includes two metadata attributes:
 
         ![Screenshot of the Accept selected recommendations button.][5]
 
-4. You can also **manually classify** columns as an alternative, or in addition, to the recommendation-based classification:
+4. To display the classified columns, select appropriate **schema** and corresponding **table** from the drop down, then click **Load Columns**.
+
+   :::image type="content" source="media/sql-data-discovery-and-classification/data-classification-load-columns.png" alt-text="screenshot of SSMS data classification loading classified columns":::
+
+5. You can also **manually classify** columns as an alternative, or in addition, to the recommendation-based classification:
 
     * Click on **Add classification** in the top menu of the window.
 
         ![Screenshot showing the top menu with the Add classification option called out.][6]
 
-    * In the context window that opens, select the schema > table > column that you want to classify, and the information type and sensitivity label. Then click on the blue **Add classification** button at the bottom of the context window.
+    * In the context window that opens, enter the column name that you want to classify, information type and the sensitivity label. Schema and table are selected based on the entries in the main page.
 
         ![Screenshot showing the Add Classification context window.][7]
 
-5. To complete your classification and persistently label (tag) the database columns with the new classification metadata, click on **Save** in the top menu of the window.
+    - If you want to add classification for all the unclassified columns for a specific table in a single attempt, then select **All Unclassified** in the **Column** drop down of **Add Classification** page.
+    
+        :::image type="content" source="media/sql-data-discovery-and-classification/data-classification-all-unclassified-column-selection.png" alt-text="screenshot of SSMS data classification selecting all unclassified columns":::
+
+6. To complete your classification and persistently label (tag) the database columns with the new classification metadata, click on **Save** in the top menu of the window.
 
     ![Screenshot showing the top menu with the Save option called out.][8]
 
 
-6. To generate a report with a full summary of the database classification state, click on **View Report** in the top menu of the window. (You can also generate a report using SSMS. Right click on the database where you would like to generate the report, and choose **Tasks** > **Data Discovery and Classification** > **Generate Report...**)
+7. To generate a report with a full summary of the database classification state, click on **View Report** in the top menu of the window. (You can also generate a report using SSMS. Right click on the database where you would like to generate the report, and choose **Tasks** > **Data Discovery and Classification** > **Generate Report...**)
 
     ![Screenshot showing the top menu with the View Report option called out.][9]
 

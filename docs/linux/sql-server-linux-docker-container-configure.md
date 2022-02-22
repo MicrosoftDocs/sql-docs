@@ -5,7 +5,7 @@ author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
 ms.custom: contperf-fy21q1
-ms.date: 03/22/2021
+ms.date: 02/22/2022
 ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: linux
@@ -166,6 +166,25 @@ In addition to these container techniques, you can also use standard SQL Server 
 
 > [!WARNING]
 > If you do create backups, make sure to create or copy the backup files outside of the container. Otherwise, if the container is removed, the backup files are also deleted.
+
+## Enable Virtual Device Interface (VDI) backup and restore
+
+Virtual Device Interface (VDI) backup and restore operations are now supported in SQL Server container deployments beginning with CU15 for SQL Server 2019 and CU28 for SQL Server 2017. Follow the steps below to enable VDI-based backup or restores for SQL Server containers:
+
+1.	When deploying SQL Server containers, use the `--shm-size` option. To begin, set the sizing to 1 GB, as shown in the sample command below: 
+
+   ```bash
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Mystr0ngP@ssw0rd!" --shm-size 1g  -p 1433:1433 --name sql19 --hostname sql19 -d mcr.microsoft.com/mssql/server:2019-latest
+   ```
+ 
+The option `--shm-size` allows you to configure the size of the shared memory directory (for example, `/dev/shm`) inside the container, which is set to 64 MB by default. This default size of the shared memory is insufficient to support VDI backups. We recommend that you configure this to a minimum of 1 GB when you deploy SQL Server containers and want to support VDI backups.
+ 
+2.	You must also enable the new parameter **memory.enablecontainersharedmemory** in **mssql.conf** inside the container. You can mount mssql.conf at the deployment of the container using the `-v` option as described in the [Persist your data](#persist) section, or after you have deployed the container by manually updating mssql.conf inside the container. Here's a sample mssql.conf file with the **memory.enablecontainersharedmemory** setting set to **true**.
+ 
+```output
+[memory]
+enablecontainersharedmemory = true
+```
 
 ## Copy files from a container
 

@@ -3093,7 +3093,7 @@ ALTER DATABASE [database_name]
 SET CHANGE_TRACKING = OFF;
 ```
 
-### D. Enabling the Query Store
+### C. Enabling the Query Store
 The following example enables the Query Store and configures Query Store parameters.
 
 ```sql
@@ -3109,7 +3109,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-### C. Enabling the Query Store with wait statistics
+### D. Enabling the Query Store with wait statistics
 The following example enables the Query Store and configures its parameters.
 
 ```sql
@@ -3127,7 +3127,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-### D. Enabling the Query Store with custom capture policy options
+### E. Enabling the Query Store with custom capture policy options
 The following example enables the Query Store and configures its parameters.
 
 ```sql

@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 02/24/2022 
+ms.date: 02/24/2022
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)

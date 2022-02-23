@@ -2694,31 +2694,6 @@ When encryption is enabled at the database level, all file groups will be encryp
 
 You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
-#### **\<db_update_option> ::=**     
-Controls whether updates are allowed on the database.
-
-READ_ONLY     
-Users can read data from the database but not modify it.
-
-> [!NOTE]
-> To improve query performance, update statistics before setting a database to READ_ONLY. If additional statistics are needed after a database is set to READ_ONLY, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will create statistics in `tempdb`. For more information about statistics for a read-only database, see [Statistics](../../relational-databases/statistics/statistics.md).
-
-READ_WRITE     
-The database is available for read and write operations.
-
-To change this state, you must have exclusive access to the database.
-
-#### **\<db_user_access_option> ::=**     
-Controls user access to the database.
-
-RESTRICTED_USER     
-Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Managed Instance.
-
-MULTI_USER     
-All users that have the appropriate permissions to connect to the database are allowed.
-
-You can determine this option's status by examining the `user_access` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `UserAccess` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
-
 #### **\<delayed_durability_option> ::=**     
 Controls whether transactions commit fully durable or delayed durable.
 
@@ -2848,8 +2823,6 @@ When you set ALLOW_SNAPSHOT_ISOLATION to a new state (from ON to OFF, or from OF
 
 You can't change the state of ALLOW_SNAPSHOT_ISOLATION if the database is OFFLINE.
 
-If you set ALLOW_SNAPSHOT_ISOLATION in a READ_ONLY database, the setting will be kept if the database is later set to READ_WRITE.
-
 You can change the ALLOW_SNAPSHOT_ISOLATION settings for the `master`, `model`, `msdb`, and `tempdb` databases. The setting is kept every time the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is stopped and restarted if you change the setting for `tempdb`. If you change the setting for the `model` system database, that setting becomes the default for any new databases that are created, except for `tempdb`.
 
 The option is ON, by default, for the `master` and `msdb` databases.
@@ -2864,8 +2837,6 @@ OFF
 Turns off the Read-Committed Snapshot option at the database level. Transactions specifying the READ COMMITTED isolation level use locking.
 
 To set READ_COMMITTED_SNAPSHOT to ON or OFF, there must be no active connections to the database except for the connection running the ALTER DATABASE command. However, the database doesn't have to be in single-user mode. You can't change the state of this option when the database is OFFLINE.
-
-If you set READ_COMMITTED_SNAPSHOT in a READ_ONLY database, the setting will be kept when the database is later set to READ_WRITE.
 
 READ_COMMITTED_SNAPSHOT can't be turned ON for the `master`, `tempdb`, or `msdb` system databases. If you change the setting for the `model` system database, that setting becomes the default for any new databases created, except for `tempdb`.
 
@@ -3075,28 +3046,10 @@ You can change the default values for any one of the database options for all ne
 
 ## Examples
 
-### A. Setting the database to READ_ONLY
-Changing the state of a database or file group to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `RESTRICTED_USER` mode to restricted access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.
-
-```sql
-USE master;
-GO
-ALTER DATABASE [database_name]
-SET RESTRICTED_USER;
-GO
-ALTER DATABASE [database_name]
-SET READ_ONLY
-GO
-ALTER DATABASE [database_name]
-SET MULTI_USER;
-GO
-```
-
-### B. Enabling snapshot isolation on a database
+### A. Enabling snapshot isolation on a database
 The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
-USE [database_name];
 USE master;
 GO
 ALTER DATABASE [database_name]
@@ -3117,7 +3070,7 @@ The result set shows that the snapshot isolation framework is enabled.
 |-------------------- |------------------------|----------|
 |[database_name] |1| ON |
 
-### C. Enabling, modifying, and disabling change tracking
+### B. Enabling, modifying, and disabling change tracking
 The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.
 
 ```sql
@@ -3140,7 +3093,7 @@ ALTER DATABASE [database_name]
 SET CHANGE_TRACKING = OFF;
 ```
 
-### D. Enabling the Query Store
+### C. Enabling the Query Store
 The following example enables the Query Store and configures Query Store parameters.
 
 ```sql
@@ -3156,7 +3109,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-### E. Enabling the Query Store with wait statistics
+### D. Enabling the Query Store with wait statistics
 The following example enables the Query Store and configures its parameters.
 
 ```sql
@@ -3174,7 +3127,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-### F. Enabling the Query Store with custom capture policy options
+### E. Enabling the Query Store with custom capture policy options
 The following example enables the Query Store and configures its parameters.
 
 ```sql

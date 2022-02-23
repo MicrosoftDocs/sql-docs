@@ -5,11 +5,10 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
-ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-author: dzsquared
-ms.author: drskwier
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 11/1/2021 
+ms.date: 02/24/2022
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -22,11 +21,94 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## Current SSMS release
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.10](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.11](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.10 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+### 18.11
+
+- Release number: 18.11
+- Build number: 15.0.18405.0
+- Release date: February 24, 2022
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x40a)
+
+#### What's new in 18.11
+
+| New Item | Details |
+|----------|---------|
+| Data Classification | Updated user interface Modified the Data Classification UI panel to allow users to select specific Schema & Table to display classified columns. |
+| Data Classification | Updated the Add Classification pane to allow users to add new classifications for columns that are not yet classified. |
+| Data Classification | Added a new category, All Unclassified, in the Column drop down of the Add Classification page. |
+| Data Classification | Updated the Recommendations pane to allow Save selected recommendations directly after scanning the entire database. |
+| General SSMS | Added a dialog box to display the status of an extended open transaction check when closing a T-SQL Query Editor tab. |
+| Profiler | Added support for trace files from Analysis Services version 16.0. |
+| Profiler | Added ability to carry over the password from an existing connection when starting SQL Profiler from SSMS. |
+
+#### Bug fixes in 18.11
+
+| New Item | Details |
+|----------|---------|
+| Accessibility | Fixed focus order for ease of navigation and corrects names read by screen reader in View Facets window. |
+| Accessibility | Improved names read by Screen Readers in Database properties window. |
+| Accessibility | Fixed contrast and accessible names in Data Classification Report. |
+| Accessibility | Multiple Screen reader fixes in the Data Classification Pane. |
+| Accessibility | Fixed issue with loss of focus indication in Data Classification Pane. |
+| Always Encrypted | Fixed issue with SSMS crashing when creating Always Encrypted master key with the Rotate permission. |
+| Analysis Services | Updated Analysis Services dependencies. |
+| General SSMS | Fixed icon consistency for temporal tables. |
+| General SSMS | Fixed an issue where SSMS could show an error dialog with an unhelpful message (e.g. "syntax error ( *EngineEdition != 11)" ). |
+| General SSMS | Updated Technical Support URL to point to sqlfeedback site. |
+| General SSMS | Fixed issue with SSMS crashing due to incorrect grid width. |
+| General SSMS | Fixed issue with arithmetic overflow error in backup system query. |
+| Import/Export Data-Tier Application| Resolved issue with Bacpac wizard failing when browsing storage accounts. |
+| Ledger Tables | Ledger objects are visually indicated as such in Object Explorer, history tables are nested under their respective ledger tables, and template ledger table scripts have been added. |
+| Profiler | Fixed an issue where SSMS was not able to start SQL Profiler when spaces existed between the server name and its port number. |
+| SQL Agent (Managed Instance) | Fixed an issue that prevented creating or adding a step to new or existing SQL Agent job.  See [SSMS error while editing job step](https://docs.microsoft.com/answers/questions/606328/ssms-error-while-editing-job-step-34object-referen.html). |
+| Showplan | Ability to zoom in and out of plans with CTRL + mousewheel. See [SQL Server user feedback](https://feedback.azure.com/d365community/idea/e780ad2c-9e31-ec11-a819-000d3ae2b306). |
+| SMO/Scripting | Added support to script External Streaming Jobs when scripting Databases. |
+| SSMS Setup | Fixed an issue in the Analysis Services deployment wizard for the JPN SSMS executable. |
+| SSMS Setup | Fixed an issue where SSMS setup could fail with an 'Element not found (0x80070490)" [Failed to find expected public key in certificate chain]. |
+| SSMS Setup | Fixed an issue to support SSMS migrations to later versions. |
+
+#### Known issues (18.11)
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
+| General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
+| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+| Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
+
+You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+|--------------|--------------|--------------|
+| [18.10](#1810) | 15.0.18390.0 | October 5, 2021 |
+| [18.9.2](#1892) | 15.0.18386.0 | July 15, 2021 |
+| [18.9.1](#1891) | 15.0.18384.0 | April 20, 2021 |
+| [18.9](#189) | 15.0.18382.0 | April 15, 2021 |
+| [18.8](#188) | 15.0.18369.0 | December 17, 2020 |
+| [18.7.1](#1871) | 15.0.18358.0 | October 27, 2020 |
+| [18.7](#187) | 15.0.18357.0 | October 20, 2020 |
+| [18.6](#186) | 15.0.18338.0 | July 22, 2020 |
+| [18.5.1](#1851) | 15.0.18333.0 | June 09, 2020 |
+| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
+| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
+| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
+| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
+| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
+| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 18.10
+
+![download](media/download-icon.png) [Download SSMS 18.10](https://go.microsoft.com/fwlink/?linkid=2168063)
 
 - Release number: 18.10
 - Build number: 15.0.18390.0
@@ -36,8 +118,7 @@ SSMS 18.10 is the latest general availability (GA) release of SSMS. If you need 
 
 #### What's new in 18.10
 
-
-| New item | Details |
+| New Item | Details |
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.32.0. |
 | Analysis Services | Update BITools to 150.19714.0 |
@@ -74,29 +155,6 @@ SSMS 18.10 is the latest general availability (GA) release of SSMS. If you need 
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
-## Previous SSMS releases
-
-Download previous SSMS versions by selecting the download link in the related section.
-
-| SSMS version | Build number | Release date |
-|--------------|--------------|--------------|
-| [18.9.2](#1892) | 15.0.18386.0 | July 15, 2021 |
-| [18.9.1](#1891) | 15.0.18384.0 | April 20, 2021 |
-| [18.9](#189) | 15.0.18382.0 | April 15, 2021 |
-| [18.8](#188) | 15.0.18369.0 | December 17, 2020 |
-| [18.7.1](#1871) | 15.0.18358.0 | October 27, 2020 |
-| [18.7](#187) | 15.0.18357.0 | October 20, 2020 |
-| [18.6](#186) | 15.0.18338.0 | July 22, 2020 |
-| [18.5.1](#1851) | 15.0.18333.0 | June 09, 2020 |
-| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
-| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
-| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
-| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
-| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
-| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
-| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
-
 ### 18.9.2
 
 ![download](media/download-icon.png) [Download SSMS 18.9.2](https://go.microsoft.com/fwlink/?linkid=2168063)
@@ -110,7 +168,7 @@ Download previous SSMS versions by selecting the download link in the related se
 #### What's new in 18.9.2
 
 
-| New item | Details |
+| New Item | Details |
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.30.0. |
 | Always Encrypted | Scripting support for Ledger tables. |
@@ -158,7 +216,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 #### What's new in 18.9.1
 
-| New item | Details |
+| New Item | Details |
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.28.0. |
 
@@ -189,7 +247,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 #### What's new in 18.9
 
-| New item | Details |
+| New Item | Details |
 |----------|---------|
 | Always Encrypted | Updated the New Column Master Key and New Column Encryption Key dialogs to support provisioning and managing column master keys stored in [Azure Key Vault Managed HSMs](/azure/key-vault/managed-hsm/overview). |
 | Always Encrypted | Enabled specifying a key length when generating column master keys in Azure Key Vault. |
@@ -263,7 +321,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 #### What's new in 18.8
 
-| New item | Details |
+| New Item | Details |
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.25.1. |
 | Analysis Services | Added support for Power BI Premium Gen2 workspaces. |
@@ -345,7 +403,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
-| New item | Details |
+| New Item | Details |
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS also installs Azure Data Studio. |
 | Always Encrypted | To recognize the new HSM endpoints, you need to upgrade SSMS. This is done by consuming the new AKV Provider NugetPackage. |
@@ -419,7 +477,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 #### What's new in 18.6
 
-| New item | Details |
+| New Item | Details |
 |----------|---------|
 | Analysis Services | Updated to latest release of AS client libraries. |
 | Auditing | Added support for SENSITIVE_BATCH_COMPLETED_GROUP action ID (string instead of a number). |
@@ -445,7 +503,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | General SSMS | Addressed three common sources of hangs in SSMS. |
 | General SSMS | Fixed a few issues related to SSMS Connection Dialog *forgetting* entries (server/user/passwords). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40256401) and [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40015519). |
 | General SSMS | Fixed an issue on the **Statistic Properties** dialog where selecting the **Update statistics for these columns** checkbox and selecting **OK** yields no effect. Statistics are not updated, and trying to script the action yields a *There is no action to be scripted* message). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37799992). |
-| General SSMS | Addressed issues related to [CVE-2020-1455](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1455). | 
+| General SSMS | Addressed issues related to [CVE-2020-1455](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1455). | 
 | Import/Export Data-Tier Application | Fixed an issue where the SSMS was throwing an error when importing a bacpac file. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40229137). |
 | Integration Services | Fixed a bug that customers can't edit a SQL agent job step when using SSMS versions 18.4 or earlier to execute SSIS packages in Azure SQL Managed Instance. |
 | Integration Services | Fixed a bug where the **Use 32-bit runtime** option is missing in the **Execution options** tab to execute an SSIS package in a SQL agent job step for an on-premises SQL Server. |
@@ -506,7 +564,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 #### What's new in 18.5
 
-| New item | Details |
+| New Item | Details |
 |----------|---------|
 | Analysis Services | Added support for Power BI endpoint in Analysis Services - matching functionality of Azure Analysis Services. |
 | Analysis Services | Profiler: added support for Analysis Services Trace Definition 15.1. |
@@ -606,7 +664,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40a)
 
-| New item | Details |
+| New Item | Details |
 |----------|---------|
 | Data Classification | Added support for custom information protection policy for data classification. |
 | Query Store | Added the *Max Plan per query* value in the dialog properties. |
@@ -663,7 +721,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 #### What's new in 18.3.1
 
-| New item | Details |
+| New Item | Details |
 |----------|---------|
 | Data Classification | Add Data Classification information to column properties UI (*Information Type*, *Information Type ID*, *Sensitivity Label*, and *Sensitivity Label ID* aren't exposed in the SSMS UI). |
 | Intellisense/Editor | Updated support for features recently added to SQL Server 2019 (for example, *ALTER SERVER CONFIGURATION*). |
@@ -789,7 +847,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 #### What's new in 18.1
 
-| New item | Details |
+| New Item | Details |
 | :-------| :------|
 | Database diagrams | [Database diagrams were added back into SSMS](https://feedback.azure.com/forums/908035/suggestions/37507828).
 | SSBDIAGNOSE.EXE |The SQL Server Diagnose (command-line tool) was added back into the SSMS package.|
@@ -859,7 +917,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 #### What's new in 18.0
 
-| New item| Details|
+| New Item| Details|
 | :-------| :------|
 |Support for SQL Server 2019|SSMS 18.0 is the first release that is fully *aware* of SQL Server 2019 (compatLevel 150).|
 |Support for SQL Server 2019|Support for "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQL Server 2019 and SQL Managed Instance.|
@@ -945,7 +1003,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 #### Bug fixes in 18.0
 
-| New item | Details|
+| New Item | Details|
 |----------|--------|
 |Crashes and freezes|Fixed a source of common SSMS crashes related to GDI objects.|
 |Crashes and freezes|Fixed a common source of hangs and poor performance when selecting "Script as Create/Update/Drop" (removed unnecessary fetches of SMO objects).|

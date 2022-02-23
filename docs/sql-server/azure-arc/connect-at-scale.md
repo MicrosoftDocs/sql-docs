@@ -93,19 +93,10 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
    az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>
    ```
 
-   ```output
-   { "appId": "d2ff754a-e10a-4eb6-9cdc-ce6e7a4687db",
-     "displayName": "Arc-for-servers",
-     "name": "http://Arc-for-servers",
-     "password": {SomeRandomlyGeneratedPassword}",
-     "tenant": "2530e75f-673b-4841-8270-47ca6a34ef4f"
-   }
-   ```
+2. Download the Linux shell script from the Portal following the instructions in [Connect your SQL Server to Azure Arc](connect.md).
 
    > [!NOTE]
    > When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [Required permissions](overview.md#required-permissions).
-
-2. Download the Linux shell script from the Portal following the instructions in [Connect your SQL Server to Azure Arc](connect.md).
 
 3. Replace the following variables in the script using the values returned by the 'az ad sp create-for-rbac' command. These variables are initially empty.
 

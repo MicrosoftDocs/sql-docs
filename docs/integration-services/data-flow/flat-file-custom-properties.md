@@ -46,9 +46,10 @@ ms.author: chugu
   
 |Property name|Data Type|Description|  
 |-------------------|---------------|-----------------|  
+|EscapeQualifier|Boolean|A value that specifies whether the text qualifier in the data written to the destination file will be escaped or not, when text qualifier is enabled from the flat file connection manager. The default value of this property is **False**.|
 |Header|String|A block of text that is inserted in the file before any data is written.<br /><br /> The value of this property can be specified by using a property expression.|  
 |Overwrite|Boolean|A value that specifies whether to overwrite or append to an existing destination file that has the same name. The default value of this property is **True**.|  
-  
+
  The input and the input columns of the Flat File destination have no custom properties.  
   
  For more information, see [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md).  

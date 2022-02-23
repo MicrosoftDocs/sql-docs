@@ -39,7 +39,7 @@ This 6-minute video provides an introduction into running SQL Server on containe
 
 ## Pull and run the container image
 
-To pull and run the Docker container images for SQL Server 2017 and SQL Server 2019, follow the prerequisites and steps in the following quickstart:
+To pull and run the Docker container images for [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] and [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], follow the prerequisites and steps in the following quickstart:
 
 - [Run the SQL Server 2017 container image with Docker](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
 - [Run the SQL Server 2019 container image with Docker](quickstart-install-connect-docker.md?view=sql-server-ver15&preserve-view=true)
@@ -101,7 +101,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 ### Tools inside the container
 
-Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the container image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
+Starting with [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the container image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
 
 1. Use the `docker exec -it` command to start an interactive bash shell inside your running container. In the following example `e69e056c702d` is the container ID.
 
@@ -207,8 +207,8 @@ Packages
 
 > [!NOTE]
 >
-> - Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported.
-> - Starting with SQL Server 2019 CU10, Ubuntu 20.04 is supported.
+> - Starting with [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] CU3, Ubuntu 18.04 is supported.
+> - Starting with [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] CU10, Ubuntu 20.04 is supported.
 > - You can retrieve a list of all available tags for mssql/server at <https://mcr.microsoft.com/v2/mssql/server/tags/list>.
 
 There are scenarios where you might not want to use the latest SQL Server container image. To run a specific SQL Server container image, use the following steps:
@@ -248,9 +248,9 @@ These steps can also be used to downgrade an existing container. For example, yo
 
 ## <a id="rhel"></a> Run RHEL-based container images
 
-The documentation for SQL Server Linux container images points to Ubuntu-based containers. Beginning with SQL Server 2019, you can use containers based on Red Hat Enterprise Linux (RHEL). An example of the image for RHEL will look like **mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8**.
+The documentation for SQL Server Linux container images points to Ubuntu-based containers. Beginning with [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], you can use containers based on Red Hat Enterprise Linux (RHEL). An example of the image for RHEL will look like **mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8**.
 
-For example, the following command pulls the Cumulative Update 15 for SQL Server 2019 container that uses RHEL 8:
+For example, the following command pulls the Cumulative Update 15 for [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] container that uses RHEL 8:
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -280,7 +280,7 @@ The [quickstart](quickstart-install-connect-docker.md) in the previous section r
 
 - The Developer container image can be configured to run the production editions as well. Use the following steps to run production editions:
 
-Review the requirements and run procedures in the [quickstart](quickstart-install-connect-docker.md). You must specify your production edition with the **MSSQL_PID** environment variable. The following example shows how to run the latest SQL Server 2019 container image for the Enterprise Edition:
+Review the requirements and run procedures in the [quickstart](quickstart-install-connect-docker.md). You must specify your production edition with the **MSSQL_PID** environment variable. The following example shows how to run the latest [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] container image for the Enterprise Edition:
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -322,7 +322,7 @@ Docker provides a way to run multiple SQL Server containers on the same host mac
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-The following example creates two SQL Server 2017 containers and maps them to ports **1401** and **1402** on the host machine.
+The following example creates two [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] containers and maps them to ports **1401** and **1402** on the host machine.
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -349,7 +349,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-The following example creates two SQL Server 2019 containers and maps them to ports **1401** and **1402** on the host machine.
+The following example creates two [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] containers and maps them to ports **1401** and **1402** on the host machine.
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -425,14 +425,14 @@ This updates the SQL Server image for any new containers you create, but it does
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- Get started with SQL Server 2017 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
+- Get started with [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-- Get started with SQL Server 2019 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md)
+- Get started with [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md)
 
 ::: moniker-end
 

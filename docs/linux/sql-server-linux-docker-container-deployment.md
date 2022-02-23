@@ -150,7 +150,7 @@ docker exec -it <Container ID or name> /opt/mssql-tools/bin/sqlcmd ^
 ```
 ::: zone-end
 
-You can also identify the SQL Server version and build number for a target Docker container image. The following command displays the SQL Server version and build information for the **mcr.microsoft.com/mssql/server:2019-latest** image. It does this by running a new container with an environment variable **PAL_PROGRAM_INFO=1**. The resulting container instantly exits, and the `docker rm` command removes it.
+You can also identify the SQL Server version and build number for a target Docker container image. The following command displays the SQL Server version and build information for the `mcr.microsoft.com/mssql/server:2019-latest` image. It does this by running a new container with an environment variable **PAL_PROGRAM_INFO=1**. The resulting container instantly exits, and the `docker rm` command removes it.
 
 ::: zone pivot="cs1-bash"
 ```bash

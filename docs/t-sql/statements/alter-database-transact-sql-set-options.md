@@ -2998,19 +2998,10 @@ You can determine this option's status by examining the `is_recursive_triggers_o
 You can determine this option's status by examining the `is_recursive_triggers_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `IsRecursiveTriggersEnabled` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
 #### **\<target_recovery_time_option> ::=**     
+
+**target_recovery_time_option** is not supported on Azure SQL Managed Instance.
+
 Specifies the frequency of indirect checkpoints on a per-database basis. Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] the default value for new databases is **1 minute**, which indicates database will use indirect checkpoints. For older versions the default is 0, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.
-
-#### TARGET_RECOVERY_TIME **=** *target_recovery_time* { SECONDS | MINUTES }     
-*target_recovery_time*     
-Specifies the maximum bound on the time to recover the specified database in the event of a crash. *target_recovery_time* is type **int**.
-
-SECONDS     
-Indicates that *target_recovery_time* is expressed as the number of seconds.
-
-MINUTES     
-Indicates that *target_recovery_time* is expressed as the number of minutes.
-
-For more information about indirect checkpoints, see [Database Checkpoints](../../relational-databases/logs/database-checkpoints-sql-server.md).
 
 #### **WITH \<termination> ::=**     
 Specifies when to roll back incomplete transactions when the database is transitioned from one state to another. If the termination clause is omitted, the ALTER DATABASE statement waits indefinitely if there's any lock on the database. Only one termination clause can be specified, and it follows the SET clauses.

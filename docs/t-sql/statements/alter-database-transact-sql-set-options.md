@@ -2694,31 +2694,6 @@ When encryption is enabled at the database level, all file groups will be encryp
 
 You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
-#### **\<db_update_option> ::=**     
-Controls whether updates are allowed on the database.
-
-READ_ONLY     
-Users can read data from the database but not modify it.
-
-> [!NOTE]
-> To improve query performance, update statistics before setting a database to READ_ONLY. If additional statistics are needed after a database is set to READ_ONLY, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will create statistics in `tempdb`. For more information about statistics for a read-only database, see [Statistics](../../relational-databases/statistics/statistics.md).
-
-READ_WRITE     
-The database is available for read and write operations.
-
-To change this state, you must have exclusive access to the database.
-
-#### **\<db_user_access_option> ::=**     
-Controls user access to the database.
-
-RESTRICTED_USER     
-Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Managed Instance.
-
-MULTI_USER     
-All users that have the appropriate permissions to connect to the database are allowed.
-
-You can determine this option's status by examining the `user_access` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `UserAccess` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
-
 #### **\<delayed_durability_option> ::=**     
 Controls whether transactions commit fully durable or delayed durable.
 

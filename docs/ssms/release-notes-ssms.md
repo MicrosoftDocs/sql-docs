@@ -64,7 +64,7 @@ SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need 
 | Import/Export Data-Tier Application| Resolved issue with Bacpac wizard failing when browsing storage accounts. |
 | Ledger Tables | Ledger objects are visually indicated as such in Object Explorer, history tables are nested under their respective ledger tables, and template ledger table scripts have been added. |
 | Profiler | Fixed an issue where SSMS was not able to start SQL Profiler when spaces existed between the server name and its port number. |
-| SQL Agent (Managed Instance) | Fixed an issue that prevented creating or adding a step to new or existing SQL Agent job.  See [SSMS error while editing job step] (https://docs.microsoft.com/en-us/answers/questions/606328/ssms-error-while-editing-job-step-34object-referen.html). |
+| SQL Agent (Managed Instance) | Fixed an issue that prevented creating or adding a step to new or existing SQL Agent job.  See [SSMS error while editing job step] (https://docs.microsoft.com/answers/questions/606328/ssms-error-while-editing-job-step-34object-referen.html). |
 | Showplan | Ability to zoom in and out of plans with CTRL + mousewheel. See [SQL Server user feedback] (https://feedback.azure.com/d365community/idea/e780ad2c-9e31-ec11-a819-000d3ae2b306). |
 | SMO/Scripting | Added support to script External Streaming Jobs when scripting Databases. |
 | SSMS Setup | Fixed an issue in the Analysis Services deployment wizard for the JPN SSMS executable. |
@@ -503,7 +503,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | General SSMS | Addressed three common sources of hangs in SSMS. |
 | General SSMS | Fixed a few issues related to SSMS Connection Dialog *forgetting* entries (server/user/passwords). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40256401) and [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40015519). |
 | General SSMS | Fixed an issue on the **Statistic Properties** dialog where selecting the **Update statistics for these columns** checkbox and selecting **OK** yields no effect. Statistics are not updated, and trying to script the action yields a *There is no action to be scripted* message). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37799992). |
-| General SSMS | Addressed issues related to [CVE-2020-1455](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1455). | 
+| General SSMS | Addressed issues related to [CVE-2020-1455](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1455). | 
 | Import/Export Data-Tier Application | Fixed an issue where the SSMS was throwing an error when importing a bacpac file. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40229137). |
 | Integration Services | Fixed a bug that customers can't edit a SQL agent job step when using SSMS versions 18.4 or earlier to execute SSIS packages in Azure SQL Managed Instance. |
 | Integration Services | Fixed a bug where the **Use 32-bit runtime** option is missing in the **Execution options** tab to execute an SSIS package in a SQL agent job step for an on-premises SQL Server. |

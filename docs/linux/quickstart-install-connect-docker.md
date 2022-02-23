@@ -102,7 +102,7 @@ Before starting the following steps, make sure that you've selected your preferr
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
-      -p 1433:1433 --name sql1 -h sql1 \
+      -p 1433:1433 --name sql1 --hostname sql1 \
       -d \
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -115,7 +115,7 @@ Before starting the following steps, make sure that you've selected your preferr
    
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 -h sql1 `
+      -p 1433:1433 --name sql1 --hostname sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -124,7 +124,7 @@ Before starting the following steps, make sure that you've selected your preferr
    ::: zone pivot="cs1-cmd"
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 -h sql1 `
+      -p 1433:1433 --name sql1 --hostname sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -143,7 +143,7 @@ Before starting the following steps, make sure that you've selected your preferr
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
-   | **-h sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
+   | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
    | **-d** | Run the container in the background (daemon) |
    | **mcr.microsoft.com/mssql/server:2017-latest** | The SQL Server 2017 Linux container image. |
 
@@ -178,7 +178,7 @@ Before starting the following steps, make sure that you've selected your preferr
    docker exec -t sqlrhel cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
-The `-h` (host name) parameter as discussed above, changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
+The `--hostname` parameter as discussed above, changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
 
 ```sql
 SELECT @@SERVERNAME,
@@ -187,7 +187,7 @@ SELECT @@SERVERNAME,
     SERVERPROPERTY('ServerName')
 ```
 
-Setting `-h` and `--name` to the same value is a good way to easily identify the target container.
+Setting `--hostname` and `--name` to the same value is a good way to easily identify the target container.
 
 5. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
 
@@ -239,7 +239,7 @@ Before starting the following steps, make sure that you've selected your preferr
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
-      -p 1433:1433 --name sql1 -h sql1 \
+      -p 1433:1433 --name sql1 --hostname sql1 \
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -247,7 +247,7 @@ Before starting the following steps, make sure that you've selected your preferr
    ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 -h sql1 `
+      -p 1433:1433 --name sql1 --hostname sql1 `
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -255,7 +255,7 @@ Before starting the following steps, make sure that you've selected your preferr
    ::: zone pivot="cs1-cmd"
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 -h sql1 `
+      -p 1433:1433 --name sql1 --hostname sql1 `
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -273,7 +273,7 @@ Before starting the following steps, make sure that you've selected your preferr
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
-   | **-h sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
+   | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
    | **mcr.microsoft.com/mssql/server:2019-latest** | The SQL Server 2019 Ubuntu Linux container image. |
 
 3. To view your Docker containers, use the `docker ps` command.
@@ -302,7 +302,7 @@ Before starting the following steps, make sure that you've selected your preferr
 
 4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md).
 
-The `-h` (host name) parameter as discussed above, changes the internal name of the container to a custom value. This changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
+The `--hostname` parameter as discussed above, changes the internal name of the container to a custom value. This changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
 
 ```sql
 SELECT @@SERVERNAME,

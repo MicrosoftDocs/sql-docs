@@ -1,6 +1,7 @@
 ---
+description: "Median (MDX)"
 title: "Median (MDX) | Microsoft Docs"
-ms.date: 06/04/2018
+ms.date: 02/17/2022
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx

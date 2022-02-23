@@ -170,6 +170,8 @@ ms.author: maghan
 
         [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)
 
+        [sp_readerrorlog](../../relational-databases/system-stored-procedures/sp-readerrorlog-transact-sql.md)
+
         [sp_recompile](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)
 
         [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)

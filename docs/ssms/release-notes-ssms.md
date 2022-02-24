@@ -55,7 +55,6 @@ SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need 
 | Accessibility | Fixed contrast and accessible names in Data Classification Report. |
 | Accessibility | Multiple Screen reader fixes in the Data Classification Pane. |
 | Accessibility | Fixed issue with loss of focus indication in Data Classification Pane. |
-| Always Encrypted | Fixed issue with SSMS crashing when creating Always Encrypted master key with the Rotate permission. |
 | Analysis Services | Updated Analysis Services dependencies. |
 | General SSMS | Fixed icon consistency for temporal tables. |
 | General SSMS | Fixed an issue where SSMS could show an error dialog with an unhelpful message (e.g. "syntax error ( *EngineEdition != 11)" ). |

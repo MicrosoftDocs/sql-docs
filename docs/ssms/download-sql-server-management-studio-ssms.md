@@ -135,10 +135,10 @@ The current release of SSMS supports the following 64-bit platforms when used wi
 
 Supported Operating Systems:
 
-- Windows Server 2022 (64-bit)
 - Windows 11 (64-bit)
 - Windows 10 (64-bit) version 1607 (10.0.14393) or later
 - Windows 8.1 (64-bit)
+- Windows Server 2022 (64-bit)
 - Windows Server 2019 (64-bit)
 - Windows Server 2016 (64-bit)
 - Windows Server 2012 R2 (64-bit)

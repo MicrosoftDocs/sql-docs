@@ -66,7 +66,7 @@ The classification includes two metadata attributes:
 
 4. To display the classified columns, select appropriate **schema** and corresponding **table** from the drop down, then click **Load Columns**.
 
-   :::image type="content" source="media/sql-data-discovery-and-classification/data-classification-load-columns.png" alt-text="screenshot of SSMS data classification loading classified columns":::
+   :::image type="content" source="media/sql-data-discovery-and-classification/data-classification-load-columns.png" alt-text="screenshot of SSMS data classification loading classified columns.":::
 
 5. You can also **manually classify** columns as an alternative, or in addition, to the recommendation-based classification:
 

@@ -270,7 +270,8 @@ If you have moved all of the system databases to a new drive or volume or to ano
     GO  
     ```  
     
-    Until the service is restarted, `tempdb` continues to use the data and log files in existing location.  
+    Until the service is restarted, `tempdb` continues to use the data and log files in the existing location.  
+
   
 4.  Stop and restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -28,7 +28,7 @@ SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need 
 ### 18.11
 
 - Release number: 18.11
-- Build number: 15.0.18405.0
+- Build number: 15.0.18404.0
 - Release date: February 24, 2022
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x40a)
@@ -37,7 +37,7 @@ SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need 
 
 | New Item | Details |
 |----------|---------|
-| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.35.0. |
+| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.34.0. |
 | Data Classification | Updated user interface Modified the Data Classification UI panel to allow users to select specific Schema & Table to display classified columns. |
 | Data Classification | Updated the Add Classification pane to allow users to add new classifications for columns that are not yet classified. |
 | Data Classification | Added a new category, All Unclassified, in the Column drop down of the Add Classification page. |
@@ -55,6 +55,7 @@ SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need 
 | Accessibility | Fixed contrast and accessible names in Data Classification Report. |
 | Accessibility | Multiple Screen reader fixes in the Data Classification Pane. |
 | Accessibility | Fixed issue with loss of focus indication in Data Classification Pane. |
+| Always Encrypted | Fixes issue with the New Column Master Key wizard freezing up when creating Always Encrypted column master key using Azure Key Vault as the key store, with the key vault having any of the Rotate key permissions set. |
 | Analysis Services | Updated Analysis Services dependencies. |
 | General SSMS | Fixed icon consistency for temporal tables. |
 | General SSMS | Fixed an issue where SSMS could show an error dialog with an unhelpful message (e.g. "syntax error ( *EngineEdition != 11)" ). |

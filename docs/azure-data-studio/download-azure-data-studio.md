@@ -11,7 +11,7 @@ ms.custom:
   - seodec18
   - contperf-fy21q4
   - intro-overview
-ms.date: 02/23/2022 
+ms.date: 02/24/2022 
 ---
 
 # Download and install Azure Data Studio
@@ -29,7 +29,7 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 Azure Data Studio 1.35.0 is the latest general availability (GA) version.
 
 - Release number: 1.35.0
-- Release date: February 23, 2022
+- Release date: February 24, 2022
 
 | Platform | Download |
 |----------|----------|

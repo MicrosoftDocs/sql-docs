@@ -63,7 +63,8 @@ ms.author: wiassaf
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' );
     ```  
     
-    Until the service is restarted, the database continues to use the data and log files in existing location.  
+    Until the service is restarted, the database continues to use the data and log files in the existing location.  
+
     
 4.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to perform maintenance. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
 

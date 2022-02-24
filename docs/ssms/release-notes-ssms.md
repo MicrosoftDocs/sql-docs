@@ -37,6 +37,7 @@ SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need 
 
 | New Item | Details |
 |----------|---------|
+| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.35.0. |
 | Data Classification | Updated user interface Modified the Data Classification UI panel to allow users to select specific Schema & Table to display classified columns. |
 | Data Classification | Updated the Add Classification pane to allow users to add new classifications for columns that are not yet classified. |
 | Data Classification | Added a new category, All Unclassified, in the Column drop down of the Add Classification page. |
@@ -54,7 +55,6 @@ SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need 
 | Accessibility | Fixed contrast and accessible names in Data Classification Report. |
 | Accessibility | Multiple Screen reader fixes in the Data Classification Pane. |
 | Accessibility | Fixed issue with loss of focus indication in Data Classification Pane. |
-| Always Encrypted | Fixed issue with SSMS crashing when creating Always Encrypted master key with the Rotate permission. |
 | Analysis Services | Updated Analysis Services dependencies. |
 | General SSMS | Fixed icon consistency for temporal tables. |
 | General SSMS | Fixed an issue where SSMS could show an error dialog with an unhelpful message (e.g. "syntax error ( *EngineEdition != 11)" ). |

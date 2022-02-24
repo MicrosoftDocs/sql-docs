@@ -20,7 +20,7 @@ ms.author: jroth
 # Seek Method and Index Property Example (VB)
 This example uses the [Recordset](./recordset-object-ado.md) object's [Seek](./seek-method.md) method and [Index](./index-property.md) property in conjunction with a given ***Employee ID***, to locate the employee's name in the ***Employees*** table of the Nwind.mdb database.  
   
-```  
+``` VB
 'BeginSeekVB  
 Public Sub SeekX()  
     On Error GoTo ErrorHandler  

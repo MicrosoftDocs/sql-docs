@@ -6,8 +6,8 @@ ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
-  - "AsGml(geometry_Data_Type)_TSQL"
-  - "AsGml(geometry Data Type)"
+  - "AsGml_(geometry_Data_Type)_TSQL"
+  - "AsGml_(geometry Data Type)"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

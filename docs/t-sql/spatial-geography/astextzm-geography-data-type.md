@@ -9,9 +9,7 @@ ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
-  - "AsTextZM (geography Data Type)"
-  - "AsTextZM_TSQL"
-  - "AsTextZM"
+  - "AsTextZM_(geography Data Type)"
   - "AsTextZM_(geography_Data_Type)_TSQL"
 dev_langs: 
   - "TSQL"

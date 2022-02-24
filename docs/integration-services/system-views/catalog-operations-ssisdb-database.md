@@ -51,6 +51,7 @@ ms.author: chugu
 |`2`|Retention window<br /><br /> (SQL Agent job)|**NULL**|**NULL**|  
 |`3`|MaxProjectVersion<br /><br /> (SQL Agent job)|**NULL**|**NULL**|  
 |`101`|**deploy_project**<br /><br /> (Stored procedure)|Project ID|Project name|  
+|`102`|**get_project**<br /><br /> (Stored procedure)|Project ID|Project name|  
 |`106`|**restore_project**<br /><br /> (Stored procedure)|Project ID|Project name|  
 |`200`|**create_execution** and **start_execution**<br /><br /> (Stored procedures)|Project ID|**NULL**|  
 |`202`|**stop_operation**<br /><br /> (Stored procedure)|Project ID|**NULL**|  

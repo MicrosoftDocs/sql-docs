@@ -18,11 +18,11 @@ keywords:
   - "ssms download"
   - "sql server ssms"
   - "ssms express"
-author: dzsquared
-ms.author: drskwier
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 12/3/2021 
+ms.date: 02/24/2022
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -35,17 +35,17 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 ## Download SSMS
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 18.10](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 18.11](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.10 is the latest general availability (GA) version. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.10 upgrades it to 18.10.
+SSMS 18.11 is the latest general availability (GA) version. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.11 upgrades it to 18.11.
 
-- Release number: 18.10
-- Build number: 15.0.18390.0
-- Release date: October 5, 2021
+- Release number: 18.11
+- Build number: 15.0.18405.0
+- Release date: February 24, 2022
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback). 
 
-The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions, so both versions are available for use. However, if you have a *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.10. You can see if you have the preview version by going to the **Help > About** window.
+The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions, so both versions are available for use. However, if you have a *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.11. You can see if you have the preview version by going to the **Help > About** window.
 
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**.
 
@@ -55,7 +55,7 @@ If a computer contains side-by-side installations of SSMS, verify you start the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 18.10:  
+SQL Server Management Studio 18.11:  
 [Chinese (Simplified)](https://aka.ms/ssmsfullsetup?clcid=0x804) | [Chinese (Traditional)](https://aka.ms/ssmsfullsetup?clcid=0x404) | [English (United States)](https://aka.ms/ssmsfullsetup?clcid=0x409) | [French](https://aka.ms/ssmsfullsetup?clcid=0x40c) | [German](https://aka.ms/ssmsfullsetup?clcid=0x407) | [Italian](https://aka.ms/ssmsfullsetup?clcid=0x410) | [Japanese](https://aka.ms/ssmsfullsetup?clcid=0x411) | [Korean](https://aka.ms/ssmsfullsetup?clcid=0x412) | [Portuguese (Brazil)](https://aka.ms/ssmsfullsetup?clcid=0x416) | [Russian](https://aka.ms/ssmsfullsetup?clcid=0x419) | [Spanish](https://aka.ms/ssmsfullsetup?clcid=0x40a)
 
 > [!TIP]
@@ -135,10 +135,10 @@ The current release of SSMS supports the following 64-bit platforms when used wi
 
 Supported Operating Systems:
 
-- Windows Server 2022 (64-bit)
 - Windows 11 (64-bit)
 - Windows 10 (64-bit) version 1607 (10.0.14393) or later
 - Windows 8.1 (64-bit)
+- Windows Server 2022 (64-bit)
 - Windows Server 2019 (64-bit)
 - Windows Server 2016 (64-bit)
 - Windows Server 2012 R2 (64-bit)

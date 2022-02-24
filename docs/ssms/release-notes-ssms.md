@@ -37,7 +37,7 @@ SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need 
 
 | New Item | Details |
 |----------|---------|
-| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.35. |
+| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.35.0. |
 | Data Classification | Updated user interface Modified the Data Classification UI panel to allow users to select specific Schema & Table to display classified columns. |
 | Data Classification | Updated the Add Classification pane to allow users to add new classifications for columns that are not yet classified. |
 | Data Classification | Added a new category, All Unclassified, in the Column drop down of the Add Classification page. |

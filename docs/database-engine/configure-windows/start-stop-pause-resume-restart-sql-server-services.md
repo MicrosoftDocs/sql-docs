@@ -1,10 +1,9 @@
 ---
-title: Start, stop, pause, resume, restart SQL Server services
+title: Start, stop, pause, resume, and restart SQL Server services
 description: Find out how to start, stop, pause, resume, or restart various SQL Server services. See how to use Transact-SQL, PowerShell, and other tools for these actions.
-ms.custom: ""
-ms.date: "10/19/2020"
+ms.custom: template-concept
+ms.date: 02/24/2022
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -37,37 +36,38 @@ helpviewer_keywords:
   - "SQL Server Database Engine setting startup options"
   - "administering SQL Server, starting and stopping services"
   - "Management Studio [SQL Server], starting or stopping services"
-ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.reviewer: rwestMSFT
 ---
 
-# Start, stop, pause, resume, restart SQL Server services
+# Start, stop, pause, resume, and restart SQL Server services
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-windows-only.md)]
 
-This topic describes how to start, stop, pause, resume, or restart the SQL Server Database Engine, the SQL Server Agent, or the SQL Server Browser service by using SQL Server Configuration Manager, SQL Server Management Studio (SSMS), net commands from a command prompt, Transact-SQL, or PowerShell.
+This article describes how to start, stop, pause, resume, or restart the SQL Server Database Engine, the SQL Server Agent, or the SQL Server Browser service on Windows by using SQL Server Configuration Manager, SQL Server Management Studio (SSMS), **net** commands from a command prompt, Transact-SQL, or PowerShell.
+
+For SQL Server on Linux, see [Start, stop, and restart SQL Server services on Linux](../../linux/sql-server-linux-start-stop-restart-sql-server-services.md).
 
 ## Identify the service
 
-SQL Server components are executable programs that run as Windows services. A program that run as a Windows service can continue to operate without displaying any activity on the computer screen and without the need for user interaction in the console.
+SQL Server components are executable programs that run as Windows services. Windows services can run without displaying any activity on the computer screen and without user interaction on the command line.
 
 ### Database Engine service
 
-The service process that represents the SQL Server Database Engine is referred to as the Database Engine service. The Database Engine can be the default instance (limit one per computer) or can be one of many named instances on the computer. Use [**SQL Server Configuration Manager**](../../relational-databases/sql-server-configuration-manager.md) to determine which instances of the Database Engine are installed on the computer. The default instance (if you install it) is listed as **SQL Server (MSSQLSERVER)**. Named instances (if you install them) are listed as **SQL Server (<instance_name>)**. By default, SQL Server Express is installed as **SQL Server (SQLEXPRESS)**.
+The Database Engine service can be the default instance (limit one per computer) or can be one of many named instances on the computer. Use [**SQL Server Configuration Manager**](../../relational-databases/sql-server-configuration-manager.md) to find out which instances of the Database Engine are installed on the computer. The default instance (if you install it) is listed as **SQL Server (MSSQLSERVER)**. Named instances (if you install them) are listed as **SQL Server (<instance_name>)**. By default, SQL Server Express is installed as **SQL Server (SQLEXPRESS)**.
 
 ### SQL Server Agent service
 
-A Windows service that executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](../../ssms/agent/sql-server-agent.md). SQL Server Agent is not available in every edition of SQL Server. For a list of features that are supported by the editions of SQL Server, see [Features Supported by the Editions of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).
+The SQL Server Agent service executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](../../ssms/agent/sql-server-agent.md). SQL Server Agent is not available in every edition of SQL Server. For a list of features that are supported by the editions of SQL Server, see [Features Supported by the Editions of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 
 ### SQL Server Browser service
 
-A Windows service that listens for incoming requests for SQL Server resources and provides clients information about SQL Server instances installed on the computer. A single instance of the SQL Server Browser service is used by all instances of SQL Server installed on the computer.
+The SQL Server Browser service listens for incoming requests for SQL Server resources and provides clients information about SQL Server instances installed on the computer. A single instance of the SQL Server Browser service is used by all instances of SQL Server installed on the computer.
 
 ### Additional Information
 
-- Pausing the Database Engine service prevents new users from connecting to the Database Engine, but users who are already connected can continue to work until their connections are broken. Use pause when you want to wait for users to complete work before you stop the service. This enables them to complete transactions that are in progress. *Resume* allows the Database Engine to accept new connections again. The SQL Server Agent service cannot be paused or resumed.  
+- If you pause the Database Engine service, users who are already connected can continue to work until their connections are broken, but new users can't connect to the Database Engine. Use *Pause* when you want to wait for users to complete their work before you stop the service, which lets them complete transactions that are in progress. *Resume* allows the Database Engine to accept new connections again. The SQL Server Agent service cannot be paused or resumed.  
 
 - The SQL Server Configuration Manager and SSMS display the current status of services by using the following icons.  
 
@@ -89,7 +89,7 @@ A Windows service that listens for incoming requests for SQL Server resources an
 
   - Two vertical white lines on a blue circle icon next to the service name indicate that the service is paused.  
 
-- When using SQL Server Configuration Manager or SSMS, only options that are possible are available. For example, if the service is already started, **Start** is unavailable.
+- You won't have access to all possible options when using SQL Server Configuration Manager or SSMS, depending on the state of the service. For example, if the service is already started, **Start** is unavailable.
 
 - When running on a cluster, the SQL Server Database Engine service is best managed by using Cluster Administrator.  
 
@@ -97,7 +97,7 @@ A Windows service that listens for incoming requests for SQL Server resources an
 
 #### Permissions
 
-By default, only members of the local administrators group can start, stop, pause, resume, or restart a service. To grant non-administrators the ability to manage services, see [How to grant users rights to manage services in Windows Server 2003](https://support.microsoft.com/kb/325349). (The process is similar on other versions of Windows Server.)
+By default, only members of the local administrator group can start, stop, pause, resume, or restart a service. To grant non-administrators the ability to manage services, see [How to grant users rights to manage services in Windows Server 2003](https://support.microsoft.com/kb/325349). (The process is similar on other versions of Windows Server.)
 
 Stopping the Database Engine by using the Transact-SQL **SHUTDOWN** command requires membership in the **sysadmin** or **serveradmin** fixed server roles, and is not transferable.
 
@@ -105,9 +105,9 @@ Stopping the Database Engine by using the Transact-SQL **SHUTDOWN** command requ
 
 ### Starting SQL Server Configuration Manager
 
-On the **Start** menu, point to **All Programs**, point to **Microsoft SQL Server**, point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.
+On the **Start** menu, select **All Programs > Microsoft SQL Server > Configuration Tools > SQL Server Configuration Manager**.
 
-Because the SQL Server Configuration Manager is a snap-in for the Microsoft Management Console program and not a stand-alone program, SQL Server Configuration Manager does not appear as an application in newer versions of Windows. Here are the paths to the last four versions when Windows is installed on the C drive.  
+The SQL Server Configuration Manager is a snap-in for the Microsoft Management Console program, and it doesn't appear as an application in newer versions of Windows. Here are the paths to the last five versions when Windows is installed on the C drive.
 
 |Version|Path|
 |-|-|
@@ -117,32 +117,32 @@ Because the SQL Server Configuration Manager is a snap-in for the Microsoft Mana
 |SQL Server 2014|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |SQL Server 2012|C:\Windows\SysWOW64\SQLServerManager11.msc|
 
-#### <a name="configmande"></a> To start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
+### <a name="configmande"></a> To start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
 
 1. Start SQL Server Configuration Manager, using the instructions above.
 
-2. If the **User Account Control** dialog box appears, click **Yes**.
+2. If the **User Account Control** dialog box appears, select **Yes**.
 
-3. In SQL Server Configuration Manager, in the left pane, click **SQL Server Services**.
+3. In SQL Server Configuration Manager, in the left pane, select **SQL Server Services**.
 
-4. In the results pane, right-click **SQL Server (MSSQLServer)** or a named instance, and then click **Start**, **Stop**, **Pause**, **Resume**, or **Restart**.
+4. In the results pane, right-click **SQL Server (MSSQLServer)** or a named instance, and then select **Start**, **Stop**, **Pause**, **Resume**, or **Restart**.
 
-5. Click **OK** to close the SQL Server Configuration Manager.
+5. Select **OK** to close the SQL Server Configuration Manager.
 
 > [!NOTE]
 > To start an instance of the SQL Server Database Engine with startup options, see [Configure Server Startup Options &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
 
-#### To start, stop, pause, resume, or restart the SQL Server Browser or an instance of the SQL Server Agent
+### To start, stop, pause, resume, or restart the SQL Server Browser or an instance of the SQL Server Agent
 
 1. Start SQL Server Configuration Manager, using the instructions above.
 
-2. If the **User Account Control** dialog box appears, click **Yes**.
+2. If the **User Account Control** dialog box appears, select **Yes**.
 
-3. In SQL Server Configuration Manager, in the left pane, click **SQL Server Services**.
+3. In SQL Server Configuration Manager, in the left pane, select **SQL Server Services**.
 
-4. In the results pane, right-click **SQL Server Browser**, or **SQL Server Agent (MSSQLServer)** or **SQL Server Agent (<instance_name>)** for a named instance, and then click **Start**, **Stop**, **Pause**, **Resume**, or **Restart**.  
+4. In the results pane, right-click **SQL Server Browser**, or **SQL Server Agent (MSSQLServer)** or **SQL Server Agent (<instance_name>)** for a named instance, and then select **Start**, **Stop**, **Pause**, **Resume**, or **Restart**.  
 
-5. Click **OK** to close the SQL Server Configuration Manager.  
+5. Select **OK** to close the SQL Server Configuration Manager.  
 
 > [!NOTE]
 > SQL Server Agent cannot be paused.
@@ -151,25 +151,25 @@ Because the SQL Server Configuration Manager is a snap-in for the Microsoft Mana
 
 ### <a name="ssmsde"></a> To start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
 
-1. In Object Explorer, connect to the instance of the Database Engine, right-click the instance of the Database Engine you want to start, and then click **Start**, **Stop**, **Pause**, **Resume**, or **Restart**.
+1. In Object Explorer, connect to the instance of the Database Engine, right-click the instance of the Database Engine you want to start, and then select **Start**, **Stop**, **Pause**, **Resume**, or **Restart**.
 
-    Or, in Registered Servers, right-click the instance of the Database Engine you want to start, point to **Service Control**, and then click **Start**, **Stop**, **Pause**, **Resume**, or **Restart**.
+    Or, in Registered Servers, right-click the instance of the Database Engine you want to start, point to **Service Control**, and then select **Start**, **Stop**, **Pause**, **Resume**, or **Restart**.
 
-2. If the **User Account Control** dialog box appears, click **Yes**.
+2. If the **User Account Control** dialog box appears, select **Yes**.
 
-3. When prompted if you want to act, click **Yes**.  
+3. When prompted if you want to act, select **Yes**.  
 
-#### To start, stop, or restart an instance of the SQL Server Agent
+### To start, stop, or restart an instance of the SQL Server Agent
 
-1. In Object Explorer, connect to the instance of the Database Engine, right-click **SQL Server Agent**, and then click **Start**, **Stop**, or **Restart**.
+1. In Object Explorer, connect to the instance of the Database Engine, right-click **SQL Server Agent**, and then select **Start**, **Stop**, or **Restart**.
 
-2. If the **User Account Control** dialog box appears, click **Yes**.
+2. If the **User Account Control** dialog box appears, select **Yes**.
 
-3. When prompted if you want to act, click **Yes**.
+3. When prompted if you want to act, select **Yes**.
 
 ## <a name="CommandPrompt"></a> Command Prompt Window using net Commands
 
-The Microsoft SQL Server services can be started, stopped, or paused by using Microsoft Windows **net** commands.
+The SQL Server services can be started, stopped, or paused by using Windows **net** commands.
 
 ### <a name="dbDefault"></a> To start the default instance of the Database Engine
 
@@ -358,29 +358,9 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN &#40;Transa
     $DfltInstance
     ```  
   
-##  <a name="ServiceController"></a> Using Service Controller Class
+##  <a name="ServiceController"></a> Using the ServiceController class
 
-You can use ServiceController class to control SQL server service or any other Windows service. For an example on how to do this, see [ServiceController Class](/dotnet/api/system.serviceprocess.servicecontroller).
-
-## Manage the SQL Server service on Linux
-
-### To start, stop, or restart an instance of the SQL Server Database Engine
-
-The following shows how to start, stop, restart, and check the status of the [SQL Server service on Linux](../../linux/sql-server-linux-troubleshooting-guide.md#manage-the-sql-server-service).
-
-Check the status of the SQL Server service using this command:
-
-   ```bash
-   sudo systemctl status mssql-server
-   ```
-
-You can stop, start, or restart the SQL Server service as needed using the following commands:
-
-   ```bash
-   sudo systemctl stop mssql-server
-   sudo systemctl start mssql-server
-   sudo systemctl restart mssql-server
-   ```
+You can use the `ServiceController` class to programmatically control the SQL Server service, or any other Windows service. For an example using C#, see [ServiceController Class](/dotnet/api/system.serviceprocess.servicecontroller).
 
 ## Next steps
 
@@ -388,4 +368,4 @@ You can stop, start, or restart the SQL Server service as needed using the follo
 - [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
 - [Start SQL Server with Minimal Configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)
-- [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)
+- [Features Supported by the Editions of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)

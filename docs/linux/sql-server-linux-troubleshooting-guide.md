@@ -26,12 +26,12 @@ If you are having difficulty connecting to your Linux SQL Server, there are a fe
 - Verify that the server name or IP address is reachable from your client machine.
 
    > [!TIP]
-   > To find the IP address of your Ubuntu machine, you can run the ifconfig command as in the following example:
+   > To find the IP address of your Ubuntu machine, you can run the `ifconfig` command as in the following example:
    >
    >   ```bash
    >   sudo ifconfig eth0 | grep 'inet addr'
    >   ```
-   > For Red Hat, you can use the ip addr as in the following example:
+   > For Red Hat, you can use the `ip addr` command as in the following example:
    >
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"

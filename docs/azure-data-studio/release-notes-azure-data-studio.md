@@ -8,7 +8,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 02/23/2022
+ms.date: 02/24/2022
 ---
 
 # Release notes for Azure Data Studio
@@ -24,7 +24,7 @@ This article provides details about updates, improvements, and bug fixes for the
 Azure Data Studio 1.35.0 is the latest general availability (GA) release.
 
 - Release number: 1.35.0
-- Release date: February 23, 2022
+- Release date: February 24, 2022
 
 #### What's new in 1.35.0
 
@@ -33,7 +33,6 @@ Azure Data Studio 1.35.0 is the latest general availability (GA) release.
 | Table Designer | Added functionality for creation and management of tables for SQL Servers. Built using DacFx framework |
 | Query Plan Viewer | Added functionality for users to view a graphic view of estimated and actual query plans without need for an extension |
 | Azure Arc Extension | Updated the Data Controller deployment wizard and the SQL Managed Instance - Azure Arc deployment wizard to reflect the deployment experience in Azure Portal |
-| Dynamic Options | Added the option to use CategoryValue type objects when implementing Dynamic Options. For further explanation on how Dynamic Options work, refer to https://github.com/microsoft/azuredatastudio/blob/main/extensions/resource-deployment/DEVELOPER_GUIDE.md#options |
 
 #### Bug fixes in 1.35.0
 

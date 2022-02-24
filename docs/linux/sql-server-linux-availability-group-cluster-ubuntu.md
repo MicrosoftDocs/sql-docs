@@ -125,13 +125,12 @@ The following command creates a three-node cluster. Before you run the script, r
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```
->[!IMPORTANT]
->In the current implementation of the SQL Server resource agent the node name must match the ServerName property from your instance. So, for example, if your node name is *node1*, you need to ensure SERVERPROPERTY('ServerName') returns *node1* in your SQL Server instance. If there is a mistmach your replicas will go into resolving state after the pacemaker resource is created.
+> [!IMPORTANT]
+> In the current implementation of the SQL Server resource agent, the node name must match the `ServerName` property from your instance. For example, if your node name is *node1*, make sure SERVERPROPERTY('ServerName') returns *node1* in your SQL Server instance. If there is a mismatch, your replicas will go into a resolving state after the pacemaker resource is created.
 >
->An scenario where this rule is important is when using fully qualified domain names. For example if you use *node1.yourdomain.com* as the node name during cluster setup, you need to ensure SERVERPROPERTY('ServerName') returns *node1.yourdomain.com* and not just *node1*. 
->The possible workarounds for this problem are:
->- Rename your host name to the FQDN and use sp_dropserver and sp_addserver store procs to ensure the metadata in SQL Server matches the change. 
->- Use the addr option in the 'pcs cluster auth' command to match the node name to the SERVERPROPERTY('ServerName') value and use an static IP as the node address. 
+> A scenario where this rule is important is when using fully qualified domain names. For example, if you use *node1.yourdomain.com* as the node name during cluster setup, make sure SERVERPROPERTY('ServerName') returns *node1.yourdomain.com*, and not just *node1*. The possible workarounds for this problem are:
+> - Rename your host name to the FQDN and use `sp_dropserver` and `sp_addserver` store procedures to ensure the metadata in SQL Server matches the change. 
+> - Use the `addr` option in the `pcs cluster auth` command to match the node name to the SERVERPROPERTY('ServerName') value and use a static IP as the node address. 
 
 
    >[!NOTE]

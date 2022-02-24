@@ -42,7 +42,8 @@ ms.author: wiassaf
   
  The following procedures apply to moving database files within the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To move a database to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or to another server, use the [backup and restore](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) operation.  
 
- The procedures in this topic require the logical name of the database files. To obtain the name, query the name column in the [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) catalog view.  
+ The procedures in this article require the logical name of the database files. To obtain the name, query the name column in the [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) catalog view.  
+
   
 > [!IMPORTANT]  
 >  If you move a system database and later rebuild the `master` database, you must move the system database again because the rebuild operation installs all system databases to their default location.     

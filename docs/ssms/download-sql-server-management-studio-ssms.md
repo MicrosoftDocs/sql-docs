@@ -22,7 +22,7 @@ author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 02/24/2022 
+ms.date: 02/24/2022
 ---
 
 # Download SQL Server Management Studio (SSMS)

@@ -8,7 +8,6 @@ ms.topic: reference
 f1_keywords: 
   - "AsGml(geometry_Data_Type)_TSQL"
   - "AsGml(geometry Data Type)"
-  - "AsGml_TSQL"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -30,22 +29,23 @@ For more information on Geography Markup Language, see the following Open Geospa
   
 ## Syntax  
   
-```  
-  
+```sql  
 .AsGml ( )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Return Types
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **xml**  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **xml**  
   
- CLR return type: **SqlXml**  
+CLR return type: **SqlXml**  
   
 ## Remarks  
   
-## Examples  
- The following example creates a `LineString` instance and uses `AsGML()` to return the GML description of the instance.  
+## Examples
+
+The following example creates a `LineString` instance and uses `AsGML()` to return the GML description of the instance.  
   
 ```sql
 DECLARE @g geometry;  

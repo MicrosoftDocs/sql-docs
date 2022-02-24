@@ -7,7 +7,6 @@ ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
   - "AsGml_(geography_Data_Type)_TSQL"
-  - "AsGml_TSQL"
   - "AsGml (geography Data Type)"
 dev_langs: 
   - "TSQL"

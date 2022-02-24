@@ -243,7 +243,8 @@ If you have moved all of the system databases to a new drive or volume or to ano
 > [!TIP]  
 > Take this opportunity to review your `tempdb` files for optimal size and placement. For more information, see [Optimizing tempdb performance in SQL Server](tempdb-database.md#optimizing-tempdb-performance-in-sql-server).
   
- Because `tempdb` is re-created each time the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, you do not have to physically move the data and log files. The files are created in the new location when the service is restarted in step 4. Until the service is restarted, `tempdb` continues to use the data and log files in existing location.  
+ Because `tempdb` is re-created each time the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, you do not have to physically move the data and log files. The files are created in the new location when the service is restarted in step 4. Until the service is restarted, `tempdb` continues to use the data and log files in the existing location.  
+
   
 1.  Determine the logical file names of the `tempdb` database and their current location on the disk.  
   

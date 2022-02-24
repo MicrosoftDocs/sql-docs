@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL)"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 ms.custom: ""
-ms.date: 01/10/2022
+ms.date: 02/23/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -1319,7 +1319,7 @@ Clearing the plan cache causes a recompilation of all subsequent execution plans
 
 ## Examples
 
-### A. Setting options on a database
+### A. Set options on a database
 
 The following example sets the recovery model and data page verification options for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.
 
@@ -1332,7 +1332,7 @@ GO
 
 ```
 
-### B. Setting the database to READ_ONLY
+### B. Set the database to READ_ONLY
 
 Changing the state of a database or file group to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `SINGLE_USER` mode to obtain exclusive access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.
 
@@ -1354,7 +1354,7 @@ SET MULTI_USER;
 GO
 ```
 
-### C. Enabling snapshot isolation on a database
+### C. Enable snapshot isolation on a database
 
 The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
@@ -1381,7 +1381,7 @@ The result set shows that the snapshot isolation framework is enabled.
 |-------------------- |------------------------|----------|
 |[database_name] |1| ON |
 
-### D. Enabling, modifying, and disabling change tracking
+### D. Enable, modify, or disable change tracking
 
 The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.
 
@@ -1405,7 +1405,7 @@ ALTER DATABASE [database_name]
 SET CHANGE_TRACKING = OFF;
 ```
 
-### E. Enabling the Query Store
+### E. Enable the Query Store
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
@@ -1424,7 +1424,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-### F. Enabling the Query Store with wait statistics
+### F. Enable the Query Store with wait statistics
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
@@ -1445,7 +1445,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-### G. Enabling the Query Store with custom capture policy options
+### G. Enable the Query Store with custom capture policy options
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
@@ -1474,21 +1474,23 @@ SET QUERY_STORE = ON
 ```
 
 ## See also
-
-- [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
-- [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
-- [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)
 - [Statistics](../../relational-databases/statistics/statistics.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
-- [Enable and Disable Change Tracking](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
-- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
-- [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
-- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
 - [sys.database_automatic_tuning_options](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
 - [sys.database_automatic_tuning_mode](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-mode-transact-sql.md)
+
+## Next steps
+
+- [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
+- [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
+- [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+- [Enable and Disable Change Tracking](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
+- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
+- [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
+- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end
@@ -2257,7 +2259,7 @@ Not all database options use the WITH \<termination> clause or can be specified 
 
 ## Examples
 
-### A. Setting the database to READ_ONLY
+### A. Set the database to READ_ONLY
 Changing the state of a database or file group to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `RESTRICTED_USER` mode to limit access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.
 
 ```sql
@@ -2275,7 +2277,7 @@ GO
 
 ```
 
-### B. Enabling snapshot isolation on a database
+### B. Enable snapshot isolation on a database
 The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
@@ -2300,7 +2302,7 @@ The result set shows that the snapshot isolation framework is enabled.
 |-------------------- |------------------------|----------|
 |[database_name] |1| ON |
 
-### C. Enabling, modifying, and disabling change tracking
+### C. Enable, modify, or disable change tracking
 The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.
 
 ```sql
@@ -2323,7 +2325,7 @@ ALTER DATABASE [database_name]
 SET CHANGE_TRACKING = OFF;
 ```
 
-### D. Enabling the Query Store
+### D. Enable the Query Store
 The following example enables the Query Store and configures Query Store parameters.
 
 ```sql
@@ -2339,7 +2341,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-### E. Enabling the Query Store with wait statistics
+### E. Enable the Query Store with wait statistics
 The following example enables the Query Store and configures its parameters.
 
 ```sql
@@ -2357,7 +2359,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-### F. Enabling the Query Store with custom capture policy options
+### F. Enable the Query Store with custom capture policy options
 The following example enables the Query Store and configures its parameters.
 
 ```sql
@@ -2383,21 +2385,24 @@ SET QUERY_STORE = ON
 ```
 
 ## See also
-
-- [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
-- [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
 - [Statistics](../../relational-databases/statistics/statistics.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
-- [Enable and Disable Change Tracking](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
-- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
-- [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
-- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
 - [sys.database_automatic_tuning_options](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
 - [sys.database_automatic_tuning_mode](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-mode-transact-sql.md)
+
+## Next steps
+
+- [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
+- [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+- [Enable and Disable Change Tracking](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
+- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
+- [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
+- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
+- [Query Store hints](../../relational-databases/performance/query-store-hints.md)
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
@@ -2694,31 +2699,6 @@ When encryption is enabled at the database level, all file groups will be encryp
 
 You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
-#### **\<db_update_option> ::=**     
-Controls whether updates are allowed on the database.
-
-READ_ONLY     
-Users can read data from the database but not modify it.
-
-> [!NOTE]
-> To improve query performance, update statistics before setting a database to READ_ONLY. If additional statistics are needed after a database is set to READ_ONLY, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will create statistics in `tempdb`. For more information about statistics for a read-only database, see [Statistics](../../relational-databases/statistics/statistics.md).
-
-READ_WRITE     
-The database is available for read and write operations.
-
-To change this state, you must have exclusive access to the database.
-
-#### **\<db_user_access_option> ::=**     
-Controls user access to the database.
-
-RESTRICTED_USER     
-Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Managed Instance.
-
-MULTI_USER     
-All users that have the appropriate permissions to connect to the database are allowed.
-
-You can determine this option's status by examining the `user_access` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `UserAccess` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
-
 #### **\<delayed_durability_option> ::=**     
 Controls whether transactions commit fully durable or delayed durable.
 
@@ -2848,8 +2828,6 @@ When you set ALLOW_SNAPSHOT_ISOLATION to a new state (from ON to OFF, or from OF
 
 You can't change the state of ALLOW_SNAPSHOT_ISOLATION if the database is OFFLINE.
 
-If you set ALLOW_SNAPSHOT_ISOLATION in a READ_ONLY database, the setting will be kept if the database is later set to READ_WRITE.
-
 You can change the ALLOW_SNAPSHOT_ISOLATION settings for the `master`, `model`, `msdb`, and `tempdb` databases. The setting is kept every time the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is stopped and restarted if you change the setting for `tempdb`. If you change the setting for the `model` system database, that setting becomes the default for any new databases that are created, except for `tempdb`.
 
 The option is ON, by default, for the `master` and `msdb` databases.
@@ -2864,8 +2842,6 @@ OFF
 Turns off the Read-Committed Snapshot option at the database level. Transactions specifying the READ COMMITTED isolation level use locking.
 
 To set READ_COMMITTED_SNAPSHOT to ON or OFF, there must be no active connections to the database except for the connection running the ALTER DATABASE command. However, the database doesn't have to be in single-user mode. You can't change the state of this option when the database is OFFLINE.
-
-If you set READ_COMMITTED_SNAPSHOT in a READ_ONLY database, the setting will be kept when the database is later set to READ_WRITE.
 
 READ_COMMITTED_SNAPSHOT can't be turned ON for the `master`, `tempdb`, or `msdb` system databases. If you change the setting for the `model` system database, that setting becomes the default for any new databases created, except for `tempdb`.
 
@@ -3027,19 +3003,10 @@ You can determine this option's status by examining the `is_recursive_triggers_o
 You can determine this option's status by examining the `is_recursive_triggers_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `IsRecursiveTriggersEnabled` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
 #### **\<target_recovery_time_option> ::=**     
+
+**target_recovery_time_option** is not supported on Azure SQL Managed Instance.
+
 Specifies the frequency of indirect checkpoints on a per-database basis. Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] the default value for new databases is **1 minute**, which indicates database will use indirect checkpoints. For older versions the default is 0, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.
-
-#### TARGET_RECOVERY_TIME **=** *target_recovery_time* { SECONDS | MINUTES }     
-*target_recovery_time*     
-Specifies the maximum bound on the time to recover the specified database in the event of a crash. *target_recovery_time* is type **int**.
-
-SECONDS     
-Indicates that *target_recovery_time* is expressed as the number of seconds.
-
-MINUTES     
-Indicates that *target_recovery_time* is expressed as the number of minutes.
-
-For more information about indirect checkpoints, see [Database Checkpoints](../../relational-databases/logs/database-checkpoints-sql-server.md).
 
 #### **WITH \<termination> ::=**     
 Specifies when to roll back incomplete transactions when the database is transitioned from one state to another. If the termination clause is omitted, the ALTER DATABASE statement waits indefinitely if there's any lock on the database. Only one termination clause can be specified, and it follows the SET clauses.
@@ -3075,28 +3042,10 @@ You can change the default values for any one of the database options for all ne
 
 ## Examples
 
-### A. Setting the database to READ_ONLY
-Changing the state of a database or file group to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `RESTRICTED_USER` mode to restricted access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.
-
-```sql
-USE master;
-GO
-ALTER DATABASE [database_name]
-SET RESTRICTED_USER;
-GO
-ALTER DATABASE [database_name]
-SET READ_ONLY
-GO
-ALTER DATABASE [database_name]
-SET MULTI_USER;
-GO
-```
-
-### B. Enabling snapshot isolation on a database
+### A. Enable snapshot isolation on a database
 The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
-USE [database_name];
 USE master;
 GO
 ALTER DATABASE [database_name]
@@ -3117,7 +3066,7 @@ The result set shows that the snapshot isolation framework is enabled.
 |-------------------- |------------------------|----------|
 |[database_name] |1| ON |
 
-### C. Enabling, modifying, and disabling change tracking
+### B. Enable, modify, or disable change tracking
 The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.
 
 ```sql
@@ -3140,7 +3089,7 @@ ALTER DATABASE [database_name]
 SET CHANGE_TRACKING = OFF;
 ```
 
-### D. Enabling the Query Store
+### C. Enable the Query Store
 The following example enables the Query Store and configures Query Store parameters.
 
 ```sql
@@ -3156,7 +3105,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-### E. Enabling the Query Store with wait statistics
+### D. Enable the Query Store with wait statistics
 The following example enables the Query Store and configures its parameters.
 
 ```sql
@@ -3174,7 +3123,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-### F. Enabling the Query Store with custom capture policy options
+### E. Enable the Query Store with custom capture policy options
 The following example enables the Query Store and configures its parameters.
 
 ```sql
@@ -3200,20 +3149,22 @@ SET QUERY_STORE = ON
 ```
 
 ## See also
-
-- [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
-- [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
 - [Statistics](../../relational-databases/statistics/statistics.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
-- [Enable and Disable Change Tracking](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
-- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
-- [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
-- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
 - [sys.database_automatic_tuning_options](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
 - [sys.database_automatic_tuning_mode](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-mode-transact-sql.md)
+
+## Next steps
+
+- [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
+- [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+- [Enable and Disable Change Tracking](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
+- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
+- [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
+- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end
@@ -3358,7 +3309,7 @@ Specifies that query result sets returned from this database will not be cached 
 
 This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure Synapse storage.
 
-Run this command to check a database's result set caching configuration.  If result set caching is turned ON, is_result_set_caching_on will return 1.
+Run this command to check a database's result set caching configuration.  If result set caching is turned ON, `is_result_set_caching_on` will return 1.
 
 ```sql
 SELECT name, is_result_set_caching_on FROM sys.databases
@@ -3435,20 +3386,22 @@ FROM sys.databases;
 
 ### Enable the Read_Committed_Snapshot option for a database
 
-```sql
--- Run this command when connecting to the MASTER database
+Run this command when connecting to the `master` database.
 
+```sql
 ALTER DATABASE MyDatabase
-SET READ_COMMITTED_SNAPSHOT ON
+SET READ_COMMITTED_SNAPSHOT ON;
 ```
 
 ## See also
-
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
-- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [Azure Synapse Analytics language elements](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
+
+## Next steps
+
+- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [Best practices for Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-best-practices#maintain-statistics)
 - [Designing tables in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-tables-overview#statistics)
-- [Azure Synapse Analytics language elements](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end

@@ -161,7 +161,8 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
  
 1. Verify that the service account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] has full permissions to the new location of the files. For more information, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service account cannot control the files in their new location, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance will not start.
  
-2.  From the **Start** menu, locate and launch **SQL Server Configuration Manager**. For more information on the expected location, see [SQL Server Configuration Manager](../sql-server-configuration-manager).
+2.  From the **Start** menu, locate and launch **SQL Server Configuration Manager**. For more information on the expected location, see [SQL Server Configuration Manager](../sql-server-configuration-manager.md).
+
   
 3.  In the **SQL Server Services** node, right-click the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, **SQL Server (MSSQLSERVER)**) and choose **Properties**.  
   

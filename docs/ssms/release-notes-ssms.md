@@ -65,7 +65,7 @@ SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need 
 | Import/Export Data-Tier Application| Resolved issue with Bacpac wizard failing when browsing storage accounts. |
 | Ledger Tables | Ledger objects are visually indicated as such in Object Explorer, history tables are nested under their respective ledger tables, and template ledger table scripts have been added. |
 | Profiler | Fixed an issue where SSMS was not able to start SQL Profiler when spaces existed between the server name and its port number. |
-| SQL Agent (Managed Instance) | Fixed an issue that prevented creating or adding a step to new or existing SQL Agent job.  See [SSMS error while editing job step](https://docs.microsoft.com/answers/questions/606328/ssms-error-while-editing-job-step-34object-referen.html). |
+| SQL Agent (Managed Instance) | Fixed an issue that prevented creating or adding a step to new or existing SQL Agent job.  See [SSMS error while editing job step](/answers/questions/606328/ssms-error-while-editing-job-step-34object-referen.html). |
 | Showplan | Ability to zoom in and out of plans with CTRL + mousewheel. See [SQL Server user feedback](https://feedback.azure.com/d365community/idea/e780ad2c-9e31-ec11-a819-000d3ae2b306). |
 | SMO/Scripting | Added support to script External Streaming Jobs when scripting Databases. |
 | SSMS Setup | Fixed an issue in the Analysis Services deployment wizard for the JPN SSMS executable. |

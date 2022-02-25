@@ -21,7 +21,7 @@ This article explains your options for addressing SQL Server products that have 
 Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is backed by a minimum of 10 years support, which includes five years in mainstream support, and five years in extended support:
 
 - **Mainstream support** includes functional, performance, scalability and security updates. 
-- **Extended support** includes only security updates. 
+- **Extended support** includes only security updates.
 
 **End of support** (also sometimes known as end of life) indicates that a product has reached the end of its lifecycle, and servicing and support is no longer available for the product. For more information about the Microsoft Lifecycle, see [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy).
 
@@ -29,10 +29,10 @@ Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is bac
 
 Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of support stage, you can choose to:
 
+- Migrate your workload to [Azure SQL](/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
+- Migrate your workload to an Azure Virtual Machine as-is for [free Extended Security Updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support).
 - Upgrade to a current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - Purchase an [Extended Security Updates subscription](https://www.microsoft.com/cloud-platform/extended-security-updates).
-- Migrate your workload to an Azure Virtual Machine as-is for [free Extended Security Updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support).
-- Migrate your workload to an [Azure SQL Database service](/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
 
 For more information, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005) and [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
 
@@ -89,7 +89,7 @@ Tools:
 - [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - [Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md) can help to tune workloads that may experience adverse effects when upgrading the database compatibility.
 
-The following image provides an example of innovation over the various versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] throughout the years: 
+The following image provides an example of innovation over the various versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] throughout the years:
 
 :::image type="content" source="media/sql-server-end-of-life-overview/sql-server-version-improvements.png" alt-text="25 years of SQL Server innovation":::
 

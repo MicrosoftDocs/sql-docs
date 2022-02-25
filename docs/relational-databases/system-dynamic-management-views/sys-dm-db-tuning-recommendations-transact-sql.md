@@ -34,19 +34,19 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 | **name** | **nvarchar(4000)** | Unique name of recommendation. |
 | **type** | **nvarchar(4000)** | The name of the automatic tuning option that produced the recommendation, for example, `FORCE_LAST_GOOD_PLAN` |
 | **reason** | **nvarchar(4000)** | Reason why this recommendation was provided. |
-| **valid\_since** | **datetime2** | The first time this recommendation was generated. |
-| **last\_refresh** | **datetime2** | The last time this recommendation was generated. |
+| **valid\_since** | **datetime2** | The first time this recommendation was generated in UTC. |
+| **last\_refresh** | **datetime2** | The last time this recommendation was generated in UTC. |
 | **state** | **nvarchar(4000)** | JSON document that describes the state of the recommendation. Following fields are available:<br />-   `currentValue` - current state of the recommendation.<br />-   `reason` - constant that describes why the recommendation is in the current state.|
 | **is\_executable\_action** | **bit** | 1 = The recommendation can be executed against the database via [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script.<br />0 = The recommendation cannot be executed against the database (for example: information only or reverted recommendation) |
 | **is\_revertable\_action** | **bit** | 1 = The recommendation can be automatically monitored and reverted by Database engine.<br />0 = The recommendation cannot be automatically monitored and reverted. Most &quot;executable&quot; actions will be &quot;revertable&quot;. |
-| **execute\_action\_start\_time** | **datetime2** | Date the recommendation is applied. |
+| **execute\_action\_start\_time** | **datetime2** | Date the recommendation is applied in UTC. |
 | **execute\_action\_duration** | **time** | Duration of the execute action. |
 | **execute\_action\_initiated\_by** | **nvarchar(4000)** | `User` = User manually forced plan in the recommendation. <br /> `System` = System automatically applied recommendation. |
-| **execute\_action\_initiated\_time** | **datetime2** | Date the recommendation was applied. |
-| **revert\_action\_start\_time** | **datetime2** | Date the recommendation was reverted. |
+| **execute\_action\_initiated\_time** | **datetime2** | Date the recommendation was applied in UTC. |
+| **revert\_action\_start\_time** | **datetime2** | Date the recommendation was reverted in UTC. |
 | **revert\_action\_duration** | **time** | Duration of the revert action. |
 | **revert\_action\_initiated\_by** | **nvarchar(4000)** | `User` = User manually unforced recommended plan. <br /> `System` = System automatically reverted recommendation. |
-| **revert\_action\_initiated\_time** | **datetime2** | Date the recommendation was reverted. |
+| **revert\_action\_initiated\_time** | **datetime2** | Date the recommendation was reverted in UTC. |
 | **score** | **int** | Estimated value/impact for this recommendation on the 0-100 scale (the larger the better) |
 | **details** | **nvarchar(max)** | JSON document that contains more details about the recommendation. Following fields are available:<br /><br />`planForceDetails`<br />-    `queryId` - query\_id of the regressed query.<br />-    `regressedPlanId` - plan_id of the regressed plan.<br />-   `regressedPlanExecutionCount` - Number of executions of the query with regressed plan before the regression is detected.<br />-    `regressedPlanAbortedCount` - Number of detected errors during the execution of the regressed plan.<br />-    `regressedPlanCpuTimeAverage` - Average CPU time (in micro seconds) consumed by the regressed query before the regression is detected.<br />-    `regressedPlanCpuTimeStddev` - Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br />-    `recommendedPlanId` - plan_id of the plan that should be forced.<br />-   `recommendedPlanExecutionCount`- Number of executions of the query with the plan that should be forced before the regression is detected.<br />-    `recommendedPlanAbortedCount` - Number of detected errors during the execution of the plan that should be forced.<br />-    `recommendedPlanCpuTimeAverage` - Average CPU time (in micro seconds) consumed by the query executed with the plan that should be forced (calculated before the regression is detected).<br />-    `recommendedPlanCpuTimeStddev` Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br /><br />`implementationDetails`<br />-  `method` - The method that should be used to correct the regression. Value is always `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script that should be executed to force the recommended plan. |
   

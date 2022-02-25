@@ -14,6 +14,8 @@ ms.technology: big-data-cluster
 
 This article describes some of the challenges and the solutions to accommodate Active Directory integration when deploying Big Data Clusters.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Overview
 
 When the big data cluster is not deployed with Active Directory integration, we rely on [Kubernetes CoreDNS](https://kubernetes.io/docs/tasks/administer-cluster/coredns/) service for internal DNS resolutions. Kubernetes uses an internal domain such as `<namespace>.svc.cluster.local`. It creates A (forward lookup) and PTR (reverse lookup) records in the DNS server with names in this domain.

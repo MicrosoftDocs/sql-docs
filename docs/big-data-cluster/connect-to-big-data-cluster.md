@@ -16,6 +16,8 @@ ms.technology: big-data-cluster
 
 This article describes how to connect to a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] from Azure Data Studio.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Prerequisites
 
 - A deployed [SQL Server 2019 big data cluster](deployment-guidance.md).

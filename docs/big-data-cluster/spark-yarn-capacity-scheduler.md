@@ -14,6 +14,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE [sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Introduction
 
 This article describes how to segment your Spark workload using YARN's Capacity Scheduler of SQL Server Big Data Clusters. The capacity scheduler allows the configuration of multiple queues with different resource usage profiles to best fit your workload requirements. It provides a hierarchy queue design, capacity can be assigned as min and max percentages of the parent in the hierarchy. 

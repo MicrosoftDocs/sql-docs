@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 HDFS as a file system is similar to the Linux based file systems that use POSIX for file permissions. In addition to the traditional POSIX permissions model, HDFS also supports POSIX access control lists (ACL). For more information, see the [Apache Hadoop article about ACLs](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#ACLs_.28Access_Control_Lists.29).
 
 The following sections provide examples of how to use the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] to for managing HDFS file and directory permissions.

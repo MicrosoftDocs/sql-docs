@@ -16,6 +16,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This guide covers streaming use cases and how to implement them by using SQL Server Big Data Clusters Spark.
 
 In this guide, you'll learn how to:

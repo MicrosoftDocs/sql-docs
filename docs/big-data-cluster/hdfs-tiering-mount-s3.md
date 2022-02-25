@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 The following sections provide an example of how to configure HDFS tiering with an S3 Storage data source.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Prerequisites
 
 - [Deployed big data cluster](deployment-guidance.md)

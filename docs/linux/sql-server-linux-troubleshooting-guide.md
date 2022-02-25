@@ -129,7 +129,7 @@ Start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single user mode
    sudo -u mssql /opt/mssql/bin/sqlservr -m
    ```
 
-Start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single user mode with `sqlcmd`
+Start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single user mode with **sqlcmd**
 
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -m sqlcmd

@@ -1,5 +1,5 @@
 ---
-title: - (Subtraction) (Transact-SQL)
+title: "- (Subtraction) (Transact-SQL)"
 description: "- (Subtraction) (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"

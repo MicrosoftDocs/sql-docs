@@ -518,7 +518,7 @@ The following options are available to the memory settings.
 |--- |--- |
 | memory.disablememorypressure | SQL Server disable memory pressure. Values can be `true` or `false`. |
 | memory.memory_optimized | Enable or disable SQL Server memory optimized features - persistent memory file enlightenment, memory protection. Values can be `true` or `false`. |
-| memory.enablecontainersharedmemory | Applicable for SQL Server containers only. Use this setting to enable shared memory inside SQL Server containers. By default this is set to `false`. Values can be `true` or `false`. |
+| memory.enablecontainersharedmemory | Applicable for SQL Server containers only. Use this setting to enable shared memory inside SQL Server containers. By default, this is set to `false`. Values can be `true` or `false`. |
 
 ## <a id="msdtc"></a> Configure MSDTC
 

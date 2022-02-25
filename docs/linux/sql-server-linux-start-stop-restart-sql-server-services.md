@@ -58,7 +58,7 @@ Stopping the [!INCLUDE[ssDE](../includes/ssde-md.md)] by using the Transact-SQL 
 
 ## <a name="CommandLine"></a> Using command-line tools
 
-The following steps show how to start, stop, restart, and check the status of the [SQL Server service on Linux](sql-server-linux-troubleshooting-guide.md#manage-the-sql-server-service).
+The following steps show how to start, stop, restart, and check the status of the [SQL Server service on Linux](sql-server-linux-troubleshooting-guide.md#manage-the-sql-server-service). To manage a SQL Server Docker container, see [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md).
 
 Check the status of the [!INCLUDE[ssDE](../includes/ssde-md.md)] service using this command:
 
@@ -99,5 +99,5 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN &#40;Transa
 ## Next steps
 
 - [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md)
-- [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [Install the SQL Server command-line tools sqlcmd and bcp on Linux](./sql-server-linux-setup-tools.md)
+- [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)
+- [Install the SQL Server command-line tools sqlcmd and bcp on Linux](sql-server-linux-setup-tools.md)

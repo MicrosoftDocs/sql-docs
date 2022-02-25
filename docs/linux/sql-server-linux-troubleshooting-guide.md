@@ -3,6 +3,7 @@ title: Troubleshoot SQL Server on Linux
 description: Troubleshoot Microsoft SQL Server running on Linux or in a Docker container. Learn where to find information about supported features and known limitations.
 author: VanMSFT 
 ms.author: vanto
+ms.reviewer: rwestMSFT
 ms.date: 02/24/2022
 ms.topic: troubleshooting
 ms.prod: sql
@@ -30,11 +31,13 @@ If you are having difficulty connecting to your Linux SQL Server, there are a fe
    >   ```bash
    >   sudo ifconfig eth0 | grep 'inet addr'
    >   ```
+   >
    > For Red Hat, you can use the `ip addr` command as in the following example:
    >
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
+   >
    > One exception to this technique relates to Azure VMs. For Azure VMs, [find the public IP for the VM in the Azure portal](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - If applicable, check that you have opened the SQL Server port (default 1433) on the firewall.

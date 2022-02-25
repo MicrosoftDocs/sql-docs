@@ -121,13 +121,13 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
 
 The parameters specified in these commands are case sensitive. The commands fail when the parameters are not specified as shown.  
 
-    -   For the default (MSSQLSERVER) instance, run the following command:  
+    For the default (MSSQLSERVER) instance, run the following command:  
   
     ```cmd  
     NET START MSSQLSERVER /f /T3608
     ```  
   
-    -   For a named instance, run the following command:  
+    For a named instance, run the following command:  
   
     ```cmd  
     NET START MSSQL$instancename /f /T3608
@@ -135,10 +135,8 @@ The parameters specified in these commands are case sensitive. The commands fail
   
      For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-4.  For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run the following statement. For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md).  
-  
+4.  Promptly after service startup with trace flag 3808, start a **sqlcmd** connection to the server, to claim the single connection that is available. For example, when executing **sqlcmd** locally on the same server as the default (MSSQLSERVER) instance, and to connect with Active Directory integration authentication, run the following command: 
 
-    Promptly after startup with trace flag 3808, start a **sqlcmd** connection to the server, to claim the single connection that is available. For example, when executing **sqlcmd** locally on the same server as the default (MSSQLSERVER) instance, and to connect with Active Directory integration authentication, run the following command: 
     ```cmd
     sqlcmd
     ```
@@ -149,15 +147,14 @@ The parameters specified in these commands are case sensitive. The commands fail
     sqlcmd -S localhost\instancename
     ```
 
-    For more information on **sqlcmd** syntax, see [sqlcmd utility](../../tools/sqlcmd-utility.md). Once the **sqlcmd** session is open, run the following statement once for each file to be moved:
+    For more information on **sqlcmd** syntax, see [sqlcmd utility](../../tools/sqlcmd-utility.md). 
+    
+    For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run the following statement. For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md). Once the **sqlcmd** session is open, run the following statement once for each file to be moved:
 
     ```cmd  
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     GO
     ```  
-
-    
-
   
 5.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

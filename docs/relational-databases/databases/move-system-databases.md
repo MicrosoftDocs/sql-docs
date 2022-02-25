@@ -158,7 +158,6 @@ The parameters specified in these commands are case sensitive. The commands fail
     ```  
 
     
-    Until the service is restarted, the database continues to use the data and log files in the existing location.  
 
   
 5.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

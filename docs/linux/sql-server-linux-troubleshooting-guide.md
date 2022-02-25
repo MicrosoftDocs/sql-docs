@@ -3,17 +3,16 @@ title: Troubleshoot SQL Server on Linux
 description: Troubleshoot Microsoft SQL Server running on Linux or in a Docker container. Learn where to find information about supported features and known limitations.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 05/01/2018
+ms.date: 02/24/2022
 ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: linux
-ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ---
 # Troubleshoot SQL Server on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
+This article describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
 
 > [!TIP]
 > For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
@@ -50,23 +49,7 @@ If you are having difficulty connecting to your Linux SQL Server, there are a fe
 
 ## Manage the SQL Server service
 
-The following sections show how to start, stop, restart, and check the status of the SQL Server service.
-
-### Manage the mssql-server service in Red Hat Enterprise Linux (RHEL) and Ubuntu 
-
-Check the status of the SQL Server service using this command:
-
-   ```bash
-   sudo systemctl status mssql-server
-   ```
-
-You can stop, start, or restart the SQL Server service as needed using the following commands:
-
-   ```bash
-   sudo systemctl stop mssql-server
-   sudo systemctl start mssql-server
-   sudo systemctl restart mssql-server
-   ```
+The following section shows how to manage the execution of SQL Server Docker containers. To manage services for Linux, see [Start, stop, and restart SQL Server services on Linux](./sql-server-linux-start-stop-restart-sql-server-services.md).
 
 ### Manage the execution of the mssql Docker container
 
@@ -75,9 +58,9 @@ You can get the status and container ID of the latest created SQL Server Docker 
    ```bash
    sudo docker ps -l
    ```
-   
+
 You can stop or restart the SQL Server service as needed using the following commands:
-   
+
    ```bash
    sudo docker stop <container ID>
    sudo docker restart <container ID>
@@ -87,7 +70,7 @@ You can stop or restart the SQL Server service as needed using the following com
 > For more troubleshooting tips for Docker, see [Troubleshooting SQL Server Docker containers](./sql-server-linux-docker-container-troubleshooting.md).
 
 ## Access the log files
-   
+
 The SQL Server engine logs to the /var/opt/mssql/log/errorlog file in both the Linux and Docker installations. You need to be in 'superuser' mode to browse this directory.
 
 The installer logs here: /var/opt/mssql/setup-< time stamp representing time of install>
@@ -98,19 +81,21 @@ You can browse the errorlog files with any UTF-16 compatible tool like 'vim' or 
    ```
 
 If you prefer, you can also convert the files to UTF-8 to read them with 'more' or 'less' with the following command:
-   
+
    ```bash
    sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
+
 ## Extended events
 
 Extended events can be queried via a SQL command.  More information about extended events can be found [here](../relational-databases/extended-events/extended-events.md):
 
-## Crash dumps 
+## Crash dumps
 
 Look for dumps in the log directory in Linux. Check under the /var/opt/mssql/log directory for Linux Core dumps (.tar.gz2 extension) or SQL minidumps (.mdmp extension)
 
-For Core dumps 
+For Core dumps
+
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
    ```
@@ -119,10 +104,11 @@ For SQL dumps
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
-   
+
 ## Start SQL Server in Minimal Configuration or in Single User Mode
 
 ### Start SQL Server in Minimal Configuration Mode
+
 This is useful if the setting of a configuration value (for example, over-committing memory) has prevented the server from starting.
   
    ```bash
@@ -130,56 +116,60 @@ This is useful if the setting of a configuration value (for example, over-commit
    ```
 
 ### Start SQL Server in Single User Mode
-Under certain circumstances, you may have to start an instance of SQL Server in single-user mode by using the startup option -m. For example, you may want to change server configuration options or recover a damaged master database or other system database. For example, you may want to change server configuration options or recover a damaged master database or other system database   
+
+Under certain circumstances, you may have to start an instance of SQL Server in single-user mode by using the startup option -m. For example, you may want to change server configuration options or recover a damaged master database or other system database. For example, you may want to change server configuration options or recover a damaged master database or other system database.
 
 Start SQL Server in Single User Mode
+
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -m
    ```
 
-Start SQL Server in Single User Mode with SQLCMD
+Start SQL Server in Single User Mode with `sqlcmd`
+
    ```bash
-   sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
+   sudo -u mssql /opt/mssql/bin/sqlservr -m sqlcmd
    ```
   
 > [!WARNING]  
->  Start SQL Server on Linux with the "mssql" user to prevent future startup issues. Example "sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]" 
+> Start SQL Server on Linux with the **mssql** user to prevent future startup issues. For example: `sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]`
 
-If you have accidentally started SQL Server with another user, you must change ownership of SQL Server database files back to the 'mssql' user prior to starting SQL Server with systemd. For example, to change ownership of all database files under /var/opt/mssql to the 'mssql' user, run the following command
+If you have accidentally started SQL Server with another user, you must change ownership of SQL Server database files back to the **mssql** user prior to starting SQL Server with systemd. For example, to change ownership of all database files under `/var/opt/mssql` to the **mssql** user, run the following command:
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
    ```
 
 ## Rebuild system databases
+
 As a last resort, you can choose to rebuild the master and model databases back to default versions.
 
 > [!WARNING]
-> These steps will **DELETE all SQL Server system data** that you have configured! This includes information about your user databases (but not the user databases themselves). It will also delete other information stored in the system databases, including the following: master key information, any certs loaded in master, the SA Login password, job-related information from msdb, DB Mail information from msdb, and sp_configure options. Only use if you understand the implications!
+> These steps will **delete all SQL Server system data** that you have configured. This includes information about your user databases (but not the user databases themselves). It will also delete other information stored in the system databases, including the following: master key information, any certificates loaded in `master`, the SA Login password, job-related information from `msdb`, Database Mail information from `msdb`, and `sp_configure` options. Only use this step if you understand the implications.
 
-1. Stop SQL Server.
+1. Stop SQL Server
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. Run **sqlservr** with the **force-setup** parameter. 
+1. Run **sqlservr** with the **force-setup** parameter
 
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
    ```
-   
+
    > [!WARNING]
    > See the previous warning! Also, you must run this as the **mssql** user as shown here.
 
-1. After you see the message "Recovery is complete", press CTRL+C. This will shut down SQL Server
+1. After you see the message "Recovery is complete", press CTRL+C. This will shut down SQL Server.
 
 1. Reconfigure the SA password.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set-sa-password
    ```
-   
+
 1. Start SQL Server and reconfigure the server. This includes restoring or re-attaching any user databases.
 
    ```bash
@@ -188,7 +178,7 @@ As a last resort, you can choose to rebuild the master and model databases back 
 
 ## Improve performance
 
-There are many factors that affect performance, including database design, hardware, and workload demands. If you are looking to improve performance, start by reviewing the best practices in the article, [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md). Then explore some of the available tools for troubleshooting performance problems.
+Many factors affect performance, including database design, hardware, and workload demands. If you are looking to improve performance, start by reviewing the best practices in the article, [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md). Then explore some of the available tools for troubleshooting performance problems.
 
 - [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [System dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
@@ -202,7 +192,7 @@ There are many factors that affect performance, including database design, hardw
 
 2. ERROR: Hostname must be 15 characters or less.
 
-   This is a known-issue that happens whenever the name of the machine that is trying to install the SQL Server Debian package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. One way to achieve this is by editing the hostname file and rebooting the machine. The following [website guide](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explains this in detail.
+   This is a known issue that happens whenever the name of the machine that is trying to install the SQL Server package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. One way to achieve this is by editing the hostname file and rebooting the machine. The following [website guide](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explains this in detail.
 
 3. Resetting the system administration (SA) password.
 
@@ -220,7 +210,7 @@ There are many factors that affect performance, including database design, hardw
 
 4. Using special characters in password.
 
-   If you use some characters in the SQL Server login password, you might need to escape them with a backslash when you use them in a Linux command in the terminal. For example, you must escape the dollar sign ($) anytime you use it in a terminal command/shell script:
+   If you use some characters in the SQL Server login password, you might need to escape them with a backslash when you use them on the Linux command line. For example, you must escape the dollar sign ($) anytime you use it in a terminal command/shell script:
 
    Does not work:
 

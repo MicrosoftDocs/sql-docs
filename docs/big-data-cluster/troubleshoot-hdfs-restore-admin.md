@@ -13,6 +13,8 @@ ms.technology: big-data-cluster
 
 # Restore HDFS permissions
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 HDFS access control lists (ACLs) modifications may have affected the `/system` and `/tmp` folders in HDFS. The most likely cause of ACL modification is a user manually manipulating the folder ACLs. Directly modifying permissions in /system folder and /tmp/logs folder are not supported.
 
 ## Symptom

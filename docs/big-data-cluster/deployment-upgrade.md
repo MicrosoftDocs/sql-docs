@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 The upgrade path depends on the current version of SQL Server Big Data Cluster. To upgrade from a supported release, including general distribution release (GDR), cumulative update (CU), or quick fix engineering (QFE) update, you can upgrade in place. In-place upgrade from a customer technology preview (CTP) or release candidate version of BDC is not supported. You need to remove and recreate the cluster. The following sections describe the steps for each scenario:
 
 - [Upgrade from supported release](#upgrade-from-supported-release)

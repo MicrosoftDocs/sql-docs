@@ -5,7 +5,6 @@ ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
-  - "XML_TSQL"
   - "xml_TSQL"
   - "xml"
 dev_langs: 
@@ -21,11 +20,12 @@ ms.date: "07/26/2017"
 ---
 
 # xml (Transact-SQL)
+
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Is the data type that stores XML data. You can store **xml** instances in a column, or a variable of **xml** type.  
+Is the data type that stores XML data. You can store **xml** instances in a column, or a variable of **xml** type.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

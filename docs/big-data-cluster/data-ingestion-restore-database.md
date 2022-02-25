@@ -17,6 +17,8 @@ ms.technology: big-data-cluster
 
 This article describes how to restore an existing database into the master instance of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The recommended method is to use a backup, copy, and restore approach.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Backup your existing database
 
 First, backup your existing SQL Server database from either SQL Server on Windows or Linux. Use standard backup techniques with Transact-SQL or with a tool like SQL Server Management Studio (SSMS).

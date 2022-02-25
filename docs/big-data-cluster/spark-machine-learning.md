@@ -15,6 +15,8 @@ ms.technology: machine-learning-bdc
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article explains how to effectively use Spark for Machine Learning on [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)].
 
 ## Spark Machine Learning in SQL Server Big Data Clusters

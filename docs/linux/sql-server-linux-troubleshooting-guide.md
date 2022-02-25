@@ -75,7 +75,7 @@ You can stop or restart the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 ## Access the log files
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] logs to the `/var/opt/mssql/log/errorlog` file in both the Linux and Docker installations. You need to be in 'superuser' mode to browse this directory.
+The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] logs to the `/var/opt/mssql/log/errorlog` file in both the Linux and Docker installations. You need to be in **superuser** mode to browse this directory.
 
 The installer logs here: `/var/opt/mssql/setup-<time stamp representing time of install>`
 You can browse the errorlog files with any UTF-16 compatible tool like **vim** or **cat** like this:

@@ -121,18 +121,17 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
 
 The parameters specified in these commands are case sensitive. The commands fail when the parameters are not specified as shown.  
 
-  
     -   For the default (MSSQLSERVER) instance, run the following command:  
   
-        ```cmd  
-        NET START MSSQLSERVER /f /T3608
-        ```  
+    ```cmd  
+    NET START MSSQLSERVER /f /T3608
+    ```  
   
     -   For a named instance, run the following command:  
   
-        ```cmd  
-        NET START MSSQL$instancename /f /T3608
-        ```  
+    ```cmd  
+    NET START MSSQL$instancename /f /T3608
+    ```  
   
      For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   

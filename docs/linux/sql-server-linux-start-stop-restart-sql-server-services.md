@@ -6,23 +6,17 @@ ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "stopping SQL Server Agent"
-  - "parameters [SQL Server], startup options"
   - "SQL Server on Linux, startup options"
-  - "Database Engine [SQL Server], starting and stopping services"
-  - "single-user mode [SQL Server], starting in"
-  - "starting SQL Server Agent"
-  - "default instances [SQL Server], starting and stopping"
-  - "SQL Server Agent, starting and stopping"
-  - "command prompt [SQL Server], starting and stopping SQL Server services"
-  - "starting SQL Server Database Engine"
-  - "command prompt [SQL Server], SQL Browser service"
-  - "startup options [SQL Server]"
+  - "Database Engine [SQL Server], starting and stopping services on Linux"
+  - "command line [SQL Server], starting and stopping SQL Server services on Linux"
+  - "starting SQL Server Database Engine on Linux"
+  - "command prompt [SQL Server] on Linux"
+  - "startup options [SQL Server] on Linux"
   - "systemctl commands [SQL Server]"
-  - "SQL Server, starting and stopping"
-  - "stopping SQL Server"
-  - "SQL Server Database Engine setting startup options"
-  - "administering SQL Server, starting and stopping services"
+  - "SQL Server on Linux, starting and stopping"
+  - "stopping SQL Server on Linux"
+  - "SQL Server Database Engine on Linux setting startup options"
+  - "administering SQL Server on Linux, starting and stopping services"
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: rwestMSFT

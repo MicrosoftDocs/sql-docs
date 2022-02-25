@@ -16,6 +16,8 @@ ms.technology: big-data-cluster
 
 This article describes how to visualize the logs an application inside [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]. [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] use Fluent Bit, an open-source log processor and forwarder. Fluent Bit fetches the logs from big data cluster components in the cluster and stores them in [Elastic Stack Elasticsearch](https://azure.microsoft.com/overview/linux-on-azure/elastic/). From Kibana Dashboard, you can visualize and search the log of your interest.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Logs stored in Elasticsearch
 
 Big Data Cluster-related logs stored in Elasticsearch includes the standard output and error logs of all services, including SQL Server, Spark, HDFS, and platform services. 

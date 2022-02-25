@@ -19,6 +19,8 @@ SQL Server Big Data Clusters support [Active Directory (AD) deployment mode](./a
 
 This article explains how to deploy a big data cluster in AD mode while deploying in [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes). 
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Architecture topologies
 
 **Active Directory Domain Services (AD DS)** runs on an Azure virtual machine (VM) [in the same way](/windows-server/identity/ad-ds/deploy/virtual-dc/adds-on-azure-vm) it runs in many on-premises instances.  After promoting the new domain controllers in Azure, set the primary and secondary DNS Servers for the virtual network, demote any on-premises DNS Servers would be demoted to tertiary or later. AD authentication enables domain-joined clients on [Linux to authenticate to SQL Server](../linux/sql-server-linux-active-directory-auth-overview.md) using their domain credentials and the Kerberos protocol.

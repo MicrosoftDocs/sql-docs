@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Introducing the SQL Server Big Data Clusters runtime for Apache Spark
 
 The __SQL Server Big Data Clusters runtime for Apache Spark__ is a standardized specification for Apache Spark that enables seamless interoperability between distributions. This Spark runtime is a consistent, versioned block of programming language distributions, engine optimizations, core libraries, and packages.

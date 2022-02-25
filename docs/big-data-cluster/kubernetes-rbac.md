@@ -11,7 +11,9 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Kubernetes RBAC model & impact on users and service accounts managing BDC
+# Kubernetes RBAC model & impact on users and service accounts managing SQL Server 2019 Big Data Clusters
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article describes the permissions requirements for users managing big data clusters and the semantics around default service account and Kubernetes access from within the big data cluster.
 
@@ -20,7 +22,7 @@ This article describes the permissions requirements for users managing big data 
 
 ## Role required for deployment
 
-BDC uses service accounts (such as `sa-mssql-controller` or `master`) to orchestrate the provisioning of the cluster pods, services, high availability, monitoring, etc. When BDC deployment starts (for example, `azdata bdc create`), [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] does the following following:
+SQL Server 2019 Big Data Clusters uses service accounts (such as `sa-mssql-controller` or `master`) to orchestrate the provisioning of the cluster pods, services, high availability, monitoring, etc. When BDC deployment starts (for example, `azdata bdc create`), [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] does the following following:
 
 1. Checks if provided namespace exists.
 2. If it does not exist, it creates one and applies the `MSSQL_CLUSTER` label.

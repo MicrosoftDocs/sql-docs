@@ -1,11 +1,8 @@
 ---
+title: "- (Subtraction) (Transact-SQL)"
 description: "- (Subtraction) (Transact-SQL)"
-title: "- (Subtraction) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -22,15 +19,19 @@ helpviewer_keywords:
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
 author: LitKnd
 ms.author: kendralittle
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "03/15/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # - (Subtraction) (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Subtracts two numbers (an arithmetic subtraction operator). Can also subtract a number, in days, from a date.  
+Subtracts two numbers (an arithmetic subtraction operator). Can also subtract a number, in days, from a date.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

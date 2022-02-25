@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This tutorial explains how to use a script to load sample data into a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Many of the other tutorials in the documentation use this sample data.
 
 > [!TIP]

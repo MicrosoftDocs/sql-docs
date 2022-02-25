@@ -5,7 +5,7 @@ author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
 ms.custom: contperf-fy21q1
-ms.date: 02/22/2022
+ms.date: 02/25/2022
 ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: linux
@@ -89,11 +89,6 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker-end
 
 This technique also enables you to share and view the files on the host outside of Docker.
-
-> [!IMPORTANT]
-> Host volume mapping for **Docker on Windows** does not currently support mapping the complete `/var/opt/mssql` directory. However, you can map a subdirectory, such as `/var/opt/mssql/data` to your host machine.
->
-> Host volume mapping for **Docker on Mac** with the SQL Server on Linux image is not supported at this time. Use data volume containers instead. This restriction is specific to the `/var/opt/mssql` directory. Reading from a mounted directory works fine. For example, you can mount a host directory using -v on Mac and restore a backup from a .bak file that resides on the host.
 
 ### Use data volume containers
 

@@ -70,23 +70,12 @@ The SQL Server Browser service listens for incoming requests for [!INCLUDE[ssNoV
 
 - The SQL Server Configuration Manager and SSMS display the current status of services by using the following icons.  
 
-    **SQL Server Configuration Manager**
-
-  - A green arrow on the icon next to the service name indicates that the service is started.
-
-  - A red square on the icon next to the service name indicates that the service is stopped.
-
-  - Two vertical blue lines on the icon next to the service name indicate that the service is paused.
-
-  - When restarting the [!INCLUDE[ssDE](../../includes/ssde-md.md)], a red square indicates that the service stopped, and then a green arrow indicates that the service started successfully.
-
-    **SQL Server Management Studio (SSMS)**
-
-  - A white arrow on a green circle icon next to the service name indicates that the service is started.  
-
-  - A white square on a red circle icon next to the service name indicates that the service is stopped.  
-
-  - Two vertical white lines on a blue circle icon next to the service name indicate that the service is paused.  
+||SQL Server Configuration Manager|SQL Server Management Studio (SSMS)|
+|---:|:---|:---|
+|**Started**|A green arrow on the icon next to the service name|A white arrow on a green circle icon next to the service name|
+|**Stopped**|A red square on the icon next to the service name|A white square on a red circle icon next to the service name|
+|**Paused**|Two vertical blue lines on the icon next to the service name|Two vertical white lines on a blue circle icon next to the service name|
+|**Restarting**|A red square indicates that the service stopped, and then a green arrow indicates that the service started successfully.|None|
 
 - You won't have access to all possible options when using SQL Server Configuration Manager or SSMS, depending on the state of the service. For example, if the service is already started, **Start** is unavailable.
 

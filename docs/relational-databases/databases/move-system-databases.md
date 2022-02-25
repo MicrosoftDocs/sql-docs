@@ -119,7 +119,7 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
   
 3.  Start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in master-only recovery mode by entering one of the following commands at the command prompt. Using startup parameter 3608 prevents SQL Server from automatically starting and recovering any database except the `master` database. For more information, see [Startup Parameters](../../tools/configuration-manager/sql-server-properties-startup-parameters-tab.md#optional-parameters) and [TF3608](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf3608).
 
-The parameters specified in these commands are case sensitive. The commands fail when the parameters are not specified as shown.  
+    The parameters specified in these commands are case sensitive. The commands fail when the parameters are not specified as shown.  
 
     For the default (MSSQLSERVER) instance, run the following command:  
   

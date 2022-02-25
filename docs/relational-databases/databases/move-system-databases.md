@@ -117,7 +117,10 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
 
 2.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if it is started.  
   
-3.  Start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in master-only recovery mode by entering one of the following commands at the command prompt. The parameters specified in these commands are case sensitive. The commands fail when the parameters are not specified as shown.  
+3.  Start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in master-only recovery mode by entering one of the following commands at the command prompt. Using startup parameter 3608 prevents SQL Server from automatically starting and recovering any database except the `master` database. For more information, see [Startup Parameters](../../tools/configuration-manager/sql-server-properties-startup-parameters-tab.md#optional-parameters) and [TF3608](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf3608).
+
+The parameters specified in these commands are case sensitive. The commands fail when the parameters are not specified as shown.  
+
   
     -   For the default (MSSQLSERVER) instance, run the following command:  
   
@@ -135,9 +138,25 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
   
 4.  For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run the following statement. For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md).  
   
+
+    Promptly after startup with trace flag 3808, start a **sqlcmd** connection to the server, to claim the single connection that is available. For example, when executing **sqlcmd** locally on the same server as the default (MSSQLSERVER) instance, and to connect with Active Directory integration authentication, run the following command: 
+    ```cmd
+    sqlcmd
+    ```
+
+    To connect to a named instance on the local server, with Active Directory integration authentication:
+
+    ```cmd
+    sqlcmd -S localhost\instancename
+    ```
+
+    For more information on **sqlcmd** syntax, see [sqlcmd utility](../../tools/sqlcmd-utility.md). Once the **sqlcmd** session is open, run the following statement once for each file to be moved:
+
     ```cmd  
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
+    GO
     ```  
+
     
     Until the service is restarted, the database continues to use the data and log files in the existing location.  
 

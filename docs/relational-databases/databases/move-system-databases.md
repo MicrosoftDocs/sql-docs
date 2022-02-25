@@ -135,7 +135,8 @@ If the `msdb` database is moved and [Database Mail](../../relational-databases/d
   
      For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-4.  Promptly after service startup with trace flag 3808, start a **sqlcmd** connection to the server, to claim the single connection that is available. For example, when executing **sqlcmd** locally on the same server as the default (MSSQLSERVER) instance, and to connect with Active Directory integration authentication, run the following command: 
+4.  Promptly after service startup with trace flag 3608 and `/f`, start a **sqlcmd** connection to the server, to claim the single connection that is available. For example, when executing **sqlcmd** locally on the same server as the default (MSSQLSERVER) instance, and to connect with Active Directory integration authentication, run the following command: 
+
 
     ```cmd
     sqlcmd

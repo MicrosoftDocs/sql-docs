@@ -13,6 +13,8 @@ ms.technology: big-data-cluster
 
 # Symptom: AD mode login fails - untrusted domain (Big Data Clusters)
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 On a SQL Server Big Data Cluster in Active Directory mode, a connection attempt may fail and the connection attempt returns the following error:
 
 `Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.`

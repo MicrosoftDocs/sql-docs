@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This guide demonstrates how to use encryption at rest capabilities of [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] to encrypt databases.
 
 The configuration experience for the DBA when configuring SQL Server transparent data encryption is the same SQL Server on Linux and [standard TDE documentation](../relational-databases/security/encryption/transparent-data-encryption.md) applies except where noted. In order to monitor status of encryption on master, follow standard DMV query patterns on top of [sys.dm_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) and [sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).

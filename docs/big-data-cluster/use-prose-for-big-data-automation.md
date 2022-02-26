@@ -15,6 +15,8 @@ ms.technology: machine-learning-bdc
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 PROSE Code Accelerator generates readable Python code for your data wrangling tasks. 
 You can mix the generated code with your hand-written code while working in a notebook within Azure Data Studio.
 

@@ -1,7 +1,7 @@
 ---
 description: "Data Definition Statements (DMX)"
 title: "Data Definition Statements (DMX) | Microsoft Docs"
-ms.date: 10/23/2019
+ms.date: 02/17/2022
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx

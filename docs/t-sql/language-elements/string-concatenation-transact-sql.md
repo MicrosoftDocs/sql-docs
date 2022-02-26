@@ -1,16 +1,12 @@
 ---
+title: "+ (String Concatenation) (Transact-SQL)"
 description: "+ (String Concatenation) (Transact-SQL)"
-title: "+ (String Concatenation) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
   - "concatenation"
-  - "+"
   - "string"
 dev_langs: 
   - "TSQL"
@@ -18,17 +14,21 @@ helpviewer_keywords:
   - "concatenation [SQL Server]"
   - "string concatenation operators"
   - "+ (string concatenation)"
-ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: LitKnd
 ms.author: kendralittle
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "12/06/2016"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # + (String Concatenation) (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  An operator in a string expression that concatenates two or more character or binary strings, columns, or a combination of strings and column names into one expression (a string operator).  For example `SELECT 'book'+'case';` returns `bookcase`.
+An operator in a string expression that concatenates two or more character or binary strings, columns, or a combination of strings and column names into one expression (a string operator).  For example `SELECT 'book'+'case';` returns `bookcase`.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

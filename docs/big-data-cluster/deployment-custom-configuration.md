@@ -11,14 +11,16 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-
 # Configure deployment settings for Big Data Cluster resources and services
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
-> [!Note]
-> Big Data Clusters version CU9+ have support for configuration management functionality. This feature enables post-deployment configurations and provides increased visibility and configurability of the cluster. Versions CU8 and lower do not have this functionality and configurations can only be done at deployment time.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Starting from a pre-defined set of configuration profiles that are built into the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
+
+> [!Note]
+> Big Data Clusters version CU9+ have support for configuration management functionality. This feature enables post-deployment configurations and provides increased visibility and configurability of the cluster. Versions CU8 and lower do not have this functionality and configurations can only be done at deployment time.
 
 Watch this 13-minute video for an overview of big data cluster configuration:
 

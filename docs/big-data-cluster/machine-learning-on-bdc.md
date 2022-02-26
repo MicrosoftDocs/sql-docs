@@ -17,6 +17,8 @@ ms.technology: machine-learning-bdc
 
 This article explains how to use [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] for Machine Learning Scenarios.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Introduction to Machine Learning in SQL Server Big Data Clusters
 
 [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] enables machine learning scenarios and solutions using different technology stacks: __SQL Server Machine Learning Services__ and __Apache Spark ML__.

@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This tutorial demonstrates how to load and run a notebook in Azure Data Studio on a SQL Server 2019 big data cluster. This allows data scientists and data engineers to run Python, R, or Scala code against the cluster.
 
 > [!TIP]

@@ -37,13 +37,15 @@ nodes (XQuery) as Table(Column)
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
+
 *XQuery*  
 Is a string literal, an XQuery expression. If the query expression constructs nodes, these constructed nodes are exposed in the resulting rowset. If the query expression results in an empty sequence, the rowset is empty as well. If the query expression statically results in a sequence that contains atomic values instead of nodes, a static error is raised.  
   
 *Table*(*Column*)  
 Is the table name and the column name for the resulting rowset.  
   
-## Remarks  
+## Remarks
+
 As an example, assume that you have the following table:  
   
 ```sql

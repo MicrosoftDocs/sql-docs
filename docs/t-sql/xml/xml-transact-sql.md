@@ -22,7 +22,7 @@ ms.date: "07/26/2017"
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Is the data type that stores XML data. You can store **xml** instances in a column, or a variable of **xml** type.  
+It's the data type that stores XML data. You can store **xml** instances in a column, or a variable of **xml** type.  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,16 +42,16 @@ Restricts the **xml** instance to be a well-formed XML fragment. The XML data ca
 This is the default behavior.  
   
 DOCUMENT  
-Restricts the **xml** instance to be a well-formed XML document. The XML data must have one and only one root element. Text nodes are not allowed at the top level.  
+Restricts the **xml** instance to be a well-formed XML document. The XML data must have one and only one root element. Text nodes aren't allowed at the top level.  
   
 *xml_schema_collection*  
 Is the name of an XML schema collection. To create a typed **xml** column or variable, you can optionally specify the XML schema collection name. For more information about typed and untyped XML, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
 ## Remarks
 
-The stored representation of **xml** data type instances cannot exceed 2 gigabytes (GB) in size.  
+The stored representation of **xml** data type instances can’t exceed 2 gigabytes (GB) in size.  
   
-The CONTENT and DOCUMENT facets apply only to typed XML. For more information see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+The CONTENT and DOCUMENT facets apply only to typed XML. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
 ## Examples  
   

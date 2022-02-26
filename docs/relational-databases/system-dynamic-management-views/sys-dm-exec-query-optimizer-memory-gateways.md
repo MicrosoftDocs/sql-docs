@@ -17,8 +17,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords:
   - "sys.dm_exec_query_optimizer_memory_gateways dynamic management view"
-author: "josack"
-ms.author: "josack"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)

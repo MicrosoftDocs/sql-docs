@@ -13,6 +13,10 @@ ms.technology: big-data-cluster
 
 # Non-root Big Data Clusters containers
 
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 SQL Server 2019 CU5 introduces support for non-root containers. The platform implementation is safer by ensuring that all container applications running within BDC are started as non-root users by default, on all supported platforms. These capabilities are available for all new deployments using the SQL Server 2019 CU5 corresponding image tag. Existing pre-CU5 BDC deployments will not be impacted by this change, and applications in these clusters will continue to run as root user. 
 
 ## Technical background

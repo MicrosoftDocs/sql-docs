@@ -17,6 +17,8 @@ ms.custom:
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article explains how to deploy a SQL Server Big Data Cluster on OpenShift environments, on-premises or on Azure Red Hat OpenShift (ARO).
 
 > [!TIP]

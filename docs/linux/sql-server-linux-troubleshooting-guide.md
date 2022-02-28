@@ -233,8 +233,9 @@ Many factors affect performance, including database design, hardware, and worklo
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   Resources:
-   [Special characters](https://tldp.org/LDP/abs/html/special-chars.html)
-   [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
+## Resources
+
+- [Special characters](https://tldp.org/LDP/abs/html/special-chars.html)
+- [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

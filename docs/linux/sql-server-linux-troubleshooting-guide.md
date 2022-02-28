@@ -53,7 +53,7 @@ If you have difficulty connecting to your Linux [!INCLUDE[ssNoVersion](../includ
 
 ## Manage the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service
 
-The following section shows how to manage the execution of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Docker containers. To manage services for Linux, see [Start, stop, and restart SQL Server services on Linux](./sql-server-linux-start-stop-restart-sql-server-services.md).
+The following section shows how to manage the execution of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Docker containers. To manage services for Linux, see [Start, stop, and restart SQL Server services on Linux](sql-server-linux-start-stop-restart-sql-server-services.md).
 
 ### Manage the execution of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Docker container
 
@@ -71,7 +71,7 @@ You can stop or restart the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
    ```
 
 > [!TIP]
-> For more troubleshooting tips for Docker, see [Troubleshooting SQL Server Docker containers](./sql-server-linux-docker-container-troubleshooting.md).
+> For more troubleshooting tips for Docker, see [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md).
 
 ## Access the log files
 
@@ -92,7 +92,7 @@ If you prefer, you can also convert the files to UTF-8 to read them with **more*
 
 ## Extended events
 
-Extended events can be queried via a SQL command.  For more information, see [extended events](../relational-databases/extended-events/extended-events.md).
+Extended events can be queried via a SQL command. For more information, see [extended events](../relational-databases/extended-events/extended-events.md).
 
 ## Crash dumps
 
@@ -104,7 +104,8 @@ For example, to view core dumps:
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
    ```
 
-For SQL dumps 
+For SQL dumps:
+
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -129,7 +130,7 @@ For example, use the following script to start [!INCLUDE[ssNoVersion](../include
    sudo -u mssql /opt/mssql/bin/sqlservr -m
    ```
 
-Start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single user mode with **sqlcmd**
+This script starts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single user mode with **sqlcmd**
 
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -m sqlcmd
@@ -148,8 +149,18 @@ If you have accidentally started [!INCLUDE[ssNoVersion](../includes/ssnoversion-
 
 As a last resort, you can choose to rebuild the `master` and `model` databases back to default versions.
 
-> [!WARNING]
-> These steps will **delete all [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system data** that you have configured. This includes information about your user databases (but not the user databases themselves), and will require you to attach the user databases to the instance afterwards. It will also delete other information stored in the system databases, including the following: master key information, any certificates loaded in `master`, the SA Login password, job-related information from `msdb`, Database Mail information from `msdb`, and `sp_configure` options. Only use this step if you understand the implications.
+This process is dangerous, because you will **delete all [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system data** that you have configured, including information about your user databases (but not the user databases themselves). You will need to attach the user databases to the instance afterwards. It will also delete other information stored in the system databases, including:
+
+- Database Master Key information
+- any certificates loaded in `master`
+- the SA login password
+- job-related information from `msdb`
+- Database Mail information from `msdb`
+- `sp_configure` options
+
+You won't be able to reattach any user databases encrypted with [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md) unless your certificates and private keys are also backed up.
+
+Only use these steps if you understand the implications.
 
 1. Stop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]
 

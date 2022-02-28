@@ -66,7 +66,7 @@ The SQL Server Browser service listens for incoming requests for [!INCLUDE[ssNoV
 
 ### Additional Information
 
-- If you pause the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service, users who are already connected can continue to work until their connections are broken, but new users can't connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use *Pause* when you want to wait for users to complete their work before you stop the service, which lets them complete transactions that are in progress. *Resume* allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to accept new connections again. The SQL Server Agent service cannot be paused or resumed.  
+- If you pause the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service, users who are already connected can continue to work until their connections are broken, but new users can't connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use **Pause** when you want to wait for users to complete their work before you stop the service, which lets them complete transactions that are in progress. **Resume** allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to accept new connections again. The SQL Server Agent service cannot be paused or resumed.  
 
 - The SQL Server Configuration Manager and SSMS display the current status of services by using the following icons.  
 
@@ -75,15 +75,13 @@ The SQL Server Browser service listens for incoming requests for [!INCLUDE[ssNoV
 |**Started**|A green arrow on the icon next to the service name|A white arrow on a green circle icon next to the service name|
 |**Stopped**|A red square on the icon next to the service name|A white square on a red circle icon next to the service name|
 |**Paused**|Two vertical blue lines on the icon next to the service name|Two vertical white lines on a blue circle icon next to the service name|
-|**Restarting**|A red square indicates that the service stopped, and then a green arrow indicates that the service started successfully.|None|
+|**Restarting**|A red square indicates that the service stopped, and then a green arrow indicates that the service started successfully|None|
 
 - You won't have access to all possible options when using SQL Server Configuration Manager or SSMS, depending on the state of the service. For example, if the service is already started, **Start** is unavailable.
 
 - When running on a cluster, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] service is best managed by using Cluster Administrator.  
 
-### Security
-
-#### Permissions
+### Permissions
 
 By default, only members of the local administrator group can start, stop, pause, resume, or restart a service. To grant non-administrators the ability to manage services, see [How to grant users rights to manage services in Windows Server 2003](https://support.microsoft.com/kb/325349). (The process is similar on other versions of Windows Server.)
 

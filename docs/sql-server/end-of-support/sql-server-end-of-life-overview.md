@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-2016"
 ---
 # SQL Server end of support options
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-windows-only.md)]
 
 This article explains your options for addressing SQL Server products that have reached end of support.
 
@@ -20,7 +20,7 @@ This article explains your options for addressing SQL Server products that have 
 
 Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is backed by a minimum of 10 years support, which includes five years in mainstream support, and five years in extended support:
 
-- **Mainstream support** includes functional, performance, scalability and security updates. 
+- **Mainstream support** includes functional, performance, scalability and security updates.
 - **Extended support** includes only security updates.
 
 **End of support** (also sometimes known as end of life) indicates that a product has reached the end of its lifecycle, and servicing and support is no longer available for the product. For more information about the Microsoft Lifecycle, see [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy).
@@ -119,7 +119,7 @@ If you're not ready to upgrade, and you're not ready to move to the cloud, you h
 - [Extend support for free by migrating as-is to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
 - [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)
 
-## Azure Virtual Machine
+## SQL Server on Azure VMs
 
 Another option is to migrate your workload to an [Azure Virtual Machine running SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview). You can migrate your system as-is and keep your end-of-support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or you can upgrade to a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is best for migrations and applications requiring OS-level access. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] virtual machines are lift-and-shift ready for existing applications that require fast migration to the cloud with minimal or no changes.
 
@@ -157,7 +157,7 @@ Another option is to migrate your workload to an [Azure Virtual Machine running 
 - [SQL virtual machine high availability](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
 - [SQL virtual machine frequently asked questions](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-faq)
 
-## Azure SQL Database single database
+## Azure SQL Database
 
 If you want to offload maintenance, reduce costs, and eliminate the need to upgrade in the future, you can move your workload to [Azure SQL Database single database](/azure/sql-database/sql-database-single-database). This option is best for modern cloud applications that want to use the latest stable [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features and have time constraints in development and marketing.
 
@@ -198,7 +198,7 @@ Tools:
 - [Data Migration Assistant](../../dma/dma-overview.md)
 - [Database Migration Service](/azure/dms/dms-overview)
 
-## SQL Managed Instance
+## Azure SQL Managed Instance
 
 If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database too limiting, you can move to [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance). A managed instance closely resembles an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], without having to worry about such things as hardware failure, or patching. Managed Instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features and that are migrated to the cloud with minimal changes.
 

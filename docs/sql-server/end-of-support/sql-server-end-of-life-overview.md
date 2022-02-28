@@ -36,7 +36,7 @@ Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached 
 
 For more information, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005) and [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
 
-:::image type="content" source="media/sql-server-end-of-life-overview/sql-server-upgrade-paths.png" alt-text="End of support options":::
+:::image type="content" source="media/sql-server-end-of-life-overview/sql-server-upgrade-paths.svg" alt-text="End of support options":::
 
 This article describes the benefits and considerations for each approach, with more resources to help guide your decision-making process.
 

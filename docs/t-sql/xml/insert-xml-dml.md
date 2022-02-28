@@ -1,10 +1,7 @@
 ---
-description: "insert (XML DML)"
 title: insert (XML DML)
-ms.custom: ""
-ms.date: "07/26/2017"
+description: "insert (XML DML)"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 dev_langs: 
@@ -14,14 +11,18 @@ helpviewer_keywords:
   - "inserting nodes"
   - "insert keyword [XML DML]"
   - "insert XML DML statement"
-ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "07/26/2017"
 ---
+
 # insert (XML DML)
+
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Inserts one or more nodes identified by *Expression1* as child nodes or siblings of the node identified by *Expression2*.  
+Inserts one or more nodes identified by *Expression1* as child nodes or siblings of the node identified by *Expression2*.  
   
 ## Syntax  
   

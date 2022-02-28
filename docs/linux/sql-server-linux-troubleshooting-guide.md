@@ -92,13 +92,13 @@ If you prefer, you can also convert the files to UTF-8 to read them with **more*
 
 ## Extended events
 
-Extended events can be queried via a SQL command.  More information about extended events can be found [here](../relational-databases/extended-events/extended-events.md):
+Extended events can be queried via a SQL command.  For more information, see [extended events](../relational-databases/extended-events/extended-events.md).
 
 ## Crash dumps
 
 Look for dumps in the log directory in Linux. Check under the `/var/opt/mssql/log` directory for Linux Core dumps (`.tar.gz2` extension) or SQL minidumps (`.mdmp` extension)
 
-For Core dumps
+For example, to view core dumps:
 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
@@ -121,9 +121,9 @@ This mode is useful if the setting of a configuration value (for example, over-c
 
 ### Start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single user mode
 
-Sometimes you may have to start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode by using the startup option **-m**. For example, you may want to change server configuration options or recover a damaged `master` database or other system database.
+Sometimes you may have to start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode by using the startup option **-m**. For more information, see [startup parameters](../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options). For example, you may want to change server configuration options or recover a damaged `master` database or other system database.
 
-Start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single user mode
+For example, use the following script to start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single user mode:
 
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -m
@@ -149,7 +149,7 @@ If you have accidentally started [!INCLUDE[ssNoVersion](../includes/ssnoversion-
 As a last resort, you can choose to rebuild the `master` and `model` databases back to default versions.
 
 > [!WARNING]
-> These steps will **delete all [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system data** that you have configured. This includes information about your user databases (but not the user databases themselves). It will also delete other information stored in the system databases, including the following: master key information, any certificates loaded in `master`, the SA Login password, job-related information from `msdb`, Database Mail information from `msdb`, and `sp_configure` options. Only use this step if you understand the implications.
+> These steps will **delete all [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system data** that you have configured. This includes information about your user databases (but not the user databases themselves), and will require you to attach the user databases to the instance afterwards. It will also delete other information stored in the system databases, including the following: master key information, any certificates loaded in `master`, the SA Login password, job-related information from `msdb`, Database Mail information from `msdb`, and `sp_configure` options. Only use this step if you understand the implications.
 
 1. Stop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]
 
@@ -194,11 +194,11 @@ Many factors affect performance, including database design, hardware, and worklo
 
    See the troubleshooting section of the article, [Connect to SQL Server on Linux](#connection).
 
-2. **ERROR: Hostname must be 15 characters or less.**
+2. You experience the error message: **ERROR: Hostname must be 15 characters or less.**
 
    This is a known issue that happens whenever the name of the machine that is trying to install the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. You can edit the hostname file and reboot the machine, which is explained in detail in the following [website guide](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/).
 
-3. Resetting the system administration (SA) password.
+3. The system administration (SA) password must be reset.
 
    If you forgot the system administrator (SA) password or need to reset it for some other reason, follow these steps.
 
@@ -212,7 +212,7 @@ Many factors affect performance, including database design, hardware, and worklo
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-4. Using special characters in password.
+4. Special characters in login passwords cause errors or login failures.
 
    If you use some characters in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login password, you might need to escape them with a backslash when you use them on the Linux command line. For example, you must escape the dollar sign ($) anytime you use it in a terminal command/shell script:
 

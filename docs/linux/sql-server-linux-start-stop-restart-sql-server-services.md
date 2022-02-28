@@ -48,9 +48,7 @@ The SQL Server Agent service executes scheduled administrative tasks, which are 
 
 - When running on a cluster, use the appropriate cluster management tool to manage the [!INCLUDE[ssDE](../includes/ssde-md.md)] for your Linux distribution. See [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md) for an example using Pacemaker.
 
-### Security
-
-#### Permissions
+### Permissions
 
 By default, only members of the local administrator group can start, stop, or restart a service.
 

@@ -135,7 +135,7 @@ This script starts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in sin
    sudo -u mssql /opt/mssql/bin/sqlservr -m sqlcmd
    ```
   
-Note that you should always start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux with the **mssql** user to prevent future startup issues. For example: `sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]`
+You should always start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux with the **mssql** user to prevent future startup issues. For example: `sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]`
 
 If you have accidentally started [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with another user, you must change ownership of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database files back to the **mssql** user prior to starting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with **systemd**. For example, to change ownership of all database files under `/var/opt/mssql` to the **mssql** user, run the following command:
 
@@ -172,7 +172,7 @@ Only use these steps if you understand the implications.
    sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
    ```
 
-   Note that you should always start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux with the **mssql** user to prevent future startup issues.
+   You should always start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux with the **mssql** user to prevent future startup issues.
 
 1. After you see the message "Recovery is complete", press **Ctrl+C**. This will shut down [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

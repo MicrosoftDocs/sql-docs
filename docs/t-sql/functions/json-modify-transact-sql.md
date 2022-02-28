@@ -270,7 +270,7 @@ PRINT @info
     "skills": ["C#", "SQL"]
 } {
     "name": "John",
-    "skills": "[\"C#\",\"T-SQL\",\"Azure\"]"
+    "skills": ["C#", "T-SQL", "Azure"]
 }
 ```  
   

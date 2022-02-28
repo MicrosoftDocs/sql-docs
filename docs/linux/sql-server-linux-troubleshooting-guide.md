@@ -15,8 +15,7 @@ ms.technology: linux
 
 This article describes how to troubleshoot [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] running on Linux or in a Docker container. When troubleshooting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux, remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
 
-> [!TIP]
-> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
 
 ## <a id="connection"></a> Troubleshoot connection failures
 
@@ -104,7 +103,7 @@ For example, to view core dumps:
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
    ```
 
-For SQL dumps:
+For SQL dumps, use this script:
 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
@@ -130,14 +129,13 @@ For example, use the following script to start [!INCLUDE[ssNoVersion](../include
    sudo -u mssql /opt/mssql/bin/sqlservr -m
    ```
 
-This script starts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single user mode with **sqlcmd**
+This script starts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single user mode with **sqlcmd**:
 
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -m sqlcmd
    ```
   
-> [!WARNING]  
-> Start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux with the **mssql** user to prevent future startup issues. For example: `sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]`
+Note that you should always start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux with the **mssql** user to prevent future startup issues. For example: `sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]`
 
 If you have accidentally started [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with another user, you must change ownership of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database files back to the **mssql** user prior to starting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with **systemd**. For example, to change ownership of all database files under `/var/opt/mssql` to the **mssql** user, run the following command:
 
@@ -174,8 +172,7 @@ Only use these steps if you understand the implications.
    sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
    ```
 
-   > [!WARNING]
-   > See the previous warning! Also, you must run this as the **mssql** user as shown here.
+Note that you should always start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux with the **mssql** user to prevent future startup issues.
 
 1. After you see the message "Recovery is complete", press **Ctrl+C**. This will shut down [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
@@ -209,12 +206,9 @@ Many factors affect performance, including database design, hardware, and worklo
 
    This is a known issue that happens whenever the name of the machine that is trying to install the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. You can edit the hostname file and reboot the machine, which is explained in detail in the following [website guide](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/).
 
-3. The system administration (SA) password must be reset.
+3. The system administration (SA) password must be reset, which will stop the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service temporarily.
 
-   If you forgot the system administrator (SA) password or need to reset it for some other reason, follow these steps.
-
-   > [!NOTE]
-   > The following steps stop the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service temporarily.
+   If you forget the system administrator (SA) password or need to reset it for some other reason, follow these steps.
 
    Log into the host terminal, run the following commands and follow the prompts to reset the SA password:
 

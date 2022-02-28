@@ -172,7 +172,7 @@ Only use these steps if you understand the implications.
    sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
    ```
 
-Note that you should always start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux with the **mssql** user to prevent future startup issues.
+   Note that you should always start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux with the **mssql** user to prevent future startup issues.
 
 1. After you see the message "Recovery is complete", press **Ctrl+C**. This will shut down [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

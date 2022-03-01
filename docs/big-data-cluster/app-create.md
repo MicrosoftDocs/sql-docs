@@ -18,6 +18,8 @@ ms.custom:
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 Applications deployed on SQL Server Big Data Clusters not only benefit from many advantages such as the computational power of the cluster but also access massive data that is available on the cluster. It dramatically improve the performance since your app sits in the same cluster where the data lives.
 
 Applications are deployed and managed using [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 

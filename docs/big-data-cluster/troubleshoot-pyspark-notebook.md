@@ -13,6 +13,8 @@ ms.technology: big-data-cluster
 
 # Troubleshoot a `pyspark` notebook
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article demonstrates how to troubleshoot a `pyspark` notebook that fails.
 
 ## Architecture of a PySpark job under Azure Data Studio

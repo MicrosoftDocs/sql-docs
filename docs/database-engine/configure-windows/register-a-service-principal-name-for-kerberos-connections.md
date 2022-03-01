@@ -121,7 +121,7 @@ To give permissions to SQL Server startup account to register and modify SPN do 
 
     a.  Select the account and click **Edit**.
 
-    b.  Under Permissions select **Validate Write servicePrincipalName**.
+    b.  Under Permissions select **Validated Write servicePrincipalName**.
 
     d.  Scroll down and under **Properties** select:
 

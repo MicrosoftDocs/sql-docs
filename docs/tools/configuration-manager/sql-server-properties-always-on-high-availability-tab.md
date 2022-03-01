@@ -14,7 +14,7 @@ ms.author: "mikeray"
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Properties (Always On High Availability Tab)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   Use the **Always On High Availability** tab of the **SQL Server Properties** dialog box in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to enable or disable the Always On Availability Groups feature in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Enabling Always On Availability Groups is a prerequisite for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use availability groups as a high availability and disaster recovery solution.  
   
 ##  <a name="Prerequisites"></a> Prerequisites  

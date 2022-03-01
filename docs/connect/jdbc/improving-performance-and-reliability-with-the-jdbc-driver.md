@@ -13,7 +13,7 @@ author: David-Engel
 ms.author: v-davidengel
 ---
 
-# Improving performance and reliability with the JDBC driver
+# Improving performance and reliability (JDBC)
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

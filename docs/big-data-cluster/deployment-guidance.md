@@ -17,6 +17,8 @@ ms.custom:
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 SQL Server Big Data Cluster is deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
 
 - Set up a Kubernetes cluster on a single VM, cluster of VMs, in Azure Kubernetes Service (AKS), Red Hat OpenShift or in Azure Red Hat OpenShift (ARO).

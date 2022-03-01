@@ -1,18 +1,13 @@
 ---
+title: "AsGml (geometry Data Type)"
 description: "AsGml (geometry Data Type)"
-title: "AsGml (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
-  - "AsGml(geometry_Data_Type)_TSQL"
-  - "AsGml"
-  - "AsGml(geometry Data Type)"
-  - "AsGml_TSQL"
+  - "AsGml_(geometry_Data_Type)_TSQL"
+  - "AsGml_(geometry Data Type)"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -20,8 +15,12 @@ helpviewer_keywords:
 ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: MladjoA
 ms.author: mlandzic 
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "08/03/2017"
 ---
 # AsGml (geometry Data Type)
+
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns the Geography Markup Language (GML) representation of a **geometry** instance.
@@ -30,22 +29,23 @@ For more information on Geography Markup Language, see the following Open Geospa
   
 ## Syntax  
   
-```  
-  
+```sql  
 .AsGml ( )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Return Types
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **xml**  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **xml**  
   
- CLR return type: **SqlXml**  
+CLR return type: **SqlXml**  
   
 ## Remarks  
   
-## Examples  
- The following example creates a `LineString` instance and uses `AsGML()` to return the GML description of the instance.  
+## Examples
+
+The following example creates a `LineString` instance and uses `AsGML()` to return the GML description of the instance.  
   
 ```sql
 DECLARE @g geometry;  

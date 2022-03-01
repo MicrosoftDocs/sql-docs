@@ -14,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 # Protocols for &lt;server&gt; (SQL Server Configuration Manager)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   To configure the protocols used by the [!INCLUDE[ssDE](../../includes/ssde-md.md)], select **Protocols** for the desired server instance in the console pane, right-click the appropriate protocol in the details pane, and then click **Properties**.  
   
   

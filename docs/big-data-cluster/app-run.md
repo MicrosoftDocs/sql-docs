@@ -16,6 +16,8 @@ ms.technology: big-data-cluster
 
 This article describes how to run an application inside a SQL Server Big Data Clusters.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Prerequisites
 
 - [SQL Server 2019 big data cluster](deployment-guidance.md)

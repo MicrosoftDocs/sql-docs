@@ -14,6 +14,8 @@ ms.technology: machine-learning-bdc
 
 # Create, export, and score Spark machine learning models on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 The following sample shows how to build a model with [Spark ML](https://spark.apache.org/docs/latest/ml-guide.html), export the model to [MLeap](http://mleap-docs.combust.ml/), and score the model in SQL Server with its [Java Language Extension](../language-extensions/language-extensions-overview.md). This is done in the context of a SQL Server big data cluster.
 
 The following diagram illustrates the work performed in this sample:
@@ -56,7 +58,7 @@ The data is first read into Spark and split into training and testing data sets.
 
 ## Model scoring with SQL Server
 
-Now that the Spark ML pipeline model is in a common serialization [MLeap bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) format, you can score the model in Java without the presence of Spark.
+Now that the Spark ML pipeline model is in a common serialization [MLeap bundle](https://github.com/combust/mleap-docs/blob/master/core-concepts/mleap-bundles.md) format, you can score the model in Java without the presence of Spark.
 
 This sample uses the [Java Language Extension](../language-extensions/language-extensions-overview.md) in SQL Server. In order to score the model in SQL Server, you first need to build a Java application that can load the model into Java and score it. You can find the sample code for this Java application in the [mssql-mleap-app folder](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app).
 

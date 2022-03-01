@@ -205,8 +205,8 @@ WHEN MATCHED THEN
     UPDATE
    SET DeptName = source.DeptName
 WHEN NOT MATCHED THEN
-   INSERT (DeptName)
-   VALUES (source.DeptName);
+   INSERT (DeptId,DeptName)
+   VALUES (source.DeptId,source.DeptName);
 ```
 
 ## Next steps

@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This tutorial demonstrates how to Query Oracle data from a SQL Server 2019 big data cluster. To run this tutorial, you will need to have access to an Oracle server. An Oracle user account with read privileges to the external object is required. Oracle Proxy user authentication is supported. If you do not have access, this tutorial can give you a sense of how data virtualization works for external data sources in SQL Server big data cluster.
 
 In this tutorial, you learn how to:

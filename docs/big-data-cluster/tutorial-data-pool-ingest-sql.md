@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This tutorial demonstrates how to use Transact-SQL to load data into the [data pool](concept-data-pool.md) of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. With [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], data from a variety of sources can be ingested and distributed across data pool instances.
 
 In this tutorial, you learn how to:

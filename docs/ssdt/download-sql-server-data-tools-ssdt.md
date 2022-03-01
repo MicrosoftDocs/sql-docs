@@ -6,7 +6,6 @@ ms.prod_service: sql-tools
 ms.technology: ssdt
 ms.topic: conceptual
 keywords: "install ssdt, download ssdt, latest ssdt"
-ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan

@@ -45,7 +45,7 @@ curl -O https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
 gpg --verify msodbcsql18_18.0.1.1-1_amd64.sig msodbcsql18_18.0.1.1-1_amd64.apk
-gpg --verify mssql-tools18_18.0.1.1-1_amd64.sig mssql-tools_18.0.1.1-1_amd64.apk
+gpg --verify mssql-tools18_18.0.1.1-1_amd64.sig mssql-tools18_18.0.1.1-1_amd64.apk
 
 
 #Install the package(s)

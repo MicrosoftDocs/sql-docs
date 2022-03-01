@@ -158,7 +158,7 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |CommandTimeout=(INT32 '60')| x | x | x | x | x | x |
 |CommentOutSetVarDeclarations=(BOOLEAN)| | x | | | x | x |
 |CompareUsingTargetCollation=(BOOLEAN)| | x | | | x | x |
-|CompressionOption=(ENUM 'Normal')| x | | x | | | | |
+|CompressionOption=(ENUM 'Normal')| x | | x | | | |
 |CreateNewDatabase=(BOOLEAN)| | x | | | x | x |
 |DacApplicationDescription=(STRING)| x | | | | | |
 |DacApplicationName=(STRING)| x | | | | | |

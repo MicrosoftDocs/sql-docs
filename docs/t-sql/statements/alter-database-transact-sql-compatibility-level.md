@@ -92,9 +92,7 @@ To view the current compatibility level of a database, query the `compatibility_
 > A [distribution database](../../relational-databases/replication/distribution-database.md) that was created in an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and is upgraded to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] RTM or Service Pack 1 has a compatibility level of 90, which is not supported for other databases. This does not have an impact on the functionality of replication. Upgrading to later service packs and versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will result in the compatibility level of the distribution database to be increased to match that of the **master** database.
 
 > [!NOTE]
-> As of **November 2019**, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default compatibility level is 150 for newly created databases. [!INCLUDE[msCoName](../../includes/msconame-md.md)] does not update database compatibility level for existing databases. It is up to customers to do at their own discretion.
-
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to leverage the latest query optimization improvements.
+> As of **November 2019**, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default compatibility level is 150 for newly created databases. [!INCLUDE[msCoName](../../includes/msconame-md.md)] does not update database compatibility level for existing databases. It is up to customers to do at their own discretion. [!INCLUDE[msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to leverage the latest query optimization improvements.
 
 To use database compatibility level 120 or higher for a database overall, but opt-in to the [**cardinality estimation**](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], which maps to database compatibility level 110, see [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), and in particular its keyword `LEGACY_CARDINALITY_ESTIMATION = ON`.
 
@@ -318,7 +316,7 @@ This section describes new behaviors introduced with compatibility level 100.
 |XML attribute values that contain end-of-line characters (carriage return and line feed) aren’t normalized according to the XML standard. That is, both characters are returned instead of a single line-feed character.|XML attribute values that contain end-of-line characters (carriage return and line feed) are normalized according to the XML standard. That is, all line breaks in external parsed entities (including the document entity) are normalized on input by translating both the two-character sequence #xD #xA and any #xD that is not followed by #xA to a single #xA character.<br /><br /> Applications that use attributes to transport string values that contain end-of-line characters will not receive these characters back as they are submitted. To avoid the normalization process, use the XML numeric character entities to encode all end-of-line characters.|Low|
 |The column properties `ROWGUIDCOL` and `IDENTITY` can be incorrectly named as a constraint. For example the statement `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` executes, but the constraint name isn’t preserved and isn’t accessible to the user.|The column properties `ROWGUIDCOL` and `IDENTITY` can’t be named as a constraint. Error 156 is returned.|Low|
 |Updating columns by using a two-way assignment such as `UPDATE T1 SET @v = column_name = <expression>` can produce unexpected results because the live value of the variable can be used in other clauses such as the `WHERE` and `ON` clause during statement execution instead of the statement starting value. This can cause the meanings of the predicates to change unpredictably on a per-row basis.<br /><br /> This behavior is applicable only when the compatibility level is set to 90.|Updating columns by using a two-way assignment produces expected results because only the statement starting value of the column is accessed during statement execution.|Low|
-|See example E in the [Examples section](#examples).|See example F in the [Examples section](#examples).|Low|
+| Variable assignment is allowed in a statement containing a top-level UNION operator, but returns unexpected results. Learn more in [example E](#e-variable-assignment---top-level-union-operator).| Variable assignment is not allowed in a statement containing a top-level UNION operator. Error 10734 is returned. Find a suggested rewrite in [example E](#e-variable-assignment---top-level-union-operator).|Low|
 |The ODBC function {fn CONVERT()} uses the default date format of the language. For some languages, the default format is YDM, which can result in conversion errors when CONVERT() is combined with other functions, such as `{fn CURDATE()}`, that expect a YMD format.|The ODBC function `{fn CONVERT()}` uses style 121 (a language-independent YMD format) when converting to the ODBC data types SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME, and SQL_TYPE_TIMESTAMP.|Low|
 |Datetime intrinsics such as DATEPART do not require string input values to be valid datetime literals. For example, `SELECT DATEPART (year, '2007/05-30')` compiles successfully.|Datetime intrinsics such as `DATEPART` require string input values to be valid datetime literals. Error 241 is returned when an invalid datetime literal is used.|Low|
 |Trailing spaces specified in the first input parameter to the REPLACE function are trimmed when the parameter is of type char. For example, in the statement SELECT '<' + REPLACE(CONVERT(char(6), 'ABC '), ' ', 'L') + '>', the value 'ABC ' is incorrectly evaluated as 'ABC'.|Trailing spaces are always preserved. For applications that rely on the previous behavior of the function, use the RTRIM function when specifying the first input parameter for the function. For example, the following syntax will reproduce the SQL Server 2005 behavior SELECT '<' + REPLACE(RTRIM(CONVERT(char(6), 'ABC ')), ' ', 'L') + '>'.|Low|
@@ -430,6 +428,36 @@ This returns results such as the following:
 |TimeStyle0 |TimeStyle121 |Datetime2Style0 |Datetime2Style121 |
 |--- |--- |--- |--- |
 |3:15PM |15:15:35.8100000 |Jun  7 2011  3:15PM |2011-06-07 15:15:35.8130000 |
+
+### E. Variable assignment - top-level UNION operator
+
+Under the database compatibility level setting of 90, variable assignment is allowed in a statement containing a top-level UNION operator, but returns unexpected results. For example, in the following statements, local variable `@v` is assigned the value of the column `BusinessEntityID` from the union of two tables. By definition, when the SELECT statement returns more than one value, the variable is assigned the last value that is returned. In this case, the variable is correctly assigned the last value, however, the result set of the SELECT UNION statement is also returned.
+
+```sql
+ALTER DATABASE AdventureWorks2012
+SET compatibility_level = 110;
+GO
+USE AdventureWorks2012;
+GO
+DECLARE @v int;
+SELECT @v = BusinessEntityID FROM HumanResources.Employee
+UNION ALL
+SELECT @v = BusinessEntityID FROM HumanResources.EmployeeAddress;
+SELECT @v;
+```
+
+Under the database compatibility level setting of 100 and higher, variable assignment is not allowed in a statement containing a top-level UNION operator. Error 10734 is returned. 
+
+To resolve the error, rewrite the query as shown in the following example.
+
+```sql
+DECLARE @v int;
+SELECT @v = BusinessEntityID FROM
+    (SELECT BusinessEntityID FROM HumanResources.Employee
+     UNION ALL
+     SELECT BusinessEntityID FROM HumanResources.EmployeeAddress) AS Test;
+SELECT @v;
+```
 
 ## Next steps
 

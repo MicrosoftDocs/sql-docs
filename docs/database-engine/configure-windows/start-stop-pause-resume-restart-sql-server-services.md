@@ -40,7 +40,7 @@ ms.author: maghan
 ms.reviewer: rwestMSFT
 ---
 
-# Start, stop, pause, resume, and restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services
+# Start, stop, pause, resume, and restart SQL Server services
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-windows-only.md)]
 
@@ -193,7 +193,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services can be st
   > [!NOTE]
   >  For more information about startup options, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-###  <a name="agDefault"></a> Start the SQL Server Agent on the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="agDefault"></a> Start the SQL Server Agent on the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 - From a command prompt, enter one of the following commands:  
   
@@ -207,7 +207,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services can be st
   net start SQLSERVERAGENT
   ```
   
-###  <a name="agNamed"></a> Start the SQL Server Agent on a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="agNamed"></a> Start the SQL Server Agent on a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 - From a command prompt, enter one of the following commands. Replace *instancename* with the name of the instance you want to manage.  
   
@@ -336,7 +336,7 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN &#40;Transa
     $DfltInstance
     ```  
   
-##  <a name="ServiceController"></a> Use the ServiceController class
+## <a name="ServiceController"></a> Use the ServiceController class
 
 You can use the `ServiceController` class to programmatically control the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service, or any other Windows service. For an example using C#, see [ServiceController Class](/dotnet/api/system.serviceprocess.servicecontroller).
 

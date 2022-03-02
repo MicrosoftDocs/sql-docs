@@ -21,7 +21,7 @@ The [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] 
 
 ## Retirement of the [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] add-on
 
-On January 31, 2025, we will be retiring [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)]. All existing users of SQL Server 2019 with Software Assurance will be fully supported on the platform and the software will continue to be maintained through SQL Server cumulative updates until that time. **For more information, see [the announcement blog post](https://aka.ms/sqlserver_bigdataclusters).**
+On February 28, 2025, we will be retiring [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)]. All existing users of SQL Server 2019 with Software Assurance will be fully supported on the platform and the software will continue to be maintained through SQL Server cumulative updates until that time. **For more information, see [the announcement blog post](https://aka.ms/sqlserver_bigdataclusters).**
 
 ## Changes to PolyBase support in SQL Server 
 

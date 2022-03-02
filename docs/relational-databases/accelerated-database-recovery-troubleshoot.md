@@ -141,7 +141,7 @@ EXEC sys.sp_persistent_version_cleanup [WideWorldImporters];
 
 - [sys.sp_persistent_version_cleanup](system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md)
 - [sys.dm_tran_persistent_version_store_stats](system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md)
-- [sys.dm_tran_aborted_transactions (Transact-SQL)](system-dynamic-management-views/sys-dm-tran-aborted-transactions.md)
+- [sys.dm_tran_aborted_transactions](system-dynamic-management-views/sys-dm-tran-aborted-transactions.md)
 
 ## Next steps 
 

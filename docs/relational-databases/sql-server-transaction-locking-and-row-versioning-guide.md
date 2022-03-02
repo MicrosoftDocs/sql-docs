@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: LitKnd
 ms.author: kendralittle
-ms.date: "03/3/2022"
+ms.date: "03/2/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transaction locking and row versioning guide

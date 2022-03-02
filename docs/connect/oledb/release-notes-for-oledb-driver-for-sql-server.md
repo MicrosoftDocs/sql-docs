@@ -1,7 +1,7 @@
 ---
 title: Release notes for OLE DB Driver
 description: This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server.
-ms.date: 02/15/2022
+ms.date: 03/02/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -36,7 +36,8 @@ If you need to download the installer in a language other than the one detected 
 
 | Feature added | Details |
 | :------------ | :------ |
-| TDS 8.0 support | The encryption connection string keyword/property now includes the option for strict encryption, which encrypts the whole connection (including PRELOGIN packets). In addition, the driver now defaults to using encrypted connections. |
+| TDS 8.0 support | The encryption connection string keyword/property now includes the option for strict encryption, which encrypts the whole connection (including PRELOGIN packets). |
+| Secure by default | **BREAKING CHANGE**<br />The driver now defaults to secure-by-default options. Encrypted connections are enabled by default. The server certificate is now validated when cliend-side encryption is off but the server requires encryption.<br /><br />To restore previous version behavior, you need to opt-in to non-encrypted connections (`Encrypt` or `Use Encryption for Data` option) and trust the server certificate (`Trust Server Certificate` option), if the server uses a self-signed certificate. For more information, see [Using encryption without validation](features/using-encryption-without-validation.md). |
 | Support for the `Host Name In Certificate` connection string keyword, and the `SSPROP_INIT_HOST_NAME_CERTIFICATE` initialization property. | The user may now specify the host name to be used when validating the SQL Server TLS/SSL certificate. |
 
 ## Previous releases

@@ -1,5 +1,5 @@
 ---
-title: "Major version differences"
+title: "MSOLEDBSQL major version differences"
 description: A description of the differences between the OLE DB Driver 19 for SQL Server and the OLE DB Driver for SQL Server
 ms.custom: ""
 ms.date: "02/16/2022"

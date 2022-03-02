@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016"
 
 # Analysis Server &lt;server&gt; (SQL Server Configuration Manager)
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This is the service that supports Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.
 

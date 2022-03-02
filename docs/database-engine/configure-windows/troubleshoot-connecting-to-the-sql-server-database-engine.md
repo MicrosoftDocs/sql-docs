@@ -11,7 +11,7 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.custom: sqlfreshmay19, FY21Q2Fresh
+ms.custom: sqlfreshmay19, FY22Q2Fresh
 ms.date: "12/02/2021"
 ---
 # Troubleshoot connecting to the SQL Server Database Engine
@@ -49,7 +49,7 @@ This error means that the client can't find the SQL Server instance. This can ha
 - This topic doesn't include information about Kerberos errors. For help, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).
 - This topic doesn't include information about Azure SQL Database connectivity. For help, see [Troubleshooting connectivity issues with Microsoft Azure SQL Database](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database).
 
-## Get instance name from Configuration Manger
+## Get instance name from Configuration Manager
 
 On the server that hosts the SQL Server instance, verify the instance name. Use [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 

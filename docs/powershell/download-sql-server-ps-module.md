@@ -109,7 +109,7 @@ Get-Module SqlServer -ListAvailable
 You can use the following command to remove older versions:
 
 ```powershell
-Uninstall-module -Name SQLServer -RequiredVersion "<version number>" -AllowClobber
+Uninstall-module -Name SQLServer -RequiredVersion "<version number>"
 ```
 
 ### Troubleshooting

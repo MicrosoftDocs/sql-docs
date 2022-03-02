@@ -1,8 +1,6 @@
 ---
-title: "MSSQLSERVER_10061 | Microsoft Docs"
+title: "MSSQLSERVER_10061"
 description: The server did not respond to the client request in SQL Server. See an explanation of the error and possible resolutions.
-ms.custom: ""
-ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -11,11 +9,14 @@ f1_keywords:
   - "10061"
 helpviewer_keywords: 
   - "10061 (Database Engine error)"
-ms.assetid: 729602f3-08df-474c-8740-8dea13c1eee3
 author: MashaMSFT
 ms.author: mathoma
+ms.custom: ""
+ms.date: "04/04/2017"
 ---
+
 # MSSQLSERVER_10061
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
@@ -29,10 +30,12 @@ ms.author: mathoma
 |Symbolic Name||  
 |Message Text|An error has occurred while establishing a connection to the server.  When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.) (Microsoft SQL Server, Error: 10061)|  
   
-## Explanation  
+## Explanation
+
 The server did not respond to the client request. This error could occur because the server is not started.  
   
-## User Action  
+## User Action
+
 Make sure that the server is started.  
   
 ## See Also  

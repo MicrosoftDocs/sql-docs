@@ -8,7 +8,7 @@ ms.topic: quickstart
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: ""
-ms.custom: intro-quickstart, FY21Q2Fresh
+ms.custom: intro-quickstart, FY22Q2Fresh
 ms.date: "12/16/2021"
 ---
 

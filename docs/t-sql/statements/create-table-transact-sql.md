@@ -178,7 +178,7 @@ column_name AS computed_column_expression
 <column_set_definition> ::=
 column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   
-< table_constraint > ::=
+<table_constraint> ::=
 [ CONSTRAINT constraint_name ]
 {
     { PRIMARY KEY | UNIQUE }
@@ -198,7 +198,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         [ NOT FOR REPLICATION ]
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )
 
-< table_index > ::=
+<table_index> ::=
 {  
     {  
       INDEX index_name  [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ]
@@ -332,7 +332,7 @@ column_name <data_type>
   | CHECK ( logical_expression )
 }
   
-< table_constraint > ::=
+<table_constraint> ::=
  [ CONSTRAINT constraint_name ]
 {
    { PRIMARY KEY | UNIQUE }
@@ -764,7 +764,7 @@ The default is 0 minutes.
 
 For recommendations on when to use `COMPRESSION_DELAY`, please see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
-\< table_option> ::=   
+\<table_option> ::=   
 Specifies one or more table options.
 
 DATA_COMPRESSION   

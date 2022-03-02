@@ -35,7 +35,7 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: ""
-ms.custom: FY21Q2Fresh
+ms.custom: FY22Q2Fresh
 ms.date: 12/16/2021
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

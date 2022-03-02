@@ -1,10 +1,7 @@
 ---
-description: "nodes() Method (xml Data Type)"
 title: nodes() Method (xml Data Type)
-ms.custom: ""
-ms.date: "07/26/2017"
+description: "nodes() Method (xml Data Type)"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 dev_langs: 
@@ -12,11 +9,15 @@ dev_langs:
 helpviewer_keywords: 
   - "nodes() method"
   - "nodes method"
-ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "07/26/2017"
 ---
+
 # nodes() Method (xml Data Type)
+
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The **nodes()** method is useful when you want to shred an **xml** data type instance into relational data. It allows you to identify nodes that will be mapped into a new row.  
@@ -36,13 +37,15 @@ nodes (XQuery) as Table(Column)
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
+
 *XQuery*  
 Is a string literal, an XQuery expression. If the query expression constructs nodes, these constructed nodes are exposed in the resulting rowset. If the query expression results in an empty sequence, the rowset is empty as well. If the query expression statically results in a sequence that contains atomic values instead of nodes, a static error is raised.  
   
 *Table*(*Column*)  
 Is the table name and the column name for the resulting rowset.  
   
-## Remarks  
+## Remarks
+
 As an example, assume that you have the following table:  
   
 ```sql

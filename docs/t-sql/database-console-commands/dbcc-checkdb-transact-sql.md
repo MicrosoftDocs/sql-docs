@@ -46,9 +46,9 @@ Checks the logical and physical integrity of all the objects in the specified da
 -   Runs [DBCC CHECKCATALOG](../../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md) on the database.    
 -   Validates the contents of every indexed view in the database.    
 -   Validates link-level consistency between table metadata and file system directories and files when storing **varbinary(max)** data in the file system using FILESTREAM.    
--   Validates the [!INCLUDE[ssSB](../../includes/sssb-md.md)] data in the database.    
+-   Validates the [!INCLUDE[ssSB](../../includes/sssb-md.md)] data in the database.
     
-This means that the DBCC CHECKALLOC, DBCC CHECKTABLE, or DBCC CHECKCATALOG commands do not have to be run separately from DBCC CHECKDB. For more detailed information about the checks that these commands perform, see the descriptions of these commands.    
+This means that the DBCC CHECKALLOC, DBCC CHECKTABLE, or DBCC CHECKCATALOG commands don't have to be run separately from DBCC CHECKDB. For more detailed information about the checks that these commands perform, see the descriptions of these commands.
  
 > [!NOTE]
 > DBCC CHECKDB is supported on databases that contain memory-optimized tables but validation only occurs on disk-based tables. However, as part of database backup and recovery, a CHECKSUM validation is done for files in memory-optimized filegroups.    
@@ -87,10 +87,10 @@ DBCC CHECKDB
  Is the name or ID of the database for which to run integrity checks. If not specified, or if 0 is specified, the current database is used. Database names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
     
 NOINDEX  
- Specifies that intensive checks of nonclustered indexes for user tables should not be performed. This decreases the overall execution time. NOINDEX does not affect system tables because integrity checks are always performed on system table indexes.  
+ Specifies that intensive checks of nonclustered indexes for user tables will not be performed. This choice decreases the overall execution time. NOINDEX doesn't affect system tables because integrity checks are always performed on system table indexes.  
     
 REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
- Specifies that DBCC CHECKDB repair the found errors. Use the REPAIR options only as a last resort. The specified database must be in single-user mode to use one of the following repair options.  
+ Specifies that DBCC CHECKDB repairs the errors found. Use the REPAIR options only as a last resort. The specified database must be in single-user mode to use one of the following repair options.  
     
 REPAIR_ALLOW_DATA_LOSS  
  Tries to repair all reported errors. These repairs can cause some data loss.  
@@ -110,8 +110,8 @@ REPAIR_FAST
  Maintains syntax for backward compatibility only. No repair actions are performed.  
     
 REPAIR_REBUILD  
- Performs repairs that have no possibility of data loss. This can include quick repairs, such as repairing missing rows in nonclustered indexes, and more time-consuming repairs, such as rebuilding an index.  
- This argument does not repair errors involving FILESTREAM data.  
+ Performs repairs that have no possibility of data loss. This option may include quick repairs, such as repairing missing rows in nonclustered indexes, and more time-consuming repairs, such as rebuilding an index.  
+ This argument doesn't repair errors involving FILESTREAM data.  
     
 > [!IMPORTANT] 
 > Since DBCC CHECKDB with any of the REPAIR options are completely logged and recoverable, [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user use CHECKDB with any REPAIR options within a transaction (execute BEGIN TRANSACTION before running the command) so that the user can confirm he/she wants  to accept the results of the operation. Then the user can execute COMMIT TRANSACTION to commit all work done by the repair operation. If the user does not want to accept the results of the operation, he/she can execute a ROLLBACK TRANSACTION to undo the effects of the repair operations.    
@@ -123,13 +123,13 @@ ALL_ERRORMSGS
 
 EXTENDED_LOGICAL_CHECKS  
  If the compatibility level is 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.  
- For more information, see *Performing Logical Consistency Checks on Indexes*, in the [Remarks](#remarks) section later in this topic.  
+ For more information, see *Performing Logical Consistency Checks on Indexes*, in the [Remarks](#remarks) section later in this article.  
     
 NO_INFOMSGS  
  Suppresses all informational messages.  
     
 TABLOCK  
- Causes DBCC CHECKDB to obtain locks instead of using an internal database snapshot. This includes a short-term exclusive (X) lock on the database. TABLOCK will cause DBCC CHECKDB to run faster on a database under heavy load, but decreases the concurrency available on the database while DBCC CHECKDB is running.  
+ Causes DBCC CHECKDB to obtain locks instead of using an internal database snapshot. This includes a short-term exclusive (X) lock on the database. TABLOCK will cause DBCC CHECKDB to run faster on a database under heavy load, but will decrease the concurrency available on the database while DBCC CHECKDB is running.  
     
 > [!IMPORTANT] 
 > TABLOCK limits the checks that are performed; DBCC CHECKCATALOG is not run on the database, and [!INCLUDE[ssSB](../../includes/sssb-md.md)] data is not validated.
@@ -144,14 +144,14 @@ PHYSICAL_ONLY
  -   Some of the underlying structures to be checked are more complex.  
  -   Many new checks have been introduced to include the new features.  
  Therefore, using the PHYSICAL_ONLY option may cause a much shorter run-time for DBCC CHECKDB on large databases and is recommended for frequent use on production systems. We still recommend that a full run of DBCC CHECKDB be performed periodically. The frequency of these runs depends on factors specific to individual businesses and production environments.    
-This argment always implies NO_INFOMSGS and is not allowed with any one of the repair options.  
+This argument always implies NO_INFOMSGS and isn't allowed with any one of the repair options.  
     
 > [!WARNING] 
 > Specifying PHYSICAL_ONLY causes DBCC CHECKDB to skip all checks of FILESTREAM data.
     
 DATA_PURITY  
- Causes DBCC CHECKDB to check the database for column values that are not valid or out-of-range. For example, DBCC CHECKDB detects columns with date and time values that are larger than or less than the acceptable range for the **datetime** data type; or **decimal** or approximate-numeric data type columns with scale or precision values that are not valid.  
- Column-value integrity checks are enabled by default and do not require the DATA_PURITY option. For databases upgraded from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], column-value checks are not enabled by default until DBCC CHECKDB WITH DATA_PURITY has been run error free on the database. After this, DBCC CHECKDB checks column-value integrity by default. For more information about how CHECKDB might be affected by upgrading database from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the Remarks section later in this topic.  
+ Causes DBCC CHECKDB to check the database for column values that aren't valid or out-of-range. For example, DBCC CHECKDB detects columns with date and time values that are larger than or less than the acceptable range for the **datetime** data type; or **decimal** or approximate-numeric data type columns with scale or precision values that aren't valid.  
+ Column-value integrity checks are enabled by default and don't require the DATA_PURITY option. For databases upgraded from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], column-value checks are not enabled by default until DBCC CHECKDB WITH DATA_PURITY has been run error free on the database. After this, DBCC CHECKDB checks column-value integrity by default. For more information about how CHECKDB might be affected by upgrading database from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the Remarks section later in this topic.  
     
 > [!WARNING]
 > If PHYSICAL_ONLY is specified, column-integrity checks are not performed.
@@ -184,7 +184,7 @@ Logical consistency checking on indexes varies according to the compatibility le
 These logical consistency checks cross check the internal index table of the index object with the user table that it is referencing. To find outlying rows, an internal query is constructed to perform a full intersection of the internal and user tables. Running this query can have a very high effect on performance, and its progress cannot be tracked. Therefore, we recommend that you specify `WITH EXTENDED_LOGICAL_CHECKS` only if you suspect index issues that are unrelated to physical corruption, or if page-level checksums have been turned off and you suspect column-level hardware corruption.
 -   If the index is a filtered index, DBCC CHECKDB performs consistency checks to verify that the index entries satisfy the filter predicate.
 -   If the compatibility level is 90 or less, unless `NOINDEX` is specified, DBCC CHECKDB performs both physical and logical consistency checks on a single table or indexed view and on all its nonclustered and XML indexes. Spatial indexes are not supported.  
-- Starting with SQL Server 2016, additional checks on persisted computed columns, UDT columns, and filtered indexes will not run by default to avoid the expensive expression evaluations. This change greatly reduces the duration of CHECKDB against databases containing these objects. However, the physical consistency checks of  these objects is always completed. Only when `EXTENDED_LOGICAL_CHECKS` option is specified will the expression evaluations be performed in addition to already present logical checks (indexed view, XML indexes, and spatial indexes) as part of the `EXTENDED_LOGICAL_CHECKS` option.   
+- Starting with SQL Server 2016, additional checks on persisted computed columns, UDT columns, and filtered indexes will not run by default to avoid the expensive expression evaluations. This change greatly reduces the duration of CHECKDB against databases containing these objects. However, the physical consistency check of  these objects is always completed. Only when `EXTENDED_LOGICAL_CHECKS` option is specified, will the expression evaluations be performed in addition to the logical checks that are already present  as part of the `EXTENDED_LOGICAL_CHECKS` option (indexed view, XML indexes, and spatial indexes).
     
 **To learn the compatibility level of a database**
 -   [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
@@ -193,7 +193,25 @@ These logical consistency checks cross check the internal index table of the ind
 DBCC CHECKDB uses an internal database snapshot for the transactional consistency needed to perform these checks. This prevents blocking and concurrency problems when these commands are executed. For more information, see [View the Size of the Sparse File of a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) and the DBCC Internal Database Snapshot Usage section in [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md). If a snapshot cannot be created, or TABLOCK is specified, DBCC CHECKDB acquires locks to obtain the required consistency. In this case, an exclusive database lock is required to perform the allocation checks, and shared table locks are required to perform the table checks.
 DBCC CHECKDB fails when run against master if an internal database snapshot cannot be created.
 Running DBCC CHECKDB against tempdb does not perform any allocation or catalog checks and must acquire shared table locks to perform table checks. This is because, for performance reasons, database snapshots are not available on tempdb. This means that the required transactional consistency cannot be obtained.
-In Microsoft SQL Server 2012 or an earlier version of SQL Server, you may encounter error messages when you run the DBCC CHECKDB command for a database that has its files located on an ReFS-formatted volume. For more information, see Knowledge Base article 2974455: [DBCC CHECKDB behavior when the SQL Server database is located on an ReFS volume.](https://support.microsoft.com/kb/2974455)    
+
+
+### How DBCC CHECKDB creates an internal snapshot database beginning with SQL Server 2014
+
+1. DBCC CHECKDB creates an internal snapshot database.
+
+1. The internal snapshot database is created by using physical files. For example, for a database with database_ID = 10 that has three files `E:\Data\my_DB.mdf`, `E:\Data\my_DB.ndf`, and `E:\Data\my_DB.ldf`, the internal snapshot database will be created using `E:\Data\my_DB.mdf_MSSQL_DBCC11` and `E:\Data\my_DB.ndf_MSSQL_DBCC11` files. Note that the database_id of the snapshot is database_id + 1.  Also note that the new files are created in the same folder using the naming convention <filename.extension>_MSSQL_DBCC<database_id_of_snapshot>. No sparse file is created for the transaction log.
+
+1. The new files are marked as [sparse files](/windows/win32/fileio/sparse-files) at the file system level. The *Size on Disk* used by the new files will increase based on how much data is updated in the source database during the DBCC CHECKDB command. The *Size* of the new files will be the same file as the .mdf or .ndf file.
+
+1. The new files are deleted at the end of DBCC CHECKDB processing. These sparse files that are created by DBCC CHECKDB have the "Delete on Close" attributes set.
+
+> [!WARNING]
+> If the operating system encounters an unexpected shutdown while the DBCC CHECKDB command is in progress, then these files will not be cleaned up. They will take up space, and can potentially cause failures on future DBCC CHECKDB executions. In that case, you can delete these new files after you confirm that there is no DBCC CHECKDB command currently being executed.
+
+The new files are visible by using ordinary file utilities such as Windows Explorer.
+
+> [!NOTE]
+> In SQL Server versions 2012 and earlier, named [file streams](/windows/win32/fileio/file-streams) were used instead to create the internal snapshot files. Named file streams are not visible by using ordinary file utilities such as Windows Explorer. Therefore, in SQL Server 2012 or an earlier version, you may encounter error messages 7926 and 5030 when you run the DBCC CHECKDB command for database files located on an [ReFS](/windows-server/storage/refs/refs-overview)-formatted volume. This is because file streams cannot be created on [Resilient File System (RefS)](/windows-server/storage/refs/refs-overview). For more information, see Knowledge Base article 2974455: [DBCC CHECKDB behavior when the SQL Server database is located on an ReFS volume.](https://support.microsoft.com/kb/2974455).
     
 ## Checking and Repairing FILESTREAM Data    
 When FILESTREAM is enabled for a database and table, you can optionally store **varbinary(max)** binary large objects (BLOBs) in the file system. When using DBCC CHECKDB on a database that stores BLOBs in the file system, DBCC checks link-level consistency between the file system and database.
@@ -233,7 +251,7 @@ The dump file contains the results of the DBCC CHECKDB command and additional di
 ## Resolving Errors    
 If any errors are reported by DBCC CHECKDB, we recommend restoring the database from the database backup instead of running REPAIR with one of the REPAIR options. If no backup exists, running repair corrects the errors reported. The repair option to use is specified at the end of the list of reported errors. However, correcting the errors by using the REPAIR_ALLOW_DATA_LOSS option might require deleting some pages, and therefore some data.    
 
-Under some circumstances, values might be entered into the database that are not valid or out-of-range based on the data type of the column. DBCC CHECKDB can detect column values that are not valid for all column data types. Therefore, running DBCC CHECKDB with the DATA_PURITY option on databases that have been upgraded from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might reveal preexisting column-value errors. Because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot automatically repair these errors, the column value must be manually updated. If CHECKDB detects such an error, CHECKDB returns a warning, the error number 2570, and information to identify the affected row and manually correct the error.    
+Under some circumstances, values might be entered into the database that are not valid or out-of-range based on the data type of the column. DBCC CHECKDB can detect column values that aren't valid for all column data types. Therefore, running DBCC CHECKDB with the DATA_PURITY option on databases that have been upgraded from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might reveal preexisting column-value errors. Because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot automatically repair these errors, the column value must be manually updated. If CHECKDB detects such an error, CHECKDB returns a warning, the error number 2570, and information to identify the affected row and manually correct the error.    
 
 The repair can be performed under a user transaction to let the user roll back the changes that were made. If repairs are rolled back, the database will still contain errors and must be restored from a backup. After repairs are completed, back up the database.
     

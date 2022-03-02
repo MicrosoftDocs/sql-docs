@@ -15,7 +15,7 @@ ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-ms.custom: FY21Q2Fresh
+ms.custom: FY22Q2Fresh
 ms.date: 11/12/2021
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

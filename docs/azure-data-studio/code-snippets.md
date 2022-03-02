@@ -56,7 +56,7 @@ You can define your own snippets. To open up the SQL snippet file for editing:
 
 3. Paste the following code into *sql.json*:
 
-    ```sql
+    ```json
     {
      "Select top 5": {
     "prefix": "sqlSelectTop5",

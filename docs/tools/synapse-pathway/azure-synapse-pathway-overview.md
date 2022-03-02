@@ -4,14 +4,16 @@ description: Azure Synapse Pathway is a tool to migrate a data warehouse to Azur
 author: anshul82-ms
 ms.author: anrampal
 ms.topic: overview
-ms.date: 09/22/2021
+ms.date: 02/11/2022
 ms.prod: sql
 ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
 ms.custom:
   - template-overview
   - intro-overview
+ms.reviewer: wiassaf
 ---
+
 # Azure Synapse Pathway overview
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
@@ -23,12 +25,15 @@ To translate this critical SQL code, customers have to either manually rewrite e
 
 > [!IMPORTANT]
 > Azure Synapse Pathway is currently in active development. Certain features might not be supported or might have constrained capabilities.
- 
 > For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
 
-**Azure Synapse Pathway** helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse. It's a free, intuitive, and easy to use tool that automates the code translation enabling a quicker migration to Azure Synapse Analytics.
+**Azure Synapse Pathway** helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse. It's a free, intuitive, and easy to use tool that automates the code translation enabling a quicker migration to Azure Synapse Analytics. The Azure Synapse Pathway provides:
 
- ![Azure Synapse pathway overview.](./media/azure-synapse-pathway-overview/pathway-overview.png) 
+- Automated data warehouse migration
+- Significant reduced migration costs
+- Accelerated migration time from months to minutes
+
+:::image type="content" source="./media/azure-synapse-pathway-overview/azure-synapse-pathway-overview.svg" alt-text="Diagram explaining the Azure Synapse Pathway supported vendors and advantages of the Pathway migration to Azure Synapse":::
 
 Synapse Pathway translates Data Definition Language (DDL) and Data Manipulation Language (DML) statements into T-SQL compliant language that is compatible with Azure Synapse SQL.
 
@@ -49,7 +54,7 @@ Azure Synapse Pathway supports code conversion of database, schemas, and tables 
 
 ## Frequently asked questions
 
-Review the [FAQ Page](pathway-faq.md) for additional information on Azure Synapse Pathway
+Review the [FAQ Page](pathway-faq.yml) for additional information on Azure Synapse Pathway
 
 ## Next steps
 

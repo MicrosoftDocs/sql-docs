@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE [sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 A SQL Server Big Data Cluster includes some containers that are developed by open-source projects. This article identifies specific projects, and versions of these containers.
 
 ## Project list

@@ -17,6 +17,8 @@ ms.technology: big-data-cluster
 
 HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for SQL Server Big Data Clusters. At this time, we support connecting to Azure Data Lake Storage Gen2, and Amazon S3. 
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## HDFS tiering overview
 
 With tiering, applications can seamlessly access data in a variety of external stores as though the data resides in the local HDFS. Mounting is a metadata operation, where the metadata that describes the namespace on the external file system is copied over to your local HDFS. This metadata includes information about the external directories and files along with their permissions and ACLs. The corresponding data is only copied on-demand, when the data itself is accessed through for example a query. The external file-system data can now be accessed from the SQL Server big data cluster. You can run Spark jobs and SQL queries on this data in the same way that you would run them on any local data stored in HDFS on the cluster.

@@ -2,7 +2,7 @@
 title: Connecting with sqlcmd
 description: Learn the options and commands available in the sqlcmd utility, available in the mssql-tools package on Linux and macOS.
 ms.custom: ""
-ms.date: 09/30/2021
+ms.date: 02/15/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -101,8 +101,8 @@ Always specify **-M** when connecting to the availability group listener of a [!
 > [!NOTE]
 > **-M** isn't supported in the CTP for SUSE Linux. You can, however, specify the **MultiSubnetFailover=Yes** keyword in a DSN file passed to `sqlcmd`. For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this article.
 
-**-N**  
-Encrypt connection.
+**-N`[s|m|o]`**  
+Set the connection encryption mode to be Strict, Mandatory, or Optional respectively. Defaults to mandatory if not specified. (`[s|m|o]` added in ODBC 18.0)
 
 **-o** *output_file*  
 Identify the file that receives output from `sqlcmd`.
@@ -115,7 +115,7 @@ Specify a user password. When used with the -G option without -U, specifies a fi
 
 Access tokens can be obtained via various methods. It's important to ensure the access token is correct byte-for-byte, as it will be sent as-is. Below is an example command that obtains an access token. The command uses the Azure CLI and Linux commands and saves it to a file in the proper format. If your system or terminal's default encoding isn't ASCII or UTF-8, you may need to adjust the `iconv` options. Be sure to carefully secure the resulting file and delete it when it's no longer required.
 
-```bash
+```azurecli
 az account get-access-token --resource https://database.windows.net --output tsv | cut -f 1 | tr -d '\n' | iconv -f ascii -t UTF-16LE > /tmp/tokenFile
 ```
 

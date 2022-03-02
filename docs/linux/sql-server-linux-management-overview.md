@@ -16,7 +16,7 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 "
 
 There are several ways to manage SQL Server on Linux. The following section provides a quick overview of different management tools and techniques with pointers to more resources.
 
-## mssql-conf 
+## mssql-conf
 
 The **mssql-conf** tool configures SQL Server on Linux. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
@@ -46,4 +46,5 @@ PowerShell provides a rich command-line environment to manage SQL Server on Linu
 
 ## Next steps
 
-For more information about SQL Server on Linux, see [SQL Server on Linux](sql-server-linux-overview.md).
+- For more information about SQL Server on Linux, see [SQL Server on Linux](sql-server-linux-overview.md)
+- [Start, stop, and restart SQL Server services on Linux](./sql-server-linux-start-stop-restart-sql-server-services.md)

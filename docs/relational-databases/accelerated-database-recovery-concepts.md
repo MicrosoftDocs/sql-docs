@@ -1,7 +1,7 @@
 ---
 description: "Accelerated database recovery"
-title: "Accelerated database recovery | Microsoft Docs"
-ms.date: "05/20/2020"
+title: "Accelerated database recovery"
+ms.date: "01/21/2022"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -12,15 +12,15 @@ helpviewer_keywords:
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
-monikerRange: ">=sql-server-ver15"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Accelerated database recovery
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
 
 Accelerated database recovery (ADR) improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process. ADR is new in SQL Server 2019. 
 
-ADR is also available for databases in Azure SQL Database, Azure SQL Managed Instance and Azure Synapse SQL. ADR is enabled by default in SQL Database and SQL Managed Instance and cannot be disabled. 
+ADR is also available for databases in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse SQL. ADR is enabled by default in SQL Database and SQL Managed Instance and cannot be disabled. For more about ADR in Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
 
 ## Overview
 
@@ -77,24 +77,24 @@ The ADR recovery process has the same three phases as the current recovery proce
 
 - **Analysis phase**
 
-  The process remains the same as today with the addition of reconstructing sLog and copying log records for non-versioned operations.
+  The process remains the same as today with the addition of reconstructing the SLOG (system log stream) and copying log records for non-versioned operations.
   
 - **Redo** phase
 
   Broken into two sub-phases
   - Sub-phase 1
 
-      Redo from sLog (oldest uncommitted transaction up to last checkpoint). Redo is a fast operation as it only needs to process a few records from the sLog.
+      Redo from SLOG (oldest uncommitted transaction up to last checkpoint). Redo is a fast operation as it only needs to process a few records from the SLOG.
 
   - Sub phase 2
 
-     Redo from transaction log starts from last checkpoint (instead of oldest uncommitted transaction)
+     Redo from transaction log starts from last checkpoint (instead of oldest uncommitted transaction).
      
 - **Undo phase**
 
-   The undo phase with ADR completes almost instantaneously by using sLog to undo non-versioned operations and persisted version store (PVS) with logical revert to perform row level version-based undo.
+   The undo phase with ADR completes almost instantaneously by using SLOG to undo non-versioned operations and persisted version store (PVS) with logical revert to perform row level version-based undo.
 
-You can also watch this 8-minute video that explains Accelerated Database Recovery
+You can also watch this eight-minute video that explains Accelerated Database Recovery:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Advanced-Database-Recovery--Data-Exposed/player?WT.mc_id=dataexposed-c9-niner]
 
@@ -114,9 +114,9 @@ The four key components of ADR are:
   - Performs rollback using PVS for all user transactions
   - Releases all locks immediately after transaction abort
 
-- **sLog**
+- **SLOG**
 
-  sLog is a secondary in-memory log stream that stores log records for non-versioned operations (such as metadata cache invalidation, lock acquisitions, and so on). The sLog is:
+  The SLOG is a secondary in-memory log stream that stores log records for non-versioned operations (such as metadata cache invalidation, lock acquisitions, and so on). The SLOG is:
 
   - Low volume and in-memory
   - Persisted on disk by being serialized during the checkpoint process
@@ -128,17 +128,12 @@ The four key components of ADR are:
 
   The cleaner is the asynchronous process that wakes up periodically and cleans page versions that are not needed.
 
-## Who should consider accelerated database recovery
+## Best practices and guidance
 
-The following types of customers should consider enabling ADR:
+For guidance on workloads that are and are not recommended for ADR, see [Manage accelerated database recovery](accelerated-database-recovery-management.md).
 
-- Customers that have workloads with long running transactions.
-- Customers that have seen cases where active transactions are causing the transaction log to grow significantly.  
-- Customers that have experienced long periods of database unavailability due to SQL Server long running recovery (such as unexpected SQL Server restart or manual transaction rollback).
+## Next steps 
 
->[!IMPORTANT]
->ADR is not supported for databases enrolled in database mirroring.
-
-## See Also  
-
-[Manage accelerated database recovery](accelerated-database-recovery-management.md)
+- [Manage accelerated database recovery](accelerated-database-recovery-management.md)
+- [Troubleshoot accelerated database recovery](accelerated-database-recovery-troubleshoot.md)
+- [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery)

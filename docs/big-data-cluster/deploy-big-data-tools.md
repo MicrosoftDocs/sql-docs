@@ -17,6 +17,8 @@ ms.custom:
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article describes the client tools that should be installed for creating, managing, and using [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The following section provides a list of tools and links to installation instructions. Before deploying a big data cluster, configure the tools marked required on Windows or Linux.
 
 ## Big data cluster tools

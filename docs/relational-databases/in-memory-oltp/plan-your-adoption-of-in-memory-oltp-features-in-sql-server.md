@@ -197,7 +197,9 @@ This section describes situations where the excellent performance of memory-opti
 
 All indexes on a memory-optimized table are created and managed by the table-related statements CREATE TABLE and ALTER TABLE. You cannot target a memory-optimized table with a CREATE INDEX statement.
 
-The traditional b-tree nonclustered index is often the sensible and simple choice when you first implement a memory-optimized table. Later, after you see how your application performs, you can consider swapping another index type.
+The traditional B-tree nonclustered index is often the sensible and simple choice when you first implement a memory-optimized table. Later, after you see how your application performs, you can consider swapping another index type.
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
 Two special types of indexes need discussion in the context of a memory-optimized table: Hash indexes, and Columnstore indexes.
 

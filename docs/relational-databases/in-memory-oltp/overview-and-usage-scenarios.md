@@ -173,7 +173,7 @@ WITH (MEMORY_OPTIMIZED=ON);
 GO
 ```
 
-You can create a [natively compiled stored procedure](creating-natively-compiled-stored-procedures.md).
+You can create a [natively compiled stored procedure](creating-natively-compiled-stored-procedures.md). For more information, see [Calling Natively Compiled Stored Procedures from Data Access Applications](calling-natively-compiled-stored-procedures-from-data-access-applications.md).
 
 ```sql
 -- natively compiled stored procedure
@@ -227,6 +227,10 @@ GO
 - [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Technologies for Faster T-SQL Performance](./survey-of-initial-areas-in-in-memory-oltp.md)
 - [Performance and resource utilization benefits of [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Improving temp table and table variable performance using memory optimization](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
+- [Demonstration: Performance Improvement of In-Memory OLTP](demonstration-performance-improvement-of-in-memory-oltp.md)
+- [Sample Database for In-Memory OLTP](sample-database-for-in-memory-oltp.md)
+- Perf demo using [!INCLUDE[hek_2](../../includes/hek-2-md.md)] can be found at: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+- [17-minute video explaining [!INCLUDE[hek_2](../../includes/hek-2-md.md)] and showing the demo](https://www.youtube.com/watch?v=UHhYhSCJil4)
 
 ## See Also
 
@@ -236,6 +240,5 @@ GO
 
 ## Next steps
 
-- Perf demo using [!INCLUDE[hek_2](../../includes/hek-2-md.md)] can be found at: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
-- [17-minute video explaining [!INCLUDE[hek_2](../../includes/hek-2-md.md)] and showing the demo](https://www.youtube.com/watch?v=UHhYhSCJil4)
+- Create a memory-optimized filegroup: [The Memory Optimized Filegroup](the-memory-optimized-filegroup.md)
 - [Script to enable [!INCLUDE[hek_2](../../includes/hek-2-md.md)] and set recommended options](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)

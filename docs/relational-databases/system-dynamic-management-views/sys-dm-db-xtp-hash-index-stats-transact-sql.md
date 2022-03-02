@@ -1,6 +1,6 @@
 ---
-title: "sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs"
-description: "For In-Memory OLTP tables, sys.dm_db_xtp_hash_index_stats helps you understand bucket counts. Also used to detect cases where the index key has many duplicates."
+title: "sys.dm_db_xtp_hash_index_stats (Transact-SQL)"
+description: "For In-Memory OLTP tables, sys.dm_db_xtp_hash_index_stats helps you understand bucket counts hash indexes in memory-optimized tables."
 ms.custom: ""
 ms.date: "03/02/2022"
 ms.prod: sql
@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 # sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  These statistics are useful for understanding and tuning the bucket counts. It can also be used to detect cases where the index key has many duplicates.  
+  These statistics are useful for understanding and tuning the bucket counts for [hash indexes in memory-optimized tables](../sql-server-index-design-guide.md#a-namehash_indexa-hash-index-design-guidelines). It can also be used to detect cases where the index key has many duplicates.  
   
  A large average chain length indicates that many rows are hashed to the same bucket. This could happen because:  
   
@@ -55,7 +55,7 @@ For more information, see [Hash Indexes for Memory-Optimized Tables](../../relat
 
 ## Examples  
   
-### A. Troubleshooting hash index bucket count
+### A. Troubleshoot hash index bucket count
 
 The following query can be used to troubleshoot the hash index bucket count of an existing table. The query returns statistics about percentage of empty buckets and chain length for all hash indexes on user tables.
 
@@ -122,8 +122,10 @@ This query is not expected to return any rows unless you are using a feature tha
 
 - [Introduction to Memory-Optimized Tables](../in-memory-oltp/introduction-to-memory-optimized-tables.md)
 - [Memory-Optimized Table Dynamic Management Views](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
+- [SQL Server and Azure SQL index architecture and design guide: Hash index design guidelines](../sql-server-index-design-guide.md#hash_index)
 
 ## Next steps 
 
 - [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)
+- [Troubleshooting Hash Indexes for Memory-Optimized Tables](../in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)

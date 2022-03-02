@@ -27,7 +27,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
   Displays information about [!INCLUDE[hek_2](../../includes/hek-2-md.md)] checkpoint files, including file size, physical location and the transaction ID.  
   
 > [!NOTE]
-> For the current checkpoint that has not closed, the state column of `sys.dm_db_xtp_checkpoint_files` will be UNDER CONSTRUCTION for new files. A checkpoint closes automatically when there is sufficient transaction log growth since the last checkpoint, or if you issue the `CHECKPOINT` command ([CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
+> For the current checkpoint that has not closed, the state column of `sys.dm_db_xtp_checkpoint_files` will be UNDER CONSTRUCTION for new files. A checkpoint closes automatically when there is sufficient transaction log growth since the last checkpoint, or if you issue the `CHECKPOINT` command. For more information, see [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).  
   
  A memory-optimized file group internally uses append-only files to store inserted and deleted rows for in-memory tables. There are two types of files. A data file contains inserted rows while a delta file contains references to deleted rows. 
   

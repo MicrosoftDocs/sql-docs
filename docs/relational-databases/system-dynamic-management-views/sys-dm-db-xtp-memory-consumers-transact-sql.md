@@ -81,7 +81,7 @@ convert(char(10),memory_consumer_type_desc ) as memory_consumer_type_desc, objec
 from sys.dm_db_xtp_memory_consumers  
 ```  
   
- Here is the output with a subset of columns. The allocators at database levels refer to user tables, indexes, and system tables. The VARHEAP with `object_id` = NULL (last row) refers to memory allocated to data rows of the tables (in the example here, it is `t1`). The allocated bytes, when converted to MB, is 1340MB.  
+ Here is the output with a subset of columns. The allocators at database levels refer to user tables, indexes, and system tables. The VARHEAP with `object_id` = `NULL` (last row) refers to memory allocated to data rows of the tables (in the example here, it is `t1`). The allocated bytes, when converted to MB, is 1340MB.  
   
 ```output  
 Name       memory_consumer_type_desc object_id   index_id    allocated_bytes      used_bytes  

@@ -276,5 +276,6 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## See also
 
-[Microsoft OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)
-[MSOLEDBSQL major version differences](major-version-differences.md)
+[Microsoft OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)  
+[MSOLEDBSQL major version differences](major-version-differences.md)  
+  

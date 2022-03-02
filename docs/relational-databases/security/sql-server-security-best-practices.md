@@ -41,11 +41,11 @@ Organizations often need to protect data at the column level as data regarding c
 
 The methods and features mentioned in this section raise the level of protection at the column level with minimal overhead, and without requiring extensive changes to application code. 
 
-Use [Always Encrypted](encryption/always-encrypted-database-engine.md)to encrypt data at rest and over the wire. Encrypted data is only decrypted by client libraries at the application client level. Use [randomized encryption over deterministic](encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption) where possible. [Always Encrypted (with enclaves)](encryption/always-encrypted-enclaves.md) can improve performance for comparison operations such as [BETWEEN, IN, LIKE, DISTINCT, Joins, and more](encryption/always-encrypted-enclaves.md#confidential-queries) for randomized encryption scenarios.
+Use [Always Encrypted](encryption/always-encrypted-database-engine.md) to encrypt data at rest and over the wire. Encrypted data is only decrypted by client libraries at the application client level. Use [randomized encryption over deterministic](encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption) where possible. [Always Encrypted (with enclaves)](encryption/always-encrypted-enclaves.md) can improve performance for comparison operations such as [BETWEEN, IN, LIKE, DISTINCT, Joins, and more](encryption/always-encrypted-enclaves.md#confidential-queries) for randomized encryption scenarios.
  
 Use [Dynamic Data Masking (DDM)](dynamic-data-masking.md#creating-a-dynamic-data-mask) to obfuscate data at the column level when Always Encrypted is not an available option. Dynamic Data Masking (DDM) is [not compatible with Always Encrypted](dynamic-data-masking.md#limitations-and-restrictions). Leverage Always Encrypted over dynamic data masking whenever possible.
 
-You can also [GRANT permissions](../../t-sql/statements/grant-object-permissions-transact-sql) at the column level to a table, view, or table-valued function. Consider the following: 
+You can also [GRANT permissions](../../t-sql/statements/grant-object-permissions-transact-sql.md) at the column level to a table, view, or table-valued function. Consider the following: 
     - Only SELECT, REFERENCES, and UPDATE permissions can be granted on a column.  
     - A table-level DENY does not take precedence over a column-level GRANT.  
 
@@ -75,7 +75,7 @@ Audit [tables and columns](auditing/sql-server-audit-database-engine.md) with se
 
 ## Identities and authentication
 
-SQL Server supports two [authentication modes](choose-an-authentication-mod.mde), Windows authentication mode and 'SQL Server and Windows Authentication mode' (mixed mode).
+SQL Server supports two [authentication modes](choose-an-authentication-mode.md), Windows authentication mode and 'SQL Server and Windows Authentication mode' (mixed mode).
 
 Logins are separate from database users. First, map logins or Windows groups to database users or roles separately. Next, grant permissions to users, [server roles](authentication-access/server-level-roles.md), and/or [database roles](authentication-access/database-level-roles.md) to access database objects.
 
@@ -102,7 +102,7 @@ The following recommendations and best practices help secure your identities and
     - gMSA reduces the administrative surface-level and improves the separation of duties.
 - Minimize the rights granted to the AD account of the DBA; Consider a separation of duties that limit access to the virtual machine, the ability to log into the operating system, the ability to modify error and auditing logs, and the ability to install applications and/or features.
 
-- Consider removing DBA accounts from the sysadmin role and granting [CONTROL SERVER](permissions-database-engine.md#chart-of-sql-server-permissions) to DBA accounts rather than making them a member of the sysadmin role. The system admin role does not respect DENY while [CONTROL SERVER](permissions-database-engine#chart-of-sql-server-permissions) does.
+- Consider removing DBA accounts from the sysadmin role and granting [CONTROL SERVER](permissions-database-engine.md#chart-of-sql-server-permissions) to DBA accounts rather than making them a member of the sysadmin role. The system admin role does not respect DENY while [CONTROL SERVER](permissions-database-engine.md#chart-of-sql-server-permissions) does.
 
 ## Data lineage and data integrity
 
@@ -152,7 +152,7 @@ To minimize the risk of a side-channel attack, consider the following:
 
 - Ensure the latest application and operating system patches are applied. 
 - For hybrid workloads, ensure the latest firmware patches are applied for any hardware on-premises.
-- In Azure, for highly sensitive applications and workloads, you can add additional protection against side-channel attacks with isolated virtual machines, dedicated hosts, or by leveraging Confidential Compute virtual machines such as the [DC-series](../../../virtual-machines/dcv2-series.md) and [Virtual Machines that leverage 3rd Gen AMD EPYC processors](https://azure.microsoft.com/blog/azure-and-amd-enable-lift-and-shift-confidential-computing/).
+- In Azure, for highly sensitive applications and workloads, you can add additional protection against side-channel attacks with isolated virtual machines, dedicated hosts, or by leveraging Confidential Compute virtual machines such as the [DC-series](/azure/virtual-machines/dcv2-series) and [Virtual Machines that leverage 3rd Gen AMD EPYC processors](https://azure.microsoft.com/blog/azure-and-amd-enable-lift-and-shift-confidential-computing/).
 
 ## Infrastructure threats 
 

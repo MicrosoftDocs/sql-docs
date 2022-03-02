@@ -886,7 +886,7 @@ A deadlock occurs when two or more tasks permanently block each other by each ta
 -   Because neither task can continue until a resource is available and neither resource can be released until a task continues, a deadlock state exists.  
    ![Diagram showing tasks in a deadlock state](../relational-databases/media/Task_Deadlock_State.png)  
   
-The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] automatically detects deadlock cycles within [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]. the [!include[ssdenoversion](../includessdenoversion-md.md)] chooses one of the sessions as a deadlock victim and the current transaction is terminated with an error to break the deadlock.  
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] automatically detects deadlock cycles within [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]. the [!include[ssdenoversion](../includes/ssdenoversion-md.md)] chooses one of the sessions as a deadlock victim and the current transaction is terminated with an error to break the deadlock.  
   
 #### <a name="deadlock_resources"></a> Resources that can deadlock  
 
@@ -2019,8 +2019,8 @@ GO
 ```  
   
 The only lock taken that references `HumanResources.Employee` is a schema stability (Sch-S) lock. In this case, serializability is no longer guaranteed.  
-  
-In [!INCLUDE[ssCurrent](./includes/sscurrent-md.md)], the `LOCK_ESCALATION` option of `ALTER TABLE` can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can be used to reduce lock escalation. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).
+
+In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the `LOCK_ESCALATION` option of `ALTER TABLE` can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can be used to reduce lock escalation. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).
 
 ###  <a name="Customize"></a> Customizing locking for an index  
 

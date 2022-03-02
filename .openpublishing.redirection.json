@@ -3656,9 +3656,9 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/2014/analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md",
-      "redirect_url": "/previous-versions/sql/2014/analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server",
-      "redirect_document_id": false
+      "source_path": "docs/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md",
+      "redirect_url": "https://docs.microsoft.com/en-us/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/2014/analysis-services/instances/features-off-by-default-analysis-services.md",

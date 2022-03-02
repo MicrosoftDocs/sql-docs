@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_merge_requests"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=sql-server-previousversions"
 ---
 # sys.dm_db_xtp_merge_requests (Transact-SQL)
 

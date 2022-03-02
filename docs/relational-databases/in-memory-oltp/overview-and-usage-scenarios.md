@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 This article covers the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] technology in both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. For more information specific to in-memory data in Azure SQL, see [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview) and [Blog: [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/).
 
-## [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview
+##<a id="in-memory-oltp-overview"></a> [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] can provide great performance gains, for the right workloads. While customers have seen up to 30X performance gain in some cases, how much gain you see depends on the workload.
 

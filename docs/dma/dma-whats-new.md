@@ -26,9 +26,9 @@ This article lists the additions in each release of Data Migration Assistant.
 
 The v5.6 release of the Data Migration Assistant provides support for:
 
-- Added new premium-series and premium-series memory optimized Azure SQL Managed Instance preview SKUs to SKU recommendation feature. 
-- Added new E v5 and Eb v5 (preview) SQL Server on Azure Virtual Machine SKUs to SKU recommendation feature. 
-- Added feature flag to SKU recommendation console app to toggle whether or not new preview SKUs are considered. 
+- Added new premium-series and premium-series memory optimized Azure SQL Managed Instance preview SKUs to SKU recommendation feature.
+- Added new E v5 and Eb v5 (preview) SQL Server on Azure Virtual Machine SKUs to SKU recommendation feature.
+- Added feature flag to SKU recommendation console app to toggle whether or not new preview SKUs are considered.
 - Improved the SKU recommendation logic for SQL Server on Azure Virtual Machine to better align with best practices: https://aka.ms/sqliaasperf
 
 In addition, this release of Data Migration Assistant provides bug fixes and improvements for the following issues:

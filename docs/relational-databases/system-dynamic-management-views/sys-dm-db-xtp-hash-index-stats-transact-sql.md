@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 # sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  These statistics are useful for understanding and tuning the bucket counts for [hash indexes in memory-optimized tables](../sql-server-index-design-guide.md#a-namehash_indexa-hash-index-design-guidelines). It can also be used to detect cases where the index key has many duplicates.  
+  These statistics are useful for understanding and tuning the bucket counts for [hash indexes in memory-optimized tables](../sql-server-index-design-guide.md#hash_index). It can also be used to detect cases where the index key has many duplicates.  
   
  A large average chain length indicates that many rows are hashed to the same bucket. This could happen because:  
   

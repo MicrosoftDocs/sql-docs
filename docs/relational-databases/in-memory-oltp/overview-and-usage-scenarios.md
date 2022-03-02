@@ -37,6 +37,8 @@ To leverage [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in your database, you 
 - *Memory-optimized table types* are used for table-valued parameters (TVPs), as well as intermediate result sets in stored procedures. These can be used instead of traditional table types. Table variables and TVPs that are declared using a memory-optimized table type inherit the benefits of non-durable memory-optimized tables: efficient data access, and no IO.
 - *Natively compiled T-SQL modules* are used to further reduce the time taken for an individual transaction by reducing CPU cycles required to process the operations. You declare a Transact-SQL module to be natively compiled at create time. At this time, the following T-SQL modules can be natively compiled: stored procedures, triggers, and scalar user-defined functions.
 
+There are sample of these objects [later in this article](#sample-script).
+
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] is built into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. And because these objects behave similar to their traditional counterparts, you can often gain performance benefits while making only minimal changes to the database and the application. Plus, you can have both memory-optimized and traditional disk-based tables in the same database, and run queries across the two. You find a Transact-SQL script showing an example for each of these types of objects towards the bottom of this article.
 
 ## Usage scenarios for [!INCLUDE[hek_2](../../includes/hek-2-md.md)]
@@ -95,7 +97,7 @@ Get started with memory-optimizing ASP.NET session state by leveraging the scrip
 
 #### Customer case study
 
-- bwin increased throughput with ASP.NET session state even further and implemented an enterprise-wide mid-tier caching system, with [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]: [How bwin is using [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] [!INCLUDE[hek_2](../../includes/hek-2-md.md)] to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
+- bwin increased throughput with ASP.NET session state even further and implemented an enterprise-wide mid-tier caching system, with [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]: [How bwin is using [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] [!INCLUDE[hek_2](../../includes/hek-2-md.md)] to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/).
 
 ### Tempdb object replacement
 
@@ -136,7 +138,7 @@ First start by configuring the database for [!INCLUDE[hek_2](../../includes/hek-
 
 ```sql
 -- configure recommended DB option
-ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
+ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON;
 GO
 ```
 
@@ -147,14 +149,14 @@ You can create tables with different durability:
 CREATE TABLE dbo.table1
 ( c1 INT IDENTITY PRIMARY KEY NONCLUSTERED,
   c2 NVARCHAR(MAX))
-WITH (MEMORY_OPTIMIZED=ON)
+WITH (MEMORY_OPTIMIZED=ON);
 GO
 -- non-durable table
 CREATE TABLE dbo.temp_table1
 ( c1 INT IDENTITY PRIMARY KEY NONCLUSTERED,
   c2 NVARCHAR(MAX))
 WITH (MEMORY_OPTIMIZED=ON,
-      DURABILITY=SCHEMA_ONLY)
+      DURABILITY=SCHEMA_ONLY);
 GO
 ```
 
@@ -167,7 +169,7 @@ CREATE TYPE dbo.tt_table1 AS TABLE
   c2 NVARCHAR(MAX),
   is_transient BIT NOT NULL DEFAULT (0),
   INDEX ix_c1 HASH (c1) WITH (BUCKET_COUNT=1024))
-WITH (MEMORY_OPTIMIZED=ON)
+WITH (MEMORY_OPTIMIZED=ON);
 GO
 ```
 
@@ -211,21 +213,24 @@ BEGIN ATOMIC
 END
 GO
 -- sample execution of the proc
-DECLARE @table1 dbo.tt_table1
-INSERT @table1 (c2, is_transient) VALUES (N'sample durable', 0)
-INSERT @table1 (c2, is_transient) VALUES (N'sample non-durable', 1)
-EXECUTE dbo.usp_ingest_table1 @table1=@table1
-SELECT c1, c2 from dbo.table1
-SELECT c1, c2 from dbo.temp_table1
+DECLARE @table1 dbo.tt_table1;
+INSERT @table1 (c2, is_transient) VALUES (N'sample durable', 0);
+INSERT @table1 (c2, is_transient) VALUES (N'sample non-durable', 1);
+EXECUTE dbo.usp_ingest_table1 @table1=@table1;
+SELECT c1, c2 from dbo.table1;
+SELECT c1, c2 from dbo.temp_table1;
 GO
 ```
 
 ## Resources to learn more
 
 - [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Technologies for Faster T-SQL Performance](./survey-of-initial-areas-in-in-memory-oltp.md)
-- [Main [!INCLUDE[hek_2](../../includes/hek-2-md.md)] documentation](overview-and-usage-scenarios.md)
 - [Performance and resource utilization benefits of [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Improving temp table and table variable performance using memory optimization](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
+
+## See Also
+
+- [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] overview and usage scenarios](overview-and-usage-scenarios.md)
 - [Optimize Performance using In-Memory Technologies in Azure SQL](/azure/sql-database/sql-database-in-memory)
 - [System-Versioned Temporal Tables with Memory-Optimized Tables](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 

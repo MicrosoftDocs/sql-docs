@@ -1,5 +1,5 @@
 ---
-description: "sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)"
+description: "sys.dm_db_xtp_nonclustered_index_stats includes statistics about operations on nonclustered indexes in memory-optimized tables."
 title: "sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)"
 ms.custom: ""
 ms.date: "03/02/2022"
@@ -16,7 +16,7 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "sys.dm_db_xtp_nonclustered_index_stats"
+  - "sys.dm_db_xtp_nonclustered_index_stats dynamic management view"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -32,7 +32,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
   
  Large numbers of retries are indicative of concurrency issues. 
   
- For more information about memory-optimized indexes, see [SQL Server In-Memory OLTP Internals for SQL Server 2016](../in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md), page 20.  
+ For more information about memory-optimized indexes, see [SQL Server [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Internals for SQL Server 2016](../in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md), page 20.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -61,11 +61,10 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
   
 ## See also
 
-- [In-Memory OLTP Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Introduction to Memory-Optimized Tables](../in-memory-oltp/introduction-to-memory-optimized-tables.md)
 - [Memory-Optimized Table Dynamic Management Views](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
 
 ## Next steps 
 
-- [SQL Server Management Studio Support for In-Memory OLTP](../in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md)
-  
+- [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)

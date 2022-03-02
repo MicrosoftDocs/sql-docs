@@ -10222,6 +10222,8 @@ items:
     - name: Manage
       href: linux/sql-server-linux-management-overview.md
       items:
+      - name: Manage SQL services
+        href: linux/sql-server-linux-start-stop-restart-sql-server-services.md
       - name: Use SSMS to manage
         href: linux/sql-server-linux-manage-ssms.md
       - name: Use Azure Data Studio to manage

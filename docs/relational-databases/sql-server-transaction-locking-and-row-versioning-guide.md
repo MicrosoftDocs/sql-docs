@@ -495,7 +495,7 @@ Intent locks serve two purposes:
 -   To prevent other transactions from modifying the higher-level resource in a way that would invalidate the lock at the lower level. 
 -   To improve the efficiency of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in detecting lock conflicts at the higher level of granularity.  
   
-For example, a shared intent lock is requested at the table level before shared (S) locks are requested on pages or rows within that table. Setting an intent lock at the table level prevents another transaction from subsequently acquiring an exclusive (x) lock on the table containing that page. intent locks improve performancbecause the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examines intent locks only at the table level to determine if a transaction can safely acquire a lock on that table. This removes the requirement to examine every row or page lock on the table to determine if a transaction can lock the entire table.  
+For example, a shared intent lock is requested at the table level before shared (S) locks are requested on pages or rows within that table. Setting an intent lock at the table level prevents another transaction from subsequently acquiring an exclusive (x) lock on the table containing that page. Intent locks improve performance because the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examines intent locks only at the table level to determine if a transaction can safely acquire a lock on that table. This removes the requirement to examine every row or page lock on the table to determine if a transaction can lock the entire table.  
   
 <a name="lock_intent_table"></a> Intent locks include intent shared (IS), intent exclusive (IX), and shared with intent exclusive (SIX).  
   
@@ -862,7 +862,7 @@ A deadlock occurs when two or more tasks permanently block each other by each ta
   
 Transaction A cannot complete until transaction B completes, but transaction B is blocked by transaction A. This condition is also called a cyclic dependency: Transaction A has a dependency on transaction B, and transaction B closes the circle by having a dependency on transaction A.  
   
-Both transactions in a deadlock will wait forever unless the deadlock is broken by an external process. th[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] deadlock monitor periodically checks for tasks that re in a deadlock. If the monitor detects a cyclic dependency, it chooses one of the tasks as a victim and terminates its transaction with an error. This allows the other task to complete its transaction. The application with the transaction that terminated with an error can retry the transaction, which usually completes after the other deadlocked transaction has finished.  
+Both transactions in a deadlock will wait forever unless the deadlock is broken by an external process. the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] deadlock monitor periodically checks for tasks that are in a deadlock. If the monitor detects a cyclic dependency, it chooses one of the tasks as a victim and terminates its transaction with an error. This allows the other task to complete its transaction. The application with the transaction that terminated with an error can retry the transaction, which usually completes after the other deadlocked transaction has finished.  
   
 Deadlocking is often confused with normal blocking. When a transaction requests a lock on a resource locked by another transaction, the requesting transaction waits until the lock is released. By default, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transactions do not time out, unless LOCK_TIMEOUT is set. The requesting transaction is blocked, not deadlocked, because the requesting transaction has not done anything to block the transaction owning the lock. Eventually, the owning transaction will complete and release the lock, and then the requesting transaction will be granted the lock and proceed.  
   
@@ -1179,7 +1179,7 @@ For more information about running the SQL Profiler deadlock graph, see [Save De
   
 ### Handling deadlocks
 
-When an instance of te [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] chooses a transaction as a deadlock victim, it terminates the current batch, rolls back the transaction, and returns error message 1205 to the application.  
+When an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] chooses a transaction as a deadlock victim, it terminates the current batch, rolls back the transaction, and returns error message 1205 to the application.  
   
 `Your transaction (process ID #52) was deadlocked on {lock | communication buffer | thread} resources with another process and has been chosen as the deadlock victim. Rerun your transaction.`  
   

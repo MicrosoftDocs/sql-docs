@@ -1,11 +1,8 @@
 ---
-description: "CREATE VIEW (Transact-SQL)"
 title: CREATE VIEW (Transact-SQL)
+description: "CREATE VIEW (Transact-SQL)"
 ms.custom: ""
-ms.date: 09/08/2021
-ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -13,7 +10,7 @@ f1_keywords:
   - "VIEW_TSQL"
   - "VIEW"
   - "CREATE_VIEW_TSQL"
-  - "SCHEMABINDING_TSQL"
+  - "SCHEMABINDING_TSQL" 
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -36,6 +33,9 @@ helpviewer_keywords:
   - "maximum number of columns per view"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.date: 09/08/2021
+ms.prod: sql
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

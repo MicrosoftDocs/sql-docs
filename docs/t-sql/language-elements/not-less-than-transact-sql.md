@@ -7,10 +7,7 @@ ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
   - "!<"
-  - "Not Less"
   - "!<_TSQL"
-  - "Not Less Than"
-  - "Less Than"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

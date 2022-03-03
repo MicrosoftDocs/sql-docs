@@ -131,6 +131,12 @@ DROP DATABASE [SQLTestDB];
 GO
 ```
 
+## See also
+
+- [Restore SQL Server databases on an Azure VM - Azure Backup](/azure/backup/restore-sql-database-azure-vm)
+- [Quickstart: Restore a backup (SSMS) - Azure SQL Managed Instance](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)
+- [Restore SQL Server databases on an Azure VM - Azure Backup](/azure/azure-sql/database/recovery-using-backups)
+
 ## Next steps
 
 - [Back up and restore overview](back-up-and-restore-of-sql-server-databases.md)

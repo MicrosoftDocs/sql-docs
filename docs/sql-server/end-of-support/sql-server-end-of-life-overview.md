@@ -29,7 +29,7 @@ Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is bac
 
 Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of support stage, you can choose to:
 
-- Migrate your workload to [Azure SQL](/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
+- [Migrate](/azure/azure-sql/migration-guides/) your workload to [Azure SQL](/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
 - Migrate your workload to an Azure Virtual Machine as-is for [free Extended Security Updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support).
 - Upgrade to a current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - Purchase an [Extended Security Updates subscription](https://www.microsoft.com/cloud-platform/extended-security-updates).
@@ -92,6 +92,45 @@ Tools:
 The following image provides an example of innovation over the various versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] throughout the years:
 
 :::image type="content" source="media/sql-server-end-of-life-overview/sql-server-version-improvements.png" alt-text="25 years of SQL Server innovation":::
+
+## Azure SQL Managed Instance
+
+If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database too limiting, you can move to [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance). A managed instance closely resembles an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], without having to worry about such things as hardware failure, or patching. Managed Instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features and that are migrated to the cloud with minimal changes.
+
+### Benefits
+
+- **Cost**: You can save costs by offloading software and hardware maintenance.
+- **Lift and shift**: You can lift and shift your entire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on-premises instance to a managed instance, including all databases with minimal to no database change.
+- **Features**: Closely matches the features of an on-premises instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], such as cross-database queries, transactional replication publishing and distribution, SQL job scheduling, and CLR support.
+- **Scalability**: Within a managed instance, all databases share resources, and it's possible to scale up and down at any time without downtime.
+- **Automation**: Patching and backups happening automatically, saving you valuable maintenance time.  
+- **Availability**: The cost of the service includes both storage and high availability, with 99.99% availability guaranteed.  
+- **Intelligent Insights**: Gain insight about the performance of your databases with built-in intelligence analytics.  
+- **Versionless**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is versionless, meaning you're always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
+- **Low risk for database applications**: When the database compatibility is at the same level as the on-premises databases, existing database applications are protected from functional and performance changes that can have detrimental effects. An application only needs to be fully re-certified when it needs to use features available in a newer database compatibility setting. For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
+
+### Considerations
+
+- **Cost**: The managed instance option can be more costly than the single database option.  
+- **Transact-SQL differences**: There are some [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) differences between a single database and an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+- **Deployment**:  Deploying a managed instance can take more time than a single database.  
+- **Feature limitation**: Although a managed instance shares most features with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are still some features that are unsupported.
+- **Size limitation**: The combined storage size for all databases within a managed instance are limited to 8 TB, as opposed to 524 PB for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on-premises.  
+- **Networking**: The networking requirements for a managed instance add an extra layer of complexity to your infrastructure, and requires either an Azure ExpressRoute or VPN Gateway.
+- **Maintenance time**: You have no guarantee for the exact maintenance time, though it's nearly transparent.
+
+### Resources
+
+- [SQL Managed Instance overview](/azure/sql-database/sql-database-managed-instance)
+- [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+- [SQL Database feature comparison](/azure/sql-database/sql-database-features)
+- [Migrate SQL Server to Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-migrate)
+- [Broader migration process](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
+
+Tools:
+
+- [Data Migration Assistant](../../dma/dma-overview.md)
+- [Database Migration Service](/azure/dms/dms-overview)
 
 ## Extend support
 
@@ -192,45 +231,6 @@ If you want to offload maintenance, reduce costs, and eliminate the need to upgr
 - [Single database T-SQL differences](/azure/sql-database/sql-database-transact-sql-information)
 - [vCore](/azure/sql-database/sql-database-vcore-resource-limits-single-databases) and [DTU](/azure/sql-database/sql-database-dtu-resource-limits-single-databases) resource limits
 - [Intelligent Insights](/azure/sql-database/sql-database-intelligent-insights)
-
-Tools:
-
-- [Data Migration Assistant](../../dma/dma-overview.md)
-- [Database Migration Service](/azure/dms/dms-overview)
-
-## Azure SQL Managed Instance
-
-If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database too limiting, you can move to [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance). A managed instance closely resembles an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], without having to worry about such things as hardware failure, or patching. Managed Instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features and that are migrated to the cloud with minimal changes.
-
-### Benefits
-
-- **Cost**: You can save costs by offloading software and hardware maintenance.
-- **Lift and shift**: You can lift and shift your entire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on-premises instance to a managed instance, including all databases with minimal to no database change.
-- **Features**: Closely matches the features of an on-premises instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], such as cross-database queries, transactional replication publishing and distribution, SQL job scheduling, and CLR support.
-- **Scalability**: Within a managed instance, all databases share resources, and it's possible to scale up and down at any time without downtime.
-- **Automation**: Patching and backups happening automatically, saving you valuable maintenance time.  
-- **Availability**: The cost of the service includes both storage and high availability, with 99.99% availability guaranteed.  
-- **Intelligent Insights**: Gain insight about the performance of your databases with built-in intelligence analytics.  
-- **Versionless**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is versionless, meaning you're always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
-- **Low risk for database applications**: When the database compatibility is at the same level as the on-premises databases, existing database applications are protected from functional and performance changes that can have detrimental effects. An application only needs to be fully re-certified when it needs to use features available in a newer database compatibility setting. For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
-
-### Considerations
-
-- **Cost**: The managed instance option can be more costly than the single database option.  
-- **Transact-SQL differences**: There are some [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) differences between a single database and an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-- **Deployment**:  Deploying a managed instance can take more time than a single database.  
-- **Feature limitation**: Although a managed instance shares most features with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are still some features that are unsupported.
-- **Size limitation**: The combined storage size for all databases within a managed instance are limited to 8 TB, as opposed to 524 PB for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on-premises.  
-- **Networking**: The networking requirements for a managed instance add an extra layer of complexity to your infrastructure, and requires either an Azure ExpressRoute or VPN Gateway.
-- **Maintenance time**: You have no guarantee for the exact maintenance time, though it's nearly transparent.
-
-### Resources
-
-- [SQL Managed Instance overview](/azure/sql-database/sql-database-managed-instance)
-- [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
-- [SQL Database feature comparison](/azure/sql-database/sql-database-features)
-- [Migrate SQL Server to Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-migrate)
-- [Broader migration process](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 
 Tools:
 

@@ -35,7 +35,7 @@ A layered security methodology provides a defense-in-depth solution by leveragin
 
 Azure complies with several industry regulations and standards that can enable you to build a compliant solution with SQL Server running in a virtual machine. For information about regulatory compliance with Azure, see [Azure Trust Center](https://azure.microsoft.com/support/trust-center/).
 
-## Column-level Protection
+## Column-level protection
 
 Organizations often need to protect data at the column level as data regarding customers, employees, trade secrets, product data, healthcare, financial, and other sensitive data is often stored in SQL Server databases. Sensitive columns often include national identification/social security numbers, mobile phone numbers, first name, family name, financial account identification, and any other data that could be deemed personally identifiable information (PII). 
 
@@ -120,7 +120,7 @@ The configuration and assessment tools below provide an ability to address surfa
 - [SQL Data Discovery and Classification (SSMS)](sql-data-discovery-and-classification.md) - It is common for DBAs to manage servers and databases and not be aware of sensitivity of the data that is contained in the database. Data Discovery & Classification adds the capability to discover, classify, label and report on the sensitivity level of your data.  Data Discovery & Classification is supported starting with [SSMS 17.5](/sql/ssms/download-sql-server-management-studio-ssms).
  
 
-## Common SQL Threats 
+## Common SQL threats 
 
 It helps to know what are some common threats that risk SQL Server: 
 
@@ -142,7 +142,7 @@ To minimize the risk of a SQL injection, consider the following:
         - **--**	Single-line comment delimiter. 
         - **/ * ... * /**    Comment delimiters. 
         - **xp_**    Catalog-extended stored procedures, such as xp_cmdshell.
-            - **Note:** It is not recommended to leverage xp_cmdshell on any SQL Server environment. It is recommended to leverage SQLCLR and look for other alternatives due to the risks xp_cmdshell may introduce.
+            - It is not recommended to leverage xp_cmdshell on any SQL Server environment. Use SQLCLR instead or look for other alternatives due to the risks xp_cmdshell may introduce.
    - Always [validate user inputs](sql-injection.md#validate-all-input) and scrub error outputs from being spilled and exposed to the attacker.
 
 
@@ -176,7 +176,7 @@ Since you don't want attackers to easily guess account names, or passwords, the 
   - If you must use the **SA** login, enable the login after provisioning and assign a new strong password.
 
 
-### Ransomware Risks
+### Ransomware risks
 
 Consider the following to minimize ransomware risks: 
 

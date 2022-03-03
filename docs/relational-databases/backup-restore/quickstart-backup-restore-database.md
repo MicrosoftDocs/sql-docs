@@ -135,7 +135,7 @@ GO
 
 - [Restore SQL Server databases on an Azure VM - Azure Backup](/azure/backup/restore-sql-database-azure-vm)
 - [Quickstart: Restore a backup (SSMS) - Azure SQL Managed Instance](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)
-- [Restore SQL Server databases on an Azure VM - Azure Backup](/azure/azure-sql/database/recovery-using-backups)
+- [Restore a database from a backup - Azure SQL Database & SQL Managed Instance](/azure/azure-sql/database/recovery-using-backups)
 
 ## Next steps
 

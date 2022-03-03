@@ -5256,6 +5256,8 @@
     href: ../connect/oledb/download-oledb-driver-for-sql-server.md
   - name: Release notes
     href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
+  - name: MSOLEDBSQL major version differences
+    href: ../connect/oledb/major-version-differences.md
   - name: System requirements
     href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
   - name: When to use OLE DB Driver

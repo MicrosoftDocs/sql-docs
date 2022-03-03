@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-2016"
 ---
 # SQL Server end of support options
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-migration-2008-and-later.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-migration-end-of-support.md)]
 
 This article explains your options for addressing SQL Server products that have reached end of support.
 

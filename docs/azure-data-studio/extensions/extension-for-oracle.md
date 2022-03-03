@@ -22,6 +22,9 @@ The Azure Data Studio functionality available for Oracle includes:
 - [Source control integration](../source-control.md)
 - [Workspace & user settings](../settings.md)
 
+> [!NOTE]
+> Currently extension provides a read-only view of the database objects. Running queries is not supported.
+
 ## Install the Extension for Oracle
 
 If you don't already have Azure Data Studio installed, see its [installation instructions](../download-azure-data-studio.md).

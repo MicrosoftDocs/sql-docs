@@ -29,10 +29,10 @@ Second, the default value has changed from `no`/`false` to `Mandatory`. This cha
 The new Microsoft OLE DB Driver 19 for SQL Server supports side by side installation with the older Microsoft OLE DB Driver for SQL Server. To be able to differentiate the drivers, the name was changed to include the major version number. To use the new driver in an application, the user must specify the new driver name. The new driver name, along with the corresponding CLSID, are specified in the updated `msoledbsql.h` header that must be included in the project. Connections through the `IDBInitialize` interface require no further changes since `MSOLEDBSQL_CLSID` will specify the CLSID of the OLE DB Driver 19 for SQL Server. Connections through the `IDataInitialize` interface must replace the value of the `Provider` keyword with `MSOLEDBSQL19` to use the Microsoft OLE DB Driver 19 for SQL Server. In graphical user interfaces such as data link properties or linked server setup in SSMS, "Microsoft OLE DB Driver 19 for SQL Server" must be selected from the list of installed providers.
 
 ## See also
-[OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)  
-[Using Connection String Keywords with OLE DB Driver](../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
-[Using Encryption Without Validation](../oledb/features/using-encryption-without-validation.md)  
-[Universal Data Link (UDL) Configuration](../oledb/help-topics/data-link-pages.md)  
-[SQL Server Login Dialog Box (OLE DB)](../oledb/help-topics/sql-server-login-dialog.md)  
-[Initialization and authorization properties (OLE DB driver)](../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)  
+[OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)  
+[Using Connection String Keywords with OLE DB Driver](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
+[Using Encryption Without Validation](features/using-encryption-without-validation.md)  
+[Universal Data Link (UDL) Configuration](help-topics/data-link-pages.md)  
+[SQL Server Login Dialog Box (OLE DB)](help-topics/sql-server-login-dialog.md)  
+[Initialization and authorization properties (OLE DB driver)](ole-db-data-source-objects/initialization-and-authorization-properties.md)  
   

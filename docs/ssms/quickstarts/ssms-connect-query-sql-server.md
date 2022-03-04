@@ -29,13 +29,20 @@ The article demonstrates how to follow the below steps:
 > - Query the new table and view the results
 > - Use the query window table to verify your connection properties
 
+
+This article covers connecting and querying an instance of SQL Server. For Azure SQL, see [Connect and query Azure SQL Database & SQL Managed Instance](/azure/azure-sql/database/connect-query-ssms). 
+
+To use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), see connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md).
+
+To learn more about SQL Server Management Studio, see [Additional Tips and Tricks](../tutorials/ssms-tricks.md).
+
 ## Prerequisites
 
 To complete this quickstart, you need the following prerequisites: 
 
 
 - Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
-- Install and configure a [SQL Server instance](https://www.microsoft.com/sql-server/sql-server-downloads). 
+- [Install](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) and configure a [SQL Server instance](https://www.microsoft.com/sql-server/sql-server-downloads). 
 
 ## Connect to a SQL Server instance
 
@@ -179,10 +186,6 @@ You can find information about the connection properties under the results of yo
 ## Troubleshoot connectivity issues
 
 To review troubleshooting techniques to use when you can't connect to an instance of your SQL Server Database Engine on a single server, visit [Troubleshoot connecting to the SQL Server Database Engine](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection).
-
-## Additional tools
-
-You can also use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), an [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md).
 
 ## Next steps
 

@@ -163,13 +163,17 @@ To allow for monitoring of the database status due to Azure Key Vault key access
 
 **Event when the service loses access to the Azure Key Vault key**
 
-EventName: MakeDatabaseInaccessible (Azure SQL Database)
+**Azure SQL Database**
+
+EventName: MakeDatabaseInaccessible
 
 Status: Started 
 
 Description: Database has lost access to Azure key vault key and is now inaccessible. 
   
-EventName: MakeManagedDbInaccessible (Azure SQL Managed Instance)
+**Azure SQL Managed Instance**
+
+EventName: MakeManagedDbInaccessible
 
 Status: Started 
 
@@ -178,27 +182,35 @@ Description: Database <name> on managed server <name> has lost access to Azure K
   
 **Event when the database has automatically come back online**
 
-EventName: MakeDatabaseAccessible 
+**Azure SQL Database**
+  
+EventName: MakeDatabaseAccessible (Azure SQL Database)
 
 Status: Succeeded 
 
 Description: Database access to Azure key vault key has been reestablished and database is now online. 
 
-EventName: MakeManagedDbAccessible 
+**Azure SQL Managed Instance**
+  
+EventName: MakeManagedDbAccessible (Azure SQL Managed Instance)
 
 Status: Succeeded 
 
-Description: Access to Azure Key Vault Key has been re-established, operation to make all databases accessible in managed server <name> started.
+Description: Access to Azure Key Vault Key has been re-established and all managed databases in server <name> is now online.
   
  
 **Event when the issue wasn’t resolved within 30 minutes and Azure Key Vault key access has to be validated manually** 
 
+**Azure SQL Database**
+  
 EventName: MakeDatabaseInaccessible 
 
 Status: Succeeded 
 
 Description: Database is inaccessible and requires user to resolve Azure key vault errors and reestablish access to Azure key vault key using Re-validate key. 
 
+**Azure SQL Managed Instance**
+  
 EventName: MakeManagedDbInaccessible 
 
 Status: Succeeded 
@@ -208,12 +220,16 @@ Description: Database <name> on managed server <name> is inaccessible and requir
  
 **Event when db comes online after manual key re-validation**
 
+**Azure SQL Database**
+  
 EventName: MakeDatabaseAccessible 
 
 Status: Succeeded 
 
 Description: Database access to Azure key vault key has been reestablished and database is now online. 
 
+**Azure SQL Managed Instance**
+  
 EventName: MakeManagedDbAccessible 
 
 Status: Succeeded 
@@ -223,12 +239,16 @@ Description: Access to Azure Key Vault Key has been re-established and all manag
 
 **Event when re-validation of Azure Key Vault key access has succeeded and the db is coming back online**
 
+**Azure SQL Database**
+  
 EventName: MakeDatabaseAccessible 
 
 Status: Started 
 
 Description: Restoring database access to Azure key vault key has started. 
 
+**Azure SQL Managed Instance**
+  
 EventName: MakeManagedDbAccessible 
 
 Status: Started 
@@ -238,12 +258,16 @@ Description: Access to Azure Key Vault Key has been re-established, operation to
 
 **Event when re-validation of Azure Key Vault key access has failed**
 
+**Azure SQL Database**
+  
 EventName: MakeDatabaseAccessible 
 
 Status: Failed 
 
 Description: Restoring database access to Azure key vault key has failed. 
 
+**Azure SQL Managed Instance**
+  
 EventName: MakeManagedDbAccessible 
 
 Status: Failed 

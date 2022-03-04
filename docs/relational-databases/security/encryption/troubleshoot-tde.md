@@ -22,13 +22,13 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 This article describes how to identify and resolve Azure Key Vault key access issues that caused a database configured to use [transparent data encryption (TDE) with customer-managed keys in Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql) to become inaccessible.
 
 ## Introduction
-When TDE is configured to use a customer-managed key in Azure Key Vault, continuous access to this TDE Protector is required for the database to stay online.  If the logical SQL server loses access to the customer-managed TDE protector in Azure Key Vault, a database will start denying all connections with the appropriate error message and change its state to *Inaccessible* in the Azure portal.
+When TDE is configured to use a customer-managed key in Azure Key Vault, continuous access to this TDE Protector is required for the database to stay online.  If the logical SQL server or managed intance loses access to the customer-managed TDE protector in Azure Key Vault, a database will start denying all connections with the appropriate error message and change its state to *Inaccessible* in the Azure portal.
 
-For the first 8 hours, if the underlying Azure key vault key access issue is resolved, the database will auto-heal and come online automatically. This means that for all intermittent and temporary network outage scenarios, no user action is required, and the database will come online automatically. In most cases, user action is required to resolve the underlying key vault key access issue. 
+For the first 30 minutes, if the underlying Azure key vault key access issue is resolved, the database will auto-heal and come online automatically. This means that for all intermittent and temporary network outage scenarios, no user action is required, and the database will come online automatically. In most cases, user action is required to resolve the underlying key vault key access issue. 
 
 If an inaccessible database is no longer needed, it can be deleted immediately to stop incurring costs. All other actions on the database are not permitted until access to the Azure key vault key has been restored and the database is back online. Changing the TDE option from customer-managed to service-managed keys on the server is also not possible while a database encrypted with customer-managed keys is inaccessible. This is necessary to protect the data from unauthorized access while permissions to the TDE Protector have been revoked. 
 
-After a database has been inaccessible for more than 8 hours, it will no longer auto-heal. If the required Azure key vault key access has been restored after that period, you must re-validate the access to the key manually, to bring the database back online. Bringing the database back online in this case can take a significant amount of time depending on the size of the database. Once the database is back online, previously configured settings such as [failover group](/azure/sql-database/sql-database-auto-failover-group), PITR history, and any tags **will be lost**. Therefore, we recommend implementing a notification system using [Action Groups](/azure/azure-monitor/platform/action-groups) that allows to become aware of and address the underlying key vault key access issues as soon as possible. 
+After a database has been inaccessible for more than 30 minutes, it will no longer auto-heal. If the required Azure key vault key access has been restored after that period, you must re-validate the access to the key manually, to bring the database back online. Bringing the database back online in this case can take a significant amount of time depending on the size of the database. Once the database is back online, previously configured settings such as [failover group](/azure/sql-database/sql-database-auto-failover-group), PITR history, and any tags **will be lost**. Therefore, we recommend implementing a notification system using [Action Groups](/azure/azure-monitor/platform/action-groups) that allows to become aware of and address the underlying key vault key access issues as soon as possible. 
 
 ## Common errors causing databases to become inaccessible
 
@@ -43,10 +43,10 @@ Most issues that occur when you use TDE with Key Vault are caused by one of the 
 ### No permissions to access the key vault or the key doesn't exist
 
 - The key was accidentally deleted, disabled or the key expired.
-- The logical SQL Server instance AppId was accidentally deleted.
-- The logical SQL Server instance was moved to a different subscription. A new AppId must be created if the logical server is moved to a different subscription.
-- Permissions granted to the AppId for the keys aren't sufficient (they don't include Get, Wrap, and Unwrap).
-- Permissions for the logical SQL Server instance AppId were revoked.
+- The server's managed identity (system-assigned or user-assigned) was accidentally deleted.
+- The server was moved to a different subscription. A new managed identity (system-assigned or user-assigned) must be assigned to the server when it is moved to a different subscription.
+- Permissions granted to the server's managed identity for the keys aren't sufficient (they don't include Get, Wrap, and Unwrap permissions).
+- Permissions for the server's managed identity were revoked from the key vault.
 
 ## Identify and resolve common errors
 

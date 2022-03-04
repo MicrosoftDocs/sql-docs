@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 11/06/2019
+ms.date: 03/04/2022
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # Common errors for transparent data encryption with customer-managed keys in Azure Key Vault
@@ -177,7 +177,7 @@ EventName: MakeManagedDbInaccessible
 
 Status: Started 
 
-Description: Database <name> on managed server <name> has lost access to Azure Key Vault Key and is now transitioning to inaccessible state.
+Description: Database on managed server has lost access to Azure Key Vault Key and is now transitioning to inaccessible state.
 
   
 **Event when the database has automatically come back online**
@@ -196,7 +196,7 @@ EventName: MakeManagedDbAccessible
 
 Status: Succeeded 
 
-Description: Access to Azure Key Vault Key has been re-established and all managed databases in server <name> is now online.
+Description: Access to Azure Key Vault Key has been re-established and all managed databases in server is now online.
   
  
 **Event when the issue wasn’t resolved within 30 minutes and Azure Key Vault key access has to be validated manually** 
@@ -215,7 +215,7 @@ EventName: MakeManagedDbInaccessible
 
 Status: Succeeded 
 
-Description: Database <name> on managed server <name> is inaccessible and requires user to re-establish access to Azure Key Vault Key.   
+Description: Database on managed server is inaccessible and requires user to re-establish access to Azure Key Vault Key.   
   
  
 **Event when db comes online after manual key re-validation**
@@ -234,7 +234,7 @@ EventName: MakeManagedDbAccessible
 
 Status: Succeeded 
 
-Description: Access to Azure Key Vault Key has been re-established and all managed databases in server <name> is now online. 
+Description: Access to Azure Key Vault Key has been re-established and all managed databases in server is now online. 
   
 
 **Event when re-validation of Azure Key Vault key access has succeeded and the db is coming back online**
@@ -253,7 +253,7 @@ EventName: MakeManagedDbAccessible
 
 Status: Started 
 
-Description: Access to Azure Key Vault Key has been re-established, operation to make all databases accessible in managed server <name> started
+Description: Access to Azure Key Vault Key has been re-established, operation to make all databases accessible in managed server started
   
 
 **Event when re-validation of Azure Key Vault key access has failed**

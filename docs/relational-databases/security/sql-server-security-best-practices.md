@@ -2,10 +2,10 @@
 title: "SQL Server security best practices"
 description: This topic provides general guidance for securing SQL Server running in an Azure virtual machine.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/04/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
+ms.reviewer: "rohitna"
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "characters [SQL Server], password policies"
   - "strong passwords [SQL Server]"
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
-author: rohitnayakmsft
-ms.author: rohitna
+author: dplessMSFT
+ms.author: dpless
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server security best practices

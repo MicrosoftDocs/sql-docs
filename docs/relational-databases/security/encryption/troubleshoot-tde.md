@@ -82,7 +82,7 @@ In the Azure portal, go to the key vault, and then go to **Access policies**. Co
 To learn more, see [Assign an Azure AD identity to your server](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
-> If the logical SQL Server instance was moved to a new tenant after the initial configuration of TDE with Key Vault, repeat the step to configure the Azure AD identity to create a new AppId. Then, add the AppId to the key vault and assign the correct permissions to the key. 
+> If the logical SQL Server or managed instance was moved to a new tenant after the initial configuration of TDE with Key Vault, repeat the step to configure the Azure AD identity to assign a new managed identity (system-assigned or user-assigned) to the server. Then, add the managed identity to the key vault and assign the correct permissions to the key. 
 >
 
 ### Missing key vault
@@ -95,7 +95,7 @@ _503 AzureKeyVaultConnectionFailed - The operation could not be completed on the
 
 To identify the key URI and the key vault:
 
-1. Use the following cmdlet or command to get the key URI of a specific logical SQL Server instance:
+1. Use the following cmdlet or command to get the key URI of a specific server instance:
 
     - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey)
 
@@ -111,7 +111,7 @@ To identify the key URI and the key vault:
 
 Confirm that the key vault is available:
 
-- Ensure that the key vault is available and that the logical SQL Server instance has access.
+- Ensure that the key vault is available and that the server has access.
 - If the key vault is behind a firewall, ensure that the check box to allow Microsoft services to access the key vault is selected.
 - If the key vault has been accidentally deleted, you must complete the configuration from the start.
 
@@ -151,11 +151,11 @@ To identify the key URI and key vault:
 
 **Mitigation**
 
-Confirm that the logical SQL Server instance has permissions to the key vault and the correct permissions to access the key:
+Confirm that the server has permissions to the key vault and the correct permissions to access the key:
 
-- In the Azure portal, go to the key vault > **Access policies**. Find the logical SQL Server instance AppId.  
-- If the AppId is present, ensure that the AppID has the following key permissions: Get, Wrap, and Unwrap.
-- If the AppId isn't present, add it by using the **Add New** button. 
+- In the Azure portal, go to the key vault > **Access policies**. Find the server's managed identity (system-assigned or user-assigned).  
+- If the server identity is present, ensure that it has the following key permissions: Get, WrapKey, and UnwrapKey.
+- If the server identity isn't present, add it by using the **Add New** button. 
 
 ## Getting TDE status from the Activity log
 
@@ -163,24 +163,19 @@ To allow for monitoring of the database status due to Azure Key Vault key access
 
 **Event when the service loses access to the Azure Key Vault key**
 
-EventName: MakeDatabaseInaccessible 
+EventName: MakeDatabaseInaccessible (Azure SQL Database)
 
 Status: Started 
 
-Description: Database has lost access to Azure key vault key and is now inaccessible: \<error message\>   
+Description: Database has lost access to Azure key vault key and is now inaccessible. 
+  
+EventName: MakeManagedDbInaccessible (Azure SQL Managed Instance)
 
- 
+Status: Started 
 
-**Event when the 8-hour wait time for self-healing begins** 
+Description: Database <name> on managed server <name> has lost access to Azure Key Vault Key and is now transitioning to inaccessible state.
 
-EventName: MakeDatabaseInaccessible 
-
-Status: InProgress 
-
-Description: Database is waiting for Azure key vault key access to be reestablished by user within 8 hours.   
-
- 
-
+  
 **Event when the database has automatically come back online**
 
 EventName: MakeDatabaseAccessible 
@@ -189,9 +184,14 @@ Status: Succeeded
 
 Description: Database access to Azure key vault key has been reestablished and database is now online. 
 
- 
+EventName: MakeManagedDbAccessible 
 
-**Event when the issue wasn’t resolved within 8 hours and Azure Key Vault key access has to be validated manually** 
+Status: Succeeded 
+
+Description: Access to Azure Key Vault Key has been re-established, operation to make all databases accessible in managed server <name> started.
+  
+ 
+**Event when the issue wasn’t resolved within 30 minutes and Azure Key Vault key access has to be validated manually** 
 
 EventName: MakeDatabaseInaccessible 
 
@@ -199,8 +199,13 @@ Status: Succeeded
 
 Description: Database is inaccessible and requires user to resolve Azure key vault errors and reestablish access to Azure key vault key using Re-validate key. 
 
- 
+EventName: MakeManagedDbInaccessible 
 
+Status: Succeeded 
+
+Description: Database <name> on managed server <name> is inaccessible and requires user to re-establish access to Azure Key Vault Key.   
+  
+ 
 **Event when db comes online after manual key re-validation**
 
 EventName: MakeDatabaseAccessible 
@@ -209,7 +214,12 @@ Status: Succeeded
 
 Description: Database access to Azure key vault key has been reestablished and database is now online. 
 
- 
+EventName: MakeManagedDbAccessible 
+
+Status: Succeeded 
+
+Description: Access to Azure Key Vault Key has been re-established and all managed databases in server <name> is now online. 
+  
 
 **Event when re-validation of Azure Key Vault key access has succeeded and the db is coming back online**
 
@@ -219,7 +229,12 @@ Status: Started
 
 Description: Restoring database access to Azure key vault key has started. 
 
- 
+EventName: MakeManagedDbAccessible 
+
+Status: Started 
+
+Description: Access to Azure Key Vault Key has been re-established, operation to make all databases accessible in managed server <name> started
+  
 
 **Event when re-validation of Azure Key Vault key access has failed**
 
@@ -229,6 +244,12 @@ Status: Failed
 
 Description: Restoring database access to Azure key vault key has failed. 
 
+EventName: MakeManagedDbAccessible 
+
+Status: Failed 
+
+Description: Restoring database access to Azure key vault key has failed. 
+  
 
 ## Next steps
 

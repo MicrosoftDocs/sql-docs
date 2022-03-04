@@ -38,26 +38,26 @@ To enable encryption to be used when a certificate hasn't been provisioned on th
 ## Registry settings
 
 Each major version of the OLE DB Driver for SQL Server uses its own set of registry settings. The following are the version specific base registry paths (referred to as `{base_registry_path}` later on):  
-<ul><li>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI{major_version}.0\GeneralFlags</li>
-<li>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSSQLServer\Client\SNI{major_version}.0\GeneralFlags</li></ul>
+<ul><li>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI`{major_version}`.0\GeneralFlags</li>
+<li>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSSQLServer\Client\SNI`{major_version}`.0\GeneralFlags</li></ul>
 
-Replace the `{major_version}` placeholder in the above paths depending on the major version of the driver, e.g.: `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSSQLServer\Client\SNI19.0\GeneralFlags` is the base path for versions 19.x.x.
+Replace the `{major_version}` placeholder in the above paths depending on the major version of the driver, e.g.: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI19.0\GeneralFlags` is the base path for versions 19.x.x.
 
 ### Force protocol encryption
 
-Encryption can also be controlled through the `Value` field of the `{base_registry_path}\Flag1` registry entry.  
-Valid values are `0`, `1`, or `2`. The OLE DB driver chooses the most secure option between the registry and the connection property/keyword settings. `0` is equivalent to `Optional`, `1` is equivalent to `Mandatory`, and `2` is equivalent to `Strict`. The `Strict` option is not supported in versions 18.x.x.
+Encryption can be controlled through the `Value` field of the `{base_registry_path}\Flag1` registry entry.  
+Valid values are `0`, `1`, or `2` (which maps to `Optional`, `Mandatory`, and `Strict` connection property/keyword values respectively). The OLE DB driver chooses the most secure option between the registry and the connection property/keyword settings.
 
 ### Trust server certificate
 
-Certificate validation can also be controlled through the `Value` field of the `{base_registry_path}\Flag2` registry entry.  
+Certificate validation can be controlled through the `Value` field of the `{base_registry_path}\Flag2` registry entry.  
 Valid values are `0` or `1`. The OLE DB driver chooses the most secure option between the registry and the connection property/keyword settings. That is, the driver will validate the server certificate as long as at least one of the registry/connection settings enables server certificate validation.
 
 ## Encryption and certificate validation behavior
 
-Application settings never reduce the level of security set in the **`Force Protocol Encryption`** and **`Trust Server Certificate`** registry (see [Registry settings](encryption-and-certificate-validation.md) for more details), but may strengthen it. For example, if **`Force Protocol Encryption`** isn't set for the client, an application may request encryption itself. To guarantee encryption even when a server certificate hasn't been provisioned, an application may request encryption and enable `TrustServerCertificate`. However, if `TrustServerCertificate` isn't enabled in the client configuration, a provisioned server certificate is still required.
+Application settings never reduce the level of security set in the registry (see [Registry settings](encryption-and-certificate-validation.md) for more details), but may strengthen it. For example, if **`Force Protocol Encryption`** isn't set for the client, an application may request encryption itself. To guarantee encryption even when a server certificate hasn't been provisioned, an application may request encryption and enable `TrustServerCertificate`. However, if `TrustServerCertificate` isn't enabled in the client configuration, a provisioned server certificate is still required.
 
-For more information about the differences between major version and encryption for OLE DB Driver for SQL Server see this: [MSOLEDBSQL major version differences](../major-version-differences.md).
+Version 19 of the OLE DB Driver for SQL Server introduces breaking changes in the encryption related APIs. For more information, see [MSOLEDBSQL major version differences](../major-version-differences.md#encryption-property-changes).
 
 ### Major version 19
 
@@ -78,7 +78,7 @@ The following table describes the resulting encryption and validation:
 
 | Encryption | Trust Server Certificate client setting | Connection string/connection attribute Trust Server Certificate | Result |
 |--|--|--|--|
-| Optional | N/A | N/A | No encryption occurs. |
+| Optional | N/A | N/A | Encryption only occurs for LOGIN packets. |
 | Mandatory | 0 | Ignored | Encryption occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
 | Mandatory | 1 | No (default) | Encryption occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
 | Mandatory | 1 | Yes | Encryption always occurs, but may use a self-signed server certificate. |

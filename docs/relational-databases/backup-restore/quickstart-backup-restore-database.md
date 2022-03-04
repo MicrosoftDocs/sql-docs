@@ -75,7 +75,7 @@ To take a backup of your database, follow these steps:
 1. Under **Destination**, confirm that the path for your backup is correct. If you need to change the path, select **Remove** to remove the existing path, and then **Add** to type in a new path. You can use the ellipses to navigate to a specific file.
 1. Select **OK** to take a backup of your database. 
 
-![Take SQL backup](media/quickstart-backup-restore-database/backup-db-ssms.png)
+:::image type="content" source="media/quickstart-backup-restore-database/backup-db-ssms.png" alt-text="Take SQL backup":::
 
 Alternatively, you can run the following Transact-SQL command to back up your database. The path may be different on your computer:
 
@@ -98,14 +98,14 @@ To restore your database, follow these steps:
 1. Launch [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) and connect to your SQL Server instance.
 1. Right-click the **Databases** node in **Object Explorer** and select **Restore Database...**.
 
-    ![Restore a database](media/quickstart-backup-restore-database/restore-db-ssms1.png)
+    :::image type="content" source="media/quickstart-backup-restore-database/restore-db-ssms1.png" alt-text="Restore a database":::
 
 1. Select **Device:**, and then select the ellipses (...) to locate your backup file. 
 1. Select **Add** and navigate to where your `.bak` file is located. Select the `.bak` file and then select **OK**. 
 1. Select **OK** to close the **Select backup devices** dialog box. 
 1. Select **OK** to restore the backup of your database. 
 
-    ![Restore the database](media/quickstart-backup-restore-database/restore-db-ssms2.png)
+    :::image type="content" source="media/quickstart-backup-restore-database/restore-db-ssms2.png" alt-text="Restore the database":::
 
 Alternatively, you can run the following Transact-SQL script to restore your database. The path may be different on your computer:
 

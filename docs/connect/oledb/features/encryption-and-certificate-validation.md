@@ -29,13 +29,11 @@ ms.author: v-davidengel
 
 Self-signed certificates don't guarantee security. The encrypted handshake is based on NT LAN Manager (NTLM). It's highly recommended you provision a verifiable certificate on SQL Server for secure connectivity. Transport Security Layer (TLS) can be made secure only with certificate validation.
 
-Applications may also request encryption of all network traffic by using connection string keywords or connection properties. The keywords are "Encrypt" for OLE DB when using a provider string with **`IDbInitialize::Initialize`**, or "Use Encryption for Data" for ADO and OLE DB when using an initialization string with **`IDataInitialize`**. Encryption may also be configured on the client machine in the registry (See [Registry settings](encryption-and-certificate-validation.md#Registry-settings) for more details), using the **Force Protocol Encryption** option. By default, encryption of all network traffic for a connection requires a certificate being provisioned on the server. By setting your client to trust the certificate on the server, you might become vulnerable to man-in-the-middle attacks. If you deploy a verifiable certificate on the server, ensure you change the client settings about trust the certificate to FALSE.
+Applications may also request encryption of all network traffic by using connection string keywords or connection properties. The keywords are "Encrypt" for OLE DB when using a provider string with **`IDbInitialize::Initialize`**, or "Use Encryption for Data" for ADO and OLE DB when using an initialization string with **`IDataInitialize`**. Encryption may also be configured on the client machine in the registry (See [Registry settings](encryption-and-certificate-validation.md#registry-settings) for more details), using the **Force Protocol Encryption** option. By default, encryption of all network traffic for a connection requires a certificate being provisioned on the server. By setting your client to trust the certificate on the server, you might become vulnerable to man-in-the-middle attacks. If you deploy a verifiable certificate on the server, ensure you change the client settings about trust the certificate to FALSE.
 
 For information about connection string keywords, see [Using connection string keywords with OLE DB driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).
 
 To enable encryption to be used when a certificate hasn't been provisioned on the server, the **`Force Protocol Encryption`** and the **`Trust Server Certificate`** client registry settings can be set. In this case, encryption will use a self-signed server certificate without validation if no verifiable certificate has been provisioned on the server.
-
-Application settings never reduce the level of security set in the **`Force Protocol Encryption`** and **`Trust Server Certificate`** registry (see [Registry settings](encryption-and-certificate-validation.md) for more details), but may strengthen it. For example, if **`Force Protocol Encryption`** isn't set for the client, an application may request encryption itself. To guarantee encryption even when a server certificate hasn't been provisioned, an application may request encryption and enable `TrustServerCertificate`. However, if `TrustServerCertificate` isn't enabled in the client configuration, a provisioned server certificate is still required.
 
 ## Registry settings
 
@@ -56,6 +54,8 @@ Certificate validation can also be controlled through the `Value` field of the `
 Valid values are `0` or `1`. The OLE DB driver chooses the most secure option between the registry and the connection property/keyword settings. That is, the driver will validate the server certificate as long as at least one of the registry/connection settings enables server certificate validation.
 
 ## Encryption and certificate validation behavior
+
+Application settings never reduce the level of security set in the **`Force Protocol Encryption`** and **`Trust Server Certificate`** registry (see [Registry settings](encryption-and-certificate-validation.md) for more details), but may strengthen it. For example, if **`Force Protocol Encryption`** isn't set for the client, an application may request encryption itself. To guarantee encryption even when a server certificate hasn't been provisioned, an application may request encryption and enable `TrustServerCertificate`. However, if `TrustServerCertificate` isn't enabled in the client configuration, a provisioned server certificate is still required.
 
 For more information about the differences between major version and encryption for OLE DB Driver for SQL Server see this: [MSOLEDBSQL major version differences](../major-version-differences.md).
 

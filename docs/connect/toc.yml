@@ -5299,8 +5299,8 @@
       href: ../connect/oledb/features/using-data-classification.md
     - name: Using Database Mirroring
       href: ../connect/oledb/features/using-database-mirroring.md
-    - name: Using Encryption Without Validation
-      href: ../connect/oledb/features/using-encryption-without-validation.md
+    - name: Encryption and certificate validation
+      href: ../connect/oledb/features/encryption-and-certificate-validation.md
     - name: Idle Connection Resiliency
       href: ../connect/oledb/features/idle-connection-resiliency.md
     - name: Using Large Value Types

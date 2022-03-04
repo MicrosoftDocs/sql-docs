@@ -56,4 +56,6 @@ For details about this release, see [the release notes](release-notes-for-oledb-
 [System requirements for OLE DB Driver for SQL Server](system-requirements-for-oledb-driver-for-sql-server.md)  
 [Support policies for OLE DB Driver for SQL Server](applications\support-policies-for-oledb-driver-for-sql-server.md)  
 [When to use OLE DB Driver for SQL Server](when-to-use-oledb-driver-for-sql-server.md)  
-[Installing OLE DB Driver for SQL Server](applications/installing-oledb-driver-for-sql-server.md)
+[Installing OLE DB Driver for SQL Server](applications/installing-oledb-driver-for-sql-server.md)  
+[MSOLEDBSQL major version differences](major-version-differences.md)  
+  

@@ -56,21 +56,21 @@ In this section, we list troubleshooting steps for the most common errors.
 
 **Error message**
 
-_401 AzureKeyVaultNoServerIdentity - The server identity is not correctly configured on server. Please contact support._
+_401 AzureKeyVaultNoServerIdentity - The server identity is not correctly configured on server. Please contact support.
 
 **Detection**
 
-Use the following cmdlet or command to ensure that an identity has been assigned to the logical SQL Server instance:
+Use the following cmdlet or command to ensure that an identity has been assigned to the server:
 
-- Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer) 
+- Azure PowerShell: [Get-AzSqlServer](/powershell/module/Az.Sql/Get-AzSqlServer) 
 
 - Azure CLI: [az-sql-server-show](/cli/azure/sql/server#az_sql_server_show)
 
 **Mitigation**
 
-Use the following cmdlet or command to configure an Azure AD identity (an AppId) for the logical SQL Server instance:
+Use the following cmdlet or command to configure an Azure AD identity for the server:
 
-- Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver) with the `-AssignIdentity` option.
+- Azure PowerShell: [Set-AzSqlServer](/powershell/module/az.sql/set-azsqlserver) with the `-AssignIdentity` option.
 
 - Azure CLI: [az sql server update](/cli/azure/sql/server#az_sql_server_update) with the `--assign_identity` option.
 
@@ -97,7 +97,7 @@ To identify the key URI and the key vault:
 
 1. Use the following cmdlet or command to get the key URI of a specific server instance:
 
-    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey)
+    - Azure PowerShell: [Get-AzSqlServerKeyVaultKey](/powershell/module/az.sql/get-azsqlserverkeyvaultkey)
 
     - Azure CLI: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key#az_sql_server_tdekey_show) 
 
@@ -184,7 +184,7 @@ Description: Database <name> on managed server <name> has lost access to Azure K
 
 **Azure SQL Database**
   
-EventName: MakeDatabaseAccessible (Azure SQL Database)
+EventName: MakeDatabaseAccessible
 
 Status: Succeeded 
 
@@ -192,7 +192,7 @@ Description: Database access to Azure key vault key has been reestablished and d
 
 **Azure SQL Managed Instance**
   
-EventName: MakeManagedDbAccessible (Azure SQL Managed Instance)
+EventName: MakeManagedDbAccessible
 
 Status: Succeeded 
 

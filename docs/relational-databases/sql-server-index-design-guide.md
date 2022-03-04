@@ -84,14 +84,10 @@ An index is an on-disk or in-memory structure associated with a table or view th
   
 4. Determine which index options might enhance performance when the index is created or maintained. For example, creating a clustered index on an existing large table would benefit from the `ONLINE` index option. The ONLINE option allows for concurrent activity on the underlying data to continue while the index is being created or rebuilt. For more information, see [Set Index Options](../relational-databases/indexes/set-index-options.md).  
   
-5. Determine the optimal storage location for the index. A nonclustered index can be stored in the same filegroup as the underlying table, or on a different filegroup. The storage location of indexes can improve query performance by increasing disk I/O performance. For example, storing a nonclustered index on a filegroup that is on a different disk than the table filegroup can improve performance because multiple disks can be read at the same time.  
- Alternatively, clustered and nonclustered indexes can use a partition scheme across multiple filegroups. Partitioning makes large tables or indexes more manageable by letting you access or manage subsets of data quickly and efficiently, while maintaining the integrity of the overall collection. For more information, see [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). When you consider partitioning, determine whether the index should be aligned, that is, partitioned in essentially the same manner as the table, or partitioned independently.
-6. When you use tools like [Database Tuning Advisor (DTA)](performance/start-and-use-the-database-engine-tuning-advisor.md) or Missing Indexes DMVs (e.g. [sys.dm_db_missing_index_details](system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md), [sys.dm_db_missing_index_columns](system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)) you may be offered multiple variations of indexes on the same table and column(s). Be sure to combine overlapping index recommendations. For example, you may see index recommendations for: 
-   - column A
-   - columns A and B 
-   - columns A and B include column C
+5. Determine the optimal storage location for the index.
 
-   Creating the third recommendation (A, B including C) would likely satisfy the queries that generated all three index suggestions. Note that order of index keys matters when combining the index suggestions (column A as a leading column is different from column B as a leading column) but the order of the included columns does not.
+    A nonclustered index can be stored in the same filegroup as the underlying table, or on a different filegroup. The storage location of indexes can improve query performance by increasing disk I/O performance. For example, storing a nonclustered index on a filegroup that is on a different disk than the table filegroup can improve performance because multiple disks can be read at the same time. Alternatively, clustered and nonclustered indexes can use a partition scheme across multiple filegroups. When you consider partitioning, determine whether the index should be aligned, that is, partitioned in essentially the same manner as the table, or partitioned independently. Learn more in the [index placement on filegroups or partitions schemes](#index_placement) section of this article.
+1. When you identify missing indexes with Dynamic Management Views (DMVs) such as [sys.dm_db_missing_index_details](system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) and [sys.dm_db_missing_index_columns](system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md), you may be offered similar variations of indexes on the same table and column(s). Examine existing indexes on the table along with missing index suggestions to prevent creating duplicate indexes. Learn more in [tune nonclustered indexes with missing index suggestions](indexes/tune-nonclustered-missing-index-suggestions.md).
 
 ##  <a name="General_Design"></a> General index design guidelines  
  Experienced database administrators can design a good set of indexes, but this task is complex, time-consuming, and error-prone even for moderately complex databases and workloads. Understanding the characteristics of your database, queries, and data columns can help you design optimal indexes.  
@@ -490,7 +486,7 @@ The following illustration shows the structure of a nonclustered index in a sing
   
      If there are very few distinct values, such as only 1 and 0, most queries will not use the index because a table scan is generally more efficient. For this type of data, consider creating a filtered index on a distinct value that only occurs in a small number of rows. For example, if most of the values are 0, the query optimizer might use a filtered index for the data rows that contain 1.  
   
-####  <a name="Included_Columns"></a> Use Included Columns to Extend Nonclustered Indexes  
+####  <a name="Included_Columns"></a> Use included columns to extend nonclustered indexes  
  You can extend the functionality of nonclustered indexes by adding nonkey columns to the leaf level of the nonclustered index. By including nonkey columns, you can create nonclustered indexes that cover more queries. This is because the nonkey columns have the following benefits:  
   
 -   They can be data types not allowed as index key columns.  
@@ -611,7 +607,7 @@ GO
 -   Index maintenance may increase the time that it takes to perform modifications, inserts, updates, or deletes, to the underlying table or indexed view.  
   
  You will have to determine whether the gains in query performance outweigh the effect to performance during data modification and in additional disk space requirements.  
-  
+
 ##  <a name="Unique"></a> Unique index design guidelines  
  A unique index guarantees that the index key contains no duplicate values and therefore every row in the table is in some way unique. Specifying a unique index makes sense only when uniqueness is a characteristic of the data itself. For example, if you want to make sure that the values in the `NationalIDNumber` column in the `HumanResources.Employee` table are unique, when the primary key is `EmployeeID`, create a UNIQUE constraint on the `NationalIDNumber` column. If the user tries to enter the same value in that column for more than one employee, an error message is displayed and the duplicate value is not entered.  
   
@@ -634,7 +630,7 @@ GO
 -   If the data is unique and you want uniqueness enforced, creating a unique index instead of a nonunique index on the same combination of columns provides additional information for the query optimizer that can produce more efficient execution plans. Creating a unique index (preferably by creating a UNIQUE constraint) is recommended in this case.  
   
 -   A unique nonclustered index can contain included nonkey columns. For more information, see [Index with Included Columns](#Included_Columns).  
-  
+ 
   
 ##  <a name="Filtered"></a> Filtered index design guidelines
 
@@ -1081,3 +1077,4 @@ Learn more about index design and related topics from the following articles:
 - [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)
 - [Columnstore Indexes overview](../relational-databases/indexes/columnstore-indexes-overview.md)
 - [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md)
+- [Tune nonclustered indexes with missing index suggestions](indexes/tune-nonclustered-missing-index-suggestions.md)

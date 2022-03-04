@@ -73,7 +73,7 @@ To take a backup of your database, follow these steps:
 1. Expand the **Databases** node in **Object Explorer**.
 1. Right-click the database, hover over **Tasks**, and select **Back up...**.
 1. Under **Destination**, confirm that the path for your backup is correct. If you need to change the path, select **Remove** to remove the existing path, and then **Add** to type in a new path. You can use the ellipses to navigate to a specific file.
-1. Select **OK** to take a backup of your database. 
+1. Select **OK** to take a backup of your database.
 
 :::image type="content" source="media/quickstart-backup-restore-database/backup-db-ssms.png" alt-text="Take SQL backup":::
 
@@ -83,7 +83,7 @@ Alternatively, you can run the following Transact-SQL command to back up your da
 USE [master];
 GO
 BACKUP DATABASE [SQLTestDB]
-TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\SQLTestDB.bak' 
+TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\SQLTestDB.bak' 
 WITH NOFORMAT, NOINIT,
 NAME = N'SQLTestDB-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10;
 GO
@@ -100,10 +100,10 @@ To restore your database, follow these steps:
 
     :::image type="content" source="media/quickstart-backup-restore-database/restore-db-ssms1.png" alt-text="Restore a database":::
 
-1. Select **Device:**, and then select the ellipses (...) to locate your backup file. 
-1. Select **Add** and navigate to where your `.bak` file is located. Select the `.bak` file and then select **OK**. 
-1. Select **OK** to close the **Select backup devices** dialog box. 
-1. Select **OK** to restore the backup of your database. 
+1. Select **Device:**, and then select the ellipses (...) to locate your backup file.
+1. Select **Add** and navigate to where your `.bak` file is located. Select the `.bak` file and then select **OK**.
+1. Select **OK** to close the **Select backup devices** dialog box.
+1. Select **OK** to restore the backup of your database.
 
     :::image type="content" source="media/quickstart-backup-restore-database/restore-db-ssms2.png" alt-text="Restore the database":::
 

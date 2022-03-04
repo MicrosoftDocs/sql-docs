@@ -12551,6 +12551,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
       - name: sys.dm_database_replica_states (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md
+      - name: sys.dm_database_backups_azure-sql-database
+        href: relational-databases/system-dynamic-management-views/sys-dm-database-backups-azure-sql-database.md  
       - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
       - name: sys.dm_db_resource_stats (Azure SQL Database)

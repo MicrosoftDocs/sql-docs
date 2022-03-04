@@ -125,7 +125,7 @@ SELECT @datetime AS '@datetime', @date AS '@date';
 > You can also complete the example with the ISO 8601 compliant date format (YYYY-MM-DD). For example:
 >
 > ```sql
-> DECLARE @date date = '2016-21-12';  
+> DECLARE @date date = '2016-12-21';  
 > DECLARE @datetime datetime = @date;  
 > 
 > SELECT @datetime AS '@datetime', @date AS '@date';  

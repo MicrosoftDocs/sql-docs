@@ -1,8 +1,8 @@
 ---
-description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
+description: "CREATE EXTERNAL DATA SOURCE creates an external data source used to establish connectivity and data virtualization from SQL Server and Azure SQL platforms."
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 2/8/2022
+ms.date: 3/4/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)] ([!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]), or Azure SQL Edge.
+Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], ([!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]), or Azure SQL Edge.
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
@@ -927,10 +927,9 @@ CREATE DATABASE SCOPED CREDENTIAL SQLServerCredentials
 WITH IDENTITY = 'username', SECRET = 'password';
 ```
 
-Next, create the new external data source. The ODBC `Database` parameter is optional. If `Database` is not specified, the default database defined for the account used in the database scoped credential is used. You can provide the database name instead via a three-part name in the CREATE EXTERNAL TABLE statement, with the LOCATION parameter. For an example, see [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true#h-create-an-external-table-for-sql-server). 
+Next, create the new external data source. The ODBC `Database` parameter is optional. If `Database` is not specified, the default database defined for the account used in the database scoped credential is used. You can provide the database name instead via a three-part name in the CREATE EXTERNAL TABLE statement, within the LOCATION parameter. For an example, see [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true#h-create-an-external-table-for-sql-server).
 
-
-In example below, `WINSQL2019AGL` is the availability group listener name. 
+In example below, `WINSQL2019AGL` is the availability group listener name and `dbname` is the name of the database to be the target of the CREATE EXTERNAL TABLE statement.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
@@ -940,6 +939,48 @@ WITH (
   CREDENTIAL = SQLServerCredentials
 );
 ```
+
+You can demonstrate the redirection behavior of the availability group by specifying `ApplicationIntent` and creating a external table on the system view `sys.servers`. In the following sample script, two external data sources are created, and one external table is created for each. Use the views to test which server is responding to the connection. Similar outcomes can also be achieved via the read-only routing feature. For more information, see [Configure read-only routing for an Always On availability group](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).
+
+```sql
+CREATE EXTERNAL DATA SOURCE [DataSource_SQLInstanceListener_ReadOnlyIntent]
+WITH (
+  LOCATION = 'sqlserver://WINSQL2019AGL' , 
+  CONNECTION_OPTIONS = 'ApplicationIntent=ReadOnly;Database=dbname' ,
+  CREDENTIAL = [SQLServerCredentials]);
+GO
+CREATE EXTERNAL DATA SOURCE [DataSource_SQLInstanceListener_ReadWriteIntent]
+WITH (
+  LOCATION = 'sqlserver://WINSQL2019AGL' , 
+  CONNECTION_OPTIONS = 'ApplicationIntent=ReadWrite;Database=dbname' ,
+  CREDENTIAL = [SQLServerCredentials]);
+GO
+```
+
+Inside the database in the availability group, create a view to return the local value of `sys.servers`:
+
+```sql
+CREATE VIEW vw_sys_servers AS 
+SELECT [name] FROM sys.servers;
+GO
+```
+
+Then, create an external table on the source instance:
+
+```sql
+CREATE EXTERNAL TABLE vw_sys_servers_ro
+(    name sysname NOT NULL )
+WITH (DATA_SOURCE = [DataSource_SQLInstanceListener_ReadOnlyIntent], LOCATION = N'dbname.dbo.vw_sys_servers');
+GO
+CREATE EXTERNAL TABLE vw_sys_servers_rw
+(    name sysname NOT NULL)
+WITH (DATA_SOURCE = [DataSource_SQLInstanceListener_ReadWriteIntent], LOCATION = N'dbname.dbo.vw_sys_servers');
+GO
+SELECT [name] FROM dbo.vw_sys_servers_ro; --should return secondary instance
+SELECT [name] FROM dbo.vw_sys_servers_rw; --should return primary instance
+GO
+```
+
 
 ## Examples: Bulk Operations
 
@@ -1327,7 +1368,7 @@ go
 ## Overview: Azure Synapse Analytics
 [!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE[asa](../../includes/applies-to-version/_asa.md)]
 
-Creates an external data source for PolyBase. External data sources are used to establish connectivity and support the following primary use case: Data virtualization and data load using [PolyBase][intro_pb]
+Creates an external data source for PolyBase. External data sources are used to establish connectivity and support the primary use case of data virtualization and data load using [PolyBase][intro_pb]
 
 > [!IMPORTANT]  
 > To create an external data source to query a [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] resource using Azure SQL Database with [elastic query][remote_eq], see [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true).

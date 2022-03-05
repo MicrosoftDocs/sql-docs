@@ -57,7 +57,7 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 |estimated_completion_time|**bigint**|Internal only. Is not nullable.|  
 |cpu_time|**int**|CPU time in milliseconds that is used by the request. Is not nullable.|  
 |total_elapsed_time|**int**|Total time elapsed in milliseconds since the request arrived. Is not nullable.|  
-|scheduler_id|**int**|ID of the scheduler that is scheduling this request. Is not nullable.|  
+|scheduler_id|**int**|ID of the scheduler that is scheduling this request. Is nullable.|  
 |task_address|**varbinary(8)**|Memory address allocated to the task that is associated with this request. Is nullable.|  
 |reads|**bigint**|Number of reads performed by this request. Is not nullable.|  
 |writes|**bigint**|Number of writes performed by this request. Is not nullable.|  

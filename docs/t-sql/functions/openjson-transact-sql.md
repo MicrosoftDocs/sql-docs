@@ -133,6 +133,35 @@ When **OPENJSON** parses a JSON array, the function returns the indexes of the e
 
 The comparison used to match path steps with the properties of the JSON expression is case-sensitive and collation-unaware (that is, a BIN2 comparison). 
 
+#### Array element identity
+
+the `OPENROWSET` function in the serverless SQL pool in Azure Synapse Analytics can automatically  generate the identity of each row that is returned as a result. The identity column is specified using the expression `$.sql:identity()` in the JSON path after the column definition. The column with this value in the JSON path expression will generate a unique 0-based number for each element in the JSON array that the function parses. The identity value represents the position/index of the array element.
+
+```sql
+DECLARE @array VARCHAR(MAX);
+SET @array = '[{"month":"Jan", "temp":10},{"month":"Feb", "temp":12},{"month":"Mar", "temp":15},
+               {"month":"Apr", "temp":17},{"month":"May", "temp":23},{"month":"Jun", "temp":27}
+              ]';
+
+SELECT * FROM OPENJSON(@array)
+        WITH (  month VARCHAR(3),
+                temp int,
+                month_id tinyint '$.sql:identity()') as months
+```
+
+**Results**
+
+| month	| temp	| month_id |
+| --- | --- | --- |
+| Jan	| 10	| 0 |
+| Feb	| 12	| 1 |
+| Mar	| 15	| 2 |
+| Apr	| 17	| 3 |
+| May	| 23	| 4 |
+| Jun	| 27	| 5 |
+
+The identity is available only in the serverless SQL pool in Synapse Analytics.
+
 ### *with_clause*
 
 Explicitly defines the output schema for the **OPENJSON** function to return. The optional *with_clause* can contain the following elements:

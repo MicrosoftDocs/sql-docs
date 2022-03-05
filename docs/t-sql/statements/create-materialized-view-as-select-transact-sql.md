@@ -1,6 +1,6 @@
 ---
+title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)"
 description: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)"
-title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2020"
 ms.prod: sql
@@ -10,9 +10,7 @@ ms.technology: data-warehouse
 ms.topic: reference
 f1_keywords: 
   - "CREATE VIEW"
-  - "VIEW_TSQL"
   - "VIEW"
-  - "CREATE_VIEW_TSQL"
   - "SCHEMABINDING_TSQL"
 dev_langs: 
   - "TSQL"

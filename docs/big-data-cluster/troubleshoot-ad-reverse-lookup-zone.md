@@ -13,6 +13,8 @@ ms.technology: big-data-cluster
 
 # AD mode deployment stopped - missing reverse lookup zone entry for DC
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 Deployment in Active Directory (AD) mode freezes. Check symptoms to see if cause is the domain controller DNS server is missing reverse lookup zone entry. 
 
 ## Symptom

@@ -49,6 +49,8 @@ items:
     items:
     - name: Introducing SQL Server Big Data Clusters
       href: big-data-cluster/big-data-cluster-overview.md
+    - name: Big data options on the Microsoft SQL Server platform
+      href: big-data-cluster/big-data-options.md
     - name: Release notes
       items:
         - name: Platform release notes
@@ -4619,8 +4621,6 @@ items:
       href: database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md
     - name: Log In to an Instance of SQL Server (Command Prompt)
       href: database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md
-    - name: Troubleshoot Connecting to the SQL Server Database Engine
-      href: database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md
     - name: Diagnostic Connection for Database Administrators
       href: database-engine/configure-windows/diagnostic-connection-for-database-administrators.md
     - name: SQL Server Express LocalDB
@@ -6183,7 +6183,7 @@ items:
     - name: Release notes
       href: tools/synapse-pathway/pathway-release-notes.md
     - name: Azure Synapse Pathway FAQ
-      href: tools/synapse-pathway/pathway-faq.md
+      href: tools/synapse-pathway/pathway-faq.yml
     - name: Installation
       href: tools/synapse-pathway/synapse-pathway-download.md
     - name: Behind the scenes
@@ -6206,8 +6206,6 @@ items:
           href: tools/synapse-pathway/data-type-mappings-microsoft-sql-server.md
         - name: Snowflake
           href: tools/synapse-pathway/data-type-mappings-snowflake.md
-        - name: Teradata Vantage
-          href: tools/synapse-pathway/data-type-mappings-teradata-vantage.md
     - name: Errors and Warnings
       items:
         - name: ASP0001
@@ -6236,12 +6234,14 @@ items:
   items:
   - name: Manage
     items:
-    - name: Accelerated Database Recovery
+    - name: Accelerated database recovery
       items:
       - name: Overview
         href: relational-databases/accelerated-database-recovery-concepts.md
       - name: Management
         href: relational-databases/accelerated-database-recovery-management.md
+      - name: Troubleshooting
+        href: relational-databases/accelerated-database-recovery-troubleshoot.md        
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager
@@ -7845,6 +7845,8 @@ items:
   items:
   - name: Overview
     href: relational-databases/security/securing-sql-server.md
+  - name: Best practices
+    href: relational-databases/security/sql-server-security-best-practices.md
   - name: How-to
     items:
     - name: Secure SQL Server
@@ -10220,6 +10222,8 @@ items:
     - name: Manage
       href: linux/sql-server-linux-management-overview.md
       items:
+      - name: Manage SQL services
+        href: linux/sql-server-linux-start-stop-restart-sql-server-services.md
       - name: Use SSMS to manage
         href: linux/sql-server-linux-manage-ssms.md
       - name: Use Azure Data Studio to manage
@@ -10620,6 +10624,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-855-database-engine-error.md
         - name: 856
           href: relational-databases/errors-events/mssqlserver-856-database-engine-error.md
+        - name: 898
+          href: relational-databases/errors-events/mssqlserver-898-database-engine-error.md
         - name: 905
           href: relational-databases/errors-events/mssqlserver-905-database-engine-error.md
         - name: 912
@@ -12545,6 +12551,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
       - name: sys.dm_database_replica_states (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md
+      - name: sys.dm_database_backups_azure-sql-database
+        href: relational-databases/system-dynamic-management-views/sys-dm-database-backups-azure-sql-database.md  
       - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
       - name: sys.dm_db_resource_stats (Azure SQL Database)
@@ -13070,6 +13078,10 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md
       - name: sys.dm_tran_version_store_space_usage
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md
+      - name: sys.dm_tran_aborted_transactions
+        href: relational-databases/system-dynamic-management-views/sys-dm-tran-aborted-transactions.md
+      - name: sys.dm_tran_persistent_version_store_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md
   - name: System functions
     href: relational-databases/system-functions/system-functions-category-transact-sql.md
     items:
@@ -13591,6 +13603,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-lock-transact-sql.md
       - name: sp_monitor
         href: relational-databases/system-stored-procedures/sp-monitor-transact-sql.md
+      - name: sp_persistent_version_cleanup
+        href: relational-databases/system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md
       - name: sp_procoption
         href: relational-databases/system-stored-procedures/sp-procoption-transact-sql.md
       - name: sp_recompile
@@ -14729,6 +14743,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md
       - name: sp_purge_jobhistory
         href: relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md
+      - name: sp_readerrorlog
+        href: relational-databases/system-stored-procedures/sp-readerrorlog-transact-sql.md
       - name: sp_remove_job_from_targets
         href: relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md
       - name: sp_resync_targetserver

@@ -93,7 +93,7 @@ To assign the *Azure Connected SQL Server Onboarding* role to Arc machine manage
 
 ```azurecli
 spID=$(az resource list -n <ArcMachineName> --query [*].identity.principalId --out tsv)
-az role assignment create --assignee $spID --role 'Azure Connected SQL Server Onboarding ' --scope /subscriptions/<mySubscriptionID>/resourceGroups/<myResourceGroup>
+az role assignment create --assignee $spID --role 'Azure Connected SQL Server Onboarding' --scope /subscriptions/<mySubscriptionID>/resourceGroups/<myResourceGroup>
 ```
 
 To install the SQL Server extension, run:

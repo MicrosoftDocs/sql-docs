@@ -115,7 +115,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## Indexed array xample  
+## Indexed array example  
 The following example retrieves each row of a result set as a numerically indexed array.  
   
 The example retrieves product information from the *Purchasing.PurchaseOrderDetail* table of the AdventureWorks database for products that have a specified date and a stocked quantity (*StockQty*) less than a specified value.  

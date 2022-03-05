@@ -277,7 +277,7 @@ Determining the appropriate size for `tempdb` in a [!INCLUDE[ssNoVersion](../../
 - Use the space-use values from the previous steps to predict your total workload usage. Adjust this value for projected concurrent activity, and then set the size of `tempdb` accordingly.
 
 ## Monitoring tempdb use
-Running out of disk space in `tempdb` can cause significant disruptions in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment. It can also prevent applications that are running from completing operations. You can use the [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) dynamic management view to monitor the disk space that's used in the `tempdb` files:
+Running out of disk space in `tempdb` can cause significant disruptions in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment. It can also prevent applications that are running from completing operations. You can use the [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) dynamic management view to monitor the disk space that's used in the `tempdb` files:
 
 ```sql
  -- Determining the amount of free space in tempdb

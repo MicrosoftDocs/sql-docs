@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article describes the role of the *SQL Server master instance* in a SQL Server big data cluster. The master pool contains the master instance of SQL Server. The master instance is a SQL Server instance running in a SQL Server big data cluster. The master instance manages connectivity, scale-out queries, metadata and user databases, and machine learning services.
 
 The SQL Server master instance provides the following functionality:

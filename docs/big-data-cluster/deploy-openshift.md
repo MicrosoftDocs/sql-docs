@@ -17,6 +17,8 @@ ms.custom:
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article explains how to deploy a SQL Server Big Data Cluster on OpenShift environments, on-premises or on Azure Red Hat OpenShift (ARO).
 
 > [!TIP]
@@ -71,7 +73,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 
    ```console
    oc create clusterrole bdc-role --verb=use --resource=scc --resource-name=bdc-scc -n <namespaceName>
-   oc create rolebinding bdc-rbac --clusterrole=bdc-role --group=system:serviceaccounts:mssql-bdc
+   oc create rolebinding bdc-rbac --clusterrole=bdc-role --group=system:serviceaccounts:<namespaceName>
    ```
 
 5. Assign appropriate permission to the user deploying BDC. Do one of the following. 

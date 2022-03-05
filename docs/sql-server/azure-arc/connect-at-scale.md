@@ -5,7 +5,7 @@ description: In this article, you learn different ways of connecting SQL Server 
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 07/30/2021
+ms.date: 02/23/2022
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -46,28 +46,17 @@ Each machine must have [Azure PowerShell](/powershell/azure/install-az-ps) insta
     $sp
     ```
 
-    ```output
-    Secret                : System.Security.SecureString
-    ServicePrincipalNames : {ad9bcd79-be9c-45ab-abd8-80ca1654a7d1, https://Arc-for-servers}
-    ApplicationId         : ad9bcd79-be9c-45ab-abd8-80ca1654a7d1
-    ObjectType            : ServicePrincipal
-    DisplayName           : Hybrid-RP
-    Id                    : 5be92c87-01c4-42f5-bade-c1c10af87758
-    Type                  :
-    ```
+2. Give the service principle permissions to access Microsoft Graph.
 
    > [!NOTE]
-   > When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [Required permissions](overview.md#required-permissions).
-
-2. Give the service principle permissions to access Microsoft Graph:
-    ```azurepowershell-interactive
-    $sp = New-AzADServicePrincipal -DisplayName "Arc-for-servers" -Role <your custom role>
-    ```
+   > - When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [Required permissions](overview.md#required-permissions).
+   > 
+   > - The service principal must have *Directory.ReadAll* permissions in Microsoft graph. For instructions how to assign [Directory permissions](/graph/permissions-reference#directory-permissions) to a service principal, see [Manage API permissions](/graph/migrate-azure-ad-graph-configure-permissions#option-1-use-the-azure-portal-to-find-the-apis-your-organization-uses).
 
 1. Retrieve the password stored in the `$sp` variable:
 
    ```azurepowershell-interactive
-   $credential = New-Object pscredential -ArgumentList "temp", $sp.Secret
+   $credential = New-Object pscredential -ArgumentList "temp", $sp.PasswordCredentials.SecretText 
    $credential.GetNetworkCredential().password
    ```
 
@@ -104,19 +93,10 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
    az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>
    ```
 
-   ```output
-   { "appId": "d2ff754a-e10a-4eb6-9cdc-ce6e7a4687db",
-     "displayName": "Arc-for-servers",
-     "name": "http://Arc-for-servers",
-     "password": {SomeRandomlyGeneratedPassword}",
-     "tenant": "2530e75f-673b-4841-8270-47ca6a34ef4f"
-   }
-   ```
+2. Download the Linux shell script from the Portal following the instructions in [Connect your SQL Server to Azure Arc](connect.md).
 
    > [!NOTE]
    > When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [Required permissions](overview.md#required-permissions).
-
-2. Download the Linux shell script from the Portal following the instructions in [Connect your SQL Server to Azure Arc](connect.md).
 
 3. Replace the following variables in the script using the values returned by the 'az ad sp create-for-rbac' command. These variables are initially empty.
 

@@ -43,7 +43,7 @@ ms.date: 11/17/2021
 > 
 >  -   **Windows 10 or 11**:  
 >          To open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, navigate to the file location listed above for your version. Clicking SQLServerManager15.msc opens the Configuration Manager. You can also right-click SQLServerManager15.msc to pin the Configuration Manager to the Start Page or Task Bar.
-
+>
 > -   **Windows 8**:  
 >          To open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, in the **Search** charm, under **Apps**, type **SQLServerManager\<version>.msc** such as **SQLServerManager13.msc**, and then press **Enter**.  
   

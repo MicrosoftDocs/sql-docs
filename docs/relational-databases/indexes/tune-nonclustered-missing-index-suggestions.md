@@ -25,7 +25,7 @@ Query optimization is a time sensitive process, so there are limitations to the 
 - Missing index suggestions are based on estimates made during the optimization of a single query, prior to query execution. Missing index suggestions aren't tested or updated after query execution.
 - The missing index feature suggests only nonclustered disk-based rowstore indexes. [Unique](../sql-server-index-design-guide.md#Unique) and [filtered indexes](../sql-server-index-design-guide.md#Filtered) aren't suggested.
 - [Key columns](../sql-server-index-design-guide.md#key-columns) are suggested, but the suggestion does not specify an order for those columns.
-- [Included columns](../sql-server-index-design-guide.md#Included_columns) are suggested, but no cost-benefit analysis is performed as to the size of the resulting index when a large number of included columns are suggested.
+- [Included columns](../sql-server-index-design-guide.md#Included_Columns) are suggested, but no cost-benefit analysis is performed as to the size of the resulting index when a large number of included columns are suggested.
 - Missing index requests may offer similar variations of indexes on the same table and column(s) across queries.
 - Suggestions are not made for trivial query plans.
 - Cost information is less accurate for queries involving only inequality predicates.
@@ -243,7 +243,7 @@ The order of included columns doesn't affect query performance. Learn more in [i
 
 When creating indexes, consider using [online index operations](guidelines-for-online-index-operations.md) when they are available.
 
-While indexes can dramatically improve query performance in some cases, indexes also have overhead and management costs. Review [general index design guidelines](../sql-server-index-design-guide.md#General_design) to help assess the benefit of indexes before creating them.
+While indexes can dramatically improve query performance in some cases, indexes also have overhead and management costs. Review [general index design guidelines](../sql-server-index-design-guide.md#General_Design) to help assess the benefit of indexes before creating them.
 
 ## Verify if your index change is successful
 

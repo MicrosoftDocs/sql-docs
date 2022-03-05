@@ -23,9 +23,9 @@ When the query optimizer generates a query plan, it analyzes what are the best i
 Query optimization is a time sensitive process, so there are limitations to the missing index feature. Limitations include:
 
 - Missing index suggestions are based on estimates made during the optimization of a single query, prior to query execution. Missing index suggestions aren't tested or updated after query execution.
-- The missing index feature suggests only nonclustered disk-based rowstore indexes. [Unique](../sql-server-index-design-guide.md#a-nameuniquea-unique-index-design-guidelines) and [filtered indexes](../sql-server-index-design-guide.md#a-namefiltereda-filtered-index-design-guidelines) aren't suggested.
+- The missing index feature suggests only nonclustered disk-based rowstore indexes. [Unique](../sql-server-index-design-guide.md#unique) and [filtered indexes](../sql-server-index-design-guide.md#filtered) aren't suggested.
 - [Key columns](../sql-server-index-design-guide.md#key-columns) are suggested, but the suggestion does not specify an order for those columns.
-- [Included columns](../sql-server-index-design-guide.md#a-nameincluded_columnsa-use-included-columns-to-extend-nonclustered-indexes) are suggested, but no cost-benefit analysis is performed as to the size of the resulting index when a large number of included columns are suggested.
+- [Included columns](../sql-server-index-design-guide.md#included_columns) are suggested, but no cost-benefit analysis is performed as to the size of the resulting index when a large number of included columns are suggested.
 - Missing index requests may offer similar variations of indexes on the same table and column(s) across queries.
 - Suggestions are not made for trivial query plans.
 - Cost information is less accurate for queries involving only inequality predicates.
@@ -87,7 +87,7 @@ To generate and view the missing index requests:
 1. Display the **Find** dialog by using the **CTRL+f** shortcut.
 1. Search for `MissingIndex`.
 
-    :::image type="content" source="media/missingindex-node-in-execution-plan-xml.png" alt-text="Screenshot of the XML for an execution plan. The "find" window has been opened, and the term 'MissingIndex' has been searched for in the document."  lightbox="media/missingindex-node-in-execution-plan-xml.png":::
+    :::image type="content" source="media/missingindex-node-in-execution-plan-xml.png" alt-text="Screenshot of the XML for an execution plan. The Find dialog has been opened, and the term MissingIndex has been searched for in the document."  lightbox="media/missingindex-node-in-execution-plan-xml.png":::
 
     In this example, there are two `MissingIndex` elements.
 
@@ -141,7 +141,7 @@ This query orders suggestions by a column named `estimated_improvement`. The est
 - The estimated impact of adding the index. This is an estimate of how much the nonclustered index would reduce the query cost.
 - The sum of executions of query operators (seeks and scans) that have been run for queries associated with the missing index request. As we discuss in [persist missing indexes with Query Store](#persist-missing-indexes-with-query-store), this information is periodically cleared.
 
-Review [limitations of missing index suggestions](#limitations-of-missing-index-suggestions) and how to [apply missing index suggestions](#apply-missing-index-suggestions) before creating indexes, and modify the index name to match the naming convention for your database.
+Review [Limitations of the missing index feature](#limitations-of-the-missing-index-feature) and how to [apply missing index suggestions](#apply-missing-index-suggestions) before creating indexes, and modify the index name to match the naming convention for your database.
 
 ## Persist missing indexes with Query Store
 
@@ -182,11 +182,11 @@ GO
 
 ## Apply missing index suggestions
 
-To effectively use missing index suggestions, follow [nonclustered index design guidelines](../sql-server-index-design-guide.md#a-namenonclustereda-nonclustered-index-design-guidelines). When tuning nonclustered indexes with missing index suggestions, review the base table structure, carefully combine indexes, consider key column order, and review included column suggestions.
+To effectively use missing index suggestions, follow [nonclustered index design guidelines](../sql-server-index-design-guide.md#nonclustered). When tuning nonclustered indexes with missing index suggestions, review the base table structure, carefully combine indexes, consider key column order, and review included column suggestions.
 
 ### Review the base table structure
 
-Before creating nonclustered indexes on a table based on missing index suggestions, review the table's [clustered index](../sql-server-index-design-guide.md#a-nameclustereda-clustered-index-design-guidelines). 
+Before creating nonclustered indexes on a table based on missing index suggestions, review the table's [clustered index](../sql-server-index-design-guide.md#clustered). 
 
 One way to check for a clustered index is by using the [sp_helpindex](../system-stored-procedures/sp-helpindex-transact-sql.md) system stored procedure. For example, we can view a summary of the indexes on the `Person.Address` table by executing the following statement:
 
@@ -198,7 +198,7 @@ Review the `index_description` column. A table can have only one clustered index
 
 :::image type="content" source="media/sp_helpindex.png" alt-text="A screenshot of the sp_helpindex being run against the `Person.Address` table in the AdventureWorks database. The table returns four indexes. The fourth index has an index_description that shows that it's a clustered, unique primary key.":::
 
-If no clustered index is present, the table is a [heap](heaps-tables-without-clustered-indexes.md). In this case, review if the table was intentionally created as a heap to solve a specific performance problem. Most tables benefit from clustered indexes: often, tables are implemented as heaps by accident. Consider implementing a clustered index based on the [clustered index design guidelines](../sql-server-index-design-guide.md#a-nameclustereda-clustered-index-design-guidelines).
+If no clustered index is present, the table is a [heap](heaps-tables-without-clustered-indexes.md). In this case, review if the table was intentionally created as a heap to solve a specific performance problem. Most tables benefit from clustered indexes: often, tables are implemented as heaps by accident. Consider implementing a clustered index based on the [clustered index design guidelines](../sql-server-index-design-guide.md#clustered).
 
 ### Review missing indexes and existing indexes for overlap
 
@@ -234,16 +234,16 @@ Tradeoffs are common in index tuning. It is quite likely that for many datasets,
 
 Indexes may be modified in multiple ways:
 
-- You can use the [CREATE INDEX Statement with the DROP_EXISTING clause](../../odbc/microsoft/create-index-statement.md#drop_existing-clause). You may wish to [rename the indexes](rename-indexes.md) following the modification so that the name still accurately describes the index definition, depending on your naming convention.
+- You can use the [CREATE INDEX Statement with the DROP_EXISTING clause](../../t-sql/statements/create-index-transact-sql.md#drop_existing-clause). You may wish to [rename the indexes](rename-indexes.md) following the modification so that the name still accurately describes the index definition, depending on your naming convention.
 - You can use the [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md) statement followed by a [CREATE INDEX Statement](../../odbc/microsoft/create-index-statement.md).
 
-The order of index keys matters when combining the index suggestions: `City` as a leading column is different from `StateProvinceID` as a leading column. Learn more in [nonclustered index design guidelines](../sql-server-index-design-guide.md#a-namenonclustereda-nonclustered-index-design-guidelines).
+The order of index keys matters when combining the index suggestions: `City` as a leading column is different from `StateProvinceID` as a leading column. Learn more in [nonclustered index design guidelines](../sql-server-index-design-guide.md#nonclustered).
 
 The order of included columns doesn't affect query performance. Learn more in [included columns guidelines](../sql-server-index-design-guide.md#index-with-included-columns-guidelines).
 
 When creating indexes, consider using [online index operations](guidelines-for-online-index-operations.md) when they are available.
 
-While indexes can dramatically improve query performance in some cases, indexes also have overhead and management costs. Review [general index design guidelines](../sql-server-index-design-guide.md#a-namegeneral_designa-general-index-design-guidelines) to help assess the benefit of indexes before creating them.
+While indexes can dramatically improve query performance in some cases, indexes also have overhead and management costs. Review [general index design guidelines](../sql-server-index-design-guide.md#general_design) to help assess the benefit of indexes before creating them.
 
 ## Verify if your index change is successful
 

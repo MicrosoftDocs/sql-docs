@@ -86,7 +86,7 @@ An index is an on-disk or in-memory structure associated with a table or view th
   
 5. Determine the optimal storage location for the index.
 
-    A nonclustered index can be stored in the same filegroup as the underlying table, or on a different filegroup. The storage location of indexes can improve query performance by increasing disk I/O performance. For example, storing a nonclustered index on a filegroup that is on a different disk than the table filegroup can improve performance because multiple disks can be read at the same time. Alternatively, clustered and nonclustered indexes can use a partition scheme across multiple filegroups. When you consider partitioning, determine whether the index should be aligned, that is, partitioned in essentially the same manner as the table, or partitioned independently. Learn more in the [index placement on filegroups or partitions schemes](#index_placement) section of this article.
+    A nonclustered index can be stored in the same filegroup as the underlying table, or on a different filegroup. The storage location of indexes can improve query performance by increasing disk I/O performance. For example, storing a nonclustered index on a filegroup that is on a different disk than the table filegroup can improve performance because multiple disks can be read at the same time. Alternatively, clustered and nonclustered indexes can use a partition scheme across multiple filegroups. When you consider partitioning, determine whether the index should be aligned, that is, partitioned in essentially the same manner as the table, or partitioned independently. Learn more in the [index placement on filegroups or partitions schemes](#Index_placement) section of this article.
 1. When you identify missing indexes with Dynamic Management Views (DMVs) such as [sys.dm_db_missing_index_details](system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) and [sys.dm_db_missing_index_columns](system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md), you may be offered similar variations of indexes on the same table and column(s). Examine existing indexes on the table along with missing index suggestions to prevent creating duplicate indexes. Learn more in [tune nonclustered indexes with missing index suggestions](indexes/tune-nonclustered-missing-index-suggestions.md).
 
 ##  <a name="General_Design"></a> General index design guidelines  
@@ -162,7 +162,7 @@ An index is an on-disk or in-memory structure associated with a table or view th
   
 You can also customize the initial storage characteristics of the index to optimize its performance or maintenance by setting an option such as FILLFACTOR. Also, you can determine the index storage location by using filegroups or partition schemes to optimize performance.  
   
-###  <a name="Index_placement"></a> Index placement on filegroups or partitions schemes  
+###  <a name=IIndex_placement"></a> Index placement on filegroups or partitions schemes  
  As you develop your index design strategy, you should consider the placement of the indexes on the filegroups associated with the database. Careful selection of the filegroup or partition scheme can improve query performance.  
   
  By default, indexes are stored in the same filegroup as the base table on which the index is created. A nonpartitioned clustered index and the base table always reside in the same filegroup. However, you can do the following:  

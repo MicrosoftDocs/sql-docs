@@ -162,7 +162,7 @@ An index is an on-disk or in-memory structure associated with a table or view th
   
 You can also customize the initial storage characteristics of the index to optimize its performance or maintenance by setting an option such as FILLFACTOR. Also, you can determine the index storage location by using filegroups or partition schemes to optimize performance.  
   
-###  <a name=IIndex_placement"></a> Index placement on filegroups or partitions schemes  
+###  <a name=Index_placement"></a> Index placement on filegroups or partitions schemes  
  As you develop your index design strategy, you should consider the placement of the indexes on the filegroups associated with the database. Careful selection of the filegroup or partition scheme can improve query performance.  
   
  By default, indexes are stored in the same filegroup as the base table on which the index is created. A nonpartitioned clustered index and the base table always reside in the same filegroup. However, you can do the following:  

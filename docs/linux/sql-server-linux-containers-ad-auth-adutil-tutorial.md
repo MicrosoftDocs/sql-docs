@@ -201,7 +201,7 @@ chmod 440 /container/sql1/secrets/mssql.keytab
     .contoso.com = CONTOSO.COM
     contoso.com = CONTOSO.COM
     ```
-    
+
 1. Copy all files, `mssql.conf`, `krb5.conf`, `mssql.keytab` to a location that will be mounted to the SQL Server container. In this example, these files are placed on the host at the following locations: `mssql.conf` and `krb5.conf` at `/container/sql1/`. `mssql.keytab` is placed at the location `/container/sql1/secrets/`.
 
 1. Make sure there's enough permission on these folders for the user running the docker/podman command. When the container starts, the user needs access to the folder path created. In this example, we provided the below permissions given to the folder path:
@@ -254,7 +254,7 @@ create login [contoso\amvin] From Windows
 SELECT name FROM sys.server_principals;
 ```
 
-## Connect to SQL Server using AD authentication.
+## Connect to SQL Server using AD authentication
 
 To connect using [SSMS](../ssms/download-sql-server-management-studio-ssms.md) or [ADS](../azure-data-studio/download-azure-data-studio.md), log in to the SQL Server with Windows credentials using the SQL Server name and port number (name could be the container name or the host name). For our example, the server name would be `sql1.contoso.com, 5433`.
 
@@ -263,6 +263,11 @@ You can also use a tool like [sqlcmd](../tools/sqlcmd-utility.md) to connect to 
 ```bash
 sqlcmd -E -S 'sql1.contoso.com, 5433'
 ```
+
+## Resources
+
+- [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)
+- [Troubleshooting Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-troubleshooting.md)
 
 ## Next Steps
 

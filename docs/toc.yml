@@ -10134,11 +10134,16 @@ items:
       href: linux/tutorial-restore-backup-in-sql-server-container.md
     - name: Create a job
       href: linux/sql-server-linux-run-sql-server-agent-job.md
-    - name: Setup AD Authentication
-      href: linux/sql-server-linux-active-directory-authentication.md
+    - name: Set up AD Authentication
       items:
-      - name: Setup AD Authentication using adutil
+      - name: Use adutil to set up AD Authentication
         href: linux/sql-server-linux-ad-auth-adutil-tutorial.md
+      - name: Set up AD Authentication
+        href: linux/sql-server-linux-active-directory-authentication.md
+      - name: Understanding AD Authentication
+        href: linux/sql-server-linux-active-directory-understanding.md
+      - name: Troubleshooting AD Authentication
+        href: linux/sql-server-linux-ad-auth-troubleshooting.md
     - name: Create failover cluster instance
       href: linux/sql-server-linux-shared-disk-cluster-configure.md
       items:

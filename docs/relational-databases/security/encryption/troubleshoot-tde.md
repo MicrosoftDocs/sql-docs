@@ -159,7 +159,10 @@ Confirm that the server has permissions to the key vault and the correct permiss
 
 ## Getting TDE status from the Activity log
 
-To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](/azure/service-health/alerts-activity-log-service-notifications) for the resource ID based on the Azure Resource Manager URL and Subscription+ResourceGroup+ServerName+DatabaseName: 
+To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](/azure/service-health/alerts-activity-log-service-notifications) for the resource ID based on the Azure Resource Manager URL.
+
+> [!NOTE]
+> Events may take at least 15-30 mins to appear in the Activity Log from the time key vault access issue occurs. 
 
 **Event when the service loses access to the Azure Key Vault key**
 
@@ -169,36 +172,17 @@ EventName: MakeDatabaseInaccessible
 
 Status: Started 
 
-Description: Database has lost access to Azure key vault key and is now inaccessible. 
+Description: Database {database_name} on Server {server_name} has lost access to Azure Key Vault Key and is now transitioning to inaccessible state.  
   
 **Azure SQL Managed Instance**
 
-EventName: MakeManagedDbInaccessible
+EventName: MakeManagedDatabaseInaccessible
 
 Status: Started 
 
-Description: Database on managed server has lost access to Azure Key Vault Key and is now transitioning to inaccessible state.
+Description: Database { database_name} on managed server {server_name} has lost access to Azure Key Vault Key and is now transitioning to inaccessible state.
 
-  
-**Event when the database has automatically come back online**
 
-**Azure SQL Database**
-  
-EventName: MakeDatabaseAccessible
-
-Status: Succeeded 
-
-Description: Database access to Azure key vault key has been reestablished and database is now online. 
-
-**Azure SQL Managed Instance**
-  
-EventName: MakeManagedDbAccessible
-
-Status: Succeeded 
-
-Description: Access to Azure Key Vault Key has been re-established and all managed databases in server is now online.
-  
- 
 **Event when the issue wasn’t resolved within 30 minutes and Azure Key Vault key access has to be validated manually** 
 
 **Azure SQL Database**
@@ -211,31 +195,12 @@ Description: Database is inaccessible and requires user to resolve Azure key vau
 
 **Azure SQL Managed Instance**
   
-EventName: MakeManagedDbInaccessible 
+EventName: MakeManagedDatabaseInaccessible 
 
 Status: Succeeded 
 
-Description: Database on managed server is inaccessible and requires user to re-establish access to Azure Key Vault Key.   
-  
- 
-**Event when db comes online after manual key re-validation**
+Description: Database { database_name} on managed server {server_name} is inaccessible and requires user to re-establish access to Azure Key Vault Key.
 
-**Azure SQL Database**
-  
-EventName: MakeDatabaseAccessible 
-
-Status: Succeeded 
-
-Description: Database access to Azure key vault key has been reestablished and database is now online. 
-
-**Azure SQL Managed Instance**
-  
-EventName: MakeManagedDbAccessible 
-
-Status: Succeeded 
-
-Description: Access to Azure Key Vault Key has been re-established and all managed databases in server is now online. 
-  
 
 **Event when re-validation of Azure Key Vault key access has succeeded and the db is coming back online**
 
@@ -245,15 +210,34 @@ EventName: MakeDatabaseAccessible
 
 Status: Started 
 
-Description: Restoring database access to Azure key vault key has started. 
+Description: Access to Azure Key Vault Key has been re-established, operation to make database {database_name} on server {server_name} accessible started. 
 
 **Azure SQL Managed Instance**
   
-EventName: MakeManagedDbAccessible 
+EventName: MakeManagedDatabaseAccessible 
 
 Status: Started 
 
-Description: Access to Azure Key Vault Key has been re-established, operation to make all databases accessible in managed server started
+Description: Access to Azure Key Vault Key has been re-established, operation to make database {database_name} on managed server {server_name} accessible started.
+
+  
+**Event when the database has successfully come back online**
+
+**Azure SQL Database**
+  
+EventName: MakeDatabaseAccessible
+
+Status: Succeeded 
+
+Description: Access to Azure Key Vault Key has been re-established and database {database_name} on server {server_name} is now online.
+
+**Azure SQL Managed Instance**
+  
+EventName: MakeManagedDatabaseAccessible
+
+Status: Succeeded 
+
+Description: Access to Azure Key Vault Key has been re-established and database {database_name} on managed server {server_name} is now online.  
   
 
 **Event when re-validation of Azure Key Vault key access has failed**
@@ -264,15 +248,15 @@ EventName: MakeDatabaseAccessible
 
 Status: Failed 
 
-Description: Restoring database access to Azure key vault key has failed. 
+Description: Access to Azure Key Vault Key has been re-established, operation to make database {database_name} accessible on server {server_name} failed
 
 **Azure SQL Managed Instance**
   
-EventName: MakeManagedDbAccessible 
+EventName: MakeManagedDatabaseAccessible 
 
 Status: Failed 
 
-Description: Restoring database access to Azure key vault key has failed. 
+Description: Access to Azure Key Vault Key has been re-established, operation to make database {database_name} accessible on managed server {server_name} failed 
   
 
 ## Next steps

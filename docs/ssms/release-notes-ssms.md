@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 02/24/2022
+ms.date: 03/08/2022
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -23,7 +23,65 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.11](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+SSMS 18.11.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+### 18.11.1
+
+- Release number: 18.11.1
+- Build number: 15.0.18410.0
+- Release date: March 08, 2022
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2189054&clcid=0x40a)
+
+#### What's new in 18.11.1
+
+| New Item | Details |
+|----------|---------|
+| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.35.0. |
+| Data Classification | Introduced Set Microsoft Information Protection Policy menu option. |
+| Data Classification | Added M365 authentication window to set MIP policy. |
+| Data Classification | Classify Data page and Add Classification page display the M365 sensitivity labels when in MIP policy mode. |
+| Data Classification | Added warning icon against the columns if the prior classification and current Information Protection policy mode doesn’t match. |
+| Data Classification | Classification recommendation option is disabled in MIP mode. |
+| Link feature for Azure SQL Managed Instance | Introduced connection wizard to assist with establishing a hybrid link between SQL Server and Managed Instance.  See [Link feature for Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/managed-instance/link-feature). |
+| Link feature for Azure SQL Managed Instance | Introduced failover wizard to assist with migration of databases from SQL Server to Azure SQL Managed Instance using the link feature. |
+| Link feature for Azure SQL Managed Instance | Introduced dashboard to monitor the status of the hybrid link established between SQL Server and Managed Instance. |
+
+#### Known issues (18.11.1)
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | Uninstalling and reinstalling SQL Server Management Studio.  If not solved by reinstallation, close all instances of SSMS, backup and then remove `%AppData%\Microsoft\SQL Server Management Studio` and `%LocalAppData%\Microsoft\SQL Server Management Studio`. |
+| General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
+| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+| Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
+
+You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+|--------------|--------------|--------------|
+| [18.11](#1811) | 15.0.18404.0 | February 24, 2022 |
+| [18.10](#1810) | 15.0.18390.0 | October 5, 2021 |
+| [18.9.2](#1892) | 15.0.18386.0 | July 15, 2021 |
+| [18.9.1](#1891) | 15.0.18384.0 | April 20, 2021 |
+| [18.9](#189) | 15.0.18382.0 | April 15, 2021 |
+| [18.8](#188) | 15.0.18369.0 | December 17, 2020 |
+| [18.7.1](#1871) | 15.0.18358.0 | October 27, 2020 |
+| [18.7](#187) | 15.0.18357.0 | October 20, 2020 |
+| [18.6](#186) | 15.0.18338.0 | July 22, 2020 |
+| [18.5.1](#1851) | 15.0.18333.0 | June 09, 2020 |
+| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
+| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
+| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
+| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
+| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
+| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 18.11
 
@@ -31,7 +89,7 @@ SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need 
 - Build number: 15.0.18404.0
 - Release date: February 24, 2022
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2174135&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2188603&clcid=0x40a)
 
 #### What's new in 18.11
 
@@ -81,32 +139,6 @@ SSMS 18.11 is the latest general availability (GA) release of SSMS. If you need 
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 | Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
 
-You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
-
-## Previous SSMS releases
-
-Download previous SSMS versions by selecting the download link in the related section.
-
-| SSMS version | Build number | Release date |
-|--------------|--------------|--------------|
-| [18.10](#1810) | 15.0.18390.0 | October 5, 2021 |
-| [18.9.2](#1892) | 15.0.18386.0 | July 15, 2021 |
-| [18.9.1](#1891) | 15.0.18384.0 | April 20, 2021 |
-| [18.9](#189) | 15.0.18382.0 | April 15, 2021 |
-| [18.8](#188) | 15.0.18369.0 | December 17, 2020 |
-| [18.7.1](#1871) | 15.0.18358.0 | October 27, 2020 |
-| [18.7](#187) | 15.0.18357.0 | October 20, 2020 |
-| [18.6](#186) | 15.0.18338.0 | July 22, 2020 |
-| [18.5.1](#1851) | 15.0.18333.0 | June 09, 2020 |
-| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
-| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
-| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
-| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
-| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
-| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
-| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
-
 ### 18.10
 
 ![download](media/download-icon.png) [Download SSMS 18.10](https://go.microsoft.com/fwlink/?linkid=2168063)
@@ -154,7 +186,6 @@ Download previous SSMS versions by selecting the download link in the related se
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 
-You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
 ### 18.9.2
 

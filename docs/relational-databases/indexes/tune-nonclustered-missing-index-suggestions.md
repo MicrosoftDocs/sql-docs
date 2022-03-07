@@ -31,7 +31,7 @@ Query optimization is a time sensitive process, so there are limitations to the 
 - Cost information is less accurate for queries involving only inequality predicates.
 - Suggestions are gathered for a maximum of 500 missing index groups. After this threshold is reached, no more missing index group data is gathered.
 
-Due to these limitations, missing index suggestions should be used as one of several sources of information when performing index analysis, design, tuning, and testing. Missing index suggestions shouldn't be treated as a prescription to create indexes exactly as suggested.
+Due to these limitations, missing index suggestions are best treated as one of several sources of information when performing index analysis, design, tuning, and testing. Missing index suggestions are not prescriptions to create indexes exactly as suggested.
 
 > [!NOTE]
 > Azure SQL Database offers [automatic index tuning](/azure/azure-sql/database/automatic-tuning-overview). Automatic index tuning uses machine learning to learn horizontally from all databases in Azure SQL Database through AI and dynamically improve its tuning actions. Automatic index tuning includes a verification process to ensure there is a positive improvement to the workload performance from indexes created.
@@ -135,11 +135,14 @@ ORDER BY estimated_improvement DESC;
 GO
 ```
 
-This query orders suggestions by a column named `estimated_improvement`. The estimated improvement is only an estimate: it is based on a combination of:
+This query orders suggestions by a column named `estimated_improvement`. The estimated improvement is based on a combination of:
 
 - The estimated query cost of queries associated with the missing index request.
 - The estimated impact of adding the index. This is an estimate of how much the nonclustered index would reduce the query cost.
 - The sum of executions of query operators (seeks and scans) that have been run for queries associated with the missing index request. As we discuss in [persist missing indexes with Query Store](#persist-missing-indexes-with-query-store), this information is periodically cleared.
+
+> [!NOTE]
+> The [Index-Creation](https://github.com/microsoft/tigertoolbox/tree/master/Index-Creation) script in Microsoft's [Tiger Toolbox](https://github.com/microsoft/tigertoolbox) provides a query that examines the missing index dynamic management views and automatically removes any redundant suggested indexes, parses out low impact indexes, and generates index creation scripts for your review. As in the query above, it does NOT execute index creation commands.
 
 Review [Limitations of the missing index feature](#limitations-of-the-missing-index-feature) and how to [apply missing index suggestions](#apply-missing-index-suggestions) before creating indexes, and modify the index name to match the naming convention for your database.
 

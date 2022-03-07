@@ -86,6 +86,9 @@ WHERE CONVERT (decimal (28, 1),migs.avg_total_user_cost * migs.avg_user_impact *
 ORDER BY migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + migs.user_scans) DESC
 ```
 
+> [!NOTE]
+> The [Index-Creation](https://github.com/microsoft/tigertoolbox/tree/master/Index-Creation) script in Microsoft's [Tiger Toolbox](https://github.com/microsoft/tigertoolbox) provides a query that examines the missing index dynamic management views and automatically removes any redundant suggested indexes, parses out low impact indexes, and generates index creation scripts for your review. As in the query above, it does NOT execute index creation commands.
+
 ## Next steps
 
 Learn more about the missing index feature in the following articles:

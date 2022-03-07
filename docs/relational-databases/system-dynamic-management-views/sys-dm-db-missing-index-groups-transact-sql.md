@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**index_handle**|**int**|Identifies a missing index that belongs to the group specified by **index_group_handle**.<br /><br /> An index group contains only one index.|  
   
 ## Remarks  
- Information returned by `sys.dm_db_missing_index_groups` is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until the database engine is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep it after server recycling. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
+ Information returned by `sys.dm_db_missing_index_groups` is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until the database engine is restarted. It may be useful for database administrators to periodically make backup copies of the missing index information if they want to keep it after server recycling. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
   
  Neither column of the output result set is a key, but together they form an index key.  
 

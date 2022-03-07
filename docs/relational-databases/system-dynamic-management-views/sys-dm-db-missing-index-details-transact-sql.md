@@ -2,7 +2,7 @@
 description: "sys.dm_db_missing_index_details (Transact-SQL)"
 title: "sys.dm_db_missing_index_details (Transact-SQL)"
 ms.custom: ""
-ms.date: "02/17/2022"
+ms.date: "3/8/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

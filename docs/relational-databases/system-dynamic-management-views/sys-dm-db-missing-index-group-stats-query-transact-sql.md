@@ -2,7 +2,7 @@
 description: "sys.dm_db_missing_index_group_stats_query (Transact-SQL)"
 title: "sys.dm_db_missing_index_group_stats_query (Transact-SQL)"
 ms.custom: ""
-ms.date: "05/06/2021"
+ms.date: "3/7/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

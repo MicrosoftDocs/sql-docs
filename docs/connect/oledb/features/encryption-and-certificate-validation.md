@@ -23,7 +23,6 @@ ms.author: v-davidengel
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-## Overview
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] always encrypts network packets associated with logging in. If no certificate has been provisioned on the server when it starts up, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] generates a self-signed certificate, which is used to encrypt login packets.
 
@@ -140,7 +139,7 @@ The following table describes the encryption and validation outcome for legacy a
 | 1 | 1 | Yes | Yes | Encryption of all network traffic always occurs, but may use a self-signed server certificate. |
 |  |  |  |  |  |
 
-## See Also
+## See also
 
 [OLE DB driver for SQL server features](oledb-driver-for-sql-server-features.md)  
 [Initialization and authorization properties](../ole-db-data-source-objects/initialization-and-authorization-properties.md)  

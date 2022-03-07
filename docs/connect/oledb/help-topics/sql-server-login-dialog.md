@@ -43,8 +43,9 @@ When you attempt to connect without specifying enough information, the OLE DB dr
 |Language|Specifies the national language to use for SQL Server system messages. The computer running SQL Server must have the language installed. This setting overrides the default language specified for the login on the server. If no language is specified, the connection uses the default language specified for the login on the server.|
 |Application Name|Specifies the application name to be stored in the **program_name** column in the row for this connection in **sys.sysprocesses**.|
 |Workstation ID|Specifies the workstation ID to be stored in the **hostname** column in the row for this connection in **sys.sysprocesses**.|
-|Connection encryption|When `Mandatory` or `Strict`, data that is passed through the connection will be encrypted. The `Strict` option additionally encrypts the PRELOGIN packets.|
-|Host name in certificate|The host name to be used in validating the SQL Server TLS/SSL certificate. If not set, the driver uses the server name on the connection URL as the host name to validate the SQL Server TLS/SSL certificate.|
+|Connection encryption|When `Mandatory` or `Strict`, data that is passed through the connection will be encrypted. The `Strict` option additionally encrypts the PRELOGIN packets. This option is only avaiable for versions 19.x.x.|
+|Use strong encryption for data|When checked, data that is passed through the connection will be encrypted. This option is only avaiable for versions 18.x.x.|
+|Host name in certificate|The host name to be used in validating the SQL Server TLS/SSL certificate. If not set, the driver uses the server name on the connection URL as the host name to validate the SQL Server TLS/SSL certificate. This option is only avaiable for versions 19.x.x.|
 |Trust server certificate|When checked, the server's certificate will be validated. Server's certificate must have the correct hostname of the server and issued by a trusted certificate authority.|
 
 > [!NOTE]  

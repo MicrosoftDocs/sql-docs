@@ -57451,6 +57451,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/connect/oledb/features/using-encryption-without-validation.md",
+      "redirect_url": "/sql/connect/oledb/features/encryption-and-certificate-validation",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/connect/oledb/index.md",
       "redirect_url": "/sql/connect/oledb/oledb-driver-for-sql-server",
       "redirect_document_id": false

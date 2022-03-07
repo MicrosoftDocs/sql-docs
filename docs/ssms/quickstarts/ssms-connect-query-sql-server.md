@@ -1,6 +1,6 @@
 ---
 title: Connect and query a SQL Server instance using SQL Server Management Studio (SSMS)
-description: Connect to a SQL Server instance in SSMS. Create and query a SQL Server database in SSMS running basic T-SQL queries.
+description: Connect to a SQL Server instance in SSMS. Create and query a SQL Server database in SSMS running basic Transact-SQL (T-SQL) queries.
 ms.prod: sql
 ms.technology: ssms
 ms.topic: quickstart
@@ -10,7 +10,7 @@ ms.reviewer: mikeray
 ms.custom:
   - contperf-fy21q2
   - intro-quickstart
-ms.date: 12/15/2020
+ms.date: 03/04/2022
 ---
 
 # Quickstart: Connect and query a SQL Server instance using SQL Server Management Studio (SSMS)
@@ -29,12 +29,24 @@ The article demonstrates how to follow the below steps:
 > - Query the new table and view the results
 > - Use the query window table to verify your connection properties
 
+
+This article covers connecting and querying an instance of SQL Server. For Azure SQL, see [Connect and query Azure SQL Database & SQL Managed Instance](/azure/azure-sql/database/connect-query-ssms). 
+
+To use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), see connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md).
+
+To learn more about SQL Server Management Studio, see [Additional Tips and Tricks](../tutorials/ssms-tricks.md).
+
 ## Prerequisites
 
-- [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md) installed.
-- [SQL Server instance](https://www.microsoft.com/sql-server/sql-server-downloads) installed and configured.
+To complete this quickstart, you need the following prerequisites: 
+
+
+- Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
+- [Install](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) and configure a [SQL Server instance](https://www.microsoft.com/sql-server/sql-server-downloads). 
 
 ## Connect to a SQL Server instance
+
+To connect to your SQL Server instance, follow these steps: 
 
 1. Start SQL Server Management Studio. The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
 
@@ -59,10 +71,6 @@ The article demonstrates how to follow the below steps:
 4. To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer** where the server name, the SQL Server version, and the username are displayed. These objects are different depending on the server type.
 
     :::image type="content" source="media/ssms-connect-query-sql-server/connect-on-prem.png" alt-text="Connecting to an on-premises server":::
-
-## Troubleshoot connectivity issues
-
-To review troubleshooting techniques to use when you can't connect to an instance of your SQL Server Database Engine on a single server, visit [Troubleshoot connecting to the SQL Server Database Engine](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
 
 ## Create a database
 
@@ -92,7 +100,7 @@ Now let's create a database named TutorialDB by following the below steps:
   
     After the query is complete, the new TutorialDB database appears in the list of databases in Object Explorer. If it isn't displayed, right-click the **Databases** node, and then select **Refresh**.
 
-## Create a table in the new database
+## Create a table
 
 In this section, you create a table in the newly created TutorialDB database. Because the query editor is still in the context of the *master* database, switch the connection context to the *TutorialDB* database by doing the following steps:
 
@@ -126,7 +134,7 @@ After the query is complete, the new Customers table is displayed in the list of
 
    :::image type="content" source="media/ssms-connect-query-sql-server/new-table.png" alt-text="New table":::
 
-## Insert rows into the new table
+## Insert rows
 
 Now let's insert some rows into the Customers table that you created. Paste the following T-SQL code snippet into the query window, and then select **Execute**:
 
@@ -175,9 +183,9 @@ You can find information about the connection properties under the results of yo
 
    :::image type="content" source="media/ssms-connect-query-sql-server/connection-properties.png" alt-text="Connection properties":::
 
-## Additional tools
+## Troubleshoot connectivity issues
 
-You can also use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), an [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md).
+To review troubleshooting techniques to use when you can't connect to an instance of your SQL Server Database Engine on a single server, visit [Troubleshoot connecting to the SQL Server Database Engine](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection).
 
 ## Next steps
 

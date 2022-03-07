@@ -220,7 +220,7 @@ One way to examine the definition of existing indexes on a table is to script ou
 1. Select all indexes listed on the Object Explorer Details pane with the shortcut **CTRL+a**.
 1. Right-click anywhere in the selected region and select the menu option **Script index as**, then **CREATE To** and **New Query Editor Window**.
 
-:::image type="content" source="media/object_explorer_details_script_all_indexes.png" alt-text="A screenshot of scripting out all indexes on a table using the Object Explorer Details pane in SSMS.":::
+:::image type="content" source="media/object_explorer_details_script_all_indexes.png" alt-text="A screenshot of scripting out all indexes on a table using the Object Explorer Details pane in SSMS."  lightbox="media/object_explorer_details_script_all_indexes.png":::
 
 #### Review indexes and combine where possible
 

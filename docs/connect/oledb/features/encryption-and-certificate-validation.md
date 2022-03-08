@@ -71,7 +71,6 @@ The following table describes the evaluation of the encryption settings:
 | 1 | Yes/Mandatory (default) | Mandatory |
 | 1 | Strict | Strict |
 | 2 | Ignored | Strict |
-|  |  |  |
 
 The following table describes the resulting encryption and validation:
 
@@ -82,7 +81,6 @@ The following table describes the resulting encryption and validation:
 | Mandatory | 1 | No (default) | Encryption occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
 | Mandatory | 1 | Yes | Encryption always occurs, but may use a self-signed server certificate. |
 | Strict | N/A | N/A | Encryption occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
-|  |  |  |  |
 
 > [!CAUTION]
 > The preceding table only provides a guide on the system behavior under different configurations. For secure connectivity, ensure that the client and server both require encryption (for server-side configuration, see [Configure Server for Forced Encryption](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md#configure-server)). Also ensure that the server has a verifiable certificate, and that the **`TrustServerCertificate`** setting on the client is set to FALSE.
@@ -102,7 +100,6 @@ To improve security, the new authentication methods respect the `TrustServerCert
 | 0 | Yes | Yes |
 | 1 | No (default) | Yes |
 | 1 | Yes | No |
-|  |  |  |
 
 The following table describes the evaluation of the encryption settings:
 
@@ -112,7 +109,6 @@ The following table describes the evaluation of the encryption settings:
 | 0 | Yes | Yes |
 | 1 | No (default) | Yes |
 | 1 | Yes | Yes |
-|  |  |  |
 
 The following table describes the resulting encryption and validation:
 
@@ -122,7 +118,6 @@ The following table describes the resulting encryption and validation:
 | No | Yes | Encryption occurs for LOGIN packets only if there's a verifiable server certificate, otherwise the connection attempt fails. |
 | Yes | No | Encryption of all network traffic always occurs, but may use a self-signed server certificate. |
 | Yes | Yes | Encryption of all network traffic occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
-|  |  |  |
 
 ### Major version 18 with legacy authentication methods
 
@@ -137,7 +132,6 @@ The following table describes the encryption and validation outcome for legacy a
 | 1 | 1 | No (default) | N/A | Encryption of all network traffic always occurs, but may use a self-signed server certificate. |
 | 1 | 1 | Yes | No (default) | Encryption of all network traffic occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
 | 1 | 1 | Yes | Yes | Encryption of all network traffic always occurs, but may use a self-signed server certificate. |
-|  |  |  |  |  |
 
 ## See also
 

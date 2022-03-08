@@ -278,7 +278,7 @@ The following statement creates a stored procedure name `pr_Names`, accepts an i
         PRINT 'Products less than ' + CAST(@VarPrice AS varchar(10));  
         -- A second statement starts here  
         SELECT ProductName, Price FROM vw_Names  
-              WHERE Price < @varPrice;  
+              WHERE Price < @VarPrice;  
      END  
   GO    
   ```  

@@ -1,8 +1,8 @@
 ---
-title: "Monitoring Performance By Using the Query Store"
+title: "Monitor Performance By Using the Query Store"
 description: The SQL Server Query Store provides insight on query plan choice and performance. Query Store captures history of queries, plans, and runtime statistics.
 ms.custom: ""
-ms.date: 10/28/2021
+ms.date: 03/07/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -15,20 +15,20 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
-# Monitoring performance by using the Query Store
+# Monitor performance by using the Query Store
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store feature provides you with insight on query plan choice and performance. It simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes happened on the server. You can configure query store using the [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) option.
 
 - For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
-- For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance with the Query Store](tuning-with-the-query-store.md).
+- For information on discovering actionable information and tune performance with the Query Store, see [Tune performance with the Query Store](tune-peformance-with-the-query-store.md).
 - For information on shaping query plans without changing application code, see [Query Store hints](query-store-hints.md).
 
 > [!IMPORTANT]
 > If you are using Query Store for just in time workload insights in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
 
-## <a name="Enabling"></a> Enabling the Query Store
+## <a name="Enabling"></a> Enable the Query Store
 
  Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics databases, and is enabled by default for new Azure SQL Database databases.
 
@@ -128,7 +128,7 @@ Select a plan to see the graphical query plan. Buttons are available to view the
 
 To force a plan, select a query and plan, then select **Force Plan**. You can only force plans that were saved by the query plan feature and are still retained in the query plan cache.
 
-## <a name="Waiting"></a> Finding waiting queries
+## <a name="Waiting"></a> Find waiting queries
 
 Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], wait statistics per query over time are available in Query Store.
 
@@ -284,7 +284,7 @@ To find out detailed information about Query Store status, execute following in 
 SELECT * FROM sys.database_query_store_options;
 ```
 
-#### Setting Query Store interval
+#### Configure Query Store interval
 
 You can override interval for aggregating query runtime statistics (default is 60 minutes). New value for interval is exposed through `sys.database_query_store_options` view.
 
@@ -335,7 +335,7 @@ SET QUERY_STORE (
 
 For the full list of configuration options, see [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
-#### Cleaning up the space
+#### Clean up the space
 
 Query Store internal tables are created in the PRIMARY filegroup during database creation and that configuration cannot be changed later. If you are running out of space you might want to clear older Query Store data by using the following statement.
 
@@ -393,25 +393,28 @@ The example above uses the `sp_query_store_remove_query` extended stored procedu
 - Use `sp_query_store_reset_exec_stats` to clear runtime statistics for a given plan.
 - Use `sp_query_store_remove_plan` to remove a single plan.
 
-### <a name="Performance"></a> Performance Auditing and Troubleshooting
+### <a name="Performance"></a> Performance auditing and troubleshooting
 
-For more information about diving into performance tuning with Query Store, see [Tuning performance with the Query Store](tuning-with-the-query-store.md).
+For more information about diving into performance tuning with Query Store, see [Tune performance with the Query Store](tune-peformance-with-the-query-store.md).
 
 Other performance topics:
 - [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md)
 
 
+## See also
+
+- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
+- [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
+- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+- [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)
+- [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md)
+- [How Query Store Collects Data](../../relational-databases/performance/how-query-store-collects-data.md)
+- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
+- [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)
+- [Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)
 
 ## Next steps
 
 - [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
-- [Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)
-- [How Query Store Collects Data](../../relational-databases/performance/how-query-store-collects-data.md)
-- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
-- [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
-- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
-- [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)
 - [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)
-- [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)
-- [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md)
-- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+- [Tune performance with the Query Store](tune-peformance-with-the-query-store.md)

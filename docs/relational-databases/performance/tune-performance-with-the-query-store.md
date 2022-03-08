@@ -1,6 +1,6 @@
 ---
-title: "Tuning performance with the Query Store"
-description: The Query Store provides can be used to discover and tune query performance in all SQL Server and Azure SQL platforms.
+title: "Tune performance with the Query Store"
+description: The Query Store can be used to discover and tune query performance in all SQL Server and Azure SQL platforms.
 ms.custom: ""
 ms.date: 03/07/2022
 ms.prod: sql
@@ -15,7 +15,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
-# Tuning performance with the Query Store
+# Tune performance with the Query Store
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
@@ -108,7 +108,7 @@ ORDER BY rs.avg_physical_io_reads DESC;
 
 #### Queries with multiple plans
 
-These queries are especially interesting because they are candidates for regressions due to plan choice change. The following query identifies these queries along with all plans:
+These queries are especially interesting because they're candidates for regressions due to plan choice change. The following query identifies these queries along with all plans:
 
 ```sql
 WITH Query_MultPlans

@@ -2,7 +2,7 @@
 title: "Query Store Usage Scenarios"
 description: Learn how Query Store can be used to track and ensure predictable workload performance. Consider several examples in SQL Server.
 ms.custom: ""
-ms.date: "03/07/2022"
+ms.date: 03/07/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=s
 -   Identify and improve ad hoc workloads  
 
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md#monitoring-performance-by-using-the-query-store).
-- For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tuning-with-the-query-store.md).
+- For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-peformance-with-the-query-store.md).
 - For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
   
 ## Pinpoint and fix queries with plan choice regressions  

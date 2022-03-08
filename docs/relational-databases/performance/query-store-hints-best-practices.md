@@ -2,7 +2,7 @@
 title: "Query Store hints (Preview) best practices"
 description: "Best practices for the Query Store hints feature, which helps you to shape query plans without changing application code."
 ms.custom: ""
-ms.date: "3/7/2022"
+ms.date: 03/07/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -22,7 +22,7 @@ This article details best practices for using the [Query Store hints feature](qu
 > Query Store hints are a public preview feature currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] – including hyperscale databases, as well as Azure SQL Managed Instance.
 
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md#monitoring-performance-by-using-the-query-store).
-- For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tuning-with-the-query-store.md).
+- For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-peformance-with-the-query-store.md).
 
 Learn how to improve bulk loading with Query Store hints with this 14-minute video:
 

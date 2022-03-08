@@ -7132,7 +7132,7 @@ items:
       - name: Validate Plan Guides After Upgrade
         href: relational-databases/performance/validate-plan-guides-after-upgrade.md
     - name: Query Store
-      href: relational-databases/performance/tuning-with-the-query-store.md
+      href: relational-databases/performance/tune-peformance-with-the-query-store.md
       items:
       - name: Query Store hints
         href: relational-databases/performance/query-store-hints.md

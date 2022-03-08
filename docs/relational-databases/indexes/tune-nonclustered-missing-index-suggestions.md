@@ -18,7 +18,7 @@ The missing indexes feature is a lightweight tool for finding missing indexes th
 
 ## Limitations of the missing index feature
 
-When the query optimizer generates a query plan, it analyzes what are the best indexes for a particular filter condition. If the best indexes don't exist, the query optimizer generates a suboptimal query plan, but still stores information about these indexes. The missing indexes feature enables you to access information about these indexes so you can decide whether they should be implemented.
+When the query optimizer generates a query plan, it analyzes what the best indexes are for a particular filter condition. If the best indexes don't exist, the query optimizer still generates a query plan using the least-costly access methods available, but also stores information about these indexes. The missing indexes feature enables you to access that information about best possible indexes so you can decide whether they should be implemented.
 
 Query optimization is a time sensitive process, so there are limitations to the missing index feature. Limitations include:
 
@@ -82,7 +82,7 @@ To generate and view the missing index requests:
     The execution plan XML will open as a new tab inside SSMS.
 
     > [!NOTE]
-    > The **Missing Index Details...** menu option will only show information for a single missing index suggestion, even if multiple suggestions are present in the execution plan XML. The missing index suggestion displayed may not be the one with the highest estimated improvement for the query.
+    > Only a single missing index suggestion will be shown in the **Missing Index Details...** menu option, even if multiple suggestions are present in the execution plan XML. The missing index suggestion displayed may not be the one with the highest estimated improvement for the query.
     
 1. Display the **Find** dialog by using the **CTRL+f** shortcut.
 1. Search for `MissingIndex`.

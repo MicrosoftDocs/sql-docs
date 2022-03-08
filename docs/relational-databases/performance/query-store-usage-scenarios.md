@@ -25,8 +25,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=s
 -   Keep performance stability during the upgrade to newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 -   Identify and improve ad hoc workloads  
 
-- For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md#monitoring-performance-by-using-the-query-store).
-- For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-peformance-with-the-query-store.md).
+- For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
+- For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).
 - For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
   
 ## Pinpoint and fix queries with plan choice regressions  

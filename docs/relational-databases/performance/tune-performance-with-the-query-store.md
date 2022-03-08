@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store feature provides you with power to discover and tune queries in your workload through the [!INCLUDE[ssmanstudiofull](../../includes/ssmanstudiofull-md.md)] visual interface and through T-SQL queries. This article details how you can take actionable information to improve query performance in your database, including how to identify queries based on their usage statistics and forcing plans. You can also use the [Query Store hints](query-store-hints.md) feature to identify queries and shape their query plans without changing application code.
 
 - For more information on how this data is collected, see [How Query Store collects data](how-query-store-collects-data.md).
-- For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md#monitoring-performance-by-using-the-query-store).
+- For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 - For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
 
 ## Performance tuning sample queries

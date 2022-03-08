@@ -21,8 +21,8 @@ This article details best practices for using the [Query Store hints feature](qu
 > [!Note]
 > Query Store hints are a public preview feature currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] – including hyperscale databases, as well as Azure SQL Managed Instance.
 
-- For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md#monitoring-performance-by-using-the-query-store).
-- For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-peformance-with-the-query-store.md).
+- For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
+- For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).
 
 Learn how to improve bulk loading with Query Store hints with this 14-minute video:
 
@@ -86,3 +86,4 @@ The RECOMPILE hint is not compatible with forced parameterization set at the dat
 - [Best practices with Query Store](best-practice-with-the-query-store.md)
 - [Monitor performance by using Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism)
+- [Tune performance with the Query Store](tune-performance-with-the-query-store.md)

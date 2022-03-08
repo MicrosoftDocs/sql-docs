@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 This article outlines the best practices for using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store with your workload.
 
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
-- For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-peformance-with-the-query-store.md).
+- For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).
 - For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
 
 > [!NOTE]
@@ -473,4 +473,4 @@ For more on estimating and configuring the size of the secondary Azure SQL datab
 ## Next steps
 
 - [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
-- [Tuning performance by using the Query Store](tune-peformance-with-the-query-store.md)
+- [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md)

@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store feature provides you with insight on query plan choice and performance. It simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes happened on the server. You can configure query store using the [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) option.
 
 - For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
-- For information on discovering actionable information and tune performance with the Query Store, see [Tune performance with the Query Store](tune-peformance-with-the-query-store.md).
+- For information on discovering actionable information and tune performance with the Query Store, see [Tune performance with the Query Store](tune-performance-with-the-query-store.md).
 - For information on shaping query plans without changing application code, see [Query Store hints](query-store-hints.md).
 
 > [!IMPORTANT]
@@ -395,7 +395,7 @@ The example above uses the `sp_query_store_remove_query` extended stored procedu
 
 ### <a name="Performance"></a> Performance auditing and troubleshooting
 
-For more information about diving into performance tuning with Query Store, see [Tune performance with the Query Store](tune-peformance-with-the-query-store.md).
+For more information about diving into performance tuning with Query Store, see [Tune performance with the Query Store](tune-performance-with-the-query-store.md).
 
 Other performance topics:
 - [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md)
@@ -417,4 +417,4 @@ Other performance topics:
 
 - [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
 - [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)
-- [Tune performance with the Query Store](tune-peformance-with-the-query-store.md)
+- [Tune performance with the Query Store](tune-performance-with-the-query-store.md)

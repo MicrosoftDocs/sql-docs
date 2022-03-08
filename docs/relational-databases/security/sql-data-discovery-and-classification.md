@@ -137,27 +137,27 @@ Power BI datasets or reports that connect to sensitivity-labeled data in support
 > :::image type="content" source="media/sql-data-discovery-and-classification/data-classification-warning-icon.png" alt-text="Screenshot of Data Classification warning of mismatched policies":::
 
 
-## <a id="Manage-information-protection-policy-with-SSMS"></a>Manage information protection policy with SSMS
+## <a id="Manage-information-protection-policy-with-SSMS"></a>Manage Information Protection Policy with SSMS
 
-You can manage the information protection policy using [SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) or later:
+You can manage the Information Protection Policy using [SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) or later:
 
 1. In SQL Server Management Studio (SSMS), connect to the SQL Server.
 
 2. In the SSMS Object Explorer, select one of your databases and choose **Tasks** > **Data Discovery and Classification**.
 
-   The following menu options allow you to manage the information protection policy:
+   The following menu options allow you to manage the Information Protection Policy:
 
-* **Set Microsoft Information Protection Policy**: sets the information protection policy to Microsoft Information Protection policy.
+* **Set Microsoft Information Protection Policy**: sets the Information Protection Policy to Microsoft Information Protection Policy.
 
-* **Set Information Protection Policy File**: uses the SQL information protection policy as defined in the selected JSON file. (See the default [Information Protection Policy File](https://github.com/Azure-Samples/sql-data-classification/blob/main/sql_information_protection_default.json))
+* **Set Information Protection Policy File**: uses the SQL Information Protection Policy as defined in the selected JSON file. (See the default [Information Protection Policy File](https://github.com/Azure-Samples/sql-data-classification/blob/main/sql_information_protection_default.json))
 
-* **Export Information Protection Policy**: exports the information protection policy to a JSON file.
+* **Export Information Protection Policy**: exports the Information Protection Policy to a JSON file.
 
-* **Reset Information Protection Policy**: resets the information protection policy to the default SQL information protection policy.
+* **Reset Information Protection Policy**: resets the Information Protection Policy to the default SQL Information Protection Policy.
 
 > [!IMPORTANT]
 > Information protection policy file is not stored in the SQL Server.
-> SSMS uses a default information protection policy. If an information protection policy customized fails, SSMS cannot use the default policy. Data classification fails. To resolve, click **Reset Information Protection Policy** to use the default policy and re-enable data classification.
+> SSMS uses a default Information Protection Policy. If an Information Protection Policy customized fails, SSMS cannot use the default policy. Data classification fails. To resolve, click **Reset Information Protection Policy** to use the default policy and re-enable data classification.
 
 ## <a id="sAccessing-the-classification-metadata"></a>Accessing the classification metadata
 
@@ -264,7 +264,7 @@ Consider protecting your sensitive columns by applying column level security mec
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Manage information protection policy with SSMS]: #subheading-3
+[Manage Information Protection Policy with SSMS]: #subheading-3
 [Accessing the classification metadata]: #subheading-4
 [Manage classifications]: #subheading-5
 [Next Steps]: #subheading-6

@@ -1,5 +1,5 @@
 ---
-title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
+title: "What's new in Data Migration Assistant (SQL Server)"
 description: Learn about the new features in each release of Data Migration Assistant for SQL Server and Azure SQL Database.
 ms.custom:
   - intro-whats-new

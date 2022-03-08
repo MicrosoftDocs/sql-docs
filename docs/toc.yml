@@ -13561,6 +13561,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md
       - name: sp_getapplock
         href: relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md
+      - name: sp_get_endpoint_certificate
+        href: relational-databases/system-stored-procedures/sp-get-endpoint-certificate-transact-sql.md
       - name: sp_get_query_template
         href: relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md
       - name: sp_help

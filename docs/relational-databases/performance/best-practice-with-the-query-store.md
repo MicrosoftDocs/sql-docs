@@ -19,12 +19,16 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 This article outlines the best practices for using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store with your workload.
 
+- For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md#monitoring-performance-by-using-the-query-store).
+- For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tuning-with-the-query-store.md).
+- For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
+
 > [!NOTE]
 > In Azure Synapse Analytics, configuration options for Query Store are not supported. 
 
 ## <a name="SSMS"></a> Use the latest [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has a set of user interfaces designed for configuring Query Store and for consuming collected data about your workload. Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [here](../../ssms/download-sql-server-management-studio-ssms.md).
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has a set of user interfaces designed for configuring Query Store and for consuming collected data about your workload. [Download the latest version of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]](../../ssms/download-sql-server-management-studio-ssms.md).
 
 For a quick description on how to use Query Store in troubleshooting scenarios, see [Query Store @Azure blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
 
@@ -32,7 +36,7 @@ For a quick description on how to use Query Store in troubleshooting scenarios, 
 
 If you run Query Store in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can use [Query Performance Insight](/azure/sql-database/sql-database-query-performance) to analyze resource consumption over time. While you can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to get detailed resource consumption for all your queries, such as CPU, memory, and I/O, Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database. For more information, see [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use).
 
-### <a name="QueryStoreOptions"> Query Store Defaults in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</a>
+### <a name="QueryStoreOptions"></a> Query Store Defaults in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 This section describes optimal configuration defaults in Azure SQL Database that are designed to ensure reliable operation of the Query Store and dependent features. Default configuration is optimized for continuous data collection, that is minimal time spent in OFF/READ_ONLY states. For more information about all available Query Store options, see [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 

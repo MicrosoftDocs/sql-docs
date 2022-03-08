@@ -1,8 +1,8 @@
 ---
-description: "sys.sp_query_store_set_hints (Transact-SQL)"
+description: "sys.sp_query_store_set_hints set Query Store hints, allowing you to influence queries without changing application code or database objects."
 title: "sys.sp_query_store_set_hints (Transact-SQL)"
 ms.custom: ""
-ms.date: "06/09/2021"
+ms.date: "03/07/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -52,9 +52,9 @@ In the cases where a hint would cause a query to fail, the hint is ignored and t
 
 To remove hints associated with a query_id, use the system stored procedure [sys.sp_query_store_clear_hints](sys-sp-query-store-clear-hints-transact-sql.md). 
 
-### Supported query hints (Preview)
+### Supported query hints 
 
-These [query hints](../../t-sql/queries/hints-transact-sql-query.md) are supported as Query Store hints:
+These [query hints](../../t-sql/queries/hints-transact-sql-query.md) are supported as Query Store hints, currently in preview:
 
 ```syntaxsql
 { HASH | ORDER } GROUP   

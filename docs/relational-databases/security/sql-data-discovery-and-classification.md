@@ -8,7 +8,7 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 03/08/2022
+ms.date: 03/09/2022
 ms.author: matripathy
 author: Madhumitatripathy
 ---
@@ -112,13 +112,13 @@ Power BI datasets or reports that connect to sensitivity-labeled data in support
 
    :::image type="content" source="media/sql-data-discovery-and-classification/data-classification-authenticate-microsoft-information-protection-policy.png" alt-text="Screenshot of authenticating to set Microsoft Information Protection Policy":::
 
-   If you want to sign into any of the Microsoft sovereign cloud to authenticate to Microsoft 365, go to SSMS > **Tools** > **Options** > **Azure Services** > **Azure Cloud**, and change the **Name** to the relevant Microsoft sovereign cloud.
-
-   :::image type="content" source="media/sql-data-discovery-and-classification/select-sovereign-cloud.png" alt-text="Screenshot of selecting type of Azure cloud in S S M S":::
-
 1. If the authentication is successful, you'll see a pop-up window with status as **Success**.
 
    :::image type="content" source="media/sql-data-discovery-and-classification/successfully-setting-microsoft-information-protection-policy.png" alt-text="Screenshot of successfully setting Microsoft Information Protection Policy in S S M S":::
+
+1. Optional - If you want to sign into any of the Microsoft sovereign cloud to authenticate to Microsoft 365, go to SSMS > **Tools** > **Options** > **Azure Services** > **Azure Cloud**, and change the **Name** to the relevant Microsoft sovereign cloud.
+
+   :::image type="content" source="media/sql-data-discovery-and-classification/select-sovereign-cloud.png" alt-text="Screenshot of selecting type of Azure cloud in S S M S":::
 
 1. In the SSMS **Object Explorer** window, right-click on the database that you would like to classify and choose **Tasks** > **Data Discovery and Classification** > **Classify Data**. You can now add new classification using MIP sensitivity labels defined in your Microsoft 365 tenant and use those labels to classify columns in SQL Server.
 

@@ -140,7 +140,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.10
 
-![download](media/download-icon.png) [Download SSMS 18.10](https://go.microsoft.com/fwlink/?linkid=2168063)
+![download](media/download-icon.png) [Download SSMS 18.10](https://go.microsoft.com/fwlink/?linkid=2174135)
 
 - Release number: 18.10
 - Build number: 15.0.18390.0

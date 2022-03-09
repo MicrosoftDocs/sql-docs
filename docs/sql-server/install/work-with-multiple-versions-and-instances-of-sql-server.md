@@ -23,7 +23,7 @@ ms.author: mikeray
 ---
 # Work with multiple versions and instances of SQL Server
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 You can install multiple instances of SQL Server, or install SQL Server on a computer where earlier SQL Server versions are already installed.
 

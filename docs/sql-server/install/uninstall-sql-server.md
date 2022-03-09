@@ -12,7 +12,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Uninstall SQL Server 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
   Follow the articles below to uninstall an existing instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] completely, and prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

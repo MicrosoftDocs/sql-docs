@@ -12,7 +12,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Local Language Versions in SQL Server
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports all languages that are supported by Windows operating systems.  
   

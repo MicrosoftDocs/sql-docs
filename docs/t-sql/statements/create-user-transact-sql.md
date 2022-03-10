@@ -2,7 +2,7 @@
 description: "CREATE USER (Transact-SQL)"
 title: CREATE USER (Transact-SQL)
 ms.custom: ""
-ms.date: "08/11/2021"
+ms.date: "03/11/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -35,14 +35,17 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Adds a user to the current database. The 12 types of users are listed below with a sample of the most basic syntax:  
+  Adds a user to the current database. The 13 types of users are listed below with a sample of the most basic syntax:  
   
 **Users based on logins in master** - This is the most common type of user.  
   
 -   User based on a login based on a Windows Active Directory account. `CREATE USER [Contoso\Fritz];`     
 -   User based on a login based on a Windows group. `CREATE USER [Contoso\Sales];`   
 -   User based on a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. `CREATE USER Mary;`  
-  
+-   User based on an Azure AD login. `CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com]`
+    > [!NOTE]
+    > [Azure Active Directory (Azure AD) server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins) are currently in public preview for Azure SQL Database.
+
 **Users that authenticate at the database** - Recommended to help make your database more portable.  
  Always allowed in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Only allowed in a contained database in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
@@ -85,7 +88,7 @@ CREATE USER
       windows_principal [ WITH <options_list> [ ,... ] ]  
   
     | user_name WITH PASSWORD = 'password' [ , <options_list> [ ,... ]   
-    | Azure_Active_Directory_principal FROM EXTERNAL PROVIDER   
+    | Azure_Active_Directory_principal FROM EXTERNAL PROVIDER [WITH OBJECT_ID = 'objectid'] 
     }  
   
  [ ; ]  
@@ -175,7 +178,7 @@ CREATE USER user_name
  Specifies the name by which the user is identified inside this database. *user_name* is a **sysname**. It can be up to 128 characters long. When creating a user based on a Windows principal, the Windows principal name becomes the user name unless another user name is specified.  
   
 #### LOGIN *login_name*  
- Specifies the login for which the database user is being created. *login_name* must be a valid login in the server. Can be a login based on a Windows principal (user or group), or a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. When this SQL Server login enters the database, it acquires the name and ID of the database user that is being created. When creating a login mapped from a Windows principal, use the format **[**_\<domainName\>_**\\**_\<loginName\>_**]**. For examples, see [Syntax Summary](#SyntaxSummary).  
+ Specifies the login for which the database user is being created. *login_name* must be a valid login in the server. Can be a login based on a Windows principal (user or group), a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, or a login using an Azure AD principal (user, group, or application). When this SQL Server login enters the database, it acquires the name and ID of the database user that is being created. When creating a login mapped from a Windows principal, use the format **[**_\<domainName\>_**\\**_\<loginName\>_**]**. For examples, see [Syntax Summary](#SyntaxSummary).  
   
  If the CREATE USER statement is the only statement in a SQL batch, Azure SQL Database supports the WITH LOGIN clause. If the CREATE USER statement is not the only statement in a SQL batch or is executed in dynamic SQL, the WITH LOGIN clause is not supported.  
   
@@ -186,7 +189,7 @@ CREATE USER user_name
  Specifies the Windows principal for which the database user is being created. The *windows_principal* can be a Windows user, or a Windows group. The user will be created even if the *windows_principal* does not have a login. When connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the *windows_principal* does not have a login, the Windows principal must authenticate at the [!INCLUDE[ssDE](../../includes/ssde-md.md)] through membership in a Windows group that has a login, or the connection string must specify the contained database as the initial catalog. When creating a user from a Windows principal, use the format **[**_\<domainName\>_**\\**_\<loginName\>_**]**. For examples, see [Syntax Summary](#SyntaxSummary). Users based on Active Directory users, are limited to names of fewer than 21 characters.
   
  #### '*Azure_Active_Directory_principal*'  
- **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
+ **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], Managed Instance, [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
  Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, an Azure Active Directory group, or an Azure Active Directory application. (Azure Active Directory users cannot have Windows Authentication logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog.
 
@@ -196,6 +199,8 @@ CREATE USER user_name
 
   - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
   - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+
+- [Azure Active Directory (Azure AD) server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins) introduces creating users that are mapped to Azure AD logins in the virtual master database. `CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com]`
 
 - Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, Managed Instance, or Azure Synapse.
 - DisplayName of Azure AD object for Azure AD Groups and Azure AD Applications. If you had the *Nurses* security group, you would use:  
@@ -242,7 +247,15 @@ CREATE USER user_name
   
 > [!WARNING]  
 >  Improper use of this option can lead to data corruption. For more information, see [Migrate Sensitive Data Protected by Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
-  
+
+#### FROM EXTERNAL PROVIDER </br>
+ **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and Managed Instance.  
+Specifies that the user is for Azure AD Authentication.
+
+#### WITH OBJECT_ID = *'objectid'*
+ **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and Managed Instance.  
+Specifies the Azure AD Object ID. In case the `Object_ID` is specified, the Azure Active Directory resource name is not required, and a different alias can be provided. The user_name must be a unique name in the `sys.database_principals` view. 
+
 ## Remarks  
  If FOR LOGIN is omitted, the new database user will be mapped to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with the same name.  
   
@@ -269,11 +282,11 @@ GO
   
  Information about database users is visible in the [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) catalog view.
 
-A new syntax extension, **FROM EXTERNAL PROVIDER** is available for creating server-level Azure AD logins in SQL Managed Instance. Azure AD logins allow database-level Azure AD principals to be mapped to server-level Azure AD logins. To create an Azure AD user from an Azure AD login use the following syntax:
+A new syntax extension, **FROM EXTERNAL PROVIDER** is available for creating server-level Azure AD logins in Azure SQL Database and Azure SQL Managed Instance. Azure AD logins allow database-level Azure AD principals to be mapped to server-level Azure AD logins. To create an Azure AD user from an Azure AD login use the following syntax:
 
 `CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
 
-When creating the user in the SQL Managed Instance database, the login_name must correspond to an existing Azure AD login, or else using the **FROM EXTERNAL PROVIDER** clause will only create an Azure AD user without a login in the master database. For example, this command will create a contained user:
+When creating the user in the Azure SQL database, the *login_name* must correspond to an existing Azure AD login, or else using the **FROM EXTERNAL PROVIDER** clause will only create an Azure AD user without a login in the master database. For example, this command will create a contained user:
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
@@ -463,11 +476,11 @@ WITH
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
 ```
 
-### I. Create an Azure AD user from an Azure AD login in SQL Managed Instance
+### I. Create an Azure AD user from an Azure AD login in Azure SQL
 
  To create an Azure AD user from an Azure AD login, use the following syntax.
 
- Sign into your managed instance with an Azure AD login granted with the `sysadmin` role. The following creates an Azure AD user bob@contoso.com, from the login bob@contoso.com. This login was created in the [CREATE LOGIN](./create-login-transact-sql.md#examples) example.
+ Sign into your SQL server or managed instance with an Azure AD login granted with the `sysadmin` role in managed instance, or `loginmanager` role in SQL Database. The following creates an Azure AD user `bob@contoso.com`, from the login `bob@contoso.com`. This login was created in the [CREATE LOGIN](./create-login-transact-sql.md#examples) example.
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -491,9 +504,9 @@ CREATE USER [bob@contoso.com] FROM LOGIN [AAD group];
 GO
 ```
 
-### J. Create an Azure AD user without an AAD login for the database
+### J. Create an Azure AD user without an Azure AD login for the database
 
-The following syntax is used to create an Azure AD user bob@contoso.com, in the SQL Managed Instance database (contained user):
+The following syntax is used to create an Azure AD user `bob@contoso.com`, in the SQL Managed Instance database (contained user):
 
 ```sql
 CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;

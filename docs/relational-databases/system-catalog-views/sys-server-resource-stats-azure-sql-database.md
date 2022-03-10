@@ -1,5 +1,5 @@
 ---
-description: "sys.server_resource_stats (Azure SQL Managed Instance)"
+description: "sys.server_resource_stats returns CPU usage, IO, and storage data for Azure SQL Managed Instance."
 title: "sys.server_resource_stats (Azure SQL Managed Instance)"
 ms.custom: ""
 ms.date: "03/09/2022"

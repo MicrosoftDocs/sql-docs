@@ -13004,7 +13004,7 @@ items:
       - name: sys.dm_os_memory_pools
         href: relational-databases/system-dynamic-management-views/sys-dm-os-memory-pools-transact-sql.md
       - name: sys.dm_os_out_of_memory_events 
-        href: relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events-transact-sql.md
+        href: relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events.md
       - name: sys.dm_os_nodes
         href: relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql.md
       - name: sys.dm_os_performance_counters

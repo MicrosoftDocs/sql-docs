@@ -2,7 +2,7 @@
 description: "sys.dm_os_out_of_memory_events returns a log of out of memory (OOM) events, including a predicted out of memory cause."
 title: "sys.dm_os_out_of_memory_events"
 ms.custom: ""
-ms.date: "01/14/2022"
+ms.date: "03/09/2022"
 ms.service: sql-database
 ms.topic: "reference"
 f1_keywords: 

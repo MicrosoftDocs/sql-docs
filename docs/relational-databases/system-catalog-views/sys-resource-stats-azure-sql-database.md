@@ -1,5 +1,5 @@
 ---
-description: "sys.resource_stats (Azure SQL Database)"
+description: "sys.resource_stats returns CPU usage and storage data for an Azure SQL Database. "
 title: "sys.resource_stats (Azure SQL Database)"
 ms.custom: ""
 ms.date: "03/09/2022"

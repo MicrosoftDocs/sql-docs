@@ -68,7 +68,7 @@ monikerRange: "=azuresqldb-current"
 > [!NOTE]
 > For more information on troubleshooting CPU utilization using dynamic management views, see [Identify CPU performance issues in Microsoft Azure SQL Database and Azure SQL Managed Instance performance](/azure/azure-sql/database/monitoring-with-dmvs#identify-cpu-performance-issues). 
 
- For a log of out of memory events, see [sys.dm_os_out_of_memory_events](../system-dynamic-management-views/sys-dm-os-out-of-memory-events.md).
+ To review recent out of memory events, use [sys.dm_os_out_of_memory_events](../system-dynamic-management-views/sys-dm-os-out-of-memory-events.md).
 
 ## Examples  
 
@@ -88,7 +88,8 @@ GROUP BY database_name
 HAVING AVG(avg_cpu_percent) >= 80;
 ```  
     
-## See Also  
+## See also  
+
  - [Service Tiers](/azure/azure-sql/database/purchasing-models)   
  - [Service tier capabilities and limits](/azure/azure-sql/database/performance-guidance) 
  - [sys.dm_os_out_of_memory_events (Azure SQL Database and Azure SQL Managed Instance)](../system-dynamic-management-views/sys-dm-os-out-of-memory-events.md)

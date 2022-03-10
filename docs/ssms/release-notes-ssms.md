@@ -42,7 +42,7 @@ SSMS 18.11.1 is the latest general availability (GA) release of SSMS. If you nee
 | Data Classification | Added M365 authentication window to set MIP policy. |
 | Data Classification | Classify Data page and Add Classification page display the M365 sensitivity labels when in MIP policy mode. |
 | Data Classification | Added warning icon against the columns if the prior classification and current Information Protection policy mode doesn’t match. |
-| Link feature for Azure SQL Managed Instance | Introduced connection wizard to assist with establishing a hybrid link between SQL Server and Managed Instance.  See [Link feature for Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/managed-instance/link-feature). |
+| Link feature for Azure SQL Managed Instance | Introduced connection wizard to assist with establishing a hybrid link between SQL Server and Managed Instance.  See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/link-feature). |
 | Link feature for Azure SQL Managed Instance | Introduced failover wizard to assist with migration of databases from SQL Server to Azure SQL Managed Instance using the link feature. |
 | Link feature for Azure SQL Managed Instance | Introduced dashboard to monitor the status of the hybrid link established between SQL Server and Managed Instance. |
 

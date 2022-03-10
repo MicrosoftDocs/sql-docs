@@ -83,7 +83,7 @@ This article helps you troubleshoot Active Directory (AD) authentication issues 
 
 1. In `krb5.conf` (located at `/etc/krb5.conf`), check that you have provided values for the default realm, realm information, and domain to realm mapping. A sample `krb5.conf` file is provided below. For more information, see [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md).
 
-    ```output
+    ```
     [libdefaults]
     default_realm = CONTOSO.COM
     
@@ -103,7 +103,7 @@ This article helps you troubleshoot Active Directory (AD) authentication issues 
 
     There are two steps you need to complete. First, modify `krb5.conf` by adding any number of domain controllers that you need, prefixed with `kdc =`.
 
-    ```output
+    ```
     [realms]
     CONTOSO.COM = {
       kdc = kdc1.contoso.com
@@ -183,7 +183,7 @@ If there aren't any problems, you should see output similar to the sample below.
 
 You can enable `security.kerberos` and `security.ldap` logging to identify specific error messages in the PAL (Platform Abstraction Layer). Create a `logger.ini` file with the content shown below at `/var/opt/mssql/log`, restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and then reproduce the failure. The PAL's AD error and debug messages will be logged to `/var/opt/mssql/log/security.log`.
 
-```output
+```
 [Output:security]
 Type = File
 Filename = /var/opt/mssql/log/security.log
@@ -203,7 +203,7 @@ The security log will continue to write to the drive until you remove the change
 
 The PAL logger generates log files in the following format:
 
-```output
+```
 <DATETIME> <Log level> [<logger>] <<process/thread identifier>> <message>
 ```
 

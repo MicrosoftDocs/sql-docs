@@ -16,10 +16,10 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 # Query Store hints (Preview) best practices
 [!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-This article details best practices for using the [Query Store hints feature](query-store-hints.md). The Query Store hints (preview) feature enables shaping query plan shapes without modifying application code.
+This article details best practices for using [Query Store hints (Preview)](query-store-hints.md). Query Store hints enable shaping query plan shapes without modifying application code.
 
 > [!Note]
-> Query Store hints are a public preview feature currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] – including hyperscale databases, as well as Azure SQL Managed Instance.
+> Query Store hints are a public preview feature currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as well as Azure SQL Managed Instance.
 
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 - For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).
@@ -31,6 +31,9 @@ Learn how to improve bulk loading with Query Store hints with this 14-minute vid
 ## Best use cases for Query Store hints
 
 Consider the following use cases as ideal of Query Store hints. For more information, see [When to use Query Store hints](query-store-hints.md#when-to-use-query-store-hints).
+
+> [!CAUTION]
+> Because the SQL Server Query Optimizer typically selects the best execution plan for a query, we recommend only using hints as a last resort for experienced developers and database administrators. For more information, see [Query Hints](../../t-sql/queries/hints-transact-sql-query.md).
 
 ### Code cannot be changed
 
@@ -46,9 +49,9 @@ Query Store hints can be added and removed to batches of queries to adjust perfo
 
 ### Replacement for plan guides
 
-Previous to Query Store hints, a developer would have to rely on [plan guides](plan-guides.md) to accomplish similar takss, which can be complex to use. The Query Store hints feature is integrated with the Query Store features of SQL Server Management Studio (SSMS), for visual exploration of queries. 
+Previous to Query Store hints, a developer would have to rely on [plan guides](plan-guides.md) to accomplish similar takss, which can be complex to use. Query Store hints are integrated with Query Store features of SQL Server Management Studio (SSMS), for visual exploration of queries. 
 
-With plan guides, searching through all plans using query snippets is necessary. The Query Store hints features does not require exact matching queries to impact the resulting query plan. Query Store hints can be applied to a `query_id` in the Query Store dataset. 
+With plan guides, searching through all plans using query snippets is necessary. The Query Store hints feature does not require exact matching queries to impact the resulting query plan. Query Store hints can be applied to a `query_id` in the Query Store dataset. 
 
 Query Store hints override hard-coded statement-level hints and existing plan guides. 
 
@@ -62,9 +65,9 @@ Query Store hints will affect all executions of the query, regardless of paramet
 
 Carefully load test changes for mission critical or sensitive systems before applying Query Store hints in production. 
 
-### Forced parameterization and the WITH RECOMPILE hint are not supported
+### Forced parameterization and the RECOMPILE hint are not supported
 
-Applying the WITH RECOMPILE query hint with Query Store hints is not supported when the database option [PARAMETERIZATION is set to FORCED](../../t-sql/statements/alter-database-transact-sql-set-options.md#parameterization_option-). For more information, see [Guidelines for Using Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).
+Applying the RECOMPILE query hint with Query Store hints is not supported when the database option [PARAMETERIZATION is set to FORCED](../../t-sql/statements/alter-database-transact-sql-set-options.md#parameterization_option-). For more information, see [Guidelines for Using Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).
 
 The RECOMPILE hint is not compatible with forced parameterization set at the database level. If the database has forced parameterization set, and the RECOMPILE hint is part of the hints string set in Query Store for a query, the Database Engine will ignore the RECOMPILE hint and will apply other hints if leveraged.
 

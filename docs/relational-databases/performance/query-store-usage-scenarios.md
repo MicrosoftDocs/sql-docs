@@ -47,7 +47,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=s
 ## Identify and tune top resource consuming queries  
  Although your workload may generate thousands of queries, typically only a handful of them actually use the most of the system resources and therefore require your attention. Among top resource consuming queries, you'll typically find queries that have either regressed or those that can be improved with additional tuning.  
   
- The easiest way to start exploration is to open **Top Resource Consuming Queries** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. User interface is separated into three panes: A histogram representing top resource consuming queries (left), a plan summary for selected query (right) and visual query plan for selected plan (bottom). Select the **Configure** button to control how many queries you want to analyze and the time interval of interest. Additionally, you can choose between different resource consumption dimensions (duration, CPU, memory, IO, number of executions) and the baseline (Average, Min, Max, Total, Standard Deviation).  
+ The easiest way to start exploration is to open **Top Resource Consuming Queries** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. User interface is separated into three panes: A histogram representing top resource consuming queries (left), a plan summary for selected query (right) and visual query plan for selected plan (bottom). Select **Configure** to control how many queries you want to analyze and the time interval of interest. Additionally, you can choose between different resource consumption dimensions (duration, CPU, memory, IO, number of executions) and the baseline (Average, Min, Max, Total, Standard Deviation).  
   
  ![Screenshot of the Query Store showing that you can identify and tune top resource consuming queries.](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
@@ -66,7 +66,7 @@ When you identify a query with suboptimal performance, your action depends on th
 5.  Consider rewriting expensive query. For example, take advantages of query parameterization and reduce usage of dynamic SQL. Implement optimal logic when read the data (apply data filtering on database side, not on application side).  
 
 ## A/B testing  
- Use Query Store to compare workload performance before and after the application change your plan to introduce. 
+ Use Query Store to compare workload performance before and after the application changes. 
 
 The following list contains several examples where you can use Query Store to assess impact of the environment or application change to the workload performance:  
   

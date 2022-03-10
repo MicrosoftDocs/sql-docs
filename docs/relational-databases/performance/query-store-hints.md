@@ -1,6 +1,6 @@
 ---
 title: "Query Store hints (Preview)"
-description: "Learn about the Query Store hints feature to shape query plans without changing application code."
+description: "Learn about Query Store hints, which can be used to shape query plans without changing application code."
 ms.custom: ""
 ms.date: "3/7/2022"
 ms.prod: sql
@@ -18,14 +18,17 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 # Query Store hints (Preview)
 [!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-This article outlines the Query Store hints feature of the Query Store. The Query Store hints feature provides an easy-to-use method for shaping query plans without changing application code. 
+This article outlines how to apply query hints using the Query Store. Query Store hints provide an easy-to-use method for shaping query plans without changing application code. 
 
 > [!Note]
-> Query Store hints are a public preview feature currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] – including hyperscale databases, as well as [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+> Query Store hints are a public preview feature currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as well as [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
 
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 - For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).
 - For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
+
+> [!CAUTION]
+> Because the SQL Server Query Optimizer typically selects the best execution plan for a query, we recommend only using hints as a last resort for experienced developers and database administrators. For more information, see [Query Hints](../../t-sql/queries/hints-transact-sql-query.md).
 
 ## Overview
 
@@ -96,25 +99,40 @@ When hints are applied, the following result set appears in the StmtSimple eleme
 ## Examples  
 
 ### A. Query Store hints demo
-The following walk-through of the Query Store hints feature in Azure SQL Database uses an imported database via a BACPAC file (.bacpac). Learn how to import a new database to an Azure SQL Database server, see [Quickstart: Import a BACPAC file to a database](/azure/azure-sql/database/database-import).
+The following walk-through of Query Store hints in Azure SQL Database uses an imported database via a BACPAC file (.bacpac). Learn how to import a new database to an Azure SQL Database server, see [Quickstart: Import a BACPAC file to a database](/azure/azure-sql/database/database-import).
 
 :::code language="tsql" source="../../../sql-server-samples/samples/features/query-store/query_store_hints_demo.sql":::
 
 ### B. Identify a query in Query Store
 
-The following example queries [sys.query_store_query_text](../system-catalog-views/sys-query-store-query-text-transact-sql.md) and [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md) to return the query_id for an executed query text fragment:
+The following example queries [sys.query_store_query_text](../system-catalog-views/sys-query-store-query-text-transact-sql.md) and [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md) to return the `query_id` for an executed query text fragment. 
+
+In this demo, the query we're attempting to tune is in the `SalesLT` sample database: 
+
+```sql
+SELECT * FROM SalesLT.Address as A 
+INNER JOIN SalesLT.CustomerAddress as CA
+on A.AddressID = CA.AddressID
+WHERE PostalCode = '98052' ORDER BY A.ModifiedDate DESC;
+```
+
+Note that Query Store doesn't immediately reflect query data to its system views.
+
+Identify the query in the query store system catalog views:
 
 ```sql
 SELECT q.query_id, qt.query_sql_text
 FROM sys.query_store_query_text qt 
 INNER JOIN sys.query_store_query q ON 
     qt.query_text_id = q.query_text_id 
-WHERE query_sql_text like N'%ORDER BY ListingPrice DESC%'  
+WHERE query_sql_text like N'%PostalCode =%'  
   AND query_sql_text not like N'%query_store%';
 GO
 ```
 
- Then, apply the hint to enforce a maximum memory grant size in percent of configured memory limit to the `query_id` (in this example, `query_id` in the previous query's resultset was 39):
+ In the following samples, the previous query example in the `SalesLT` database was identified as `query_id` 39.
+
+ Once identified, apply the hint to enforce a maximum memory grant size in percent of configured memory limit to the `query_id`:
   
 ```sql
 EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(MAX_GRANT_PERCENT=10)';
@@ -138,6 +156,12 @@ EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPI
 SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc 
 FROM sys.query_store_query_hints 
 WHERE query_id = 39;
+```
+
+ Finally, remove the hint from `query_id` 39, using [sp_query_store_clear_hints](sys-sp-query-store-clear-hints-transact-sql.md).  
+
+```sql
+EXEC sys.sp_query_store_clear_hints @query_id = 39;
 ```
 
 ## See also

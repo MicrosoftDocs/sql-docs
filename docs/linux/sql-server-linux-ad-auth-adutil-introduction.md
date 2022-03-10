@@ -41,7 +41,7 @@ For more information on how to configure LDAPS and how it differs from LDAP, see
 
 ## Installing adutil
 
-If you do not accept the EULA during the time of install, when you run the **adutil** command for the first time, you will have to run it with the flag `--accept-eula`. This is true for all distributions.
+If you don't accept the EULA during the time of install, when you run the **adutil** command for the first time, you'll have to run it with the flag `--accept-eula`. This is true for all distributions.
 
 # [RHEL](#tab/rhel)
 

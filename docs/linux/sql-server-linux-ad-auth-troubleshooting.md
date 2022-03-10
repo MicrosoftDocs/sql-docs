@@ -42,9 +42,9 @@ This article helps you troubleshoot Active Directory (AD) authentication issues 
 
 ## Check keytab file and permissions
 
-1. Check that you have created the keytab (key table) file, and that **mssql-conf** is configured to use the correct file with appropriate permissions. The keytab must be accessible to the `mssql` user account. See [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md) for more information.
+1. Check that you've created the keytab (key table) file, and that **mssql-conf** is configured to use the correct file with appropriate permissions. The keytab must be accessible to the `mssql` user account. See [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md) for more information.
 
-1. Make sure that you can list the contents of the keytab, and that you have added the correct Service Principal Names (SPNs), port, encryption type, and user account. If you don't type the passwords correctly when creating the SPNs and keytab entries, you'll encounter errors when attempting to sign in using AD authentication.
+1. Make sure that you can list the contents of the keytab, and that you've added the correct Service Principal Names (SPNs), port, encryption type, and user account. If you don't type the passwords correctly when creating the SPNs and keytab entries, you'll encounter errors when attempting to sign in using AD authentication.
 
     ```bash
     klist -kte /var/opt/mssql/secrets/mssql.keytab
@@ -197,9 +197,9 @@ Level = debug
 Outputs = security
 ```
 
-Restarting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is not needed for the logger changes to be picked up from `logger.ini`, but failures can occur during AD service initialization on during [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] startup that would otherwise go unnoticed. Restarting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ensures all the error messages are captured.
+You don't need to restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for the logger changes to be picked up from `logger.ini`, but failures can occur during AD service initialization on during [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] startup that would otherwise go unnoticed. Restarting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ensures all the error messages are captured.
 
-The security log will continue to write to the drive until you remove the changes in `logger.ini`. Remember to disable `security.kerberos` and `security.ldap` logging once you have identified and resolved the problem to prevent running out of space on the drive.
+The security log will continue to write to the drive until you remove the changes in `logger.ini`. Remember to disable `security.kerberos` and `security.ldap` logging once you've identified and resolved the problem to prevent running out of space on the drive.
 
 The PAL logger generates log files in the following format:
 
@@ -246,7 +246,7 @@ You can refer to this list of common errors to identify the possible cause for e
 
 #### Possible cause
 
- You may encounter this error when you are trying to create the Windows login, or during [group refresh](sql-server-linux-ad-auth-understanding.md#sql-server-group-refresh).
+ You may encounter this error when trying to create the Windows login, or during [group refresh](sql-server-linux-ad-auth-understanding.md#sql-server-group-refresh).
 
 #### Troubleshooting guidance
 
@@ -262,17 +262,17 @@ The Transact-SQL syntax to create an AD login is:
 CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
 ```
 
-The NetBIOS name (`CONTOSO`) is required in the command, but in the backend when performing an LDAP connection, the FQDN of the domain (`contoso.com`) must be provided. To do this conversion, a DNS lookup is performed on `CONTOSO` to resolve to the IP of a domain controller which can then be bound to for LDAP queries.
+The NetBIOS name (`CONTOSO`) is required in the command, but in the backend when performing an LDAP connection, the FQDN of the domain (`contoso.com`) must be provided. To do this conversion, a DNS lookup is performed on `CONTOSO` to resolve to the IP of a domain controller, which can then be bound to for LDAP queries.
 
 #### Troubleshooting guidance
 
-The error message "Could not look up short domain name due to error" normally would mean that `nslookup` for `contoso` does not resolve to IP address of the domain controller. You should review [DNS and reverse DNS lookups](#dns-and-reverse-dns-lookups) to confirm that `nslookup` for both the NetBIOS and domain name should match.
+The error message "Could not look up short domain name due to error" suggests that `nslookup` for `contoso` doesn't resolve to IP address of the domain controller. You should review [DNS and reverse DNS lookups](#dns-and-reverse-dns-lookups) to confirm that `nslookup` for both the NetBIOS and domain name should match.
 
 ### <a id="error-rdns-lookup"></a> Error messages: "Could not perform rDNS lookup for host \<hostname\> due to error" or <a id="error-fqdn-not-returned"></a> "FQDN not returned by rDNS lookup"
 
 #### Possible cause
 
-This error message mostly indicates that the reverse DNS records (PTR records) does not exist for all domain controllers.
+This error message mostly indicates that the reverse DNS records (PTR records) don't exist for all domain controllers.
 
 #### Troubleshooting guidance
 
@@ -280,11 +280,11 @@ Check the [DNS and reverse DNS lookups](#dns-and-reverse-dns-lookups). Once the 
 
 - **Add rDNS entries for all domain controllers**
 
-    This is not a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setting, and must be configured at the domain level. You may have to work with your domain administration team to create the required PTR records for all the domain controllers returned when running `nslookup` on the domain name.
+    This isn't a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setting, and must be configured at the domain level. You may have to work with your domain administration team to create the required PTR records for all the domain controllers returned when running `nslookup` on the domain name.
 
 - **Restrict [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to a subset of domain controllers**
 
-    If adding PTR records is not possible for all returned domain controllers, you can [limit SQL Server to a subset of domain controllers](#validate-realm-information-in-krb5conf).
+    If adding PTR records isn't possible for all returned domain controllers, you can [limit SQL Server to a subset of domain controllers](#validate-realm-information-in-krb5conf).
 
 ### <a id="error-failed-to-bind-to-ldap-server"></a> Error message: "Failed to bind to LDAP server ldap://CONTOSO.COM:3268: Local Error"
 
@@ -305,7 +305,7 @@ Here is one such example of the error message:
 
 - **No credentials**
 
-    Other error messages are thrown first if credentials could not be loaded for LDAP connections. You should [enable PAL logging](#enable-kerberos-and-security-based-pal-logging) check the error log for error messages before this one. If none are found, it is most likely not a credentials issue. If one is found, then work on fixing the error message that you see. In most cases it will be one of the error messages covered in this article.
+    Other error messages are thrown first if credentials can't be loaded for LDAP connections. You should [enable PAL logging](#enable-kerberos-and-security-based-pal-logging) check the error log for error messages before this one. If there aren't any other errors, it's most likely not a credentials issue. If one is found, then work on fixing the error message that you see. In most cases it will be one of the error messages covered in this article.
 
 - **rDNS problems**
 

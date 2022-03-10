@@ -10141,7 +10141,7 @@ items:
       - name: Set up AD Authentication
         href: linux/sql-server-linux-active-directory-authentication.md
       - name: Understanding AD Authentication
-        href: linux/sql-server-linux-active-directory-understanding.md
+        href: linux/sql-server-linux-ad-auth-understanding.md
       - name: Troubleshooting AD Authentication
         href: linux/sql-server-linux-ad-auth-troubleshooting.md
     - name: Create failover cluster instance

@@ -1,6 +1,6 @@
 ---
 title: Understanding Active Directory authentication for SQL Server on Linux and containers
-description: Troubleshoot Active Directory authentication issues with SQL Server on Linux and containers, configuration tips, common errors. Includes Kerberos, keytabs and DNS.
+description: Understand Active Directory authentication with SQL Server on Linux and containers. Includes LDAP, Kerberos, keytabs and DNS.
 author: amvin87
 ms.author: amitkh
 ms.reviewer: rwestMSFT
@@ -130,7 +130,7 @@ You will need to use the SPN that is stored in `mssql.keytab` to connect to the 
 
 :::image type="content" source="media/sql-server-linux-ad-auth-understanding/ad_auth_explained_container.svg" alt-text="AD authentication for SQL Server Containers":::
 
-## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] group refresh
+## SQL Server group refresh
 
 You may be wondering why there is a user account in the keytab if you only need a Service Principal Name to authenticate.
 

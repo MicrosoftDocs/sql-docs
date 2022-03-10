@@ -88,7 +88,7 @@ As with Kerberos authentication on Windows, the first two steps to obtain a tick
 
 - A client begins the login process by sending their username and password (encrypted) to the domain controller (DC).
 
-- After checking the username and password against its internal storage, the DC returns a ticket granting ticket (TGT) for the user to the client (TGTuser).
+- After checking the username and password against its internal storage, the DC returns a TGT for the user to the client.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux uses the keytab file to read the password for the Service Principal Name (SPN) and then decrypts the encrypted blob, which it uses to authorize the connection. The next steps outline this process.
 

@@ -138,7 +138,7 @@ Imagine you have a user *adUser*, which is a member of a group *adGroup*. If *ad
 
 We periodically run a process called *group refresh* to protect against a scenario where a connected user is no longer allowed to perform a privileged action (such as creating a login or altering a database).
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has a privileged AD account which it uses for group refresh. This account is either configured using **mssql-conf** with the **network.privilegedadaccount** setting, or defaults to the machine account of the host machine (`<hostname>`).
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has a privileged AD account which it uses for group refresh. This account is either configured using **mssql-conf** with the **network.privilegedadaccount** setting, or defaults to the machine account of the host machine (`<hostname>$`).
 
 The credentials for the privileged account in `mssql.keytab` are used to impersonate the client (*adUser* in this example). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does a Kerberos handshake with itself to identify the group membership information, and compares it with `sys.syslogins` to check if *adUser* still has the permissions necessary to connect and execute the requested Transact-SQL commands. If *adUser* has been removed from *adGroup*, the connection is terminated by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

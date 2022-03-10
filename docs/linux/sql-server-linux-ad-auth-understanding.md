@@ -60,7 +60,7 @@ These are the values you need on the host server running [!INCLUDE[ssNoVersion](
 
 Here is a sample `krb5.conf` file for reference:
 
-```
+```ini
 [libdefaults]
 default_realm = CONTOSO.COM
 

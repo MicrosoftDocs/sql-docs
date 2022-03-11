@@ -1,8 +1,8 @@
 ---
-description: "Logical Functions - IIF (Transact-SQL)"
-title: "IIF (Transact-SQL) | Microsoft Docs"
+description: "The IIF logical function Returns one of two values, depending on whether the Boolean expression evaluates to true or false. "
+title: "IIF (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/11/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -15,7 +15,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "IIF function"
-ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: markingmyname
 ms.author: maghan
 ---
@@ -35,15 +34,16 @@ IIF( boolean_expression, true_value, false_value )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *boolean_expression*  
+
+#### *boolean_expression*  
  A valid Boolean expression.  
   
  If this argument is not a Boolean expression then a syntax error is raised.  
   
- *true_value*  
+#### *true_value*  
  Value to return if *boolean_expression* evaluates to true.  
   
- *false_value*  
+#### *false_value*  
  Value to return if *boolean_expression* evaluates to false.  
   
 ## Return Types  
@@ -54,7 +54,7 @@ IIF( boolean_expression, true_value, false_value )
   
  The fact that IIF is translated into CASE also has an impact on other aspects of the behavior of this function. Since CASE expressions can be nested only up to the level of 10, IIF statements can also be nested only up to the maximum level of 10. Also, IIF is remoted to other servers as a semantically equivalent CASE expression, with all the behaviors of a remoted CASE expression.  
 
-IIF is not supported in Azure Synapse Analytics Dedicated SQL Pool.
+ IIF is not supported in dedicated SQL pools in Azure Synapse Analytics.
 
 ## Examples  
   
@@ -96,8 +96,7 @@ Result
 NULL  
 ```  
   
-## See Also  
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
-  
-  
+## Next steps
+
+- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+- [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)

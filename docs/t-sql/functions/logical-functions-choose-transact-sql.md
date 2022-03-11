@@ -1,8 +1,8 @@
 ---
-description: "Logical Functions - CHOOSE (Transact-SQL)"
-title: "CHOOSE (Transact-SQL) | Microsoft Docs"
+description: "The CHOOSE logical function returns the item at the specified index from a list of values."
+title: "CHOOSE (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/11/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -15,7 +15,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "CHOOSE function"
-ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: markingmyname
 ms.author: maghan
 ---
@@ -78,7 +77,6 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductCategoryID, CHOOSE (ProductCategoryID, 'A','B','C','D','E') AS Expression1  
 FROM Production.ProductCategory;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -125,7 +123,7 @@ Sales Representative                               2007-07-01 Summer
   
 ```  
   
-## See Also  
- [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
-  
-  
+## Next steps
+
+- [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
+- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)

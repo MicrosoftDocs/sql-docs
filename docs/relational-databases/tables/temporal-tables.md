@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 03/04/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: rwestMSFT
+ms.reviewer: randolphwest
 ms.technology: table-view-index
 ms.topic: conceptual
 author: markingmyname
@@ -45,9 +45,9 @@ Real data sources are dynamic and more often than not business decisions rely on
 - Period start column: The system records the start time for the row in this column, typically denoted as the `ValidFrom` column.
 - Period end column: The system records the end time for the row in this column, typically denoted as the `ValidTo` column.
 
-The current table contains the current value for each row. The history table contains each previous value for each row, if any, and the start time and end time for the period for which it was valid.
+The current table contains the *current value* for each row. The history table contains each previous value (the *old version*) for each row, if any, and the start time and end time for the period for which it was valid.
 
-![Diagram showing how a Temporal table works.](../../relational-databases/tables/media/temporal-howworks.PNG "Temporal-HowWorks")
+:::image type="content" source="../../relational-databases/tables/media/temporal-howworks.svg" alt-text="Diagram showing how a Temporal table works":::
 
 The following script illustrates a scenario with employee information:
 
@@ -81,7 +81,9 @@ For more information, see [Creating a System-Versioned Temporal Table](../../rel
 
 The **SELECT** statement **FROM** *\<table\>* clause has a new clause **FOR SYSTEM_TIME** with five temporal-specific sub-clauses to query data across the current and history tables. This new **SELECT** statement syntax is supported directly on a single table, propagated through multiple joins, and through views on top of multiple temporal tables.
 
-![Diagram showing how Temporal Querying works.](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")
+When you query using the **FOR SYSTEM_TIME** clause using one of the five sub-clauses, *historical* data from the temporal table will be included, as shown in the following image.
+
+:::image type="content" source="../../relational-databases/tables/media/temporal-querying.svg" alt-text="Diagram showing how Temporal Querying works":::
 
 The following query searches for row versions for an employee with the filter condition `WHERE EmployeeID = 1000` that were active at least for a portion of period between January 1, 2021 and January 1, 2022 (including the upper boundary):
 

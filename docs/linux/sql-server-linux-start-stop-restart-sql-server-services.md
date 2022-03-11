@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "administering SQL Server on Linux, starting and stopping services"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: rwestMSFT
+ms.reviewer: randolphwest
 ---
 
 # Start, stop, and restart SQL Server services on Linux

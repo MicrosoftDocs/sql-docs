@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], hiding instances"
   - "hiding instances of Database Engine"
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Hide an Instance of SQL Server Database Engine
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

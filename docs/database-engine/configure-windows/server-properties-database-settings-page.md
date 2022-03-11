@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.serverproperties.databasesettings.f1"
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.custom: ""
 ms.date: 05/23/2019
 ---

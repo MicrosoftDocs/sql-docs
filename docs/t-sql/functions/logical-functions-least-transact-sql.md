@@ -160,7 +160,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Only values less than 0.65 are displayed.
   
 ```  
-VarX   Correlation 
+VarX       Correlation 
 ---------- ----------- 
 Var1              .200 
 Var3              .610 
@@ -191,11 +191,11 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-VarX       Correlation                             LeastVar
----------- --------------------------------------- ---------------------------------------
-Var1       0.200                                   0.200
-Var2       0.825                                   0.590
-Var3       0.610                                   0.590
+VarX       Correlation           LeastVar
+---------- --------------------- ---------------------
+Var1       0.200                 0.200
+Var2       0.825                 0.590
+Var3       0.610                 0.590
 
 (3 rows affected)
 ```  

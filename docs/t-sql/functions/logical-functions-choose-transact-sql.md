@@ -96,32 +96,33 @@ ProductCategoryID Expression1
 
 ### C. CHOOSE in combination with MONTH
   
- The following example returns the season in which an employee was hired. The MONTH function is used to return the month value from the column `HireDate`.  
+ The following example returns the season in which a product model was last modified. The MONTH function is used to return the month value from the column `ModifiedDate`. The `CHOOSE` function is used to assign a northern hemisphere season. This sample uses the `AdventureWorksLT` database, which can be quickly installed as the sample database for a new Azure SQL Database. For more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#deploy-to-azure-sql-database).
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
-SELECT JobTitle, HireDate, CHOOSE(MONTH(HireDate),'Winter','Winter', 'Spring','Spring','Spring','Summer','Summer',   
-                                                  'Summer','Autumn','Autumn','Autumn','Winter') AS Quarter_Hired  
-FROM HumanResources.Employee  
-WHERE  YEAR(HireDate) > 2005  
-ORDER BY YEAR(HireDate);  
-  
+SELECT Name, ModifiedDate, CHOOSE(MONTH(ModifiedDate),'Winter','Winter', 'Spring','Spring','Spring','Summer','Summer',   
+                                                  'Summer','Autumn','Autumn','Autumn','Winter') AS Quarter_Modified
+FROM SalesLT.ProductModel AS PM
+WHERE Name LIKE '%Frame%'
+ORDER BY ModifiedDate;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-JobTitle                                           HireDate   Quarter_Hired  
--------------------------------------------------- ---------- -------------  
-Sales Representative                               2006-11-01 Autumn  
-European Sales Manager                             2006-05-18 Spring  
-Sales Representative                               2006-07-01 Summer  
-Sales Representative                               2006-07-01 Summer  
-Sales Representative                               2007-07-01 Summer  
-Pacific Sales Manager                              2007-04-15 Spring  
-Sales Representative                               2007-07-01 Summer  
-  
+Name                        ModifiedDate            Quarter_Modified
+--------------------------- ----------------------- ----------------
+HL Road Frame               2002-05-02 00:00:00.000 Spring
+HL Mountain Frame           2005-06-01 00:00:00.000 Summer
+LL Road Frame               2005-06-01 00:00:00.000 Summer
+ML Road Frame               2005-06-01 00:00:00.000 Summer
+ML Road Frame-W             2006-06-01 00:00:00.000 Summer
+ML Mountain Frame           2006-06-01 00:00:00.000 Summer
+ML Mountain Frame-W         2006-06-01 00:00:00.000 Summer
+LL Mountain Frame           2006-11-20 09:56:38.273 Autumn
+HL Touring Frame            2009-05-16 16:34:28.980 Spring
+LL Touring Frame            2009-05-16 16:34:28.980 Spring
+
+(10 rows affected)
 ```  
   
 ## Next steps

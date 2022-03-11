@@ -161,7 +161,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  Only values greater than 0.7 are displayed.
   
 ```output  
-VarX   Correlation 
+VarX       Correlation 
 ---------- ----------- 
 Var2              .825 
 
@@ -191,11 +191,11 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```output  
-VarX       Correlation                             GreatestVar
----------- --------------------------------------- ---------------------------------------
-Var1       0.200                                   0.590
-Var2       0.825                                   0.825
-Var3       0.610                                   0.610
+VarX       Correlation           GreatestVar 
+---------- --------------------- ---------------------
+Var1       0.200                 0.590
+Var2       0.825                 0.825
+Var3       0.610                 0.610
 
 (3 rows affected) 
 ```  

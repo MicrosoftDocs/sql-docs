@@ -5,8 +5,8 @@ ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: reference
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: contperf-fy20q4
 ms.date: 05/14/2021

@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Lock Pages in Memory option"
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Enable the Lock Pages in Memory Option (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

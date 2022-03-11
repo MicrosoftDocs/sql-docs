@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "surface area configuration [SQL Server], connection protocols"
   - "connections [SQL Server], enabling remote using Configuration Manager"
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Enable or Disable a Server Network Protocol
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

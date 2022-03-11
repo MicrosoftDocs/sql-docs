@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OPENDATASOURCE function, ad hoc distributed queries option"
   - "ad hoc access"
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # ad hoc distributed queries Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -10,8 +10,8 @@ ms.technology: install
 ms.topic: quickstart
 helpviewer_keywords:
   - "upgrading SQL Server"
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Upgrade SQL Server

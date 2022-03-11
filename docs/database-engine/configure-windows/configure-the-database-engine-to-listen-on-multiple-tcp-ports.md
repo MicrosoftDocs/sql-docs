@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "tabular data stream"
   - "multiple ports"
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Configure the Database Engine to Listen on Multiple TCP Ports
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

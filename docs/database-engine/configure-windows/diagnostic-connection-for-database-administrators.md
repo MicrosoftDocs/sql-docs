@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ports [SQL Server]"
   - "dedicated administrator connections [SQL Server]"
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Diagnostic Connection for Database Administrators
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "unresolved transactions"
   - "in-doubt xact resolution option"
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # in-doubt xact resolution Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

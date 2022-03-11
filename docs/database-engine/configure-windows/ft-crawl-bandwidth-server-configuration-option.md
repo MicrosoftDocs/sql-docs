@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "memory [SQL Server], buffers"
   - "ft crawl bandwidth option"
 ms.assetid: e5864ad9-92f5-43b5-95de-46d68ded8694
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # ft crawl bandwidth Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

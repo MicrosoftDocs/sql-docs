@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "command prompt [SQL Server], logins"
   - "logging in [SQL Server]"
 ms.assetid: f67c11e3-c519-40c9-82c1-07efa9d9985e
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Log In to an Instance of SQL Server (Command Prompt)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

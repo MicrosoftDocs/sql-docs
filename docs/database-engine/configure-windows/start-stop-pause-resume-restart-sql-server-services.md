@@ -37,7 +37,7 @@ helpviewer_keywords:
   - "Management Studio [SQL Server], starting or stopping services"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: rwestMSFT
+ms.reviewer: randolphwest
 ---
 
 # Start, stop, pause, resume, and restart SQL Server services

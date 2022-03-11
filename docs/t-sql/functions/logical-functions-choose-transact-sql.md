@@ -96,11 +96,12 @@ ProductCategoryID Expression1
 
 ### C. CHOOSE in combination with MONTH
   
- The following example returns the season in which a product model was last modified. The MONTH function is used to return the month value from the column `ModifiedDate`. The `CHOOSE` function is used to assign a northern hemisphere season. This sample uses the `AdventureWorksLT` database, which can be quickly installed as the sample database for a new Azure SQL Database. For more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#deploy-to-azure-sql-database).
+ The following example returns the season in which a product model was last modified. The `MONTH` function is used to return the month value from the column `ModifiedDate`. The `CHOOSE` function is used to assign a Northern Hemisphere season. This sample uses the `AdventureWorksLT` database, which can be quickly installed as the sample database for a new Azure SQL Database. For more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#deploy-to-azure-sql-database).
   
 ```sql  
-SELECT Name, ModifiedDate, CHOOSE(MONTH(ModifiedDate),'Winter','Winter', 'Spring','Spring','Spring','Summer','Summer',   
-                                                  'Summer','Autumn','Autumn','Autumn','Winter') AS Quarter_Modified
+SELECT Name, ModifiedDate, 
+CHOOSE(MONTH(ModifiedDate),'Winter','Winter', 'Spring','Spring','Spring','Summer','Summer',   
+                          'Summer','Autumn','Autumn','Autumn','Winter') AS Quarter_Modified
 FROM SalesLT.ProductModel AS PM
 WHERE Name LIKE '%Frame%'
 ORDER BY ModifiedDate;  

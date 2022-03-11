@@ -362,6 +362,8 @@ Specifies that the login is for Azure AD Authentication.
 #### WITH OBJECT_ID = *'objectid'*   
 Specifies the Azure AD Object ID. In case the `Object_ID` is specified, the Azure Active Directory resource name is not required, and a different alias can be provided. The login_name must be a unique name in the `sys.server_principals` view.   
 
+For more information on using the `WITH OBJECT_ID` option, see [](/azure/azure-sql/database/authentication-azure-ad-logins#azure-ad-logins-and-users-with-non-unique-display-names)
+
 #### PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
 

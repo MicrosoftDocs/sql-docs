@@ -256,6 +256,8 @@ Specifies that the user is for Azure AD Authentication.
  **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and Managed Instance.  
 Specifies the Azure AD Object ID. In case the `Object_ID` is specified, the Azure Active Directory resource name is not required, and a different alias can be provided. The user_name must be a unique name in the `sys.database_principals` view. 
 
+For more information on using the `WITH OBJECT_ID` option, see [](/azure/azure-sql/database/authentication-azure-ad-logins#azure-ad-logins-and-users-with-non-unique-display-names).
+
 ## Remarks  
  If FOR LOGIN is omitted, the new database user will be mapped to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with the same name.  
   

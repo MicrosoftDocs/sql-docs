@@ -34,12 +34,13 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *index*  
+
+#### *index*  
  Is an integer expression that represents a 1-based index into the list of the items following it.  
   
  If the provided index value has a numeric data type other than **int**, then the value is implicitly converted to an integer. If the index value exceeds the bounds of the array of values, then CHOOSE returns null.  
   
- *val_1 ... val_n*  
+#### *val_1 ... val_n*  
  List of comma separated values of any data type.  
   
 ## Return Types  

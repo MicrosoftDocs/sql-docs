@@ -38,7 +38,7 @@ IIF( boolean_expression, true_value, false_value )
 #### *boolean_expression*  
  A valid Boolean expression.  
   
- If this argument is not a Boolean expression then a syntax error is raised.  
+ If this argument is not a boolean expression then a syntax error is raised.  
   
 #### *true_value*  
  Value to return if *boolean_expression* evaluates to true.  

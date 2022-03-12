@@ -31,7 +31,11 @@ ms.author: maghan
 
         [sp_columns](../../relational-databases/system-stored-procedures/sp-columns-transact-sql.md)
 
+        [sp_create_openrowset_statistics (Transact-SQL)](sp-create-openrowset-statistics.md)
+
         [sp_databases](../../relational-databases/system-stored-procedures/sp-databases-transact-sql.md)
+
+        [sp_drop_openrowset_statistics (Transact-SQL)](sp-drop-openrowset-statistics.md)
 
         [sp_fkeys](../../relational-databases/system-stored-procedures/sp-fkeys-transact-sql.md)
 

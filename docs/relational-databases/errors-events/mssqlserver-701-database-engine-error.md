@@ -68,10 +68,10 @@ The following list outlines general steps that will help in troubleshooting memo
 
 ### Internal memory pressure, not coming from SQL Server: diagnostics and solutions
 
-To diagnose internal memory pressure caused by DLLs running inside SQL Server, there are a couple of ways to approach it:
+To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server, use the following approach:
 
 - If SQL Server is *not* using [Locked Pages in Memory](../../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md) (AWE API), then the majority of its memory is reflected in the **Process:Private Bytes** counter (SQLServr instance) in Performance Monitor. The overall memory usage coming from within SQL Server engine is reflected in **SQL Server:Memory Manager: Total Server Memory (KB)** counter. If you find a significant difference between the value **Process:Private Bytes** and **SQL Server:Memory Manager: Total Server Memory (KB)**, then that difference is likely coming from a DLL (linked server, XP, SQLCLR, etc.). For example if Private bytes is 300 GB and Total Server Memory counter is 250 GB, then 50 GB of the overall memory in the process is coming from outside SQL Server engine.
-- If SQL Server is using Locked Pages in Memory (AWE API), then it is more challenging to identify the issue because Performance monitor does not offer AWE counters that track memory usage for individual processes. The overall memory usage coming from within SQL Server engine is reflected in **SQL Server:Memory Manager: Total Server Memory (KB)** counter and typical **Process:Private Bytes** values may vary between 300 MB and 1-2 GB overall. If you find a significant usage of **Process:Private Bytes** beyond the typical use, then the difference is likely coming from an DLL (linked server, XP, SQLCLR, etc.). For example if Private bytes is 5-4 GB and SQL Server is using Locked Pages in Memory (AWE), then a large part of the Private bytes may be coming from outside SQL Server engine. This is more of an approximation technique. 
+- If SQL Server is using Locked Pages in Memory (AWE API), then it is more challenging to identify the issue because Performance monitor does not offer AWE counters that track memory usage for individual processes. The overall memory usage coming from within SQL Server engine is reflected in **SQL Server:Memory Manager: Total Server Memory (KB)** counter. Typical **Process:Private Bytes** values may vary between 300 MB and 1-2 GB overall. If you find a significant usage of **Process:Private Bytes** beyond this typical use, then the difference is likely coming from a DLL (linked server, XP, SQLCLR, etc.). For example, if Private bytes is 5-4 GB and SQL Server is using Locked Pages in Memory (AWE), then a large part of the Private bytes may be coming from outside SQL Server engine. This is an approximation technique.
 
 - Use the Tasklist utility to identify any DLLs that are loaded inside SQL Server space:
 
@@ -87,12 +87,12 @@ To diagnose internal memory pressure caused by DLLs running inside SQL Server, t
 
 - If you suspect that a Linked Server module is causing significant memory consumption, then you can configure it to run out of process by disabling **Allow inprocess** option. See [Create Linked Servers](../linked-servers/create-linked-servers-sql-server-database-engine.md) for more information. Note that not all linked server OLEDB providers may run out of process; contact the product manufacturer for more information.
 
-- In the rare case when OLE automation objects are used (sp_OA*), you may configure the object to run in a process outside SQL Server by setting*context* = 4 (Local (.exe) OLE server only.). For more information, see [sp_OACreate](../system-stored-procedures/sp-oacreate-transact-sql.md)
+- In the rare case that OLE automation objects are used (sp_OA*), you may configure the object to run in a process outside SQL Server by setting*context* = 4 (Local (.exe) OLE server only.). For more information, see [sp_OACreate](../system-stored-procedures/sp-oacreate-transact-sql.md)
 
 ### Internal memory usage by SQL Server engine: diagnostics and solutions
 
 - Start collecting performance monitor counters for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:**Buffer Manager**, **SQL Server: Memory Manager**.  
-- Query the SQL Server memory clerks DMV multiple times to see where the highest consumption of memory is inside the engine and see if it changes:
+- Query the SQL Server memory clerks DMV multiple times to see where the highest consumption of memory occurs inside the engine:
 
   ```tsql
   SELECT pages_kb, type, name, virtual_memory_committed_kb, awe_allocated_kb
@@ -128,7 +128,7 @@ The following actions may free some memory and make it available to [!INCLUDE[ss
 
 - Check the query workload: number of concurrent sessions, currently executing queries and see if there are less critical applications that may be stopped temporarily or moved to another SQL Server.
 
-- If you are running SQL Server in a virtual machine (VM), check to ensure the memory for each VM is not overcommitted. For examples on how to approach this, see this blog [Virtualization – Overcommitting memory and how to detect it within the VM](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/virtualization-8211-overcommitting-memory-and-how-to-detect-it/ba-p/367623) and  [Troubleshooting ESX/ESXi virtual machine performance issues (memory overcommitment)](https://kb.vmware.com/s/article/2001003#Memory) 
+- If you are running SQL Server on a virtual machine (VM), ensure the memory for the VM is not overcommitted. For ideas on how to do this, see this blog [Virtualization – Overcommitting memory and how to detect it within the VM](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/virtualization-8211-overcommitting-memory-and-how-to-detect-it/ba-p/367623) and  [Troubleshooting ESX/ESXi virtual machine performance issues (memory overcommitment)](https://kb.vmware.com/s/article/2001003#Memory) 
 
 - You can run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory caches.  
   

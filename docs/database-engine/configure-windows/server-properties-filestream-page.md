@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], properties page"
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Server Properties - FILESTREAM Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

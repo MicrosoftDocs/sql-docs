@@ -35,9 +35,9 @@ helpviewer_keywords:
   - "SQL Server Database Engine setting startup options"
   - "administering SQL Server, starting and stopping services"
   - "Management Studio [SQL Server], starting or stopping services"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: rwestMSFT
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: randolphwest
 ---
 
 # Start, stop, pause, resume, and restart SQL Server services

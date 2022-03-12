@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.serverproperties.connections.f1"
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Server Properties - Connections Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

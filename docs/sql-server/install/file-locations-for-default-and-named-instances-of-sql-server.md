@@ -7,8 +7,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # File Locations for Default and Named Instances of SQL Server
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]

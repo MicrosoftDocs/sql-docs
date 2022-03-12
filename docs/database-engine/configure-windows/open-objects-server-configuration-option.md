@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "open objects option"
 ms.assetid: c8424d3c-86ba-4cc5-bf0c-be4ce44bdd04
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # open objects Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

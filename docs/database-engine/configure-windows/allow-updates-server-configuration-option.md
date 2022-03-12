@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "allow updates option"
 ms.assetid: 3967c3ed-280a-4de8-a2ce-393e82745a7b
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # allow updates Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

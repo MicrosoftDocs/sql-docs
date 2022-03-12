@@ -1,8 +1,8 @@
 ---
-title: "Release Notes for ODBC Driver for SQL Server on Windows"
-description: "This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows."
+title: Release Notes for ODBC Driver for SQL Server on Windows
+description: This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows.
 ms.custom: ""
-ms.date: "02/17/2022"
+ms.date: 03/11/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -53,6 +53,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------- | :------ |
 | Added compatibility with OpenSSL 3.0 | See [Connection String Keywords and Data Source Names](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md#using-tlsssl). |
 | Ability to send long types as max types | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Secure by default | **BREAKING CHANGE**<br />Default Encrypt to Yes/Mandatory. Changed certificate validation behavior to validate when encryption is negotiated from either the client or the server side, not just the client side. For more information, see the [ODBC Driver 18.0 release announcement](https://techcommunity.microsoft.com/t5/sql-server-blog/odbc-driver-18-0-for-sql-server-released/ba-p/3169228).
 | Support for TDS 8.0 | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Compatibility extensions for SQLGetData | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |

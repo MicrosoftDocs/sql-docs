@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "versions [SQL Server], upgrading"
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2017"
 ---
 # Supported version & edition upgrades (SQL Server 2019)

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "worker threads [SQL Server]"
   - "max worker threads option"
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Configure the max worker threads Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

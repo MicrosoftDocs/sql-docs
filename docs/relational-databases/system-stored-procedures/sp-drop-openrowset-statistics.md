@@ -39,19 +39,19 @@ sys.sp_drop_openrowset_statistics [ @stmt = ] N'statement_text'
 [ @stmt = ] N'statement_text'
 Specifies a Transact-SQL statement that will return column values to be used for statistics. You can use TABLESAMPLE within the `@stmt` to specify samples of data to be used. If TABLESAMPLE isn't specified, FULLSCAN will be used.
 
-<tablesample_clause> ::= TABLESAMPLE ( sample_number PERCENT )
+`<tablesample_clause> ::= TABLESAMPLE ( sample_number PERCENT )`
   
 ## Remarks  
  Currently, you can create single-column statistics only. 
 
- Statistics metadata is available for external table columns only. Statistics metadata is not available for OPENROWSET columns. 
+ Statistics metadata is available for external table columns only. Statistics metadata isn't available for OPENROWSET columns. 
   
 ## Permissions  
  Requires ADMINISTER BULK OPERATIONS or ADMINISTER DATABASE BULK OPERATIONS permissions.
   
 ## Example
 
-For scenarios and examples, see [Update statistics](/azure/synapse-analytics/sql/develop-tables-statistics#examples-update-statistics-1).
+For scenarios and examples, review [Update statistics](/azure/synapse-analytics/sql/develop-tables-statistics#examples-update-statistics-1).
   
 ## See also  
 

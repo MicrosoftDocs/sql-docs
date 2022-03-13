@@ -281,7 +281,7 @@ EXIT(SELECT @@ROWCOUNT)
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
 ```  
   
- The **osql** utility passes everything between the parentheses **()** to the server exactly as entered. If a stored system procedure selects a set and returns a value, only the selection is returned. The EXIT**()** statement with nothing between the parentheses executes everything preceding it in the batch and then exits with no return value.  
+ The **osql** utility passes everything between the parentheses **()** to the server exactly as entered. If a stored system procedure selects a set and returns a value, only the selection is returned. The EXIT **()** statement with nothing between the parentheses executes everything preceding it in the batch and then exits with no return value.  
   
  There are four EXIT formats:  
   
@@ -290,12 +290,12 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Does not execute the batch; quits immediately and returns no value.  
   
--   EXIT**()**  
+-   EXIT **()**  
   
 > [!NOTE]  
 >  Executes the batch, and then quits and returns no value.  
   
--   EXIT**(**_query_**)**  
+-   EXIT **(**_query_**)**  
   
 > [!NOTE]  
 >  Executes the batch, including the query, and then quits after returning the results of the query.  

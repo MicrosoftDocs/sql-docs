@@ -95,7 +95,8 @@ To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server,
 
 ### Internal memory usage by SQL Server engine: diagnostics and solutions
 
-- Start collecting performance monitor counters for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:**Buffer Manager**, **SQL Server: Memory Manager**.  
+- Start collecting performance monitor counters for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:**SQL Server:Buffer Manager**, **SQL Server: Memory Manager**.  
+
 - Query the SQL Server memory clerks DMV multiple times to see where the highest consumption of memory occurs inside the engine:
 
   ```tsql

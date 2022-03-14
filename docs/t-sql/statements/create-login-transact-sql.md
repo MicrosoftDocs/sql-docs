@@ -2,7 +2,7 @@
 description: "CREATE LOGIN (Transact-SQL)"
 title: "CREATE LOGIN (Transact-SQL)"
 ms.custom: ""
-ms.date: 03/11/2022
+ms.date: 03/14/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -336,7 +336,7 @@ CREATE LOGIN Andreas
 -- Syntax for Azure SQL Database
 CREATE LOGIN login_name
   { 
-    FROM EXTERNAL PROVIDER [WITH OBJECT_ID = 'objectid'] 
+    FROM EXTERNAL PROVIDER
     | WITH <option_list> [,..] 
   }
 
@@ -358,11 +358,6 @@ Azure AD users and service principals (Azure AD applications) that are members o
 
 #### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Azure AD Authentication.
-
-#### WITH OBJECT_ID = *'objectid'*   
-Specifies the Azure AD Object ID. In case the `Object_ID` is specified, the Azure Active Directory resource name is not required, and a different alias can be provided. The login_name must be a unique name in the `sys.server_principals` view.   
-
-For more information on using the `WITH OBJECT_ID` option, see [](/azure/azure-sql/database/authentication-azure-ad-logins#azure-ad-logins-and-users-with-non-unique-display-names)
 
 #### PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
@@ -442,17 +437,6 @@ Use master
 CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER
 GO
 ```
-
-### D. Create a login with an alias using Object ID
-
-You can create an alias for your *login_name* by specifying the Object ID of the Azure AD service principal or group.
-
-```sql
-CREATE LOGIN [myapp4466e] FROM EXTERNAL PROVIDER 
-  WITH OBJECT_ID='4466e2f8-0fea-4c61-a470-xxxxxxxxxxxx' 
-```
-
-For more information on obtaining the Object ID of a service principal, see [Service principal object](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object.)
 
 ## See Also
 

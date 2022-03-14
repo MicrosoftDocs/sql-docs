@@ -2,7 +2,7 @@
 description: "CREATE USER (Transact-SQL)"
 title: CREATE USER (Transact-SQL)
 ms.custom: ""
-ms.date: "03/11/2022"
+ms.date: "03/14/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -88,7 +88,7 @@ CREATE USER
       windows_principal [ WITH <options_list> [ ,... ] ]  
   
     | user_name WITH PASSWORD = 'password' [ , <options_list> [ ,... ]   
-    | Azure_Active_Directory_principal FROM EXTERNAL PROVIDER [WITH OBJECT_ID = 'objectid'] 
+    | Azure_Active_Directory_principal FROM EXTERNAL PROVIDER
     }  
   
  [ ; ]  
@@ -251,12 +251,6 @@ CREATE USER user_name
 #### FROM EXTERNAL PROVIDER </br>
  **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and Managed Instance.  
 Specifies that the user is for Azure AD Authentication.
-
-#### WITH OBJECT_ID = *'objectid'*
- **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and Managed Instance.  
-Specifies the Azure AD Object ID. In case the `Object_ID` is specified, the Azure Active Directory resource name is not required, and a different alias can be provided. The user_name must be a unique name in the `sys.database_principals` view. 
-
-For more information on using the `WITH OBJECT_ID` option, see [](/azure/azure-sql/database/authentication-azure-ad-logins#azure-ad-logins-and-users-with-non-unique-display-names).
 
 ## Remarks  
  If FOR LOGIN is omitted, the new database user will be mapped to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with the same name.  

@@ -35,8 +35,6 @@ This error occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ### External or OS memory pressure
   External pressure refers to high memory utilization coming from a component outside of the SQL Server process. This means, you have to find if other applications on the system are consuming memory and leading to low memory availability. SQL Server is one of the few applications written to respond to OS memory pressure by cutting back its memory use. This means, if some application or driver asks for memory, the OS sends a signal to everyone to free up memory and SQL Server will respond by reducing its own memory usage. Very few applications respond because they aren't designed to listen for that notification. SQL Server is designed this way. So if SQL starts cutting back its memory usage, its memory pool is reduced and whichever components need memory may not get it. You start getting 701 and other memory-related errors.
 
-> [!NOTE]
-> On PaaS systems like Azure SQL Database it is very difficult for you to diagnose external pressure since such metrics are not exposed
 
 ### Internal memory pressure, not coming from SQL Server
 

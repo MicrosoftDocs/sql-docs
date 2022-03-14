@@ -24,9 +24,9 @@ Query optimization is a time sensitive process, so there are limitations to the 
 
 - Missing index suggestions are based on estimates made during the optimization of a single query, prior to query execution. Missing index suggestions aren't tested or updated after query execution.
 - The missing index feature suggests only nonclustered disk-based rowstore indexes. [Unique](../sql-server-index-design-guide.md#Unique) and [filtered indexes](../sql-server-index-design-guide.md#Filtered) aren't suggested.
-- [Key columns](../sql-server-index-design-guide.md#key-columns) are suggested, but the suggestion does not specify an order for those columns.
+- [Key columns](../sql-server-index-design-guide.md#key-columns) are suggested, but the suggestion does not specify an order for those columns. For information on ordering columns, see the [Apply missing index suggestions](#apply-missing-index-suggestions) section of this article.
 - [Included columns](../sql-server-index-design-guide.md#Included_Columns) are suggested, but no cost-benefit analysis is performed as to the size of the resulting index when a large number of included columns are suggested.
-- Missing index requests may offer similar variations of indexes on the same table and column(s) across queries.
+- Missing index requests may offer similar variations of indexes on the same table and column(s) across queries. It is important to [Review indexes and combine where possible](#review-indexes-and-combine-where-possible).
 - Suggestions are not made for trivial query plans.
 - Cost information is less accurate for queries involving only inequality predicates.
 - Suggestions are gathered for a maximum of 500 missing index groups. After this threshold is reached, no more missing index group data is gathered.
@@ -224,16 +224,18 @@ One way to examine the definition of existing indexes on a table is to script ou
 
 #### Review indexes and combine where possible
 
-Review the missing index recommendations for a table as a group, along with the definitions of existing indexes on the table. Remember that when defining indexes, generally equality columns should be put before the inequality columns, and together they should form the key of the index. Included columns should be added to the CREATE INDEX statement using the INCLUDE clause. To determine an effective order for the equality columns, order them based on their selectivity: list the most selective columns first (leftmost in the column list).
+Review the missing index recommendations for a table as a group, along with the definitions of existing indexes on the table. Remember that when defining indexes, generally equality columns should be put before the inequality columns, and together they should form the key of the index. To determine an effective order for the equality columns, order them based on their selectivity: list the most selective columns first (leftmost in the column list). Unique columns are most selective, while columns with many repeating values are less selective.
+
+Included columns should be added to the CREATE INDEX statement using the INCLUDE clause. The order of included columns doesn't affect query performance. Learn more in [included columns guidelines](../sql-server-index-design-guide.md#index-with-included-columns-guidelines).
 
 For example, you may have a table, `Person.Address`, with an existing index on the key column `StateProvinceID`. You may see missing index recommendations for the `Person.Address` table for the following columns:
 
    - EQUALITY filters for `StateProvinceID` and `City`
    - EQUALITY filters for `StateProvinceID` and `City`,  INCLUDE `PostalCode`
 
-Modifying the existing index to match the third recommendation, an index with keys on `StateProvinceID` and `City` including `PostalCode`, would likely satisfy the queries that generated all three index suggestions.
+Modifying the existing index to match the second recommendation, an index with keys on `StateProvinceID` and `City` including `PostalCode`, would likely satisfy the queries that generated both index suggestions.
 
-Tradeoffs are common in index tuning. It is quite likely that for many datasets, the `City` column is more selective than the `StateProvinceID` column. However, if our existing index on `StateProvinceID` is heavily used, and other requests largely search on both `StateProvinceID` and `City`, it is lower overhead for the database in general to have a single index with both columns in the key, leading on `StateProvinceID`, although it is not the most selective column.
+Tradeoffs are common in index tuning. It is likely that for many datasets, the `City` column is more selective than the `StateProvinceID` column. However, if our existing index on `StateProvinceID` is heavily used, and other requests largely search on both `StateProvinceID` and `City`, it is lower overhead for the database in general to have a single index with both columns in the key, leading on `StateProvinceID`, although it is not the most selective column.
 
 Indexes may be modified in multiple ways:
 
@@ -241,8 +243,6 @@ Indexes may be modified in multiple ways:
 - You can use the [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md) statement followed by a [CREATE INDEX Statement](../../odbc/microsoft/create-index-statement.md).
 
 The order of index keys matters when combining the index suggestions: `City` as a leading column is different from `StateProvinceID` as a leading column. Learn more in [nonclustered index design guidelines](../sql-server-index-design-guide.md#Nonclustered).
-
-The order of included columns doesn't affect query performance. Learn more in [included columns guidelines](../sql-server-index-design-guide.md#index-with-included-columns-guidelines).
 
 When creating indexes, consider using [online index operations](guidelines-for-online-index-operations.md) when they are available.
 

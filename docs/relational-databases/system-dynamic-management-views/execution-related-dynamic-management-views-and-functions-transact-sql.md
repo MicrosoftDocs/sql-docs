@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "dynamic management objects [SQL Server], execution"
   - "execution-related dynamic management objects [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || >= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # Execution Related Dynamic Management Views and Functions (Transact-SQL)

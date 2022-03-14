@@ -10,8 +10,8 @@ ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---

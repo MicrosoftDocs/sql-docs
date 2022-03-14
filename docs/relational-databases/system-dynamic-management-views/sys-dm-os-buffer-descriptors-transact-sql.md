@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_buffer_descriptors dynamic management view"
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| >= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.dm_os_buffer_descriptors (Transact-SQL)

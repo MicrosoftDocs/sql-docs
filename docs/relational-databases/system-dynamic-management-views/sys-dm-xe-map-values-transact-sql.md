@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sys.dm_xe_map_values dynamic management view"
   - "xe"
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "permissions [SQL Server], hierarchy"
   - "displaying permission hierarchy"
   - "sys.fn_builtin_permissions function"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_builtin_permissions (Transact-SQL)

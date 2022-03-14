@@ -1,5 +1,5 @@
 ---
-description: "sys.dm_db_missing_index_group_stats_query (Transact-SQL)"
+description: "The sys.dm_db_missing_index_group_stats_query dynamic management view returns information about queries that needed a missing index from groups of missing indexes."
 title: "sys.dm_db_missing_index_group_stats_query (Transact-SQL)"
 ms.custom: ""
 ms.date: "3/7/2022"

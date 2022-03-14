@@ -1,5 +1,5 @@
 ---
-description: "sys.dm_db_missing_index_details (Transact-SQL)"
+description: "The sys.dm_db_missing_index_details dynamic management view returns detailed information about missing indexes."
 title: "sys.dm_db_missing_index_details (Transact-SQL)"
 ms.custom: ""
 ms.date: "3/8/2022"

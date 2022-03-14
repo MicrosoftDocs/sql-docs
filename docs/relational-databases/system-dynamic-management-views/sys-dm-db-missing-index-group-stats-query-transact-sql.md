@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_missing_index_group_stats_query dynamic management view"
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats_query dynamic management view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_group_stats_query (Transact-SQL)

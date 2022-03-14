@@ -18,9 +18,13 @@ This article provides you details on how AD (Active Directory) authentication wo
 
 ## Concepts
 
-### Lightweight Directory Access Protocol (LDAP)
+### <a id="ldap"></a> Lightweight Directory Access Protocol (LDAP)
 
 LDAP is an application protocol for working with various directory services, including Active Directory (AD). Directory services store user and account information, and security information such as passwords. That information is encrypted and then shared with other devices on the network.
+
+For more information on how Lightweight Directory Access Protocol over SSL (LDAPS) differs from LDAP, see [LDAP over SSL (LDAPS) Certificate](https://social.technet.microsoft.com/wiki/contents/articles/2980.ldap-over-ssl-ldaps-certificate.aspx#Enabling_LDAPS_for_Client_Authentication).
+
+To find out more about securing LDAP, see [How to enable LDAP signing in Windows Server](/troubleshoot/windows-server/identity/enable-ldap-signing-in-windows-server).
 
 ### Kerberos
 

@@ -1,6 +1,6 @@
 ---
 title: Introduction to adutil - Active Directory Utility 
-description: Overview of adutil utility for configuring and managing Active Directory domains for SQL Server on Linux and containers
+description: Overview of adutil, a utility for configuring and managing Active Directory domains for SQL Server on Linux and containers
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
@@ -23,7 +23,7 @@ The **adutil** tool is designed as a series of commands and subcommands, with ad
 
 ## Configuring adutil for LDAP over Secure Sockets Layer (SSL)
 
-Support for **adutil** is limited for SQL Server use cases only. Controlled and secure environments using Lightweight Directory Access Protocol (LDAP) over SSL (LDAPS) are preferred over Lightweight Directory Access Protocol (LDAP).
+Support for **adutil** is limited for SQL Server use cases only. You should use Lightweight Directory Access Protocol over SSL (LDAPS) instead of Lightweight Directory Access Protocol (LDAP). For more information about LDAP, see [Lightweight Directory Access Protocol (LDAP)](sql-server-linux-ad-auth-understanding.md#ldap).
 
 You can set the `useLdaps` option to `true` in the `adutil.json` configuration file, which is located at: `/var/opt/mssql/.adutil/adutil.json` when run under the `mssql` user. This JSON code sample shows how to configure the setting:
 
@@ -36,8 +36,6 @@ You can set the `useLdaps` option to `true` in the `adutil.json` configuration f
 By default, the `useLDAPS` setting is set to `false`. When configuring this setting and using **mssql-conf** to create the keytab (key table), make sure you run **mssql-conf** as the user `mssql`.
 
 To set up the keytab file, see [Create the SQL Server service keytab file](sql-server-linux-ad-auth-adutil-tutorial.md#create-the-sql-server-service-keytab-file).
-
-For more information on how to configure LDAPS and how it differs from LDAP, see [LDAP over SSL (LDAPS) Certificate](https://social.technet.microsoft.com/wiki/contents/articles/2980.ldap-over-ssl-ldaps-certificate.aspx#Enabling_LDAPS_for_Client_Authentication).
 
 ## Installing adutil
 
@@ -207,7 +205,7 @@ Each command is documented so you can get started right away. Here are some of t
     adutil spn addauto -n sqluser -s MSSQLSvc -H mymachine.contoso.com -p 1433 
     ```
 
-- Create keytab files using **adutil**:
+- Create keytabs using **adutil**:
 
     ```bash
     adutil keytab createauto -k /var/opt/mssql/secrets/mssql.keytab -p 1433 -H mymachine.contoso.com --password 'P@ssw0rd' -s MSSQLSvc 

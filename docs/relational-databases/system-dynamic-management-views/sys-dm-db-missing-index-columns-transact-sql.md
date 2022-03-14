@@ -1,5 +1,6 @@
 ---
-description: "The sys.dm_db_missing_index_columns dynamic management function returns information about database table columns that are missing an index, excluding spatial indexes."
+description: "The sys.dm_db_missing_index_columns dynamic management function returns information about database table columns that are missing an index."
+
 title: "sys.dm_db_missing_index_columns (Transact-SQL)"
 ms.custom: ""
 ms.date: "03/8/2022"

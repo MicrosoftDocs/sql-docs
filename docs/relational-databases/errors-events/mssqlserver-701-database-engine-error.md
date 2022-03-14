@@ -64,7 +64,8 @@ The following list outlines general steps that will help in troubleshooting memo
 
 - Review the System Event and look for memory related errors (e.g. low virtual memory). Review the Application Event log for application-related memory issues.
 - Address any code or configuration issues for less critical applications or services to reduce their memory usage.  
-- If applications besides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are consuming resources, try stopping running these applications or consider running them on a separate server. These steps will remove external memory pressure.
+- If applications besides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are consuming resources, try stopping or rescheduling these applications, or consider running them on a separate server. These steps will remove external memory pressure.
+
 
 ### Internal memory pressure, not coming from SQL Server: diagnostics and solutions
 

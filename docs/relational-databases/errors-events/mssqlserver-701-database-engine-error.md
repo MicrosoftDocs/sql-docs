@@ -90,7 +90,8 @@ To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server,
 
 - If you suspect that a Linked Server module is causing significant memory consumption, then you can configure it to run out of process by disabling **Allow inprocess** option. See [Create Linked Servers](../linked-servers/create-linked-servers-sql-server-database-engine.md) for more information. Note that not all linked server OLEDB providers may run out of process; contact the product manufacturer for more information.
 
-- In the rare case that OLE automation objects are used (sp_OA*), you may configure the object to run in a process outside SQL Server by setting*context* = 4 (Local (.exe) OLE server only.). For more information, see [sp_OACreate](../system-stored-procedures/sp-oacreate-transact-sql.md)
+- In the rare case that OLE automation objects are used (`sp_OA*`), you may configure the object to run in a process outside SQL Server by setting *context* = 4 (Local (.exe) OLE server only.). For more information, see [sp_OACreate](../system-stored-procedures/sp-oacreate-transact-sql.md).
+
 
 ### Internal memory usage by SQL Server engine: diagnostics and solutions
 

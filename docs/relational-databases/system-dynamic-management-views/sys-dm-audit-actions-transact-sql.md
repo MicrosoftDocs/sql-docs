@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_audit_actions dynamic management view"
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 # sys.dm_audit_actions (Transact-SQL)

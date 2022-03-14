@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.query_store_query_hints catalog view"
   - "query_store_query_hints catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # sys.query_store_query_hints (Transact-SQL)

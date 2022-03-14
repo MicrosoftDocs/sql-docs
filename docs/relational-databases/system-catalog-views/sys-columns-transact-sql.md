@@ -12,8 +12,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.columns catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "08/05/2021"

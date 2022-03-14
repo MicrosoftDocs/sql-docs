@@ -17,8 +17,8 @@ helpviewer_keywords:
 dev_langs: 
   - "TSQL"
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---

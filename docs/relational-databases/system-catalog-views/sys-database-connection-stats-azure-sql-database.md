@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sys.database_connection_stats"
   - "database_connection_stats"
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current"
 ---

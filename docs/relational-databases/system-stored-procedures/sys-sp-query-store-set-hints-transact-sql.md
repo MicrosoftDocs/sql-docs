@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_query_store_set_hints"
   - "sp_query_store_set_hints"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # sp_query_store_set_hints (Transact-SQL)

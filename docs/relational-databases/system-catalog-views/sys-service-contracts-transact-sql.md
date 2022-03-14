@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_contracts catalog view"
 ms.assetid: 787dd47e-4210-439d-9c4a-57a727a0dbd8
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.service_contracts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_uncontained_entities dynamic management view"
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

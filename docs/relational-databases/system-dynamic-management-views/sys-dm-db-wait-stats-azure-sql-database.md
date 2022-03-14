@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_wait_stats dynamic management view"
   - "dm_db_wait_stats"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "= azuresqldb-current"
 ---
 # sys.dm_db_wait_stats (Azure SQL Database)

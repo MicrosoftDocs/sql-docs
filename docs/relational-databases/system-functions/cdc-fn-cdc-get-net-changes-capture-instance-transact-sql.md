@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "fn_cdc_get_net_changes_<capture_instance>"
   - "change data capture [SQL Server], querying metadata"
   - "cdc.fn_cdc_get_net_changes_<capture_instance>"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

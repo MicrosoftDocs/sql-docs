@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_hosts dynamic management view"
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017|| >= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.dm_os_hosts (Transact-SQL)

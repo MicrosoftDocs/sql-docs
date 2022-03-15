@@ -1,8 +1,8 @@
 ---
-description: "UPDATE STATISTICS (Transact-SQL)"
-title: "UPDATE STATISTICS (Transact-SQL) | Microsoft Docs"
+description: "UPDATE STATISTICS updates query optimization statistics on a table or indexed view. Updating statistics ensures that queries compile with up-to-date statistics."
+title: "UPDATE STATISTICS (Transact-SQL)"
 ms.custom: ""
-ms.date: "01/04/2018"
+ms.date: "03/15/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "query optimization statistics [SQL Server], updating"
   - "UPDATE STATISTICS statement"
   - "statistical information [SQL Server], updating"
-ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -28,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Updates query optimization statistics on a table or indexed view. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using `UPDATE STATISTICS` or the stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) to update statistics more frequently than the default updates.  
   
-Updating statistics ensures that queries compile with up-to-date statistics. However, updating statistics causes queries to recompile. We recommend not updating statistics too frequently because there is a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application. `UPDATE STATISTICS` can use tempdb to sort the sample of rows for building statistics.  
+Updating statistics ensures that queries compile with up-to-date statistics. Updating statistics via any process may cause query plans to recompile automatically. We recommend not updating statistics too frequently because there is a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application. `UPDATE STATISTICS` can use `tempdb` to sort the sample of rows for building statistics.  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -87,18 +86,19 @@ UPDATE STATISTICS [ schema_name . ] table_name
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
- *table_or_indexed_view_name*  
+
+#### *table_or_indexed_view_name*  
  Is the name of the table or indexed view that contains the statistics object.  
   
- *index_or_statistics_name*  
+#### *index_or_statistics_name*  
  Is the name of the index to update statistics on or name of the statistics to update. If *index_or_statistics_name* is not specified, the query optimizer updates all statistics for the table or indexed view. This includes statistics created using the CREATE STATISTICS statement, single-column statistics created when AUTO_CREATE_STATISTICS is on, and statistics created for indexes.  
   
  For more information about AUTO_CREATE_STATISTICS, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). To view all indexes for a table or view, you can use [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
- FULLSCAN  
+#### FULLSCAN  
  Compute statistics by scanning all rows in the table or indexed view. FULLSCAN and SAMPLE 100 PERCENT have the same results. FULLSCAN cannot be used with the SAMPLE option.  
   
- SAMPLE *number* { PERCENT | ROWS }  
+#### SAMPLE *number* { PERCENT | ROWS }  
  Specifies the approximate percentage or number of rows in the table or indexed view for the query optimizer to use when it updates statistics. For PERCENT, *number* can be from 0 through 100 and for ROWS, *number* can be from 0 to the total number of rows. The actual percentage or number of rows the query optimizer samples might not match the percentage or number specified. For example, the query optimizer scans all rows on a data page.  
   
  SAMPLE is useful for special cases in which the query plan, based on default sampling, is not optimal. In most situations, it is not necessary to specify SAMPLE because the query optimizer uses sampling and determines the statistically significant sample size by default, as required to create high-quality query plans. 
@@ -109,16 +109,14 @@ Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], sampling of 
   
  We recommend against specifying 0 PERCENT or 0 ROWS. When 0 PERCENT or ROWS is specified, the statistics object is updated but does not contain statistics data.  
   
- For most workloads, a full scan is not required, and default sampling is adequate.  
-However, certain workloads that are sensitive to widely varying data distributions may require an increased sample size, or even a full scan.  
-For more information, see  the [CSS SQL Escalation Services blog](/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
+ For most workloads, a full scan is not required, and default sampling is adequate. However, certain workloads that are sensitive to widely varying data distributions may require an increased sample size, or even a full scan. For more information, see the [CSS SQL Escalation Services blog](/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
   
- RESAMPLE  
+#### RESAMPLE  
  Update each statistic using its most recent sample rate.  
   
  Using RESAMPLE can result in a full-table scan. For example, statistics for indexes use a full-table scan for their sample rate. When none of the sample options (SAMPLE, FULLSCAN, RESAMPLE) are specified, the query optimizer samples the data and computes the sample size by default.  
 
-PERSIST_SAMPLE_PERCENT = { ON | OFF }  
+#### PERSIST_SAMPLE_PERCENT = { ON | OFF }  
 When **ON**, the statistics will retain the set sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**. 
  
  > [!NOTE]
@@ -136,15 +134,15 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]  
  
- ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 
+#### ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 
  Forces the leaf-level statistics covering the partitions specified in the ON PARTITIONS clause to be recomputed, and then merged to build the global statistics. WITH RESAMPLE is required because partition statistics built with different sample rates cannot be merged together.  
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later
   
- ALL | COLUMNS | INDEX  
+#### ALL | COLUMNS | INDEX  
  Update all existing statistics, statistics created on one or more columns, or statistics created for indexes. If none of the options are specified, the UPDATE STATISTICS statement updates all statistics on the table or indexed view.  
   
- NORECOMPUTE  
+#### NORECOMPUTE  
  Disable the automatic statistics update option, AUTO_UPDATE_STATISTICS, for the specified statistics. If this option is specified, the query optimizer completes this statistics update and disables future updates.  
   
  To re-enable the AUTO_UPDATE_STATISTICS option behavior, run UPDATE STATISTICS again without the NORECOMPUTE option or run **sp_autostats**.  
@@ -154,7 +152,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
   
  For more information about the AUTO_STATISTICS_UPDATE option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- INCREMENTAL = { ON | OFF }  
+#### INCREMENTAL = { ON | OFF }  
  When **ON**, the statistics are recreated as per partition statistics. When **OFF**, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] re-computes the statistics. The default is **OFF**.  
   
  If per partition statistics are not supported an error is generated. Incremental stats are not supported for following statistics types:  
@@ -169,7 +167,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later
 
-MAXDOP = *max_degree_of_parallelism*  
+#### MAXDOP = *max_degree_of_parallelism*  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
@@ -199,7 +197,7 @@ MAXDOP = *max_degree_of_parallelism*
 * The `MAXDOP` option is not compatible with `STATS_STREAM`, `ROWCOUNT` and `PAGECOUNT` options.
 * The `MAXDOP` option is limited by the Resource Governor workload group `MAX_DOP` setting, if used.
 
-### Updating All Statistics with sp_updatestats  
+### Update all Statistics with sp_updatestats
 For information about how to update statistics for all user-defined and internal tables in the database, see the stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). For example, the following command calls sp_updatestats to update all statistics for the database.  
   
 ```sql  
@@ -308,14 +306,18 @@ UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;
 UPDATE STATISTICS Customer;  
 ```  
   
-## See Also  
- [Statistics](../../relational-databases/statistics/statistics.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
- [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
- [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)
+## See also
+
+- [Statistics](../../relational-databases/statistics/statistics.md)   
+- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+- [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
+- [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)
+
+## Next steps
+
+- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
+- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+- [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+- [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+- [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
+- [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)

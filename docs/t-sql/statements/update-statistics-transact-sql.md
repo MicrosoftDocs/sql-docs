@@ -241,7 +241,7 @@ UPDATE STATISTICS t1 (a) WITH stats_stream = 0x01;
 ## Examples  
   
 ### A. Update all statistics on a table  
- The following example updates the statistics for all indexes on the `SalesOrderDetail` table.  
+ The following example updates all statistics on the `SalesOrderDetail` table.  
   
 ```sql  
 USE AdventureWorks2012;  

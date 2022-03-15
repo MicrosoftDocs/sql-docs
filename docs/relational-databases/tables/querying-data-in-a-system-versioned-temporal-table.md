@@ -2,10 +2,10 @@
 description: "Querying Data in a System-Versioned Temporal Table"
 title: "Querying Data in a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/28/2016"
+ms.date: 03/04/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
@@ -41,7 +41,7 @@ This first example returns the state of the dbo.Department table AS OF a specifi
 
 ```sql
 /*State of entire table AS OF specific date in the past*/
-SELECT [DeptID], [DeptName], [SysStartTime],[SysEndTime]
+SELECT [DeptID], [DeptName], [ValidFrom],[ValidTo]
 FROM [dbo].[Department]
 FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
 ```
@@ -54,8 +54,8 @@ SET @ADayAgo = DATEADD (day, -1, sysutcdatetime())
 /*Comparison between two points in time for subset of rows*/
 SELECT D_1_Ago.[DeptID], D.[DeptID],
 D_1_Ago.[DeptName], D.[DeptName],
-D_1_Ago.[SysStartTime], D.[SysStartTime],
-D_1_Ago.[SysEndTime], D.[SysEndTime]
+D_1_Ago.[ValidFrom], D.[ValidFrom],
+D_1_Ago.[ValidTo], D.[ValidTo]
 FROM [dbo].[Department] FOR SYSTEM_TIME AS OF @ADayAgo AS D_1_Ago
 JOIN [Department] AS D ON D_1_Ago.[DeptID] = [D].[DeptID]
 AND D_1_Ago.[DeptID] BETWEEN 1 and 5 ;
@@ -104,30 +104,30 @@ The first two sub-clauses return row versions that overlap with a specified peri
 SELECT
      [DeptID]
    , [DeptName]
-   , [SysStartTime]
-   , [SysEndTime]
-   , IIF (YEAR(SysEndTime) = 9999, 1, 0) AS IsActual
+   , [ValidFrom]
+   , [ValidTo]
+   , IIF (YEAR(ValidTo) = 9999, 1, 0) AS IsActual
 FROM [dbo].[Department]
 FOR SYSTEM_TIME BETWEEN '2015-01-01' AND '2015-12-31'
 WHERE DeptId = 1
-ORDER BY SysStartTime DESC;
+ORDER BY ValidFrom DESC;
 
 /* Query using CONTAINED IN sub-clause */
-SELECT [DeptID], [DeptName], [SysStartTime],[SysEndTime]
+SELECT [DeptID], [DeptName], [ValidFrom],[ValidTo]
 FROM [dbo].[Department]
 FOR SYSTEM_TIME CONTAINED IN ('2015-04-01', '2015-09-25')
 WHERE DeptId = 1
-ORDER BY SysStartTime DESC ;
+ORDER BY ValidFrom DESC ;
 
 /* Query using ALL sub-clause */
 SELECT
      [DeptID]
    , [DeptName]
-   , [SysStartTime]
-   , [SysEndTime]
-   , IIF (YEAR(SysEndTime) = 9999, 1, 0) AS IsActual
+   , [ValidFrom]
+   , [ValidTo]
+   , IIF (YEAR(ValidTo) = 9999, 1, 0) AS IsActual
 FROM [dbo].[Department] FOR SYSTEM_TIME ALL
-ORDER BY [DeptID], [SysStartTime] Desc
+ORDER BY [DeptID], [ValidFrom] Desc
 ```
 
 ## Next steps

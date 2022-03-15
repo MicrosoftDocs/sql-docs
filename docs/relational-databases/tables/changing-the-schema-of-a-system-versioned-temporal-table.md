@@ -2,10 +2,10 @@
 description: "Changing the Schema of a System-Versioned Temporal Table"
 title: "Changing the Schema of a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/28/2016"
+ms.date: 03/04/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
@@ -44,10 +44,10 @@ ALTER TABLE dbo.Department
 Use ALTER COLUMN <period_column> DROP HIDDEN to clear IsHidden flag */
 
 ALTER TABLE dbo.Department
-    ALTER COLUMN SysStartTime ADD HIDDEN;
+    ALTER COLUMN ValidFrom ADD HIDDEN;
 
 ALTER TABLE dbo.Department
-    ALTER COLUMN SysEndTime ADD HIDDEN;
+    ALTER COLUMN ValidTo ADD HIDDEN;
 ```
 
 ### Important remarks

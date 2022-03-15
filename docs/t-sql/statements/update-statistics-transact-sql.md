@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Updates query optimization statistics on a table or indexed view. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using `UPDATE STATISTICS` or the stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) to update statistics more frequently than the default updates.  
   
-Updating statistics ensures that queries compile with up-to-date statistics. Updating statistics via any process may cause query plans to recompile automatically. We recommend not updating statistics too frequently because there is a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application. `UPDATE STATISTICS` can use `tempdb` to sort the sample of rows for building statistics.  
+Updating statistics ensures that queries compile with up-to-date statistics. Updating statistics via any process may cause query plans to recompile automatically. We recommend not updating statistics too frequently because there's a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application. `UPDATE STATISTICS` can use `tempdb` to sort the sample of rows for building statistics.  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -91,25 +91,25 @@ UPDATE STATISTICS [ schema_name . ] table_name
  Is the name of the table or indexed view that contains the statistics object.  
   
 #### *index_or_statistics_name*  
- Is the name of the index to update statistics on or name of the statistics to update. If *index_or_statistics_name* is not specified, the query optimizer updates all statistics for the table or indexed view. This includes statistics created using the CREATE STATISTICS statement, single-column statistics created when AUTO_CREATE_STATISTICS is on, and statistics created for indexes.  
+ Is the name of the index to update statistics on or name of the statistics to update. If *index_or_statistics_name* isn't specified, the query optimizer updates all statistics for the table or indexed view. This includes statistics created using the CREATE STATISTICS statement, single-column statistics created when AUTO_CREATE_STATISTICS is on, and statistics created for indexes.  
   
  For more information about AUTO_CREATE_STATISTICS, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). To view all indexes for a table or view, you can use [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 #### FULLSCAN  
- Compute statistics by scanning all rows in the table or indexed view. FULLSCAN and SAMPLE 100 PERCENT have the same results. FULLSCAN cannot be used with the SAMPLE option.  
+ Compute statistics by scanning all rows in the table or indexed view. FULLSCAN and SAMPLE 100 PERCENT have the same results. FULLSCAN can't be used with the SAMPLE option.  
   
 #### SAMPLE *number* { PERCENT | ROWS }  
  Specifies the approximate percentage or number of rows in the table or indexed view for the query optimizer to use when it updates statistics. For PERCENT, *number* can be from 0 through 100 and for ROWS, *number* can be from 0 to the total number of rows. The actual percentage or number of rows the query optimizer samples might not match the percentage or number specified. For example, the query optimizer scans all rows on a data page.  
   
- SAMPLE is useful for special cases in which the query plan, based on default sampling, is not optimal. In most situations, it is not necessary to specify SAMPLE because the query optimizer uses sampling and determines the statistically significant sample size by default, as required to create high-quality query plans. 
+ SAMPLE is useful for special cases in which the query plan, based on default sampling, isn't optimal. In most situations, it isn't necessary to specify SAMPLE because the query optimizer uses sampling and determines the statistically significant sample size by default, as required to create high-quality query plans. 
  
 Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], sampling of data to build statistics is done in parallel, when using compatibility level 130, to improve the performance of statistics collection. The query optimizer will use parallel sample statistics, whenever a table size exceeds a certain threshold. 
    
- SAMPLE cannot be used with the FULLSCAN option. When neither SAMPLE nor FULLSCAN is specified, the query optimizer uses sampled data and computes the sample size by default.  
+ SAMPLE can't be used with the FULLSCAN option. When neither SAMPLE nor FULLSCAN is specified, the query optimizer uses sampled data and computes the sample size by default.  
   
- We recommend against specifying 0 PERCENT or 0 ROWS. When 0 PERCENT or ROWS is specified, the statistics object is updated but does not contain statistics data.  
+ We recommend against specifying 0 PERCENT or 0 ROWS. When 0 PERCENT or ROWS is specified, the statistics object is updated but doesn't contain statistics data.  
   
- For most workloads, a full scan is not required, and default sampling is adequate. However, certain workloads that are sensitive to widely varying data distributions may require an increased sample size, or even a full scan. For more information, see the [CSS SQL Escalation Services blog](/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
+ For most workloads, a full scan isn't required, and default sampling is adequate. However, certain workloads that are sensitive to widely varying data distributions may require an increased sample size, or even a full scan. For more information, see the [CSS SQL Escalation Services blog](/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
   
 #### RESAMPLE  
  Update each statistic using its most recent sample rate.  
@@ -117,11 +117,11 @@ Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], sampling of 
  Using RESAMPLE can result in a full-table scan. For example, statistics for indexes use a full-table scan for their sample rate. When none of the sample options (SAMPLE, FULLSCAN, RESAMPLE) are specified, the query optimizer samples the data and computes the sample size by default.  
 
 #### PERSIST_SAMPLE_PERCENT = { ON | OFF }  
-When **ON**, the statistics will retain the set sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**. 
+When **ON**, the statistics will retain the set sampling percentage for subsequent updates that don't explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that don't explicitly specify a sampling percentage. The default is **OFF**. 
  
  > [!NOTE]
  > If AUTO_UPDATE_STATISTICS is executed, it uses the persisted sampling percentage if available, or use default sampling percentage if not.
- > RESAMPLE behavior is not affected by this option.
+ > RESAMPLE behavior isn't affected by this option.
  
  > [!NOTE]
  > If the table is truncated, all statistics built on the truncated HoBT will revert to using the default sampling percentage.
@@ -135,7 +135,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]  
  
 #### ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 
- Forces the leaf-level statistics covering the partitions specified in the ON PARTITIONS clause to be recomputed, and then merged to build the global statistics. WITH RESAMPLE is required because partition statistics built with different sample rates cannot be merged together.  
+ Forces the leaf-level statistics covering the partitions specified in the ON PARTITIONS clause to be recomputed, and then merged to build the global statistics. WITH RESAMPLE is required because partition statistics built with different sample rates can't be merged together.  
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later
   
@@ -155,9 +155,9 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
 #### INCREMENTAL = { ON | OFF }  
  When **ON**, the statistics are recreated as per partition statistics. When **OFF**, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] re-computes the statistics. The default is **OFF**.  
   
- If per partition statistics are not supported an error is generated. Incremental stats are not supported for following statistics types:  
+ If per partition statistics aren't supported an error is generated. Incremental stats aren't supported for following statistics types:  
   
--   Statistics created with indexes that are not partition-aligned with the base table.  
+-   Statistics created with indexes that aren't partition-aligned with the base table.  
 -   Statistics created on Always On readable secondary databases.  
 -   Statistics created on read-only databases.  
 -   Statistics created on filtered indexes.  
@@ -193,8 +193,8 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
  For more information about when to use `UPDATE STATISTICS`, see [Statistics](../../relational-databases/statistics/statistics.md).  
 
 ### Limitations and Restrictions  
-* Updating statistics is not supported on external tables. To update statistics on an external table, drop and re-create the statistics.  
-* The `MAXDOP` option is not compatible with `STATS_STREAM`, `ROWCOUNT` and `PAGECOUNT` options.
+* Updating statistics isn't supported on external tables. To update statistics on an external table, drop and re-create the statistics.  
+* The `MAXDOP` option isn't compatible with `STATS_STREAM`, `ROWCOUNT` and `PAGECOUNT` options.
 * The `MAXDOP` option is limited by the Resource Governor workload group `MAX_DOP` setting, if used.
 
 ### Update all Statistics with sp_updatestats
@@ -211,7 +211,7 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
  To determine when statistics were last updated, use the [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) function.  
   
 ### PDW / Azure Synapse Analytics  
- The following syntax is not supported by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]  
+ The following syntax isn't supported by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]  
   
 ```sql
 UPDATE STATISTICS t1 (a,b);   

@@ -43087,7 +43087,7 @@
     },
     {
         "source_path": "docs/database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md",
-        "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-life-overview",
+        "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
         "redirect_document_id": true
     },
     {
@@ -59022,8 +59022,13 @@
     },
     {
       "source_path": "docs/kb-support/end-support-sql-server-2008.md",
-      "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-life-overview",
+      "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql/sql-server/end-of-support/sql-server-end-of-life-overview.md",
+      "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/kb-support/resource-monitor-nonyielding-condition.md",

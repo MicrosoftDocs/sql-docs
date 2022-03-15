@@ -24,10 +24,10 @@ Query optimization is a time sensitive process, so there are limitations to the 
 
 - Missing index suggestions are based on estimates made during the optimization of a single query, prior to query execution. Missing index suggestions aren't tested or updated after query execution.
 - The missing index feature suggests only nonclustered disk-based rowstore indexes. [Unique](../sql-server-index-design-guide.md#Unique) and [filtered indexes](../sql-server-index-design-guide.md#Filtered) aren't suggested.
-- [Key columns](../sql-server-index-design-guide.md#key-columns) are suggested, but the suggestion does not specify an order for those columns. For information on ordering columns, see the [Apply missing index suggestions](#apply-missing-index-suggestions) section of this article.
-- [Included columns](../sql-server-index-design-guide.md#Included_Columns) are suggested, but no cost-benefit analysis is performed as to the size of the resulting index when a large number of included columns are suggested.
-- Missing index requests may offer similar variations of indexes on the same table and column(s) across queries. It is important to [review index suggestions and combine where possible](#review-indexes-and-combine-where-possible).
-- Suggestions are not made for trivial query plans.
+- [Key columns](../sql-server-index-design-guide.md#key-columns) are suggested, but the suggestion doesn't specify an order for those columns. For information on ordering columns, see the [Apply missing index suggestions](#apply-missing-index-suggestions) section of this article.
+- [Included columns](../sql-server-index-design-guide.md#Included_Columns) are suggested, but SQL Server performs no cost-benefit analysis regarding the size of the resulting index when a large number of included columns are suggested.
+- Missing index requests may offer similar variations of indexes on the same table and column(s) across queries. It's important to [review index suggestions and combine where possible](#review-indexes-and-combine-where-possible).
+- Suggestions aren't made for trivial query plans.
 - Cost information is less accurate for queries involving only inequality predicates.
 - Suggestions are gathered for a maximum of 500 missing index groups. After this threshold is reached, no more missing index group data is gathered.
 
@@ -135,7 +135,7 @@ ORDER BY estimated_improvement DESC;
 GO
 ```
 
-This query orders suggestions by a column named `estimated_improvement`. The estimated improvement is based on a combination of:
+This query orders the suggestions by a column named `estimated_improvement`. The estimated improvement is based on a combination of:
 
 - The estimated query cost of queries associated with the missing index request.
 - The estimated impact of adding the index. This is an estimate of how much the nonclustered index would reduce the query cost.
@@ -226,7 +226,7 @@ One way to examine the definition of existing indexes on a table is to script ou
 
 Review the missing index recommendations for a table as a group, along with the definitions of existing indexes on the table. Remember that when defining indexes, generally equality columns should be put before the inequality columns, and together they should form the key of the index. To determine an effective order for the equality columns, order them based on their selectivity: list the most selective columns first (leftmost in the column list). Unique columns are most selective, while columns with many repeating values are less selective.
 
-Included columns should be added to the CREATE INDEX statement using the INCLUDE clause. The order of included columns doesn't affect query performance, therefore, when combining indexes included columns may be combined without worrying about order. Learn more in [included columns guidelines](../sql-server-index-design-guide.md#index-with-included-columns-guidelines).
+Included columns should be added to the CREATE INDEX statement using the INCLUDE clause. The order of included columns doesn't affect query performance. Therefore, when combining indexes, included columns may be combined without worrying about order. Learn more in [included columns guidelines](../sql-server-index-design-guide.md#index-with-included-columns-guidelines).
 
 For example, you may have a table, `Person.Address`, with an existing index on the key column `StateProvinceID`. You may see missing index recommendations for the `Person.Address` table for the following columns:
 

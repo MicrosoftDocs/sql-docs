@@ -226,7 +226,7 @@ One way to examine the definition of existing indexes on a table is to script ou
 
 Review the missing index recommendations for a table as a group, along with the definitions of existing indexes on the table. Remember that when defining indexes, generally equality columns should be put before the inequality columns, and together they should form the key of the index. To determine an effective order for the equality columns, order them based on their selectivity: list the most selective columns first (leftmost in the column list). Unique columns are most selective, while columns with many repeating values are less selective.
 
-Included columns should be added to the CREATE INDEX statement using the INCLUDE clause. The order of included columns doesn't affect query performance. Learn more in [included columns guidelines](../sql-server-index-design-guide.md#index-with-included-columns-guidelines).
+Included columns should be added to the CREATE INDEX statement using the INCLUDE clause. The order of included columns doesn't affect query performance, therefore, when combining indexes included columns may be combined without worrying about order. Learn more in [included columns guidelines](../sql-server-index-design-guide.md#index-with-included-columns-guidelines).
 
 For example, you may have a table, `Person.Address`, with an existing index on the key column `StateProvinceID`. You may see missing index recommendations for the `Person.Address` table for the following columns:
 

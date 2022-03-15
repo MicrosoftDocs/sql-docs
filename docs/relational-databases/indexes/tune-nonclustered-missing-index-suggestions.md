@@ -26,7 +26,7 @@ Query optimization is a time sensitive process, so there are limitations to the 
 - The missing index feature suggests only nonclustered disk-based rowstore indexes. [Unique](../sql-server-index-design-guide.md#Unique) and [filtered indexes](../sql-server-index-design-guide.md#Filtered) aren't suggested.
 - [Key columns](../sql-server-index-design-guide.md#key-columns) are suggested, but the suggestion does not specify an order for those columns. For information on ordering columns, see the [Apply missing index suggestions](#apply-missing-index-suggestions) section of this article.
 - [Included columns](../sql-server-index-design-guide.md#Included_Columns) are suggested, but no cost-benefit analysis is performed as to the size of the resulting index when a large number of included columns are suggested.
-- Missing index requests may offer similar variations of indexes on the same table and column(s) across queries. It is important to [Review indexes and combine where possible](#review-indexes-and-combine-where-possible).
+- Missing index requests may offer similar variations of indexes on the same table and column(s) across queries. It is important to [review index suggestions and combine where possible](#review-indexes-and-combine-where-possible).
 - Suggestions are not made for trivial query plans.
 - Cost information is less accurate for queries involving only inequality predicates.
 - Suggestions are gathered for a maximum of 500 missing index groups. After this threshold is reached, no more missing index group data is gathered.

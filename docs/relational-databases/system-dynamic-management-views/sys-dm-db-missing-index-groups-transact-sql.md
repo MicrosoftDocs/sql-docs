@@ -1,5 +1,6 @@
 ---
-description: "sys.dm_db_missing_index_groups (Transact-SQL)"
+description: "The sys.dm_db_missing_index_groups dynamic management view returns information about indexes that are missing in a specific index group."
+
 title: "sys.dm_db_missing_index_groups (Transact-SQL)"
 ms.custom: ""
 ms.date: "03/8/2022"
@@ -25,7 +26,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # sys.dm_db_missing_index_groups (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  This DMV returns information about indexes that are missing in a specific index group, except for spatial indexes. 
+  This DMV returns information about indexes that are missing in a specific index group. 
+
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.  
    

@@ -95,8 +95,8 @@ conceptualContent:
           url: azure-data-studio/release-notes-azure-data-studio.md
           itemType: whats-new
         - text: SQL Server Machine Learning Services
-           url: machine-learning/what-s-new-in-sql-server-machine-learning-services.md
-           itemType: whats-new
+          url: machine-learning/what-s-new-in-sql-server-machine-learning-services.md
+          itemType: whats-new
         - text: Azure Arc-enabled SQL Server
           url: sql-server/azure-arc/overview.md
           itemType: whats-new

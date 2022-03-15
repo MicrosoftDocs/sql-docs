@@ -87,7 +87,7 @@ To generate and view the missing index requests:
 1. Display the **Find** dialog by using the **CTRL+f** shortcut.
 1. Search for `MissingIndex`.
 
-    :::image type="content" source="media/missingindex-node-in-execution-plan-xml.png" alt-text="Screenshot of the XML for an execution plan. The Find dialog has been opened, and the term MissingIndex has been searched for in the document."  lightbox="media/missingindex-node-in-execution-plan-xml.png":::
+    :::image type="content" source="media/missing-index-node-in-execution-plan-xml.png" alt-text="Screenshot of the XML for an execution plan. The Find dialog has been opened, and the term MissingIndex has been searched for in the document."  lightbox="media/missingindex-node-in-execution-plan-xml.png":::
 
     In this example, there are two `MissingIndex` elements.
 
@@ -199,7 +199,7 @@ GO
 ```
 Review the `index_description` column. A table can have only one clustered index. If a clustered index has been implemented for the table, the `index_description` will contain the word 'clustered'. 
 
-:::image type="content" source="media/sp_helpindex.png" alt-text="A screenshot of the sp_helpindex being run against the `Person.Address` table in the AdventureWorks database. The table returns four indexes. The fourth index has an index_description that shows that it's a clustered, unique primary key.":::
+:::image type="content" source="media/sp-helpindex.png" alt-text="A screenshot of the sp_helpindex being run against the `Person.Address` table in the AdventureWorks database. The table returns four indexes. The fourth index has an index_description that shows that it's a clustered, unique primary key.":::
 
 If no clustered index is present, the table is a [heap](heaps-tables-without-clustered-indexes.md). In this case, review if the table was intentionally created as a heap to solve a specific performance problem. Most tables benefit from clustered indexes: often, tables are implemented as heaps by accident. Consider implementing a clustered index based on the [clustered index design guidelines](../sql-server-index-design-guide.md#Clustered).
 
@@ -220,7 +220,7 @@ One way to examine the definition of existing indexes on a table is to script ou
 1. Select all indexes listed on the Object Explorer Details pane with the shortcut **CTRL+a**.
 1. Right-click anywhere in the selected region and select the menu option **Script index as**, then **CREATE To** and **New Query Editor Window**.
 
-:::image type="content" source="media/object_explorer_details_script_all_indexes.png" alt-text="A screenshot of scripting out all indexes on a table using the Object Explorer Details pane in SSMS."  lightbox="media/object_explorer_details_script_all_indexes.png":::
+:::image type="content" source="media/object-explorer-details-script-all-indexes.png" alt-text="A screenshot of scripting out all indexes on a table using the Object Explorer Details pane in SSMS."  lightbox="media/object_explorer_details_script_all_indexes.png":::
 
 #### Review indexes and combine where possible
 

@@ -221,6 +221,9 @@ DDL operations bypassing ANSI_WARNINGS will cause the CDC scheduler to fail.
 **Computed columns**
 CDC does not support the values for computed columns even if the computed column is defined as persisted. Computed columns that are included in a capture instance always have a value of NULL. This behavior is intended, and not a bug.
 
+**Point-in-time restore (PITR)**
+If you enabled CDC on your database as an AAD user, PITR will not work and it will fail. PITR will only work when you enable CDC on your database as a SQL user.
+
 ## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Enable and Disable change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

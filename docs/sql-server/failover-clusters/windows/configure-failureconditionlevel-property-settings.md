@@ -70,7 +70,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 3.  Right-click the **SQL Server resource** under **Other Resources**, and then select **Properties** from the menu. The SQL Server resource **Properties** dialog box opens.  
   
-4.  Select the **Properties** tab, enter the desired value for the **FaliureConditionLevel** property, and then click **OK** to apply the change.  
+4.  Select the **Properties** tab, enter the desired value for the **FailureConditionLevel** property, and then click **OK** to apply the change.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To configure FailureConditionLevel property settings:**  

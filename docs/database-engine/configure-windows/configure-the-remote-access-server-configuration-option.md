@@ -7,8 +7,8 @@ ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "remote servers [SQL Server], stored procedure execution"
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "03/02/2022"

@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "set working set size option"
 ms.assetid: 8876cdbe-c84a-43ae-a146-06974b4576e8
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # set working set size Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

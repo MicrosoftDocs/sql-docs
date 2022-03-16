@@ -12,8 +12,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.views catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "05/25/2021"

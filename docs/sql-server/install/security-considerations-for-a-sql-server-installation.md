@@ -28,7 +28,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Security Considerations for a SQL Server Installation
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
  Security is important for every product and every business. By following simple best practices, you can avoid many security vulnerabilities. This article discusses some security best practices that you should consider both before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Security guidance for specific features is included in the reference articles for those features.  
   

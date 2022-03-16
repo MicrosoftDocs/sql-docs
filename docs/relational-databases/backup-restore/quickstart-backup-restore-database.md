@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: In this article, learn how to create a new database, take a backup of the database, and restore the backup in SQL Server.
 author: LitKnd
 ms.author: kendralittle
-ms.reviewer: rwestMSFT
+ms.reviewer: randolphwest
 ms.custom: seo-lt-2019
 ms.date: 03/03/2022
 ms.topic: conceptual

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Browser Service"
   - "SQL Server Browser service"
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # SQL Server Browser Service (Database Engine and SSAS)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

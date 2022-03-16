@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.dm_os_sys_info dynamic management view"
   - "time [SQL Server], instance started"
   - "starting time"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_sys_info (Transact-SQL)

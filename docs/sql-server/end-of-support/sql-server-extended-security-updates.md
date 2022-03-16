@@ -6,8 +6,8 @@ ms.date: "11/24/2020"
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: pmasl
 monikerRange: ">=sql-server-2016"
 ---

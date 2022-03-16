@@ -117,7 +117,7 @@ The configuration and assessment tools below provide an ability to address surfa
 
 - [Surface Area Configuration](surface-area-configuration.md) - It is recommended to enable only the features that are required by your environment in order to minimize the number of features that can be attacked by a malicious user. 
 - [Vulnerability assessment for SQL Server (SSMS)](sql-vulnerability-assessment.md) - SQL vulnerability assessment is a tool in [SSMS v17.4+](../../ssms/download-sql-server-management-studio-ssms.md) that helps discover, track, and remediate potential database vulnerabilities. The vulnerability assessment is a valuable tool to improve your database security and is executed at the database level, per database.
-- [SQL Data Discovery and Classification (SSMS)](sql-data-discovery-and-classification.md) - It is common for DBAs to manage servers and databases and not be aware of sensitivity of the data that is contained in the database. Data Discovery & Classification adds the capability to discover, classify, label and report on the sensitivity level of your data.  Data Discovery & Classification is supported starting with [SSMS 17.5](/sql/ssms/download-sql-server-management-studio-ssms).
+- [SQL Data Discovery and Classification (SSMS)](sql-data-discovery-and-classification.md) - It is common for DBAs to manage servers and databases and not be aware of sensitivity of the data that is contained in the database. Data Discovery & Classification adds the capability to discover, classify, label and report on the sensitivity level of your data.  Data Discovery & Classification is supported starting with [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md).
  
 
 ## Common SQL threats 
@@ -194,6 +194,4 @@ Consider the following to minimize ransomware risks:
 
 For a comprehensive review of SQL Server security features, see [Securing SQL Server](securing-sql-server.md). 
 
-For specific product security best practices, see [Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/security-best-practice) and [SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices). 
-
-
+For specific product security best practices, see [Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/security-best-practice) and [SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices).

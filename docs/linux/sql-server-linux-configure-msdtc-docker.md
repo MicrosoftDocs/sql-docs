@@ -270,7 +270,7 @@ EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname = N'40.88.213.209', @rmtuser = 
 GO
 ```
 
-Now you can start the distributed transaction, and this code sample will show you the `sys.sysprocesses` from the `mssql-1` instance:
+Now you can start the distributed transaction, and this code sample will show you the `sys.sysprocesses` from the `mssql-0` instance:
 
 ```sql
 SET XACT_ABORT ON;

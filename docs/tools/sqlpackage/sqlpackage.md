@@ -14,7 +14,7 @@ ms.date: 1/25/2022
 
 # SqlPackage.exe
 
-**SqlPackage.exe** is a command-line utility that automates the following database development tasks:  
+**SqlPackage.exe** is a command-line utility that automates the following database development tasks by exposing some of the public Data-Tier Application Framework (DacFx) APIs:  
   
 - [Version](#version): Returns the build number of the SqlPackage application.  Added in version 18.6.
 
@@ -65,6 +65,18 @@ Create a SQL script that generates the differences of two .dacpac files:
 ```
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
 ```
+
+
+## Support
+
+ The DacFx library and the SqlPackage CLI tool have adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy). All security updates, fixes, and new features will be released only in the latest point version of the major version. Maintaining your DacFx or SqlPackage installations to the current version helps ensure that you will receive all applicable bug fixes in a timely manner.
+
+### Supported SQL offerings
+
+SqlPackage and DacFx supports all [supported SQL versions](https://docs.microsoft.com/en-us/lifecycle/products/?products=sql-server) at time of the SqlPackage/DacFx release. For example, a SqlPackage release on January 14th 2022 supports all supported versions of SQL in January 14th 2022. For more on SQL support policies, see [the SQL support policy](https://docs.microsoft.com/en-us/troubleshoot/sql/general/support-policy-sql-server#support-policy).
+
+
+
 
 ## Version
 

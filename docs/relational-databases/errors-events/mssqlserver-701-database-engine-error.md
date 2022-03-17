@@ -46,18 +46,44 @@ Internal memory pressure coming from components inside SQL Server Engine can als
 
 ## User action  
 
-If you aren't using Resource Governor, we recommend that you verify the overall server state and load, or check the resource pool or workload group settings.  
-
 If error 701 appears occasionally or for a brief period, there may be a short-lived memory issue that resolved itself. You may not need to take action in those cases. However, if the error occurs multiple times, on multiple connections and persists for periods of seconds or longer, follow the steps to troubleshoot further.
 
-The following list outlines general steps that will help in troubleshooting memory errors:  
+The following list outlines general steps that will help in troubleshooting memory errors. 
+
+### Diagnostic tools and capture
+
+The diagnostics tools that will allow you to collect troubleshooting data are **Performance Monitor**, **[sys.dm_os_memory_clerks](../system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**, and **[DBCC MEMORYSTATUS](/troubleshoot/sql/performance/dbcc-memorystatus-monitor-memory-usage)**. 
+
+Configure and collect the following counters with Performance Monitor: 
+  - **Memory:Available MB**
+  - **Process:Working Set**
+  - **Process:Private Bytes**
+  - **SQL Server:Memory Manager: (all counters)**
+  - **SQL Server:Buffer Manager: (all counters)**
+
+Configure and collect period outputs of this query
+
+  ```tsql
+  SELECT pages_kb, type, name, virtual_memory_committed_kb, awe_allocated_kb
+  FROM sys.dm_os_memory_clerks
+  ORDER BY pages_kb DESC
+  ```
+
+### Pssdiag or SQL LogScout
+
+An alternative, automated way to capture these data points is to use tools like [PSSDIAG](https://github.com/microsoft/DiagManager/releases) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases). 
+
+- If you use Pssdiag, configure to capture **Perfmon** collector and the **Custom Diagnostics\SQL Memory Error** collector
+- If you use SQL LogScout, configure to capture the **Memory** scenario
+
+The following sections describe more detailed steps for each scenario - external or internal memory pressure. 
 
 ### External pressure: diagnostics and solutions
 
 - To diagnose low memory conditions on the system outside of SQL Server process, collect Performance monitor counters. Investigate if applications or services other than SQL Server are consuming memory on this server by looking at these counters:
 
-  -  **Memory:Available MB**
-  -  **Process:Working Set**
+  - **Memory:Available MB**
+  - **Process:Working Set**
   - **Process:Private Bytes**
 
 - Review the System Event log and look for memory related errors (for example, low virtual memory). 
@@ -139,5 +165,6 @@ The following actions may free some memory and make it available to [!INCLUDE[ss
   - DBCC FREESESSIONCACHE  
   
   - DBCC FREEPROCCACHE  
-  
+
+- If you are using Resource Governor, we recommend that you check the resource pool or workload group settings and see if they are not limiting memory too drastically. 
 - If the problem continues, you'll need to investigate further and possibly increase server resources (RAM).

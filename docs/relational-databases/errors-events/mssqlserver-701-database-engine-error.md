@@ -24,16 +24,16 @@ ms.reviewer: wiassaf
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|NOSYSMEM|  
-|Message Text|There is insufficient system memory to run this query.|  
+|Message Text|There's insufficient system memory to run this query.|  
 
 > [!NOTE]
 > **This article is focused on SQL Server.** For information on troubleshooting out of memory issues in Azure SQL Database, see [Troubleshoot out of memory errors with Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues).
 
 ## Explanation  
-Error 701 occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has failed to allocate sufficient memory to run a query. Insufficient memory can be caused by a number factors including operating system settings, physical memory availability, too many other components using memory inside SQL Server, or memory limits on the current workload. In most cases, the transaction that failed isn't the cause of this error. Overall, the causes can be grouped into three:
+Error 701 occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has failed to allocate sufficient memory to run a query. Insufficient memory can be caused by a number of factors that include operating system settings, physical memory availability, other components use memory inside SQL Server, or memory limits on the current workload. In most cases, the transaction that failed isn't the cause of this error. Overall, the causes can be grouped into three:
 
 ### External or OS memory pressure
-  External pressure refers to high memory utilization coming from a component outside of the SQL Server process leading to insufficient memory for SQL Server. This means, you have to find if other applications on the system are consuming memory and leading to low memory availability. SQL Server is one of the few applications designed to respond to OS memory pressure by cutting back its memory use. This means, if some application or driver asks for memory, the OS sends a signal to all applications to free up memory and SQL Server will respond by reducing its own memory usage. Very few other applications respond because they aren't designed to listen for that notification. So if SQL starts cutting back its memory usage, its memory pool is reduced and whichever components need memory may not get it. You start getting 701 and other memory-related errors. For more information, see [SQL Server Memory Architecture](../memory-management-architecture-guide.md#sql-server-memory-architecture)
+  External pressure refers to high memory utilization coming from a component outside of the process that leads to insufficient memory for SQL Server. You have to find if other applications on the system are consuming memory and contribute to low memory availability. SQL Server is one of the few applications designed to respond to OS memory pressure by cutting back its memory use. This means, if some application or driver asks for memory, the OS sends a signal to all applications to free up memory and SQL Server will respond by reducing its own memory usage. Very few other applications respond because they aren't designed to listen for that notification. So if SQL starts cutting back its memory usage, its memory pool is reduced and whichever components need memory may not get it. You start getting 701 and other memory-related errors. For more information, see [SQL Server Memory Architecture](../memory-management-architecture-guide.md#sql-server-memory-architecture)
 
 ### Internal memory pressure, not coming from SQL Server
 
@@ -42,7 +42,7 @@ Internal memory pressure refers to low memory availability caused by factors ins
 
 ### Internal memory pressure, coming from SQL Server component(s)
   
-Internal memory pressure coming from components inside SQL Server Engine can also lead to error 701. There are hundreds of components, tracked via [memory clerks](../system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), that allocate memory in SQL Server. You must identify which memory clerk(s) are responsible for the largest memory allocations to be able to resolve this further. For example, if you find that the OBJECTSTORE_LOCK_MANAGER memory clerk is showing the large memory allocation, you need to further understand why the Lock Manager is consuming so much memory. You may find there are query requests that apply a large number of locks and optimize them by using indexes, or shorten transactions that hold locks for long periods, or check if lock escalation is disabled. Each memory clerk or component has a unique way of accessing and using memory. For more information, see [memory clerk types](../system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) and their descriptions.
+Internal memory pressure coming from components inside SQL Server Engine can also lead to error 701. There are hundreds of components, tracked via [memory clerks](../system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), that allocate memory in SQL Server. You must identify which memory clerk(s) are responsible for the largest memory allocations to be able to resolve this further. For example, if you find that the OBJECTSTORE_LOCK_MANAGER memory clerk is showing the large memory allocation, you need to further understand why the Lock Manager is consuming so much memory. You may find there are queries that acquire a large number of locks and optimize them by using indexes, or shorten transactions that hold locks for long periods, or check if lock escalation is disabled. Each memory clerk or component has a unique way of accessing and using memory. For more information, see [memory clerk types](../system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) and their descriptions.
 
 ## User action  
 
@@ -61,7 +61,7 @@ Configure and collect the following counters with Performance Monitor:
   - **SQL Server:Memory Manager: (all counters)**
   - **SQL Server:Buffer Manager: (all counters)**
 
-Configure and collect period outputs of this query
+Collect periodic outputs of this query on the impacted SQL Server
 
   ```tsql
   SELECT pages_kb, type, name, virtual_memory_committed_kb, awe_allocated_kb
@@ -95,7 +95,7 @@ The following sections describe more detailed steps for each scenario - external
 
 To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server, use the following approach:
 
-- If SQL Server is *not* using [Locked Pages in Memory](../../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md) (AWE API), then most its memory is reflected in the **Process:Private Bytes** counter (`SQLServr` instance) in Performance Monitor. The overall memory usage coming from within SQL Server engine is reflected in **SQL Server:Memory Manager: Total Server Memory (KB)** counter. If you find a significant difference between the value **Process:Private Bytes** and **SQL Server:Memory Manager: Total Server Memory (KB)**, then that difference is likely coming from a DLL (linked server, XP, SQLCLR, etc.). For example if **Private bytes** is 300 GB and **Total Server Memory** is 250 GB, then approximately 50 GB of the overall memory in the process is coming from outside SQL Server engine.
+- If SQL Server isn't* using [Locked Pages in Memory](../../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md) (AWE API), then most its memory is reflected in the **Process:Private Bytes** counter (`SQLServr` instance) in Performance Monitor. The overall memory usage coming from within SQL Server engine is reflected in **SQL Server:Memory Manager: Total Server Memory (KB)** counter. If you find a significant difference between the value **Process:Private Bytes** and **SQL Server:Memory Manager: Total Server Memory (KB)**, then that difference is likely coming from a DLL (linked server, XP, SQLCLR, etc.). For example if **Private bytes** is 300 GB and **Total Server Memory** is 250 GB, then approximately 50 GB of the overall memory in the process is coming from outside SQL Server engine.
 
 - If SQL Server is using Locked Pages in Memory (AWE API), then it is more challenging to identify the issue because Performance monitor doesn't offer AWE counters that track memory usage for individual processes. The overall memory usage coming from within SQL Server engine is reflected in **SQL Server:Memory Manager: Total Server Memory (KB)** counter. Typical **Process:Private Bytes** values may vary between 300 MB and 1-2 GB overall. If you find a significant usage of **Process:Private Bytes** beyond this typical use, then the difference is likely coming from a DLL (linked server, XP, SQLCLR, etc.). For example, if **Private bytes** counter is 5-4 GB and SQL Server is using Locked Pages in Memory (AWE), then a large part of the Private bytes may be coming from outside SQL Server engine. This is an approximation technique.
 
@@ -111,7 +111,7 @@ To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server,
   SELECT * FROM sys.dm_os_loaded_modules
   ```
 
-- If you suspect that a Linked Server module is causing significant memory consumption, then you can configure it to run out of process by disabling **Allow inprocess** option. See [Create Linked Servers](../linked-servers/create-linked-servers-sql-server-database-engine.md) for more information. Note that not all linked server OLEDB providers may run out of process; contact the product manufacturer for more information.
+- If you suspect that a Linked Server module is causing significant memory consumption, then you can configure it to run out of process by disabling **Allow inprocess** option. See [Create Linked Servers](../linked-servers/create-linked-servers-sql-server-database-engine.md) for more information. Not all linked server OLEDB providers may run out of process; contact the product manufacturer for more information.
 
 - In the rare case that OLE automation objects are used (`sp_OA*`), you may configure the object to run in a process outside SQL Server by setting *context* = 4 (Local (.exe) OLE server only.). For more information, see [sp_OACreate](../system-stored-procedures/sp-oacreate-transact-sql.md).
 
@@ -166,5 +166,5 @@ The following actions may free some memory and make it available to [!INCLUDE[ss
   
   - DBCC FREEPROCCACHE  
 
-- If you are using Resource Governor, we recommend that you check the resource pool or workload group settings and see if they are not limiting memory too drastically. 
+- If you're using Resource Governor, we recommend that you check the resource pool or workload group settings and see if they aren't limiting memory too drastically. 
 - If the problem continues, you'll need to investigate further and possibly increase server resources (RAM).

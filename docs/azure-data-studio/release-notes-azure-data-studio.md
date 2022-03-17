@@ -8,7 +8,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 03/17/2022
+ms.date: 02/24/2022
 ---
 
 # Release notes for Azure Data Studio
@@ -19,21 +19,33 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### February 2022 Hotfix release
+### February 2022
 
-Azure Data Studio 1.35.1 is the latest general availability (GA) release.
+Azure Data Studio 1.35.0 is the latest general availability (GA) release.
 
-- Release number: 1.35.1
-- Release date: March 17, 2022
+- Release number: 1.35.0
+- Release date: February 24, 2022
 
-#### Bug fixes in 1.35.1
+#### What's new in 1.35.0
+
+| New item | Details |
+|----------|---------|
+| Table Designer | Added functionality for creation and management of tables for SQL Servers. Built using DacFx framework |
+| Query Plan Viewer | Added functionality for users to view a graphic view of estimated and actual query plans without need for an extension |
+| Azure Arc Extension | Updated the Data Controller deployment wizard and the SQL Managed Instance - Azure Arc deployment wizard to reflect the deployment experience in Azure Portal |
+
+#### Bug fixes in 1.35.0
 
 | New Item | Details |
 |----------|---------|
-| Query Editor | Geometry Data Type Returned as Unknown Charset in Results Grid |
-| Query Editor | Excel number format  |
+| Azure Arc Extension | SQL Managed Instance-Azure Arc is now fixed for both indirect connectivity mode and direct connectivity mode |
+| Notebooks | Support for keyboard navigation between cells to minimize mouse clicking |
 
-For a full list of bug fixes addressed for the February 2022 Hotfix release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/86).
+For a full list of bug fixes addressed for the February 2022 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2022+Release%22+is%3Aclosed).
+
+#### Known issues in 1.35.0
+
+For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ## Azure Data Studio feedback
 
@@ -43,7 +55,6 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------|
-| [February 2022](#february-2022) | 1.35.0 | February 24, 2021 | N/A | 
 | [December 2021](#december-2021) | 1.34.0 | December 15, 2021 | N/A |  
 | [October 2021](#october-2021) | 1.33.0 | October 27, 2021 | N/A |
 | [August 2021](#august-2021) | 1.32.0 | August 18, 2021 | N/A |
@@ -81,34 +92,6 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 > [!Note]
 > All previous versions of Azure Data Studio are not supported.
-
-### February 2022
-
-Azure Data Studio 1.35.0 is the latest general availability (GA) release.
-
-- Release number: 1.35.0
-- Release date: February 24, 2022
-
-#### What's new in 1.35.0
-
-| New item | Details |
-|----------|---------|
-| Table Designer | Added functionality for creation and management of tables for SQL Servers. Built using DacFx framework |
-| Query Plan Viewer | Added functionality for users to view a graphic view of estimated and actual query plans without need for an extension |
-| Azure Arc Extension | Updated the Data Controller deployment wizard and the SQL Managed Instance - Azure Arc deployment wizard to reflect the deployment experience in Azure Portal |
-
-#### Bug fixes in 1.35.0
-
-| New Item | Details |
-|----------|---------|
-| Azure Arc Extension | SQL Managed Instance-Azure Arc is now fixed for both indirect connectivity mode and direct connectivity mode |
-| Notebooks | Support for keyboard navigation between cells to minimize mouse clicking |
-
-For a full list of bug fixes addressed for the February 2022 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2022+Release%22+is%3Aclosed).
-
-#### Known issues in 1.35.0
-
-For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ### December 2021
 

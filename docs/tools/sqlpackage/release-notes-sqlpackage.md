@@ -57,6 +57,7 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
 | Deployment | The Azure SQL ledger table feature isn't yet supported for extract and publish. | N/A |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 
 ## 18.8 sqlpackage

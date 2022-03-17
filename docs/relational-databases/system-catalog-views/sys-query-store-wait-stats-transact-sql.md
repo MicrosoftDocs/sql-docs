@@ -11,6 +11,7 @@ ms.topic: "reference"
 f1_keywords: 
   - "sys.query_store_wait_stats"
   - "query_store_wait_stats"
+  - "sys.query_store_wait_stats_TSQL"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

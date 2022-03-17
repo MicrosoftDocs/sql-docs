@@ -73,7 +73,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 
 ### Supported SQL offerings
 
-SqlPackage and DacFx supports all [supported SQL versions](https://docs.microsoft.com/en-us/lifecycle/products/?products=sql-server) at time of the SqlPackage/DacFx release. For example, a SqlPackage release on January 14th 2022 supports all supported versions of SQL in January 14th 2022. For more on SQL support policies, see [the SQL support policy](https://docs.microsoft.com/en-us/troubleshoot/sql/general/support-policy-sql-server#support-policy).
+SqlPackage and DacFx supports all [supported SQL versions](/lifecycle/products/?products=sql-server) at time of the SqlPackage/DacFx release. For example, a SqlPackage release on January 14th 2022 supports all supported versions of SQL in January 14th 2022. For more on SQL support policies, see [the SQL support policy](/troubleshoot/sql/general/support-policy-sql-server#support-policy).
 
 
 

@@ -27,17 +27,10 @@ The following Microsoft SQL Server products are supported by Microsoft Connector
 - Microsoft SQL Server Data Tools (SSDT) 15.8.1 or later for Visual Studio 2017
 - Microsoft SQL Server Data Tools (SSDT) for Visual Studio 2019
 
-Microsoft connector for Teradata uses Teradata Parallel Transporter Application Programming Language Interface to load into and export data from the Teradata database. The following versions are supported:
+Microsoft connector for Teradata uses Teradata Parallel Transporter Application Programming Language Interface to load into and export data from the Teradata database. The following versions are supported during TTU lifecycle:
 
-- Teradata Parallel Transporter (Teradata PT) 16.10
-- Teradata Parallel Transporter (Teradata PT) 16.20
-
-The following Teradata database versions of data source are supported:
-
-- Teradata Database 16.20
-- Teradata Database 16.10
-- Teradata Database 15.10
-- Teradata Database 15.00
+- Teradata Tools and Utilities (TTU) 16.10 supports Teradata Database 14.00, 14.10, 15.00, 15.10, 16.10, 16.20 and 17.00/05
+- Teradata Tools and Utilities (TTU) 16.20 supports Teradata Database 14.10, 15.00, 15.10, 16.10, 16.20, 17.00/05 and 17.10
 
 Check [Teradata documentation](https://docs.teradata.com/) for details of Teradata Parallel Transporter Application programming interface programmer guide.
 

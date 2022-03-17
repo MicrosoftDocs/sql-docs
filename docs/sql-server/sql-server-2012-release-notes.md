@@ -192,7 +192,7 @@ The following items describe the prerequisite installation behavior during SQL S
   
     -   Windows 7/Windows Server 2008 R2 - Windows PowerShell 2.0 are installed by default.  
   
--   If you plan to use SQL Server 2012 features in a SharePoint environment, then SharePoint Server 2010 Service Pack 1 (SP1) and the SharePoint August Cumulative Update is required. You must install SP1, the SharePoint [August Cumulative Update](https://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx), and fully patch the server farm before you add SQL Server 2012 features to the farm. This requirement applies to the following SQL Server 2012 features: using an instance of Database Engine as the farm's database server, configuring PowerPivot for SharePoint, or deploying Reporting Services in SharePoint mode.  
+-   If you plan to use SQL Server 2012 features in a SharePoint environment, then SharePoint Server 2010 Service Pack 1 (SP1) and the SharePoint August Cumulative Update is required. You must install SP1, the SharePoint [August Cumulative Update](/archive/blogs/), and fully patch the server farm before you add SQL Server 2012 features to the farm. This requirement applies to the following SQL Server 2012 features: using an instance of Database Engine as the farm's database server, configuring PowerPivot for SharePoint, or deploying Reporting Services in SharePoint mode.  
   
 ### 1.8 Supported Operating Systems for SQL Server 2012  
 SQL Server 2012 is supported on the Windows Vista SP2, Windows Server 2008 SP2, Windows 2008 R2 SP1, and Windows 7 SP1 operating systems.  

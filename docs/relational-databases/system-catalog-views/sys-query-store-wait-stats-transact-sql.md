@@ -9,10 +9,9 @@ ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
-  - "SYS.QUERY_STORE_WAIT_STATS"
-  - "SYS.QUERY_STORE_WAIT_STATS_TSQL"
-  - "QUERY_STORE_WAIT_STATS"
-  - "QUERY_STORE_WAIT_STATS_TSQL"
+  - "sys.query_store_wait_stats"
+  - "query_store_wait_stats"
+  - "sys.query_store_wait_stats_TSQL"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

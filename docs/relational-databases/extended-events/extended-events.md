@@ -31,8 +31,8 @@ You can find more information about Extended Events at [Quickstart: Extended eve
 ## Benefits of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  
 
 Extended Events is a lightweight performance monitoring system that uses minimal performance resources. SQL Server Management Studio provides a graphical user interface for Extended Events to create and modify sessions and display and analyze session data. Here you can find out more about those extensions:
-|[Manage Event Sessions in the Object Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
-|[Use the SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md) 
+-[Manage Event Sessions in the Object Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
+-[Use the SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md) 
 
 
 ## Extended Events Concepts  
@@ -46,7 +46,6 @@ Extended Events is a lightweight performance monitoring system that uses minimal
 |[SQL Server Extended Events Targets](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))|Describes the event consumers that can receive data during an event session.|  
 |[SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|Describes the engine that implements and manages an Extended Events session.|  
 |[SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|Describes the Extended Events session.|  
-| &nbsp; | &nbsp; |
   
 ## Extended Events Architecture  
 
@@ -99,7 +98,7 @@ Using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or [!INCLUDE[tsq
 |Describes how to identify the source of locks that are hindering database performance.|[Find the Objects That Have the Most Locks Taken on Them](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Describes how to use Extended Events with Event Tracing for Windows to monitor system activity.|[Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 |Using the Catalog views and the Dynamic management views (DMVs) for extended events | [SELECTs and JOINs From System Views for Extended Events in SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
-| &nbsp; | &nbsp; |
+
 
 Use the following Transact-SQL (T-SQL) query to list out all possible extended events and their descriptions:
 

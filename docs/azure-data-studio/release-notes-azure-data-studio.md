@@ -55,7 +55,6 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------|
-| [February 2022](#february-2022) | 1.35.0 | February 15, 2021 | N/A |  
 | [December 2021](#december-2021) | 1.34.0 | December 15, 2021 | N/A |  
 | [October 2021](#october-2021) | 1.33.0 | October 27, 2021 | N/A |
 | [August 2021](#august-2021) | 1.32.0 | August 18, 2021 | N/A |
@@ -93,29 +92,6 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 > [!Note]
 > All previous versions of Azure Data Studio are not supported.
-
-### February 2022
-
-Azure Data Studio 1.35.0 is the latest general availability (GA) release.
-
-- Release number: 1.35.0
-- Release date: February 24, 2022
-
-#### What's new in 1.35.0
-
-| New item | Details |
-|----------|---------|
-| Table Designer | Added functionality for creation and management of tables for SQL Servers. Built using DacFx framework |
-| Query Plan Viewer | Added functionality for users to view a graphic view of estimated and actual query plans without need for an extension |
-| Azure Arc Extension | Updated the Data Controller deployment wizard and the SQL Managed Instance - Azure Arc deployment wizard to reflect the deployment experience in Azure Portal |
-
-#### Bug fixes in 1.35.0
-
-| New Item | Details |
-|----------|---------|
-| Azure Arc Extension | SQL Managed Instance-Azure Arc is now fixed for both indirect connectivity mode and direct connectivity mode |
-| Notebooks | Support for keyboard navigation between cells to minimize mouse clicking |
-
 
 ### December 2021
 

@@ -1,5 +1,5 @@
 ---
-description: "The sp_drop_openrowset_statistics system stored procedure removes column statistics for a column in the OPENROWSET path of Azure Synapse SQL resources and PolyBase external data sources."
+description: "The sp_drop_openrowset_statistics system stored procedure removes column statistics for a column in the OPENROWSET path of Azure Synapse SQL resources."
 title: "sp_drop_openrowset_statistics (Transact-SQL)"
 ms.custom: ""
 ms.date: "03/11/2022"
@@ -17,14 +17,14 @@ helpviewer_keywords:
   - "sp_drop_openrowset_statistics"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||=azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # sp_drop_openrowset_statistics (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/asdbmi-asa-svrless-poolonly.md)]
 
-  Creates column statistics for a column in the OPENROWSET path of Azure Synapse SQL resources, such as dedicated SQL pools and serverless SQL pools. For more information, see [Statistics in Synapse SQL](/azure/synapse-analytics/sql/develop-tables-statistics). To update statistics, drop and create statistics using [sp_create_openrowset_statistics (Transact-SQL)](sp-create-openrowset-statistics.md).
+  Drops column statistics for a column in the OPENROWSET path of Azure Synapse SQL resources, such as dedicated SQL pools and serverless SQL pools. For more information, see [Statistics in Synapse SQL](/azure/synapse-analytics/sql/develop-tables-statistics). To update statistics, drop and create statistics using [sp_create_openrowset_statistics (Transact-SQL)](sp-create-openrowset-statistics.md).
 
-  This procedure is also used by [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] for with Polybase external data sources.
+  This procedure is also used by [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] for column statistics in external data sources via OPENROWSET.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,8 @@ Specifies a Transact-SQL statement that will return column values to be used for
 `<tablesample_clause> ::= TABLESAMPLE ( sample_number PERCENT )`
   
 ## Remarks  
- Currently, you can create single-column statistics only. 
+ Statistics metadata is not available for OPENROWSET columns.
 
- Statistics metadata is available for external table columns only. Statistics metadata isn't available for OPENROWSET columns. 
-  
 ## Permissions  
  Requires ADMINISTER BULK OPERATIONS or ADMINISTER DATABASE BULK OPERATIONS permissions.
   

@@ -199,9 +199,8 @@ Outputs = security
 ```
 
 You don't need to restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for the logger changes to be picked up from `logger.ini`, but failures can occur during AD service initialization on during [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] startup that would otherwise go unnoticed. Restarting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ensures all the error messages are captured.
-                                                                                                                                                                                              
-> [!NOTE] 
-> The security log will continue to write to the drive until you remove the changes in `logger.ini`. Remember to disable `security.kerberos` and `security.ldap` logging once you've identified and resolved the problem to prevent running out of space on the drive.
+
+Note that the security log will continue to write to the drive until you remove the changes in `logger.ini`. Remember to disable `security.kerberos` and `security.ldap` logging once you've identified and resolved the problem to prevent running out of space on the drive.
 
 The PAL logger generates log files in the following format:
 

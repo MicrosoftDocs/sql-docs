@@ -254,19 +254,19 @@ For example, the following command pulls the Cumulative Update 15 for [!INCLUDE[
 
 ::: zone pivot="cs1-bash"
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8.4
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-powershell"
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8.4
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-cmd"
 ```cmd
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU15-rhel-8.4
 ```
 ::: zone-end
 

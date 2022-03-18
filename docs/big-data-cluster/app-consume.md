@@ -2,8 +2,8 @@
 title: Consume applications
 titleSuffix: SQL Server Big Data Clusters
 description: Consume an application deployed on SQL Server Big Data Clusters using a RESTful web service.
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 06/22/2020
 ms.metadata: seo-lt-2019

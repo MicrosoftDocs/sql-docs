@@ -3,7 +3,6 @@ description: "The sp_drop_openrowset_statistics system stored procedure removes 
 title: "sp_drop_openrowset_statistics (Transact-SQL)"
 ms.custom: ""
 ms.date: "03/11/2022"
-ms.prod: sql
 ms.service: synapse-analytics, sql-managed-instance
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
@@ -23,7 +22,7 @@ monikerRange: "=azure-sqldw-latest||=azuresqldb-mi-current"
 # sp_drop_openrowset_statistics (Transact-SQL)
 [!INCLUDE [asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/asdbmi-asa-svrless-poolonly.md)]
 
-  Drops column statistics for a column in the OPENROWSET path of Azure Synapse SQL resources, such as dedicated SQL pools and serverless SQL pools. For more information, see [Statistics in Synapse SQL](/azure/synapse-analytics/sql/develop-tables-statistics). To update statistics, drop and create statistics using [sp_create_openrowset_statistics (Transact-SQL)](sp-create-openrowset-statistics.md).
+  Drops column statistics for a column in the OPENROWSET path of Azure Synapse SQL resources, such as dedicated SQL pools and serverless SQL pools. For more information, see [Statistics in Synapse SQL](/azure/synapse-analytics/sql/develop-tables-statistics). To update statistics, drop and create statistics using [sp_create_openrowset_statistics](sp-create-openrowset-statistics.md).
 
   This procedure is also used by [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] for column statistics in external data sources via OPENROWSET.
 

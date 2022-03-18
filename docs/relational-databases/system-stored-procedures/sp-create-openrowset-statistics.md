@@ -3,7 +3,6 @@ description: "The sp_create_openrowset_statistics system stored procedure create
 title: "sp_create_openrowset_statistics (Transact-SQL)"
 ms.custom: ""
 ms.date: "03/11/2022"
-ms.prod: sql
 ms.service: synapse-analytics, sql-managed-instance
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""

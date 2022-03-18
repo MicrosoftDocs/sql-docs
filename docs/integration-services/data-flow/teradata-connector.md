@@ -81,11 +81,22 @@ To design SSIS package in SSDT *targeting SQL Server 2017 and below*, you will n
 
 - Teradata Source Editor, view cannot be displayed when Data access mode is "Table Name – TPT Export". As work-around, use Advanced Editor of Teradata Source.
 
-- Teradata Destination, attribute ‘PackMaximum’ cannot be set to ‘True’. Otherwise, error will occur.
+- Teradata Destination, attribute "PackMaximum" cannot be set to "True". Otherwise, error will occur.
+
+- Teradata Source always reads columns in the order as they are defined in the table. ODBC, on the other hand, requires columns be read in a specific order in certain circumstances (see [here](https://docs.microsoft.com/sql/odbc/reference/develop-app/getting-long-data) and [here](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-api/sqlgetdata)). When the two orders do not match, read will fail with error message "Invalid descriptor index, descriptor record does not exist, or descriptor record was not properly initialized."
+
+- Installing a new version over an old installation will not remove the old version entry from the installed program list. While this does not impact functioning of the new version, user can manually uninstall the old version in control panel "Programs and Features" to get rid of the old version entry.
 
 ## Uninstallation
 
 You can run uninstall wizard to remove **Microsoft connector for Teradata**.
+
+## Release Notes
+
+### Rev. 197
+
+**Bugfixes**
+1. When reading empty string data, Teradata Source would fail with error message "An error occurred when converting string to target codepage."
 
 ## Next steps
 

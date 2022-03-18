@@ -26,7 +26,7 @@ Options and recommendations for loading data into a columnstore index by using t
 
 To perform a bulk load, you can use [bcp Utility](../../tools/bcp-utility.md), [Integration Services](../../integration-services/sql-server-integration-services.md), or select rows from a staging table.
 
-![Loading into a clustered columnstore index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
+![Loading into a clustered columnstore index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.png "Loading into a clustered columnstore index")  
   
 As the diagram suggests, a bulk load:
   

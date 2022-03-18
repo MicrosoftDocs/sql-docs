@@ -114,8 +114,6 @@ If you need to download the packages for offline installation, all versions are 
 ### Ubuntu
 
 - Ubuntu 21.10 .deb packages: [v17](https://packages.microsoft.com/ubuntu/21.10/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/ubuntu/21.10/prod/pool/main/m/msodbcsql18/)
-- Ubuntu 21.04 .deb packages: [v17](https://packages.microsoft.com/ubuntu/21.04/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/ubuntu/21.04/prod/pool/main/m/msodbcsql18/)
-- Ubuntu 20.10 .deb packages: [v17](https://packages.microsoft.com/ubuntu/20.10/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/ubuntu/20.10/prod/pool/main/m/msodbcsql18/)
 - Ubuntu 20.04 .deb packages: [v17](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/msodbcsql18/)
 - Ubuntu 18.04 .deb packages: [v17](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/) [v18](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql18/)
 - Ubuntu 16.04 .deb packages: [v13](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/) [v17](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)

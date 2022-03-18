@@ -50,9 +50,9 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("Modified
 Server srv;   
 srv = new Server();   
 //Modify a property using the Databases, Tables, and Columns collections to reference a column.   
-srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("LastName").Nullable = true;   
+srv.Databases["AdventureWorks2012"].Tables["Person", "Person"].Columns["LastName"].Nullable = true;   
 //Call the Alter method to make the change on the instance of SQL Server.   
-srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("LastName").Alter();   
+srv.Databases["AdventureWorks2012"].Tables["Person", "Person"].Columns["LastName"].Alter();   
 }  
 ```  
   
@@ -83,14 +83,14 @@ Console.WriteLine("Total connections =" & total)
 ```csharp  
 //Connect to the local, default instance of SQL Server.   
 {   
-Server srv = default(Server);   
+Server srv = default[Server];   
 srv = new Server();   
 int count = 0;   
 int total = 0;   
 //Iterate through the databases and call the GetActiveDBConnectionCount method.   
 Database db = default(Database);   
 foreach ( db in srv.Databases) {   
-  count = srv.GetActiveDBConnectionCount(db.Name);   
+  count = srv.GetActiveDBConnectionCount[db.Name];   
   total = total + count;   
   //Display the number of connections for each database.   
   Console.WriteLine(count + " connections on " + db.Name);   

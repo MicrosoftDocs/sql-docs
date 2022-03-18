@@ -34,15 +34,15 @@ This article helps you troubleshoot Active Directory (AD) authentication issues 
     nslookup <IPs returned from the above commands>
     ```
 
-    All should return `<hostname>.contoso.com`. If that isn't the case, check that the PTR (pointer) records that are created in Active Directory.
+    All should return `<hostname>.contoso.com`. If that isn't the case, check the PTR (pointer) records that are created in Active Directory.
 
     You may have to work with your domain administrator to get rDNS working. If you can't add PTR entries for all the IP addresses returned, you can also [limit SQL Server to a subset of domain controllers](#validate-realm-information-in-krb5conf). This change will affect any other services using `krb5.conf` on the host.
 
     For more information about reverse DNS, see [What is reverse DNS?](/azure/dns/dns-reverse-dns-overview#what-is-reverse-dns)
-    
+
 ## Check keytab file and permissions
 
-1. Check that you've created the keytab (key table) file, and that **mssql-conf** is configured to use the correct file with appropriate permissions. The keytab must be accessible to the `mssql` user account. See [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md) for more information. --> This link here should point to this https://review.docs.microsoft.com/en-us/sql/linux/sql-server-linux-ad-auth-adutil-tutorial?view=sql-server-2017&branch=pr-en-us-21428#create-the-sql-server-service-keytab-file which takes it to the exact subtopic of keytab creation.
+1. Check that you've created the keytab (key table) file, and that **mssql-conf** is configured to use the correct file with appropriate permissions. The keytab must be accessible to the `mssql` user account. See [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md#create-the-sql-server-service-keytab-file) for more information.
 
 1. Make sure that you can list the contents of the keytab, and that you've added the correct Service Principal Names (SPNs), port, encryption type, and user account. If you don't type the passwords correctly when creating the SPNs and keytab entries, you'll encounter errors when attempting to sign in using AD authentication.
 
@@ -131,13 +131,12 @@ See the details below to assist you in troubleshooting AD authentication issues 
 After you create the user, SPNs, and keytabs, and configure **mssql-conf** to see that the AD configuration for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux is correct, you can display the Kerberos trace messages to the console (`stdout`) when attempting to obtain or renew the Kerberos TGT (ticket-granting ticket) with the privileged account, using this command:
 
 ```bash
-$ KRB5_TRACE=/dev/stdout kinit -kt /var/opt/mssql/secrets/mssql.keytab sqluser
+root@sqllinux mssql# KRB5_TRACE=/dev/stdout kinit -kt /var/opt/mssql/secrets/mssql.keytab sqluser
 ```
 
 If there aren't any problems, you should see output similar to the sample below. If not, the trace will provide context about which steps you should review.
 
 ```output
-root@sqllinux mssql# KRB5_TRACE=/dev/stdout kinit -kt /var/opt/mssql/secrets/mssql.keytab sqluser
 3791545 1640722276.100275: Getting initial credentials for sqluser@CONTOSO.COM
 3791545 1640722276.100276: Looked up etypes in keytab: aes256-cts, aes128-cts
 3791545 1640722276.100278: Sending unauthenticated request

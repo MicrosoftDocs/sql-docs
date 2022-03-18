@@ -1,8 +1,8 @@
 ---
 title: Update AZDATA_PASSWORD
 description: Update the `AZDATA_PASSWORD` manually
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 07/12/2021
 ms.topic: conceptual

@@ -2,8 +2,8 @@
 title: SQL Server Big Data Clusters post-deployment configuration overview
 titleSuffix: SQL Server Big Data Clusters
 description: Big data clusters post-deployment configuration overview
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 10/05/2021
 ms.topic: reference

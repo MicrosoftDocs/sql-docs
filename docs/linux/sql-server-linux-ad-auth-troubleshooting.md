@@ -34,7 +34,7 @@ This article helps you troubleshoot Active Directory (AD) authentication issues 
     nslookup <IPs returned from the above commands>
     ```
 
-    All should return `<hostname>.contoso.com`. If that isn't the case, check that the PTR (pointer) records are created in Active Directory.
+    All should return `<hostname>.contoso.com`. If that isn't the case, check the PTR (pointer) records that are created in Active Directory.
 
     You may have to work with your domain administrator to get rDNS working. If you can't add PTR entries for all the IP addresses returned, you can also [limit SQL Server to a subset of domain controllers](#validate-realm-information-in-krb5conf). This change will affect any other services using `krb5.conf` on the host.
 
@@ -42,7 +42,7 @@ This article helps you troubleshoot Active Directory (AD) authentication issues 
 
 ## Check keytab file and permissions
 
-1. Check that you've created the keytab (key table) file, and that **mssql-conf** is configured to use the correct file with appropriate permissions. The keytab must be accessible to the `mssql` user account. See [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md) for more information.
+1. Check that you've created the keytab (key table) file, and that **mssql-conf** is configured to use the correct file with appropriate permissions. The keytab must be accessible to the `mssql` user account. See [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md#create-the-sql-server-service-keytab-file) for more information.
 
 1. Make sure that you can list the contents of the keytab, and that you've added the correct Service Principal Names (SPNs), port, encryption type, and user account. If you don't type the passwords correctly when creating the SPNs and keytab entries, you'll encounter errors when attempting to sign in using AD authentication.
 
@@ -131,13 +131,7 @@ See the details below to assist you in troubleshooting AD authentication issues 
 After you create the user, SPNs, and keytabs, and configure **mssql-conf** to see that the AD configuration for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux is correct, you can display the Kerberos trace messages to the console (`stdout`) when attempting to obtain or renew the Kerberos TGT (ticket-granting ticket) with the privileged account, using this command:
 
 ```bash
-$ KRB5_TRACE=/dev/stdout kinit -kt /var/opt/mssql/secrets/mssql.keytab sqluser
-$ sudo klist
-Ticket cache: KCM:0:37337
-Default principal: sqluser@CONTOSO.COM
-Valid starting Expires Service principal
-12/28/2021 20:11:16 12/29/2021 06:11:16 krbtgt/CONTOSO.COM@CONTOSO.COM
-renew until 01/04/2022 20:11:16
+root@sqllinux mssql# KRB5_TRACE=/dev/stdout kinit -kt /var/opt/mssql/secrets/mssql.keytab sqluser
 ```
 
 If there aren't any problems, you should see output similar to the sample below. If not, the trace will provide context about which steps you should review.
@@ -177,6 +171,13 @@ If there aren't any problems, you should see output similar to the sample below.
 3791545 1640722276.100310: Storing sqluser@CONTOSO.COM -> krbtgt/CONTOSO.COM@CONTOSO.COM in KCM:0:37337
 3791545 1640722276.100311: Storing config in KCM:0:37337 for krbtgt/CONTOSO.COM@CONTOSO.COM: pa_type: 2
 3791545 1640722276.100312: Storing sqluser@CONTOSO.COM -> krb5_ccache_conf_data/pa_type/krbtgt/CONTOSO.COM@CONTOSO.COM@X-CACHECONF: in KCM:0:37337
+
+$ sudo klist
+Ticket cache: KCM:0:37337
+Default principal: sqluser@CONTOSO.COM
+Valid starting Expires Service principal
+12/28/2021 20:11:16 12/29/2021 06:11:16 krbtgt/CONTOSO.COM@CONTOSO.COM
+renew until 01/04/2022 20:11:16
 ```
 
 ### Enable Kerberos and security-based PAL logging
@@ -199,7 +200,7 @@ Outputs = security
 
 You don't need to restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for the logger changes to be picked up from `logger.ini`, but failures can occur during AD service initialization on during [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] startup that would otherwise go unnoticed. Restarting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ensures all the error messages are captured.
 
-The security log will continue to write to the drive until you remove the changes in `logger.ini`. Remember to disable `security.kerberos` and `security.ldap` logging once you've identified and resolved the problem to prevent running out of space on the drive.
+Note that the security log will continue to write to the drive until you remove the changes in `logger.ini`. Remember to disable `security.kerberos` and `security.ldap` logging once you've identified and resolved the problem to prevent running out of space on the drive.
 
 The PAL logger generates log files in the following format:
 
@@ -210,7 +211,7 @@ The PAL logger generates log files in the following format:
 For example, a sample line from the log is shown below:
 
 ```output
-12/28/2021 13:56:31.609453055 Error [security.kerberos] <0003753757/0x00000324> Request ticket server MSSQLSvc/sql.contoso.  com:1433@CONTOSO.COM kvno 3 enctype aes256-cts found in keytab but cannot decrypt ticket
+12/28/2021 13:56:31.609453055 Error [security.kerberos] <0003753757/0x00000324> Request ticket server MSSQLSvc/sql.contoso.com:1433@CONTOSO.COM kvno 3 enctype aes256-cts found in keytab but cannot decrypt ticket
 ```
 
 Once you have PAL logging enabled and you reproduce the issue, look for the first message with a log-level of `Error`, then use the table below to find the error and follow the guidance and recommendation to troubleshoot and resolve the issue.

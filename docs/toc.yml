@@ -10140,10 +10140,6 @@ items:
         href: linux/sql-server-linux-ad-auth-adutil-tutorial.md
       - name: Set up AD Authentication
         href: linux/sql-server-linux-active-directory-authentication.md
-      - name: Understanding AD Authentication
-        href: linux/sql-server-linux-ad-auth-understanding.md
-      - name: Troubleshooting AD Authentication
-        href: linux/sql-server-linux-ad-auth-troubleshooting.md
     - name: Create failover cluster instance
       href: linux/sql-server-linux-shared-disk-cluster-configure.md
       items:
@@ -10326,6 +10322,10 @@ items:
         href: linux/sql-server-linux-encrypted-connections.md
       - name: Introduction to adutil
         href: linux/sql-server-linux-ad-auth-adutil-introduction.md
+      - name: Understanding AD Authentication
+        href: linux/sql-server-linux-ad-auth-understanding.md
+      - name: Troubleshooting AD Authentication
+        href: linux/sql-server-linux-ad-auth-troubleshooting.md
       - name: Rotate SQL Server on Linux keytabs
         href: linux/sql-server-linux-ad-auth-rotate-keytabs.md
     - name: Performance

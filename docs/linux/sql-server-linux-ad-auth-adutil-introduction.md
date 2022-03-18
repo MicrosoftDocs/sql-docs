@@ -21,9 +21,11 @@ You don't need to use **adutil** to enable AD authentication for SQL Server on L
 
 The **adutil** tool is designed as a series of commands and subcommands, with additional flags that you specify as further input. Each top level command represents a category of administrative functions. Within that category, each subcommand is an operation. This article will show you how you can download and get started with **adutil**.
 
+Support for **adutil** is limited for SQL Server use cases only.
+
 ## Configuring adutil for LDAP over Secure Sockets Layer (SSL)
 
-Support for **adutil** is limited for SQL Server use cases only. You should use Lightweight Directory Access Protocol over SSL (LDAPS) instead of Lightweight Directory Access Protocol (LDAP). For more information about LDAP, see [Lightweight Directory Access Protocol (LDAP)](sql-server-linux-ad-auth-understanding.md#ldap).
+You should use Lightweight Directory Access Protocol over SSL (LDAPS) instead of Lightweight Directory Access Protocol (LDAP). If you want to learn more about LDAP, see [Lightweight Directory Access Protocol (LDAP)](sql-server-linux-ad-auth-understanding.md#ldap). For more information on how to configure LDAPS and how it differs from LDAP, see [Enabling LDAPS for Client Authentication](https://social.technet.microsoft.com/wiki/contents/articles/2980.ldap-over-ssl-ldaps-certificate.aspx#Enabling_LDAPS_for_Client_Authentication).
 
 You can set the `useLdaps` option to `true` in the `adutil.json` configuration file, which is located at: `/var/opt/mssql/.adutil/adutil.json` when run under the `mssql` user. This JSON code sample shows how to configure the setting:
 
@@ -33,7 +35,11 @@ You can set the `useLdaps` option to `true` in the `adutil.json` configuration f
         }
 ```
 
-By default, the `useLDAPS` setting is set to `false`. When configuring this setting and using **mssql-conf** to create the keytab (key table), make sure you run **mssql-conf** as the user `mssql`.
+By default, the `useLDAPS` setting is set to `false`. When configuring this setting and using **mssql-conf** to create the keytab (key table), make sure you run **mssql-conf** as the user `mssql`. You can do this by running the following command:
+
+```bash
+sudo su mssql
+```
 
 To set up the keytab file, see [Create the SQL Server service keytab file](sql-server-linux-ad-auth-adutil-tutorial.md#create-the-sql-server-service-keytab-file).
 

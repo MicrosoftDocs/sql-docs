@@ -224,8 +224,14 @@ CDC does not support the values for computed columns even if the computed column
 **Point-in-time restore (PITR)**
 If you enabled CDC on your database as an AAD user, PITR will not work and it will fail. PITR will only work when you enable CDC on your database as a SQL user.
 
+**Azure Active Directory (AAD)**
+If you create a database in Azure SQL Database as an AAD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another AAD user will be able to enable/disable change data capture on the same database.
+
+Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an AAD user won't work.
+
 ## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Enable and Disable change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   
  [Work with Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [Administer and Monitor change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
+[Temporal Tables](../../relational-databases/tables/temporal-tables.md)

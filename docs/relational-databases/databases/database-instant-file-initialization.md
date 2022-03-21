@@ -40,7 +40,7 @@ Instant file initialization is only available if the [!INCLUDE[ssNoVersion](../.
 > Some feature usage, such as [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), can prevent Instant File Initialization.  
 
 > [!NOTE]
-> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], this permission can be granted to the service account at install time, during setup. <br><br>If using the [command prompt install](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), add the /SQLSVCINSTANTFILEINIT argument, or check the box *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* in the [installation wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
+> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], this permission can be granted to the service account at install time, during setup. <br><br>If using the [command prompt install](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), add the /SQLSVCINSTANTFILEINIT argument, or check the box *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* in the [installation wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). <br><br>For enabling Instant File Initialization on remote server, SQL Server service startup account must be granted SE_MANAGE_VOLUME_NAME on that remote server as well.
   
 To grant an account the `Perform volume maintenance tasks` permission:  
   

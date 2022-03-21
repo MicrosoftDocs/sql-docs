@@ -229,6 +229,9 @@ If you create a database in Azure SQL Database as an AAD user and enable change 
 
 Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an AAD user won't work.
 
+**Aggressive log truncation**
+When enabling CDC on your Azure SQL Database, you should ensure that aggressive log truncation is disabled (the CDC scan uses the database log).
+
 ## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Enable and Disable change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

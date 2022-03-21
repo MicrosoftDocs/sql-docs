@@ -75,5 +75,7 @@ The last step is to update the password of the **network.privilegedadaccount** o
 
 ## Next steps
 
-- [Configure Active Directory authentication with SQL Server on Linux using adutil](sql-server-linux-ad-auth-adutil-tutorial.md)
+- [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md)
 - [Configure Active Directory authentication with SQL Server on Linux containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)
+- [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)
+- [Troubleshooting Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-troubleshooting.md)

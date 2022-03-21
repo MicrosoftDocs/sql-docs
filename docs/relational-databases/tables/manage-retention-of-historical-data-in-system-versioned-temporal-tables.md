@@ -5,12 +5,10 @@ ms.custom: "seo-lt-2019"
 ms.date: 03/04/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: randolphwest
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage retention of historical data in system-versioned temporal tables

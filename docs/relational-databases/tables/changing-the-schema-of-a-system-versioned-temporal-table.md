@@ -5,12 +5,10 @@ ms.custom: ""
 ms.date: 03/04/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: randolphwest
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Changing the schema of a system-versioned temporal table

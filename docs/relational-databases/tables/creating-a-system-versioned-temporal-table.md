@@ -5,10 +5,8 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
-author: markingmyname
-ms.reviewer: randolphwest
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.custom: ""
 ms.date: 03/04/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

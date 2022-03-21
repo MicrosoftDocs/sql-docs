@@ -7,9 +7,8 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: table-view-index
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: randolphwest
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Querying data in a system-versioned temporal table

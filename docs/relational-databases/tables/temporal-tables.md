@@ -46,7 +46,7 @@ Real data sources are dynamic and more often than not business decisions rely on
 
 The current table contains the *current value* for each row. The history table contains each previous value (the *old version*) for each row, if any, and the start time and end time for the period for which it was valid.
 
-:::image type="content" source="../../relational-databases/tables/media/temporal-howworks.svg" alt-text="Diagram showing how a Temporal table works":::
+:::image type="content" source="../../relational-databases/tables/media/temporal-how-works.svg" alt-text="Diagram showing how a Temporal table works":::
 
 The following script illustrates a scenario with employee information:
 

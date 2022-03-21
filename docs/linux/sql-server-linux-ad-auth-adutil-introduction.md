@@ -17,11 +17,11 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allv
 
 The **adutil** tool is a command-line interface (CLI) utility for configuring and managing Active Directory domains for SQL Server on Linux and containers, without switching between Windows and Linux machines to manage Windows Active Directory.
 
+Support for **adutil** is limited for SQL Server use cases only.
+
 You don't need to use **adutil** to enable AD authentication for SQL Server on Linux or containers. You can also use utilities like **ktpass**, as explained in [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
 The **adutil** tool is designed as a series of commands and subcommands, with additional flags that you specify as further input. Each top level command represents a category of administrative functions. Within that category, each subcommand is an operation. This article will show you how you can download and get started with **adutil**.
-
-Support for **adutil** is limited for SQL Server use cases only.
 
 ## Configuring adutil for LDAP over Secure Sockets Layer (SSL)
 

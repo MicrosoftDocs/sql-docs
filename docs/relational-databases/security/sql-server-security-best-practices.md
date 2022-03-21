@@ -158,8 +158,8 @@ To minimize the risk of a side-channel attack, consider the following:
 
 Consider the following common infrastructure threats: 
 
-- [Brute force access](/azure/defender-for-identity/compromised-credentials-alerts) - the attacker attempts to authenticate with multiple passwords on different accounts until a correct password is found.
-- Password cracking / [password spray](/azure/security/compass/incident-response-playbook-password-spray) - attackers try a single carefully crafted password against all of the known user accounts (one password to many accounts). If the initial password spray fails, they try again, utilizing a different carefully crafted password, normally waiting a set amount of time between attempts to avoid detection.
+- [Brute force access](/defender-for-identity/compromised-credentials-alerts) - the attacker attempts to authenticate with multiple passwords on different accounts until a correct password is found.
+- Password cracking / [password spray](/security/compass/incident-response-playbook-password-spray) - attackers try a single carefully crafted password against all of the known user accounts (one password to many accounts). If the initial password spray fails, they try again, utilizing a different carefully crafted password, normally waiting a set amount of time between attempts to avoid detection.
 - [Ransomware attacks](/windows/security/threat-protection/intelligence/ransomware-malware) is a type of targeted attack where malware is used to encrypt data and files, preventing access to important content. The attackers then attempt to extort money from victims, usually in the form of cryptocurrencies, in exchange for the decryption key. Most ransomware infections start with email messages with attachments that try to install ransomware,  or websites hosting exploit kits that attempt to use vulnerabilities in web browsers and other software to install ransomware. 
 
 ### Password risks
@@ -185,7 +185,7 @@ Consider the following to minimize ransomware risks:
     - Ensuring the latest operating system and application security updates are applied
     - Use [group managed service accounts (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
     - Limit access to the virtual machines
-    - Require  [Just-in-time (JIT) access](/azure/defender-for-cloud/security-center-just-in-time.md) and [Azure Bastion](/azure//bastion/bastion-overview)
+    - Require  [Just-in-time (JIT) access](/azure/defender-for-cloud/just-in-time-access-usage) and [Azure Bastion](/azure//bastion/bastion-overview)
     - Improve Surface Area Security by avoiding installing tools including sysinternals and SSMS on the local machine
     - Avoid installing Windows Features, roles and enabling services that are not required
     - Additionally, there should be a regular full backup scheduled that is separately secured from a common administrator account so it can't delete copies of the databases. 

@@ -48,7 +48,7 @@ The performance impact from enabling change data capture on Azure SQL Database i
 - Space available in the source database, since CDC artifacts (e.g. CT tables, cdc_jobs etc.) are stored in the same database 
 - Whether the database is single or pooled. For databases in elastic pools, in addition to considering the number of tables that have CDC enabled, pay attention to the number of databases those tables belong to. Databases in a pool share resources among them (such as disk space), so enabling CDC on multiple databases runs the risk of reaching the max size of the elastic pool disk size. Monitor resources such as CPU, memory and log throughput. 
 
-To provide more specific performance optimization guidance to customers, more details are needed on each customer’s workload. However, below is some additional general guidance:
+To provide more specific performance optimization guidance to customers, more details are needed on each customer’s workload. However, below is some additional general guidance, based on performance tests ran on TPCC workload:
 
 - Consider increasing the number of vCores or shift to a higher database tier to ensure the same performance level as before CDC was enabled on your Azure SQL Database.
 
@@ -228,6 +228,9 @@ If you enabled CDC on your database as an AAD user, PITR will not work and it wi
 If you create a database in Azure SQL Database as an AAD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another AAD user will be able to enable/disable change data capture on the same database.
 
 Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an AAD user won't work.
+
+**Aggressive log truncation**
+When enabling CDC on your Azure SQL Database, you should ensure that aggressive log truncation is disabled (the CDC scan uses the database log).
 
 ## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

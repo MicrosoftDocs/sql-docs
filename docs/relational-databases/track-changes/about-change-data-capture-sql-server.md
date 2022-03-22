@@ -1,5 +1,5 @@
 ---
-description: "Learn about change data capture (CDC), which records insert, update, and delete activity that applies to a SQL Server table. Use with SQL Server, Azure SQL Managed Instance, and Azure SQL Database (preview)"
+description: "Learn about change data capture (CDC), which records insert, update, and delete activity that applies to a SQL Server table. Use with SQL Server, Azure SQL Managed Instance, and Azure SQL Database"
 title: "What is change data capture (CDC)?"
 ms.custom:
   - seo-dt-2019
@@ -21,7 +21,7 @@ ms.author: mikeray
 # What is change data capture (CDC)?
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-In this article, learn about change data capture (CDC), which records activity on a database when tables and rows have been modified. Change data capture is generally available in SQL Server and Azure SQL Managed Instance, but is currently in preview for Azure SQL Database. 
+In this article, learn about change data capture (CDC), which records activity on a database when tables and rows have been modified. Change data capture is generally available in Azure SQL Databases, SQL Server, and Azure SQL Managed Instance.
 
 ## Overview 
 
@@ -29,10 +29,7 @@ Change data capture (CDC) uses the SQL Server agent to record insert, update, an
   
 A good example of a data consumer that this technology targets is an extraction, transformation, and loading (ETL) application. An ETL application incrementally loads change data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source tables to a data warehouse or data mart. Although the representation of the source tables within the data warehouse must reflect changes in the source tables, an end-to-end technology that refreshes a replica of the source is not appropriate. Instead, you need a reliable stream of change data that is structured so that consumers can apply it to dissimilar target representations of the data. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] change data capture provides this technology.  
 
-## CDC & Azure SQL Database (Preview) 
-
-> [!NOTE]
-> Support for change data capture in Azure SQL Database is currently in [preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
+## CDC & Azure SQL Database
 
 In Azure SQL Database, a change data capture scheduler takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the change data capture tables. The scheduler runs capture and cleanup automatically within SQL Database, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand. 
 
@@ -155,14 +152,11 @@ Although it is common for the database validity interval and the validity interv
 > [!NOTE]  
 >  In Azure SQL Database, the Agent Jobs are replaced by an scheduler which runs capture and cleanup automatically. 
  
-## CDC cleanup in Azure SQL Database (Preview)
+## CDC cleanup in Azure SQL Database
 
 In Azure SQL Database, a change data capture scheduler takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the change data capture tables. The scheduler runs capture and cleanup automatically within SQL Database, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand using the [sp_cdc_scan](../system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) and [sp_cdc_cleanup_change_tables](../system-stored-procedures/sys-sp-cdc-cleanup-change-table-transact-sql.md) procedures.
 
 Azure SQL Database includes two dynamic management views to help you monitor change data capture: [sys.dm_cdc_log_scan_sessions](../system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) and [sys.dm_cdc_errors](../system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
-
-> [!NOTE]
-> Support for change data capture in Azure SQL Database is currently in [preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
  
 ## Collation differences
 
@@ -209,13 +203,13 @@ Change data capture cannot be enabled on tables with a clustered columnstore ind
 **Partition switching with variables**   
 Using variables with partition switching on databases or tables with change data capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching) to learn more. 
 
-**Availability of CDC in Azure SQL Databases (Preview)**
-CDC can only be enabled on databases tiers above Standard 3 (S3+). Basic, S0, S1, S2 Azure SQL Databases are not supported for CDC. 
+**Availability of CDC in Azure SQL Databases**
+CDC can only be enabled on databases tiers above Standard 3 (S3+). Basic, S0, S1, S2 and subcore Azure SQL Databases are not supported for CDC. 
 
-**Capture and Cleanup Customization on Azure SQL Databases (Preview)**
+**Capture and Cleanup Customization on Azure SQL Databases**
 Configuring the frequency of the capture and the cleanup processes for CDC in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the scheduler.
 
-**ANSI_WARNINGS on CDC for Azure SQL Databases (Preview)**
+**ANSI_WARNINGS on CDC for Azure SQL Databases**
 DDL operations bypassing ANSI_WARNINGS will cause the CDC scheduler to fail. 
 
 **Computed columns**

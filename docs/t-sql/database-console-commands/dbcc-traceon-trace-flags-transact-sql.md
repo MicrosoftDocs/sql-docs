@@ -2,10 +2,10 @@
 description: "DBCC TRACEON - Trace Flags (Transact-SQL)"
 title: "Trace Flags (Transact-SQL)"
 ms.custom: ""
-ms.date: 02/15/2022
+ms.date: 03/22/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
+ms.reviewer: "wiassaf"
 ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
@@ -23,7 +23,7 @@ ms.author: "pelopes"
 ---
 # DBCC TRACEON - Trace Flags (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-asdmi-md](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Trace flags are used to set specific server characteristics or to alter a particular behavior. For example, trace flag 3226 is a commonly used startup trace flag which suppresses successful backup messages in the error log. Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems, but they may also be recommended by Microsoft Support to address behavior that is negatively impacting a specific workload. All documented trace flags and those recommended by Microsoft Support are fully supported in a production environment when used as directed. Note that trace flags in this list may have additional considerations regarding their particular usage, so it is advisable to carefully review all the recommendations given here and/or by your support engineer. Also, as with any configuration change in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it is always best to thoroughly test the flag in a non-production environment before deploying.
 
@@ -43,6 +43,20 @@ Trace flags are set ON or OFF by using either of the following methods:
   
 Use the `DBCC TRACESTATUS` command to determine which trace flags are currently active.
 
+## Examples  
+
+The following example sets trace flag 3205 on for all sessions at the server level by using `DBCC TRACEON`.  
+  
+```sql  
+DBCC TRACEON (3205,-1);  
+```
+
+You can enable all plan-affecting hotfixes controlled by trace flags 4199 and 4137 for a particular query.
+  
+```sql
+SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137);
+``` 
+
 ## Trace flags
 
 The following table lists and describes the trace flags that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -58,7 +72,6 @@ The following table lists and describes the trace flags that are available in [!
 
 > [!NOTE]
 > Тrace flags can be referenced directly in the table via a bookmark that you can add to the end of the URL, using this format #tfNNNN. For example, to jump directly to trace flag 1118 in the table, use `https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1118`.
-
 
 |Trace flag|Description|  
 |---|---|
@@ -213,29 +226,20 @@ The following table lists and describes the trace flags that are available in [!
 |<a name="tf11634"></a>**11634**| An `ALTER INDEX ... REORGANIZE` and the [background merge task](../../relational-databases/indexes/columnstore-indexes-overview.md#bckmergetsk) will clean up the deleted rows in a columnstore index rowgroup only when a certain threshold of rows has been deleted from that rowgroup. The default threshold is 10% of maximum row limit (1 million), or 100,000 rows.<br /><br />This trace flag changes the threshold to 1% of the rows in a columnstore rowgroup. If enabled together with trace flag 11631 then it will be 1% of the current number of rows in a rowgroup, instead of 1% of 1 million rows. For more information see [Microsoft Support article](https://support.microsoft.com/help/5000895)<br /><br />**Note:** This trace flag applies to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 and higher builds.<br /><br />**Scope**: global only|
 |<a name="tf13116"></a>**13116**|Disables the fix for bug [13685819](https://support.microsoft.com/en-us/topic/kb5000645-cumulative-update-16-for-sql-server-2016-sp2-a3997fa9-ec49-4df0-bcc3-12dd58b78265#bkmk_13685819). Use this trace flag if after you apply [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16, you encounter an issue in which DML (insert/update/delete) queries that use parallel plans cannot complete any execution and encounter HP_SPOOL_BARRIER waits. <br /><br />**Note:** This trace flag applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16.<br /><br />**Scope**: global only| 
 
-## Examples  
- The following example sets trace flag 3205 on for all sessions at the server level by using `DBCC TRACEON`.  
-  
-```sql  
-DBCC TRACEON (3205,-1);  
-```
-
-You can enable all plan-affecting hotfixes controlled by trace flags 4199 and 4137 for a particular query.
-  
-```sql
-SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137);
-``` 
  
 ## See also  
  - [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
  - [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)  
  - [DBCC OUTPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md)  
- - [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
- - [DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
- - [DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
  - [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
  - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
  - [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)  
+ - [Query Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
+
+## Next steps
+
  - [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
  - [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
- - [Query Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
+ - [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
+ - [DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
+ - [DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  

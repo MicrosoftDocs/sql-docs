@@ -1,5 +1,5 @@
 ---
-title: Distributed transactions (MSDTC) with SQL Server Linux Containers
+title: How to use distributed transactions with SQL Server Linux containers
 description: Learn to use the Microsoft Distributed Transaction Coordinator (MSDTC) for distributed transactions in a SQL Server container on Linux.
 ms.custom: seo-lt-2019
 author: VanMSFT 
@@ -76,7 +76,7 @@ docker run `
 
 ::: moniker-end
 
-In this command, the **RPC Endpoint Mapper** service has been bound to port 135, and the **MSDTC** service has been bound to port 51000 within docker virtual network. SQL Server TDS communication occurs on port 1433 within the container's virtual network. These ports have been externally exposed to host as TDS port 51433, RPC endpoint mapper port 135, and MSDTC port 51000.
+In this command, the **RPC Endpoint Mapper** service has been bound to port 135, and the **MSDTC** service has been bound to port 51000 within the container's virtual network. SQL Server TDS communication occurs on port 1433, also within the container's virtual network. These ports have been externally exposed to host as TDS port 51433, RPC endpoint mapper port 135, and MSDTC port 51000.
 
 The RPC Endpoint Mapper and MSDTC port don't have to be the same on the host and the container. So while RPC Endpoint Mapper port was configured to be 135 on container, it could potentially be mapped to port 13501 or any other available port on the host server.
 

@@ -1,7 +1,7 @@
 ---
 title: "Use the system_health Session"
 description: The system_health Extended Events session is included with SQL Server. This session collects system data to troubleshoot performance for the Database Engine.
-ms.date: "11/27/2018"
+ms.date: "03/21/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -12,14 +12,13 @@ helpviewer_keywords:
   - "extended events [SQL Server], system_health session"
   - "system_health session [SQL Server extended events]"
   - "system health session [SQL Server extended events]"
-ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: LitKnd
 ms.author: kendralittle
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the system_health Session
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 The system_health session is an Extended Events session that is included by default with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This session starts automatically when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] starts, and runs without any noticeable performance effects. The session collects system data that you can use to help troubleshoot performance issues in the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
 
@@ -75,16 +74,29 @@ WHERE xe.name = 'system_health'
 ```  
   
 To view the session data from the event file, use the Extended Events user interface available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Advanced Viewing of Target Data from Extended Events in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
-  
+
 ## Restoring the system_health Session  
 If you delete the system_health session, you can restore it by executing the **u_tables.sql** file in Query Editor. This file is located in the following folder, where **C:** represents the drive where you installed the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] program files, and **MSSQL1x** the major version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
  `C:\Program Files\Microsoft SQL Server\MSSQL1x.\<*instanceid*>\MSSQL\Install`  
   
 Be aware that after you restore the session, you must start the session by using the `ALTER EVENT SESSION` statement or by using the **Extended Events** node in Object Explorer. Otherwise, the session starts automatically the next time that you restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
+
+## The system_health session in Azure SQL 
+
+This article applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+
+There is no system_health extended event trace in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] by default, but you can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For example walkthrough, review [Event File target code for extended events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
+
+In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], the system_health extended events session is not accessible via a local file system as the examples in this article demonstrate, as direct access to the local file system is not possible. 
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)    
- [Extended Events Tools](../../relational-databases/extended-events/extended-events-tools.md)    
- [Database Engine Errors](../../relational-databases/errors-events/database-engine-events-and-errors.md)    
- [Messages (for errors) Catalog Views - sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 
+## See also  
+
+- [Extended Events](../../relational-databases/extended-events/extended-events.md)    
+- [Database Engine Errors](../../relational-databases/errors-events/database-engine-events-and-errors.md)    
+- [Messages (for errors) Catalog Views - sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 
+
+## Next steps
+
+- [Extended Events Tools](../../relational-databases/extended-events/extended-events-tools.md)    
+- [sys.fn_xe_file_target_read_file (Transact-SQL)](../system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)

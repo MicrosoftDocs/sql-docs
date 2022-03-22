@@ -2,7 +2,7 @@
 description: "The sys.fn_xe_file_target_read_file system function reads files that are created by the Extended Events asynchronous file target."
 title: "sys.fn_xe_file_target_read_file (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/18/2022"
+ms.date: "03/21/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -24,7 +24,7 @@ ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_xe_file_target_read_file (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Reads files that are created by the Extended Events asynchronous file target. One event, in XML format, is returned per row. 
 
@@ -80,13 +80,13 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ### A. Retrieving data from file targets
  
- Prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the following example gets all the rows from all the files, including both the `.xel` and `.xem` file. In this example the file targets and metafiles are located in the trace folder in the `C:\traces\` folder.
+ For [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and previous versions, the following example gets all the rows from all the files, including both the `.xel` and `.xem` file. In this example the file targets and metafiles are located in the trace folder in the `C:\traces\` folder.
   
 ```sql  
 SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\metafile.xem', null, null);  
 ```  
  
- In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, the following example retrieves events inside all `.xel` files in the default folder. The default location is `\MSSQL\Log` within the installation folder of the instance.
+ In [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] and later, the following example retrieves events inside all `.xel` files in the default folder. The default location is `\MSSQL\Log` within the installation folder of the instance.
 
 ```sql
 SELECT * FROM sys.fn_xe_file_target_read_file('*.xel', null, null, null)
@@ -97,6 +97,29 @@ SELECT * FROM sys.fn_xe_file_target_read_file('*.xel', null, null, null)
 ```sql
 SELECT * FROM sys.fn_xe_file_target_read_file('system_health*.xel', null, null, null)
 WHERE cast(timestamp_utc as datetime2(7)) > dateadd(day, -1, GETUTCDATE())
+```
+
+### B. Retrieving data from file targets in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
+
+The system_health extended events session is available via:
+
+If you try to specify a wildcard path for a local file system, the following error message will arise:
+
+```
+Msg 40538, Level 16, State 3, Line 15
+A valid URL beginning with 'https://' is required as value for any filepath specified.
+```
+
+
+### C. Retrieving data from file targets in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+
+There is no system_health extended event trace in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] by default, but you can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For example walkthrough, review [Event File target code for extended events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
+
+If you try to specify a wildcard path for a local file system, the following error message will arise:
+
+```
+Msg 40538, Level 16, State 3, Line 15
+A valid URL beginning with 'https://' is required as value for any filepath specified.
 ```
 
 

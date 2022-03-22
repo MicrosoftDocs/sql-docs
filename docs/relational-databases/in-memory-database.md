@@ -42,6 +42,8 @@ A fast volatile cache that fronts a considerably slower but durable media has be
 
 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] introduces a new feature that is [memory-optimized tempdb metadata](./databases/tempdb-database.md#memory-optimized-tempdb-metadata), which effectively removes some contention bottlenecks and unlocks a new level of scalability for tempdb-heavy workloads.
 
+For more information on recent `tempb` improvements including memory-optimized metadata in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and newer features, review [System Page Latch Concurrency Enhancements (Ep. 6) | Data Exposed](/shows/data-exposed/system-page-latch-concurrency-enhancements).
+
 ## In-memory OLTP
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

@@ -9,11 +9,11 @@ helpviewer_keywords:
   - "SQL Server Audit"
   - "audits [SQL Server], SQL Server Audit"
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-author: davidtrigano
-ms.author: datrigan
+author: sravanisaluru
+ms.author: srsaluru
 ms.reviewer: vanto
 ms.custom: ""
-ms.date: "01/01/2020"
+ms.date: "03/23/2022"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # SQL Server Audit (Database Engine)

@@ -2,7 +2,7 @@
 description: "sys.sp_generate_database_ledger_digest (Transact-SQL)"
 title: "sys.sp_generate_database_ledger_digest (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2021"
+ms.date: "03/22/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -38,7 +38,7 @@ EXEC sys.sp_generate_database_ledger_digest
 
 |Column name|Description|  
 |-----------------|---------------|
-|**latest_digest**|A JSON document containing the following data:<br/><br/>`database_name` - the name of the database. <br/>`block_id` – same as block_id from the last row in sys.database_ledger.<br/>`hash` – a hexadecimal string representing a SHA-256 hash of the last row in sys.database_ledger.<br/>`last_transaction_commit_time` - same as commit_time from the last row in sys.database_ledger in the ISO 8601 format.<br/>`digest_time` – the time when the digest was generated in the ISO 8601 format.
+|**latest_digest**|A JSON document containing the following data:<br/><br/>`database_name` - the name of the database. <br/>`block_id` – same as block_id from the last row in sys.database_ledger_blocks.<br/>`hash` – a hexadecimal string representing a SHA-256 hash of the last row in sys.database_ledger_blocks.<br/>`last_transaction_commit_time` - same as commit_time from the last row in sys.database_ledger_blocks in the ISO 8601 format.<br/>`digest_time` – the time when the digest was generated in the ISO 8601 format.
 
 **Example JSON**
 

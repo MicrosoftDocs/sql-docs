@@ -2,9 +2,9 @@
 title: Administration resources for Big Data Clusters 
 titleSuffix: SQL Server
 description: This article explains how to view the status of a big data cluster by using Azure Data Studio, notebooks, and Azure Data CLI (azdata) commands.
-author: cloudmelon
-ms.author: melqin
-ms.reviewer: wiassaf, dacoelho
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: wiassaf
 ms.date: 09/28/2021
 ms.topic: conceptual
 ms.prod: sql

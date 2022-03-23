@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: Use a bash deployment script to deploy a SQL Server 2019 big data cluster to a single node kubeadm cluster.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.topic: conceptual

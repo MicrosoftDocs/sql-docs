@@ -4,7 +4,7 @@ titleSuffix: SQL Server 2019 Big Data Clusters
 description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.date: 01/31/2022
 ms.topic: conceptual
 ms.prod: sql

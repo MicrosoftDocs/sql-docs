@@ -2,8 +2,8 @@
 title: Upgrade to a new release
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to upgrade SQL Server Big Data Clusters to a new release.
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 09/21/2021
 ms.topic: conceptual

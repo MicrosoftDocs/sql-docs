@@ -16,7 +16,7 @@ You can connect your SQL Server instance to Azure Arc by following these steps.
 ## Prerequisites
 
 * Your machine has at least one instance of SQL Server installed
-* The **Microsoft.AzureArcData** resource provider has been registered.
+* The **Microsoft.AzureArcData** and **Microsoft.HybridCompute** resource providers has been registered.
 
 To register the resource provider, use one of the methods below:  
 
@@ -25,7 +25,7 @@ To register the resource provider, use one of the methods below:
 1. Select **Subscriptions** 
 2. Choose your subscription
 3. Under **Settings**, select **Resource providers**
-4. Search for `Microsoft.AzureArcData` and select **Register**
+4. Search for `Microsoft.AzureArcData` and `Microsoft.HybridCompute` and select **Register**
 
 # [PowerShell](#tab/powershell)
 

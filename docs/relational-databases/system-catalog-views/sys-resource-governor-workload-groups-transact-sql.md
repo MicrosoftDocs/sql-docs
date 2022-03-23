@@ -38,6 +38,7 @@ ms.author: randolphwest
 |group_max_requests|**int**|Maximum number of concurrent requests. The default value, 0, specifies no limit. Is not nullable.|  
 |pool_id|**int**|ID of the resource pool that this workload group uses.|  
 |external_pool_id|**int**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.<br /><br /> ID of the external resource pool that this workload group uses.|  
+|request_max_memory_grant_percent_numeric|**float**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later.<br /><br /> Maximum memory grant, as a percentage, for a single request. The default value is 25. Is not nullable.<br /><br /> **Note:** If this setting is higher than 50 percent, large queries will run one at a time. Therefore, there is greater risk of getting an out-of-memory error while the query is running.|  
   
 ## Remarks  
  The catalog view displays the stored metadata. To see the in-memory configuration, use the corresponding dynamic management view, [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  

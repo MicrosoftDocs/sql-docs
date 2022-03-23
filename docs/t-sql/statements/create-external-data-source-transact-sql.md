@@ -958,11 +958,12 @@ WITH (
 GO
 ```
 
-Inside the database in the availability group, create a view to return the local value of `sys.servers`:
+Inside the database in the availability group, create a view to return `sys.servers` and the name of the local instance, which helps you identify which replica is responding to the query. For more information, see [sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md).
 
 ```sql
 CREATE VIEW vw_sys_servers AS 
-SELECT [name] FROM sys.servers;
+SELECT [name] FROM sys.servers
+WHERE server_id = 0;
 GO
 ```
 
@@ -977,8 +978,8 @@ CREATE EXTERNAL TABLE vw_sys_servers_rw
 (    name sysname NOT NULL)
 WITH (DATA_SOURCE = [DataSource_SQLInstanceListener_ReadWriteIntent], LOCATION = N'dbname.dbo.vw_sys_servers');
 GO
-SELECT [name] FROM dbo.vw_sys_servers_ro; --should return secondary instance
-SELECT [name] FROM dbo.vw_sys_servers_rw; --should return primary instance
+SELECT [name] FROM dbo.vw_sys_servers_ro; --should return secondary replica instance
+SELECT [name] FROM dbo.vw_sys_servers_rw; --should return primary replica instance
 GO
 ```
 

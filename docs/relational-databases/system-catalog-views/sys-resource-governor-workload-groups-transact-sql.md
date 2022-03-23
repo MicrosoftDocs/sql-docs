@@ -34,7 +34,7 @@ ms.author: randolphwest
 |request_max_memory_grant_percent|**int**|Maximum memory grant, as a percentage, for a single request. The default value is 25. Is not nullable.<br /><br /> **Note:** If this setting is higher than 50 percent, large queries will run one at a time. Therefore, there is greater risk of getting an out-of-memory error while the query is running.|  
 |request_max_cpu_time_sec|**int**|Maximum CPU use limit, in seconds, for a single request. The default value, 0, specifies no limit. Is not nullable.<br /><br /> **Note:** For more information, see [CPU Threshold Exceeded Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
 |request_memory_grant_timeout_sec|**int**|Memory grant time-out, in seconds, for a single request. The default value, 0, uses an internal calculation based on query cost. Is not nullable.|  
-|max_dop|**int**|Maximum degree of parallelism for the workload group. The default value, 0, uses global settings. Is not nullable.<br /><br /> **Node:** This setting will override the query option **maxdop**.|  
+|max_dop|**int**|Maximum degree of parallelism for the workload group. The default value, 0, uses global settings. Is not nullable.<br /><br /> **Note:** This setting will override the query option **maxdop**.|  
 |group_max_requests|**int**|Maximum number of concurrent requests. The default value, 0, specifies no limit. Is not nullable.|  
 |pool_id|**int**|ID of the resource pool that this workload group uses.|  
 |external_pool_id|**int**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.<br /><br /> ID of the external resource pool that this workload group uses.|  

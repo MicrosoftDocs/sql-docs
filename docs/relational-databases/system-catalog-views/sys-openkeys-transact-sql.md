@@ -20,7 +20,8 @@ helpviewer_keywords:
 ms.assetid: 719a1259-2398-4fcb-ba05-aeabba7aec21
 author: rwestMSFT
 ms.author: randolphwest
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| = azure-sqldw-latest"
+
 ---
 # sys.openkeys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database Synapse](../../includes/applies-to-version/sql-asdb-asa.md)] 

@@ -91,7 +91,7 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 |Azure Resource Explorer|Preview||
 |Generate Scripts Wizard||Yes|
 |Object Properties||Yes|
-|Table Designer||Yes|
+|Table Designer|Preview|Yes|
 
 ### Query Editor
 

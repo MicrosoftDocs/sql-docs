@@ -19,27 +19,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 These release notes are for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) for Visual Studio (VS).
 
-## 15.9.10,&nbsp; SSDT for VS 2017
-
-_Released:_ &nbsp; Feb 27, 2022  
-_Build Number:_ &nbsp; 14.0.16247.0
-_SSDT for Visual Studio 2017._
-
-### What's New?
-
-| New Item | Details |
-|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Integration Services (SSIS) | Fixed issue that executing SSIS package via Azure will fail on Azure-SSIS IR under newly created data factory. |
-| Integration Services (SSIS) | Removed dependency on log4j. |
-
-### Known issues
-
-| Known issue | Details |
-| :---------- | :------ |
-| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog aren't affected. |
-| &nbsp; | &nbsp; |
-
-
 ## 15.9.9,&nbsp; SSDT for VS 2017
 
 _Released:_ &nbsp; Aug 27, 2021  

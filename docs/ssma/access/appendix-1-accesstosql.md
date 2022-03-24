@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 ---
 # Appendix - 1 (AccessToSQL)
 Quick view of the SSMA Console command line options:  

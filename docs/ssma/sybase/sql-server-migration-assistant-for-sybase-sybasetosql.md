@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 manager: alexiva
 ---
 # SQL Server Migration Assistant for Sybase (SybaseToSQL)

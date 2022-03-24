@@ -1,5 +1,5 @@
 ---
-title: "Python Driver for SQL Server | Microsoft Docs"
+title: "Python driver for SQL Server"
 description: "Connect to a SQL Database using Python on Windows, Linux, or macOS."
 ms.custom: ""
 ms.date: "03/24/2022"
@@ -10,13 +10,13 @@ author: David-Engel
 ms.author: v-davidengel
 ---
 
-# Python SQL Driver
+# Python SQL driver
 
 ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Install SQL driver for Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 You can connect to a SQL Database using Python on Windows, Linux, or macOS.  
   
-## Getting Started
+## Getting started
 
 There are several python SQL drivers available. However, Microsoft places its testing efforts and its confidence in **pyodbc** driver. Choose one of the following drivers, and configure your development environment:
 

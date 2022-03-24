@@ -25,7 +25,7 @@ Connect to SQL Database by using Python - pyodbc on Windows:
    1. Select your language, and agree to the terms.
    1. Follow the instructions on the screen to install Python on your computer.
    1. You can verify that Python is installed by going to a command prompt and running `python -V` or `py -V` (for 3.x). You can also search for Python in the start menu.
-      
+
 3. [**Install the Microsoft ODBC Driver for SQL Server on Windows**.](../../odbc/windows/system-requirements-installation-and-driver-files.md#installing-microsoft-odbc-driver-for-sql-server)
   
 4. **Open cmd.exe as an administrator**.

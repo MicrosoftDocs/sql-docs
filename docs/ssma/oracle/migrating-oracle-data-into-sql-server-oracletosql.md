@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Oracle Data Migration, Client-Side Migration"
   - "Oracle Data Migration,Server-Side Migration"
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Migrating Oracle Data into SQL Server (OracleToSQL)

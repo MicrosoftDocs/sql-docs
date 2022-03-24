@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Connecting to Azure SQL Database, SQL Azure permissions"
   - "Connecting to Azure SQL Database, synchronization"
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Connecting to Azure SQL Database (MySQLToSQL)

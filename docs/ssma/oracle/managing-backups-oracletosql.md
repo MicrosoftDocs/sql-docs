@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Oracle Backup Management"
   - "SQL Server Backup Management"
 ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Managing Backups (OracleToSQL)

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Connecting to SQL Server,Synchronizing SQL Server Metadata"
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 

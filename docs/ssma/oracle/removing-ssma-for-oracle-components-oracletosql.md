@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Uninstalling the Extension Pack"
 ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Removing SSMA  for Oracle Components (OracleToSQL)

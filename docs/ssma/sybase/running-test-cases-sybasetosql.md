@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Tester Component,Execution Steps"
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 ---
 
 # Running Test Cases (SybaseToSQL)

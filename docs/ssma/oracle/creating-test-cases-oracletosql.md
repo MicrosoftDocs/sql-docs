@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Test Case Wizard"
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 manager: alexiva
 ---
 # Creating Test Cases (OracleToSQL)

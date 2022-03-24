@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Command Line Options, Variable Value File Option"
   - "Command Line Options,Script File Option"
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 manager: alexiva
 ---
 # Command Line Options in SSMA Console (OracleToSQL)

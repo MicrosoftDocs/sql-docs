@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Connecting to SQL Server"
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Connecting to SQL Server (SybaseToSQL)

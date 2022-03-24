@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Conversion Settings (MySQLToSQL)
 The **'Settings'** tab allows the user to set node level settings. The tab will be available at the following Metabase nodes:  

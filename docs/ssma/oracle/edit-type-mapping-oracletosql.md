@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Edit Type Mapping (OracleToSQL)

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Conversion Results"
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Converting Oracle Schemas (OracleToSQL)

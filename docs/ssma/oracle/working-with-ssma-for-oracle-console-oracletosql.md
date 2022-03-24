@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Working with SSMA for Oracle Console (OracleToSQL)

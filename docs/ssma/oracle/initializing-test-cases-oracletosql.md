@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Initializing Test Cases (OracleToSQL)

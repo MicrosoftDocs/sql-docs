@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "SSMA extension pack, Installation"
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Installing SSMA components on SQL Server (MySQLToSql)

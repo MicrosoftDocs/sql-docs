@@ -2,7 +2,7 @@
 description: "A filtered index is an optimized disk-based rowstore nonclustered index especially suited to cover queries that select from a well-defined subset of data."
 title: "Create filtered indexes"
 ms.custom: ""
-ms.date: "03/14/2022"
+ms.date: "03/24/2022"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
@@ -78,7 +78,7 @@ For example, consider a filtered index:
 
 - Review the required SET options for filtered index creation in [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md) syntax
 
-- Filters cannot be applied to primary key or unique constraints, but can be applied to indexes with the UNIQUE property. See the example later in this article.
+- Filters cannot be applied to primary key or unique constraints, but can be applied to indexes with the UNIQUE property. 
   
 ## Permissions  
 
@@ -143,75 +143,6 @@ WHERE EndDate IS NOT NULL
     AND StartDate > '01/01/2008' ;  
 GO  
 ```  
-
-## Enforce filtered uniqueness
-
-Index filters can be applied to indexes with the UNIQUE keyword, allowing for filtered uniqueness. Note that filters cannot be applied to primary key or unique constraints, but can be applied to unique indexes. A design drawback is that foreign key constraints cannot be created against unique indexes, only against primary or unique constraints.
-
-This may be valuable where you want a single primary key value to possess `IsActive = 1`, but would allow many rows to possess `IsActive = 0`. This is the case in type 2 slowly changing dimensions in data warehousing, or other data modification patterns that involve inserting a new row and updating the existing row for the same primary key. Consider the following table and unique index, instead of enforcing uniqueness on `key1` alone. 
-
-```sql
-CREATE TABLE dbo.DimTest
-( key1 int not null
-, IsActive bit not null
-, DateModified datetimeoffset(0) not null 
-);
-GO
-CREATE UNIQUE NONCLUSTERED INDEX IX_U_F_DimTest_key1_IsActive
-ON dbo.DimTest (key1, IsActive) 
-WHERE IsActive = 1;
-GO
-```
-
-With filtered uniqueness in place, test the following operations:
-
-```sql
-INSERT INTO dbo.DimTest (key1, IsActive, DateModified) VALUES (1,1, SYSDATETIMEOFFSET());
-WAITFOR DELAY '00:00:01';
-GO
-INSERT INTO dbo.DimTest (key1, IsActive, DateModified) VALUES (1,0, SYSDATETIMEOFFSET()); --success
-WAITFOR DELAY '00:00:01';
-GO
-INSERT INTO dbo.DimTest (key1, IsActive, DateModified) VALUES (1,0, SYSDATETIMEOFFSET()); --success
-WAITFOR DELAY '00:00:01';
-GO
-INSERT INTO dbo.DimTest (key1, IsActive, DateModified) VALUES (1,1, SYSDATETIMEOFFSET()); --failure
-GO
-```
-
-The last INSERT will result in an error message, as expected:
-
-```
-Msg 2601, Level 14, State 1, Line 24
-Cannot insert duplicate key row in object 'dbo.DimTest' with unique index 'IX_U_F_DimTest_key1_IsActive'. The duplicate key value is (1, 1).
-The statement has been terminated.
-```
-
-A typical application operation to mark the current row as inactive, an insert a new row, would look similar to:
-
-```sql
-BEGIN TRAN
-UPDATE dbo.DimTest SET IsActive = 0 WHERE key1 = 1 and IsActive = 1;
-INSERT INTO dbo.DimTest (key1, IsActive, DateModified) VALUES (1,1, SYSDATETIMEOFFSET()); 
-COMMIT TRAN
-```
-
-The following is the result set of this example's scripts:
-
-```sql
-SELECT * FROM dbo.DimTest;
-```
-
-```output
-key1        IsActive DateModified
------------ -------- ----------------------------------
-1           0        2022-03-14 12:31:50 -07:00
-1           0        2022-03-14 12:31:51 -07:00
-1           0        2022-03-14 12:31:52 -07:00
-1           1        2022-03-14 12:31:53 -07:00
-
-(4 rows affected)
-```
 
 ## Next steps
   

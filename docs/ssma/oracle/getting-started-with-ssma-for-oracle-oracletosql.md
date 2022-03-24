@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SSMA for Oracle, Metadata Explorers"
   - "SSMA for Oracle, Toolbars"
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Explore SSMA for Oracle interface

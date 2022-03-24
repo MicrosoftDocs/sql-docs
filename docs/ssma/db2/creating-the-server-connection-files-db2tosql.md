@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Creating the Server Connection Files (DB2ToSQL)

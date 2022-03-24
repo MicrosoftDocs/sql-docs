@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "connecting to SQL Server 2008, SQL Server permission"
   - "connecting to SQL Server 2008, synchronization"
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Connecting to SQL Server (MySQLToSQL)

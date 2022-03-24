@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "reference, user interface"
   - "user interface"
 ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # User Interface Reference (AccessToSQL)

@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Global Settings (Dialogs) (MySQLToSQL)
 Use the Dialogs page of the **Global Settings** dialog box to specify the default user action and warning settings for SSMA.  

@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016"
 
 [!INCLUDE [SQL Server end of support](../../includes/applies-to-version/sql-migration-end-of-support.md)]
 
-This article provides information for using Azure Arc to receive Extended Security Updates for versions of SQL Server that are out of extended support.
+This article provides information for using [Azure Arc](/azure/azure-arc/overview) to receive Extended Security Updates (ESUs) for versions of SQL Server that are out of extended support.
 
 > [!TIP]  
 > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure SQL Server VMs if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
@@ -25,12 +25,17 @@ For more information about other options, see [End of support options](sql-serve
 
 ## Overview
 
-Once [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of its support lifecycle, you can sign up for an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years, until you're ready to upgrade to a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or migrate to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. This subscription is available in two ways:
+Once [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of its support lifecycle, you can sign up for an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years, until you're ready to upgrade to a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or migrate to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-- Can be purchased for your on-premises or hosted environment servers.
-- Free and enabled by default when migrating on-premises servers to Azure Virtual Machines.
+There are two ways to receive ESUs:
 
-To receive ESUs on your end-of-support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with Azure Arc, you can either **connect** using an Arc agent with direct connectivity to Azure, or **register** using a manual process, similar to the deprecated SQL Server registry. Then you can download updates when they're available.
+1. **Azure Arc**. Purchased for your on-premises or hosted environment. Then you can download updates when they're available.
+
+    1. **Connected**. Install the Azure Connected Machine agent with direct connectivity to Azure. You will benefit from the features that [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) provide.
+
+    1. **Registered**. Manually add your instance using a process similar to the deprecated SQL Server registry. It will be added in a *disconnected* state.
+
+1. **Azure Virtual Machines**. Free and enabled by default when migrating on-premises servers to SQL Server Virtual Machines.
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends applying ESU patches as soon as they're available to keep your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance protected. For detailed information about ESUs, see the [ESU FAQ page](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
@@ -73,9 +78,9 @@ ESUs are available to customers running their workload in Azure, on-premises, or
 
 If you migrate your workloads to Azure Virtual Machines (IaaS), you'll have access to ESUs for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] for up to three years after the End of Support, at **no additional charges** above the cost of running the virtual machine. Customers don't need Software Assurance to receive ESUs in Azure.
 
-Azure Virtual Machines running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on **Windows Server 2012 and greater** will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels, when the virtual machine is configured to use [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
+Azure Virtual Machines (VMs) running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels, when the virtual machine is configured to use [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
-Azure Virtual Machines (VMs) that have ***not* been configured for [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** will need to manually download and deploy ESU patches as described in the [on-premises or hosted environments](#on-premises-or-hosted-environments) section.
+Azure VMs that have ***not* been configured for [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** will need to manually download and deploy ESU patches as described in the [on-premises or hosted environments](#on-premises-or-hosted-environments) section.
 
 ### On-premises or hosted environments
 
@@ -83,51 +88,43 @@ If you have Software Assurance, you can purchase an Extended Security Update (ES
 
 Customers covered by ESU agreements must follow these steps to download and deploy an ESU patch. The process is the same for Azure Stack and Azure Virtual Machines that are not configured to receive automatic updates:
 
-[RW] -> [new Azure Arc content here]
-
-- [Register eligible instances](#register-instances-for-esus) with the **[SQL Server registry](#create-sql-server-registry)**.
+- [Register eligible instances](#register-instances-for-esus).
 - Once registered, whenever ESU patches are released, a download link will be available in the Azure portal to download the package.
 - The downloaded package can be deployed to your on-premises or hosted environments manually, or through whatever update orchestration solution is used in your organization, such as Microsoft Endpoint Configuration Manager (formerly System Center Configuration Manager).
 
 For more information, see the [Extended Security Updates frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
-## [replace this section with Arc connect / register content]
+## Set up an Azure Arc resource
 
-## Create SQL Server registry
+### [RW] -> [Still to come]
 
-To register your ESU-enabled [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances, you'll first need to create the SQL Server registry in the Azure portal. 
+It isn't necessary to register [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances for ESUs when running an Azure Virtual Machine that is configured for [automatic updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
-It's not necessary to register [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances for ESUs when running an Azure Virtual Machine that is configured for [automatic updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching). 
+## Register SQL Server instances for ESUs
 
-To create the SQL Server registry, follow these steps:
+In this example, you will add your SQL Server instances to Azure Arc following these steps below.
 
-1. Sign into the [Azure portal](https://portal.azure.com). 
-1. Select the option to **Create a resource**. 
-1. Type `SQL Server registry` in the search box.  
-1. Choose the **SQL Server registry** option published by [!INCLUDE[msCoName](../../includes/msconame-md.md)], and then select **Create**.
+1. Sign into the [Azure portal](https://portal.azure.com).
 
-   :::image type="content" source="media/sql-server-extended-security-updates/sql-server-registry-service.png" alt-text="Screenshot of the Azure portal that shows how to create a SQL Server registry":::
+1. Select the option to **Create a resource**.
 
-1. Under **Project Details**, choose your subscription from the drop-down. Then either choose an existing **Resource group** or select **Create new** to create a new resource group for your new SQL Server registry service. 
-1. Under **Service Details**, provide a name and region for your new **SQL Server registry** resource: 
+1. Navigate to **Azure Arc** and select **SQL Servers** from the Infrastructure section.
 
-   :::image type="content" source="media/sql-server-extended-security-updates/create-new-sql-server-registry.png" alt-text="Screenshot of the SQL Server registry showing the Basics tab":::
+1. To add a machine, you can either select **Add** from the menu at the top of the screen, or choose the **Add SQL Server - Azure Arc** button lower down.
 
-1. Select **Review + create** to review the details for your **SQL Server registry**. Select **Create** once validation has passed.
+    :::image type="content" source="media/sql-server-end-of-life-overview/arc-enabled-portal-screen-1.png" alt-text="Screenshot showing an empty list of SQL Servers list on the Azure Arc portal":::
 
-## Register instances for ESUs
+1. Select **Register servers** to add a disconnected SQL Server instance.
 
-After the **SQL Server registry** resource is deployed, you can choose to register a [single](#single-sql-server-instance) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, or you can register multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in [bulk](#multiple-sql-server-instances-in-bulk). At least one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance must be registered in the scope of your SQL Server registry in order to download any ESU packages.
+    :::image type="content" source="media/sql-server-end-of-life-overview/arc-enabled-portal-screen-3.png" alt-text="Screenshot showing the two options for adding connected or registered servers":::
 
 ### Single SQL Server instance
 
-To register a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, follow these steps:
+1. On the next screen, you can choose to add a single or multiple SQL Server instances. Select the option for **Single SQL instance** to continue.
 
-1. Sign into the [Azure portal](https://portal.azure.com).
-1. Go to your **SQL Server registry** resource.
-1. Select **+ Register** from the **Overview** pane:
+    :::image type="content" source="media/sql-server-end-of-life-overview/arc-enabled-portal-screen-9.png" alt-text="Screenshot showing the two options for adding connected or registered servers":::
 
-   :::image type="content" source="media/sql-server-extended-security-updates/register-single-sql-server-instance.png" alt-text="Choose register to register a single instance of SQL Server":::
+### [RW] -> [Confirm what goes in here]
 
 1. Provide the required information as is detailed in this table, and then select **Register**:
 
@@ -153,15 +150,32 @@ Once a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance has be
 
 Multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances can be registered in bulk by uploading a .CSV file. Once your [.CSV file has been formatted correctly](#formatting-requirements-for-csv-file), you can follow these steps to bulk register your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances with the SQL Server registry resource:
 
-1. Sign into the [Azure portal](https://portal.azure.com).
-1. Go to your **SQL Server registry** resource.
-1. Select **Bulk Register** from the **Overview** pane:
+1. On the next screen, you can choose to add a single or multiple SQL Server instances. Select the option for **Multiple SQL instances** to continue.
 
-   :::image type="content" source="media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png" alt-text="Choose bulk register to register multiple instances of SQL Server":::
+    :::image type="content" source="media/sql-server-end-of-life-overview/arc-enabled-portal-screen-4.png" alt-text="Screenshot showing the two options for adding connected or registered servers":::
 
-1. Select the file icon to browse to your .CSV file location. Select the .CSV file. Then select **Register** to upload the file and register multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+1. Select **Browse** to upload the CSV file containing multiple disconnected SQL Server instances.
 
-   :::image type="content" source="media/sql-server-extended-security-updates/upload-csv-file-for-bulk-registration.png" alt-text="Upload CSV file to register multiple instances of SQL Server":::
+    :::image type="content" source="media/sql-server-end-of-life-overview/arc-enabled-portal-screen-5.png" alt-text="Screenshot showing two connected SQL Server instances on the Azure Arc portal":::
+
+1. Before you can continue, you must confirm that you have the rights to receive Extended Security Updates, using the checkbox provided.
+
+    :::image type="content" source="media/sql-server-end-of-life-overview/arc-enabled-portal-screen-6.png" alt-text="Screenshot showing two connected SQL Server instances on the Azure Arc portal":::
+
+1. The `Year1OrderID` tag is optional, but should reflect the ESU invoice number for ease of reference. The `Year1EntitlementConfirmed` tag is automatically filled in.
+
+    :::image type="content" source="media/sql-server-end-of-life-overview/arc-enabled-portal-screen-7.png" alt-text="Screenshot showing two connected SQL Server instances on the Azure Arc portal":::
+
+1. Before you can add your SQL Server instances, you must agree to the terms and conditions.
+
+    :::image type="content" source="media/sql-server-end-of-life-overview/arc-enabled-portal-screen-8.png" alt-text="Screenshot showing two connected SQL Server instances on the Azure Arc portal":::
+
+1. Finally, you will see your registered SQL Server instances in the portal. Because they were added manually, they will always show as disconnected.
+
+    :::image type="content" source="media/sql-server-end-of-life-overview/arc-enabled-portal-screen-2.png" alt-text="Screenshot showing two connected SQL Server instances on the Azure Arc portal":::
+
+### Add section for linking ESU Invoice here
+
 
 ### Formatting requirements for CSV file
 
@@ -169,19 +183,19 @@ Multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances can
 - Values aren't single or double-quoted
 - Column names are case-insensitive but must be named as follows:
 
-   |Column name|Additional information|
+   |Column name|Required for Azure SQL VM|
    |---|---|
-   |name||
-   |version||
-   |edition||
-   |cores||
-   |hostType||
-   |subscriptionID|Only necessary for Azure Virtual Machines|
-   |resourceGroup|Only necessary for Azure Virtual Machines|
-   |azureVmName|Only necessary for Azure Virtual Machines|
-   |AzureVmOS|Only necessary for Azure Virtual Machines|
+   |name|No|
+   |version|No|
+   |edition|No|
+   |cores|No|
+   |hostType|No|
+   |subscriptionID|Yes|
+   |resourceGroup|Yes|
+   |azureVmName|Yes|
+   |AzureVmOS|Yes|
 
-#### CSV Example 1 - on-premises
+#### CSV Example 1 - On-premises
 
 For on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances, the CSV file should look like this:
 
@@ -196,7 +210,7 @@ Server4\SQL2008,2008,Developer,8,Physical Server
 
 Refer to [MyPhysicalServers.csv](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-server-extended-security-updates/scripts/MyPhysicalServers.csv) for a CSV file example.
 
-#### CSV Example 2 - Azure VM
+#### CSV Example 2 - Azure SQL VM
 
 For Azure Virtual Machine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances, the CSV file should look like this:
 
@@ -215,15 +229,19 @@ For [!INCLUDE[tsql](../../includes/tsql-md.md)] and PowerShell example scripts t
 
 ## Download ESUs
 
-Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances have been registered with the SQL Server registry service, you can download the Extended Security Update packages using the link found in the Azure portal, if and when they're made available.
+Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances have been registered with Azure Arc, you can download the Extended Security Update packages using the link found in the Azure portal, if and when they're made available.
 
 To download ESUs, follow these steps:
 
 1. Sign into the [Azure portal](https://portal.azure.com).
-1. Go to your **SQL Server registry** resource.
-1. Select **Security Updates** on the navigation pane.
 
-   :::image type="content" source="media/sql-server-extended-security-updates/security-updates-sql-registry.png" alt-text="Check security updates pane for available updates":::
+1. Go to your **Azure Arc** resource, and navigate to **SQL Servers** in the Infrastructure section. Select a server from the list.
+
+    :::image type="content" source="media/sql-server-end-of-life-overview/arc-enabled-portal-screen-10.png" alt-text="Screenshot showing two connected SQL Server instances on the Azure Arc portal":::
+
+1. Download security updates from here, if and when they are made available.
+
+    :::image type="content" source="media/sql-server-end-of-life-overview/arc-enabled-portal-screen-11.png" alt-text="Screenshot showing two connected SQL Server instances on the Azure Arc portal":::
 
 1. Download security updates from here, if and when they are made available.
 
@@ -348,7 +366,7 @@ Yes, customers can start a new [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]
 
 **Can I get technical support on-premises for SQL Server after the End of Support date, without purchasing Extended Security Updates?**
 
-[RW] -> [Check this for connected servers]
+### [RW] -> [Check this for connected servers]
 
 No. If a customer has [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and chooses to remain on-premises during a migration without ESUs, they can't log a support ticket even if they have a support plan. If they migrate to Azure, however, they can get support using their Azure Support Plan.
 
@@ -393,7 +411,7 @@ Azure doesn't currently support shared storage clustering. For advice on how to 
 
 Customers can't use ESUs if they move their [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] environment to a PaaS implementation on other cloud providers. If customers are looking to move to virtual machines (IaaS), they can use License Mobility for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via Software Assurance to make the move, and purchase ESUs from [!INCLUDE[msCoName](../../includes/msconame-md.md)] to manually apply patches to the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instances running in a VM (IaaS) on an authorized SPLA hosting provider's server. However, free updates in Azure are the more attractive offer.
 
-[RW] -> [Check wording]
+### [RW] -> [Check wording]
 
 Customers can purchase ESUs from Microsoft directly to cover [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] workloads running on IaaS and dedicated hosts in third party clouds.
 

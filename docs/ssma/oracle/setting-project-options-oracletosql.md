@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Configuration Options and Modes"
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Setting Project Options (OracleToSQL)

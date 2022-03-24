@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Script File Creation, Non-Configurable option"
   - "Script File Creation, Script File Validation"
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Creating Script Files (OracleToSQL)

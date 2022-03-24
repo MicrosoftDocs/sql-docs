@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Type Mapping Inheritance"
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Mapping Oracle and SQL Server Data Types (OracleToSQL)

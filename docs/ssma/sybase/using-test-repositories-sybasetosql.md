@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Tester Component,Test Repositories"
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
-author: MYethirajam 
-ms.author: madhuriy 
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Using Test Repositories (SybaseToSQL)

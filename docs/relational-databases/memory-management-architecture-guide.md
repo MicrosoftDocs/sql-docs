@@ -59,7 +59,7 @@ One of the primary design goals of all database software is to minimize disk I/O
 
 #### 32-bit platform
 
-All SQL Server versions that support 32-bit and all editions support [virtual memory allocations](https://docs.microsoft.com/en-us/windows/win32/memory/allocating-virtual-memory). Listed below are limits afforded by process virtual address space:
+All SQL Server versions that support 32-bit and all editions support [virtual memory allocations](/windows/win32/memory/allocating-virtual-memory). Listed below are limits afforded by a process virtual address space in x86:
 - 2 GB of virtual address space (user mode)
 - 3 GB with /3GB operating system boot parameter
 - 4 GB on Windows on Windows 64 (WOW64). (Windows on Windows 64) is a mode in which 32-bit SQL Server runs on a 64-bit operating system.
@@ -137,7 +137,7 @@ In earlier versions of SQL Server ( [!INCLUDE[ssVersion2005](../includes/ssversi
 
 The virtual address space that is reserved for these allocations is determined by the _**memory\_to\_reserve**_ configuration option. The default value that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses is 256 MB. To override the default value, use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* startup parameter. Refer to the documentation page on [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter.
 
-Because starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the new "any size" page allocator also handles allocations greater than 8 KB, the *memory_to_reserve* value does not include the multi-page allocations. Except for this change, everything else remains the same with this configuration option.
+Because starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the new "any size" page allocator also handles allocations greater than 8 KB, the *memory_to_reserve* value doesn't include the multi-page allocations. Except for this change, everything else remains the same with this configuration option.
 
 The following table indicates whether a specific type of memory allocation falls into the *memory_to_reserve* region of the virtual address space for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process:
 

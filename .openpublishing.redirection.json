@@ -43088,7 +43088,7 @@
     {
         "source_path": "docs/database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md",
         "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
-        "redirect_document_id": true
+        "redirect_document_id": false
     },
     {
         "source_path": "docs/lp/sql-server/load-move-data.md",

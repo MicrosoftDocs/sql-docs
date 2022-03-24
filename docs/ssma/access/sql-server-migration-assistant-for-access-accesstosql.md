@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 manager: alexiva
 ---
 # SQL Server Migration Assistant for Access (AccessToSQL)

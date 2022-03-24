@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 ---
 # Data Migration Report (AccessToSQL)
 The **Data Migration Report** dialog box appears after you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 42b26160-354f-460c-a1e4-167017af3a0b
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 manager: alexiva
 ---
 # Global Settings (Output Window)  (OracleToSQL)

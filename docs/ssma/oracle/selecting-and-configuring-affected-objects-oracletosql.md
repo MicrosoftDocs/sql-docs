@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Columns Comparison Settings"
   - "Selection of Affected Objects"
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 manager: alexiva
 ---
 # Selecting and Configuring Affected Objects (OracleToSQL)

@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 ---
 
 # Project Settings (Conversion) (SybaseToSQL)

@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 manager: alexiva
 ---
 # Refresh from Database (OracleToSQL)

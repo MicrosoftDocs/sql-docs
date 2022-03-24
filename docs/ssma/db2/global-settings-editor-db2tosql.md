@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a5029bcb-7d5d-44a0-ae28-0efd10d2a714
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 ---
 # Global Settings (Editor) (DB2ToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

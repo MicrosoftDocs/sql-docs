@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Server Connection File Creation"
   - "Server Connection File, Server Connection File Validation"
 ms.assetid: 002f129e-0868-48ad-a4b4-c68b5007e12e
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 manager: alexiva
 ---
 # Creating the Server Connection Files (OracleToSQL)

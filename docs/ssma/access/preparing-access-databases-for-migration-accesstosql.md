@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "versions of Access"
   - "workgroup security"
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: MYethirajam 
+ms.author: madhuriy 
 manager: alexiva
 ---
 # Preparing Access databases for migration (AccessToSQL)

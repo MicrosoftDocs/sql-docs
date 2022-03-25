@@ -99,30 +99,21 @@ Customers covered by ESU agreements must follow these steps to download and depl
 
 - [Register eligible instances](#register-instances-for-esus).
 - Once registered, whenever ESU patches are released, a download link will be available in the Azure portal to download the package.
-- The downloaded package can be deployed to your on-premises or hosted environments manually, or through whatever update orchestration solution is used in your organization, such as Microsoft Endpoint Configuration Manager (formerly System Center Configuration Manager).
+- The downloaded package can be deployed to your on-premises or hosted environments manually, or through the update orchestration solution you use in your organization, such as Microsoft Endpoint Configuration Manager.
 
 For more information, see the [Extended Security Updates frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
-## Set up an Azure Arc resource
-
-### [RW] -> [Still to come]
-
-1. Sign into the [Azure portal](https://portal.azure.com).
-
-1. Select the option to **Create a resource**.
-
-
-It isn't necessary to register [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances for ESUs when running an Azure Virtual Machine that is configured for [automatic updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
+You don't need to register [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances for ESUs when running an Azure Virtual Machine that is configured for [automatic updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
 ## <a id="register-instances-for-esus"></a> Register SQL Server instances for ESUs
 
-In this example, you will add your SQL Server instances to Azure Arc following these steps below.
+This example shows you how to manually add your SQL Server instances in a disconnected state to Azure Arc. If you would prefer to add your server as an Azure Arc-enabled server running the Connected Machine agent, see [Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) instead.
 
 1. Sign into the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Azure Arc** and select **SQL Servers** from the Infrastructure section.
+1. Navigate to **Azure Arc** and select **Infrastructure** > **SQL Servers**.
 
-1. To add a machine, you can either select **Add** from the menu at the top of the screen, or choose the **Add SQL Server - Azure Arc** button lower down.
+1. To register a disconnected machine, select **Add** from the menu at the top of the screen.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-empty-list.png" alt-text="Screenshot showing an empty list of SQL Servers list on the Azure Arc portal":::
 
@@ -132,31 +123,23 @@ In this example, you will add your SQL Server instances to Azure Arc following t
 
 ### Single SQL Server instance
 
-1. On the next screen, you can choose to add a single or multiple SQL Server instances. Select the option for **Single SQL instance** to continue.
+1. On the next screen, you can choose to add a single or multiple SQL Server instances. The option for **Single SQL instance** is selected by default.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-sql-registration-options.png" alt-text="Screenshot showing the Add SQL Registrations options":::
 
-### [RW] -> [Confirm what goes in here]
+1. Choose the **Subscription** and **Resource group** for your registered SQL Server instance.
 
-1. Provide the required information as is detailed in this table, and then select **Register**:
+1. Provide the required information as is detailed in this table, and then select **Next**:
 
-   |Value|Description|Additional information|
-   |---|---|---|
-   | **Instance** | Enter the output of command `SELECT @@SERVERNAME`, such `MyServer\Instance01`. ||
-   | **SQL Version** | Select your version from the drop-down. ||
-   | **Edition** | Select the applicable edition from the drop-down: Datacenter, Developer (free to deploy if purchased ESUs), Enterprise, Standard, Web, Workgroup. |
-   | **Cores** | Enter the number of cores for this instance ||
-   | **Host Type** | Select the applicable host type from the drop-down: Virtual machine (on-premises), Physical Server (on-premises), Azure Virtual Machine, Amazon EC2, Google Compute Engine, Other. ||
-   | **SubscriptionID** | Enter the SubscriptionID where the VM is created.  |Only necessary for Azure virtual machines|
-   | **Resource Group** | Enter the resource group where the VM is created.  |Only necessary for Azure virtual machines|
-   | **Azure VM name** | Enter the VM resource name.  |Only necessary for Azure virtual machines|
-   | **Azure VM operating system** | Select the applicable Windows Server operating system version from the drop-down. |Only necessary for Azure virtual machines|
+   |Value|Description|
+   |---|---|
+   |**Instance Name**|Enter the output of command `SELECT @@SERVERNAME`, such as `MyServer\Instance01`.|
+   |**SQL Server Version**|Select your version from the drop-down.|
+   |**Edition**| Select the applicable edition from the drop-down: Datacenter, Developer (free to deploy if purchased ESUs), Enterprise, Standard, Web, Workgroup.|
+   |**Cores**|Enter the number of cores for this instance|
+   |**Host Type**|Select the applicable host type from the drop-down: Virtual machine (on-premises), Physical Server (on-premises), Azure Virtual Machine, Amazon EC2, Google Compute Engine, Other.|
 
-The newly registered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is now visible in the **Register SQL Server instances** section of the **Overview** pane:
-
-:::image type="content" source="media/sql-server-extended-security-updates/registered-sql-instance.png" alt-text="Registered SQL Server instances":::
-
-Once a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance has been registered, the **Security Updates** section becomes available. Any available ESUs will be posted there.
+1. You must confirm that you have the rights to receive Extended Security Updates, using the checkbox provided.
 
 ### Multiple SQL Server instances in bulk
 
@@ -170,7 +153,7 @@ Multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances can
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-browse-csv-file.png" alt-text="Screenshot showing how to browse to the CSV file":::
 
-1. Before you can continue, you must confirm that you have the rights to receive Extended Security Updates, using the checkbox provided.
+1. You must confirm that you have the rights to receive Extended Security Updates, using the checkbox provided.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-rights.png" alt-text="Screenshot showing the checkbox to indicate the rights to continue":::
 
@@ -192,8 +175,8 @@ Follow these steps to link an ESU invoice to your Azure Arc SQL Server instances
 
 1. Sign into the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Azure Arc** and select **SQL Servers** from the Infrastructure section.
-
+1. Navigate to **Azure Arc** and select **Infrastructure** > **SQL Servers**.
+1. 
 1. Use the checkboxes next to each server to select which machines you would like to link, and then select **Link ESU invoice**.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-select.png" alt-text="Screenshot showing all SQL Server instances on the Azure Arc blade":::
@@ -263,7 +246,7 @@ To download ESUs, follow these steps:
 
 1. Sign into the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Azure Arc** and select **SQL Servers** from the Infrastructure section.
+1. Navigate to **Azure Arc** and select **Infrastructure** > **SQL Servers**.
 
 1. Select a server from the list.
 
@@ -274,70 +257,6 @@ To download ESUs, follow these steps:
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-available-updates.png" alt-text="Screenshot showing available security updates":::
 
 1. Download security updates from here, if and when they are made available.
-
-## Supported regions and data residency
-
-You can register your instance with Azure Arc in a subset of Azure regions. The following table shows the supported regions and the data residency type in each.
-
-| **Region** | **Data residency** |
-|:--|:--|
-|Australia East|Geo|
-|Australia Southeast|Geo|
-|Canada Central|Geo|
-|France Central|Geo|
-|Japan East|Geo|
-|Japan West|Geo|
-|Korea Central|Geo|
-|Korea South|Geo|
-|North Central US|Geo|
-|North Europe|Geo|
-|South Central US|Geo|
-|Southeast Asia|Single region|
-|South India|Geo|
-|South Africa North|Geo|
-|UK South|Geo|
-|UK West|Geo|
-|West US|Geo|
-|East US|Geo|
-|Central US|Geo|
-|East Asia|Geo|
-|West Europe|Geo|
-|West Central US|Geo|
-|West US 2|Geo|
-|East US 2|Geo|
-
-In the regions with geographic residency, the Azure Arc service maintains data backups in a geo-redundant storage account (GRS). In the regions with the single region residency, the Azure Arc service maintains data backups in a zone-redundant storage account (ZRS). For more information, see the [Trust Center](https://azuredatacentermap.azurewebsites.net/).
-
-## Configure regional redundancy
-
-Customers that require regional redundancy for their registered servers can create registration data in two distinct regions. Customers can then download security updates from either region based on service availability.
-
-For regional redundancy, the Azure Arc service has to be created in two different regions, and your SQL Server inventory has to be split between these two services. This way, half of your SQL Servers are registered in one region, and then the other half of your SQL Servers are registered in the other region.
-
-To configure regional redundancy, follow these steps:
-
-1. Split your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inventory into two files, such as `upload1.csv` and `upload2.csv`.
-
-    **`upload1.csv`**
-
-    |Name|Version|Edition|Cores|HostType|
-    |---|---|---|---|---|
-    |Server2|2012|Standard|55|Physical Server|
-    |t5\Server3|2012|Standard|55|Physical Server|
-    |Server1\SQL2012|2012|Enterprise|12|Physical Server|
-
-    **`upload2.csv`**
-
-    |Name|Version|Edition|Cores|HostType|
-    |---|---|---|---|---|
-    |Server2\SQL2012|2012|Enterprise|24|Physical Server|
-    |Server3\SQL2012|2012|Enterprise|12|Physical Server|
-    |Server4\SQL2012|2012|Developer|8|Physical Server|
-
-1. Create the first **Azure Arc** service in one region, and then bulk register one of the csv files to it. For example, create the first **Azure Arc** service in the **West US** region, and bulk register your SQL Servers using the `upload1.csv` file.
-1. Create the second **Azure Arc** service in the second region, and then bulk register the other csv file to it. For example, create the second **Azure Arc** service in the **East US** region, and bulk register your SQL Servers using the `upload2.csv` file.
-
-Once your data has been registered with the two different **Azure Arc** resources, you will be able to download security updates from either region, based on service availability.
 
 ## Frequently Asked Questions
 

@@ -59,7 +59,7 @@ The session collects information that includes the following:
 > For more information on deadlocks, see [deadlocking in the Transaction Locking and Row Versioning Guide](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks).   
 > For more information on SQL error messages, see [Database Engine Errors](../../relational-databases/errors-events/database-engine-events-and-errors.md).
 
-## Viewing the Session Data  
+## View the session data  
 The session uses the ring buffer target and event file target to store the data. The event file target is configured with a maximum size of 5 MB and a file retention policy of 4 files. 
 
 To view the session data from the ring buffer target with the Extended Events user interface available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Advanced Viewing of Target Data from Extended Events in SQL Server - Watch live data](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md#b3-watch-live-data).
@@ -75,7 +75,7 @@ WHERE xe.name = 'system_health'
   
 To view the session data from the event file, use the Extended Events user interface available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Advanced Viewing of Target Data from Extended Events in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
 
-## Restoring the system_health Session  
+## Restore the system_health session  
 If you delete the system_health session, you can restore it by executing the **u_tables.sql** file in Query Editor. This file is located in the following folder, where **C:** represents the drive where you installed the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] program files, and **MSSQL1x** the major version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
  `C:\Program Files\Microsoft SQL Server\MSSQL1x.\<*instanceid*>\MSSQL\Install`  
@@ -84,11 +84,11 @@ Be aware that after you restore the session, you must start the session by using
 
 ## The system_health session in Azure SQL 
 
-This article applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+This article applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-There is no system_health extended event trace in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] by default, but you can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For example walkthrough, review [Event File target code for extended events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
+There is no built-in system_health extended event trace in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], but you can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For an example walkthrough, review [Event File target code for extended events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
 
-In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], the system_health extended events session is not accessible via a local file system as the examples in this article demonstrate, as direct access to the local file system is not possible. 
+In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], the system_health extended events session XEL target is not accessible, but system_health can be accessed via the ring buffer target. For more information, see [Targets for Extended Events in SQL Server](../extended-events/targets-for-extended-events-in-sql-server.md#h2_target_ring_buffer).
   
 ## See also  
 

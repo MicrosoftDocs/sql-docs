@@ -44,7 +44,8 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
  The path to the files to read. *path* can contain wildcards and include the name of a file. *path* is **nvarchar(260)**. There is no default. In the context of Azure SQL Database, this value is an HTTP URL to a file in Azure Storage.
   
 #### *mdpath*  
- The path to the metadata file that corresponds to the file or files specified by the *path* argument. *mdpath* is **nvarchar(260)**. There is no default. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] does not require the *mdpath* parameter. However, it is maintained for backward compatibility for log files generated in previous versions of SQL Server. Starting with SQL Server 2016, this parameter can be given as null as `.xem` files are no longer used.
+ The path to the metadata file that corresponds to the file or files specified by the *path* argument. *mdpath* is **nvarchar(260)**. There is no default. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] does not require the *mdpath* parameter. However, it is maintained for backward compatibility for log files generated in previous versions of SQL Server. Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]
+, this parameter can be given as null as `.xem` files are no longer used.
   
 #### *initial_file_name*  
  The first file to read from *path*. *initial_file_name* is **nvarchar(260)**. There is no default. If **null** is specified as the argument all the files found in *path* are read.  
@@ -73,6 +74,24 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accept trace results generated in XEL and XEM format. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Extended Events only support trace results in XEL format. We recommend that you use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to read trace results in XEL format.    
   
+ In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], if you try to specify a path for a local file system, you will receive an error message similar to:
+
+```
+Msg 40538, Level 16, State 3, Line 15
+A valid URL beginning with 'https://' is required as value for any filepath specified.
+```
+
+### XEL files in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
+
+You can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. 
+
+The system_health extended events session is not accessible via the .xel target in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], but can be accessed via the ring buffer target. For more information, see [Targets for Extended Events in SQL Server](../extended-events/targets-for-extended-events-in-sql-server.md#h2_target_ring_buffer).
+
+
+### XEL files in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+
+You can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For example walkthrough, review [Event File target code for extended events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
+
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
@@ -80,7 +99,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ### A. Retrieving data from file targets
  
- For [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and previous versions, the following example gets all the rows from all the files, including both the `.xel` and `.xem` file. In this example the file targets and metafiles are located in the trace folder in the `C:\traces\` folder.
+ For [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and previous versions, the following example gets all the rows from all the files, including both the `.xel` and `.xem` file. In this example, the file targets and metafiles are located in the trace folder in the `C:\traces\` folder.
   
 ```sql  
 SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\metafile.xem', null, null);  
@@ -97,29 +116,6 @@ SELECT * FROM sys.fn_xe_file_target_read_file('*.xel', null, null, null)
 ```sql
 SELECT * FROM sys.fn_xe_file_target_read_file('system_health*.xel', null, null, null)
 WHERE cast(timestamp_utc as datetime2(7)) > dateadd(day, -1, GETUTCDATE())
-```
-
-### B. Retrieving data from file targets in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
-
-The system_health extended events session is available via:
-
-If you try to specify a wildcard path for a local file system, the following error message will arise:
-
-```
-Msg 40538, Level 16, State 3, Line 15
-A valid URL beginning with 'https://' is required as value for any filepath specified.
-```
-
-
-### C. Retrieving data from file targets in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
-
-There is no system_health extended event trace in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] by default, but you can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For example walkthrough, review [Event File target code for extended events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
-
-If you try to specify a wildcard path for a local file system, the following error message will arise:
-
-```
-Msg 40538, Level 16, State 3, Line 15
-A valid URL beginning with 'https://' is required as value for any filepath specified.
 ```
 
 

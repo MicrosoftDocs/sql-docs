@@ -14,13 +14,13 @@ author: LitKnd
 ms.author: kendralittle
 ms.custom:
   - intro-overview
-ms.date: "07/23/2019"
+ms.date: "03/25/2022"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Extended events overview
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database SQL Managed instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] The Extended Events architecture enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem. Extended Events is configurable, and it scales very well.
 
@@ -35,7 +35,7 @@ Extended Events is a lightweight performance monitoring system that uses minimal
 -[Use the SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md) 
 
 
-## Extended Events Concepts  
+## Extended Events concepts  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events builds on existing concepts, such as an event or an event consumer, uses concepts from Event Tracing for Windows, and introduces new concepts.  
   
  The following table describes the concepts in Extended Events.  
@@ -47,7 +47,7 @@ Extended Events is a lightweight performance monitoring system that uses minimal
 |[SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|Describes the engine that implements and manages an Extended Events session.|  
 |[SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|Describes the Extended Events session.|  
   
-## Extended Events Architecture  
+## Extended Events architecture  
 
 Extended Events is our name for a general event-handling system for server systems. The Extended Events infrastructure supports the correlation of data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and under certain conditions, the correlation of data from the operating system and database applications. In the operating system case, Extended Events output must be directed to [Event Tracing for Windows (ETW)](/windows/win32/etw/event-tracing-portal). ETW can correlate the event data with operating system or application event data.
 
@@ -77,11 +77,11 @@ All applications have execution points that are useful both inside and outside a
   
 -   A default system health session that runs without any noticeable performance effects. The session collects system data that you can use to help troubleshoot performance issues. For more information, see [Use the system_health Session](../../relational-databases/extended-events/use-the-system-health-session.md).  
   
-## Extended Events Tasks  
+## Extended Events tasks  
 
 Using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] Data Definition Language (DDL) statements, consume dynamic management views and functions, or catalog views, you can create simple or complex [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events troubleshooting solutions for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment.  
   
-|Task Description|Topic|  
+|Task Description|Article|  
 |----------------------|-----------|  
 |Use the **Object Explorer** to manage event sessions.|[Manage Event Sessions in the Object Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)|  
 |Describes how to create an Extended Events session.|[Create an Extended Events Session](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130))|  
@@ -117,20 +117,21 @@ SELECT
 ```
 
 
-## Code examples can differ for Azure SQL Database
+## Code examples can differ for Azure SQL Database and SQL Managed Instance
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## See Also
+## See also
 
-[Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-[DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
-[Deploy a Data-tier Application](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
-[Monitor Data-tier Applications](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
-&nbsp;  
-[Extended Events Dynamic Management Views](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)  
-[Extended Events Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
-&nbsp;  
-[XELite: Cross-platform library to read XEvents from XEL files or live SQL streams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), released May 2019.  
-[Read-SQLXEvent PowerShell cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent), released June 2019.  
-[SQL Mysteries: Causality tracking vs Event Sequence for XEvent Sessions (blog published April 1, 2019)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)
+- [Extended Events Dynamic Management Views](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)  
+- [Extended Events Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
+
+## Next Steps
+
+- [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)  
+- [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
+- [Deploy a Data-tier Application](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
+- [Monitor Data-tier Applications](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
+- [XELite: Cross-platform library to read XEvents from XEL files or live SQL streams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), released May 2019.  
+- [Read-SQLXEvent PowerShell cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent), released June 2019.  
+- [SQL Mysteries: Causality tracking vs Event Sequence for XEvent Sessions (blog published April 1, 2019)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)

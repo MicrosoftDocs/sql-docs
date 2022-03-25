@@ -313,7 +313,7 @@ To configure regional redundancy, follow these steps:
     |Server3\SQL2012|2012|Enterprise|12|Physical Server|
     |Server4\SQL2012|2012|Developer|8|Physical Server|
 
-1. Create the first **Azure Arc** service in one region, and then bulk register one of the csv files to it. For example, create the first **Azure Arc** service in the **West US** region, and bulk register your SQL Servers using the `upload1.csv file`.
+1. Create the first **Azure Arc** service in one region, and then bulk register one of the csv files to it. For example, create the first **Azure Arc** service in the **West US** region, and bulk register your SQL Servers using the `upload1.csv` file.
 1. Create the second **Azure Arc** service in the second region, and then bulk register the other csv file to it. For example, create the second **Azure Arc** service in the **East US** region, and bulk register your SQL Servers using the `upload2.csv` file.
 
 Once your data has been registered with the two different **Azure Arc** resources, you will be able to download security updates from either region, based on service availability.

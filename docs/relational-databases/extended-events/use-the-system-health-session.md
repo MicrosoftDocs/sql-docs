@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 
 [!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
-The system_health session is an Extended Events session that is included by default with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This session starts automatically when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] starts, and runs without any noticeable performance effects. The session collects system data that you can use to help troubleshoot performance issues in the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
+The system_health session is an Extended Events session that is included by default with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This session starts automatically when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] starts, and runs without any noticeable performance effects. The session collects system data that you can use to help troubleshoot performance issues in the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 > [!IMPORTANT]
 > We recommend that you do not stop, alter, or delete the system_health session. Any changes made to the system_health session settings may be overwritten by a future product update.
@@ -83,8 +83,6 @@ If you delete the system_health session, you can restore it by executing the **u
 Be aware that after you restore the session, you must start the session by using the `ALTER EVENT SESSION` statement or by using the **Extended Events** node in Object Explorer. Otherwise, the session starts automatically the next time that you restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
 
 ## The system_health session in Azure SQL 
-
-This article applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 There is no built-in system_health extended event trace in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], but you can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For an example walkthrough, review [Event File target code for extended events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
 

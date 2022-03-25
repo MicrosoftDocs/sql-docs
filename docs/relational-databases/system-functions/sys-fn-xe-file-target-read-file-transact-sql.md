@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Reads files that are created by the Extended Events asynchronous file target. One event, in XML format, is returned per row. 
 
-  The Extended Events `event_file` target stores the data it receives in a binary format that is not human readable. Read the contents of the `.xel` file by with the `sys.fn_xe_file_target_read_file` function. These files can also be read from [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For a walkthrough, see [Quickstart: Extended events in SQL Server](../extended-events/quick-start-extended-events-in-sql-server.md).
+  The Extended Events `event_file` target stores the data it receives in a binary format that is not human readable. Read the contents of the `.xel` file with the `sys.fn_xe_file_target_read_file` function. These files can also be read from [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For a walkthrough, see [Quickstart: Extended events in SQL Server](../extended-events/quick-start-extended-events-in-sql-server.md).
    
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,23 +74,16 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accept trace results generated in XEL and XEM format. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Extended Events only support trace results in XEL format. We recommend that you use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to read trace results in XEL format.    
   
- In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], if you try to specify a path for a local file system, you will receive an error message similar to:
+### Azure SQL
+
+ In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], store .xel files in Azure Blob Storage. You can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For example walkthrough, review [Event File target code for extended events in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file).
+
+If you specify wildcard and/or a path for a local file system, you will receive an error message similar to:
 
 ```
 Msg 40538, Level 16, State 3, Line 15
 A valid URL beginning with 'https://' is required as value for any filepath specified.
 ```
-
-### XEL files in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
-
-You can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. 
-
-The system_health extended events session is not accessible via the .xel target in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], but can be accessed via the ring buffer target. For more information, see [Targets for Extended Events in SQL Server](../extended-events/targets-for-extended-events-in-sql-server.md#h2_target_ring_buffer).
-
-
-### XEL files in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
-
-You can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For example walkthrough, review [Event File target code for extended events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
 
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  

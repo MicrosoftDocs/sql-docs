@@ -210,11 +210,11 @@ For on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instan
 
 ```csv
 name,version,edition,cores,hostType
-Server1\SQL2008,2008,Enterprise,12,Physical Server
-Server1\SQL2008R2,2008 R2,Enterprise,12,Physical Server
-Server2\SQL2008R2,2008 R2,Enterprise,24,Physical Server
-Server3\SQL2008R2,2008 R2,Enterprise,12,Virtual Machine
-Server4\SQL2008,2008,Developer,8,Physical Server  
+Server1\SQL2012,2012,Enterprise,12,Physical Server
+Server1\SQL2012,2012,Enterprise,12,Physical Server
+Server2\SQL2012,2012,Enterprise,24,Physical Server
+Server3\SQL2012,2012,Enterprise,12,Virtual Machine
+Server4\SQL2012,2012,Developer,8,Physical Server  
 ```
 
 Refer to [MyPhysicalServers.csv](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-server-extended-security-updates/scripts/MyPhysicalServers.csv) for a CSV file example.
@@ -225,16 +225,16 @@ For Azure Virtual Machine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 
 ```csv
 name,version,edition,cores,hostType,subscriptionId,resourceGroup,azureVmName,azureVmOS    
-ProdServerUS1\SQL01,2008 R2,Enterprise,12,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM1,2012    
-ProdServerUS1\SQL02,2008 R2,Enterprise,24,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM1,2012    
-ServerUS2\SQL01,2008,Enterprise,12,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM2,2012 R2    
-ServerUS2\SQL02,2008,Enterprise,8,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM2,2012 R2    
-SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM3,2008 R2  
+ProdServerUS1\SQL01,2012,Enterprise,12,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM1,2012    
+ProdServerUS1\SQL02,2012,Enterprise,24,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM1,2012    
+ServerUS2\SQL01,2012,Enterprise,12,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM2,2012    
+ServerUS2\SQL02,2012,Enterprise,8,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM2,2012    
+SalesServer\SQLProdSales,2012,Developer,8,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM3,2012  
 ```
 
-Refer to [MyAzureVMs.csv](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-server-extended-security-updates/scripts/MyAzureVMs.csv) for an Azure VM targeted CSV file example. 
+Refer to [MyAzureVMs.csv](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-server-extended-security-updates/scripts/MyAzureVMs.csv) for an Azure VM targeted CSV file example.
 
-For [!INCLUDE[tsql](../../includes/tsql-md.md)] and PowerShell example scripts that can generate the required [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance registration information into a .CSV file, see [ESU registration script examples](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-server-extended-security-updates/scripts.md). 
+For [!INCLUDE[tsql](../../includes/tsql-md.md)] and PowerShell example scripts that can generate the required [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance registration information into a .CSV file, see [ESU registration script examples](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-server-extended-security-updates/scripts.md).
 
 ## Download ESUs
 
@@ -303,19 +303,18 @@ To configure regional redundancy, follow these steps:
     |---|---|---|---|---|
     |Server2|2012|Standard|55|Physical Server|
     |t5\Server3|2012|Standard|55|Physical Server|
-    |Server1\SQL2008|2008|Enterprise|12|Physical Server|
     |Server1\SQL2012|2012|Enterprise|12|Physical Server|
 
     **`upload2.csv`**
 
     |Name|Version|Edition|Cores|HostType|
     |---|---|---|---|---|
-    |Server2\SQL2008R2|2008 R2|Enterprise|24|Physical Server|
+    |Server2\SQL2012|2012|Enterprise|24|Physical Server|
     |Server3\SQL2012|2012|Enterprise|12|Physical Server|
     |Server4\SQL2012|2012|Developer|8|Physical Server|
 
-1. Create the first **Azure Arc** service in one region, and then bulk register one of the csv files to it. For example, create the first **Azure Arc** service in the **West US** region, and bulk register your SQL Servers using the upload1.csv file.
-1. Create the second **Azure Arc** service in the second region, and then bulk register the other csv file to it. For example, create the second **Azure Arc** service in the **East US** region, and bulk register your SQL Servers using the upload2.csv file.
+1. Create the first **Azure Arc** service in one region, and then bulk register one of the csv files to it. For example, create the first **Azure Arc** service in the **West US** region, and bulk register your SQL Servers using the `upload1.csv file`.
+1. Create the second **Azure Arc** service in the second region, and then bulk register the other csv file to it. For example, create the second **Azure Arc** service in the **East US** region, and bulk register your SQL Servers using the `upload2.csv` file.
 
 Once your data has been registered with the two different **Azure Arc** resources, you will be able to download security updates from either region, based on service availability.
 
@@ -326,10 +325,6 @@ General frequently asked questions about Extended Security updates can be found 
 **When was the End of Support for SQL Server 2012?**
 
 The End of Support date for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] was July 12, 2022.
-
-**When was the End of Support for SQL Server 2008 and 2008 R2?**
-
-The End of Support date for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] was July 9, 2019.
 
 **What does End of Support mean?**
 

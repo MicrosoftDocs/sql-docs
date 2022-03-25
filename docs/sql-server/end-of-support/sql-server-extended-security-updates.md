@@ -107,6 +107,11 @@ For more information, see the [Extended Security Updates frequently asked questi
 
 ### [RW] -> [Still to come]
 
+1. Sign into the [Azure portal](https://portal.azure.com).
+
+1. Select the option to **Create a resource**.
+
+
 It isn't necessary to register [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances for ESUs when running an Azure Virtual Machine that is configured for [automatic updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
 ## <a id="register-instances-for-esus"></a> Register SQL Server instances for ESUs
@@ -114,8 +119,6 @@ It isn't necessary to register [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 In this example, you will add your SQL Server instances to Azure Arc following these steps below.
 
 1. Sign into the [Azure portal](https://portal.azure.com).
-
-1. Select the option to **Create a resource**.
 
 1. Navigate to **Azure Arc** and select **SQL Servers** from the Infrastructure section.
 
@@ -183,8 +186,25 @@ Multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances can
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-connected-servers.png" alt-text="Screenshot showing two registered SQL Server instances on the Azure Arc portal":::
 
-### Add section for linking ESU Invoice here
+### Link ESU invoice to registered servers
 
+Follow these steps to link an ESU invoice to your Azure Arc SQL Server instances, to get access to extended updates.
+
+1. Sign into the [Azure portal](https://portal.azure.com).
+
+1. Navigate to **Azure Arc** and select **SQL Servers** from the Infrastructure section.
+
+1. Use the checkboxes next to each server to select which machines you would like to link, and then select **Link ESU invoice**.
+
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-select.png" alt-text="Screenshot showing all SQL Server instances on the Azure Arc blade":::
+
+1. Fill in the ESU invoice number in the **Invoice ID** section, and then select **Link invoice**.
+
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-save.png" alt-text="Screenshot showing the invoice ID on the Link ESU invoice page":::
+
+1. The servers you linked to the ESU invoice now show a valid ESU expiration date.
+
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-linked.png" alt-text="Screenshot showing SQL Server instances with a valid ESU expiration value":::
 
 ### Formatting requirements for CSV file
 
@@ -210,7 +230,6 @@ For on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instan
 
 ```csv
 name,version,edition,cores,hostType
-Server1\SQL2012,2012,Enterprise,12,Physical Server
 Server1\SQL2012,2012,Enterprise,12,Physical Server
 Server2\SQL2012,2012,Enterprise,24,Physical Server
 Server3\SQL2012,2012,Enterprise,12,Virtual Machine
@@ -244,7 +263,9 @@ To download ESUs, follow these steps:
 
 1. Sign into the [Azure portal](https://portal.azure.com).
 
-1. Go to your **Azure Arc** resource, and navigate to **SQL Servers** in the Infrastructure section. Select a server from the list.
+1. Navigate to **Azure Arc** and select **SQL Servers** from the Infrastructure section.
+
+1. Select a server from the list.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-list-of-servers.png" alt-text="Screenshot showing a list of servers, with one server highlighted":::
 
@@ -340,8 +361,6 @@ Enterprise, Datacenter, Standard, Web, and Workgroup editions of [!INCLUDE[ssSQL
 **When will the Extended Security Updates offer be available?**
 
 ESUs are now available for purchase and can be ordered from [!INCLUDE[msCoName](../../includes/msconame-md.md)] or a [!INCLUDE[msCoName](../../includes/msconame-md.md)] licensing partner. The delivery of ESUs will begin after the End of Support dates, if and when available. Customers interested in migrating to Azure can do so immediately.
-
-## [review]
 
 **What do Extended Security Updates include?**
 

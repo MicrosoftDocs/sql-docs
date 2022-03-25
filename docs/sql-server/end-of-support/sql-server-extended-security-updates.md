@@ -121,6 +121,8 @@ This example shows you how to manually add your SQL Server instances in a discon
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png" alt-text="Screenshot showing the two options for adding connected or registered servers":::
 
+In the next steps, you can either register a [single SQL Server instance](#single-sql-server-instance), or upload a CSV file to register [multiple SQL Server instances in bulk](#multiple-sql-server-instances-in-bulk).
+
 ### Single SQL Server instance
 
 1. On the next screen, you can choose to add a single or multiple SQL Server instances. The option for **Single SQL instance** is selected by default.
@@ -141,6 +143,8 @@ This example shows you how to manually add your SQL Server instances in a discon
 
 1. You must confirm that you have the rights to receive Extended Security Updates, using the checkbox provided.
 
+Now you can continue to the [Confirmation](#confirmation) section.
+
 ### Multiple SQL Server instances in bulk
 
 Multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances can be registered in bulk by uploading a .CSV file. Once your [.CSV file has been formatted correctly](#formatting-requirements-for-csv-file), you can follow these steps to bulk register your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances with Azure Arc:
@@ -157,6 +161,10 @@ Multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances can
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-rights.png" alt-text="Screenshot showing the checkbox to indicate the rights to continue":::
 
+Now you can continue to the [Confirmation](#confirmation) section.
+
+### Confirmation
+
 1. The `Year1OrderID` tag is optional, but should reflect the ESU invoice number for ease of reference. The `Year1EntitlementConfirmed` tag is automatically filled in.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-tags.png" alt-text="Screenshot showing tags":::
@@ -165,18 +173,18 @@ Multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances can
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-terms-and-conditions.png" alt-text="Screenshot showing terms and conditions":::
 
-1. Finally, you will see your registered SQL Server instances in the portal. Because they were added manually, they will always show in a disconnected state.
+1. Once you have added your SQL Server instances, you will see them in the portal. Because they were added manually, they will always show in a disconnected state, with the description **Registered**.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-connected-servers.png" alt-text="Screenshot showing two registered SQL Server instances on the Azure Arc portal":::
 
 ### Link ESU invoice to registered servers
 
-Follow these steps to link an ESU invoice to your Azure Arc SQL Server instances, to get access to extended updates.
+Follow these steps to link an ESU invoice to your Azure Arc SQL Server instances to get access to extended updates. This example includes both **Connected** and **Registered** servers.
 
 1. Sign into the [Azure portal](https://portal.azure.com).
 
 1. Navigate to **Azure Arc** and select **Infrastructure** > **SQL Servers**.
-1. 
+
 1. Use the checkboxes next to each server to select which machines you would like to link, and then select **Link ESU invoice**.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-select.png" alt-text="Screenshot showing all SQL Server instances on the Azure Arc blade":::

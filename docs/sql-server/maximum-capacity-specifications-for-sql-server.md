@@ -68,7 +68,7 @@ Maximum values of various objects defined in [!INCLUDE[ssNoVersion](../includes/
 |File size (log)|2 terabytes||
 |Data files for memory-optimized data per database|4,096 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. The limit is less strict on [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] and later.||
 |Delta file per data file for memory-optimized data|1||
-|Foreign key table references per table|Outgoing = 253. Incoming = 10,000.|For restrictions, see [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|
+|Foreign key table references per table|Outgoing = 253.<br/>Incoming = 10,000.|For restrictions, see [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|
 |Identifier length (in characters)|128||
 |Instances per computer|50 instances on a stand-alone server.<br /><br />25 failover cluster instances when using a shared cluster drive as storage.<br/><br/>50 failover cluster instances with SMB file shares as the storage option.||
 |Indexes per memory-optimized table|999 starting [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] and in [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)].<br/><br/>8 in [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] and [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)].||

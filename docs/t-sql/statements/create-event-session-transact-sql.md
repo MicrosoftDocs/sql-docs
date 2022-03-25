@@ -1,8 +1,8 @@
 ---
-description: "CREATE EVENT SESSION (Transact-SQL)"
-title: "CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs"
+description: "CREATE EVENT SESSION creates an Extended Events session that identifies the source of the events, the event session targets, and the event session options."
+title: "CREATE EVENT SESSION (Transact-SQL)"
 ms.custom: ""
-ms.date: "07/10/2019"
+ms.date: "03/25/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,7 +20,6 @@ dev_langs:
 helpviewer_keywords: 
   - "event sessions [SQL Server]"
   - "CREATE EVENT SESSION statement"
-ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -207,10 +206,10 @@ Specifies the location where event buffers are created.
 A single set of buffers are created within the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
 PER_NODE
-A set of buffers are created for each NUMA node.
+A set of buffers is created for each NUMA node.
 
 PER_CPU
-A set of buffers are created for each CPU.
+A set of buffers is created for each CPU.
 
 #### TRACK_CAUSALITY = { ON | **OFF** }
 Specifies whether or not causality is tracked. If enabled, causality allows related events on different server connections to be correlated together.
@@ -233,7 +232,7 @@ The order of precedence for the logical operators is `NOT` (highest), followed b
 
 ## Permissions
 
-On SQL Server, requires the `ALTER ANY EVENT SESSION` permission.
+On SQL Server and SQL Managed Instance, requires the `ALTER ANY EVENT SESSION` permission.
 On SQL Database, requires the `ALTER ANY DATABASE EVENT SESSION` permission in the database.
 
 ## Examples

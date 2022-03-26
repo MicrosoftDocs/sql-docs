@@ -2,7 +2,7 @@
 description: "ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)"
 title: "ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER DATABASE AUDIT SPECIFICATION statement"
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
-author: VanMSFT
-ms.author: vanto
+author: sravanisaluru
+ms.author: srsaluru
 ---
 # ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

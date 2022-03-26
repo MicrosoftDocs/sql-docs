@@ -74,4 +74,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)  
  Introduces spatial indexes and describes tessellation and tessellation schemes.  
   
-  
+## Spatial tools open-source project
+
+[!INCLUDE [Spatial tools project information](../../includes/spatial-tools.md)]

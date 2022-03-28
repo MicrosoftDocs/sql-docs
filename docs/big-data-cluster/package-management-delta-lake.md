@@ -2,8 +2,8 @@
 title: SQL Server Big Data Clusters Delta Lake
 titleSuffix: SQL Server Big Data Clusters
 description: This guide covers how to use Delta Lake on SQL Server Big Data Clusters.
-author: DaniBunny 
-ms.author: dacoelho
+author: HugoMSFT 
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
 ms.date: 10/06/2021

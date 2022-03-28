@@ -2,7 +2,7 @@
 description: "sp_audit_write (Transact-SQL)"
 title: "sp_audit_write (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_audit_write"
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-author: markingmyname
-ms.author: maghan
+author: sravanisaluru
+ms.author: srsaluru
 ---
 # sp_audit_write (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

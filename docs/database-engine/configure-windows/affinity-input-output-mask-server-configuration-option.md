@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "binding processors [SQL Server]"
   - "CPU affinity mask option"
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # affinity Input-Output mask Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

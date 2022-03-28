@@ -63,11 +63,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
-    GO  
-    ALTER TABLE dbo.DocExe   
-    DROP CONSTRAINT FK_Column_B;   
-    GO  
+    USE AdventureWorks2012;
+    GO
+    ALTER TABLE dbo.DocExe
+    DROP CONSTRAINT FK_Column_B;
+    GO
     ```  
   
  For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  

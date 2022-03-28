@@ -1756,6 +1756,8 @@ items:
         href: relational-databases/indexes/rename-indexes.md
       - name: Set Options
         href: relational-databases/indexes/set-index-options.md
+      - name: Tune nonclustered indexes with missing index suggestions
+        href: relational-databases/indexes/tune-nonclustered-missing-index-suggestions.md
       - name: Disk Space Index DDL Operations
         href: relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md
         items:
@@ -10134,11 +10136,12 @@ items:
       href: linux/tutorial-restore-backup-in-sql-server-container.md
     - name: Create a job
       href: linux/sql-server-linux-run-sql-server-agent-job.md
-    - name: Setup AD Authentication
-      href: linux/sql-server-linux-active-directory-authentication.md
+    - name: Set up AD Authentication
       items:
-      - name: Setup AD Authentication using adutil
+      - name: Use adutil to set up AD Authentication
         href: linux/sql-server-linux-ad-auth-adutil-tutorial.md
+      - name: Set up AD Authentication
+        href: linux/sql-server-linux-active-directory-authentication.md
     - name: Create failover cluster instance
       href: linux/sql-server-linux-shared-disk-cluster-configure.md
       items:
@@ -10156,7 +10159,7 @@ items:
       href: linux/sql-server-linux-create-availability-group.md
     - name: Create with HA with HPE Serviceguard
       href: linux/sql-server-availability-group-ha-hpe.md
-    - name: Deploy on Kubernetes
+    - name: Deploy SQL Server container - Kubernetes
       href: linux/tutorial-sql-server-containers-kubernetes.md
     - name: Deploy availability group with DH2i on AKS
       href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
@@ -10204,7 +10207,7 @@ items:
         href: linux/sql-server-linux-docker-container-configure.md
       - name: Container security
         href: linux/sql-server-linux-docker-container-security.md
-      - name: Configure Docker for MSDTC
+      - name: Use MSDTC with containers
         href: linux/sql-server-linux-configure-msdtc-docker.md
       - name: Troubleshoot Docker containers
         href: linux/sql-server-linux-docker-container-troubleshooting.md
@@ -10321,6 +10324,10 @@ items:
         href: linux/sql-server-linux-encrypted-connections.md
       - name: Introduction to adutil
         href: linux/sql-server-linux-ad-auth-adutil-introduction.md
+      - name: Understanding AD Authentication
+        href: linux/sql-server-linux-ad-auth-understanding.md
+      - name: Troubleshooting AD Authentication
+        href: linux/sql-server-linux-ad-auth-troubleshooting.md
       - name: Rotate SQL Server on Linux keytabs
         href: linux/sql-server-linux-ad-auth-rotate-keytabs.md
     - name: Performance

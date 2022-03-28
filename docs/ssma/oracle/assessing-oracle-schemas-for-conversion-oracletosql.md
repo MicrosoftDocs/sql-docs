@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Analyzing Conversion Problems"
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Assessing Oracle Schemas for Conversion (OracleToSQL)

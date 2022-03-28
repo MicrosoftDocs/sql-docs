@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Synchronization, Securing Objects in SQL Server"
   - "Synchronization,Scripting Objects"
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Loading Converted Database Objects into SQL Server (OracleToSQL)

@@ -5,9 +5,9 @@ ms.date: 02/24/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: pmasl, rwestMSFT
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: pmasl
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server end of support options

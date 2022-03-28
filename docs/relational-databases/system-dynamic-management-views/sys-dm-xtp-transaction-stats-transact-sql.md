@@ -16,8 +16,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_xtp_transaction_stats dynamic management view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

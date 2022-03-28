@@ -9,8 +9,8 @@ ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.external_tables (Transact-SQL)

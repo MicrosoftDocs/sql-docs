@@ -20,8 +20,9 @@ helpviewer_keywords:
   - "CREATE SERVER AUDIT statement"
   - "audits [SQL Server], creating"
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
-author: VanMSFT
-ms.author: vanto
+author: sravanisaluru
+ms.author: srsaluru
+ms.date: "03/23/2022"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 

@@ -2,7 +2,7 @@
 description: "sys.dm_audit_class_type_map (Transact-SQL)"
 title: "sys.dm_audit_class_type_map (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_audit_class_type_map dynamic management view"
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: sravanisaluru
+ms.author: srsaluru
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 # sys.dm_audit_class_type_map (Transact-SQL)

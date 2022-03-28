@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "reducing overhead"
   - "overhead [SQL Server]"
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # lightweight pooling Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

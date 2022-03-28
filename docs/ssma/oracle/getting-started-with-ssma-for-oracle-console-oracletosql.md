@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Oracle Console, Console Output Conventions"
   - "Oracle Console, Launching Console"
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Getting Started with SSMA  for Oracle Console (OracleToSQL)

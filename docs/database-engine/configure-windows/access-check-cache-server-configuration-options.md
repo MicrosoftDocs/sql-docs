@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "access check cache bucket count"
   - "access check cache quota"
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # access check cache Server Configuration Options
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

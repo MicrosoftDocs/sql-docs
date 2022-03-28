@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "slow performance"
   - "unlinking tables"
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 manager: alexiva
 ---
 # Linking Access applications to SQL Server - Azure SQL Database (AccessToSQL)

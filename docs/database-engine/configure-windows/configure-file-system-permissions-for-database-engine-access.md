@@ -5,8 +5,8 @@ ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "01/31/2022"

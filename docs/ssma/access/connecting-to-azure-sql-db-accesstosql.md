@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Azure, reconnecting"
   - "SQL Azure, synchronizing metadata"
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Connecting to Azure SQL Database (AccessToSQL)

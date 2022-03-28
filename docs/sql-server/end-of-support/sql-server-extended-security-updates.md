@@ -266,6 +266,28 @@ To download ESUs, follow these steps:
 
 1. Download security updates from here, if and when they are made available.
 
+## Supported regions
+
+The following list shows the supported regions for this service:
+
+- Australia East
+- Central US
+- East Asia
+- East US
+- East US 2
+- France Central
+- Japan East
+- Korea Central
+- North Central US
+- North Europe
+- South Central US
+- Southeast Asia
+- UK South
+- West Europe
+- West US
+- West US 2
+- West US 3
+
 ## Frequently Asked Questions
 
 General frequently asked questions about Extended Security updates can be found at the [Extended security updates FAQ](https://www.microsoft.com/cloud-platform/extended-security-updates). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific frequently asked questions are listed below.

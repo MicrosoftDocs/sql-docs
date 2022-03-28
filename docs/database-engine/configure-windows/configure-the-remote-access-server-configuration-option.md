@@ -18,12 +18,12 @@ ms.date: "03/02/2022"
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article is about the **remote access** configuration option, which is a deprecated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] communication feature, and you probably shouldn't disable it.
+This article is about the **remote access** configuration option, which is a deprecated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] communication feature. You probably shouldn't disable this option.
 
 > [!IMPORTANT]
 > [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]
 
-If you reached this page because you are having trouble connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see one of the following articles instead:
+If you reached this page because you're having trouble connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see one of the following articles instead:
   
 - [Tutorial: Getting Started with the Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)
   
@@ -39,7 +39,7 @@ If you reached this page because you are having trouble connecting to [!INCLUDE[
   
 - [How to Troubleshoot Connecting to the SQL Server Database Engine](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection)
 
-Programmers may be interested in the following topics:  
+Programmers may be interested in the following articles:  
   
 - [Quickstart: Use .NET Core &#40;C#&#41; to query a database](/azure/azure-sql/database/connect-query-dotnet-core)  
   
@@ -47,17 +47,17 @@ Programmers may be interested in the following topics:
   
 - [Add new connections in Visual Studio](/visualstudio/data-tools/add-new-connections)
 
-## Features
+## Manage remote access
 
 The **remote access** configuration option controls the execution of stored procedures from local or remote servers on which instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are running.
 
 The default value for the **remote access** option is **1** (enabled). This grants permission to run local stored procedures from remote servers or remote stored procedures from the local server. To prevent local stored procedures from being run from a remote server or remote stored procedures from being run on the local server, set the option to **0** (disabled).
 
-This setting does not take effect until you restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+This setting doesn't take effect until you restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-## Limitations and Restrictions
+## Limitations and restrictions
 
-The **remote access** option affects servers that are added by using [sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) and [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). You should not disable this configuration option if you use [Linked Servers](../../relational-databases/linked-servers/linked-servers-database-engine.md).
+The **remote access** option affects servers that are added by using [sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) and [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). You should keep this configuration option enabled (the default) if you use [Linked Servers](../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 ## Permissions
 
@@ -69,7 +69,7 @@ Execute permissions on **sp_configure** with no parameters or with only the firs
   
 1. In Object Explorer, right-click a server and select **Properties**.  
   
-2. Click the **Connections** node.  
+2. Select the **Connections** node.  
   
 3. Under **Remote server connections**, select or clear the **Allow remote connections to this server** check box.
   
@@ -79,9 +79,9 @@ Execute permissions on **sp_configure** with no parameters or with only the firs
   
 1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
 
-1. From the Standard bar, click **New Query**.  
+1. From the Standard bar, select **New Query**.  
 
-1. Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `remote access` option to `0`.  
+1. Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `remote access` option to `0`.  
 
 ```sql
 EXEC sp_configure 'remote access', 0;

@@ -21,7 +21,7 @@ ms.date: "03/02/2022"
 This article is about the **remote access** configuration option, which is a deprecated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] communication feature, and you probably shouldn't disable it.
 
 > [!IMPORTANT]
-> [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)].
+> [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]
 
 If you reached this page because you are having trouble connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see one of the following articles instead:
   
@@ -41,11 +41,11 @@ If you reached this page because you are having trouble connecting to [!INCLUDE[
 
 Programmers may be interested in the following topics:  
   
-- [How To: Connect to SQL Server Using SQL Authentication in ASP.NET 2.0](/previous-versions/msp-n-p/ff648340(v=pandp.10))  
+- [Quickstart: Use .NET Core &#40;C#&#41; to query a database](/azure/azure-sql/database/connect-query-dotnet-core)  
   
 - [Connecting to an Instance of SQL Server](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
-- [How to: Create Connections to SQL Server Databases](/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))  
+- [Add new connections in Visual Studio](/visualstudio/data-tools/add-new-connections)
 
 ## Features
 
@@ -53,13 +53,15 @@ The **remote access** configuration option controls the execution of stored proc
 
 The default value for the **remote access** option is **1** (enabled). This grants permission to run local stored procedures from remote servers or remote stored procedures from the local server. To prevent local stored procedures from being run from a remote server or remote stored procedures from being run on the local server, set the option to **0** (disabled).
 
+This setting does not take effect until you restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
 ## Limitations and Restrictions
 
-The **remote access** option affects servers that are added by using [sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) and [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). You should not disable this configuration option.
+The **remote access** option affects servers that are added by using [sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) and [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). You should not disable this configuration option if you use [Linked Servers](../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 ## Permissions
 
-Execute permissions on **sp_configure** with no parameters or with only the first parameter are granted to all users by default. To execute **sp_configure** with both parameters to change a configuration option or to run the RECONFIGURE statement, a user must be granted the ALTER SETTINGS server-level permission. The ALTER SETTINGS permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.  
+Execute permissions on **sp_configure** with no parameters or with only the first parameter are granted to all users by default. To execute **sp_configure** with both parameters to change a configuration option or to run the RECONFIGURE statement, a user must be granted the ALTER SETTINGS server-level permission. The ALTER SETTINGS permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.
 
 ## <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
 
@@ -88,11 +90,10 @@ RECONFIGURE;
 GO
 ```  
 
-This setting does not take effect until you restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ## See also
 
-- [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
 - [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
 - [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

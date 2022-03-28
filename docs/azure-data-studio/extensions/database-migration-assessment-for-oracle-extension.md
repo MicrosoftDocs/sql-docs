@@ -19,7 +19,7 @@ The Database Migration Assessment for Oracle extension in Azure Data Studio asse
 
 - An [Oracle database](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) running version 10 g or higher.
 - [Azure Data Studio installed](../download-azure-data-studio.md).
-- Extension for Oracle Azure Data Studio extension
+- [Extension for Oracle installed](extension-for-oracle.md)
 
 ## Install Azure Data Studio extension
 

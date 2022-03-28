@@ -204,7 +204,7 @@ Use the Transact-SQL script in the code window below to create the partition fun
 ```sql
 BEGIN TRANSACTION
 /*Create partition function*/
-    CREATE PARTITION FUNCTION [fn_Partition_DepartmentHistory_By_SysEndTime] (datetime2(7))
+    CREATE PARTITION FUNCTION [fn_Partition_DepartmentHistory_By_ValidTo] (datetime2(7))
         AS RANGE LEFT FOR VALUES
           (
             N'2015-09-30T23:59:59.999'
@@ -215,8 +215,8 @@ BEGIN TRANSACTION
           , N'2016-02-29T23:59:59.999'
           )
 /*Create partition scheme*/
-    CREATE PARTITION SCHEME [sch_Partition_DepartmentHistory_By_SysEndTime]
-        AS PARTITION [fn_Partition_DepartmentHistory_By_SysEndTime]
+    CREATE PARTITION SCHEME [sch_Partition_DepartmentHistory_By_ValidTo]
+        AS PARTITION [fn_Partition_DepartmentHistory_By_ValidTo]
             TO ([PRIMARY], [PRIMARY], [PRIMARY], [PRIMARY], [PRIMARY], [PRIMARY], [PRIMARY])
 /*Re-create index to be partition-aligned with the partitioning schema*/
     CREATE CLUSTERED INDEX [ix_DepartmentHistory] ON [dbo].[DepartmentHistory]
@@ -235,7 +235,7 @@ BEGIN TRANSACTION
           , ALLOW_PAGE_LOCKS = ON
           , DATA_COMPRESSION = PAGE
         )
-    ON [sch_Partition_DepartmentHistory_By_SysEndTime] ([ValidTo])
+    ON [sch_Partition_DepartmentHistory_By_ValidTo] ([ValidTo])
 
 COMMIT TRANSACTION;
 ```
@@ -293,11 +293,11 @@ BEGIN TRANSACTION
       DROP TABLE [dbo].[staging_DepartmentHIstory_September_2015];
 */
 /*(6) merge range to move lower boundary one month ahead*/
-    ALTER PARTITION FUNCTION [fn_Partition_DepartmentHistory_By_SysEndTime]()
+    ALTER PARTITION FUNCTION [fn_Partition_DepartmentHistory_By_ValidTo]()
         MERGE RANGE(N'2015-09-30T23:59:59.999')
 /*(7) Create new empty partition for "April and after" by creating new boundary point and specifying NEXT USED file group*/
-    ALTER PARTITION SCHEME [sch_Partition_DepartmentHistory_By_SysEndTime] NEXT USED [PRIMARY]
-        ALTER PARTITION FUNCTION [fn_Partition_DepartmentHistory_By_SysEndTime]() SPLIT RANGE(N'2016-03-31T23:59:59.999')
+    ALTER PARTITION SCHEME [sch_Partition_DepartmentHistory_By_ValidTo] NEXT USED [PRIMARY]
+        ALTER PARTITION FUNCTION [fn_Partition_DepartmentHistory_By_ValidTo]() SPLIT RANGE(N'2016-03-31T23:59:59.999')
 COMMIT TRANSACTION
 ```
 

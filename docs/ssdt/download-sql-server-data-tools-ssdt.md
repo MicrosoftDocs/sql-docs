@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ### Changes in SSDT for Visual Studio 2022
 
-The core SSDT functionality to create database projects has remained integral to Visual Studio.  The extensions for Analysis Services, and Integration Services projects are not available for Visual Studio 2022 at this time.
+The core SSDT functionality to create database projects has remained integral to Visual Studio.  The extensions for Analysis Services and Integration Services projects are not available for Visual Studio 2022 at this time.
 
 > [!NOTE]
 > There's no SSDT standalone installer for Visual Studio 2022.

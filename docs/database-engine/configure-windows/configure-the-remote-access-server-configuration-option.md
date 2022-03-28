@@ -11,7 +11,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: ""
-ms.date: "03/02/2022"
+ms.date: "03/28/2022"
 ---
 
 # Configure the remote access Server Configuration Option

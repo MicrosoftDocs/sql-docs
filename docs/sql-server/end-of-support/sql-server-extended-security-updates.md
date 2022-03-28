@@ -264,8 +264,6 @@ To download ESUs, follow these steps:
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-available-updates.png" alt-text="Screenshot showing available security updates":::
 
-1. Download security updates from here, if and when they are made available.
-
 ## Supported regions
 
 The following list shows the supported regions for this service:

@@ -42,7 +42,9 @@ The Microsoft's shipped ruleset is available on GitHub. You can view the [entire
 
 ## SQL Assessment cmdlets and associated extensions
 
-The SQL Assessment API is part of:
+### Use the API directly
+
+The SQL Assessment API is available and can be used through managed code as part of any of these components :
 
 * [Azure Data Studio (ADS)](../../azure-data-studio/what-is-azure-data-studio.md)
 
@@ -56,7 +58,7 @@ The SQL Assessment API is part of:
 
     Release version as of July 2019 and higher.
 
-Before you start using the SQL Assessment API, make sure to:
+Before you start using the SQL Assessment API itself, make sure to install either of these:
 
 * [Install ADS](https://techcommunity.microsoft.com/t5/sql-server/released-sql-server-assessment-extension-for-azure-data-studio/ba-p/1470603)
 
@@ -64,19 +66,28 @@ Before you start using the SQL Assessment API, make sure to:
 
 * [Install SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md)
 
-The SqlServer module is getting two new cmdlets to work with SQL Assessment API:
+* [Install via Nuget](https://www.nuget.org/packages/Microsoft.SqlServer.Assessment/)
 
-* **Get-SqlAssessmentItem** – Provides a list of available assessment checks for a SQL Server object
 
-* **Invoke-SqlAssessment** – Provides results of an assessment
-
-SMO Framework is supplemented by the SQL Assessment API extension that provides the following methods:
+The SMO Framework is supplemented by the SQL Assessment API extension that provides the following methods:
 
 * **GetAssessmentItems** – Returns available checks for a particular SQL object (IEnumerable<…>)
 
 * **GetAssessmentResults** – Synchronously evaluates assessment and returns results and errors if any (IEnumerable<…>)
 
 * **GetAssessmentResultsList** – Asynchronously evaluates assessment and returns results and errors if any (Task<…>)
+
+### Use the API via PowerShell
+
+If you would like to invoke the SQL Assessment API via PowerShell, you must [install SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md)
+
+The SqlServer module is getting two new cmdlets to work with SQL Assessment API:
+
+* **Get-SqlAssessmentItem** – Provides a list of available assessment checks for a SQL Server object
+
+* **Invoke-SqlAssessment** – Provides results of an assessment
+
+
 
 ## Get started using SQL Assessment cmdlets
 

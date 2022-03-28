@@ -56,7 +56,7 @@ Once the assessment extension is installed, the next step is to connect to Oracl
 4. Now, a new connection appears in the connection details menu.
 5. Right-click on the Oracle connection and select **Manage**.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-manage-database-connection.png" alt-text="":::
+:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-manage-database-connection.png" alt-text="mangae database connection":::
 
 6. Select **Oracle Assessment**.
 
@@ -64,7 +64,7 @@ Once the assessment extension is installed, the next step is to connect to Oracl
 
 7. Select **Run new Assessment**.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-run-new-oracle-assessment.png" alt-text="Run new assessment":::
+:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-run-new-oracle-assessment.png" alt-text="run new assessment":::
 
 8. Provide your assessment details.
     1. In the **Assessment name** field, enter a title.
@@ -75,7 +75,7 @@ Once the assessment extension is installed, the next step is to connect to Oracl
         1. In the **Scale factor** field, enter the ...
         1. In the **Percentile utilization** field, enter the ...
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="Assessment details":::
+:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="assessment details":::
 
 9. Select **Run new Assessment**. 
     1. Now, you see the new Assessment in the last five sections.
@@ -84,7 +84,7 @@ Once the assessment extension is installed, the next step is to connect to Oracl
 
 14. You can select the assessment link, and it takes you to the assessment details page. You can get the latest assessment status.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-latest-assessment-status.png" alt-text="image":::
+:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-latest-assessment-status.png" alt-text="latest assessment status":::
 
 15. Select refresh till the Assessment completes. The status updates to show you 1 of 3 statuses - **success**, **failed** or **in-progress**.
 
@@ -98,7 +98,7 @@ Each card has three sections. It shows the overall feasibility of the migration 
 
 When you Select on view detail report, it first shows the summary of the Assessment.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-card-sections.png" alt-text="Card sections":::
+:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-card-sections.png" alt-text="card sections":::
 
 The following database details tab provides the breakup per schema basis. It shows how many schemas are discovered, how complex it will be to migrate, and the estimated time to migrate your database in hours.
 

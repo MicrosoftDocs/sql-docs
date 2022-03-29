@@ -2,7 +2,6 @@
 description: "CREATE SERVER AUDIT (Transact-SQL)"
 title: CREATE SERVER AUDIT (Transact-SQL)
 ms.custom: ""
-ms.date: "03/11/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

@@ -83,7 +83,7 @@ To design SSIS package in SSDT *targeting SQL Server 2017 and below*, you will n
 
 - Teradata Destination, attribute "PackMaximum" cannot be set to "True". Otherwise, error will occur.
 
-- Teradata Source always reads columns in the order as they are defined in the table. ODBC, on the other hand, requires columns be read in a specific order in certain circumstances (see [here](https://docs.microsoft.com/sql/odbc/reference/develop-app/getting-long-data) and [here](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-api/sqlgetdata)). When the two orders do not match, read will fail with error message "Invalid descriptor index, descriptor record does not exist, or descriptor record was not properly initialized."
+- Teradata Source always reads columns in the order as they are defined in the table. ODBC, on the other hand, requires columns be read in a specific order in certain circumstances [Getting Long Data](../../odbc/reference/develop-app/getting-long-data.md) and [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md). When the two orders do not match, read fails with error message "Invalid descriptor index, descriptor record does not exist, or descriptor record was not properly initialized."
 
 - Installing a new version over an old installation will not remove the old version entry from the installed program list. While this does not impact functioning of the new version, user can manually uninstall the old version in control panel "Programs and Features" to get rid of the old version entry.
 

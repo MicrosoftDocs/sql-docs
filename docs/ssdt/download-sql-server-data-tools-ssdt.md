@@ -10,13 +10,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 08/20/2021
+ms.date: 03/28/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 
 # Download SQL Server Data Tools (SSDT) for Visual Studio
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asa.md)]
 
 **SQL Server Data Tools (SSDT)** is a modern development tool for building SQL Server relational databases, databases in Azure SQL, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.
 
@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ### Changes in SSDT for Visual Studio 2022
 
-The core SSDT functionality to create database projects has remained integral to Visual Studio.  The extensions for Analysis Services, Integration Services, and Reporting Services projects are not available for Visual Studio 2022 at this time.
+The core SSDT functionality to create database projects has remained integral to Visual Studio.  The extensions for Analysis Services and Integration Services projects are not available for Visual Studio 2022 at this time.
 
 > [!NOTE]
 > There's no SSDT standalone installer for Visual Studio 2022.

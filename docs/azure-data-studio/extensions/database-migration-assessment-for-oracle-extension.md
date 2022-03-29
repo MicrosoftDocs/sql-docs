@@ -13,7 +13,7 @@ ms.date: 04/25/2022
 
 # Database Migration Assessment for Oracle extension (Preview)
 
-The Database Migration Assessment for Oracle extension in Azure Data Studio assesses an Oracle workload, identifies the suitable workload, and groups them under simple, medium, large and rearchitect complexity, appropriate Azure SQL target with right-sizing recommendations, and the feature list for migrating Oracle to SQL.
+The Database Migration Assessment for Oracle extension in Azure Data Studio helps you assess an Oracle workload for migrating to SQL. The extension identifies an appropriate Azure SQL target with right-sizing recommendations, and how complex the migration can be.
 
 ## Pre-requisites
 
@@ -37,7 +37,7 @@ Follow the steps below to install the Database Migration Assessment for Oracle e
 
 ## Run Assessment
 
-Once the assessment extension is installed, the next step is to connect to Oracle your database, collect metadata information from your Oracle instance and generate an assessment report.
+Once the assessment extension installs, the next step is to connect to Oracle your database, collect metadata information from your Oracle instance and generate an assessment report.
 
 1. Go to the connections icon in the menu bar.
 
@@ -100,7 +100,7 @@ When you Select on view detail report, it first shows the summary of the Assessm
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-card-sections.png" alt-text="card sections":::
 
-The following database details tab provides the breakup per schema basis. It shows how many schemas are discovered, how complex it will be to migrate, and the estimated time to migrate your database in hours.
+The following database details tab provides the breakup per schema basis. It shows how many schemas are discovered, how complex it can be to migrate, and the estimated time to migrate your database in hours.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-per-schema-basis.png" alt-text="per schma basis":::
 

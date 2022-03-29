@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
 author: cpichuka 
 ms.author: cpichuka 
-manager: alexiva
+manager: madhuriy
 ---
 # New GUI features in SSMA for Oracle (OracleToSQL)
 This chapter describes new features of SSMA User Interface.  

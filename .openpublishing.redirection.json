@@ -59081,11 +59081,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/database-engine/deprecated-database-engine-features-in-sql-server-2019.md",
-      "redirect_url": "/sql/database-engine/deprecated-database-engine-features-in-sql-server-version-15",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "docs/integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md",
       "redirect_url": "/azure/data-factory/ssis-azure-connect-with-windows-auth",
       "redirect_document_id": false
@@ -59323,6 +59318,41 @@
     {
       "source_path": "docs/tools/synapse-pathway/data-type-mappings-teradata-vantage.md",
       "redirect_url": "/tools/synapse-pathway/azure-synapse-pathway-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md",
+      "redirect_url": "/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md",
+      "redirect_url": "/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/what-s-new-in-sql-server-ver15.md",
+      "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/editions-and-components-of-sql-server-version-15.md",
+      "redirect_url": "/sql/sql-server/editions-and-components-of-sql-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/sql-server-version-15-release-notes.md",
+      "redirect_url": "/sql/sql-server/sql-server-2019-release-notes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/deprecated-database-engine-features-in-sql-server-version-15.md",
+      "redirect_url": "/sql/database-engine/deprecated-database-engine-features-in-sql-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md",
+      "redirect_url": "/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2019",
       "redirect_document_id": false
     }
   ]

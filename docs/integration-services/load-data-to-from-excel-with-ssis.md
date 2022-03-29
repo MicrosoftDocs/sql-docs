@@ -49,7 +49,7 @@ You can import data from Excel or export data to Excel with SSIS by using one of
 
 Before you can import data from Excel or export data to Excel with SSIS, you may have to download the connectivity components for Excel if they're not already installed. The connectivity components for Excel are not installed by default.
 
-Use the table within [Unable to use the Access ODBC, OLEDB or DAO interfaces outside Office Click-to-Run](https://docs.microsoft.com/office/troubleshoot/access/cannot-use-odbc-or-oledb) to understand if additional components are necessary for your environment. 
+Use the table within [Unable to use the Access ODBC, OLEDB or DAO interfaces outside Office Click-to-Run](/office/troubleshoot/access/cannot-use-odbc-or-oledb) to understand if additional components are necessary for your environment.
 
 **Note:** The Office System Drivers are only supported under certain scenarios, please refer to [Considerations for server-side Automation of Office](https://support.microsoft.com/topic/considerations-for-server-side-automation-of-office-48bcfe93-8a89-47f1-0bce-017433ad79e2) for specific guidance.
 

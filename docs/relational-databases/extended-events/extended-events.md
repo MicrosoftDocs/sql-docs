@@ -14,7 +14,7 @@ author: LitKnd
 ms.author: kendralittle
 ms.custom:
   - intro-overview
-ms.date: "03/25/2022"
+ms.date: 03/29/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database SQL Managed instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] The Extended Events architecture enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem. Extended Events is configurable, and scales very well as most endpoint are asynchronous, with less impact on the monitored SQL resources.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] The Extended Events architecture enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem. Extended Events is configurable, and scales very well as most targets are asynchronous, with less impact on the monitored SQL resources.
 
 Extended Events replace the deprecated [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) and SQL Server Profiler features.
 
@@ -127,11 +127,10 @@ SELECT
 - [Extended Events Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
 - [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)  
 - [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
+- [Deploy a Data-tier Application](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
+- [Monitor Data-tier Applications](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
 
 ## Next Steps
 
-- [Deploy a Data-tier Application](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
-- [Monitor Data-tier Applications](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
 - [XELite: Cross-platform library to read XEvents from XEL files or live SQL streams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), released May 2019.  
-- [Read-SQLXEvent PowerShell cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent), released June 2019.  
-- [SQL Mysteries: Causality tracking vs Event Sequence for XEvent Sessions (blog published April 1, 2019)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)
+- [Read-SQLXEvent PowerShell cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent), released June 2019. 

@@ -54,7 +54,6 @@ One of the primary design goals of all database software is to minimize disk I/O
 > [!NOTE]
 > In a heavily loaded system under memory pressure, queries with merge join, sort and bitmap in the query plan can drop the bitmap when the queries do not get the minimum required memory for the bitmap. This can affect the query performance and if the sorting process can not fit in memory, it can increase the usage of worktables in tempdb database, causing tempdb to grow. To resolve this problem add physical memory or tune the queries to use a different and faster query plan.
 
-
 ### Conventional (virtual) memory
 
 All SQL Server editions support conventional memory on 64-bit platform. The SQL Server process can access virtual address space up to Operating System maximum on x64 architecture (SQL Server Standard Edition supports up to 128 GB). With IA64 architecture, the limit was 7 TB (IA64 not supported in SQL Server 2012 (11.x) and above). See [Memory Limits for Windows](/windows/win32/memory/memory-limits-for-windows-releases) for more information.

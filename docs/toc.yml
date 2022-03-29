@@ -12,7 +12,7 @@ items:
   - name: What's New
     items:
     - name: SQL Server 2019
-      href: sql-server/what-s-new-in-sql-server-ver15.md
+      href: sql-server/what-s-new-in-sql-server-2019.md
     - name: SQL Server 2017
       href: sql-server/what-s-new-in-sql-server-2017.md
     - name: SQL Server 2016
@@ -20,7 +20,7 @@ items:
   - name: Editions & Features
     items:
     - name: SQL Server 2019
-      href: sql-server/editions-and-components-of-sql-server-version-15.md
+      href: sql-server/editions-and-components-of-sql-server-2019.md
     - name: SQL Server 2017
       href: sql-server/editions-and-components-of-sql-server-2017.md
     - name: SQL Server 2016
@@ -28,7 +28,7 @@ items:
   - name: Release Notes
     items:
     - name: SQL Server 2019
-      href: sql-server/sql-server-version-15-release-notes.md
+      href: sql-server/sql-server-2019-release-notes.md
     - name: SQL Server 2017
       href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: SQL Server 2016
@@ -4443,13 +4443,13 @@ items:
     - name: Discontinued functionality in SQL Server
       href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
     - name: Deprecated in SQL Server 2019
-      href: database-engine/deprecated-database-engine-features-in-sql-server-version-15.md
+      href: database-engine/deprecated-database-engine-features-in-sql-server-2019.md
     - name: Deprecated in SQL Server 2017
       href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
     - name: Deprecated in SQL Server 2016
       href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
     - name: Breaking changes in SQL Server 2019
-      href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md
+      href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2019.md
     - name: Breaking changes in SQL Server 2017
       href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
     - name: Breaking changes in SQL Server 2016
@@ -4464,7 +4464,7 @@ items:
     - name: Hardware & software requirements
       items:
       - name: SQL Server 2019
-        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
+        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md
       - name: SQL Server 2016 & 2017
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
     - name: Security considerations
@@ -4541,7 +4541,7 @@ items:
     - name: Compatibility Certification
       href: database-engine/install-windows/compatibility-certification.md
     - name: Supported Version & Edition Upgrades SQL Server 2019
-      href: database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md
+      href: database-engine/install-windows/supported-version-and-edition-upgrades-2019.md
     - name: Supported Version & Edition Upgrades SQL Server 2017
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016

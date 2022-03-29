@@ -4,7 +4,8 @@ description: Learn how to get download Azure Synapse Pathway
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
-helpviewer_keywords: "Azure Synapse Pathway, download"
+helpviewer_keywords:
+    -  "Azure Synapse Pathway, download"
 author: WilliamDAssafMSFT 
 ms.author: wiassaf 
 ms.custom: intro-installation

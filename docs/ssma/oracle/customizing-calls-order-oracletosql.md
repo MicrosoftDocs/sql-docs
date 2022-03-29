@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 9d273ee3-2438-45cc-b4d1-8d3b549904b4
 author: cpichuka 
 ms.author: cpichuka 
-manager: alexiva
+manager: madhuriy
 ---
 # Customizing Calls Order (OracleToSQL)
 At this step you select the order in which the objects to test will be invoked.  

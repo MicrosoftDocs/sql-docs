@@ -2,7 +2,7 @@
 description: "sys.dm_xe_database_session_event_actions (Azure SQL Database)"
 title: "sys.dm_xe_database_session_event_actions"
 titleSuffix: Azure SQL Database
-ms.date: "06/10/2016"
+ms.date: "03/30/2022"
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -16,13 +16,9 @@ monikerRange: "= azuresqldb-current"
 ms.custom: seo-lt-2019
 ---
 # sys.dm_xe_database_session_event_actions (Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Returns information about event session actions. Actions are executed when events are fired. This management view aggregates statistics about the number of times an action has run, and the total run time of the action.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 and any future versions.|  
+Returns information about event session actions. Actions are executed when events are fired. This management view aggregates statistics about the number of times an action has run, and the total run time of the action.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -33,9 +29,10 @@ ms.custom: seo-lt-2019
 |event_package_guid|**uniqueidentifier**|The GUID for the package that contains the event. Is not nullable.|  
   
 ## Permissions  
- Requires VIEW DATABASE STATE permission.  
+
+Requires the VIEW DATABASE STATE permission.  
   
-### Relationship Cardinalities  
+### Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  
@@ -43,7 +40,9 @@ ms.custom: seo-lt-2019
 |sys.dm_xe_database_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_database_session_events.event_package_guid|Many-to-one|  
 |sys.dm_xe_database_session_event_actions.event_name<br /><br /> sys.dm_xe_database_session_event_actions.event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Many-to-one|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+## Next steps
+
+Learn more about related concepts in the following articles:
+
+- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+- [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)

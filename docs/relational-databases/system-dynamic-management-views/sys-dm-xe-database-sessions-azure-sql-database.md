@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_xe_database_sessions (Azure SQL Database)"
-title: "sys.dm_xe_database_sessions (Azure SQL Database) | Microsoft Docs"
+title: "sys.dm_xe_database_sessions (Azure SQL Database)"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "03/30/2022"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: "reference"
@@ -14,13 +14,9 @@ ms.author: randolphwest
 monikerRange: "= azuresqldb-current"
 ---
 # sys.dm_xe_database_sessions (Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Returns information about session events. Events are discrete execution points. Predicates can be applied to events to stop them from firing if the event does not contain the required information.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 and any later versions.|  
+Returns information about session events. Events are discrete execution points. Predicates can be applied to events to stop them from firing if the event does not contain the required information.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -30,17 +26,25 @@ monikerRange: "= azuresqldb-current"
 |event_predicate|**nvarchar(2048)**|An XML representation of the predicate tree that is applied to the event. Is nullable.|  
   
 ## Permissions  
- Requires VIEW DATABASE STATE permission.  
+
+Requires the VIEW DATABASE STATE permission.  
   
-### Relationship Cardinalities  
-As of 2015-07-13, 'sys.dm_xe_objects' is one of these XEvents DMVs that do Not contain '_database' in their name. Not a typo or error in the following table's right-side column. The name is the same in Microsoft SQL Server and Azure SQL Database.  
+### Relationship cardinalities  
+
+>[!NOTE]
+> The 'sys.dm_xe_objects' Extended Events Dynamic Management view does not contain '_database' in its name. This is not a typo or error in the following table's right-side column. The name is the same in Microsoft SQL Server and Azure SQL Database.  
   
 |From|To|Relationship|  
 |--------|------|----------------|  
 |sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|Many-to-one|  
 |sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Many-to-one|  
   
-## See Also  
-[Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)  
-[Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
+## Next steps
+
+Learn more about related concepts in the following articles:
+
+- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+- [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
+- [sys.database_event_sessions (Azure SQL Database)](sys-database-event-sessions-azure-sql-database.md)
+- [sys.database_event_session_actions (Azure SQL Database)](sys-database-event-session-actions-azure-sql-database.md)
+- [sys.database_event_session_events (Azure SQL Database)](sys-database-event-session-events-azure-sql-database.md)

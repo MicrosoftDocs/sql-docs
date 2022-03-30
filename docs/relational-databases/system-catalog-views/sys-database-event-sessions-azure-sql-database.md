@@ -1,8 +1,9 @@
 ---
 description: "sys.database_event_sessions (Azure SQL Database)"
-title: "sys.database_event_sessions (Azure SQL Database) | Microsoft Docs"
+title: "sys.database_event_sessions"
+titleSuffix: Azure SQL Database
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/30/2022"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: "reference"
@@ -14,16 +15,12 @@ ms.author: randolphwest
 monikerRange: "= azuresqldb-current"
 ---
 # sys.database_event_sessions (Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Lists all the event session definitions that exist in the current database, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+Lists all the event session definitions that exist in the current database.  
   
 > [!NOTE]
 >  The similar catalog view named `sys.server_event_sessions` applies only to [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], and to any later versions.|  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -40,6 +37,15 @@ monikerRange: "= azuresqldb-current"
 |startup_state|**bit**|Value determines whether or not session is started automatically when the server starts. The default is 0. Is not nullable. Is one of:<br /><br /> 0 (OFF). The session does not start when the server starts.<br /><br /> 1 (ON). The event session starts when the server starts.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
-  
-  
+
+Requires the VIEW SERVER STATE permission.  
+
+## Next steps
+
+Learn more about related concepts in the following articles:
+
+- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+- [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
+- [sys.database_event_session_actions (Azure SQL Database)](sys-database-event-session-actions-azure-sql-database.md)
+- [sys.database_event_session_targets (Azure SQL Database)](sys-database-event-session-targets-azure-sql-database.md)
+- [sys.database_event_session_events (Azure SQL Database)](sys-database-event-session-events-azure-sql-database.md)

@@ -2,7 +2,7 @@
 description: "sys.dm_xe_database_session_object_columns (Azure SQL Database)"
 title: "sys.dm_xe_database_session_object_columns"
 titleSuffix: Azure SQL Database
-ms.date: "06/10/2016"
+ms.date: "03/30/2022"
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -16,13 +16,9 @@ monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---
 # sys.dm_xe_database_session_object_columns (Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Shows the configuration values for objects that are bound to a session.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 and any later versions.|  
+Shows the configuration values for objects that are bound to a session.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -35,16 +31,22 @@ ms.custom: seo-dt-2019
 |object_package_guid|**uniqueidentifier**|The GUID of the package that contains the object. Is not nullable.|  
   
 ## Permissions  
- Requires VIEW DATABASE STATE permission.  
+
+Requires the VIEW DATABASE STATE permission.  
   
-### Relationship Cardinalities  
+### Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  
 |dm_xe_database_session_object_columns.object_name<br /><br /> dm_xe_database_session_object_columns.object_package_guid|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|Many-to-one|  
 |dm_xe_database_session_object_columns.column_name<br /><br /> dm_xe_database_session_object_columns.column_id|sys.dm_xe_object_columns.name<br /><br /> sys.dm_xe_object_columns.column_id|Many-to-one|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+## Next steps
+
+Learn more about Extended Events and related concepts in the following articles:
+
+- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+- [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
+- [sys.database_event_sessions (Azure SQL Database)](sys-database-event-sessions-azure-sql-database.md)
+- [sys.database_event_session_actions (Azure SQL Database)](sys-database-event-session-actions-azure-sql-database.md)
+- [sys.database_event_session_events (Azure SQL Database)](sys-database-event-session-events-azure-sql-database.md)

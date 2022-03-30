@@ -1,8 +1,9 @@
 ---
 description: "sys.database_event_session_events (Azure SQL Database)"
-title: "sys.database_event_session_events (Azure SQL Database) | Microsoft Docs"
+title: "sys.database_event_session_events"
+titleSuffix: Azure SQL Database
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "03/30/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -16,13 +17,9 @@ ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_events (Azure SQL Database)
-[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2016-asdb](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
-  Returns a row for each event in an event session.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 and any later versions.|  
+Returns a row for each event in an event session.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -35,16 +32,23 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |predicate_xml|**nvarchar(3000)**|The XML predicate expression that is applied to the event. Is nullable.|  
   
 ## Permissions  
- Requires VIEW DATABASE STATE permission on the server.  
+
+Requires the VIEW DATABASE STATE permission.
   
 ## Remarks  
- This view has the following relationship cardinalities.  
+
+This view has the following relationship cardinalities.  
   
 | From | To | Relationship |
 | ---- | -- | ------------ |
 |sys.database_event_session_events.event_session_id|sys.database_event_sessions.event_session_id|Many to one|  
   
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+## Next steps
+
+Learn more about related concepts in the following articles:
+
+- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
+- [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
+- [sys.database_event_sessions (Azure SQL Database)](sys-database-event-sessions-azure-sql-database.md)
+- [sys.database_event_session_actions (Azure SQL Database)](sys-database-event-session-actions-azure-sql-database.md)
+- [sys.database_event_session_targets (Azure SQL Database)](sys-database-event-session-targets-azure-sql-database.md)

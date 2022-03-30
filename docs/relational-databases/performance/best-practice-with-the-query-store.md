@@ -291,7 +291,7 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;
 ```
 
-The difference between the `actual_state_desc` and `desired_state_desc` indicates that a change of the operation mode occurred automatically. The most common change is for Query Store to silently switch to read-only mode. In extremely rare circumstances, Query Store can end up in the ERROR state because of internal errors.
+The difference between the `actual_state_desc` and `desired_state_desc` indicates that a change of the operation mode occurred automatically. The most common change is for Query Store to silently switch to read-only mode. In extremely rare circumstances, Query Store can end up in the [ERROR state](#error-state) because of internal errors.
 
 When the actual state is read-only, use the `readonly_reason` column to determine the root cause. Typically, you find that Query Store transitioned to read-only mode because the size quota was exceeded. In that case, the `readonly_reason` is set to 65536. For other reasons, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
@@ -335,7 +335,32 @@ FROM sys.database_query_store_options;
 
 If the problem persists, it indicates that corruption of Query Store data is persisted on the disk.
 
-Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], Query Store can be recovered by executing the `sys.sp_query_store_consistency_check` stored procedure within the affected database. Query Store must be disabled before you attempt the recovery operation. For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you need to clear the data from Query Store as shown.
+Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], Query Store can be recovered by executing the `sys.sp_query_store_consistency_check` stored procedure within the affected database. Query Store must be disabled before you attempt the recovery operation. Here is a sample query to use or modify to accomplish the consistency check and recovery of QDS:
+
+```sql
+IF EXISTS (SELECT * FROM sys.database_query_store_options WHERE actual_state=3) 
+BEGIN
+  BEGIN TRY
+    ALTER DATABASE [QDS] SET QUERY_STORE = OFF
+    Exec [QDS].dbo.sp_query_store_consistency_check
+    ALTER DATABASE [QDS] SET QUERY_STORE = ON
+    ALTER DATABASE [QDS] SET QUERY_STORE (OPERATION_MODE = READ_WRITE)
+  END TRY
+ 
+  BEGIN CATCH 
+    SELECT  
+      ERROR_NUMBER() AS ErrorNumber  
+      ,ERROR_SEVERITY() AS ErrorSeverity  
+      ,ERROR_STATE() AS ErrorState  
+      ,ERROR_PROCEDURE() AS ErrorProcedure  
+      ,ERROR_LINE() AS ErrorLine  
+      ,ERROR_MESSAGE() AS ErrorMessage; 
+  END CATCH;   
+END
+```
+
+
+For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you need to clear the data from Query Store as shown.
 
 If the recovery was unsuccessful, you can try clearing Query Store before you set the read-write mode.
 

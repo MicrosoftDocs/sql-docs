@@ -47,7 +47,7 @@ Dim con As New ADODB.Connection
 con.ConnectionString = "Provider=MSOLEDBSQL19;" _
          & "Server=(local);" _
          & "Database=AdventureWorks;" _
-         & "Encrypt=Optional;" _
+         & "Use Encryption for Data=Optional;" _
          & "Integrated Security=SSPI;" _
          & "DataTypeCompatibility=80;" _
          & "MARS Connection=True;"
@@ -70,7 +70,7 @@ Dim sXMLResult As String
 con.ConnectionString = "Provider=MSOLEDBSQL19;" _
          & "Server=(local);" _
          & "Database=AdventureWorks;" _
-         & "Encrypt=Optional;" _
+         & "Use Encryption for Data=Optional;" _
          & "Integrated Security=SSPI;" _
          & "DataTypeCompatibility=80;"
 
@@ -113,7 +113,7 @@ Dim i As Integer
 con.ConnectionString = "Provider=MSOLEDBSQL19;" _
          & "Server=(local);" _
          & "Database=AdventureWorks;" _
-         & "Encrypt=Optional;" _
+         & "Use Encryption for Data=Optional;" _
          & "Integrated Security=SSPI;" _
          & "DataTypeCompatibility=80;"
 
@@ -151,7 +151,7 @@ Dim con As New ADODB.Connection
 con.ConnectionString = "Provider=MSOLEDBSQL19;" _
          & "Server=(local);" _
          & "Database=AdventureWorks;" _
-         & "Encrypt=Optional;" _
+         & "Use Encryption for Data=Optional;" _
          & "Integrated Security=SSPI;" _
          & "DataTypeCompatibility=80;" _
          & "MARS Connection=True;"

@@ -25,8 +25,8 @@ OLE DB Driver for SQL Server contains the components described in the following 
 
 ## OLE DB Driver 19 for SQL Server
 
-|Component|Description|  
-|---------------|-----------------|  
+|Component|Description|
+|---------------|-----------------|
 |msoledbsql19.dll|The dynamic-link library (DLL) file that contains all of the OLE DB Driver for SQL Server functionality.|
 |msoledbsqlr19.rll|The accompanying resource file for the OLE DB Driver for SQL Server library.|
 |msoledbsql.h|The OLE DB Driver for SQL Server header file that contains all of the new definitions needed in order to use OLE DB Driver for SQL Server. This header file replaces the sqloledb.h header file.<br /><br /> Note: You can reference msoledbsql.h and sqloledb.h in same program as long as sqloledb.h is defined first.|
@@ -34,10 +34,8 @@ OLE DB Driver for SQL Server contains the components described in the following 
 
 ## OLE DB Driver 18 for SQL Server
 
-OLE DB Driver for SQL Server contains the following components:  
-
-|Component|Description|  
-|---------------|-----------------|  
+|Component|Description|
+|---------------|-----------------|
 |msoledbsql.dll|The dynamic-link library (DLL) file that contains all of the OLE DB Driver for SQL Server functionality.|
 |msoledbsqlr.rll|The accompanying resource file for the OLE DB Driver for SQL Server library.|
 |msoledbsql.h|The OLE DB Driver for SQL Server header file that contains all of the new definitions needed in order to use OLE DB Driver for SQL Server. This header file replaces the sqloledb.h header file.<br /><br /> Note: You can reference msoledbsql.h and sqloledb.h in same program as long as sqloledb.h is defined first.|
@@ -45,4 +43,4 @@ OLE DB Driver for SQL Server contains the following components:
 
 ## See also
 
-[Building Applications with OLE DB Driver for SQL Server](building-applications-with-oledb-driver-for-sql-server.md)  
+[Building Applications with OLE DB Driver for SQL Server](building-applications-with-oledb-driver-for-sql-server.md)

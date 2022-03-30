@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: a63e4112-4b5d-4b7a-a5c2-06a24e86ab1b
 author: cpichuka 
 ms.author: cpichuka 
-manager: alexiva
+manager: madhuriy
 ---
 # Global Settings (Editor) (OracleToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

@@ -1,8 +1,8 @@
 ---
-description: "sys.server_resource_stats (Azure SQL Managed Instance)"
+description: "sys.server_resource_stats returns CPU usage, IO, and storage data for Azure SQL Managed Instance."
 title: "sys.server_resource_stats (Azure SQL Managed Instance)"
 ms.custom: ""
-ms.date: "08/19/2021"
+ms.date: "03/09/2022"
 ms.service: sql-database
 ms.topic: "reference"
 f1_keywords: 
@@ -58,7 +58,7 @@ The following table describes the columns available:
  Querying a dynamic management view requires **VIEW SERVER STATE** permissions. 
 
 ## Remarks  
- The data returned by `sys.server_resource_stats` are expressed as the total used in either bytes or megabytes (stated in column names) other than avg_cpu, which is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
+ The data returned by `sys.server_resource_stats` are expressed as the total used in either bytes or megabytes (stated in column names) other than `avg_cpu`, which is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
  
 > [!NOTE]
 > For more information on troubleshooting CPU utilization using dynamic management views, see [Identify CPU performance issues in Microsoft Azure SQL Database and Azure SQL Managed Instance performance](/azure/azure-sql/database/monitoring-with-dmvs#identify-cpu-performance-issues). 
@@ -77,7 +77,11 @@ WHERE start_time BETWEEN @s AND @e;
 GO
 ```  
     
-## See Also  
+## See also  
  - [Managed Instance Compute Hardware in the vCore Service Tier](/azure/azure-sql/managed-instance/service-tiers-managed-instance-vcore)
  - [Managed Instance Resource Limits](/azure/azure-sql/managed-instance/resource-limits)
+ - [sys.dm_os_out_of_memory_events (Azure SQL Database and Azure SQL Managed Instance)](../system-dynamic-management-views/sys-dm-os-out-of-memory-events.md)
+
+## Next steps
  - [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview)
+

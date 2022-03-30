@@ -174,7 +174,7 @@ chmod 440 /container/sql1/secrets/mssql.keytab
 
     > [!NOTE]
     >
-    > - `privilagedadaccount`: Privileged AD user to use for AD authentication.
+    > - `privilegedadaccount`: Privileged AD user to use for AD authentication.
     > - `kerberoskeytabfile`: The path in the container where the mssql.keytab file will be located.
 
 1. Create a krb5.conf file. Here's a sample shown below. The casing matters on these files.

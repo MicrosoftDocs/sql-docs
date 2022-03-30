@@ -32,7 +32,7 @@ Let's consider an example. AD authentication is already enabled for the SQL Serv
     kinit privilegeduser@CONTOSO.COM
     ```
 
-1. Once you've ran `kinit` to obtain/renew the TGT, query the current **kvno** number of the **network.privilegedadaccount**. In this case, it's `sqluser@CONTOSO.COM`.
+1. Once you've run `kinit` to obtain/renew the TGT, query the current **kvno** number of the **network.privilegedadaccount**. In this case, it's `sqluser@CONTOSO.COM`.
 
     ```bash
     kvno sqluser@CONTOSO.COM 

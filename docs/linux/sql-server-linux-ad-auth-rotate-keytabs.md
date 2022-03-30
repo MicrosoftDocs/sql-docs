@@ -3,8 +3,8 @@ title: Rotate SQL Server on Linux keytabs
 description: Recommendations on rotating keytabs for SQL Server on Linux using adutil when configured for Active Directory authentication
 author: amvin87
 ms.author: amitkh
-ms.reviewer: vanto
-ms.date: 09/30/2021
+ms.reviewer: vanto, rwestMSFT
+ms.date: 03/30/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -26,13 +26,13 @@ Let's consider an example. AD authentication is already enabled for the SQL Serv
 
 1. [Install adutil](sql-server-linux-ad-auth-adutil-introduction.md#installing-adutil) on the domain joined machine.
 
-1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using the `kinit` command. Use a privileged account for the `kinit` command. The account needs to have permission to connect to the domain and should be able to create accounts and SPNs in the domain. In this case, we are using the account **sqluser@CONTOSO.COM** that has permissions to create accounts and SPNs in our domain called **CONTOSO.COM**.
+1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using the `kinit` command. Use a privileged account for the `kinit` command. The account needs to have permission to connect to the domain and should be able to create accounts and SPNs in the domain. In this case, we are using the account **privilegeduser@CONTOSO.COM** that has permissions to create accounts and SPNs in our domain called **CONTOSO.COM**.
 
     ```bash
-    kinit sqluser@CONTOSO.COM 
+    kinit privilegeduser@CONTOSO.COM
     ```
 
-1. Once you've ran `kinit` to obtain/renew the TGT, query the current **kvno** number of the **network.privilegedadaccount**. In this case, it's `sqluser@CONTOSO.COM`.
+1. Once you've run `kinit` to obtain/renew the TGT, query the current **kvno** number of the **network.privilegedadaccount**. In this case, it's `sqluser@CONTOSO.COM`.
 
     ```bash
     kvno sqluser@CONTOSO.COM 

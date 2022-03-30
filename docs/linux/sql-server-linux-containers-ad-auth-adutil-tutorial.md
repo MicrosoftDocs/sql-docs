@@ -72,7 +72,7 @@ Enabling AD authentication on SQL Server on Linux containers requires steps 1-3 
     In this example script, a privileged user called `privilegeduser@CONTOSO.COM` has already been created on the domain controller.
 
     ```bash
-    kinit privilegeduser@DOMAIN.COM
+    kinit privilegeduser@CONTOSO.COM
     ```
 
 2. Using the adutil tool, create the new user that will be used as the privileged AD Account by SQL Server.

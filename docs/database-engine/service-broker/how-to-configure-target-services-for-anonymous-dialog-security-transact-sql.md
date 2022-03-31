@@ -40,7 +40,7 @@ SQL Server uses dialog security for any conversation to a service for which a re
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
-```
+```sql
     USE AdventureWorks2008R2 ;
     GO
     

@@ -46,7 +46,7 @@ Once access is configured in each instance, then communications between the two 
 
 
 
-```
+```sql
     USE master ;
     GO
     
@@ -79,7 +79,6 @@ Once access is configured in each instance, then communications between the two 
     BACKUP CERTIFICATE TransportSecurity
         TO FILE = 'C:\Certificates\ThisInstanceCertificate.cer' ;
     GO
-```
 
 ## See Also
 

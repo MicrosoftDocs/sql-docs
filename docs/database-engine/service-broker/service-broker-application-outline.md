@@ -53,7 +53,7 @@ For simplicity, the script produces a result set for each message. If an error o
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
-```
+```sql
     USE AdventureWorks2008R2 ;
     GO
     

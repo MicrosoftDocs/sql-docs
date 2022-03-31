@@ -28,7 +28,7 @@ Service Broker applications can communicate errors by using either system-define
 
 Use the WITH ERROR clause of the END CONVERSATION statement to report application errors that are severe enough to require ending the conversation. For example:
 
-```
+```sql
     END CONVERSATION @ConversationHandle
         WITH ERROR = 1234 DESCRIPTION = "The account specified in the invoice does not exist, verify the account number."
 ```

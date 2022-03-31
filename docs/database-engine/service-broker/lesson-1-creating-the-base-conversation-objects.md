@@ -25,15 +25,16 @@ In this lesson, you will learn to build all the objects that enable a database t
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
   - Copy and paste the following code into a Query Editor window. Then, run it to ensure that Service Broker is enabled in the AdventureWorks2008R2 database, and switch context to the database.
-    ```
-        USE master;
-        GO
-        ALTER DATABASE AdventureWorks2008R2
-              SET ENABLE_BROKER;
-        GO
-        USE AdventureWorks2008R2;
-        GO
-    ```
+
+   ```sql
+       USE master;
+       GO
+       ALTER DATABASE AdventureWorks2008R2
+             SET ENABLE_BROKER;
+       GO
+       USE AdventureWorks2008R2;
+       GO
+   ```
 
 ### Create the message types
 
@@ -51,7 +52,8 @@ In this lesson, you will learn to build all the objects that enable a database t
 ### Create the contract
 
   - Copy and paste the following code into a Query Editor window. Then, run it to create the contract for the conversation. The contract specifies that conversations that use it must send messages of the **//AWDB/InternalAct/RequestMessage** type from the initiator to the target, and messages of the **//AWDB/InternalAct/ReplyMessage** type from the target to the initiator.
-    ```sql   
+
+    ```sql
         CREATE CONTRACT [//AWDB/InternalAct/SampleContract]
               ([//AWDB/InternalAct/RequestMessage]
                SENT BY INITIATOR,

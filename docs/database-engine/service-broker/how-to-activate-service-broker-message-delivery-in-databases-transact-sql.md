@@ -25,7 +25,6 @@ By default, Service Broker message delivery is active in a database when the dat
 
 ## Example
 
-
 ```
     USE master ;
     GO

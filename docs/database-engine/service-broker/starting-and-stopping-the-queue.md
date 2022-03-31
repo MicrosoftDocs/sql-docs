@@ -23,7 +23,8 @@ Administrators often create queues in an unavailable state. This prevents Servic
 ```
 
 The statement below makes the queue unavailable for receive:
-```
+
+```sql
     ALTER QUEUE dbo.ExpenseQueue WITH STATUS = OFF ;
 ```
 

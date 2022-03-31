@@ -1,7 +1,7 @@
 ---
 title: SqlClient driver support lifecycle
 description: Product support lifecycle information for the Microsoft.Data.SqlClient .NET library.
-ms.date: 12/13/2021
+ms.date: 03/30/2022
 dev_langs:
   - "csharp"
   - "vb"
@@ -31,6 +31,7 @@ New stable (GA) releases are published every six months on a regular cadence beg
 | -- | -- | -- | -- | -- | -- |
 | 4.1 | January 31, 2022 | - | - | Current | - |
 | 4.0 | November 18, 2021 | 4.0.1 | January 17, 2022 | LTS | November 19, 2024 |
+| 3.1 | March 30, 2022 | - | - | Current | December 30, 2022 |
 | 3.0 | June 9, 2021 | 3.0.1 | September 24, 2021 | Current | March 10, 2022 |
 | 2.1 | November 19, 2020 | 2.1.4 | September 20, 2021 | LTS | November 20, 2023 |
 | 1.1 | November 20, 2019 | 1.1.4 | March 10, 2021 | LTS | November 21, 2022 |
@@ -46,7 +47,7 @@ New stable (GA) releases are published every six months on a regular cadence beg
 
 New stable (GA) releases for `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` are published on demand when new features are added. Long Term Support (LTS) releases will be chosen by stakeholders and maintainers based on a few qualifications and customer response.
 
-### Actively supported releases
+### Actively supported Azure Key Vault Provider releases
 
 | Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level  | End of Support |
 | -- | -- | -- | -- | -- | -- |
@@ -61,7 +62,6 @@ LTS releases are supported for three years after the initial release.
 ## Current releases
 
 Current releases are supported for three months after a subsequent Current or LTS release.
-
 
 ## SQL version compatibility with Microsoft.Data.SqlClient
 

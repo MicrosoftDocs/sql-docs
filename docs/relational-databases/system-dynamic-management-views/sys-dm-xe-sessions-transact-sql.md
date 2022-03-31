@@ -23,7 +23,7 @@ ms.author: randolphwest
 # sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns information about an active extended events session. This session is a collection of events, actions, and targets.  
+Returns information about server-scoped active extended events sessions. A session is a collection of events, actions, and targets.  
     
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,11 +49,12 @@ ms.author: randolphwest
 |buffer_full_count|**bigint**|**Applies to:** SQL Server 2017 and later. The number of buffers that were full when they were processed and accumulates from start of session. Is not nullable.|  
 |total_bytes_generated|**bigint**|**Applies to:** SQL Server 2017 and later. The number of actual bytes that the extended events session has generated. This information is collected when the session is processing buffers and applies to the file target only. No tracking for other targets. |  
 
-## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
-  
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
-  
-  
+## Permissions
 
+Requires VIEW SERVER STATE permission on the server.  
+  
+## Next steps
+
+Learn more about related concepts in the following articles:
+
+- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)

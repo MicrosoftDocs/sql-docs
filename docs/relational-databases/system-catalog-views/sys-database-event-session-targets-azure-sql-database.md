@@ -1,6 +1,7 @@
 ---
-description: "sys.database_event_session_targets (Azure SQL Database)"
+description: "sys.database_event_session_targets (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.database_event_session_targets"
+titleSuffix: Azure SQL Database and Azure SQL Managed Instance
 ms.custom: ""
 ms.date: "03/30/2022"
 ms.prod: sql
@@ -15,11 +16,13 @@ author: rwestMSFT
 ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# sys.database_event_session_targets (Azure SQL Database)
+# sys.database_event_session_targets (Azure SQL Database and Azure SQL Managed Instance)
 
 [!INCLUDE [sqlserver2016-asdb](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
-Returns a row for each event target for an event session.  
+Returns a row for each event target for a database-scoped event session.
+
+Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). Azure SQL Managed Instance supports both database-scoped sessions and more capable [server-scoped sessions](../extended-events/extended-events.md).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

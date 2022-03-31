@@ -14,6 +14,14 @@ ms.author: v-davidengel
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
+The Microsoft.Data.SqlClient namespace is a fork of the System.Data.SqlClient namespace. Microsoft.Data.SqlClient generally maintains the same API and backwards compatibility with System.Data.SqlClient. To migrate from System.Data.SqlClient to Microsoft.Data.SqlClient, for most applications, it's simple. Add a NuGet dependency on Microsoft.Data.SqlClient and update references and `using` statements to Microsoft.Data.SqlClient.
+
+There are a few differences in less-used APIs compared to System.Data.SqlClient that may affect some applications. For those differences, see this useful [porting cheat sheet](https://github.com/dotnet/SqlClient/blob/main/porting-cheat-sheet.md).
+
+## API reference
+
+The Microsoft.Data.SqlClient API details can be found in the [.NET API Browser](/dotnet/api/microsoft.data.sqlclient).
+
 ## Release notes for Microsoft.Data.SqlClient 4.1
 
 Full release notes, including dependencies, are available in the GitHub Repository: [4.1 Release Notes](https://github.com/dotnet/SqlClient/tree/main/release-notes/4.1).

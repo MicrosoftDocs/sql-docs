@@ -25,16 +25,15 @@ In this lesson, you will learn to build all the objects that enable a database t
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
   - Copy and paste the following code into a Query Editor window. Then, run it to ensure that Service Broker is enabled in the AdventureWorks2008R2 database, and switch context to the database.
-
-   ```sql
+    ```sql
        USE master;
        GO
        ALTER DATABASE AdventureWorks2008R2
              SET ENABLE_BROKER;
        GO
        USE AdventureWorks2008R2;
-       GO
-   ```
+        GO
+    ```
 
 ### Create the message types
 

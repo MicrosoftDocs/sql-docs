@@ -21,10 +21,7 @@ When a conversation is initiated, Service Broker checks to see whether a remote 
 > [!NOTE]
 > The behavior is comparable to [Service Broker Dynamic Routing](service-broker-dynamic-routing.md).
 
-
 ## Requesting Remote Service Binding
-
-
 
 Requests for remote service bindings use the message type **https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRemoteServiceBinding**. The message is in XML format, and contains the name of the service for which remote service binding information should be available.
 
@@ -44,11 +41,5 @@ In either case, the application ends the conversation. Service Broker sends one 
 
 ## See Also
 
-### Reference
-
-[CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
-
-### Concepts
-
-[Service Broker Configuration Notice Service](service-broker-configuration-notice-service.md)
-
+- [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
+- [Service Broker Configuration Notice Service](service-broker-configuration-notice-service.md)

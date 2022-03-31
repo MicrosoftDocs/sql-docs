@@ -26,14 +26,6 @@ The network format for a message includes the name of the contract. Therefore, c
 
 ## See Also
 
-### Reference
-
-[CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
-
-
-### Concepts
-
-[Conversation Architecture](conversation-architecture.md)
-
-[Contracts](contracts.md)
-
+- [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
+- [Conversation Architecture](conversation-architecture.md)
+- [Contracts](contracts.md)

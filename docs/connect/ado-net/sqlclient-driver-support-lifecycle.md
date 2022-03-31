@@ -27,21 +27,21 @@ New stable (GA) releases are published every six months on a regular cadence beg
 
 ### Actively supported releases
 
-| Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level  | End of Support |
+| Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level | End of Support |
 | -- | -- | -- | -- | -- | -- |
 | 4.1 | January 31, 2022 | - | - | Current | - |
 | 4.0 | November 18, 2021 | 4.0.1 | January 17, 2022 | LTS | November 19, 2024 |
-| 3.1 | March 30, 2022 | - | - | Current | December 30, 2022 |
-| 3.0 | June 9, 2021 | 3.0.1 | September 24, 2021 | Current | March 10, 2022 |
+| 3.1 | March 30, 2022 | - | - | Current | - |
+| 3.0 | June 9, 2021 | 3.0.1 | September 24, 2021 | May 18, 2022 |
 | 2.1 | November 19, 2020 | 2.1.4 | September 20, 2021 | LTS | November 20, 2023 |
 | 1.1 | November 20, 2019 | 1.1.4 | March 10, 2021 | LTS | November 21, 2022 |
 
 ### Out of support releases
 
-| Version | Latest Patch Release Date | Latest Patch Version | Support Ended |
-| -- | -- | -- | -- |
-| 2.0 | June 16, 2020 | 2.0.1 | August 25, 2020 |
-| 1.0 | September 26, 2019 | 1.0.19269.1 | February 20, 2020 |
+| Version | Release Date | Last Patch Version | Last Patch Release Date | Support Ended |
+| -- | -- | -- | -- | -- |
+| 2.0 | June 16, 2020 | 2.0.1 | August 25, 2020 | May 19, 2021 |
+| 1.0 | August 28, 2019 | 1.0.19269.1 | September 26, 2019 | May 20, 2020 |
 
 ## Azure Key Vault Provider release cadence
 

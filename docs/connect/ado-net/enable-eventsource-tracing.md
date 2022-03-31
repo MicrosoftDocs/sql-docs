@@ -20,7 +20,7 @@ ms.reviewer: v-davidengel
 
 [Event Tracing for Windows (ETW)](/windows/win32/etw/event-tracing-portal) is an efficient, kernel-level, tracing facility that lets you log driver-defined events for debugging and testing purposes. SqlClient supports capturing ETW events at different informational levels. To begin capturing event traces, client applications should listen for events from SqlClient's EventSource implementation:
 
-```cpp
+```
 Microsoft.Data.SqlClient.EventSource
 ```
 
@@ -108,7 +108,7 @@ class Program
 
 1. Start tracing using the following command line.
 
-   ```dos
+   ```
    xperf -start trace -f myTrace.etl -on *Microsoft.Data.SqlClient.EventSource
    ```
 
@@ -116,7 +116,7 @@ class Program
 
 3. Stop tracing using the following command line.
 
-   ```dos
+   ```
    xperf -stop trace
    ```
 

@@ -41,6 +41,7 @@ Consider the following questions when you decide how the application handles a p
 This Transact-SQL example shows a simple, stateless service that includes logic for handling poison messages. Before the stored procedure receives a message, the procedure saves the transaction. When the procedure cannot process a message, the procedure rolls the transaction back to the save point. The partial rollback returns the message to the queue while continuing to hold a lock on the conversation group for the message. Because the program continues to hold the conversation group lock, the program can update a table that maintains a list of failed messages without risk that another queue reader might process the message.
 
 The following example defines the activation stored procedure for the application:
+
 ```
     CREATE PROCEDURE ProcessExpenseReport
     AS
@@ -112,6 +113,7 @@ The following example defines the activation stored procedure for the applicatio
         END ;
     END ;
 ```
+
 The stored procedure TrackMessage tracks the number of times that a message has failed. When the message has not failed before, the procedure inserts a new counter for the message into the table ExpenseServiceFailedMessages. Otherwise, the procedure checks the counter for the number of times that the message failed. The procedure increments the counter when the counter is less than a predefined number. When the counter is greater than the predefined number, the procedure ends the conversation with an error and removes the counter for the conversation from the table.
 
 ```

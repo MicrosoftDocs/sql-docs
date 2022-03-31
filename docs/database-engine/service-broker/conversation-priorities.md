@@ -252,7 +252,7 @@ This script specifies the priority level for the initiator conversation endpoint
 
 <!-- end list -->
 
-```
+```sql
     USE InitiatorDB;
     GO
     CREATE BROKER PRIORITY InitiatorToTargetPriority
@@ -271,7 +271,7 @@ This script specifies the priority level for the target conversation endpoint an
   - The SEND of the **ReplyMessage** from the **TargetService** to the **InitiatorQueue**.
 
 <!-- end list -->
-```
+```sql
     USE TargetDB;
     GO
     CREATE BROKER PRIORITY TargetToInitiatorPriority

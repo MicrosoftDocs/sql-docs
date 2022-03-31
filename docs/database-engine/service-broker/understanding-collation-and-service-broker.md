@@ -26,7 +26,7 @@ Queues use a consistent collation regardless of the default collation of the SQL
 
 For example, an application that uses message retention may need to preserve some messages for a conversation before the application ends the conversation. The following Transact-SQL code sample saves all messages, for a given conversation, that have a message type name in the table **AuditedMessageTypes**.
 
-```
+```sql
     IF @messageTypeName =
       'https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog'
     BEGIN

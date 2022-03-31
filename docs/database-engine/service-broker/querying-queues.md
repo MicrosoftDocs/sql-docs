@@ -26,13 +26,13 @@ For a description of the columns in a queue, see [CREATE QUEUE (Transact-SQL)](.
 
 Following is an example SELECT statement to find out the number of messages in the queue **ExpenseQueue**:
 
-```
+```sql
     SELECT COUNT(*) FROM dbo.ExpenseQueue WITH (NOLOCK) ;
 ```
 
 The following SELECT statement lets the administrator learn whether the queue **ExpenseQueue** contains any messages for the service **//Adventure-Works.com/AccountsPayable/Expenses**:
 
-```
+```sql
     IF EXISTS(SELECT * FROM dbo.ExpenseQueue WITH (NOLOCK) WHERE
               service_name = '//Adventure-Works.com/AccountsPayable/Expenses')
       PRINT 'The queue contains messages for ' +

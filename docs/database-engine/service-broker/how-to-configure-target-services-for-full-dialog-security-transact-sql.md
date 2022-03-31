@@ -58,7 +58,7 @@ To make sure that a target service uses dialog security, create a user for the i
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
-```
+```sql
     USE AdventureWorks2008R2 ;
     GO
     

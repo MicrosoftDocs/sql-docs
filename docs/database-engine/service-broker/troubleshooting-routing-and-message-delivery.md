@@ -28,7 +28,7 @@ If messages are not successfully delivered between two services, use the **ssbdi
 
 Ensure that Service Broker message delivery is activated in the database. The **is_broker_enabled** column of **sys.databases** shows whether broker message delivery is activated, as shown in the following sample:
 
-```
+```sql
     SELECT is_broker_enabled FROM sys.databases
     WHERE database_id = DB_ID() ;
 ```
@@ -122,7 +122,7 @@ For more information about retries, see [Service Broker Routing and Networking](
 
 Ensure that the service name specified in the message exactly matches the service name specified in the route. Service Broker uses a byte-by-byte binary comparison to match service names. If a route that specifies the service name exists, you can compare the names by running the following query:
 
-```
+```sql
     SELECT N'No Exact Match' = tq.to_service_name
     FROM sys.transmission_queue AS tq
     WHERE NOT EXISTS

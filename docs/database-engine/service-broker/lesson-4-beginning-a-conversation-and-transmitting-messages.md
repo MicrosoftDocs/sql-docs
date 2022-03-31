@@ -23,16 +23,17 @@ In this lesson, you will learn to start a conversation that spans two databases 
 ### Switch to the InitiatorDB database
 
   - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **InitiatorDB** database where you will initiate the conversation.
-```    
+  
+    ```sql 
         USE InitiatorDB;
         GO
-```
+    ```
 
 ### Start a conversation and send a request message
 
   - Copy and paste the following code into a Query Editor window. Then, run it to start a conversation and send a request message to the **//TgtDB/2DBSample/TargetService** in the **TargetDB**. The code must be run in one block because a variable is used to pass a dialog handle from BEGIN DIALOG to the SEND statement. The batch runs the BEGIN DIALOG statement to begin the conversation and build a request message. Then, it uses the dialog handle in a SEND statement to send the request message on that conversation. The last SELECT statement displays the text of the message that was sent.
   
-    ```  
+    ```sql 
         DECLARE @InitDlgHandle UNIQUEIDENTIFIER;
         DECLARE @RequestMsg NVARCHAR(100);
         
@@ -62,7 +63,7 @@ In this lesson, you will learn to start a conversation that spans two databases 
 
   - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **TargetDB** database where you will receive the request message and send a reply message back to the **InitiatorDB**.
 
-    ```    
+    ```sql   
         USE TargetDB;
         GO
     ```
@@ -71,7 +72,7 @@ In this lesson, you will learn to start a conversation that spans two databases 
 
   - Copy and paste the following code into a Query Editor window. Then, run it to receive the reply message from the **TargetQueue2DB** and send a reply message back to the initiator. The RECEIVE statement retrieves the request message. Then, the following SELECT statement displays the text so that you can verify that it is the same message that was sent in the previous step. The IF statement tests whether the received message is a request message type, and if a SEND statement is used to send a reply message back to the initiator. It also tests whether the END CONVERSATION statement is used to end the target side of the conversation. The final SELECT statement displays the text of the reply message.
 
-    ```    
+    ```sql   
         DECLARE @RecvReqDlgHandle UNIQUEIDENTIFIER;
         DECLARE @RecvReqMsg NVARCHAR(100);
         DECLARE @RecvReqMsgName sysname;
@@ -112,7 +113,7 @@ In this lesson, you will learn to start a conversation that spans two databases 
 
   - Copy and paste the following code into a Query Editor window. Then, run it to switch context back to the **InitiatorDB** database where you will receive the reply message and end the conversation.
 
-    ```   
+    ```sql  
         USE InitiatorDB;
         GO
     ```
@@ -121,7 +122,7 @@ In this lesson, you will learn to start a conversation that spans two databases 
 
   - Copy and paste the following code into a Query Editor window. Then, run it to receive the reply message and end the conversation. The RECEIVE statement retrieves the reply message from the **InitiatorQueue2DB**. The END CONVERSATION statement ends the initiator side of the conversation. The last SELECT statement displays the text of the reply message so that you can confirm it is the same as what was sent in the previous step.
 
-    ```   
+    ```sql  
         DECLARE @RecvReplyMsg NVARCHAR(100);
         DECLARE @RecvReplyDlgHandle UNIQUEIDENTIFIER;
         

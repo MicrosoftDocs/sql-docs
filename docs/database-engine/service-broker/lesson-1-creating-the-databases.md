@@ -24,7 +24,7 @@ In this lesson, you will learn to create the databases and enable the trustworth
 
   - Copy and paste the following code into a Query Editor window. Then, run it to create the databases for this tutorial. By default, new databases have the ENABLE_BROKER option set to on. Setting the TRUSTWORTHY option in the **InitiatorDB** lets you start conversations in that database that reference target services in the **TargetDB**.
 
-    ```    
+    ```sql   
         USE master;
         GO
         

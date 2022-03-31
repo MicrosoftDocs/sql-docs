@@ -32,7 +32,7 @@ This example configures permissions to allow BrokerApplicationUser to send messa
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
-```
+```sql
     USE AdventureWorks2008R2 ;
     GO
     

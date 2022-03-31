@@ -23,16 +23,17 @@ In this lesson, you will learn how to receive a request message from the target 
 ### Switch to the TargetDB database
 
   - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **InstTargetDB** database where you will receive the request message and send a reply message back to the **InstInitiatorDB**.
-  ```
+    
+    ```sql 
         USE InstTargetDB;
         GO
-  ```
+    ```
 
 ### Receive the request and send a reply
 
   - Copy and paste the following code into a Query Editor window. Then, run it to receive the reply message from the **InstTargetQueue** and send a reply message back to the initiator. The RECEIVE statement retrieves the request message. Then, the following SELECT statement displays the text so that you can verify that it is the same message that was sent in the previous step. The IF statement tests whether the received message is a request message type, and if a SEND statement is used to send a reply message back to the initiator. The END CONVERSATION statement is used to end the target side of the conversation. The final SELECT statement displays the text of the reply message.
-
-  ```sql
+    
+    ```sql 
         DECLARE @RecvReqDlgHandle UNIQUEIDENTIFIER;
         DECLARE @RecvReqMsg NVARCHAR(100);
         DECLARE @RecvReqMsgName sysname;
@@ -66,7 +67,7 @@ In this lesson, you will learn how to receive a request message from the target 
         
         COMMIT TRANSACTION;
         GO
-  ```
+    ```
 
 ## Next Steps
 

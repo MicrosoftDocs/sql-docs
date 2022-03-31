@@ -23,10 +23,11 @@ In this lesson, you will learn to start a conversation that spans two databases 
 ### Switch to the InitiatorDB database
 
   - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **InitiatorDB** database where you will initiate the conversation.
-```sql   
+  
+    ```sql 
         USE InitiatorDB;
         GO
-```
+    ```
 
 ### Start a conversation and send a request message
 

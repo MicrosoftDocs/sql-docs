@@ -31,7 +31,7 @@ Lists all the packages registered with the extended events engine.
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|The name of package. The description is exposed from the package itself. Is not nullable.|  
 |guid|**uniqueidentifier**|The GUID that identifies the package. Is not nullable.|  
-|description|**nvarchar(3072)**|The package description. descriptionis set by the package author and is not nullable.|  
+|description|**nvarchar(3072)**|The package description. description is set by the package author and is not nullable.|  
 |capabilities|**int**|Bitmap describing the capabilities of this package. Is nullable.|  
 |capabilities_desc|**nvarchar(256)**|A list of all the capabilities possible for this package. Is nullable.|  
 |module_guid|**nvarchar(60)**|The GUID of the module that exposes this package. Is not nullable.|  

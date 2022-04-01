@@ -51,11 +51,7 @@ The responsibilities of the application for the Broker Configuration Notice serv
 
 Notice that, in either case, the application that implements the Broker Configuration Notice service ends the conversation. Service Broker sends one **MissingRoute** message at a time for a specific service, regardless of the number of conversations to the service. Further, Service Broker uses the largest possible time-out for requests to the Broker Configuration service. Therefore if the Broker Configuration service does not end the conversation, Service Broker does not create a new request to the service. If the Broker Configuration service did not create a route, or the lifetime of the route that the service created expires, messages to the service will remain delayed until the conversation lifetime expires.
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Service Broker Routing](service-broker-routing.md)
 

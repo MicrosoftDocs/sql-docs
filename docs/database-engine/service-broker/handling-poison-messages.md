@@ -180,15 +180,13 @@ The stored procedures above do not handle errors that would cause a transaction 
 
 If you believe that the processing you perform on the message might cause a transaction failure, you can use TRY and CATCH statements to handle the error. For more information on handling errors, see [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md).
 
-## See Also
-
-### Reference
+## See also
 
 [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)
 
 [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)
 
-### Concepts
+
 
 [Removing Poison Messages](removing-poison-messages.md)
 

@@ -93,11 +93,7 @@ Your system must have the following installed:
     
     
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Completing a Conversation in a Single Database](completing-a-conversation-in-a-single-database.md)
 

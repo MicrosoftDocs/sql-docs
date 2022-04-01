@@ -75,9 +75,7 @@ In this lesson, you will learn how to receive a request message from the target 
 
 You have successfully received the request message and sent a reply message to the initiator service. Next, you will receive the reply message from the initiator queue and end the conversation. See [Lesson 6: Receiving the Reply and Ending the Conversation](lesson-6-receiving-the-reply-and-ending-the-conversation.md).
 
-## See Also
-
-### Reference
+## See also
 
 [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
 
@@ -87,7 +85,7 @@ You have successfully received the request message and sent a reply message to t
 
 [WAITFOR (Transact-SQL)](../../t-sql/language-elements/waitfor-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Applications](service-broker-applications.md)
 

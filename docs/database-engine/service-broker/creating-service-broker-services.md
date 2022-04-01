@@ -36,11 +36,7 @@ To create a service, you must do the following:
 
 The exact steps involved in creating a service may differ somewhat depending on the specific needs of the service. For example, when you create a service to handle event notifications, the message type and contract are already defined by SQL Server, so there is no need to create them.
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Conversation Architecture](conversation-architecture.md)
 

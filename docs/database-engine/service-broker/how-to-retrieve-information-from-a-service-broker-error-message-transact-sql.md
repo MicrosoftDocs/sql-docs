@@ -86,11 +86,7 @@ A message of type **https://schemas.microsoft.com/SQL/ServiceBroker/Error** is a
     GO
 ```
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Broker System Messages](broker-system-messages.md)
 

@@ -56,9 +56,7 @@ A conversation timer allows an application to receive a message at a specific ti
 
 Each participant in a conversation can set one conversation timer per conversation. The conversation timer is not shared with the other participant, and the conversation timer does not affect the lifetime of the conversation. Instead, when the timer expires, the local Service Broker adds a time-out message to the queue for the local service. A time-out message has the type name **https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer**
 
-## See Also
-
-### Reference
+## See also
 
 [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
 
@@ -72,7 +70,7 @@ Each participant in a conversation can set one conversation timer per conversati
 
 [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
 
-### Concepts
+
 
 [Broker System Messages](broker-system-messages.md)
 

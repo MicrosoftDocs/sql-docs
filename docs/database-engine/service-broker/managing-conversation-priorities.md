@@ -61,9 +61,7 @@ Conversation priorities are stored in the **sys.conversation_priorities** system
              remote_service_name;
 ```
 
-## See Also
-
-### Reference
+## See also
 
 [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)
 

@@ -60,7 +60,7 @@ For internal activation, the queue monitor activates a new instance of the activ
 
 For external applications, Service Broker has no information on the number of distinct queue readers that may be working with the queue. Further, there may be some start up time required between the time that the activation event is raised and the time that a reader begins reading the queue. Therefore, Service Broker provides a time-out for an external application to respond. During the time-out, Service Broker will not produce another notification. Once an application calls RECEIVE on the queue or the time-out expires, Service Broker creates another event notification if activation is required. An external application monitors the event notifications while the program is running to determine whether more queue readers are required to read events.
 
-## See Also
+## See also
 
 
 
@@ -72,7 +72,7 @@ For external applications, Service Broker has no information on the number of di
 
 [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
 
-### Concepts
+
 
 [Implementing Internal Activation](implementing-internal-activation.md)
 

@@ -20,11 +20,7 @@ First, an application should not permanently remove a message from a queue witho
 
 Second, an application should always hold a lock on a conversation group before updating the state of the conversation group or the state of any message in the conversation group. When an application receives a message within a transaction, the application automatically locks the conversation group.
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [SAVE TRANSACTION (Transact-SQL)](../../t-sql/language-elements/save-transaction-transact-sql.md)
 

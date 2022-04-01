@@ -55,19 +55,10 @@ When the certificate is stored in SQL Server, the certificate must be encrypted 
 
 In order for SQL Server to use a certificate to begin a conversation, the certificate must be marked ACTIVE FOR BEGIN_DIALOG. Certificates are marked as active for begin dialog by default. However, you can choose to temporarily deactivate a certificate while updating the security configuration for a service. For more information, see [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md) and [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md).
 
-## See Also
+## See also
 
-### Reference
-
-[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
-
-[Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
-
-### Concepts
-
-[Service Broker Communication Protocols](service-broker-communication-protocols.md)
-
-[Remote Service Bindings](remote-service-bindings.md)
-
-[Certificates for Dialog Security](certificates-for-dialog-security.md)
-
+- [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
+- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
+- [Service Broker Communication Protocols](service-broker-communication-protocols.md)
+- [Remote Service Bindings](remote-service-bindings.md)
+- [Certificates for Dialog Security](certificates-for-dialog-security.md)

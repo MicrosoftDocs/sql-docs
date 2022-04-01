@@ -97,9 +97,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
 You have successfully configured **AdventureWorks2008R2** to support a conversation between the **//AWDB/1DBSample/InitiatorService** and the **//AWDB/1DBSample/TargetService**. Next, you will complete a conversation using the configuration. See [Lesson 2: Beginning a Conversation and Transmitting Messages](lesson-2-beginning-a-conversation-and-transmitting-messages.md).
 
-## See Also
-
-### Reference
+## See also
 
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 
@@ -112,7 +110,7 @@ You have successfully configured **AdventureWorks2008R2** to support a conversat
 
 [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
 
-### Concepts
+
 
 [Conversation Architecture](conversation-architecture.md)
 

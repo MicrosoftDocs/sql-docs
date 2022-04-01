@@ -32,12 +32,10 @@ An external application that uses event-based activation typically creates an ev
 
 This strategy allows the external application to use the activation logic that is built in to Service Broker to determine when there is more work for a queue reader. Further, it is possible for one external application to monitor activation for a number of queues, and start the appropriate program when activation is required.
 
-## See Also
-
-### Reference
+## See also
 
 [CREATE EVENT NOTIFICATION (Transact-SQL)](../../t-sql/statements/create-event-notification-transact-sql.md)
 
-### Concepts
+
 
 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)

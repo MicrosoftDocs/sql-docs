@@ -93,11 +93,7 @@ This Transact-SQL code sample defines a service that archives untyped XML docume
     GO
 ```
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Creating Service Broker Objects](creating-service-broker-objects.md)
 

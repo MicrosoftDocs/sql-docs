@@ -33,7 +33,7 @@ Message forwarding allows an instance of SQL Server to accept messages from outs
     GO
 ```
 
-## See Also
+## See also
 
 
 

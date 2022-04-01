@@ -56,9 +56,7 @@ A RECEIVE statement that has a WHERE clause that specifies a conversation group 
 
 View **sys.conversation_endpoint** to see if the conversation endpoint was assigned the expected priority level. If it was not, use **sys.conversation_priorites** to review the properties specified for the conversation priorities in the database against the contract, local service, and remote service that is used for the conversation endpoint.
 
-## See Also
-
-### Reference
+## See also
 
 [Broker:Remote Message Ack Event Class](../../relational-databases/event-classes/broker-remote-message-ack-event-class.md)
 
@@ -80,7 +78,7 @@ View **sys.conversation_endpoint** to see if the conversation endpoint was assig
 
 [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
 
-### Concepts
+
 
 [Conversation Priorities](conversation-priorities.md)
 

@@ -34,13 +34,11 @@ An activated stored procedure typically processes one or more messages, and retu
 
 Using activation stored procedures is a common way to design Service Broker applications. However, other designs might better suit the needs of a specific application. Any application that can run Transact-SQL batches in SQL Server can send and receive messages. Messages can be also be processed by any stored procedure, regardless of whether the stored procedure is activated by SQL Server, started by SQL Server Agent, run by an external application, or run interactively from a tool such as SQL Server Management Studio or SQL Server Express Management Studio.
 
-## See Also
-
-### Reference
+## See also
 
 [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
 
-### Concepts
+
 
 [Conversation Architecture](conversation-architecture.md)
 

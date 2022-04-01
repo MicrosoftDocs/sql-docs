@@ -84,9 +84,7 @@ Regardless of the specified option, SQL Server does not allow for two databases 
 
 For more information about the options for attaching databases, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) and [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md). For information about how to activate Service Broker message delivery in a database, see [How to: Activate Service Broker Message Delivery in Databases (Transact-SQL)](how-to-activate-service-broker-message-delivery-in-databases-transact-sql.md).
 
-## See Also
-
-### Reference
+## See also
 
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 

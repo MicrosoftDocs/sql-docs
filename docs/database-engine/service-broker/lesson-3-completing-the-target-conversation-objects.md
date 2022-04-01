@@ -77,9 +77,7 @@ In this lesson, you will learn to create the linked server and routes from the t
 
 You have successfully finished configuring the target database to support a Service Broker conversation to the initiator database. Next, you will begin a conversation in the initiator database and send a request message to the target service. See [Lesson 4: Beginning the Conversation](lesson-4-beginning-the-conversation.md).
 
-## See Also
-
-### Reference
+## See also
 
 [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
 
@@ -91,7 +89,7 @@ You have successfully finished configuring the target database to support a Serv
 
 [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Routing and Networking](service-broker-routing-and-networking.md)
 

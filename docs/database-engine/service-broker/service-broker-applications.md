@@ -66,9 +66,7 @@ Service Broker provides two operations for working with conversation groups:
 
   - The MOVE CONVERSATION statement moves a conversation from one conversation group to another. The statement locks both the original conversation group and the destination conversation group.
 
-## See Also
-
-### Reference
+## See also
 
 [BEGIN CONVERSATION TIMER (Transact-SQL)](../../t-sql/statements/begin-conversation-timer-transact-sql.md)
 
@@ -88,7 +86,7 @@ Service Broker provides two operations for working with conversation groups:
 
 [BEGIN CONVERSATION TIMER (Transact-SQL)](../../t-sql/statements/begin-conversation-timer-transact-sql.md)
 
-### Concepts
+
 
 [Contracts](contracts.md)
 

@@ -123,15 +123,13 @@ When a conversation ends, Service Broker discards the messages for that conversa
 
 If a service cannot process a message, this means that the service cannot complete the task for the conversation. Ending the conversation with an error notifies the other participant in the conversation that the task failed.
 
-## See Also
-
-### Reference
+## See also
 
 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
 
 [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
 
-### Concepts
+
 
 [Querying Queues](querying-queues.md)
 

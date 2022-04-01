@@ -138,7 +138,7 @@ The following table lists the type of dialog security for each valid combination
   - Full security  
     SQL Server uses full security. Messages outside of the instance are encrypted for this dialog. Operations on behalf of the initiating service run as the designated user in the target database.
 
-## See Also
+## See also
 
 
 
@@ -154,7 +154,7 @@ The following table lists the type of dialog security for each valid combination
 
 [How to: Configure Permissions for a Local Service (Transact-SQL)](how-to-configure-permissions-for-a-local-service-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Communication Protocols](service-broker-communication-protocols.md)
 

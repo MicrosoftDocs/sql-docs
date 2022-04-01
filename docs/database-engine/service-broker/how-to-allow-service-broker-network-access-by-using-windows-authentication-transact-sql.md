@@ -40,9 +40,7 @@ Once access is configured in each instance, then communications between the two 
     GO
 ```
 
-## See Also
-
-### Reference
+## See also
 
 [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
 

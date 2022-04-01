@@ -84,11 +84,7 @@ If your application involves sending messages between SQL Server instances, it i
   - [Service Script Example](service-script-example.md)  
     Describes a Transact-SQL code sample and defines a service.
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Contracts](contracts.md)
 

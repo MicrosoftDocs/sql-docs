@@ -50,11 +50,7 @@ As shown in the illustration, the **ProcessExpenses** contract specifies three m
   - [Services](services.md)  
     Service Broker services are names for specific business tasks or sets of business tasks.
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Building Applications with Service Broker](building-applications-with-service-broker.md)
 

@@ -40,9 +40,7 @@ These objects cannot be temporary objects. Therefore, the number sign (\#) is no
 
 Queue names can be used for many of the statements that accept table names. Therefore, queues names follow standard SQL Server identifier conventions, with one exception. Because queues cannot be temporary objects, the name of a queue cannot start with the number sign (\#). Queues are schema-owned objects, so queue names can include a schema name and database name.
 
-## See Also
-
-### Reference
+## See also
 
 [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
 

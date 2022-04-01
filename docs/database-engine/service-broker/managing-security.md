@@ -46,11 +46,7 @@ Dialog security relies on certificates for authentication and encryption. Transp
 
 For more information on certificates, see [Certificates and Service Broker](certificates-and-service-broker.md) and [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md).
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Service Broker Dialog Security](service-broker-dialog-security.md)
 

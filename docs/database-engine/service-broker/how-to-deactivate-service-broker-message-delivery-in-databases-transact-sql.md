@@ -36,9 +36,7 @@ When message delivery is not active, messages remain in the transmission queue. 
     GO
 ```
 
-## See Also
-
-### Reference
+## See also
 
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 

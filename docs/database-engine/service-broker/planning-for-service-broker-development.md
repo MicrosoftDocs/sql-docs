@@ -62,11 +62,7 @@ Consider the following questions as you plan your application:
     
     In heavily loaded systems, Service Broker conversation priorities help ensure that important work is not blocked by large amounts of less important work. Conversation priorities also enable designs that support different levels of service.
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Service Broker Programming Concepts](service-broker-programming-concepts.md)
 

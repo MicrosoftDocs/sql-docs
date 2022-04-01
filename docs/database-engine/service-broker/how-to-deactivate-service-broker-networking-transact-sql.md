@@ -32,7 +32,7 @@ Service Broker sends and receives messages over the network while any Service Br
     GO
 ```
 
-## See Also
+## See also
 
 [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md)
 

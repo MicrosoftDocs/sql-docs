@@ -30,7 +30,7 @@ The development or test environment may contain the same user names as the produ
 
 As part of the installation process, the developer and the administrator should plan and document the procedure to uninstall the application. Applications that use Service Broker typically rely on Service Broker's guarantee of reliable messaging. Therefore, the developer and the administrator must work together to outline a strategy for making sure that the application processes all of the messages it has received before the administrator uninstalls the application.
 
-## See Also
+## See also
 
 [Uninstalling Service Broker Applications](uninstalling-service-broker-applications.md)
 

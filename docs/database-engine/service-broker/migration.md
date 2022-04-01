@@ -38,7 +38,7 @@ After moving the database, you must do the following:
 
 After moving a database, you can check for Service Broker errors by running the **ssbdiagnose** utility. For more information, see [ssbdiagnose Utility](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md).
 
-## See Also
+## See also
 
 
 
@@ -56,7 +56,7 @@ After moving a database, you can check for Service Broker errors by running the 
 
 [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
 
-### Concepts
+
 
 [Copy Databases to Other Servers](../../relational-databases/databases/copy-databases-to-other-servers.md)
 

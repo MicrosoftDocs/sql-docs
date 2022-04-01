@@ -66,15 +66,13 @@ A conversation group identifier is valid from the time Service Broker creates it
 
 An application that uses the conversation group identifier to manage application state uses a state table provided by the developer. The application must delete that state from the state table when the application determines that the state is no longer necessary. In many cases, the application deletes state after the task completes successfully, or after errors indicate that the task cannot be completed. In these cases, the application typically includes the command to delete state within the transaction that sends the final response message and ends the conversation. This strategy ensures that the application state and the conversation group identifier have the same lifetime. If the send operation fails, the delete operation rolls back. Likewise, if the delete operation fails, the send operation rolls back and SQL Server does not send the message. In either case, the application state and the conversation group identifier remain valid. If both operations succeed, then the conversation group identifier lifetime ends at the same time that the program deletes the associated application state.
 
-## See Also
-
-### Reference
+## See also
 
 [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)
 
 [sys.conversation_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)
 
-### Concepts
+
 
 [Conversation Group Locks](conversation-group-locks.md)
 

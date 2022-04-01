@@ -46,15 +46,13 @@ A database user may be mapped to a server login. In general, avoid using a datab
 
 Notice that the remote authorization procedure checks only database permissions. Therefore, remote authorization does not take into account permissions that would normally be available through the Windows login. For example, a user that maps to a login that is a member of the **BUILTIN\\Administrators** group normally has CONTROL SERVER permission. When used for remote authorization, however, the user has only the permissions that have been explicitly granted to the user.
 
-## See Also
-
-### Reference
+## See also
 
 [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)
 
 [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Dialog Security](service-broker-dialog-security.md)
 

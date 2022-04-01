@@ -35,7 +35,7 @@ By default, Service Broker message delivery is active in a database when the dat
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
-## See Also
+## See also
 
 
 

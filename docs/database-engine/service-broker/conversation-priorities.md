@@ -331,9 +331,7 @@ Messages and message fragments may be sent out of priority order:
 
 While individual messages or message fragments may be sent out of priority order, the effects should be small when considered across many message sends.
 
-## See Also
-
-### Reference
+## See also
 
 [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)
 
@@ -357,7 +355,7 @@ While individual messages or message fragments may be sent out of priority order
 
 [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
 
-### Concepts
+
 
 [Conversation Architecture](conversation-architecture.md)
 

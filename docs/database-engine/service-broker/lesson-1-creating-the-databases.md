@@ -51,15 +51,13 @@ In this lesson, you will learn to create the databases and enable the trustworth
 
 You have successfully created the databases that will be used for the tutorial. Next, you will configure the **TargetDB** with the objects that are required to support the target end of a Service Broker Conversation. See [Lesson 2: Creating the Target Conversation Objects](lesson-2-creating-the-target-conversation-objects.md).
 
-## See Also
-
-### Reference
+## See also
 
 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Dialog Security](service-broker-dialog-security.md)
 

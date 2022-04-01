@@ -100,7 +100,7 @@ The Service Broker dynamic management views return data for the current state of
 
 For a list of Service Broker dynamic management views, see [Service Broker Related Dynamic Management Views (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md).
 
-## See Also
+## See also
 
 [Errors and Events Reference (Database Engine)](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
 

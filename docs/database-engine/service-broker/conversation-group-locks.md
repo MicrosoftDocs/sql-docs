@@ -50,12 +50,10 @@ The following statements acquire conversation group locks:
 
   - [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
 
-## See Also
-
-### Reference
+## See also
 
 [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)
 
-### Concepts
+
 
 [Transaction locking and row versioning guide](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md)

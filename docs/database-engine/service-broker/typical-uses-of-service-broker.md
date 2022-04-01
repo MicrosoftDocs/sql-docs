@@ -54,7 +54,7 @@ Applications that must use or display information simultaneously from multiple d
 
 Applications that must perform large-scale batch processing can take advantage of the queuing and parallel processing offered by Service Broker to handle large volumes of work quickly and efficiently. The application stores data to be processed in a Service Broker queue. A program periodically reads from the queue and processes the data. An application can take advantage of the reliable messaging provided by Service Broker to perform batch processing on a computer other than the computer from which the request originates.
 
-## See Also
+## See also
 
 ### Other Resources
 

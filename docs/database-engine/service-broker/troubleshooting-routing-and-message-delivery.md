@@ -167,7 +167,7 @@ Check the Service Broker endpoint configuration to ensure that the two instances
 
 Check certificates, users, and permissions for Service Broker transport security. For more information, see [Service Broker Transport Security](service-broker-transport-security.md).
 
-## See Also
+## See also
 
 
 
@@ -184,7 +184,7 @@ Check certificates, users, and permissions for Service Broker transport security
 
 [sys.service_broker_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-service-broker-endpoints-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Routing and Networking](service-broker-routing-and-networking.md)
 

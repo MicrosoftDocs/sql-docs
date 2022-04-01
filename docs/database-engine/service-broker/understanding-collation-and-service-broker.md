@@ -48,9 +48,9 @@ The SELECT statement explicitly specifies a binary comparison for matching the m
 
 Service Broker transmits the message body as binary data and does not modify the content of the message. If applications exchange data that is collation-sensitive, the applications must handle any collation differences. Applications that exchange text generally use Unicode types to help minimize collation problems.
 
-## See Also
+## See also
 
-### Concepts
+
 
 [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)
 

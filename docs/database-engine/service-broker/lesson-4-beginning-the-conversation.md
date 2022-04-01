@@ -64,15 +64,13 @@ In this lesson, you will learn to start a conversation that spans two instances 
 
 You have successfully started a conversation and sent the request message to the target service. Next, you will receive the request message from the target queue and send a reply message to the initiator service. See [Lesson 5: Receiving a Request and Sending a Reply](lesson-5-receiving-a-request-and-sending-a-reply.md).
 
-## See Also
-
-### Reference
+## See also
 
 [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
 
 [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Applications](service-broker-applications.md)
 

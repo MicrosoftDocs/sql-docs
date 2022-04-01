@@ -52,7 +52,7 @@ This example configures permissions to allow BrokerApplicationUser to send messa
     GO
 ```
 
-## See Also
+## See also
 
 
 
@@ -72,7 +72,7 @@ This example configures permissions to allow BrokerApplicationUser to send messa
 
 [GRANT Service Broker Permissions (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)
 
-### Concepts
+
 
 [Identity and Access Control (Service Broker)](identity-and-access-control.md)
 

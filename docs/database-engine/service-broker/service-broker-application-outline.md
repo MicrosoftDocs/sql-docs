@@ -142,9 +142,7 @@ For simplicity, the script produces a result set for each message. If an error o
     END ; -- Process all conversation groups.
 ```
 
-## See Also
-
-### Reference
+## See also
 
 [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
 

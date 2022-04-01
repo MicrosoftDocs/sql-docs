@@ -24,9 +24,7 @@ An instance that performs message forwarding often functions as a bridge between
 
 The dynamic management view **sys.dm_broker_forwarded_messages** shows the messages that are stored for forwarding.
 
-## See Also
-
-### Reference
+## See also
 
 [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)
 
@@ -34,7 +32,7 @@ The dynamic management view **sys.dm_broker_forwarded_messages** shows the messa
 
 [sys.dm_broker_forwarded_messages (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Endpoints](service-broker-endpoints.md)
 

@@ -38,13 +38,11 @@ If Service Broker message delivery is not active in the database that sends the 
 
 If the destination database is available, but the destination queue is unavailable, the message is held in the transmission queue for the database that contains the destination service.
 
-## See Also
-
-### Reference
+## See also
 
 [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
 
-### Concepts
+
 
 [Conversation Architecture](conversation-architecture.md)
 

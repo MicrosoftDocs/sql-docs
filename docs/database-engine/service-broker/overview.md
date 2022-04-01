@@ -35,9 +35,9 @@ Service Broker also provides reliable messaging between SQL Server instances. Se
 - [Planning for Service Broker Development](planning-for-service-broker-development.md)
     Find sources of Service Broker information, overviews, system requirements, installation instructions, and more.
 
-## See Also
+## See also
 
-### Concepts
+
 
 - [What Does Service Broker Do?](what-does-service-broker-do.md)
 

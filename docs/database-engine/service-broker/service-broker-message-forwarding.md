@@ -46,9 +46,7 @@ Service Broker message forwarding does not require a forwarding instance to decr
 
 However, because transport security applies to the connections between SQL Server instances each SQL Server instance must have transport security correctly configured for the instances that it communicates with directly. For example, if Instance A and Instance B communicate through a forwarding instance, then both Instance A and Instance B must have transport security correctly configured for the forwarding instance. Because the instances do not exchange messages directly, the instances should not have transport security configured to communicate with each other.
 
-## See Also
-
-### Reference
+## See also
 
 [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
 
@@ -60,7 +58,7 @@ However, because transport security applies to the connections between SQL Serve
 
 [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Routing and Networking](service-broker-routing-and-networking.md)
 

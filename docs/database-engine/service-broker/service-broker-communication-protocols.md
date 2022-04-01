@@ -118,11 +118,7 @@ Network connections occur between two Service Broker endpoints. These connection
 
 To deliver a message, Service Broker holds the message in the transmission queue for the database that sent the message. The recipient delivers the message directly to the queue for the destination service. If that queue is OFF, the message is held temporarily in the transmission queue for the receiving database. The queue for the sending service is not involved in the operation. The transmission queue for the database that hosts the receiving service is only involved if the destination queue is OFF.
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Service Broker Routing](service-broker-routing.md)
 

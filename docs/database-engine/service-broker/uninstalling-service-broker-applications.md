@@ -36,13 +36,11 @@ In databases that host initiating services, drop each route that contains the ne
 
 Finally, drop the service definition to ensure that Service Broker no longer accepts messages for the service. Drop the contracts, message types, and queues for the service unless these objects are used by another service in the instance. If necessary, drop the activation stored procedure for the service.
 
-## See Also
-
-### Reference
+## See also
 
 [ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)
 
-### Concepts
+
 
 [Starting and Stopping the Queue](starting-and-stopping-the-queue.md)
 

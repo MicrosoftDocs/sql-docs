@@ -32,15 +32,8 @@ Some of the benefits of programming with Service Broker are:
 
   - **Ability to leverage existing knowledge:** Service Broker uses Transact-SQL to create objects. Applications that use Service Broker are most often implemented in Transact-SQL or Microsoft .NET Framework-compatible languages. You do not have to learn a new language to create Service Broker applications.
 
-## See Also
+## See also
 
-### Concepts
-
-[Creating Service Broker Objects](creating-service-broker-objects.md)
-
-[Overview (Service Broker)](overview.md)
-
-### Other Resources
-
-[Creating Service Broker Applications](creating-service-broker-applications.md)
-
+- [Creating Service Broker Objects](creating-service-broker-objects.md)
+- [Overview (Service Broker)](overview.md)
+- [Creating Service Broker Applications](creating-service-broker-applications.md)

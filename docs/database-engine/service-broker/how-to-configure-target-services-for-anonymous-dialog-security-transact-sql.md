@@ -86,7 +86,7 @@ SQL Server uses dialog security for any conversation to a service for which a re
     GRANT SEND ON SERVICE::[SupplierOrders] TO public ;
 ```
 
-## See Also
+## See also
 
 
 

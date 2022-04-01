@@ -77,7 +77,7 @@ Once an application receives an **Error** message, the program can no longer sen
 
 Error handling routines should be coded in such a way as to prevent poison messages. For more information, see [Handling Poison Messages](handling-poison-messages.md).
 
-## See Also
+## See also
 
 - [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
 - [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)

@@ -22,11 +22,7 @@ The content of the message is determined by the application. When a message is r
 
 An application typically processes the content of a message based on the contract and the message type.
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Message Types](message-types.md)
 

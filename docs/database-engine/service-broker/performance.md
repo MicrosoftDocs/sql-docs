@@ -47,9 +47,9 @@ Next, end conversations when the task completes. Service Broker maintains state 
 
 Finally, keep transactions short. For example, if the conversation pattern for the service involves a large number of messages on the same conversation group, limiting the number of messages processed in each transaction may improve overall throughput.
 
-## See Also
+## See also
 
-### Concepts
+
 
 [Conversation Group Locks](conversation-group-locks.md)
 

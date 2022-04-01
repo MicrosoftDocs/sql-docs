@@ -30,12 +30,10 @@ The following considerations apply to database principals created for Service Br
 
   - When Service Broker transport security uses SSPI, the service account for the remote database must have CONNECT permission in **master**, and must also correspond to a login. Therefore, the account that the remote SQL Server instance runs as must have permission to log in to SQL Server using Windows Authentication. There are no requirements for the login to have other permissions or to own objects in any database.
 
-## See Also
-
-### Reference
+## See also
 
 [GRANT Service Broker Permissions (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)
 
-### Concepts
+
 
 [Query notifications in SQL Server](../../connect/ado-net/sql/query-notifications-sql-server.md)

@@ -171,9 +171,7 @@ In this lesson, you will learn to create the initiator database and all the init
 
 You have successfully created the initiator databases that will be used for the tutorial. Next, you will finish configuring the target database by creating the target objects that have dependencies on initiator objects. See [Lesson 3: Completing the Target Conversation Objects](lesson-3-completing-the-target-conversation-objects.md).
 
-## See Also
-
-### Reference
+## See also
 
 [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)
 
@@ -203,7 +201,7 @@ You have successfully created the initiator databases that will be used for the 
 
 [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Dialog Security](service-broker-dialog-security.md)
 

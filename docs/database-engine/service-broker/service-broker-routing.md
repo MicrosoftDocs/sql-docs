@@ -108,9 +108,7 @@ When Service Broker chooses a route that specifies a mirror address, and Service
 
 In cases where Service Broker cannot reach the principal but the partner does not claim to be new principal, Service Broker does not send messages to the partner. Service Broker then retries the principal address and the partner address until either the principal is reachable, or the partner indicates that it is now the principal. By taking this approach, Service Broker reliably delivers messages when the principal and partner can communicate, but the instance sending the message cannot reach the principal.
 
-## See Also
-
-### Reference
+## See also
 
 [sys.routes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)
 
@@ -120,7 +118,7 @@ In cases where Service Broker cannot reach the principal but the partner does no
 
 [DROP ROUTE (Transact-SQL)](../../t-sql/statements/drop-route-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Message Forwarding](service-broker-message-forwarding.md)
 

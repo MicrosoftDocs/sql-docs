@@ -39,9 +39,7 @@ For more information using certificates for Service Broker transport security, s
     GO
 ```
 
-## See Also
-
-### Reference
+## See also
 
 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
 

@@ -44,13 +44,11 @@ The following SELECT statement lets the administrator learn whether the queue **
 
 Service Broker manages updates to queues. Although the name of a queue can be used in place of a table name in a SELECT statement, a queue cannot be the target of an INSERT, UPDATE, DELETE, or TRUNCATE statement. SQL Server does not allow users to create indexes on queues.
 
-## See Also
-
-### Reference
+## See also
 
 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
 
-### Concepts
+
 
 [Queues](queues.md)
 

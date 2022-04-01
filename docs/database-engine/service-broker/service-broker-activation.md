@@ -35,15 +35,13 @@ Not all Service Broker applications use activation. If an application requires s
   - [Event-Based Activation](event-based-activation.md)  
     Describes the event and strategies for receiving and responding to the event
 
-## See Also
-
-### Reference
+## See also
 
 [sys.dm_broker_activated_tasks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)
 
 [sys.dm_broker_queue_monitors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)
 
-### Concepts
+
 
 [Implementing Internal Activation](implementing-internal-activation.md)
 

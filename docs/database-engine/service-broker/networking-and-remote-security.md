@@ -29,11 +29,7 @@ To help enable secure, reliable communication between different instances of SQL
   - [Service Broker Endpoints](service-broker-endpoints.md)  
     Describes configuring SQL Server to send and receive messages over TCP/IP connections. Endpoints can provide transport security, which prevents unauthorized connections to the endpoint.
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Remote Service Bindings](remote-service-bindings.md)
 

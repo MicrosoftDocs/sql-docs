@@ -70,15 +70,8 @@ Some applications start one time, typically when the computer starts or when SQL
 
 This strategy can be useful for an application that processes a constant stream of messages and that is relatively resource-intensive during startup.
 
-## See Also
+## See also
 
-### Reference
-
-[Create a Job](../../ssms/agent/create-a-job.md)
-
-### Concepts
-
-[Service Broker Activation](service-broker-activation.md)
-
-[Implementing Internal Activation](implementing-internal-activation.md)
-
+- [Create a Job](../../ssms/agent/create-a-job.md)
+- [Service Broker Activation](service-broker-activation.md)
+- [Implementing Internal Activation](implementing-internal-activation.md)

@@ -29,9 +29,7 @@ Service Broker offers a built-in message type named DEFAULT. If the message type
 
 Service Broker includes system messages types that are used to report errors and the status of dialogs. For more information, see [Broker System Messages](broker-system-messages.md).
 
-## See Also
-
-### Reference
+## See also
 
 [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
 
@@ -46,7 +44,7 @@ Service Broker includes system messages types that are used to report errors and
 
 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
 
-### Concepts
+
 
 [Contracts](contracts.md)
 

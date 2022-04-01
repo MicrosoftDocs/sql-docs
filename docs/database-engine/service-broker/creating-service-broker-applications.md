@@ -42,9 +42,9 @@ If Service Broker detects an error or the conversation lifetime expires, Service
   - [Service Broker Application Outline](service-broker-application-outline.md)  
     Describes the basic steps to receive and process messages.
 
-## See Also
+## See also
 
-### Concepts
+
 
 [Service Broker Activation](service-broker-activation.md)
 

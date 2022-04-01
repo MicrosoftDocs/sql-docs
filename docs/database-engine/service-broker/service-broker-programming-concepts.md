@@ -35,11 +35,7 @@ Service Broker introduces concepts that are unique to developing a Service Broke
   - [Error Handling for Service Broker](error-handling-for-service-broker.md)  
     Discusses error handing in applications that use Service Broker.
 
-## See Also
-
-
-
-### Concepts
+## See also
 
 [Overview (Service Broker)](overview.md)
 

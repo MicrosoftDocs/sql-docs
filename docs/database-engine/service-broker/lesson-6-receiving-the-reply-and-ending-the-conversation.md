@@ -60,9 +60,7 @@ In this lesson, you will learn to receive the reply message from the target serv
 
 
 This concludes the tutorial. Tutorials are brief introductions only. They do not describe all available options. Tutorials use simplified logic and error handling, and should not be used in a production environment. To create efficient, reliable, and robust conversations, you need more complex code than the example in this tutorial.
-## See Also
-
-### Reference
+## See also
 
 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
 
@@ -70,7 +68,7 @@ This concludes the tutorial. Tutorials are brief introductions only. They do not
 
 [WAITFOR (Transact-SQL)](../../t-sql/language-elements/waitfor-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Applications](service-broker-applications.md)
 

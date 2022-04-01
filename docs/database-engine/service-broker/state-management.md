@@ -24,13 +24,11 @@ An application may also use a state table for auditing or logging purposes. The 
 
 Some applications may require a precise record of the messages sent and received while the conversation is active. For this scenario, Service Broker provides message retention.
 
-## See Also
-
-### Reference
+## See also
 
 [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Application Outline](service-broker-application-outline.md)
 

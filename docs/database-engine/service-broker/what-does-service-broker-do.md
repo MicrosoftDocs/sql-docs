@@ -114,7 +114,7 @@ Service Broker has three types of components:
 
 Service definition components, networking components, and security components are part of the metadata for the database and the SQL Server instance. Conversation groups, conversations, and messages are part of the data that the database contains.
 
-## See Also
+## See also
 
 - [Service Broker Scalability](service-broker-scalability.md)
 

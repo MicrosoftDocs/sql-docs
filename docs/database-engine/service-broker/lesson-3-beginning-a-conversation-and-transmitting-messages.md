@@ -104,9 +104,7 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
 
 You have successfully completed a request-reply message cycle between the **//AWDB/InternalAct/InitiatorService** and the **//AWDB/InternalAct/TargetService**. You can repeat the steps in this lesson as many times as you want to transmit a request-reply pair of messages. When you have finished investigating the SEND and REPLY statements, you can drop all the objects that were used by the conversation. For more information, see [Lesson 4: Dropping the Conversation Objects](lesson-4-dropping-the-conversation-objects.md).
 
-## See Also
-
-### Reference
+## See also
 
 [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
 
@@ -116,7 +114,7 @@ You have successfully completed a request-reply message cycle between the **//AW
 
 [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
 
-### Concepts
+
 
 [Service Broker Applications](service-broker-applications.md)
 

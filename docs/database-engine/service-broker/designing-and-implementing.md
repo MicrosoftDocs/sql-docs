@@ -30,6 +30,6 @@ This section provides high-level information that can help when you design and i
   - [Developer Responsibilities for Service Broker](developer-responsibilities-for-service-broker.md)  
     Lists the tasks involved with creating Service Broker applications.
 
-## See Also
+## See also
 
 [Planning for Service Broker Development](planning-for-service-broker-development.md)

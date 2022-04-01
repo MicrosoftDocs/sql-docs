@@ -71,7 +71,7 @@ Your system must have the following installed:
 
   - The AdventureWorks2008R2 sample database. For more information about how to install the sample databases, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
 
-## See Also
+## See also
 
 [Completing a Conversation Between Databases](completing-a-conversation-between-databases.md)
 

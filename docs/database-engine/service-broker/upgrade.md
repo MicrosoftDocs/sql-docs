@@ -26,7 +26,7 @@ Databases are upgraded when the following are true:
 
 When a SQL Server database is upgraded to a newer version, conversations continue to operate as they did in the previous version.
 
-## See Also
+## See also
 
 #### Reference
 
@@ -34,7 +34,7 @@ When a SQL Server database is upgraded to a newer version, conversations continu
 
 [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)
 
-### Concepts
+
 
 [Conversation Priorities](conversation-priorities.md)
 

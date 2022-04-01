@@ -64,9 +64,7 @@ Make sure that activation stored procedures are correctly started:
 
 If activated tasks are running, but messages remain on the queue, the task is either failing to RECEIVE, or it is failing to commit transactions. Check the SQL Server error log for errors from the stored procedure. Stopping activation and running the stored procedure by hand might help troubleshoot the problem.
 
-## See Also
-
-### Reference
+## See also
 
 [sys.service_queues (Transact-SQL)](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)
 

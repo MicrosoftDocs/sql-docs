@@ -46,15 +46,13 @@ An activated stored procedure is responsible for managing transactions. SQL Serv
 
 An activated stored procedure must receive messages from the queue that activated the procedure. If the stored procedure exits without receiving messages or the queue monitor detects that the stored procedure is not receiving messages after a short time-out, the queue monitor considers the stored procedure to have failed. In this case, the queue monitor stops activating the stored procedure.
 
-## See Also
-
-### Reference
+## See also
 
 [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)
 
 [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)
 
-### Concepts
+
 
 [Implementing Internal Activation](implementing-internal-activation.md)
 

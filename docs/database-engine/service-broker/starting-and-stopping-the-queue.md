@@ -18,12 +18,13 @@ Use the ALTER QUEUE statement to start and stop a queue. When a queue is started
 
 Administrators often create queues in an unavailable state. This prevents Service Broker from placing messages on the queue until all of the objects for a service are created. When the service is ready to receive messages, the administrator makes the queue available with the following statement:
 
-```
+```sql
     ALTER QUEUE dbo.ExpenseQueue WITH STATUS = ON ;
 ```
 
 The statement below makes the queue unavailable for receive:
-```
+
+```sql
     ALTER QUEUE dbo.ExpenseQueue WITH STATUS = OFF ;
 ```
 

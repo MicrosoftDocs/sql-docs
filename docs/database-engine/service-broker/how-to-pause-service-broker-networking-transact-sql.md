@@ -24,7 +24,7 @@ Service Broker sends and receives messages over the network while any endpoint f
 
 
 
-```
+```sql
     USE master ;
     GO
     

@@ -27,12 +27,9 @@ Once access is configured in each instance, then communications between the two 
 > [!NOTE]
 > If both instances run as the same domain account, then the instances can always communicate using Windows Authentication for transport security. If the instances run as the **LocalSystem** account, the login name is MachineName$, and Kerberos must be available on the network to use the machine account.
 
-
 ## Example
 
-
-
-```
+```sql
     USE master ;
     GO
     
@@ -50,4 +47,3 @@ Once access is configured in each instance, then communications between the two 
 [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
 
 [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-

@@ -24,13 +24,13 @@ Conversation priorities are always active for RECEIVE statements. The HONOR_BROK
 
 An administrator can enable conversation priorities for SEND statements in a database by using the following statement:
 
-```
+```sql
     ALTER DATABASE MyDatabase SET HONOR_BROKER_PRIORITY ON;
 ```
 
 An administrator can turn off conversation priorities for SEND statements by using the following statement:
 
-```
+```sql
     ALTER DATABASE MyDatabase SET HONOR_BROKER_PRIORITY OFF;
 ```
 
@@ -46,7 +46,7 @@ Conversation priorities are specified by using the CREATE BROKER PRIORITY, ALTER
 
 Conversation priorities are stored in the **sys.conversation_priorities** system view. The following statement lists all the conversation priorities in the current database:
 
-```
+```sql
     SELECT scp.name AS priority_name,
            ssc.name AS contract_name,
            ssvc.name AS local_service_name,

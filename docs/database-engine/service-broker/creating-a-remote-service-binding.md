@@ -21,19 +21,18 @@ When a conversation is initiated, Service Broker checks to see whether a remote 
 > [!NOTE]
 > The behavior is comparable to [Service Broker Dynamic Routing](service-broker-dynamic-routing.md).
 
-
 ## Requesting Remote Service Binding
-
-
 
 Requests for remote service bindings use the message type **https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRemoteServiceBinding**. The message is in XML format, and contains the name of the service for which remote service binding information should be available.
 
 For example, the following message is a request for a remote service binding to the service **http://Adventure-Works.com/Elsewhere**:
-```
+
+```xml
     <MissingRemoteServiceBinding xmlns="https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRemoteServiceBinding">
       <SERVICE_NAME>http://Adventure-Works.com/Elsewhere</SERVICE_NAME>
     </MissingRemoteServiceBinding>
 ```
+
 The application that is defined in the BCN queue reads a **MissingRemoteServiceBinding** message from the queue. If the application can determine the appropriate user context for the target service, the application creates a remote service binding for the service and then ends the conversation. If the application cannot determine the remote service binding for the service, the application ends the conversation with an error.
 
 If the application ended the conversation with an error, Service Broker stores this response for 10 minutes. Service Broker will not send a **MissingRemoteServiceBinding** message for dialogs to the BCN service during this time. If a conversation is started after 10 minutes, Service Broker will send another **MissingRemoteServiceBinding** message to check whether a remote service binding has been created.
@@ -42,11 +41,5 @@ In either case, the application ends the conversation. Service Broker sends one 
 
 ## See Also
 
-### Reference
-
-[CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
-
-### Concepts
-
-[Service Broker Configuration Notice Service](service-broker-configuration-notice-service.md)
-
+- [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
+- [Service Broker Configuration Notice Service](service-broker-configuration-notice-service.md)

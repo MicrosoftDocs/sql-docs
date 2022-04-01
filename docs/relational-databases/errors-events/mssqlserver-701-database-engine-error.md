@@ -86,8 +86,38 @@ The following sections describe more detailed steps for each scenario - external
   - **Process:Working Set**
   - **Process:Private Bytes**
 
+  Here is a sample Perfmon log collection using PowerShell
+
+  ```PowerShell
+  clear
+  $serverName = $env:COMPUTERNAME
+  $Counters = @(
+     ("\\$serverName" +"\Memory\Available MBytes"),
+     ("\\$serverName" +"\Process(*)\Working Set"),
+     ("\\$serverName" +"\Process(*)\Private Bytes")
+  )
+  
+  Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 1 | ForEach-Object  {
+  $_.CounterSamples | ForEach-Object 	  {
+     [pscustomobject]@{
+        TimeStamp = $_.TimeStamp
+        Path = $_.Path
+        Value = ([Math]::Round($_.CookedValue, 3)) }
+   }
+  }
+  ```
+
+
 - Review the System Event log and look for memory related errors (for example, low virtual memory). 
 - Review the Application Event log for application-related memory issues.
+
+  Here is a sample PowerShell script to query the System and Applicaiton Event logs for the keyword "memory". Feel free to use other strings like "resource" for your search:
+  
+  ```PowerShell
+  Get-EventLog System -ComputerName "$env:COMPUTERNAME" -Message "*memory*"
+  Get-EventLog Application -ComputerName "$env:COMPUTERNAME" -Message "*memory*"
+  ```
+
 - Address any code or configuration issues for less critical applications or services to reduce their memory usage.  
 - If applications besides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are consuming resources, try stopping or rescheduling these applications, or consider running them on a separate server. These steps will remove external memory pressure.
 
@@ -107,7 +137,7 @@ To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server,
 
 - You could also use this query to examine loaded modules (DLLs) and see if something isn't expected to be there
 
-  ```tsql
+  ```sql
   SELECT * FROM sys.dm_os_loaded_modules
   ```
 
@@ -122,7 +152,7 @@ To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server,
 
 - Query the SQL Server memory clerks DMV multiple times to see where the highest consumption of memory occurs inside the engine:
 
-  ```tsql
+  ```sql
   SELECT pages_kb, type, name, virtual_memory_committed_kb, awe_allocated_kb
   FROM sys.dm_os_memory_clerks
   ORDER BY pages_kb DESC
@@ -130,7 +160,7 @@ To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server,
 
 - Alternatively, you can observe the more detailed DBCC MEMORYSTATUS output and the way it changes when you see these error messages.  
 
-  ```tsql
+  ```sql
   DBCC MEMORYSTATUS
   ```
 

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Installing the extension pack"
   - "SQL Server Database Objects"
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Installing SSMA components on SQL Server (OracleToSQL)

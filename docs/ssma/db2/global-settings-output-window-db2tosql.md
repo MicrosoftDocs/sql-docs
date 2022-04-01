@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f21f80f4-9a2a-448d-9fe8-b6926595389e
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Global Settings (Output Window) (DB2ToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

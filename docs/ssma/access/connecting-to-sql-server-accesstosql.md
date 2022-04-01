@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQL Server, connecting to"
   - "SQL Server, reconnecting"
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 
 # Connecting to SQL Server (AccessToSQL)

@@ -5,7 +5,6 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
@@ -40,7 +39,7 @@ The **SqlPackage.exe** command line tool allows you to specify these actions alo
 
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
-```
+```cmd
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
 
@@ -50,19 +49,19 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 Start by creating a .dacpac file of your latest database changes:
 
-```
+```cmd
 sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
- ```
- 
+```
+
 Create a .dacpac file of your database target (that has no changes):
 
- ```
- sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
- ```
+```cmd
+sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+```
 
 Create a SQL script that generates the differences of two .dacpac files:
 
-```
+```cmd
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
 ```
 
@@ -82,21 +81,21 @@ SqlPackage and DacFx supports all [supported SQL versions](/lifecycle/products/?
 
 Displays the sqlpackage version as a build number.  Can be used in interactive prompts as well as in [automated pipelines](sqlpackage-pipelines.md).
 
-```
+```cmd
 sqlpackage.exe /Version
- ```
+```
 
 ## Help
 
 You can display sqlpackage usage information by using `/?` or `/help:True`.
 
-```
+```cmd
 sqlpackage.exe /?
 ```
 
 For parameter and property information specific to a particular action, use the help parameter in addition to that action's parameter.
 
-```
+```cmd
 sqlpackage.exe /Action:Publish /?
 ```
 
@@ -107,8 +106,8 @@ Commands that return the following exit codes:
 - 0 = success
 - non-zero = failure
 
-
 ## Parameters
+
 Some parameters are shared between the SqlPackage actions. Below is a table summarizing the parameters, for more information click into the specific action pages.
 
 | Parameter | Short Form | [Extract](sqlpackage-extract.md#parameters-for-the-extract-action) | [Publish](sqlpackage-publish.md#parameters-for-the-publish-action) | [Export](sqlpackage-export.md#parameters-for-the-export-action) | [Import](sqlpackage-import.md#parameters-for-the-import-action) | [DeployReport](sqlpackage-deploy-drift-report.md#deployreport-action-parameters) | [DriftReport](sqlpackage-deploy-drift-report.md#driftreport-action-parameters) | [Script](sqlpackage-script.md#parameters-for-the-script-action) |
@@ -149,6 +148,7 @@ Some parameters are shared between the SqlPackage actions. Below is a table summ
 |**/Variables:**|**/v**| | | | | x | | x |
 
 ## Properties
+
 Some properties are shared between the SqlPackage actions.  Below is a table summarizing the properties, for more information click into the specific action pages.
 
 | Property | [Extract](sqlpackage-extract.md#properties-specific-to-the-extract-action) | [Publish](sqlpackage-publish.md#properties-specific-to-the-publish-action) | [Export](sqlpackage-export.md#properties-specific-to-the-export-action) | [Import](sqlpackage-import.md#properties-specific-to-the-import-action) | [DeployReport](sqlpackage-deploy-drift-report.md#deployreport-action-properties) | [Script](sqlpackage-script.md#properties-specific-to-the-script-action) |
@@ -271,7 +271,6 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |VerifyDeployment=(BOOLEAN 'True')| | x | | | x | x |
 |VerifyExtraction=(BOOLEAN)| x | | | | | |
 |VerifyFullTextDocumentTypesSupported=(BOOLEAN)| | | x | | | |
-
 
 ## Next steps
 

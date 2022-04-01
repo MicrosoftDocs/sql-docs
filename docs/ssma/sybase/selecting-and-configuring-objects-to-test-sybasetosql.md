@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Tester Component,Parameter Comparision Setting"
   - "Tester Component,Selecting Objects"
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Selecting and Configuring Objects to Test (SybaseToSQL)
 At this step you select objects to test, and configure settings for comparing procedures' and functions' output parameters, as well as the return values of functions.  

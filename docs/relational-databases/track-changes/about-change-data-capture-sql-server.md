@@ -50,13 +50,15 @@ The performance impact from enabling change data capture on Azure SQL Database i
 
 To provide more specific performance optimization guidance to customers, more details are needed on each customer’s workload. However, below is some additional general guidance, based on performance tests ran on TPCC workload:
 
-- Consider increasing the number of vCores or shift to a higher database tier to ensure the same performance level as before CDC was enabled on your Azure SQL Database.
+- Consider increasing the number of vCores or shift to a higher database tier (e.g. Hyperscale) to ensure the same performance level as before CDC was enabled on your Azure SQL Database.
 
 - Monitor space utilization closely and test your workload thoroughly before enabling CDC on databases in production.
 
+- Monitor log generation rate. To learn more [here](https://docs.microsoft.com/azure/azure-sql/database/resource-limits-logical-server#resource-consumption-by-user-workloads-and-internal-processes). 
+
 - Scan/cleanup are part of user workload (user’s resources are used). Performance impact can be substantial since entire rows are added to change tables and for updates operations pre-image is also included.  
 
-- Elastic Pools - Number of CDC-enabled databases should not exceed the number of vCores of the pool, in order to avoid latency increase.
+- Elastic Pools - Number of CDC-enabled databases should not exceed the number of vCores of the pool, in order to avoid latency increase. Learn more about resource management in dense Elastic Pools [here](https://docs.microsoft.com/azure/azure-sql/database/elastic-pool-resource-management). 
 
 - Cleanup – based on the customer's workload, it may be advised to keep the retention period smaller than the default of 3 days, to ensure that the cleanup catches up with all changes in change table. In general, it is good to keep the retention low and track the database size.  
 

@@ -97,23 +97,23 @@ While connected to the `master` database, you can create databases on the server
 
 ### Create a new database
 
-1. Start SSMS and connect to your server in SQL Server on Linux
+1. Start SSMS and connect to your server in SQL Server on Linux.
 
-2. In Object Explorer, right-click on the **Databases** folder, and then select **New Database...**
+2. In Object Explorer, right-click on the **Databases** folder, and then select **New Database...**.
 
-3. In the **New Database** dialog, enter a name for your new database, and then select **OK**
+3. In the **New Database** dialog, enter a name for your new database, and then select **OK**.
 
 The new database is successfully created in your server. If you prefer to create a new database using T-SQL, then see [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-transact-sql.md).
 
 ### Drop a database
 
-1. Start SSMS and connect to your server in SQL Server on Linux
+1. Start SSMS and connect to your server in SQL Server on Linux.
 
 2. In Object Explorer, expand the **Databases** folder to see a list of all the database on the server.
 
-3. In Object Explorer, right-click on the database you wish to drop, and then select **Delete**
+3. In Object Explorer, right-click on the database you wish to drop, and then select **Delete**.
 
-4. In the **Delete Object** dialog, check **Close existing connections** and then select **OK**
+4. In the **Delete Object** dialog, check **Close existing connections** and then select **OK**.
 
 The database is successfully dropped from your server. If you prefer to drop a database using T-SQL, then see [DROP DATABASE (SQL Server Transact-SQL)](../t-sql/statements/drop-database-transact-sql.md).
 
@@ -121,9 +121,9 @@ The database is successfully dropped from your server. If you prefer to drop a d
 
 The [Activity Monitor](../relational-databases/performance-monitor/activity-monitor.md) tool is built into SQL Server Management Studio (SSMS) and displays information about SQL Server processes and how these processes affect the current instance of SQL Server.
 
-1. Start SSMS and connect to your server in SQL Server on Linux
+1. Start SSMS and connect to your server in SQL Server on Linux.
 
-1. In Object Explorer, right-click the *server* node, and then select **Activity Monitor**
+1. In Object Explorer, right-click the *server* node, and then select **Activity Monitor**.
 
 Activity Monitor shows expandable and collapsible panes with the following information:
 

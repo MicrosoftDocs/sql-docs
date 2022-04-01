@@ -1,7 +1,7 @@
 ---
-description: "sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)"
+description: "sys.dm_geo_replication_link_status (Azure SQL Database)"
 title: "sys.dm_geo_replication_link_status"
-titleSuffix: Azure SQL Database and Azure SQL Managed Instance
+titleSuffix: Azure SQL Database
 ms.date: "03/30/2022"
 ms.service: sql-database
 ms.reviewer: ""
@@ -22,9 +22,9 @@ ms.author: randolphwest
 monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---
-# sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)
+# sys.dm_geo_replication_link_status (Azure SQL Database)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
 Contains a row for each replication link between primary and secondary databases in a geo-replication partnership. This includes both primary and secondary databases. If more than one continuous replication link exists for a given primary database, this table contains a row for each of the relationships. The view is created in all databases, including the **master** database. However, querying this view in the **master** database returns an empty set.  
   
@@ -73,4 +73,3 @@ Learn more about related concepts in the following articles:
 - [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
 - [Active geo-replication](/azure/azure-sql/database/active-geo-replication-overview)
 - [Auto-failover groups overview & best practices (Azure SQL Database)](/azure/azure-sql/database/auto-failover-group-sql-db)
-- [Auto-failover groups overview & best practices (Azure SQL Managed Instance)](/azure/azure-sql/managed-instance/auto-failover-group-sql-mi)

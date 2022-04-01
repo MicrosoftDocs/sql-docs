@@ -2,7 +2,7 @@
 description: "sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.dm_geo_replication_link_status"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
-ms.date: "03/30/2023"
+ms.date: "03/30/2022"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: conceptual

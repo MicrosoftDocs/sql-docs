@@ -534,7 +534,7 @@ Access Token: <your access token>
 You have successfully logged on as: <your client ID>
 ```
 
-# Next steps
+## Next steps
 
 Learn more about related concepts in the following articles:
 

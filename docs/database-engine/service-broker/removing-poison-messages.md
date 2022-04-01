@@ -41,7 +41,7 @@ The following example shows how to inspect a message safely for the conversation
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
-```
+```sql
     use AdventureWorks2008R2 ;
     GO
     
@@ -110,7 +110,7 @@ The following example shows how to inspect a message safely for the conversation
 
 When you find a poison message, you end the conversation. The following example ends the conversation e29059bb-9922-40f4-a575-66b2e4c70cf9.
 
-```
+```sql
     -- End the conversation. Do this only if the message cannot be
     -- processed by the normal procedure.
     

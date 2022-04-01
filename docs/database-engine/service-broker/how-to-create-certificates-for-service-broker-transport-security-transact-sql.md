@@ -26,7 +26,7 @@ For more information using certificates for Service Broker transport security, s
 
 
 
-```
+```sql
     USE master ;
     GO
     

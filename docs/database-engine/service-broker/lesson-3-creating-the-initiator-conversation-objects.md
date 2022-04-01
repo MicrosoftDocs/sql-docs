@@ -24,7 +24,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
   - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **InitiatorDB** database.
  
-    ``` 
+    ```sql
         USE InitiatorDB;
         GO
     ```
@@ -33,7 +33,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
   - Copy and paste the following code into a Query Editor window. Then, run it to create the message types for the conversation. The message type names and properties that are specified here must be identical to the ones that were created in the **TargetDB** in the previous lesson.
 
-    ```    
+    ```sql   
         CREATE MESSAGE TYPE [//BothDB/2DBSample/RequestMessage]
                VALIDATION = WELL_FORMED_XML;
         CREATE MESSAGE TYPE [//BothDB/2DBSample/ReplyMessage]
@@ -45,7 +45,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
   - Copy and paste the following code into a Query Editor window. Then, run it to create the contract for the conversation. The contract name and properties that are specified here must be identical to the contract that was created in the **TargetDB** in the previous lesson.
 
-    ```    
+    ```sql   
         CREATE CONTRACT [//BothDB/2DBSample/SimpleContract]
               ([//BothDB/2DBSample/RequestMessage]
                  SENT BY INITIATOR,
@@ -59,7 +59,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
   - Copy and paste the following code into a Query Editor window. Then, run it to create the queue and service that is used for the initiator. Because no contract name is specified, no other services can use this service as a target service.
 
-    ```    
+    ```sql   
         CREATE QUEUE InitiatorQueue2DB;
         
         CREATE SERVICE [//InitDB/2DBSample/InitiatorService]

@@ -26,7 +26,7 @@ In this lesson, you will learn to create the initiator database and all the init
     
     Windows Authentication works when both computers are in the same domain, or are in trusted domains. If the computers are not in trusted domains, use certificate security for the endpoints. For more information, see [How to: Create Certificates for Service Broker Transport Security (Transact-SQL)](how-to-create-certificates-for-service-broker-transport-security-transact-sql.md).
 
-    ```    
+    ```sql   
         USE master;
         GO
         IF EXISTS (SELECT * FROM sys.endpoints
@@ -44,7 +44,7 @@ In this lesson, you will learn to create the initiator database and all the init
 
   - Copy and paste the following code into a Query Editor window. Change the password on the CREATE MASTER KEY statement. Then, run the code to create the target database that is used for this tutorial. By default, new databases have the ENABLE_BROKER option set to on. The code also creates the master key and user that will be used to support encryption and remote connections.
 
-    ```  
+    ```sql 
         USE master;
         GO
         IF EXISTS (SELECT * FROM sys.databases

@@ -24,7 +24,7 @@ In this lesson, you will learn to start a conversation that spans two instances 
 
   - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **InstInitiatorDB** database where you will initiate the conversation.
 
-    ```    
+    ```sql   
         USE InstInitiatorDB;
         GO
     ```
@@ -33,7 +33,7 @@ In this lesson, you will learn to start a conversation that spans two instances 
 
   - Copy and paste the following code into a Query Editor window. Then, run it to begin a conversation and send a request message to the **//TgtDB/2InstSample/TargetService** in the **InstTargetDB**. The code must be run in one block because a variable is used to pass a dialog handle from BEGIN DIALOG to the SEND statement. The batch runs the BEGIN DIALOG statement to begin the conversation, and then builds a request message. Then, it uses the dialog handle in a SEND statement to send the request message on that conversation. The last SELECT statement just displays the text of the message that was sent.
 
-    ```    
+    ```sql   
         DECLARE @InitDlgHandle UNIQUEIDENTIFIER;
         DECLARE @RequestMsg NVARCHAR(100);
         

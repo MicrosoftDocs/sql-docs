@@ -2,7 +2,7 @@
 description: "sys.geo_replication_links (Azure SQL Database)"
 title: "sys.geo_replication_links (Azure SQL Database)"
 ms.custom: ""
-ms.date: "03/30/2023"
+ms.date: "03/30/2022"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: conceptual

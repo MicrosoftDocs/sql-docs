@@ -24,7 +24,7 @@ Message forwarding allows an instance of SQL Server to accept messages from outs
 
 
 
-```
+```sql
     USE master ;
     GO
     

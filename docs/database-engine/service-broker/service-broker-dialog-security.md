@@ -31,9 +31,11 @@ Messages are encrypted on the network when the conversation uses either full sec
 Whether the conversation uses full security or anonymous security, the message body is encrypted with a symmetric session key that is generated for the specific conversation. Only the keys are encrypted with private key encryption using the certificate supplied for Dialog Security. Service Broker also performs a message integrity check to help detect message corruption or tampering.
 
 SQL Server creates a session key for a conversation that uses dialog security. To protect the session key while it is stored in the database, Service Broker encrypts the session key with the master key for the database. If a database master key is not available, messages for the conversation remain in the **transmission_status** with an error until a database master key is created, or until the conversation times out. Therefore, both databases that participate in the conversation must contain master keys, even when the databases are hosted in the same instance. If the initiating database does not contain a master key, the dialog will fail. If the target database does not contain a master key, messages remain in the transmission queue of the initiating database. The last transmission error for these messages indicates the reason that the messages cannot be delivered. Either use the ENCRYPTION = OFF parameter to create an unencrypted dialog, or use the following command to create a database master key:
-```
+
+```sql
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
 ```
+
 For convenience, Service Broker allows secure conversations that remain within a single database to proceed regardless of whether the database contains a master key. While two different databases can be moved to different SQL Server instances during the lifetime of a conversation, a conversation within a single database always remains within that database. Therefore, the conversation can proceed.
 
 ### Full Security

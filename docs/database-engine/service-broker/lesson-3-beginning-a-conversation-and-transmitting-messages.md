@@ -33,7 +33,7 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
 ### Begin a conversation and send a request message
 
   - Copy and paste the following code into a Query Editor window. Then, run it to start a conversation and send a request message to the **//AWDB/InternalAct/TargetService**. The code must be run in one block because a variable is used to pass a dialog handle from BEGIN DIALOG to the SEND statement. The batch runs the BEGIN DIALOG statement to start the conversation. It builds a request message, and then uses the dialog handle in a SEND statement to send the request message on that conversation. The last SELECT statement displays the text of the message that was sent.
-    ```    
+    ```sql   
         DECLARE @InitDlgHandle UNIQUEIDENTIFIER;
         DECLARE @RequestMsg NVARCHAR(100);
         
@@ -72,7 +72,7 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
 ### Receive the reply and end the conversation
 
   - Copy and paste the following code into a Query Editor window. Then, run it to receive the reply message and end the conversation. The RECEIVE statement retrieves the reply message from the **InitiatorQueueIntAct**. The END CONVERSATION statement ends the initiator side of the conversation and sends an **EndDialog** message to the target service. The last SELECT statement displays the text of the reply message so that you can confirm it is the same as what was sent in the previous step.
-    ```    
+    ```sql   
         DECLARE @RecvReplyMsg NVARCHAR(100);
         DECLARE @RecvReplyDlgHandle UNIQUEIDENTIFIER;
         

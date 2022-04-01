@@ -36,7 +36,7 @@ A message of type **https://schemas.microsoft.com/SQL/ServiceBroker/Error** is a
 
 
 
-```
+```sql
     -- The variables to hold the error code and the description are
     -- provided by the caller.
     

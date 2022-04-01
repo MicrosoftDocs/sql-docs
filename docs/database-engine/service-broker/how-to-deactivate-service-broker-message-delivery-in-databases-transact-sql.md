@@ -28,7 +28,7 @@ When message delivery is not active, messages remain in the transmission queue. 
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
-```
+```sql
     USE master ;
     GO
     

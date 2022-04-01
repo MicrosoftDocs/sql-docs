@@ -29,7 +29,7 @@ Service Broker does not send or receive messages over the network by default. To
 
 
 
-```
+```sql
     USE master;
     GO
     

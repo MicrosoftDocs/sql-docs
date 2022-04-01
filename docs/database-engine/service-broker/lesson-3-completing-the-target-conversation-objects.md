@@ -24,7 +24,7 @@ In this lesson, you will learn to create the linked server and routes from the t
 
   - Copy and paste the following code into a Query Editor window. Change the FROM FILE clause to reference the folder to which you copied the **InstInitiatorCertficate.cer** file from step 4 in Lesson 2. Then, run the code to create an initiator user and pull in the initiator certificate.
 
-    ```   
+    ```sql  
         USE InstTargetDB
         GO
         CREATE USER InitiatorUser WITHOUT LOGIN;
@@ -42,7 +42,7 @@ In this lesson, you will learn to create the linked server and routes from the t
     
     The following CREATE ROUTE statements assume that there are no duplicate service names in the target instance. If multiple databases on the target instance contain services that have the same name, use the BROKER_INSTANCE clause to specify the database on which you want to open a conversation.
 
-    ```    
+    ```sql   
         DECLARE @Cmd NVARCHAR(4000);
         
         SET @Cmd = N'USE InstTargetDB;

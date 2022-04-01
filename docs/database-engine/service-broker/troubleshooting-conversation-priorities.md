@@ -22,7 +22,7 @@ This topic provides suggestions for correcting common symptoms related to Servic
 
 Use the **sys.databasesis_broker_priority_honored** column to determine the state of the HONOR_BROKER_PRIORITY database option:
 
-```
+```sql
     SELECT name AS database_name,
            CASE is_broker_priority_honored
                 WHEN 0 THEN N'OFF'

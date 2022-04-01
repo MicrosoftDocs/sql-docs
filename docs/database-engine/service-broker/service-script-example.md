@@ -24,7 +24,7 @@ This Transact-SQL code sample defines a service that archives untyped XML docume
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
-```
+```sql
     -- The contract script contains definitions that must be
     -- present for both the intiating service and the target
     -- service.
@@ -67,7 +67,7 @@ This Transact-SQL code sample defines a service that archives untyped XML docume
 
 ## Service Definition Script
 
-```
+```sql
     -- This script defines the target service. The
     -- objects created by this script are only
     -- required in a database that hosts the target

@@ -175,7 +175,7 @@ Before starting the following steps, make sure that you've selected your preferr
 4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). It will be ready for connection, once the SQL Server error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the SQL Server error log inside the container using the command:
 
    ```bash
-   docker exec -t sqlrhel cat /var/opt/mssql/log/errorlog | grep connection
+   docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
 The `--hostname` parameter as discussed above, changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:

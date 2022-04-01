@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [sqlserver2016-asdb](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
-Returns a row for each event target for a database-scoped event session.
+Returns a row for each event target for a database-scoped event session. For information about *active* database-scoped sessions, see [sys.dm_xe_database_session_targets](../system-dynamic-management-views/sys-dm-xe-database-session-targets-azure-sql-database.md).
 
 Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). Azure SQL Managed Instance supports both database-scoped sessions and more capable [server-scoped sessions](../extended-events/extended-events.md).
   
@@ -48,8 +48,8 @@ This view has the following relationship cardinalities.
 
 Learn more about related concepts in the following articles:
 
-- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
 - [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
-- [sys.database_event_sessions (Azure SQL Database)](sys-database-event-sessions-azure-sql-database.md)
-- [sys.database_event_session_actions (Azure SQL Database)](sys-database-event-session-actions-azure-sql-database.md)
-- [sys.database_event_session_events (Azure SQL Database)](sys-database-event-session-events-azure-sql-database.md)
+- [Event File target code for extended events in Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file)
+- [sys.database_event_sessions (Azure SQL Database and Azure SQL Managed Instance)](sys-database-event-sessions-azure-sql-database.md)
+- [sys.database_event_session_events (Azure SQL Database and Azure SQL Managed Instance)](sys-database-event-session-events-azure-sql-database.md)
+- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)

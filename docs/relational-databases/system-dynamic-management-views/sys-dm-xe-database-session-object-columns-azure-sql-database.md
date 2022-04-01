@@ -1,7 +1,7 @@
 ---
-description: "sys.dm_xe_database_session_object_columns (Azure SQL Database)"
+description: "sys.dm_xe_database_session_object_columns (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.dm_xe_database_session_object_columns"
-titleSuffix: Azure SQL Database
+titleSuffix: Azure SQL Database and Azure SQL Managed Instance
 ms.date: "03/30/2022"
 ms.service: sql-database
 ms.prod_service: "sql-database"
@@ -15,10 +15,12 @@ ms.author: randolphwest
 monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---
-# sys.dm_xe_database_session_object_columns (Azure SQL Database)
-[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+# sys.dm_xe_database_session_object_columns (Azure SQL Database and Azure SQL Managed Instance)
+[!INCLUDE[Azure SQL Database and Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Shows the configuration values for objects that are bound to a session.  
+Shows the configuration values for objects that are bound to an active database-scoped session.
+
+Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). Azure SQL Managed Instance supports both database-scoped sessions and more capable [server-scoped sessions](../extended-events/extended-events.md).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,8 +47,8 @@ Requires the VIEW DATABASE STATE permission.
 
 Learn more about Extended Events and related concepts in the following articles:
 
-- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
 - [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
-- [sys.database_event_sessions (Azure SQL Database)](sys-database-event-sessions-azure-sql-database.md)
-- [sys.database_event_session_actions (Azure SQL Database)](sys-database-event-session-actions-azure-sql-database.md)
-- [sys.database_event_session_events (Azure SQL Database)](sys-database-event-session-events-azure-sql-database.md)
+- [Event File target code for extended events in Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file)
+- [sys.dm_xe_database_session_targets (Azure SQL Database and Azure SQL Managed Instance)](sys-dm-xe-database-session-targets-azure-sql-database.md)
+- [sys.dm_xe_database_sessions (Azure SQL Database and Azure SQL Managed Instance)](sys-dm-xe-database-sessions-azure-sql-database.md)
+- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)

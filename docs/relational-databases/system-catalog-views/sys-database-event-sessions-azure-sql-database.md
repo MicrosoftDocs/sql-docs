@@ -17,7 +17,7 @@ monikerRange: "= azuresqldb-current"
 # sys.database_event_sessions (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Lists all the database-scoped event session definitions that exist in the current database.
+Lists all the database-scoped event session definitions that exist in the current database. For information about *active* database-scoped event sessions, see [sys.dm_xe_database_sessions](../system-dynamic-management-views/sys-dm-xe-database-sessions-azure-sql-database.md).
 
 Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). Azure SQL Managed Instance supports both database-scoped sessions and more capable [server-scoped sessions](../extended-events/extended-events.md).
   
@@ -44,7 +44,8 @@ Requires the VIEW SERVER STATE permission.
 Learn more about related concepts in the following articles:
 
 - [sys.server_event_sessions](sys-server-event-sessions-transact-sql.md) returns server-scoped event session definitions for SQL Server and Azure SQL Managed Instance.
-- [sys.dm_xe_database_sessions](../system-dynamic-management-views/sys-dm-xe-database-sessions-azure-sql-database.md) returns *active* database-scoped event sessions.
 - [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
+- [Event File target code for extended events in Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file)
+- [sys.database_event_session_actions (Azure SQL Database and Azure SQL Managed Instance)](sys-database-event-session-actions-azure-sql-database.md)
+- [sys.database_event_session_targets (Azure SQL Database and Azure SQL Managed Instance)](sys-database-event-session-targets-azure-sql-database.md)
 - [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
-- [Extended events overview (SQL Server and Azure SQL Managed Instance)](../extended-events/extended-events.md)

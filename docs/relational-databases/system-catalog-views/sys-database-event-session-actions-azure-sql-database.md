@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # sys.database_event_session_actions (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-Returns a row for each action on each event of a database-scoped event session.
+Returns a row for each action on each event of a database-scoped event session. For information on actions in *active* database-scoped event sessions, see [sys.dm_xe_database_session_event_actions](../system-dynamic-management-views/sys-dm-xe-database-session-event-actions-azure-sql-database.md).
 
 Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). Azure SQL Managed Instance supports both database-scoped sessions and more capable [server-scoped sessions](../extended-events/extended-events.md).
   

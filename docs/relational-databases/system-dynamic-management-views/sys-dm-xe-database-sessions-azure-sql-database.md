@@ -1,6 +1,7 @@
 ---
-description: "sys.dm_xe_database_sessions (Azure SQL Database)"
-title: "sys.dm_xe_database_sessions (Azure SQL Database)"
+description: "sys.dm_xe_database_sessions (Azure SQL Database and Azure SQL Managed Instance)"
+title: "sys.dm_xe_database_sessions"
+titleSuffix: Azure SQL Database and Azure SQL Managed Instance
 ms.custom: ""
 ms.date: "03/30/2022"
 ms.service: sql-database
@@ -13,10 +14,12 @@ author: rwestMSFT
 ms.author: randolphwest
 monikerRange: "= azuresqldb-current"
 ---
-# sys.dm_xe_database_sessions (Azure SQL Database)
-[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+# sys.dm_xe_database_sessions (Azure SQL Database and Azure SQL Managed Instance)
+[!INCLUDE[Azure SQL Database and Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Returns information about active database-scoped extended events sessions. A session is a collection of events, actions, and targets.
+Returns information about *active* database-scoped extended events sessions. A session is a collection of events, actions, and targets. For information on all event sessions in the database, see [sys.database_event_sessions](../system-catalog-views/sys-database-event-sessions-azure-sql-database.md).
+
+Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). Azure SQL Managed Instance supports both database-scoped sessions and more capable [server-scoped sessions](../extended-events/extended-events.md).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -37,31 +40,21 @@ Returns information about active database-scoped extended events sessions. A ses
 |blocked_event_fire_time|**int**|The length of time that event firings were blocked when buffers were full. This value is **0** if `buffer_policy_desc` is "Drop full buffer" or "Drop event". Is not nullable.|  
 |create_time|**datetime**|The time that the session was created. Is not nullable.|  
 |largest_event_dropped_size|**int**|The size of the largest event that did not fit into the session buffer. Is not nullable.|  
-|session_source|**nvarchar(256)**| The scope of the session. Is not nullable. `session_source` can be one of the following values:<BR><BR>server = session scoped to the server, including user sessions.<BR>internal = certain internal sessions, such as the `sp_server_diagnostics` session.<BR>*database_name* = for database-scoped sessions in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] only. Currently, this is not exposed.|  
-|buffer_processed_count|**bigint**|**Applies to:** SQL Server 2017 and later. The total number of buffers processed by the session and accumulates from start of session. Is not nullable.|
-|buffer_full_count|**bigint**|**Applies to:** SQL Server 2017 and later. The number of buffers that were full when they were processed and accumulates from start of session. Is not nullable.|  
-|total_bytes_generated|**bigint**|**Applies to:** SQL Server 2017 and later. The number of actual bytes that the extended events session has generated. This information is collected when the session is processing buffers and applies to the file target only. No tracking for other targets. | 
+|session_source|**nvarchar(256)**| The *database_name* that is the scope of the session. |  
+|buffer_processed_count|**bigint**|The total number of buffers processed by the session and accumulates from start of session. Is not nullable.|
+|buffer_full_count|**bigint**|The number of buffers that were full when they were processed and accumulates from start of session. Is not nullable.|  
+|total_bytes_generated|**bigint**|The number of actual bytes that the extended events session has generated. This information is collected when the session is processing buffers and applies to the file target only. No tracking for other targets. | 
+|total_target_memory |**bigint**| |
   
 ## Permissions  
 
 Requires the VIEW DATABASE STATE permission.  
   
-### Relationship cardinalities  
-
->[!NOTE]
-> The 'sys.dm_xe_objects' Extended Events Dynamic Management view does not contain '_database' in its name. This is not a typo or error in the following table's right-side column. The name is the same in Microsoft SQL Server, Azure SQL Managed Instance, and Azure SQL Database.  
-  
-|From|To|Relationship|  
-|--------|------|----------------|  
-|sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|Many-to-one|  
-|sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Many-to-one|  
-  
 ## Next steps
 
 Learn more about related concepts in the following articles:
 
-- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)
 - [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
-- [sys.database_event_sessions (Azure SQL Database)](sys-database-event-sessions-azure-sql-database.md)
-- [sys.database_event_session_actions (Azure SQL Database)](sys-database-event-session-actions-azure-sql-database.md)
-- [sys.database_event_session_events (Azure SQL Database)](sys-database-event-session-events-azure-sql-database.md)
+- [Event File target code for extended events in Azure SQL Database and SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file)
+- [sys.dm_xe_database_session_targets (Azure SQL Database and Azure SQL Managed Instance)](sys-dm-xe-database-session-targets-azure-sql-database.md)
+- [Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views](/azure/azure-sql/database/monitoring-with-dmvs)

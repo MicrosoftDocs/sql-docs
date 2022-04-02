@@ -23,6 +23,7 @@ There are two distinct types of activation: internal activation and external act
 Not all Service Broker applications use activation. If an application requires substantial resources during startup, or if response time for infrequent messages is paramount, the application might be better designed to start when SQL Server starts and remain running. For tasks that are better performed at certain times, it might be better to design the application to run as a scheduled job. For more information about choosing a strategy to start an application that uses Service Broker, see [Choosing a Startup Strategy](choosing-a-startup-strategy.md).
 
 ## In This Section
+
   - [Understanding When Activation Occurs](understanding-when-activation-occurs.md)  
     Describes the two steps of the Service Broker activation process.
 
@@ -33,8 +34,7 @@ Not all Service Broker applications use activation. If an application requires s
     Describes the event and strategies for receiving and responding to the event
 
 ## See also
-[sys.dm_broker_activated_tasks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)
 
-[sys.dm_broker_queue_monitors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)
-[Implementing Internal Activation](implementing-internal-activation.md)
-
+- [sys.dm_broker_activated_tasks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)
+- [sys.dm_broker_queue_monitors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)
+- [Implementing Internal Activation](implementing-internal-activation.md)

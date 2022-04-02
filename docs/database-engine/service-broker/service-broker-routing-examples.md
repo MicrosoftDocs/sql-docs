@@ -110,7 +110,9 @@ This example describes the default configuration for Service Broker routing. By 
    NULL
 
    :::column-end:::
-:::row-end:::In this case, all dialogs created in the **AdventureWorks2008R2** database are delivered to a service in the current instance. In addition, all dialogs arriving from outside the instance are delivered to a service in the current instance.
+:::row-end:::
+
+In this case, all dialogs created in the **AdventureWorks2008R2** database are delivered to a service in the current instance. In addition, all dialogs arriving from outside the instance are delivered to a service in the current instance.
 
 For conversations created in **AdventureWorks2008R2**, **AutoCreatedLocal** is the only route in **AdventureWorks2008R2.sys.routes**. That route is the only route in the set of matching routes, and Service Broker chooses that route. If the service for the message does not exist in the local instance, the message is dropped.
 

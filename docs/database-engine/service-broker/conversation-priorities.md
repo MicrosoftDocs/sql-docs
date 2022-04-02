@@ -98,6 +98,7 @@ Service Broker assigns the conversation endpoint the priority level from the con
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    Priority Contract
@@ -112,6 +113,7 @@ Service Broker assigns the conversation endpoint the priority level from the con
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    Priority Contract
@@ -126,6 +128,7 @@ Service Broker assigns the conversation endpoint the priority level from the con
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    Priority Contract
@@ -140,6 +143,7 @@ Service Broker assigns the conversation endpoint the priority level from the con
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    ANY
@@ -154,6 +158,7 @@ Service Broker assigns the conversation endpoint the priority level from the con
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    ANY
@@ -168,6 +173,7 @@ Service Broker assigns the conversation endpoint the priority level from the con
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    ANY
@@ -182,20 +188,23 @@ Service Broker assigns the conversation endpoint the priority level from the con
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
-   :::column span="1":::
-   ANY
+  :::column span="1":::
+  ANY
 
-   :::column-end:::
-   :::column span="1":::
-   ANY
+  :::column-end:::
+  :::column span="1":::
+  ANY
 
-   :::column-end:::
-   :::column span="1":::
-   ANY
+  :::column-end:::
+  :::column span="1":::
+  ANY
 
-   :::column-end:::
-:::row-end:::Service Broker first looks for a priority whose specified contract, local service, and remote service matches those used by the conversation endpoint. If one is not found, Service Broker then looks for a priority with a contract and local service that matches those used by the endpoint, and where the remote service was specified as ANY. This continues for all the variations listed in the precedence table. If no match is found, the endpoint is assigned the default priority of 5.
+  :::column-end:::
+:::row-end:::
+
+Service Broker first looks for a priority whose specified contract, local service, and remote service matches those used by the conversation endpoint. If one is not found, Service Broker then looks for a priority with a contract and local service that matches those used by the endpoint, and where the remote service was specified as ANY. This continues for all the variations listed in the precedence table. If no match is found, the endpoint is assigned the default priority of 5.
 
 The Service Broker communication protocols do not transmit priority levels between conversation endpoints. Service Broker independently assigns a priority level to each endpoint. To have Service Broker assign priority levels to both the initiator and target conversation endpoints, you must ensure that both endpoints are covered by conversation priorities. If the initiator and target conversation endpoints are in separate databases, you must create conversation priorities in each database. If the initiator and target endpoints are in the same database:
 
@@ -255,9 +264,9 @@ This script specifies the priority level for the initiator conversation endpoint
 
 This script specifies the priority level for the target conversation endpoint and its associated operations:
 
-  - The RECEIVE of the **RequestMessage** from the **TargetQueue**.
+- The RECEIVE of the **RequestMessage** from the **TargetQueue**.
 
-  - The SEND of the **ReplyMessage** from the **TargetService** to the **InitiatorQueue**.
+- The SEND of the **ReplyMessage** from the **TargetService** to the **InitiatorQueue**.
 
 <!-- end list -->
 ```sql
@@ -319,6 +328,7 @@ Messages and message fragments may be sent out of priority order:
 While individual messages or message fragments may be sent out of priority order, the effects should be small when considered across many message sends.
 
 ## See also
+
 - [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)
 - [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
 - [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)

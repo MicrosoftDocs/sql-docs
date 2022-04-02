@@ -48,10 +48,12 @@ If Service Broker message delivery is active, check the **transmission_status** 
 
    :::column-end:::
    :::column span="1":::
-   Service Broker could not locate a route to the service specified.
+
+   Service Broker couldn't locate a route to the service specified.
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    The target Service Broker is unreachable.
@@ -62,6 +64,7 @@ If Service Broker message delivery is active, check the **transmission_status** 
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    Transport layer is unavailable.
@@ -72,6 +75,7 @@ If Service Broker message delivery is active, check the **transmission_status** 
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    Target queue is disabled.
@@ -82,6 +86,7 @@ If Service Broker message delivery is active, check the **transmission_status** 
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    An error occurred while receiving data: '10054(An existing connection was forcibly closed by the remote host.)'.
@@ -92,6 +97,7 @@ If Service Broker message delivery is active, check the **transmission_status** 
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    (None)
@@ -101,7 +107,10 @@ If Service Broker message delivery is active, check the **transmission_status** 
    Service Broker has not yet tried to send the message. If the **enqueue_time** column shows the message has been in the queue a long time, Service Broker message delivery might not be activated in the database.
 
    :::column-end:::
-:::row-end:::## Problem: Route Exists, Transmission Status Shows No Route For Service
+:::row-end:::
+
+## Problem: Route Exists, Transmission Status Shows No Route For Service
+
 The most common causes for this problem are the following:
 
   - The SEND statement created the message when no route existed to successfully deliver the message.

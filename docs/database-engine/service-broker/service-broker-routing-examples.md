@@ -69,7 +69,9 @@ This example describes the default configuration for Service Broker routing. By 
    NULL
 
    :::column-end:::
-:::row-end:::**msdb.sys.routes**
+:::row-end:::
+
+**msdb.sys.routes**
 
 :::row:::
    :::column span="1":::

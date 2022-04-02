@@ -20,15 +20,15 @@ This tutorial is intended for users who are new to Service Broker, but are famil
 
 This tutorial builds on the tasks that you learned in the tutorial [Completing a Conversation in a Single Database](completing-a-conversation-in-a-single-database.md). In this tutorial you will learn how to configure the conversation so that it runs between two databases on the same instance of the Database Engine.
 
-The steps that you will follow in Lesson 2 are the same as those you followed in Lesson 1, with these exceptions:
+The steps that you follow in Lesson 2 are the same as those you followed in Lesson 1, with these exceptions:
 
-- You will create two databases: **InitiatorDB** and **TargetDB**. You will create all the initiator service and queue in the **InitiatorDB** and the target service and queue in the **TargetDB**.
+- Create two databases: **InitiatorDB** and **TargetDB**. You need to create all the initiator service and queue in the **InitiatorDB** and the target service and queue in the **TargetDB**.
 
-- You will create two copies of the message types and contacts, one in the **InitiatorDB** and the other in **TargetDB**. Both sides of the conversation must have access to message type and contract definitions that are identical.
+- Create two copies of the message types and contacts, one in the **InitiatorDB** and the other in **TargetDB**. Both sides of the conversation must have access to message type and contract definitions that are identical.
 
-- You will set the TRUSTWORTHY database property to ON in the **InitiatorDB**. This is the simplest mechanism for enabling conversations between two databases when they are on the same instance of the Database Engine.
+- Set the TRUSTWORTHY database property to ON in the **InitiatorDB**. This is the simplest mechanism for enabling conversations between two databases when they are on the same instance of the Database Engine.
 
-- You will learn which statements must be run in each database to complete a conversation, and the sequence in which they must be run.
+- Learn which statements must be run in each database to complete a conversation, and the sequence in which they must be run.
 
 Messages are not transmitted across a network for conversations that have both ends in the same instance of the Database Engine. Database Engine security and permissions restricts access to authorized principles. Network encryption is not needed for this scenario.
 
@@ -59,4 +59,5 @@ Your system must have the following installed:
 - A supported internet browser.
 
 ## See also
+
 - [Completing a Conversation Between Instances](completing-a-conversation-between-instances.md)

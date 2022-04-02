@@ -19,9 +19,9 @@ By default, Service Broker message delivery is active in a database when the dat
 > [!NOTE]  
 > Activating Service Broker allows messages to be delivered to the database. A Service Broker endpoint must be created to send and receive messages from outside of the instance.
 
-### To activate Service Broker in a database
+## To activate Service Broker in a database
 
-  - Alter the database to set the ENABLE_BROKER option.
+- Alter the database to set the ENABLE_BROKER option.
 
 ## Example
 
@@ -37,14 +37,7 @@ By default, Service Broker message delivery is active in a database when the dat
 
 ## See also
 
-
-[How to: Deactivate Service Broker Message Delivery in Databases (Transact-SQL)](how-to-deactivate-service-broker-message-delivery-in-databases-transact-sql.md)
-
-[How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md)
-
-
-
-[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-
-[sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)[sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
-
+- [How to: Deactivate Service Broker Message Delivery in Databases (Transact-SQL)](how-to-deactivate-service-broker-message-delivery-in-databases-transact-sql.md)
+- [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md)
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)[sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)

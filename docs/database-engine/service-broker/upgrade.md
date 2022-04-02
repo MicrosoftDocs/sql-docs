@@ -18,9 +18,9 @@ Service Broker operations do not change when a database or an instance of the Da
 
 Databases are upgraded when the following are true:
 
-  - They are attached to an instance of SQL Server Database Engine after they are detached from an instance of a previous version of the database engine.
+- They are attached to an instance of SQL Server Database Engine after they are detached from an instance of a previous version of the database engine.
 
-  - The instance of the database engine they are in is upgraded from a previous version.
+- The instance of the database engine they are in is upgraded from a previous version.
 
 ## Conversation Priorities
 

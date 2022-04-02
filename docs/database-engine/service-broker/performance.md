@@ -16,9 +16,9 @@ ms.date: "03/30/2022"
 
 The performance of a Service Broker application is generally determined by two factors:
 
-  - The number of messages arriving within a specified period of time.
+- The number of messages arriving within a specified period of time.
 
-  - The speed with which the application processes each message.
+- The speed with which the application processes each message.
 
 Monitoring these two factors is the key to understanding the performance of the application.
 

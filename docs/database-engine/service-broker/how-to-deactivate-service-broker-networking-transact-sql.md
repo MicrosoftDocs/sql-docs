@@ -18,9 +18,10 @@ Service Broker sends and receives messages over the network while any Service Br
 
 ## To deactivate Service Broker networking
 
-  - Drop all Service Broker endpoints.
+- Drop all Service Broker endpoints.
 
 ## Example
+
 ```sql
     USE master ;
     GO

@@ -20,9 +20,9 @@ Service Broker security relies on certificates. The general approach is to use c
 
 Service Broker provides two distinct types of security — dialog security and transport security. Understanding these two types of security, and how they work together, will help you to design, deploy, and administer Service Broker applications.
 
-  - **Dialog security** — Encrypts messages in an individual dialog conversation and verifies the identities of participants in the dialog. Dialog security also provides remote authorization and message integrity checking. Dialog security establishes authenticated and encrypted communication between two services.
+- **Dialog security** — Encrypts messages in an individual dialog conversation and verifies the identities of participants in the dialog. Dialog security also provides remote authorization and message integrity checking. Dialog security establishes authenticated and encrypted communication between two services.
 
-  - **Transport security** — Prevents unauthorized databases from sending Service Broker messages to databases in the local instance. Transport security establishes an authenticated network connection between two databases.
+- **Transport security** — Prevents unauthorized databases from sending Service Broker messages to databases in the local instance. Transport security establishes an authenticated network connection between two databases.
 
 Notice that the dialog protocol and the adjacent broker protocol are designed around passing messages between databases, rather than executing commands on a remote database. This style of communication allows Service Broker to provide services without requiring databases to share SQL Server logins or Windows security credentials.
 

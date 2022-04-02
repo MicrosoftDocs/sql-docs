@@ -22,13 +22,13 @@ Service Broker is a component of the Database Engine. Therefore, many of the Dat
 
 The **ssbdiagnose** utility analyzes the configuration of Service Broker services and running conversations for errors. Use **ssbdiagnose** to do the following:
 
-  - Confirm that there are no configuration errors in a newly configured Service Broker application.
+- Confirm that there are no configuration errors in a newly configured Service Broker application.
 
-  - Confirm that there are no configuration errors after you change the configuration of an existing Service Broker application.
+- Confirm that there are no configuration errors after you change the configuration of an existing Service Broker application.
 
-  - Confirm that there are no configuration errors after a Service Broker database is detached and then reattached to a new instance of the Database Engine.
+- Confirm that there are no configuration errors after a Service Broker database is detached and then reattached to a new instance of the Database Engine.
 
-  - Determine what errors are preventing messages from being successfully transmitted between services.
+- Determine what errors are preventing messages from being successfully transmitted between services.
 
 For more information about how to use the utility, see [ssbdiagnose Utility](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md).
 
@@ -38,9 +38,9 @@ Service Broker messages that are not successfully transmitted to the receiving q
 
 Not all messages in the transmission queue are caused by errors:
 
-  - Some messages in the queue could be in the process of being sent. Examples include waiting for a disconnected receiver to be reconnected or a network send to be acknowledged.
+- Some messages in the queue could be in the process of being sent. Examples include waiting for a disconnected receiver to be reconnected or a network send to be acknowledged.
 
-  - If a queue has RETENTION set to ON, successfully transmitted messages are kept in the transmission queue until the conversation is ended.
+- If a queue has RETENTION set to ON, successfully transmitted messages are kept in the transmission queue until the conversation is ended.
 
 The **is_conversation_error** column indicates whether the message has encountered an error.
 
@@ -62,11 +62,11 @@ For more information, see [Monitor Resource Usage (Performance Monitor)](../../r
 
 For more information about the Service Broker performance objects, see the following topics:
 
-  - [SQL Server, Broker Activation object](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md).
+- [SQL Server, Broker Activation object](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md).
 
-  - [SQL Server, Broker Statistics object](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md).
+- [SQL Server, Broker Statistics object](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md).
 
-  - [SQL Server, Broker/DBM Transport object](../../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md).
+- [SQL Server, Broker/DBM Transport object](../../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md).
 
 ## Service Broker Errors
 

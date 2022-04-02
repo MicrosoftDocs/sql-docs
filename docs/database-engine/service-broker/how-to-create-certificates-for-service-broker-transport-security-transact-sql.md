@@ -20,7 +20,7 @@ For more information using certificates for Service Broker transport security, s
 
 ## To create a certificate for Service Broker transport security
 
-  - Create a certificate in the **master** database.
+- Create a certificate in the **master** database.
 
 ## Example
 

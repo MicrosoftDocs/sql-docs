@@ -40,5 +40,6 @@ If the application ended the conversation with an error, Service Broker stores t
 In either case, the application ends the conversation. Service Broker sends one **MissingRemoteServiceBinding** message at a time for a specific service regardless of the number of conversations to the service. Further, Service Broker uses the longest possible time out for requests to the BCN service. Therefore if the BCN service does not end the conversation, Service Broker does not create a new request to the service. If the BCN service did not create a remote service binding, secure messages (ENCRYPTION=ON) remain delayed until the conversation lifetime expires. However, non-secure messages (ENCRYPTION=OFF) will continue after the BCN service ends the conversation.
 
 ## See also
+
 - [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
 - [Service Broker Configuration Notice Service](service-broker-configuration-notice-service.md)

@@ -45,15 +45,16 @@ Messages must be exchanged both ways before the local database considers the ide
 
 For the first message sent by each side of the conversation, Service Broker includes the following headers:
 
-  - A service pair security header containing information on the certificates used for the message. The service pair security header is signed with the private key for the user who owns the service.
+- A service pair security header containing information on the certificates used for the message. The service pair security header is signed with the private key for the user who owns the service.
 
-  - A key exchange key that encrypts the 128-bit session key used to encrypt the body of the message. The key exchange key is encrypted with the public key for the remote user.
+- A key exchange key that encrypts the 128-bit session key used to encrypt the body of the message. The key exchange key is encrypted with the public key for the remote user.
 
 For dialogs that use anonymous security, the service pair security header remains unencrypted. The message itself is still encrypted, and the key exchange key is encrypted with the public key for the security principal in the target database. In this case, the first return message does not contain a key exchange key, service pair security header, or an encrypted session key.
 
 When Service Broker itself generates a message in response to an incoming message (for example, an error or an acknowledgment), that message uses the session key of the incoming message, regardless of whether the dialog uses full security or anonymous security.
 
 ## See also
+
 - [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
 - [ALTER REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)
 - [ALTER REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)

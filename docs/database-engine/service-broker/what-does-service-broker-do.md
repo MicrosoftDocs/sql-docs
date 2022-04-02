@@ -60,25 +60,25 @@ The following illustrates the exchange of messages in a typical dialog conversat
 
 - At the initiator:
 
-  - A program begins the conversation.
+- A program begins the conversation.
 
-  - The program builds a message that contains the data required to perform a task.
+- The program builds a message that contains the data required to perform a task.
 
-  - The program sends the message to the target service.
+- The program sends the message to the target service.
 
-  - At the target:
+- At the target:
 
-    - The message is placed in the queue associated with the target service.
+  - The message is placed in the queue associated with the target service.
 
-    - A program receives the message from the queue and performs the work.
+  - A program receives the message from the queue and performs the work.
 
-    - The program responds by sending a message to the initiator service.
+  - The program responds by sending a message to the initiator service.
 
-  - At the initiator:
+- At the initiator:
 
-    - The response message is placed in the queue associated with the initiator service.
+  - The response message is placed in the queue associated with the initiator service.
 
-    - A program receives the response and processes it.
+  - A program receives the response and processes it.
 
 This cycle repeats until the initiator ends the conversation because it has no more requests to send to the target.
 

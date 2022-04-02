@@ -17,13 +17,14 @@ ms.date: "03/30/2022"
 In this lesson, you will learn to create the target database and all the Service Broker target objects that do not have dependencies on the initiator database. Run these steps from a copy of Management Studio that is running on the same computer as the target instance the Database Engine.
 
 ## Procedures
+
 ### Create a Service Broker endpoint
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to create a Service Broker endpoint for this instance of the Database Engine. A Service Broker endpoint establishes the network address to which Service Broker messages are sent. This endpoint uses the Service Broker default of TCP port 4022, and establishes that the remote instances of the Database Engine will use Windows Authentication connections to send messages. 
+- Copy and paste the following code into a Query Editor window. Then, run it to create a Service Broker endpoint for this instance of the Database Engine. A Service Broker endpoint establishes the network address to which Service Broker messages are sent. This endpoint uses the Service Broker default of TCP port 4022, and establishes that the remote instances of the Database Engine will use Windows Authentication connections to send messages.
     
     Windows Authentication works when both computers are in the same domain or trusted domains. If the computers are not in trusted domains, use certificate security for the endpoints. For more information, see [How to: Create Certificates for Service Broker Transport Security (Transact-SQL)](how-to-create-certificates-for-service-broker-transport-security-transact-sql.md).
     
-    ```
+    ```sql
         USE master;
         GO
         IF EXISTS (SELECT * FROM master.sys.endpoints
@@ -39,9 +40,9 @@ In this lesson, you will learn to create the target database and all the Service
 
 ### Create the target database, master key, and user
 
-  - Copy and paste the following code into a Query Editor window. Change the password on the CREATE MASTER KEY statement. Then, run the code to create the target database used for this tutorial. By default, new databases have the ENABLE_BROKER option set to on. The code also creates the master key and user that will be used to support encryption and remote connections.
+- Copy and paste the following code into a Query Editor window. Change the password on the CREATE MASTER KEY statement. Then, run the code to create the target database used for this tutorial. By default, new databases have the ENABLE_BROKER option set to on. The code also creates the master key and user that will be used to support encryption and remote connections.
 
-    ```sql   
+    ```sql
         USE master;
         GO
         IF EXISTS (SELECT * FROM sys.databases
@@ -61,9 +62,9 @@ In this lesson, you will learn to create the target database and all the Service
 
 ### Create the target certificate
 
-  - Copy and paste the following code into a Query Editor window. Change the file name that is specified in the BACKUP CERTIFICATE statement to refer to a folder on your system. Then, run the code to create the target certificate that is used to encrypt messages. The folder that you specify should have permissions that prevent access from accounts other than your Windows account and the Windows account the instance of the Database Engine is running under. For Lesson 2, you must manually copy the **InstTargetCertificate.cer** file to a folder that can be accessed from the initiator instance.
+- Copy and paste the following code into a Query Editor window. Change the file name that is specified in the BACKUP CERTIFICATE statement to refer to a folder on your system. Then, run the code to create the target certificate that is used to encrypt messages. The folder that you specify should have permissions that prevent access from accounts other than your Windows account and the Windows account the instance of the Database Engine is running under. For Lesson 2, you must manually copy the **InstTargetCertificate.cer** file to a folder that can be accessed from the initiator instance.
 
-    ```sql 
+    ```sql
         CREATE CERTIFICATE InstTargetCertificate 
              AUTHORIZATION TargetUser
              WITH SUBJECT = 'Target Certificate',
@@ -77,9 +78,9 @@ In this lesson, you will learn to create the target database and all the Service
 
 ### Create the message types
 
-  - Copy and paste the following code into a Query Editor window then run it to create the message types for the conversation. The message type names and properties specified here must be identical to the ones that you will create in the **InstInitiatorDB** in the next lesson.
+- Copy and paste the following code into a Query Editor window then run it to create the message types for the conversation. The message type names and properties specified here must be identical to the ones that you will create in the **InstInitiatorDB** in the next lesson.
 
-    ```sql   
+    ```sql
         CREATE MESSAGE TYPE [//BothDB/2InstSample/RequestMessage]
                VALIDATION = WELL_FORMED_XML;
         CREATE MESSAGE TYPE [//BothDB/2InstSample/ReplyMessage]
@@ -89,9 +90,9 @@ In this lesson, you will learn to create the target database and all the Service
 
 ### Create the contract
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to create the contract for the conversation. The contract name and properties that are specified here must be identical to the contract that you will create in the **InstInitiatorDB** in the next lesson.
+- Copy and paste the following code into a Query Editor window. Then, run it to create the contract for the conversation. The contract name and properties that are specified here must be identical to the contract that you will create in the **InstInitiatorDB** in the next lesson.
 
-    ```sql   
+    ```sql
         CREATE CONTRACT [//BothDB/2InstSample/SimpleContract]
               ([//BothDB/2InstSample/RequestMessage]
                  SENT BY INITIATOR,
@@ -103,9 +104,9 @@ In this lesson, you will learn to create the target database and all the Service
 
 ### Create the target queue and service
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to create the queue and service that is used for the target. The CREATE SERVICE statement associates the service with the **InstTargetQueue**, so that all messages sent to the service will be received into the **InstTargetQueue**. The CREATE SERVICE also specifies that only conversations that use the **//BothDB/ 2InstSample/SimpleContract** that was created earlier can use the service as a target service.
+- Copy and paste the following code into a Query Editor window. Then, run it to create the queue and service that is used for the target. The CREATE SERVICE statement associates the service with the **InstTargetQueue**, so that all messages sent to the service will be received into the **InstTargetQueue**. The CREATE SERVICE also specifies that only conversations that use the **//BothDB/ 2InstSample/SimpleContract** that was created earlier can use the service as a target service.
 
-    ```sql   
+    ```sql
         CREATE QUEUE InstTargetQueue;
         
         CREATE SERVICE [//TgtDB/2InstSample/TargetService]

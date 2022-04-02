@@ -18,7 +18,7 @@ Service Broker sends and receives messages over the network while any endpoint f
 
 ## To pause Service Broker networking
 
-  - Alter all Service Broker endpoints to set the state to **STOPPED**.
+- Alter all Service Broker endpoints to set the state to **STOPPED**.
 
 ## Example
 

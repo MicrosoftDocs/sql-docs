@@ -22,7 +22,7 @@ In this lesson, you will learn to drop the objects that enabled a database to su
 
 ### Switch to the AdventureWorks2008R2 database
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **AdventureWorks2008R2** database.
+- Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **AdventureWorks2008R2** database.
     ```
         USE AdventureWorks2008R2;
         GO
@@ -30,7 +30,7 @@ In this lesson, you will learn to drop the objects that enabled a database to su
 
 ### Drop the conversation objects
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to drop the objects that were used to support the conversation.
+- Copy and paste the following code into a Query Editor window. Then, run it to drop the objects that were used to support the conversation.
     ```sql   
         IF EXISTS (SELECT * FROM sys.objects
                    WHERE name =

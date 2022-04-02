@@ -25,6 +25,7 @@ More than one contract can use the same message types. For example, a message th
 The network format for a message includes the name of the contract. Therefore, contract names are often chosen to avoid collation issues and naming conflicts. For more information on naming, see [Naming Service Broker Objects](naming-service-broker-objects.md).
 
 ## See also
+
 - [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
 - [Conversation Architecture](conversation-architecture.md)
 - [Contracts](contracts.md)

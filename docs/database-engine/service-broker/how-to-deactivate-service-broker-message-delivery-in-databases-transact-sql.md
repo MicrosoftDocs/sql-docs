@@ -19,7 +19,7 @@ When message delivery is not active, messages remain in the transmission queue. 
 > [!NOTE]  
 > Deactivating Service Broker prevents messages from being sent from or delivered to the database. However, this does not prevent messages from arriving in the instance. To prevent messages from arriving in the instance, you must remove or stop the Service Broker endpoint.### To deactivate Service Broker in a database
 
-  - Alter the database to set the DISABLE_BROKER option.
+- Alter the database to set the DISABLE_BROKER option.
 
 ## Example
 

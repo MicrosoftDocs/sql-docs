@@ -23,9 +23,9 @@ Service Broker routing uses the Service Broker identifier to ensure that all mes
 
 Service Broker identifiers can be specified in the TO SERVICE clause of the BEGIN DIALOG CONVERSATION statement to control the type of routing to be performed:
 
-  - To route conversations to a specific copy of a service, specify a *service_broker_guid*. For example, you could have three copies of a service in three databases on the network: a development database, a test database, and a production database. The BEGIN DIALOG CONVERSATION statements in each system should specify *service_broker_guid* to ensure that all messages go to the correct database.
+- To route conversations to a specific copy of a service, specify a *service_broker_guid*. For example, you could have three copies of a service in three databases on the network: a development database, a test database, and a production database. The BEGIN DIALOG CONVERSATION statements in each system should specify *service_broker_guid* to ensure that all messages go to the correct database.
 
-  - To let Service Broker balance conversation loads across multiple copies of a service, do not specify *service_broker_guid*. Service Broker will alternatively pick among the routes with the same service name as is specified in the TO SERVICE clause of BEGIN DIALOG CONVERSATION.
+- To let Service Broker balance conversation loads across multiple copies of a service, do not specify *service_broker_guid*. Service Broker will alternatively pick among the routes with the same service name as is specified in the TO SERVICE clause of BEGIN DIALOG CONVERSATION.
 
 By default, if there is only one copy of a service in a network, Service Broker correctly routes the conversations. You do not have to specify the Service Broker identifier in CREATE ROUTE or BEGIN DIALOG CONVERSATION statements.
 
@@ -47,15 +47,15 @@ The CREATE DATABASE command, the ALTER DATABASE command, and the RESTORE DATABAS
 
 By default, when you attach or restore a database, the Service Broker identifier and message delivery status are unchanged. Typically, you do not change the Service Broker identifier in the following situations:
 
-  - When you restore a backup for recovery purposes.
+- When you restore a backup for recovery purposes.
 
-  - When you configure a mirrored pair.
+- When you configure a mirrored pair.
 
-  - When you set up log shipping for a standby server. When you are making a copy of the database, you change the instance identifier.
+- When you set up log shipping for a standby server. When you are making a copy of the database, you change the instance identifier.
 
 There are four options to manage identifiers and message delivery:
 
-  - ENABLE_BROKER. This option activates Service Broker message delivery, preserving the existing Service Broker identifier for the database.
+- ENABLE_BROKER. This option activates Service Broker message delivery, preserving the existing Service Broker identifier for the database.
     
     
     
@@ -64,11 +64,11 @@ There are four options to manage identifiers and message delivery:
     > Enabling SQL Server Service Broker in any database require a database lock. To enable Service Broker in the **msdb** database, first stop SQL Server Agent. Then, Service Broker can obtain the necessary lock.    
     
 
-  - DISABLE_BROKER. This option deactivates Service Broker message delivery, preserving the existing Service Broker identifier for the database.
+- DISABLE_BROKER. This option deactivates Service Broker message delivery, preserving the existing Service Broker identifier for the database.
 
-  - NEW_BROKER. This option activates Service Broker message delivery and creates a new Service Broker identifier for the database. This option ends all existing conversations in the database, and returns an error for each conversation. This is because these conversations do not use the new identifier. Any route that references the old Service Broker identifier must be re-created with the new identifier.
+- NEW_BROKER. This option activates Service Broker message delivery and creates a new Service Broker identifier for the database. This option ends all existing conversations in the database, and returns an error for each conversation. This is because these conversations do not use the new identifier. Any route that references the old Service Broker identifier must be re-created with the new identifier.
 
-  - ERROR_BROKER_CONVERSATIONS. This option activates Service Broker message delivery, preserving the existing Service Broker identifier for the database. Service Broker ends all conversations in the database, and returns an error for each conversation. This option is typically used when you must restore a database to a different point in time than other databases with which it has open conversations. All conversations in the restored database must be ended with an error because they are now out of sync with the other databases. The Service Broker identifier is retained so that all routes that reference the identifier are still valid.
+- ERROR_BROKER_CONVERSATIONS. This option activates Service Broker message delivery, preserving the existing Service Broker identifier for the database. Service Broker ends all conversations in the database, and returns an error for each conversation. This option is typically used when you must restore a database to a different point in time than other databases with which it has open conversations. All conversations in the restored database must be ended with an error because they are now out of sync with the other databases. The Service Broker identifier is retained so that all routes that reference the identifier are still valid.
 
 Regardless of the specified option, SQL Server does not allow for two databases that have the same Service Broker identifier to both have message delivery active in the same instance of SQL Server. If you attach a database that has the same Service Broker identifier as an existing database, SQL Server deactivates Service Broker message delivery in the database that is being attached.
 

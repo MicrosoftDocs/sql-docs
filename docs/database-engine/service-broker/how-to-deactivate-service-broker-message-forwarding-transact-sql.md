@@ -16,11 +16,12 @@ ms.date: "03/30/2022"
 
 Message forwarding allows an instance of SQL Server to accept messages from outside the instance and send those messages to a different instance. Message forwarding is configured on a Service Broker endpoint.
 
-### To deactivate Service Broker message forwarding
+## To deactivate Service Broker message forwarding
 
-  - Alter the endpoint to deactivate message forwarding.
+- Alter the endpoint to deactivate message forwarding.
 
 ## Example
+
 ```sql
     USE master ;
     GO

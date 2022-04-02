@@ -19,6 +19,7 @@ Service Broker is designed to let services and applications in instances with di
 The byte-by-byte match is effectively a binary comparison that does not consider the current collation. For this reason, many broker services find it convenient to follow the recommendations in [Naming Service Broker Objects](naming-service-broker-objects.md). An application that follows these guidelines and treats all names as case-sensitive should function correctly regardless of differences in collation between the database that hosts the target service and the database that hosts the initiating service.
 
 ## Queue Collation Considerations
+
 Queues use a consistent collation regardless of the default collation of the SQL Server instance or the default collation of the database that hosts the queue. If a queue is the target of a SELECT statement that includes a JOIN statement with another table in the database, such as a table used to maintain state, you may be required to explicitly specify the collation for the comparison.
 
 For example, an application that uses message retention may need to preserve some messages for a conversation before the application ends the conversation. The following Transact-SQL code sample saves all messages, for a given conversation, that have a message type name in the table **AuditedMessageTypes**.

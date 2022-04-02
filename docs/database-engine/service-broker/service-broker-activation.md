@@ -24,13 +24,13 @@ Not all Service Broker applications use activation. If an application requires s
 
 ## In This Section
 
-  - [Understanding When Activation Occurs](understanding-when-activation-occurs.md)  
+- [Understanding When Activation Occurs](understanding-when-activation-occurs.md)  
     Describes the two steps of the Service Broker activation process.
 
-  - [Internal Activation Context](internal-activation-context.md)  
+- [Internal Activation Context](internal-activation-context.md)  
     Describes the execution context for a stored procedure that is started by internal activation.
 
-  - [Event-Based Activation](event-based-activation.md)  
+- [Event-Based Activation](event-based-activation.md)  
     Describes the event and strategies for receiving and responding to the event
 
 ## See also

@@ -22,13 +22,13 @@ Service Broker supports asynchronous, queued messaging. Because conversations ca
 
 The strategies for starting an application fall into four broad categories:
 
-  - Internal activation
+- Internal activation
 
-  - Event-based activation
+- Event-based activation
 
-  - Scheduled task
+- Scheduled task
 
-  - Startup task
+- Startup task
 
 Each activation strategy has different advantages. An application can combine these strategies. For example, an application can use internal activation with a small number of queue readers most of the time. But, at certain times of the day, it can start more queue readers.
 
@@ -61,6 +61,7 @@ Some applications start one time, typically when the computer starts or when SQL
 This strategy can be useful for an application that processes a constant stream of messages and that is relatively resource-intensive during startup.
 
 ## See also
+
 - [Create a Job](../../ssms/agent/create-a-job.md)
 - [Service Broker Activation](service-broker-activation.md)
 - [Implementing Internal Activation](implementing-internal-activation.md)

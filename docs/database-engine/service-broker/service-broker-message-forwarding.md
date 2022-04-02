@@ -18,11 +18,11 @@ Service Broker message forwarding allows an instance of SQL Server to accept mes
 
 An administrator can use message forwarding to:
 
-  - Provide connectivity between servers in different trust domains
+- Provide connectivity between servers in different trust domains
 
-  - Simplify administration by creating a single centralized instance that holds the routing information for a domain
+- Simplify administration by creating a single centralized instance that holds the routing information for a domain
 
-  - Distribute work among several instances
+- Distribute work among several instances
 
 When forwarding is enabled, the routing table in **msdb.sys.routes** determines whether a message that arrives from another instance is forwarded. If the address for the matching route is not LOCAL, SQL Server forwards the message to the address specified. Otherwise, the message is delivered locally.
 

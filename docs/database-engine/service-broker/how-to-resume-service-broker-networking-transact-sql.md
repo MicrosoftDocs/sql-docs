@@ -21,7 +21,7 @@ Service Broker sends and receives messages over the network while any endpoint f
 
 ## To resume Service Broker networking
 
-  - Alter an endpoint to set the state to **STARTED**.
+- Alter an endpoint to set the state to **STARTED**.
 
 ## Example
 

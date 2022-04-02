@@ -113,9 +113,9 @@ If Service Broker message delivery is active, check the **transmission_status** 
 
 The most common causes for this problem are the following:
 
-  - The SEND statement created the message when no route existed to successfully deliver the message.
+- The SEND statement created the message when no route existed to successfully deliver the message.
 
-  - The route was then created, but Service Broker has not yet tried to resend the message.
+- The route was then created, but Service Broker has not yet tried to resend the message.
 
 For more information about retries, see [Service Broker Routing and Networking](service-broker-routing-and-networking.md).
 

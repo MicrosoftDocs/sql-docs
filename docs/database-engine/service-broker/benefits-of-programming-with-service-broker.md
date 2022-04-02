@@ -18,19 +18,19 @@ Queuing and asynchronous messaging are needed for many database applications tod
 
 Some of the benefits of programming with Service Broker are:
 
-  - **Flexible development:** The programs used in a single distributed application can be written in multiple languages. Each program provides the functionality of each distributed application component.
+- **Flexible development:** The programs used in a single distributed application can be written in multiple languages. Each program provides the functionality of each distributed application component.
 
-  - **Improved security:** You can express security requirements via certificates, so application components do not need to share the same security context. Service Broker uses SQL Server security features to help you secure your applications.
+- **Improved security:** You can express security requirements via certificates, so application components do not need to share the same security context. Service Broker uses SQL Server security features to help you secure your applications.
 
-  - **Transactional processing:** Message processing occurs within SQL Server transactions to ensure data integrity. Service Broker supports remote transactional messaging over a standard connection to the database.
+- **Transactional processing:** Message processing occurs within SQL Server transactions to ensure data integrity. Service Broker supports remote transactional messaging over a standard connection to the database.
 
-  - **Guaranteed ordering:** Service Broker provides strong guarantees regarding the delivery and processing of a related set of messages exactly once and in order, so no additional coding is required to provide this functionality.
+- **Guaranteed ordering:** Service Broker provides strong guarantees regarding the delivery and processing of a related set of messages exactly once and in order, so no additional coding is required to provide this functionality.
 
-  - **Reliable delivery:** All of the data needed for a conversation--a set of related communications between two or more services--is persisted in SQL Server. Service Broker supports clustering and database mirroring. A conversation may be maintained through system restarts, server failover, network outages, and so on without failing or losing data.
+- **Reliable delivery:** All of the data needed for a conversation--a set of related communications between two or more services--is persisted in SQL Server. Service Broker supports clustering and database mirroring. A conversation may be maintained through system restarts, server failover, network outages, and so on without failing or losing data.
 
-  - **Improved scalability:** Service Broker routing delivers messages based on the name of the service, rather than on the network address of the computer where the service runs. This allows you to install an application on multiple computers without changing application code.
+- **Improved scalability:** Service Broker routing delivers messages based on the name of the service, rather than on the network address of the computer where the service runs. This allows you to install an application on multiple computers without changing application code.
 
-  - **Ability to leverage existing knowledge:** Service Broker uses Transact-SQL to create objects. Applications that use Service Broker are most often implemented in Transact-SQL or Microsoft .NET Framework-compatible languages. You do not have to learn a new language to create Service Broker applications.
+- **Ability to leverage existing knowledge:** Service Broker uses Transact-SQL to create objects. Applications that use Service Broker are most often implemented in Transact-SQL or Microsoft .NET Framework-compatible languages. You do not have to learn a new language to create Service Broker applications.
 
 ## See also
 

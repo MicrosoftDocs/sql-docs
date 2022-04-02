@@ -16,13 +16,14 @@ ms.date: "03/30/2022"
 
 Message forwarding allows an instance of SQL Server to accept messages from outside the instance and send those messages to a different instance. Message forwarding is configured on a Service Broker endpoint.
 
-### To activate Service Broker message forwarding
+## To activate Service Broker message forwarding
 
-1.  Activate Service Broker networking if networking is not already active. For more information on Service Broker networking, see [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md).
+1. Activate Service Broker networking if networking is not already active. For more information on Service Broker networking, see [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md).
 
-2.  Alter the endpoint to activate message forwarding, and specify the maximum size, in megabytes, for forwarded messages.
+2. Alter the endpoint to activate message forwarding, and specify the maximum size, in megabytes, for forwarded messages.
 
 ## Example
+
 ```sql
     USE master ;
     GO
@@ -35,8 +36,5 @@ Message forwarding allows an instance of SQL Server to accept messages from outs
 
 ## See also
 
-
-[How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md)
-
-[How to: Deactivate Service Broker Message Forwarding (Transact-SQL)](how-to-deactivate-service-broker-message-forwarding-transact-sql.md)
-
+- [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md)
+- [How to: Deactivate Service Broker Message Forwarding (Transact-SQL)](how-to-deactivate-service-broker-message-forwarding-transact-sql.md)

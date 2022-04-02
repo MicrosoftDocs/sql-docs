@@ -20,7 +20,7 @@ In this lesson, you will learn to receive the reply message from the target serv
 
 ### Switch to the InitiatorDB database
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to switch context back to the **InstInitiatorDB** database where you will receive the reply message and end the conversation.
+- Copy and paste the following code into a Query Editor window. Then, run it to switch context back to the **InstInitiatorDB** database where you will receive the reply message and end the conversation.
 
     ```sql
         USE InstInitiatorDB;
@@ -29,7 +29,7 @@ In this lesson, you will learn to receive the reply message from the target serv
 
 ### Receive the reply and end the conversation
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to receive the reply message and end the conversation. The RECEIVE statement retrieves the reply message from the **InstInitiatorQueue**. The END CONVERSATION statement ends the initiator side of the conversation. The last SELECT statement displays the text of the reply message so that you can confirm it is the same as what was sent in the last step.
+- Copy and paste the following code into a Query Editor window. Then, run it to receive the reply message and end the conversation. The RECEIVE statement retrieves the reply message from the **InstInitiatorQueue**. The END CONVERSATION statement ends the initiator side of the conversation. The last SELECT statement displays the text of the reply message so that you can confirm it is the same as what was sent in the last step.
 
     ```sql
         DECLARE @RecvReplyMsg NVARCHAR(100);

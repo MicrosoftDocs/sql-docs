@@ -83,13 +83,13 @@ A Service Broker transmission object is an in-memory object that manages and rec
 
 A dialog requests a transmission object when it does the following:
 
-  - Sends a message through the transmission queue. This includes the following:
+- Sends a message through the transmission queue. This includes the following:
     
-      - All messages sent to a remote instance of the Database Engine
+    - All messages sent to a remote instance of the Database Engine
     
-      - Messages to sent queues in the local instance if the message cannot be directly inserted into the destination queue
+    - Messages to sent queues in the local instance if the message cannot be directly inserted into the destination queue
 
-  - Receives either a remote message or a message that comes from a local transmission queue.
+- Receives either a remote message or a message that comes from a local transmission queue.
 
 A transmission object is created the first time that a dialog requests one. Service Broker uses the same transmission object for subsequent requests from that dialog. Transmission objects are modified every time that Service Broker has to record a change in the state of transmissions for the dialog. Transmission objects are about 1 KB.
 

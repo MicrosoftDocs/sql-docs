@@ -24,60 +24,61 @@ Each Service Broker conversation has two ends: the conversation initiator and ta
 
 You will perform the following tasks:
 
-  - Create a service and queue for the target and a service and queue for the initiator.
+- Create a service and queue for the target and a service and queue for the initiator.
 
-  - Create a request message type and a reply message type.
+- Create a request message type and a reply message type.
 
-  - Create a contract that specifies request messages go from the initiator to the target, and that reply messages go from the target to the initiator.
+- Create a contract that specifies request messages go from the initiator to the target, and that reply messages go from the target to the initiator.
 
-  - Create a stored procedure that receives request messages from the target queue and sends reply messages to the initiator.
+- Create a stored procedure that receives request messages from the target queue and sends reply messages to the initiator.
 
-  - Alter the target queue to enable internal activation of the stored procedure.
+- Alter the target queue to enable internal activation of the stored procedure.
 
 You will then perform a simple conversation:
 
-  - Start the conversation.
+- Start the conversation.
 
-  - Send a request from the initiator to the target.
+- Send a request from the initiator to the target.
 
-  - Service Broker will then activate the stored procedure. The stored procedure will receive the request at the target and send a reply to the initiator.
+- Service Broker will then activate the stored procedure. The stored procedure will receive the request at the target and send a reply to the initiator.
 
-  - Receive the reply at the initiator.
+- Receive the reply at the initiator.
 
-  - End the initiator side of the conversation.
+- End the initiator side of the conversation.
 
-  - Service Broker will then activate the stored procedure a second time, and the stored procedure will end the target side of the conversation.
+- Service Broker will then activate the stored procedure a second time, and the stored procedure will end the target side of the conversation.
 
 Messages are not transmitted across a network for conversations that have both ends in the same instance of the Database Engine. Database Engine security and permissions restricts access to authorized principles. Network encryption is not needed for this scenario.
 
 This tutorial is divided into three lessons:
 
-  - [Lesson 1: Creating the Base Conversation Objects](lesson-1-creating-the-base-conversation-objects.md)  
+- [Lesson 1: Creating the Base Conversation Objects](lesson-1-creating-the-base-conversation-objects.md)  
     In this lesson, you create the message types, contract, services, and queues that are required to support a basic Service Broker conversation.
 
-  - [Lesson 2: Creating an Internal Activation Procedure](lesson-2-creating-an-internal-activation-procedure.md)  
+- [Lesson 2: Creating an Internal Activation Procedure](lesson-2-creating-an-internal-activation-procedure.md)  
     In this lesson, you create the stored procedure that will receive messages from the target queue, then alter the target queue to specify internal activation.
 
-  - [Lesson 3: Beginning a Conversation and Transmitting Messages](lesson-3-beginning-a-conversation-and-transmitting-messages.md)  
+- [Lesson 3: Beginning a Conversation and Transmitting Messages](lesson-3-beginning-a-conversation-and-transmitting-messages.md)  
     In this lesson, you complete a basic conversation by starting the conversation and transmitting a request message from the initiator to the target. The internal activation stored procedure will receive the request message and return a reply message. You will then end the initiator side of the conversation, and the stored procedure will end the target side of the conversation.
 
-  - [Lesson 4: Dropping the Conversation Objects](lesson-4-dropping-the-conversation-objects.md)  
+- [Lesson 4: Dropping the Conversation Objects](lesson-4-dropping-the-conversation-objects.md)  
     In this lesson, you drop the objects that were created to support the conversation.
 
 ## Requirements
+
 To complete this tutorial, you should be familiar with the Transact-SQL language and how to use the Database Engine Query Editor in SQL Server Management Studio. You must be a member of the **db_ddladmin** or **db_owner** fixed database roles for the AdventureWorks2008R2 sample database, or the **sysadmin** fixed server role.
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
 Your system must have the following installed:
 
-  - Any edition of SQL Server.
+- Any edition of SQL Server.
 
-  - Either SQL Server Management Studio or Management Studio Express.
+- Either SQL Server Management Studio or Management Studio Express.
 
-  - A supported internet browser.
+- A supported internet browser.
 
-  - The AdventureWorks2008R2 sample database. For more information about how to install the sample databases, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
+- The AdventureWorks2008R2 sample database. For more information about how to install the sample databases, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
 
 ## See also
 

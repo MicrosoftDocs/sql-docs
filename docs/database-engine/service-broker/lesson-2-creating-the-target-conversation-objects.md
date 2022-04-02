@@ -17,19 +17,20 @@ ms.date: "03/30/2022"
 In this lesson, you will learn to build all the objects that enable a database to be the target of a conversation from another database.
 
 ## Procedures
+
 ### Switch to the TargetDB database
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **TargetDB** database.
-  ```sql   
+- Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **TargetDB** database.
+  ```sql
         USE TargetDB;
         GO
   ```
 
 ### Create the message types
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to create the message types for the conversation. The message type names and properties that you specify must be identical to the ones that you will create in the **InitiatorDB** in the next lesson.
+- Copy and paste the following code into a Query Editor window. Then, run it to create the message types for the conversation. The message type names and properties that you specify must be identical to the ones that you will create in the **InitiatorDB** in the next lesson.
 
-    ```sql   
+    ```sql
         CREATE MESSAGE TYPE [//BothDB/2DBSample/RequestMessage]
                VALIDATION = WELL_FORMED_XML;
         CREATE MESSAGE TYPE [//BothDB/2DBSample/ReplyMessage]
@@ -39,9 +40,9 @@ In this lesson, you will learn to build all the objects that enable a database t
 
 ### Create the contract
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to create the contract for the conversation. The contract name and properties that you specify must be identical to the contract you will create in the **InitiatorDB** in the next lesson.
+- Copy and paste the following code into a Query Editor window. Then, run it to create the contract for the conversation. The contract name and properties that you specify must be identical to the contract you will create in the **InitiatorDB** in the next lesson.
 
-    ```sql 
+    ```sql
         CREATE CONTRACT [//BothDB/2DBSample/SimpleContract]
               ([//BothDB/2DBSample/RequestMessage]
                  SENT BY INITIATOR,
@@ -53,9 +54,9 @@ In this lesson, you will learn to build all the objects that enable a database t
 
 ### Create the target queue and service
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to create the queue and service that is used for the target. The CREATE SERVICE statement associates the service with the **TargetQueue2DB** so that all messages that are sent to the service will be received into the **TargetQueue2DB**. The CREATE SERVICE also specifies that only conversations that use the **//BothDB/2DBSample/SimpleContract** that you created earlier can use the service as a target service.
+- Copy and paste the following code into a Query Editor window. Then, run it to create the queue and service that is used for the target. The CREATE SERVICE statement associates the service with the **TargetQueue2DB** so that all messages that are sent to the service will be received into the **TargetQueue2DB**. The CREATE SERVICE also specifies that only conversations that use the **//BothDB/2DBSample/SimpleContract** that you created earlier can use the service as a target service.
 
-    ```sql   
+    ```sql
         CREATE QUEUE TargetQueue2DB;
         
         CREATE SERVICE [//TgtDB/2DBSample/TargetService]

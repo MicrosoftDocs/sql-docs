@@ -40,19 +40,19 @@ For convenience, SQL Server allows an application to lock the next available con
 
 Service Broker manages the lifetime of the conversation group. You do not need to explicitly create or destroy a conversation group. Service Broker creates a new conversation group under the following circumstances:
 
-  - An application begins a new conversation that is not related to an existing conversation group. Service Broker creates a new conversation group and assigns a new identifier to the conversation group.
+- An application begins a new conversation that is not related to an existing conversation group. Service Broker creates a new conversation group and assigns a new identifier to the conversation group.
 
-  - An application begins a conversation related to a conversation group identifier that does not currently exist. In this case, Service Broker creates a new conversation group with the specified identifier. This means you can assign your own value to a conversation group identifier.
+- An application begins a conversation related to a conversation group identifier that does not currently exist. In this case, Service Broker creates a new conversation group with the specified identifier. This means you can assign your own value to a conversation group identifier.
 
-  - Service Broker receives the first message on a new conversation started by another service. In this case, Service Broker uses the name of the service and the broker instance identifier (if one is present) to do the following:
-    
-    1.  Locate the appropriate queue.
-    
-    2.  Create a new conversation group and associate the conversation group with the queue.
-    
-    3.  Create a new conversation handle and add the conversation handle to the new conversation group.
-    
-    4.  Place the incoming message on the queue.
+- Service Broker receives the first message on a new conversation started by another service. In this case, Service Broker uses the name of the service and the broker instance identifier (if one is present) to do the following:
+
+1. Locate the appropriate queue.
+
+2. Create a new conversation group and associate the conversation group with the queue.
+
+3. Create a new conversation handle and add the conversation handle to the new conversation group.
+
+4. Place the incoming message on the queue.
 
 Service Broker adds the conversation group identifier to the metadata for the conversation that created the conversation group. Whenever Service Broker receives a message for any conversation associated with the conversation group, Service Broker adds the conversation group identifier to that message before entering the message in the queue.
 
@@ -61,6 +61,7 @@ A conversation group identifier is valid from the time Service Broker creates it
 An application that uses the conversation group identifier to manage application state uses a state table provided by the developer. The application must delete that state from the state table when the application determines that the state is no longer necessary. In many cases, the application deletes state after the task completes successfully, or after errors indicate that the task cannot be completed. In these cases, the application typically includes the command to delete state within the transaction that sends the final response message and ends the conversation. This strategy ensures that the application state and the conversation group identifier have the same lifetime. If the send operation fails, the delete operation rolls back. Likewise, if the delete operation fails, the send operation rolls back and SQL Server does not send the message. In either case, the application state and the conversation group identifier remain valid. If both operations succeed, then the conversation group identifier lifetime ends at the same time that the program deletes the associated application state.
 
 ## See also
+
 - [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)
 - [sys.conversation_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)
 - [Conversation Group Locks](conversation-group-locks.md)

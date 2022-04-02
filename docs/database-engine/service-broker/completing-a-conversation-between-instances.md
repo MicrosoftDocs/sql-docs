@@ -20,11 +20,11 @@ This tutorial is intended for users who are new to Service Broker, but are famil
 
 This tutorial builds on the tasks that you learned in [Completing a Conversation Between Databases](completing-a-conversation-between-databases.md). In this tutorial, you will learn how to configure a conversation so that it runs between two instances of the Database Engine.
 
-The steps that you will follow in this tutorial are the same as those you followed in the Completing a Conversation Between Databases tutorial, with these exceptions:
+The steps that you follow in this tutorial are the same as those you followed in the Completing a Conversation Between Databases tutorial, with these exceptions:
 
-- The two databases will be on separate instances of the Database Engine.
+- The two databases are on separate instances of the Database Engine.
 
-- You will learn how to create Service Broker endpoints and routes to establish network connections between two instances.
+- You can learn how to create Service Broker endpoints and routes to establish network connections between two instances.
 
 - The previous tutorials did not transmit messages on the network. Therefore, they used Database Engine permissions to help protect against unauthorized access to messages. In Lesson 3, you will learn how to create certificates and remote service bindings to encrypt messages on the network.
 
@@ -77,5 +77,6 @@ Both systems must have the following installed:
 The firewalls for both systems must be configured to enable connections to UDP port 1434 and TCP ports 1433 and 4022. Use the Configuration Manager tool to ensure that both instances allow TCP/IP connections, and that the SQL Server Browser service is running on both computers.
 
 ## See also
+
 - [Completing a Conversation in a Single Database](completing-a-conversation-in-a-single-database.md)
 - [Completing a Conversation Between Databases](completing-a-conversation-between-databases.md)

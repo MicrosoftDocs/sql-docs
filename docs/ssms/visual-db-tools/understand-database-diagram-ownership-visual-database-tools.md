@@ -29,7 +29,7 @@ To use Database Diagram Designer it must first be set up by a member of the [db_
 
 Some points to keep in mind about diagram ownership:  
   
-- Although any user with access to a database can create a diagram, once the diagram has been created, the only users who can see it are the diagrams creator and any member of the db_owner role. If the diagrams creator is part of a user group and not a member of the db_owner role they require their own login id to view the diagram.
+- Although any user with access to a database can create a diagram, once the diagram has been created, the only users who can see it are the diagram creator and any member of the db_owner role. If the diagram creator is part of a user group and not a member of the db_owner role then they require their own login to view the diagram.
 
 - Ownership of diagrams can only be transferred to members of the db_owner role. This is only possible if the previous owner of the diagram has been removed from the database.  
   

@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 In this lesson, you will learn how to receive a request message from the target queue and send a reply message to the initiator service. Run these steps from a copy of Management Studio that is running on the same computer as the target instance of the Database Engine.
 
 ## Procedures
-
-
-
 ### Switch to the TargetDB database
 
   - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **InstTargetDB** database where you will receive the request message and send a reply message back to the **InstInitiatorDB**.
@@ -70,13 +67,9 @@ In this lesson, you will learn how to receive a request message from the target 
     ```
 
 ## Next Steps
-
-
-
 You have successfully received the request message and sent a reply message to the initiator service. Next, you will receive the reply message from the initiator queue and end the conversation. See [Lesson 6: Receiving the Reply and Ending the Conversation](lesson-6-receiving-the-reply-and-ending-the-conversation.md).
 
 ## See also
-
 [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
 
 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
@@ -84,8 +77,5 @@ You have successfully received the request message and sent a reply message to t
 [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
 
 [WAITFOR (Transact-SQL)](../../t-sql/language-elements/waitfor-transact-sql.md)
-
-
-
 [Service Broker Applications](service-broker-applications.md)
 

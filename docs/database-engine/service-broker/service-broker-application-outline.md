@@ -41,9 +41,6 @@ Alternatively, rather than sending a message from a different program, the initi
 An application that processes a large number of messages in the same conversation group may keep a count of messages received and commit a transaction after a processing a certain number of messages. This count-and-commit strategy allows the application to keep transactions relatively short, and lets the application process different conversation groups.
 
 ## Example
-
-
-
 The following Transact-SQL example processes all messages on the queue **MyServiceQueue**. The processing for the message is minimal. If the message is an **EndDialog** or **Error** message, the code ends the conversation. For any other message, the code creates an XML representation of the message and produces a result set that contains the conversation handle, the message type name, and the XML. When no messages are available for 500 milliseconds, the code exits.
 
 For simplicity, the script produces a result set for each message. If an error occurs while reading from the queue, the script commits the changes without producing any result. Therefore, this script will silently remove any messages that cause an error.
@@ -143,7 +140,6 @@ For simplicity, the script produces a result set for each message. If an error o
 ```
 
 ## See also
-
 [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
 
 [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)

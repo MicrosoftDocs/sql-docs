@@ -34,8 +34,6 @@ If Service Broker detects an error or the conversation lifetime expires, Service
 
 ## In This Section
 
-
-
   - [Choosing a Startup Strategy](choosing-a-startup-strategy.md)  
     Discusses some of the most common strategies for starting an application that uses Service Broker.
 
@@ -43,10 +41,5 @@ If Service Broker detects an error or the conversation lifetime expires, Service
     Describes the basic steps to receive and process messages.
 
 ## See also
-
-
-
-[Service Broker Activation](service-broker-activation.md)
-
-[Transactional Messaging](transactional-messaging.md)
-
+- [Service Broker Activation](service-broker-activation.md)
+- [Transactional Messaging](transactional-messaging.md)

@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 Service Broker dialog security uses certificates to map remote operations to a local security principal. This topic describes some of the considerations involved in choosing a local principal to map to a remote user.
 
 ## General Considerations
-
-
-
 Access to SQL Server resources occurs within the security context of a database principal. Service Broker dialog security uses remote authorization to determine the local security context -- that is, the local database principal -- within which messages are sent for a specific dialog. The local security principal is determined by the certificate used for the conversation. For more information, see [Certificates for Dialog Security](certificates-for-dialog-security.md).
 
 The local principal need only have SEND permission on the service or services that the principal sends messages to. There is no need for the principal to have any other permissions in the database. In particular, CONNECT permission is not required. Therefore, remote authorization generally uses a database principal specifically created for remote authorization. That principal has no other permissions, and should not be used for any other purpose. For a discussion of security principals in SQL Server, see [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md).
@@ -27,9 +24,6 @@ The local principal need only have SEND permission on the service or services th
 In general, you use one principal for each service. This helps to limit access to services. In some cases, if your application uses a closely related set of services, you may decide to use the same principal for all of the services. For example, if you design your application so that one service accepts expense report submissions while another service provides status information on expense reports, you may decide to secure both services with the same principal. In this case, access to one service implies access to the other service, so there is no need to separate the principals.
 
 ## Principal Types
-
-
-
 Dialog security can use either a database user or an application role as the local principal. Each principal type has different characteristics. Select the type of principal that best suits the needs of your application. In most cases, a database user without a login provides the most flexible way to authorize remote connections, while minimizing the privileges required.
 
 ### Database Users Without Logins
@@ -47,13 +41,9 @@ A database user may be mapped to a server login. In general, avoid using a datab
 Notice that the remote authorization procedure checks only database permissions. Therefore, remote authorization does not take into account permissions that would normally be available through the Windows login. For example, a user that maps to a login that is a member of the **BUILTIN\\Administrators** group normally has CONTROL SERVER permission. When used for remote authorization, however, the user has only the permissions that have been explicitly granted to the user.
 
 ## See also
-
 [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)
 
 [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-
-
-
 [Service Broker Dialog Security](service-broker-dialog-security.md)
 
 [Certificates for Dialog Security](certificates-for-dialog-security.md)

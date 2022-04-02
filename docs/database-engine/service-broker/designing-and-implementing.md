@@ -31,5 +31,4 @@ This section provides high-level information that can help when you design and i
     Lists the tasks involved with creating Service Broker applications.
 
 ## See also
-
-[Planning for Service Broker Development](planning-for-service-broker-development.md)
+- [Planning for Service Broker Development](planning-for-service-broker-development.md)

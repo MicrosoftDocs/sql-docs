@@ -77,6 +77,5 @@ Both systems must have the following installed:
 The firewalls for both systems must be configured to enable connections to UDP port 1434 and TCP ports 1433 and 4022. Use the Configuration Manager tool to ensure that both instances allow TCP/IP connections, and that the SQL Server Browser service is running on both computers.
 
 ## See also
-
 - [Completing a Conversation in a Single Database](completing-a-conversation-in-a-single-database.md)
 - [Completing a Conversation Between Databases](completing-a-conversation-between-databases.md)

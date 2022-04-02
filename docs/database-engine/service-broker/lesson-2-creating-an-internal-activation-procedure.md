@@ -102,13 +102,9 @@ In this lesson, you will learn to create a stored procedure to process messages 
     ```
 
 ## Next Steps
-
-
-
 You have successfully configured AdventureWorks2008R2 to support a conversation between the **//AWDB/InternalAct/InitiatorService** and the **//AWDB/InternalAct/TargetService**. Next, you will complete a conversation using the configuration. See [Lesson 3: Beginning a Conversation and Transmitting Messages](lesson-3-beginning-a-conversation-and-transmitting-messages.md).
 
 ## See also
-
 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
 
 [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
@@ -116,8 +112,5 @@ You have successfully configured AdventureWorks2008R2 to support a conversation 
 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
 
 [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
-
-
-
 [Service Broker Applications](service-broker-applications.md)
 

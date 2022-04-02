@@ -18,15 +18,13 @@ SQL Server enforces SEND permission for each service and RECEIVE permissions for
 
 This procedure is a simplified form of the procedure for creating a remote security configuration. In both cases, you grant SEND permission on the destination service and RECEIVE permission on the queue for the service that sends the messages. For a remote security configuration, however, you must also configure Service Broker security to correctly identify the remote user. For a configuration within a single database, you only need to grant permissions.
 
-### Granting permissions for a local service
+## Granting permissions for a local service
 
-1.  Grant permission for the user to receive from the queue that the application uses.
+1. Grant permission for the user to receive from the queue that the application uses.
 
-2.  Grant permission for the user that owns the initiating service to send messages to the services that the application communicates with.
+2. Grant permission for the user that owns the initiating service to send messages to the services that the application communicates with.
 
 ## Example
-
-
 
 This example configures permissions to allow BrokerApplicationUser to send messages from the service that uses the queue StoreFrontQueue to the service Ordering. This procedure assumes that the user, the services, and the queue already exist.
 
@@ -54,25 +52,10 @@ This example configures permissions to allow BrokerApplicationUser to send messa
 
 ## See also
 
-
-
-#### Tasks
-
-[How to: Configure Target Services for Anonymous Dialog Security (Transact-SQL)](how-to-configure-target-services-for-anonymous-dialog-security-transact-sql.md)
-
-[How to: Configure Target Services for Full Dialog Security (Transact-SQL)](how-to-configure-target-services-for-full-dialog-security-transact-sql.md)
-
-[How to: Configure Initiating Services for Full Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-full-dialog-security-transact-sql.md)
-
-[How to: Configure Initiating Services for Anonymous Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-anonymous-dialog-security-transact-sql.md)
-
-#### Reference
-
-[Grant T-SQL permissions for Parallel Data Warehouse](../../analytics-platform-system/grant-permissions.md)
-
-[GRANT Service Broker Permissions (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)
-
-
-
-[Identity and Access Control (Service Broker)](identity-and-access-control.md)
-
+- [How to: Configure Target Services for Anonymous Dialog Security (Transact-SQL)](how-to-configure-target-services-for-anonymous-dialog-security-transact-sql.md)
+- [How to: Configure Target Services for Full Dialog Security (Transact-SQL)](how-to-configure-target-services-for-full-dialog-security-transact-sql.md)
+- [How to: Configure Initiating Services for Full Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-full-dialog-security-transact-sql.md)
+- [How to: Configure Initiating Services for Anonymous Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-anonymous-dialog-security-transact-sql.md)
+- [Grant T-SQL permissions for Parallel Data Warehouse](../../analytics-platform-system/grant-permissions.md)
+- [GRANT Service Broker Permissions (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)
+- [Identity and Access Control (Service Broker)](identity-and-access-control.md)

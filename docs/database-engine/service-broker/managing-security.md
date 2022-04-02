@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 Service Broker provides a flexible security framework for helping you secure your applications. This topic explains considerations for managing Service Broker security.
 
 ## Planning Security
-
-
-
 Each application has unique security requirements. Part of managing security is to carefully plan the requirements for your application. Transport security, dialog security, and the security infrastructure built into SQL Server work together to help you secure your application.
 
 All applications use the security infrastructure built into SQL Server. Each operation in SQL Server occurs in a specific security context. In most cases, you create SQL Server database principals specifically for the application. This helps you to ensure that each step in the application runs in a security context with only the privileges necessary for that step. For example, the principal that you specify for internal activation needs execute permissions on the stored procedure that Service Broker activates. The stored procedure itself may impersonate a user that has RECEIVE permission for the queue and UPDATE permission for a particular table. You design your application so that, at each stage, the security context for the application does not have permission to perform unexpected operations.
@@ -35,9 +32,6 @@ Service Broker uses the remote service bindings in the database that begins the 
 Service Broker transport security prevents unauthorized network connections to Service Broker endpoints, detects alterations to messages in transit, and optionally provides point-to-point encryption. This helps protect your database against receiving unwanted messages. Because transport security applies to network connections, transport security automatically applies to all conversations between the SQL Server instances. Notice, however, that transport security does not provide end-to-end encryption, and does not provide authentication for individual conversations.
 
 ## Maintaining Security
-
-
-
 Maintaining security for Service Broker applications consists of two main tasks--auditing the application configuration and replacing the certificates that the application uses.
 
 Periodically audit the application to determine that the security configuration is unchanged, and that the security configuration meets the business needs for the application.
@@ -47,7 +41,6 @@ Dialog security relies on certificates for authentication and encryption. Transp
 For more information on certificates, see [Certificates and Service Broker](certificates-and-service-broker.md) and [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md).
 
 ## See also
-
 [Service Broker Dialog Security](service-broker-dialog-security.md)
 
 [Service Broker Transport Security](service-broker-transport-security.md)

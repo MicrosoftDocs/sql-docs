@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 In this lesson, you will learn to complete a simple request-reply message cycle in a system configured with an internal activation stored procedure.
 
 ## Procedures
-
-
-
 ### Switch to the AdventureWorks2008R2 database
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
@@ -99,13 +96,9 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
   - When you run the END CONVERSATION statement for the initiator, Service Broker sends an **EndDialog** message to the **TargetQueueIntAct** queue. The **TargetActiveProc** procedure receives the **EndDialog** message and issues an END CONVERSATION that ends the target side of the conversation.
 
 ## Next Steps
-
-
-
 You have successfully completed a request-reply message cycle between the **//AWDB/InternalAct/InitiatorService** and the **//AWDB/InternalAct/TargetService**. You can repeat the steps in this lesson as many times as you want to transmit a request-reply pair of messages. When you have finished investigating the SEND and REPLY statements, you can drop all the objects that were used by the conversation. For more information, see [Lesson 4: Dropping the Conversation Objects](lesson-4-dropping-the-conversation-objects.md).
 
 ## See also
-
 [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
 
 [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
@@ -113,8 +106,5 @@ You have successfully completed a request-reply message cycle between the **//AW
 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
 
 [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
-
-
-
 [Service Broker Applications](service-broker-applications.md)
 

@@ -117,7 +117,5 @@ Service definition components, networking components, and security components ar
 ## See also
 
 - [Service Broker Scalability](service-broker-scalability.md)
-
 - [Service Broker Activation](service-broker-activation.md)
-
 - [Logical Architecture](logical-architecture.md)

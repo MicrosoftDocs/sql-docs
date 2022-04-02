@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 The Service Broker activation process consists of two steps. First, Service Broker determines whether activation is necessary. Second, Service Broker determines whether activation occurs. Although the exact process is different for internal activation and external activation, the overall concepts involved are the same for either strategy.
 
 ## Determining Whether Activation Is Necessary
-
-
-
 Activation is necessary whenever a new queue reader would have useful work to perform. Queue monitors determine whether activation is necessary. Service Broker creates a queue monitor for each queue with activation STATUS = ON or for which a QUEUE_ACTIVATION event notification has been registered. The dynamic management view [sys.dm_broker_queue_monitors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md) lists the queue monitors active in the instance. Each queue monitor tracks the following:
 
 Whether the queue contains messages that are ready for receive
@@ -52,8 +49,6 @@ For example, a queue may contain a large number of unprocessed messages on a sin
 
 ## Determining Whether Activation Occurs
 
-
-
 Once Service Broker determines that activation is necessary, Service Broker must decide whether activation occurs.
 
 For internal activation, the queue monitor activates a new instance of the activation stored procedure when the number of running programs is lower than the MAX_QUEUE_READERS value set for the queue. If the number of running programs is equal to or greater than the MAX_QUEUE_READERS value, the queue monitor does not start a new instance of the stored procedure. The management view [sys.dm_broker_activated_tasks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md) contains information on stored procedures started by Service Broker.
@@ -62,17 +57,6 @@ For external applications, Service Broker has no information on the number of di
 
 ## See also
 
-
-
-#### Tasks
-
-[Troubleshooting Activation Stored Procedures](troubleshooting-activation-stored-procedures.md)
-
-#### Reference
-
-[CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
-
-
-
-[Implementing Internal Activation](implementing-internal-activation.md)
-
+- [Troubleshooting Activation Stored Procedures](troubleshooting-activation-stored-procedures.md)
+- [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
+- [Implementing Internal Activation](implementing-internal-activation.md)

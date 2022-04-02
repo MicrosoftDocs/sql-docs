@@ -27,9 +27,6 @@ There are three types of Service Broker components:
   - This section also presents short overview of building applications by using Service Broker.
 
 ## In This Section
-
-
-
   - [Conversation Architecture](conversation-architecture.md)  
     Describes conversations, conversation groups, and messages. These are the Service Broker objects that are created and managed at runtime in application code.
 
@@ -39,11 +36,7 @@ There are three types of Service Broker components:
   - [Networking and Remote Security](networking-and-remote-security.md)  
     Describes objects that control how Service Broker communicates between databases and instances of the Database Engine.
 
-## See also
-
-
-
-#### Other Resources
+## See also#### Other Resources
 
 [Benefits of Programming with Service Broker](benefits-of-programming-with-service-broker.md)
 

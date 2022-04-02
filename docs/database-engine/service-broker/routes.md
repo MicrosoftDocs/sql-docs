@@ -34,13 +34,9 @@ SQL Server guarantees that once the target acknowledges the first message, all s
 By default, each user database contains the route **AutoCreatedLocal**. This route matches any service name and broker instance, and specifies that the message should be delivered within the current instance. For simple scenarios where both the initiator and the target for the conversation exist in the same SQL Server instance, no additional routes are necessary. However, creation of a route for each service helps to safeguard against modification or dropping of the **AutoCreatedLocal** route.
 
 ## See also
-
 [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
 
 [CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)
-
-
-
 [Service Broker Routing](service-broker-routing.md)
 
 [Managing Service Broker Identities](managing-service-broker-identities.md)

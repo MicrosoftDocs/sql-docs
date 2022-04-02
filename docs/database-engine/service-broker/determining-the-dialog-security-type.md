@@ -123,10 +123,7 @@ The following table lists the type of dialog security for each valid combination
    Dialog fails
 
    :::column-end:::
-:::row-end:::
-
-
-  - Dialog fails  
+:::row-end:::  - Dialog fails  
     SQL Server does not have the information required to provide the requested security. Service Broker ends the conversation and puts an error message on the queue for the initiating service.
 
   - No dialog security  
@@ -140,21 +137,9 @@ The following table lists the type of dialog security for each valid combination
 
 ## See also
 
-
-
-#### Tasks
-
-[How to: Configure Initiating Services for Anonymous Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-anonymous-dialog-security-transact-sql.md)
-
-[How to: Configure Initiating Services for Full Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-full-dialog-security-transact-sql.md)
-
-[How to: Configure Target Services for Anonymous Dialog Security (Transact-SQL)](how-to-configure-target-services-for-anonymous-dialog-security-transact-sql.md)
-
-[How to: Configure Target Services for Full Dialog Security (Transact-SQL)](how-to-configure-target-services-for-full-dialog-security-transact-sql.md)
-
-[How to: Configure Permissions for a Local Service (Transact-SQL)](how-to-configure-permissions-for-a-local-service-transact-sql.md)
-
-
-
-[Service Broker Communication Protocols](service-broker-communication-protocols.md)
-
+- [How to: Configure Initiating Services for Anonymous Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-anonymous-dialog-security-transact-sql.md)
+- [How to: Configure Initiating Services for Full Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-full-dialog-security-transact-sql.md)
+- [How to: Configure Target Services for Anonymous Dialog Security (Transact-SQL)](how-to-configure-target-services-for-anonymous-dialog-security-transact-sql.md)
+- [How to: Configure Target Services for Full Dialog Security (Transact-SQL)](how-to-configure-target-services-for-full-dialog-security-transact-sql.md)
+- [How to: Configure Permissions for a Local Service (Transact-SQL)](how-to-configure-permissions-for-a-local-service-transact-sql.md)
+- [Service Broker Communication Protocols](service-broker-communication-protocols.md)

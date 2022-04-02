@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 An application uses Service Broker by executing Transact-SQL statements that operate on Service Broker objects defined in a database. This section describes general considerations when you create the Service Broker objects for an application.
 
 ## Overview
-
-
-
 Service Broker objects define the metadata and storage for a specific set of tasks:
 
   - Message types define the data that is exchanged in a conversation.
@@ -35,9 +32,6 @@ Notice that a contract depends on one or more message types. A service depends o
   - For more information on these objects, see [Conversation Architecture](conversation-architecture.md).
 
 ## Creating Objects for a Service
-
-
-
 The procedure for creating a service follows the same basic outline regardless of whether your service is an initiating service, a target service, or both.
 
 The definition of a service specifies the contracts for which the service can be a target. In contrast, an application can use a service to initiate a conversation that uses any contract defined in the database. Service Broker takes this approach to enforce the general rule that a service should only receive messages that the application can process. To ensure that the application does not receive messages of an arbitrary or unknown type, Service Broker accepts a new dialog only if the dialog follows a contract specified in the service. An initiating service specifies the contract to use when the conversation begins, so an initiating service does not need to include the contract in the service definition.
@@ -55,17 +49,11 @@ To create the objects for a service, do the following:
 In most cases, you create the target service and then use the contracts and message types created for the target service to create an initiating service. In some cases, however, you may create a target service for an initiating service that is already defined. In these cases, the target service uses the message types and contracts that the initiating service uses. For example, if you are creating a target service to receive event notifications, you use the contract **https://schemas.microsoft.com/SQL/Notifications/PostEventNotification**, because this is the contract that the initiating service uses.
 
 ## Managing Object Definitions
-
-
-
 It is recommended that you create a Transact-SQL script for the Service Broker objects that your application uses. This Transact-SQL script makes it easy to refer to the specifics of your Service Broker objects. The script also provides a way to deploy the service on a different system or to re-create the service if necessary.
 
 If your application involves sending messages between SQL Server instances, it is recommended that you create one script that defines the message types and contracts for the service, and a second script that defines the queue and the service. The first script defines the interface for the service, the objects that are common to both the initiating service and the target service. The second script defines the service name and the queue, the objects for one side of the conversation.
 
 ## In This Section
-
-
-
   - [Creating Service Broker Message Types](creating-service-broker-message-types.md)  
     Describes message types and how they are used.
 
@@ -85,12 +73,7 @@ If your application involves sending messages between SQL Server instances, it i
     Describes a Transact-SQL code sample and defines a service.
 
 ## See also
-
-[Contracts](contracts.md)
-
-[Queues](queues.md)
-
-[Message Types](message-types.md)
-
-[Service Broker Routing](service-broker-routing.md)
-
+- [Contracts](contracts.md)
+- [Queues](queues.md)
+- [Message Types](message-types.md)
+- [Service Broker Routing](service-broker-routing.md)

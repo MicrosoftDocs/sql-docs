@@ -63,10 +63,6 @@ To satisfy the requirement that only qualified vendors can connect to the Advent
 The combination of transport security and dialog security helps the AdventureWorks2008R2 administrator meet the security requirements of this application. Notice that, in this scenario, vendors cannot log on to the AdventureWorks2008R2 database, and the Adventure Works administrator cannot log on to the vendor databases. Only Service Broker messages can be exchanged between the databases.
 
 ## See also
-
 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
-
-
-
 [Service Broker Communication Protocols](service-broker-communication-protocols.md)
 

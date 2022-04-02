@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 Each database contains a unique identifier that is used for routing Service Broker messages to that database. This topic describes Service Broker identifiers, how Service Broker protects against message misdirection, and the options that are available to manage Service Broker identifiers.
 
 ## Service Broker Identifiers
-
-
-
 Each database contains a Service Broker identifier that distinguishes it from all other databases in the network. The **service_broker_guid** column of the **sys.databases** catalog view shows the Service Broker identifier for each database in the instance. Service Broker systems can be designed to run multiple copies of a service. Each copy of the service runs in a separate database. In a system that has multiple copies of a service, use the BROKER_INSTANCE clause of the CREATE ROUTE statement to create a route to a specific copy of the service.
 
 Service Broker routing uses the Service Broker identifier to ensure that all messages for a conversation are delivered to the same database. The BEGIN DIALOG CONVERSATION statement opens a conversation with a destination service. If a conversation is successfully opened, the acknowledgment message from the destination service contains the Service Broker identifier for the destination database. Service Broker then routes all messages for the conversation to the specified database.
@@ -37,9 +34,6 @@ For more information about Service Broker route matching, see [Service Broker Ro
 To correctly support message delivery, each Service Broker identifier should be unique across all instances of the Database Engine on the same network. Otherwise, messages could be misdirected. When a new database is created, it is assigned a new Service Broker identifier that should be unique in the network. The identifier is restored when the database is either restored or attached. Be careful when you restore and attach databases. You should not have multiple databases that are actively performing Service Broker operations and using the same identifiers.
 
 ## Service Broker Message Delivery
-
-
-
 SQL Server provides a mechanism for deactivating Service Broker message delivery in a database if it has the same Service Broker identifier as another database in the same network. When message delivery is deactivated in a database, all messages sent from that database remain in the transmission queue for the database. Further, Service Broker does not consider services in that database to be available for receiving messages. These services are not considered when Service Broker routing locates a destination service in an instance.
 
 Deactivating Service Broker message delivery lets you safely attach a backup of a database for troubleshooting or data recovery purposes without the risk of misdirected messages. The **is_broker_enabled** column of **sys.databases** shows the current state of Service Broker message delivery for each database.
@@ -47,9 +41,6 @@ Deactivating Service Broker message delivery lets you safely attach a backup of 
 When you attach or restore a database, use care to ensure that only one database that has a given Service Broker identifier has message delivery active. Otherwise, messages could be misdirected, and processing for a conversation might occur in the wrong copy of the database.
 
 ## Managing Identifiers and Message Delivery
-
-
-
 The CREATE DATABASE command, the ALTER DATABASE command, and the RESTORE DATABASE command contain options to activate Service Broker message delivery. They also contain options to change the Service Broker identifier for a database.
 
 By default, when you attach or restore a database, the Service Broker identifier and message delivery status are unchanged. Typically, you do not change the Service Broker identifier in the following situations:
@@ -68,10 +59,7 @@ There are four options to manage identifiers and message delivery:
     
 
     > [!NOTE]
-    > Enabling SQL Server Service Broker in any database require a database lock. To enable Service Broker in the **msdb** database, first stop SQL Server Agent. Then, Service Broker can obtain the necessary lock.
-
-
-    
+    > Enabling SQL Server Service Broker in any database require a database lock. To enable Service Broker in the **msdb** database, first stop SQL Server Agent. Then, Service Broker can obtain the necessary lock.    
     
 
   - DISABLE_BROKER. This option deactivates Service Broker message delivery, preserving the existing Service Broker identifier for the database.
@@ -85,7 +73,6 @@ Regardless of the specified option, SQL Server does not allow for two databases 
 For more information about the options for attaching databases, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) and [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md). For information about how to activate Service Broker message delivery in a database, see [How to: Activate Service Broker Message Delivery in Databases (Transact-SQL)](how-to-activate-service-broker-message-delivery-in-databases-transact-sql.md).
 
 ## See also
-
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 
 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
@@ -93,5 +80,3 @@ For more information about the options for attaching databases, see [CREATE DATA
 [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
 
 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-
-

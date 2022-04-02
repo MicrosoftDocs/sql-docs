@@ -18,8 +18,6 @@ This tutorial is intended for users who are new to Service Broker, but are famil
 
 ## What You Will Learn
 
-
-
 This tutorial shows you how to create the database objects that are required to support a simple request-reply Service Broker conversation. You will then start a conversation and use it to transmit messages.
 
 Each Service Broker conversation has two ends: the conversation initiator and target. You will perform the following tasks:
@@ -72,7 +70,5 @@ Your system must have the following installed:
   - The AdventureWorks2008R2 sample database. For more information about how to install the sample databases, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
 
 ## See also
-
-[Completing a Conversation Between Databases](completing-a-conversation-between-databases.md)
-
-[Completing a Conversation Between Instances](completing-a-conversation-between-instances.md)
+- [Completing a Conversation Between Databases](completing-a-conversation-between-databases.md)
+- [Completing a Conversation Between Instances](completing-a-conversation-between-instances.md)

@@ -28,14 +28,7 @@ When a SQL Server database is upgraded to a newer version, conversations continu
 
 ## See also
 
-#### Reference
-
-[ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
-
-[CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)
-
-
-
-[Conversation Priorities](conversation-priorities.md)
-
-[SQL Server installation guide](../install-windows/install-sql-server.md)
+- [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
+- [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)
+- [Conversation Priorities](conversation-priorities.md)
+- [SQL Server installation guide](../install-windows/install-sql-server.md)

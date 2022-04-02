@@ -20,8 +20,6 @@ Service Broker supports asynchronous, queued messaging. Because conversations ca
 
 ## Startup Strategies
 
-
-
 The strategies for starting an application fall into four broad categories:
 
   - Internal activation
@@ -36,13 +34,9 @@ Each activation strategy has different advantages. An application can combine th
 
 ## Internal Activation
 
-
-
 With Service Broker internal activation, a Service Broker queue monitor directly activates a stored procedure when it is necessary. This is often the most straightforward approach. By using direct activation of a stored procedure, you do not have to write additional code in the application to manage activation. However, internal activation requires that the application be written as a SQL Server stored procedure. When using internal activation, you write the application to exit when there are no more messages to process.
 
 ## Event-Based Activation
-
-
 
 Some applications run in response to a specific event. For example, you can run an application when the CPU usage on the computer falls below a certain level. Or, you can run a logging application when a new table is created.
 
@@ -56,22 +50,17 @@ When using event-based activation, an application typically exits when there are
 
 ## Scheduled Task
 
-
-
 With a scheduled task, an application is activated on a set schedule. This strategy is convenient for batch-processing applications. An application that runs as a scheduled task can exit when there are no more messages to process, or the program can exit at a certain time.
 
 For example, an application that processes orders to a supplier can store messages during the day and then process the messages overnight to produce a single order to the supplier. In this case, the application can use a SQL Server Agent job to start the application at a specific time each night.
 
 ## Startup Task
 
-
-
 Some applications start one time, typically when the computer starts or when SQL Server starts. Examples of these tasks are a startup stored procedure in SQL Server, an application in the Windows startup group, or a Windows service. In this case, the application remains running and processes messages as they arrive. An application that runs continuously does not require startup time when a message arrives on the queue. However, because the application does not exit when there are no messages, the program consumes resources even when there is no work for the program to do.
 
 This strategy can be useful for an application that processes a constant stream of messages and that is relatively resource-intensive during startup.
 
 ## See also
-
 - [Create a Job](../../ssms/agent/create-a-job.md)
 - [Service Broker Activation](service-broker-activation.md)
 - [Implementing Internal Activation](implementing-internal-activation.md)

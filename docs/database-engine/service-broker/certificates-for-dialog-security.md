@@ -18,8 +18,6 @@ When a conversation begins, Service Broker uses remote service bindings to locat
 
 ## Locating the Certificate for a Dialog
 
-
-
 Service Broker first locates a remote service binding for the conversation, and then selects a certificate owned by the user specified in the binding.
 
 To find a binding, Service Broker checks the database for a binding that specifies the target service name for the conversation.
@@ -29,8 +27,6 @@ To select a certificate, Service Broker finds the certificate with the latest ex
 If no remote service binding exists, or the user for the remote service binding does not own a valid certificate that is available for begin dialog, Service Broker cannot encrypt messages for the conversation. If there is no binding, and the database contains a Broker Configuration Service, Service Broker requests a binding through that service. If there is no Broker Configuration Service in the database or the Broker Configuration Service does not provide a remote service binding, the conversation is delayed if encryption is ON, or continues without encryption if encryption is OFF. For more information, see [Determining the Dialog Security Type](determining-the-dialog-security-type.md).
 
 ## Remote Authorization and Dialog Security
-
-
 
 Service Broker dialog security uses certificates for remote authorization. When a dialog uses dialog security, the first message sent by each participant in the conversation contains header information encrypted with the private key of the sending user, and header information encrypted with the public key of the receiving user. The content of the message is encrypted with a session key. The session key itself is encrypted, and can only be recovered using the private key for the receiving user.
 
@@ -58,7 +54,6 @@ For dialogs that use anonymous security, the service pair security header remain
 When Service Broker itself generates a message in response to an incoming message (for example, an error or an acknowledgment), that message uses the session key of the incoming message, regardless of whether the dialog uses full security or anonymous security.
 
 ## See also
-
 - [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
 - [ALTER REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)
 - [ALTER REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)

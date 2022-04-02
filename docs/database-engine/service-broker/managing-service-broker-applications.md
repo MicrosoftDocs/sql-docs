@@ -28,6 +28,5 @@ For a Service Broker application that is in production, most day-to-day manageme
     Describes the tasks required to stop and uninstall a service.
 
 ## See also
-
 - [New Installation (Service Broker)](new-installation.md)
 - [Migration (Service Broker)](migration.md)

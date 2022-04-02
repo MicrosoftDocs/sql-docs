@@ -21,9 +21,6 @@ Service Broker sends and receives messages over the network while any Service Br
   - Drop all Service Broker endpoints.
 
 ## Example
-
-
-
 ```sql
     USE master ;
     GO
@@ -33,12 +30,11 @@ Service Broker sends and receives messages over the network while any Service Br
 ```
 
 ## See also
-
 [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md)
 
 [How to: Pause Service Broker Networking (Transact-SQL)](how-to-pause-service-broker-networking-transact-sql.md)
 
-#### Reference
+
 
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 

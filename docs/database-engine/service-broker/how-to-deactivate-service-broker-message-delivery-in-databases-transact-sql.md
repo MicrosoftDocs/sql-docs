@@ -17,10 +17,7 @@ ms.date: "03/30/2022"
 When message delivery is not active, messages remain in the transmission queue. To determine if Service Broker is active for a database, check the **is_broker_enabled** column of the **sys.databases** catalog view.
 
 > [!NOTE]  
-> Deactivating Service Broker prevents messages from being sent from or delivered to the database. However, this does not prevent messages from arriving in the instance. To prevent messages from arriving in the instance, you must remove or stop the Service Broker endpoint.
-
-
-### To deactivate Service Broker in a database
+> Deactivating Service Broker prevents messages from being sent from or delivered to the database. However, this does not prevent messages from arriving in the instance. To prevent messages from arriving in the instance, you must remove or stop the Service Broker endpoint.### To deactivate Service Broker in a database
 
   - Alter the database to set the DISABLE_BROKER option.
 
@@ -37,11 +34,7 @@ When message delivery is not active, messages remain in the transmission queue. 
 ```
 
 ## See also
-
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 
-[sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-
-
-[sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
+[sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)[sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
 

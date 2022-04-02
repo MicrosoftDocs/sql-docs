@@ -18,7 +18,7 @@ SQL Server uses dialog security for any conversation to a service for which a re
 
 To make sure that a target service uses dialog security, create a user for the initiating service to log in as. For each initiating service, create a user and install the certificate for the initiating user. Notice that a target service does not use a remote service binding.
 
-### To configure a target service for full dialog security
+## To configure a target service for full dialog security
 
 1. Create a user without a login.
 
@@ -137,14 +137,11 @@ To make sure that a target service uses dialog security, create a user for the i
 ## See also
 
 
-
-#### Tasks
-
 [How to: Configure Initiating Services for Full Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-full-dialog-security-transact-sql.md)
 
 [How to: Configure Permissions for a Local Service (Transact-SQL)](how-to-configure-permissions-for-a-local-service-transact-sql.md)
 
-#### Reference
+
 
 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
 

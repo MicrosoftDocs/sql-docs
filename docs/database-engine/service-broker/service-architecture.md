@@ -35,9 +35,6 @@ The following diagram shows a Service Broker service:
 As shown in the illustration, the **ProcessExpenses** contract specifies three message types: **SubmitExpense**, **AcceptDenyExpense**, and **ReimbursementIssued**. The contract lists the message types required for a conversation that performs an expense reimbursement task. The **ProcessExpenses** contract governs all conversations between the **ProcessExpense** service and any services that initiate a conversation with the **ProcessExpense** service. The **ProcessExpense** service stores incoming and outgoing messages in the **ExpenseQueue** queue. The **ExpenseProcessing** stored procedure receives messages from this queue, processes the messages, and sends messages back to the queue for routing to the appropriate broker if a reply is necessary.
 
 ## In This Section
-
-
-
   - [Message Types](message-types.md)  
     Participants in a conversation must agree on the name and content of each message. Message types define names and content.
 
@@ -51,6 +48,5 @@ As shown in the illustration, the **ProcessExpenses** contract specifies three m
     Service Broker services are names for specific business tasks or sets of business tasks.
 
 ## See also
-
 [Building Applications with Service Broker](building-applications-with-service-broker.md)
 

@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 In this lesson, you will learn to start a conversation that spans two instances of the Database Engine and send a request message from the initiator instance to the target instance. Run these steps from a copy of Management Studio running on the same computer as the initiator instance.
 
 ## Procedures
-
-
-
 ### Switch to the InitiatorDB database
 
   - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **InstInitiatorDB** database where you will initiate the conversation.
@@ -59,18 +56,11 @@ In this lesson, you will learn to start a conversation that spans two instances 
     ```
 
 ## Next Steps
-
-
-
 You have successfully started a conversation and sent the request message to the target service. Next, you will receive the request message from the target queue and send a reply message to the initiator service. See [Lesson 5: Receiving a Request and Sending a Reply](lesson-5-receiving-a-request-and-sending-a-reply.md).
 
 ## See also
-
 [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
 
 [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
-
-
-
 [Service Broker Applications](service-broker-applications.md)
 

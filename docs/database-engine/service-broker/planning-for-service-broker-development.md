@@ -21,9 +21,6 @@ Review the following as you design a Service Broker application:
 If you understand these factors, you can develop a system that meets business goals.
 
 ## Planning Checklist
-
-
-
 Consider the following questions as you plan your application:
 
   - **What role does Service Broker play in your application?**
@@ -63,7 +60,6 @@ Consider the following questions as you plan your application:
     In heavily loaded systems, Service Broker conversation priorities help ensure that important work is not blocked by large amounts of less important work. Conversation priorities also enable designs that support different levels of service.
 
 ## See also
-
 [Service Broker Programming Concepts](service-broker-programming-concepts.md)
 
 [Developer Responsibilities for Service Broker](developer-responsibilities-for-service-broker.md)

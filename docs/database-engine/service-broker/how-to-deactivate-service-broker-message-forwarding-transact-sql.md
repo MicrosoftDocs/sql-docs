@@ -21,9 +21,6 @@ Message forwarding allows an instance of SQL Server to accept messages from outs
   - Alter the endpoint to deactivate message forwarding.
 
 ## Example
-
-
-
 ```sql
     USE master ;
     GO
@@ -35,9 +32,6 @@ Message forwarding allows an instance of SQL Server to accept messages from outs
 
 ## See also
 
-
-
-#### Tasks
 
 [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md)
 

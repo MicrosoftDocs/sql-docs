@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 In this lesson, you will learn to create the initiator database and all the initiator Service Broker objects that are used in this tutorial. Run these steps from a copy of Management Studio that is running on the same computer as the initiator instance the Database Engine.
 
 ## Procedures
-
-
-
 ### Create a Service Broker endpoint
 
   - Copy and paste the following code into a Query Editor window. Then, run it to create a Service Broker endpoint for this instance of the Database Engine. A Service Broker endpoint specifies the network address to which Service Broker messages are sent. This endpoint uses the Service Broker default of TCP port 4022, and specifies that remote instances of the Database Engine will use Windows Authentication connections to send messages.
@@ -166,13 +163,9 @@ In this lesson, you will learn to create the initiator database and all the init
     ```
 
 ## Next Steps
-
-
-
 You have successfully created the initiator databases that will be used for the tutorial. Next, you will finish configuring the target database by creating the target objects that have dependencies on initiator objects. See [Lesson 3: Completing the Target Conversation Objects](lesson-3-completing-the-target-conversation-objects.md).
 
 ## See also
-
 [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)
 
 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
@@ -200,9 +193,6 @@ You have successfully created the initiator databases that will be used for the 
 [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
 
 [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
-
-
-
 [Service Broker Dialog Security](service-broker-dialog-security.md)
 
 [Conversation Architecture](conversation-architecture.md)

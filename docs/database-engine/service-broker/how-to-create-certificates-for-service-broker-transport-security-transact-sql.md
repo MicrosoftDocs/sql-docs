@@ -23,9 +23,6 @@ For more information using certificates for Service Broker transport security, s
   - Create a certificate in the **master** database.
 
 ## Example
-
-
-
 ```sql
     USE master ;
     GO
@@ -40,7 +37,6 @@ For more information using certificates for Service Broker transport security, s
 ```
 
 ## See also
-
 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
 
 [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)

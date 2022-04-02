@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 Service Broker conversation priorities let you specify which conversations to prioritize so that their messages are not blocked by large numbers of messages from less important conversations.
 
 ## Enabling Conversation Priorities
-
-
-
 Conversation priorities are always active for RECEIVE statements. The HONOR_BROKER_PRIORITY database option must be on to make conversation priorities active for SEND statements. By default, this option is off for all databases.
 
 An administrator can enable conversation priorities for SEND statements in a database by using the following statement:
@@ -35,15 +32,9 @@ An administrator can turn off conversation priorities for SEND statements by usi
 ```
 
 ## Specifying Conversation Priorities
-
-
-
 Conversation priorities are specified by using the CREATE BROKER PRIORITY, ALTER BROKER PRIORITY, and DROP BROKER PRIORITY statements. For more information, see [Conversation Priorities](conversation-priorities.md).
 
 ## Querying Conversation Priorities
-
-
-
 Conversation priorities are stored in the **sys.conversation_priorities** system view. The following statement lists all the conversation priorities in the current database:
 
 ```sql
@@ -62,7 +53,6 @@ Conversation priorities are stored in the **sys.conversation_priorities** system
 ```
 
 ## See also
-
 [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)
 
 [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)

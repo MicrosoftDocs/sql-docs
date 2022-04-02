@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 Service Broker introduces concepts that are unique to developing a Service Broker application. Understanding these concepts will help you build applications that take full advantage of Service Broker capabilities.
 
 ## In This Section
-
-
-
   - [Transactional Messaging](transactional-messaging.md)  
     Explains how Service Broker messaging works with SQL Server transactions.
 
@@ -36,6 +33,5 @@ Service Broker introduces concepts that are unique to developing a Service Broke
     Discusses error handing in applications that use Service Broker.
 
 ## See also
-
 [Overview (Service Broker)](overview.md)
 

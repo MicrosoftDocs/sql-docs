@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 When a Service Broker application is in production, most day-to-day management occurs as a normal part of maintenance of the Database Engine. Service Broker provides performance counters and event notifications to monitor a service. However, you might have to work directly with a message queue or with the messages in a queue. This might be necessary to troubleshoot a service or to collect information about the traffic that is received by a queue.
 
 ## In This Section
-
-
-
   - [Starting and Stopping the Queue](starting-and-stopping-the-queue.md)  
     Describes how to start and stop a queue.
 
@@ -32,11 +29,7 @@ When a Service Broker application is in production, most day-to-day management o
   - [Managing Conversation Priorities](managing-conversation-priorities.md)  
     Describes how to enable, specify, and query conversation priorities.
 
-## See also
-
-
-
-#### Other Resources
+## See also#### Other Resources
 
 [Managing Service Broker Applications](managing-service-broker-applications.md)
 

@@ -41,12 +41,9 @@ After moving a database, you can check for Service Broker errors by running the 
 ## See also
 
 
-
-#### Tasks
-
 [How to: Activate Service Broker Message Delivery in Databases (Transact-SQL)](how-to-activate-service-broker-message-delivery-in-databases-transact-sql.md)
 
-#### Reference
+
 
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 
@@ -55,9 +52,6 @@ After moving a database, you can check for Service Broker errors by running the 
 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 
 [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
-
-
-
 [Copy Databases to Other Servers](../../relational-databases/databases/copy-databases-to-other-servers.md)
 
 [Managing Service Broker Identities](managing-service-broker-identities.md)

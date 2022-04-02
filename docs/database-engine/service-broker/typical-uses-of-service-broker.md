@@ -56,8 +56,5 @@ Applications that must perform large-scale batch processing can take advantage o
 
 ## See also
 
-### Other Resources
-
 - [Logical Architecture](logical-architecture.md)
-
 - [Benefits of Programming with Service Broker](benefits-of-programming-with-service-broker.md)

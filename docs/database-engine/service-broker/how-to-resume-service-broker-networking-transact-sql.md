@@ -24,9 +24,6 @@ Service Broker sends and receives messages over the network while any endpoint f
   - Alter an endpoint to set the state to **STARTED**.
 
 ## Example
-
-
-
 ```sql
     USE master ;
     GO
@@ -39,16 +36,13 @@ Service Broker sends and receives messages over the network while any endpoint f
 ## See also
 
 
-
-#### Tasks
-
 [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md)
 
 [How to: Deactivate Service Broker Networking (Transact-SQL)](how-to-deactivate-service-broker-networking-transact-sql.md)
 
 [How to: Pause Service Broker Networking (Transact-SQL)](how-to-pause-service-broker-networking-transact-sql.md)
 
-#### Reference
+
 
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 

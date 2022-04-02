@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 This tutorial is intended for users who are new to Service Broker, but are familiar with database concepts and Transact-SQL statements. It will help new users get started by showing them how to implement an internal activation stored procedure to process Service Broker messages.
 
 ## What You Will Learn
-
-
-
 This tutorial shows you how to create the database objects that are required to support a simple request-reply Service Broker conversation using an internal activation stored procedure. You will then start a conversation and use it to transmit messages.
 
 Each Service Broker conversation has two ends: the conversation initiator and target. In a request-reply conversation, a request message us sent from the initiator to the target, which returns a reply message. Service Broker internal activation can be used to run a stored procedure whenever there are messages to process. Service Broker can run multiple copies of the stored procedure if there are many messages being transmitted. This tutorial shows you how to create a stored procedure that receives the request messages at the target, and how to configure the target to use internal activation to run the stored procedure.
@@ -67,9 +64,6 @@ This tutorial is divided into three lessons:
     In this lesson, you drop the objects that were created to support the conversation.
 
 ## Requirements
-
-
-
 To complete this tutorial, you should be familiar with the Transact-SQL language and how to use the Database Engine Query Editor in SQL Server Management Studio. You must be a member of the **db_ddladmin** or **db_owner** fixed database roles for the AdventureWorks2008R2 sample database, or the **sysadmin** fixed server role.
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
@@ -87,14 +81,10 @@ Your system must have the following installed:
     
     
 
-
-
-
     
     
 
 ## See also
-
 [Completing a Conversation in a Single Database](completing-a-conversation-in-a-single-database.md)
 
 [Completing a Conversation Between Databases](completing-a-conversation-between-databases.md)

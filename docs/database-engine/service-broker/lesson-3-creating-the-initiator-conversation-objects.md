@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 In this lesson, you will learn to build all the objects that enable a database to initiate a conversation with another database.
 
 ## Procedures
-
-
-
 ### Switch to the InitiatorDB database
 
   - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **InitiatorDB** database.
@@ -68,24 +65,14 @@ In this lesson, you will learn to build all the objects that enable a database t
     ```
 
 ## Next Steps
-
-
-
 You have successfully configured the **InitiatorDB** and **TargetDB** to support a conversation between the two databases. Next, you will complete a conversation that uses the configuration. See [Lesson 4: Beginning a Conversation and Transmitting Messages](lesson-4-beginning-a-conversation-and-transmitting-messages.md).
 
 ## See also
-
 [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
 
-[CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
-
-
-[CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
+[CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)[CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
 
 [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
-
-
-
 [Conversation Architecture](conversation-architecture.md)
 
 [Service Architecture](service-architecture.md)

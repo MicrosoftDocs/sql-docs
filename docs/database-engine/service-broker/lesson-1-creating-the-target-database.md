@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 In this lesson, you will learn to create the target database and all the Service Broker target objects that do not have dependencies on the initiator database. Run these steps from a copy of Management Studio that is running on the same computer as the target instance the Database Engine.
 
 ## Procedures
-
-
-
 ### Create a Service Broker endpoint
 
   - Copy and paste the following code into a Query Editor window. Then, run it to create a Service Broker endpoint for this instance of the Database Engine. A Service Broker endpoint establishes the network address to which Service Broker messages are sent. This endpoint uses the Service Broker default of TCP port 4022, and establishes that the remote instances of the Database Engine will use Windows Authentication connections to send messages. 
@@ -119,21 +116,14 @@ In this lesson, you will learn to create the target database and all the Service
     ```
 
 ## Next Steps
-
-
-
 You have successfully created the databases that will be used for the tutorial. Next, you will create the **InstInitiatorDB** and configure it with the objects required to support the initiator end of a Service Broker Conversation. See [Lesson 2: Creating the Initiator Database](lesson-2-creating-the-initiator-database.md).
 
 ## See also
-
 [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)
 
 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
 
-[CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
-
-
-[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+[CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 
 [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
 
@@ -146,9 +136,6 @@ You have successfully created the databases that will be used for the tutorial. 
 [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
 
 [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-
-
-
 [Service Broker Dialog Security](service-broker-dialog-security.md)
 
 [Conversation Architecture](conversation-architecture.md)

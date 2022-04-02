@@ -17,9 +17,6 @@ ms.date: "03/30/2022"
 In this lesson, you will learn to build all the objects that enable a database to support a conversation in the database.
 
 ## Procedures
-
-
-
 ### Enable Service Broker and switch to the AdventureWorks2008R2 database
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
@@ -88,26 +85,16 @@ In this lesson, you will learn to build all the objects that enable a database t
     ```
 
 ## Next Steps
-
-
-
 You have successfully configured AdventureWorks2008R2 to support a conversation between the **//AWDB/InternalAct/InitiatorService** and the **//AWDB/InternalAct/TargetService**. Next, you will create a stored procedure to support internal activation on the target queue. See [Lesson 2: Creating an Internal Activation Procedure](lesson-2-creating-an-internal-activation-procedure.md).
 
 ## See also
-
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 
 [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
 
-[CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
-
-
-[CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
+[CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)[CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
 
 [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
-
-
-
 [Conversation Architecture](conversation-architecture.md)
 
 [Service Architecture](service-architecture.md)

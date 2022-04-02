@@ -23,9 +23,6 @@ Message forwarding allows an instance of SQL Server to accept messages from outs
 2.  Alter the endpoint to activate message forwarding, and specify the maximum size, in megabytes, for forwarded messages.
 
 ## Example
-
-
-
 ```sql
     USE master ;
     GO
@@ -38,9 +35,6 @@ Message forwarding allows an instance of SQL Server to accept messages from outs
 
 ## See also
 
-
-
-#### Tasks
 
 [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md)
 

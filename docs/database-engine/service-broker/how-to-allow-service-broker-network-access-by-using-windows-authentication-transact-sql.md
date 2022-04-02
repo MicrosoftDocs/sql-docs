@@ -42,6 +42,5 @@ Once access is configured in each instance, then communications between the two 
 
 ## See also
 
-[CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
-
-[CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+- [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
+- [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)

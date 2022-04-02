@@ -18,8 +18,6 @@ Conversation priorities are a set of user-defined rules, each of which specifies
 
 ## Uses of Conversation Priorities
 
-
-
 Conversation priorities can be used to do the following:
 
   - Identify conversations that have precedence over others.
@@ -29,8 +27,6 @@ Conversation priorities can be used to do the following:
   - Favor customer requests over background tasks. For example, new customer registrations should have a higher priority than sending business transaction summaries to a data warehouse.
 
 ## Conversation Priorities and Conversation Endpoints
-
-
 
 Conversation priorities are created in each database using the CREATE BROKER PRIORITY statement. Each conversation priority defines the following:
 
@@ -71,8 +67,6 @@ Which service is evaluated as a local or remote service depends on the type of c
   - For the target conversation endpoint, the target service is the local service and the initiator service is the remote service.
 
 ## How Service Broker Assigns Priority Levels
-
-
 
 Service Broker assigns conversation priority levels when conversation endpoints are created. The conversation endpoint retains the priority level until the conversation ends. New priorities or changes to existing priorities are not applied to existing conversations.
 
@@ -201,10 +195,7 @@ Service Broker assigns the conversation endpoint the priority level from the con
    ANY
 
    :::column-end:::
-:::row-end:::
-
-
-Service Broker first looks for a priority whose specified contract, local service, and remote service matches those used by the conversation endpoint. If one is not found, Service Broker then looks for a priority with a contract and local service that matches those used by the endpoint, and where the remote service was specified as ANY. This continues for all the variations listed in the precedence table. If no match is found, the endpoint is assigned the default priority of 5.
+:::row-end:::Service Broker first looks for a priority whose specified contract, local service, and remote service matches those used by the conversation endpoint. If one is not found, Service Broker then looks for a priority with a contract and local service that matches those used by the endpoint, and where the remote service was specified as ANY. This continues for all the variations listed in the precedence table. If no match is found, the endpoint is assigned the default priority of 5.
 
 The Service Broker communication protocols do not transmit priority levels between conversation endpoints. Service Broker independently assigns a priority level to each endpoint. To have Service Broker assign priority levels to both the initiator and target conversation endpoints, you must ensure that both endpoints are covered by conversation priorities. If the initiator and target conversation endpoints are in separate databases, you must create conversation priorities in each database. If the initiator and target endpoints are in the same database:
 
@@ -233,8 +224,6 @@ All conversation endpoints in a database are assigned default priorities of 5 if
 Conversation priorities do not affect message forwarding, which always operates at the default priority level of 5.
 
 ## Conversation Priority Example
-
-
 
 Consider a system with the following:
 
@@ -285,8 +274,6 @@ This script specifies the priority level for the target conversation endpoint an
 
 ## How Priorities Operate
 
-
-
 Typically, Service Broker sends and receives messages for high priority conversations before sending and receiving messages for low priority conversations. Messages from high priority conversations spend less time in queues than messages from low priority conversations.
 
 ### Reception Priority Levels
@@ -332,34 +319,17 @@ Messages and message fragments may be sent out of priority order:
 While individual messages or message fragments may be sent out of priority order, the effects should be small when considered across many message sends.
 
 ## See also
-
-[ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)
-
-[ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
-
-[BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
-
-[CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)
-
-[CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
-
-[CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
-
-[GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)
-
-[RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
-
-[SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
-
-[sys.conversation_priorities (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)
-
-[sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
-
-
-
-[Conversation Architecture](conversation-architecture.md)
-
-[Service Architecture](service-architecture.md)
-
-[Service Broker Routing and Networking](service-broker-routing-and-networking.md)
-
+- [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)
+- [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
+- [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
+- [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)
+- [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
+- [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
+- [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)
+- [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
+- [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
+- [sys.conversation_priorities (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)
+- [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
+- [Conversation Architecture](conversation-architecture.md)
+- [Service Architecture](service-architecture.md)
+- [Service Broker Routing and Networking](service-broker-routing-and-networking.md)

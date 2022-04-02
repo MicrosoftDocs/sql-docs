@@ -19,11 +19,13 @@ A poison message is a message containing information that an application cannot 
 A poison message is not a corrupt message, and may not be an invalid request. Service Broker contains message integrity checks that detect corrupt messages. An application also typically validates the content of a message, and discards a message that contains an illegal request. In contrast, many poison messages were valid when the message was created, but later became impossible to process.
 
 ## Automatic Poison Message Detection
+
 Service Broker provides automatic poison message detection. When a transaction that contains a RECEIVE statement rolls back five times, Service Broker disables all queues that the transaction received messages from, by automatically setting the queue status to OFF. In addition, Service Broker generates an event of type Broker:Queue Disabled.
 
 An administrator may use SQL Server Agent alerts to be notified when a queue is disabled. A developer can also create an application that detects when a queue is disabled by Service Broker. That application often inspects the messages in the queue to find the poison message. Once the application determines which message cannot be processed, the application sets the queue status to ON and ends the conversation for the message with an error. An application that detects poison messages must be careful to clean up any state associated with the conversation when ending the conversation. For more information on creating an application to recover from poison messages, see [Handling Poison Messages](handling-poison-messages.md).
 
 ## Removing Poison Messages Administratively
+
 Most applications should track and remove poison messages programmatically. However, it may sometimes be necessary to remove a poison message manually. For example, the part of the application that performs recovery may not be able to detect the poison message, or may not be able to safely clean up the saved state for the conversation.
 
 Removing a message manually runs the risk of interrupting an important conversation. Therefore, always inspect a poison message before removing the message from the queue. To see the content of the message, begin a transaction, receive the message body, display the message body, and then roll back the transaction. Until you are positive that the message in question is a poison message, it is important to roll back the transaction.
@@ -115,8 +117,7 @@ When a conversation ends, Service Broker discards the messages for that conversa
 If a service cannot process a message, this means that the service cannot complete the task for the conversation. Ending the conversation with an error notifies the other participant in the conversation that the task failed.
 
 ## See also
-[RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
 
-[END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
-[Querying Queues](querying-queues.md)
-
+- [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
+- [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
+- [Querying Queues](querying-queues.md)

@@ -76,13 +76,12 @@ In this lesson, you will learn to drop the objects that enabled a database to su
     ```
 
 ## Next Steps
+
 This concludes the tutorial. Tutorials are brief overviews and do not describe all available options. Tutorials have simplified logic and error handling to better focus on fundamental operations. To create efficient, reliable, and robust conversations, you need more complex code than the example in this tutorial.
+
 ## See also
-[DROP SERVICE (Transact-SQL)](../../t-sql/statements/drop-service-transact-sql.md)
 
-[DROP QUEUE (Transact-SQL)](../../t-sql/statements/drop-queue-transact-sql.md)
-
-[DROP MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/drop-message-type-transact-sql.md)
-
-[DROP CONTRACT (Transact-SQL)](../../t-sql/statements/drop-contract-transact-sql.md)
-
+- [DROP SERVICE (Transact-SQL)](../../t-sql/statements/drop-service-transact-sql.md)
+- [DROP QUEUE (Transact-SQL)](../../t-sql/statements/drop-queue-transact-sql.md)
+- [DROP MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/drop-message-type-transact-sql.md)
+- [DROP CONTRACT (Transact-SQL)](../../t-sql/statements/drop-contract-transact-sql.md)

@@ -36,33 +36,33 @@ In a sample business scenario, Adventure Works Cycles, a fictitious company, cre
 
 To satisfy the requirement that messages must be encrypted, Adventure Works and the vendors use Service Broker dialog security:
 
-1.  To set up dialog security, the AdventureWorks2008R2 administrator creates a local user named VendorOutgoing and creates a key pair for that user.
+1. To set up dialog security, the AdventureWorks2008R2 administrator creates a local user named VendorOutgoing and creates a key pair for that user.
 
-2.  The administrator distributes the certificate that contains the public key of the key pair to vendors that need to access the service.
+2. The administrator distributes the certificate that contains the public key of the key pair to vendors that need to access the service.
 
-3.  Each vendor installs the certificate from Adventure Works Cycles into the database and creates a user that owns the certificate.
+3. Each vendor installs the certificate from Adventure Works Cycles into the database and creates a user that owns the certificate.
 
-4.  The vendor then creates a key pair, and sends information on the service name for the vendor service and a certificate with the public key of that key pair to the AdventureWorks2008R2 administrator.
+4. The vendor then creates a key pair, and sends information on the service name for the vendor service and a certificate with the public key of that key pair to the AdventureWorks2008R2 administrator.
 
-5.  The AdventureWorks2008R2 administrator creates a user for each vendor and associates the certificate from that vendor with the user.
+5. The AdventureWorks2008R2 administrator creates a user for each vendor and associates the certificate from that vendor with the user.
 
-6.  The administrator also creates a remote service binding for each vendor that associates the name of the vendor service with the user created for the vendor.
+6. The administrator also creates a remote service binding for each vendor that associates the name of the vendor service with the user created for the vendor.
 
 To satisfy the requirement that only qualified vendors can connect to the AdventureWorks2008R2 database, the AdventureWorks2008R2 administrator uses Service Broker transport security:
 
-1.  To set up transport security, the AdventureWorks2008R2 administrator creates a certificate in the master database of the SQL Server instance that will send messages.
+1. To set up transport security, the AdventureWorks2008R2 administrator creates a certificate in the master database of the SQL Server instance that will send messages.
 
-2.  The AdventureWorks2008R2 administrator sends the certificate to each vendor.
+2. The AdventureWorks2008R2 administrator sends the certificate to each vendor.
 
-3.  Each vendor administrator creates a user in the master database to own the certificate, and then installs the certificate in the SQL Server instance that will receive messages.
+3. Each vendor administrator creates a user in the master database to own the certificate, and then installs the certificate in the SQL Server instance that will receive messages.
 
-4.  The vendor administrator next creates a certificate in the master database of the instance, and sends the public key for that user to the AdventureWorks2008R2 administrator.
+4. The vendor administrator next creates a certificate in the master database of the instance, and sends the public key for that user to the AdventureWorks2008R2 administrator.
 
-5.  Finally, the AdventureWorks2008R2 administrator creates a user in the master database to own each vendor public key certificate and installs each vendor certificate in the database.
+5. Finally, the AdventureWorks2008R2 administrator creates a user in the master database to own each vendor public key certificate and installs each vendor certificate in the database.
 
 The combination of transport security and dialog security helps the AdventureWorks2008R2 administrator meet the security requirements of this application. Notice that, in this scenario, vendors cannot log on to the AdventureWorks2008R2 database, and the Adventure Works administrator cannot log on to the vendor databases. Only Service Broker messages can be exchanged between the databases.
 
 ## See also
-[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
-[Service Broker Communication Protocols](service-broker-communication-protocols.md)
 
+- [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
+- [Service Broker Communication Protocols](service-broker-communication-protocols.md)

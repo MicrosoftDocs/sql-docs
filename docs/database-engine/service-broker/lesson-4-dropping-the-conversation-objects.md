@@ -83,13 +83,9 @@ In this lesson, you will learn to drop the objects that enabled a database to su
 This concludes the tutorial. Tutorials are brief introductions only. They do not describe all available options. Tutorials use simplified logic and error handling, and should not be used in a production environment. To create efficient, reliable, and robust conversations, you need more complex code than the example in this tutorial.
 
 ## See also
-[DROP PROCEDURE (Transact-SQL)](../../t-sql/statements/drop-procedure-transact-sql.md)
 
-[DROP SERVICE (Transact-SQL)](../../t-sql/statements/drop-service-transact-sql.md)
-
-[DROP QUEUE (Transact-SQL)](../../t-sql/statements/drop-queue-transact-sql.md)
-
-[DROP MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/drop-message-type-transact-sql.md)
-
-[DROP CONTRACT (Transact-SQL)](../../t-sql/statements/drop-contract-transact-sql.md)ms190475\(v=sql.105\))
-
+- [DROP PROCEDURE (Transact-SQL)](../../t-sql/statements/drop-procedure-transact-sql.md)
+- [DROP SERVICE (Transact-SQL)](../../t-sql/statements/drop-service-transact-sql.md)
+- [DROP QUEUE (Transact-SQL)](../../t-sql/statements/drop-queue-transact-sql.md)
+- [DROP MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/drop-message-type-transact-sql.md)
+- [DROP CONTRACT (Transact-SQL)](../../t-sql/statements/drop-contract-transact-sql.md)ms190475\(v=sql.105\))

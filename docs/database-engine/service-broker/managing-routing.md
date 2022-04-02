@@ -27,7 +27,6 @@ In most cases, a route does not need to expire. The route remains active while t
 An application that uses dynamic routing, however, may use route expiration to ensure that the routing information remains up to date. Service Broker does not remove expired routes from the database. An application that uses route expiration should also create a SQL Server Agent job to periodically remove route objects that have expired.
 
 ## See also
-[Routes](routes.md)
 
-[Service Broker Routing](service-broker-routing.md)
-
+- [Routes](routes.md)
+- [Service Broker Routing](service-broker-routing.md)

@@ -91,5 +91,5 @@ This Transact-SQL code sample defines a service that archives untyped XML docume
 ```
 
 ## See also
-[Creating Service Broker Objects](creating-service-broker-objects.md)
 
+- [Creating Service Broker Objects](creating-service-broker-objects.md)

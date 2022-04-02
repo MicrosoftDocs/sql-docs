@@ -23,7 +23,6 @@ The content of the message is determined by the application. When a message is r
 An application typically processes the content of a message based on the contract and the message type.
 
 ## See also
-[Message Types](message-types.md)
 
-[Building Applications with Service Broker](building-applications-with-service-broker.md)
-
+- [ Message Types](message-types.md)
+- [Building Applications with Service Broker](building-applications-with-service-broker.md)

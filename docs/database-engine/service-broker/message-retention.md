@@ -28,8 +28,7 @@ An application cannot receive the same message twice, and an application cannot 
 For more information on using SELECT statements to access a queue, see [Querying Queues](querying-queues.md).
 
 ## See also
-[ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)
 
-[CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
-[Querying Queues](querying-queues.md)
-
+- [ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)
+- [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
+- [Querying Queues](querying-queues.md)

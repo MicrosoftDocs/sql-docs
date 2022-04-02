@@ -23,6 +23,7 @@ Service Broker communicates the status of a conversation to an application throu
 Messages from Service Broker and messages from the other side of the conversation arrive and are processed in the same way. By using the same programming model to process all messages, you simplify application development. This also lets Service Broker applications be redeployed without changes to application code.
 
 ## In This Section
+
   - [Service Broker Routing](service-broker-routing.md)  
     Describes how Service Broker routes messages.
 
@@ -33,5 +34,5 @@ Messages from Service Broker and messages from the other side of the conversatio
     Describes the message forwarding system.
 
 ## See also
-[Conversation Architecture](conversation-architecture.md)
 
+- [Conversation Architecture](conversation-architecture.md)

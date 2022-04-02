@@ -40,23 +40,12 @@ After moving a database, you can check for Service Broker errors by running the 
 
 ## See also
 
-
-[How to: Activate Service Broker Message Delivery in Databases (Transact-SQL)](how-to-activate-service-broker-message-delivery-in-databases-transact-sql.md)
-
-
-
-[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-
-[ALTER ROUTE (Transact-SQL)](../../t-sql/statements/alter-route-transact-sql.md)
-
-[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
-
-[CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
-[Copy Databases to Other Servers](../../relational-databases/databases/copy-databases-to-other-servers.md)
-
-[Managing Service Broker Identities](managing-service-broker-identities.md)
-
-[Routes](routes.md)
-
-[Service Broker Routing](service-broker-routing.md)
-
+- [How to: Activate Service Broker Message Delivery in Databases (Transact-SQL)](how-to-activate-service-broker-message-delivery-in-databases-transact-sql.md)
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [ALTER ROUTE (Transact-SQL)](../../t-sql/statements/alter-route-transact-sql.md)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+- [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
+- [Copy Databases to Other Servers](../../relational-databases/databases/copy-databases-to-other-servers.md)
+- [Managing Service Broker Identities](managing-service-broker-identities.md)
+- [Routes](routes.md)
+- [Service Broker Routing](service-broker-routing.md)

@@ -25,6 +25,7 @@ A value of NULL in the **remote_service_name** column matches any service name. 
 The examples for outgoing messages do not use the routing table in **msdb**, and the examples for incoming messages and message forwarding do not use the routing table for **AdventureWorks2008R2**.
 
 ## Example 1: Default Configuration
+
 This example describes the default configuration for Service Broker routing. By default, all databases except **master** contain the **AutoCreatedLocal** route. Therefore, the routing tables for **AdventureWorks2008R2** and **msdb** contain the following information.
 
 **AdventureWorks2008R2.sys.routes**
@@ -820,10 +821,8 @@ This example sends messages from outside the local instance to a different insta
 For conversations that arrive from outside the database, the set of matching routes contains both **AutoCreatedLocal** and **ForwardingRoute**, since both routes specify the same remote service name and Service Broker identifier. Service Broker must choose between these two routes. Service Broker chooses routes with the address **'LOCAL'** before routes that specify a network address, so Service Broker first chooses **AutoCreatedLocal**. If the target service exists in the local instance, Service Broker uses this route and delivers the message to that service. However, if the target service does not exist in the local instance, and message forwarding is on, Service Broker chooses **ForwardingRoute**. If message forwarding is not on, Service Broker drops the message if the target service does not exist in the local instance.
 
 ## See also
-[CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)
 
-[sys.routes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)
-[Routes](routes.md)
-
-[Service Broker Routing](service-broker-routing.md)
-
+- [CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)
+- [sys.routes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)
+- [Routes](routes.md)
+- [Service Broker Routing](service-broker-routing.md)

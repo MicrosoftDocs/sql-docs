@@ -34,6 +34,7 @@ For more information about Service Broker route matching, see [Service Broker Ro
 To correctly support message delivery, each Service Broker identifier should be unique across all instances of the Database Engine on the same network. Otherwise, messages could be misdirected. When a new database is created, it is assigned a new Service Broker identifier that should be unique in the network. The identifier is restored when the database is either restored or attached. Be careful when you restore and attach databases. You should not have multiple databases that are actively performing Service Broker operations and using the same identifiers.
 
 ## Service Broker Message Delivery
+
 SQL Server provides a mechanism for deactivating Service Broker message delivery in a database if it has the same Service Broker identifier as another database in the same network. When message delivery is deactivated in a database, all messages sent from that database remain in the transmission queue for the database. Further, Service Broker does not consider services in that database to be available for receiving messages. These services are not considered when Service Broker routing locates a destination service in an instance.
 
 Deactivating Service Broker message delivery lets you safely attach a backup of a database for troubleshooting or data recovery purposes without the risk of misdirected messages. The **is_broker_enabled** column of **sys.databases** shows the current state of Service Broker message delivery for each database.
@@ -41,6 +42,7 @@ Deactivating Service Broker message delivery lets you safely attach a backup of 
 When you attach or restore a database, use care to ensure that only one database that has a given Service Broker identifier has message delivery active. Otherwise, messages could be misdirected, and processing for a conversation might occur in the wrong copy of the database.
 
 ## Managing Identifiers and Message Delivery
+
 The CREATE DATABASE command, the ALTER DATABASE command, and the RESTORE DATABASE command contain options to activate Service Broker message delivery. They also contain options to change the Service Broker identifier for a database.
 
 By default, when you attach or restore a database, the Service Broker identifier and message delivery status are unchanged. Typically, you do not change the Service Broker identifier in the following situations:
@@ -73,10 +75,8 @@ Regardless of the specified option, SQL Server does not allow for two databases 
 For more information about the options for attaching databases, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) and [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md). For information about how to activate Service Broker message delivery in a database, see [How to: Activate Service Broker Message Delivery in Databases (Transact-SQL)](how-to-activate-service-broker-message-delivery-in-databases-transact-sql.md).
 
 ## See also
-[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 
-[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
-
-[RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-
-[sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+- [RESTORE Statements (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

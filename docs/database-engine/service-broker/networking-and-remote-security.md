@@ -27,13 +27,9 @@ To help enable secure, reliable communication between different instances of SQL
     Describes configuring SQL Server to send and receive messages over TCP/IP connections. Endpoints can provide transport security, which prevents unauthorized connections to the endpoint.
 
 ## See also
-[Remote Service Bindings](remote-service-bindings.md)
 
-[Routes](routes.md)
-
-[Service Broker Endpoints](service-broker-endpoints.md)
-
-[Service Broker Dialog Security](service-broker-dialog-security.md)
-
-[Service Broker Transport Security](service-broker-transport-security.md)
-
+- [Remote Service Bindings](remote-service-bindings.md)
+- [Routes](routes.md)
+- [Service Broker Endpoints](service-broker-endpoints.md)
+- [Service Broker Dialog Security](service-broker-dialog-security.md)
+- [Service Broker Transport Security](service-broker-transport-security.md)

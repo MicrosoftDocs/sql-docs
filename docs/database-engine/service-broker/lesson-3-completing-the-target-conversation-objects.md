@@ -69,19 +69,15 @@ In this lesson, you will learn to create the linked server and routes from the t
     ```
 
 ## Next Steps
+
 You have successfully finished configuring the target database to support a Service Broker conversation to the initiator database. Next, you will begin a conversation in the initiator database and send a request message to the target service. See [Lesson 4: Beginning the Conversation](lesson-4-beginning-the-conversation.md).
 
 ## See also
-[CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
 
-[CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)
-
-[CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-
-[EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
-
-[sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
-[Service Broker Routing and Networking](service-broker-routing-and-networking.md)
-
-[Networking and Remote Security](networking-and-remote-security.md)
-
+- [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
+- [CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)
+- [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+- [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
+- [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
+- [Service Broker Routing and Networking](service-broker-routing-and-networking.md)
+- [Networking and Remote Security](networking-and-remote-security.md)

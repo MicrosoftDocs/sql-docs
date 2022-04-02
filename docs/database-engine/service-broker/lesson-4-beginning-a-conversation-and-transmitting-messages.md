@@ -17,6 +17,7 @@ ms.date: "03/30/2022"
 In this lesson, you will learn to start a conversation that spans two databases in the same instance of the Database Engine. You will also learn how to complete a simple request-reply message cycle, and then end the conversation.
 
 ## Procedures
+
 ### Switch to the InitiatorDB database
 
   - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **InitiatorDB** database where you will initiate the conversation.
@@ -30,7 +31,7 @@ In this lesson, you will learn to start a conversation that spans two databases 
 
   - Copy and paste the following code into a Query Editor window. Then, run it to start a conversation and send a request message to the **//TgtDB/2DBSample/TargetService** in the **TargetDB**. The code must be run in one block because a variable is used to pass a dialog handle from BEGIN DIALOG to the SEND statement. The batch runs the BEGIN DIALOG statement to begin the conversation and build a request message. Then, it uses the dialog handle in a SEND statement to send the request message on that conversation. The last SELECT statement displays the text of the message that was sent.
   
-    ```sql 
+    ```sql
         DECLARE @InitDlgHandle UNIQUEIDENTIFIER;
         DECLARE @RequestMsg NVARCHAR(100);
         
@@ -142,16 +143,14 @@ In this lesson, you will learn to start a conversation that spans two databases 
     ```
 
 ## Next Steps
+
 This concludes the tutorial. Tutorials are brief introductions only. They do not describe all available options. Tutorials use simplified logic and error handling, and should not be used in a production environment. To create efficient, reliable, and robust conversations, you need more complex code than the example in this tutorial.
+
 ## See also
-[BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
 
-[END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
-
-[RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
-
-[SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
-
-[WAITFOR (Transact-SQL)](../../t-sql/language-elements/waitfor-transact-sql.md)
-[Service Broker Applications](service-broker-applications.md)
-
+- [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
+- [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
+- [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
+- [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
+- [WAITFOR (Transact-SQL)](../../t-sql/language-elements/waitfor-transact-sql.md)
+- [Service Broker Applications](service-broker-applications.md)

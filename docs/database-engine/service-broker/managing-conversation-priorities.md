@@ -32,9 +32,11 @@ An administrator can turn off conversation priorities for SEND statements by usi
 ```
 
 ## Specifying Conversation Priorities
+
 Conversation priorities are specified by using the CREATE BROKER PRIORITY, ALTER BROKER PRIORITY, and DROP BROKER PRIORITY statements. For more information, see [Conversation Priorities](conversation-priorities.md).
 
 ## Querying Conversation Priorities
+
 Conversation priorities are stored in the **sys.conversation_priorities** system view. The following statement lists all the conversation priorities in the current database:
 
 ```sql
@@ -53,15 +55,10 @@ Conversation priorities are stored in the **sys.conversation_priorities** system
 ```
 
 ## See also
-[ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)
 
-[ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
-
-[CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)
-
-[DROP BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/drop-broker-priority-transact-sql.md)
-
-[sys.conversation_priorities (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)
-
-[sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
-
+- [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)
+- [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
+- [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)
+- [DROP BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/drop-broker-priority-transact-sql.md)
+- [sys.conversation_priorities (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)
+- [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)

@@ -44,6 +44,7 @@ The transport protocol layer handles the actual network transmission. This layer
 Service Broker endpoints set options for the transport protocol. SQL Server does not contain Service Broker endpoints by default. For more information on creating a Service Broker endpoint, see [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md).
 
 ## Service Broker Message Processing
+
 Service Broker uses two distinct categories of message. A sequenced message is a message that must be delivered to an application exactly once, in order. An unsequenced message is a message that can be processed immediately, regardless of the sequence in which the message arrives.
 
 Service Broker uses sequenced messages for all user-defined message types, end dialog messages, and error messages created by an application. Each sequenced message has a sequence number. The instance that originates the message creates the message sequence number and assigns the sequence number to the message. The receiving broker uses the message sequence number to order the messages it provides to an application. For a given dialog, the application always receives the message with the lowest sequence number first. Service Broker also uses the message sequence number to detect duplicate messages. When the dialog protocol layer receives two messages on the same dialog with the same sequence number, the dialog protocol layer considers the messages to be duplicates and discards one.
@@ -77,6 +78,7 @@ The message integrity check is an MD5 signature for the contents of the message.
 The destination for the message decrypts the message, and then compares the signature in the message to a new signature computed over the actual contents received. If the signatures do not match, the message has been damaged or tampered with during transmission. The message fails the message integrity check. SQL Server discards the message and does not acknowledge the message to the sender. The **Broker:Corrupted Message** event class reports information when a message fails the message integrity check.
 
 ## Service Broker Transmission Objects
+
 A Service Broker transmission object is an in-memory object that manages and records the state of message transmissions for a dialog. Each conversation endpoint has one transmission object.
 
 A dialog requests a transmission object when it does the following:
@@ -107,5 +109,5 @@ Network connections occur between two Service Broker endpoints. These connection
 To deliver a message, Service Broker holds the message in the transmission queue for the database that sent the message. The recipient delivers the message directly to the queue for the destination service. If that queue is OFF, the message is held temporarily in the transmission queue for the receiving database. The queue for the sending service is not involved in the operation. The transmission queue for the database that hosts the receiving service is only involved if the destination queue is OFF.
 
 ## See also
-[Service Broker Routing](service-broker-routing.md)
 
+- [Service Broker Routing](service-broker-routing.md)

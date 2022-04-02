@@ -24,5 +24,5 @@ When a BCN service is created, the initiating service will send a **MissingRemot
 The BCN service also manages dynamic routing. For more information about creating a Broker Configuration Notice Service, see [Service Broker Dynamic Routing](service-broker-dynamic-routing.md).
 
 ## See also
-[Service Broker Dynamic Routing](service-broker-dynamic-routing.md)
 
+- [Service Broker Dynamic Routing](service-broker-dynamic-routing.md)

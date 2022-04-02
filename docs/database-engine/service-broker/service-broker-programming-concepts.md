@@ -33,5 +33,5 @@ Service Broker introduces concepts that are unique to developing a Service Broke
     Discusses error handing in applications that use Service Broker.
 
 ## See also
-[Overview (Service Broker)](overview.md)
 
+- [Overview (Service Broker)](overview.md)

@@ -17,6 +17,7 @@ ms.date: "03/30/2022"
 Service Broker provides a flexible security framework for helping you secure your applications. This topic explains considerations for managing Service Broker security.
 
 ## Planning Security
+
 Each application has unique security requirements. Part of managing security is to carefully plan the requirements for your application. Transport security, dialog security, and the security infrastructure built into SQL Server work together to help you secure your application.
 
 All applications use the security infrastructure built into SQL Server. Each operation in SQL Server occurs in a specific security context. In most cases, you create SQL Server database principals specifically for the application. This helps you to ensure that each step in the application runs in a security context with only the privileges necessary for that step. For example, the principal that you specify for internal activation needs execute permissions on the stored procedure that Service Broker activates. The stored procedure itself may impersonate a user that has RECEIVE permission for the queue and UPDATE permission for a particular table. You design your application so that, at each stage, the security context for the application does not have permission to perform unexpected operations.
@@ -41,7 +42,6 @@ Dialog security relies on certificates for authentication and encryption. Transp
 For more information on certificates, see [Certificates and Service Broker](certificates-and-service-broker.md) and [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md).
 
 ## See also
-[Service Broker Dialog Security](service-broker-dialog-security.md)
 
-[Service Broker Transport Security](service-broker-transport-security.md)
-
+- [Service Broker Dialog Security](service-broker-dialog-security.md)
+- [Service Broker Transport Security](service-broker-transport-security.md)

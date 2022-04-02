@@ -16,7 +16,7 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 The following release notes apply to [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] running on Linux. This article is broken into sections for each release. The GA release has detailed supportability and known issues listed. Each cumulative update (CU) or general distribution release (GDR) has a link to a support article describing the CU changes as well as links to the Linux package downloads.
 
 > [!TIP]
-> These release notes are specifically for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] releases. For more information about the new [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], see [Release notes for SQL Server 2019 preview on Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true).
+> These release notes are specifically for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] releases. For more information about the new [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], see [Release notes for SQL Server 2019 on Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true).
 
 ## Supported platforms
 
@@ -25,7 +25,7 @@ The following release notes apply to [!INCLUDE[ssSQL17](../includes/sssql17-md.m
 | Red Hat Enterprise Linux 7.7 - 7.9, or 8.0 - 8.5 Server | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP3 - SP5 | XFS or EXT4 | [Installation guide](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04 LTS, 18.04 LTS | XFS or EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
-| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
+| Docker Engine 1.8+ on Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
 > For more information, review the [system requirements](sql-server-linux-setup.md#system) for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux. For the latest support policy for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)], see the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).

@@ -36,7 +36,5 @@ There are three types of Service Broker components:
   - [Networking and Remote Security](networking-and-remote-security.md)  
     Describes objects that control how Service Broker communicates between databases and instances of the Database Engine.
 
-## See also#### Other Resources
-
-[Benefits of Programming with Service Broker](benefits-of-programming-with-service-broker.md)
+## See also[Benefits of Programming with Service Broker](benefits-of-programming-with-service-broker.md)
 

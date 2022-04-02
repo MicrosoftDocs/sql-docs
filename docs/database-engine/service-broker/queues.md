@@ -42,7 +42,5 @@ A queue may be associated with a stored procedure. In this case, SQL Server acti
 
 [Creating Service Broker Queues](creating-service-broker-queues.md)
 
-#### Other Resources
-
 [Benefits of Programming with Service Broker](benefits-of-programming-with-service-broker.md)
 

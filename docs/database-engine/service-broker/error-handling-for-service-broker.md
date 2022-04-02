@@ -26,7 +26,5 @@ Error handling in an application that uses Service Broker has two distinct aspec
   - [Handling Poison Messages](handling-poison-messages.md)  
     Describes strategies for recovering from poison messages.
 
-## See also#### Other Resources
-
-[Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
+## See also[Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
 

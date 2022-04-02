@@ -116,29 +116,20 @@ In this lesson, you will learn to create the target database and all the Service
     ```
 
 ## Next Steps
+
 You have successfully created the databases that will be used for the tutorial. Next, you will create the **InstInitiatorDB** and configure it with the objects required to support the initiator end of a Service Broker Conversation. See [Lesson 2: Creating the Initiator Database](lesson-2-creating-the-initiator-database.md).
 
 ## See also
-[BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)
 
-[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
-
-[CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
-
-[CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
-
-[CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)
-
-[CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
-
-[CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
-
-[CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
-
-[CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-[Service Broker Dialog Security](service-broker-dialog-security.md)
-
-[Conversation Architecture](conversation-architecture.md)
-
-[Service Architecture](service-architecture.md)
-
+- [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)
+- [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
+- [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+- [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
+- [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)
+- [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
+- [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
+- [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
+- [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+- [Service Broker Dialog Security](service-broker-dialog-security.md)
+- [Conversation Architecture](conversation-architecture.md)
+- [Service Architecture](service-architecture.md)

@@ -29,7 +29,5 @@ When a Service Broker application is in production, most day-to-day management o
   - [Managing Conversation Priorities](managing-conversation-priorities.md)  
     Describes how to enable, specify, and query conversation priorities.
 
-## See also#### Other Resources
-
-[Managing Service Broker Applications](managing-service-broker-applications.md)
+## See also[Managing Service Broker Applications](managing-service-broker-applications.md)
 

@@ -89,17 +89,14 @@ In this lesson, you will learn to build all the objects that enable a database t
     ```
 
 ## Next Steps
+
 You have successfully configured **AdventureWorks2008R2** to support a conversation between the **//AWDB/1DBSample/InitiatorService** and the **//AWDB/1DBSample/TargetService**. Next, you will complete a conversation using the configuration. See [Lesson 2: Beginning a Conversation and Transmitting Messages](lesson-2-beginning-a-conversation-and-transmitting-messages.md).
 
 ## See also
-[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 
-[CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
-
-[CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)[CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
-
-[CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
-[Conversation Architecture](conversation-architecture.md)
-
-[Service Architecture](service-architecture.md)
-
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
+- [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)[CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
+- [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
+- [Conversation Architecture](conversation-architecture.md)
+- [Service Architecture](service-architecture.md)

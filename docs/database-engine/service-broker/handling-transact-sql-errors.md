@@ -23,7 +23,5 @@ Second, an application should always hold a lock on a conversation group before 
 ## See also
 [SAVE TRANSACTION (Transact-SQL)](../../t-sql/language-elements/save-transaction-transact-sql.md)
 
-#### Other Resources
-
 [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
 

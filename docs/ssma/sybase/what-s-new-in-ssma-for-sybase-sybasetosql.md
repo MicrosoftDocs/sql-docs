@@ -1,7 +1,7 @@
 ---
 title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Sybase (SybaseToSQL) for each release.
-author: nahk-ivanov
+author: cpichuka
 ms.prod: sql
 ms.custom:
   - intro-whats-new
@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-ms.author: alexiva
+ms.author: cpichuka
 ---
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 

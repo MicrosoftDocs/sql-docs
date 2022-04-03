@@ -81,7 +81,7 @@ When Service Broker establishes a dialog between two databases, the initiating s
 The most flexible way to do this is to create a certificate and remote service binding. For more information about creating a certificate, see [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md). For more information about creating a remote service binding see, [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md).
 
 > [!NOTE]
-> If the security context is not set up correctly, messages sent on the dialog will stay in the sys.transmission_queue on the initiating service with the following error message in the transmission_status column: **The server principal '%.*ls' is not able to access the database '%.*ls' under the current security context.**
+> If the security context is not set up correctly, messages sent on the dialog will stay in the sys.transmission_queue on the initiating service with the following error message in the transmission_status column: **The server principal `'%.*ls'` is not able to access the database `'%.*ls'` under the current security context.**
 
 ## See also
 

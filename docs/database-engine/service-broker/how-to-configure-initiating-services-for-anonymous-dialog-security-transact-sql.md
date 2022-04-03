@@ -14,7 +14,9 @@ ms.date: "03/30/2022"
 
 [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
-SQL Server uses dialog security for any conversation to a service for which a remote service binding exists. If the database that hosts the target service does not contain a user that corresponds to the user that created the dialog, the dialog uses anonymous security.> [!NOTE]  
+SQL Server uses dialog security for any conversation to a service for which a remote service binding exists. If the database that hosts the target service does not contain a user that corresponds to the user that created the dialog, the dialog uses anonymous security.
+
+> [!NOTE]  
 > Only install certificates from trusted sources.
 
 ## To make sure that an initiating service uses dialog security

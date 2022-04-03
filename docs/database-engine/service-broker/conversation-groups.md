@@ -46,13 +46,13 @@ Service Broker manages the lifetime of the conversation group. You do not need t
 
 - Service Broker receives the first message on a new conversation started by another service. In this case, Service Broker uses the name of the service and the broker instance identifier (if one is present) to do the following:
 
-1. Locate the appropriate queue.
+   1. Locate the appropriate queue.
 
-2. Create a new conversation group and associate the conversation group with the queue.
+   2. Create a new conversation group and associate the conversation group with the queue.
 
-3. Create a new conversation handle and add the conversation handle to the new conversation group.
+   3. Create a new conversation handle and add the conversation handle to the new conversation group.
 
-4. Place the incoming message on the queue.
+   4. Place the incoming message on the queue.
 
 Service Broker adds the conversation group identifier to the metadata for the conversation that created the conversation group. Whenever Service Broker receives a message for any conversation associated with the conversation group, Service Broker adds the conversation group identifier to that message before entering the message in the queue.
 

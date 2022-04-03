@@ -18,10 +18,10 @@ SQL Server uses dialog security for any conversation to a service for which a re
 
 To make sure that an initiating service uses dialog security, you create a remote service binding for the service. For SQL Server to use full security, the remote service binding must not specify anonymous security, and the target database must be configured to use full security for this service.
 
-### To configure an initiating service for full dialog security
+## To configure an initiating service for full dialog security
 
 1. Obtain a certificate for the owner of the target service in the remote database from a trusted source. Typically, this involves sending the certificate using encrypted e-mail or transferring the certificate on physical media such as a floppy disk.
-    
+
    > [!NOTE]  
    > Only install certificates from trusted sources.
   
@@ -37,15 +37,15 @@ To make sure that an initiating service uses dialog security, you create a remot
 5. Create a user without a login to own the local service.
 
 6. Create a certificate for the local service. The user created in the previous step owns the certificate.
-    
+
    > [!NOTE]
    > The certificate must be encrypted with the master key for the database. For more information, see [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md).
 
 7. Back up the certificate.
-    
+
    > [!NOTE]  
    > Only back up the certificate for this user. Do not back up or distribute the private key associated with the certificate.
-   
+
 8. Provide the certificate and the name of the initiating service to the database administrator for the remote database. For example, you may exchange the certificate on physical media such as a floppy disk or a CD-ROM, by placing the certificate on a file share, or through secured e-mail.
 
    > [!NOTE]
@@ -146,23 +146,11 @@ To make sure that an initiating service uses dialog security, you create a remot
     GO
 ```
 
-## See Also
+## See also
 
-
-
-#### Tasks
-
-[How to: Configure Target Services for Full Dialog Security (Transact-SQL)](how-to-configure-target-services-for-full-dialog-security-transact-sql.md)
-
-[How to: Configure Permissions for a Local Service (Transact-SQL)](how-to-configure-permissions-for-a-local-service-transact-sql.md)
-
-#### Reference
-
-[CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
-
-[CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-
-[CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
-
-[Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
-
+- [How to: Configure Target Services for Full Dialog Security (Transact-SQL)](how-to-configure-target-services-for-full-dialog-security-transact-sql.md)
+- [How to: Configure Permissions for a Local Service (Transact-SQL)](how-to-configure-permissions-for-a-local-service-transact-sql.md)
+- [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
+- [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+- [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
+- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

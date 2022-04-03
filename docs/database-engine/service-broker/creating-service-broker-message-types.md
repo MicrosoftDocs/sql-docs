@@ -34,7 +34,7 @@ In general, only one of the participants in the conversation should end the conv
 
 Either participant can end a conversation with an error at any time. For a discussion of handling Service Broker error messages, see [Handling Service Broker Error Messages](handling-service-broker-error-messages.md).
 
-## See Also
+## See also
 
 - [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
 - [Service Broker Communication Protocols](service-broker-communication-protocols.md)

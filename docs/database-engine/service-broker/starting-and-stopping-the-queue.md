@@ -32,9 +32,6 @@ When a queue is unavailable for receive, an application cannot process the messa
 
 When a message arrives for a queue that is unavailable, Service Broker holds the message in the transmission queue for the database, rather than delivering the message to the queue.
 
-## See Also
+## See also
 
-### Reference
-
-[ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)
-
+- [ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)

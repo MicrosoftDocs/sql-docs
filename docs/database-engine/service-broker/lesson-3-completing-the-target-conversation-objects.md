@@ -18,11 +18,9 @@ In this lesson, you will learn to create the linked server and routes from the t
 
 ## Procedures
 
-
-
 ### Create references to initiator objects
 
-  - Copy and paste the following code into a Query Editor window. Change the FROM FILE clause to reference the folder to which you copied the **InstInitiatorCertficate.cer** file from step 4 in Lesson 2. Then, run the code to create an initiator user and pull in the initiator certificate.
+- Copy and paste the following code into a Query Editor window. Change the FROM FILE clause to reference the folder to which you copied the **InstInitiatorCertficate.cer** file from step 4 in Lesson 2. Then, run the code to create an initiator user and pull in the initiator certificate.
 
     ```sql  
         USE InstTargetDB
@@ -38,11 +36,11 @@ In this lesson, you will learn to create the linked server and routes from the t
 
 ### Create routes
 
-  - Copy and paste the following code into a Query Editor window. Change the string **MyInitiatorComputer** to the name of the computer that is running your initiator instance. Then, run the code to create routes to the target service and initiator service, and a remote service binding that associates the **InitiatorUser** with the initiator service route.
-    
+- Copy and paste the following code into a Query Editor window. Change the string **MyInitiatorComputer** to the name of the computer that is running your initiator instance. Then, run the code to create routes to the target service and initiator service, and a remote service binding that associates the **InitiatorUser** with the initiator service route.
+
     The following CREATE ROUTE statements assume that there are no duplicate service names in the target instance. If multiple databases on the target instance contain services that have the same name, use the BROKER_INSTANCE clause to specify the database on which you want to open a conversation.
 
-    ```sql   
+    ```sql
         DECLARE @Cmd NVARCHAR(4000);
         
         SET @Cmd = N'USE InstTargetDB;
@@ -73,27 +71,14 @@ In this lesson, you will learn to create the linked server and routes from the t
 
 ## Next Steps
 
-
-
 You have successfully finished configuring the target database to support a Service Broker conversation to the initiator database. Next, you will begin a conversation in the initiator database and send a request message to the target service. See [Lesson 4: Beginning the Conversation](lesson-4-beginning-the-conversation.md).
 
-## See Also
+## See also
 
-### Reference
-
-[CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
-
-[CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)
-
-[CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-
-[EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
-
-[sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
-
-### Concepts
-
-[Service Broker Routing and Networking](service-broker-routing-and-networking.md)
-
-[Networking and Remote Security](networking-and-remote-security.md)
-
+- [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
+- [CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)
+- [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+- [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)
+- [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
+- [Service Broker Routing and Networking](service-broker-routing-and-networking.md)
+- [Networking and Remote Security](networking-and-remote-security.md)

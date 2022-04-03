@@ -20,8 +20,6 @@ The byte-by-byte match is effectively a binary comparison that does not consider
 
 ## Queue Collation Considerations
 
-
-
 Queues use a consistent collation regardless of the default collation of the SQL Server instance or the default collation of the database that hosts the queue. If a queue is the target of a SELECT statement that includes a JOIN statement with another table in the database, such as a table used to maintain state, you may be required to explicitly specify the collation for the comparison.
 
 For example, an application that uses message retention may need to preserve some messages for a conversation before the application ends the conversation. The following Transact-SQL code sample saves all messages, for a given conversation, that have a message type name in the table **AuditedMessageTypes**.
@@ -48,9 +46,6 @@ The SELECT statement explicitly specifies a binary comparison for matching the m
 
 Service Broker transmits the message body as binary data and does not modify the content of the message. If applications exchange data that is collation-sensitive, the applications must handle any collation differences. Applications that exchange text generally use Unicode types to help minimize collation problems.
 
-## See Also
+## See also
 
-### Concepts
-
-[COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)
-
+- [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)

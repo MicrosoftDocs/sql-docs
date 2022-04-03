@@ -29,32 +29,15 @@ Service Broker offers a built-in message type named DEFAULT. If the message type
 
 Service Broker includes system messages types that are used to report errors and the status of dialogs. For more information, see [Broker System Messages](broker-system-messages.md).
 
-## See Also
+## See also
 
-### Reference
-
-[BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
-
-[CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
-
-
-[CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
-
-[CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
-
-[SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
-
-[RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
-
-### Concepts
-
-[Contracts](contracts.md)
-
-[Dialog Conversations](dialog-conversations.md)
-
-[Messages](messages.md)
-
-[Queues](queues.md)
-
-[Services](services.md)
-
+- [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)
+- [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)[CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
+- [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)
+- [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
+- [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
+- [Contracts](contracts.md)
+- [Dialog Conversations](dialog-conversations.md)
+- [Messages](messages.md)
+- [Queues](queues.md)
+- [Services](services.md)

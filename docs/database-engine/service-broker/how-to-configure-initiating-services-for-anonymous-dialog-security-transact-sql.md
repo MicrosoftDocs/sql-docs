@@ -16,23 +16,20 @@ ms.date: "03/30/2022"
 
 SQL Server uses dialog security for any conversation to a service for which a remote service binding exists. If the database that hosts the target service does not contain a user that corresponds to the user that created the dialog, the dialog uses anonymous security.
 
-
 > [!NOTE]  
 > Only install certificates from trusted sources.
 
-### To make sure that an initiating service uses dialog security
+## To make sure that an initiating service uses dialog security
 
-1.  Obtain a certificate for a user in the remote database from a trusted source.
+1. Obtain a certificate for a user in the remote database from a trusted source.
 
-2.  Create a user without a login.
+2. Create a user without a login.
 
-3.  Install the certificate for the remote service. The user created in step 3 owns the certificate. By default the certificate is active for BEGIN DIALOG.
+3. Install the certificate for the remote service. The user created in step 3 owns the certificate. By default the certificate is active for BEGIN DIALOG.
 
-4.  Create a remote service binding that specifies the user and the target service. For anonymous dialog security, the remote service binding specifies ANONYMOUS = ON.
+4. Create a remote service binding that specifies the user and the target service. For anonymous dialog security, the remote service binding specifies ANONYMOUS = ON.
 
 ## Example
-
-
 
 This example configures anonymous dialog security for conversations between the service named OrderParts in the current instance and the service named SupplierOrders in the remote instance.
 
@@ -86,23 +83,11 @@ This example configures anonymous dialog security for conversations between the 
     GO
 ```
 
-## See Also
+## See also
 
-
-
-#### Tasks
-
-[How to: Configure Permissions for a Local Service (Transact-SQL)](how-to-configure-permissions-for-a-local-service-transact-sql.md)
-
-#### Reference
-
-[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
-
-[CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-
-[CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
-
-[OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md)
-
-[CLOSE MASTER KEY (Transact-SQL)](../../t-sql/statements/close-master-key-transact-sql.md)
-
+- [How to: Configure Permissions for a Local Service (Transact-SQL)](how-to-configure-permissions-for-a-local-service-transact-sql.md)
+- [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
+- [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+- [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
+- [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md)
+- [CLOSE MASTER KEY (Transact-SQL)](../../t-sql/statements/close-master-key-transact-sql.md)

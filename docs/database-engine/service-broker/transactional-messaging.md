@@ -26,12 +26,7 @@ If the application instead receives the message in one transaction and updates t
 
 When an application processes a message and makes no changes to the database, the guarantee holds. The message has been processed successfully. An application that uses Service Broker may choose to ignore a message, but the application must not inadvertently lose a message, even in cases where the application loses connectivity to the database or exits unexpectedly.
 
-## See Also
+## See also
 
-
-
-### Concepts
-
-[Controlling Transactions (ADO)](../../ado/guide/data/controlling-transactions-ado.md)
-
-[Broker System Messages](broker-system-messages.md)
+- [Controlling Transactions (ADO)](../../ado/guide/data/controlling-transactions-ado.md)
+- [Broker System Messages](broker-system-messages.md)

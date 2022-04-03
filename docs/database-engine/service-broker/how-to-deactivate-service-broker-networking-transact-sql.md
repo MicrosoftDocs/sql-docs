@@ -18,11 +18,9 @@ Service Broker sends and receives messages over the network while any Service Br
 
 ## To deactivate Service Broker networking
 
-  - Drop all Service Broker endpoints.
+- Drop all Service Broker endpoints.
 
 ## Example
-
-
 
 ```sql
     USE master ;
@@ -32,17 +30,10 @@ Service Broker sends and receives messages over the network while any Service Br
     GO
 ```
 
-## See Also
+## See also
 
-[How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md)
-
-[How to: Pause Service Broker Networking (Transact-SQL)](how-to-pause-service-broker-networking-transact-sql.md)
-
-#### Reference
-
-[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-
-[ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)
-
-[CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
-
+- [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md)
+- [How to: Pause Service Broker Networking (Transact-SQL)](how-to-pause-service-broker-networking-transact-sql.md)
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)
+- [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)

@@ -36,7 +36,7 @@ Azure SQL Database supports only database-scoped sessions. See [sys.dm_xe_databa
 |execution_count|**bigint**|The number of times the target has been executed for the session. Is not nullable.|  
 |execution_duration_ms|**bigint**|The total amount of time, in milliseconds, that the target has been executing. Is not nullable.|  
 |target_data|**nvarchar(max)**|The data that the target maintains, such as event aggregation information. Is nullable.|
-|bytes_written|**bigint**|Number of bytes written to target. Is not nullable. |
+|bytes_written|**bigint**|**Applies to:** SQL Server 2017 and later. Number of bytes written to target. Is not nullable. |
   
 ## Permissions  
 

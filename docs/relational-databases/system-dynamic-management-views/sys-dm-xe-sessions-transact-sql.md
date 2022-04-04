@@ -50,6 +50,7 @@ Azure SQL Database supports only database-scoped sessions. See [sys.dm_xe_databa
 |buffer_processed_count|**bigint**|**Applies to:** SQL Server 2017 and later. The total number of buffers processed by the session and accumulates from start of session. Is not nullable.|
 |buffer_full_count|**bigint**|**Applies to:** SQL Server 2017 and later. The number of buffers that were full when they were processed and accumulates from start of session. Is not nullable.|  
 |total_bytes_generated|**bigint**|**Applies to:** SQL Server 2017 and later. The number of actual bytes that the extended events session has generated. This information is collected when the session is processing buffers and applies to the file target only. No tracking for other targets. |  
+|total_target_memory |**bigint**|**Applies to:** SQL Server 2019 and later. The total target memory in bytes for a session storing information in a ring buffer target. Is not nullable.|
 
 ## Permissions
 

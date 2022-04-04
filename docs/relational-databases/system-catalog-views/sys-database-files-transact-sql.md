@@ -2,7 +2,7 @@
 description: "sys.database_files (Transact-SQL)"
 title: "sys.database_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/19/2016"
+ms.date: "04/04/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**state**|**tinyint**|File state:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|Description of the file state:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> For more information, see [File States](../../relational-databases/databases/file-states.md).|  
 |**size**|**int**|Current size of the file, in 8-KB pages.<br /><br /> 0 = Not applicable<br /><br /> For a database snapshot, size reflects the maximum space that the snapshot can ever use for the file.<br /><br /> For FILESTREAM filegroup containers, size reflects the current used size of the container.|  
-|**max_size**|**int**|Maximum file size, in 8-KB pages:<br /><br /> 0 = No growth is allowed.<br /><br /> -1 = File will grow until the disk is full.<br /><br /> 268435456 = Log file will grow to a maximum size of 2 TB.<br /><br /> For FILESTREAM filegroup containers, max_size reflects the maximum size of the container.<br /><br /> Note that databases that are upgraded with an unlimited log file size will report -1 for the maximum size of the log file.|  
+|**max_size**|**int**|Maximum file size, in 8-KB pages:<br /><br /> 0 = No growth is allowed.<br /><br /> -1 = File will grow until the disk is full.<br /><br /> 268435456 = Log file will grow to a maximum size of 2 TB.<br /><br /> For FILESTREAM filegroup containers, max_size reflects the maximum size of the container.<br /><br /> Note that databases that are upgraded with an unlimited log file size will report -1 for the maximum size of the log file.<br /><br /> In Azure SQL Database, the sum of *max_size* values for all data files may be less than the maximum data size for the database. Use `DATABASEPROPERTYEX(DB_NAME(), 'MaxSizeInBytes')` to determine maximum data size.|  
 |**growth**|**int**|0 = File is fixed size and will not grow.<br /><br /> >0 = File will grow automatically.<br /><br /> If is_percent_growth = 0, growth increment is in units of 8-KB pages, rounded to the nearest 64 KB.<br /><br /> If is_percent_growth = 1, growth increment is expressed as a whole number percentage.|  
 |**is_media_read_only**|**bit**|1 = File is on read-only media.<br /><br /> 0 = File is on read-write media.|  
 |**is_read_only**|**bit**|1 = File is marked read-only.<br /><br /> 0 = File is marked read/write.|  

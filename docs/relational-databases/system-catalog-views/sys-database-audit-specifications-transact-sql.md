@@ -25,10 +25,10 @@ ms.date: 04/01/2022
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit on a server instance. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+Contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit on a server instance. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Column name|Data type|Description|
-|-----------------|---------------|-----------------|  
+|---|---|---|
 |Name|**sysname**|Name of the auditing specification.|
 |database_specification_id|**int**|ID of the database specification.|
 |create_date|**datetime**|Date the audit specification was created.|
@@ -38,7 +38,7 @@ This article contains information about the database audit specifications in a [
 
 ## Remarks
 
-If a database is in ready-only mode, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit feature can't add Database Audit Specifications.  
+If a database is in ready-only mode, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit feature cannot add Database Audit Specifications.  
 
 ## Permissions
 

@@ -77,7 +77,7 @@ Once access is configured in each instance, then communications between the two 
     GO
 ```
 
-## See Also
+## See also
 
 - [How to: Create Certificates for Service Broker Transport Security (Transact-SQL)](how-to-create-certificates-for-service-broker-transport-security-transact-sql.md)
 - [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)

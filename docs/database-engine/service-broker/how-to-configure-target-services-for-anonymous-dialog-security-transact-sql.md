@@ -16,25 +16,25 @@ ms.date: "03/30/2022"
 
 SQL Server uses dialog security for any conversation to a service for which a remote service binding exists in the database that hosts the initiating service. If the remote service binding specifies ANONYMOUS = ON, the dialog uses anonymous security. In this case, there is no need for the target database to contain a user for the initiating service. The initiating service acts as public in the target database.
 
-### To configure a target service for anonymous dialog security
+## To configure a target service for anonymous dialog security
 
-1.  Create a user without a login.
+1. Create a user without a login.
 
-2.  Create a certificate for the user.
-    
+2. Create a certificate for the user.
+
     > [!NOTE]
     > The certificate must be encrypted with the master key. For more information, see [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md).
 
-3.  Back up the certificate to a file.
-    
+3. Back up the certificate to a file.
+  
     > [!NOTE]
     > Only back up the certificate for this user. Do not back up or distribute the private key associated with the certificate.
 
-4.  Grant permission for the target service user to receive messages from the queue that the target service uses.
+4. Grant permission for the target service user to receive messages from the queue that the target service uses.
 
-5.  Grant permission for public to send messages to the target service.
+5. Grant permission for public to send messages to the target service.
 
-6.  Provide the certificate and the name of the target service to the database administrator for the remote database.
+6. Provide the certificate and the name of the target service to the database administrator for the remote database.
 
 ## Example
 
@@ -86,23 +86,11 @@ SQL Server uses dialog security for any conversation to a service for which a re
     GRANT SEND ON SERVICE::[SupplierOrders] TO public ;
 ```
 
-## See Also
+## See also
 
-
-
-#### Tasks
-
-[How to: Configure Permissions for a Local Service (Transact-SQL)](how-to-configure-permissions-for-a-local-service-transact-sql.md)
-
-[How to: Configure Initiating Services for Anonymous Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-anonymous-dialog-security-transact-sql.md)
-
-#### Reference
-
-[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
-
-[CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-
-[CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
-
-[CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)
-
+- [How to: Configure Permissions for a Local Service (Transact-SQL)](how-to-configure-permissions-for-a-local-service-transact-sql.md)
+- [How to: Configure Initiating Services for Anonymous Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-anonymous-dialog-security-transact-sql.md)
+- [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
+- [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+- [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
+- [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)

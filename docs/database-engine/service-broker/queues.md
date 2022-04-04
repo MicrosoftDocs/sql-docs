@@ -24,31 +24,15 @@ Applications receive messages from the queue for the service. For each conversat
 
 A queue may be associated with a stored procedure. In this case, SQL Server activates the stored procedure when there are messages in the queue to be processed. SQL Server can start more than one instance of the stored procedure up to a configured maximum. For more information, see [Service Broker Activation](service-broker-activation.md).
 
-## See Also
+## See also
 
-### Reference
-
-[CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
-
-[ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)
-
-[DROP QUEUE (Transact-SQL)](../../t-sql/statements/drop-queue-transact-sql.md)
-
-[SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
-
-[RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
-
-### Concepts
-
-[Service Broker Activation](service-broker-activation.md)
-
-[Choosing a Startup Strategy](choosing-a-startup-strategy.md)
-
-[Understanding When Activation Occurs](understanding-when-activation-occurs.md)
-
-[Creating Service Broker Queues](creating-service-broker-queues.md)
-
-#### Other Resources
-
-[Benefits of Programming with Service Broker](benefits-of-programming-with-service-broker.md)
-
+- [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
+- [ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)
+- [DROP QUEUE (Transact-SQL)](../../t-sql/statements/drop-queue-transact-sql.md)
+- [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
+- [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
+- [Service Broker Activation](service-broker-activation.md)- 
+- [Choosing a Startup Strategy](choosing-a-startup-strategy.md)
+- [Understanding When Activation Occurs](understanding-when-activation-occurs.md)
+- [Creating Service Broker Queues](creating-service-broker-queues.md)
+- [Benefits of Programming with Service Broker](benefits-of-programming-with-service-broker.md)

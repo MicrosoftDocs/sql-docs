@@ -16,9 +16,9 @@ ms.date: "03/30/2022"
 
 The performance of a Service Broker application is generally determined by two factors:
 
-  - The number of messages arriving within a specified period of time.
+- The number of messages arriving within a specified period of time.
 
-  - The speed with which the application processes each message.
+- The speed with which the application processes each message.
 
 Monitoring these two factors is the key to understanding the performance of the application.
 
@@ -26,13 +26,7 @@ Service Broker provides a set of performance counters that provide information o
 
 - [Service Broker Related Dynamic Management Views (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)
 - [SQL Server, Broker Statistics object](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)
-- [Broker Event Category](../../relational-databases/event-classes/broker-event-category.md)
-
-
-## Tuning a Service Broker Stored Procedure
-
-
-
+- [Broker Event Category](../../relational-databases/event-classes/broker-event-category.md)## Tuning a Service Broker Stored Procedure
 For the most part, tuning a stored procedure that uses Service Broker is no different from tuning any other stored procedure. However, there are a few additional considerations.
 
 First, use the WAITFOR clause. Messages seldom arrive at predictable intervals. Even in a service where messages arrive at roughly the same rate that the stored procedure processes the messages, there may be times when no messages are available. Therefore, the procedure should use a WAITFOR clause with a RECEIVE statement or with a GET CONVERSATION GROUP statement. Without WAITFOR, these statements return immediately when there are no available messages on the queue. Depending on the implementation of the stored procedure, the procedure may then loop back through the statement, consuming resources needlessly, or the procedure may exit only to be reactivated shortly thereafter, consuming more resources than simply continuing to run.
@@ -47,9 +41,7 @@ Next, end conversations when the task completes. Service Broker maintains state 
 
 Finally, keep transactions short. For example, if the conversation pattern for the service involves a large number of messages on the same conversation group, limiting the number of messages processed in each transaction may improve overall throughput.
 
-## See Also
-
-### Concepts
+## See also
 
 [Conversation Group Locks](conversation-group-locks.md)
 

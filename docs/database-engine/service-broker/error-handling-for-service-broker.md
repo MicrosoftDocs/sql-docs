@@ -18,22 +18,15 @@ Error handling in an application that uses Service Broker has two distinct aspec
 
 ## In This Section
 
-
-
-  - [Handling Transact-SQL Errors (Service Broker)](handling-transact-sql-errors.md)  
+- [Handling Transact-SQL Errors (Service Broker)](handling-transact-sql-errors.md)  
     Describes strategies for working with Transact-SQL errors while maintaining transactional messaging.
 
-  - [Handling Service Broker Error Messages](handling-service-broker-error-messages.md)  
+- [Handling Service Broker Error Messages](handling-service-broker-error-messages.md)  
     Describes strategies for handling error messages delivered by Service Broker.
 
-  - [Handling Poison Messages](handling-poison-messages.md)  
+- [Handling Poison Messages](handling-poison-messages.md)  
     Describes strategies for recovering from poison messages.
 
-## See Also
+## See also
 
-
-
-#### Other Resources
-
-[Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
-
+- [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)

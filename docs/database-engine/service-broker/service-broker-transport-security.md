@@ -24,15 +24,8 @@ The type of authentication an instance uses depends on the AUTHENTICATION option
 
 Service Broker endpoints support two kinds of encryption. As with authentication, the exact encryption method used for a connection depends on the order in which the methods are specified for the instance initiating the connection.
 
-## See Also
+## See also
 
-### Reference
-
-[CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
-
-[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
-
-### Concepts
-
-[Service Broker Communication Protocols](service-broker-communication-protocols.md)
-
+- [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
+- [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
+- [Service Broker Communication Protocols](service-broker-communication-protocols.md)

@@ -22,11 +22,6 @@ Each Service Broker application is a set of tasks that can operate independently
 
 When you design your Service Broker application for scalability, carefully consider how the tasks in the application relate to each other. Services constructed with clear separation between tasks are generally most successful in both scale-up and scale-out scenarios. In general, divide tasks into services by considering the data needed to complete the task. When two related tasks do not modify the same data, consider structuring these tasks as different services. For example, although both a customer management application and a shipping application require access to the customer address, only the customer management application modifies the address. In this case, messages to the shipping application can contain the address information necessary to ship an order. Because there is no need for the shipping application and the customer application to access the same tables, these tasks can be separated cleanly into different services.
 
-## See Also
+## See also
 
-
-
-#### Other Resources
-
-[Administration (Service Broker)](administration.md)
-
+- [Administration (Service Broker)](administration.md)

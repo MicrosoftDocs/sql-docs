@@ -30,6 +30,6 @@ All Service Broker applications communicate through conversations. Conversations
 - [Conversation Priorities](conversation-priorities.md)  
     Conversation priorities identify the relative importance of conversations. Messages from high priority conversations are processes before messages from low priority conversations. This helps ensure important work is not blocked during heavy processing loads. It also enables systems to offer different levels of service to different customers.
 
-## See Also
+## See also
 
 - [Logical Architecture](logical-architecture.md)

@@ -39,6 +39,28 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
+## Examples  
+ The following example shows how to retrieve all foreign keys in the database, with their related tables & columns.
+  
+```  
+select	fk.name as ForeignKeyName
+      , t_parent.name as ParentTableName
+      , c_parent.name as ParentColumnName
+      , t_child.name as ReferencedTableName
+      , c_child.name as ReferencedColumnName
+from sys.foreign_keys fk 
+inner join sys.foreign_key_columns fkc on fkc.constraint_object_id = fk.object_id
+inner join sys.tables t_parent on t_parent.object_id = fk.parent_object_id
+inner join sys.columns c_parent on fkc.parent_column_id = c_parent.column_id  
+                               and c_parent.object_id = t_parent.object_id 
+inner join sys.tables t_child on t_child.object_id = fk.referenced_object_id
+inner join sys.columns c_child on c_child.object_id = t_child.object_id
+                              and fkc.referenced_column_id = c_child.column_id
+order by t_parent.name, c_parent.name 
+  
+```  
+  
+  
 ## See Also  
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

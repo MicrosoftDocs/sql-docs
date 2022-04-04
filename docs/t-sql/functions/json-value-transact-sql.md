@@ -9,6 +9,8 @@ ms.topic: reference
 f1_keywords: 
   - "JSON_VALUE"
   - "JSON_VALUE_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "JSON_VALUE function"
   - "JSON, extracting"

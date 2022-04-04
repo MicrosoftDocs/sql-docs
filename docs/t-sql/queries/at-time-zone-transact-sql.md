@@ -11,6 +11,8 @@ ms.topic: reference
 f1_keywords: 
   - "AT TIME ZONE"
   - "AT_TIME_ZONE_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "AT TIME ZONE function"
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a

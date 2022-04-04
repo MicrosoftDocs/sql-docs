@@ -13,6 +13,8 @@ f1_keywords:
   - "sys.SESSION_CONTEXT"
   - "SESSION_CONTEXT_TSQL"
   - "sys.SESSION_CONTEXT_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "SESSION_CONTEXT function"
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100

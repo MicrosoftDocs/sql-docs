@@ -18,8 +18,6 @@ This topic describes the execution context for a stored procedure that is starte
 
 ## Security Context
 
-
-
 A queue configured for activation must also specify the user that the activation stored procedure runs as. SQL Server impersonates this user before starting the stored procedure.
 
 When the stored procedure also specifies an EXECUTE AS clause, two impersonations occur. SQL Server first impersonates the user specified for the queue and executes the stored procedure. When the stored procedure executes, the procedure impersonates the user specified in the EXECUTE AS clause of the procedure.
@@ -28,33 +26,20 @@ Notice that the user specified for a remote service binding is generally a diffe
 
 ## Session Settings
 
-
-
 Service Broker executes internally activated service programs on a background session distinct from the connection that created the message. The options set for this session are the default options for the database.
 
 Within a session started by Service Broker, SQL Server writes the output of PRINT and RAISERROR statements to the SQL Server error log. Service Broker does not provide parameters to an activated stored procedure. Service Broker does not consider return values from an activated stored procedure and does not process result sets from an activated stored procedure.
 
 ## Transaction Context
 
-
-
 An activated stored procedure is responsible for managing transactions. SQL Server does not start a transaction before activating the stored procedure, and the stored procedure runs in a different transaction context than the internal operation that activates the procedure. For a discussion of managing transactions in activated stored procedures, see [Transactional Messaging](transactional-messaging.md).
 
 ## Failure Detection
 
-
-
 An activated stored procedure must receive messages from the queue that activated the procedure. If the stored procedure exits without receiving messages or the queue monitor detects that the stored procedure is not receiving messages after a short time-out, the queue monitor considers the stored procedure to have failed. In this case, the queue monitor stops activating the stored procedure.
 
-## See Also
+## See also
 
-### Reference
-
-[PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)
-
-[RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)
-
-### Concepts
-
-[Implementing Internal Activation](implementing-internal-activation.md)
-
+- [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)
+- [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)
+- [Implementing Internal Activation](implementing-internal-activation.md)

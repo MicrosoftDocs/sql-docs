@@ -18,19 +18,17 @@ Service Broker message forwarding allows an instance of SQL Server to accept mes
 
 An administrator can use message forwarding to:
 
-  - Provide connectivity between servers in different trust domains
+- Provide connectivity between servers in different trust domains
 
-  - Simplify administration by creating a single centralized instance that holds the routing information for a domain
+- Simplify administration by creating a single centralized instance that holds the routing information for a domain
 
-  - Distribute work among several instances
+- Distribute work among several instances
 
 When forwarding is enabled, the routing table in **msdb.sys.routes** determines whether a message that arrives from another instance is forwarded. If the address for the matching route is not LOCAL, SQL Server forwards the message to the address specified. Otherwise, the message is delivered locally.
 
 Each Service Broker message contains a maximum lifetime and a count of the number of times that the message has been forwarded. When an instance forwards the message, that instance increases the count in the message. If the message exceeds the maximum lifetime, the forwarding instance discards the message. This strategy helps avoid problems in situations where a routing loop may exist.
 
 ## Forwarding and Reliable Delivery
-
-
 
 An instance that forwards a message does not acknowledge the message to the sender. Only the final destination acknowledges the message. If the sender does not receive an acknowledgment from the destination after a period of time, the sender retries the message.
 
@@ -40,33 +38,18 @@ The management view **sys.dm_broker_forwarded_messages** contains information ab
 
 ## Security and Forwarding
 
-
-
 Service Broker message forwarding does not require a forwarding instance to decrypt the forwarded message. Therefore, only the databases that participate in the conversation must have dialog security configured.
 
 However, because transport security applies to the connections between SQL Server instances each SQL Server instance must have transport security correctly configured for the instances that it communicates with directly. For example, if Instance A and Instance B communicate through a forwarding instance, then both Instance A and Instance B must have transport security correctly configured for the forwarding instance. Because the instances do not exchange messages directly, the instances should not have transport security configured to communicate with each other.
 
-## See Also
+## See also
 
-### Reference
-
-[CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
-
-[ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)
-
-[sys.dm_broker_forwarded_messages (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)
-
-[sys.routes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)
-
-[sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
-
-### Concepts
-
-[Service Broker Routing and Networking](service-broker-routing-and-networking.md)
-
-[Service Broker Endpoints](service-broker-endpoints.md)
-
-[Service Broker Dialog Security](service-broker-dialog-security.md)
-
-[Service Broker Transport Security](service-broker-transport-security.md)
-
+- [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
+- [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)
+- [sys.dm_broker_forwarded_messages (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)
+- [sys.routes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)
+- [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
+- [Service Broker Routing and Networking](service-broker-routing-and-networking.md)
+- [Service Broker Endpoints](service-broker-endpoints.md)
+- [Service Broker Dialog Security](service-broker-dialog-security.md)
+- [Service Broker Transport Security](service-broker-transport-security.md)

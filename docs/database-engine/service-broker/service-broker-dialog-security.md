@@ -18,8 +18,6 @@ Dialog security provides encryption, remote authentication, and remote authoriza
 
 ## Dialog Security Basics
 
-
-
 Service Broker dialog security lets your application use authentication, authorization, or encryption for an individual dialog conversation (or dialog). By default, all dialog conversations use dialog security. When you begin a dialog, you can explicitly allow a dialog to proceed without dialog security by including the ENCRYPTION = OFF clause on the BEGIN DIALOG CONVERSATION statement. However, if a remote service binding exists for the service that the conversation targets, the dialog uses security even when ENCRYPTION = OFF.
 
 For a dialog that uses security, Service Broker encrypts all messages sent outside a SQL Server instance. Messages that remain within a SQL Server instance are never encrypted. In dialog security, only the database that hosts the initiating service and the database that hosts the target service need to have access to the certificates used for security. That is, an instance that performs message forwarding is not required to have the capability to decrypt the messages that the instance forwards.
@@ -64,8 +62,6 @@ For dialogs that use anonymous security, both sides of the conversation use the 
 
 ## Security Contexts for Dialog Security
 
-
-
 Service Broker remote authorization controls remote access to an individual service. Remote authorization determines the security context within which the incoming messages to a SQL Server instance are sent to a service.
 
 Service Broker always uses remote authorization for a secure conversation that does not take place entirely within a SQL Server instance. The dialog security that is configured for the conversation determines the security context that Service Broker uses for remote authorization.
@@ -80,24 +76,16 @@ For better security, the user that owns the private key for a service is typical
 
 ## Creating a Secure Dialog
 
-
-
 When Service Broker establishes a dialog between two databases, the initiating service must establish a user context in the target database so it can put messages in the target queue. This user context determines whether the initiating service has permission to open a dialog to the target.
 
 The most flexible way to do this is to create a certificate and remote service binding. For more information about creating a certificate, see [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md). For more information about creating a remote service binding see, [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md).
 
 > [!NOTE]
-> If the security context is not set up correctly, messages sent on the dialog will stay in the sys.transmission_queue on the initiating service with the following error message in the transmission_status column: **The server principal '%.*ls' is not able to access the database '%.*ls' under the current security context.**## See Also
+> If the security context is not set up correctly, messages sent on the dialog will stay in the sys.transmission_queue on the initiating service with the following error message in the transmission_status column: **The server principal `'%.*ls'` is not able to access the database `'%.*ls'` under the current security context.**
 
-### Reference
+## See also
 
-[Broker:Corrupted Message Event Class](../../relational-databases/event-classes/broker-corrupted-message-event-class.md)
-
-[Audit Broker Login Event Class](../../relational-databases/event-classes/audit-broker-login-event-class.md)
-
-### Concepts
-
-[Remote Service Bindings](remote-service-bindings.md)
-
-[Determining the Dialog Security Type](determining-the-dialog-security-type.md)
-
+- [Broker:Corrupted Message Event Class](../../relational-databases/event-classes/broker-corrupted-message-event-class.md)
+- [Audit Broker Login Event Class](../../relational-databases/event-classes/audit-broker-login-event-class.md)
+- [Remote Service Bindings](remote-service-bindings.md)
+- [Determining the Dialog Security Type](determining-the-dialog-security-type.md)

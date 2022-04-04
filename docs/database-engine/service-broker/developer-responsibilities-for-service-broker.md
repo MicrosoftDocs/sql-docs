@@ -44,6 +44,6 @@ The tasks involved in creating an individual application depend on the needs of 
 
 13. During development and testing, it is often convenient for an application to work with the user names that the application will use in production, but to associate those user names with certificates that are used only in the development and test environment. When the application moves into production, use certificates created for the production environment. By using different certificates, you can reduce the effort involved in deploying the application while still maintaining security between the development environment and the production environment.
 
-## See Also
+## See also
 
 - [Planning for Service Broker Development](planning-for-service-broker-development.md)

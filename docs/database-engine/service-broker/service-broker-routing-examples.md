@@ -26,8 +26,6 @@ The examples for outgoing messages do not use the routing table in **msdb**, and
 
 ## Example 1: Default Configuration
 
-
-
 This example describes the default configuration for Service Broker routing. By default, all databases except **master** contain the **AutoCreatedLocal** route. Therefore, the routing tables for **AdventureWorks2008R2** and **msdb** contain the following information.
 
 **AdventureWorks2008R2.sys.routes**
@@ -73,7 +71,6 @@ This example describes the default configuration for Service Broker routing. By 
    :::column-end:::
 :::row-end:::
 
-
 **msdb.sys.routes**
 
 :::row:::
@@ -117,7 +114,6 @@ This example describes the default configuration for Service Broker routing. By 
    :::column-end:::
 :::row-end:::
 
-
 In this case, all dialogs created in the **AdventureWorks2008R2** database are delivered to a service in the current instance. In addition, all dialogs arriving from outside the instance are delivered to a service in the current instance.
 
 For conversations created in **AdventureWorks2008R2**, **AutoCreatedLocal** is the only route in **AdventureWorks2008R2.sys.routes**. That route is the only route in the set of matching routes, and Service Broker chooses that route. If the service for the message does not exist in the local instance, the message is dropped.
@@ -125,8 +121,6 @@ For conversations created in **AdventureWorks2008R2**, **AutoCreatedLocal** is t
 The process is the same for conversations that arrive from outside of the instance. For conversations that arrive from outside of the instance, **AutoCreatedLocal** is the only route in **msdb.sys.routes**. That route is the only route in the set of matching routes, and Service Broker chooses that route. If the service for the message does not exist in the local instance, the message is dropped.
 
 ## Example 2: Network Route to a Specific Service
-
-
 
 This example describes the typical routing configuration for services outside the current instance. To configure a route to an external service, create the route in the database that begins the conversation. In this example, **AdventureWorks2008R2** contains a route for the service **OrderParts**. The route contains a network address for the **OrderParts** service.
 
@@ -172,6 +166,7 @@ This example describes the typical routing configuration for services outside th
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    OrderPartsRoute
@@ -194,7 +189,6 @@ This example describes the typical routing configuration for services outside th
 
    :::column-end:::
 :::row-end:::
-
 
 **msdb.sys.routes**
 
@@ -239,7 +233,6 @@ This example describes the typical routing configuration for services outside th
    :::column-end:::
 :::row-end:::
 
-
 In this case, all dialogs created in the **AdventureWorks2008R2** database to the service **OrderParts** match the route **OrderPartsRoute**. Service Broker sends these messages to the network address **tcp://host2.Adventure-Works.com:4022/**. All other conversations are delivered to services in the same instance.
 
 For conversations created in **AdventureWorks2008R2** with a target service of **OrderParts**, the set of matching routes contains **OrderPartsRoute**, since this route exactly matches the service name. **OrderPartsRoute** is the only route in the set of matching routes, so Service Broker chooses that route.
@@ -249,8 +242,6 @@ For conversations created in **AdventureWorks2008R2** to a different target serv
 For conversations that arrive from outside of the instance, **AutoCreatedLocal** is the only route in **msdb.sys.routes**. That route is the only route in the set of matching routes, and Service Broker chooses that route. If the service for the message does not exist in the local instance, the message is dropped.
 
 ## Example 3: Network Route to a Mirrored Database
-
-
 
 This example describes the typical routing configuration for a service hosted by a mirrored database outside the current instance. To configure a route to an external service, create the route in the database that begins the conversation. In this example, **AdventureWorks2008R2** contains a route for the service **OrderParts**. The route contains both a network address and a mirror address for the **OrderParts** service.
 
@@ -296,6 +287,7 @@ This example describes the typical routing configuration for a service hosted by
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    OrderPartsRoute
@@ -318,7 +310,6 @@ This example describes the typical routing configuration for a service hosted by
 
    :::column-end:::
 :::row-end:::
-
 
 **msdb.sys.routes**
 
@@ -363,7 +354,6 @@ This example describes the typical routing configuration for a service hosted by
    :::column-end:::
 :::row-end:::
 
-
 For conversations created in **AdventureWorks2008R2** with a target service of **OrderParts**, the set of matching routes contains **OrderPartsRoute**, since this route exactly matches the service name. **OrderPartsRoute** is the only route in the set of matching routes, so Service Broker chooses that route. Service Broker checks both the address and the mirror address to determine which partner is the principal, and then sends the message to the principal.
 
 For conversations created in **AdventureWorks2008R2** to a different target service, the set of matching routes contains **AutoCreatedLocal**. Since this is the only route in the set of matching routes, Service Broker chooses that route. If the service for the message does not exist in the local instance, Service Broker marks the conversation DELAYED.
@@ -371,8 +361,6 @@ For conversations created in **AdventureWorks2008R2** to a different target serv
 For conversations that arrive from outside of the instance, **AutoCreatedLocal** is the only route in **msdb.sys.routes**. That route is the only route in the set of matching routes, and Service Broker chooses that route. If the service for the message does not exist in the local instance, the message is dropped.
 
 ## Example 4: Network Route to All External Services
-
-
 
 This example sends messages from services in **AdventureWorks2008R2** to a different instance unless the service exists in the local instance. Notice that messages for any services that are not in the local instance go to the same network address. This configuration may be useful if the SQL Server instance at that network address performs message forwarding.
 
@@ -420,6 +408,7 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    ExternalRoute
@@ -442,7 +431,6 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
 
    :::column-end:::
 :::row-end:::
-
 
 **msdb.sys.routes**
 
@@ -487,14 +475,11 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
    :::column-end:::
 :::row-end:::
 
-
 For conversations created in **AdventureWorks2008R2**, the set of matching routes contains both **AutoCreatedLocal** and **ExternalRoute**, since the remote service name and broker instance is the same for both routes. Service Broker must choose between these two routes. Service Broker chooses routes with the address **'LOCAL'** before routes that specify a network address, so Service Broker first chooses **AutoCreatedLocal**. If the target service exists in the local instance, Service Broker uses this route and delivers the message to that service. However, if the target service does not exist in the local instance, Service Broker chooses **ExternalRoute**.
 
 For conversations that arrive from outside of the instance, **AutoCreatedLocal** is the only route in **msdb.sys.routes**. That route is the only route in the set of matching routes, and Service Broker chooses that route. If the service for the message does not exist in the local instance, the message is dropped.
 
 ## Example 5: Network Route to Different Instances of a Service
-
-
 
 This example shows a routing configuration where two different network addresses host different instances of the same service. This configuration may be useful for a load balancing configuration.
 
@@ -542,6 +527,7 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    BalancedRouteOne
@@ -564,6 +550,7 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    BalancedRouteTwo
@@ -586,7 +573,6 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
 
    :::column-end:::
 :::row-end:::
-
 
 **msdb.sys.routes**
 
@@ -631,7 +617,6 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
    :::column-end:::
 :::row-end:::
 
-
 For conversations created in the **AdventureWorks2008R2** database to the service **BalancedService** that do not specify a Service Broker identifier, the set of matching routes contains either **BalancedRouteOne** and **BalancedRouteTwo**. Since the routes contain different Service Broker identifiers, the matching process arbitrarily selects a Service Broker identifier and matches that route. Since only one route matches, Service Broker chooses that route for the conversation. The result is that some conversations route to **tcp://server1.Adventure-Works.com:4022/**, and other conversations route to **tcp://server2.Adventure-Works.com:4022/**. However, once Service Broker receives an acknowledgment for a message in a conversation, Service Broker uses the Service Broker identifier contained in the acknowledgment for other messages in the conversation. Once the first acknowledgment is received, all future messages on the conversation are routed using the Service Broker identifier in the acknowledgment.
 
 For conversations created in the **AdventureWorks2008R2** database to the service **BalancedService** that specify one of the Service Broker identifiers in the routing table, the set of matching routes contains the route that matches the Service Broker identifier. The conversation routes to the address in the route with that Service Broker identifier.
@@ -641,8 +626,6 @@ For conversations created in **AdventureWorks2008R2** to a different target serv
 For conversations that arrive from outside of the instance, **AutoCreatedLocal** is the only route in **msdb.sys.routes**. That route is the only route in the set of matching routes, and Service Broker chooses that route. If the service for the message does not exist in the local instance, the message is dropped.
 
 ## Example 6: Message Forwarding for a Specific Service
-
-
 
 This example forwards messages from outside the local instance to the service **ElsewhereService** to the network address **tcp://elsewhere.Adventure-Works.com:4022/**. For all other services, Service Broker delivers the messages to a service in the local instance or marks the conversation DELAYED if the service does not exist in the local instance.
 
@@ -689,7 +672,6 @@ This example forwards messages from outside the local instance to the service **
    :::column-end:::
 :::row-end:::
 
-
 **msdb.sys.routes**
 
 :::row:::
@@ -732,6 +714,7 @@ This example forwards messages from outside the local instance to the service **
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    ForwardingRoute
@@ -755,7 +738,6 @@ This example forwards messages from outside the local instance to the service **
    :::column-end:::
 :::row-end:::
 
-
 For conversations created in **AdventureWorks2008R2**, **AutoCreatedLocal** is the only route in **AdventureWorks2008R2.sys.routes**. That route is the only route in the set of matching routes, and Service Broker chooses that route. If the service for the message does not exist in the local instance, Service Broker marks the conversation DELAYED. Notice that a conversation created in **AdventureWorks2008R2** to the service **ElsewhereService** does not route to **tcp://elsewhere.Adventure-Works.com:4022/**.
 
 For conversations that arrive from outside of the instance to the service **ElsewhereService**, the route **ForwardingRoute** exactly matches the service name. Therefore, **ForwardingRoute** is the only route in the set of matching routes, and Service Broker chooses that route when message forwarding is on. Service Broker chooses this route even if the local instance contains the service **ElsewhereService**. If message forwarding is off, Service Broker drops the message.
@@ -763,8 +745,6 @@ For conversations that arrive from outside of the instance to the service **Else
 For conversations that arrive from outside of the instance to all other services, **AutoCreatedLocal** is the only matching route in **msdb.sys.routes**. Service Broker chooses that route. If the service for the message does not exist in the local instance, the message is dropped.
 
 ## Example 7: Message Forwarding for All Services Not in the Instance
-
-
 
 This example sends messages from outside the local instance to a different instance unless the service exists in the local instance. Notice that messages for all external services go to the same network address. This configuration may be useful for message forwarding.
 
@@ -811,7 +791,6 @@ This example sends messages from outside the local instance to a different insta
    :::column-end:::
 :::row-end:::
 
-
 **msdb.sys.routes**
 
 :::row:::
@@ -854,6 +833,7 @@ This example sends messages from outside the local instance to a different insta
 
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="1":::
    ForwardingRoute
@@ -877,22 +857,13 @@ This example sends messages from outside the local instance to a different insta
    :::column-end:::
 :::row-end:::
 
-
 For conversations created in **AdventureWorks2008R2**, **AutoCreatedLocal** is the only route in **AdventureWorks2008R2.sys.routes**. That route is the only route in the set of matching routes, and Service Broker chooses that route. If the service for the message does not exist in the local instance, Service Broker marks the conversation DELAYED.
 
 For conversations that arrive from outside the database, the set of matching routes contains both **AutoCreatedLocal** and **ForwardingRoute**, since both routes specify the same remote service name and Service Broker identifier. Service Broker must choose between these two routes. Service Broker chooses routes with the address **'LOCAL'** before routes that specify a network address, so Service Broker first chooses **AutoCreatedLocal**. If the target service exists in the local instance, Service Broker uses this route and delivers the message to that service. However, if the target service does not exist in the local instance, and message forwarding is on, Service Broker chooses **ForwardingRoute**. If message forwarding is not on, Service Broker drops the message if the target service does not exist in the local instance.
 
-## See Also
+## See also
 
-### Reference
-
-[CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)
-
-[sys.routes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)
-
-### Concepts
-
-[Routes](routes.md)
-
-[Service Broker Routing](service-broker-routing.md)
-
+- [CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)
+- [sys.routes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)
+- [Routes](routes.md)
+- [Service Broker Routing](service-broker-routing.md)

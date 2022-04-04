@@ -24,18 +24,9 @@ Service Broker also includes a built-in contract named DEFAULT. The DEFAULT cont
 
 For example, a contract can have message types **SubmitRequest**, **ProcessRequest**, and **RequestStatus**. Only the initiating endpoint can use **SubmitRequest**, and only the target endpoint can send **ProcessRequest.** Either participant in the conversation can send the **RequestStatus** message type. The **RequestStatus** message type lets the participant either see where the target is in its processing, or check with the initiator on the status of any parallel processing relating to this request.
 
-## See Also
+## See also
 
-### Reference
-
-[CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
-
-
-[DROP CONTRACT (Transact-SQL)](../../t-sql/statements/drop-contract-transact-sql.md)
-
-### Concepts
-
-[Message Types](message-types.md)
-
-[Creating Service Broker Contracts](creating-service-broker-contracts.md)
-
+- [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
+- [DROP CONTRACT (Transact-SQL)](../../t-sql/statements/drop-contract-transact-sql.md)
+- [Message Types](message-types.md)
+- [Creating Service Broker Contracts](creating-service-broker-contracts.md)

@@ -18,22 +18,20 @@ In this lesson, you will learn to receive the reply message from the target serv
 
 ## Procedures
 
-
-
 ### Switch to the InitiatorDB database
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to switch context back to the **InstInitiatorDB** database where you will receive the reply message and end the conversation.
+- Copy and paste the following code into a Query Editor window. Then, run it to switch context back to the **InstInitiatorDB** database where you will receive the reply message and end the conversation.
 
-    ```sql 
+    ```sql
         USE InstInitiatorDB;
         GO
     ```
 
 ### Receive the reply and end the conversation
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to receive the reply message and end the conversation. The RECEIVE statement retrieves the reply message from the **InstInitiatorQueue**. The END CONVERSATION statement ends the initiator side of the conversation. The last SELECT statement displays the text of the reply message so that you can confirm it is the same as what was sent in the last step.
+- Copy and paste the following code into a Query Editor window. Then, run it to receive the reply message and end the conversation. The RECEIVE statement retrieves the reply message from the **InstInitiatorQueue**. The END CONVERSATION statement ends the initiator side of the conversation. The last SELECT statement displays the text of the reply message so that you can confirm it is the same as what was sent in the last step.
 
-    ```sql   
+    ```sql
         DECLARE @RecvReplyMsg NVARCHAR(100);
         DECLARE @RecvReplyDlgHandle UNIQUEIDENTIFIER;
         
@@ -57,20 +55,11 @@ In this lesson, you will learn to receive the reply message from the target serv
 
 ## Next Steps
 
-
-
 This concludes the tutorial. Tutorials are brief introductions only. They do not describe all available options. Tutorials use simplified logic and error handling, and should not be used in a production environment. To create efficient, reliable, and robust conversations, you need more complex code than the example in this tutorial.
-## See Also
 
-### Reference
+## See also
 
-[RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
-
-[END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
-
-[WAITFOR (Transact-SQL)](../../t-sql/language-elements/waitfor-transact-sql.md)
-
-### Concepts
-
-[Service Broker Applications](service-broker-applications.md)
-
+- [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
+- [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
+- [WAITFOR (Transact-SQL)](../../t-sql/language-elements/waitfor-transact-sql.md)
+- [Service Broker Applications](service-broker-applications.md)

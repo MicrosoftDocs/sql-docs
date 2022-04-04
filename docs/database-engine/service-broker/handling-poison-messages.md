@@ -20,19 +20,19 @@ Service Broker provides automatic poison message detection. Automatic poison mes
 
 The strategy outlined in this section assumes that a message should be removed if it fails a certain number of times. For many applications, this assumption is valid. However, before using this strategy in your application, consider the following questions:
 
-  - Is a failure count reliable for your application? Depending on your application, it may be normal for messages to fail from time to time. For example, in an order entry application, the service that processes an order may take less processing time than the service that adds a new customer record. In this case, it may be normal that an order for a new customer cannot be processed immediately. The application needs to account for the delay when deciding whether a message is a poison message or not. The service may need to allow several failures before removing the message.
+- Is a failure count reliable for your application? Depending on your application, it may be normal for messages to fail from time to time. For example, in an order entry application, the service that processes an order may take less processing time than the service that adds a new customer record. In this case, it may be normal that an order for a new customer cannot be processed immediately. The application needs to account for the delay when deciding whether a message is a poison message or not. The service may need to allow several failures before removing the message.
 
-  - Can your application quickly and reliably check the content of a message to detect that it can never succeed? If so, this is a better strategy than counting the number of times that the program failed to process the message. For example, an expense report that does not contain an employee name or an employee ID number cannot be processed. In this case, the program may be more efficient if it immediately responds to a message that cannot be processed with an error, rather than attempting to process the message. Consider other validation as well. For example, if the ID number is present, but falls outside the range of assigned numbers (for example, a negative number), the application can end the conversation immediately.
+- Can your application quickly and reliably check the content of a message to detect that it can never succeed? If so, this is a better strategy than counting the number of times that the program failed to process the message. For example, an expense report that does not contain an employee name or an employee ID number cannot be processed. In this case, the program may be more efficient if it immediately responds to a message that cannot be processed with an error, rather than attempting to process the message. Consider other validation as well. For example, if the ID number is present, but falls outside the range of assigned numbers (for example, a negative number), the application can end the conversation immediately.
 
-  - Should you remove a message after any failure? If the application handles a high volume of messages where each message has a limited useful life, it may be most efficient to immediately remove any message that causes an operation to fail. For example, if the message provides a progress report from the target service, the initiating service may choose to discard an empty progress report by committing the receive without processing the message. In this case, the conversation continues.
+- Should you remove a message after any failure? If the application handles a high volume of messages where each message has a limited useful life, it may be most efficient to immediately remove any message that causes an operation to fail. For example, if the message provides a progress report from the target service, the initiating service may choose to discard an empty progress report by committing the receive without processing the message. In this case, the conversation continues.
 
 Consider the following questions when you decide how the application handles a poison message:
 
-  - Should your application log the failure and the content of the message? In many cases, this is not necessary. However, for some applications, preserving the content of the message may be appropriate.
+- Should your application log the failure and the content of the message? In many cases, this is not necessary. However, for some applications, preserving the content of the message may be appropriate.
 
-  - Should your application log other information about the failure? In some cases, you may want to track other information about the conversation. For example, you might use the catalog view **sys.conversation_endpoints** to identify the remote broker instance that generated the poison message.
+- Should your application log other information about the failure? In some cases, you may want to track other information about the conversation. For example, you might use the catalog view **sys.conversation_endpoints** to identify the remote broker instance that generated the poison message.
 
-  - Should your application end the conversation with an error, or should the contract for the service allow an application to indicate an error without closing the conversation? For many services, receiving a poison message means that the task described in the contract cannot be completed. In this case, the application ends the conversation with an error. In other cases, the conversation may be able to continue even though one message fails. For example, a service that receives inventory data from a warehouse floor may occasionally receive a message with an unknown part number. Rather than ending the conversation, the service may save the message in a separate table for an operator to inspect at a later time.
+- Should your application end the conversation with an error, or should the contract for the service allow an application to indicate an error without closing the conversation? For many services, receiving a poison message means that the task described in the contract cannot be completed. In this case, the application ends the conversation with an error. In other cases, the conversation may be able to continue even though one message fails. For example, a service that receives inventory data from a warehouse floor may occasionally receive a message with an unknown part number. Rather than ending the conversation, the service may save the message in a separate table for an operator to inspect at a later time.
 
 ## Example: Detecting a Poison Message
 
@@ -180,18 +180,9 @@ The stored procedures above do not handle errors that would cause a transaction 
 
 If you believe that the processing you perform on the message might cause a transaction failure, you can use TRY and CATCH statements to handle the error. For more information on handling errors, see [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md).
 
-## See Also
+## See also
 
-### Reference
-
-[TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)
-
-[sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)
-
-### Concepts
-
-[Removing Poison Messages](removing-poison-messages.md)
-
-#### Other Resources
-
-[Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
+- [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)
+- [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)
+- [Removing Poison Messages](removing-poison-messages.md)
+- [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)

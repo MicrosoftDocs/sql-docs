@@ -16,11 +16,11 @@ ms.date: "03/30/2022"
 
 To allow another instance to send messages using Windows Authentication for transport security, you create a user in the **master** database for the startup service account for the other instance.
 
-### To permit Service Broker access using Windows Authentication
+## To permit Service Broker access using Windows Authentication
 
-1.  Create a login for the startup service account for the other instance.
+1. Create a login for the startup service account for the other instance.
 
-2.  Grant that user CONNECT permission to the Service Broker endpoint.
+2. Grant that user CONNECT permission to the Service Broker endpoint.
 
 Once access is configured in each instance, then communications between the two instances use Service Broker transport security when the transport security configuration option is set in both databases.
 
@@ -40,10 +40,7 @@ Once access is configured in each instance, then communications between the two 
     GO
 ```
 
-## See Also
+## See also
 
-### Reference
-
-[CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
-
-[CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+- [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
+- [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)

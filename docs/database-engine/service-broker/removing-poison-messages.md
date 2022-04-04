@@ -20,15 +20,11 @@ A poison message is not a corrupt message, and may not be an invalid request. Se
 
 ## Automatic Poison Message Detection
 
-
-
 Service Broker provides automatic poison message detection. When a transaction that contains a RECEIVE statement rolls back five times, Service Broker disables all queues that the transaction received messages from, by automatically setting the queue status to OFF. In addition, Service Broker generates an event of type Broker:Queue Disabled.
 
 An administrator may use SQL Server Agent alerts to be notified when a queue is disabled. A developer can also create an application that detects when a queue is disabled by Service Broker. That application often inspects the messages in the queue to find the poison message. Once the application determines which message cannot be processed, the application sets the queue status to ON and ends the conversation for the message with an error. An application that detects poison messages must be careful to clean up any state associated with the conversation when ending the conversation. For more information on creating an application to recover from poison messages, see [Handling Poison Messages](handling-poison-messages.md).
 
 ## Removing Poison Messages Administratively
-
-
 
 Most applications should track and remove poison messages programmatically. However, it may sometimes be necessary to remove a poison message manually. For example, the part of the application that performs recovery may not be able to detect the poison message, or may not be able to safely clean up the saved state for the conversation.
 
@@ -36,10 +32,7 @@ Removing a message manually runs the risk of interrupting an important conversat
 
 ### Example
 
-The following example shows how to inspect a message safely for the conversation handle e29059bb-9922-40f4-a575-66b2e4c70cf9 in the queue ExpenseQueue.
-
-
-[!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
+The following example shows how to inspect a message safely for the conversation handle e29059bb-9922-40f4-a575-66b2e4c70cf9 in the queue ExpenseQueue.[!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
 ```sql
     use AdventureWorks2008R2 ;
@@ -123,15 +116,8 @@ When a conversation ends, Service Broker discards the messages for that conversa
 
 If a service cannot process a message, this means that the service cannot complete the task for the conversation. Ending the conversation with an error notifies the other participant in the conversation that the task failed.
 
-## See Also
+## See also
 
-### Reference
-
-[RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
-
-[END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
-
-### Concepts
-
-[Querying Queues](querying-queues.md)
-
+- [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
+- [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
+- [Querying Queues](querying-queues.md)

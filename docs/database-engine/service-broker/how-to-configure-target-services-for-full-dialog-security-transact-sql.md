@@ -18,7 +18,7 @@ SQL Server uses dialog security for any conversation to a service for which a re
 
 To make sure that a target service uses dialog security, create a user for the initiating service to log in as. For each initiating service, create a user and install the certificate for the initiating user. Notice that a target service does not use a remote service binding.
 
-### To configure a target service for full dialog security
+## To configure a target service for full dialog security
 
 1. Create a user without a login.
 
@@ -30,19 +30,19 @@ To make sure that a target service uses dialog security, create a user for the i
 3. Make that user the owner of the target service.
 
 4. Back up the certificate to a file.
-    
+
    > [!NOTE]  
    > Only back up the certificate for this user. Do not back up or distribute the private key associated with the certificate.
- 
+
 5. Grant permission for the target service user to receive messages from the queue that the target service uses.
 
 6. Provide the certificate and the name of the initiating service to the database administrator for the remote database.
- 
+
    > [!NOTE]
    > For SQL Server to use full dialog security, the certificate must be installed in the remote database, and the user for the certificate must be the user specified in the remote service binding for the target service.
 
 7. Obtain a certificate for a user in the remote database from a trusted source. Typically, this involves sending the certificate using encrypted e-mail or transferring the certificate on physical media such as a floppy disk.
-     
+
    > [!NOTE]
    > Only install certificates from trusted sources.
 
@@ -134,23 +134,11 @@ To make sure that a target service uses dialog security, create a user for the i
     GO
 ```
 
-## See Also
+## See also
 
-
-
-#### Tasks
-
-[How to: Configure Initiating Services for Full Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-full-dialog-security-transact-sql.md)
-
-[How to: Configure Permissions for a Local Service (Transact-SQL)](how-to-configure-permissions-for-a-local-service-transact-sql.md)
-
-#### Reference
-
-[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
-
-[CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-
-[CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
-
-[CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)
-
+- [How to: Configure Initiating Services for Full Dialog Security (Transact-SQL)](how-to-configure-initiating-services-for-full-dialog-security-transact-sql.md)
+- [How to: Configure Permissions for a Local Service (Transact-SQL)](how-to-configure-permissions-for-a-local-service-transact-sql.md)
+- [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
+- [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+- [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)
+- [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)

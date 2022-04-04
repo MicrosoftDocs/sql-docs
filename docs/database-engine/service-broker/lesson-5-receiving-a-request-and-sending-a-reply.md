@@ -17,13 +17,10 @@ ms.date: "03/30/2022"
 In this lesson, you will learn how to receive a request message from the target queue and send a reply message to the initiator service. Run these steps from a copy of Management Studio that is running on the same computer as the target instance of the Database Engine.
 
 ## Procedures
-
-
-
 ### Switch to the TargetDB database
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **InstTargetDB** database where you will receive the request message and send a reply message back to the **InstInitiatorDB**.
-    
+- Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **InstTargetDB** database where you will receive the request message and send a reply message back to the **InstInitiatorDB**.
+
     ```sql 
         USE InstTargetDB;
         GO
@@ -31,7 +28,7 @@ In this lesson, you will learn how to receive a request message from the target 
 
 ### Receive the request and send a reply
 
-  - Copy and paste the following code into a Query Editor window. Then, run it to receive the reply message from the **InstTargetQueue** and send a reply message back to the initiator. The RECEIVE statement retrieves the request message. Then, the following SELECT statement displays the text so that you can verify that it is the same message that was sent in the previous step. The IF statement tests whether the received message is a request message type, and if a SEND statement is used to send a reply message back to the initiator. The END CONVERSATION statement is used to end the target side of the conversation. The final SELECT statement displays the text of the reply message.
+- Copy and paste the following code into a Query Editor window. Then, run it to receive the reply message from the **InstTargetQueue** and send a reply message back to the initiator. The RECEIVE statement retrieves the request message. Then, the following SELECT statement displays the text so that you can verify that it is the same message that was sent in the previous step. The IF statement tests whether the received message is a request message type, and if a SEND statement is used to send a reply message back to the initiator. The END CONVERSATION statement is used to end the target side of the conversation. The final SELECT statement displays the text of the reply message.
     
     ```sql 
         DECLARE @RecvReqDlgHandle UNIQUEIDENTIFIER;
@@ -71,23 +68,12 @@ In this lesson, you will learn how to receive a request message from the target 
 
 ## Next Steps
 
-
-
 You have successfully received the request message and sent a reply message to the initiator service. Next, you will receive the reply message from the initiator queue and end the conversation. See [Lesson 6: Receiving the Reply and Ending the Conversation](lesson-6-receiving-the-reply-and-ending-the-conversation.md).
 
-## See Also
+## See also
 
-### Reference
-
-[END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
-
-[RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
-
-[SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
-
-[WAITFOR (Transact-SQL)](../../t-sql/language-elements/waitfor-transact-sql.md)
-
-### Concepts
-
-[Service Broker Applications](service-broker-applications.md)
-
+- [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
+- [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
+- [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)
+- [WAITFOR (Transact-SQL)](../../t-sql/language-elements/waitfor-transact-sql.md)
+- [Service Broker Applications](service-broker-applications.md)

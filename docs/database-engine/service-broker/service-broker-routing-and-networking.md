@@ -24,18 +24,15 @@ Messages from Service Broker and messages from the other side of the conversatio
 
 ## In This Section
 
-
-
-  - [Service Broker Routing](service-broker-routing.md)  
+- [Service Broker Routing](service-broker-routing.md)  
     Describes how Service Broker routes messages.
 
-  - [Service Broker Communication Protocols](service-broker-communication-protocols.md)  
+- [Service Broker Communication Protocols](service-broker-communication-protocols.md)  
     Describes how Service Broker uses a broker-specific protocol to communicate with remote brokers.
 
-  - [Service Broker Message Forwarding](service-broker-message-forwarding.md)  
+- [Service Broker Message Forwarding](service-broker-message-forwarding.md)  
     Describes the message forwarding system.
 
-## See Also
+## See also
 
-[Conversation Architecture](conversation-architecture.md)
-
+- [Conversation Architecture](conversation-architecture.md)

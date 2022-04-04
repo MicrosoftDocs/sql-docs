@@ -42,8 +42,6 @@ An application that processes a large number of messages in the same conversatio
 
 ## Example
 
-
-
 The following Transact-SQL example processes all messages on the queue **MyServiceQueue**. The processing for the message is minimal. If the message is an **EndDialog** or **Error** message, the code ends the conversation. For any other message, the code creates an XML representation of the message and produces a result set that contains the conversation handle, the message type name, and the XML. When no messages are available for 500 milliseconds, the code exits.
 
 For simplicity, the script produces a result set for each message. If an error occurs while reading from the queue, the script commits the changes without producing any result. Therefore, this script will silently remove any messages that cause an error.
@@ -142,13 +140,8 @@ For simplicity, the script produces a result set for each message. If an error o
     END ; -- Process all conversation groups.
 ```
 
-## See Also
+## See also
 
-### Reference
-
-[END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
-
-[GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)
-
-[RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)
-
+- [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)
+- [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)
+- [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)

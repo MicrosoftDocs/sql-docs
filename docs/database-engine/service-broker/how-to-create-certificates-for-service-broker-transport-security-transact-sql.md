@@ -18,13 +18,11 @@ To set up Service Broker transport security for an instance of SQL Server, you f
 
 For more information using certificates for Service Broker transport security, see [How to: Allow Service Broker Network Access by Using Certificates (Transact-SQL)](how-to-allow-service-broker-network-access-by-using-certificates-transact-sql.md).
 
-### To create a certificate for Service Broker transport security
+## To create a certificate for Service Broker transport security
 
-  - Create a certificate in the **master** database.
+- Create a certificate in the **master** database.
 
 ## Example
-
-
 
 ```sql
     USE master ;
@@ -39,13 +37,8 @@ For more information using certificates for Service Broker transport security, s
     GO
 ```
 
-## See Also
+## See also
 
-### Reference
-
-[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
-
-[CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
-
-[ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)
-
+- [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
+- [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)
+- [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)

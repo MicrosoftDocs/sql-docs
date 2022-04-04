@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 10/20/2021
+ms.date: 04/04/2022
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -47,6 +47,16 @@ We are "standardizing" all our 'Release Notes' style articles:
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## SQL Server 2019 Reporting Services
+
+## 15.0.7961.31630, 2022/04/04 
+*(Product Version: 15.0.1102.962)*
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Fixed datetime parameter issue affecting specific locales  | &nbsp; |
+| Fixed System.FormatException when retrieving data from ESSBASE  | &nbsp; |
+| Fixed issue where editing security groups on an item could remove all previous settings  | &nbsp; |
+| Fixed PDF search issue in right-to-left languages  | &nbsp; |
 
 ## 15.0.7961.31630, 2021/10/20 
 *(Product Version: 15.0.1102.932)*

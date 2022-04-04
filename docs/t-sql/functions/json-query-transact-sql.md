@@ -9,6 +9,8 @@ ms.topic: reference
 f1_keywords: 
   - "JSON_QUERY"
   - "JSON_QUERY_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "JSON, extracting"
   - "JSON, querying"

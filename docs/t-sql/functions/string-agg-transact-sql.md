@@ -11,6 +11,8 @@ ms.topic: reference
 f1_keywords: 
   - "STRING_AGG"
   - "STRING_AGG_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "STRING_AGG function"
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206

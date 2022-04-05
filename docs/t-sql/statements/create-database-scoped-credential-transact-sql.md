@@ -16,6 +16,8 @@ f1_keywords:
   - "CREATE_DATABASE_SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_CREDENTIAL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement"

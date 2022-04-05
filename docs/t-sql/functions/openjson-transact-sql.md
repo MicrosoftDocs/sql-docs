@@ -9,6 +9,8 @@ ms.topic: reference
 f1_keywords: 
   - "OPENJSON"
   - "OPENJSON_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "OPENJSON rowset function"
   - "JSON, importing"

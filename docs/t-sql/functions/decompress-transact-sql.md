@@ -11,6 +11,8 @@ ms.topic: reference
 f1_keywords: 
   - "DECOMPRESS"
   - "DECOMPRESS_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "DECOMPRESS function"
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11

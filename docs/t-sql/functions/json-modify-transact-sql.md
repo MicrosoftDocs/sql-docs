@@ -9,6 +9,8 @@ ms.topic: reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: "jovanpop-msft"
 ms.author: "jovanpop"
+dev_langs: 
+  - "TSQL"
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 # JSON_MODIFY (Transact-SQL)

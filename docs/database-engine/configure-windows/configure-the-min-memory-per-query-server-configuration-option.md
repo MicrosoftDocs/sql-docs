@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "min memory per query option"
   - "min memory grant"
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Configure the min memory per query Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

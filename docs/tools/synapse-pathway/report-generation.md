@@ -1,8 +1,8 @@
 ---
 title: Azure Synapse Pathway Report Generation
 description: Azure Synapse Pathway provides comprehensive reporting on scripts translated.
-author: anshul82-ms
-ms.author: anrampal
+author: WilliamDAssafMSFT 
+ms.author: wiassaf 
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: tools-other 

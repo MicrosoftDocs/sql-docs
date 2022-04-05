@@ -2,7 +2,7 @@
 description: "sys.fn_get_audit_file (Transact-SQL)"
 title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/19/2020"
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.fn_get_audit_file function"
   - "fn_get_audit_file function"
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: sravanisaluru
+ms.author: srsaluru
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sys.fn_get_audit_file (Transact-SQL)

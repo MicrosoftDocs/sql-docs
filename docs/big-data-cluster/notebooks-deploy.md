@@ -2,8 +2,8 @@
 title: "Deploy: Azure Data Studio notebook"
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to use the code and documentation in a notebook from Azure Data Studio to deploy a SQL Server Big Data Cluster.
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
 ms.date: 10/05/2021

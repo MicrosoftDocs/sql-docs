@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Buffer pool extension
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

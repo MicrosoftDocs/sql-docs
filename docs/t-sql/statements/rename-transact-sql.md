@@ -9,6 +9,8 @@ ms.reviewer: "WilliamDAssafMSFT"
 ms.topic: reference
 author: ronortloff
 ms.author: rortloff
+dev_langs: 
+  - "TSQL"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # RENAME (Transact-SQL)

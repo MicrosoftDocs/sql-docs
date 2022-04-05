@@ -10,6 +10,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: dphansen
 manager: cgronlun
+dev_langs: 
+  - "TSQL"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 

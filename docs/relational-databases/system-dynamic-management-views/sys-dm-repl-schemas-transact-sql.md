@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_repl_schemas dynamic management function"
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

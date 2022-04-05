@@ -1,5 +1,5 @@
 ---
-title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
+title: "What's new in Data Migration Assistant (SQL Server)"
 description: Learn about the new features in each release of Data Migration Assistant for SQL Server and Azure SQL Database.
 ms.custom:
   - intro-whats-new
@@ -21,6 +21,24 @@ ms.author: aciortea
 # What's new in Data Migration Assistant
 
 This article lists the additions in each release of Data Migration Assistant.
+
+## Data Migration Assistant v 5.6
+
+The v5.6 release of the Data Migration Assistant provides support for:
+
+- Added new premium-series and premium-series memory optimized Azure SQL Managed Instance preview SKUs to SKU recommendation feature.
+- Added new E v5 and Eb v5 (preview) SQL Server on Azure Virtual Machine SKUs to SKU recommendation feature.
+- Added feature flag to SKU recommendation console app to toggle whether or not new preview SKUs are considered.
+- Improved the SKU recommendation logic for SQL Server on Azure Virtual Machine to better align with best practices: https://aka.ms/sqliaasperf
+
+In addition, this release of Data Migration Assistant provides bug fixes and improvements for the following issues:
+
+- Fixed CPU utilization calculation causing incorrect SKU recommendation results.
+- Fixed case-sensitive collation issue causing data collection to fail during SKU recommendation.
+- Fixed accessibility issues.
+- Fixed Azure SQL Database migration row count mismatch.
+- Fixed T-SQL parser bug.
+- Changed some blocking issues to warnings.
 
 ## Data Migration Assistant v 5.5
 

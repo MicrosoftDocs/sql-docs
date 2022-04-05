@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sys.dm_xe_objects dynamic management view"
   - "extended events [SQL Server], views"
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

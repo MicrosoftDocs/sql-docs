@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Replication XPs option"
 ms.assetid: e170326f-d126-4ed5-bb01-246e1934b710
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Replication XPs Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

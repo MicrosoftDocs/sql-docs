@@ -10,8 +10,8 @@ ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_network_credentials (Transact-SQL)

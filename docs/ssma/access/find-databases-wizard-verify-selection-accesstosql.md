@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Find Databases Wizard"
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Find Databases Wizard (Verify Selection) (AccessToSQL)
 The Verify Selection page of the Find Databases Wizard lists the files to be added to SSMA. If the list of files is incorrect, click **Back** to modify the list. Otherwise, click **Finish** to add the files.  

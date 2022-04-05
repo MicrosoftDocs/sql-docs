@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "Managing Passwords in Oracle, Exporting or Importing Encrypted Password"
   - "Managing passwords in Oracle, Securing Password"
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
-author: "nahk-ivanov"
-ms.author: "alexiva"
-manager: alexiva
+author: cpichuka 
+ms.author: cpichuka 
+manager: madhuriy
 ---
 # Managing Passwords (OracleToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers.

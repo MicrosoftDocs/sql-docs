@@ -13,8 +13,8 @@ f1_keywords:
   - "sql13.swb.serverproperties.activedirectory.f1"
   - "sql13.swb.serverproperties.prodinfo.f1"
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Server Properties - General Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

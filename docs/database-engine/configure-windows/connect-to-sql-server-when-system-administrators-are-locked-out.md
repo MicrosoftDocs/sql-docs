@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "connecting when locked out [SQL Server]"
   - "locked out [SQL Server]"
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: ""
 ms.custom: contperf-fy20q4
 ms.date: 11/02/2021

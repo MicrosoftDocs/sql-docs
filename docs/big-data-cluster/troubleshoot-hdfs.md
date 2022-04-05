@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Cluster
 description: Troubleshoot HDFS in SQL Server Big Data Clusters
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.date: 12/16/2021
 ms.topic: troubleshooting
 ms.prod: sql

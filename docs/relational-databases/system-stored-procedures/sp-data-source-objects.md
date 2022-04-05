@@ -17,8 +17,8 @@ f1_keywords:
   - "sys.sp_data_source_objects"
 helpviewer_keywords: 
   - "PolyBase"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sp_data_source_objects (Transact-SQL)
 

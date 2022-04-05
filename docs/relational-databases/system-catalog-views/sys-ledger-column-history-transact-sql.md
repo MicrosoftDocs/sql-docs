@@ -2,7 +2,7 @@
 description: "sys.ledger_column_history (Transact-SQL)"
 title: "sys.ledger_column_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2021"
+ms.date: "03/22/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -28,6 +28,8 @@ For more information on database ledger, see [Azure SQL Database ledger](/azure/
 |**column_name**|**sysname**|The name of the column in ledger table. If the operation has changed the column name, this column captures the new column name.|
 |**operation_type**|**tinyint**|The numeric value indicating the type of the operation<br/><br/>0 = CREATE – creating a column as part of creating the table containing the column using CREATE TABLE.<br/>1 = ADD – adding a column in a ledger table, using ALTER TABLE/ADD COLUMN..|
 |**operation_type_desc**|**nvarchar(60)**|Textual description of the value of operation_type.|
+|**transaction_id**| **bigint** | A transaction ID that is unique for the database (it corresponds to a transaction ID in the database transaction log). |
+|**sequence_number**| **bigint** | The sequence number of the operation within the transaction. |
 
 ## Permissions
 

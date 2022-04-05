@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL DATA SOURCE creates an external data source used to establish connectivity and data virtualization from SQL Server and Azure SQL platforms."
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 3/4/2022
+ms.date: 4/5/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], ([!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]), or Azure SQL Edge.
+Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], or Azure SQL Edge.
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
@@ -1901,7 +1901,7 @@ WITH
 Creates an external data source [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. 
 
 > [!NOTE]
-> Some functionality of the PolyBase feature is in private preview for **Azure SQL managed instances**, including the ability to query external data (Parquet files) in Azure Data Lake Storage (ADLS) Gen2. Private preview includes access to client libraries and documentation for testing purposes that are not yet available publicly. If you are interested and ready to invest some time in trying out the functionalities and sharing your feedback and questions, please review the [Azure SQL Managed Instance PolyBase Private Preview Guide](https://sqlmipg.blob.core.windows.net/azsqlpolybaseshare/Azure_SQL_Managed_Instance_Polybase_Private_Preview_Onboarding_Guide.pdf).
+> Some functionality of the PolyBase feature is in preview for **Azure SQL managed instances**, including the ability to query external data (Parquet files) in Azure Data Lake Storage (ADLS) Gen2. For more information, see [Data virtualization with Azure SQL Managed Instance (Preview)](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
 In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], external data sources are used to establish connectivity and support:
 

@@ -7,7 +7,7 @@ ms.custom:
   - seo-lt-2019
   - intro-installation
 ms.author: vanto
-ms.date: 06/22/2020
+ms.date: 03/31/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -38,20 +38,20 @@ In this quickstart, you install SQL Server 2019 on Red Hat Enterprise Linux (RHE
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-You must have a RHEL 7.7 - 7.8, or 8.0 - 8.3 machine with **at least 2 GB** of memory.
+You must have a RHEL 7.7 - 7.9, or 8.0 - 8.5 machine with **at least 2 GB** of memory.
 
 ::: moniker-end
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-You must have a RHEL 7.7 - 7.8, or 8.0 - 8.3 machine with **at least 2 GB** of memory.
+You must have a RHEL 7.7 - 7.9, or 8.0 - 8.5 machine with **at least 2 GB** of memory.
 
 ::: moniker-end
 
 To install Red Hat Enterprise Linux on your own machine, go to [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 
-If you have previously installed a CTP or RC release of SQL Server, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and 2019](sql-server-linux-change-repo.md).
+If you've previously installed a CTP or RC release of SQL Server, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and 2019](sql-server-linux-change-repo.md).
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -129,7 +129,7 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    systemctl status mssql-server
    ```
 
-5. To allow remote connections, open the SQL Server port on the firewall on RHEL. The default SQL Server port is TCP 1433. If you are using **FirewallD** for your firewall, you can use the following commands:
+5. To allow remote connections, open the SQL Server port on the firewall on RHEL. The default SQL Server port is TCP 1433. If you're using **FirewallD** for your firewall, you can use the following commands:
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
@@ -196,7 +196,7 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    systemctl status mssql-server
    ```
 
-5. To allow remote connections, open the SQL Server port on the firewall on RHEL. The default SQL Server port is TCP 1433. If you are using **FirewallD** for your firewall, you can use the following commands:
+5. To allow remote connections, open the SQL Server port on the firewall on RHEL. The default SQL Server port is TCP 1433. If you're using **FirewallD** for your firewall, you can use the following commands:
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent

@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "cost threshold for parallelism option"
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Configure the cost threshold for parallelism Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

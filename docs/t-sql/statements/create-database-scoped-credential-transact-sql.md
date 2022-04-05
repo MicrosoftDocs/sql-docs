@@ -16,6 +16,8 @@ f1_keywords:
   - "CREATE_DATABASE_SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_CREDENTIAL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement"
@@ -133,7 +135,7 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';
 -- Create a database scoped credential.
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
-    IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>',
+    IDENTITY = '<client_id>@<OAuth_2.0_Token_EndPoint>',
     SECRET = '<key>'
 ;
 ```

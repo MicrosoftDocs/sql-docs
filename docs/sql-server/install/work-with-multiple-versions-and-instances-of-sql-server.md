@@ -18,12 +18,12 @@ helpviewer_keywords:
   - "32-bit edition [SQL Server]"
   - "editions [SQL Server], side-by-side installations"
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Work with multiple versions and instances of SQL Server
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 You can install multiple instances of SQL Server, or install SQL Server on a computer where earlier SQL Server versions are already installed.
 

@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "system stored functions [SQL Server]"
 ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ms.custom: seo-dt-2019
 ---
 # System Functions by category for Transact-SQL

@@ -18,12 +18,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.openkeys catalog view"
 ms.assetid: 719a1259-2398-4fcb-ba05-aeabba7aec21
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rwestMSFT
+ms.author: randolphwest
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| = azure-sqldw-latest"
+
 ---
 # sys.openkeys (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database Synapse](../../includes/applies-to-version/sql-asdb-asa.md)] 
+
 
   This catalog view returns information about encryption keys that are open in the current session.  
   

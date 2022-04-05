@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "triggers [SQL Server], recursive"
   - "server trigger recursion option"
 ms.assetid: da4c25f5-d04c-4951-a3db-409e71a1b468
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # server trigger recursion Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

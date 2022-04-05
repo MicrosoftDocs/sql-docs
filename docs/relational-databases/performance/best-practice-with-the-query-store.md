@@ -2,7 +2,7 @@
 title: "Best practices with Query Store"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
-ms.date: "12/03/2021"
+ms.date: "4/4/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -425,9 +425,23 @@ Consider the following options:
 > [!TIP]
 > When using an Object-Relational Mapping (ORM) solution such as Entity Framework (EF), application queries like manual LINQ query trees or certain raw SQL queries may not be parameterized, which impacts plan re-use and the ability to track queries in the Query Store. For more information, see [EF Query caching and parameterization](/ef/core/performance/advanced-performance-topics) and [EF Raw SQL Queries](/ef/core/querying/raw-sql).
 
-###  Steps to find out non-parameterized queries in Query Store
+### Find non-parameterized queries in Query Store
 
-Use these extended events on the  database server to capture all the events to find the large number of non-parameterized query in Query Store.
+You can find the number of plans stored in Query Store using the below query, using query store DMVs:
+
+```sql
+  SELECT count(plan_id) plan_count, query_hash,Txt.query_text_id, Txt.query_sql_text
+  FROM sys.query_store_plan AS Pl
+  INNER JOIN sys.query_store_query AS Qry
+      ON Pl.query_id = Qry.query_id
+  INNER JOIN sys.query_store_query_text AS Txt
+      ON Qry.query_text_id = Txt.query_text_id
+         group by query_hash,Txt.query_text_id, Txt.query_sql_text
+         order by 1 desc
+
+```
+
+Use the following sample extended event session to capture non-parameterized query usage in Query Store.
 
 ```sql
   CREATE EVENT SESSION [QueryStore_Troubleshoot] ON SERVER
@@ -557,20 +571,6 @@ Use these extended events on the  database server to capture all the events to f
   ACTION(sqlos.system_thread_id,sqlos.task_address,sqlserver.database_id,sqlserver.database_name))
   ADD TARGET package0.event_file(SET filename=N'QueryStore',max_file_size=(100))
   WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0     KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
-```
-
-You can find the number of plans stored in Query Store using the below DMV’s.
-
-```sql
-  SELECT count(plan_id) plan_count, query_hash,Txt.query_text_id, Txt.query_sql_text
-  FROM sys.query_store_plan AS Pl
-  INNER JOIN sys.query_store_query AS Qry
-      ON Pl.query_id = Qry.query_id
-  INNER JOIN sys.query_store_query_text AS Txt
-      ON Qry.query_text_id = Txt.query_text_id
-         group by query_hash,Txt.query_text_id, Txt.query_sql_text
-         order by 1 desc
-
 ```
 
 

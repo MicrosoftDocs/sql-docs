@@ -11,6 +11,8 @@ ms.topic: "reference"
 f1_keywords: 
   - "COMPRESS"
   - "COMPRESS_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "COMPRESS function"
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88

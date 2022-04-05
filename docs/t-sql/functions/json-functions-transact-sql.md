@@ -6,6 +6,8 @@ ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "JSON functions"
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e

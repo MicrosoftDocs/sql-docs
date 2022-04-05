@@ -133,13 +133,13 @@ In the next steps, you can either register a [single SQL Server instance](#singl
 
 1. Provide the required information as is detailed in this table, and then select **Next**:
 
-   |Value|Description|
-   |---|---|
-   |**Instance Name**|Enter the output of command `SELECT @@SERVERNAME`, such as `MyServer\Instance01`.|
-   |**SQL Server Version**|Select your version from the drop-down.|
-   |**Edition**| Select the applicable edition from the drop-down: Datacenter, Developer (free to deploy if purchased ESUs), Enterprise, Standard, Web, Workgroup.|
-   |**Cores**|Enter the number of cores for this instance|
-   |**Host Type**|Select the applicable host type from the drop-down: Virtual machine (on-premises), Physical Server (on-premises), Azure Virtual Machine, Amazon EC2, Google Compute Engine, Other.|
+   |Value|Description|Additional information|
+   |---|---|---|
+   |**Instance Name**|Enter the output of command `SELECT @@SERVERNAME`, such as `MyServer\Instance01`.|If you have a named instance, you must replace the backslash (`\`) with a hyphen (`-`). For example, `MyServer\Instance01` will become `MyServer-Instance01`.|
+   |**SQL Server Version**|Select your version from the drop-down.||
+   |**Edition**| Select the applicable edition from the drop-down: Datacenter, Developer (free to deploy if purchased ESUs), Enterprise, Standard, Web, Workgroup.||
+   |**Cores**|Enter the number of cores for this instance||
+   |**Host Type**|Select the applicable host type from the drop-down: Virtual machine (on-premises), Physical Server (on-premises), Azure Virtual Machine, Amazon EC2, Google Compute Engine, Other.||
 
 1. You must confirm that you have the rights to receive Extended Security Updates, using the checkbox provided.
 
@@ -221,30 +221,13 @@ For on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instan
 
 ```csv
 name,version,edition,cores,hostType
-Server1\SQL2012,2012,Enterprise,12,Physical Server
-Server2\SQL2012,2012,Enterprise,24,Physical Server
-Server3\SQL2012,2012,Enterprise,12,Virtual Machine
-Server4\SQL2012,2012,Developer,8,Physical Server  
+Server1-SQL2012,2012,Enterprise,12,Physical Server
+Server2-SQL2012,2012,Enterprise,24,Physical Server
+Server3-SQL2012,2012,Enterprise,12,Virtual Machine
+Server4-SQL2012,2012,Developer,8,Physical Server  
 ```
 
 Refer to [MyPhysicalServers.csv](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-server-extended-security-updates/scripts/MyPhysicalServers.csv) for a CSV file example.
-
-#### CSV Example 2 - Azure SQL VM
-
-For Azure Virtual Machine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances, the CSV file should look like this:
-
-```csv
-name,version,edition,cores,hostType,subscriptionId,resourceGroup,azureVmName,azureVmOS    
-ProdServerUS1\SQL01,2012,Enterprise,12,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM1,2012    
-ProdServerUS1\SQL02,2012,Enterprise,24,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM1,2012    
-ServerUS2\SQL01,2012,Enterprise,12,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM2,2012    
-ServerUS2\SQL02,2012,Enterprise,8,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM2,2012    
-SalesServer\SQLProdSales,2012,Developer,8,Azure Virtual Machine,61868ab8-16d4-44ec-a9ff-f35d05922847,RG,VM3,2012  
-```
-
-Refer to [MyAzureVMs.csv](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-server-extended-security-updates/scripts/MyAzureVMs.csv) for an Azure VM targeted CSV file example.
-
-For [!INCLUDE[tsql](../../includes/tsql-md.md)] and PowerShell example scripts that can generate the required [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance registration information into a .CSV file, see [ESU registration script examples](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-server-extended-security-updates/scripts.md).
 
 ## Download ESUs
 

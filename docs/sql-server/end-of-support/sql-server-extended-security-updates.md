@@ -2,7 +2,7 @@
 title: "What are Extended Security Updates?"
 description: Learn how to use Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012.
 ms.custom: ""
-ms.date: 03/15/2022
+ms.date: 04/08/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2016"
 This article provides information for using [Azure Arc](/azure/azure-arc/overview) to receive Extended Security Updates (ESUs) for versions of SQL Server that are out of extended support.
 
 > [!TIP]  
-> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure SQL Server VMs if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
+> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
 
 For more information about other options, see [End of support options](sql-server-end-of-support-overview.md).
 
@@ -63,7 +63,7 @@ For the versions in the table below, consider using [Extended Security Updates](
 Extended Security Updates (ESUs) include security updates for customers who have purchased an Extended Support Update subscription, and are available for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 
 > [!TIP]  
-> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure SQL Server VMs if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
+> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
 
 ESUs are made available **if needed**, once a security vulnerability is discovered and is rated as **Critical** by the [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com). Therefore, there is no regular release cadence for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESUs.
 
@@ -83,13 +83,13 @@ ESUs don't include technical support, but you can use an active support contract
 
 ESUs are available to customers running their workload in Azure, on-premises, or hosted environments.
 
-### Azure Virtual Machines
+### Azure workloads
 
-If you migrate your workloads to Azure Virtual Machines (IaaS), you'll have access to ESUs for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] for up to three years after the End of Support, at **no additional charges** above the cost of running the virtual machine. Customers don't need Software Assurance to receive ESUs in Azure.
+If you migrate your workloads to an Azure service (see the [Overview](#overview) for more information), you'll have access to ESUs for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] for up to three years after the End of Support, at **no additional charges** above the cost of running the Azure service. Customers don't need Software Assurance to receive ESUs in Azure.
 
-Azure VMs running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels, when the virtual machine is configured to use [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
+Azure services running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels, when the service is configured to use [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
-Azure VMs that have ***not* been configured for [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** will need to manually download and deploy ESU patches as described in the [on-premises or hosted environments](#on-premises-or-hosted-environments) section.
+Azure services that have ***not* been configured for [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** will need to manually download and deploy ESU patches as described in the [on-premises or hosted environments](#on-premises-or-hosted-environments) section.
 
 ### On-premises or hosted environments
 
@@ -103,9 +103,7 @@ Customers covered by ESU agreements must follow these steps to download and depl
 
 For more information, see the [Extended Security Updates frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
-You don't need to register [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances for ESUs when running an Azure Virtual Machine that is configured for [automatic updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
-
-## <a id="register-instances-for-esus"></a> Register SQL Server instances for ESUs
+## <a id="register-instances-for-esus"></a> Register disconnected SQL Server instances for ESUs
 
 This example shows you how to manually add your SQL Server instances in a disconnected state to Azure Arc. If you would prefer to add your server as an Azure Arc-enabled server running the Connected Machine agent, see [Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) instead.
 
@@ -165,11 +163,11 @@ Now you can continue to the [Confirmation](#confirmation) section.
 
 ### Confirmation
 
-1. The `Year1OrderID` tag is optional, but should reflect the ESU invoice number for ease of reference. The `Year1EntitlementConfirmed` tag is automatically filled in.
+1. We recommend using the `Year1OrderID` tag to link your SQL Server instances to your ESU invoice number for easy reference. The `Year1EntitlementConfirmed` tag is automatically filled in.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-tags.png" alt-text="Screenshot showing tags":::
 
-1. Before you can add your SQL Server instances, you must agree to the terms and conditions.
+1. Before you can add your SQL Server instances, you must agree to the terms of use and privacy policy.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-terms-and-conditions.png" alt-text="Screenshot showing terms and conditions":::
 
@@ -201,14 +199,14 @@ Follow these steps to link an ESU invoice to your Azure Arc SQL Server instances
 
 - Values are comma-separated
 - Values aren't single or double-quoted
-- If you have a named instance, you must replace the backslash (`\`) with a hyphen (`-`). For example, `MyServer\Instance01` will become `MyServer-Instance01`.
+- Values can include letters, numbers, hyphens (`-`), and underscores (`_`). No other special characters can be used. If you have a named instance, you must replace the backslash (`\`) with a hyphen (`-`). For example, `MyServer\Instance01` will become `MyServer-Instance01`.
 - Column names are case-insensitive but must be named as follows:
 
-   - name
-   - version
-   - edition
-   - cores
-   - hostType
+  - name
+  - version
+  - edition
+  - cores
+  - hostType
 
 #### Example CSV file
 
@@ -266,9 +264,9 @@ The following list shows the supported regions for this service:
 
 General frequently asked questions about Extended Security updates can be found at the [Extended security updates FAQ](https://www.microsoft.com/cloud-platform/extended-security-updates). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific frequently asked questions are listed below.
 
-**When was the End of Support for SQL Server 2012?**
+**When is the End of Support for SQL Server 2012?**
 
-The End of Support date for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] was July 12, 2022.
+The End of Support date for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] is July 12, 2022.
 
 **What does End of Support mean?**
 
@@ -279,7 +277,7 @@ Microsoft Lifecycle Policy offers 10 years of support (5 years for Mainstream Su
 Enterprise, Datacenter, Standard, Web, and Workgroup editions of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] are eligible for ESUs for both x86 and x64 versions.
 
 > [!TIP]  
-> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure SQL Server VMs if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
+> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
 
 **When will the Extended Security Updates offer be available?**
 
@@ -291,7 +289,7 @@ ESUs include provision of Security Updates and Bulletins rated **critical** by t
 
 - For [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ESUs will be available until July 8, 2025.
 
-- For [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], ESUs will be available until July 12, 2023 for customers who have migrated their workloads to Azure VMs.
+- For [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], ESUs will be available until July 12, 2023 for customers who have migrated their workloads to Azure services. See the [Overview](#overview) for more information.
 
 ESU will be distributed if and when available. ESUs do not include technical support, but you may use other [!INCLUDE[msCoName](../../includes/msconame-md.md)] support plans to get assistance on your [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] questions on workloads covered by ESUs. ESUs don't include new features, functional improvements, nor customer-requested fixes. However, [!INCLUDE[msCoName](../../includes/msconame-md.md)] may include non-security fixes as deemed necessary.
 
@@ -317,7 +315,7 @@ For customers who don't have Software Assurance, the alternative option to get a
 No. For versions before [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] we we recommend upgrading to the latest supported versions, but customers can upgrade to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to take advantage of this offer.
 
 > [!TIP]  
-> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure SQL Server VMs if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
+> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
 
 **Can I deploy a brand new SQL Server 2012 instance on Azure and still get Extended Security Updates?**
 
@@ -342,7 +340,7 @@ Customers can move legacy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 ESUs will be available for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in Azure Virtual Machines after the End of Support date of July 12, 2022, for the next three years.
 
 > [!TIP]  
-> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure SQL Server VMs if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
+> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
 
 For customers looking to upgrade from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], all subsequent versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will be supported. For [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], customers are required to be on the latest supported Service Pack. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], customers are advised to be on the latest Cumulative Update. Service Packs won't be available starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], only Cumulative Updates and General Distribution Releases (GDRs).
 
@@ -354,7 +352,7 @@ Yes, customers with active Software Assurance or equivalent Server Subscriptions
 
 **Can customers get free Extended Security Updates on Azure Government regions?**
 
-Yes, ESUs will be available on Azure Virtual Machines on Azure Government regions.
+Not at this stage. Please refer to the [Supported regions](#supported-regions) for more information.
 
 **Can customers get free Extended Security Updates on Azure Stack?**
 

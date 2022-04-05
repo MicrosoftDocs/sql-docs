@@ -3,7 +3,7 @@ title: "Upgrade SQL Server"
 description: This article provides links to resources that contain upgrade information for instances of different versions of SQL Server.
 ms.custom:
   - intro-quickstart
-ms.date: 03/15/2022
+ms.date: 04/08/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

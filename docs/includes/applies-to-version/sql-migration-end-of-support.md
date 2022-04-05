@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.service: sql
 ms.topic: include
-ms.date: 03/15/2022
+ms.date: 04/08/2022
 ms.author: randolphwest
 # SQL on Azure VM version support (currently 2008, 2008 R2, 2012)
 ---

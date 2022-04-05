@@ -201,23 +201,18 @@ Follow these steps to link an ESU invoice to your Azure Arc SQL Server instances
 
 - Values are comma-separated
 - Values aren't single or double-quoted
+- If you have a named instance, you must replace the backslash (`\`) with a hyphen (`-`). For example, `MyServer\Instance01` will become `MyServer-Instance01`.
 - Column names are case-insensitive but must be named as follows:
 
-   |Column name|Required for Azure SQL VM|
-   |---|---|
-   |name|No|
-   |version|No|
-   |edition|No|
-   |cores|No|
-   |hostType|No|
-   |subscriptionID|Yes|
-   |resourceGroup|Yes|
-   |azureVmName|Yes|
-   |AzureVmOS|Yes|
+   - name
+   - version
+   - edition
+   - cores
+   - hostType
 
-#### CSV Example 1 - On-premises
+#### Example CSV file
 
-For on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances, the CSV file should look like this:
+The CSV file should look like this:
 
 ```csv
 name,version,edition,cores,hostType
@@ -226,8 +221,6 @@ Server2-SQL2012,2012,Enterprise,24,Physical Server
 Server3-SQL2012,2012,Enterprise,12,Virtual Machine
 Server4-SQL2012,2012,Developer,8,Physical Server  
 ```
-
-Refer to [MyPhysicalServers.csv](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-server-extended-security-updates/scripts/MyPhysicalServers.csv) for a CSV file example.
 
 ## Download ESUs
 

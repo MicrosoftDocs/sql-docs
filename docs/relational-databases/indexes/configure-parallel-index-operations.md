@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 This topic defines max degree of parallelism and explains how to modify this setting in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
-On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise or higher, index statements may use multiple processors (CPUs) to perform the scan, sort, and index operations associated with the index statement just like other queries do. The number of CPUs used to run a single index statement is determined by the [max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) server configuration option, the current workload, and the index statistics. The max degree of parallelism option determines the maximum number of processors to use in parallel plan execution. If the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detects that the system is busy, the degree of parallelism of the index operation is automatically reduced before statement execution starts. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can also reduce the degree of parallelism if the leading key column of a non-partitioned index has a limited number of distinct values or the frequency of each distinct value varies significantly. For more information, see [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing). 
+On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise or higher, index modification statements may use multiple processors (CPUs) to perform the scan, sort, and index operations associated with the index modification statement just like other queries do. The number of CPUs used to run a single index statement is determined by the [max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) server configuration option, the current workload, and the index statistics. The max degree of parallelism option determines the maximum number of processors to use in parallel plan execution. If the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detects that the system is busy, the degree of parallelism of the index operation is automatically reduced before statement execution starts. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can also reduce the degree of parallelism if the leading key column of a non-partitioned index has a limited number of distinct values or the frequency of each distinct value varies significantly. For more information, see [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing). 
   
 > [!NOTE]  
 > Parallel index operations are not available in every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition. For more information, see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
@@ -47,7 +47,7 @@ On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   The number of processors that are used by the query optimizer typically provides optimal performance. However, operations such as creating, rebuilding, or dropping very large indexes are resource intensive and can cause insufficient resources for other applications and database operations for the duration of the index operation. When this problem occurs, you can manually configure the maximum number of processors that are used to run the index statement by limiting the number of processors to use for the index operation.  
+-   The number of processors that are used by the query optimizer typically provides optimal performance. However, operations such as creating, rebuilding, or dropping very large indexes are resource intensive and can cause insufficient resources for other applications and database operations for the duration of the index operation. When this problem occurs, you can manually configure the maximum number of processors that are used to run the index modification statement by limiting the number of processors to use for the index operation.  
   
 -   The MAXDOP index option overrides the max degree of parallelism configuration option only for the query specifying this option. The following table lists the valid integer values that can be specified with the max degree of parallelism configuration option and the MAXDOP index option.  
   
@@ -76,29 +76,9 @@ On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes
 ###  <a name="Security"></a> <a name="Permissions"></a> Permissions  
  Requires `ALTER` permission on the table or view.  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
-  
-#### To set max degree of parallelism on an index  
-  
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to set max degree of parallelism for an index.  
-  
-2.  Expand the **Tables** folder.  
-  
-3.  Click the plus sign to expand the table on which you want to set max degree of parallelism for an index.  
-  
-4.  Expand the **Indexes** folder.  
-  
-5.  Right-click the index for which you want to set the max degree of parallelism and select **Properties**.  
-  
-6.  Under **Select a page**, select **Options**.  
-  
-7.  Select **Maximum degree of parallelism**, and then enter some value between 1 and 64.  
-  
-8.  Click **OK**.  
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
-#### To set max degree of parallelism on an existing index  
+#### To set max degree of parallelism when modifying an existing index  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -118,7 +98,7 @@ On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes
   
  For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-#### Set max degree of parallelism on a new index  
+#### Set max degree of parallelism when creating a new index  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

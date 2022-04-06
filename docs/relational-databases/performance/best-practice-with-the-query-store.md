@@ -441,7 +441,7 @@ You can find the number of plans stored in Query Store using the below query, us
 
 ```
 
-On SQL Server, this extended event session creates an event file in the SQL Server Log folder by default. For example, in a default SQL Server 2019 installation on Windows, the event file (.xel file) should be created in the folder `C:\Program Files\Microsoft SQL Server\MSSQLSERVER\MSSQL\Log`. For Azure SQL Managed Instance, specify an Azure Blob Storage location instead. For more information, see [XEvent event_file for Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file#phase-2-transact-sql-code-that-uses-azure-storage-container). The event 'qds.query_store_db_diagnostics' is not available for Azure SQL Database. 
+On SQL Server, this extended event session creates an event file in the SQL Server Log folder by default. For example, in a default SQL Server 2019 installation on Windows, the event file (.xel file) should be created in the folder `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`. For Azure SQL Managed Instance, specify an Azure Blob Storage location instead. For more information, see [XEvent event_file for Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file#phase-2-transact-sql-code-that-uses-azure-storage-container). The event 'qds.query_store_db_diagnostics' is not available for Azure SQL Database. 
 
 The following sample creates a session to capture the event `query_store_db_diagnostics`:
 

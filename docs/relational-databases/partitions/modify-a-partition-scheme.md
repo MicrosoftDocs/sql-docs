@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 You can modify a partition scheme in SQL Server, Azure SQL Database, and Azure SQL Managed Instance by designating a filegroup to hold the next partition that is added to a partitioned table using [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You do this by assigning the NEXT USED property to a filegroup. 
 
-You can assign the NEXT USED property to an empty filegroup or to one that already holds a partition.In other words, a filegroup can hold more than one partition. Learn more about filegroups and  partitioning strategies in the [Filegroups](partitioned-tables-and-indexes.md#filegroups).
+You can assign the NEXT USED property to an empty filegroup or to one that already holds a partition. In other words, a filegroup can hold more than one partition. Learn more about filegroups and  partitioning strategies in the [Filegroups](partitioned-tables-and-indexes.md#filegroups).
 
 Table partitioning is also available in dedicated SQL pools in Azure Synapse Analytics, with some syntax differences. Learn more in [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition).
  
@@ -46,16 +46,16 @@ This example uses the [AdventureWorks sample database](../../samples/adventurewo
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.
+3.  Copy and paste the following example into the query window and select **Execute**.
 
-    > ![NOTE]
+    > [!NOTE]
     > For simplicity, this code creates new filegroups but does not assign files to them. This  allows the demonstration of how to modify the partition scheme but is not a complete example of configuring a partitioned object. Find examples of creating partitioned tables and indexes in [Create partitioned tables and indexes](create-partitioned-tables-and-indexes.md).
   
     ```  
     USE AdventureWorks2019;  
-    GO  
+    GO
     -- add five new filegroups to the AdventureWorks2019 database  
     ALTER DATABASE AdventureWorks2019  
     ADD FILEGROUP test1fg;  
@@ -116,15 +116,15 @@ This example uses the [AdventureWorks sample database](../../samples/adventurewo
 
 1. In **Object Explorer**, connect to your target database.
 
-1. Click the plus sign to expand the database where you want to delete the partition scheme.  
+1. Select the plus sign to expand the database where you want to delete the partition scheme.  
   
-1. Click the plus sign to expand the **Storage** folder.  
+1. Select the plus sign to expand the **Storage** folder.  
   
-1. Click the plus sign to expand the **Partition Schemes** folder.  
+1. Select the plus sign to expand the **Partition Schemes** folder.  
   
 1. Right-click the partition scheme you want to delete and select **Delete**.  
   
-1. In the **Delete Object** dialog box, ensure that the correct partition scheme is selected, and then click **OK**.
+1. In the **Delete Object** dialog box, ensure that the correct partition scheme is selected, and then select **OK**.
 
 ## Next steps
 

@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 You can change the way a table or index is partitioned in SQL Server, Azure SQL Database, and Azure SQL Managed Instance by adding or subtracting the number of partitions specified, in increments of 1, in the partition function of the partitioned table or index by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. When you add a partition, you do so by "splitting" an existing partition into two partitions and redefining the boundaries of the new partitions. When you drop a partition, you do so by "merging" the boundaries of two partitions into one. This last action repopulates one partition and leaves the other partition unassigned.  
   
 > [!CAUTION]  
->  More than one table or index can use the same partition function. When you modify a partition function, you affect all of them in a single transaction. Check the partition function's dependencies before modifying it.  
+>  More than one table or index can use the same partition function. When you modify a partition function, you affect all of them in a single transaction. Check the [partition function's dependencies](#query-partitioned-objects-in-a-database) before modifying it.  
 
 Table partitioning is also available in dedicated SQL pools in Azure Synapse Analytics, with some syntax differences. Learn more in [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition).
   
@@ -50,25 +50,49 @@ Table partitioning is also available in dedicated SQL pools in Azure Synapse Ana
 -   CONTROL or ALTER permission on the database in which the partition function was created.  
   
 -   CONTROL SERVER or ALTER ANY DATABASE permission on the server of the database in which the partition function was created.  
-  
+
+## Query partitioned objects in a database
+
+The following query lists all partitioned objects in a database. This can be used to check the dependencies for a partition function before modifying it.
+
+```sql
+SELECT 
+	PF.name AS PartitionFunction,
+	ds.name AS PartitionScheme,
+	OBJECT_NAME(si.object_id) AS PartitionedTable, 
+	si.name as IndexName
+FROM sys.indexes AS si
+JOIN sys.data_spaces AS ds
+	ON ds.data_space_id = si.data_space_id
+JOIN sys.partition_schemes AS PS
+	ON PS.data_space_id = si.data_space_id
+JOIN sys.partition_functions AS PF
+	ON PF.function_id = PS.function_id
+WHERE ds.type = 'PS'
+AND OBJECTPROPERTYEX(si.object_id, 'BaseType') = 'U'
+ORDER BY PartitionFunction, PartitionScheme, PartitionedTable;
+```  
+
 ## Split a partition with Transact-SQL
   
 1.  In **Object Explorer**, connect to your target database.  
   
-2.  On the Standard bar, click **New Query**.  
+2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+3.  Copy and paste the following example into the query window and select **Execute**.  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
-    GO  
+    GO
+
     -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  
+
     --Split the partition between boundary_values 100 and 1000  
     --to create two partitions between boundary_values 100 and 500  
     --and between boundary_values 500 and 1000.  
@@ -80,20 +104,22 @@ Table partitioning is also available in dedicated SQL pools in Azure Synapse Ana
   
 1.  In **Object Explorer**, connect to your target database.  
   
-2.  On the Standard bar, click **New Query**.  
+2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+3.  Copy and paste the following example into the query window and select **Execute**.  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
-    GO  
+    GO 
+
     -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  
+
     --Merge the partitions between boundary_values 1 and 100  
     --and between boundary_values 100 and 1000 to create one partition  
     --between boundary_values 1 and 1000.  
@@ -111,7 +137,7 @@ Table partitioning is also available in dedicated SQL pools in Azure Synapse Ana
   
 1. Right-click the partition function you want to delete and select **Delete**.  
   
-1. In the **Delete Object** dialog box, ensure that the correct partition function is selected, and then click **OK**. 
+1. In the **Delete Object** dialog box, ensure that the correct partition function is selected, and then select **OK**. 
 
 ## Next steps
 

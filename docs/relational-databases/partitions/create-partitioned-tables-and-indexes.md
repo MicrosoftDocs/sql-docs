@@ -38,13 +38,13 @@ You can create a [partitioned table or index](partitioned-tables-and-indexes.md)
 
 Creating a partitioned table or index typically happens in three or four parts:  
   
-1.  Optionally create a filegroup or filegroups and corresponding data files that will hold the partitions specified by the partition scheme. The main reason to place partitions on multiple filegroups is to ensure you can independently perform backup and restore operations on partitions. If this is not required, you may choose to assign all partitions to a single filegroup, using either an existing filegroup, such as `PRIMARY`, or another filegroup of your choice.
+1.  Optionally [create a filegroup](../../t-sql/statements/alter-database-transact-sql-set-options.md) or filegroups and corresponding data files that will hold the partitions specified by the partition scheme. The main reason to place partitions on multiple filegroups is to ensure you can independently perform backup and restore operations on partitions. If this is not required, you may choose to assign all partitions to a single filegroup, using either an existing filegroup, such as `PRIMARY`, or a new filegroup with related data file(s).
   
-2.  Create a partition function that maps the rows of a table or index into partitions based on the values of a specified column.  
+2.  Create a [partition function](../../t-sql/statements/create-partition-function-transact-sql.md) that maps the rows of a table or index into partitions based on the values of a specified column.  
   
-3.  Create a partition scheme that maps the partitions of a partitioned table or index to one filegroup or to multiple filegroups.  
+3.  Create a [partition scheme](../../t-sql/statements/create-partition-scheme-transact-sql.md) that maps the partitions of a partitioned table or index to one filegroup or to multiple filegroups.  
   
-4.  Create or modify a table or index and specify the partition scheme as the storage location.  
+4.  Create or modify a table or index and specify the partition scheme as the storage location, along with the column that will serve as the partitioning column.
  
 > [!NOTE]
 > Only the `PRIMARY` filegroup is supported in Azure SQL Database. For optimized backup and restore, consider the [Hyperscale service tier](/azure/azure-sql/database/service-tier-hyperscale), which has a unique architecture that provides nearly instantaneous database backups and fast database restores.
@@ -95,7 +95,7 @@ CREATE PARTITION SCHEME myRangePS1
     ALL TO ('PRIMARY') ;  
 GO  
 
-CREATE TABLE PartitionTable (col1 int PRIMARY KEY, col2 char(10))  
+CREATE TABLE dbo.PartitionTable (col1 int PRIMARY KEY, col2 char(10))  
     ON myRangePS1 (col1) ;  
 GO
 ```
@@ -105,12 +105,8 @@ GO
 
 Follow the steps in this section to create one or more filegroups, corresponding files, and a partitioned table using Transact-SQL in SSMS.
 
-Both SQL Server and Azure SQL Managed Instance support creating filegroups and files. Azure SQL Managed Instance automatically configures the path for all database files added, so syntax on `ALTER DATABASE ADD FILE` commands does not allow the `FILENAME` parameter.
-
-Azure SQL Database supports creating partitioned tables in the PRIMARY filegroup. Find example code in [Create a partitioned table on one filegroup using Transact-SQL](#create-a-partitioned-table-on-one-filegroup-using-transact-sql).
+Both SQL Server and Azure SQL Managed Instance support creating filegroups and files. Azure SQL Managed Instance automatically configures the path for all database files added, so syntax on `ALTER DATABASE ADD FILE` commands does not allow the `FILENAME` parameter. Azure SQL Database supports creating partitioned tables only in the PRIMARY filegroup. Find example code for Azure SQL Database in [Create a partitioned table on one filegroup using Transact-SQL](#create-a-partitioned-table-on-one-filegroup-using-transact-sql).
   
-### Create a partitioned table  
-
 This example uses the [AdventureWorks sample database](../../samples/adventureworks-install-configure.md). The example:
 
 - Adds four new filegroups to the AdventureWorks2019 database.
@@ -207,9 +203,9 @@ This example uses the [AdventureWorks sample database](../../samples/adventurewo
 
 ## <a name="SSMSProcedure"></a> Partition a table with SSMS
 
-Follow the steps in this section to optionally create filegroups and corresponding files, then create a partitioned table or partition an existing table using the **Create Partition Wizard** in SQL Server Management Studio (SSMS). The **Create Partition Wizard** is available in SSMS for SQL Server and Azure SQL Managed Instance. Find example code for Azure SQL Database in [Create a partitioned table on one filegroup using Transact-SQL](#create-a-partitioned-table-on-one-filegroup-using-transact-sql).
+Follow the steps in this section to optionally create filegroups and corresponding files, then create a partitioned table or partition an existing table using the **Create Partition Wizard** in SQL Server Management Studio (SSMS). The **Create Partition Wizard** is available in SSMS for SQL Server and Azure SQL Managed Instance. For Azure SQL Database, refer to [Create a partitioned table on one filegroup using Transact-SQL](#create-a-partitioned-table-on-one-filegroup-using-transact-sql).
   
-### Create new filegroups for a partitioned table
+### Create new filegroups (optional)
 
 If you wish to place your partitioned table on one or more new [filegroups](partitioned-tables-and-indexes.md#filegroups), follow the steps in this section. Both SQL Server and Azure SQL Managed Instance support creating filegroups and files. For Azure SQL Managed Instance, the path for any files created will automatically be configured for you.
   
@@ -328,15 +324,15 @@ If you wish to place your partitioned table on one or more new [filegroups](part
   
             -   If you select **Monthly**, select either **Day** or **The**.  
   
-                -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter "15" in the first box and "2" in the second box. Note that the largest number allowed in the second box is "99".  
+                -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter "15" in the first box and "2" in the second box. The largest number allowed in the second box is "99".  
   
-                -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter "2" in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Note that the largest number allowed in the last box is "99".  
+                -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter "2" in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. The largest number allowed in the last box is "99".  
   
         2.  Under **Daily frequency**, specify how often the job schedule repeats on the day the job schedule runs:  
   
             -   If you select **Occurs once at**, enter the specific time of day when the job schedule should run in the **Occurs once at** box. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
-            -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter "2" in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Note that the largest number allowed in the first box is "100".  
+            -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter "2" in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. The largest number allowed in the first box is "100".  
   
                  In the **Starting at** box, enter the time that the job schedule should start running. In the **Ending at** box, enter the time that the job schedule should stop repeating. Enter the hour, minute, and second of the day, as well as AM or PM.  
   

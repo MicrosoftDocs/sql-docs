@@ -12,7 +12,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ""
 ms.custom: FY22Q2Fresh
-ms.date: "10/21/2021"
+ms.date: "04/06/2022"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename a Database

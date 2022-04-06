@@ -34,7 +34,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   If a subscription is not synchronized within the maximum distribution retention period (default of 72 hours) and there are changes in the distribution database that have not been delivered to the Subscriber, the subscription will be marked deactivated by the **Expired Subscription clean up** job that runs on the Distributor. The subscription must be reinitialized.  
   
--   If a subscription is not synchronized within the publication retention period (default of 336 hours), the subscription will expire and be dropped by the **Expired subscription clean up** job that runs on the Publisher. The subscription must be recreated and synchronized.  
+-   If a subscription is not synchronized within the publication retention period (default of 336 hours), the subscription will expire and be dropped by the **Expired subscription clean up** job that runs on the Publisher. (Prior to the fix in [KB4014798](https://support.microsoft.com/topic/kb4014798-update-reduces-the-execution-frequency-of-the-sp-mssubscription-cleanup-stored-procedure-in-sql-server-82f6de06-6ce0-3620-bc79-e954df38a536), the job was named **Distribution cleanup**.) The subscription must be recreated and synchronized.  
   
      If a push subscription expires, it is completely removed, but pull subscriptions are not. You must clean up pull subscriptions at the Subscriber. For more information, see [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   

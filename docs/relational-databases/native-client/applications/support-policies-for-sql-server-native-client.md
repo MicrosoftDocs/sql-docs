@@ -56,8 +56,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  
  ### Support Lifecycle exception
  
- SQL Server versions 2012 through 2019 ship SQL Native Client 11.0 and use it for multiple features. Therefore, SQL Native Client 11.0 will continue to be supported as part of these SQL Server versions until their respective end-of-support lifecycles. This support exception does not include providing enhancements or fixes to SQL Native Client 11.0, but it does cover critical security fixes. 
-  
+The SQL Native Client 11.0 provider is supported in SQL Server 2012 through 2019 until their respective end-of-support lifecycles, but only when used by SQL Server components. Do not remove the SQL Native Client provider that gets installed by SQL Server on the system. This support exception does not include enhancements or fixes to SQL Native Client 11.0, but it does cover critical security fixes.
+
 ## See Also  
  [Building Applications with SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   

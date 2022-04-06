@@ -260,14 +260,50 @@ Parameters that are listed for a [!INCLUDE[ssDEnoversion](../../includes/ssdenov
 |Python/Machine Learning Services (In-Database)|/MPYCACHEDIRECTORY|Reserved for future use. Use %TEMP% to store Python .CAB files for installation on a computer that does not have an internet connection. |  
 |R/Machine Learning Services (In-Database)|/MRCACHEDIRECTORY|Use this parameter to specify the Cache directory for Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Standalone), or R feature support in SQL Server Machine Learning Services or Machine Learning Server (Standalone). This setting is typically used when installing R components from the [command line on a computer without Internet access](../../machine-learning/install/sql-ml-component-install-without-internet-access.md).|  
 |Java/Language Extensions| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **Optional** | Starting with SQL Server 2019, specifies installing Java with Language Extensions. If /SQL_INST_JAVA is provided without the /SQLJAVADIR parameter, it's assumed you want to install the Zulu Open JRE that is provided by the installation media. <br /><br /> Providing a path for /SQLJAVADIR indicates you would like to use an already-installed JRE or JDK. |
+|Azure Arc agent extension |/FEATURES=ARC | Connect the instance to Azure Arc. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURESUBSCRIPTIONID  |Azure subscription the SQL Server instance resource will be created. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURERESOURCEGROUP| Azure resource group where the SQL Server instance resource will be created. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZUREREGION | Azure region where the SQL Server instance resource will be created. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURETENANTID | Azure tenant ID in which the service principal exists. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURESERVICEPRINCIPAL | Service principal to authenticate against given tenant id, subscription and resource group. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURESERVICEPRINCIPALSECRET | Service principal secret. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZUREARCPROXY | Name of the proxy server used to connect to Azure Arc (Optional).Starting with SQL Server 2022 (Preview).|
   
-###### Sample Syntax:  
+### Sample Syntax:
+
  To install a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components and enable instant file initialization for [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
   
 ```  
 setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
-  
+
+#### Deploy - connected to Azure Arc
+
+Beginning with SQL Server 2022 (preview) you can deploy SQL Server instances with the Azure Arc agent extension. This article demonstrates how to include that extension in a command-line deployment. When you include the Azure Arc agent extension you can automatically enable the instance for Azure Arc.
+
+The following example deploys a SQL Server instance that is connected to Azure Arc. Before you run the example, replace the information in angle brackets ( `< ... > ` ) with your information.
+
+```console
+setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ARC /INSTANCENAME=<instance name> /SQLSYSADMINACCOUNTS="<sysadmin account>" /IACCEPTSQLSERVERLICENSETERMS /ONBOARDSQLTOARC /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<00000000-0000-0000-0000-000000000000" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region>
+```
+
+The following example adds the SQL Arc agent extension to an existing instance.
+
+```console
+setup.exe /qs /ACTION=Install /FEATURES=ARC  /IACCEPTSQLSERVERLICENSETERMS /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<00000000-0000-0000-0000-000000000000" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region> 
+```
+
+The following example removes the SQL Arc agent extension.
+
+```console
+setup.exe /qs /ACTION=Uninstall /FEATURES=ARC  /IACCEPTSQLSERVERLICENSETERMS 
+```
+
+For more information about connecting to Azure Arc, see:
+
+- [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md)
+- [Connect your SQL Server to Azure Arc](../../sql-server/azure-arc/connect.md)
+
 ##  <a name="SysPrep"></a> SysPrep Parameters  
  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, see  
   

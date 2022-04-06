@@ -112,6 +112,8 @@ C:\SQLMedia\SQLServer2019> setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION="i
 /ASSYSADMINACCOUNTS="MyDomain\MyAccount"
 ```
 
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
+
 To view a list of all possible commands within the console, run the executable with the /help flag: 
 
 ```console

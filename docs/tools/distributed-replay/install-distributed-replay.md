@@ -173,6 +173,8 @@ Install the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVer
 ```  
 setup /q /ACTION=Install /FEATURES=DREPLAY_CTLR /IAcceptSQLServerLicenseTerms /CTLRUSERS="domain\user1" "domain\user2" /CTLRSVCACCOUNT="domain\svcuser" /CTLRSVCPASSWORD="password" /CTLRSTARTUPTYPE=Automatic  
 ```  
+
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
  **To install the Distributed Replay client component**  
   

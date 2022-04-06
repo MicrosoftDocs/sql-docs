@@ -42,7 +42,9 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
     ```  
   
      Then run Windows SysPrep Generalization. 
-  
+
+   [!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
+
 2. Deploy the image by running Windows SysPrep Specialize. 
   
 3. Create the Windows Failover Cluster. 

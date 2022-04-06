@@ -451,7 +451,7 @@ On SQL Server, this extended event session creates an event_file in SQL Server L
   ADD TARGET package0.event_file(SET filename=N'QueryStore',max_file_size=(100))
   WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
 ```
-The above extended event capture the event query_store_db_diagnostics, with this data you will find out the plan count in the Query Store and also many other stats as well.
+The above extended event capture the event query_store_db_diagnostics, with this data you will find out the plan count in the Query Store and also many other stats as well. Look at the plan_count, query_count, max_stmt_hash_map_size_kb, max_size_mb columns in the event to understand the amount of memory used and number of plans that are tracked by Query Store.
 
 In case plan count is high then you can use the below query to trace out the Parameterized Queries and  Non-Parameterized Queries.
 

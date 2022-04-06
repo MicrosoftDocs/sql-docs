@@ -188,6 +188,8 @@ If you frequently run queries that involve an equi-join between two or more part
 
 In this way, the query optimizer can process the join faster, because the partitions themselves can be joined. If a query joins two tables that are not collocated or are not partitioned on the join field, the presence of partitions may actually slow down query processing instead of accelerate it.
 
+You may find it useful to use `$PARTITION` in some queries. Learn more in [$PARTITION (Transact-SQL)](../../t-sql/functions/partition-transact-sql.md).
+
 For more information about partition handling in query processing, see [Query Processing Enhancements on Partitioned Tables and Indexes](../../relational-databases/query-processing-architecture-guide.md#query-processing-enhancements-on-partitioned-tables-and-indexes).
 
 ## Behavior changes in statistics computation during partitioned index operations
@@ -201,6 +203,7 @@ After upgrading a database with partitioned indexes from a version of SQL Server
 Learn more about partitioned tables and index strategies in the following articles:
 
 - [Create Partitioned Tables and Indexes](create-partitioned-tables-and-indexes.md)
+- [$PARTITION (Transact-SQL)](../../t-sql/functions/partition-transact-sql.md)
 - [Scaling out with Azure SQL Database](/azure/azure-sql/database/elastic-scale-introduction)
 - [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition)
 - [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)

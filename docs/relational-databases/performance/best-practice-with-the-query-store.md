@@ -441,8 +441,9 @@ You can find the number of plans stored in Query Store using the below query, us
 
 ```
 
-On SQL Server, this extended event session creates an event_file in SQL Server Log folder by default, For example if you run for SQL server 2019 then the event file (.xel file)will be created at  'C:\Program Files\Microsoft SQL Server\MSSQL15.SQL2019\MSSQL\Log'. For Azure SQL Managed Instance, specify an Azure Blob Storage location instead. For more information, see [XEvent event_file for Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file#phase-2-transact-sql-code-that-uses-azure-storage-container). The event 'qds.query_store_db_diagnostics' is not available for Azure SQL Database. 
+On SQL Server, this extended event session creates an event file in the SQL Server Log folder by default. For example, in a default SQL Server 2019 installation on Windows, the event file (.xel file) should be created in the folder `C:\Program Files\Microsoft SQL Server\MSSQLSERVER\MSSQL\Log`. For Azure SQL Managed Instance, specify an Azure Blob Storage location instead. For more information, see [XEvent event_file for Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file#phase-2-transact-sql-code-that-uses-azure-storage-container). The event 'qds.query_store_db_diagnostics' is not available for Azure SQL Database. 
 
+The following sample creates a session to capture the event `query_store_db_diagnostics`:
 
 ```sql
   CREATE EVENT SESSION [QueryStore_Troubleshoot] ON SERVER 
@@ -451,29 +452,28 @@ On SQL Server, this extended event session creates an event_file in SQL Server L
   ADD TARGET package0.event_file(SET filename=N'QueryStore',max_file_size=(100))
   WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
 ```
-The above extended event capture the event query_store_db_diagnostics, with this data you will find out the plan count in the Query Store and also many other stats as well. Look at the plan_count, query_count, max_stmt_hash_map_size_kb, max_size_mb columns in the event to understand the amount of memory used and number of plans that are tracked by Query Store.
 
-In case plan count is high then you can use the below query to trace out the Parameterized Queries and  Non-Parameterized Queries.
+With this data you can find plan count in the Query Store, and also many other stats as well. Look for the `plan_count`, `query_count`, `max_stmt_hash_map_size_kb`, and `max_size_mb` columns in the event data, in order to understand the amount of memory used and number of plans that are tracked by Query Store. If the plan_count is higher than normal, it may indicate an increase in non-parameterized queries. Use the below Query Store DMVs query to review the parameterized queries and non-parameterized queries in the Query Store.
 
-For Parameterized Queries
+For parameterized queries:
 ```sql
 select query_id,qsqt.query_sql_text
   from sys.query_store_query qsq, 
   	 sys.query_store_query_text qsqt
   where qsq.query_text_id= qsqt.query_text_id 
   	  and (query_parameterization_type<>0 or query_sql_text like '%@%')
-
-Non Parameterized Queries
 ```
+
+For non-parameterized queries:
+
+```sql
 select query_id,qsqt.query_sql_text
   from sys.query_store_query qsq, 
   	 sys.query_store_query_text qsqt
   where qsq.query_text_id= qsqt.query_text_id 
   	  and (query_parameterization_type=0)
-```sql
-
-
 ```
+
 ## <a name="Drop"></a> Avoid a DROP and CREATE pattern for containing objects
 
 Query Store associates query entry with a containing object, such as stored procedure, function, and trigger. When you re-create a containing object, a new query entry is generated for the same query text. This prevents you from tracking performance statistics for that query over time and using a plan forcing mechanism. To avoid this situation, use the `ALTER <object>` process to change a containing object definition whenever it's possible.

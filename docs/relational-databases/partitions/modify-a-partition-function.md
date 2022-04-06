@@ -1,8 +1,9 @@
 ---
 description: "Modify a Partition Function"
-title: "Modify a Partition Function | Microsoft Docs"
+title: "Modify a Partition Function"
+
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "4/6/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -13,33 +14,20 @@ ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify a Partition Function
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  You can change the way a table or index is partitioned in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by adding or subtracting the number of partitions specified, in increments of 1, in the partition function of the partitioned table or index by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. When you add a partition, you do so by "splitting" an existing partition into two partitions and redefining the boundaries of the new partitions. When you drop a partition, you do so by "merging" the boundaries of two partitions into one. This last action repopulates one partition and leaves the other partition unassigned.  
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
+You can change the way a table or index is partitioned in SQL Server, Azure SQL Database, and Azure SQL Managed Instance by adding or subtracting the number of partitions specified, in increments of 1, in the partition function of the partitioned table or index by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. When you add a partition, you do so by "splitting" an existing partition into two partitions and redefining the boundaries of the new partitions. When you drop a partition, you do so by "merging" the boundaries of two partitions into one. This last action repopulates one partition and leaves the other partition unassigned.  
   
 > [!CAUTION]  
 >  More than one table or index can use the same partition function. When you modify a partition function, you affect all of them in a single transaction. Check the partition function's dependencies before modifying it.  
+
+Table partitioning is also available in dedicated SQL pools in Azure Synapse Analytics, with some syntax differences. Learn more in [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition).
   
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To modify a partition function, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations
   
 -   ALTER PARTITION FUNCTION can only be used for splitting one partition into two, or for merging two partitions into one. To change the way a table or index is partitioned (from 10 partitions to 5, for example), you can use any one of the following options:  
   
-    -   Create a new partitioned table with the desired partition function, and then insert the data from the old table into the new table by using either an INSERT INTO ... SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or the **Manage Partition Wizard** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+    -   Create a new partitioned table with the desired partition function, and then insert the data from the old table into the new table by using either an INSERT INTO ... SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or the **Manage Partition Wizard** in [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md).  
   
     -   Create a partitioned clustered index on a heap.  
   
@@ -50,13 +38,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
     -   Perform a sequence of ALTER PARTITION FUNCTION statements.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not provide replication support for modifying a partition function. If you want to make changes to a partition function in the publication database, you must do this manually in the subscription database.  
+- The database engine does not provide replication support for modifying a partition function. If you want to make changes to a partition function in the publication database, you must do this manually in the subscription database.  
   
 -   All filegroups that are affected by ALTER PARTITION FUNCTION must be online.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Any one of the following permissions can be used to execute ALTER PARTITION FUNCTION:  
   
 -   ALTER ANY DATASPACE permission. This permission defaults to members of the **sysadmin** fixed server role and the **db_owner** and **db_ddladmin** fixed database roles.  
@@ -65,26 +51,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   CONTROL SERVER or ALTER ANY DATABASE permission on the server of the database in which the partition function was created.  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- **To modify a partition function:**  
+## Split a partition with Transact-SQL
   
- This specific action cannot be performed using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In order to modify a partition function, you must first delete the function and then create a new one with the desired properties using the Create Partition Wizard. For more information, see  
-  
-#### To delete a partition function  
-  
-1.  Expand the database where you want to delete the partition function and then expand the **Storage** folder.  
-  
-2.  Expand the **Partition Functions** folder.  
-  
-3.  Right-click the partition function you want to delete and select **Delete**.  
-  
-4.  In the **Delete Object** dialog box, ensure that the correct partition function is selected, and then click **OK**.  
-
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
-  
-#### To split a single partition into two partitions  
-  
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to your target database.  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -107,9 +76,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     SPLIT RANGE (500);  
     ```  
   
-#### To merge two partitions into one partition  
+## Merge two partitions with Transact-SQL
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Object Explorer**, connect to your target database.  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -131,7 +100,24 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     ALTER PARTITION FUNCTION myRangePF1 ()  
     MERGE RANGE (100);  
     ```  
+
+## Delete a partition function with SSMS
+
+1. In **Object Explorer**, connect to your target database.
   
- For more information, see [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md).  
+1. Expand the database where you want to delete the partition function and then expand the **Storage** folder.  
   
+1. Expand the **Partition Functions** folder.  
   
+1. Right-click the partition function you want to delete and select **Delete**.  
+  
+1. In the **Delete Object** dialog box, ensure that the correct partition function is selected, and then click **OK**. 
+
+## Next steps
+
+Learn more about related concepts in the following articles:
+
+- [Partitioned tables and indexes](partitioned-tables-and-indexes.md)
+- [Create partitioned tables and indexes](create-partitioned-tables-and-indexes.md)
+- [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)
+- [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition)

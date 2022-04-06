@@ -1,6 +1,7 @@
 ---
 description: "Create partitioned tables and indexes"
 title: "Create partitioned tables and indexes"
+titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
 ms.custom: ""
 ms.date: "4/5/2022"
 ms.prod: sql

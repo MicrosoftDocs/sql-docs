@@ -112,8 +112,6 @@ C:\SQLMedia\SQLServer2019> setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION="i
 /ASSYSADMINACCOUNTS="MyDomain\MyAccount"
 ```
 
-[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
-
 To view a list of all possible commands within the console, run the executable with the /help flag: 
 
 ```console
@@ -128,7 +126,9 @@ The rest of the article provides a detailed description of the available paramet
   
  Regardless of the installation method, you are required to confirm acceptance of the software license terms as an individual or on behalf of an entity, unless your use of the software is governed by a separate agreement such as a Microsoft volume licensing agreement or a third-party agreement with an ISV or OEM.  
   
- The license terms are displayed for review and acceptance in the Setup user interface. Unattended installations (using the /Q or /QS parameters) must include the /IACCEPTSQLSERVERLICENSETERMS parameter. You can review the license terms separately at [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkId=148209).  
+ The license terms are displayed for review and acceptance in the Setup user interface. Unattended installations (using the /Q or /QS parameters) must include the /IACCEPTSQLSERVERLICENSETERMS parameter. You can review the license terms separately at [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkId=148209).
+
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 > [!NOTE] 
 > Depending on how you received the software (for example, through Microsoft volume licensing), your use of the software may be subject to additional terms and conditions.  

@@ -1,5 +1,5 @@
 ---
-title: 'Quickstart: Deploy SQL Server Linux containers to Kubernetes using Helm charts'
+title: 'Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts'
 description: Learn how to deploy a SQL Server on Linux container to Azure Kubernetes Service (AKS) using Helm charts.
 author: rwestMSFT
 ms.author: randolphwest
@@ -7,14 +7,14 @@ ms.reviewer: amitkh
 ms.prod: sql
 ms.technology: linux
 ms.topic: quickstart
-ms.date: 04/06/2022
+ms.date: 04/20/2022
 ---
 
-# Quickstart: Deploy SQL Server Linux containers to Kubernetes using Helm charts
+# Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts
 
-This article takes you through the steps to deploy SQL Server on Linux containers to AKS with [Helm charts](/azure/aks/quickstart-helm), from a Windows client machine.
+This quickstart takes you through the steps to deploy SQL Server on Linux containers to [Azure Kubernetes Service](/azure/aks/) (AKS) with [Helm charts](/azure/aks/quickstart-helm), from a Windows client machine.
 
-[Azure Kubernetes Service](/azure/aks/) (AKS) is a managed Kubernetes service for deploying and managing container clusters.  [Helm](https://helm.sh/) is an open-source packaging tool that helps you install and manage the lifecycle of Kubernetes applications.
+AKS is a managed Kubernetes service for deploying and managing container clusters. [Helm](https://helm.sh/) is an open-source packaging tool that helps you install and manage the lifecycle of Kubernetes applications.
 
 ## Prerequisites
 
@@ -91,7 +91,7 @@ If successful, you'll see similar output:
 
 ```output
 NAME: mssql-latest-deploy
-LAST DEPLOYED: Wed Dec 30 21:36:19 2020
+LAST DEPLOYED: Wed Apr 06 21:36:19 2022
 NAMESPACE: default
 STATUS: deployed
 REVISION: 1
@@ -135,11 +135,11 @@ For example, if you connect to the SQL Server instance using SSMS, you can use t
 
 Once you've connected, you'll be able to expand the SQL Server instance in **Object Explorer**.
 
-:::image type="content" source="media/sql-server-linux-deploy-helm-charts-kubernetes/object-explorer.png" alt-text="Screenshot showing the Object Explorer connected to the database instance":::
+:::image type="content" source="media/sql-server-linux-containers-deploy-helm-charts-kubernetes/expand-object-explorer.png" alt-text="Screenshot showing the Object Explorer connected to the database instance":::
 
 ## Change the tempdb path
 
-In the sample Helm chart (`templates/deployment.yaml`), there's a custom `mountPath` for `tempdb` files, which ensures that `tempdb` is stored in a predictable location for service restarts.
+It is a good practice to keep your `tempdb` database separate from your user databases, so in the sample Helm chart (`templates/deployment.yaml`), there's a custom `mountPath` for `tempdb` files.
 
 1. Connect to the SQL Server instance, and then run the following Transact-SQL (T-SQL) script:
 
@@ -209,5 +209,6 @@ If you're not going to continue using your AKS cluster, remember to [delete your
 
 ## Next steps
 
-- Terraform (still to come)
-- Ansible (still to come)
+- [Configure Active Directory authentication with SQL Server on Linux-based containers using adutil](sql-server-linux-containers-ad-auth-adutil-tutorial.md)
+- [Secure SQL Server Docker containers](sql-server-linux-docker-container-security.md)
+- [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md)

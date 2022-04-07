@@ -36,7 +36,7 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
 
-   ![Screenshot that shows adding to Azure SQL.](./media/single-database-create-quickstart/select-deployment.png)
+   ![Screenshot that shows adding to Azure SQL.](https://docs.microsoft.com/en-us/azure/azure-sql/database/media/single-database-create-quickstart/select-deployment.png)
 
 1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the Azure subscription you want to use.
 
@@ -59,7 +59,7 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 1. This quickstart uses a serverless database, so select **Serverless**, and then select **Apply**. 
 
-      ![Screenshot that shows configuring a serverless database.](./media/single-database-create-quickstart/configure-database.png)
+      ![Screenshot that shows configuring a serverless database.](https://docs.microsoft.com/en-us/azure/azure-sql/database/media/single-database-create-quickstart/configure-database.png)
 
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
@@ -211,7 +211,7 @@ az storage account create \
 
 ### Grant the server permissions to write ledger digests
 
-Assign the managed identity of the server to the [Storage Blob Data Contributor](../../role-based-access-control/built-in-roles.md#storage-blob-data-contributor) role with the [az role assignment create](/cli/azure/sql/db) command.  This gives the SQL server the appropriate permissions to publish database digests to the storage account.
+Assign the managed identity of the server to the [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) role with the [az role assignment create](/cli/azure/sql/db) command.  This gives the SQL server the appropriate permissions to publish database digests to the storage account.
 
 ```azurecli-interactive
 az role assignment create \
@@ -243,7 +243,7 @@ To  protect the digests from being deleted or updated, it is recommended you con
 > [!NOTE]
 > Once database digests begin to be uploaded to the storage account, you will not be able to delete the storage account until the immutability policy expires.  Setting the immutability policy can be skipped if you plan to clean-up resources immediatly after this QuickStart.
 
-For more information about time-based retention policy for containers, see [Configure immutability policies for containers](../../storage/blobs/immutable-policy-configure-container-scope.md).
+For more information about time-based retention policy for containers, see [Configure immutability policies for containers](/azure/storage/blobs/immutable-policy-configure-container-scope).
 
 ```azurecli-interactive
 az storage container immutability-policy create \
@@ -390,7 +390,7 @@ $storage
 
 ### Grant the server permissions to write ledger digests
 
-Assign the managed identity of the server to the [Storage Blob Data Contributor](../../role-based-access-control/built-in-roles.md#storage-blob-data-contributor) role with the [New-AzRoleAssignment](/powershell/module/az.Resources/New-azRoleAssignment) cmdlet. This gives the SQL server the appropriate permissions to publish database digests to the storage account.
+Assign the managed identity of the server to the [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) role with the [New-AzRoleAssignment](/powershell/module/az.Resources/New-azRoleAssignment) cmdlet. This gives the SQL server the appropriate permissions to publish database digests to the storage account.
 
 ```azurepowershell-interactive
 Write-host "Granting the server access to the storage account..."
@@ -427,7 +427,7 @@ To  protect the digests from being deleted or updated, it is recommended you con
 > [!NOTE]
 > You will not be able to delete the container or the storage account during the specified immutability period.
 
-For more information about time-based retention policy for containers, see [Configure immutability policies for containers](../../storage/blobs/immutable-policy-configure-container-scope.md).
+For more information about time-based retention policy for containers, see [Configure immutability policies for containers](/azure/storage/blobs/immutable-policy-configure-container-scope).
 
 ```azurepowershell-interactive
 Write-host "Configuring a time-based retention policy..." 

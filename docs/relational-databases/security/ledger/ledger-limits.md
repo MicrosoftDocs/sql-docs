@@ -23,7 +23,7 @@ There are some considerations and limitations to be aware of when working with l
 
 Consider the following when working with ledger.
 - A ledger database, this is a database with the ledger property set to on, cannot be converted to a regular database, with the ledger property set to off.
-- Automated digest management with ledger tables by using [Azure Storage immutable blobs](../../storage/blobs/immutable-storage-overview.md) doesn't offer the ability for users to use [LRS](../../storage/common/storage-redundancy.md#locally-redundant-storage) accounts.
+- Automated digest management with ledger tables by using [Azure Storage immutable blobs](/azure/storage/blobs/immutable-storage-overview) doesn't offer the ability for users to use [LRS](/azure/storage/common/storage-redundancy#locally-redundant-storage) accounts.
 - When a ledger database is created, all new tables created by default (without specifying the `APPEND_ONLY = ON` clause) in the database will be [updatable ledger tables](ledger-updatable-ledger-tables.md). To create [append-only ledger tables](ledger-append-only-ledger-tables.md), use [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) statements.
 - A transaction can update up to 200 ledger tables.
 - Change tracking isn't allowed on ledger tables.

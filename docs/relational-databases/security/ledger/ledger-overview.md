@@ -17,7 +17,7 @@ ms.author: vanto
 > [!NOTE]
 > Azure SQL Database ledger is currently in public preview.
 
-Establishing trust around the integrity of data stored in database systems has been a longstanding problem for all organizations that manage financial, medical, or other sensitive data. The ledger feature of [Azure SQL Database](sql-database-paas-overview.md) and SQL Server provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with.
+Establishing trust around the integrity of data stored in database systems has been a longstanding problem for all organizations that manage financial, medical, or other sensitive data. The ledger feature of [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) and SQL Server provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with.
 
 Ledger helps protect data from any attacker or high-privileged user, including database administrators (DBAs), system administrators, and cloud administrators. As with a traditional ledger, the feature preserves historical data. If a row is updated in the database, its previous value is maintained and protected in a history table. Ledger provides a chronicle of all changes made to the database over time. 
 
@@ -55,7 +55,7 @@ Typical patterns for solving this problem involve replicating data from the bloc
 
 Each transaction that the database receives is cryptographically hashed (SHA-256). The hash function uses transaction metadata, such as commit timestamp and the user who executed it, the hashes of the rows contained in the transaction, along with the hash of the previous transaction, as input to the hash function. The function cryptographically links all transactions together, like a blockchain. 
 
-Cryptographically hashed [database digests](#database-digests) represent the state of the database. They can be periodically generated and stored outside the database in a tamper-proof storage location. An example of a storage location is the [immutable storage feature of Azure Blob Storage](../../storage/blobs/immutable-storage-overview.md) or [Azure Confidential Ledger](../../confidential-ledger/index.yml). Database digests are later used to verify the integrity of the database by comparing the value of the hash in the digest against the calculated hashes in database. 
+Cryptographically hashed [database digests](#database-digests) represent the state of the database. They can be periodically generated and stored outside the database in a tamper-proof storage location. An example of a storage location is the [immutable storage feature of Azure Blob Storage](/azure/storage/blobs/immutable-storage-overview) or [Azure Confidential Ledger](/azure/confidential-ledger/index). Database digests are later used to verify the integrity of the database by comparing the value of the hash in the digest against the calculated hashes in database. 
 
 Ledger functionality is introduced to tables in two forms:
 
@@ -106,7 +106,7 @@ When a block is formed, its associated database digest is published and stored o
 2. Generate the hashes that represent the database with those changes.
 3. Modify the digests to represent the updated hash of the transactions in the block. 
 
-Ledger provides the ability to automatically generate and store the database digests in [immutable storage](../../storage/blobs/immutable-storage-overview.md) or [Azure Confidential Ledger](../../confidential-ledger/index.yml), to prevent tampering. Alternatively, users can manually generate database digests and store them in the location of their choice. Database digests are used for later verifying that the data stored in ledger tables has not been tampered with.
+Ledger provides the ability to automatically generate and store the database digests in [immutable storage](/azure/storage/blobs/immutable-storage-overview) or [Azure Confidential Ledger](/azure/confidential-ledger/index), to prevent tampering. Alternatively, users can manually generate database digests and store them in the location of their choice. Database digests are used for later verifying that the data stored in ledger tables has not been tampered with.
 
 ### Ledger verification
 

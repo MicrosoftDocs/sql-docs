@@ -430,15 +430,14 @@ Consider the following options:
 You can find the number of plans stored in Query Store using the below query, using query store DMVs:
 
 ```sql
-  SELECT count(plan_id) plan_count, query_hash,Txt.query_text_id, Txt.query_sql_text
+  SELECT count(Pl.plan_id) AS plan_count, Qry.query_hash, Txt.query_text_id, Txt.query_sql_text
   FROM sys.query_store_plan AS Pl
   INNER JOIN sys.query_store_query AS Qry
       ON Pl.query_id = Qry.query_id
   INNER JOIN sys.query_store_query_text AS Txt
       ON Qry.query_text_id = Txt.query_text_id
-         group by query_hash,Txt.query_text_id, Txt.query_sql_text
-         order by 1 desc
-
+  GROUP BY Qry.query_hash, Txt.query_text_id, Txt.query_sql_text
+  ORDER BY plan_count desc;
 ```
 
 On SQL Server, this extended event session creates an event file in the SQL Server Log folder by default. For example, in a default SQL Server 2019 installation on Windows, the event file (.xel file) should be created in the folder `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`. For Azure SQL Managed Instance, specify an Azure Blob Storage location instead. For more information, see [XEvent event_file for Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file#phase-2-transact-sql-code-that-uses-azure-storage-container). The event 'qds.query_store_db_diagnostics' is not available for Azure SQL Database.  

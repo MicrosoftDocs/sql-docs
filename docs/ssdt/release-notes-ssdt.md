@@ -21,8 +21,8 @@ These release notes are for [SQL Server Data Tools (SSDT)](download-sql-server-d
 
 ## 15.9.10,&nbsp; SSDT for VS 2017
 
-_Released:_ &nbsp; Feb 27, 2022  
-_Build Number:_ &nbsp; 14.0.16247.0
+_Released:_ &nbsp; Apr 6, 2022  
+_Build Number:_ &nbsp; 14.0.16248.0
 _SSDT for Visual Studio 2017._
 
 ### What's New?

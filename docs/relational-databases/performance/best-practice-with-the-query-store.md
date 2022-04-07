@@ -444,11 +444,11 @@ The following sample creates an [Extended Events session](../extended-events/ext
 
 
 ```sql
-  CREATE EVENT SESSION [QueryStore_Troubleshoot] ON SERVER 
-  ADD EVENT qds.query_store_db_diagnostics(
+CREATE EVENT SESSION [QueryStore_Troubleshoot] ON SERVER 
+ADD EVENT qds.query_store_db_diagnostics(
       ACTION(sqlos.system_thread_id,sqlos.task_address,sqlos.task_time,sqlserver.database_id,sqlserver.database_name))
-  ADD TARGET package0.event_file(SET filename=N'QueryStore',max_file_size=(100))
-  WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
+ADD TARGET package0.event_file(SET filename=N'QueryStore',max_file_size=(100))
+WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF);
 ```
 
 With this data you can find plan count in the Query Store, and also many other stats as well. Look for the `plan_count`, `query_count`, `max_stmt_hash_map_size_kb`, and `max_size_mb` columns in the event data, in order to understand the amount of memory used and number of plans that are tracked by Query Store. If the plan count is higher than normal, it may indicate an increase in non-parameterized queries. Use the below Query Store DMVs query to review the parameterized queries and non-parameterized queries in the Query Store.

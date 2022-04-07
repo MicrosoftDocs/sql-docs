@@ -455,21 +455,21 @@ With this data you can find plan count in the Query Store, and also many other s
 
 For parameterized queries:
 ```sql
-select query_id,qsqt.query_sql_text
-  from sys.query_store_query qsq, 
-  	 sys.query_store_query_text qsqt
-  where qsq.query_text_id= qsqt.query_text_id 
-  	  and (query_parameterization_type<>0 or query_sql_text like '%@%')
+SELECT qsq.query_id, qsqt.query_sql_text
+FROM sys.query_store_query AS qsq 
+INNER JOIN sys.query_store_query_text AS qsqt
+ON qsq.query_text_id= qsqt.query_text_id 
+WHERE qsq.query_parameterization_type<>0 or qsqt.query_sql_text like '%@%';
 ```
 
 For non-parameterized queries:
 
 ```sql
-select query_id,qsqt.query_sql_text
-  from sys.query_store_query qsq, 
-  	 sys.query_store_query_text qsqt
-  where qsq.query_text_id= qsqt.query_text_id 
-  	  and (query_parameterization_type=0)
+SELECT qsq.query_id, qsqt.query_sql_text
+FROM sys.query_store_query AS qsq 
+INNER JOIN sys.query_store_query_text AS qsqt
+ON qsq.query_text_id= qsqt.query_text_id 
+WHERE query_parameterization_type=0;
 ```
 
 ## <a name="Drop"></a> Avoid a DROP and CREATE pattern for containing objects

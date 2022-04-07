@@ -13,7 +13,7 @@ ms.date: "04/05/2022"
 
 # Verify a ledger table to detect tampering
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 > [!NOTE]
 > Azure SQL Database ledger is currently in public preview.

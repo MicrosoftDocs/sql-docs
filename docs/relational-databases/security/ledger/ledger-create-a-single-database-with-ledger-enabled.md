@@ -13,7 +13,7 @@ ms.custom: mode-other
 
 # Quickstart: Create a database in Azure SQL Database with ledger enabled
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 > [!NOTE]
 > Azure SQL Database ledger is currently in public preview.

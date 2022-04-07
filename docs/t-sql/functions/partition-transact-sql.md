@@ -140,7 +140,7 @@ The query should return the following results:
 Learn more about table partitioning in these articles:
 
 - [Partitioned tables and indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)
-- [CREATE PARTITION FUNCTION (Transact-SQL)](create-partition-function-transact-sql.md)
+- [CREATE PARTITION FUNCTION (Transact-SQL)](../statements/create-partition-function-transact-sql.md)
 - [Modify a Partition Function](../../relational-databases/partitions/modify-a-partition-function.md)
 - [Modify a Partition Scheme](../../relational-databases/partitions/modify-a-partition-scheme.md)
 - [sys.partition_functions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)

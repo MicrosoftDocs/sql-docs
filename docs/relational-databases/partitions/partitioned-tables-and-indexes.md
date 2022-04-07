@@ -174,7 +174,7 @@ With a larger number of partitions, DBCC commands could take longer to execute a
   
 ### Queries
 
-Queries that use partition elimination could have comparable or improved performance with larger number of partitions. Queries that do not use partition elimination could take longer to execute as the number of partitions increases.  
+After partitioning a table or index, queries that use partition elimination can have comparable or improved performance with larger number of partitions. Queries that do not use partition elimination could take longer to execute as the number of partitions increases.  
   
 For example, assume a table has 100 million rows and columns `A`, `B`, and `C`.
 

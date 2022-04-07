@@ -427,7 +427,7 @@ Consider the following options:
 
 ### Find non-parameterized queries in Query Store
 
-You can find the number of plans stored in Query Store using the below query, using query store DMVs:
+You can find the number of plans stored in Query Store using the below query, using query store DMVs, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]:
 
 ```sql
   SELECT count(Pl.plan_id) AS plan_count, Qry.query_hash, Txt.query_text_id, Txt.query_sql_text

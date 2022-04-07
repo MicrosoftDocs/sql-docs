@@ -107,6 +107,10 @@ For more information, see the [Extended Security Updates frequently asked questi
 
 This example shows you how to manually add your SQL Server instances in a disconnected state to Azure Arc. If you would prefer to add your server as an Azure Arc-enabled server running the Connected Machine agent, see [Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) instead.
 
+You can either register a [single SQL Server instance](#single-sql-server-instance), or upload a CSV file to register [multiple SQL Server instances in bulk](#multiple-sql-server-instances-in-bulk).
+
+### Single SQL Server instance
+
 1. Sign into the [Azure portal](https://portal.azure.com).
 
 1. Navigate to **Azure Arc** and select **Infrastructure** > **SQL Servers**.
@@ -118,10 +122,6 @@ This example shows you how to manually add your SQL Server instances in a discon
 1. Select **Register servers** to add a disconnected SQL Server instance.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png" alt-text="Screenshot showing the two options for adding connected or registered servers":::
-
-In the next steps, you can either register a [single SQL Server instance](#single-sql-server-instance), or upload a CSV file to register [multiple SQL Server instances in bulk](#multiple-sql-server-instances-in-bulk).
-
-### Single SQL Server instance
 
 1. On the next screen, you can choose to add a single or multiple SQL Server instances. The option for **Single SQL instance** is selected by default.
 
@@ -147,17 +147,25 @@ Now you can continue to the [Confirmation](#confirmation) section.
 
 Multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances can be registered in bulk by uploading a .CSV file. Once your [.CSV file has been formatted correctly](#formatting-requirements-for-csv-file), you can follow these steps to bulk register your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances with Azure Arc:
 
-1. On the next screen, you can choose to add a single or multiple SQL Server instances. Select the option for **Multiple SQL instances** to continue.
+1. Sign into the [Azure portal](https://portal.azure.com).
+
+1. Navigate to **Azure Arc** and select **Infrastructure** > **SQL Servers**.
+
+1. To register a disconnected machine, select **Add** from the menu at the top of the screen.
+
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-empty-list.png" alt-text="Screenshot showing an empty list of SQL Servers list on the Azure Arc portal":::
+
+1. Select **Register servers** to add a disconnected SQL Server instance.
+
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png" alt-text="Screenshot showing the two options for adding connected or registered servers":::
+
+1. On this screen, you can choose to add a single or multiple SQL Server instances. Select the option for **Multiple SQL instances**.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-multiple-sql-instances.png" alt-text="Screenshot showing the Multiple SQL instances option":::
 
-1. Select **Browse** to upload the CSV file containing multiple disconnected SQL Server instances.
-
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-browse-csv-file.png" alt-text="Screenshot showing how to browse to the CSV file":::
+1. Select the Browse icon to upload the CSV file containing multiple disconnected SQL Server instances.
 
 1. You must confirm that you have the rights to receive Extended Security Updates, using the checkbox provided.
-
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-rights.png" alt-text="Screenshot showing the checkbox to indicate the rights to continue":::
 
 Now you can continue to the [Confirmation](#confirmation) section.
 
@@ -169,7 +177,7 @@ Now you can continue to the [Confirmation](#confirmation) section.
 
 1. Before you can add your SQL Server instances, you must agree to the terms of use and privacy policy.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-terms-and-conditions.png" alt-text="Screenshot showing terms and conditions":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-terms.png" alt-text="Screenshot showing terms and conditions":::
 
 1. Once you have added your SQL Server instances, you will see them in the portal. Because they were added manually, they will always show in a disconnected state, with the description **Registered**.
 

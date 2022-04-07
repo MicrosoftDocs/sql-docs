@@ -44,7 +44,8 @@ ABS ( numeric_expression )
 *numeric_expression*  
 An expression of the exact numeric or approximate numeric data type category.
   
-## Return Types
+## Return types
+
 
 Returns the same type as *numeric_expression*.
   

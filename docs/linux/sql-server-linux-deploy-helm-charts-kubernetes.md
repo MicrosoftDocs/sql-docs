@@ -35,7 +35,7 @@ If you prefer to use a different client operating system, you'll need to select 
 
 ### Install kubectl using Azure CLI
 
-You will use **kubectl** to interact with the Kubernetes cluster. To install **kubectl**, run the following command from your Windows command prompt:
+You'll use **kubectl** to interact with the Kubernetes cluster. To install **kubectl**, run the following command from your Windows command prompt:
 
 ```cmd
 az aks install-cli
@@ -126,7 +126,7 @@ replicaset.apps/mssql-latest-deploy-7f8c7f5bc   1         1         1       2m56
 
 You can connect to the SQL Server instance using any familiar SQL Server client tool, such as SQL Server Management Studio (SSMS), Azure Data Studio, or **sqlcmd**.
 
-Connect to the instance of the SQL Server with the following settings:
+For example, if you connect to the SQL Server instance using SSMS, you can use the following settings:
 
 - **Server name:** Use the `External-IP` address for the `mssql-latest-deploy` service. In this example, it's `20.40.0.145`.
 - **Authentication:** Select **SQL Server Authentication** from the dropdown.
@@ -157,7 +157,7 @@ In the sample Helm chart (`templates/deployment.yaml`), there's a custom `mountP
 
    > [!NOTE]
    >  
-   > If there are more files associated with tempdb, you will need to move them as well.
+   > If there are more files associated with tempdb, you'll need to move them as well.
 
 1. Verify that the `tempdb` file location has been modified, using the following T-SQL script:
 
@@ -179,7 +179,7 @@ In the sample Helm chart (`templates/deployment.yaml`), there's a custom `mountP
      kubectl scale deployment mssql-latest-deploy --replicas=0
      ```
 
-   Wait a few seconds for the container to be deleted, and then run the following command redeploy the container:
+   Wait a few seconds for the container to be deleted, and then run the following command to redeploy the container:
 
      ```cmd
      kubectl scale deployment mssql-latest-deploy --replicas=1

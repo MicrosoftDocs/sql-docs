@@ -1,4 +1,4 @@
-﻿---
+---
 title: Service Broker Routing Examples
 description: "This section presents examples of the Service Broker routing process."
 ms.prod: sql
@@ -18,7 +18,7 @@ This section presents examples of the Service Broker routing process. Each examp
 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
-The routing tables presented in this topic are simplified versions of the **sys.routes** catalog view. The route id and the owner are not important for the routing process, and all routes are considered to have an indefinite lifetime.
+The routing tables presented in this topic are simplified versions of the **sys.routes** catalog view. The route ID and the owner are not important for the routing process, and all routes are considered to have an indefinite lifetime.
 
 A value of NULL in the **remote_service_name** column matches any service name. A value of NULL in the **broker_instance** column matches any Service Broker identifier.
 
@@ -181,7 +181,7 @@ This example describes the typical routing configuration for services outside th
 
    :::column-end:::
    :::column span="1":::
-   tcp://host2.Adventure-Works.com:4022/
+   TCP://host2.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::
@@ -302,11 +302,11 @@ This example describes the typical routing configuration for a service hosted by
 
    :::column-end:::
    :::column span="1":::
-   tcp://partner1.Adventure-Works.com:4022/
+   TCP://partner1.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::
-   tcp://partner2.Adventure-Works.com:4022/
+   TCP://partner2.Adventure-Works.com:4022/
 
    :::column-end:::
 :::row-end:::
@@ -423,7 +423,7 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
 
    :::column-end:::
    :::column span="1":::
-   tcp://forwarding.Adventure-Works.com:4022/
+   TCP://forwarding.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::
@@ -542,7 +542,7 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
 
    :::column-end:::
    :::column span="1":::
-   tcp://server1.Adventure-Works.com:4022/
+   TCP://server1.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::
@@ -565,7 +565,7 @@ In this example, the **AdventureWorks2008R2** database contains the **AutoCreate
 
    :::column-end:::
    :::column span="1":::
-   tcp://server2.Adventure-Works.com:4022/
+   TCP://server2.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::
@@ -627,7 +627,7 @@ For conversations that arrive from outside of the instance, **AutoCreatedLocal**
 
 ## Example 6: Message Forwarding for a Specific Service
 
-This example forwards messages from outside the local instance to the service **ElsewhereService** to the network address **tcp://elsewhere.Adventure-Works.com:4022/**. For all other services, Service Broker delivers the messages to a service in the local instance or marks the conversation DELAYED if the service does not exist in the local instance.
+This example forward messages from outside the local instance to the service **ElsewhereService** to the network address **tcp://elsewhere.Adventure-Works.com:4022/**. For all other services, Service Broker delivers the messages to a service in the local instance or marks the conversation DELAYED if the service does not exist in the local instance.
 
 **AdventureWorks2008R2.sys.routes**
 
@@ -729,7 +729,7 @@ This example forwards messages from outside the local instance to the service **
 
    :::column-end:::
    :::column span="1":::
-   tcp://elsewhere.Adventure-Works.com:4022/
+   TCP://elsewhere.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::
@@ -848,7 +848,7 @@ This example sends messages from outside the local instance to a different insta
 
    :::column-end:::
    :::column span="1":::
-   tcp://forwarding.Adventure-Works.com:4022/
+   TCP://forwarding.Adventure-Works.com:4022/
 
    :::column-end:::
    :::column span="1":::

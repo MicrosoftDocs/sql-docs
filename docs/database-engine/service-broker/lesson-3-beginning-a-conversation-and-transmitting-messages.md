@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Lesson 3: Beginning a Conversation and Transmitting Messages'
 description: "In this lesson, you will learn to complete a simple request-reply message cycle in a system configured with an internal activation stored procedure."
 ms.prod: sql
@@ -23,7 +23,8 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
 - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **AdventureWorks2008R2** database.
-- 
+-
+
     ```sql
         USE AdventureWorks2008R2;
         GO
@@ -36,9 +37,9 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
     ```sql
         DECLARE @InitDlgHandle UNIQUEIDENTIFIER;
         DECLARE @RequestMsg NVARCHAR(100);
-        
+
         BEGIN TRANSACTION;
-        
+
         BEGIN DIALOG @InitDlgHandle
              FROM SERVICE
               [//AWDB/InternalAct/InitiatorService]
@@ -48,19 +49,19 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
               [//AWDB/InternalAct/SampleContract]
              WITH
                  ENCRYPTION = OFF;
-        
+
         -- Send a message on the conversation
         SELECT @RequestMsg =
                N'<RequestMsg>Message for Target service.</RequestMsg>';
-        
+
         SEND ON CONVERSATION @InitDlgHandle
-             MESSAGE TYPE 
+             MESSAGE TYPE
              [//AWDB/InternalAct/RequestMessage]
              (@RequestMsg);
-        
+
         -- Diplay sent request.
         SELECT @RequestMsg AS SentRequestMsg;
-        
+
         COMMIT TRANSACTION;
         GO
     ```
@@ -76,21 +77,21 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
     ```sql
         DECLARE @RecvReplyMsg NVARCHAR(100);
         DECLARE @RecvReplyDlgHandle UNIQUEIDENTIFIER;
-        
+
         BEGIN TRANSACTION;
-        
+
         WAITFOR
         ( RECEIVE TOP(1)
             @RecvReplyDlgHandle = conversation_handle,
             @RecvReplyMsg = message_body
             FROM InitiatorQueueIntAct
         ), TIMEOUT 5000;
-        
+
         END CONVERSATION @RecvReplyDlgHandle;
-        
+
         -- Display recieved request.
         SELECT @RecvReplyMsg AS ReceivedReplyMsg;
-        
+
         COMMIT TRANSACTION;
         GO
     ```

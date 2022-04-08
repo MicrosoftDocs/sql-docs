@@ -269,7 +269,7 @@ Parameters that are listed for a [!INCLUDE[ssDEnoversion](../../includes/ssdenov
 |Azure Arc agent extension |/AZURESERVICEPRINCIPALSECRET | Service principal secret. Starting with SQL Server 2022 (Preview).|
 |Azure Arc agent extension |/AZUREARCPROXY | Name of the proxy server used to connect to Azure Arc (Optional).Starting with SQL Server 2022 (Preview).|
   
-### Sample Syntax:
+### Sample syntax:
 
  To install a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components and enable instant file initialization for [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
   

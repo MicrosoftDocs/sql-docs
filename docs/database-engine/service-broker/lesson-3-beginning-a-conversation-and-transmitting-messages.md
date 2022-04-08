@@ -23,7 +23,6 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
 - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **AdventureWorks2008R2** database.
--
 
     ```sql
         USE AdventureWorks2008R2;
@@ -74,7 +73,7 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
 
 - Copy and paste the following code into a Query Editor window. Then, run it to receive the reply message and end the conversation. The RECEIVE statement retrieves the reply message from the **InitiatorQueueIntAct**. The END CONVERSATION statement ends the initiator side of the conversation and sends an **EndDialog** message to the target service. The last SELECT statement displays the text of the reply message so that you can confirm it is the same as what was sent in the previous step.
 
-    ```sql
+   ```sql
         DECLARE @RecvReplyMsg NVARCHAR(100);
         DECLARE @RecvReplyDlgHandle UNIQUEIDENTIFIER;
 
@@ -94,7 +93,7 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
 
         COMMIT TRANSACTION;
         GO
-    ```
+   ```
 
 ### End the target side of the conversation
 

@@ -118,8 +118,7 @@ ms.author: maggies
   
  For more information about converting strings to **DateTime** data types, see [Parsing Date and Time Strings](/dotnet/api/system.datetime.parse?view=net-6.0), [Formatting Date and Time for a Specific Culture](/dotnet/standard/base-types/formatting-types), and [Choosing Between DateTime, DateTimeOffset, and TimeZoneInfo](/dotnet/standard/datetime/choosing-between-datetime) on MSDN.  
   
--   Add a new calculated field to the report dataset that uses an expression to extract parts of the string. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
-  
+-   Add a new calculated field to the report dataset that uses an expression to extract parts of the string. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).    
 -   Change the report dataset query to use [!INCLUDE[tsql](../../includes/tsql-md.md)] functions to extract the date and time values independently to create separate columns. The following example shows how to use the function **DatePart** to add a column for the year and a column for the UTC time zone converted to minutes:  
   
      `SELECT`  

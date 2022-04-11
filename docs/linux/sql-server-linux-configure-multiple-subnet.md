@@ -116,4 +116,4 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
 4. If desired, fail the AG or FCI back to the original subnet.
 
 Here is a CSS post showing how to configure the CIB for three subnets, please review for detail: 
-[Configure multiple-subnet AlwaysOn Availability Group by modifying CIB](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838).
+[Configure multiple-subnet Always On Availability Group by modifying CIB](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838).

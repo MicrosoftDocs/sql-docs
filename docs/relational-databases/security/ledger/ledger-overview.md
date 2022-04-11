@@ -66,7 +66,9 @@ Both updatable ledger tables and append-only ledger tables provide tamper-eviden
 
 ### Ledger database
 
-In a ledger database, all user data is tamper evident and stored in ledger tables. A ledger database can contain only ledger tables. Each table is, by default, created as an updatable ledger table. Ledger databases provide an easy-to-use solution for applications that require the integrity of all data to be protected. 
+In a ledger database, all user data is tamper evident and stored in ledger tables. A ledger database can contain only ledger tables. Each table is, by default, created as an updatable ledger table, with the default name of the history table, ledger view and the default names of additional columns. You can create an append-only ledger table by specifying specifying the `APPEND_ONLY = ON` clause in your [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) statement. If you don't want the system to automatically add the columns and uses the default names, you'll have to use the full [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) syntax. Ledger databases provide an easy-to-use solution for applications that require the integrity of all data to be protected.  
+
+Remark: A ledger database can only be enabled during the creation of you database. This option cannot be changed after you create your database. 
 
 ### Updatable ledger tables
 

@@ -59026,7 +59026,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/sql/sql-server/end-of-support/sql-server-end-of-life-overview.md",
+      "source_path": "docs/sql-server/end-of-support/sql-server-end-of-life-overview.md",
       "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
       "redirect_document_id": true
     },

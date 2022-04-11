@@ -20,7 +20,7 @@ A message of type `https://schemas.microsoft.com/SQL/ServiceBroker/Error` is a S
 
 1. Declare a variable of type int to hold the error code.
 
-2. Declare a variable of type nvarchar(3,000) to hold the error description.
+2. Declare a variable of type nvarchar(3000) to hold the error description.
 
 3. Declare a variable of type XML to hold an XML representation of the message body.
 

@@ -20,7 +20,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
 ### Switch to the TargetDB database
 
-- Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **TargetDB** database.
+- Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **TargetDB** database.
 
   ```sql
         USE TargetDB;

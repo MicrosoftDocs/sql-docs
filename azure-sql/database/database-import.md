@@ -11,6 +11,7 @@ author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: kendralittle, mathoma
 ms.date: 10/29/2020
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Quickstart: Import a BACPAC file to a database in Azure SQL Database or Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

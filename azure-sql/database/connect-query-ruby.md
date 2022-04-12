@@ -12,6 +12,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: kendralittle, mathoma
 ms.date: 05/29/2020
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Quickstart: Use Ruby to query a database in Azure SQL Database or Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

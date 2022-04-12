@@ -11,6 +11,7 @@ author: uc-msft
 ms.author: umajay
 ms.reviewer: kendralittle, mathoma
 ms.date: 10/18/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Getting started with JSON features in Azure SQL Database and Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

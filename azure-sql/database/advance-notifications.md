@@ -11,6 +11,7 @@ author: scott-kim-sql
 ms.author: scottkim
 ms.reviewer: kendralittle, mathoma, wiassaf, urosmil
 ms.date: 04/04/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Advance notifications for planned maintenance events (Preview)
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

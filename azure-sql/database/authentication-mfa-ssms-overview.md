@@ -12,6 +12,7 @@ ms.author: mireks
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 12/15/2021
 tags: azure-synapse
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Using multi-factor Azure Active Directory authentication

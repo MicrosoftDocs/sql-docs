@@ -11,6 +11,7 @@ author: AlainDormehlMSFT
 ms.author: aldorme
 ms.reviewer: kendralittle, mathoma, urmilano, wiassaf
 ms.date: 03/17/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

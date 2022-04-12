@@ -11,6 +11,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 08/11/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Use Azure Active Directory authentication

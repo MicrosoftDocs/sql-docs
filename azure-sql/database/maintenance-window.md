@@ -10,6 +10,7 @@ ms.author: wiassaf
 ms.reviewer: kendralittle, mathoma, urosmil
 ms.custom: references_regions
 ms.date: 04/19/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Maintenance window

@@ -12,6 +12,7 @@ ms.author: matripathy
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 04/05/2022
 tags: azure-synpase
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Dynamic data masking 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]

@@ -12,6 +12,7 @@ ms.author: datrigan
 ms.reviewer: kendralittle, vanto, sstein, mathoma
 ms.date: 06/09/2021
 tags: azure-synapse
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # SQL Advanced Threat Protection

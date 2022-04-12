@@ -8,6 +8,7 @@ author: shohamMSFT
 ms.author: shohamd
 ms.reviewer: vanto
 ms.date: 12/16/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Managed identities for transparent data encryption with BYOK

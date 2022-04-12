@@ -11,6 +11,7 @@ author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: kendralittle, mathoma, wiassaf
 ms.date: 10/18/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Automatic tuning in Azure SQL Database and Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

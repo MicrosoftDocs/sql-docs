@@ -12,6 +12,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: kendralittle, mathoma
 ms.date: 12/19/2020
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Quickstart: Use Python to query a database
 

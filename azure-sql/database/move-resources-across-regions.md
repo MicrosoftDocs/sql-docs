@@ -12,6 +12,7 @@ author: LitKnd
 ms.author: kendralittle
 ms.reviewer: mathoma
 ms.date: 06/25/2019
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Move resources to new region - Azure SQL Database & Azure SQL Managed Instance

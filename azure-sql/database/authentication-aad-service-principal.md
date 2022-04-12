@@ -8,6 +8,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: kendralittle, vanto, mathoma, wiassaf
 ms.date: 02/14/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Azure Active Directory service principal with Azure SQL

@@ -12,6 +12,7 @@ author: danimir
 ms.author: danil
 ms.reviewer: kendralittle, bonova, mathoma, danil
 ms.date: 12/14/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Features comparison: Azure SQL Database and Azure SQL Managed Instance

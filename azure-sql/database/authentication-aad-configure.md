@@ -12,6 +12,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 04/09/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Configure and manage Azure AD authentication with Azure SQL

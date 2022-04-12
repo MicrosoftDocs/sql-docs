@@ -12,6 +12,7 @@ author: shohamMSFT
 ms.author: shohamd
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 06/23/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Transparent data encryption for SQL Database, SQL Managed Instance, and Azure Synapse Analytics
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]

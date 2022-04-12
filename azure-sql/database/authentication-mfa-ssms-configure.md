@@ -12,6 +12,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 08/27/2019
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Configure multi-factor authentication for SQL Server Management Studio and Azure AD

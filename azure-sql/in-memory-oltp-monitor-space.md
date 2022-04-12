@@ -11,6 +11,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, kendralittle
 ms.date: 01/25/2019
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Monitor In-Memory OLTP storage in Azure SQL Database and Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](includes/appliesto-sqldb-sqlmi.md)]

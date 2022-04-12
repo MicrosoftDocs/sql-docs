@@ -11,6 +11,7 @@ author: AlainDormehlMSFT
 ms.author: aldorme
 ms.reviewer: kendralittle, mathoma, wiassaf
 ms.date: 11/04/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Troubleshoot Azure SQL Database and Azure SQL Managed Instance performance issues with Intelligent Insights
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

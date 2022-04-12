@@ -12,6 +12,7 @@ ms.author: drskwier
 ms.reviewer: kendralittle, mathoma, v-masebo
 ms.date: 05/29/2020
 ms.custom: sqldbrb=2 , mode-other
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Quickstart: Use PHP to query a database in Azure SQL Database
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

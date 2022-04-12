@@ -11,6 +11,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: kendralittle, mathoma
 ms.date: 03/25/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Event File target code for extended events in Azure SQL Database and SQL Managed Instance
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb-sqlmi.md)]

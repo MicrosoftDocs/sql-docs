@@ -10,6 +10,7 @@ ms.topic: conceptual
 author: LitKnd
 ms.author: kendralittle
 ms.date: 09/02/2020
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Accelerate real-time big data analytics using the Spark connector
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

@@ -8,6 +8,7 @@ ms.author: kendralittle
 ms.service: sql-database
 ms.subservice: security
 ms.custom: subject-policy-compliancecontrols
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Azure Policy Regulatory Compliance controls for Azure SQL Database & SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

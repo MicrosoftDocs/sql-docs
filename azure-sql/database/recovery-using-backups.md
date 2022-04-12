@@ -12,6 +12,7 @@ author: SudhirRaparla
 ms.author: nvraparl 
 ms.reviewer: kendralittle, mathoma, danil
 ms.date: 04/18/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Recover using automated database backups - Azure SQL Database & SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

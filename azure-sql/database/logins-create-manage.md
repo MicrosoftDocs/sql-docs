@@ -13,6 +13,7 @@ author: AndreasWolter
 ms.author: anwolter
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 03/23/2020
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Authorize database access to SQL Database, SQL Managed Instance, and Azure Synapse Analytics
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]

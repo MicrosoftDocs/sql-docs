@@ -10,6 +10,7 @@ ms.author: vanto
 ms.topic: article
 ms.date: 04/13/2021
 ms.reviewer: kendralittle, mathoma
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Playbook for addressing common security requirements with Azure SQL Database and Azure SQL Managed Instance

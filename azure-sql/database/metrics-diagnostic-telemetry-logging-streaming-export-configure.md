@@ -10,6 +10,7 @@ author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: kendralittle, mathoma, wiassaf
 ms.date: 3/10/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Configure streaming export of Azure SQL Database and SQL Managed Instance diagnostic telemetry

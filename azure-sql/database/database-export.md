@@ -11,6 +11,7 @@ ms.author: kendralittle
 ms.reviewer: mathoma
 ms.date: 12/10/2021
 ms.topic: how-to
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Export to a BACPAC file - Azure SQL Database and Azure SQL Managed Instance
 

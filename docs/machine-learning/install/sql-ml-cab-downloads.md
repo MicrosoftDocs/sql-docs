@@ -46,7 +46,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 |------- | --------- | ------------- | ---------------- |
 |**[SQL Server 2019 CU16](https://support.microsoft.com/help/5011644)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
-| | R Server              | [SRS_9.4.7.2008_1033.cab](https://go.microsoft.com/fwlink/?linkid=)  |  |
+| | R Server              | [SRS_9.4.7.2008_1033.cab](https://go.microsoft.com/fwlink/?linkid=2191223)  |  |
 | | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
 | | Python Server         | [SPS_9.4.7.2008_1033.cab](https://go.microsoft.com/fwlink/?linkid=)  |  |
 |**[SQL Server 2019 CU8-CU15](https://support.microsoft.com/help/5008996)** |  |  |  |

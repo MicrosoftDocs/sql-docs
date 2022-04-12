@@ -14,7 +14,7 @@ ms.date: "03/30/2022"
 
 [!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
-A message of type **https://schemas.microsoft.com/SQL/ServiceBroker/Error** is a Service Broker error message. Messages of this type are XML documents that contain a numeric code for the error and a description of the error.
+A message of type `https://schemas.microsoft.com/SQL/ServiceBroker/Error` is a Service Broker error message. Messages of this type are XML documents that contain a numeric code for the error and a description of the error.
 
 ## To retrieve the information from a Service Broker error message
 

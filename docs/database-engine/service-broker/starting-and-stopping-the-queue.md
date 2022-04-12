@@ -1,4 +1,4 @@
-﻿---
+---
 title: Starting and Stopping the Queue
 description: "Use the ALTER QUEUE statement to start and stop a queue."
 ms.prod: sql
@@ -22,7 +22,7 @@ Administrators often create queues in an unavailable state. This prevents Servic
     ALTER QUEUE dbo.ExpenseQueue WITH STATUS = ON ;
 ```
 
-The statement below makes the queue unavailable for receive:
+The following statement makes the queue unavailable for receive:
 
 ```sql
     ALTER QUEUE dbo.ExpenseQueue WITH STATUS = OFF ;

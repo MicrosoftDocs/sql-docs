@@ -12,6 +12,7 @@ helpviewer_keywords:
   - "Windows Server Failover Clustering, with SQL Server"
   - "WSFC, with SQL Server"
   - "quorum [SQL Server]"
+  - "failover clustering [SQL Server], AlwaysOn Availability Groups"
   - "failover clustering [SQL Server], Always On Availability Groups"
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
@@ -138,7 +139,7 @@ ms.author: mathoma
   
  For more information, see: [WSFC Disaster Recovery through Forced Quorum (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
-##  <a name="AlwaysOnWsfcRelationship"></a> Relationship of SQL Server AlwaysOn Components to WSFC  
+##  <a name="AlwaysOnWsfcRelationship"></a> Relationship of SQL Server Always On Components to WSFC  
  Several layers of relationships exist between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On and WSFC features and components.  
   
  Always On availability groups are hosted on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances.  
@@ -156,7 +157,7 @@ ms.author: mathoma
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] registry keys are subkeys of the WSFC cluster.  
  If you delete and re-create a WSFC, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each server instance that was enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on the original WSFC. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
- ![SQL Server AlwaysOn Component Context Diagram](../../../sql-server/failover-clusters/windows/media/alwaysoncomponentcontextdiagram.gif "SQL Server AlwaysOn Component Context Diagram")  
+ ![SQL Server Always On Component Context Diagram](../../../sql-server/failover-clusters/windows/media/alwaysoncomponentcontextdiagram.gif "SQL Server Always On Component Context Diagram")  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

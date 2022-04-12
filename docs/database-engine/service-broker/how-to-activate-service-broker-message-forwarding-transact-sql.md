@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'How to: Activate Service Broker Message Forwarding (Transact-SQL)'
 description: "Message forwarding allows an instance of SQL Server to accept messages from outside the instance and send those messages to a different instance. Message forwarding is configured on a Service Broker endpoint."
 ms.prod: sql
@@ -27,8 +27,8 @@ Message forwarding allows an instance of SQL Server to accept messages from outs
 ```sql
     USE master ;
     GO
-    
-    ALTER ENDPOINT BrokerEndpoint 
+
+    ALTER ENDPOINT BrokerEndpoint
         FOR SERVICE_BROKER ( MESSAGE_FORWARDING = ENABLED,
                              MESSAGE_FORWARD_SIZE = 10 ) ;
     GO

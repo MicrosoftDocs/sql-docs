@@ -91,6 +91,14 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
     (ADD CONTRACT [//Adventure-Works.com/Expenses/ExpenseProcessing],   
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
+
+### D. Altering the owner of a service
+The following example changes the owner of `//Adventure-Works.com/Expenses` to dbo.
+
+```sql
+ALTER AUTHORIZATION ON SERVICE::[//Adventure-Works.com/Expenses] TO dbo
+GO
+```
   
 ## See Also  
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   

@@ -65,11 +65,11 @@ Install SQL Server. The following links point to SQL Server installation instruc
 Enable Always On availability groups for each node that hosts a SQL Server instance, and then restart `mssql-server`. Run the following script:
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
+sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 sudo systemctl restart mssql-server
 ```
 
-##Enable an AlwaysOn_health event session
+## Enable an AlwaysOn_health event session
 
 You can optionally enable extended events (XE) to help with root-cause diagnosis when you troubleshoot an availability group. Run the following command on each instance of SQL Server:
 
@@ -139,10 +139,10 @@ Update the following Transact-SQL script for your environment on all SQL Server 
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATABASE_MIRRORING (
-	    ROLE = ALL,
-	    AUTHENTICATION = CERTIFICATE dbm_certificate,
-		ENCRYPTION = REQUIRED ALGORITHM AES
-		);
+        ROLE = ALL,
+        AUTHENTICATION = CERTIFICATE dbm_certificate,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+        );
 ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 ```
 

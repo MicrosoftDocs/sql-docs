@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 1/25/2022
+ms.date: 4/11/2022
 ---
 
 # Download and install sqlpackage
@@ -22,10 +22,10 @@ Download and install the latest releases:
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
-|[Windows](#get-sqlpackage-for-windows)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2185764)|January 25, 2022|19.0|16.0.5400.1|
-|[macOS .NET Core](#get-sqlpackage-net-core-for-macos) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185765)|January 25, 2022|19.0|16.0.5400.1|
-|[Linux .NET Core](#get-sqlpackage-net-core-for-linux) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185670)|January 25, 2022|19.0|16.0.5400.1|
-|[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185669)|January 25, 2022|19.0|16.0.5400.1|
+|[Windows](#windows-net-framework)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2185764)|January 25, 2022|19.0|16.0.5400.1|
+|[macOS .NET Core](#macos-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185765)|January 25, 2022|19.0|16.0.5400.1|
+|[Linux .NET Core](#linux-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185670)|January 25, 2022|19.0|16.0.5400.1|
+|[Windows .NET Core](#windows-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185669)|January 25, 2022|19.0|16.0.5400.1|
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional languages, see the [Available Languages](#available-languages) section.
 

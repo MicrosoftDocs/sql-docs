@@ -9,6 +9,7 @@ author: scott-kim-sql
 ms.author: scottkim
 ms.reviewer: kendralittle, mathoma
 ms.date: 03/07/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Configure maintenance window
 

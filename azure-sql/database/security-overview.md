@@ -12,6 +12,7 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: kendralittle, vanto, emlisa, mathoma
 ms.date: 08/23/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # An overview of Azure SQL Database and SQL Managed Instance security capabilities
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]

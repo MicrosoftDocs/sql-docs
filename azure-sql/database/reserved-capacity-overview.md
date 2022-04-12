@@ -12,6 +12,7 @@ author: emlisa
 ms.author: emlisa
 ms.reviewer: kendralittle, mathoma
 ms.date: 04/06/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Save costs for resources with reserved capacity - Azure SQL Database & SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)] 

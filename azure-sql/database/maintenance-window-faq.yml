@@ -11,6 +11,7 @@ metadata:
   ms.reviewer: kendralittle, mathoma
   ms.custom: 
   ms.date: 03/07/2022
+  monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 title: Maintenance window FAQ
 summary: This article answers frequently asked questions about the maintenance window for [Azure SQL database](sql-database-paas-overview.md) and [SQL managed instance](../managed-instance/sql-managed-instance-paas-overview.md).

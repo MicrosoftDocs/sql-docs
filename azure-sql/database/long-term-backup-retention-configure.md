@@ -10,6 +10,7 @@ author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: kendralittle, mathoma
 ms.date: 12/16/2020
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Manage Azure SQL Database long-term backup retention

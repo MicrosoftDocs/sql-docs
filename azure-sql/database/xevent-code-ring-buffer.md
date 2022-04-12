@@ -11,6 +11,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: kendralittle, mathoma
 ms.date: 12/19/2018
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Ring Buffer target code for extended events in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

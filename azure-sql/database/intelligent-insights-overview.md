@@ -11,6 +11,7 @@ author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: kendralittle, mathoma, wiassaf
 ms.date: 01/31/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Intelligent Insights using AI to monitor and troubleshoot database performance (preview)
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

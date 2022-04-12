@@ -9,6 +9,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 12/15/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Tutorial: Assign Directory Readers role to an Azure AD group and manage role assignments

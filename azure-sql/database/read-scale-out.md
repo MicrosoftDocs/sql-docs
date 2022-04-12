@@ -11,6 +11,7 @@ author: emlisa
 ms.author: emlisa
 ms.reviewer: kendralittle, mathoma
 ms.date: 1/20/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Use read-only replicas to offload read-only query workloads
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

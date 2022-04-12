@@ -11,6 +11,9 @@ ms.author: dfurman
 ms.reviewer: kendralittle, mathoma
 ms.date: 04/06/2022
 ms.custom: devx-track-azurepowershell
+ms.date: 02/02/2022
+ms.custom: devx-track-azurepowershellds
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # vCore purchasing model overview - Azure SQL Database and Azure SQL Managed Instance 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

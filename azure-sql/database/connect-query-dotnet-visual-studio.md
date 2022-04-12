@@ -12,6 +12,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: kendralittle, mathoma
 ms.date: 08/10/2020
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Quickstart: Use .NET and C# in Visual Studio to connect to and query a database
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi-asa.md)]

@@ -13,6 +13,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: kendralittle, mathoma
 ms.date: 09/28/2020
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

@@ -12,6 +12,7 @@ author: SudhirRaparla
 ms.author: nvraparl 
 ms.reviewer: kendralittle, mathoma
 ms.date: 07/13/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Long-term retention - Azure SQL Database and Azure SQL Managed Instance
 

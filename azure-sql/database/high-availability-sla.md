@@ -12,6 +12,7 @@ author: emlisa
 ms.author: emlisa
 ms.reviewer: kendralittle, mathoma, emlisa
 ms.date: 04/13/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # High availability for Azure SQL Database and SQL Managed Instance

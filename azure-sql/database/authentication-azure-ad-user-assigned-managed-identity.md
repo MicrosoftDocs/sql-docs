@@ -9,6 +9,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
 ms.date: 03/09/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # User-assigned managed identity in Azure AD for Azure SQL

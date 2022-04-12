@@ -12,6 +12,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: kendralittle, mathoma
 ms.date: 04/11/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Monitoring Microsoft Azure SQL Database and Azure SQL Managed Instance performance using dynamic management views
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

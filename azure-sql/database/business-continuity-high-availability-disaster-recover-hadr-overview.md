@@ -13,6 +13,7 @@ author: emlisa
 ms.author: emlisa
 ms.reviewer: kendralittle, mathoma
 ms.date: 10/18/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Overview of business continuity with Azure SQL Database & Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

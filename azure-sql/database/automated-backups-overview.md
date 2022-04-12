@@ -11,6 +11,7 @@ author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: kendralittle, mathoma, wiassaf, danil
 ms.date: 01/10/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Automated backups - Azure SQL Database & Azure SQL Managed Instance
 

@@ -9,6 +9,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 04/06/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Create server with Azure AD-only authentication enabled in Azure SQL

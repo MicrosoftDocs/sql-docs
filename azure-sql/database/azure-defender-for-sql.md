@@ -10,6 +10,7 @@ ms.author: memildin
 manager: rkarlin
 author: memildin
 ms.date: 06/07/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Microsoft Defender for SQL
 

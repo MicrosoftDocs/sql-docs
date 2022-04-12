@@ -13,6 +13,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: kendralittle, mathoma
 ms.date: 05/29/2020
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Quickstart: Use Visual Studio Code to connect and query 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

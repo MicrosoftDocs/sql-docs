@@ -11,6 +11,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: kendralittle, mathoma
 ms.date: 07/23/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Extended events in Azure SQL Database 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

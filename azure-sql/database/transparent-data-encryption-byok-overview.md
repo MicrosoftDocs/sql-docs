@@ -12,6 +12,7 @@ author: shohamMSFT
 ms.author: shohamd
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 12/16/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Azure SQL transparent data encryption with customer-managed key
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]

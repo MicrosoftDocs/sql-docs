@@ -9,6 +9,7 @@ author: scoriani
 ms.author: scoriani
 ms.reviewer: kendralittle, mathoma
 ms.date: 11/02/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Distributed transactions across cloud databases
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

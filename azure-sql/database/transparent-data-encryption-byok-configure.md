@@ -11,6 +11,7 @@ author: shohamMSFT
 ms.author: shohamd
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 06/23/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # PowerShell and Azure CLI: Enable Transparent Data Encryption with customer-managed key from Azure Key Vault

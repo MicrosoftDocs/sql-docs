@@ -53,7 +53,7 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
 
 ## Linux (.NET Core)
 
-1. Download [sqlpackage for Linux](https://aka.ms/sqlpackage-linux) by using one of the installers or the tar.gz archive.
+1. Download [sqlpackage for Linux](https://aka.ms/sqlpackage-linux).
 2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    ```bash

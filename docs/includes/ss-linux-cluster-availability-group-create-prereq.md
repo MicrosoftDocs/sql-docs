@@ -74,7 +74,7 @@ sudo systemctl restart mssql-server
 You can optionally enable extended events (XE) to help with root-cause diagnosis when you troubleshoot an availability group. Run the following command on each instance of SQL Server:
 
 ```SQL
-ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
+ALTER EVENT SESSION AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
@@ -94,7 +94,7 @@ BACKUP CERTIFICATE dbm_certificate
    WITH PRIVATE KEY (
            FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
            ENCRYPTION BY PASSWORD = '**<Private_Key_Password>**'
-       );
+        );
 ```
 
 At this point, your primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas. Use the mssql user, or give permission to the mssql user to access these files.
@@ -122,9 +122,9 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate
     FROM FILE = '/var/opt/mssql/data/dbm_certificate.cer'
     WITH PRIVATE KEY (
-    FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
-    DECRYPTION BY PASSWORD = '**<Private_Key_Password>**'
-            );
+           FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
+           DECRYPTION BY PASSWORD = '**<Private_Key_Password>**'
+        );
 ```
 
 ## Create the database mirroring endpoints on all replicas
@@ -143,6 +143,7 @@ CREATE ENDPOINT [Hadr_endpoint]
         AUTHENTICATION = CERTIFICATE dbm_certificate,
         ENCRYPTION = REQUIRED ALGORITHM AES
         );
+
 ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 ```
 

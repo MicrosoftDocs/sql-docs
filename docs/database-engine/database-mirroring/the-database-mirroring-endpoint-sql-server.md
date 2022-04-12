@@ -12,6 +12,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], deployment"
   - "database mirroring [SQL Server], endpoint"
   - "endpoints [SQL Server], AlwaysOn Availability Groups"
+  - "endpoints [SQL Server], Always On Availability Groups"
   - "endpoints [SQL Server], database mirroring"
   - "Availability Groups [SQL Server], endpoint"
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635

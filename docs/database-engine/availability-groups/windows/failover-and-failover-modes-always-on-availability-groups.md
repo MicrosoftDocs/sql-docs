@@ -12,6 +12,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], failover"
   - "Availability Groups [SQL Server], failover modes"
   - "failover [SQL Server], AlwaysOn Availability Groups"
+  - "failover [SQL Server], Always On Availability Groups"
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Conversation Priorities
 description: "Conversation priorities are a set of user-defined rules, each of which specifies a priority level and the criteria for determining which Service Broker conversations to assign the priority level."
 ms.prod: sql
@@ -35,7 +35,7 @@ Conversation priorities are created in each database using the CREATE BROKER PRI
 - A priority level to assign Service Broker conversations. The levels are specified as integers from 1 (lowest) to 10 (highest). The default is 5.
 
 - The criteria that determine which conversations the priority level applies to the following:
-  
+
   - A contract name, or ANY.
 
   - A local service name, or ANY.
@@ -268,7 +268,8 @@ This script specifies the priority level for the target conversation endpoint an
 
 - The SEND of the **ReplyMessage** from the **TargetService** to the **InitiatorQueue**.
 
-<!-- end list -->
+<!-- end list -->
+
 ```sql
     USE TargetDB;
     GO

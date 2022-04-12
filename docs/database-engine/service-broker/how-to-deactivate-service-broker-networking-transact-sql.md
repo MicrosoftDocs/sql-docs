@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'How to: Deactivate Service Broker Networking (Transact-SQL)'
 description: "Service Broker sends and receives messages over the network while any Service Broker endpoint is in the STARTED state."
 ms.prod: sql
@@ -25,7 +25,7 @@ Service Broker sends and receives messages over the network while any Service Br
 ```sql
     USE master ;
     GO
-    
+
     DROP ENDPOINT BrokerEndpoint ;
     GO
 ```

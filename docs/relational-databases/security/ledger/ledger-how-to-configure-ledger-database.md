@@ -1,6 +1,6 @@
 ---
-title: Configure automatic database digests
-description: This article discusses how to configure automatic database digest in Azure SQL Database using the Azure portal, PowerShell, and the Azure CLI.
+title: Configure a ledger database
+description: This article discusses how to configure a ledger database
 ms.service: sql-database
 ms.subservice: security
 ms.devlang:

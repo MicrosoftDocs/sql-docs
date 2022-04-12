@@ -71,4 +71,3 @@ az sql db ledger-digest-uploads enable \
 - [Database verification](ledger-database-verification.md)
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)
-- [Access the digests stored in Azure Confidential Ledger](ledger-how-to-access-acl-digest.md)

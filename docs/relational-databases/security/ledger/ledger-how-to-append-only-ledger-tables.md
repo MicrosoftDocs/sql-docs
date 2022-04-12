@@ -107,5 +107,4 @@ We'll create a `KeyCardEvents` table with the following schema.
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md) 
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md)
-- [Access the digests stored in Azure Confidential Ledger (ACL)](ledger-how-to-access-acl-digest.md)
 - [Verify a ledger table to detect tampering](ledger-verify-database.md)

@@ -51,11 +51,10 @@ Scheduling database verification can be done with Elastic Jobs or Azure Automati
 
 ## See also
 
-- [Database ledger](ledger-database-ledger.md) 
+- [Database ledger](ledger-database-ledger.md)
 - [Digest management](ledger-digest-management.md)
 - [Database verification](ledger-database-verification.md)
-- [Append-only ledger tables](ledger-append-only-ledger-tables.md) 
+- [Append-only ledger tables](ledger-append-only-ledger-tables.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md)
-- [Access the digests stored in Azure Confidential Ledger (ACL)](ledger-how-to-access-acl-digest.md)
 - [Verify a ledger table to detect tampering](ledger-verify-database.md)

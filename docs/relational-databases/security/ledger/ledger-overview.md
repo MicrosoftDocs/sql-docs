@@ -121,7 +121,6 @@ Because the ledger verification recomputes all of the hashes for transactions in
 Ideally, users should run ledger verification only when the organization that's hosting the data goes through an audit and needs to provide cryptographic evidence about the integrity of the data to another party. To reduce the cost of verification, the feature exposes options to verify individual ledger tables or only a subset of the ledger tables.
 
 ## Next steps
- 
+
 - [Quickstart: Create a SQL database with ledger enabled](ledger-create-a-single-database-with-ledger-enabled.md)
-- [Access the digests stored in Azure Confidential Ledger](ledger-how-to-access-acl-digest.md)
 - [Verify a ledger table to detect tampering](ledger-verify-database.md)

@@ -26,7 +26,7 @@ You need an active Azure subscription. If you don't have one, [create a free acc
 
 ## Create a ledger database and configure digest storage
 
-Create a single ledger database in the [serverless compute tier](serverless-tier-overview.md), and configure uploading ledger digests to an Azure Storage account.
+Create a single ledger database in the [serverless compute tier](/azure/azure-sql/database/serverless-tier-overview), and configure uploading ledger digests to an Azure Storage account.
 
 # [Portal](#tab/azure-portal)
 

@@ -1,6 +1,6 @@
 ---
 title: "Targets for Extended Events in SQL Server"
-description: This article explains package0 targets for extended events in SQL Server. Learn about target abilities in gathering and reporting data and target parameters.
+description: This article explains package0 targets for Extended Events in SQL Server. Learn about target abilities in gathering and reporting data and target parameters.
 ms.date: "03/25/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -15,8 +15,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>
 
 [!INCLUDE [SQL Server Azure SQL Database Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
-
-This article explains when and how to use the package0 targets for extended events in SQL Server. For each target, the present article explains:
+This article explains when and how to use the package0 targets for Extended Events in SQL Server. For each target, the present article explains:
 
 - Its abilities in gathering and reporting the data sent by events.
 - Its parameters, except where the parameter is self-explanatory.
@@ -31,7 +30,7 @@ The [ring_buffer section](#h2_target_ring_buffer) includes an example of using [
 ### Prerequisites
 
 
-- Be generally familiar with the basics of extended events, as described in [Quick Start: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
+- Be generally familiar with the basics of Extended Events, as described in [Quick Start: Extended Events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
 
 - Have installed a recent version of the frequently updated utility SQL Server Management Studio (SSMS.exe). For details see:
@@ -47,7 +46,7 @@ The [ring_buffer section](#h2_target_ring_buffer) includes an example of using [
 ## Parameters, actions, and fields
 
 
-In Transact-SQL, the [CREATE EVENT SESSION](~/t-sql/statements/create-event-session-transact-sql.md) statement is central to extended events. To write the statement you often need a list and description of the following:
+In Transact-SQL, the [CREATE EVENT SESSION](~/t-sql/statements/create-event-session-transact-sql.md) statement is central to Extended Events. To write the statement you often need a list and description of the following:
 
 - The fields associated with your chosen event.
 - The parameters associated with your chosen target.
@@ -67,7 +66,7 @@ You can see parameters, fields, and actions used in the context of an actual CRE
 
 ## etw_classic_sync_target target
 
-SQL Server extended events can inter-operate with Event Tracing for Windows (ETW) to monitor system activity. For more information, see:
+SQL Server Extended Events can inter-operate with Event Tracing for Windows (ETW) to monitor system activity. For more information, see:
 
 - [Event Tracing for Windows Target](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
 - [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
@@ -140,7 +139,7 @@ The **event_file** target writes event session output from buffer to a disk file
 > [!NOTE]
 > [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] only support storing `xel` files on Azure Blob Storage. 
 >
-> For an **event_file** code example specific to SQL Database or SQL Managed Instance, see [Event File target code for extended events in SQL Database](/azure/sql-database/sql-database-xevent-code-event-file).
+> For an **event_file** code example specific to SQL Database or SQL Managed Instance, see [Event File target code for Extended Events in SQL Database](/azure/sql-database/sql-database-xevent-code-event-file).
 
 ::: moniker-end
 

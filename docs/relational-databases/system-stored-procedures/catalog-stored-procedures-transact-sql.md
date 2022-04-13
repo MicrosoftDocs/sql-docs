@@ -59,7 +59,9 @@ Stored procedures for certain platforms only as specified, including Azure Synap
 :::row:::
     :::column:::
         [sp_create_openrowset_statistics](sp-create-openrowset-statistics.md)
+
         [sp_drop_openrowset_statistics](sp-drop-openrowset-statistics.md)
+
     :::column-end:::
 :::row-end:::
 

@@ -96,7 +96,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  The index type Hashed accepts exact match or range searches, but pattern matching searches do not use the index.  
   
- The `sp_statistics` system stored procedure is equivalent to **SQLStatistics** in ODBC. The results returned are ordered by `NON_UNIQUE`, `TYPE`, `INDEX_QUALIFIER`, `INDEX_NAME`, and `SEQ_IN_INDEX`. For more information, see the [ODBC API Reference](../../odbc/reference/syntax/odbc-reference.md).  
+ The `sp_statistics` system stored procedure is equivalent to **SQLStatistics** in ODBC. The results returned are ordered by `NON_UNIQUE`, `TYPE`, `INDEX_QUALIFIER`, `INDEX_NAME`, and `SEQ_IN_INDEX`. For more information, see the [ODBC API Reference](../../odbc/reference/syntax/odbc-reference.md).
   
 ## Permissions  
  Requires SELECT permission on the schema.  

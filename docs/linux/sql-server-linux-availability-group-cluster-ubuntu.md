@@ -19,7 +19,7 @@ This article describes how to create a three-node cluster on Ubuntu 20.04 and ad
 
 SQL Server's integration with Pacemaker on Linux isn't as coupled as with WSFC on Windows. From within SQL Server, there's no knowledge about the presence of the cluster, all orchestration is from outside in, and the service is controlled as a standalone instance by the cluster manager. Also, the virtual network name is specific to WSFC, and there's no equivalent of the same in Pacemaker. Always On dynamic management views that query cluster information return empty rows.
 
-You can still [create a listener](sql-server-linux-availability-group-overview.md#the-listener-under-linux) for transparent reconnection after failover, but you have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained in the following sections).
+You can still [create a listener](sql-server-linux-availability-group-overview.md#the-listener-under-linux) for transparent reconnection after failover, but you have to manually register the listener name in the DNS server with the IP used to create the virtual IP resource (as explained in the following sections).
 
 The following sections walk through the steps to set up a failover cluster solution.
 

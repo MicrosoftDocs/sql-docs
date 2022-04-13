@@ -59359,6 +59359,11 @@
       "source_path": "docs/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md",
       "redirect_url": "/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2019",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md",
+      "redirect_url": "/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server",
+      "redirect_document_id": true
     }
   ]
 }

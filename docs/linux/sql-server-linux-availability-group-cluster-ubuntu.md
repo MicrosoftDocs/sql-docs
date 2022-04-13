@@ -145,7 +145,7 @@ Pacemaker cluster vendors require STONITH to be enabled and a fencing device con
 
 Resource level fencing ensures that no data corruption occurs if there's an outage. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down.
 
-Node level fencing ensures that a node doesn't run any resources. This is done by resetting the node, and the Pacemaker implementation of it's called STONITH. Pacemaker supports a great variety of fencing devices, for example, an uninterruptible power supply or management interface cards for servers.
+Node level fencing ensures that a node doesn't run any resources. This is done by resetting the node, and the Pacemaker implementation of it is called STONITH. Pacemaker supports a great variety of fencing devices, for example, an uninterruptible power supply or management interface cards for servers.
 
 For more information, see [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) and [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html).
 
@@ -197,7 +197,7 @@ sudo apt-get install mssql-server-ha
 
 ## Create availability group resource
 
-To create the availability group resource, use `pcs resource create` command and set the resource properties. Below command creates a `ocf:mssql:ag` master/subordinate type resource for availability group with name `ag1`.
+To create the availability group resource, use `pcs resource create` command and set the resource properties. Below command creates a `ocf:mssql:ag` primary/replica type resource for availability group with name `ag1`.
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s promotable notify=true

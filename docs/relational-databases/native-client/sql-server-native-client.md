@@ -18,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 SNAC, or SQL Server Native Client, is a term that has been used interchangeably to refer to ODBC and OLE DB drivers for SQL Server.
 
 > [!IMPORTANT] 
-> The SQL Server Native Client (SQLNCLI) remains deprecated and it is not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
+> The SQL Server Native Client (SQLNCLI) remains deprecated and it is not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features. For SNAC that ships as a component with SQL Server Database engine itself see this [Support Lifecycle exception](/sql/relational-databases/native-client/applications/support-policies-for-sql-server-native-client#support-lifecycle-exception)
 
 > [!NOTE]
 > For more information and to download the SNAC or ODBC Drivers, see the [SNAC lifecycle explained blog post](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained).

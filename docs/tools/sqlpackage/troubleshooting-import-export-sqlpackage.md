@@ -17,9 +17,9 @@ ms.date: 5/5/2021
 In some scenarios, import or export operations take longer than expected or fail to complete.  The following are some frequently suggested tactics to troubleshoot import and export operations. While reading the specific documentation page for each action to understand the available parameters and properties is recommended, this article serves as a starting point in investigating SqlPackage Import or Export operations.
 
 ## Overall strategy
-As general guideline, better performance can be obtained via the [.NET Core version](sqlpackage-download.md#get-sqlpackage-net-core-for-windows) of SqlPackage.exe.
+As general guideline, better performance can be obtained via the [.NET Core version](sqlpackage-download.md#windows-net-core) of SqlPackage.exe.
 
-1. [Download](sqlpackage-download.md#get-sqlpackage-net-core-for-windows) the zip for SqlPackage on .NET Core for your operating system (Windows, macOS, or Linux).
+1. [Download](sqlpackage-download.md#windows-net-core) the zip for SqlPackage on .NET Core for your operating system (Windows, macOS, or Linux).
 2. Unzip archive as directed on the download page.
 3. Open a command prompt and change directory (`cd`) to the SqlPackage folder.
 

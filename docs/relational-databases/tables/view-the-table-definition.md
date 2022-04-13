@@ -2,7 +2,7 @@
 description: "View the Table Definition"
 title: "View the Table Definition"
 ms.custom: ""
-ms.date: "03/09/2021"
+ms.date: "04/12/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -21,24 +21,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   You can display properties for a table in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Security](#Security)  
-  
--   **To display table properties, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+    
+###  <a name="Permissions"></a> Permissions  
  You can only see properties in a table if you either own the table or have been granted permissions to that table.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
@@ -63,18 +47,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 EXEC sp_help 'dbo.mytable';
 ```  
     
- For more information, see [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md).
+ For more information, see [sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md).
 
  You could alternatively query the system catalog views directly to query object metadata information about tables, schema, and columns. For example:  
-  
+ 
 ```sql
-SELECT s.name, t.name, c.* FROM sys.columns AS c
+SELECT s.name as schema_name, t.name as table_name, c.* FROM sys.columns AS c
 INNER JOIN sys.tables AS t ON t.object_id = c.object_id
 INNER JOIN sys.schemas AS s ON s.schema_id = t.schema_id
-WHERE t.object_id = object_id('mytable') AND s.name = 'dbo';
+WHERE t.name = 'mytable' AND s.name = 'dbo';
 ```
-    
- For more information, see: 
+
+## Next Steps
 
 * [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)    
 * [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)    

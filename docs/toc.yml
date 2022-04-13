@@ -13627,8 +13627,12 @@ items:
         href: relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md
       - name: sp_columns
         href: relational-databases/system-stored-procedures/sp-columns-transact-sql.md
+      - name: sp_create_openrowset_statistics 
+        href: relational-databases/system-stored-procedures/sp-create-openrowset-statistics.md
       - name: sp_databases
         href: relational-databases/system-stored-procedures/sp-databases-transact-sql.md
+      - name: sp_drop_openrowset_statistics 
+        href: relational-databases/system-stored-procedures/sp-drop-openrowset-statistics.md
       - name: sp_fkeys
         href: relational-databases/system-stored-procedures/sp-fkeys-transact-sql.md
       - name: sp_pkeys

@@ -10,6 +10,7 @@ ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
+  - "replication [SQL Server], Always On Availability Groups"
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
@@ -222,4 +223,4 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 - [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
 - [Always On Availability Groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
 - [SQL Server Replication](../../../relational-databases/replication/sql-server-replication.md)  
-- If you are using non-default ports, see [Walkthrough Publisher, Distributor, Subscriber in AlwaysOn Availability Groups](https://repltalk.com/2019/03/09/walkthrough-publisher-distributor-subscriber-in-alwayson-availability-groups).
+- If you are using non-default ports, see [Walkthrough Publisher, Distributor, Subscriber in Always On Availability Groups](https://repltalk.com/2019/03/09/walkthrough-publisher-distributor-subscriber-in-alwayson-availability-groups).

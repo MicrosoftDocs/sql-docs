@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'How to: Allow Service Broker Network Access by Using Windows Authentication (Transact-SQL)'
 description: "To allow another instance to send messages using Windows Authentication for transport security, you create a user in the master database for the startup service account for the other instance."
 ms.prod: sql
@@ -32,10 +32,10 @@ Once access is configured in each instance, then communications between the two 
 ```sql
     USE master ;
     GO
-    
+
     CREATE LOGIN [DOMAIN\user] FROM WINDOWS ;
     GO
-    
+
     GRANT CONNECT ON ENDPOINT::ThisInstanceEndpoint to [DOMAIN\user] ;
     GO
 ```

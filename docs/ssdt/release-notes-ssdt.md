@@ -20,7 +20,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > [!IMPORTANT]
 > Release notes for SQL Server Data Tools (SSDT) for Visual Studio 2019 and later are not mentioned with SSDT 2017 and earlier.  
 > Release notes updates for **SSDT 2017 and earlier** are in this article.  
-> Release notes updates for **SSDT 2019 and later** are now listed under [Visual Studio](/visualstudio/ide/whats-new-visual-studio-docs?toc=%2Fvisualstudio%2Freleases%2Ftoc.json&bc=%2Fvisualstudio%2Freleases%2F_breadcrumb%2Ftoc.json&view=vs-2022#data-tools).
+> Release notes updates for **SSDT 2019 and later** are now listed under [Visual Studio](/visualstudio/ide/whats-new-visual-studio-docs).
 
 These release notes are for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) for Visual Studio (VS).
 

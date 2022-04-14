@@ -4,9 +4,9 @@ description: "Each database contains a unique identifier that is used for routin
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: randolphwest
+ms.author: rwestMSFT
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 

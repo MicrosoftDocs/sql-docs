@@ -4,9 +4,9 @@ description: "In this lesson, you will learn to drop the objects that enabled a 
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: randolphwest
+ms.author: rwestMSFT
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -31,7 +31,8 @@ In this lesson, you will learn to drop the objects that enabled a database to su
 
 ### Drop the conversation objects
 
-- Copy and paste the following code into a Query Editor window. Then, run it to drop the objects that were used to support the conversation.
+- Copy and paste the following code into a Query Editor window. Then, run it to drop the objects that were used to support the conversation.
+
 
     ```sql
         IF EXISTS (SELECT * FROM sys.objects

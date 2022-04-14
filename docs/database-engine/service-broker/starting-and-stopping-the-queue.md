@@ -4,9 +4,9 @@ description: "Use the ALTER QUEUE statement to start and stop a queue."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: randolphwest
+ms.author: rwestMSFT
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 

@@ -33,7 +33,7 @@ Follow the steps below to install the Database Migration Assessment for Oracle e
 
 4. Select **Install**.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/install-database-migration-assessment-for-oracle-extension.png" alt-text="install extension":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/install-database-migration-assessment-for-oracle-extension.png" alt-text="install extension":::
 
 ## Run Assessment
 
@@ -41,30 +41,32 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
 1. Go to the connections icon in the menu bar.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-connections-menu-bar.png" alt-text="connections menu bar":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-connections-menu-bar.png" alt-text="connections menu bar":::
 
 2. In the **Connection Details**, fill out the fields.
     1. In **Connection type** field, select **Oracle**.
     2. In the **Data Source** field, type in your Oracle server name and instance.
-        3. You can provide the TNS name as well.
-    4. In the **User Id** field, provide the database username.
-    5. In the **Password** field, provide the database password.
+        1. You can provide the TNS name as well.
+    3. In the **User Id** field, provide the database username.
+    4. In the **Password** field, provide the database password.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-connections-details.png" alt-text="connection details":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-connections-details.png" alt-text="connection details":::
 
 3. Select **Connect**.
+
 4. Now, a new connection appears in the connection details menu.
+
 5. Right-click on the Oracle connection and select **Manage**.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-manage-database-connection.png" alt-text="mangae database connection":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-manage-database-connection.png" alt-text="mangae database connection":::
 
 6. Select **Oracle Assessment**.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-select-oracle-assessment.png" alt-text="manage database connection":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-select-oracle-assessment.png" alt-text="manage database connection":::
 
 7. Select **Run new Assessment**.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-run-new-oracle-assessment.png" alt-text="run new assessment":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-run-new-oracle-assessment.png" alt-text="run new assessment":::
 
 8. Provide your assessment details.
     1. In the **Assessment name** field, enter a title.
@@ -72,21 +74,21 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
     1. Enter your **Assessment setting**.
         1. In the **Target Platform** field, enter the destination migration database.
             1. For example, **SQL**.
-        1. In the **Scale factor** field, enter the ...
-        1. In the **Percentile utilization** field, enter the ...
+        1. In the **Scale factor** field, enter the multiplier value.
+        1. In the **Percentile utilization** field, enter the percentile value for sizing the Azure target.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="assessment details":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="assessment details":::
 
-9. Select **Run new Assessment**. 
+9. Select **Run new Assessment**.
     1. Now, you see the new Assessment in the last five sections.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-demo.png" alt-text="name the assessment demo1":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-demo.png" alt-text="name the assessment demo1":::
 
-14. You can select the assessment link, and it takes you to the assessment details page. You can get the latest assessment status.
+10. You can select the assessment link, and it takes you to the assessment details page. You can get the latest assessment status.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-latest-assessment-status.png" alt-text="latest assessment status":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-latest-assessment-status.png" alt-text="latest assessment status":::
 
-15. Select refresh until the Assessment completes. The status updates to show you 1 of 3 statuses - **success**, **failed** or **in-progress**.
+11. Select refresh until the Assessment completes. The status updates to show you 1 of 3 statuses - **success**, **failed** or **in-progress**.
 
 ## View Assessment
 

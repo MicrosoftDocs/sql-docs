@@ -195,7 +195,7 @@ _SSDT for Visual Studio 2017._
 | Integration Services (SSIS) | Fixed an issue that maintenance plan tasks’ UI can't list ADO.NET connection managers created outside of the task UI. |
 | Integration Services (SSIS) | Fixed an issue that Azure interactive sign in page doesn't show up when deploying an SSAS project, which belongs to a solution also having SSIS projects loaded. |
 | Integration Services (SSIS) | Fixed an issue that clicking on MSOLAP driver properties button makes DTS wizard crash when SQL Server isn't installed. |
-| Integration Services (SSIS) | Fixed an issue that MSOLEDBSQL driver doesn't support AAD auth in DTS Wizard. |
+| Integration Services (SSIS) | Fixed an issue that MSOLEDBSQL driver doesn't support Azure AD auth in DTS Wizard. |
 | Integration Services (SSIS) | Fixed an issue that XML Source and ADO.NET Destination can't be correctly persisted when targeting to SQL Server 2012. |
 | Integration Services (SSIS) | Fixed an issue that the "Download WSDL" button in Web Service Task editor may not be properly displayed. |
 | Integration Services (SSIS) | Fixed an issue that table may not be able to be selected in Connection Manager page of LookUp Transformation editor. |
@@ -277,7 +277,7 @@ _SSDT for Visual Studio 2017._
 
 ## 15.9.1,&nbsp; SSDT for VS 2017
 
-_Released:_ &nbsp; Aprilil 27, 2019  
+_Released:_ &nbsp; April 27, 2019  
 _Build Number:_ &nbsp; 14.0.16191.0  
 _SSDT for Visual Studio 2017._
 
@@ -306,7 +306,7 @@ _SSDT for Visual Studio 2017._
 
 ## 15.9.0,&nbsp; SSDT for VS 2017
 
-_Released:_ &nbsp; Januaryuary 28, 2019  
+_Released:_ &nbsp; January 28, 2019  
 _Build Number:_ &nbsp; 14.0.16186.0  
 _SSDT for Visual Studio 2017._
 
@@ -441,7 +441,7 @@ _SSDT for Visual Studio 2017._
 
 ## 15.6.0,&nbsp; SSDT for VS 2017
 
-_Released:_ &nbsp; Aprilil 10, 2018  
+_Released:_ &nbsp; April 10, 2018  
 _Build number:_ &nbsp; 14.0.16162.0  
 _SSDT for Visual Studio 2017._
 
@@ -501,7 +501,7 @@ _SSDT for Visual Studio 2017._
 Visual Studio 2017 (15.5.1) is the same release as version 15.5.0 except for the following bug fixes to the installer:
 
 1. Fix an issue where the installer stops responding on SQL Server Integration Services post install.
-2. Fix an issue where setup fails with the following error message: "The requested metafile operation isn't support (0x800707D3)".
+2. Fix an issue where setup fails with the following error message: "The requested metafile operation isn't supported (0x800707D3)".
 
 In addition to these two bug fixes, the following details for 15.5.0 still apply to 15.5.1
 
@@ -662,7 +662,7 @@ _SSDT for Visual Studio 2015._
 - New Query option in Query Builder now allows creating a new blank query.
 - Fixed an issue that caused edits to an existing data source query to not update the model definition of the table in 1400-compat level.
 - Fixed issues with custom context expressions that may have caused exceptions.
-- When importing new table with duplicate name in 1400 tabular models, user is now be notified that there was a name conflict and the name adjusted to be unique.
+- When importing new table with duplicate name in 1400 tabular models, user is now notified that there was a name conflict and the name adjusted to be unique.
 - Current User impersonation mode has been removed from models in Import mode, as it isn't a supported scenario.
 - PowerQuery integration now supports Options for Additional Data Sources (OData.Feed, Odbc.DataSource, Access.Database, SapBusinessWarehouse.Cubes).
 - PowerQuery Options strings for Data Sources will now correctly show localized text based on client locale.

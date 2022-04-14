@@ -44,7 +44,7 @@ You can also generate a database digest on demand so that you can manually store
 > Generating database digests requires the **GENERATE LEDGER DIGEST** permission. For details on permissions related to ledger tables, see [Permissions](/sql/relational-databases/security/permissions-database-engine#asdbpermissions). 
 
 ```sql
-EXECUTE sp_generate_database_ledger_digest
+EXECUTE sp_generate_database_ledger_digest;
 ```
 
 The returned result set is a single row of data. It should be saved to the trusted storage location as a JSON document as follows:

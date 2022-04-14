@@ -55,10 +55,10 @@ To view the database ledger, run the following T-SQL statements in [SQL Server M
 > Viewing the database ledger requires the **VIEW LEDGER CONTENT** permission. For details on permissions related to ledger tables, see [Permissions](/sql/relational-databases/security/permissions-database-engine#asdbpermissions). 
 
 ```sql
-SELECT * FROM sys.database_ledger_transactions
+SELECT * FROM sys.database_ledger_transactions;
 GO
 
-SELECT * FROM sys.database_ledger_blocks
+SELECT * FROM sys.database_ledger_blocks;
 GO
 ```
 

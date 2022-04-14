@@ -97,8 +97,7 @@ In **Security**, select the **Ledger** option. :::image type="content" source="m
 1. Create a new query with the following T-SQL statement:
 
    ```sql
-   /****** This will retrieve the latest digest file  ******/
-   EXECUTE sp_generate_database_ledger_digest
+   EXECUTE sp_generate_database_ledger_digest;
    ```
 
 1. Execute the query. The results contain the latest database digest and represent the hash of the database at the current point in time. Copy the contents of the results to be used in the next step.
@@ -108,10 +107,9 @@ In **Security**, select the **Ledger** option. :::image type="content" source="m
 1. Create a new query with the following T-SQL statement. Replace `<YOUR DATABASE DIGEST>` with the digest you copied in the previous step.
 
    ```
-   /****** Verifies the integrity of the ledger using the referenced digest  ******/
    EXECUTE sp_verify_database_ledger N'
    <YOUR DATABASE DIGEST>
-   '
+   ';
    ```
 
 1. Execute the query. The **Messages** window contains the following success message.
@@ -138,7 +136,7 @@ In **Security**, select the **Ledger** option. :::image type="content" source="m
            "last_transaction_commit_time":  "2020-11-12T18:39:35.6633333",
            "digest_time":  "2020-11-12T18:43:30.4701575"
        }
-   ]
+   ]';
    ```
 
 ---

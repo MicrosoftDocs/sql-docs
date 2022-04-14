@@ -40,8 +40,8 @@ We'll create an account balance table with the following schema.
 1. Use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) to create a new schema and table called `[Account].[Balance]`.
 
    ```sql
-   CREATE SCHEMA [Account]
-     
+   CREATE SCHEMA [Account];
+   GO  
    CREATE TABLE [Account].[Balance]
    (
        [CustomerID] INT NOT NULL PRIMARY KEY CLUSTERED,
@@ -53,7 +53,7 @@ We'll create an account balance table with the following schema.
    (
    	SYSTEM_VERSIONING = ON (HISTORY_TABLE = [Account].[BalanceHistory]),
    	LEDGER = ON
-   )
+   );
    ```
 
     > [!NOTE]
@@ -72,7 +72,7 @@ We'll create an account balance table with the following schema.
    JOIN sys.schemas ts ON (ts.[schema_id] = t.[schema_id])
    JOIN sys.schemas hs ON (hs.[schema_id] = h.[schema_id])
    JOIN sys.schemas vs ON (vs.[schema_id] = v.[schema_id])
-   WHERE t.[name] = 'Balance'
+   WHERE t.[name] = 'Balance';
    ```
 
    :::image type="content" source="media/ledger/ledger-updatable-how-to-new-tables.png" alt-text="Screenshot that shows querying new ledger tables.":::
@@ -81,7 +81,7 @@ We'll create an account balance table with the following schema.
 
    ```sql
    INSERT INTO [Account].[Balance]
-   VALUES (1, 'Jones', 'Nick', 50)
+   VALUES (1, 'Jones', 'Nick', 50);
    ```
 
 1. Insert the names `John Smith`, `Joe Smith`, and `Mary Michaels` as new customers with opening balances of $500, $30, and $200, respectively.
@@ -90,7 +90,7 @@ We'll create an account balance table with the following schema.
    INSERT INTO [Account].[Balance]
    VALUES (2, 'Smith', 'John', 500),
    (3, 'Smith', 'Joe', 30),
-   (4, 'Michaels', 'Mary', 200)
+   (4, 'Michaels', 'Mary', 200);
    ```
 
 1. View the `[Account].[Balance]` updatable ledger table, and specify the [GENERATED ALWAYS](/sql/t-sql/statements/create-table-transact-sql#generate-always-columns) columns added to the table.
@@ -104,7 +104,7 @@ We'll create an account balance table with the following schema.
       ,[ledger_end_transaction_id]
       ,[ledger_start_sequence_number]
       ,[ledger_end_sequence_number]
-    FROM [Account].[Balance]  
+    FROM [Account].[Balance];  
    ```
    In the results window, you'll first see the values inserted by your T-SQL commands, along with the system metadata that's used for data lineage purposes.
 
@@ -117,7 +117,7 @@ We'll create an account balance table with the following schema.
 
    ```sql
    UPDATE [Account].[Balance] SET [Balance] = 100
-   WHERE [CustomerID] = 1
+   WHERE [CustomerID] = 1;
    ```
 1. View the `[Account].[Balance]` ledger view, along with the transaction ledger system view to identify users that made the changes.
 
@@ -133,7 +133,7 @@ We'll create an account balance table with the following schema.
 	FROM [Account].[Balance_Ledger] l
 	JOIN sys.database_ledger_transactions t
 	ON t.transaction_id = l.ledger_transaction_id
-	ORDER BY t.commit_time DESC
+	ORDER BY t.commit_time DESC;
    ```
 
    > [!TIP]

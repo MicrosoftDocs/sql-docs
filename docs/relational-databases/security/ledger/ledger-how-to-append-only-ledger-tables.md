@@ -41,25 +41,22 @@ We'll create a `KeyCardEvents` table with the following schema.
 1. Use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) to create a new schema and table called `[AccessControl].[KeyCardEvents]`.
 
    ```sql
-   CREATE SCHEMA [AccessControl]
+   CREATE SCHEMA [AccessControl];
+   GO
    CREATE TABLE [AccessControl].[KeyCardEvents]
-       (
-           [EmployeeID] INT NOT NULL,
-           [AccessOperationDescription] NVARCHAR (1024) NOT NULL,
-           [Timestamp] Datetime2 NOT NULL
-       )
-       WITH (
-       	  LEDGER = ON (
-       	               APPEND_ONLY = ON
-       	               )
-       	 )
+      (
+         [EmployeeID] INT NOT NULL,
+         [AccessOperationDescription] NVARCHAR (1024) NOT NULL,
+         [Timestamp] Datetime2 NOT NULL
+      )
+      WITH (LEDGER = ON (APPEND_ONLY = ON));
    ```
 
 1. Add a new building access event in the `[AccessControl].[KeyCardEvents]` table with the following values.
 
    ```sql
    INSERT INTO [AccessControl].[KeyCardEvents]
-   VALUES ('43869', 'Building42', '2020-05-02T19:58:47.1234567')
+   VALUES ('43869', 'Building42', '2020-05-02T19:58:47.1234567');
    ```
 
 1. View the contents of your KeyCardEvents table, and specify the [GENERATED ALWAYS](/sql/t-sql/statements/create-table-transact-sql#generate-always-columns) columns that are added to your [append-only ledger table](ledger-append-only-ledger-tables.md).
@@ -68,7 +65,7 @@ We'll create a `KeyCardEvents` table with the following schema.
    SELECT *
         ,[ledger_start_transaction_id]
         ,[ledger_start_sequence_number]
-   FROM [AccessControl].[KeyCardEvents]
+   FROM [AccessControl].[KeyCardEvents];
    ```
 
    :::image type="content" source="media/ledger/append-only-how-to-keycardevent-table.png" alt-text="Screenshot that shows results from querying the KeyCardEvents table.":::
@@ -86,13 +83,13 @@ We'll create a `KeyCardEvents` table with the following schema.
 	FROM [AccessControl].[KeyCardEvents_Ledger] l
 	JOIN sys.database_ledger_transactions t
 	ON t.transaction_id = l.ledger_transaction_id
-	ORDER BY t.commit_time DESC
+	ORDER BY t.commit_time DESC;
    ```
 
 1. Try to update the `KeyCardEvents` table by changing the `EmployeeID` from `43869` to `34184.`
 
    ```sql
-   UPDATE [AccessControl].[KeyCardEvents] SET [EmployeeID] = 34184
+   UPDATE [AccessControl].[KeyCardEvents] SET [EmployeeID] = 34184;
    ```
 
    You'll receive an error message that states the updates aren't allowed for your append-only ledger table.

@@ -75,8 +75,7 @@ EXECUTE sp_verify_database_ledger N'
         "last_transaction_commit_time":  "2020-11-12T18:39:35.6633333",
         "digest_time":  "2020-11-12T18:43:30.4701575"
     }
-]
-'
+]';
 ```
 
 Return codes for `sp_verify_database_ledger` and `sp_verify_database_ledger_from_digest_storage` are `0` (success) or `1` (failure).

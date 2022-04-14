@@ -733,7 +733,7 @@ Specifies that all triggers in the table are enabled or disabled.
 *trigger_name*  
 Specifies the name of the trigger to disable or enable.
 
-{ ENABLE | DISABLE } CHANGE_TRACKING  
+#### { ENABLE | DISABLE } CHANGE_TRACKING  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies whether change tracking is enabled disabled for the table. By default, change tracking is disabled.
@@ -792,7 +792,7 @@ If you specify *partition_scheme_name*, the rules for [CREATE TABLE](../../t-sql
 
 Either disables or enables system versioning of a table. To enable system versioning of a table, the system verifies that the datatype, nullability constraint, and primary key constraint requirements for system versioning are met. The system will record the history of each record in the system-versioned table in a separate history table. If the `HISTORY_TABLE` argument is not used, the name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If the history table does not exists, the system generates a new history table matching the schema of the current table, creates a link between the two tables, and enables the system to record the history of each record in the current table in the history table. If you use the HISTORY_TABLE argument to create a link to and use an existing history table, the system creates a link between the current table and the specified table. When creating a link to an existing history table, you can choose to do a data consistency check. This data consistency check ensures that existing records don't overlap. Running the data consistency check is the default. Use the `SYSTEM_VERSIONING = ON` argument on a table that is defined with the `PERIOD FOR SYSTEM_TIME` clause to make the existing table a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS} }  
+#### HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS} }  
 **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies finite or infinite retention for historical data in a temporal table. If omitted, infinite retention is assumed.
@@ -843,7 +843,7 @@ Rebuilds all partitions when changing the partition compression settings.
 #### REBUILD WITH ( \<rebuild_option> )  
 All options apply to a table with a clustered index. If the table doesn't have a clustered index, the heap structure is only affected by some of the options.
 
-When a specific compression setting isn't specified with the REBUILD operation, the current compression setting for the partition is used. To return the current setting, query the **data_compression** column in the **sys.partitions** catalog view.
+When a specific compression setting isn't specified with the REBUILD operation, the current compression setting for the partition is used. To return the current setting, query the `data_compression` column in the `sys.partitions` catalog view.
 
 For complete descriptions of the rebuild options, see [ALTER TABLE index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md).
 
@@ -1423,8 +1423,6 @@ GO
 DROP TABLE Person.ContactBackup ;
 ```
 
-![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Examples](#Example_Top)
-
 ### <a name="alter_column"></a> Altering a column definition
 
 #### A. Changing the data type of a column
@@ -1506,16 +1504,17 @@ CREATE TABLE T3 (
 GO
 ```
 
-Next, column 'C2' is encrypted with a column encryption key, named CEK1, and randomized encryption. For the following statement to succeed:
+Next, column 'C2' is encrypted with a column encryption key, named `CEK1`, and randomized encryption. For the following statement to succeed:
 
 - The column encryption key must be enclave-enabled. Meaning, it must be encrypted with a column master key that allows enclave computations.
 - The target SQL Server instance must support Always Encrypted with secure enclaves.
 - The statement must be issued over a connection set up for Always Encrypted with secure enclaves, and using a supported client driver.
-- The calling application must have access to the column master key, protecting CEK1.
+- The calling application must have access to the column master key, protecting `CEK1`.
 
 ```sql
 ALTER TABLE T3
-ALTER COLUMN C2 VARCHAR(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;
+ALTER COLUMN C2 VARCHAR(50) ENCRYPTED 
+WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;
 GO
 ```
 
@@ -1641,7 +1640,7 @@ DISABLE CHANGE_TRACKING ;
 
 #### A. Disabling and re-enabling a constraint
 
-The following example disables a constraint that limits the salaries accepted in the data. `NOCHECK CONSTRAINT` is used with `ALTER TABLE` to disable the constraint and allow for an insert that would typically violate the constraint. `CHECK CONSTRAINT` re-enables the constraint.
+The following example disables a constraint that limits the salaries accepted in the data. `NOCHECK CONSTRAINT` is used with `ALTER TABLE` to disable the constraint and allow for an insert that would typically violate the constraint. `CHECK CONSTRAINT` re-enables the constraint. 
 
 ```sql
 CREATE TABLE dbo.cnst_example (
@@ -1665,6 +1664,8 @@ INSERT INTO dbo.cnst_example VALUES (3,'Pat Jones',105000) ;
 ALTER TABLE dbo.cnst_example CHECK CONSTRAINT salary_cap;
 INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;
 ```
+
+
 
 #### B. Disabling and re-enabling a trigger
 

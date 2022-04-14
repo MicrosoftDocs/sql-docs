@@ -51,6 +51,38 @@ Consider the following when working with ledger.
 - User-defined data type
 - FILESTREAM
 
+### Temporal Table Limitations
+Ledger tables are based on the technology of [Temporal Tables](https://docs.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver15) and inherits most of the [limitations](https://docs.microsoft.com/en-us/sql/relational-databases/tables/temporal-table-considerations-and-limitations?view=sql-server-ver15) but not all of them. Below is a list of limitations that is inherited from Temporal tables.
+
+- Temporal syntax works on tables or views that are stored locally in the database. If it is a remote object like a table on linked server or external table then you cannot use the FOR clause or period predicates directly in the query. 
+- If the name of a history table is specified during history table creation, you must specify the schema and table name and also the name of the ledger view.
+- By default, the history table is PAGE compressed.
+- If current table is partitioned, the history table is created on default file group because partitioning configuration is not replicated automatically from the current table to the history table.
+- Temporal and history tables cannot be FILETABLE and can contain columns of any supported datatype other than FILESTREAM since FILETABLE and FILESTREAM allow data manipulation outside of SQL Server and thus system versioning cannot be guaranteed.
+- A node or edge table cannot be created as or altered to a temporal table. Graph is not supported with ledger.
+- While temporal tables support blob data types, such as (n)varchar(max), varbinary(max), (n)text, and image, they will incur significant storage costs and have performance implications due to their size. As such, when designing your system, care should be taken when using these data types.
+- History table must be created in the same database as the current table. Temporal querying over Linked Server is not supported.
+- History table cannot have constraints (primary key, foreign key, table or column constraints).
+- Online option (WITH (ONLINE = ON) has no effect on ALTER TABLE ALTER COLUMN in case of system-versioned temporal table. ALTER column is not performed as online regardless of which value was specified for ONLINE option.
+- INSERT and UPDATE statements cannot reference the [GENERATED ALWAYS](/sql/t-sql/statements/create-table-transact-sql#generate-always-columns) columns. Attempts to insert values directly into these columns will be blocked.
+- UPDATETEXT and WRITETEXT are not supported
+- Triggers on the history table are not allowed
+- Usage of replication technologies is limited:
+    - Always On: Fully supported
+    - Change Data Capture and Change Tracking: Supported only on the current table
+    - Snapshot, merge and transactional replication: Not supported for temporal tables
+- A history table cannot be configured as current table in a chain of history tables.
+- The following objects/properties are not replicated from the current to the history table when the history table is created:
+    - Period definition
+    - Identity definition
+    - Indexes
+    - Statistics
+    - Check constraints
+    - Triggers
+    - Partitioning configuration
+    - Permissions
+    - Row-level security predicates 
+
 ## Schema changes limitations
 
 ### Adding columns

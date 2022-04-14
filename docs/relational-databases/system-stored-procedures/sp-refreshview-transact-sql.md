@@ -58,7 +58,7 @@ EXECUTE sp_refreshview N'Sales.vIndividualCustomer';
 ```  
   
 ### B. Creating a script that updates all views that have dependencies on a changed object  
- Assume that the table `Person.Person` was changed in a way that would affect the definition of any views that are created on it. The following example creates a script that refreshes the metadata for all views that have a dependency on table `Person.Person`.  
+ Assume that the table `Person.Person` was changed in a way that would affect the definition of any views that are created on it. The following example creates a script that refreshes the metadata for all views that have a dependency on table `Person.Person`. Note however, that this does not refresh views that are dependent on the refreshed view. These must be refreshed themselves.
   
 ```  
 USE AdventureWorks2012;  

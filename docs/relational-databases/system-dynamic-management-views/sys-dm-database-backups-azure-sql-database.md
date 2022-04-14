@@ -29,7 +29,7 @@ monikerRange: "= azuresqldb-current"
 
 
 > [!NOTE]
-> sys.dm_database_backups is introduced as part of Backup History for Azure SQL Database which is currently in preview.
+> sys.dm_database_backups DMV is currently in preview and is available for all Azure SQL Database service tiers except Hyperscale tier.
 
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  

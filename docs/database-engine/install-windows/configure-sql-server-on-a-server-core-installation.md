@@ -83,6 +83,8 @@ Apply an update at a command prompt, replacing <package_name> with the name of y
     ```  
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances  
     ```  
+
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 ## <a name="BKMK_StartStopServices"></a> Start/Stop [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service  
 The [sqlservr Application](../../tools/sqlservr-application.md) application starts, stops, pauses, and continues an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a command prompt.  

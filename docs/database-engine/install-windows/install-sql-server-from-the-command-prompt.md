@@ -174,7 +174,7 @@ Parameters that are listed for a [!INCLUDE[ssDEnoversion](../../includes/ssdenov
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ACTION<br /><br /> **Required**|Required to indicate the installation workflow.<br /><br /> Supported values: **Install**.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Suppresses the privacy notice statement. By using this flag, you are agreeing with the [privacy notice](../../sql-server/sql-server-privacy.md).  |  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Required to acknowledge acceptance of the license terms.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Required to acknowledge acceptance of the license terms.<br/>Beginning with SQL Server 2022, read the Microsoft SQL Server Software License Terms at https://aka.ms/useterms.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python Setup Control|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations that include the Anaconda Python package.**|Required to acknowledge acceptance of the license terms.| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R Setup Control|/IACCEPTROPENLICENSETERMS <br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations that include the Microsoft R Open package.**|Required to acknowledge acceptance of the license terms.| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ENU<br /><br /> **Optional**|Use this parameter to install the English version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|  
@@ -648,6 +648,8 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=MSSQLSERVER /Features=
 ```  
 setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name>" /Features=AS,SQL /INDICATEPROGRESS /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
+
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 #### Complete Failover Cluster Parameters  
  Use the parameters in the following table to develop command-line scripts for failover cluster complete. This is the second step in the advanced failover cluster install option. After you have run prepare on all the failover cluster nodes, you run this command on the node that owns the shared disks. For more information, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 

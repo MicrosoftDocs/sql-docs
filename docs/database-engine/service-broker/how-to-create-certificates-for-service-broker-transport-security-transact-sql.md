@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'How to: Create Certificates for Service Broker Transport Security (Transact-SQL)'
 description: "To set up Service Broker transport security for an instance of SQL Server, you first create a certificate in the master database by using the Transact-SQL CREATE CERTIFICATE statement."
 ms.prod: sql
@@ -27,9 +27,9 @@ For more information using certificates for Service Broker transport security, s
 ```sql
     USE master ;
     GO
-    
+
     -- Create a certificate owned by dbo.
-    
+
     CREATE CERTIFICATE TransportSecurity
         AUTHORIZATION [dbo]
         ENCRYPTION BY PASSWORD = '**(34ader#$lqQEUer13'

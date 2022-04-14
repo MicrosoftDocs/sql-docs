@@ -1,8 +1,8 @@
 ---
-description: "Catalog Stored Procedures (Transact-SQL)"
-title: "Catalog Stored Procedures (Transact-SQL) | Microsoft Docs"
+description: "An index of catalog stored procedures in SQL Server Transact-SQL."
+title: "Catalog Stored Procedures (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/13/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "ODBC data dictionary functions"
   - "system stored procedures [SQL Server], catalog"
   - "catalog system stored procedures [SQL Server]"
-ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
 author: markingmyname
 ms.author: maghan
 ---
@@ -53,8 +52,22 @@ ms.author: maghan
         [sp_tables](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)
     :::column-end:::
 :::row-end:::
+<BR>
 
-## See Also  
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+Stored procedures for certain platforms only as specified, including Azure Synapse Analytics:
+
+:::row:::
+    :::column:::
+        [sp_create_openrowset_statistics](sp-create-openrowset-statistics.md)
+
+        [sp_drop_openrowset_statistics](sp-drop-openrowset-statistics.md)
+
+    :::column-end:::
+:::row-end:::
+
+
+
+## See also  
+ - [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -2,7 +2,7 @@
 description: "OPENJSON (Transact-SQL)"
 title: "OPENJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/03/2020
+ms.date: 04/13/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -34,8 +34,6 @@ Use **OPENJSON** to import JSON data into [!INCLUDE[ssNoVersion](../../includes/
 > You can check compatibility level in the `sys.databases` view or in database properties. You can change the compatibility level of a database with the following command:  
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
->
-> Compatibility level 120 may be the default even in a new Azure SQL Database.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon")[Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

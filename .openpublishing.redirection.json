@@ -43087,8 +43087,8 @@
     },
     {
         "source_path": "docs/database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md",
-        "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-life-overview",
-        "redirect_document_id": true
+        "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
+        "redirect_document_id": false
     },
     {
         "source_path": "docs/lp/sql-server/load-move-data.md",
@@ -59022,8 +59022,13 @@
     },
     {
       "source_path": "docs/kb-support/end-support-sql-server-2008.md",
-      "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-life-overview",
+      "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/end-of-support/sql-server-end-of-life-overview.md",
+      "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/kb-support/resource-monitor-nonyielding-condition.md",
@@ -59353,6 +59358,11 @@
     {
       "source_path": "docs/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md",
       "redirect_url": "/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md",
+      "redirect_url": "/azure/azure-sql/virtual-machines/windows/availability-group-manually-configure-multiple-regions",
       "redirect_document_id": false
     }
   ]

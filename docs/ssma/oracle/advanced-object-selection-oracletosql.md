@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
 author: cpichuka 
 ms.author: cpichuka 
-manager: alexiva
+manager: madhuriy
 ---
 # Advanced Object Selection  (OracleToSQL)
 The **Advanced Object Section** dialog box lets you filter database objects by using strings and substrings in the object name, and then select or deselect those objects. SSMA performs conversion and migration operations on selected objects.  

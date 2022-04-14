@@ -13,6 +13,8 @@ f1_keywords:
   - "FLUSHAUTHCACHE"
   - "DBCC_FLUSHAUTHCACHE_TSQL"
   - "FLUSHAUTHCACHE_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "DBCC FLUSHAUTHCACHE"
 ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f

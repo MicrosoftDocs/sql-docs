@@ -7,6 +7,8 @@ ms.topic: reference
 f1_keywords: 
   - "ADD SIGNATURE"
   - "ADD_SIGNATURE_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "ADD SIGNATURE statement"
   - "adding digital signatures"

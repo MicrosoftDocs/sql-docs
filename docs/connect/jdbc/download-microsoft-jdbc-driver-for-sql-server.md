@@ -1,7 +1,7 @@
 ---
 title: Download
 description: Download the Microsoft JDBC Driver for SQL Server to develop Java applications that connect to SQL Server and Azure SQL Database.
-ms.date: 01/31/2022
+ms.date: 04/04/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -37,7 +37,7 @@ When you download the driver, there are multiple JAR files. The name of the JAR 
 This release of Microsoft JDBC Driver for SQL Server is available in the following languages:
 
 Microsoft JDBC Driver 10.2.0 for SQL Server (zip):
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2183120&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2186163&clcid=0x40a)
 
 Microsoft JDBC Driver 10.2.0 for SQL Server (tar.gz):
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2186164&clcid=0x40a)

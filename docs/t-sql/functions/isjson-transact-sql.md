@@ -9,6 +9,8 @@ ms.topic: reference
 f1_keywords: 
   - "ISJSON"
   - "ISJSON_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "ISJSON function"
   - "JSON, validating"

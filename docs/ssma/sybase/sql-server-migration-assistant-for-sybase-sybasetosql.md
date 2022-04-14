@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
 author: cpichuka 
 ms.author: cpichuka 
-manager: alexiva
+manager: madhuriy
 ---
 # SQL Server Migration Assistant for Sybase (SybaseToSQL)
 

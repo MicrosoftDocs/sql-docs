@@ -13,6 +13,8 @@ f1_keywords:
   - "CURRENT_TRANSACTION_ID_TSQL"
   - "sys.CURRENT_TRANSACTION_ID"
   - "sys.CURRENT_TRANSACTION_ID_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "CURRENT_TRANSACTION_ID function"
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467

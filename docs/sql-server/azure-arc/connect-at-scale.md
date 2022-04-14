@@ -90,7 +90,7 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
 1. Create the service principal using the ['az ad sp create-for-rbac'](/cli/azure/ad/sp#az-ad-sp-create-for-rbac) command.
 
    ```azurecli-interactive
-   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>
+   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name> --scopes /subscriptions/<subscription id>
    ```
 
 2. Download the Linux shell script from the Portal following the instructions in [Connect your SQL Server to Azure Arc](connect.md).

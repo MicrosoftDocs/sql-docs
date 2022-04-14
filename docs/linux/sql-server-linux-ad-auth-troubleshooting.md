@@ -182,7 +182,7 @@ renew until 01/04/2022 20:11:16
 
 ### Enable Kerberos and security-based PAL logging
 
-You can enable `security.kerberos` and `security.ldap` logging to identify specific error messages in the PAL (Platform Abstraction Layer). Create a `logger.ini` file with the content shown below at `/var/opt/mssql/log`, restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and then reproduce the failure. The PAL's AD error and debug messages will be logged to `/var/opt/mssql/log/security.log`.
+You can enable `security.kerberos` and `security.ldap` logging to identify specific error messages in the PAL (Platform Abstraction Layer). Create a `logger.ini` file with the content shown below at `/var/opt/mssql/`, restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and then reproduce the failure. The PAL's AD error and debug messages will be logged to `/var/opt/mssql/log/security.log`.
 
 ```ini
 [Output:security]
@@ -345,7 +345,7 @@ When attempting to retrieve the credentials of `<principal>` from the keytab, no
 
 #### Troubleshooting guidance
 
-Follow the [Check keytab file and permissions](#check-keytab-file-and-permissions) section of this document to list all entries in the keytab. Make sure that `<principal>` is present. The principal account here is usually the `privilagedadaccount` to which the SPNs are registered. If it isn't, then add it using the **adutil** command. See [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md#create-the-sql-server-service-keytab-file) for more information.
+Follow the [Check keytab file and permissions](#check-keytab-file-and-permissions) section of this document to list all entries in the keytab. Make sure that `<principal>` is present. The principal account here is usually the **network.privilegedadaccount** to which the SPNs are registered. If it isn't, then add it using the **adutil** command. See [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md#create-the-sql-server-service-keytab-file) for more information.
 
 ### <a id="error-request-ticket-server-not-found-kvno"></a> Error message: "Request ticket server \<principal\> not found in keytab (ticket kvno \<KVNO\>)"
 

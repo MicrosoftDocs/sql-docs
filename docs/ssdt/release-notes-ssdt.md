@@ -9,7 +9,7 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: maghan, drskwier
 ms.custom: seo-lt-2019
-ms.date: 04/13/2022
+ms.date: 04/14/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 
@@ -18,9 +18,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE [sql-asdb-asa](../includes/applies-to-version/sql-asdb-asa.md)]
 
 > [!IMPORTANT]
-> Release notes for SQL Server Data Tools (SSDT) for Visual Studio 2019 and later are not mentioned with SSDT 2017 and earlier.  
-> Release notes updates for **SSDT 2017 and earlier** are in this article.  
 > Release notes updates for **SSDT 2019 and later** are now listed under [Visual Studio](/visualstudio/ide/whats-new-visual-studio-docs).
+> You can download the [SSAS](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects), [SSIS](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects), and the [SSRS](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio) 2019 and later VSIX files from the [Visual Studio Marketplace](<https://marketplace.visualstudio.com/>).
 
 These release notes are for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) for Visual Studio (VS).
 

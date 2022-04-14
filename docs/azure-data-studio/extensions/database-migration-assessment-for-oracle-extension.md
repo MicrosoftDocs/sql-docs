@@ -118,6 +118,10 @@ You can also download the report for offline viewing by selecting download combi
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-downlaod-report.png" alt-text="downlaod assessment report":::
 
+## Troubleshoot
+
+You can troubleshoot this extension with the migration tool.
+
 ## Next steps
 
 - [Azure SQL Migration extension](azure-sql-migration-extension.md)

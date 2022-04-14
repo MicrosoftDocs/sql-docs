@@ -18,7 +18,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Disable Foreign Key Constraints with INSERT and UPDATE Statements
+# Disable foreign key constraints with INSERT and UPDATE statements
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   You can disable a foreign key constraint during INSERT and UPDATE transactions in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use this option if you know that new data will not violate the existing constraint or if the constraint applies only to the data already in the database.  
@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ##  <a name="Security"></a><a name="Permissions"></a> Permissions  
  Requires ALTER permission on the table.  
   
-##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio
   
 #### To disable a foreign key constraint for INSERT and UPDATE statements  
   
@@ -99,4 +99,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 - [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
 - [View Foreign Key Properties](view-foreign-key-properties.md)
-  

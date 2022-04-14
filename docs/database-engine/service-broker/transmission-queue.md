@@ -4,8 +4,8 @@ description: "Service Broker uses a transmission queue as a holding area for mes
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: randolphwest
-ms.author: rwestMSFT
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---

@@ -4,8 +4,8 @@ description: "Service Broker helps database developers build reliable and scalab
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: randolphwest
-ms.author: rwestMSFT
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: 02/10/2022
 ---

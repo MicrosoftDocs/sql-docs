@@ -4,8 +4,8 @@ description: "An application that maintains state typically stores that state in
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: randolphwest
-ms.author: rwestMSFT
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---

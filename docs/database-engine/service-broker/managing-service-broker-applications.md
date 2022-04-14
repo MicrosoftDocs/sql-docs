@@ -4,8 +4,8 @@ description: "For a Service Broker application that is in production, most day-t
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: randolphwest
-ms.author: rwestMSFT
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---

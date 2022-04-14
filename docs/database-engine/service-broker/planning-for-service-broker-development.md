@@ -4,8 +4,8 @@ description: "Review the following as you design a Service Broker application."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: randolphwest
-ms.author: rwestMSFT
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---

@@ -4,8 +4,8 @@ description: "A queue holds incoming messages for a service."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: randolphwest
-ms.author: rwestMSFT
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---

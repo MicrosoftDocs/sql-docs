@@ -1,6 +1,6 @@
 ---
 title: "Database ledger"
-description: This article provides information on ledger database tables and associated views in Azure SQL Database and SQL Server.
+description: This article provides information on ledger database tables and associated views.
 ms.date: "04/05/2022"
 ms.service: sql-database
 ms.subservice: security
@@ -14,10 +14,7 @@ ms.author: vanto
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-> [!NOTE]
-> Azure SQL Database ledger is currently in public preview.
-
-The database ledger is part of the ledger feature of Azure SQL Database and SQL Server. The database ledger incrementally captures the state of a database as the database evolves over time, while updates occur on ledger tables. It logically uses a blockchain and [Merkle tree data structures](/archive/msdn-magazine/2018/march/blockchain-blockchain-fundamentals). 
+The database ledger is part of the ledger feature. The database ledger incrementally captures the state of a database as the database evolves over time, while updates occur on ledger tables. It logically uses a blockchain and [Merkle tree data structures](/archive/msdn-magazine/2018/march/blockchain-blockchain-fundamentals). 
 
 Any operations that update a ledger table need to perform some additional tasks to maintain the historical data and compute the digests captured in the database ledger. Specifically, for every row updated, we must: 
 - Persist the earlier version of the row in the history table.

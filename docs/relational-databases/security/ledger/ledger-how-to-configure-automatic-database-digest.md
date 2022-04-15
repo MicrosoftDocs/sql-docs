@@ -15,9 +15,6 @@ ms.date: "04/05/2022"
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-> [!NOTE]
-> Azure SQL Database ledger is currently in public preview.
-
 In this article, we will describe how you can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI.
 
 ## Prerequisites
@@ -37,8 +34,9 @@ In this article, we will describe how you can configure automatic generation and
 # [PowerShell](#tab/PowerShell)
 ### Enable database digest uploads
 
-Update the database to start uploading ledger digests to the storage account, by using the [Enable-AzSqlDatabaseLedgerDigestUpload](/powershell/module/az.sql/enable-azsqldatabaseledgerdigestupload) cmdlet. The database server will create a new container, named **sqldbledgerdigests**, within the storage account and it will start writing ledger digests to the container.  
-*Note: Make sure you modify the parameters ResourceGroupName, ServerName, DatabaseName and Endpoint*
+Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger, by using the [Enable-AzSqlDatabaseLedgerDigestUpload](/powershell/module/az.sql/enable-azsqldatabaseledgerdigestupload) cmdlet. When the endpoint parameter is an Azure Blob Storage endpoint, the database server will create a new container, named **sqldbledgerdigests**, within the storage account and it will start writing ledger digests to the container.
+  
+*Note: Make sure you modify the parameters ResourceGroupName, ServerName, DatabaseName and Endpoint (ACL endpoint or Azure Storage endpoint)*
 
 ```azurepowershell-interactive
 Write-host "Enabling ledger digest upload..." 
@@ -52,7 +50,7 @@ $ledgerDigestUploadConfig
 # [Azure CLI](#tab/AzureCLI)
 ### Enable database digest uploads
 
-Update the database to start uploading ledger digests to the storage account by using the [az sql db ledger-digest-uploads enable](/cli/azure/sql/db) command.  *Note: Make sure you modify the parameters name,resource-group, server and endpoint*
+Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger, by using the [az sql db ledger-digest-uploads enable](/cli/azure/sql/db) command.  *Note: Make sure you modify the parameters name,resource-group, server and endpoint (ACL endpoint or Azure Storage endpoint)*
 
 ```azurecli-interactive
 az sql db ledger-digest-uploads enable \
@@ -65,7 +63,7 @@ az sql db ledger-digest-uploads enable \
 
 ## Next steps
 
-- [Azure SQL Database ledger overview](ledger-overview.md)
+- [Ledger overview](ledger-overview.md)
 - [SQL Database ledger](ledger-database-ledger.md)
 - [Digest management](ledger-digest-management.md)
 - [Database verification](ledger-database-verification.md)

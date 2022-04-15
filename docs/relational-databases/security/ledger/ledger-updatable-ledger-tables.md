@@ -1,6 +1,6 @@
 ---
-title: "Azure SQL Database updatable ledger tables"
-description: This article provides information on updatable ledger tables, ledger schema, and ledger views in Azure SQL Database.
+title: "Updatable ledger tables"
+description: This article provides information on updatable ledger tables, ledger schema, and ledger views.
 ms.date: "09/09/2021"
 ms.service: sql-database
 ms.subservice: security
@@ -10,12 +10,9 @@ author: VanMSFT
 ms.author: vanto
 ---
 
-# Azure SQL Database updatable ledger tables
+# Updatable ledger tables
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-
-> [!NOTE]
-> Azure SQL Database ledger is currently in public preview.
 
 Updatable ledger tables are system-versioned tables on which users can perform updates and deletes while also providing tamper-evidence capabilities. When updates or deletes occur, all earlier versions of a row are preserved in a secondary table, known as the history table. The history table mirrors the schema of the updatable ledger table. When a row is updated, the latest version of the row remains in the ledger table, while its earlier version is inserted into the history table by the system, transparently to the application. 
 

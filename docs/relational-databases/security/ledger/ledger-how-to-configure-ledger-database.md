@@ -15,9 +15,6 @@ ms.date: "04/05/2022"
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-> [!NOTE]
-> Azure SQL Database ledger is currently in public preview.
-
 In this article, we will describe how you can configure a [ledger database](ledger-overview.md)  through the Azure portal, PowerShell, or the Azure CLI.
 
 ## Prerequisites
@@ -74,7 +71,7 @@ az sql db create \
 
 ## Next steps
 
-- [Azure SQL Database ledger overview](ledger-overview.md)
+- [Ledger overview](ledger-overview.md)
 - [SQL Database ledger](ledger-database-ledger.md)
 - [Digest management](ledger-digest-management.md)
 - [Database verification](ledger-database-verification.md)

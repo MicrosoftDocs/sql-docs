@@ -14,9 +14,6 @@ ms.author: vanto
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-> [!NOTE]
-> Azure SQL Database ledger is currently in public preview.
-
 There are some considerations and limitations to be aware of when working with ledger tables, due to the nature of system-versioning and immutable data.
 
 ## General Limitations

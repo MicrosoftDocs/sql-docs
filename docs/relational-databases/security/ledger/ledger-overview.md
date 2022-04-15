@@ -1,6 +1,6 @@
 ---
-title: "Azure SQL Database ledger overview"
-description: Learn the basics of the Azure SQL Database ledger feature.
+title: "Ledger overview"
+description: Learn the basics of the ledger feature.
 ms.date: "04/05/2022"
 ms.service: sql-database
 ms.subservice: security
@@ -10,22 +10,19 @@ author: VanMSFT
 ms.author: vanto
 ---
 
-# Azure SQL Database ledger
+# Ledger overview
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-> [!NOTE]
-> Azure SQL Database ledger is currently in public preview.
-
-Establishing trust around the integrity of data stored in database systems has been a longstanding problem for all organizations that manage financial, medical, or other sensitive data. The ledger feature of [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview) and SQL Server provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with.
+Establishing trust around the integrity of data stored in database systems has been a longstanding problem for all organizations that manage financial, medical, or other sensitive data. The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with.
 
 Ledger helps protect data from any attacker or high-privileged user, including database administrators (DBAs), system administrators, and cloud administrators. As with a traditional ledger, the feature preserves historical data. If a row is updated in the database, its previous value is maintained and protected in a history table. Ledger provides a chronicle of all changes made to the database over time. 
 
-Ledger and the historical data are managed transparently, offering protection without any application changes. The feature maintains historical data in a relational form to support SQL queries for auditing, forensics, and other purposes. It provides guarantees of cryptographic data integrity while maintaining the power, flexibility, and performance of Azure SQL Database.
+Ledger and the historical data are managed transparently, offering protection without any application changes. The feature maintains historical data in a relational form to support SQL queries for auditing, forensics, and other purposes. It provides guarantees of cryptographic data integrity while maintaining the power, flexibility, and performance of the SQL database.
 
 :::image type="content" source="media/ledger/ledger-table-architecture.png" alt-text="Diagram of the ledger table architecture.":::
 
-## Use cases for Azure SQL Database ledger 
+## Use cases for ledger 
 
 ### Streamlining audits
 

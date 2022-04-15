@@ -14,9 +14,6 @@ ms.author: vanto
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-> [!NOTE]
-> Azure SQL Database ledger is currently in public preview.
-
 This article shows you how to create an [append-only ledger table](ledger-append-only-ledger-tables.md). Next, you'll insert values in your append-only ledger table and then attempt to make updates to the data. Finally, you'll view the results by using the ledger view. We'll use an example of a card key access system for a facility, which is an append-only system pattern. Our example will give you a practical look at the relationship between the append-only ledger table and its corresponding ledger view.
 
 For more information, see [Append-only ledger tables](ledger-append-only-ledger-tables.md).

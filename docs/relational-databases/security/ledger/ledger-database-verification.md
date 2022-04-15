@@ -1,6 +1,6 @@
 ---
 title: "Database verification"
-description: This article provides information on database verification for a ledger database in Azure SQL Database.
+description: This article provides information on database verification for a ledger database.
 ms.date: "04/05/2022"
 ms.service: sql-database
 ms.subservice: security
@@ -14,10 +14,7 @@ ms.author: vanto
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-> [!NOTE]
-> Azure SQL Database ledger is currently in public preview.
-
-Azure SQL Database ledger provides a form of data integrity called *forward integrity*, which provides evidence of data tampering on data in your ledger tables. The database verification process takes as input one or more previously generated database digests. It then recomputes the hashes stored in the database ledger based on the current state of the ledger tables. If the computed hashes don't match the input digests, the verification fails. The failure indicates that the data has been tampered with. The verification process reports all inconsistencies that it detects.
+Ledger provides a form of data integrity called *forward integrity*, which provides evidence of data tampering on data in your ledger tables. The database verification process takes as input one or more previously generated database digests. It then recomputes the hashes stored in the database ledger based on the current state of the ledger tables. If the computed hashes don't match the input digests, the verification fails. The failure indicates that the data has been tampered with. The verification process reports all inconsistencies that it detects.
 
 ## Database verification
 
@@ -82,7 +79,7 @@ Return codes for `sp_verify_database_ledger` and `sp_verify_database_ledger_from
 
 ## Next steps
 
-- [Azure SQL Database ledger overview](ledger-overview.md)
+- [Ledger overview](ledger-overview.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)   
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)   
 - [Database ledger](ledger-database-ledger.md)

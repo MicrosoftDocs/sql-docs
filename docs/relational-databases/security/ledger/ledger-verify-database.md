@@ -1,6 +1,6 @@
 ---
 title: Verify a ledger table to detect tampering
-description: This article discusses how to verify if an Azure SQL Database table was tampered with.
+description: This article discusses how to verify if a table was tampered with.
 ms.service: sql-database
 ms.subservice: security
 ms.devlang:
@@ -15,10 +15,7 @@ ms.date: "04/05/2022"
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-> [!NOTE]
-> Azure SQL Database ledger is currently in public preview.
-
-In this article, you'll verify the integrity of the data in your Azure SQL Database ledger tables. If you have enabled the setting **Enable automatic digest storage** on your Azure SQL Database, follow the *T-SQL using automatic digest storage*. Otherwise, follow the *T-SQL using manual digest storage*.
+In this article, you'll verify the integrity of the data in your ledger tables. If you have enabled the setting **Enable automatic digest storage** on your Azure SQL Database, follow the *T-SQL using automatic digest storage*. Otherwise, follow the *T-SQL using a manual generated digest*.
 
 ## Prerequisites
 
@@ -91,7 +88,9 @@ In **Security**, select the **Ledger** option. :::image type="content" source="m
        Failed to execute query. Error: The hash of block xxxx in the database ledger doesn't match the hash provided in the digest for this block.
        ```s
 
-# [T-SQL using manual digest storage](#tab/t-sql-manual)
+# [T-SQL using a manual generated digest](#tab/t-sql-manual)
+
+
 
 1. Connect to your database by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
 1. Create a new query with the following T-SQL statement:
@@ -100,7 +99,7 @@ In **Security**, select the **Ledger** option. :::image type="content" source="m
    EXECUTE sp_generate_database_ledger_digest;
    ```
 
-1. Execute the query. The results contain the latest database digest and represent the hash of the database at the current point in time. Copy the contents of the results to be used in the next step.
+1. Execute the query. The results contain the latest database digest and represent the hash of the database at the current point in time. Copy the contents of the results to be used in the next step. 
 
    :::image type="content" source="media/ledger/ledger-retrieve-digest.png" alt-text="Screenshot that shows retrieving digest results by using Azure Data Studio.":::
 
@@ -138,12 +137,12 @@ In **Security**, select the **Ledger** option. :::image type="content" source="m
        }
    ]';
    ```
-
+>[!NOTE] In this example, we call the sp_generate_database_ledger_digest stored procedure to generate the digest and use it immediately for verification. However, when a customer is using a custom trusted storage, they could save the digest in the trusted storage for a later verification.
 ---
 
 ## Next steps
 
-- [Azure SQL Database ledger overview](ledger-overview.md)
+- [Ledger overview](ledger-overview.md)
 - [SQL Database ledger](ledger-database-ledger.md)
 - [Digest management](ledger-digest-management.md)
 - [Database verification](ledger-database-verification.md)

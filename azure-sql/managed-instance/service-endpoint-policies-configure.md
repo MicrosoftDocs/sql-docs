@@ -79,7 +79,7 @@ To create a service endpoint policy, follow these steps:
 1. Select **+ Create a resource**. 
 1. In the search pane, enter _service endpoint policy_, select **Service endpoint policy**, and then select **Create**.
 
-   ![Create service endpoint policy](/azure/virtual-network/media/virtual-network-service-endpoint-policies-portal/create-sep-resource.png)
+   ![Create service endpoint policy](media/service-endpoint-policies-configure/create-sep-resource.png)
 
 1. Fill in the following values on the **Basics** page:
 
@@ -88,7 +88,7 @@ To create a service endpoint policy, follow these steps:
    - Name: Provide a name for your policy, such as **mySEP**.
    - Location: Select the region of the virtual network hosting the managed instance. 
 
-   ![Create service endpoint policy basics](/azure/virtual-network/media/virtual-network-service-endpoint-policies-portal/create-sep-basics.png)
+   ![Create service endpoint policy basics](media/service-endpoint-policies-configure/create-sep-basics.png)
 
 1. In **Policy definitions**, select **Add an alias** and enter the following information on the **Add an alias** pane:
    - Service Alias: Select /Services/Azure/ManagedInstance.

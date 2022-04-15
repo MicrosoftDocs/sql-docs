@@ -216,7 +216,7 @@ You must already have a subnet that's tagged with the particular virtual network
 
 1. Search for and select **SQL servers**, and then select your server. Under **Security**, select **Firewalls and virtual networks**.
 
-    :::image type="content" source="/azure/sql-database/media/sql-database-vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png" alt-text="Azure SQL logical server properties, Firewalls and Virtual Networks highlighted" lightbox="/azure/sql-database/media/sql-database-vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png":::
+    :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png" alt-text="Azure SQL logical server properties, Firewalls and Virtual Networks highlighted" lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-firewalls-and-virtual-networks.png":::
 
 1. Set **Allow Azure services and resources to access this server** to **No**.
 
@@ -225,20 +225,20 @@ You must already have a subnet that's tagged with the particular virtual network
 
 1. Select **+ Add existing virtual network** in the **Virtual networks** section.
 
-    :::image type="content" source="/azure/sql-database/media/sql-database-vnet-service-endpoint-rule-overview/portal-firewall-vnet-add-existing-10.png" alt-text="Screenshot that shows selecting + Add existing (subnet endpoint, as a SQL rule)." lightbox="/azure/sql-database/media/sql-database-vnet-service-endpoint-rule-overview/portal-firewall-vnet-add-existing-10.png":::
+    :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-add-existing-10.png" alt-text="Screenshot that shows selecting + Add existing (subnet endpoint, as a SQL rule)." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-add-existing-10.png":::
 
 1. In the new **Create/Update** pane, fill in the boxes with the names of your Azure resources.
 
     > [!TIP]
     > You must include the correct address prefix for your subnet. You can find the **Address prefix** value in the portal. Go to **All resources** &gt; **All types** &gt; **Virtual networks**. The filter displays your virtual networks. Select your virtual network, and then select **Subnets**. The **ADDRESS RANGE** column has the address prefix you need.
 
-    :::image type="content" source="/azure/sql-database/media/sql-database-vnet-service-endpoint-rule-overview/portal-firewall-create-update-vnet-rule-20.png" alt-text="Screenshot that shows filling in boxes for the new rule." lightbox="/azure/sql-database/media/sql-database-vnet-service-endpoint-rule-overview/portal-firewall-create-update-vnet-rule-20.png":::
+    :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-create-update-vnet-rule-20.png" alt-text="Screenshot that shows filling in boxes for the new rule." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-create-update-vnet-rule-20.png":::
 
 1. Select the **OK** button near the bottom of the pane.
 
 1. See the resulting virtual network rule on the **Firewall** pane.
 
-    :::image type="content" source="/azure/sql-database/media/sql-database-vnet-service-endpoint-rule-overview/portal-firewall-vnet-result-rule-30.png" alt-text="Screenshot that shows the new rule on the Firewall pane." lightbox="/azure/sql-database/media/sql-database-vnet-service-endpoint-rule-overview/portal-firewall-vnet-result-rule-30.png":::
+    :::image type="content" source="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-result-rule-30.png" alt-text="Screenshot that shows the new rule on the Firewall pane." lightbox="media/vnet-service-endpoint-rule-overview/portal-firewall-vnet-result-rule-30.png":::
 
 > [!NOTE]
 > The following statuses or states apply to the rules:

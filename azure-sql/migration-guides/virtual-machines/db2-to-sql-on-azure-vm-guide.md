@@ -84,7 +84,7 @@ To convert the schema, follow these steps:
     1. Provide authentication details. 
     1. Select **Connect**.
 
-    :::image type="content" source="../../includes/media/virtual-machines-sql-server-connection-steps/rm-ssms-connect.png" alt-text="Screenshot that shows the details needed to connect to your SQL Server on Azure VM.":::
+    :::image type="content" source="media/db2-to-sql-on-azure-vm-guide/rm-ssms-connect.png" alt-text="Screenshot that shows the details needed to connect to your SQL Server on Azure VM.":::
 
 1. Right-click the schema and then choose **Convert Schema**. Alternatively, you can choose **Convert Schema** from the top navigation bar after selecting your schema.
 

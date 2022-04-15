@@ -96,7 +96,7 @@ To download the replication appliance installer, follow these steps:
 
 1. In the Azure Migrate project > **Servers**, in **Azure Migrate: Server Migration**, select **Discover**.
 
-    ![Discover VMs](/azure/migrate/media/tutorial-migrate-physical-virtual-machines/migrate-discover.png)
+    ![Discover VMs](media/sql-server-availability-group-to-sql-on-azure-vm/migrate-discover.png)
 
 1. In **Discover machines** > **Are your machines virtualized?**, select **Physical or other (AWS, GCP, Xen, etc.)**.
 1. In **Target region**, select the Azure region to which you want to migrate the machines.
@@ -109,7 +109,7 @@ To download the replication appliance installer, follow these steps:
 1. In **Do you want to install a new replication appliance?**, select **Install a replication appliance**.
 1. In **Download and install the replication appliance software**, download the appliance installer, and the registration key. You need to the key in order to register the appliance. The key is valid for five days after it's downloaded.
 
-    ![Download provider](/azure/migrate/media/tutorial-migrate-physical-virtual-machines/download-provider.png)
+    ![Download provider](media/sql-server-availability-group-to-sql-on-azure-vm/download-provider.png)
 
 1. Copy the appliance setup file and key file to the Windows Server 2016 machine you created for the appliance.
 1. After the installation completes, the Appliance configuration wizard will launch automatically (You can also launch the wizard manually by using the cspsconfigtool shortcut that is created on the desktop of the appliance machine). Use the **Manage Accounts** tab of the wizard to create a dummy account with the following details:
@@ -122,7 +122,7 @@ To download the replication appliance installer, follow these steps:
 
 1. After setup completes, and the appliance restarts, in **Discover machines**, select the new appliance in **Select Configuration Server**, and select **Finalize registration**. Finalize registration performs a couple of final tasks to prepare the replication appliance.
 
-    ![Finalize registration](/azure/migrate/media/tutorial-migrate-physical-virtual-machines/finalize-registration.png)
+    ![Finalize registration](media/sql-server-availability-group-to-sql-on-azure-vm/finalize-registration.png)
 
 
 ## Install Mobility service
@@ -165,7 +165,7 @@ To install the Mobility service, follow these steps:
 
 It may take some time after installation for discovered machines to appear in Azure Migrate: Server Migration. As VMs are discovered, the **Discovered servers** count rises.
 
-![Discovered servers](/azure/migrate/media/tutorial-migrate-physical-virtual-machines/discovered-servers.png)
+![Discovered servers](media/sql-server-availability-group-to-sql-on-azure-vm/discovered-servers.png)
 
 ## Prepare source machines
 
@@ -214,19 +214,19 @@ To replicate machines, follow these steps:
 
 1. In the Azure Migrate project > **Servers**, **Azure Migrate: Server Migration**, select **Replicate**.
 
-    ![Screenshot of the Azure Migrate - Servers screen showing the Replicate button selected in Azure Migrate: Server Migration under Migration tools](/azure/migrate/media/tutorial-migrate-physical-virtual-machines/select-replicate.png)
+    ![Screenshot of the Azure Migrate - Servers screen showing the Replicate button selected in Azure Migrate: Server Migration under Migration tools](media/sql-server-availability-group-to-sql-on-azure-vm/select-replicate.png)
 
 1. In **Replicate**, > **Source settings** > **Are your machines virtualized?**, select **Physical or other (AWS, GCP, Xen, etc.)**.
 1. In **On-premises appliance**, select the name of the Azure Migrate appliance that you set up.
 1. In **Process Server**, select the name of the replication appliance.
 1. In **Guest credentials**, select the dummy account created previously during the [replication installer setup](#download-replication-appliance-installer) previously in this article. Then select **Next: Virtual machines**.   
 
-    ![Screenshot of the Source settings tab in the Replicate screen with the Guest credentials field highlighted.](/azure/migrate/media/tutorial-migrate-physical-virtual-machines/source-settings.png)
+    ![Screenshot of the Source settings tab in the Replicate screen with the Guest credentials field highlighted.](media/sql-server-availability-group-to-sql-on-azure-vm/source-settings.png)
 
 1. In **Virtual Machines**, in **Import migration settings from an assessment?**, leave the default setting **No, I'll specify the migration settings manually**.
 1. Check each VM you want to migrate. Then select **Next: Target settings**.
 
-    ![Select VMs](/azure/migrate/media/tutorial-migrate-physical-virtual-machines/select-vms.png)
+    ![Select VMs](media/sql-server-availability-group-to-sql-on-azure-vm/select-vms.png)
 
 
 1. In **Target settings**, select the subscription, and target region to which you'll migrate, and specify the resource group in which the Azure VMs will reside after migration.
@@ -249,7 +249,7 @@ To replicate machines, follow these steps:
     - Select **No** if you don't want to apply Azure Hybrid Benefit. Then select **Next**.
     - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions, and you want to apply the benefit to the machines you're migrating. Then select **Next**.
 
-    :::image type="content" source="/azure/migrate/media/tutorial-migrate-vmware/target-settings.png" alt-text="Target settings":::
+    :::image type="content" source="media/sql-server-availability-group-to-sql-on-azure-vm/target-settings.png" alt-text="Target settings":::
 
 1. In **Compute**, review the VM name, size, OS disk type, and availability configuration (if selected in the previous step). VMs must conform with [Azure requirements](/azure/migrate/migrate-support-matrix-physical-migration#azure-vm-requirements).
 
@@ -258,11 +258,11 @@ To replicate machines, follow these steps:
     - **Availability Zone**: Specify the Availability Zone to use.
     - **Availability Set**: Specify the Availability Set to use.
 
-   ![Compute settings](/azure/migrate/media/tutorial-migrate-physical-virtual-machines/compute-settings.png)
+   ![Compute settings](media/sql-server-availability-group-to-sql-on-azure-vm/compute-settings.png)
 
 1. In **Disks**, specify whether the VM disks should be replicated to Azure, and select the disk type (standard SSD/HDD or premium managed disks) in Azure. Then select **Next**.  
 
-    ![Disk settings](/azure/migrate/media/tutorial-migrate-physical-virtual-machines/disks.png)
+    ![Disk settings](media/sql-server-availability-group-to-sql-on-azure-vm/disks.png)
 
 1. In **Review and start replication**, review the settings, and select **Replicate** to start the initial replication for the servers.
 
@@ -281,7 +281,7 @@ Replication proceeds in the following sequence:
 You can track job status in the portal notifications.
 
 You can monitor replication status by selecting on **Replicating servers** in **Azure Migrate: Server Migration**.
-![Monitor replication](/azure/migrate/media/tutorial-migrate-physical-virtual-machines/replicating-servers.png)
+![Monitor replication](media/sql-server-availability-group-to-sql-on-azure-vm/replicating-servers.png)
 
 
 ## Migrate VMs
@@ -291,7 +291,7 @@ After machines are replicated, they are ready for migration. To migrate your ser
 
 1. In the Azure Migrate project > **Servers** > **Azure Migrate: Server Migration**, select **Replicating servers**.
 
-    ![Replicating servers](/azure/migrate/media/tutorial-migrate-physical-virtual-machines/replicate-servers.png)
+    ![Replicating servers](media/sql-server-availability-group-to-sql-on-azure-vm/replicate-servers.png)
 
 2. To ensure the migrated server is synchronized with the source server, stop the SQL Server service on every replica in the availability group, starting with secondary replicas (in **SQL Server Configuration Manager** > **Services**) while ensuring the disks hosting SQL data are online.   
 3. In **Replicating machines** > select server name > **Overview**, ensure that the last synchronized timestamp is after you have stopped the SQL Server service on the servers to be migrated before you move onto the next step. This should only take a few minutes. 

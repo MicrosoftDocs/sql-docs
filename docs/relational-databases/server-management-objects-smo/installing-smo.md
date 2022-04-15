@@ -44,4 +44,4 @@ See [NuGet Quick Start - Use a Package](/nuget/quickstart/use-a-package) for ins
 
 ## Programming Guide
 
-The [SMO Programming Guide](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) includes additional links to get started with SQL Server Management Objects.
+The [SMO Programming Guide](/sql-server-management-objects-smo-programming-guide.md) includes additional links to get started with SQL Server Management Objects.

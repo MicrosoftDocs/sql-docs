@@ -15,8 +15,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.external_library_files catalog view"
-author: dphansen
-ms.author: davidph
+author: rothja
+ms.author: jroth
 manager: cgronlun
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---

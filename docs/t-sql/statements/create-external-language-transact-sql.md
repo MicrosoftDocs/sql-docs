@@ -6,8 +6,8 @@ ms.date: 04/03/2020
 ms.prod: sql
 ms.technology: language-extensions
 ms.topic: language-reference
-author: dphansen
-ms.author: davidph
+author: rothja
+ms.author: jroth
 manager: cgronlun
 dev_langs: 
   - "TSQL"

@@ -14,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER EXTERNAL RESOURCE POOL statement"
 ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
-author: dphansen
-ms.author: davidph
+author: rothja
+ms.author: jroth
 manager: cgronlund
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---

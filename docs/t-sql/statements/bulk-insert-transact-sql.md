@@ -109,7 +109,7 @@ Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the data_f
 
 #### BATCHSIZE = *batch_size*
 
-Specifies the number of rows in a batch. Each batch is copied to the server as one transaction. If this fails, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] commits or rolls back the transaction for every batch. By default, all data in the specified data file is one batch. For information about performance considerations, see "Remarks," later in this article.
+Specifies the number of rows in a batch. Each batch is copied to the server as one transaction. If this fails, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] commits or rolls back the transaction for every batch. By default, all data in the specified data file is one batch. For information about performance considerations, see [Performance considerations](#performance-considerations) later in this article.
 
 #### CHECK_CONSTRAINTS
 
@@ -203,7 +203,8 @@ Specifies that empty columns should retain a null value during the bulk-import o
 
 #### KILOBYTES_PER_BATCH = *kilobytes_per_batch*
 
-Specifies the approximate number of kilobytes (KB) of data per batch as *kilobytes_per_batch*. By default, KILOBYTES_PER_BATCH is unknown. For information about performance considerations, see "Remarks," later in this article.
+Specifies the approximate number of kilobytes (KB) of data per batch as *kilobytes_per_batch*. By default, KILOBYTES_PER_BATCH is unknown. For information about performance considerations, see [Performance considerations](#performance-considerations) later in this article.
+
 
 #### LASTROW = *last_row*
 
@@ -225,11 +226,13 @@ Specifies how the data in the data file is sorted. Bulk import performance is im
 
 Indicates the approximate number of rows of data in the data file.
 
-By default, all the data in the data file is sent to the server as a single transaction, and the number of rows in the batch is unknown to the query optimizer. If you specify ROWS_PER_BATCH (with a value > 0) the server uses this value to optimize the bulk-import operation. The value specified for ROWS_PER_BATCH should approximately the same as the actual number of rows. For information about performance considerations, see "Remarks," later in this article.
+By default, all the data in the data file is sent to the server as a single transaction, and the number of rows in the batch is unknown to the query optimizer. If you specify ROWS_PER_BATCH (with a value > 0) the server uses this value to optimize the bulk-import operation. The value specified for ROWS_PER_BATCH should approximately the same as the actual number of rows. For information about performance considerations, see [Performance considerations](#performance-considerations) later in this article.
+
 
 #### TABLOCK
 
-Specifies that a table-level lock is acquired for the duration of the bulk-import operation. A table can be loaded concurrently by multiple clients if the table has no indexes and TABLOCK is specified. By default, locking behavior is determined by the table option **table lock on bulk load**. Holding a lock for the duration of the bulk-import operation reduces lock contention on the table, in some cases can significantly improve performance. For information about performance considerations, see "Remarks," later in this article.
+Specifies that a table-level lock is acquired for the duration of the bulk-import operation. A table can be loaded concurrently by multiple clients if the table has no indexes and TABLOCK is specified. By default, locking behavior is determined by the table option **table lock on bulk load**. Holding a lock for the duration of the bulk-import operation reduces lock contention on the table, in some cases can significantly improve performance. For information about performance considerations, see [Performance considerations](#performance-considerations) later in this article.
+
 
 For a columnstore index, the locking behavior is different because it's internally divided into multiple rowsets. Each thread loads data exclusively into each rowset by taking an X lock on the rowset allowing parallel data load with concurrent data load sessions. The use of TABLOCK option will cause thread to take an X lock on the table (unlike BU lock for traditional rowsets) which will prevent other concurrent threads to load data concurrently.
 
@@ -352,7 +355,8 @@ The BULK INSERT statement can be executed within a user-defined transaction to i
 
 ## Interoperability
 
-### Importing data from a CSV file
+### Import data from a CSV file
+
 
 Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], BULK INSERT supports the CSV format, as does Azure SQL Database.
 

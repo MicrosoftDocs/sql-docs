@@ -2,7 +2,7 @@
 description: "sys.dm_xe_database_session_event_actions (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.dm_xe_database_session_event_actions"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
-ms.date: "03/30/2022"
+ms.date: "4/18/2022"
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -20,7 +20,7 @@ ms.custom: seo-lt-2019
 
 Returns information about event session actions for *active* database-scoped sessions. Actions are executed when events are fired. This management view aggregates statistics about the number of times an action has run, and the total run time of the action. For information on all actions in database-scoped sessions, see [sys.database_event_session_actions](../system-catalog-views/sys-database-event-session-actions-azure-sql-database.md).
 
-Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). Azure SQL Managed Instance supports both database-scoped sessions and more capable [server-scoped sessions](../extended-events/extended-events.md).
+Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). Azure SQL Managed Instance supports both database-scoped sessions and [server-scoped sessions](../extended-events/extended-events.md). Server-scoped sessions are recommended for managed instances: learn more in [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md#code-examples-can-differ-for-azure-sql-database-and-sql-managed-instance).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

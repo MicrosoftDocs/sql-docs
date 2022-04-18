@@ -2,7 +2,7 @@
 description: "sys.resource_stats returns CPU usage and storage data for an Azure SQL Database. "
 title: "sys.resource_stats (Azure SQL Database)"
 ms.custom: ""
-ms.date: "03/30/2022"
+ms.date: "4/18/2022"
 ms.service: sql-database
 ms.topic: "reference"
 f1_keywords: 
@@ -70,18 +70,20 @@ Returns CPU usage and storage data for a database in Azure SQL Database. The dat
 
 You must be connected to the `master` database on the [logical server](/azure/azure-sql/database/logical-servers) to query `sys.resource_stats`.
 
-The following example returns all databases that are averaging at least 80% of compute utilization over the last one week.  
+The following example returns all databases that are averaging at least 80% of CPU utilization over the last one week.  
   
 ```sql  
 DECLARE @s datetime;  
 DECLARE @e datetime;  
 SET @s= DateAdd(d,-7,GetUTCDate());  
 SET @e= GETUTCDATE();  
-SELECT database_name, AVG(avg_cpu_percent) AS Average_Compute_Utilization   
+
+SELECT database_name, AVG(avg_cpu_percent) AS Average_CPU_Utilization   
 FROM sys.resource_stats   
 WHERE start_time BETWEEN @s AND @e  
 GROUP BY database_name  
 HAVING AVG(avg_cpu_percent) >= 80;
+GO
 ```  
     
 ## See also  

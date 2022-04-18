@@ -2,7 +2,7 @@
 description: "sys.database_connection_stats (Azure SQL Database)"
 title: "sys.database_connection_stats"
 titleSuffix: Azure SQL Database
-ms.date: "03/30/2022"
+ms.date: "04/18/2022"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: "reference"
@@ -75,20 +75,21 @@ This view may not include all connection and error information:
   
 - This view does not include all [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database errors that could occur, only those specified in Event Types in [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
 - If there is a machine failure within the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] datacenter, a small amount of data may be missing from the event table.  
-- If an IP address has been blocked through DoSGuard, connection attempt events from that IP address cannot be collected and will not appear in this view.  
+- If an IP address has been blocked through [DoSGuard](/azure/security/fundamentals/infrastructure-sql#dosguard), connection attempt events from that IP address cannot be collected and will not appear in this view.  
   
 ## Permissions
 
-Users with permission to access the **master** database on the [logical server](/azure/azure-sql/database/logical-servers) in Azure SQL Database have read-only access to this view.
+Requires permission to access the **master** database on the [logical server](/azure/azure-sql/database/logical-servers) in Azure SQL Database.
   
 ## Examples
 
-This example queries **sys.database_connection_stats** to return a summary of the database connections that occurred between noon on March 29, 2022 and noon on March 30, 2022 (UTC). By default, the query results are sorted by **start_time** (ascending order).  Connect to the **master** database on the [logical server](/azure/azure-sql/database/logical-servers) in Azure SQL Database to run the query.
+This example queries **sys.database_connection_stats** to return a summary of the database connections that occurred between noon on March 29, 2022 and noon on March 30, 2022 (UTC).  Connect to the **master** database on the [logical server](/azure/azure-sql/database/logical-servers) in Azure SQL Database to run the query.
   
 ```sql
-SELECT database_name, start_time, end_time, success_count, total_failure_count, connection_failure_count0
+SELECT database_name, start_time, end_time, success_count, total_failure_count, connection_failure_count
 FROM sys.database_connection_stats
-WHERE start_time>='2022-03-29 12:00:00' and end_time<='2022-03-30 12:00:00'; 
+WHERE start_time>='2022-03-29 12:00:00' and end_time<='2022-03-30 12:00:00'
+ORDER BY start_time ASC; 
 ```  
 
 ## Next steps

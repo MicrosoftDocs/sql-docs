@@ -2,7 +2,7 @@
 description: "sys.event_log (Azure SQL Database)"
 title: "sys.event_log (Azure SQL Database)"
 ms.custom: ""
-ms.date: "03/30/2022"
+ms.date: "04/18/2022"
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -29,7 +29,7 @@ monikerRange: "= azuresqldb-current"
 Returns successful [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database connections and connection failures. You can use this information to track or troubleshoot your database activity.  
   
 > [!CAUTION]  
-> For installations having a large number of databases or high numbers of logins, activity in sys.event_log can cause limitations in performance, high CPU usage, and possibly result in login failures. Queries of sys.event_log can contribute to the problem. Microsoft is working to resolve this issue. In the meantime, to reduce the impact of this issue, limit queries of sys.event_log.
+> For [logical servers](/azure/azure-sql/database/logical-servers) with a large number of databases and/or high numbers of logins, querying sys.event_log can cause high resource usage in the master database, possibly resulting in login failures. To reduce the impact of this issue, limit queries of sys.event_log.
 
 The `sys.event_log` view contains the following columns.  
   
@@ -118,7 +118,7 @@ Connect to the **master** database on the [logical server](/azure/azure-sql/data
   
 ### Query the sys.event_log view
 
- The following query returns all events that occurred between noon on March 25, 2022 and noon on March 30, 2022 (UTC). By default, query results are sorted by **start_time** (ascending order).  
+The following query returns all events that occurred between noon on March 25, 2022 and noon on March 30, 2022 (UTC). By default, query results are sorted by **start_time** (ascending order).  
 
 ```sql
 SELECT database_name, start_time, end_time, event_category,

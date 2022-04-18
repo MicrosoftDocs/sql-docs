@@ -1,9 +1,9 @@
 ---
 description: "sys.resource_usage (Azure SQL Database and Azure SQL Managed Instance)"
-title: "sys.resource_usages"
+title: "sys.resource_usage"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
 ms.custom: ""
-ms.date: "03/30/2022"
+ms.date: "04/18/2022"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: "reference"
@@ -42,12 +42,12 @@ monikerRange: "= azuresqldb-current"
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Time (UTC) in hour increments.|  
 |database_name|**nvarchar**|Name of user database.|  
-|sku|**nvarchar**|Name of the SKU. The following are the possible values:<br /><br /> Web<br /><br /> Business<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
-|storage_in_megabytes|**decimal**|Maximum storage size for the hour, including database data, indexes, stored procedures and metadata.|  
+|sku|**nvarchar**|Name of the service tier. Possible values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical, Hyperscale. |  
+|storage_in_megabytes|**decimal**|Maximum used storage size for the hour, including database data, indexes, stored procedures and metadata.|  
   
 ## Permissions  
 
-Users with permission to access the **master** database on the [logical server](/azure/azure-sql/database/logical-servers) in Azure SQL Database have read-only access to this view.  
+Requires permission to access the **master** database on the [logical server](/azure/azure-sql/database/logical-servers) in Azure SQL Database.  
 
 ## Examples
 

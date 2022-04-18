@@ -3,7 +3,7 @@ description: "sys.database_event_session_targets (Azure SQL Database and Azure S
 title: "sys.database_event_session_targets"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
 ms.custom: ""
-ms.date: "03/30/2022"
+ms.date: "4/18/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 Returns a row for each event target for a database-scoped event session. For information about *active* database-scoped sessions, see [sys.dm_xe_database_session_targets](../system-dynamic-management-views/sys-dm-xe-database-session-targets-azure-sql-database.md).
 
-Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). Azure SQL Managed Instance supports both database-scoped sessions and more capable [server-scoped sessions](../extended-events/extended-events.md).
+Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/database/xevent-db-diff-from-svr). Azure SQL Managed Instance supports both database-scoped sessions and [server-scoped sessions](../extended-events/extended-events.md). Server-scoped sessions are recommended for managed instances: learn more in [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md#code-examples-can-differ-for-azure-sql-database-and-sql-managed-instance).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

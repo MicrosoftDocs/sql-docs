@@ -1,8 +1,8 @@
 ---
-description: "sys.dm_geo_replication_link_status (Azure SQL Database)"
+description: "sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.dm_geo_replication_link_status"
-titleSuffix: Azure SQL Database
-ms.date: "03/30/2022"
+titleSuffix: Azure SQL Database and Azure SQL Managed Instance
+ms.date: "04/18/2022"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: conceptual
@@ -22,9 +22,9 @@ ms.author: randolphwest
 monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---
-# sys.dm_geo_replication_link_status (Azure SQL Database)
+# sys.dm_geo_replication_link_status (Azure SQL Database and Azure SQL Managed Instance)
 
-[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Contains a row for each replication link between primary and secondary databases in a geo-replication partnership. This includes both primary and secondary databases. If more than one continuous replication link exists for a given primary database, this table contains a row for each of the relationships. The view is created in all databases, including the **master** database. However, querying this view in the **master** database returns an empty set.  
   
@@ -48,11 +48,11 @@ Contains a row for each replication link between primary and secondary databases
   
 ## Permissions  
 
-Any account with view_database_state permission can query **sys.dm_geo_replication_link_status**.  
+Requires the `VIEW DATABASE STATE` permission in the database.  
   
 ## Examples 
 
-This Transact-SQL query shows replication lags and last replication time of my secondary databases.  
+This Transact-SQL query shows replication lags and last replication time of secondary databases.  
   
 ```sql
 SELECT   

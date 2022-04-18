@@ -101,7 +101,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Azure SQL Database.
 
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the data_file can be in Azure Blob Storage. In that case, you need to specify **data_source_name** option. For an example, see [Importing data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the *data_file* can be in Azure Blob Storage. In that case, you need to specify **data_source_name** option. For an example, see [Importing data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
 >  
@@ -127,7 +127,7 @@ A situation in which you might want constraints disabled (the default behavior) 
 
 #### CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | '*code_page*' }
 
-Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values greater than **127** or less than **32**. For an example, see [Specifying a code page](#d-specifying-a-code-page).
+Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values greater than **127** or less than **32**. For an example, see [Specify a code page](#d-specify-a-code-page).
 
 CODEPAGE isn't a supported option on Linux for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. For [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], only the **'RAW'** option is allowed for CODEPAGE.
 
@@ -467,7 +467,7 @@ EXEC(@bulk_cmd);
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
-### D. Specifying a code page
+### D. Specify a code page
 
 The following example shows how to specify a code page.
 
@@ -503,7 +503,7 @@ This example will also work for UTF-8 files that don't use fixed-width format.
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
-### F. Importing data from a file in Azure Blob Storage
+### F. Import data from a file in Azure Blob Storage
 
 The following example shows how to load data from a CSV file in an Azure Blob Storage location on which you've created a SAS key. The Azure Blob Storage location is configured as an external data source, which requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
 
@@ -534,9 +534,9 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 > [!IMPORTANT]
 > Azure SQL only supports reading from Azure Blob Storage.
 
-### G. Importing data from a file in Azure Blob Storage and specifying an error file
+### G. Import data from a file in Azure Blob Storage and specify an error file
 
-The following example shows how to load data from a CSV file in an Azure Blob Storage location, which has been configured as an external data source and also specifying an error file. You will need a database scoped credential using a shared access signature. If running on Azure SQL Database, ERRORFILE option should be accompanied by ERRORFILE_DATA_SOURCE otherwise the import might fail with permissions error. The file specified in ERRORFILE shouldn't exist in the container.
+The following example shows how to load data from a CSV file in an Azure Blob Storage location, which has been configured as an external data source, and also specifying an error file. You will need a database scoped credential using a shared access signature. If running on Azure SQL Database, ERRORFILE option should be accompanied by ERRORFILE_DATA_SOURCE otherwise the import might fail with permissions error. The file specified in ERRORFILE shouldn't exist in the container.
 
 ```sql
 BULK INSERT Sales.Invoices

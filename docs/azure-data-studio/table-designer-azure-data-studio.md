@@ -15,17 +15,11 @@ ms.date: 04/15/2022
 
 The visual table design (preview) is available in Azure Data Studio and provides a modern editor experience which enables data professionals to create and customize table structures, along with the Transact-SQL Editor experience available in SSMS. With Azure Data Studio, you can now create and manage your tables inside databases in your server connections. The table designer consists of a window split into three separate panes. The first pane, usually the widest pane by default, is the main view of the table design, consisting of tabs for the columns, foreign keys, constraint checks, indexes, and a general tab for  
 
- 
+## Create a new table
 
-1. Create a new table 
+To create a table, right-click the Tables node in your database and select New Table. Please note that your server will need to be connected. This is indicated by the green node at the bottom right corner of the server connection. If red (this means the connection is inactive or disconnected), simply left click once on the connection and this will spin up your connection.  
 
-    To create a table, right-click the Tables node in your database and select New Table. Please note that your server will need to be connected. This is indicated by the green node at the bottom right corner of the server connection. If red (this means the connection is inactive or disconnected), simply left click once on the connection and this will spin up your connection.  
-
- 
-
-           
-
- 
+:::image type="content" source="media/table-designer-azure-data-studio/table-designer-general-pane.PNG" alt-text="general pane view":::
 
 The table name is edited in a text box at the top of the pane and columns are edited in the matrix below. A default table is created with default name of “NewTable-1” which has one column. Let us update our table name to “Cities” and give it column names “CityName,” and “Population.” The column field is highlighted by default which means that whatever changes you make will be in reference to the column property. We will assign “CityName” as our Primary Key/Identifier for this table. To read more on Primary Keys, (link to primary key here).  
 

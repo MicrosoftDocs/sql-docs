@@ -247,7 +247,8 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.csv'
 WITH ( FORMAT='CSV');
 ```
 
-#### FIELDQUOTE **=** 'field_quote'
+#### FIELDQUOTE = '*field_quote*'
+
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 
 Specifies a character that will be used as the quote character in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
@@ -337,7 +338,7 @@ To bulk export or import SQLXML data, use one of the following data types in you
 
 |Data type|Effect|
 |---------------|------------|
-|SQLCHAR or SQLVARCHAR|The data is sent in the client code page or in the code page implied by the collation). The effect is the same as specifying the DATAFILETYPE **='char'** without specifying a format file.|
+|SQLCHAR or SQLVARCHAR|The data is sent in the client code page or in the code page implied by the collation). The effect is the same as specifying the DATAFILETYPE **= 'char'** without specifying a format file.|
 |SQLNCHAR or SQLNVARCHAR|The data is sent as Unicode. The effect is the same as specifying the DATAFILETYPE **= 'widechar'** without specifying a format file.|
 |SQLBINARY or SQLVARBIN|The data is sent without any conversion.|
 
@@ -456,7 +457,8 @@ EXEC(@bulk_cmd);
 ```
 
 > [!NOTE]
-> Due to how Microsoft Windows treats text files **(\n** automatically gets replaced with **\r\n)**.
+>  
+> Owing to the way Microsoft Windows treats text files, `\n` is automatically replaced with `\r\n`.
 
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
@@ -499,7 +501,7 @@ This example will also work for UTF-8 files that don't use fixed-width format.
 
 ### F. Importing data from a file in Azure Blob Storage
 
-The following example shows how to load data from a csv file in an Azure Blob Storage location on which you've created a SAS key. The Azure Blob Storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
+The following example shows how to load data from a CSV file in an Azure Blob Storage location on which you've created a SAS key. The Azure Blob Storage location is configured as an external data source, which requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
 
 ```sql
 --> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -530,7 +532,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 
 ### G. Importing data from a file in Azure Blob Storage and specifying an error file
 
-The following example shows how to load data from a csv file in an Azure Blob Storage location, which has been configured as an external data source and also specifying an error file. This requires a database scoped credential using a shared access signature. If running on Azure SQL Database, ERRORFILE option should be accompanied by ERRORFILE_DATA_SOURCE otherwise the import might fail with permissions error. The file specified in ERRORFILE shouldn't exist in the container.
+The following example shows how to load data from a CSV file in an Azure Blob Storage location, which has been configured as an external data source and also specifying an error file. You will need a database scoped credential using a shared access signature. If running on Azure SQL Database, ERRORFILE option should be accompanied by ERRORFILE_DATA_SOURCE otherwise the import might fail with permissions error. The file specified in ERRORFILE shouldn't exist in the container.
 
 ```sql
 BULK INSERT Sales.Invoices

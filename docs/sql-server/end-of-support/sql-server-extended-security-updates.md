@@ -222,10 +222,10 @@ The CSV file should look like this:
 
 ```csv
 name,version,edition,cores,hostType
-Server1-SQL2012,2012,Enterprise,12,Physical Server
-Server2-SQL2012,2012,Enterprise,24,Physical Server
-Server3-SQL2012,2012,Enterprise,12,Virtual Machine
-Server4-SQL2012,2012,Developer,8,Physical Server  
+Server1-SQL2012,SQL Server 2012,Enterprise,12,Other Physical Server
+Server2-SQL2012,SQL Server 2012,Enterprise,24,Other Physical Server
+Server3-SQL2012,SQL Server 2012,Enterprise,12,Azure Virtual Machine
+Server4-SQL2012,SQL Server 2012,Standard,8,Azure VMWare Solutions
 ```
 
 ## Download ESUs

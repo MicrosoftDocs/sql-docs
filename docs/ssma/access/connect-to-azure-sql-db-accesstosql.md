@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "Connect to SQL Azure dialog box"
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-author: nahk-ivanov
-ms.author: alexiva
+author: cpichuka
+ms.author: cpichuka
 ---
 # Connect To Azure SQL Database (AccessToSQL)
 Use the Connect to SQL Azure dialog box to connect to the database in Azure SQL Database that you want to migrate.  

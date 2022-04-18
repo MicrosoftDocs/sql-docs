@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: This article discusses migration strategies for SQL Server 2019 Big Clusters
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.date: 02/22/2022
 ms.topic: conceptual
 ms.prod: sql

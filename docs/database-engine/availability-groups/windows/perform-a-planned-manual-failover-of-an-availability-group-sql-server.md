@@ -12,6 +12,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
+  - "failover [SQL Server], Always On Availability Groups"
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
@@ -19,12 +20,12 @@ ms.author: mathoma
 
 # Perform a planned manual failover of an Always On availability group (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-This topic describes how to perform a manual failover without data loss (a *planned manual failover*) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. An availability group fails over at the level of an availability replica. A planned manual failover, like any AlwaysOn availability group failover, transitions a secondary replica to primary role. Concurrently, the failover transitions the former primary replica to the secondary role.  
+This topic describes how to perform a manual failover without data loss (a *planned manual failover*) on an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. An availability group fails over at the level of an availability replica. A planned manual failover, like any Always On availability group failover, transitions a secondary replica to primary role. Concurrently, the failover transitions the former primary replica to the secondary role.  
   
 A planned manual failover is supported only when the primary replica and the target secondary replica are running in synchronous-commit mode and are currently synchronized. A planned manual failover preserves all the data in the secondary databases that are joined to the availability group on the target secondary replica. After the former primary replica transitions to the secondary role, its databases become secondary databases. Then they begin to synchronize with the new primary databases. After they all transition into the SYNCHRONIZED state, the new secondary replica becomes eligible to serve as the target of a future planned manual failover.  
   
 > [!NOTE]  
->  If the secondary and primary replicas are both configured for automatic failover mode, after the secondary replica is synchronized, it also can serve as the target for an automatic failover. For more information, see [Availability modes &#40;AlwaysOn availability groups&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+>  If the secondary and primary replicas are both configured for automatic failover mode, after the secondary replica is synchronized, it also can serve as the target for an automatic failover. For more information, see [Availability modes &#40;Always On availability groups&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
    
 ##  <a name="BeforeYouBegin"></a> Before you begin 
 
@@ -37,7 +38,7 @@ A planned manual failover is supported only when the primary replica and the tar
 - Cross-database consistency across databases within the availability group might not be maintained on failover. 
   
     > [!NOTE] 
-    >  Support for cross-database and distributed transactions vary by SQL Server and operating system versions. For more information, see [Cross-database transactions and distributed transactions for AlwaysOn availability groups and database mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
+    >  Support for cross-database and distributed transactions vary by SQL Server and operating system versions. For more information, see [Cross-database transactions and distributed transactions for Always On availability groups and database mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
   
 ###  <a name="Prerequisites"></a> Prerequisites and restrictions 
   
@@ -45,7 +46,7 @@ A planned manual failover is supported only when the primary replica and the tar
 -   Currently, the target secondary replica must be synchronized with the primary replica. All the secondary databases on this secondary replica must be joined to the availability group. They also must be synchronized with their corresponding primary databases (that is, the local secondary databases must be SYNCHRONIZED). 
   
     > [!TIP] 
-    >  To determine the failover readiness of a secondary replica, query the **is_failover_ready** column in the [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) dynamic management view. Or you can look at the **Failover Readiness** column of the [AlwaysOn group dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
+    >  To determine the failover readiness of a secondary replica, query the **is_failover_ready** column in the [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) dynamic management view. Or you can look at the **Failover Readiness** column of the [Always On group dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
 -   This task is supported only on the target secondary replica. You must be connected to the server instance that hosts the target secondary replica. 
   
 ###  <a name="Security"></a> Security 
@@ -58,7 +59,7 @@ A planned manual failover is supported only when the primary replica and the tar
   
 1. In Object Explorer, connect to a server instance that hosts a secondary replica of the availability group that needs to be failed over. Expand the server tree. 
   
-2. Expand the **AlwaysOn High Availability** node and the **Availability Groups** node. 
+2. Expand the **Always On High Availability** node and the **Availability Groups** node. 
   
 3. Right-click the availability group to be failed over, and select **Failover**. 
   
@@ -113,7 +114,7 @@ A planned manual failover is supported only when the primary replica and the tar
 
 ## See also 
 
- * [Overview of AlwaysOn availability groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
- * [Failover and failover modes &#40;AlwaysOn availability groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 
+ * [Overview of Always On availability groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
+ * [Failover and failover modes &#40;Always On availability groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 
  * [Perform a forced manual failover of an availability group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 
   

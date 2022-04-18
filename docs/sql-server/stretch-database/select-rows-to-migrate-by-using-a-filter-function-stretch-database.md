@@ -274,7 +274,7 @@ ALTER TABLE [<table name>]
 SET (   
         REMOTE_DATA_ARCHIVE = ON   
                 (   
-                        FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20160101(SysEndTime)
+                        FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20160101(ValidTo)
                                 , MIGRATION_STATE = OUTBOUND   
                 )  
         )   
@@ -307,7 +307,7 @@ GO
         (  
                REMOTE_DATA_ARCHIVE = ON  
                (  
-                       FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20160102(SysEndTime),  
+                       FILTER_PREDICATE = dbo.fn_StretchBySystemEndTime20160102(ValidTo),  
                        MIGRATION_STATE = OUTBOUND  
                )  
         )   

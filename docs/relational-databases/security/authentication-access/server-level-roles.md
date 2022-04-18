@@ -1,8 +1,8 @@
 ---
-title: "Server-Level Roles | Microsoft Docs"
+title: "Server-level roles | Microsoft Docs"
 description: SQL Server provides server-level roles. These security principals group other principals to manage the server-wide permissions.
 ms.custom: ""
-ms.date: "05/24/2017"
+ms.date: "03/31/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
@@ -25,21 +25,21 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Server-Level Roles
+# Server-level roles
 [!INCLUDE[SQL Server Azure SQL Managed Instance Parallel Data Warehouse](../../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides server-level roles to help you manage the permissions on a server. These roles are security principals that group other principals. Server-level roles are server-wide in their permissions scope. (*Roles* are like *groups* in the Windows operating system.)  
   
  Fixed server roles are provided for convenience and backward compatibility. Assign more specific permissions whenever possible.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides nine fixed server roles. The permissions that are granted to the fixed server roles (except **public**) cannot be changed. Beginning with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], you can create user-defined server roles and add server-level permissions to the user-defined server roles.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides nine fixed server roles. The permissions that are granted to the fixed server roles (except **public**) can't be changed. Beginning with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], you can create user-defined server roles and add server-level permissions to the user-defined server roles.  
   
- You can add server-level principals ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, Windows accounts, and Windows groups) into server-level roles. Each member of a fixed server role can add other logins to that same role. Members of user-defined server roles cannot add other server principals to the role.
+ You can add server-level principals ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, Windows accounts, and Windows groups) into server-level roles. Each member of a fixed server role can add other logins to that same role. Members of user-defined server roles can't add other server principals to the role.
 
 > [!NOTE]
->  Server-level permissions are not available in SQL Database or Azure Synapse Analytics. For more information about SQL Database, see [Controlling and granting database access.](/azure/sql-database/sql-database-manage-logins)
+> These server-level permissions are not available in Azure SQL Database or Azure Synapse Analytics. There are special [Azure SQL Database server roles for permission management](/azure/azure-sql/database/security-server-roles). For more information about SQL Database, see [Controlling and granting database access.](/azure/sql-database/sql-database-manage-logins).
   
-## Fixed Server-Level Roles  
+## Fixed server-level roles  
 The following table shows the fixed server-level roles and their capabilities.  
 
 |Fixed server-level role |Description |
@@ -49,22 +49,22 @@ The following table shows the fixed server-level roles and their capabilities.
 |**securityadmin**|Members of the **securityadmin** fixed server role manage logins and their properties. They can `GRANT`, `DENY`, and `REVOKE` server-level permissions. They can also `GRANT`, `DENY`, and `REVOKE` database-level permissions if they have access to a database. Additionally, they can reset passwords for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins.<br /><br /> **IMPORTANT:** The ability to grant access to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] and to configure user permissions allows the security admin to assign most server permissions. The **securityadmin** role should be treated as equivalent to the **sysadmin** role.|
 |**processadmin**|Members of the **processadmin** fixed server role can end processes that are running in an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|
 |**setupadmin**|Members of the **setupadmin** fixed server role can add and remove linked servers by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements. (**sysadmin** membership is needed when using [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|
-|**bulkadmin**|Members of the **bulkadmin** fixed server role can run the `BULK INSERT` statement.<br /><br /> The **bulkadmin** role or ADMINISTER BULK OPERATIONS permissions is not supported for SQL Server on Linux. Only the **sysadmin** can perform bulk inserts for SQL Server on Linux. |
+|**bulkadmin**|Members of the **bulkadmin** fixed server role can run the `BULK INSERT` statement.<br /><br /> The **bulkadmin** role or ADMINISTER BULK OPERATIONS permissions isn't supported for SQL Server on Linux. Only the **sysadmin** can perform bulk inserts for SQL Server on Linux. |
 |**diskadmin**|The **diskadmin** fixed server role is used for managing disk files.|
 |**dbcreator**|Members of the **dbcreator** fixed server role can create, alter, drop, and restore any database.|
-|**public**|Every [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login belongs to the **public** server role. When a server principal has not been granted or denied specific permissions on a securable object, the user inherits the permissions granted to public on that object. Only assign public permissions on any object when you want the object to be available to all users. You cannot change membership in public.<br /><br /> **Note:** **public** is implemented differently than other roles, and permissions can be granted, denied, or revoked from the public fixed server roles.|  
+|**public**|Every [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login belongs to the **public** server role. When a server principal hasn't been granted or denied specific permissions on a securable object, the user inherits the permissions granted to **public** on that object. Only assign public permissions on any object when you want the object to be available to all users. You can't change membership in public.<br /><br /> **Note:** **public** is implemented differently than other roles, and permissions can be granted, denied, or revoked from the public fixed server roles.|  
   
 > [!IMPORTANT] 
-> Most of the permissions provided by the following server roles are not applicable to Synapse SQL - **processadmin**, **serveradmin**, **setupadmin**, and **diskadmin**.
+> Most of the permissions provided by the following server roles are not applicable to Azure Synapse Analytics - **processadmin**, **serveradmin**, **setupadmin**, and **diskadmin**.
   
-## Permissions of Fixed Server Roles  
+## Permissions of fixed server roles  
  Each fixed server role has certain permissions assigned to it. The following graphic shows the permissions assigned to the server roles.   
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
 >  The **CONTROL SERVER** permission is similar but not identical to the **sysadmin** fixed server role. Permissions do not imply role memberships and role memberships do not grant permissions. (E.g. **CONTROL SERVER** does not imply membership in the **sysadmin** fixed server role.) However, it is sometimes possible to impersonate between roles and equivalent permissions. Most **DBCC** commands and many system procedures require membership in the **sysadmin** fixed server role. For a list of 171 system stored procedures that require **sysadmin** membership, see the following blog post by Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
   
-## Server-Level Permissions  
+## Server-level permissions  
  Only server-level permissions can be added to user-defined server roles. To list the server-level permissions, execute the following statement. The server-level permissions are:  
   
 ```  
@@ -73,7 +73,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
   
  For more information about permissions, see [Permissions &#40;Database Engine&#41;](../../../relational-databases/security/permissions-database-engine.md) and [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
   
-## Working with Server-Level Roles  
+## Working with server-level roles  
  The following table explains the commands, views, and functions that you can use to work with server-level roles.  
   
 |Feature|Type|Description|  
@@ -89,7 +89,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 |[sp_addsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|Command|Adds a login as a member of a server-level role. Deprecated. Use [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) instead.|  
 |[sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|Command|Removes a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login or a Windows user or group from a server-level role. Deprecated. Use [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) instead.|  
   
-## See Also  
+## See also  
  [Database-Level Roles](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Security Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Security Functions &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
@@ -98,4 +98,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [REVOKE Server Principal Permissions &#40;Transact-SQL&#41;](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [DENY Server Principal Permissions &#40;Transact-SQL&#41;](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
  [Create a Server Role](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
-  
+ [Azure SQL Database server roles for permission management](/azure/azure-sql/database/security-server-roles) 

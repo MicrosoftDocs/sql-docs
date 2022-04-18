@@ -1,7 +1,7 @@
 ---
 title: "Support Policies"
 description: Learn about SQL Server Native Client supported SQL Server versions, operating systems, and support policies for ADO, BCP, ODBC, and OLE DB.
-ms.date: "03/14/2017"
+ms.date: "04/06/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -19,6 +19,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Server Support  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 supports connections to, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
+  
+  SQL Server Native Client 13.0 supports connections to, SQL Server 2008, SQL Server 2008 R2, SQL Server 2012, SQL Server 2014, SQL Server 2016,  SQL Server 2017, SQL Server 2019, and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
   
 ## Supported Operating System Versions  
  The following table lists which operating systems support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
@@ -47,7 +49,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  OLE DB applications that have not been certified for use with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client can use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client if they specify `DataTypeCompatibility=80` in their connection strings.  
   
  OLE DB applications that use OLE DB Service Components can only use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client if they specify `DataTypeCompatibility=80` in their connection strings. However, no features added after [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] will be available in this case.  
+ 
+ ## Support Lifecycle 
   
+  SQL Server Native Client support lifecycle can be found on the [SNAC lifecycle explained blog](https://techcommunity.microsoft.com/t5/sql-server-blog/snac-lifecycle-explained/ba-p/385381). This lifecycle applies to building database applications using SQL Server Native Client. 
+ 
+ ### Support Lifecycle exception
+ 
+The SQL Native Client 11.0 provider is supported in SQL Server 2012 through 2019 until their respective end-of-support lifecycles, but only when used by SQL Server components. Do not remove the SQL Native Client provider that gets installed by SQL Server on the system. This support exception does not include enhancements or fixes to SQL Native Client 11.0, but it does cover critical security fixes.
+
 ## See Also  
  [Building Applications with SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   

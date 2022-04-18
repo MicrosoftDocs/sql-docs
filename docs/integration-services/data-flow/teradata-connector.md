@@ -27,17 +27,10 @@ The following Microsoft SQL Server products are supported by Microsoft Connector
 - Microsoft SQL Server Data Tools (SSDT) 15.8.1 or later for Visual Studio 2017
 - Microsoft SQL Server Data Tools (SSDT) for Visual Studio 2019
 
-Microsoft connector for Teradata uses Teradata Parallel Transporter Application Programming Language Interface to load into and export data from the Teradata database. The following versions are supported:
+Microsoft connector for Teradata uses Teradata Parallel Transporter Application Programming Language Interface to load into and export data from the Teradata database. The following versions are supported during TTU lifecycle:
 
-- Teradata Parallel Transporter (Teradata PT) 16.10
-- Teradata Parallel Transporter (Teradata PT) 16.20
-
-The following Teradata database versions of data source are supported:
-
-- Teradata Database 16.20
-- Teradata Database 16.10
-- Teradata Database 15.10
-- Teradata Database 15.00
+- Teradata Tools and Utilities (TTU) 16.10 supports Teradata Database 14.00, 14.10, 15.00, 15.10, 16.10, 16.20 and 17.00/05
+- Teradata Tools and Utilities (TTU) 16.20 supports Teradata Database 14.10, 15.00, 15.10, 16.10, 16.20, 17.00/05 and 17.10
 
 Check [Teradata documentation](https://docs.teradata.com/) for details of Teradata Parallel Transporter Application programming interface programmer guide.
 
@@ -88,11 +81,22 @@ To design SSIS package in SSDT *targeting SQL Server 2017 and below*, you will n
 
 - Teradata Source Editor, view cannot be displayed when Data access mode is "Table Name – TPT Export". As work-around, use Advanced Editor of Teradata Source.
 
-- Teradata Destination, attribute ‘PackMaximum’ cannot be set to ‘True’. Otherwise, error will occur.
+- Teradata Destination, attribute "PackMaximum" cannot be set to "True". Otherwise, error will occur.
+
+- Teradata Source always reads columns in the order as they are defined in the table. ODBC, on the other hand, requires columns be read in a specific order in certain circumstances [Getting Long Data](../../odbc/reference/develop-app/getting-long-data.md) and [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md). When the two orders do not match, read fails with error message "Invalid descriptor index, descriptor record does not exist, or descriptor record was not properly initialized."
+
+- Installing a new version over an old installation will not remove the old version entry from the installed program list. While this does not impact functioning of the new version, user can manually uninstall the old version in control panel "Programs and Features" to get rid of the old version entry.
 
 ## Uninstallation
 
 You can run uninstall wizard to remove **Microsoft connector for Teradata**.
+
+## Release Notes
+
+### Rev. 197
+
+**Bugfixes**
+1. When reading empty string data, Teradata Source would fail with error message "An error occurred when converting string to target codepage."
 
 ## Next steps
 

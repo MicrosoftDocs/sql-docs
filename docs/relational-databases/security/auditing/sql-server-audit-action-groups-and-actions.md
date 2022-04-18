@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "audit action groups [SQL Server]"
   - "audits [SQL Server], actions"
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-author: DavidTrigano
-ms.author: datrigan
+author: sravanisaluru
+ms.author: srsaluru
 ms.reviewer: vanto
 ms.custom: ""
-ms.date: "05/07/2021"
+ms.date: "03/23/2022"
 ---
 # SQL Server Audit Action Groups and Actions
 

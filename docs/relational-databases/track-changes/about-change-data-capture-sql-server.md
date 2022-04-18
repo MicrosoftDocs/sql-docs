@@ -48,15 +48,17 @@ The performance impact from enabling change data capture on Azure SQL Database i
 - Space available in the source database, since CDC artifacts (e.g. CT tables, cdc_jobs etc.) are stored in the same database 
 - Whether the database is single or pooled. For databases in elastic pools, in addition to considering the number of tables that have CDC enabled, pay attention to the number of databases those tables belong to. Databases in a pool share resources among them (such as disk space), so enabling CDC on multiple databases runs the risk of reaching the max size of the elastic pool disk size. Monitor resources such as CPU, memory and log throughput. 
 
-To provide more specific performance optimization guidance to customers, more details are needed on each customer’s workload. However, below is some additional general guidance:
+To provide more specific performance optimization guidance to customers, more details are needed on each customer’s workload. However, below is some additional general guidance, based on performance tests ran on TPCC workload:
 
-- Consider increasing the number of vCores or shift to a higher database tier to ensure the same performance level as before CDC was enabled on your Azure SQL Database.
+- Consider increasing the number of vCores or shift to a higher database tier (e.g. Hyperscale) to ensure the same performance level as before CDC was enabled on your Azure SQL Database.
 
 - Monitor space utilization closely and test your workload thoroughly before enabling CDC on databases in production.
 
+- Monitor log generation rate. To learn more [here](/azure/azure-sql/database/resource-limits-logical-server#resource-consumption-by-user-workloads-and-internal-processes). 
+
 - Scan/cleanup are part of user workload (user’s resources are used). Performance impact can be substantial since entire rows are added to change tables and for updates operations pre-image is also included.  
 
-- Elastic Pools - Number of CDC-enabled databases should not exceed the number of vCores of the pool, in order to avoid latency increase.
+- Elastic Pools - Number of CDC-enabled databases should not exceed the number of vCores of the pool, in order to avoid latency increase. Learn more about resource management in dense Elastic Pools [here](/azure/azure-sql/database/elastic-pool-resource-management). 
 
 - Cleanup – based on the customer's workload, it may be advised to keep the retention period smaller than the default of 3 days, to ensure that the cleanup catches up with all changes in change table. In general, it is good to keep the retention low and track the database size.  
 
@@ -221,8 +223,20 @@ DDL operations bypassing ANSI_WARNINGS will cause the CDC scheduler to fail.
 **Computed columns**
 CDC does not support the values for computed columns even if the computed column is defined as persisted. Computed columns that are included in a capture instance always have a value of NULL. This behavior is intended, and not a bug.
 
+**Point-in-time restore (PITR)**
+If you enabled CDC on your database as an AAD user, PITR will not work and it will fail. PITR will only work when you enable CDC on your database as a SQL user.
+
+**Azure Active Directory (AAD)**
+If you create a database in Azure SQL Database as an AAD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another AAD user will be able to enable/disable change data capture on the same database.
+
+Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an AAD user won't work.
+
+**Aggressive log truncation**
+When enabling CDC on your Azure SQL Database, you should ensure that aggressive log truncation is disabled (the CDC scan uses the database log).
+
 ## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Enable and Disable change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   
  [Work with Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [Administer and Monitor change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
+[Temporal Tables](../../relational-databases/tables/temporal-tables.md)

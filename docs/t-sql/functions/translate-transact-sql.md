@@ -11,6 +11,8 @@ ms.topic: reference
 f1_keywords: 
   - "TRANSLATE"
   - "TRANSLATE_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "TRANSLATE function"
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec

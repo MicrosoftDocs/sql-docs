@@ -10,7 +10,6 @@ ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
-##RW##Phase2
 ---
 # Choose a database engine upgrade method
 
@@ -28,10 +27,10 @@ There are several approaches to consider when you are planning to upgrade the [!
 
 > [!NOTE]  
 > You may also consider upgrading the Azure SQL Database or virtualizing your SQL Server environment as part of your upgrade plan. These articles are out of scope for this article, but here are some links:
->  
->- [SQL Server on Azure Virtual Machines overview](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
->- [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
->- [Selecting a SQL Server option in Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview)
+
+> - [SQL Server on Azure Virtual Machines overview](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
+> - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
+> - [Selecting a SQL Server option in Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview).
 
 ## Upgrade in-place
 
@@ -65,7 +64,7 @@ With this approach, you maintain the current environment while you build a new [
 
 - **System objects:** Some applications depend on information, entities, and/or objects that are outside of the scope of a single user database. Typically, an application has dependencies on the `master` and `msdb` databases, and also on the user database. Anything stored outside of a user database that is required for the correct functioning of that database must be made available on the destination server instance. For example, the logins for an application are stored as metadata in the `master` database, and they must be re-created on the destination server. If an application or database maintenance plan depends on SQL Server Agent jobs, whose metadata is stored in the `msdb` database, you must re-create those jobs on the destination server instance. Similarly, the metadata for a server-level trigger is stored in `master`.
 
-When you move the database for an application to another server instance, you must re-create all the metadata of the dependent entities and objects in `master` and `msdb` on the destination server instance. For example, if a database application uses server-level triggers, just attaching or restoring the database on the new system is not enough. The database will not work as expected unless you manually re-create the metadata for those triggers in the `master` database. For detailed information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)
+  When you move the database for an application to another server instance, you must re-create all the metadata of the dependent entities and objects in `master` and `msdb` on the destination server instance. For example, if a database application uses server-level triggers, just attaching or restoring the database on the new system is not enough. The database will not work as expected unless you manually re-create the metadata for those triggers in the `master` database. For detailed information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)
 
 - **Integration Services packages stored in `msdb`:** If you are storing packages in `msdb`, you will need to either script out those packages using the [dtutil Utility](../../integration-services/dtutil-utility.md) or redeploy them to the new server. Before using the packages on the new server, you will need to upgrade the packages to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).
 
@@ -87,7 +86,7 @@ For example, you may use this approach to upgrade:
 - An x86 installation of SQL Server as [!INCLUDE[ss2016](../../includes/sssql16-md.md)] and later do not support x86 installations.
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to new hardware and/or a new version of the operating system.
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in conjunction with server consolidation.
-- SQL Server 2005 as [!INCLUDE[ss2016](../../includes/sssql16-md.md)] and later do not support the in-place upgrade of SQL Server 2005. For more information, see [Are you upgrading from SQL Server 2005](../../sql-server/end-of-support/sql-server-end-of-support-overview.md).
+- SQL Server 2005 as [!INCLUDE[ss2016](../../includes/sssql16-md.md)] and later do not support the in-place upgrade of SQL Server 2005. For more information, see [Are you upgrading from an older version of SQL Server](../../sql-server/end-of-support/sql-server-end-of-support-overview.md).
 
 The steps required for a new installation upgrade vary slightly depending upon whether you are using attached storage or SAN storage.
 

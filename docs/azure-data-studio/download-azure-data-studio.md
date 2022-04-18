@@ -11,7 +11,7 @@ ms.custom:
   - seodec18
   - contperf-fy21q4
   - intro-overview
-ms.date: 02/24/2022 
+ms.date: 03/17/2022 
 ---
 
 # Download and install Azure Data Studio
@@ -26,10 +26,10 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 
 ## Download Azure Data Studio
 
-Azure Data Studio 1.35.0 is the latest general availability (GA) version.
+Azure Data Studio 1.35.1 is the latest general availability (GA) version.
 
-- Release number: 1.35.0
-- Release date: February 24, 2022
+- Release number: 1.35.1
+- Release date: March 17, 2022
 
 | Platform | Download |
 |----------|----------|
@@ -214,48 +214,16 @@ As an alternative, if you want to try out the beta features and send feedback, y
 
 ## Supported operating systems
 
-Azure Data Studio runs on Windows, macOS, and Linux and is supported on the following platforms:
+Azure Data Studio runs on Windows, macOS, and Linux.  The following versions are supported:
 
-### Windows operating systems
-
-- Windows 11 (64-bit)
-- Windows 10 (64-bit)
-- Windows 8.1 (64-bit)
-- Windows 8 (64-bit)
-- Windows 7 (SP1)
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2 (64-bit)
-- Windows Server 2012 (64-bit)
-- Windows Server 2008 R2 (64-bit)
-
-### macOS operating systems
-
-- macOS 10.15 Catalina
-- macOS 10.14 Mojave
-- macOS 10.13 High Sierra
-- macOS 10.12 Sierra
-- macOS 11.1  Big Sur
-
-### Linux operating systems
-
-- Red Hat Enterprise Linux (RHEL) 8.3
-- Red Hat Enterprise Linux 8.2
-- Red Hat Enterprise Linux 8.1
-- Red Hat Enterprise Linux 8.0
-- Red Hat Enterprise Linux 7.4
-- Red Hat Enterprise Linux 7.3
-- SUSE Linux Enterprise Server v12 SP2
-- Ubuntu 20.04
-- Ubuntu 18.04
-- Ubuntu 16.04
+- Windows: 7 (with SP1), 8, 8.1, 10, 11
+- Windows Server: 2016, 2019, 2022
+- macOS: 10.12+, 11, 12
+- Linux: Debian 9+, RHEL 7+, Ubuntu 18.04+
 
 > [!Note]
 >
-> Versions 7.3 and 7.4 of RHEL are no longer supported by Red Hat. RHEL 7.3 support ended November 30, 2018, and RHEL 7.4 ended August 31, 2019.
->
-> For more information, see the [RHEL 7 Application Compatibility Guide](https://access.redhat.com/articles/rhel-abi-compatibility) or the [RHEL 8 Application Compatibility Guide](https://access.redhat.com/articles/rhel8-abi-compatibility).
+> Incremental versions within a major operating system release may no longer be in support by the operating system. Consult the documentation for your operating system to ensure you have received applicable updates.
 
 ## System requirements
 

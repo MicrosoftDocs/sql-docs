@@ -2,7 +2,7 @@
 description: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2019"
+ms.date: "04/13/2022"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, sql-database"
 ms.reviewer: ""
@@ -16,6 +16,8 @@ f1_keywords:
   - "CREATE_DATABASE_SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_CREDENTIAL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement"
@@ -76,7 +78,7 @@ Here are some applications of database scoped credentials:
 
 - [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] uses a database scoped credential to access non-public Azure blob storage or Kerberos-secured Hadoop clusters with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-- [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] uses a database scoped credential to access non-public Azure blob storage with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
+- [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] uses a database scoped credential to access non-public Azure blob storage with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md). For more information about Azure Synapse storage authentication, see [Use external tables with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-external-tables).
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials for its global query feature. This is the ability to query across multiple database shards.
 
@@ -133,7 +135,7 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';
 -- Create a database scoped credential.
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
-    IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>',
+    IDENTITY = '<client_id>@<OAuth_2.0_Token_EndPoint>',
     SECRET = '<key>'
 ;
 ```

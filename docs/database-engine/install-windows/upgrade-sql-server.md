@@ -13,7 +13,6 @@ helpviewer_keywords:
 author: rwestMSFT
 ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
-##RW##Phase1
 ---
 # Upgrade SQL Server
 

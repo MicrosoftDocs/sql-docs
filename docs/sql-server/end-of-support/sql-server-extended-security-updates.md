@@ -179,7 +179,7 @@ Now you can continue to the [Confirmation](#confirmation) section.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-terms.png" alt-text="Screenshot showing terms and conditions":::
 
-1. Once you have added your SQL Server instances, you will see them in the portal. Because they were added manually, they will always show in a disconnected state, with the description **Registered**.
+1. Once you have added your SQL Server instances, you will see them in the portal after a few minutes. Because they were added manually, they will always show in a disconnected state, with the description **Registered**.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-connected-servers.png" alt-text="Screenshot showing two registered SQL Server instances on the Azure Arc portal":::
 

@@ -1,5 +1,5 @@
 ---
-title: Disaster recovery for SQL Server | Microsoft Docs
+title: Business continuity and database recovery - SQL Server | Microsoft Docs
 description: Use this overview of business continuity solutions for high availability and disaster recovery in SQL Server to provide resources with minimal interruption.
 author: MashaMSFT
 ms.author: mathoma

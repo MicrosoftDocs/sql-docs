@@ -57,7 +57,7 @@ In-Memory OLTP provides the following objects that can be used for memory-optimi
   
 ## B. Scenario: Replace global tempdb &#x23;&#x23;table  
   
-Replacing a global temporary table with a memory-optimized SCHEMA_ONLY table is fairly straightforward. The biggest change is to create the table at deployment time, not at runtime. Creation of memory-optimized tables takes longer than creation of traditional tables, due to the compile-time optimizations. Creating and dropping memory-optimized tables as part of the online workload would impact the performance of the workload, as well as the performance of redo on AlwaysOn secondaries and database recovery.
+Replacing a global temporary table with a memory-optimized SCHEMA_ONLY table is fairly straightforward. The biggest change is to create the table at deployment time, not at runtime. Creation of memory-optimized tables takes longer than creation of traditional tables, due to the compile-time optimizations. Creating and dropping memory-optimized tables as part of the online workload would impact the performance of the workload, as well as the performance of redo on Always On Availability Group secondaries and database recovery.
 
 Suppose you have the following global temporary table.  
   

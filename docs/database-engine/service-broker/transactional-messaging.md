@@ -4,9 +4,9 @@ description: "The foundation of the Service Broker programming model is transact
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -26,12 +26,7 @@ If the application instead receives the message in one transaction and updates t
 
 When an application processes a message and makes no changes to the database, the guarantee holds. The message has been processed successfully. An application that uses Service Broker may choose to ignore a message, but the application must not inadvertently lose a message, even in cases where the application loses connectivity to the database or exits unexpectedly.
 
-## See Also
+## See also
 
-
-
-### Concepts
-
-[Controlling Transactions (ADO)](../../ado/guide/data/controlling-transactions-ado.md)
-
-[Broker System Messages](broker-system-messages.md)
+- [Controlling Transactions (ADO)](../../ado/guide/data/controlling-transactions-ado.md)
+- [Broker System Messages](broker-system-messages.md)

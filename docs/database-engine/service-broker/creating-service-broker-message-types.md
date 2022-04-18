@@ -4,9 +4,9 @@ description: "A message type defines the name of a specific kind of message and 
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -22,15 +22,11 @@ The Service Broker communications protocols are designed to work with this messa
 
 ## Choosing a Validation Type
 
-
-
 The validation specified for the message depends on the content of the message. A common practice is to use the most restrictive validation available during testing, and then to choose less-restrictive validation to improve performance when the application is deployed. For example, it is possible to exchange a typed XML document as the body of a message that specifies a validation of NONE. In this case, your application validates the message when processing the XML.
 
 The network format for a message includes the name of the message type. Therefore, message type names are often chosen to avoid collation issues and naming conflicts. For more information on naming, see [Naming Service Broker Objects](naming-service-broker-objects.md).
 
 ## Indicating Success and Failure
-
-
 
 An application typically does not define new message types to indicate success or failure. Instead, use the END CONVERSATION statement to indicate that the conversation is complete and that the task succeeded. If the task failed, include the WITH ERROR option to return an error message on the conversation.
 
@@ -38,13 +34,7 @@ In general, only one of the participants in the conversation should end the conv
 
 Either participant can end a conversation with an error at any time. For a discussion of handling Service Broker error messages, see [Handling Service Broker Error Messages](handling-service-broker-error-messages.md).
 
-## See Also
+## See also
 
-### Reference
-
-[CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
-
-### Concepts
-
-[Service Broker Communication Protocols](service-broker-communication-protocols.md)
-
+- [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)
+- [Service Broker Communication Protocols](service-broker-communication-protocols.md)

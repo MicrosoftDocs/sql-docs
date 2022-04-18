@@ -1,12 +1,12 @@
-﻿---
+---
 title: Service Broker Communication Protocols
 description: "Service Broker uses a broker-specific protocol to communicate with remote brokers."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -17,8 +17,6 @@ ms.date: "03/30/2022"
 Service Broker uses a broker-specific protocol to communicate with remote brokers. The broker manages connections separately from the normal pool of client connections. In order for two SQL Server instances to exchange Service Broker messages, each instance must be able to send TCP/IP traffic to the port that the other instance uses for Service Broker communications. By convention, Service Broker often uses port 4022 for broker-to-broker communication. However, the exact port is specified when the endpoint is created.
 
 ## Protocol Layers
-
-
 
 Service Broker takes a layered approach to communication. Each layer builds on the underlying layer to help ensure reliable delivery. This approach allows an application to operate without knowledge of the location of the remote service or the physical transport that the broker uses to communicate. In most cases, these protocols are transparent to an application. However, understanding the role each protocol layer plays may help in troubleshooting problems with an application.
 
@@ -47,8 +45,6 @@ The transport protocol layer handles the actual network transmission. This layer
 Service Broker endpoints set options for the transport protocol. SQL Server does not contain Service Broker endpoints by default. For more information on creating a Service Broker endpoint, see [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md).
 
 ## Service Broker Message Processing
-
-
 
 Service Broker uses two distinct categories of message. A sequenced message is a message that must be delivered to an application exactly once, in order. An unsequenced message is a message that can be processed immediately, regardless of the sequence in which the message arrives.
 
@@ -84,19 +80,17 @@ The destination for the message decrypts the message, and then compares the sign
 
 ## Service Broker Transmission Objects
 
-
-
 A Service Broker transmission object is an in-memory object that manages and records the state of message transmissions for a dialog. Each conversation endpoint has one transmission object.
 
 A dialog requests a transmission object when it does the following:
 
-  - Sends a message through the transmission queue. This includes the following:
-    
-      - All messages sent to a remote instance of the Database Engine
-    
-      - Messages to sent queues in the local instance if the message cannot be directly inserted into the destination queue
+- Sends a message through the transmission queue. This includes the following:
 
-  - Receives either a remote message or a message that comes from a local transmission queue.
+    - All messages sent to a remote instance of the Database Engine
+
+    - Messages to sent queues in the local instance if the message cannot be directly inserted into the destination queue
+
+- Receives either a remote message or a message that comes from a local transmission queue.
 
 A transmission object is created the first time that a dialog requests one. Service Broker uses the same transmission object for subsequent requests from that dialog. Transmission objects are modified every time that Service Broker has to record a change in the state of transmissions for the dialog. Transmission objects are about 1 KB.
 
@@ -105,8 +99,6 @@ To free memory, Service Broker periodically stores batches of inactive transmiss
 Transmission objects are not used for either sending or receiving local messages that can be inserted directly into the destination queue.
 
 ## Network Communication Flow
-
-
 
 The following illustration presents a high-level view of Service Broker network communication between two SQL Server instances.
 
@@ -118,11 +110,6 @@ Network connections occur between two Service Broker endpoints. These connection
 
 To deliver a message, Service Broker holds the message in the transmission queue for the database that sent the message. The recipient delivers the message directly to the queue for the destination service. If that queue is OFF, the message is held temporarily in the transmission queue for the receiving database. The queue for the sending service is not involved in the operation. The transmission queue for the database that hosts the receiving service is only involved if the destination queue is OFF.
 
-## See Also
+## See also
 
-
-
-### Concepts
-
-[Service Broker Routing](service-broker-routing.md)
-
+- [Service Broker Routing](service-broker-routing.md)

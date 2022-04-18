@@ -1,12 +1,12 @@
-﻿---
+---
 title: Managing Security (Service Broker)
 description: "Service Broker provides a flexible security framework for helping you secure your applications."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -17,8 +17,6 @@ ms.date: "03/30/2022"
 Service Broker provides a flexible security framework for helping you secure your applications. This topic explains considerations for managing Service Broker security.
 
 ## Planning Security
-
-
 
 Each application has unique security requirements. Part of managing security is to carefully plan the requirements for your application. Transport security, dialog security, and the security infrastructure built into SQL Server work together to help you secure your application.
 
@@ -36,8 +34,6 @@ Service Broker transport security prevents unauthorized network connections to S
 
 ## Maintaining Security
 
-
-
 Maintaining security for Service Broker applications consists of two main tasks--auditing the application configuration and replacing the certificates that the application uses.
 
 Periodically audit the application to determine that the security configuration is unchanged, and that the security configuration meets the business needs for the application.
@@ -46,13 +42,7 @@ Dialog security relies on certificates for authentication and encryption. Transp
 
 For more information on certificates, see [Certificates and Service Broker](certificates-and-service-broker.md) and [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md).
 
-## See Also
+## See also
 
-
-
-### Concepts
-
-[Service Broker Dialog Security](service-broker-dialog-security.md)
-
-[Service Broker Transport Security](service-broker-transport-security.md)
-
+- [Service Broker Dialog Security](service-broker-dialog-security.md)
+- [Service Broker Transport Security](service-broker-transport-security.md)

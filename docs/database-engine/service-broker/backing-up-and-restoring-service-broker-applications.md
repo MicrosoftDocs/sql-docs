@@ -4,9 +4,9 @@ description: "Backup and restore procedures for a Service Broker service are int
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -20,14 +20,7 @@ The **msdb** database contains routes for incoming messages. Therefore, these ro
 
 Service Broker routing relies on a unique identifier in each database to correctly deliver messages. When restoring a backup that is intended to replace the original database, ensure that this identifier is not changed. When restoring a copy of a database to a different location, take care to change this identifier. For more information on Service Broker database identities, see [Managing Service Broker Identities](managing-service-broker-identities.md).
 
-## See Also
+## See also
 
-
-
-### Concepts
-
-[Migration (Service Broker)](migration.md)
-
-#### Other Resources
-
-[Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Migration (Service Broker)](migration.md)
+- [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)

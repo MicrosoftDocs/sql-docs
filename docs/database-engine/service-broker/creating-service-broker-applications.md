@@ -4,9 +4,9 @@ description: "This section provides a general overview of the structure of a Ser
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -34,19 +34,13 @@ If Service Broker detects an error or the conversation lifetime expires, Service
 
 ## In This Section
 
-
-
-  - [Choosing a Startup Strategy](choosing-a-startup-strategy.md)  
+- [Choosing a Startup Strategy](choosing-a-startup-strategy.md)  
     Discusses some of the most common strategies for starting an application that uses Service Broker.
 
-  - [Service Broker Application Outline](service-broker-application-outline.md)  
+- [Service Broker Application Outline](service-broker-application-outline.md)  
     Describes the basic steps to receive and process messages.
 
-## See Also
+## See also
 
-### Concepts
-
-[Service Broker Activation](service-broker-activation.md)
-
-[Transactional Messaging](transactional-messaging.md)
-
+- [Service Broker Activation](service-broker-activation.md)
+- [Transactional Messaging](transactional-messaging.md)

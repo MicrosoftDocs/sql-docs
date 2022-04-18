@@ -969,8 +969,6 @@ items:
           href: database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
         - name: Add secondary replica
           href: database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md
-        - name: Use the Add Azure Replica Wizard (SQL Server)
-          href: database-engine/availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md
         - name: Change session-timeout period
           href: database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md
         - name: Change the HADR cluster context
@@ -4895,7 +4893,7 @@ items:
   - name: End of support
     items:
     - name: Overview
-      href: sql-server/end-of-support/sql-server-end-of-life-overview.md
+      href: sql-server/end-of-support/sql-server-end-of-support-overview.md
       displayName: end of support, end of life
     - name: Extended security updates
       href: sql-server/end-of-support/sql-server-extended-security-updates.md
@@ -13629,8 +13627,12 @@ items:
         href: relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md
       - name: sp_columns
         href: relational-databases/system-stored-procedures/sp-columns-transact-sql.md
+      - name: sp_create_openrowset_statistics 
+        href: relational-databases/system-stored-procedures/sp-create-openrowset-statistics.md
       - name: sp_databases
         href: relational-databases/system-stored-procedures/sp-databases-transact-sql.md
+      - name: sp_drop_openrowset_statistics 
+        href: relational-databases/system-stored-procedures/sp-drop-openrowset-statistics.md
       - name: sp_fkeys
         href: relational-databases/system-stored-procedures/sp-fkeys-transact-sql.md
       - name: sp_pkeys

@@ -1,12 +1,12 @@
-﻿---
+---
 title: Starting and Stopping the Queue
 description: "Use the ALTER QUEUE statement to start and stop a queue."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -18,12 +18,13 @@ Use the ALTER QUEUE statement to start and stop a queue. When a queue is started
 
 Administrators often create queues in an unavailable state. This prevents Service Broker from placing messages on the queue until all of the objects for a service are created. When the service is ready to receive messages, the administrator makes the queue available with the following statement:
 
-```
+```sql
     ALTER QUEUE dbo.ExpenseQueue WITH STATUS = ON ;
 ```
 
-The statement below makes the queue unavailable for receive:
-```
+The following statement makes the queue unavailable for receive:
+
+```sql
     ALTER QUEUE dbo.ExpenseQueue WITH STATUS = OFF ;
 ```
 
@@ -31,9 +32,6 @@ When a queue is unavailable for receive, an application cannot process the messa
 
 When a message arrives for a queue that is unavailable, Service Broker holds the message in the transmission queue for the database, rather than delivering the message to the queue.
 
-## See Also
+## See also
 
-### Reference
-
-[ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)
-
+- [ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)

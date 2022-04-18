@@ -4,9 +4,9 @@ description: "Messages are the information exchanged between applications that u
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -22,13 +22,7 @@ The content of the message is determined by the application. When a message is r
 
 An application typically processes the content of a message based on the contract and the message type.
 
-## See Also
+## See also
 
-
-
-### Concepts
-
-[Message Types](message-types.md)
-
-[Building Applications with Service Broker](building-applications-with-service-broker.md)
-
+- [ Message Types](message-types.md)
+- [Building Applications with Service Broker](building-applications-with-service-broker.md)

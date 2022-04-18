@@ -83,7 +83,7 @@ There are several approaches to consider when you are planning to upgrade the [!
 -   An x86 installation of SQL Server as [!INCLUDE[ss2016](../../includes/sssql16-md.md)] and later do not support x86 installations.   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to new hardware and/or a new version of the operating system.    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in conjunction with server consolidation.   
--   SQL Server 2005 as [!INCLUDE[ss2016](../../includes/sssql16-md.md)] and later do not support the in-place upgrade of SQL Server 2005. For more information, see [Are you upgrading from SQL Server 2005](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).
+-   SQL Server 2005 as [!INCLUDE[ss2016](../../includes/sssql16-md.md)] and later do not support the in-place upgrade of SQL Server 2005. For more information, see [Are you upgrading from an older version of SQL Server](../../sql-server/end-of-support/sql-server-end-of-support-overview.md).
 
   
 The steps required for a new installation upgrade vary slightly depending upon whether you are using attached storage or SAN storage.  

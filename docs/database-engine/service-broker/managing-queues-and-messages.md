@@ -4,9 +4,9 @@ description: "When a Service Broker application is in production, most day-to-da
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -18,25 +18,18 @@ When a Service Broker application is in production, most day-to-day management o
 
 ## In This Section
 
-
-
-  - [Starting and Stopping the Queue](starting-and-stopping-the-queue.md)  
+- [Starting and Stopping the Queue](starting-and-stopping-the-queue.md)  
     Describes how to start and stop a queue.
 
-  - [Querying Queues](querying-queues.md)  
+- [Querying Queues](querying-queues.md)  
     Describes the data that a queue contains, and the process for running queries against a queue.
 
-  - [Removing Poison Messages](removing-poison-messages.md)  
+- [Removing Poison Messages](removing-poison-messages.md)  
     Describes how to handle messages that cannot be processed by the service.
 
-  - [Managing Conversation Priorities](managing-conversation-priorities.md)  
+- [Managing Conversation Priorities](managing-conversation-priorities.md)  
     Describes how to enable, specify, and query conversation priorities.
 
-## See Also
+## See also
 
-
-
-#### Other Resources
-
-[Managing Service Broker Applications](managing-service-broker-applications.md)
-
+- [Managing Service Broker Applications](managing-service-broker-applications.md)

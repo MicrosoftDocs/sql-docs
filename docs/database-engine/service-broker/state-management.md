@@ -4,9 +4,9 @@ description: "An application that maintains state typically stores that state in
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -24,13 +24,7 @@ An application may also use a state table for auditing or logging purposes. The 
 
 Some applications may require a precise record of the messages sent and received while the conversation is active. For this scenario, Service Broker provides message retention.
 
-## See Also
+## See also
 
-### Reference
-
-[CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
-
-### Concepts
-
-[Service Broker Application Outline](service-broker-application-outline.md)
-
+- [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)
+- [Service Broker Application Outline](service-broker-application-outline.md)

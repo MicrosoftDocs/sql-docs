@@ -4,9 +4,9 @@ description: "Contracts define the name of a specific business task and list the
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -24,16 +24,8 @@ More than one contract can use the same message types. For example, a message th
 
 The network format for a message includes the name of the contract. Therefore, contract names are often chosen to avoid collation issues and naming conflicts. For more information on naming, see [Naming Service Broker Objects](naming-service-broker-objects.md).
 
-## See Also
+## See also
 
-### Reference
-
-[CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
-
-
-### Concepts
-
-[Conversation Architecture](conversation-architecture.md)
-
-[Contracts](contracts.md)
-
+- [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)
+- [Conversation Architecture](conversation-architecture.md)
+- [Contracts](contracts.md)

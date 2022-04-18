@@ -4,9 +4,9 @@ description: "Sometimes it may be necessary to temporarily stop a Service Broker
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -26,15 +26,8 @@ Stopping a queue does not reset the conversation timer or the dialog lifetime ti
 
 To restart the application, alter the queue that the application uses so that the queue status is ON. This starts the queue. When the queue has an activation stored procedure specified and the queue contains messages, Service Broker immediately starts the activation stored procedure when the queue starts. Because the queue is now available, Service Broker also generates messages for conversation timers and dialog lifetime timers that expired while the queue was stopped. For an application that does not use activation, restart the application using the startup procedure defined for that application.
 
-## See Also
+## See also
 
-### Reference
-
-[ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)
-
-### Concepts
-
-[Starting and Stopping the Queue](starting-and-stopping-the-queue.md)
-
-[Uninstalling Service Broker Applications](uninstalling-service-broker-applications.md)
-
+- [ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)
+- [Starting and Stopping the Queue](starting-and-stopping-the-queue.md)
+- [Uninstalling Service Broker Applications](uninstalling-service-broker-applications.md)

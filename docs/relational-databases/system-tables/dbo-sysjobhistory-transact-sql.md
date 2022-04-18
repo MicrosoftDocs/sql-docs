@@ -75,7 +75,7 @@ JOIN msdb.dbo.sysjobhistory sh
 GO
 ```
 
-# Next steps
+## Next steps
 
 Learn more about related concepts in the following articles:
 

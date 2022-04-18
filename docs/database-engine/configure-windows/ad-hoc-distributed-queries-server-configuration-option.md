@@ -23,7 +23,7 @@ ms.author: randolphwest
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow ad hoc distributed queries using OPENROWSET and OPENDATASOURCE. When this option is set to 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows ad hoc access. When this option is not set or is set to 0, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow ad hoc access.  
+By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't allow ad hoc distributed queries using OPENROWSET and OPENDATASOURCE. When this option is set to 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows ad hoc access. When this option isn't set or is set to 0, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't allow ad hoc access.  
   
 Ad hoc distributed queries use the OPENROWSET and OPENDATASOURCE functions to connect to remote data sources that use OLE DB. OPENROWSET and OPENDATASOURCE should be used only to reference OLE DB data sources that are accessed infrequently. For any data sources that will be accessed more than several times, define a linked server.  
   
@@ -31,7 +31,7 @@ Enabling the use of ad hoc names means that any authenticated login to [!INCLUDE
   
 ## Remarks
 
-If you attempt to make an ad hoc connection with **ad hoc distributed queries** disabled, you will see the following error:
+If you attempt to make an ad hoc connection with **ad hoc distributed queries** disabled, you'll see the following error:
 
 ```output
 Msg 7415, Level 16, State 1, Line 1  

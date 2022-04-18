@@ -11,6 +11,8 @@ ms.topic: reference
 f1_keywords: 
   - "DROP DATABASE SCOPED CREDENTIAL"
   - "DROP_DATABASE_SCOPED_CREDENTIAL_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "DROP DATABASE SCOPED CREDENTIAL statement"
   - "credential [SQL Server], DROP DATABASE SCOPED CREDENTIAL statement"

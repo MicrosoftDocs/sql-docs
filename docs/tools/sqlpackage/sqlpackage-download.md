@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 1/25/2022
+ms.date: 4/11/2022
 ---
 
 # Download and install sqlpackage
@@ -22,14 +22,13 @@ Download and install the latest releases:
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
-|[Windows](#get-sqlpackage-for-windows)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2185764)|January 25, 2022|19.0|16.0.5400.1|
-|[macOS .NET Core](#get-sqlpackage-net-core-for-macos) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185765)|January 25, 2022|19.0|16.0.5400.1|
-|[Linux .NET Core](#get-sqlpackage-net-core-for-linux) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185670)|January 25, 2022|19.0|16.0.5400.1|
-|[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185669)|January 25, 2022|19.0|16.0.5400.1|
+|[Windows](#windows-net-framework)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2185764)|January 25, 2022|19.0|16.0.5400.1|
+|[macOS .NET Core](#macos-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185765)|January 25, 2022|19.0|16.0.5400.1|
+|[Linux .NET Core](#linux-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185670)|January 25, 2022|19.0|16.0.5400.1|
+|[Windows .NET Core](#windows-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185669)|January 25, 2022|19.0|16.0.5400.1|
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional languages, see the [Available Languages](#available-languages) section.
 
-An evergreen link ([https://aka.ms/sqlpackage-linux](https://aka.ms/sqlpackage-linux)) is available that points to the current version of sqlpackage for [Linux .NET Core](#get-sqlpackage-net-core-for-linux), which can be used in automating environments with the latest sqlpackage.
 
 ## DacFx
 
@@ -44,54 +43,17 @@ dotnet add package Microsoft.SqlServer.DacFx
 > [!NOTE]
 > Additional NuGet packages were published under the DacFx name, "Microsoft.SqlServer.DacFx.x64" and "Microsoft.SqlServer.DacFx.x86". Support for both platforms is covered under the "Microsoft.SqlServer.DacFx" package. New references should be made to this package, not the x64 or x86 variants.
 
-## Get sqlpackage for Windows
+## Automated environments
 
-This release of sqlpackage includes a standard Windows installer experience, and a .zip: 
+Evergreen links are available for downloading the latest Sqlpackage versions:
+- Linux ([https://aka.ms/sqlpackage-linux](https://aka.ms/sqlpackage-linux))
+- macOS ([https://aka.ms/sqlpackage-macos](https://aka.ms/sqlpackage-macos))
+- Windows ([https://aka.ms/sqlpackage-windows](https://aka.ms/sqlpackage-windows))
+- Windows, .NET Framework ([https://aka.ms/dacfx-msi](https://aka.ms/dacfx-msi))
 
-1. Download and run the [DacFramework.msi installer for Windows](https://aka.ms/dacfx-msi).
-2. Open a new Command Prompt window, and run sqlpackage.exe
-    - sqlpackage is installed to the ```C:\Program Files\Microsoft SQL Server\160\DAC\bin``` folder
+## Linux (.NET Core)
 
-## Get sqlpackage .NET Core for Windows
-
-1. Download [sqlpackage for Windows](https://go.microsoft.com/fwlink/?linkid=2185669).
-2. To extract the file by right clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory.
-3. Open a new Terminal window and cd to the location where sqlpackage was extracted:
-
-   ```cmd
-   > sqlpackage
-   ```
-
-## Get sqlpackage .NET Core for macOS
-
-1. Download [sqlpackage for macOS](https://go.microsoft.com/fwlink/?linkid=2185765).
-2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
-
-   ```bash
-   $ mkdir sqlpackage
-   $ unzip ~/Downloads/sqlpackage-osx-<version string>.zip -d ~/sqlpackage
-   $ chmod +x ~/sqlpackage/sqlpackage
-   $ echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
-   $ source ~/.bash_profile
-   $ sqlpackage
-   ```
-
-   > [!NOTE]
-   > Security settings may require modification to run sqlpackage on macOS. Use the following commands to interact with Gatekeeper from the command line.
-
-   **Before executing sqlpackage:**
-   ```bash
-   $ sudo spctl --master-disable
-   ```
-
-   **After executing sqlpackage:**
-   ```bash
-   $ sudo spctl --master-enable
-   ```
-
-## Get sqlpackage .NET Core for Linux
-
-1. Download [sqlpackage for Linux](https://aka.ms/sqlpackage-linux) by using one of the installers or the tar.gz archive.
+1. Download [sqlpackage for Linux](https://aka.ms/sqlpackage-linux).
 2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    ```bash
@@ -131,6 +93,51 @@ This release of sqlpackage includes a standard Windows installer experience, and
    $ sudo apt-get install libicu60      # for 18.x
    $ sudo apt-get install libicu66      # for 20.x
    ```
+
+## macOS (.NET Core)
+
+1. Download [sqlpackage for macOS](https://go.microsoft.com/fwlink/?linkid=2185765).
+2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
+
+   ```bash
+   $ mkdir sqlpackage
+   $ unzip ~/Downloads/sqlpackage-osx-<version string>.zip -d ~/sqlpackage
+   $ chmod +x ~/sqlpackage/sqlpackage
+   $ echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
+   $ source ~/.bash_profile
+   $ sqlpackage
+   ```
+
+   > [!NOTE]
+   > Security settings may require modification to run sqlpackage on macOS. Use the following commands to interact with Gatekeeper from the command line.
+
+   **Before executing sqlpackage:**
+   ```bash
+   $ sudo spctl --master-disable
+   ```
+
+   **After executing sqlpackage:**
+   ```bash
+   $ sudo spctl --master-enable
+   ```
+
+## Windows (.NET Core)
+
+1. Download [sqlpackage for Windows](https://go.microsoft.com/fwlink/?linkid=2185669).
+2. To extract the file by right clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory.
+3. Open a new Terminal window and cd to the location where sqlpackage was extracted:
+
+   ```cmd
+   > sqlpackage
+   ```
+
+## Windows (.NET Framework)
+
+This release of sqlpackage includes a standard Windows installer experience, and a .zip: 
+
+1. Download and run the [DacFramework.msi installer for Windows](https://aka.ms/dacfx-msi).
+2. Open a new Command Prompt window, and run sqlpackage.exe
+    - sqlpackage is installed to the ```C:\Program Files\Microsoft SQL Server\160\DAC\bin``` folder
 
 ## Uninstall sqlpackage
 

@@ -1,5 +1,5 @@
 ---
-title: "Uninstall SQL Server 2016 | Microsoft Docs"
+title: "Uninstall SQL Server | Microsoft Docs"
 description: Use these resources to uninstall an instance of SQL Server 2019 completely and prepare the system so that you can reinstall SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"

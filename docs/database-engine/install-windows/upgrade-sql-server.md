@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2016"
 
  Support for SQL Server 2012 will end on July 12, 2022. For new end of support options, see [New options for SQL Server 2012 and Windows Server 2012 End of Support](/lifecycle/announcements/sql-server-2012-windows-server-2012-end-of-support).
      
- If you're upgrading from an end-of-support version of SQL Server, such as SQL Server 2005, 2008, and 2008 R2, see the [end of support options](../../sql-server/end-of-support/sql-server-end-of-life-overview.md). For more information, see [SQL Server end of support options](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).
+ If you're upgrading from an end-of-support version of SQL Server, such as SQL Server 2005, 2008, and 2008 R2, see the [end of support options](../../sql-server/end-of-support/sql-server-end-of-support-overview.md). For more information, see [SQL Server end of support options](../../sql-server/end-of-support/sql-server-end-of-support-overview.md).
 
 
 ## Upgrade documentation 
@@ -46,7 +46,7 @@ The following articles will help you upgrade components of SQL Server:
 -   [Upgrade SQL Server Management Tools](../../database-engine/install-windows/upgrade-sql-server-management-tools.md)  
 -   [Upgrade SQL Server using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 -   [Upgrade to a different edition of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)  
--   [SQL Server end of support options](../../sql-server/end-of-support/sql-server-end-of-life-overview.md) 
+-   [SQL Server end of support options](../../sql-server/end-of-support/sql-server-end-of-support-overview.md) 
   
 ## See also  
 

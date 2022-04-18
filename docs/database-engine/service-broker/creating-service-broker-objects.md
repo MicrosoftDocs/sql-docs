@@ -4,9 +4,9 @@ description: "An application uses Service Broker by executing Transact-SQL state
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -48,7 +48,7 @@ To create the objects for a service, do the following:
 
 4. Create a service. The service definition specifies the queue that the service uses and the contracts for which this service is the target.
 
-In most cases, you create the target service and then use the contracts and message types created for the target service to create an initiating service. In some cases, however, you may create a target service for an initiating service that is already defined. In these cases, the target service uses the message types and contracts that the initiating service uses. For example, if you are creating a target service to receive event notifications, you use the contract **https://schemas.microsoft.com/SQL/Notifications/PostEventNotification**, because this is the contract that the initiating service uses.
+In most cases, you create the target service and then use the contracts and message types created for the target service to create an initiating service. In some cases, however, you may create a target service for an initiating service that is already defined. In these cases, the target service uses the message types and contracts that the initiating service uses. For example, if you are creating a target service to receive event notifications, you use the contract `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`, because this is the contract that the initiating service uses.
 
 ## Managing Object Definitions
 

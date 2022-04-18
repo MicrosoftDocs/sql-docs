@@ -76,7 +76,7 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 
 **Sources**
 
-- SQL Server 2005
+- SQL Server 2005 (deprecated)
 - SQL Server 2008
 - SQL Server 2008 R2
 - SQL Server 2012

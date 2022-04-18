@@ -55,7 +55,7 @@ STDistance() always returns *null* if the spatial reference IDs (SRIDs) of the *
 ## Examples  
  The following example finds the distance between two **geography** instances.  
   
-```  
+```sql
 DECLARE @g geography;  
 DECLARE @h geography;  
 SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  

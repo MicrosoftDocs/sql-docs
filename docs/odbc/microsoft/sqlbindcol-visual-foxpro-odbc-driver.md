@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLBindCol function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLBindCol (Visual FoxPro ODBC Driver)
 > [!NOTE]  

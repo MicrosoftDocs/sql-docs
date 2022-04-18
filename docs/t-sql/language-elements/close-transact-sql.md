@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "cursors [SQL Server], closing"
   - "CLOSE statement"
 ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # CLOSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

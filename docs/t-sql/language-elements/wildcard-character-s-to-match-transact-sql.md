@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "[ ] (wildcard - character(s) to match)"
 ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

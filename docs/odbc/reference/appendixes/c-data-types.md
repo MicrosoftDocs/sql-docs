@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "C buffers [ODBC]"
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # C Data Types
 ODBC C data types indicate the data type of C buffers used to store data in the application.  

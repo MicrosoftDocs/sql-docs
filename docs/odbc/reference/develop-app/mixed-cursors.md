@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "cursors [ODBC], mixed"
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Mixed Cursors
 

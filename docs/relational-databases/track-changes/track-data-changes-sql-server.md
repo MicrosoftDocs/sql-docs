@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], security"
   - "change data capture [SQL Server], other SQL Server features and"
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Track Data Changes (SQL Server)

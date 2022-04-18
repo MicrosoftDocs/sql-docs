@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Paradox driver [ODBC], SQLDriverConnect"
 ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLDriverConnect (Paradox Driver)
 > [!NOTE]  

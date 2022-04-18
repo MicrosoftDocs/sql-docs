@@ -1,6 +1,6 @@
 ---
-title: "Formatting Lines, Colors, and Images (Report Builder) | Microsoft Docs"
-description: Explore ways to use lines, colors, data regions, and images in Report Builder. Visually tie items together to improve readability in Report Builder.
+title: "Formatting lines, colors, and images in a paginated report | Microsoft Docs"
+description: Explore ways to use lines, colors, data regions, and images in a paginated report. Visually tie items together to improve readability in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -25,13 +25,17 @@ ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Formatting Lines, Colors, and Images (Report Builder and SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gives you the ability to format lines, colors, data regions, images, and other report items.  
+# Formatting lines, colors, and images in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Report Builder gives you the ability to format lines, colors, data regions, images, and other report items in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## Borders, Lines and Gridlines  
+
  Borders, lines, and gridlines can visually tie items together on the page and help your report readers easily read the contents of the report. Using the predefined border styles, you can quickly add a border around a text box, a group of text boxes, or an image. In addition, you can change the style, width, and color for the borders, lines, and gridlines. Borders are added around the entire item selected or around a border along an edge of the item, for example, a border along the bottom of a text box.  
   
  To format borders and gridlines in a text box, report layout, or around an image, use the **Border** tab of the report item's **Properties** dialog box. For example, if you want to add a border around an image, right-click the image and then in the **Image Properties** dialog box, click **Border**.  

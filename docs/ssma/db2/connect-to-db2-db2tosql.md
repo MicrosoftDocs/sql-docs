@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Connect To DB2 (DB2ToSQL)
 Use the **Connect to DB2** dialog box to connect to the DB2 database that you want to migrate.  

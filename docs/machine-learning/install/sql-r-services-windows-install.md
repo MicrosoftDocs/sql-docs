@@ -6,9 +6,11 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/06/2020
 ms.topic: how-to
-author: garyericson
-ms.author: garye
-ms.custom: contperf-fy20q4
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.custom:
+  - contperf-fy20q4
+  - intro-installation
 monikerRange: "=sql-server-2016"
 ---
 # Install SQL Server 2016 R Services

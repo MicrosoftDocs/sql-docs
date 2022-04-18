@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "TRUE"
   - "single-column set of values [SQL Server]"
 ms.assetid: ddadefd7-49ad-4be1-b34d-dcf155558d34
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # ANY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

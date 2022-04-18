@@ -2,9 +2,9 @@
 title: Connect in Active Directory mode
 titleSuffix: SQL Server Big Data Cluster
 description: Learn how to connect to SQL Server Big Data Clusters in an Active Directory domain.
-author: cloudmelon
-ms.author: melqin
-ms.reviewer: mikeray
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: wiassaf
 ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
@@ -14,6 +14,8 @@ ms.technology: big-data-cluster
 # Connect [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]: Active Directory mode
 
 This article describes how to connect to SQL Server Big Data Cluster endpoints deployed in Active Directory mode. The tasks in this article require that you have a SQL Server Big Data Cluster deployed in Active Directory mode. If you do not have a cluster, refer to [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deploy.md).
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Overview
 

@@ -2,17 +2,18 @@
 description: "Project Settings (Migration) (AccessToSQL)"
 title: "Project Settings (Migration) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Migration settings"
   - "Project Settings dialog box, Migration"
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Project Settings (Migration) (AccessToSQL)
 The Migration project settings let you configure how data is migrated to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  

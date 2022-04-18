@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.selectbackupdest.f1"
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Select Backup Destination
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,6 +1,7 @@
 ---
-title: "Dataset Fields Collection References (Report Builder) | Microsoft Docs"
-description: Create a dataset for display of individual or summarized values in the Report Data pane of Report Builder. 
+title: "Dataset Fields collection references in a paginated report | Microsoft Docs"
+
+description: Create a dataset for display of individual or summarized values in the Report Data pane of Report Builder in a paginated report. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +13,12 @@ ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Built-in Collections - Dataset Fields Collection References (Report Builder)
-  Each dataset in a report contains one Fields collection. The Fields collection is the set of fields specified by the dataset query plus any additional calculated fields that you create. After you create a dataset, the field collection appears in the **Report Data** pane.  
+# Built-in collections - dataset Fields collection references in a paginated report (Report Builder)
+
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Each dataset in a paginated report contains one Fields collection. The Fields collection is the set of fields specified by the dataset query plus any additional calculated fields that you create. After you create a dataset, the field collection appears in the **Report Data** pane.  
   
  A simple field reference in an expression displays on the design surface as a simple expression. For example, when you drag the field `Sales` from the Report Data pane to a table cell on the design surface, `[Sales]` is displayed. This represents the underlying expression `=Fields!Sales.Value` that is set on the text box Value property. When the report runs, the report processor evaluates this expression and displays the actual data from the data source in the text box in the table cell. For more, see [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) and [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   

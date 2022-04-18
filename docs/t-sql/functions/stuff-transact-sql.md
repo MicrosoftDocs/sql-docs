@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "characters [SQL Server], replacing"
   - "inserting data"
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STUFF (Transact-SQL)

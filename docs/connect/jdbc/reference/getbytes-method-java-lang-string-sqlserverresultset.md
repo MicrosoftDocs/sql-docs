@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: ff617165-47f8-41c1-9c51-37ffc7714923
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getBytes Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

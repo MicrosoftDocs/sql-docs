@@ -1,6 +1,6 @@
 ---
-title: "Adding Data to a Tablix Data Region (Report Builder) | Microsoft Docs"
-description: Learn how to display detailed or grouped data, from a report dataset in a table or matrix, to a Tablix Data Region. 
+title: "Adding data to a tablix data region in a paginated report | Microsoft Docs"
+description: Learn how to display detailed or grouped data, from a report dataset in a table or matrix, to a tablix data region in a paginated report. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Adding Data to a Tablix Data Region (Report Builder and SSRS)
-In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, to display data from a report dataset in a table or matrix, in each data cell, specify the name of a dataset field to display. You can display detail data or grouped data. If you add groups to a table or matrix, rows and columns for group values and group data are added automatically. You can then add subtotals and totals for your data.  
+# Adding data to a tablix data region in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+In paginated reports, to display data from a report dataset in a table or matrix, in each data cell, specify the name of a dataset field to display. You can display detail data or grouped data. If you add groups to a table or matrix, rows and columns for group values and group data are added automatically. You can then add subtotals and totals for your data.  
   
  All data in a data region belongs to at least one group. Detail data is a member of the details group. For more information about detail and grouped data, see [Understanding Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   

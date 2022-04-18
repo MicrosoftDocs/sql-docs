@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysarticles system table"
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # sysarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

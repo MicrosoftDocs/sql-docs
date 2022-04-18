@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 20bbeacd-ccca-4a46-8184-ff941ae2ec5f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # DateTimeOffset Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

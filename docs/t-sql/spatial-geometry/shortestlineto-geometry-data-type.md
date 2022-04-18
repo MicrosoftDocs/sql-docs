@@ -47,7 +47,7 @@ Returns a **LineString** instance with two points that represent the shortest di
 ### A. Calling ShortestLineTo() on non-intersecting instances  
  This example finds the shortest distance between a `CircularString` instance and a `LineString` instance and returns the `LineString` instance connecting the two points:  
   
-```
+```sql
  DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
  DECLARE @g2 geometry = 'LINESTRING(-4 7, 7 10, 3 7)';  
  SELECT @g1.ShortestLineTo(@g2).ToString();
@@ -56,7 +56,7 @@ Returns a **LineString** instance with two points that represent the shortest di
 ### B. Calling ShortestLineTo() on intersecting instances  
  This example returns an empty `LineString` instance because the `LineString` instance intersects the `CircularString` instance:  
   
-```
+```sql
  DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
  DECLARE @g2 geometry = 'LINESTRING(0 5, 7 10, 3 7)';  
  SELECT @g1.ShortestLineTo(@g2).ToString();

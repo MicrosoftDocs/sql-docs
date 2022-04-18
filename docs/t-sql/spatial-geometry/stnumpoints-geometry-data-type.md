@@ -44,7 +44,7 @@ ms.author: mlandzic
 ## Examples  
  The following example creates a `LineString` instance and uses `STNumPoints()` to determine how many points were used in the description of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
 SELECT @g.STNumPoints();  

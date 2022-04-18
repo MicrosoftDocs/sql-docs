@@ -6,8 +6,8 @@ ms.technology: machine-learning-services
   
 ms.date: 04/30/2020
 ms.topic: tutorial
-ms.author: garye
-author: garyericson
+ms.author: wiassaf
+author: WilliamDAssafMSFT
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 #customer intent: As an R developer, I want to model/train/score partitioned data to avoid manually subsetting data.

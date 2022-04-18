@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "query method"
   - "query() method"
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # query() Method (xml Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

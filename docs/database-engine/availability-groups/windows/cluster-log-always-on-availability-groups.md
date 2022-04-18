@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Generate and analyze the CLUSTER.LOG for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

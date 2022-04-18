@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Selective XML Indexes (SXI)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

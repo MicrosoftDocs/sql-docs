@@ -3,8 +3,8 @@ title: External Key Providers
 titleSuffix: SQL Server Big Data Clusters
 description: This article provides details of how to configure external key providers for SQL Big Data Clusters encryption at rest.
 ms.date: 07/19/2021
-author: danibunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.topic: conceptual
 ms.prod: sql
@@ -12,6 +12,8 @@ ms.technology: big-data-cluster
 ---
 
 # External Key Providers in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article provides details of how to configure external key providers in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] for key management.
 
@@ -127,7 +129,7 @@ USE master;
 select * from sys.asymmetric_keys;
 ```
 
-The asymmetric key will appear with the naming convention "tde_asymmetric_key_<version>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md). For example, use the following T-SQL command:
+The asymmetric key will appear with the naming convention "tde_asymmetric_key_\<version\>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md). For example, use the following T-SQL command:
 
 ```sql
 USE db1;

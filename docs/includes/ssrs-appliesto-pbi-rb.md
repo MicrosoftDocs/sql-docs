@@ -11,4 +11,4 @@
  ms.custom: include file
 ---
 
-✔ Power BI Report Builder
+✔️&nbsp;Power&nbsp;BI&nbsp;Report&nbsp;Builder

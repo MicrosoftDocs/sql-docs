@@ -1,6 +1,6 @@
 ---
-title: "Gauges (Report Builder) | Microsoft Docs"
-description: Display key performance indicators to illustrate values or to compare data by using a radial or linear gauge in Report Builder. 
+title: "Gauges in a paginated report | Microsoft Docs"
+description: Display key performance indicators in a paginated report to illustrate values or to compare data by using a radial or linear gauge in Report Builder. 
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -160,8 +160,11 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Gauges (Report Builder and SSRS)
-  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, a gauge data region displays a single value from your dataset. An individual gauge is always positioned inside a gauge panel, where you can add child or adjacent gauges. Inside a single gauge panel, you can create multiple gauges that share common functions such as filtering, grouping, or sorting.  
+# Gauges in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In paginated reports, a gauge data region displays a single value from your dataset. An individual gauge is always positioned inside a gauge panel, where you can add child or adjacent gauges. Inside a single gauge panel, you can create multiple gauges that share common functions such as filtering, grouping, or sorting.  
   
  Gauges can perform many tasks in a report:  
   

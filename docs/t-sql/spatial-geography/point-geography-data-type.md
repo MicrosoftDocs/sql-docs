@@ -55,7 +55,7 @@ Point ( Lat, Long, SRID )
 ## Examples  
  The following example uses `Point()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;   
 SET @g = geography::Point(47.65100, -122.34900, 4326)  
 SELECT @g.ToString();  

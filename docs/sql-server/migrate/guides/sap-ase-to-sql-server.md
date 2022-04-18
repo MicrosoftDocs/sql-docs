@@ -4,11 +4,12 @@ description: 'This guide teaches you how to migrate your SAP ASE databases to Mi
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: migration-guide
-ms.custom: 
+ms.custom:
+  - intro-migration
 ms.devlang: 
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 03/19/2021
 ---
 

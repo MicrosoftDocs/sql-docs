@@ -20,7 +20,7 @@ ms.date: 01/19/2017
 
 # Autosize Selected Tables in Diagrams (Visual Database Tools)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
 You can quickly fit tables in your diagram to the smallest size that shows all fields.  
   

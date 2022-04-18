@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: b021a248-e046-4709-bece-9966d3961677
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLServerConnectionPoolDataSource Methods
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

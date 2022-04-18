@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: fa7a3ca5-1111-4480-97ca-65b632aa1e5b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateTime Method (int, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

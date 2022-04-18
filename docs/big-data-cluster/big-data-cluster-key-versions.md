@@ -3,8 +3,8 @@ title: Key Versions
 titleSuffix: SQL Server Big Data Clusters
 description: This article provides details of how key versions are used for SQL BDC key management and key rotation for HDFS and SQL Server keys.
 ms.date: 06/14/2021
-author: Danibunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.topic: conceptual
 ms.prod: sql
@@ -12,6 +12,10 @@ ms.technology: big-data-cluster
 ---
 
 # Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article provides details of how key versions are used in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] for key management and key rotation for HDFS and SQL Server keys. The article includes details about how the versions can [incorporate customer's keys](#customer-provided-key). 
 
@@ -147,7 +151,7 @@ USE master;
 select * from sys.asymmetric_keys;
 ```
 
-The asymmetric key will appear with the naming convention "tde_asymmetric_key_<version>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md). For example, use the following T-SQL command:
+The asymmetric key will appear with the naming convention "tde_asymmetric_key_\<version\>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md). For example, use the following T-SQL command:
 
 ```tsql
 USE db1;
@@ -158,7 +162,7 @@ Now, the DEK protector is changed to use the asymmetric key:
 
 :::image type="content" source="media/big-data-cluster-key-versions/sql-asymmetric.png" alt-text="After the DEK protector is changed to use the asymmetric key":::  
 
-If `azdata bdc kms set` command is re-executed, then the asymmetric keys in SQL Server would show another entry in `sys.asymmetric_keys` with the format "tde_asymmetric_key_<version>". This `azdata` command can be used to again change the DEK protector of a SQL Server database.
+If `azdata bdc kms set` command is re-executed, then the asymmetric keys in SQL Server would show another entry in `sys.asymmetric_keys` with the format "tde_asymmetric_key_\<version\>". This `azdata` command can be used to again change the DEK protector of a SQL Server database.
 
 ## Customer provided key
 

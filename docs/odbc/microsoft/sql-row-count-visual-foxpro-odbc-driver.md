@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQL row count [ODBC]"
 ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQL Row Count (Visual FoxPro ODBC Driver)
 > [!NOTE]  

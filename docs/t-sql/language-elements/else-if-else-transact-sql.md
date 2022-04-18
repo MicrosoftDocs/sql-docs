@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ELSE keyword"
   - "IF keyword"
 ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ELSE (IF...ELSE) (Transact-SQL)

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 60248447-6908-4036-a779-a501453cd553
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # next Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

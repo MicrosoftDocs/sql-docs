@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplmonthresholdmetrics system table"
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # MSreplmonthresholdmetrics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

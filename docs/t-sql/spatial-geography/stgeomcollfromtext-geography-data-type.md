@@ -53,7 +53,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 ## Examples  
  The following example uses `STGeomCollFromText()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 DECLARE @g geography;  
 SET @g = geography::STGeomCollFromText('GEOMETRYCOLLECTION ( POINT(-122.34900 47.65100), LINESTRING(-122.360 47.656, -122.343 47.656) )', 4326);  

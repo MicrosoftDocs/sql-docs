@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_pfieldex"
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_pfieldex (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

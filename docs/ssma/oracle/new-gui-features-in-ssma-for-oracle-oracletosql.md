@@ -8,18 +8,18 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
-author: "nahk-ivanov"
-ms.author: "alexiva"
-manager: alexiva
+author: cpichuka 
+ms.author: cpichuka 
+manager: madhuriy
 ---
 # New GUI features in SSMA for Oracle (OracleToSQL)
 This chapter describes new features of SSMA User Interface.  
   
 ## Layouts  
-This feature allows you to choose one of two predefined windows lay-out or create you own layout. To access layout submenu, on the View menu point to Layouts. There you can choose one of the existing layouts, add new layout or manage layouts.  
+This feature allows you to choose one of two predefined windows layout or create you own layout. To access layout submenu, on the View menu point to Layouts. There you can choose one of the existing layouts, add new layout or manage layouts.  
   
 ### Add Current Layout  
-To save current windows layout, on the View menu point to Layouts, then click Add Current Layout.  
+To save the current layout, on the View menu point to Layouts, then click Add Current Layout.  
   
 ### Choose predefined layout  
 To choose one of the predefined layouts, on the View menu point to Layouts, then click Default Layout or Without Explorers. You can also use shortcuts Ctrl+Alt+1 or Ctrl+Alt+2 for predefined layouts.  

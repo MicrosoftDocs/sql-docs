@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 1af26ac2-76e5-4a26-a600-9919211333ba
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateBinaryStream Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

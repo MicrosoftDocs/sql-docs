@@ -2,7 +2,7 @@
 title: Using Azure Active Directory with the ODBC Driver
 description: The Microsoft ODBC Driver for SQL Server allows ODBC applications to connect to an instance of Azure SQL Database using Azure Active Directory.
 ms.custom: ""
-ms.date: 07/30/2021
+ms.date: 02/17/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Azure Active Directory with the ODBC Driver
 
@@ -19,6 +19,8 @@ ms.author: v-daenge
 ## Purpose
 
 The Microsoft ODBC Driver for SQL Server version 13.1 or above allows ODBC applications to connect to an instance of Azure SQL Database using a federated identity in Azure Active Directory. The identity can use a username/password, an Azure Active Directory access token, an Azure Active Directory managed identity (17.3+), or Windows-Integrated Authentication (17.6+ on Linux/macOS). For the ODBC Driver version 13.1, the Azure Active Directory access token authentication is _Windows only_. The ODBC Driver version 17 and above support this authentication across all platforms (Windows, Linux, and macOS). A new Azure Active Directory interactive authentication with Login ID is introduced in ODBC Driver version 17.1 for Windows. A new Azure Active Directory managed identity authentication method was added in ODBC Driver version 17.3.1.1 for both system-assigned and user-assigned identities. All of these options are accomplished by using new DSN and connection string keywords, and connection attributes.
+
+To use Azure Active Directory authentication, you must configure your Azure SQL data source. For more information, see [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 > [!NOTE]
 > The ODBC Driver on Linux and macOS before version 17.6 only supports Azure Active Directory authentication directly against Azure Active Directory. If you are using Azure Active Directory username/password authentication from a Linux or macOS client and your Active Directory configuration requires the client to authenticate against an Active Directory Federation Services endpoint, authentication may fail. As of driver version 17.6, this limitation has been removed.
@@ -30,7 +32,7 @@ The `Authentication` keyword can be used when connecting with a DSN or connectio
 |Name|Values|Default|Description|
 |-|-|-|-|
 |`Authentication`|(not set), (empty string), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi`, `ActiveDirectoryServicePrincipal` |(not set)|Controls the authentication mode.<table><tr><th>Value<th>Description<tr><td>(not set)<td>Authentication mode determined by other keywords (existing legacy connection options.)<tr><td>(empty string)<td>(Connection string only.) Override and unset an `Authentication` value set in the DSN.<tr><td>`SqlPassword`<td>Directly authenticate to a SQL Server instance using a username and password.<tr><td>`ActiveDirectoryPassword`<td>Authenticate with an Azure Active Directory identity using a username and password.<tr><td>`ActiveDirectoryIntegrated`<td>_Windows, and Linux/Mac 17.6+, driver only_. Authenticate with an Azure Active Directory identity using integrated authentication.<tr><td>`ActiveDirectoryInteractive`<td>_Windows driver only_. Authenticate with an Azure Active Directory identity using interactive authentication.<tr><td>`ActiveDirectoryMsi`<td>Authenticate with Azure Active Directory identity using managed identity authentication. For user-assigned identity, UID is set to the object ID of the user identity.<tr><td>`ActiveDirectoryServicePrincipal`<td>(17.7+) Authenticate with Azure Active Directory identity using service principal authentication. UID is set to the client ID of the service principal. PWD is set to the client secret.</table>|
-|`Encrypt`|(not set), `Yes`, `No`|(see description)|Controls encryption for a connection. If the pre-attribute value of the `Authentication` setting isn't _`none`_ in the DSN or connection string, the default is `Yes`. Otherwise, the default is `No`. If the attribute `SQL_COPT_SS_AUTHENTICATION` overrides the pre-attribute value of `Authentication`, explicitly set the value of Encryption in the DSN or connection string or connection attribute. The pre-attribute value of Encryption is `Yes` if the value is set to `Yes` in either the DSN or connection string.|
+|`Encrypt`|(not set), `Yes`/`Mandatory`(18.0+), `No`/`Optional`(18.0+), `Strict`(18.0+)|(see description)|Controls encryption for a connection. If the pre-attribute value of the `Authentication` setting is not _`none`_ in the DSN or connection string, the default is `Yes`. The default is also `Yes` in versions 18.0.1+. Otherwise, the default is `No`. If the attribute `SQL_COPT_SS_AUTHENTICATION` overrides the pre-attribute value of `Authentication`, explicitly set the value of Encryption in the DSN or connection string or connection attribute. The pre-attribute value of Encryption is `Yes` if the value is set to `Yes` in either the DSN or connection string.|
 
 ## New and/or Modified Connection Attributes
 
@@ -63,6 +65,9 @@ It's possible to use the new Azure AD authentication options when creating or ed
 `Authentication=ActiveDirectoryInteractive` for Azure Active Directory interactive authentication to Azure SQL Database
 
 ![The DSN creation and editing screen with Azure Active Directory Interactive authentication selected.](windows/create-dsn-ad-interactive.png)
+
+> [!NOTE]
+> As of driver version 17.9, the interactive authentication behavior has changed. Users will always be prompted for credentials unless the driver has a valid access token cached. This change prevents users on Azure Active Directory joined devices from skipping the prompt and automatically signing in with cached credentials when using `ActiveDirectoryInteractive` authentication. 
 
 `Authentication=SqlPassword` for username/password authentication to SQL Server (Azure or otherwise)
 
@@ -113,7 +118,7 @@ For system-assigned identity,<br>
 For user-assigned identity with object ID equals to myObjectId,<br>
 `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`
 9. Azure Active Directory Service Principal Authentication
-`server=Server;databse=Database;UID=clientId;PWD=clientSecret;Authentication=ActiveDirectoryServicePrincipal;`
+`server=Server;database=Database;UID=clientId;PWD=clientSecret;Authentication=ActiveDirectoryServicePrincipal;`
 
 > [!NOTE]
 >
@@ -139,7 +144,7 @@ typedef struct AccessToken
 The `ACCESSTOKEN` is a variable-length structure consisting of a 4-byte _length_ followed by _length_ bytes of opaque data that form the access token. Because of how SQL Server handles access tokens, one obtained via an [OAuth 2.0](/azure/active-directory/develop/active-directory-authentication-scenarios) JSON response must be expanded so that each byte is followed by a zero padding byte, similar to a UCS-2 string containing only ASCII characters. However, the token is an opaque value and the length specified, in bytes, must NOT include any null terminator. Because of their considerable length and format constraints, this method of authentication is only available programmatically via the `SQL_COPT_SS_ACCESS_TOKEN` connection attribute. There's no corresponding DSN or connection string keyword. The connection string must not contain `UID`, `PWD`, `Authentication`, or `Trusted_Connection` keywords.
 
 > [!NOTE]
-> The ODBC Driver version 13.1 only supports this authentication on _Windows_.
+> The ODBC Driver version 13.1 only supports this authentication on _Windows_. Subsequent versions support this authentication on all platforms.
 
 ## Azure Active Directory Authentication Sample Code
 

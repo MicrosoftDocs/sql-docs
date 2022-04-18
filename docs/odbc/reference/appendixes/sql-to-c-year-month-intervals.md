@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "year-month intervals [ODBC]"
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQL to C: Year-Month Intervals
 

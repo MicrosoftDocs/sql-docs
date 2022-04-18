@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], Excel driver"
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Other Excel Driver Programming Details
 > [!NOTE]  

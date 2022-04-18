@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 57d28ee5-c2f6-4740-b42d-cead1aade809
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsTransactions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

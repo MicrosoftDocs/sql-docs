@@ -7,9 +7,11 @@ ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "= azuresqldb-current"
 ms.custom: seo-lt-2019
 ---

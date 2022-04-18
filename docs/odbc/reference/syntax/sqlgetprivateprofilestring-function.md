@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetPrivateProfileString function [ODBC]"
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetPrivateProfileString Function
 **Conformance**  

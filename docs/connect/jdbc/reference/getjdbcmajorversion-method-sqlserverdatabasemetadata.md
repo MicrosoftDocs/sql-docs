@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 67b2bb4b-9714-4ba5-8739-50c632830451
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getJDBCMajorVersion Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "UDTs [CLR integration], Transact-SQL"
   - "queries [CLR integration]"
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Working with User-Defined Types in SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

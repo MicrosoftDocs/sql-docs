@@ -1,6 +1,6 @@
 ---
-title: "Vary Polygon, Line, and Point Display by Rules and Analytical Data | Microsoft Docs"
-description:  Control display for polygons, lines, and points by setting options and rules, or by overriding options for embedded map elements in Report Builder.
+title: "Vary polygon, line, and point display in a paginated report by rules and analytical data | Microsoft Docs"
+description:  Control display for polygons, lines, and points in a paginated report by setting options and rules, or by overriding options for embedded map elements in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -22,8 +22,11 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Vary Polygon, Line, and Point Display by Rules and Analytical Data
-  The display options for polygons, lines, and points on a map layer are controlled by setting options for the layer, by setting rules for the map elements on the layer, or by overriding options for specific embedded map elements on a layer.  
+# Vary polygon, line, and point display in a paginated report by rules and analytical data (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  The display options for polygons, lines, and points on a map layer in a paginated report are controlled by setting options for the layer, by setting rules for the map elements on the layer, or by overriding options for specific embedded map elements on a layer.  
   
  Display options apply in a specific precedence, listed from lowest to highest precedence:  
   

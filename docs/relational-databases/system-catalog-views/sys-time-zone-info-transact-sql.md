@@ -8,6 +8,8 @@ ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sys.time_zone_info"
   - "sys.time_zone_info_TSQL"
@@ -16,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.time_zone_info system table"
 ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.time_zone_info (Transact-SQL)

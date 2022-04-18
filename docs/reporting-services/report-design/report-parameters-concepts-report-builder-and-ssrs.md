@@ -1,6 +1,6 @@
 ---
-title: "Report Parameters Concepts (Report Builder) | Microsoft Docs"
-description: Find out how to add parameters to link related reports, to control a report appearance, to filter report data, or to narrow the scope in Report Builder. 
+title: "Report parameters concepts in paginated reports | Microsoft Docs"
+description: Find out how to add parameters to link related paginated reports, to control a report appearance, to filter report data, or to narrow the scope in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Parameters Concepts (Report Builder and SSRS)
-  You can add parameters to a report to link related reports, to control the report appearance, to filter report data, or to narrow the scope of a report to specific users or locations.  
+# Report parameters concepts in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  You can add parameters to a paginated report to link related reports, to control the report appearance, to filter report data, or to narrow the scope of a report to specific users or locations.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

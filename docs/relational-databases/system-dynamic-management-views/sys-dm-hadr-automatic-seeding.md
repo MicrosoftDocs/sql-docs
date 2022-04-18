@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "automatic seeding"
   - "sys.dm_hadr_automatic_seeding dynamic management view"
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # sys.dm_hadr_automatic_seeding (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

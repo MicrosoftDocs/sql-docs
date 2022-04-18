@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQLGetFunctions function [ODBC]"
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetFunctions Function
 **Conformance**  

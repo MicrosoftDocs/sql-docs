@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "diagnostic information [ODBC], SqlGetDiagRec"
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Diagnostic Handling Rules
 The following rules govern diagnostic handling in **SQLGetDiagRec** and **SQLGetDiagField**.  

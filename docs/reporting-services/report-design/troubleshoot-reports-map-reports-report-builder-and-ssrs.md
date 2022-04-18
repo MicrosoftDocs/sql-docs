@@ -1,6 +1,6 @@
 ---
-title: "Troubleshoot Reports: Map Reports (Report Builder) | Microsoft Docs"
-description: Explore troubleshooting ideas for situations that can result when you customize, add a layer, or publish a report with a map in Report Builder.
+title: "Troubleshoot reports: map reports in a paginated report | Microsoft Docs"
+description: Explore troubleshooting ideas for situations that can result when you customize, add a layer, or publish a paginated report with a map in Report Builder.
 ms.date: 07/22/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,14 +12,17 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Troubleshoot Reports: Map Reports (Report Builder and SSRS)
-  Issues with maps in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report might occur when you add a map or map layer to your report, when you customize an existing map or map layer in your report, when you preview a map in a report, or when you publish a report with a map. Use this topic to help troubleshoot these issues.  
+# Troubleshoot reports: map reports in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Issues with maps in a paginated report might occur when you add a map or map layer to your report, when you customize an existing map or map layer in your report, when you preview a map in a report, or when you publish a report with a map. Use this topic to help troubleshoot these issues.  
     
    ## Need more help?  
    
   Try:  
  * [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) on Stack Overflow  
- * Log an issue or suggestion at [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
+ * Share [ideas for SQL](https://feedback.azure.com/forums/908035-sql-server).  
 
   
 ##  <a name="Embedded"></a> Report Definition Size Issues  

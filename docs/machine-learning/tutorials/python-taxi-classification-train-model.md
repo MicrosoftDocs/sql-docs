@@ -5,10 +5,10 @@ description: In part four of this five-part tutorial series, you'll train and sa
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/29/2020
+ms.date: 09/17/2021
 ms.topic: tutorial
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
 ---
@@ -38,7 +38,7 @@ In [part five](python-taxi-classification-deploy-model.md), you'll learn how to 
 
 1. Create a stored procedure called **PyTrainTestSplit** to divide the data in the nyctaxi_sample table into two parts: nyctaxi_sample_training and nyctaxi_sample_testing. 
 
-   This stored procedure should already be created for you, but you can run the following code to create it:
+   Run the following code to create it:
 
    ```sql
    DROP PROCEDURE IF EXISTS PyTrainTestSplit;
@@ -56,7 +56,7 @@ In [part five](python-taxi-classification-deploy-model.md), you'll learn how to 
    GO
    ```
 
-2. To divide your data using a custom split, run the stored procedure, and type an integer that represents the percentage of data allocated to the training set. For example, the following statement would allocate 60% of data to the training set.
+2. To divide your data using a custom split, run the stored procedure, and provide an integer parameter that represents the percentage of data to allocate to the training set. For example, the following statement would allocate 60% of data to the training set.
 
    ```sql
    EXEC PyTrainTestSplit 60
@@ -70,9 +70,9 @@ After the data has been prepared, you can use it to train a model. You do this b
 + The stored procedure **PyTrainScikit** creates a tip prediction model using the **scikit-learn** package.
 + The stored procedure **TrainTipPredictionModelRxPy** creates a tip prediction model using the **revoscalepy** package.
 
-Each stored procedure uses the input data you provide to create and train a logistic regression model. All Python code is wrapped in the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+Each stored procedure uses the input data you provide to create and train a logistic regression model. All Python code is wrapped in the system stored procedure, [`sp_execute_external_script`](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-To make it easier to retrain the model on new data, you wrap the call to sp_execute_external_script in another stored procedure, and pass in the new training data as a parameter. This section will walk you through that process.
+To make it easier to retrain the model on new data, you wrap the call to `sp_execute_external_script` in another stored procedure, and pass in the new training data as a parameter. This section will walk you through that process.
 
 ### PyTrainScikit
 
@@ -123,7 +123,7 @@ To make it easier to retrain the model on new data, you wrap the call to sp_exec
    INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
    ```
 
-   Processing of the data and fitting the model might take a couple of mins. Messages that would be piped to Python's **stdout** stream are displayed in the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For example:
+   Processing of the data and fitting the model might take a couple of minutes. Messages that would be piped to Python's **stdout** stream are displayed in the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For example:
 
    ```text
    STDOUT message(s) from external script:
@@ -139,7 +139,7 @@ To make it easier to retrain the model on new data, you wrap the call to sp_exec
 
 ### TrainTipPredictionModelRxPy
 
-This stored procedure uses the new **revoscalepy** package, which is a new package for Python. It contains objects, transformation, and algorithms similar to those provided for the R language's **RevoScaleR** package. 
+This stored procedure uses the **revoscalepy** Python package. It contains objects, transformation, and algorithms similar to those provided for the R language's **RevoScaleR** package. 
 
 By using **revoscalepy**, you can create remote compute contexts, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more. For more information, see [revoscalepy module in SQL Server](../python/ref-py-revoscalepy.md) and [revoscalepy function reference](/r-server/python-reference/revoscalepy/revoscalepy-package).
 

@@ -1,11 +1,11 @@
 ---
 title: azdata sql reference
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Reference article for azdata sql commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 06/02/2021
+ms.date: 10/05/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -80,7 +80,7 @@ Database name to connect to.
 #### `--server -s`
 SQL Server instance name or address.
 #### `--integrated -e`
-Use integrated authentication on windows.
+Use integrated authentication on Windows.
 #### `--mssqlclirc`
 Location of mssqlclirc config file.
 #### `--row-limit`
@@ -98,7 +98,7 @@ Time in seconds to wait for a connection to the server before terminating reques
 #### `--application-intent -k`
 Declares the application workload type when connecting to a database in a SQL Server Availability Group.
 #### `--multi-subnet-failover -m`
-If application is connecting to AlwaysOn AG on different subnets, setting this provides faster detection and connection to currently active server.
+If application is connecting to Always On AG on different subnets, setting this provides faster detection and connection to currently active server.
 #### `--packet-size`
 Size in bytes of the network packets used to communicate with SQL Server.
 #### `--dac-connection -a`
@@ -151,7 +151,7 @@ Username to connect to the database.
 #### `--server -s`
 SQL Server instance name or address.
 #### `--integrated -e`
-Use integrated authentication on windows.
+Use integrated authentication on Windows.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

@@ -50,7 +50,7 @@ Returns an object that represents the point set from one **geometry** instance t
 ### A. Computing the difference between two Polygon instances  
  The following example uses `STDifference()` to compute the difference between two polygons.  
   
-```  
+```sql
 DECLARE @g geometry;  
 DECLARE @h geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);  
@@ -61,7 +61,7 @@ SELECT @g.STDifference(@h).ToString();
 ### B. Invoking STDifference() on a CurvePolygon instance  
  The following example uses STDifference() on a CurvePolygon instance.  
   
-```
+```sql
  DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
  DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';  
  -- Note the different results returned by the two SELECT statements  

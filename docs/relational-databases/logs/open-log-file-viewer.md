@@ -88,12 +88,6 @@ ms.author: "mathoma"
   
      The logs include **Audit Collection** and **Windows NT**.  
   
-##### To view logs that are related to audits collections  
-  
--   In Object Explorer, expand **Security**, expand **Audits**, right-click an audit, and then click **View Audit Logs**.  
-  
-     The logs include **Audit Collection** and **Windows NT**.  
-  
 ## See Also  
  [Log File Viewer](../../relational-databases/logs/log-file-viewer.md)   
  [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   

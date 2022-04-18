@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "metadata [SQL Server], functions"
   - "functions [SQL Server], metadata"
 ms.assetid: a18c12a9-59ad-4711-a862-39d8f28476b0
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # Metadata Functions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

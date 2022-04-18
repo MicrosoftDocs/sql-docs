@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Enlist keyword"
   - "transaction promotion [CLR integration]"
 ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Transaction Promotion
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

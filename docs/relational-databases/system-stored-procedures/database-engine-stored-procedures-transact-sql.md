@@ -119,6 +119,10 @@ ms.author: maghan
 
         [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)
 
+        [sp_get_endpoint_certificate](../../relational-databases/system-stored-procedures/sp-get-endpoint-certificate-transact-sql.md)
+
+        [sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)
+
         [sp_getapplock](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)
 
         [sp_getbindtoken](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)
@@ -169,6 +173,8 @@ ms.author: maghan
         [sp_prepexecrpc](../../relational-databases/system-stored-procedures/sp-prepexecrpc-transact-sql.md)
 
         [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)
+
+        [sp_readerrorlog](../../relational-databases/system-stored-procedures/sp-readerrorlog-transact-sql.md)
 
         [sp_recompile](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)
 

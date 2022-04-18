@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "host protection attributes [CLR integration]"
   - "common language runtime [SQL Server], host protection attributes"
 ms.assetid: 27b550cd-dd3d-4263-bd97-0f0dec1215fd
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Disallowed Types and Members in System.dll
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

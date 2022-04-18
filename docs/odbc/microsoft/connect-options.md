@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "custom connection options [ODBC]"
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connect Options
 > [!IMPORTANT]  

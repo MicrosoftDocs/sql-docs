@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], creating"
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Reference for the creation and configuration of Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -89,12 +89,6 @@ ms.author: chadam
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
      [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
-  
--   **Videos:**  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Whitepapers:**  
   

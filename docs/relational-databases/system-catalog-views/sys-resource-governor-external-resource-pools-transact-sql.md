@@ -8,6 +8,8 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sys.resource_governor_external_resource_pools"
   - "sys.resource_governor_external_resource_pools_TSQL"
@@ -17,8 +19,8 @@ helpviewer_keywords:
   - "sys.resource_governor_external_resource_pools"
   - "resource_governor_external_resource_pools"
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

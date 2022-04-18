@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: cda48c7e-9ce1-42c4-8fba-f6641cecb093
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # rollback Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

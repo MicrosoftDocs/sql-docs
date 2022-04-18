@@ -3,7 +3,7 @@ title: Develop applications for SQL Server on Linux
 description: You can create applications that connect to and use SQL Server on Linux from a variety of programming languages and popular web frameworks.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 11/17/2017
+ms.date: 10/21/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -14,8 +14,6 @@ ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 You can create applications that connect to and use SQL Server on Linux from a variety of programming languages, such as C#, Java, Node.js, PHP, Python, Ruby, and C++. You can also use popular web frameworks and Object Relational Mapping (ORM) frameworks.
-
-> [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
 > These same development options also enable you to target SQL Server on other platforms. Applications can target SQL Server running on-premises or in the cloud, on Linux, Windows, or Docker on macOS. Or you can target Azure SQL Database and Azure Synapse Analytics.

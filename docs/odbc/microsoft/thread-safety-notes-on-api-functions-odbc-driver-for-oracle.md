@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "multiple concurrent statements [ODBC]"
 ms.assetid: f0c9bdfd-f79d-4088-9ecb-afcd8ca7fb73
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Thread-Safety Notes on API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  

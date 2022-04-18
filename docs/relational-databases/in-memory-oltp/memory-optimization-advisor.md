@@ -12,8 +12,8 @@ f1_keywords:
   - "swb.memoryoptimizationwizard.f1"
   - "sql13.swb.memoryoptimizationwizard.f1"
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-author: rothja
-ms.author: jroth
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Memory Optimization Advisor

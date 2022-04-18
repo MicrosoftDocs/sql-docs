@@ -2,9 +2,9 @@
 title: Restrict egress traffic of Big Data Clusters in Azure Kubernetes Service (AKS) private cluster
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to restrict egress traffic of Big Data Clusters in Azure Kubernetes Service (AKS) private cluster.
-author: cloudmelon
-ms.author: melqin
-ms.reviewer: mikeray
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: wiassaf
 ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: sql
@@ -12,6 +12,8 @@ ms.technology: big-data-cluster
 ---
 
 # Restrict egress traffic of big data clusters in Azure Kubernetes Service (AKS) private cluster
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 AKS provisions a standard SKU Load Balancer to be set up and used for egress by default. However, the default setup may not meet the requirements of all scenarios if public IPs are disallowed or additional hops are required for egress. Define a user user-defined route table if the cluster disallows public IPs and sits behind a network virtual appliance (NVA).
 
@@ -90,7 +92,7 @@ The following steps provide details.
 
 1. Define a set of environment variables for creating resources.
 
-   ```console
+   ```azurecli
    export FWNAME=bdcaksazfw
    export FWPUBIP=$FWNAME-ip
    export FWIPCONFIG_NAME=$FWNAME-config
@@ -171,7 +173,7 @@ See the following example:
 ```azurecli
 # Create SP and Assign Permission to Virtual Network
 
-az ad sp create-for-rbac -n "bdcaks-sp" --skip-assignment
+az ad sp create-for-rbac -n "bdcaks-sp"
 
 APPID=<your service principal ID >
 PASSWORD=< your service principal password >

@@ -1,6 +1,6 @@
 ---
-title: "Sort Data in a Data Region (Report Builder) | Microsoft Docs"
-description: Learn how to change the sort order of data in a data region when a report first runs in Report Builder.
+title: "Sort data in a data region in a paginated report | Microsoft Docs"
+description: Learn how to change the sort order of data in a data region in a paginated report when a report first runs in Report Builder.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Sort Data in a Data Region (Report Builder and SSRS)
-  To change the sort order of data in a data region when a report first runs, you must set the sort expression on the data region or group. By default, the sort expression for a group is automatically set to the same value as the group expression.  
+# Sort data in a data region in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  To change the sort order of data in a data region when a paginated report first runs, you must set the sort expression on the data region or group. By default, the sort expression for a group is automatically set to the same value as the group expression.  
   
 -   In a tablix data region, set the sort expression for the data region or for each group, including the details group. If you have only one details group in a tablix data region, you can define a sort expression in the query, on the data region, or on the details group and they all have the same effect.  
   

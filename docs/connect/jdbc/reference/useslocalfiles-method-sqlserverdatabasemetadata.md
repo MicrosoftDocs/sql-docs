@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 69afb3a9-ed56-4191-88b8-bc46c03b817b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # usesLocalFiles Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

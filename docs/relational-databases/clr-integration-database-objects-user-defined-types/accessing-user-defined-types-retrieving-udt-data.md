@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "user-defined types [CLR integration], ADO.NET"
   - "bytes [CLR integration]"
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Accessing User-Defined Types - Retrieving UDT Data
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

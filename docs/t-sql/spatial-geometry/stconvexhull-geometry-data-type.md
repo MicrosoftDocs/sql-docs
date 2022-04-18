@@ -44,7 +44,7 @@ Returns an object representing the convex hull of a **geometry** instance.
 ## Examples  
  The following example uses `STConvexHull()` to find the convex hull of a non-convex `Polygon``geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 1 1, 2 2, 2 0, 0 0))', 0);  
 SELECT @g.STConvexHull().ToString();  

@@ -8,8 +8,8 @@ ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "optimize for ad hoc workloads option"
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ms.custom: ""
 ms.date: "11/17/2017"
 ---

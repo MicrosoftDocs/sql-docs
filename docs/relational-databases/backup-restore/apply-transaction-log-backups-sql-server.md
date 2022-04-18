@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], quantity needed for restore sequence"
   - "backups [SQL Server], log backups"
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Apply Transaction Log Backups (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

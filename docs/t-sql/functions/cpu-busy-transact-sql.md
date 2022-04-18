@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "statistical information [SQL Server], CPU"
   - "CPU [SQL Server], activity"
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 
 # &#x40;&#x40;CPU_BUSY (Transact-SQL)

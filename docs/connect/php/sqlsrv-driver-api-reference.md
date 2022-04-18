@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSRV Driver API Reference
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

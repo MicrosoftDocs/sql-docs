@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MIN_ACTIVE_ROWVERSION function [Transact-SQL]"
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

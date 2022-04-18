@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "data types [OLE DB]"
   - "OLE DB, data types"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Data Types (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

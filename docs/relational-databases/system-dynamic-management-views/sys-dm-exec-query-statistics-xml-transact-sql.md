@@ -12,6 +12,8 @@ f1_keywords:
   - "sys.dm_exec_query_statistics_xml_TSQL"
   - "dm_exec_query_statistics_xml_TSQL"
   - "dm_exec_query_statistics_xml"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_exec_query_statistics_xml management view"
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb

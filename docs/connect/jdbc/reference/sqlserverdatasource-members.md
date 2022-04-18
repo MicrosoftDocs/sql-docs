@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLServerDataSource Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

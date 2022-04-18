@@ -1,6 +1,6 @@
 ---
-title: "Rendering Data Regions (Report Builder) | Microsoft Docs"
-description: Learn about the pagination and rendering behaviors of various parts of a data region in Report Builder.
+title: "Rendering data regions in a paginated report | Microsoft Docs"
+description: Learn about the pagination and rendering behaviors of various parts of a data region in a paginated report in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Rendering Data Regions (Report Builder and SSRS)
-  In addition to the general rendering behaviors that apply to all report items, data regions have additional pagination and rendering behaviors that they follow. Data region-specific rendering rules include how a data region grows, how special cells such as the corner cell or header cells are rendered, and how a data region for right-to-left reading is rendered. This topic discusses how the various parts of a data region are rendered.  
+# Rendering data regions in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In addition to the general rendering behaviors that apply to all paginated report items, data regions have additional pagination and rendering behaviors that they follow. Data region-specific rendering rules include how a data region grows, how special cells such as the corner cell or header cells are rendered, and how a data region for right-to-left reading is rendered. This topic discusses how the various parts of a data region are rendered.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

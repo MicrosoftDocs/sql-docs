@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "OLE DB, stored procedures"
   - "OLE DB Driver for SQL Server, stored procedures"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Stored Procedures - Running
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -10,9 +10,10 @@ ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
+  - "quorum [SQL Server], Always On and WSFC quorum"
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Force a WSFC Cluster to Start Without a Quorum
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

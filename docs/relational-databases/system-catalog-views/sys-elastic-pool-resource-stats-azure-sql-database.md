@@ -7,6 +7,8 @@ ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sys.elastic_pool_resource_stats catalog view"
 helpviewer_keywords: 
@@ -15,8 +17,8 @@ helpviewer_keywords:
   - "elastic_pool_resource_stats_TSQL"
   - "elastic_pool_resource_stats"
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current"
 ---

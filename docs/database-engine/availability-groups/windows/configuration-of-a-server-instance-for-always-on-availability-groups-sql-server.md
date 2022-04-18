@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], about"
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Enable the Always On availability group feature for a SQL Server instance
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,12 +65,6 @@ ms.author: chadam
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
      [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
-  
--   **Videos:**  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Whitepapers:**  
   

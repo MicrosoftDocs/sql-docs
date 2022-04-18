@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "INSERT statement [SQL Server], SQL graph"
   - "SQL graph, INSERT statement"
 ms.assetid: 
-author: "shkale-msft"
-ms.author: "shkale"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INSERT (SQL Graph)

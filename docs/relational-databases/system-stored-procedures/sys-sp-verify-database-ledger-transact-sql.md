@@ -45,6 +45,10 @@ sp_verify_database_ledger [@digests = ] 'digests' [ , [@table_name = ] 'table_na
 
 A JSON document containing a list of transaction digests, each of which has been obtained by querying the sys.database_ledger_latest_digest view. The JSON document must contain at least one digest.
 
+[ @table_name = ] '*table_name*'
+
+The name of the table that you want to verify.
+
 ## Return code values
 
 0 (success) or 1 (failure).

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getCrossReference Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

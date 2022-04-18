@@ -70,7 +70,7 @@ cat log.txt
 
 - Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will stop responding and time out during execution.
 
-## SSIS Build task version 1.* (Preview)
+## SSIS Build task version 1.* 
 
 Enhancements in version 1.*:
 
@@ -161,13 +161,19 @@ Specify whether to continue deployment for remaining projects or files when an e
 
 ### Limitations and known issues
 
-SSIS Deploy Task doesn't support the following scenarios currently:
+SSIS Deploy task currently doesn't support the following scenarios:
 
-- Configure environment in SSIS catalog.
-- Deploy ispac to Azure SQL Server or Azure SQL Managed Instance, which only allows multi-factor authentication (MFA).
-- Deploy packages to MSDB or SSIS Package Store.
+- Configuring the environment in the SSIS catalog.
+- Deploying ISPAC to Azure SQL Server or Azure SQL Managed Instance, which allow only multifactor authentication.
+- Deploying packages to MSDB or SSIS Package Store.
+- If you install the SSIS DevOps Tools extension in Azure DevOps Server, you might see the message "The extension package size exceeds the maximum package size." To resolve the issue, complete the following steps: 
+  1. Connect to the on-premises SQL Server instance and select the database **Gallery_Configuration**.
+  1. Run the query `INSERT INTO dbo.tbl_RegistryItems VALUES (1,'#\Configuration\Service\Gallery\LargeExtensionUpload\SSIS\','MaxPackageSizeMB\',50)`. Change `50` to a higher number if the extension is larger than 50 MBs.
+  1. After you run the query, restart Internet Information Services. Try again to upload the extension.
+  1. If the error persists, please contact Azure DevOps support. 
 
-## SSIS Deploy task version 1.* (Preview)
+
+## SSIS Deploy task version 1.* 
 
 Enhancements in version 1.*:
 
@@ -370,6 +376,12 @@ The configuration JSON schema has three layers:
 |sensitive|Whether the value of the environment variable is sensitive.|Valid inputs are: <br> *true* <br> *false*|
 
 ## Release notes
+
+### Version 1.0.6
+
+Release Date: September 1, 2021
+
+- General Availability(GA) release.
     
 ### Version 1.0.5
 

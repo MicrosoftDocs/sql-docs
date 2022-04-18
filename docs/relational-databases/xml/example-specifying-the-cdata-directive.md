@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "CDATA directive"
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Example: Specifying the CDATA Directive
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

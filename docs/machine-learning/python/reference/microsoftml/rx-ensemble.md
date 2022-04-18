@@ -4,8 +4,8 @@
 title: "rx_ensemble: Ensembles" 
 description: "Train an ensemble of models" 
 keywords: "ensemble" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019 
 ms.topic: "reference" 
@@ -267,7 +267,7 @@ values from `1` to `4` provide increasing amounts of information.
 Sets the context in which computations are executed,
 specified with a valid `revoscalepy.RxComputeContext`.
 Currently local and [revoscalepy.RxSpark](/machine-learning-server/python-reference/revoscalepy/RxSpark) compute contexts
-are supported. When [revoscalepy.RxSpark](/machine-learning-server/python-reference/revoscalepy/revoscalepy/RxSpark) is specified,
+are supported. When [revoscalepy.RxSpark](/machine-learning-server/python-reference/revoscalepy/RxSpark) is specified,
 the training of the models is done in a distributed way, and the ensembling
 is done locally. Note that the compute context cannot be non-waiting.
 

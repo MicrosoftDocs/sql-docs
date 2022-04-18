@@ -2,7 +2,7 @@
 title: "Pushdown computations in PolyBase"
 titlesuffix: SQL Server
 description: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
-ms.date: 06/29/2021
+ms.date: 10/14/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -126,7 +126,7 @@ Given this combination of predicates, the map-reduce jobs can perform all of the
 ```sql
 SELECT * FROM customer 
 WHERE customer.account_balance <= 200000 
-    AND customer.zipcode BETWEEN 92656 AND 92677;
+AND customer.zipcode BETWEEN 92656 AND 92677;
 ```
 
 ### Supported functions for pushdown
@@ -191,6 +191,26 @@ The following T-SQL functions or syntax will prevent pushdown computation:
 - `PARSE`
 
 Pushdown support for the `FORMAT` and `TRIM` syntax was introduced in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU10.
+
+### Filter clause with variable
+If you are specifying a variable in a filter clause, by default this will prevent pushdown of the filter clause. For example, if you run the following query, the filter clause will not be pushed down:
+
+```sql
+DECLARE @BusinessEntityID INT
+
+SELECT * FROM [Person].[BusinessEntity]  
+WHERE BusinessEntityID = @BusinessEntityID;
+```
+
+To achieve pushdown of the variable, you need to enable query optimizer hotfixes functionality. This can be done in any of the following ways:
+- Instance Level: Enable trace flag 4199 as a startup parameter for the instance
+- Database Level: In the context of the database that has the PolyBase external objects, execute ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON
+- Query level: 
+		Use query hint OPTION (QUERYTRACEON 4199) or OPTION (USE HINT ('ENABLE_QUERY_OPTIMIZER_HOTFIXES'))
+
+This limitation applies to execution of [sp_executesql](../system-stored-procedures/sp-executesql-transact-sql.md). 
+
+Note: The ability to pushdown the variable was first introduced in SQL Server 2019 CU5. 
 
 ## Examples
 

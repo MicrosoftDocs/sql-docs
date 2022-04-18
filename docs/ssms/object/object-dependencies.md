@@ -30,7 +30,7 @@ Clicking this button displays a list of those objects that are dependency-tracke
 Clicking this button displays a list of those objects that are dependency-tracked, on which the selected object depends.  
   
 **Dependencies**  
-If **Objects that depend on** *<selected object>* is clicked, this displays an hierarchical view of objects that depend on the selected object. If **Objects on which** *<selected object>* **depends** is clicked, this displays an hierarchical view of objects on which the selected object depends.  
+If **Objects that depend on** *\<selected object\>* is clicked, this displays an hierarchical view of objects that depend on the selected object. If **Objects on which** *\<selected object\>* **depends** is clicked, this displays an hierarchical view of objects on which the selected object depends.  
   
 **Name**  
 Displays the name of the object selected in the **Dependencies** tree view above.  

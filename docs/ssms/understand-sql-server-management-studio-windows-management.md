@@ -16,7 +16,7 @@ ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ---
-# Understand SQL Server Management Studio Windows Management
+# Understand SQL Server Management Studio windows management
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
@@ -30,7 +30,7 @@ The tool windows in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[s
   
 Manipulating windows is central to the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment. Users can easily access the tools and windows they use frequently. Users can control how much space they want to allocate to different information, and the environment should maximize the space available for editing queries accordingly. Windows can be moved to different locations on the screen. Many windows can be undocked and dragged out of the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] frame. This is particularly useful when using more than one monitor.  
   
-To increase your editing space while maintaining functionality, all windows offer the Auto Hide feature, which displays the window as a tab within a bar along the border of the main [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment. When the pointer is placed over one of these tabs, the underlying window reveals itself. Auto Hide for a window can be toggled by clicking the **Auto Hide** button, represented by a pushpin in the upper-right corner of the window. There is also an **Auto Hide All** option on the **Window** menu.  
+To increase your editing space while maintaining functionality, all windows provide the Auto Hide feature, which displays the window as a tab within a bar along the border of the main [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment. When the pointer is placed over one of these tabs, the underlying window reveals itself. Auto Hide for a window can be toggled by clicking the **Auto Hide** button, represented by a pushpin in the upper-right corner of the window. There is also an **Auto Hide All** option on the **Window** menu.  
   
 Some components can be configured in either tabbed mode where components appear as tabs in the same docking location, or in multiple document interface (MDI) mode where each document has its own window. To configure this feature, on the **Tools** menu, click **Options**, click **Environment**, and then click **General**.  
   

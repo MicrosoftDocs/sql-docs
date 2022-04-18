@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "procedures [ODBC], executing"
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Executing Procedures
 ODBC defines a standard escape sequence for executing procedures. For the syntax of this sequence and a code example that uses it, see [Procedure Calls](../../../odbc/reference/develop-app/procedure-calls.md).  

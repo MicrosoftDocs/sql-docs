@@ -1,15 +1,11 @@
 ---
+title: "&amp; (Bitwise AND) (Transact-SQL)"
 description: "&amp; (Bitwise AND) (Transact-SQL)"
-title: "&amp; (Bitwise AND) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
-  - "bitwise"
   - "&"
   - "&_TSQL"
 dev_langs: 
@@ -18,17 +14,21 @@ helpviewer_keywords:
   - "AND, bitwise AND"
   - "& (bitwise AND)"
   - "bitwise AND (&)"
-ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "01/10/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # &amp; (Bitwise AND) (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Performs a bitwise logical AND operation between two integer values.  
+Performs a bitwise logical AND operation between two integer values.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

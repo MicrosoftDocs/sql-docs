@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "FoxPro ODBC driver"
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Unsupported Visual FoxPro Commands and Functions (Visual FoxPro ODBC Driver)
 The following table lists FoxPro commands and functions that are not supported by the Visual FoxPro ODBC Driver but are supported by Microsoft® Visual FoxPro®.  

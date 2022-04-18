@@ -1,11 +1,8 @@
 ---
+title: CHECK_CONSTRAINTS (Transact-SQL)
 description: "CHECK_CONSTRAINTS (Transact-SQL)"
-title: "CHECK_CONSTRAINTS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
@@ -16,17 +13,21 @@ dev_langs:
 helpviewer_keywords: 
   - "CHECK_CONSTRAINTS view"
   - "INFORMATION_SCHEMA.CHECK_CONSTRAINTS view"
-ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "03/15/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # CHECK_CONSTRAINTS (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns one row for each CHECK constraint in the current database. This information schema view returns information about the objects to which the current user has permissions.  
-  
- To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.**_view_name_.  
+Returns one row for each CHECK constraint in the current database. This information schema view returns information about the objects to which the current user has permissions.  
+
+To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.**_view_name_.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -35,9 +36,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**CONSTRAINT_NAME**|**sysname**|Constraint name.|  
 |**CHECK_CLAUSE**|**nvarchar(**4000**)**|Actual text of the [!INCLUDE[tsql](../../includes/tsql-md.md)] definition statement.|  
   
-## See Also  
- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
- [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
-  
+## See Also
+
+- [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
+- [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
+- [sys.check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)
+- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)

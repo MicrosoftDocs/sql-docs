@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], suspending a database"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Suspend an Availability Database (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -110,7 +110,7 @@ ms.author: chadam
   
     ```  
     Suspend-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityDatabases\MyDb3  
     ```  
   
     > [!NOTE]  

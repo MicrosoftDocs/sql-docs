@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_describe"
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 ---
 # srv_describe (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

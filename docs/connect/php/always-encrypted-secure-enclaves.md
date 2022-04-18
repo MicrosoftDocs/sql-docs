@@ -8,7 +8,7 @@ ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: ""
-ms.author: v-daenge
+ms.author: v-davidengel
 author: David-Engel
 ---
 # Using Always Encrypted with secure enclaves with the PHP Drivers for SQL Server

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "backing up [SQL Server]. damaged database"
   - "transaction log backups [SQL Server], damaged databases"
 ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Back Up the Transaction Log When the Database Is Damaged (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

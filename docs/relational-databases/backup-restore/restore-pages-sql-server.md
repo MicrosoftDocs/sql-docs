@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "pages [SQL Server], damaged"
   - "restoring [SQL Server], pages"
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Restore Pages (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

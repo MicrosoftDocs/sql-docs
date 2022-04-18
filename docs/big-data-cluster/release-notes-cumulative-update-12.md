@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: This article describes the SQL Server Big Data Clusters Cumulative Update 12 contents.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: melqin,dacoelho
+ms.reviewer: hudequei
 ms.date: 08/16/2021
 ms.topic: conceptual
 ms.prod: sql
@@ -23,7 +23,7 @@ SQL Server Big Data Clusters CU12 was tested on the following environment combin
 
 | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ------------ | ------- | ------- | ------------ | ----------- |
-| CU12 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.3<br/>docker 20.10.2<br/>CRI-O 1.20.0 | Block only | Block only |
+| Ubuntu 20.04 LTS | 1.20 | containerd 1.4.3<br/>docker 20.10.2<br/>CRI-O 1.20.0 | Block only | Block only |
 
 Reference Architecture White Papers for SQL Server Big Data Clusters can be found on the following pages:
 
@@ -33,7 +33,7 @@ Reference Architecture White Papers for SQL Server Big Data Clusters can be foun
 ## System environment
 
 * __Operating System__: Ubuntu 20.04.2 LTS
-* __SQL Server__: 15.0.4153.1
+* __SQL Server__: 15.0.4153.13
     * __Java__: Azul Zulu JRE 11.0.9.1
     * __Python__: 3.7.2 (miniconda 4.5.12)
     * __R__: Microsoft R 3.5.2

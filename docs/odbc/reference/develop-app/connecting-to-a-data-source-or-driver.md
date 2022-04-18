@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connecting to a Data Source or Driver
 An application can be connected to any number of drivers and data sources. These can be a variety of drivers and data sources, the same driver and a variety of data sources, or even multiple connections to the same driver and data source.  

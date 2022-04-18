@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 09042ee9-dfb1-4d0b-82bd-d1224b0aea80
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setCharacterStream Method (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

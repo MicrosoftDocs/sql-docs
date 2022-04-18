@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLConfigDataSource function [ODBC], Text File Driver"
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLConfigDataSource (Text File Driver)
 > [!NOTE]  

@@ -9,6 +9,8 @@ ms.topic: language-reference
 author: dphansen
 ms.author: davidph
 manager: cgronlun
+dev_langs: 
+  - "TSQL"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 

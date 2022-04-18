@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLDrivers function [ODBC]"
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLDrivers Function
 **Conformance**  

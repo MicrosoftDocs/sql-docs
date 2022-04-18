@@ -1,7 +1,7 @@
 ---
-title: "SqlClient driver support lifecycle"
-description: "Page that contains product support lifecycle information."
-ms.date: "06/09/2021"
+title: SqlClient driver support lifecycle
+description: Product support lifecycle information for the Microsoft.Data.SqlClient .NET library.
+ms.date: 03/30/2022
 dev_langs:
   - "csharp"
   - "vb"
@@ -11,8 +11,7 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
-ms.reviewer: v-jizho2
+ms.author: v-davidengel
 ---
 # SqlClient driver support lifecycle
 
@@ -28,27 +27,30 @@ New stable (GA) releases are published every six months on a regular cadence beg
 
 ### Actively supported releases
 
-| Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level  | End of Support |
-| -- | -- | -- | -- | -- | -- |
-| 3.0 | June 9, 2021 | 3.0.0 | June 9, 2021 | Current | March 10, 2022 |
-| 2.1 | November 19, 2020 | 2.1.3 | May 21, 2021 | LTS | November 20, 2023 |
-| 1.1 | November 20, 2019 | 1.1.3 | May 15, 2020 | LTS | November 21, 2022 |
+| Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level | End of Support |
+|--|--|--|--|--|--|
+| 4.1 | January 31, 2022 | - | - | Current | - |
+| 4.0 | November 18, 2021 | 4.0.1 | January 17, 2022 | LTS | November 19, 2024 |
+| 3.1 | March 30, 2022 | - | - | Current | - |
+| 3.0 | June 9, 2021 | 3.0.1 | September 24, 2021 | Current | May 18, 2022 |
+| 2.1 | November 19, 2020 | 2.1.4 | September 20, 2021 | LTS | November 20, 2023 |
+| 1.1 | November 20, 2019 | 1.1.4 | March 10, 2021 | LTS | November 21, 2022 |
 
 ### Out of support releases
 
-| Version | Latest Patch Release Date | Latest Patch Version | Support Ended |
-| -- | -- | -- | -- |
-| 2.0 | June 16, 2020 | 2.0.1 | August 25, 2020 |
-| 1.0 | September 26, 2019 | 1.0.19269.1 | February 20, 2020 |
+| Version | Release Date | Last Patch Version | Last Patch Release Date | Support Ended |
+|--|--|--|--|--|
+| 2.0 | June 16, 2020 | 2.0.1 | August 25, 2020 | May 19, 2021 |
+| 1.0 | August 28, 2019 | 1.0.19269.1 | September 26, 2019 | May 20, 2020 |
 
 ## Azure Key Vault Provider release cadence
 
 New stable (GA) releases for `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` are published on demand when new features are added. Long Term Support (LTS) releases will be chosen by stakeholders and maintainers based on a few qualifications and customer response.
 
-### Actively supported releases
+### Actively supported Azure Key Vault Provider releases
 
-| Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level  | End of Support |
-| -- | -- | -- | -- | -- | -- |
+| Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level | End of Support |
+|--|--|--|--|--|--|
 | 3.x | June 14, 2021 | 3.0.0 | June 14, 2021 | LTS | June 15, 2024 |
 | 2.x | March 3, 2021 | 2.0.0 | March 3, 2021 | LTS | March 4, 2024 |
 | 1.x | November 19, 2019 | 1.2.0 | December 01, 2020 | LTS | November 21, 2022 |
@@ -61,11 +63,13 @@ LTS releases are supported for three years after the initial release.
 
 Current releases are supported for three months after a subsequent Current or LTS release.
 
-
 ## SQL version compatibility with Microsoft.Data.SqlClient
 
 |Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
 |---|---|---|---|---|---|---|---|---|
+|4.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|4.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|3.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |2.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |2.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |1.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -75,13 +79,13 @@ Current releases are supported for three months after a subsequent Current or LT
 
 ### Support for .NET Framework applications
 
-Microsoft.Data.SqlClient supports all operating systems supported by .NET Framework v4.6 and above.
+Microsoft.Data.SqlClient supports all operating systems supported by .NET Framework v4.6.1 and above.
 
 [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).
 
 ### Support for .NET Core applications
 
-Microsoft.Data.SqlClient supports all operating systems supported by .NET Core v2.1 and above.
+Microsoft.Data.SqlClient supports all operating systems supported by .NET Core v3.1 and above.
 
 [.NET Core supported OS lifecycle policy](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
 

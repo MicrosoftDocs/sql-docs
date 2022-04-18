@@ -8,6 +8,8 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_validate_replica_hosts_as_publishers_TSQL"
   - "sp_validate_replica_hosts_as_publishers"

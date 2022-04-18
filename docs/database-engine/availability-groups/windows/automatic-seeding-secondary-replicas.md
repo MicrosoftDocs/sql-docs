@@ -10,8 +10,8 @@ ms.topic: how-to
 helpviewer_keywords: 
 - "Automatic seeding [SQL Server], secondary replica"
 ms.assetid: 
-author: "cawrites"
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Use automatic seeding to initialize a secondary replica for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

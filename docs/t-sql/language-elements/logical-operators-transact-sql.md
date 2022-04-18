@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "FALSE"
   - "logical operators [SQL Server], Transact-SQL"
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Logical Operators (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

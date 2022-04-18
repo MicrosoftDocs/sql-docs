@@ -1,7 +1,7 @@
 ---
-title: "Azure Active Directory"
-description: "Learn how to use Azure Active Directory authentication with the Microsoft Drivers for PHP for SQL Server."
-ms.date: "01/29/2021"
+title: Azure Active Directory
+description: Learn how to use Azure Active Directory authentication with the Microsoft Drivers for PHP for SQL Server.
+ms.date: 12/14/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -10,12 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "azure active directory, authentication, access token"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connect Using Azure Active Directory Authentication
+
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) is a central user ID management technology that operates as an alternative to [SQL Server authentication](how-to-connect-using-sql-server-authentication.md). Azure AD allows connections to Microsoft Azure SQL Database and Azure Synapse Analytics with federated identities in Azure AD using a username and password, Windows Integrated Authentication, or an Azure AD access token. The PHP drivers for SQL Server offer partial support for these features.
+
+ You must configure your Azure SQL data source before you can use Azure AD authentication. For more information, see [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 To use Azure AD, use the **Authentication** or **AccessToken** keywords (they are mutually exclusive), as shown in the following table. For more technical details, refer to [Using Azure Active Directory with the ODBC Driver](../odbc/using-azure-active-directory.md).
 
@@ -187,45 +190,6 @@ if ($conn === false) {
     }
     
     sqlsrv_close($conn);
-}
-?>
-```
-
-### Using the user-assigned managed identity with PDO_SQLSRV driver
-
-A user-assigned managed identity is created as a standalone Azure resource. Azure creates an identity in the Azure AD tenant that's trusted by the
-subscription in use. After the identity is created, the identity can be assigned to one or more Azure service instances. Copy the `Object ID` of this identity and set it as the user name in the connection string. 
-
-Therefore, when connecting using the user-assigned managed identity, provide the Object ID as the user name but omit the password.
-
-```php
-<?php
-
-$azureServer = 'myazureserver.database.windows.net';
-$azureDatabase = 'myazuredatabase';
-$azureUser = '2d68f56e-9547-4dae-aee8-f3g28ab9674x';    // Object ID of the identity
-$connectionInfo = "Database = $azureDatabase; Authentication = ActiveDirectoryMsi;";
-
-try {
-    $conn = new PDO("sqlsrv:server = $azureServer; $connectionInfo", $azureUser);
-    echo "Connected successfully with Authentication=ActiveDirectoryMsi (user-assigned).\n";
-    
-    $tsql = "SELECT @@Version AS SQL_VERSION";
-    
-    try {
-        $stmt = $conn->query($tsql);
-        $result = $stmt->fetchall(PDO::FETCH_ASSOC);
-        print_r($result);
-
-        unset($stmt);
-    } catch (PDOException $e) {
-        echo "Failed to run the simple query (user-assigned).\n";
-    }
-    unset($conn);
-} catch (PDOException $e) {
-    echo "Could not connect with Authentication=ActiveDirectoryMsi (user-assigned).\n";
-    print_r($e->getMessage());
-    echo "\n";
 }
 ?>
 ```

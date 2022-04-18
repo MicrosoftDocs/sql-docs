@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], methods"
   - "methods [XML in SQL Server]"
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # xml Data Type Methods
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

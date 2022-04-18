@@ -8,6 +8,8 @@ ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_set_session_context"
   - "sp_set_session_context_TSQL"

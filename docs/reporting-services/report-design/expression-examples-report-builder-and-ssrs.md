@@ -1,6 +1,6 @@
 ---
-title: "Expression Examples (Report Builder) | Microsoft Docs"
-description: Control content and report appearance using built-in functions, custom code, report and group variables, and user-defined variables in Report Builder.
+title: "Expression examples in paginated reports | Microsoft Docs"
+description: Control content and paginated report appearance using built-in functions, custom code, report and group variables, and user-defined variables in Report Builder.
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -27,8 +27,11 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Expression Examples (Report Builder and SSRS)
-Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports to control content and report appearance. Expressions are written in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], and can use built-in functions, custom code, report and group variables, and user-defined variables. Expressions begin with an equal sign (=). For more information about the expression editor and the types of references that you can include, see [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), and [Add an Expression &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+# Expression examples in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+Expressions are used frequently in paginated reports to control content and report appearance. Expressions are written in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], and can use built-in functions, custom code, report and group variables, and user-defined variables. Expressions begin with an equal sign (=). For more information about the expression editor and the types of references that you can include, see [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), and [Add an Expression &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  When RDL Sandboxing is enabled, only certain types and members can be used in expression text at report publish time. For more information, see [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  

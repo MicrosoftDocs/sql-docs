@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 
 # SQL Data Discovery and Classification JDBC Sample

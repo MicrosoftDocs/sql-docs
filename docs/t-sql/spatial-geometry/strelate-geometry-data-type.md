@@ -41,7 +41,7 @@ ms.author: mlandzic
  Is a string of type **nchar(9)** encoding acceptable values for the DE-9IM pattern matrix device between the two **geometry** instances.  
   
 ## Remarks  
- This method always returns null if the spatial reference IDs (SRIDs) of the **geometry** instances do not match. This method will throw an **ArgumentException** if the matrix is not well-formed.  
+ This method always returns null if the spatial reference IDs (SRIDs) of the **geometry** instances do not match. This method will throw an **ArgumentException** if the matrix isn't well formed.
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
@@ -51,7 +51,7 @@ ms.author: mlandzic
 ## Examples  
  The following example uses `STRelate()` to test two **geometry** instances for spatial disjoint using an explicit DE-9IM pattern.  
   
-```  
+```sql
 DECLARE @g geometry;  
 DECLARE @h geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);  

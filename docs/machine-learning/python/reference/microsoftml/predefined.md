@@ -4,8 +4,8 @@
 title: "predefined: predefined" 
 description: "Remover with predefined list of stop words." 
 keywords: "stop-words" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "readable secondary replicas"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Offload read-only workload to secondary replica of an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: v-kaywon
 ---
 # Step 1: Configure development environment for ADO.NET development

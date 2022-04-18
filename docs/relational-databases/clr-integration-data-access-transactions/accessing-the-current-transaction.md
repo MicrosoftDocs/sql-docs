@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Current property"
   - "Transaction class"
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Accessing the Current Transaction
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

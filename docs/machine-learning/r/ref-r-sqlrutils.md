@@ -3,10 +3,10 @@ title: sqlrutils helper functions
 description: sqlrutils is an R package from Microsoft that provides a mechanism for R users to put their R scripts into a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an R development environment. The package is included in SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/14/2020
+ms.date: 09/30/2021
 ms.topic: how-to
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # sqlrutils (R package in SQL Server Machine Learning Services)
@@ -29,7 +29,7 @@ You can also execute the stored procedure from an R environment, by passing well
   
 ## Full reference documentation
 
-The **sqlrutils** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, documentation for individual sqlrutils functions is published to just one location under the [sqlrutils package reference](/machine-learning-server/r-reference/sqlrutils/sqlrutils). Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **sqlrutils** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Functions list
 
@@ -37,16 +37,16 @@ The following section provides an overview of the functions that you can call fr
 
 |Function | Description |
 |------|-------------|
-|[executeStoredProcedure](/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Execute a SQL stored procedure.|
-|[getInputParameters](/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Get a list of input parameters to the stored procedure.| 
-|[InputData](/machine-learning-server/r-reference/sqlrutils/inputdata)| Defines the source of data in SQL Server that will be used in the R data frame. You specify the name of the data.frame in which to store the input data, and a query to get the data, or a default value. Only simple SELECT queries are supported. | 
-|[InputParameter](/machine-learning-server/r-reference/sqlrutils/inputparameter)| Defines a single input parameter that will be embedded in the T-SQL script. You must provide the name of the parameter and its R data type.| 
-|[OutputData](/machine-learning-server/r-reference/sqlrutils/outputdata)| Generates an intermediate data object that is needed if your R function returns a list that contains a data.frame. The *OutputData* object is used to store the name of a single data.frame obtained from the list.| 
-|[OutputParameter](/machine-learning-server/r-reference/sqlrutils/outputparameter) | Generates an intermediate data object that is needed if your R function returns a list. The *OutputParameter* object stores the name and data type of a single member of the list, assuming that member is **not** a data frame. |
-|[registerStoredProcedure](/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Register the stored procedure with a database.|
-|[setInputDataQuery](/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Assign a query to an input data parameter of the stored procedure.| 
-|[setInputParameterValue](/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Assign a value to an input parameter of the stored procedure.| 
-|[StoredProcedure](/machine-learning-server/r-reference/sqlrutils/storedprocedure)| A stored procedure object.|
+|[executeStoredProcedure](reference/sqlrutils/executestoredprocedure.md)| Execute a SQL stored procedure.|
+|[getInputParameters](reference/sqlrutils/getinputparameters.md)| Get a list of input parameters to the stored procedure.| 
+|[InputData](reference/sqlrutils/inputdata.md)| Defines the source of data in SQL Server that will be used in the R data frame. You specify the name of the data.frame in which to store the input data, and a query to get the data, or a default value. Only simple SELECT queries are supported. | 
+|[InputParameter](reference/sqlrutils/inputparameter.md)| Defines a single input parameter that will be embedded in the T-SQL script. You must provide the name of the parameter and its R data type.| 
+|[OutputData](reference/sqlrutils/outputdata.md)| Generates an intermediate data object that is needed if your R function returns a list that contains a data.frame. The *OutputData* object is used to store the name of a single data.frame obtained from the list.| 
+|[OutputParameter](reference/sqlrutils/outputparameter.md) | Generates an intermediate data object that is needed if your R function returns a list. The *OutputParameter* object stores the name and data type of a single member of the list, assuming that member is **not** a data frame. |
+|[registerStoredProcedure](reference/sqlrutils/registerstoredprocedure.md) | Register the stored procedure with a database.|
+|[setInputDataQuery](reference/sqlrutils/setinputdataquery.md)| Assign a query to an input data parameter of the stored procedure.| 
+|[setInputParameterValue](reference/sqlrutils/setinputparametervalue.md)| Assign a value to an input parameter of the stored procedure.| 
+|[StoredProcedure](reference/sqlrutils/storedprocedure.md)| A stored procedure object.|
 
 
 ## How to use sqlrutils
@@ -100,4 +100,4 @@ The stored procedure object typically does not have any data or values associate
 
 ## See also
 
-[How to create a stored procedure using sqlrutils](/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r)
+[How to create a stored procedure using sqlrutils](reference/sqlrutils/how-to-create-stored-procedure-from-r.md)

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "mapping deprecated functions [ODBC], SQLAllocConnect"
 ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLAllocConnect Mapping
 When an application calls **SQLAllocConnect** through an ODBC 3.*x* driver, the call to **SQLAllocConnect**(*henv*, *phdbc*) is mapped to **SQLAllocHandle** as follows:  

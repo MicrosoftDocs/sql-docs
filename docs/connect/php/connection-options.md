@@ -2,7 +2,7 @@
 title: "Connection Options"
 description: "This topic lists the options that are permitted in the associative array of sqlsrv_connect in the SQLSRV driver or the keywords that are permitted in the data source name the PDO_SQLSRV driver."
 ms.custom: ""
-ms.date: "03/05/2021"
+ms.date: "03/02/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Connection Options
 
@@ -34,7 +34,7 @@ This topic lists the options that are permitted in the associative array (when u
 |ConnectRetryInterval|Integer between 1 and 60 (inclusive)|The time, in seconds, between attempts to reestablish a connection. The application will attempt to reconnect immediately upon detecting a broken connection, and will then wait `ConnectRetryInterval` seconds before trying again. This keyword is ignored if `ConnectRetryCount` is equal to 0.|10|  
 |Database|String|Specifies the name of the database in use for the connection being established<sup>2</sup>.|The default database for the login being used.|  
 |DecimalPlaces<br /><br />(not supported in the PDO_SQLSRV driver)|Integer between 0 and 4 (inclusive)|Specifies the decimal places when formatting fetched money values.<br /><br />This option works only when `FormatDecimals` is true. Any negative integer or value more than 4 will be ignored.|Default precision and scale|
-|Driver|String|Specifies the Microsoft ODBC driver used to communicate with SQL Server.<br /><br />Possible values are:<br />ODBC Driver 17 for SQL Server<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (Windows only).|When the Driver keyword is not specified, the Microsoft Drivers for PHP for SQL Server attempt to find supported Microsoft ODBC driver(s) in the system, starting with the latest version of ODBC and so on.|
+|Driver|String|Specifies the Microsoft ODBC driver used to communicate with SQL Server.<br /><br />Possible values are:<br />ODBC Driver 18 for SQL Server<br />ODBC Driver 17 for SQL Server<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (Windows only).|When the Driver keyword is not specified, the Microsoft Drivers for PHP for SQL Server attempt to find supported Microsoft ODBC driver(s) in the system, starting with the latest version of ODBC and so on.|
 |Encrypt|1 or **true** for encryption on.<br /><br />0 or **false** for encryption off.|Specifies whether the communication with SQL Server is encrypted (1 or **true**) or unencrypted (0 or **false**)<sup>3</sup>.|**false** (0)|  
 |Failover_Partner|String|Specifies the server and instance of the database's mirror (if enabled and configured) to use when the primary server is unavailable.<br /><br />There are restrictions to using `Failover_Partner` with `MultiSubnetFailover`. For more information, see [Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).<br /><br />This option is not supported on Linux or macOS because database mirroring is not supported by the ODBC driver on Linux or macOS. Instead, use Always On availability groups and set the `MultiSubnetFailover` and `TransparentNetworkIPResolution` options.|Not set.|
 |FormatDecimals<br /><br />(not supported in the PDO_SQLSRV driver)|1 or **true** to format fetched decimal strings.<br /><br />0 or **false** for default decimal formatting behavior.|Specifies whether to add leading zeroes to decimal strings when appropriate and enables the `DecimalPlaces` option for formatting money types. If left false, the default behavior of returning exact precision and omitting leading zeroes for values less than 1 is used.<br /><br />For more information, see [Formatting Decimal Strings and Money Values](formatting-decimals-sqlsrv-driver.md).|**false** (0)|

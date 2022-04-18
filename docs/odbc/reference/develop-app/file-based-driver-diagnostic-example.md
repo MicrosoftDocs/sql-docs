@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "error messages [ODBC], diagnostic messages"
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # File-Based Driver Diagnostic Example
 A file-based driver acts both as an ODBC driver and as a data source. It can therefore generate errors and warnings both as a component in an ODBC connection and as a data source. Because it also is the component that interfaces with the Driver Manager, it formats and returns arguments for **SQLGetDiagRec**.  

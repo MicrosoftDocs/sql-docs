@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "wildcard components [XML]"
   - "content validation [XML]"
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Wildcard Components and Content Validation
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

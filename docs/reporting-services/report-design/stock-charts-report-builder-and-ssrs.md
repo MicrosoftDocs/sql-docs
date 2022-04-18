@@ -1,6 +1,6 @@
 ---
-title: "Stock Charts (Report Builder) | Microsoft Docs"
-description: Display financial or scientific data using up to four values per data point using markers such as lines or triangles in Report Builder.
+title: "Stock charts in a paginated report | Microsoft Docs"
+description: Display financial or scientific data using up to four values per data point in a paginated report using markers such as lines or triangles in Report Builder.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -13,9 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Stock Charts (Report Builder and SSRS)
+# Stock charts in a paginated report (Report Builder)
 
-  A stock chart is specifically designed for financial or scientific data that uses up to four values per data point. These values align with the high, low, open and close values that are used to plot financial stock data. This chart type displays opening and closing values by using markers, which are typically lines or triangles. In the following example, the opening values are shown by the markers on the left, and the closing values are shown by the markers on the right.  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  A stock chart in a paginated report is specifically designed for financial or scientific data that uses up to four values per data point. These values align with the high, low, open and close values that are used to plot financial stock data. This chart type displays opening and closing values by using markers, which are typically lines or triangles. In the following example, the opening values are shown by the markers on the left, and the closing values are shown by the markers on the right.  
   
  ![Stock chart](../../reporting-services/report-design/media/rs-stockchart.gif "Stock chart")  
   
@@ -34,7 +36,7 @@ ms.author: maggies
   
 -   When axis labels are generated, labeling usually begins at zero.  In general, stock prices do not fluctuate to the same degree as other data sets. For this reason, you may want to disable the axis labels from starting at zero, in order to get a better view of your data. To do this, set **IncludeZero** to **false** in the **Axis Properties** dialog box or the Properties window. For more information about how the chart generates axis labels, see [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides many calculated formulas for use with stock charts, including Price Indicator, Relative Strength Index, MACD and more.  
+-   Report Builder provides many calculated formulas for use with stock charts, including Price Indicator, Relative Strength Index, MACD and more.  
 
 ## Next steps
 

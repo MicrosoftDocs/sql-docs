@@ -178,7 +178,7 @@ column_name AS computed_column_expression
 <column_set_definition> ::=
 column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   
-< table_constraint > ::=
+<table_constraint> ::=
 [ CONSTRAINT constraint_name ]
 {
     { PRIMARY KEY | UNIQUE }
@@ -198,7 +198,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         [ NOT FOR REPLICATION ]
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )
 
-< table_index > ::=
+<table_index> ::=
 {  
     {  
       INDEX index_name  [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ]
@@ -332,7 +332,7 @@ column_name <data_type>
   | CHECK ( logical_expression )
 }
   
-< table_constraint > ::=
+<table_constraint> ::=
  [ CONSTRAINT constraint_name ]
 {
    { PRIMARY KEY | UNIQUE }
@@ -764,7 +764,7 @@ The default is 0 minutes.
 
 For recommendations on when to use `COMPRESSION_DELAY`, please see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
-\< table_option> ::=   
+\<table_option> ::=   
 Specifies one or more table options.
 
 DATA_COMPRESSION   
@@ -1062,7 +1062,7 @@ If more than one temporary table is created inside a single stored procedure or 
 
 If you include a *schema_name* when you create or access a temporary table, it is ignored. All temporary tables are created in the dbo schema.
 
-If a local temporary table is created in a stored procedure or application that can be executed at the same time by several users, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be able to distinguish the tables created by the different users. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does this by internally appending a numeric suffix to each local temporary table name. The full name of a temporary table as stored in the `sys.sysobjects` table in `tempdb` is made up of the table name specified in the CREATE TABLE statement and the system-generated numeric suffix. To allow for the suffix, *table_name* specified for a local temporary name cannot exceed 116 characters.
+If a local temporary table is created in a stored procedure or application that can be executed at the same time by several sessions, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be able to distinguish the tables created by the different sessions. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does this by internally appending a numeric suffix to each local temporary table name. The full name of a temporary table as stored in the `sys.sysobjects` table in `tempdb` is made up of the table name specified in the CREATE TABLE statement and the system-generated numeric suffix. To allow for the suffix, *table_name* specified for a local temporary name cannot exceed 116 characters.
 
 Temporary tables are automatically dropped when they go out of scope, unless explicitly dropped by using DROP TABLE:
 
@@ -1535,9 +1535,9 @@ CREATE TABLE Department
     DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
     ParentDepartmentNumber CHAR(10) NULL,
-    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+    ValidFrom DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    ValidTo DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 )
 WITH (SYSTEM_VERSIONING = ON);
 ```
@@ -1552,8 +1552,8 @@ CREATE TABLE Department_History
     DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
     ParentDepartmentNumber CHAR(10) NULL,
-    SysStartTime DATETIME2 NOT NULL,
-    SysEndTime DATETIME2 NOT NULL
+    ValidFrom DATETIME2 NOT NULL,
+    ValidTo DATETIME2 NOT NULL
 );
 
 -- Temporal table
@@ -1563,9 +1563,9 @@ CREATE TABLE Department
     DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
     ParentDepartmentNumber CHAR(10) NULL,
-    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+    ValidFrom DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    ValidTo DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 )
 WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON));
 ```
@@ -1588,9 +1588,9 @@ CREATE TABLE dbo.Department
     DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
     ParentDepartmentNumber CHAR(10) NULL,
-    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+    ValidFrom DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    ValidTo DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 )
 WITH
 (
@@ -1610,8 +1610,8 @@ CREATE TABLE Department_History
     DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
     ParentDepartmentNumber CHAR(10) NULL,
-    SysStartTime DATETIME2 NOT NULL,
-    SysEndTime DATETIME2 NOT NULL
+    ValidFrom DATETIME2 NOT NULL,
+    ValidTo DATETIME2 NOT NULL
 );
 
 -- Temporal table
@@ -1621,9 +1621,9 @@ CREATE TABLE Department
     DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
     ParentDepartmentNumber CHAR(10) NULL,
-    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+    ValidFrom DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    ValidTo DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 )
 WITH
 (
@@ -1822,9 +1822,9 @@ CREATE TABLE [HR].[Employees]
 (
     EmployeeID INT NOT NULL PRIMARY KEY,
     Salary Money NOT NULL,
-    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+    ValidFrom DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    ValidTo DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 )
 WITH (SYSTEM_VERSIONING = ON, LEDGER = ON);
 GO
@@ -1843,9 +1843,9 @@ CREATE TABLE [HR].[Employees]
     EndTransactionId BIGINT GENERATED ALWAYS AS TRANSACTION_ID END HIDDEN NULL,
     StartSequenceNumber BIGINT GENERATED ALWAYS AS SEQUENCE_NUMBER START HIDDEN NOT NULL,
     EndSequenceNumber BIGINT GENERATED ALWAYS AS SEQUENCE_NUMBER END HIDDEN NULL,
-    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+    ValidFrom DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    ValidTo DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 )
 WITH (
     SYSTEM_VERSIONING = ON (HISTORY_TABLE = [HR].[EmployeesHistory]),

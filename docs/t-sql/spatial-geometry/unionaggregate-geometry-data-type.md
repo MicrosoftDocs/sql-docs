@@ -50,7 +50,7 @@ UnionAggregate ( geometry_operand )
   
 ## Examples  
  The following example returns the union of a set of **geometry** objects in a table variable.  
- ```
+ ```sql
  -- Setup table variable for UnionAggregate example 
  DECLARE @Geom TABLE 
  ( 

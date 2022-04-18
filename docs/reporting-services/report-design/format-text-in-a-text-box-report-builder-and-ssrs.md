@@ -1,6 +1,6 @@
 ---
-title: "Format Text in a Text Box (Report Builder) | Microsoft Docs"
-description: Discover how to format text within a text box and how to mix placeholder text and static text to create mail merges or templates for text in Report Builder. 
+title: "Format text in a text box in paginated reports | Microsoft Docs"
+description: Discover how to format text in a text box in paginated reports, and how to mix placeholder text and static text to create mail merges or templates for text in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Format Text in a Text Box (Report Builder and SSRS)
-  You can format any part of the text within a text box independently, and mix placeholder text and static text in one text box. This ability to mix formats and add placeholder text enables you to create mail merges or templates for text in your report. Any expression can be defined and formatted separately using a placeholder.  
+# Format text in a text box in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+In paginated reports, you can format any part of the text in a text box independently, and mix placeholder text and static text in one text box. This ability to mix formats and add placeholder text enables you to create mail merges or templates for text in your paginated report. Any expression can be defined and formatted separately using a placeholder.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

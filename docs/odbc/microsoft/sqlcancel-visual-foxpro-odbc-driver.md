@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLCancel function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 4f7baa1d-37ef-4051-ae13-7dc38033af16
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLCancel (Visual FoxPro ODBC Driver)
 > [!NOTE]  

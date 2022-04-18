@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords:
   - "OLE DB Driver for SQL Server, updating applications"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Updating Applications from SQL Server 2005 Native Client
 

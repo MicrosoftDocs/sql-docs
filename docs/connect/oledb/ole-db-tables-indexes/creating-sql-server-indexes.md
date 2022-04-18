@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "indexes [OLE DB]"
   - "adding indexes"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Creating SQL Server Indexes
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

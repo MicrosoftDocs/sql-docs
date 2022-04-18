@@ -82,7 +82,7 @@ Returns a geometric object that represents the union of all point values whose d
 ## Examples  
  The following example creates a `Point` instance and uses `BufferWithTolerance()` to obtain a rough buffer around it.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT(3 3)', 0);  
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  

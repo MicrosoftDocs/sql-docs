@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "installing SQL Server, preparing to install"
   - "installation [SQL Server]"
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
-author: cawrites
-ms.author: chadam
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server installation guide
@@ -36,7 +36,7 @@ Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[s
     - [[!INCLUDE[ss2019](../../includes/sssql19-md.md)]](~/sql-server/editions-and-components-of-sql-server-version-15.md).  
     - [[!INCLUDE[ss2017](../../includes/sssql17-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md).  
     - [[!INCLUDE[ss2016](../../includes/sssql16-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
-    - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://docs.microsoft.com/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014)
+    - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014)
 
 *  **Requirements**: Review hardware and software installation requirements for [SQL Server 2016 & 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) or [SQL Server on Linux](../../linux/sql-server-linux-setup.md), as well as system configuration checks, and security considerations in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md) 
 

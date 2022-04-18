@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysindexes system table"
   - "sys.sysindexes compatibility view"
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

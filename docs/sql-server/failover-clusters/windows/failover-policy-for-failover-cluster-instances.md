@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "flexible failover policy"
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Failover Policy for Failover Cluster Instances
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

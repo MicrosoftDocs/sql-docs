@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: fece19e9-3bf8-4299-9188-ac3df5ce9c19
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getMaxSchemaNameLength Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

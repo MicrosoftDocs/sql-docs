@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "FILE_NAME function"
   - "logical file names [SQL Server]"
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # FILE_NAME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

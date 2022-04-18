@@ -1,6 +1,6 @@
 ---
+title: sys.tables (Transact-SQL)
 description: "sys.tables (Transact-SQL)"
-title: "sys.tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/25/2021"
 ms.prod: sql
@@ -9,17 +9,15 @@ ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
-  - "tables_TSQL"
   - "sys.tables_TSQL"
   - "sys.tables"
-  - "tables"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "sys.tables catalog view"
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.tables (Transact-SQL)
@@ -114,6 +112,5 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)   
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md)  
   

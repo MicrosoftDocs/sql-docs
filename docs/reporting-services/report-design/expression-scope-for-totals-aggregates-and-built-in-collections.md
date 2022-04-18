@@ -1,6 +1,6 @@
 ---
-title: "Expression Scope for Totals, Aggregates, and Built-in Collections | Microsoft Docs"
-description: Discover the variety of meanings for scope in expressions for totals, aggregates, and built-in collections in reports in Report Builder.
+title: "Expression scope for totals, aggregates, and built-in collections in a paginated report | Microsoft Docs"
+description: Discover the variety of meanings for scope in expressions for totals, aggregates, and built-in collections in paginated reports in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Expression Scope for Totals, Aggregates, and Built-in Collections
-  When you write expressions, you will find that the term *scope* is used in multiple contexts. Scope can specify the data to use for evaluating an expression, the set of text boxes on a rendered page, the set of report items that can be shown or hidden based on a toggle. You will see the term *scope* in topics that relate to expression evaluation, aggregate function syntax, conditional visibility, and also in error messages related to these areas. Use the following descriptions to help differentiate which meaning of *scope* applies:  
+# Expression scope for totals, aggregates, and built-in collections in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  When you write expressions, you will find that the term *scope* is used in multiple contexts in paginated reports. Scope can specify the data to use for evaluating an expression, the set of text boxes on a rendered page, the set of report items that can be shown or hidden based on a toggle. You will see the term *scope* in topics that relate to expression evaluation, aggregate function syntax, conditional visibility, and also in error messages related to these areas. Use the following descriptions to help differentiate which meaning of *scope* applies:  
   
 -   **Data scope** Data scope is a hierarchy of scopes that the report processor uses as it combines report data and report layout, and builds out data regions such as tables and charts on which to display the data. Understanding data scope helps you to get the results that you want when you do the following:  
   

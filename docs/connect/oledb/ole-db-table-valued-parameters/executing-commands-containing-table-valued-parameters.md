@@ -11,7 +11,7 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, executing commands containing"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Executing Commands Containing Table-Valued Parameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

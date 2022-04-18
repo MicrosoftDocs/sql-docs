@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], DBasedriver"
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Setting Options Programmatically for the dBASE Driver
 

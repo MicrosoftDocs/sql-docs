@@ -111,7 +111,6 @@ The following lists the types of values that cannot be stored by using **sql_var
 - **text**
 - **varchar(max)**
 - **varbinary(max)**
-- **sql_variant**
 - User-defined types
 - **xml**
 

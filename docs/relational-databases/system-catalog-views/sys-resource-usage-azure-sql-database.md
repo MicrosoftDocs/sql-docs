@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "resource_usage"
   - "sys.resource_usage"
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "= azuresqldb-current"
 ---
 # sys.resource_usage (Azure SQL Database)

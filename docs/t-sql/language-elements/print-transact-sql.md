@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "viewing user-defined messages"
   - "conditionally returning messages [SQL Server]"
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

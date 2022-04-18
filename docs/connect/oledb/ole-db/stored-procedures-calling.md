@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "stored procedures [OLE DB], calling"
   - "OLE DB Driver for SQL Server, stored procedures"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Calling a stored procedure (OLE DB)
 

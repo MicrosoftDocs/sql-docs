@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "failover clustering, troubleshooting"
   - "cluster troubleshooting"
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Failover Cluster Troubleshooting
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

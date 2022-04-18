@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "component services [ODBC]"
 ms.assetid: 06450562-d8f3-4987-b7bd-4a70223ff937
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Microsoft Component Services
 > [!IMPORTANT]  

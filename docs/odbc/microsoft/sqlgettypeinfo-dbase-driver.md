@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "DBase driver [ODBC], SQLGetTypeInfo"
 ms.assetid: 6e9ce02b-97c7-4c1a-91e0-829df7459c84
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetTypeInfo (dBASE Driver)
 > [!NOTE]  

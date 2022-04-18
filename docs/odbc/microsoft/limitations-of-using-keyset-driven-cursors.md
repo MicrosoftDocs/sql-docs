@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "keyset-driven cursors [ODBC]"
 ms.assetid: 59d86fed-387c-4719-9550-36343e74da44
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Limitations of Using Keyset-Driven Cursors
 > [!IMPORTANT]  

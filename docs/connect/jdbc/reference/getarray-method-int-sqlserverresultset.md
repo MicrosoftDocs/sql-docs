@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 377746c7-8c9c-41f5-8490-ca0dd56fd57a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getArray Method (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

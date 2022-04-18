@@ -38,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -- Syntax for SQL Server and Azure SQL Database
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
-    [ { @parameter [ type_schema_name. ] data_type }   
+    [ { @parameter_name [ type_schema_name. ] data_type }   
         [ VARYING ] [ = default ] [ OUT | OUTPUT ] [READONLY]  
     ] [ ,...n ]   
 [ WITH <procedure_option> [ ,...n ] ]  
@@ -56,7 +56,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
 -- Syntax for SQL Server CLR Stored Procedure  
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
-    [ { @parameter [ type_schema_name. ] data_type }   
+    [ { @parameter_name [ type_schema_name. ] data_type }   
         [ = default ] [ OUT | OUTPUT ] [READONLY]  
     ] [ ,...n ]   
 [ WITH EXECUTE AS Clause ]  
@@ -89,7 +89,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- **@** *parameter*  
+ @*parameter_name*  
  A parameter in the procedure. Up to 2,100 parameters can be specified.  
   
  [ _type\_schema\_name_**.** ] _data\_type_  

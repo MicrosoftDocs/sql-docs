@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 4db67eb7-7ff2-4fb8-8052-39f699de53ff
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # isCaseSensitive Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 19d60b8b-7e01-4d7b-afa9-f0705d634cf9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getInt Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

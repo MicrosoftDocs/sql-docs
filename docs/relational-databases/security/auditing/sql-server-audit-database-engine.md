@@ -1,41 +1,41 @@
 ---
-title: "SQL Server Audit (Database Engine) | Microsoft Docs"
+title: "SQL Server Audit (Database Engine)"
 description: Learn about server audits for the SQL Server Database Engine or an individual database. Server audits contain server and database audit specifications.
-ms.custom: ""
-ms.date: "01/01/2020"
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
-f1_keywords: 
-  - "audit"
 helpviewer_keywords: 
   - "SQL Server Audit"
   - "audits [SQL Server], SQL Server Audit"
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-author: davidtrigano
-ms.author: datrigan
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: vanto
+ms.custom: ""
+ms.date: "03/23/2022"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # SQL Server Audit (Database Engine)
+
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 
-  *Auditing* an instance of the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] or an individual database involves tracking and logging events that occur on the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit lets you create server audits, which can contain server audit specifications for server level events, and database audit specifications for database level events. Audited events can be written to the event logs or to audit files.  
+*Auditing* an instance of the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] or an individual database involves tracking and logging events that occur on the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit lets you create server audits, which can contain server audit specifications for server level events, and database audit specifications for database level events. Audited events can be written to the event logs or to audit files.  
   
 [!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
- There are several levels of auditing for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], depending on government or standards requirements for your installation. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit provides the tools and processes you must have to enable, store, and view audits on various server and database objects.  
+There are several levels of auditing for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], depending on government or standards requirements for your installation. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit provides the tools and processes you must have to enable, store, and view audits on various server and database objects.  
   
- You can record server audit action groups per-instance, and either database audit action groups or database audit actions per database. The audit event will occur every time that the auditable action is encountered.  
+You can record server audit action groups per-instance, and either database audit action groups or database audit actions per database. The audit event will occur every time that the auditable action is encountered.  
   
- All editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support server level audits. All editions support database level audits beginning with [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1. Prior to that, database level auditing was limited to Enterprise, Developer, and Evaluation editions. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+All editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support server level audits. All editions support database level audits beginning with [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1. Prior to that, database level auditing was limited to Enterprise, Developer, and Evaluation editions. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
->  This     topic applies to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  For [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Get started with SQL database auditing](/azure/azure-sql/database/auditing-overview).  
+> This topic applies to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  For [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Get started with SQL database auditing](/azure/azure-sql/database/auditing-overview).  
   
 ## SQL Server Audit Components  
- An *audit* is the combination of several elements into a single package for a specific group of server actions or database actions. The components of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit combine to produce an output that is called an audit, just as a report definition combined with graphics and data elements produces a report.  
+
+An *audit* is the combination of several elements into a single package for a specific group of server actions or database actions. The components of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit combine to produce an output that is called an audit, just as a report definition combined with graphics and data elements produces a report.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit uses *Extended Events* to help create an audit. For more information about Extended Events, see [Extended Events](../../../relational-databases/extended-events/extended-events.md).  
   

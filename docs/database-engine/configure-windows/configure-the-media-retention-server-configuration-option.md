@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "backup sets [SQL Server], retention duration"
   - "media retention option"
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Configure the media retention Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

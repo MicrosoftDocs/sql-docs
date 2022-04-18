@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "constants"
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Constants (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

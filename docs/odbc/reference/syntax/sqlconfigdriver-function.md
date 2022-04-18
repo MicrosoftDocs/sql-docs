@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLConfigDriver function [ODBC]"
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLConfigDriver Function
 **Conformance**  

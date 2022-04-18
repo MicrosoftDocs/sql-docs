@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Visual Studio Analyzer [ODBC]"
 ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Visual Studio Analyzer
 > [!IMPORTANT]  

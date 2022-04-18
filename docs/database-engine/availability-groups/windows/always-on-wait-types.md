@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Identify waits associated with availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

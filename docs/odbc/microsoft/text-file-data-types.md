@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], text file driver"
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Text File Data Types
 The following table shows how text data types are mapped to ODBC SQL data types. Note that not all ODBC SQL data types are supported by the ODBC Text driver.  

@@ -2,15 +2,13 @@
 description: "Changing the Schema of a System-Versioned Temporal Table"
 title: "Changing the Schema of a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/28/2016"
+ms.date: 03/04/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Changing the schema of a system-versioned temporal table
@@ -44,10 +42,10 @@ ALTER TABLE dbo.Department
 Use ALTER COLUMN <period_column> DROP HIDDEN to clear IsHidden flag */
 
 ALTER TABLE dbo.Department
-    ALTER COLUMN SysStartTime ADD HIDDEN;
+    ALTER COLUMN ValidFrom ADD HIDDEN;
 
 ALTER TABLE dbo.Department
-    ALTER COLUMN SysEndTime ADD HIDDEN;
+    ALTER COLUMN ValidTo ADD HIDDEN;
 ```
 
 ### Important remarks
@@ -65,7 +63,7 @@ ALTER TABLE dbo.Department
 
   - Adding a computed column
   - Adding an **IDENTITY** column
-  - Adding a **SPARSE** column or changing existing column to be **SPARSE**when the history table is set to **DATA_COMPRESSION = PAGE** or **DATA_COMPRESSION = ROW**, which is the default for the history table.
+  - Adding a **SPARSE** column or changing existing column to be **SPARSE** when the history table is set to **DATA_COMPRESSION = PAGE** or **DATA_COMPRESSION = ROW**, which is the default for the history table.
   - Adding a **COLUMN_SET**
   - Adding a **ROWGUIDCOL** column or changing existing column to be **ROWGUIDCOL**
 

@@ -1,6 +1,6 @@
 ---
-title: "Planning a Report (Report Builder) | Microsoft Docs"
-description: Plan and create reports with richly formatted text that shows sales data, marketing trends, operational reports, or dashboards in Report Builder.
+title: "Planning a paginated report | Microsoft Docs"
+description: Plan and create paginated reports with richly formatted text that shows sales data, marketing trends, operational reports, or dashboards in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -15,12 +15,16 @@ ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Planning a Report (Report Builder)
+# Planning a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
   Report Builder lets you create many kinds of paginated reports. For example, you can create reports that show summary or detailed sales data, marketing and sales trends, operational reports, or dashboards. You can also create reports that take advantage of richly formatted text, such as for sales orders, product catalogs, or form letters. All these reports are created by using different combinations of the same basic building blocks in Report Builder. To create a useful, easily understood report, it helps to plan first. Here are some things you might want to consider before you get started:  
   
 -   **What format do you want the report to appear in?**  
   
-     You can render reports online in a browser such as the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or export them to other formats such as Excel, Word, or PDF. The final form your report takes is an important consideration because not all features are available in all export formats. For more information, see [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+     You can render reports online in a browser such as the web portal or Power BI service, or export them to other formats such as Excel, Word, or PDF. The final form your report takes is an important consideration because not all features are available in all export formats. For more information, see [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+
   
 -   **What structure do you want to use to present the data in the report?**  
   

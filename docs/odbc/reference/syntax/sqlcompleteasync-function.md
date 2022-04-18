@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "SQLCompleteAsync function [ODBC]"
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLCompleteAsync Function
 **Conformance**  

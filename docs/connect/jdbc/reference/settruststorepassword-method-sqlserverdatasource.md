@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setTrustStorePassword Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

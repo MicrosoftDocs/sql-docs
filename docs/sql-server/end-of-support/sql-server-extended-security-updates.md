@@ -6,15 +6,15 @@ ms.date: "11/24/2020"
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: cawrites
-ms.author: chadam
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: pmasl
 monikerRange: ">=sql-server-2016"
 ---
 # What are Extended Security Updates for SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-This article provides information for using the SQL Server registry service to receive Extended Security Updates for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]. For more information about other options, see [End of support options](sql-server-end-of-life-overview.md). 
+This article provides information for using the SQL Server registry service to receive Extended Security Updates for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]. For more information about other options, see [End of support options](sql-server-end-of-support-overview.md). 
 
 ## Overview
 Once [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of its support lifecycle, you have the option to sign-up for an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years, until you are ready to upgrade to a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or migrate to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. This subscription is available in two ways:
@@ -25,7 +25,7 @@ You can then use the **SQL Server registry** service in the Azure portal to regi
 Microsoft recommends applying ESU patches as soon as they are available to keep your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance protected. For detailed information about ESUs, see the [ESU FAQ page](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
 > [!IMPORTANT]
-> [Extended support for SQL Server 2008 and SQL Server 2008 R2 ended on July 10, 2019](https://www.microsoft.com/cloud-platform/windows-sql-server-2008). For these versions, consider using Extended Security Updates described in this article or other migration options. For more information, see [End of support options](sql-server-end-of-life-overview.md).
+> [Extended support for SQL Server 2008 and SQL Server 2008 R2 ended on July 10, 2019](https://www.microsoft.com/cloud-platform/windows-sql-server-2008). For these versions, consider using Extended Security Updates described in this article or other migration options. For more information, see [End of support options](sql-server-end-of-support-overview.md).
 
 ## What are Extended Security Updates
 Extended Security Updates (ESUs) for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] include provision of security updates for customers who have purchased an Extended Support Update subscription.
@@ -348,7 +348,7 @@ For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../inclu
 ## See also
 
 - [SQL Server 2008 / 2008 R2 lifecycle page](https://support.microsoft.com/lifecycle/search?alpha=sql%20server%202008)
-- [SQL Server 2008 / 2008 R2 end of support page](./sql-server-end-of-life-overview.md?WT.mc_id=akamseos)
+- [SQL Server 2008 / 2008 R2 end of support page](./sql-server-end-of-support-overview.md?WT.mc_id=akamseos)
 - [Extended Security Updates frequently asked questions (FAQ)](https://aka.ms/sqleosfaq)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
 - [Manage Windows updates by using Azure Automation](/azure/automation/update-management/overview)

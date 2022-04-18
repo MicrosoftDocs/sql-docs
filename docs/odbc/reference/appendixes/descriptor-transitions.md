@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "descriptor transitions [ODBC]"
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Descriptor Transitions
 ODBC descriptors have the following three states.  

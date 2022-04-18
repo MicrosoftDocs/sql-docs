@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "maximum number of minutes per database recovery"
   - "recovery [SQL Server], recovery interval option"
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Configure the recovery interval Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ GO
   
  For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Follow Up: After you configure the recovery internal option  
+##  <a name="FollowUp"></a> Follow Up: After you configure the recovery interval option  
  The setting takes effect immediately without restarting the server.  
   
 ## See Also  

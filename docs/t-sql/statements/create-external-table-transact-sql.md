@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL TABLE (Transact-SQL)"
 title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 ms.custom: ""
-ms.date: 08/13/2021
+ms.date: 2/15/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -169,7 +169,7 @@ This example shows how the three REJECT options interact with each other. For ex
 
 #### REJECTED_ROW_LOCATION = *Directory Location*   
 Introduced in SQL Server 2019 CU6. Specifies the directory within the External Data Source that the rejected rows and the corresponding error file should be written.
-If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. This option can be used only with external data sources where TYPE = HADOOP. For more information, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md#type---hadoop--blob_storage-).
+If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. This option can be used only with external data sources where TYPE = HADOOP and for external tables using DELIMITEDTEXT FORMAT_TYPE. For more information, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md#type---hadoop--blob_storage--1) and [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md).
 
 The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files, corresponding files have a matching suffix.
 
@@ -197,11 +197,11 @@ Note, the login that creates the external data source must have permission to re
 > [!IMPORTANT]
 > The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
 
-## Error Handling
+## Error handling
 
 While executing the CREATE EXTERNAL TABLE statement, PolyBase attempts to connect to the external data source. If the attempt to connect fails, the statement will fail and the external table won't be created. It can take a minute or more for the command to fail since PolyBase retries the connection before eventually failing the query.
 
-## General Remarks
+## General remarks
 
 In ad-hoc query scenarios, such as SELECT FROM EXTERNAL TABLE, PolyBase stores the rows that are retrieved from the external data source in a temporary table. After the query completes, PolyBase removes and deletes the temporary table. No permanent data is stored in SQL tables.
 
@@ -211,7 +211,7 @@ PolyBase can push some of the query computation to Hadoop to improve query perfo
 
 You can create many external tables that reference the same or different external data sources.
 
-## Limitations and Restrictions
+## Limitations and restrictions
 
 Since the data for an external table is not under the direct management control of SQL Server, it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
@@ -249,6 +249,13 @@ The following data types cannot be used in PolyBase external tables:
 - `nText`
 - `xml`
 - Any user-defined type
+
+### Data source specific limitations
+
+#### Oracle
+
+Oracle synonyms are not supported for usage with PolyBase.
+
 
 ## Locking
 
@@ -601,7 +608,9 @@ WITH
      );
 ```
 
-## See also
+## Next steps
+
+Learn more about related concepts in the following articles:
 
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -696,11 +705,11 @@ The DISTRIBUTION clause specifies the data distribution used for this table. The
 
 Users with access to the external table automatically gain access to the underlying remote tables under the credential given in the external data source definition. Avoid undesired elevation of privileges through the credential of the external data source. Use GRANT or REVOKE for an external table just as though it were a regular table. Once you have defined your external data source and your external tables, you can now use full T-SQL over your external tables.
 
-## Error Handling
+## Error handling
 
 While executing the CREATE EXTERNAL TABLE statement, if the attempt to connect fails, the statement will fail and the external table won't be created. It can take a minute or more for the command to fail since SQL Database retries the connection before eventually failing the query.
 
-## General Remarks
+## General remarks
 
 In ad-hoc query scenarios, such as SELECT FROM EXTERNAL TABLE, SQL Database stores the rows that are retrieved from the external data source in a temporary table. After the query completes, SQL Database removes and deletes the temporary table. No permanent data is stored in SQL tables.
 
@@ -708,7 +717,7 @@ In contrast, in the import scenario, such as SELECT INTO FROM EXTERNAL TABLE, SQ
 
 You can create many external tables that reference the same or different external data sources.
 
-## Limitations and Restrictions
+## Limitations and restrictions
 
 Access to data via an external table doesn't adhere to the isolation semantics within SQL Server. This means that querying an external doesn't impose any locking or snapshot isolation and thus data return can change if the data in the external data source is changing.  The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
@@ -716,14 +725,15 @@ You can create multiple external tables that each reference different external d
 
 Only these Data Definition Language (DDL) statements are allowed on external tables:
 
-- CREATE TABLE and DROP TABLE
-- CREATE VIEW and DROP VIEW
+- CREATE TABLE and DROP TABLE.
+- CREATE VIEW and DROP VIEW.
 
 Constructs and operations not supported:
 
-- The DEFAULT constraint on external table columns
-- Data Manipulation Language (DML) operations of delete, insert, and update
-- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns
+- The DEFAULT constraint on external table columns.
+- Data Manipulation Language (DML) operations of delete, insert, and update.
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns.
+- Cursors are not supported for external tables in Azure SQL Database.
 
 Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, that is, when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.
 
@@ -739,7 +749,7 @@ Only literal predicates defined in a query can be pushed down to the external da
                           WHERE CustomerName = 'MyCompany')
 ```
 
-Use of External Tables prevents use of parallelism in the query plan.
+Use of external tables prevents use of parallelism in the query plan.
 
 External tables are implemented as Remote Query and as such the estimated number of rows returned is generally 1000, there are other rules based on the type of predicate used to filter the external table. They are rules-based estimates rather than estimates based on the actual data in the external table. The optimizer doesn't access the remote data source to obtain a more accurate estimate.
 
@@ -773,7 +783,9 @@ WITH
 ( DATA_SOURCE = MyElasticDBQueryDataSrc)
 ```
 
-## See also
+## Next steps
+
+Learn more about external tables in Azure SQL Database in the following articles:
 
 - [Azure SQL Database elastic query overview](/azure/sql-database/sql-database-elastic-query-overview)
 - [Reporting across scaled-out cloud databases](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
@@ -845,7 +857,8 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
     WITH ( 
         LOCATION = 'folder_or_filepath',   
         DATA_SOURCE = external_data_source_name,   
-        FILE_FORMAT = external_file_format_name   
+        FILE_FORMAT = external_file_format_name,   
+        TABLE_OPTIONS = table_options_json     
     )   
 [;]   
 <column_definition> ::= 
@@ -884,6 +897,10 @@ Specifies the name of the external data source that contains the location of the
 
 #### FILE_FORMAT = *external_file_format_name*
 Specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+
+#### TABLE_OPTIONS
+
+Specifies the set of options that describe how to read the underlying files. Currently, the only option that is available is `{"READ_OPTIONS":["ALLOW_INCONSISTENT_READS"]}` that instructs the external table to ignore the updates that are made on the underlying files, even if this might cause some inconsistent read operations. Use this option only in special cases where you have frequently appended files. This option is available in serverless SQL pool for CSV format.
 
 #### Reject Options
 You can specify reject parameters that determine how PolyBase will handle *dirty* records it retrieves from the external data source. A data record is considered 'dirty' if it actual data types or the number of columns don't match the column definitions of the external table.
@@ -952,11 +969,11 @@ Note, the login that creates the external data source must have permission to re
 > [!IMPORTANT]
 > The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
 
-## Error Handling
+## Error handling
 
 While executing the CREATE EXTERNAL TABLE statement, PolyBase attempts to connect to the external data source. If the attempt to connect fails, the statement will fail and the external table won't be created. It can take a minute or more for the command to fail since PolyBase retries the connection before eventually failing the query.
 
-## General Remarks
+## General remarks
 
 In ad-hoc query scenarios, such as SELECT FROM EXTERNAL TABLE, PolyBase stores the rows that are retrieved from the external data source in a temporary table. After the query completes, PolyBase removes and deletes the temporary table. No permanent data is stored in SQL tables.
 
@@ -966,7 +983,7 @@ PolyBase can push some of the query computation to Hadoop to improve query perfo
 
 You can create many external tables that reference the same or different external data sources.
 
-## Limitations and Restrictions
+## Limitations and restrictions
 
 Since the data for an external table is not under the direct management control of Azure Synapse, it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
@@ -1057,7 +1074,9 @@ AS SELECT * FROM
 [dbo].[DimProduct_external] ;
 ```
 
-## See also
+## Next steps
+
+Learn more about external tables and related concepts in the following articles:
 
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -1210,11 +1229,11 @@ Note, the login that creates the external data source must have permission to re
 > [!IMPORTANT]
 > The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
 
-## Error Handling
+## Error handling
 
 While executing the CREATE EXTERNAL TABLE statement, PolyBase attempts to connect to the external data source. If the attempt to connect fails, the statement will fail and the external table won't be created. It can take a minute or more for the command to fail since PolyBase retries the connection before eventually failing the query.
 
-## General Remarks
+## General remarks
 
 In ad-hoc query scenarios, such as SELECT FROM EXTERNAL TABLE, PolyBase stores the rows that are retrieved from the external data source in a temporary table. After the query completes, PolyBase removes and deletes the temporary table. No permanent data is stored in SQL tables.
 
@@ -1224,7 +1243,7 @@ PolyBase can push some of the query computation to Hadoop to improve query perfo
 
 You can create many external tables that reference the same or different external data sources.
 
-## Limitations and Restrictions
+## Limitations and restrictions
 
 Since the data for an external table is not under the direct management control of the appliance, it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
@@ -1303,7 +1322,9 @@ FROM ClickStream
 ;
 ```
 
-## See also
+## Next steps
+
+Learn more about external tables in Analytics Platform System in the following articles:
 
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)

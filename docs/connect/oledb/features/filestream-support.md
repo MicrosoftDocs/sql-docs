@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], OLE DB Driver for SQL Server"
   - "OLE DB Driver for SQL Server [FILESTREAM support]"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # FILESTREAM Support in OLE DB Driver for SQL Server
 [!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "registry entries for data sources [ODBC]"
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Registry Entries for Data Sources
 > [!NOTE]  

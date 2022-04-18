@@ -46,7 +46,7 @@ The  X-coordinate property of a **Point** instance.
 ## Examples  
  The following example creates a `Point` instance and uses `STX` to retrieve the X-coordinate of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT(3 8)', 0);  
 SELECT @g.STX;  

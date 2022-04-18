@@ -2,14 +2,15 @@
 description: "Project Settings (Migration) (DB2ToSQL)"
 title: "Project Settings (Migration) (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-migration
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Project Settings (Migration) (DB2ToSQL)
 The Migration page of the **Project Settings** dialog box contains settings that customize how SSMA migrates data from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

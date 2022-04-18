@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "time [SQL Server], validate"
   - "ISDATE function [SQL Server]"
 ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 03/14/2017
@@ -38,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns 1 if the *expression* is a valid **date**, **time**, or **datetime** value; otherwise, 0.  
+  Returns 1 if the *expression* is a valid **datetime** value; otherwise, 0.  
   
  ISDATE returns 0 if the *expression* is a **datetime2** value.  
   

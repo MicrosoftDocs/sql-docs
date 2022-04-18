@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "updating data"
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

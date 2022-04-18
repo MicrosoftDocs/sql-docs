@@ -14,6 +14,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article describes how to add new Active Directory groups with *bdcUser* roles in addition to the ones provided during deployment through the *clusterUsers* configuration setting.
 
 >[!IMPORTANT]

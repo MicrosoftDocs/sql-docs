@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "functions [ODBC], views defined"
 ms.assetid: 72cef4bd-13be-430e-9b6a-c75b60f9d1dc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Tables and Views
 In ODBC functions, tables and views are interchangeable. The term *table* is used both for tables and for views, except where the term *view* is used explicitly.

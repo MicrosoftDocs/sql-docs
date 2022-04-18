@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "assignment operators, ^="
   - "augmented operators, ^="
 ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

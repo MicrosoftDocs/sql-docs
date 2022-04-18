@@ -1,7 +1,8 @@
 ---
 description: "Columnstore indexes - what&#39;s new"
 title: "Columnstore indexes - what&#39;s new | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-whats-new
 ms.date: "05/11/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
@@ -36,9 +37,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Read-only nonclustered columnstore index on heap or B-tree|yes|yes|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|  
 |Updateable nonclustered columnstore index on heap or B-tree|||yes|yes|yes|yes|yes|  
 |Additional B-tree indexes allowed on a heap or B-tree that has a nonclustered columnstore index|yes|yes|yes|yes|yes|yes|yes|  
-|Updateable clustered columnstore index||yes|yes|yes||yes|yes|  
-|B-tree index on a clustered columnstore index|||yes|yes||yes|yes|  
-|Columnstore index on a memory-optimized table|||yes|yes||yes|yes|  
+|Updateable clustered columnstore index||yes|yes|yes|yes|yes|yes|  
+|B-tree index on a clustered columnstore index|||yes|yes|yes|yes|yes|  
+|Columnstore index on a memory-optimized table|||yes|yes|yes|yes|yes|  
 |Nonclustered columnstore index definition supports using a filtered condition|||yes|yes|yes|yes|yes|  
 |Compression delay option for columnstore indexes in `CREATE TABLE` and `ALTER TABLE`|||yes|yes|yes|yes|yes|
 |Columnstore index can have a non-persisted computed column||||yes|yes|||   

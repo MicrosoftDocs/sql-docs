@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 1e8cb175-5f4c-4208-b4f5-3646990a30e3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getMultiSubnetFailover Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SOME | ANY keyword"
   - "single-column set of values [SQL Server]"
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # SOME | ANY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

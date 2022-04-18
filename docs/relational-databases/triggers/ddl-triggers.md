@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "DDL triggers, about DDL triggers"
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DDL Triggers

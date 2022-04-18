@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 03649d56-3319-4867-bef1-559dfd221b8b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLServerXADataSource Constructor ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

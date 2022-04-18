@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Understanding isolation levels
 
@@ -24,7 +24,7 @@ Transaction isolation levels control the following effects:
 
 - How long the read locks are held.
 
-- Whether a read operation referencing rows modified by another transaction:
+- Whether read operations referencing rows modified by another transaction:
 
   - Block until the exclusive lock on the row is freed.
 

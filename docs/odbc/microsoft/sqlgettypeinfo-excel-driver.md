@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Excel driver [ODBC], SQLGetTypeInfo"
 ms.assetid: 708845be-e6a1-4677-8113-c52819a43fa4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetTypeInfo (Excel Driver)
 > [!NOTE]  

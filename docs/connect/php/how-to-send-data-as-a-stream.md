@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "streaming data"
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # How to: Send Data as a Stream
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

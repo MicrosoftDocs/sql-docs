@@ -41,7 +41,7 @@ Returns 1 if a **geometry** instance is empty. Returns 0 if a **geometry** insta
 ## Examples  
  The following example creates an empty `geometry` instance and uses `STIsEmpty()` to test whether the instance is empty.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POLYGON EMPTY', 0);  
 SELECT @g.STIsEmpty();  

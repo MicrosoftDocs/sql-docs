@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article describes the role of *SQL Server compute pools* in a SQL Server big data cluster. Compute pools provide scale-out computational resources for a SQL Server big data cluster. They are used to offload computational work, or intermediate result sets, from the SQL Server master instance. The following sections describe the architecture, functionality and usage scenarios of a compute pool.
 
 You can also watch this 5-minute video for an introduction into compute pools:

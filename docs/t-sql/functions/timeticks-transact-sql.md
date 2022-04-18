@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "time [SQL Server], ticks"
   - "number of microseconds per tick"
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # &#x40;&#x40;TIMETICKS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

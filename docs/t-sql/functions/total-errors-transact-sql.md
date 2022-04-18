@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "write errors [SQL Server]"
   - "read/write errors"
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # &#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

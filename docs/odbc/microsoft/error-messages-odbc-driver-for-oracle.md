@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], error messages"
 ms.assetid: 6e54fe40-8306-4c2b-9e60-e521705e5b4b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Error Messages (ODBC Driver for Oracle)
 > [!IMPORTANT]  

@@ -2,16 +2,16 @@
 title: "Using Data Classification with Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
 description: Learn how to use Microsoft OLE DB Driver for SQL Server to obtain classification information.
 ms.custom: ""
-ms.date: "09/30/2020"
+ms.date: "02/18/2022"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OLE DB Driver for SQL Server, data classification"
-author: "bazizi"
-ms.author: v-beaziz
+author: David-Engel
+ms.author: v-davidengel
 manager: kenvh
 ---
 # Using data classification
@@ -105,8 +105,8 @@ int main()
 void Connect(CComPtr<IDBInitialize>& pIDBInitialize, const wchar_t* server, const wchar_t* database)
 {
     // Construct the connection string.
-    std::wstring connString = L"Provider=MSOLEDBSQL;Data Source=" + std::wstring(server) + L";Database=" +
-        std::wstring(database) + L";Authentication=ActiveDirectoryIntegrated;Use Encryption for Data=true;";
+    std::wstring connString = L"Provider=MSOLEDBSQL19;Data Source=" + std::wstring(server) + L";Database=" +
+        std::wstring(database) + L";Authentication=ActiveDirectoryIntegrated;Use Encryption for Data=Mandatory;";
 
     CComPtr<IDataInitialize> pIDataInitialize;
     if (FAILED(CoCreateInstance(CLSID_MSDAINITIALIZE, nullptr, CLSCTX_INPROC_SERVER, IID_IDataInitialize, reinterpret_cast<LPVOID*>(&pIDataInitialize))))

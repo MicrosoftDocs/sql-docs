@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLSetCursorName function [ODBC]"
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetCursorName Function
 **Conformance**  

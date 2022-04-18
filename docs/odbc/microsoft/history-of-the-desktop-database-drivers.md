@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], history"
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # History of the Desktop Database Drivers
 The following table shows the Desktop Database Drivers version history.  

@@ -53,7 +53,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
 ## Examples  
  The following example uses `STMPolyFromText()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STMPolyFromText('MULTIPOLYGON (((5 5, 10 5, 10 10, 5 5)), ((10 10, 100 10, 200 200, 30 30, 10 10)))', 0);  
 SELECT @g.ToString();  

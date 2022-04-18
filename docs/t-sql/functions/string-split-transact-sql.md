@@ -1,10 +1,9 @@
 ---
-title: "STRING_SPLIT (Transact-SQL) | Microsoft Docs"
+title: "STRING_SPLIT (Transact-SQL)"
 description: "Transact-SQL reference for the STRING_SPLIT function. This table-valued function splits a string into substrings based on a character delimiter."
-ms.date: "11/28/2018"
+ms.date: "11/04/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: "jrasnick"
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -14,9 +13,9 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "STRING_SPLIT function"
-ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: 
 monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017" 
 ---
 # STRING_SPLIT (Transact-SQL)
@@ -32,39 +31,54 @@ STRING_SPLIT requires the compatibility level to be at least 130. When the level
 To change the compatibility level of a database, refer to [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
 
 > [!NOTE]
-> Compatibility configuration is not needed for STRING_SPLIT in Azure Synapse Analytics.
+> Compatibility configuration is not needed for `STRING_SPLIT` in Azure Synapse Analytics.
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 
 ```syntaxsql
-STRING_SPLIT ( string , separator )  
+STRING_SPLIT ( string , separator [ , enable_ordinal ] )  
 ```
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
- *string*  
+#### *string*
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (for example, **nvarchar**, **varchar**, **nchar**, or **char**).  
   
- *separator*  
+#### *separator*  
  Is a single character [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (for example, **nvarchar(1)**, **varchar(1)**, **nchar(1)**, or **char(1)**) that is used as separator for concatenated substrings.  
-  
+
+#### *enable_ordinal*  
+An **int** or **bit** [expression](../../t-sql/language-elements/expressions-transact-sql.md) that serves as a flag to enable or disable the `ordinal` output column. A value of 1 enables the `ordinal` column. If *enable_ordinal* is omitted, `NULL`, or has a value of 0, the `ordinal` column is disabled.  
+
+> [!NOTE]
+> The *enable_ordinal* argument and `ordinal` output column are currently only supported in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (serverless SQL pool only).
+
 ## Return Types  
 
-Returns a single-column table whose rows are the substrings. The name of the column is **value**. Returns **nvarchar** if any of the input arguments are either **nvarchar** or **nchar**. Otherwise returns **varchar**. The length of the return type is the same as the length of the string argument.  
+If the `ordinal` output column is not enabled, STRING_SPLIT returns a single-column table whose rows are the substrings. The name of the column is `value`. It returns **nvarchar** if any of the input arguments are either **nvarchar** or **nchar**. Otherwise, it returns **varchar**. The length of the return type is the same as the length of the *string* argument.  
+
+If the *enable_ordinal* argument is passed a value of 1, a second column named `ordinal` is returned that consists of the 1-based index values of each substring's position in the input string. The return type is **bigint**.  
+
   
 ## Remarks  
 
-**STRING_SPLIT** inputs a string that has delimited substrings, and inputs one character to use as the delimiter or separator. STRING_SPLIT outputs a single-column table whose rows contain the substrings. The name of the output column is **value**.
+STRING_SPLIT inputs a string that has delimited substrings and inputs one character to use as the delimiter or separator. Optionally, the function supports a third argument with a value of 0 or 1 that disables or enables, respectively, the `ordinal` output column.  
 
-The output rows might be in any order. The order is _not_ guaranteed to match the order of the substrings in the input string. You can override the final sort order by using an ORDER BY clause on the SELECT statement (`ORDER BY value`).
+STRING_SPLIT outputs a single-column or double-column table, depending on the *enable_ordinal* argument.  
+
+ - If *enable_ordinal* is `NULL`, omitted, or has a value of 0, STRING_SPLIT returns a single-column table whose rows contain the substrings. The name of the output column is `value`.  
+
+ - If *enable_ordinal* has a value of 1, the function returns a two-column table, including the `ordinal` column that consists of the 1-based index values of the substrings in the original input string.  
+
+Note that the *enable_ordinal* argument must be a constant value, not a column or variable. It must also be either a **bit** or **int** data type with a value of 0 or 1. Otherwise, the function will raise an error.  
+
+The output rows might be in any order. The order is _not_ guaranteed to match the order of the substrings in the input string. You can override the final sort order by using an ORDER BY clause on the SELECT statement, for example, `ORDER BY value` or `ORDER BY ordinal`.
 
 0x0000 (**char(0)**) is an undefined character in Windows collations and cannot be included in STRING_SPLIT.
 
-Empty zero-length substrings are present when the input string contains two or more consecutive occurrences of the delimiter character. Empty substrings are treated the same as are plain substrings. You can filter out any rows that contain the empty substring by using the WHERE clause (`WHERE value <> ''`). If the input string is NULL, the STRING_SPLIT table-valued function returns an empty table.  
+Empty zero-length substrings are present when the input string contains two or more consecutive occurrences of the delimiter character. Empty substrings are treated the same as are plain substrings. You can filter out any rows that contain the empty substring by using the WHERE clause, for example `WHERE value <> ''`. If the input string is `NULL`, the STRING_SPLIT table-valued function returns an empty table.  
 
 As an example, the following SELECT statement uses the space character as the separator:
 
@@ -74,7 +88,7 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 
 In a practice run, the preceding SELECT returned following result table:  
   
-|value|  
+|**value**|  
 | :-- |  
 |Lorem|  
 |ipsum|  
@@ -82,6 +96,23 @@ In a practice run, the preceding SELECT returned following result table:
 |sit|  
 |amet.|  
 | &nbsp; |
+
+The following example enables the `ordinal` column by passing 1 for the optional third argument:  
+
+```sql
+SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ', 1);
+```
+
+This statement then returns the following result table:  
+
+|**value**|**ordinal**|  
+| :-- | :-- |  
+|Lorem|1|  
+|ipsum|2|  
+|dolor|3|  
+|sit|4|  
+|amet.|5|  
+| &nbsp; ||
 
 ## Examples  
   
@@ -103,7 +134,7 @@ STRING_SPLIT will return empty string if there is nothing between separator. Con
 
 Product table has a column with comma-separate list of tags shown in the following example:  
   
-|ProductId|Name|Tags|  
+|**ProductId**|**Name**|**Tags**|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -119,7 +150,7 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|Name|value|  
+|**ProductId**|**Name**|**value**|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
 |1|Full-Finger Gloves|road|  
@@ -129,15 +160,15 @@ FROM Product
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  
 
-  >[!NOTE]
-  > The order of the output may vary as the order is _not_ guaranteed to match the order of the substrings in the input string.
-  
+>[!NOTE]
+> The order of the output may vary as the order is _not_ guaranteed to match the order of the substrings in the input string.
+
 ### C. Aggregation by values
 
 Users must create a report that shows the number of products per each tag, ordered by number of products, and to filter only the tags with more than two products.  
 
 ```sql  
-SELECT value as tag, COUNT(*) AS [Number of articles]  
+SELECT value as tag, COUNT(*) AS [number_of_articles]  
 FROM Product  
     CROSS APPLY STRING_SPLIT(Tags, ',')  
 GROUP BY value  
@@ -186,7 +217,44 @@ FROM Product
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
 ```
 
-## See Also
+### F. Find rows by ordinal values  
+
+The following statement finds all rows with an even index value:  
+
+```sql
+SELECT *
+FROM STRING_SPLIT('Austin,Texas,Seattle,Washington,Denver,Colorado', ',', 1)
+WHERE ordinal % 2 = 0;  
+```
+
+The above statement returns the following table:  
+
+|**value**|**ordinal**|  
+|----------|--------|  
+|Texas|2|  
+|Washington|4|  
+|Colorado|6|  
+
+### G. Order rows by ordinal values  
+
+The following statement returns the split substring values of the input string and their ordinal values, ordered by the `ordinal` column:  
+
+```sql
+SELECT * FROM STRING_SPLIT('E-D-C-B-A', '-', 1) ORDER BY ordinal DESC;  
+```
+
+The above statement returns the following table:
+
+|**value**|**ordinal**|  
+|-----|--------|  
+|A|5|  
+|B|4|  
+|C|3|  
+|D|2|  
+|E|1|  
+
+
+## Next Steps
 
 - [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)
 - [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)

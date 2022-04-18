@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "common language runtime [SQL Server]"
   - ".NET Framework [SQL Server]"
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Common Language Runtime (CLR) Integration Programming Concepts
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

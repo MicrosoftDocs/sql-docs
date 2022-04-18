@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], user-defined types"
   - "ISSCommandWithParameters interface"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using User-Defined Types
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

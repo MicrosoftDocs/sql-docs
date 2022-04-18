@@ -5,10 +5,11 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2020
 ms.topic: how-to
-author: garyericson
-ms.author: garye
-
-ms.custom: seo-lt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

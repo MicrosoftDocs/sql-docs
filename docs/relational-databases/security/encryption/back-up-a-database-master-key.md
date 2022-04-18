@@ -1,8 +1,8 @@
 ---
-title: "Back Up a Database Master Key | Microsoft Docs"
+title: "Back up a database master key"
 description: Learn how to back up a database master key in SQL Server by using Transact-SQL. This essential key encrypts other keys and certificates.
 ms.custom: ""
-ms.date: "01/02/2019"
+ms.date: "12/16/2021"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,17 +13,19 @@ ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
 ---
-# Back Up a Database Master Key
+
+# Back up a database master key
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to back up a database master key in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The database master key is used to encrypt other keys and certificates inside a database. If it is deleted or corrupted, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] may be unable to decrypt those keys, and the data encrypted using them will be effectively lost. For this reason, you should back up the database master key and store the backup in a secure off-site location.  
+  This topic describes how to back up a database master key in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The database master key is used to encrypt other keys and certificates inside a database. If it's deleted or corrupted, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] may be unable to decrypt those keys, and the data encrypted using them will be effectively lost. For this reason, you should back up the database master key and store the backup in a secure off-site location.  
   
-## Before You Begin  
+## Before you begin  
   
-### Limitations and Restrictions  
+### Limitations and restrictions  
   
-- The master key must be open and, therefore, decrypted before it is backed up. If it is encrypted with the service master key, the master key does not have to be explicitly opened. But if the master key is encrypted only with a password, it must be explicitly opened.  
+- The master key must be open and, therefore, decrypted before it's backed up. If it's encrypted with the service master key, the master key doesn't have to be explicitly opened. But if the master key is encrypted only with a password, it must be explicitly opened.  
   
-- We recommend that you back up the master key as soon as it is created, and store the backup in a secure, off-site location.  
+- We recommend that you back up the master key as soon as it's created, and store the backup in a secure, off-site location.  
   
 ## Security  
   
@@ -32,7 +34,7 @@ Requires CONTROL permission on the database.
   
 ## Using SQL Server Management Studio with Transact-SQL  
   
-### To back-up the database master key  
+### To back up the database master key  
   
 1. In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], connect to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance containing the database master key you wish to back up.  
   
@@ -40,7 +42,7 @@ Requires CONTROL permission on the database.
   
 3. Obtain a removable backup medium for storing a copy of the backed-up key.  
   
-4. Identify an NTFS directory in which to create the backup of the key. This is where you will create the file specified in the next step. The directory should be protected with highly restrictive access control lists (ACLs).  
+4. Identify an NTFS directory in which to create the backup of the key. This is where you'll create the file specified in the next step. The directory should be protected with highly restrictive access control lists (ACLs).  
   
 5. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -65,5 +67,7 @@ Requires CONTROL permission on the database.
 8. Copy the file to the backup medium and verify the copy.  
   
 9. Store the backup in a secure, off-site location.  
-  
+
+## See also
+
  For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) and [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md).  

@@ -11,8 +11,8 @@ ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: 0a6e4985-9601-4877-942a-cf53f6932958
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # Data Type Functions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

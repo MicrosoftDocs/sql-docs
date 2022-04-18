@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLError function [ODBC], mapping"
 ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLError Mapping
 When an application calls **SQLError** through an ODBC *3.x* driver, the call to  

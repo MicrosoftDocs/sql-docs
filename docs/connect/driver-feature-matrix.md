@@ -2,13 +2,13 @@
 title: Driver feature support matrix
 description: Learn which SQL Server features are supported in the drivers for .NET, ODBC, OLE DB, JDBC, Node.js, JavaScript, and Python.
 ms.custom: ""
-ms.date: 05/06/2021
+ms.date: 02/01/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
-ms.reviewer: v-daenge
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
 ---
 # Driver feature support matrix for Microsoft SQL Server
 
@@ -36,7 +36,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Azure Active Directory Access Token authentication](/azure/active-directory/develop/access-tokens) | [Yes](/dotnet/api/system.data.sqlclient.sqlconnection.accesstoken) | [Yes](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [Yes](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) (v4.6+) | [Yes](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) (v4.6+) |
 | [Azure Active Directory Password authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](ado-net/sql/azure-active-directory-authentication.md) | [Yes](ado-net/sql/azure-active-directory-authentication.md) | | Yes (v4.6+) |
 | [Azure Active Directory Integrated authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](ado-net/sql/azure-active-directory-authentication.md) | [Yes](ado-net/sql/azure-active-directory-authentication.md) | | Yes (v4.6+) |
-| [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](ado-net/sql/azure-active-directory-authentication.md) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.0+) | | Yes (v4.7.2+) |
+| [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](ado-net/sql/azure-active-directory-authentication.md) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.0+) | | |
 | [Azure Active Directory Managed Identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.1+) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.1+) | | |
 | [Azure Active Directory Service Principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.0+) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.0+) | | |
 | [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | [Yes](ado-net/sql/authentication-sql-server.md) | [Yes](ado-net/sql/authentication-sql-server.md) | [Yes](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Yes](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
@@ -53,7 +53,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | :-- | :-- | :-- | :-- | :-- |
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Yes](odbc/using-always-encrypted-with-the-odbc-driver.md) (v13.1+) | [Yes](odbc/using-always-encrypted-with-the-odbc-driver.md) (v13.1+) | [Yes](jdbc/using-always-encrypted-with-the-jdbc-driver.md) (v6.0+) |
 | [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Yes](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) (v17.4+) | [Yes](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) (v17.4+) | [Yes](jdbc/using-always-encrypted-with-the-jdbc-driver.md) (v8.2+) | |
-| [Azure Active Directory Access Token authentication](/azure/active-directory/develop/access-tokens) | [Yes](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) (v13.1+) | [Yes](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) (v13.1+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md#connecting-using-access-token) (v6.0+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.2+) |
+| [Azure Active Directory Access Token authentication](/azure/active-directory/develop/access-tokens) | [Yes](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) (v13.1+) | [Yes](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) (v13.1+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md#connect-using-access-token) (v6.0+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.2+) |
 | [Azure Active Directory Password authentication](/azure/sql-database/sql-database-aad-authentication) |  [Yes](odbc/using-azure-active-directory.md) (v13.1+) | [Yes](odbc/using-azure-active-directory.md) (v13.1+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v6.0+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.2+) |
 | [Azure Active Directory Integrated authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](odbc/using-azure-active-directory.md) (v13.1+) | [Yes](odbc/using-azure-active-directory.md) (v17.6+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v6.0+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.2+) |
 | [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](odbc/using-azure-active-directory.md) (v17.1+) | | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v9.2+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.3+) |
@@ -78,13 +78,13 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Azure Active Directory Integrated authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | | Yes |
 | [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | | | | Yes<sup>[2](#note2)</sup> |
 | [Azure Active Directory Managed Identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | [Yes](php/azure-active-directory.md) (v5.6+) | [Yes](php/azure-active-directory.md) (v5.6+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes |
-| [Azure Active Directory Service Principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](php/azure-active-directory.md) (v5.9+) | [Yes](php/azure-active-directory.md) (v5.9+) | | |
+| [Azure Active Directory Service Principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](php/azure-active-directory.md) (v5.9+) | [Yes](php/azure-active-directory.md) (v5.9+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes |
 | [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | [Yes](php/how-to-connect-using-windows-authentication.md) | [Yes](odbc/linux-mac/using-integrated-authentication.md) | | Yes |
 | [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | | | [Yes](https://tediousjs.github.io/tedious/bulk-load.html) | |
 | [Data Discovery and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | Yes (v5.8+) | Yes (v5.8+) | | |
 | [Multiple Active Result Sets (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [Yes](php/how-to-disable-multiple-active-resultsets-mars.md) | [Yes](php/how-to-disable-multiple-active-resultsets-mars.md) | | Yes |
 | [Spatial Data Types](../relational-databases/spatial/spatial-data-sql-server.md) | | | | |
-| [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | | | [Yes](https://tediousjs.github.io/tedious/parameters.html) | Yes |
+| [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Yes](php/use-table-valued-parameters.md) (v5.10+) | [Yes](php/use-table-valued-parameters.md) (v5.10+) | [Yes](https://tediousjs.github.io/tedious/parameters.html) | Yes |
 | [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) |
 | [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](odbc/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

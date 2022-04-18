@@ -5,7 +5,7 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
-keywords: 
+keywords:
   - "extensions"
   - "vsix"
   - "install extension"
@@ -13,7 +13,9 @@ keywords:
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: seo-lt-2019
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
 ms.date: 07/29/2020
 ---
 

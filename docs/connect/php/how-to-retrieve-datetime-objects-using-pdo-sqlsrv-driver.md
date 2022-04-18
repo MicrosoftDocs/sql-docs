@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "date and time types, retrieving as datetime objects"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # How to: Retrieve Date and Time Types as PHP DateTime Objects Using the PDO_SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

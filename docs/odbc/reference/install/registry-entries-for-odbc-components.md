@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "registry entries for components [ODBC], about registry entries"
 ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Registry Entries for ODBC Components
 > [!NOTE]  

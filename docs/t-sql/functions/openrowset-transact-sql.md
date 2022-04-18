@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "OLE DB data sources [SQL Server]"
   - "ad hoc connection information"
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # OPENROWSET (Transact-SQL)

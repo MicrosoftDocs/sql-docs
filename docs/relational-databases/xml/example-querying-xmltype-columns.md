@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, querying XML example"
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Example: Querying XMLType Columns
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

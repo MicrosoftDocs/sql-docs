@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "guide"
   - "guide, list"
 ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
-author: "rothja"
-ms.author: "jroth"
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Guides

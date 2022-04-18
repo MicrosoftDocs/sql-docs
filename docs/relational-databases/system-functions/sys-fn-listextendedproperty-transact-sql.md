@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "extended properties [SQL Server], columns"
   - "table extended properties [SQL Server]"
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_listextendedproperty (Transact-SQL)

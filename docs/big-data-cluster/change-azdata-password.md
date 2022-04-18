@@ -1,8 +1,8 @@
 ---
 title: Update AZDATA_PASSWORD
 description: Update the `AZDATA_PASSWORD` manually
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 07/12/2021
 ms.topic: conceptual
@@ -13,6 +13,8 @@ ms.technology: big-data-cluster
 # Manually update AZDATA_PASSWORD
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Whether or not the [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] is operating with Active Directory integration, `AZDATA_PASSWORD` is set during deployment. It provides a basic authentication to the cluster controller and master instance. This document describes how to manually update `AZDATA_PASSWORD`.
 
@@ -110,7 +112,7 @@ Follow these options for manually updating the password for [Grafana](app-monito
     admin:{SHA}<secret>
     ```
     
-    Replace values for /<username/>, /<password/>, /<secret/> as appropriate, for example:
+    Replace values for \<username\>, \<password\>, \<secret\> as appropriate, for example:
     
     ```bash
     htpasswd -nbs admin Test@12345

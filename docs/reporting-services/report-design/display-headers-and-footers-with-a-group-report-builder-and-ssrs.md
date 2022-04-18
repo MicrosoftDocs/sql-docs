@@ -1,6 +1,6 @@
 ---
-title: "Display Headers and Footers with a Group (Report Builder) | Microsoft Docs"
-description: Find out how to set properties to render headers and footers with dynamic rows that are associated with a group in a tablix data region.
+title: "Display headers and footers with a group in a paginated report | Microsoft Docs"
+description: Find out how to set properties to render headers and footers with dynamic rows that are associated with a group in a tablix data region in a paginated report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Display Headers and Footers with a Group (Report Builder and SSRS)
-  You can help control whether a static row, such as a group header or footer, renders with dynamic rows that are associated with a group in a tablix data region.  
+# Display headers and footers with a group in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  You can help control whether a static row, such as a group header or footer, renders with dynamic rows that are associated with a group in a tablix data region in a paginated report.  
   
  To repeat all the column headings or row headings on multiple pages, you can set properties for the tablix data region. For more information, see [Display Row and Column Headers on Multiple Pages (Report Builder and SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
   

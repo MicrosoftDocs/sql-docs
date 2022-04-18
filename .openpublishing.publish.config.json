@@ -2,6 +2,20 @@
   "build_entry_point": "docs",
   "docsets_to_publish": [
     {
+      "docset_name": "azure-sql",
+      "build_source_folder": "azure-sql",
+      "build_output_subfolder": "azure-sql",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
       "docset_name": "data-migration",
       "build_source_folder": "data-migration",
       "build_output_subfolder": "data-migration",
@@ -49,7 +63,7 @@
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     },
     {
@@ -69,7 +83,7 @@
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     },
     {
@@ -84,7 +98,7 @@
       "Publish",
       "PDF"
     ],
-    "master": [
+    "main": [
       "Publish",
       "PDF"
     ],
@@ -99,9 +113,8 @@
       "template_folder": "_themes.pdf"
     }
   },
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  },
+  "docs_build_engine": {},
+  "contribution_branch_mappings": null,
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "enable_branch_build_custom_validation": true,

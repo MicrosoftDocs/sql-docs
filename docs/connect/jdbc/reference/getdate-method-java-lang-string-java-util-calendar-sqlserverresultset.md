@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 3fa2a72a-7499-44ec-8f76-a8e646e0190c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getDate Method (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

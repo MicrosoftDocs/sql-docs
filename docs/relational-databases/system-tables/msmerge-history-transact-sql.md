@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_history system table"
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # MSmerge_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

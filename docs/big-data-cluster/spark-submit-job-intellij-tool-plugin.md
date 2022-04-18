@@ -1,13 +1,13 @@
 ---
 title: "Run Spark jobs: Azure Toolkit for IntelliJ"
 titleSuffix: SQL Server Big Data Clusters
-description: Learn how to submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ by submitting a local Jar or Py file.
+description: Learn how to submit Spark jobs on SQL Server Big Data Clusters in Azure Toolkit for IntelliJ by submitting a local Jar or Py file.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
 ms.topic: conceptual
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 10/05/2021
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
@@ -16,12 +16,14 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 One of the key scenarios for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
 
 ## Prerequisites
 
 - SQL Server big data cluster.
-- Oracle Java Development Kit. You can install it from the [Oracle website](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+- Java Development Kit.
 - IntelliJ IDEA. You can install it from the [JetBrains website](https://www.jetbrains.com/idea/download/).
 - Azure Toolkit for IntelliJ extension. For installation instructions, see [Install Azure Toolkit for IntelliJ](/azure/azure-toolkit-for-intellij-installation).
 

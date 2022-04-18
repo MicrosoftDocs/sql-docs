@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQL Server 2008 R2 SP2"
   - "Release Notes, SQL Server 2008 R2 SP2"
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2008 R2 SP2 Release Notes

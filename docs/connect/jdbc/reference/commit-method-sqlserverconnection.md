@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: c7346165-51bf-4844-b64c-29833c147236
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # commit Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

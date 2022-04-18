@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "analytic functions, LAST_VALUE"
   - "LAST_VALUE function"
 ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LAST_VALUE (Transact-SQL)

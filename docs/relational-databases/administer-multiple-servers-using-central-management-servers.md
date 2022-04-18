@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "multiserver queries"
   - "central management server"
   - "multiserver administration [SQL Server]"
-  - "master servers [SQL Server], central management servers"
+  - "central management servers"
   - "target configuration [SQL Server]"
   - "server configuration [SQL Server]"
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c

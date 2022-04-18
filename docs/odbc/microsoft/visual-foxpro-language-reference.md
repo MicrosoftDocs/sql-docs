@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], commands"
 ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Visual FoxPro Language Reference
 This section contains the following topics.  

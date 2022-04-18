@@ -56,7 +56,7 @@ Returns a specified point in a **geometry** instance.
 ## Examples  
  The following example creates a `LineString` instance and uses `STPointN()` to retrieve the second point in the description of the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
 SELECT @g.STPointN(2).ToString();  

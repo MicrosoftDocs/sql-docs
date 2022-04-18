@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "schemas [SQL Server], XML"
   - "schema collections [SQL Server], reconstructing schemas"
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # xml_schema_namespace
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -3,25 +3,22 @@ title: Configure Active Directory authentication with SQL Server on Linux-based 
 description: Step by step on how to configure Active Directory authentication with SQL Server on Linux containers using adutil
 author: amvin87
 ms.author: amitkh
-ms.reviewer: vanto
-ms.date: 12/10/2020
+ms.reviewer: randolphwest
+ms.date: 03/07/2022
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---
 
-# Tutorial: Configure Active Directory authentication with SQL Server on Linux  containers
-
-> [!NOTE]
-> **adutil** is currently in **public preview**
+# Tutorial: Configure Active Directory authentication with SQL Server on Linux containers
 
 This tutorial explains how to configure SQL Server on Linux containers to support Active Directory (AD) authentication, also known as integrated authentication. For an overview, see [Active Directory authentication for SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md).
 
 This tutorial consists of the following tasks:
 
 > [!div class="checklist"]
-> - Install adutil-preview
+> - Install adutil
 > - Join Linux host to AD domain
 > - Create an AD user for SQL Server and set the ServicePrincipalName (SPN) using the adutil tool
 > - Create the SQL Server service keytab file
@@ -35,7 +32,7 @@ This tutorial consists of the following tasks:
 The following are required before configuring AD authentication:
 
 - Have an AD Domain Controller (Windows) in your network.
-- Install the adutil-preview tool on a Linux host machine, which is joined to a domain. Follow the [Install adutil-preview](#install-adutil-preview) section below based on the Linux distribution that you're running to install the adutil-preview tool.
+- Install the adutil tool on a Linux host machine, which is joined to a domain. Follow the [Install adutil](#install-adutil) section below for details.
 
 ## Container deployment and preparation
 
@@ -43,83 +40,18 @@ To set up your container, you'll need to know in advance the port that will be u
 
 When registering Service Principal Names (SPN), you can use the hostname of the machine or the name of the container, but you should set it up according to what you'd like to see when you connect to the container externally.
 
-Make sure there is forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL Server container. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`, and my SQL Server container name is `sql1`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to sql1.contoso.com, it reaches the right host.
+Make sure there's a forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL Server container. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`, and my SQL Server container name is `sql1`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to `sql1.contoso.com`, it reaches the right host.
 
 :::image type="content" source="media/sql-server-linux-containers-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 
-For this tutorial, we're using an environment in Azure with three VMs. One VM acting as the windows domain controller (DC), with the domain name `contoso.com`. The Domain Controller is named `adVM.contoso.com`. The second machine is a Windows machine called `winbox`, running Windows 10 desktop, which is used as a client box and has SQL Server Management Studio (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `myubuntu`, which hosts the SQL Server containers. All machines have been joined to the `contoso.com` domain. For more information, see [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
+For this tutorial, we're using an environment in Azure with three VMs. One VM acting as the Windows domain controller (DC), with the domain name `contoso.com`. The Domain Controller is named `adVM.contoso.com`. The second machine is a Windows machine called `winbox`, running Windows 10 desktop, which is used as a client box and has SQL Server Management Studio (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `myubuntu`, which hosts the SQL Server containers. All machines have been joined to the `contoso.com` domain. For more information, see [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
 
 > [!NOTE]
 > Joining the host container machine to the domain is not mandatory, as you can see later in this article.
 
-## Install adutil-preview
+## Install adutil
 
-On the Linux host machine, use the following commands to install adutil-preview based on the linux distribution.
-
-> [!NOTE]
-> For this preview version, we are aware that on certain Linux distributions, if the adutil installation is attempted without the `ACCEPT_EULA` parameter, the installation experience is hindered. Our recommendation below is to install the adutil-preview tool with `ACCEPT_EULA=Y` set. You can read the preview [EULA](https://go.microsoft.com/fwlink/?linkid=2151376) ahead of the installation. We are actively working on this and this should be fixed for the GA release.
-
-### RHEL
-
-1. Download the Microsoft Red Hat repository configuration file.
-
-    ```bash
-    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
-    ```
-
-1. If you had a previous version of adutil installed, remove any older adutil packages.
-
-    ```bash
-    sudo yum remove adutil
-    ```
-
-1. Run the following commands to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
-
-    ```bash
-    sudo ACCEPT_EULA=Y yum install -y adutil-preview
-    ```
-
-### Ubuntu
-
-1. Import the public repository GPG keys and then register the Microsoft Ubuntu repository.
-
-    ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-    sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
-    ```
-
-1. If you had a previous version of adutil installed, remove any older adutil packages using the below commands
-
-    ```bash
-    sudo apt-get remove adutil
-    ```
-
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
-
-    ```bash
-    sudo apt-get update
-    sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
-    ```
-
-### SLES
-
-1. Add the Microsoft SQL Server repository to Zypper.
-
-    ```bash
-    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo
-    ```
-
-1. If you had a previous version of adutil installed, remove any older adutil packages.
-
-    ```bash
-    sudo zypper remove adutil
-    ```
-
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
-
-    ```bash
-    sudo ACCEPT_EULA=Y zypper install -y adutil-preview
-    ```
+To install adutil tool, follow the steps explained in:[Introduction to adutil - Active Directory utility](sql-server-linux-ad-auth-adutil-introduction.md) utility on a host machine that is domain joined.
 
 ## Creating the AD user, SPNs, and SQL Server service keytab
 
@@ -137,17 +69,10 @@ Enabling AD authentication on SQL Server on Linux containers requires steps 1-3 
 
 1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using the `kinit` command. Use a privileged account for the `kinit` command. The account needs to have permission to connect to the domain, and also should be able to create accounts and SPNs in the domain.
 
-    > [!IMPORTANT]
-    > Before you run this command, the host should already be part of the domain as shown in the previous step.
+    In this example script, a privileged user called `privilegeduser@CONTOSO.COM` has already been created on the domain controller.
 
     ```bash
-    kinit privilegeduser@DOMAIN.COM
-    ```
-
-    Example: For the environment described above, my privileged account is `amvin@CONTOSO.COM`
-
-    ```bash
-    kinit amvin@CONTOSO.COM
+    kinit privilegeduser@CONTOSO.COM
     ```
 
 2. Using the adutil tool, create the new user that will be used as the privileged AD Account by SQL Server.
@@ -218,7 +143,7 @@ adutil keytab createauto --help
 To create the keytab for the user, the command is:
 
 ```bash
-adutil keytab create -k /container/sql1/secrets/mssql.keytab -p sqluser --password 'P@ssw0rd!'
+adutil keytab create -k /container/sql1/secrets/mssql.keytab -p sqluser --password 'P@ssw0rd'
 ```
 
 > [!NOTE]
@@ -239,9 +164,9 @@ chmod 440 /container/sql1/secrets/mssql.keytab
 
 ## Create the config files to be used by the SQL Server container
 
-1. Create an `mssql.conf` file with the settings for AD. This file can be created anywhere on the host and needs to be mounted correctly during the docker run command. In this example, we placed this file `mssql.conf` under `/container/sql1 `, which is our container directory. The content of the `mssql.conf` is as shown below:
+1. Create an `mssql.conf` file with the settings for AD. This file can be created anywhere on the host and needs to be mounted correctly during the docker run command. In this example, we placed this file `mssql.conf` under `/container/sql1`, which is our container directory. The content of the `mssql.conf` is as shown below:
 
-    ```output
+    ```ini
     [network]
     privilegedadaccount = sqluser
     kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
@@ -249,26 +174,26 @@ chmod 440 /container/sql1/secrets/mssql.keytab
 
     > [!NOTE]
     >
-    > - `privilagedadaccount`: Privileged AD user to use for AD authentication.
+    > - `privilegedadaccount`: Privileged AD user to use for AD authentication.
     > - `kerberoskeytabfile`: The path in the container where the mssql.keytab file will be located.
 
 1. Create a krb5.conf file. Here's a sample shown below. The casing matters on these files.
 
-    ```output
+    ```ini
     [libdefaults]
-    default_realm = DOMAIN.COM
-
+    default_realm = CONTOSO.COM
+    
     [realms]
-     CONTOSO.COM = {
-         kdc = adVM.contoso.com
-         admin_server = adVM.contoso.com
-         default_domain = CONTOSO.COM
-     }
-
+    CONTOSO.COM = {
+        kdc = adVM.contoso.com
+        admin_server = adVM.contoso.com
+        default_domain = CONTOSO.COM
+    }
+    
     [domain_realm]
-     .contoso.com = CONTOSO.COM
-     contoso.com = CONTOSO.COM
-
+    .contoso.com = CONTOSO.COM
+    contoso.com = CONTOSO.COM
+    ```
 
 1. Copy all files, `mssql.conf`, `krb5.conf`, `mssql.keytab` to a location that will be mounted to the SQL Server container. In this example, these files are placed on the host at the following locations: `mssql.conf` and `krb5.conf` at `/container/sql1/`. `mssql.keytab` is placed at the location `/container/sql1/secrets/`.
 
@@ -322,9 +247,9 @@ create login [contoso\amvin] From Windows
 SELECT name FROM sys.server_principals;
 ```
 
-## Connect to SQL Server using AD authentication.
+## Connect to SQL Server using AD authentication
 
-To connect using [SSMS](../ssms/download-sql-server-management-studio-ssms.md) or [ADS](../azure-data-studio/download-azure-data-studio.md), log in to the SQL Server with Windows credentials using the SQL Server name and port number (name could be the container name or the host name). For our example, the server name would be `sql1.contoso.com, 5433`.
+To connect using [SSMS](../ssms/download-sql-server-management-studio-ssms.md) or [ADS](../azure-data-studio/download-azure-data-studio.md), sign in to the SQL Server with Windows credentials using the SQL Server name and port number (name could be the container name or the host name). For our example, the server name would be `sql1.contoso.com, 5433`.
 
 You can also use a tool like [sqlcmd](../tools/sqlcmd-utility.md) to connect to the SQL Server in your container.
 
@@ -332,7 +257,13 @@ You can also use a tool like [sqlcmd](../tools/sqlcmd-utility.md) to connect to 
 sqlcmd -E -S 'sql1.contoso.com, 5433'
 ```
 
-## Next Steps
+## Resources
+
+- [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)
+- [Troubleshooting Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-troubleshooting.md)
+
+## Next steps
 
 - [Quickstart: Run SQL Server container images with Docker](quickstart-install-connect-docker.md)
 - [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-auth-overview.md)
+- [Rotate SQL Server on Linux keytabs](sql-server-linux-ad-auth-rotate-keytabs.md)

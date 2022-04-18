@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ISequentialStream interface"
   - "BLOBs, fetching"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Fetching BLOB Data Using IRow::Open and ISequentialStream
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

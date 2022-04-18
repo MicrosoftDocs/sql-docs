@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "statement attributes [ODBC]"
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Statement Attributes
 Statement attributes are characteristics of the statement. For example, whether to use bookmarks and what kind of cursor to use with the statement's result set are statement attributes.  

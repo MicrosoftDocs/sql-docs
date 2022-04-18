@@ -41,7 +41,7 @@ Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representatio
 ## Examples  
  The following example creates a `LineString` geometry instance from (0,0) to (2,3) from text. `STAsText()` returns the result in text.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);  
 SELECT @g.STAsText();  

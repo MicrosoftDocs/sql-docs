@@ -141,7 +141,7 @@ GO
   
 1.  Use `ALTER RESOURCE POOL` to change the value of both MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT.  
   
-2.  Use `ALTER RESURCE GOVERNOR` to reconfigure the Resource Governor with the new values.  
+2.  Use `ALTER RESOURCE GOVERNOR` to reconfigure the Resource Governor with the new values.  
   
  **Sample Code**  
   
@@ -170,7 +170,7 @@ GO
 |\<= 96 GB|85%|  
 |>96 GB|90%|  
   
- For example, if your 'target committed memory' is 100 GB, and you estimate your memory-optimized tables and indexes need 60GBof memory, then you can create a resource pool with MAX_MEMORY_PERCENT = 67 (60GB needed / 0.90 = 66.667GB - round up to 67GB; 67GB / 100GB installed = 67%) to ensure that your [!INCLUDE[hek_2](../../includes/hek-2-md.md)] objects have the 60GB they need.  
+ For example, if your 'target committed memory' is 100 GB, and you estimate your memory-optimized tables and indexes need 60GB of memory, then you can create a resource pool with MAX_MEMORY_PERCENT = 67 (60GB needed / 0.90 = 66.667GB - round up to 67GB; 67GB / 100GB installed = 67%) to ensure that your [!INCLUDE[hek_2](../../includes/hek-2-md.md)] objects have the 60GB they need.  
   
  Once a database has been bound to a named resource pool, use the following query to see memory allocations across different resource pools.  
   
@@ -195,7 +195,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 ----------- ----------- ------------------ ------------------ ------------- -------------- ----------------   
 1           internal    0                  100                3845          125            3845  
 2           default     0                  100                3845          32             3845  
-259         PoolIMOLTP 0                  100                3845          1356           2307  
+259         Pool_IMOLTP 0                  100                3845          1356           2307  
 ```  
   
  For more information, see [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  

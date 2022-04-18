@@ -2,18 +2,19 @@
 title: "Getting Started with SSMA for MySQL (MySQLToSQL) | Microsoft Docs"
 description: Learn about the SQL Server Migration Assistant (SSMA) for MySQL installation process, and familiarize yourself with the SSMA user interface.
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-get-started
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Getting started, MySQL metadata explorer"
   - "Getting started, SQL Server or SQL Azure metadata explorer"
   - "Getting started,Installing and licensing"
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Getting Started with SSMA for MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL lets you quickly convert MySQL database schemas to SQL Server or Azure SQL Database schemas, upload the resulting schemas into SQL Server or Azure SQL Database, and migrate data from MySQL to SQL Server or Azure SQL Database.  

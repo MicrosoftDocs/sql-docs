@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # deletesAreDetected Method (SQLServerDatabaseMetaData)
 

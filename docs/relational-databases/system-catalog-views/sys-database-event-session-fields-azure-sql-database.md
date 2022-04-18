@@ -8,9 +8,11 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 ms.assetid: 9b5c94d6-612c-4e0f-976d-ac6ba55da3ac
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_fields (Azure SQL Database)

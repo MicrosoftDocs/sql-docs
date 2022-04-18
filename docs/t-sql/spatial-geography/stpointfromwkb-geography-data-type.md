@@ -53,7 +53,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
 ## Examples  
  The following example uses `STPointFromWKB()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STPointFromWKB(0x010100000017D9CEF753D347407593180456965EC0, 4326);  
 SELECT @g.ToString();  

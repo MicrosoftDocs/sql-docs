@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "query store [SQL Server], catalog views"
   - "catalog views [SQL Server], query store"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query Store Catalog Views (Transact-SQL)

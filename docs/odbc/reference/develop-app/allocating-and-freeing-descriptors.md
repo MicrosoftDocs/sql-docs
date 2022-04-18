@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "allocating and freeing descriptors [ODBC]"
 ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Allocating and Freeing Descriptors
 Descriptors are either implicitly or explicitly allocated, as described in the following sections.  

@@ -2,17 +2,19 @@
 title: Encryption at rest
 titleSuffix: SQL Server Big Data Clusters
 description: Learn all about encryption at rest on a SQL Server 2019 Big Data Cluster.
-author: DaniBunny
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.metadata: seo-lt-2019
-ms.date: 06/14/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
 # Encryption at rest concepts and configuration guide
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Starting with Microsoft SQL Server 2019 CU8 Big Data Clusters, the encryption at rest feature is available to provide application-level encryption to all data stored in the platform. This guide documents the concepts, architecture, and configuration for the encryption at rest feature set for Big Data Clusters.
 
@@ -148,7 +150,7 @@ __Encryption Zones won't be configured__. The Hadoop KMS component won't be conf
 If you upgraded your cluster to CU8 (`azdata upgrade`) and want to enable HDFS encryption zones there are two options available:
 
 * Execution of the Azure Data Studio [Operational Notebook](cluster-manage-notebooks.md) named __SOP0128 - Enable HDFS Encryption zones in Big Data Clusters__ to perform the configuration.
-* Script execution as described bellow.
+* Script execution as described below.
 
 Requirements:
 

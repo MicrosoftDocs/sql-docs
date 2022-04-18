@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLGetConnectAttr function [ODBC]"
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetConnectAttr Function
 **Conformance**  

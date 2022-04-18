@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "version declaration [ODBC]"
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Declaring the Application&#39;s ODBC Version
 Before an application allocates a connection, it must set the SQL_ATTR_ODBC_VERSION environment attribute. This attribute states that the application follows the ODBC *2.x* or ODBC *3.x* specification when using the following items:  

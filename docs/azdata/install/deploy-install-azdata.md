@@ -2,12 +2,14 @@
 title: Install Azure Data CLI (azdata)
 titleSuffix: 
 description: Learn how to install the Azure Data CLI azdata) tool.
-author: MikeRayMSFT 
+author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
+ms.custom:
+  - intro-installation
 ---
 
 # Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]

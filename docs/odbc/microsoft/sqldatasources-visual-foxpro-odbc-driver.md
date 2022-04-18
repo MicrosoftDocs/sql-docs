@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLDataSources function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 033f8d37-b2dd-4a4e-b93a-70c25b25b72e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLDataSources (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLFreeConnect function [ODBC], mapping"
 ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFreeConnect Mapping
 When an application calls **SQLFreeConnect** through an ODBC *3.x* driver, the call to  

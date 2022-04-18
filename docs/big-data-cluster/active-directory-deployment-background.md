@@ -2,13 +2,15 @@
 title: Deploy multiple in Active Directory domain
 titleSuffix: SQL Server Big Data Cluster
 description: Learn how to deploy multiple SQL Server Big Data Clusters in a single Active Directory domain.
-author: cloudmelon
-ms.author: melqin
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 07/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy multiple [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in the same Active Directory domain
@@ -16,6 +18,8 @@ ms.technology: big-data-cluster
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article explains the updates to SQL Server 2019 CU5 that enables the capability for multiple SQL Server 2019 Big Data Clusters to be deployed and integrated with the same Active Directory Domain.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Prior to SQL 2019 CU5 there were two issues preventing deployment of multiple big data clusters in an AD domain.
 

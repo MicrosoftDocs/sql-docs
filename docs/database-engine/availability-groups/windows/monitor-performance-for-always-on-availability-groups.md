@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Monitor performance for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

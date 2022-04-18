@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "embedded SQL [ODBC]"
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Dynamic SQL performance in ODBC
 

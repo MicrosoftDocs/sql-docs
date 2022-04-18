@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "API functions [ODBC]"
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Level 1 API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  

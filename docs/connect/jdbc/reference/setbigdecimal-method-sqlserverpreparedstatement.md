@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 860f86db-d840-401a-a5c2-cd22e8cc1e4e
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setBigDecimal Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

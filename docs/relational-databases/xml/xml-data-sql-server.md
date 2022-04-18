@@ -9,8 +9,8 @@ helpviewer_keywords:
   - "XML [SQL Server]"
   - "XML [SQL Server], about XML"
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: RothJa
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 04/03/2020

@@ -11,7 +11,6 @@ ms.topic: reference
 f1_keywords: 
   - "10024"
   - "sql13.rtp.rptdesigner.datasetproperties.query.f1"
-  - "10160"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies

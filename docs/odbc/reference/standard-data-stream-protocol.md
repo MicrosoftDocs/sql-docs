@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "standard data stream protocol [ODBC]"
 ms.assetid: 1d234d17-2927-4c98-9fae-550c1370f829
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Standard Data Stream Protocol
 A standard data stream protocol is one way to access data in heterogeneous DBMSs. In fact, a standard data stream protocol already exists:

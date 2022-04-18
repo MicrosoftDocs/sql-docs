@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Sybase Console,refresh-from-database report"
   - "Sybase Console,synchronize-target report"
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Generating Reports (SybaseToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  

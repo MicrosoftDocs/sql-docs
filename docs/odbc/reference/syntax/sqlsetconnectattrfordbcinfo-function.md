@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLSetConnectAttrForDbcInfo function [ODBC]"
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetConnectAttrForDbcInfo Function
 **Conformance**  

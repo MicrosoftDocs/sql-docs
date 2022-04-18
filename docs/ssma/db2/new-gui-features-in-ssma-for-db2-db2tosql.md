@@ -8,17 +8,17 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # New GUI features in SSMA for DB2 (DB2ToSQL)
 This chapter describes new features of SSMA User Interface.  
   
 ## Layouts  
-This feature allows you to choose one of two predefined windows lay-out or create you own layout. To access layout submenu, on the View menu point to Layouts. There you can choose one of the existing layouts, add new layout or manage layouts.  
+This feature allows you to choose one of two predefined windows layout or create you own layout. To access layout submenu, on the View menu point to Layouts. There you can choose one of the existing layouts, add new layout or manage layouts.  
   
 ### Add Current Layout  
-To save current windows layout, on the View menu point to Layouts, then click Add Current Layout.  
+To save the current layout, on the View menu point to Layouts, then click Add Current Layout.  
   
 ### Choose predefined layout  
 To choose one of the predefined layouts, on the View menu point to Layouts, then click Default Layout or Without Explorers. You can also use shortcuts Ctrl+Alt+1 or Ctrl+Alt+2 for predefined layouts.  

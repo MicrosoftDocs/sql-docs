@@ -14,7 +14,7 @@ apitype: "COM"
 helpviewer_keywords: 
   - "BCPDone method"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # IBCPSession::BCPDone (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

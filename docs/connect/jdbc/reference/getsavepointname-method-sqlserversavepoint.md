@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 6affbe5c-e836-4195-a3ba-1892cbf81907
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getSavepointName Method (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

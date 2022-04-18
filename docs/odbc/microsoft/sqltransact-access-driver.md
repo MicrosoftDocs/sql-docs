@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLTransact function [ODBC], Access Driver"
 ms.assetid: 892b79c7-9e20-4d1f-bc60-d4b25694ca25
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLTransact (Access Driver)
 > [!NOTE]  

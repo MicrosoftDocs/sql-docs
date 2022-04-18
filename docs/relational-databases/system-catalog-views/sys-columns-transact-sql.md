@@ -1,44 +1,44 @@
 ---
-description: "sys.columns (Transact-SQL)"
 title: "sys.columns (Transact-SQL)"
-ms.custom: ""
-ms.date: "08/05/2021"
+description: "sys.columns (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sys.columns_TSQL"
   - "sys.columns"
-  - "columns_TSQL"
-  - "columns"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "sys.columns catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "08/05/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # sys.columns (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns a row for each column of an object that has columns, such as views or tables. The following is a list of object types that have columns:  
+Returns a row for each column of an object that has columns, such as views or tables. The following is a list of object types that have columns:  
   
--   Table-valued assembly functions (FT)  
+- Table-valued assembly functions (FT)  
   
--   Inline table-valued SQL functions (IF)  
+- Inline table-valued SQL functions (IF)  
   
--   Internal tables (IT)  
+- Internal tables (IT)  
   
--   System tables (S)  
+- System tables (S)  
   
--   Table-valued SQL functions (TF)  
+- Table-valued SQL functions (TF)  
   
--   User tables (U)  
+- User tables (U)  
   
--   Views (V)  
+- Views (V)  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |column_id|**int**|ID of the column. Is unique within the object.<br /><br /> Column IDs might not be sequential.|  
 |system_type_id|**tinyint**|ID of the system type of the column.|  
 |user_type_id|**int**|ID of the type of the column as defined by the user.<br /><br /> To return the name of the type, join to the [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) catalog view on this column.|  
-|max_length|**smallint**|Maximum length (in bytes) of the column.<br /><br /> -1 = Column data type is **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or **xml**.<br /><br /> For **text** columns, the max_length value will be 16 or the value set by sp_tableoption 'text in row'.|  
+|max_length|**smallint**|Maximum length (in bytes) of the column.<br /><br /> -1 = Column data type is **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or **xml**.<br /><br /> For **text**, **ntext**, and **image** columns, the max_length value will be 16 (representing the 16-byte pointer only) or the value set by sp_tableoption 'text in row'.|  
 |precision|**tinyint**|Precision of the column if numeric-based; otherwise, 0.|  
 |scale|**tinyint**|Scale of column if numeric-based; otherwise, 0.|  
 |collation_name|**sysname**|Name of the collation of the column if character-based; otherwise `NULL`.|  

@@ -11,8 +11,8 @@ ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 
 # :: (Scope Resolution) (Transact-SQL)

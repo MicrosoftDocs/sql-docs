@@ -45,7 +45,7 @@ ms.author: mlandzic
 ## Examples  
  This example creates a **Point** instance and retrieves the longitude of the point.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);  
 SELECT @g.Long;  

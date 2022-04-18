@@ -2,7 +2,7 @@
 description: "MERGE (Transact-SQL)"
 title: "MERGE (Transact-SQL)"
 ms.custom: ""
-ms.date: "06/22/2021"
+ms.date: "03/07/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
@@ -165,8 +165,14 @@ An alternative name to reference a table for the *target_table*.
 #### USING \<table_source>  
 Specifies the data source that's matched with the data rows in *target_table* based on \<merge_search condition>. The result of this match dictates the actions to take by the WHEN clauses of the MERGE statement. \<table_source> can be a remote table or a derived table that accesses remote tables.
   
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 \<table_source> can be a derived table that uses the [!INCLUDE[tsql](../../includes/tsql-md.md)] [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to construct a table by specifying multiple rows.  
-  
+::: moniker-end
+
+::: moniker range="=azure-sqldw-latest"
+\<table_source> can be a derived table that uses `SELECT ... UNION ALL` to construct a table by specifying multiple rows.  
+::: moniker-end
+
  #### [ AS ] *table_alias*  
 An alternative name to reference a table for the table_source.   
   
@@ -209,9 +215,13 @@ Specifying the TABLOCK hint on a table that's the target of an INSERT statement 
 #### INDEX ( index_val [ ,...n ] )  
 Specifies the name or ID of one or more indexes on the target table for doing an implicit join with the source table. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"  
+
 #### \<output_clause>  
 Returns a row for every row in *target_table* that's updated, inserted, or deleted, in no particular order. **$action** can be specified in the output clause. **$action** is a column of type **nvarchar(10)** that returns one of three values for each row: 'INSERT', 'UPDATE', or 'DELETE', according to the action done on that row. The OUTPUT clause is the recommended way to query or count rows affected by a MERGE. For more information about the arguments and behavior of this clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
-  
+
+::: moniker-end
+
 #### OPTION ( \<query_hint> [ ,...n ] )  
 Specifies that optimizer hints are used to customize the way the Database Engine processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
@@ -252,11 +262,13 @@ Specifies the graph match pattern. For more information about the arguments for 
 
 >[!NOTE]
 > In Azure Synapse Analytics, the MERGE command (preview) has following differences compared to SQL server and Azure SQL database.  
+> - Using MERGE to update a distribution key column is not supported.
 > - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
-> - During the preview, MERGE…WHEN NOT MATCHED INSERT is not supported for tables with IDENTITY columns.  
+> - MERGE…WHEN NOT MATCHED INSERT is not supported for tables with IDENTITY columns.  
+> - Table value constructor cannot be used in the USING clause for the source table. Use `SELECT ... UNION ALL` to create a derived source table with multiple rows.
 > - The support for tables with different distribution types is described in this table:
 >
->|MERGE CLAUSE in Azure Synapse Analytics|Supported TARGE distribution table| Supported SOURCE distribution table|Comment|  
+>|MERGE CLAUSE in Azure Synapse Analytics|Supported TARGET distribution table| Supported SOURCE distribution table|Comment|  
 >|-----------------|---------------|-----------------|-----------|  
 >|**WHEN MATCHED**| All distribution types |All distribution types||  
 >|**NOT MATCHED BY TARGET**|HASH |All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables. |
@@ -469,6 +481,7 @@ The following features are available to assist you in measuring and diagnosing t
 
 A common scenario is updating one or more columns in a table if a matching row exists. Or, inserting the data as a new row if a matching row doesn't exist. You usually do either scenario by passing parameters to a stored procedure that contains the appropriate UPDATE and INSERT statements. With the MERGE statement, you can do both tasks in a single statement. The following example shows a stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database that contains both an INSERT statement and an UPDATE statement. The procedure is then modified to run the equivalent operations by using a single MERGE statement.  
   
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"  
 ```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
@@ -537,11 +550,72 @@ DELETE FROM Production.UnitMeasure WHERE UnitMeasureCode IN ('ABC','XYZ');
 DROP TABLE #MyTempTable;  
 GO  
 ```  
+
+::: moniker-end
+
+::: moniker range="=azure-sqldw-latest"
+
+```sql  
+CREATE PROCEDURE dbo.InsertUnitMeasure  
+    @UnitMeasureCode nchar(3),  
+    @Name nvarchar(25)  
+AS
+BEGIN  
+    SET NOCOUNT ON;  
+-- Update the row if it exists.
+    UPDATE Production.UnitMeasure  
+SET Name = @Name  
+WHERE UnitMeasureCode = @UnitMeasureCode  
+-- Insert the row if the UPDATE statement failed.  
+IF (@@ROWCOUNT = 0 )  
+BEGIN  
+    INSERT INTO Production.UnitMeasure (UnitMeasureCode, Name)  
+    VALUES (@UnitMeasureCode, @Name)  
+END  
+END;  
+GO  
+-- Test the procedure and return the results.  
+EXEC InsertUnitMeasure @UnitMeasureCode = 'ABC', @Name = 'Test Value';  
+SELECT UnitMeasureCode, Name FROM Production.UnitMeasure  
+WHERE UnitMeasureCode = 'ABC';  
+GO  
   
+-- Rewrite the procedure to perform the same operations using the
+-- MERGE statement.
+ALTER PROCEDURE dbo.InsertUnitMeasure  
+    @UnitMeasureCode nchar(3),  
+    @Name nvarchar(25)  
+AS
+BEGIN  
+    SET NOCOUNT ON;  
+  
+    MERGE Production.UnitMeasure AS tgt  
+    USING (SELECT @UnitMeasureCode, @Name) as src (UnitMeasureCode, Name)  
+    ON (tgt.UnitMeasureCode = src.UnitMeasureCode)  
+    WHEN MATCHED THEN
+        UPDATE SET Name = src.Name  
+    WHEN NOT MATCHED THEN  
+        INSERT (UnitMeasureCode, Name)  
+        VALUES (src.UnitMeasureCode, src.Name);  
+END;  
+GO  
+-- Test the procedure and return the results.  
+EXEC InsertUnitMeasure @UnitMeasureCode = 'ABC', @Name = 'New Test Value';  
+EXEC InsertUnitMeasure @UnitMeasureCode = 'XYZ', @Name = 'Test Value';  
+EXEC InsertUnitMeasure @UnitMeasureCode = 'ABC', @Name = 'Another Test Value';  
+  
+-- Cleanup
+DELETE FROM Production.UnitMeasure WHERE UnitMeasureCode IN ('ABC','XYZ');  
+GO  
+```  
+::: moniker-end
+
 ### B. Using MERGE to do UPDATE and DELETE operations on a table in a single statement
 
 The following example uses MERGE to update the `ProductInventory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database, daily, based on orders that are processed in the `SalesOrderDetail` table. The `Quantity` column of the `ProductInventory` table is updated by subtracting the number of orders placed each day for each product in the `SalesOrderDetail` table. If the number of orders for a product drops the inventory level of a product to 0 or less, the row for that product is deleted from the `ProductInventory` table.  
   
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017" 
+
 ```sql  
 CREATE PROCEDURE Production.usp_UpdateInventory  
     @OrderDate datetime  
@@ -564,12 +638,40 @@ OUTPUT $action, Inserted.ProductID, Inserted.Quantity,
 GO  
   
 EXECUTE Production.usp_UpdateInventory '20030501';  
-```  
+```
+
+::: moniker-end
+
+::: moniker range="=azure-sqldw-latest"
+
+```sql  
+CREATE PROCEDURE Production.usp_UpdateInventory  
+    @OrderDate datetime  
+AS  
+MERGE Production.ProductInventory AS tgt  
+USING (SELECT ProductID, SUM(OrderQty) FROM Sales.SalesOrderDetail AS sod  
+    JOIN Sales.SalesOrderHeader AS soh  
+    ON sod.SalesOrderID = soh.SalesOrderID  
+    AND soh.OrderDate = @OrderDate  
+    GROUP BY ProductID) as src (ProductID, OrderQty)  
+ON (tgt.ProductID = src.ProductID)  
+WHEN MATCHED AND tgt.Quantity - src.OrderQty <= 0  
+    THEN DELETE  
+WHEN MATCHED
+    THEN UPDATE SET tgt.Quantity = tgt.Quantity - src.OrderQty,
+                    tgt.ModifiedDate = GETDATE();  
+GO  
+  
+EXECUTE Production.usp_UpdateInventory '20030501';  
+```
+
+::: moniker-end
   
 ### C. Using MERGE to do UPDATE and INSERT operations on a target table by using a derived source table
 
 The following example uses MERGE to modify the `SalesReason` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by either updating or inserting rows. 
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 When the value of `NewName` in the source table matches a value in the `Name` column of the target table, (`SalesReason`), the `ReasonType` column is updated in the target table. When the value of `NewName` doesn't match, the source row is inserted into the target table. The source table is a derived table that uses the [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor to specify multiple rows for the source table. For more information about using the table value constructor in a derived table, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). 
 
 The OUTPUT clause can be useful to query the result of MERGE statements, for more information, see [OUTPUT Clause](../../t-sql/queries/output-clause-transact-sql.md). The example also shows how to store the results of the OUTPUT clause in a table variable. And, then you summarize the results of the MERGE statement by running a simple select operation that returns the count of inserted and updated rows.  
@@ -594,7 +696,27 @@ SELECT Change, COUNT(*) AS CountPerChange
 FROM @SummaryOfChanges  
 GROUP BY Change;  
 ```  
+::: moniker-end
+
+::: moniker range="=azure-sqldw-latest"
+When the value of `NewName` in the source table matches a value in the `Name` column of the target table, (`SalesReason`), the `ReasonType` column is updated in the target table. When the value of `NewName` doesn't match, the source row is inserted into the target table. The source table is a derived table that uses `SELECT ... UNION ALL` to specify multiple rows for the source table.
   
+```sql  
+MERGE INTO Sales.SalesReason AS tgt  
+USING (SELECT 'Recommendation','Other' UNION ALL 
+       SELECT 'Review', 'Marketing' UNION ALL 
+       SELECT 'Internet', 'Promotion')
+   as src (NewName, NewReasonType)  
+ON tgt.Name = src.NewName  
+WHEN MATCHED THEN  
+UPDATE SET ReasonType = src.NewReasonType  
+WHEN NOT MATCHED BY TARGET THEN  
+INSERT (Name, ReasonType) VALUES (NewName, NewReasonType);  
+```  
+::: moniker-end
+
+
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ### D. Inserting the results of the MERGE statement into another table
 
 The following example captures data returned from the OUTPUT clause of a MERGE statement and inserts that data into another table. The MERGE statement updates the `Quantity` column of the `ProductInventory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, based on orders that are processed in the `SalesOrderDetail` table. The example captures the updated rows and inserts them into another table that's used to track inventory changes. 
@@ -702,9 +824,10 @@ FROM Person , City , livesIn
 WHERE MATCH(Person-(livesIn)->city)
 GO
 ```
+::: moniker-end
   
 ## See also
-
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
 - [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
 - [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
@@ -713,3 +836,14 @@ GO
 - [MERGE in Integration Services Packages](../../integration-services/control-flow/merge-in-integration-services-packages.md)
 - [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)
 - [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  
+::: moniker-end
+
+::: moniker range="=azure-sqldw-latest"
+- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
+- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
+- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
+- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)
+- [MERGE in Integration Services Packages](../../integration-services/control-flow/merge-in-integration-services-packages.md)
+- [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)
+- [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  
+::: moniker-end

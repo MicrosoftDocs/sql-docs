@@ -1,5 +1,5 @@
 ---
-title: "Understanding Groups (Report Builder) | Microsoft Docs"
+title: "Understanding groups in a paginated report | Microsoft Docs"
 description: Gain an understanding of how a group organizes a view of a report dataset in a paginated report in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -15,8 +15,11 @@ ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Understanding Groups (Report Builder and SSRS)
-  In a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, a group is a named set of data from the report dataset that is bound to a data region. Basically, a group organizes a view of a report dataset. All groups in a data region specify different views of the same report dataset.  
+# Understanding groups in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In a paginated report, a group is a named set of data from the report dataset that is bound to a data region. Basically, a group organizes a view of a report dataset. All groups in a data region specify different views of the same report dataset.  
   
  To help visualize what a group is, refer to the following figure that shows the tablix data region in Preview. In this figure, the row groups categorize the dataset by product type and the column groups categorize the dataset by geographic region and year.  
   

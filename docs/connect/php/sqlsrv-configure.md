@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_configure"
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

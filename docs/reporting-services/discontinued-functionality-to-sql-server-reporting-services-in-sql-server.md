@@ -9,7 +9,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
 ms.custom: seodec18
-ms.date: 04/26/2019
+ms.date: 03/14/2022
 ---
 
 # Discontinued Functionality in SQL Server 2016 Reporting Services (SSRS)
@@ -24,6 +24,8 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 
 |Feature|Replacement or workaround|
 |-|-|
+|Upload report models through the web portal|
+|Manage report models through the web portal|
 |Customized style sheets for HTML Viewer and Report Manager|You can still [brand the web portal](branding-the-web-portal.md).|
 
 ## Next steps
@@ -32,4 +34,4 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 * [Behavior Changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
 * [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

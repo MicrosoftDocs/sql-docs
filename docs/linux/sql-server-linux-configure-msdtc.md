@@ -83,6 +83,7 @@ The following example shows how to create these rules on **Ubuntu**.
 ```bash
 sudo ufw allow from any to any port 51999 proto tcp
 sudo ufw allow from any to any port 135 proto tcp
+sudo ufw allow from any to any port 13500 proto tcp
 ```
 
 The following example shows how this could be done on **Red Hat Enterprise Linux (RHEL)**:

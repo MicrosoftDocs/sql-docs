@@ -11,8 +11,8 @@ ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: e9b8daff-b72f-4a53-907d-5a83a78785ec
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Language Elements (Transact-SQL)

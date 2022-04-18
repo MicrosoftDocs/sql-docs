@@ -44,7 +44,7 @@ ms.author: mlandzic
 ## Examples  
  The following example creates a `Polygon` instance and uses `STGeometryType()` to confirm that it is a polygon.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
 SELECT @g.STGeometryType();  

@@ -49,7 +49,7 @@ Parse ( 'geometry_tagged_text' )
 ## Examples  
  The following example uses `Parse()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;   
 SET @g = geometry::Parse('LINESTRING (100 100, 20 180, 180 180)');  
 SELECT @g.ToString();  

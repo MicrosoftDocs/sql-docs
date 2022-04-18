@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "subkeys [ODBC], usage counts"
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Usage Counting
 > [!NOTE]  

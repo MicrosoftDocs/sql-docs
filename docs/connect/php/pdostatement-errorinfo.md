@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # PDOStatement::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

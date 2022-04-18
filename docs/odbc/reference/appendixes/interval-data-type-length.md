@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "interval data type [ODBC], length"
 ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Interval Data Type Length
 The following rules are used to determine the length of an interval data type in characters. Length is expressed in number of characters. The number of bytes depends upon the character set. The length includes the following values added together:  

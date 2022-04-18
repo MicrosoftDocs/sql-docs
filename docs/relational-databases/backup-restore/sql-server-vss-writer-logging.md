@@ -17,6 +17,9 @@ ms.author: gfourrat
 As [SQL Server Back up Applications - Volume Shadow Copy Service (VSS) and SQL Writer](sql-server-vss-writer-backup-guide.md) describes in depth, [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] can be involved in VSS (Volume Shadow Copy Service) backup and restore operations through its dedicated SQL Writer service. The service would report execution errors to Windows Application Event Logs with a `SQLWRITER` event source, but up until [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], it had no dedicated activity log. It could make investigations against [!INCLUDE[ssSQL11](../../includes/ssnoversion-md.md)] as a participant in VSS operations challenging.
 This article describes the new log introduced by [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] to provide better visibility on its SQLWriter operations.
 
+> [!IMPORTANT]
+>Following its introduction in SQL Server 2019, the new SQL Writer logging infrastructure described here was later made available in [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] Service Pack 3; and in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] starting with Cumulative Update 27.
+
 ## Overview
 
 The main characteristics of  [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] SQLWriter logging are:

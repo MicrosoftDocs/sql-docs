@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLTransact function [ODBC], dBASE Driver"
 ms.assetid: 159ca21a-ccc4-45e2-97ca-2a9387efa7df
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLTransact (dBASE Driver)
 > [!NOTE]  

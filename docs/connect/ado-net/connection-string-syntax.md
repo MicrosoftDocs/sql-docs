@@ -8,8 +8,7 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
-ms.reviewer: v-chmalh
+ms.author: v-davidengel
 ---
 # Connection string syntax
 
@@ -101,21 +100,17 @@ The `TrustServerCertificate` keyword is valid only when connecting to a SQL Serv
 
 ### Enable encryption
 
-To enable encryption when a certificate has not been provisioned on the server, the **Force Protocol Encryption** and the **Trust Server Certificate** options must be set in SQL Server Configuration Manager. In this case, encryption will use a self-signed server certificate without validation if no verifiable certificate has been provisioned on the server.
+To enable encryption when a certificate has not been provisioned on the server, the **Trust Server Certificate** connection property must be set. In this case, encryption will use a self-signed server certificate without validation since no verifiable certificate has been provisioned on the server.
 
-Application settings cannot reduce the level of security configured in SQL Server, but can optionally strengthen it. An application can request encryption by setting the `TrustServerCertificate` and `Encrypt` keywords to `true`, guaranteeing that encryption takes place even when a server certificate has not been provisioned and **Force Protocol Encryption** has not been configured for the client. However, if `TrustServerCertificate` is not enabled in the client configuration, a provisioned server certificate is still required.
+Application settings cannot reduce the level of security configured in SQL Server, but can optionally strengthen it. An application can request encryption by setting the `TrustServerCertificate` and `Encrypt` keywords to `true`, guaranteeing that encryption takes place even when a server certificate has not been provisioned. However, if `TrustServerCertificate` is not enabled in the client configuration, a provisioned server certificate is still required.
 
 The following table describes all cases.
 
-|Force Protocol Encryption client setting|Trust Server Certificate client setting|Encrypt/Use Encryption for Data connection string/attribute|Trust Server Certificate connection string/attribute|Result|  
-|----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
-|No|N/A|No (default)|Ignored|No encryption occurs.|  
-|No|N/A|Yes|No (default)|Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails.|  
-|No|N/A|Yes|Yes|Encryption always occurs, but may use a self-signed server certificate.|  
-|Yes|No|Ignored|Ignored|Encryption occurs only if there is a verifiable server certificate; otherwise, the connection attempt fails.|  
-|Yes|Yes|No (default)|Ignored|Encryption always occurs, but may use a self-signed server certificate.|  
-|Yes|Yes|Yes|No (default)|Encryption occurs only if there is a verifiable server certificate; otherwise, the connection attempt fails.|  
-|Yes|Yes|Yes|Yes|Encryption always occurs, but may use a self-signed server certificate.|  
+| Encrypt connection string/attribute | Trust Server Certificate connection string/attribute | Result |
+|--|--|--|
+| No | Ignored | No encryption occurs. |
+| Yes | No | Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails. |
+| Yes | Yes | Encryption always occurs, but may use a self-signed server certificate. |
 
 For more information, see [Using Encryption Without Validation](../../relational-databases/native-client/features/using-encryption-without-validation.md).
 

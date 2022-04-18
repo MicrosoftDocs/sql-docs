@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLAsyncNotificationCallback Function
 **Conformance**  

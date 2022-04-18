@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "binary data transfers [ODBC]"
 ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQL to C: Binary
 The identifiers for the binary ODBC SQL data types are:  

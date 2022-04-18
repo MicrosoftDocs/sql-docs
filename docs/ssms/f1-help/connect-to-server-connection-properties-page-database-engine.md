@@ -22,7 +22,7 @@ ms.date: 08/14/2017
 Use this tab to view or specify options when connecting to an instance of [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] or registering [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 **Connect to database**  
-Select a database to connect to from the list. If you select **<default>**, you connect to the default database for the server. If you select **<Browse server>**, you can browse the server for the database to which to connect.  
+Select a database to connect to from the list. If you select **\<default\>**, you connect to the default database for the server. If you select **\<Browse server\>**, you can browse the server for the database to which to connect.  
   
 When connecting to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine through [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you must use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication and specify a database in the **Connect to Server** dialog box, on the **Connection Properties** tab. Ensure that you select the **Encrypt connection** checkbox.  
   

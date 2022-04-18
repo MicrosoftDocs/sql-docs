@@ -1,6 +1,6 @@
 ---
-title: "Highlight Chart Data by Adding Strip Lines (Report Builder) | Microsoft Docs"
-description: Use strip lines in horizontal or vertical ranges to improve readability, highlight dates, or highlight a specific key range in Report Builder.
+title: "Highlight chart data by adding strip lines in a paginated report | Microsoft Docs"
+description: Use strip lines in horizontal or vertical ranges in a paginated report to improve readability, highlight dates, or highlight a specific key range in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Highlight Chart Data by Adding Strip Lines (Report Builder and SSRS)
-  Strip lines, or strips, are horizontal or vertical ranges that shade the background of the chart in regular or custom intervals. You can use strip lines to:  
+# Highlight chart data by adding strip lines in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Strip lines, or strips, are horizontal or vertical ranges that shade the background of the paginated report chart in regular or custom intervals. You can use strip lines to:  
   
 -   Improve readability for looking up individual values on the chart. Specify strip lines at regular intervals to help separate data points when reading the chart.  
   

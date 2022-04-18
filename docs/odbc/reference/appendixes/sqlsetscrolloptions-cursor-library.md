@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLSetScrollOptions function [ODBC], Cursor Library"
 ms.assetid: c5c0ac6d-a6c1-4077-8186-1644df1944f8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetScrollOptions (Cursor Library)
 > [!IMPORTANT]  

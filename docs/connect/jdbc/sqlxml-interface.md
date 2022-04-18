@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLXML interface
 

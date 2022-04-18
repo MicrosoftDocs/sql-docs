@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 09ec7d40-4c4a-4d89-ba11-78e5327b5759
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getMaxUserNameLength Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

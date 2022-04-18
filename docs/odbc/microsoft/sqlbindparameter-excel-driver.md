@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLBindParameter function [ODBC], Excel Driver"
 ms.assetid: 40489bc5-3e2a-425e-892d-e0dc037f4d7a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLBindParameter (Excel Driver)
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: "Tables (Report Builder and SSRS) | Microsoft Docs"
+title: "Tables in paginated reports | Microsoft Docs"
 description: Display detail data or grouped data by using a single field or multiple fields, or by writing your own expression in a paginated report in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -12,8 +12,11 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Tables (Report Builder  and SSRS)
- In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], you can use a table to display detail data or grouped data, or a combination of both in a paginated report.   
+# Tables in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+ In Report Builder, you can use a table to display detail data or grouped data, or a combination of both in a paginated report.   
    
  You can group data by a single field, by multiple fields, or by writing your own expression. You can create nested groups or independent, adjacent groups. To display aggregated values for grouped data, add totals to groups. Format the rows and columns to highlight the data you want to emphasize. You can initially hide detail or grouped data, and include drilldown toggles to enable a user to interactively choose how much data to show.  
   

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: c8e55377-aaea-4415-8159-938fab1b2a93
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # updateBinaryStream Method (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

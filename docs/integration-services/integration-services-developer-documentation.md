@@ -78,12 +78,6 @@ ms.author: chugu
 ## Related Sections  
  [Troubleshooting Tools for Package Development](../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  Describes the features and tools that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides for troubleshooting packages during development.  
-  
-## External Resources  
-  
--   CodePlex samples, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), on www.codeplex.com/MSFTISProdSamples  
-  
+ 
 ## See Also  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
-  
-  

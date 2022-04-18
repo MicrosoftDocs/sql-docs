@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 241536e1-fae6-4980-85a5-d8cfcd50b8bd
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getClientInfo Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

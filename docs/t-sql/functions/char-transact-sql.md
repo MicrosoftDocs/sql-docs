@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "line feed"
   - "printing ASCII values"
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHAR (Transact-SQL)

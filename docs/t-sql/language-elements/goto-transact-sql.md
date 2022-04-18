@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "statements [SQL Server], skipping"
   - "GOTO statement"
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # GOTO (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

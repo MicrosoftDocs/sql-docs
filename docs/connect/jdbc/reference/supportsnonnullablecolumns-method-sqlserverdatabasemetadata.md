@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 7c32ea64-460e-4636-8a3b-07c8abeed687
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # supportsNonNullableColumns Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

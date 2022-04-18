@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Upgrading Always On Availability Group Replica Instances
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -50,7 +50,7 @@ Returns an object that represents the points where a **geometry** instance inter
 ### A. Using STIntersection() on Polygon instances  
  The following example uses `STIntersection()` to compute the intersection of two polygons.  
   
-```  
+```sql
 DECLARE @g geometry;  
 DECLARE @h geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);  
@@ -61,7 +61,7 @@ SELECT @g.STIntersection(@h).ToString();
 ### B. Using STIntersection() with CurvePolygon instance  
  The following example returns an instance that contains a circular arc segment.  
   
-```
+```sql
  DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
  DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';  
  SELECT @h.STIntersection(@g).ToString();

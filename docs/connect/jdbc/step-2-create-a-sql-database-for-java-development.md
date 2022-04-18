@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7c9bfbc8-3ba6-491f-a7eb-380bb3d98b86
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Step 2: Create a SQL database for Java development
 

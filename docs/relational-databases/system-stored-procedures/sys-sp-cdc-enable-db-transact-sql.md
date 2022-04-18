@@ -52,7 +52,7 @@ sys.sp_cdc_enable_db
  sys.sp_cdc_enable_db creates the change data capture objects that have database wide scope, including meta data tables and DDL triggers. It also creates the cdc schema and cdc database user and sets the is_cdc_enabled column for the database entry in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view to 1.  
   
 ## Permissions  
- Requires membership in the sysadmin fixed server role.  
+ Requires membership in the **sysadmin** fixed server role for Change Data Capture on Azure SQL Managed Instance or SQL Server. Requires membership in the **db_owner** for Change Data Capture on Azure SQL Database.
   
 ## Examples  
  The following example enables change data capture.  

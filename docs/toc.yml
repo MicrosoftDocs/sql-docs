@@ -1,18 +1,16 @@
 items:
 - name: SQL Server
   href: sql-server/index.yml
-
 - name: Docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md
 - name: Previous versions 2005-2014
   href: sql-server/previous-versions-sql-server.md
-
 - name: Overview
   items:
   - name: What's New
     items:
     - name: SQL Server 2019
-      href: sql-server/what-s-new-in-sql-server-ver15.md
+      href: sql-server/what-s-new-in-sql-server-2019.md
     - name: SQL Server 2017
       href: sql-server/what-s-new-in-sql-server-2017.md
     - name: SQL Server 2016
@@ -20,7 +18,7 @@ items:
   - name: Editions & Features
     items:
     - name: SQL Server 2019
-      href: sql-server/editions-and-components-of-sql-server-version-15.md
+      href: sql-server/editions-and-components-of-sql-server-2019.md
     - name: SQL Server 2017
       href: sql-server/editions-and-components-of-sql-server-2017.md
     - name: SQL Server 2016
@@ -28,7 +26,7 @@ items:
   - name: Release Notes
     items:
     - name: SQL Server 2019
-      href: sql-server/sql-server-version-15-release-notes.md
+      href: sql-server/sql-server-2019-release-notes.md
     - name: SQL Server 2017
       href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: SQL Server 2016
@@ -49,10 +47,18 @@ items:
     items:
     - name: Introducing SQL Server Big Data Clusters
       href: big-data-cluster/big-data-cluster-overview.md
+    - name: Big data options on the Microsoft SQL Server platform
+      href: big-data-cluster/big-data-options.md
     - name: Release notes
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 15
+          href: big-data-cluster/release-notes-cumulative-update-15.md
+        - name: Cumulative Update 14
+          href: big-data-cluster/release-notes-cumulative-update-14.md
+        - name: Cumulative Update 13
+          href: big-data-cluster/release-notes-cumulative-update-13.md
         - name: Cumulative Update 12
           href: big-data-cluster/release-notes-cumulative-update-12.md
         - name: Cumulative Update history
@@ -181,6 +187,8 @@ items:
         href: big-data-cluster/bdc-upgrade-configuration.md
       - name: Post-deployment configuration
         href: big-data-cluster/configure-bdc-postdeployment.md
+      - name: Configure SQL Server master instance
+        href: big-data-cluster/configure-sql-server-master-instance.md
       - name: Overview - (pre CU9)
         href: big-data-cluster/configure-bdc-pre-configuration.md
     - name: Data virtualization
@@ -205,7 +213,7 @@ items:
           href: big-data-cluster/hdfs-tiering-mount-s3.md
         - name: Manage HDFS permissions
           href: big-data-cluster/hdfs-tiering-manage-permissions.md
-    - name: Data ingestion
+    - name: Data movement
       items:
       - name: Load data with curl
         href: big-data-cluster/data-ingestion-curl.md
@@ -213,6 +221,8 @@ items:
         href: big-data-cluster/tutorial-data-pool-ingest-sql.md
       - name: Load data with Spark
         href: big-data-cluster/tutorial-data-pool-ingest-spark.md
+      - name: HDFS distributed data copy (distcp)
+        href: big-data-cluster/distributed-data-copy-hdfs.md
       - name: Restore a database
         href: big-data-cluster/data-ingestion-restore-database.md
     - name: Deploy and consume apps
@@ -227,177 +237,178 @@ items:
         href: big-data-cluster/app-run.md
       - name: Monitor apps
         href: big-data-cluster/app-monitor.md
-
-    - name: Big Data/Machine Learning
+    - name: Machine Learning
       items:
-      - name: Use Machine Learning Services (Python, R)
-        href: big-data-cluster/machine-learning-services.md
-      - name: Machine learning quickstarts
+      - name: Machine Learning on SQL Server Big Data Clusters
+        href: big-data-cluster/machine-learning-on-bdc.md
+      - name: SQL Server Machine Learning Services
         items:
-        - name: Python
-          items:
-          - name: Run Python scripts
-            href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Data structures and objects
-            href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Python functions
-            href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Train and score a model
-            href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-        - name: R
-          items:
-          - name: Run R scripts
-            href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Data types and objects
-            href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: R functions
-            href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Train and score a model
-            href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-      - name: Machine learning tutorials
-        items:
-        - name: Python
-          items:
-          - name: Ski rental (linear regression)
-            items:
-            - name: 1 - Introduction
-              href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 2 - Prepare data
-              href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 3 - Train model
-              href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 4 - Deploy model
-              href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Categorize customers (k-means clustering)
-            items:
-            - name: 1 - Introduction
-              href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 2 - Prepare the data
-              href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 3 - Create the model
-              href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 4 - Deploy the model
-              href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: NYC taxi tips (classification)
-            items:
-            - name: 1 - Introduction
-              href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 2 - Data exploration
-              href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 3 - Feature engineering
-              href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 4 - Train and deploy
-              href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 5 - Predictions
-              href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-        - name: R
-          items:
-          - name: Ski rental (decision tree)
-            items:
-            - name: 1 - Introduction
-              href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 2 - Prepare data
-              href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 3 - Train model
-              href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 4 - Deploy model
-              href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Categorize customers (k-means clustering)
-            items:
-            - name: 1 - Introduction
-              href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 2 - Prepare the data
-              href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 3 - Create the model
-              href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 4 - Deploy the model
-              href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: NYC taxi tips (classification)
-            items:
-            - name: 1 - Introduction
-              href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 2 - Data exploration
-              href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 3 - Feature engineering
-              href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 4 - Train and deploy
-              href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: 5 - Predictions
-              href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-      - name: Machine learning how-to guides
-        items:
-        - name: Data exploration and modeling
+        - name: Use SQL Server Machine Learning Services
+          href: big-data-cluster/machine-learning-services.md
+        - name: Machine learning quickstarts
           items:
           - name: Python
             items:
-            - name: Plot Histogram in Python
-              href: machine-learning/data-exploration/python-plot-histogram.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Import data into pandas dataframe
-              href: machine-learning/data-exploration/python-dataframe-pandas.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Insert dataframe into SQL
-              href: machine-learning/data-exploration/python-dataframe-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-        - name: Data type conversions
-          items:
-          - name: Python to SQL
-            href: machine-learning/python/python-libraries-and-data-types.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: R to SQL
-            href: machine-learning/r/r-libraries-and-data-types.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-        - name: Deploy
-          items:
-          - name: Operationalize using stored procedures
-            href: ./machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
-          - name: Convert R code for SQL Server
-            href: ./machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
-        - name: Predictions
-          items:
-          - name: Native scoring with PREDICT T-SQL
-            href: machine-learning/predictions/native-scoring-predict-transact-sql.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-        - name: Package management
-          items:
-          - name: Install new Python packages
+            - name: Run Python scripts
+              href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Data structures and objects
+              href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Python functions
+              href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Train and score a model
+              href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+          - name: R
             items:
-            - name: Get Python package information
-              href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Install with sqlmlutils
-              href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Install new R packages
-            items:
-            - name: Get R package information
-              href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Install with sqlmlutils
-              href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Create a miniCRAN repo
-              href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Tips for using R packages
-              href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-        - name: Administration
+            - name: Run R scripts
+              href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Data types and objects
+              href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: R functions
+              href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Train and score a model
+              href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+        - name: Machine learning tutorials
           items:
-          - name: Monitor
+          - name: Python
             items:
-            - name: Monitor using SSMS reports
-              href: machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Monitor using DMVs
-              href: machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Extended events
+            - name: Ski rental (linear regression)
               items:
-              - name: Monitor using extended events
-                href: machine-learning/administration/extended-events.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Monitor PREDICT T-SQL
-                href: machine-learning/administration/extended-events-predict-tsql.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-        - name: Security
+              - name: 1 - Introduction
+                href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 2 - Prepare data
+                href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 3 - Train model
+                href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 4 - Deploy model
+                href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Categorize customers (k-means clustering)
+              items:
+              - name: 1 - Introduction
+                href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 2 - Prepare the data
+                href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 3 - Create the model
+                href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 4 - Deploy the model
+                href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: NYC taxi tips (classification)
+              items:
+              - name: 1 - Introduction
+                href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 2 - Data exploration
+                href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 3 - Feature engineering
+                href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 4 - Train and deploy
+                href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 5 - Predictions
+                href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+          - name: R
+            items:
+            - name: Ski rental (decision tree)
+              items:
+              - name: 1 - Introduction
+                href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 2 - Prepare data
+                href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 3 - Train model
+                href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 4 - Deploy model
+                href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Categorize customers (k-means clustering)
+              items:
+              - name: 1 - Introduction
+                href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 2 - Prepare the data
+                href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 3 - Create the model
+                href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 4 - Deploy the model
+                href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: NYC taxi tips (classification)
+              items:
+              - name: 1 - Introduction
+                href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 2 - Data exploration
+                href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 3 - Feature engineering
+                href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 4 - Train and deploy
+                href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: 5 - Predictions
+                href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+        - name: Machine learning how-to guides
           items:
-          - name: Give users permission
-            href: machine-learning/security/user-permission.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-
-      - name: Data wrangling using PROSE Code Accelerator
-        href: big-data-cluster/use-prose-for-big-data-automation.md
-      - name: Spark machine learning models with MLeap
-        href: big-data-cluster/spark-create-machine-learning-model.md
-      - name: Use Sparklyr from RStudio
-        href: big-data-cluster/sparklyr-from-RStudio.md
-      - name: Integrate Spark with SQL Server
-        href: big-data-cluster/spark-mssql-connector.md
-
+          - name: Data exploration and modeling
+            items:
+            - name: Python
+              items:
+              - name: Plot Histogram in Python
+                href: machine-learning/data-exploration/python-plot-histogram.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: Import data into pandas dataframe
+                href: machine-learning/data-exploration/python-dataframe-pandas.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: Insert dataframe into SQL
+                href: machine-learning/data-exploration/python-dataframe-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+          - name: Data type conversions
+            items:
+            - name: Python to SQL
+              href: machine-learning/python/python-libraries-and-data-types.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: R to SQL
+              href: machine-learning/r/r-libraries-and-data-types.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+          - name: Deploy
+            items:
+            - name: Operationalize using stored procedures
+              href: ./machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
+            - name: Convert R code for SQL Server
+              href: ./machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
+          - name: Predictions
+            items:
+            - name: Native scoring with PREDICT T-SQL
+              href: machine-learning/predictions/native-scoring-predict-transact-sql.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+          - name: Package management
+            items:
+            - name: Install new Python packages
+              items:
+              - name: Get Python package information
+                href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: Install with sqlmlutils
+                href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Install new R packages
+              items:
+              - name: Get R package information
+                href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: Install with sqlmlutils
+                href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: Create a miniCRAN repo
+                href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: Tips for using R packages
+                href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+          - name: Administration
+            items:
+            - name: Monitor
+              items:
+              - name: Monitor using SSMS reports
+                href: machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: Monitor using DMVs
+                href: machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: Extended events
+                items:
+                - name: Monitor using extended events
+                  href: machine-learning/administration/extended-events.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                - name: Monitor PREDICT T-SQL
+                  href: machine-learning/administration/extended-events-predict-tsql.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+          - name: Security
+            items:
+            - name: Give users permission
+              href: machine-learning/security/user-permission.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+      - name: Spark Machine Learning
+        items:
+        - name: Use Spark Machine Learning
+          href: big-data-cluster/spark-machine-learning.md
+        - name: Data wrangling using PROSE Code Accelerator
+          href: big-data-cluster/use-prose-for-big-data-automation.md
+        - name: Spark machine learning models with MLeap
+          href: big-data-cluster/spark-create-machine-learning-model.md
     - name: Manage
       items:
       - name: Connect
@@ -430,6 +441,8 @@ items:
       items:
       - name: Tuning guide
         href: big-data-cluster/performance-guidelines-tuned.md
+      - name: Spark workloads and YARN queues
+        href: big-data-cluster/spark-yarn-capacity-scheduler.md
     - name: Secure
       items:
       - name: Kubernetes RBAC for BDC
@@ -438,6 +451,8 @@ items:
         href: big-data-cluster/change-azdata-password.md
       - name: Non root containers
         href: big-data-cluster/non-root-containers.md
+      - name: Password rotation for auto generated AD service accounts
+        href: big-data-cluster/active-directory-password-rotation.md
       - name: Encryption at rest
         items:
           - name: Concepts and configuration
@@ -450,6 +465,10 @@ items:
             href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
     - name: Spark
       items:
+      - name: runtime for Apache Spark
+        href: big-data-cluster/runtime-for-apache-spark.md
+      - name: Spark 3 upgrade guide
+        href: big-data-cluster/spark-3-upgrade.md
       - name: Submit Spark jobs in Azure Data Studio
         href: big-data-cluster/spark-submit-job.md
       - name: Submit Spark jobs using the command line
@@ -458,6 +477,10 @@ items:
         href: big-data-cluster/spark-hive-tools-vscode.md
       - name: Submit Spark jobs in IntelliJ
         href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+      - name: Use Sparklyr from RStudio
+        href: big-data-cluster/sparklyr-from-RStudio.md
+      - name: Integrate Spark with SQL Server
+        href: big-data-cluster/spark-mssql-connector.md
       - name: Manage libraries
         href: big-data-cluster/spark-install-packages.md
       - name: Delta Lake
@@ -482,6 +505,8 @@ items:
           href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
         - name: AD login fails
           href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+      - name: Troubleshoot HDFS 
+        href: big-data-cluster/troubleshoot-hdfs.md
       - name: Troubleshoot HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
       - name: Cluster troubleshooting notebooks
@@ -944,8 +969,6 @@ items:
           href: database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
         - name: Add secondary replica
           href: database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md
-        - name: Use the Add Azure Replica Wizard (SQL Server)
-          href: database-engine/availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md
         - name: Change session-timeout period
           href: database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md
         - name: Change the HADR cluster context
@@ -1727,6 +1750,8 @@ items:
         href: relational-databases/indexes/rename-indexes.md
       - name: Set Options
         href: relational-databases/indexes/set-index-options.md
+      - name: Tune nonclustered indexes with missing index suggestions
+        href: relational-databases/indexes/tune-nonclustered-missing-index-suggestions.md
       - name: Disk Space Index DDL Operations
         href: relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md
         items:
@@ -1783,7 +1808,322 @@ items:
     - name: Sequence Properties
       href: relational-databases/sequence-numbers/sequence-properties-general-page.md
   - name: Service Broker
-    href: database-engine/configure-windows/sql-server-service-broker.md 
+    items:
+    - name: Overview
+      href: database-engine/configure-windows/sql-server-service-broker.md
+    - name: "What does service broker do?"
+      href: database-engine/service-broker/what-does-service-broker-do.md
+    - name: Typical Uses of Service Broker
+      href: database-engine/service-broker/typical-uses-of-service-broker.md
+    - name: Completing a Conversation in a Single Database
+      items:
+      - name: Completing a Conversation in a Single Database
+        href: database-engine/service-broker/completing-a-conversation-in-a-single-database.md
+      - name: "Lesson 1: Creating the Conversation Objects"
+        href: database-engine/service-broker/lesson-1-creating-the-conversation-objects.md
+      - name: "Lesson 2: Beginning a Conversation and Transmitting Messages"
+        href: database-engine/service-broker/lesson-2-beginning-a-conversation-and-transmitting-messages.md
+      - name: "Lesson 3: Dropping the Conversation Objects"
+        href: database-engine/service-broker/lesson-3-dropping-the-conversation-objects.md
+    - name: Completing a Conversation Between Databases
+      items:
+      - name: Completing a Conversation Between Databases
+        href: database-engine/service-broker/completing-a-conversation-between-databases.md
+      - name: "Lesson 1: Creating the Databases"
+        href: database-engine/service-broker/lesson-1-creating-the-databases.md
+      - name: "Lesson 2: Creating the Target Conversation Objects"
+        href: database-engine/service-broker/lesson-2-creating-the-target-conversation-objects.md
+      - name: "Lesson 3: Creating the Initiator Conversation Objects"
+        href: database-engine/service-broker/lesson-3-creating-the-initiator-conversation-objects.md
+      - name: "Lesson 4: Beginning a Conversation and Transmitting Messages"
+        href: database-engine/service-broker/lesson-4-beginning-a-conversation-and-transmitting-messages.md
+    - name: Completing a Conversation Between Instances
+      items:
+      - name: Completing a Conversation Between Instances
+        href: database-engine/service-broker/completing-a-conversation-between-instances.md
+      - name: "Lesson 1: Creating the Target Database"
+        href: database-engine/service-broker/lesson-1-creating-the-target-database.md
+      - name: "Lesson 2: Creating the Initiator Database"
+        href: database-engine/service-broker/lesson-2-creating-the-initiator-database.md
+      - name: "Lesson 3: Completing the Target Conversation Objects"
+        href: database-engine/service-broker/lesson-3-completing-the-target-conversation-objects.md
+      - name: "Lesson 4: Beginning the Conversation"
+        href: database-engine/service-broker/lesson-4-beginning-the-conversation.md
+      - name: "Lesson 5: Receiving a Request and Sending a Reply"
+        href: database-engine/service-broker/lesson-5-receiving-a-request-and-sending-a-reply.md
+      - name: "Lesson 6: Receiving the Reply and Ending the Conversation"
+        href: database-engine/service-broker/lesson-6-receiving-the-reply-and-ending-the-conversation.md
+    - name: Implementing Internal Activation
+      items:
+      - name: Implementing Internal Activation
+        href: database-engine/service-broker/implementing-internal-activation.md
+      - name: "Lesson 1: Creating the Base Conversation Objects"
+        href: database-engine/service-broker/lesson-1-creating-the-base-conversation-objects.md
+      - name: "Lesson 2: Creating an Internal Activation Procedure"
+        href: database-engine/service-broker/lesson-2-creating-an-internal-activation-procedure.md
+      - name: "Lesson 3: Beginning a Conversation and Transmitting Messages"
+        href: database-engine/service-broker/lesson-3-beginning-a-conversation-and-transmitting-messages.md
+      - name: "Lesson 4: Dropping the Conversation Objects"
+        href: database-engine/service-broker/lesson-4-dropping-the-conversation-objects.md
+    - name: Troubleshooting (Service Broker)
+      items:
+      - name: Troubleshooting Activation Stored Procedures
+        href: database-engine/service-broker/troubleshooting-activation-stored-procedures.md
+      - name: Troubleshooting Routing and Message Delivery
+        href: database-engine/service-broker/troubleshooting-routing-and-message-delivery.md
+      - name: Troubleshooting Conversation Priorities
+        href: database-engine/service-broker/troubleshooting-conversation-priorities.md
+      - name: Troubleshooting Tools (Service Broker)
+        href: database-engine/service-broker/troubleshooting-tools.md
+    - name: Threat and Vulnerability Mitigation (Service Broker)
+      items:
+      - name: Threat and Vulnerability Mitigation (Service Broker)
+        href: database-engine/service-broker/threat-and-vulnerability-mitigation.md
+      - name: Certificates and Service Broker
+        href: database-engine/service-broker/certificates-and-service-broker.md
+    - name: Service Broker Dialog Security
+      items:
+      - name: Service Broker Dialog Security
+        href: database-engine/service-broker/service-broker-dialog-security.md
+      - name: Creating a Remote Service Binding
+        href: database-engine/service-broker/creating-a-remote-service-binding.md
+      - name: Determining the Dialog Security Type
+        href: database-engine/service-broker/determining-the-dialog-security-type.md
+      - name: Certificates for Dialog Security
+        href: database-engine/service-broker/certificates-for-dialog-security.md
+      - name: Mapping Remote Principals to Local Principals
+        href: database-engine/service-broker/mapping-remote-principals-to-local-principals.md
+    - name: Service Broker Transport Security
+      href: database-engine/service-broker/service-broker-transport-security.md
+    - name: Planning and Architecture (Service Broker)
+      items:
+      - name: Building Applications with Service Broker
+        href: database-engine/service-broker/building-applications-with-service-broker.md
+      - name: Logical Architecture [Service Broker]
+        href: database-engine/service-broker/logical-architecture.md
+      - name: Service Broker Routing and Networking
+        href: database-engine/service-broker/service-broker-routing-and-networking.md
+      - name: Solution Design Considerations (Service Broker)
+        items:
+        - name: Service Broker Scalability
+          href: database-engine/service-broker/service-broker-scalability.md
+        - name: Understanding Collation and Service Broker
+          href: database-engine/service-broker/understanding-collation-and-service-broker.md
+    - name: Conversation Architecture
+      href: database-engine/service-broker/conversation-architecture.md
+    - name: Messages
+      items:
+      - name: Messages
+        href: database-engine/service-broker/messages.md
+      - name: Dialog Conversations
+        href: database-engine/service-broker/dialog-conversations.md
+      - name: Conversation Groups
+        href: database-engine/service-broker/conversation-groups.md
+      - name: Conversation Priorities
+        href: database-engine/service-broker/conversation-priorities.md
+    - name: Service Architecture
+      items:  
+      - name: Service Architecture
+        href: database-engine/service-broker/service-architecture.md
+      - name: Message Types
+        href: database-engine/service-broker/message-types.md
+      - name: Contracts
+        href: database-engine/service-broker/contracts.md
+      - name: Queues
+        href: database-engine/service-broker/queues.md
+      - name: Services
+        href: database-engine/service-broker/services.md
+    - name: Networking and Remote Security
+      items:
+      - name: Networking and Remote Security
+        href: database-engine/service-broker/networking-and-remote-security.md
+      - name: Remote Service Bindings
+        href: database-engine/service-broker/remote-service-bindings.md
+      - name: Routes
+        href: database-engine/service-broker/routes.md
+      - name: Service Broker Endpoints
+        href: database-engine/service-broker/service-broker-endpoints.md
+    - name: Service Broker Routing
+      items:
+      - name: Service Broker Routing
+        href: database-engine/service-broker/service-broker-routing.md
+      - name: Service Broker Dynamic Routing
+        href: database-engine/service-broker/service-broker-dynamic-routing.md
+      - name: Service Broker Configuration Notice Service
+        href: database-engine/service-broker/service-broker-configuration-notice-service.md
+      - name: Service Broker Routing Examples
+        href: database-engine/service-broker/service-broker-routing-examples.md
+    - name: Service Broker Communication Protocols
+      items:
+      - name: Service Broker Communication Protocols
+        href: database-engine/service-broker/service-broker-communication-protocols.md
+      - name: Broker System Messages
+        href: database-engine/service-broker/broker-system-messages.md
+      - name: Transmission Queue
+        href: database-engine/service-broker/transmission-queue.md
+    - name: Service Broker Message Forwarding
+      href: database-engine/service-broker/service-broker-message-forwarding.md
+    - name: Development (Service Broker)
+      items:
+      - name: Designing and Implementing (Service Broker)
+        items:
+        - name: Designing and Implementing (Service Broker)
+          href: database-engine/service-broker/designing-and-implementing.md
+        - name: Benefits of Programming with Service Broker
+          href: database-engine/service-broker/benefits-of-programming-with-service-broker.md
+        - name: Service Broker Applications
+          href: database-engine/service-broker/service-broker-applications.md
+        - name: Planning for Service Broker Development
+          href: database-engine/service-broker/planning-for-service-broker-development.md
+        - name: Developer Responsibilities for Service Broker
+          href: database-engine/service-broker/developer-responsibilities-for-service-broker.md   
+      - name: Service Broker Programming Concepts
+        items:
+        - name: Service Broker Programming Concepts
+          href: database-engine/service-broker/service-broker-programming-concepts.md
+        - name: Transactional Messaging
+          href: database-engine/service-broker/transactional-messaging.md
+        - name: Conversation Group Locks
+          href: database-engine/service-broker/conversation-group-locks.md
+        - name: State Management
+          items:
+          - name: State Management
+            href: database-engine/service-broker/state-management.md
+          - name: Message Retention
+            href: database-engine/service-broker/message-retention.md
+          - name: Service Broker Activation
+            items:
+            - name: Service Broker Activation
+              href: database-engine/service-broker/service-broker-activation.md
+            - name: Understanding When Activation Occurs
+              href: database-engine/service-broker/understanding-when-activation-occurs.md
+            - name: Internal Activation Context
+              href: database-engine/service-broker/internal-activation-context.md
+            - name: Event-Based Activation
+              href: database-engine/service-broker/event-based-activation.md          
+          - name: Error Handling for Service Broker
+            items:
+            - name: Error Handling for Service Broker
+              href: database-engine/service-broker/error-handling-for-service-broker.md
+            - name: Handling Transact-SQL Errors (Service Broker)
+              href: database-engine/service-broker/handling-transact-sql-errors.md
+            - name: Handling Service Broker Error Messages
+              href: database-engine/service-broker/handling-service-broker-error-messages.md
+            - name: Handling Poison Messages
+              href: database-engine/service-broker/handling-poison-messages.md
+            - name: "How to: Retrieve Information from a Service Broker Error Message (Transact SQL)"
+              href: database-engine/service-broker/how-to-retrieve-information-from-a-service-broker-error-message-transact-sql.md
+    - name: Creating Service Broker Objects
+      items:
+      - name: Creating Service Broker Objects
+        href: database-engine/service-broker/creating-service-broker-objects.md
+      - name: Creating Service Broker Message Types
+        href: database-engine/service-broker/creating-service-broker-message-types.md
+      - name: Creating Service Broker Contracts
+        href: database-engine/service-broker/creating-service-broker-contracts.md
+      - name: Creating Service Broker Queues
+        href: database-engine/service-broker/creating-service-broker-queues.md
+      - name: Creating Service Broker Services
+        href: database-engine/service-broker/creating-service-broker-services.md
+      - name: Naming Service Broker Objects
+        href: database-engine/service-broker/naming-service-broker-objects.md
+      - name: Service Script Example
+        href: database-engine/service-broker/service-script-example.md
+    - name: Creating Service Broker Applications
+      items:  
+      - name: Creating Service Broker Applications
+        href: database-engine/service-broker/creating-service-broker-applications.md
+      - name: Choosing a Startup Strategy
+        href: database-engine/service-broker/choosing-a-startup-strategy.md
+      - name: Service Broker Application Outline
+        href: database-engine/service-broker/service-broker-application-outline.md
+    - name: Deployment (Service Broker)
+      items:
+      - name: New Installation (Service Broker)
+        href: database-engine/service-broker/new-installation.md
+      - name: Upgrade (Service Broker)
+        href: database-engine/service-broker/upgrade.md
+      - name: Migration (Service Broker)
+        href: database-engine/service-broker/migration.md
+    - name: Operations (Service Broker)
+      items:
+      - name: Administration (Service Broker)
+        items:
+        - name: Administration (Service Broker)
+          href: database-engine/service-broker/administration.md
+        - name: Managing Service Broker Applications
+          items:
+          - name: Managing Service Broker Applications
+            href: database-engine/service-broker/managing-service-broker-applications.md
+          - name: Stopping and Starting Service Broker Applications
+            href: database-engine/service-broker/stopping-and-starting-service-broker-applications.md
+          - name: Backing Up and Restoring Service Broker Applications
+            href: database-engine/service-broker/backing-up-and-restoring-service-broker-applications.md
+          - name: Uninstalling Service Broker Applications
+            href: database-engine/service-broker/uninstalling-service-broker-applications.md
+        - name: Managing Service Broker Identities
+          href: database-engine/service-broker/managing-service-broker-identities.md
+          items:
+          - name: Managing Queues and Messages
+            href: database-engine/service-broker/managing-queues-and-messages.md
+          - name: Starting and Stopping the Queue
+            href: database-engine/service-broker/starting-and-stopping-the-queue.md
+          - name: Querying Queues
+            href: database-engine/service-broker/querying-queues.md
+          - name: Removing Poison Messages
+            href: database-engine/service-broker/removing-poison-messages.md
+          - name: Managing Conversation Priorities
+            href: database-engine/service-broker/managing-conversation-priorities.md
+        - name: Managing Forwarding (Service Broker)	  
+          href: database-engine/service-broker/managing-forwarding.md
+        - name: Managing Security (Service Broker)
+          href: database-engine/service-broker/managing-security.md
+        - name: Managing Routing
+          href: database-engine/service-broker/managing-routing.md
+        - name: "Administration: How-to Topics (Service Broker)"
+          items:
+          - name: "How to: Pause Service Broker Networking (Transact-SQL)"
+            href: database-engine/service-broker/how-to-pause-service-broker-networking-transact-sql.md
+          - name: "How to: Resume Service Broker Networking (Transact-SQL)"
+            href: database-engine/service-broker/how-to-resume-service-broker-networking-transact-sql.md
+          - name: "How to: Activate Service Broker Message Delivery in Databases (Transact-SQL)"
+            href: database-engine/service-broker/how-to-activate-service-broker-message-delivery-in-databases-transact-sql.md
+          - name: "How to: Activate Service Broker Networking (Transact-SQL)"
+            href: database-engine/service-broker/how-to-activate-service-broker-networking-transact-sql.md
+          - name: "How to: Activate Service Broker Message Forwarding (Transact-SQL)"
+            href: database-engine/service-broker/how-to-activate-service-broker-message-forwarding-transact-sql.md
+          - name: "How to: Deactivate Service Broker Message Delivery in Databases (Transact-SQL)"
+            href: database-engine/service-broker/how-to-deactivate-service-broker-message-delivery-in-databases-transact-sql.md
+          - name: "How to: Deactivate Service Broker Networking (Transact-SQL)"
+            href: database-engine/service-broker/how-to-deactivate-service-broker-networking-transact-sql.md
+          - name: "How to: Deactivate Service Broker Message Forwarding (Transact-SQL)"
+            href: database-engine/service-broker/how-to-deactivate-service-broker-message-forwarding-transact-sql.md          
+      - name: "Performance (Service Broker)"
+        href: database-engine/service-broker/performance.md
+    - name: Security and Protection (Service Broker)
+      items:
+      - name: Security Overview (Service Broker)
+        href: database-engine/service-broker/security-overview.md
+      - name: Identity and Access Control (Service Broker)
+        href: database-engine/service-broker/identity-and-access-control.md
+      - name: Security How-to Topics (Service Broker)
+        items:
+        - name: "How to: Allow Service Broker Network Access by Using Certificates (Transact-SQL)"
+          href: database-engine/service-broker/how-to-allow-service-broker-network-access-by-using-certificates-transact-sql.md
+        - name: "How to: Allow Service Broker Network Access by Using Windows Authentication (Transact-SQL)"
+          href: database-engine/service-broker/how-to-allow-service-broker-network-access-by-using-windows-authentication-transact-sql.md
+        - name: "How to: Configure Initiating Services for Anonymous Dialog Security (Transact-SQL)"
+          href: database-engine/service-broker/how-to-configure-initiating-services-for-anonymous-dialog-security-transact-sql.md
+        - name: "How to: Configure Initiating Services for Full Dialog Security (Transact-SQL)"
+          href: database-engine/service-broker/how-to-configure-initiating-services-for-full-dialog-security-transact-sql.md
+        - name: "How to: Configure Permissions for a Local Service (Transact-SQL)"
+          href: database-engine/service-broker/how-to-configure-permissions-for-a-local-service-transact-sql.md
+        - name: "How to: Configure Target Services for Full Dialog Security (Transact-SQL)"
+          href: database-engine/service-broker/how-to-configure-target-services-for-full-dialog-security-transact-sql.md
+        - name: "How to: Configure Target Services for Anonymous Dialog Security (Transact-SQL)"
+          href: database-engine/service-broker/how-to-configure-target-services-for-anonymous-dialog-security-transact-sql.md
+        - name: "How to: Create Certificates for Service Broker Transport Security (Transact-SQL)"
+          href: database-engine/service-broker/how-to-create-certificates-for-service-broker-transport-security-transact-sql.md
   - name: Spatial data
     href: relational-databases/spatial/spatial-data-sql-server.md
     items:
@@ -2756,6 +3096,8 @@ items:
         href: language-extensions/language-extensions-overview.md
       - name: What is Java Language Extension?
         href: language-extensions/java-overview.md
+      - name: What is C# Language Extension?
+        href: language-extensions/csharp-overview.md
       - name: What's new?
         href: language-extensions/language-extensions-whats-new.md
     - name: Install
@@ -2770,6 +3112,8 @@ items:
       items:
       - name: Extensibility framework
         href: language-extensions/concepts/extensibility-framework.md
+      - name: Compare extensibility to SQL CLR
+        href: language-extensions/concepts/compare-extensibility-to-clr.md
     - name: How-to guides
       items:
       - name: Call Java from SQL Server
@@ -4408,13 +4752,13 @@ items:
     - name: Discontinued functionality in SQL Server
       href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
     - name: Deprecated in SQL Server 2019
-      href: database-engine/deprecated-database-engine-features-in-sql-server-version-15.md
+      href: database-engine/deprecated-database-engine-features-in-sql-server-2019.md
     - name: Deprecated in SQL Server 2017
       href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
     - name: Deprecated in SQL Server 2016
       href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
     - name: Breaking changes in SQL Server 2019
-      href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md
+      href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2019.md
     - name: Breaking changes in SQL Server 2017
       href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
     - name: Breaking changes in SQL Server 2016
@@ -4429,7 +4773,7 @@ items:
     - name: Hardware & software requirements
       items:
       - name: SQL Server 2019
-        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
+        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md
       - name: SQL Server 2016 & 2017
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
     - name: Security considerations
@@ -4506,7 +4850,7 @@ items:
     - name: Compatibility Certification
       href: database-engine/install-windows/compatibility-certification.md
     - name: Supported Version & Edition Upgrades SQL Server 2019
-      href: database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md
+      href: database-engine/install-windows/supported-version-and-edition-upgrades-2019.md
     - name: Supported Version & Edition Upgrades SQL Server 2017
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016
@@ -4549,7 +4893,7 @@ items:
   - name: End of support
     items:
     - name: Overview
-      href: sql-server/end-of-support/sql-server-end-of-life-overview.md
+      href: sql-server/end-of-support/sql-server-end-of-support-overview.md
       displayName: end of support, end of life
     - name: Extended security updates
       href: sql-server/end-of-support/sql-server-extended-security-updates.md
@@ -4588,8 +4932,6 @@ items:
       href: database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md
     - name: Log In to an Instance of SQL Server (Command Prompt)
       href: database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md
-    - name: Troubleshoot Connecting to the SQL Server Database Engine
-      href: database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md
     - name: Diagnostic Connection for Database Administrators
       href: database-engine/configure-windows/diagnostic-connection-for-database-administrators.md
     - name: SQL Server Express LocalDB
@@ -5236,7 +5578,7 @@ items:
         items:
         - name: Monitor replication agents
           href: relational-databases/replication/monitor/monitor-replication-agents.md
-        - name: System Monitor
+        - name: Performance Monitor
           href: relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md
         - name: Replication Monitor
           href: relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md
@@ -5339,6 +5681,16 @@ items:
           href: relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md
         - name: Publish stored procedure execution
           href: relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md
+        - name: Peer to peer replication
+          items:
+          - name: Administer a peer to peer topology
+            href: relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md
+          - name: One peer - availabilty group
+            href: relational-databases/replication/transactional/peer-to-peer/single-availability-group.md
+          - name: Two peers - availability groups
+            href: relational-databases/replication/transactional/peer-to-peer/multi-availability-group.md
+          - name: Configure last writer conflict detection & resolution
+            href: relational-databases/replication/transactional/peer-to-peer/configure-last-writer.md
       - name: Merge replication
         items:
         - name: Specify properties
@@ -5391,10 +5743,6 @@ items:
             href: relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md
           - name: Resolving in a logical record
             href: relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md
-      - name: Peer to peer replication
-        items:
-        - name: Administer a P2P topology
-          href: relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md
       - name: Non-SQL replication
         items:
         - name: Create a publication from an Oracle DB
@@ -6146,9 +6494,11 @@ items:
     - name: Release notes
       href: tools/synapse-pathway/pathway-release-notes.md
     - name: Azure Synapse Pathway FAQ
-      href: tools/synapse-pathway/pathway-faq.md
+      href: tools/synapse-pathway/pathway-faq.yml
     - name: Installation
       href: tools/synapse-pathway/synapse-pathway-download.md
+    - name: Behind the scenes
+      href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
     - name: Tutorials
       items:
       - name: Tutorial - Run Azure Synapse Pathway
@@ -6167,22 +6517,42 @@ items:
           href: tools/synapse-pathway/data-type-mappings-microsoft-sql-server.md
         - name: Snowflake
           href: tools/synapse-pathway/data-type-mappings-snowflake.md
-        - name: Teradata Vantage
-          href: tools/synapse-pathway/data-type-mappings-teradata-vantage.md
     - name: Errors and Warnings
       items:
+        - name: ASP0001
+          href: tools/synapse-pathway/transpiler-messages/asp0001.md
+        - name: ASP0002
+          href: tools/synapse-pathway/transpiler-messages/asp0002.md
+        - name: ASP0003
+          href: tools/synapse-pathway/transpiler-messages/asp0003.md
+        - name: ASP0011
+          href: tools/synapse-pathway/transpiler-messages/asp0011.md
+        - name: ASP0012
+          href: tools/synapse-pathway/transpiler-messages/asp0012.md
+        - name: ASP0013
+          href: tools/synapse-pathway/transpiler-messages/asp0013.md
+        - name: ASP0014
+          href: tools/synapse-pathway/transpiler-messages/asp0014.md
+        - name: ASP0015
+          href: tools/synapse-pathway/transpiler-messages/asp0015.md
+        - name: ASP0101
+          href: tools/synapse-pathway/transpiler-messages/asp0101.md
+        - name: ASP0117
+          href: tools/synapse-pathway/transpiler-messages/asp0117.md
         - name: ASP1001
           href: tools/synapse-pathway/transpiler-messages/asp1001.md
 - name: Manage, monitor, & tune
   items:
   - name: Manage
     items:
-    - name: Accelerated Database Recovery
+    - name: Accelerated database recovery
       items:
       - name: Overview
         href: relational-databases/accelerated-database-recovery-concepts.md
       - name: Management
         href: relational-databases/accelerated-database-recovery-management.md
+      - name: Troubleshooting
+        href: relational-databases/accelerated-database-recovery-troubleshoot.md        
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager
@@ -6663,7 +7033,7 @@ items:
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md
       items:
-      - name: Start System Monitor (Windows)
+      - name: Start Performance Monitor (Windows)
         href: relational-databases/performance/start-system-monitor-windows.md
       - name: Set Up a SQL Server Database Alert (Windows)
         href: relational-databases/performance/set-up-a-sql-server-database-alert-windows.md
@@ -6685,7 +7055,7 @@ items:
         href: relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
       - name: Concepts
         items:
-        - name: Run System Monitor
+        - name: Run Performance Monitor
           href: relational-databases/performance-monitor/run-system-monitor.md
         - name: Monitor Disk Usage
           href: relational-databases/performance-monitor/monitor-disk-usage.md
@@ -6887,8 +7257,6 @@ items:
             href: relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
           - name: Quick survey
             href: relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
-          - name: Video, sample, resources
-            href: relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
         - name: Planning for In-Memory
           href: relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
           items:
@@ -7226,12 +7594,15 @@ items:
       - name: Reddit >>
         href: https://www.reddit.com/r/SQLServer
   - name: Linked servers
-    href: relational-databases/linked-servers/linked-servers-database-engine.md
     items:
-    - name: Create Linked Servers
+    - name: Overview
+      href: relational-databases/linked-servers/linked-servers-database-engine.md
+    - name: Create linked servers
       href: relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
-    - name: Create Linked Server Provider
+    - name: Create linked server provider
       href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
+    - name: Compare remote query methods
+      href: relational-databases/linked-servers/linked-servers-openquery-openrowset-exec-at.md
   - name: Full-text search
     href: relational-databases/search/full-text-search.md
     items:
@@ -7355,8 +7726,9 @@ items:
       - name: Host database on a managed instance
         href: ./master-data-services/master-data-services-host-database-on-managed-instance.md
     - name: Excel add-in
-      href: master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
       items:
+      - name: Excel Add-in Overview
+        href: master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
       - name: Data Quality Matching
         href: master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md
       - name: Match Similar Data
@@ -7784,6 +8156,8 @@ items:
   items:
   - name: Overview
     href: relational-databases/security/securing-sql-server.md
+  - name: Best practices
+    href: relational-databases/security/sql-server-security-best-practices.md
   - name: How-to
     items:
     - name: Secure SQL Server
@@ -8582,6 +8956,8 @@ items:
         href: ssdt/required-permissions-for-sql-server-data-tools.md
       - name: DAC Framework Compatibility
         href: ssdt/dac-framework-compatibility.md
+    - name: Alter DacFx Used by SSDT
+      href: ssdt/alter-dacfx-used-by-ssdt.md
   - name: SQL Server Management Studio (SSMS)
     items:
     - name: Download SSMS
@@ -8721,7 +9097,7 @@ items:
             href: ssms/agent/jobs-that-reference-a-schedule.md
           - name: Alerts Page
             href: ssms/agent/job-properties-new-job-alerts-page.md
-          - name: General Page)
+          - name: General Page
             href: ssms/agent/job-properties-new-job-general-page.md
           - name: Notifications Page
             href: ssms/agent/job-properties-new-job-notifications-page.md
@@ -9314,7 +9690,6 @@ items:
           href: ssms/menu-help/options-query-execution.md
         - name: Options (Azure Service - Help - General Page)
           href: ssms/menu-help/options-azure-services.md
-
         - name: External Tools
           href: ssms/menu-help/external-tools.md
         - name: Customize (Commands Page)
@@ -10069,11 +10444,12 @@ items:
       href: linux/tutorial-restore-backup-in-sql-server-container.md
     - name: Create a job
       href: linux/sql-server-linux-run-sql-server-agent-job.md
-    - name: Setup AD Authentication
-      href: linux/sql-server-linux-active-directory-authentication.md
+    - name: Set up AD Authentication
       items:
-      - name: Setup AD Authentication using adutil
+      - name: Use adutil to set up AD Authentication
         href: linux/sql-server-linux-ad-auth-adutil-tutorial.md
+      - name: Set up AD Authentication
+        href: linux/sql-server-linux-active-directory-authentication.md
     - name: Create failover cluster instance
       href: linux/sql-server-linux-shared-disk-cluster-configure.md
       items:
@@ -10091,7 +10467,7 @@ items:
       href: linux/sql-server-linux-create-availability-group.md
     - name: Create with HA with HPE Serviceguard
       href: linux/sql-server-availability-group-ha-hpe.md
-    - name: Deploy on Kubernetes
+    - name: Deploy SQL Server container - Kubernetes
       href: linux/tutorial-sql-server-containers-kubernetes.md
     - name: Deploy availability group with DH2i on AKS
       href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
@@ -10139,7 +10515,7 @@ items:
         href: linux/sql-server-linux-docker-container-configure.md
       - name: Container security
         href: linux/sql-server-linux-docker-container-security.md
-      - name: Configure Docker for MSDTC
+      - name: Use MSDTC with containers
         href: linux/sql-server-linux-configure-msdtc-docker.md
       - name: Troubleshoot Docker containers
         href: linux/sql-server-linux-docker-container-troubleshooting.md
@@ -10157,6 +10533,8 @@ items:
     - name: Manage
       href: linux/sql-server-linux-management-overview.md
       items:
+      - name: Manage SQL services
+        href: linux/sql-server-linux-start-stop-restart-sql-server-services.md
       - name: Use SSMS to manage
         href: linux/sql-server-linux-manage-ssms.md
       - name: Use Azure Data Studio to manage
@@ -10252,6 +10630,14 @@ items:
         href: linux/sql-server-linux-active-directory-join-domain.md
       - name: Encrypting connections
         href: linux/sql-server-linux-encrypted-connections.md
+      - name: Introduction to adutil
+        href: linux/sql-server-linux-ad-auth-adutil-introduction.md
+      - name: Understanding AD Authentication
+        href: linux/sql-server-linux-ad-auth-understanding.md
+      - name: Troubleshooting AD Authentication
+        href: linux/sql-server-linux-ad-auth-troubleshooting.md
+      - name: Rotate SQL Server on Linux keytabs
+        href: linux/sql-server-linux-ad-auth-rotate-keytabs.md
     - name: Performance
       items:
       - name: Best practices
@@ -10301,7 +10687,7 @@ items:
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-- name: SQL Server on Azure Arc-enabled servers (preview)
+- name: SQL Server on Azure Arc-enabled servers
   items:
     - name: Overview
       href: sql-server/azure-arc/overview.md
@@ -10325,8 +10711,6 @@ items:
       href: sql-server/educational-sql-resources.yml
     - name: Microsoft Learn >>
       href: /learn/
-    - name: SQL on Channel 9 >>
-      href: https://channel9.msdn.com/Search
   - name: Help
     items:
     - name: Get help
@@ -10425,6 +10809,8 @@ items:
         href: azdata/reference/reference-azdata-bdc-hdfs-settings.md
       - name: bdc hdfs status
         href: azdata/reference/reference-azdata-bdc-hdfs-status.md
+      - name: bdc rotate
+        href: azdata/reference/reference-azdata-bdc-rotate.md
       - name: bdc settings
         href: azdata/reference/reference-azdata-bdc-settings.md
       - name: bdc spark
@@ -10515,6 +10901,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-360-database-engine-error.md
         - name: 511
           href: relational-databases/errors-events/mssqlserver-511-database-engine-error.md
+        - name: 556
+          href: relational-databases/errors-events/mssqlserver-556-database-engine-error.md
         - name: 601
           href: relational-databases/errors-events/mssqlserver-601-database-engine-error.md
         - name: 605
@@ -10551,8 +10939,12 @@ items:
           href: relational-databases/errors-events/mssqlserver-855-database-engine-error.md
         - name: 856
           href: relational-databases/errors-events/mssqlserver-856-database-engine-error.md
+        - name: 898
+          href: relational-databases/errors-events/mssqlserver-898-database-engine-error.md
         - name: 905
           href: relational-databases/errors-events/mssqlserver-905-database-engine-error.md
+        - name: 912
+          href: relational-databases/errors-events/mssqlserver-912-database-engine-error.md
         - name: 916
           href: relational-databases/errors-events/mssqlserver-916-database-engine-error.md
         - name: 926
@@ -10951,7 +11343,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-11001-database-engine-error.md
         - name: 11409
           href: relational-databases/errors-events/mssqlserver-11409-database-engine-error.md
-      - name: Errors 12,300 to 16,000
+      - name: Errors 12,300 to 16,999
         items:
         - name: 12300
           href: relational-databases/errors-events/mssqlserver-12300-database-engine-error.md
@@ -10991,6 +11383,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-15599-database-engine-error.md
         - name: 15661
           href: relational-databases/errors-events/mssqlserver-15661-database-engine-error.md
+        - name: 16591
+          href: relational-databases/errors-events/mssqlserver-16591-database-engine-error.md
+        - name: 16594
+          href: relational-databases/errors-events/mssqlserver-16594-database-engine-error.md
       - name: Errors 17,000 to 19,000
         items:
         - name: 17053
@@ -12411,9 +12807,6 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-physical-seeding-stats.md
       - name: sys.dm_tcp_listener_states
         href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
-
-
-
     - name: Big Data Clusters
       items:
       - name: sys.dm_cluster_endpoints
@@ -12470,6 +12863,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
       - name: sys.dm_database_replica_states (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md
+      - name: sys.dm_database_backups_azure-sql-database
+        href: relational-databases/system-dynamic-management-views/sys-dm-database-backups-azure-sql-database.md  
       - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
       - name: sys.dm_db_resource_stats (Azure SQL Database)
@@ -12930,6 +13325,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md
       - name: sys.dm_os_memory_pools
         href: relational-databases/system-dynamic-management-views/sys-dm-os-memory-pools-transact-sql.md
+      - name: sys.dm_os_out_of_memory_events 
+        href: relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events.md
       - name: sys.dm_os_nodes
         href: relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql.md
       - name: sys.dm_os_performance_counters
@@ -12995,6 +13392,10 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md
       - name: sys.dm_tran_version_store_space_usage
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md
+      - name: sys.dm_tran_aborted_transactions
+        href: relational-databases/system-dynamic-management-views/sys-dm-tran-aborted-transactions.md
+      - name: sys.dm_tran_persistent_version_store_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-tran-persistent-version-store-stats.md
   - name: System functions
     href: relational-databases/system-functions/system-functions-category-transact-sql.md
     items:
@@ -13226,8 +13627,12 @@ items:
         href: relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md
       - name: sp_columns
         href: relational-databases/system-stored-procedures/sp-columns-transact-sql.md
+      - name: sp_create_openrowset_statistics 
+        href: relational-databases/system-stored-procedures/sp-create-openrowset-statistics.md
       - name: sp_databases
         href: relational-databases/system-stored-procedures/sp-databases-transact-sql.md
+      - name: sp_drop_openrowset_statistics 
+        href: relational-databases/system-stored-procedures/sp-drop-openrowset-statistics.md
       - name: sp_fkeys
         href: relational-databases/system-stored-procedures/sp-fkeys-transact-sql.md
       - name: sp_pkeys
@@ -13389,7 +13794,7 @@ items:
       - name: sp_autostats
         href: relational-databases/system-stored-procedures/sp-autostats-transact-sql.md
       - name: sp_batch_params
-        href: relational-databases/system-stored-procedures/sp-batch-params-transact-sql.md
+        href: ./relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md
       - name: sp_bindefault
         href: relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md
       - name: sp_bindrule
@@ -13478,6 +13883,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md
       - name: sp_getapplock
         href: relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md
+      - name: sp_get_endpoint_certificate
+        href: relational-databases/system-stored-procedures/sp-get-endpoint-certificate-transact-sql.md
       - name: sp_get_query_template
         href: relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md
       - name: sp_help
@@ -13516,6 +13923,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-lock-transact-sql.md
       - name: sp_monitor
         href: relational-databases/system-stored-procedures/sp-monitor-transact-sql.md
+      - name: sp_persistent_version_cleanup
+        href: relational-databases/system-stored-procedures/sys-sp-persistent-version-cleanup-transact-sql.md
       - name: sp_procoption
         href: relational-databases/system-stored-procedures/sp-procoption-transact-sql.md
       - name: sp_recompile
@@ -14654,6 +15063,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md
       - name: sp_purge_jobhistory
         href: relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md
+      - name: sp_readerrorlog
+        href: relational-databases/system-stored-procedures/sp-readerrorlog-transact-sql.md
       - name: sp_remove_job_from_targets
         href: relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md
       - name: sp_resync_targetserver
@@ -16591,7 +17002,6 @@ items:
           href: t-sql/language-elements/select-local-variable-transact-sql.md
         - name: DECLARE @local_variable
           href: t-sql/language-elements/declare-local-variable-transact-sql.md
-
     - name: Queries
       href: t-sql/queries/queries.md
       displayName: Query

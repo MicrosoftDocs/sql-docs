@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "EDGE"
   - "SQL graph, CREATE TABLE statement"
 ms.assetid: 
-author: "shkale-msft"
-ms.author: "shkale"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE TABLE (SQL Graph)

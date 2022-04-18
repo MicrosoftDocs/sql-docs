@@ -1,18 +1,19 @@
 ---
 title: "Installing the Driver Manager"
 description: "This article contains instructions to install the unixODBC Driver Manager for use with all versions of Microsoft ODBC Driver for SQL Server on Linux and macOS."
-ms.custom: ""
-ms.date: "02/15/2018"
+ms.custom:
+  - intro-installation
+ms.date: "02/15/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Driver Manager, installing"
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Installing the Driver Manager
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -22,8 +23,8 @@ This article contains instructions to install the unixODBC Driver Manager for us
 > [!IMPORTANT]  
 > Delete any driver manager packages installed on your computer before you install the unixODBC Driver Manager. Installing the unixODBC Driver Manager could cause a failure of an existing Driver Manager.  
 
-## Installing the Driver Manager for Microsoft ODBC Driver 13, 13.1, and 17
-The driver manager dependency is resolved automatically by the package management system when you install the Microsoft ODBC Driver 13, 13.1, or 17 for SQL Server on Linux or macOS by following the instructions in the following articles:
+## Installing the Driver Manager for Microsoft ODBC Driver 13, 13.1, 17, and 18
+The driver manager dependency is resolved automatically by the package management system when you install the Microsoft ODBC Driver 13, 13.1, 17, or 18 for SQL Server on Linux or macOS by following the instructions in the following articles:
 
 - [Installing the Microsoft ODBC Driver for SQL Server on Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 - [Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)

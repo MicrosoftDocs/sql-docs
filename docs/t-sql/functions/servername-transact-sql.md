@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;SERVERNAME (Transact-SQL)"
+description: "@@SERVERNAME (Transact-SQL)"
 title: "@@SERVERNAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"

@@ -53,7 +53,7 @@ ms.author: mlandzic
 ## Examples  
  The following example uses `Filter()` to determine if two `geography` instances intersect each other.  
   
-```  
+```sql
 CREATE TABLE sample (id int primary key, g geography);  
 INSERT INTO sample VALUES  
    (0, geography::Point(45, -120, 4326)),  

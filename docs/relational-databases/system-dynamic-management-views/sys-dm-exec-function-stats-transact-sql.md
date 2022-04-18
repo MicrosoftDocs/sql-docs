@@ -8,6 +8,8 @@ ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sys.dm_exec_function_stats"
   - "sys.dm_exec_function_stats_tsql"
@@ -16,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.dm_exec_function_stats dynamic management view"
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_function_stats (Transact-SQL)
@@ -69,8 +71,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ## Permissions  
 
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.   
-On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.
+
+On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
   
 ## Examples  
  The following example returns information about the top ten functions identified by average elapsed time.  

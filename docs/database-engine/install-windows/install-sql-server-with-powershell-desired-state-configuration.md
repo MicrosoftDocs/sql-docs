@@ -1,8 +1,10 @@
 ---
 title: "Install: PowerShell Desired State Configuration"
 description: "Install SQL Server by using PowerShell DSC and learn about the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016."
-ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.custom:
+  - seo-lt-2019
+  - intro-installation
+ms.date: "09/17/2021"
 ms.devlang: PowerShell
 ms.prod: sql
 ms.reviewer: ""
@@ -23,9 +25,12 @@ Have you ever gone through the SQL Server installation interface just by selecti
 
 What's worse is now the confidence of the entire installation is shaken. "What else did I forget?" you might ask yourself.
 
-Read about [PowerShell Desired State Configuration (DSC)](/powershell/scripting/dsc/overview/overview). By using DSC, you build one configuration template that you can reuse over hundreds and thousands of servers. Depending on the build, you might have to tweak a few of the setup parameters. But that's not a significant issue because you can keep all of the standard settings in place. It eliminates the possibility that you'll forget to enter an important parameter.
+Read about [PowerShell Desired State Configuration (DSC)](/powershell/dsc/overview). By using DSC, you build one configuration template that you can reuse over hundreds and thousands of servers. Depending on the build, you might have to tweak a few of the setup parameters. But that's not a significant issue because you can keep all of the standard settings in place. It eliminates the possibility that you'll forget to enter an important parameter.
 
 This article explores the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016 by using the **SqlServerDsc** DSC resource. Some prior knowledge of DSC is helpful as we won't explore how DSC works.
+
+> [!NOTE]
+> This article refers to PowerShell 5.1, which is the default version of PowerShell installed with Windows Server 2016, 2019, and 2022.
 
 The following items are required for this walkthrough:
 
@@ -208,7 +213,7 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 
 ## See also
 
-[Windows PowerShell Desired State Configuration Overview](/powershell/scripting/dsc/overview/overview)
+[Windows PowerShell Desired State Configuration Overview](/powershell/dsc/overview)
 
 [Install SQL Server from the command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 

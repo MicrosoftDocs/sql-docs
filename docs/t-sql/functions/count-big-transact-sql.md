@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "number of group items"
   - "COUNT_BIG function"
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COUNT_BIG (Transact-SQL)

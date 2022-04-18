@@ -1,5 +1,5 @@
 ---
-title: "Linking Multiple Data Regions to the Same Dataset (Report Builder) | Microsoft Docs"
+title: "Linking multiple data regions to the same dataset in a paginated report | Microsoft Docs"
 description: Find out how to add multiple data regions to a paginated report to provide different views of data from the same report dataset in Report Builder.
 ms.date: 05/30/2017
 ms.prod: reporting-services
@@ -13,9 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Linking Multiple Data Regions to the Same Dataset (Report Builder and SSRS)
+# Linking multiple data regions to the same dataset in a paginated report (Report Builder)
 
-You can add multiple data regions to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report to provide different views of data from the same report dataset. For example, you might want to display data in a table and also display it visually in a chart. To do so, you must use identical expressions and scopes for the appropriate filter expressions, sort expressions, and group expressions.  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+You can add multiple data regions to a paginated report to provide different views of data from the same report dataset. For example, you might want to display data in a table and also display it visually in a chart. To do so, you must use identical expressions and scopes for the appropriate filter expressions, sort expressions, and group expressions.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -32,4 +34,4 @@ You can add multiple data regions to a [!INCLUDE[ssRSnoversion](../../includes/s
 [Tables, Matrices, and Lists](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
 [Nested Data Regions](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

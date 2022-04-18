@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "first nonnull expressions [SQL Server]"
   - "nonnull expressions"
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COALESCE (Transact-SQL)

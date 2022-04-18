@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "RIGHT function"
   - "character strings [SQL Server], RIGHT"
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RIGHT (Transact-SQL)

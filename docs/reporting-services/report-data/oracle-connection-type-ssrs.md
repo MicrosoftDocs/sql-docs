@@ -137,7 +137,7 @@ Power BI Desktop uses **Unmanaged ODP.NET** for authoring Power BI reports. You 
 Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies an Oracle database on the server named "Oracle18" using Unicode. The server name must match what is defined in the Tnsnames.ora configuration file as the Oracle server instance name.  
   
 ```  
-Data Source="Oracle"; Unicode="True"  
+Data Source="Oracle18"; Unicode="True"  
 ```  
   
 For more connection string examples, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  

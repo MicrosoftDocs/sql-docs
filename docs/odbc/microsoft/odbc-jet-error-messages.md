@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "error messages (ODBC driver for oracle)"
 ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ODBC Jet Error Messages
 For errors that occur in the data source, the ODBC driver returns an error message returned to it by the ODBC File Library. For errors that occur in the ODBC driver or the Driver Manager, the driver returns an error message based on the text associated with the SQLSTATE.  

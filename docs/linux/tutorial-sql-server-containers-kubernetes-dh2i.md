@@ -1,14 +1,15 @@
 ---
 title: Deploy availability group with DH2i cluster on Azure Kubernetes Services (AKS)
 description: This tutorial shows how to deploy a SQL Server Always On availability group with DH2i Clustering solution for SQL Server containers on Azure Kubernetes Service (AKS).
-ms.custom:
 author: amvin87
 ms.author: amitkh
 ms.reviewer: amitkh, vanto
-ms.date: 07/20/2021
+ms.date: 04/01/2022
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy availability group with DH2i for SQL Server containers on AKS
@@ -89,21 +90,24 @@ $mkdir dockefiles
 $cd dockerfiles 
 $nano Dockerfile  
 # paste the sample dockerfile content shared above 
-# now build the image using the command: 
-$docker build -t <tagname> . 
-# you should now be able to see the new image, sqlimage when you run the docker images command 
+# now build the image using the command:
+# <tagname> should be sqldh2i/latest
+$docker build -t <tagname> .
+# you should now be able to see the new image, sqldh2i when you run the docker images command 
 ```
 
 Tag the image and push it to Azure Container Registry (ACR) using the commands below. Make sure you've already logged into Azure Container Registry (ACR) using the docker login command. For more information, see [login to ACR](/azure/container-registry/container-registry-get-started-portal#log-in-to-registry).
 
 ```bash
-$docker tag sqlimage/latest <registry-name>.azurecr.io/sqlimage:latest 
+$docker tag sqldh2i/latest <registry-name>.azurecr.io/sqldh2i:latest 
 #now push to the ACR repo: 
-$docker push <registry-name>.azurecr.io/sqlimage:latest 
+$docker push <registry-name>.azurecr.io/sqldh2i:latest 
 #you can browse your ACR through the portal and should see the repo and the tag listed in the ACR. 
 ```
 
 This ensures that the custom image has been pushed to Azure Container Registry (ACR) and that you can now integrate your Azure Kubernetes Service (AKS) with ACR by running the following command. For more information, see this [Integrate ACR with an AKS cluster](/azure/aks/cluster-container-registry-integration).
+
+Use the short name for `<registry-name>`. The full qualified name of the registry is not accepted in the below command.
 
 ```bash
 az aks update -n myAKSCluster -g <myResourceGroup> --attach-acr <registry-name>
@@ -175,7 +179,7 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
             fsGroup: 10001 
           containers: 
           - name: mssql 
-            image: <registry-name>.azurecr.io/sqldh2i:latest 
+            image: <registry-name>.azurecr.io/sqldh2i:latest
             env: 
             - name: ACCEPT_EULA 
               value: "Y" 
@@ -234,7 +238,7 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
             fsGroup: 10001 
           containers: 
           - name: mssql 
-            image: <registry-name>.azurecr.io/sqldh2i:latest 
+            image: <registry-name>.azurecr.io/sqldh2i:latest
             env: 
             - name: ACCEPT_EULA 
               value: "Y" 
@@ -364,7 +368,7 @@ DxEnterprise is high availability clustering software from DH2i that supports SQ
 With this, you should have an Always On availability group created and database(s) added to the group supporting high availability.
 
 > [!NOTE]
-> You can deploy [basic Always On availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups) with SQL Server standard edition, but as you may be aware, one of the limitations of basic availability groups is that you are limited to only having two replicas and one additional configuration only replica required for successful automatic failover. Refer to the [documentation](https://docs.microsoft.com/sql/linux/sql-server-linux-availability-group-overview#configuration-only-replica-and-quorum) for more information on failover with configuration only replica. You can add configuration only replica for containers as well, and to do so, please refer to the [DH2i documentation](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf), making sure to pass the availability mode in the 'dxcli add-ags-node' command as 'configuration_only'.
+> You can deploy [basic Always On availability group](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md) with SQL Server standard edition, but as you may be aware, one of the limitations of basic availability groups is that you are limited to only having two replicas and one additional configuration only replica required for successful automatic failover. Refer to the [documentation](./sql-server-linux-availability-group-overview.md#configuration-only-replica-and-quorum) for more information on failover with configuration only replica. You can add configuration only replica for containers as well, and to do so, please refer to the [DH2i documentation](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf), making sure to pass the availability mode in the 'dxcli add-ags-node' command as 'configuration_only'.
 
 
 ## Steps to configure Always On availability group listener: (Optional)
@@ -373,7 +377,7 @@ You can also configure an Always On availability group listener; to do so, follo
 
 1. Ensure you've created the AG listener using DxEnterprise as outlined in the optional step near the end of the [DH2i documentation](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf).
 
-2. In Kubernetes, you can optionally create static IP addresses. Creating static IP addresses ensures that if the listener service is deleted and recreated, the external IP address assigned to your listener service does not change and thus remains static. Follow the steps outlined [here](https://docs.microsoft.com/azure/aks/static-ip#create-a-static-ip-address) to create a static IP address in Azure Kubernetes Service (AKS).
+2. In Kubernetes, you can optionally create static IP addresses. Creating static IP addresses ensures that if the listener service is deleted and recreated, the external IP address assigned to your listener service does not change and thus remains static. Follow the steps outlined [here](/azure/aks/static-ip#create-a-static-ip-address) to create a static IP address in Azure Kubernetes Service (AKS).
    
 3. After you have created an IP address, you assign that IP address and create the load balancer service, as shown in the sample yaml below:
 

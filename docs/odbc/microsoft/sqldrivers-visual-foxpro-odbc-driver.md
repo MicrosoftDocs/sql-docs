@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLDrivers function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 179b11e0-665f-45a2-b926-c3d870a0dab8
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLDrivers (Visual FoxPro ODBC Driver)
 > [!NOTE]  

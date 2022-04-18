@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Paradox driver [ODBC], SQLGetTypeInfo"
 ms.assetid: e65063c7-ba9e-4cf0-ac13-4bb5bd2937db
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetTypeInfo (Paradox Driver)
 > [!NOTE]  

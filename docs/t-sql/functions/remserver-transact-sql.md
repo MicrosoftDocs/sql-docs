@@ -1,5 +1,5 @@
 ---
-description: "&#x40;&#x40;REMSERVER (Transact-SQL)"
+description: "@@REMSERVER (Transact-SQL)"
 title: "@@REMSERVER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "remote servers [SQL Server], logins"
   - "@@REMSERVER function"
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # &#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

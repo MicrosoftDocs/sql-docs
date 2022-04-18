@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLTables function [ODBC], Paradox Driver"
 ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLTables (Paradox Driver)
 > [!NOTE]  

@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 3/10/2021
+ms.date: 12/27/2021
 ---
 
 # SQL Assessment API
@@ -42,7 +42,9 @@ The Microsoft's shipped ruleset is available on GitHub. You can view the [entire
 
 ## SQL Assessment cmdlets and associated extensions
 
-The SQL Assessment API is part of:
+### Use the API directly
+
+The SQL Assessment API is available and can be used through managed code as part of any of these components :
 
 * [Azure Data Studio (ADS)](../../azure-data-studio/what-is-azure-data-studio.md)
 
@@ -56,7 +58,7 @@ The SQL Assessment API is part of:
 
     Release version as of July 2019 and higher.
 
-Before you start using the SQL Assessment API, make sure to:
+Before you start using the SQL Assessment API itself, make sure to install either of these:
 
 * [Install ADS](https://techcommunity.microsoft.com/t5/sql-server/released-sql-server-assessment-extension-for-azure-data-studio/ba-p/1470603)
 
@@ -64,19 +66,28 @@ Before you start using the SQL Assessment API, make sure to:
 
 * [Install SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md)
 
-The SqlServer module is getting two new cmdlets to work with SQL Assessment API:
+* [Install via Nuget](https://www.nuget.org/packages/Microsoft.SqlServer.Assessment/)
 
-* **Get-SqlAssessmentItem** – Provides a list of available assessment checks for a SQL Server object
 
-* **Invoke-SqlAssessment** – Provides results of an assessment
-
-SMO Framework is supplemented by the SQL Assessment API extension that provides the following methods:
+The SMO Framework is supplemented by the SQL Assessment API extension that provides the following methods:
 
 * **GetAssessmentItems** – Returns available checks for a particular SQL object (IEnumerable<…>)
 
 * **GetAssessmentResults** – Synchronously evaluates assessment and returns results and errors if any (IEnumerable<…>)
 
 * **GetAssessmentResultsList** – Asynchronously evaluates assessment and returns results and errors if any (Task<…>)
+
+### Use the API via PowerShell
+
+If you would like to invoke the SQL Assessment API via PowerShell, you must [install SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md)
+
+The SqlServer module is getting two new cmdlets to work with SQL Assessment API:
+
+* **Get-SqlAssessmentItem** – Provides a list of available assessment checks for a SQL Server object
+
+* **Invoke-SqlAssessment** – Provides results of an assessment
+
+
 
 ## Get started using SQL Assessment cmdlets
 
@@ -104,19 +115,7 @@ Go through the examples below to get started.
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-3. Get a list of available checks for all databases of the instance. Here, we're using the Get-Item cmdlet and a path implemented with the Windows PowerShell SQL Server provider to get a list of the databases, and then piping it to the Get-SqlDatabase cmdlet.
-
-    ```powershell
-    Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
-    ```
-
-    Also, you can use the Get-SqlDatabase cmdlet to do the same.
-
-    ```powershell
-    Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
-    ```
-
-4. Invoke assessment for the instance and save the results to a SQL table. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Invoke-SqlAssessment cmdlet, which results are piped to the Write-SqlTableData cmdlet. The Invoke-Assessment cmdlet is run with the `-FlattenOutput` parameter in this example. This parameter makes the output suitable for the Write-SqlTableData cmdlet. The latter raises an error if you omit the parameter.
+3. Invoke assessment for the instance and save the results to a SQL table. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Invoke-SqlAssessment cmdlet, which results are piped to the Write-SqlTableData cmdlet. The Invoke-Assessment cmdlet is run with the `-FlattenOutput` parameter in this example. This parameter makes the output suitable for the Write-SqlTableData cmdlet. The latter raises an error if you omit the parameter.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |
@@ -132,11 +131,11 @@ Go through the examples below to get started.
     Write-SqlTableData -ServerInstance 'localhost' -DatabaseName SQLAssessmentDemo -SchemaName Assessment -TableName Results -Force
     ```
 
-5. Follow descriptions and links in the table to further understand the recommendations.
+4. Follow descriptions and links in the table to further understand the recommendations.
 
-6. Customize the rules based on your environment and organizational requirements (see below).
+5. Customize the rules based on your environment and organizational requirements (see below).
 
-7. Schedule a task or a job to run the assessment regularly or on-demand to measure progress.
+6. Schedule a task or a job to run the assessment regularly or on-demand to measure progress.
 
 ## Customizing rules
 

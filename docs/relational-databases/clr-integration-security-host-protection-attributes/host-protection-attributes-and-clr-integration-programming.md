@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], disallowed types and members"
   - "HPAs [CLR integration]"
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Host Protection Attributes and CLR Integration Programming
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

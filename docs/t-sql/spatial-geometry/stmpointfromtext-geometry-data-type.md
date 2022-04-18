@@ -53,7 +53,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
 ## Examples  
  The following example uses `STMPointFromText()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;   
 SET @g = geometry::STMPointFromText('MULTIPOINT ((100 100), (200 200))', 0);  
 SELECT @g.ToString();  

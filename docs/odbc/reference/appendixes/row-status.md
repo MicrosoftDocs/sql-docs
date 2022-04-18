@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "cache [ODBC]"
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Row Status
 > [!IMPORTANT]  

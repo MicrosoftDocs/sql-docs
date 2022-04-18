@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "ConfigDriver [ODBC]"
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ConfigDriver Function
 **Conformance**  

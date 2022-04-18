@@ -1,15 +1,10 @@
 ---
-title: "SQL Server Audit Action Groups and Actions | Microsoft Docs"
+title: "SQL Server Audit Action Groups and Actions"
 description: Learn about server-level, database-level, and audit-level groups of actions and individual actions in SQL Server Audit. 
-ms.custom: ""
-ms.date: "05/07/2021"
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
-f1_keywords: 
-  - "audit"
 helpviewer_keywords: 
   - "audit actions [SQL Server]"
   - "audits [SQL Server], groups"
@@ -20,50 +15,56 @@ helpviewer_keywords:
   - "audit action groups [SQL Server]"
   - "audits [SQL Server], actions"
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-author: DavidTrigano
-ms.author: datrigan
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: vanto
+ms.custom: ""
+ms.date: "03/23/2022"
 ---
 # SQL Server Audit Action Groups and Actions
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit feature enables you to audit server-level and database-level groups of events and individual events. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+
+The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit feature enables you to audit server-level and database-level groups of events and individual events. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audits consist of zero or more audit action items. These audit action items can be either a group of actions, such as Server_Object_Change_Group, or individual actions such as SELECT operations on a table.  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audits consist of zero or more audit action items. These audit action items can be either a group of actions, such as Server_Object_Change_Group, or individual actions such as SELECT operations on a table.  
   
 > [!NOTE]  
->  Server_Object_Change_Group includes CREATE, ALTER, and DROP for any server object (Database or Endpoint).  
+> Server_Object_Change_Group includes CREATE, ALTER, and DROP for any server object (Database or Endpoint).  
   
  Audits can have the following categories of actions:  
   
--   Server-level. These actions include server operations, such as management changes and logon and logoff operations.  
+- Server-level. These actions include server operations, such as management changes and logon and logoff operations.  
   
--   Database-level. These actions encompass data manipulation languages (DML) and data definition language (DDL) operations.  
+- Database-level. These actions encompass data manipulation languages (DML) and data definition language (DDL) operations.  
   
--   Audit-level. These actions include actions in the auditing process.  
+- Audit-level. These actions include actions in the auditing process.  
   
- Some actions performed on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auditing components are intrinsically audited in a specific audit, and in these cases audit events occur automatically because the event occurred on the parent object.  
+Some actions performed on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auditing components are intrinsically audited in a specific audit, and in these cases audit events occur automatically because the event occurred on the parent object.  
   
- The following actions are intrinsically audited:  
+The following actions are intrinsically audited:  
   
--   Server Audit State Change (setting State to ON or OFF)  
+- Server Audit State Change (setting State to ON or OFF)  
   
  The following events are not intrinsically audited:  
   
--   CREATE SERVER AUDIT SPECIFICATION  
+- CREATE SERVER AUDIT SPECIFICATION  
   
--   ALTER SERVER AUDIT SPECIFICATION  
+- ALTER SERVER AUDIT SPECIFICATION  
   
--   DROP SERVER AUDIT SPECIFICATION  
+- DROP SERVER AUDIT SPECIFICATION  
   
--   CREATE DATABASE AUDIT SPECIFICATION  
+- CREATE DATABASE AUDIT SPECIFICATION  
   
--   ALTER DATABASE AUDIT SPECIFICATION  
+- ALTER DATABASE AUDIT SPECIFICATION  
   
--   DROP DATABASE AUDIT SPECIFICATION  
+- DROP DATABASE AUDIT SPECIFICATION  
   
  All audits are disabled when initially created.  
   
 ## Server-Level Audit Action Groups  
- Server-level audit action groups are actions similar to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] security audit event classes. For more information, see [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+
+Server-level audit action groups are actions similar to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] security audit event classes. For more information, see [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  The following table describes the server-level audit action groups and provides the equivalent SQL Server Event Class where applicable.  
   
@@ -134,8 +135,8 @@ ms.author: datrigan
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|This event is raised whenever a password is changed for an application role. Equivalent to the [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|This event is raised whenever any audit is created, modified or deleted. This event is raised whenever any audit specification is created, modified, or deleted. Any change to an audit is audited in that audit. Equivalent to the [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
 |BACKUP_RESTORE_GROUP|This event is raised whenever a backup or restore command is issued. Equivalent to the [Audit Backup and Restore Event Class](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
-|BATCH_COMPLETED_GROUP|This event is raised whenever any batch text, stored procedure, or transaction management operation completes executing. It is raised after the batch completes and will audit the entire batch or stored procedure text, as sent from the client, including the result.|  
-|BATCH_STARTED_GROUP|This event is raised whenever any batch text, stored procedure, or transaction management operation starts to execute. It is raised before execution and will audit the entire batch or stored procedure text, as sent from the client.|  
+|BATCH_COMPLETED_GROUP|This event is raised whenever any batch text, stored procedure, or transaction management operation completes executing. It is raised after the batch completes and will audit the entire batch or stored procedure text, as sent from the client, including the result. **Added in SQL Server 2019.**|  
+|BATCH_STARTED_GROUP|This event is raised whenever any batch text, stored procedure, or transaction management operation starts to execute. It is raised before execution and will audit the entire batch or stored procedure text, as sent from the client. **Added in SQL Server 2019.**|  
 |DATABASE_CHANGE_GROUP|This event is raised when a database is created, altered, or dropped. Equivalent to the [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|This event is raised when a contained database user logs out of a database.|  
 |DATABASE_OBJECT_ACCESS_GROUP|This event is raised whenever database objects such as certificates and asymmetric keys are accessed. Equivalent to the [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  

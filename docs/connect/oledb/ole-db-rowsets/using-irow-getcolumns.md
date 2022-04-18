@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
   - "GetColumns method"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using IRow::GetColumns
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

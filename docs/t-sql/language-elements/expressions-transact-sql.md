@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "simple expressions [SQL Server]"
   - "complex expressions [SQL Server]"
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Expressions (Transact-SQL)

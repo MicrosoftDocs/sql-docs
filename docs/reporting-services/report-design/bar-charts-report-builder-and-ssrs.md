@@ -1,6 +1,6 @@
 ---
-title: "Bar Charts (Report Builder) | Microsoft Docs"
-description: Display data horizontally with a bar chart to represent data with a finite start and end date in Report Builder.
+title: "Bar charts in a paginated report | Microsoft Docs"
+description: Display data horizontally with a bar chart to represent data in a paginated report with a finite start and end date in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Bar Charts (Report Builder and SSRS)
-  A bar chart displays series as sets of horizontal bars. The plain bar chart is closely related to the column chart, which displays series as sets of vertical bars, and the range bar chart, which displays series as sets of horizontal bars with varying beginning and end points.  
+# Bar charts in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  A bar chart displays series as sets of horizontal bars in a paginated report. The plain bar chart is closely related to the column chart, which displays series as sets of vertical bars, and the range bar chart, which displays series as sets of horizontal bars with varying beginning and end points.  
   
  The bar chart is the only chart type that displays data horizontally. For this reason, it is popular for representing data that occurs over time, with a finite start and end date. It is also popular for showing categorical information since the categories can be displayed horizontally. For more information about how to add data to a bar chart, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   

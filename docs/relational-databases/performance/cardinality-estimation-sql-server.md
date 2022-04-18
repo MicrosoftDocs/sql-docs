@@ -331,7 +331,7 @@ WHERE Model = 'Xbox' AND
 ```  
   
 ### Example C. CE no longer assumes any correlation between filtered predicates from different tables 
-With extense new research on modern workloads and actual business data reveal that predicate filters from different tables usually do not correlate with each other. In the following query, the CE assumes there is no correlation between `s.type` and `r.date`. Therefore the CE makes a lower estimate of the number of rows returned.  
+Extensive new research on modern workloads and actual business data reveals that predicate filters from different tables usually do not correlate with each other. In the following query, the CE assumes there is no correlation between `s.type` and `r.date`. Therefore the CE makes a lower estimate of the number of rows returned.  
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  

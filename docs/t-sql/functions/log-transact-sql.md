@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "logarithm of expression"
   - "LOG function"
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LOG (Transact-SQL)

@@ -48,7 +48,7 @@ A method that tests if the **geometry** instance is the same as the specified ty
 ## Examples  
  The following example creates a `MultiPoint` instance and uses `InstanceOf()` to see if the instance is a `GeometryCollection`.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);  
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  

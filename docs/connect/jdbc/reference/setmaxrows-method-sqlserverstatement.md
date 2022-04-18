@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setMaxRows Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

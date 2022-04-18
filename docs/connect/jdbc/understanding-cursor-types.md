@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Understanding cursor types
 

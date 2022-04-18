@@ -1,6 +1,6 @@
 ---
-title: "Data Types in Expressions (Report Builder) | Microsoft Docs"
-description:  Explore how data types represent different kinds of data so that the data can be stored and processed in Report Builder. 
+title: "Data types in expressions in a paginated report | Microsoft Docs"
+description:  Explore how data types represent different kinds of data in a paginated report so that the data can be stored and processed in Report Builder. 
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Data Types in Expressions (Report Builder and SSRS)
-  Data types represent different kinds of data so that it can be stored and processed efficiently. Typical data types include text (also known as strings), numbers with and without decimal places, dates and times, and images. Values in a report must be an Report Definition Language (RDL) data type. You can format a value according to your preference when you display it in a report. For example, a field that represents currency is stored in the report definition as a floating point number, but can be displayed in a variety of formats depending on the format property you choose.  
+# Data types in expressions in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Data types represent different kinds of data in a paginated report so that it can be stored and processed efficiently. Typical data types include text (also known as strings), numbers with and without decimal places, dates and times, and images. Values in a report must be an Report Definition Language (RDL) data type. You can format a value according to your preference when you display it in a report. For example, a field that represents currency is stored in the report definition as a floating point number, but can be displayed in a variety of formats depending on the format property you choose.  
   
  For more information about display formats, see [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md).  
   
@@ -113,10 +116,10 @@ ms.author: maggies
   
          If the `MyDateTime.Value` string has a UTC offset, the `DateTime.Parse` function first adjusts for the UTC offset (7 A.M. - [`+08:00`] to the UTC time of 11 P.M. the night before). The `DateTime.Parse` function then applies the local report server UTC offset and, if necessary, adjusts the time again for Daylight Saving Time. For example, in Redmond, Washington, the local time offset adjusted for Daylight Saving Time is `[-07:00]`, or 7 hours earlier than 11 PM. The result is the following **DateTime** value: `2007-07-06 04:07:07 PM` (July 6, 2007 at 4:07 P.M).  
   
- For more information about converting strings to **DateTime** data types, see [Parsing Date and Time Strings](https://go.microsoft.com/fwlink/?LinkId=89703), [Formatting Date and Time for a Specific Culture](https://go.microsoft.com/fwlink/?LinkId=89704), and [Choosing Between DateTime, DateTimeOffset, and TimeZoneInfo](/dotnet/standard/datetime/choosing-between-datetime) on MSDN.  
+ For more information about converting strings to **DateTime** data types, see [Parsing Date and Time Strings](/dotnet/api/system.datetime.parse), [Formatting Date and Time for a Specific Culture](/dotnet/standard/base-types/formatting-types), and [Choosing Between DateTime, DateTimeOffset, and TimeZoneInfo](/dotnet/standard/datetime/choosing-between-datetime).  
+
   
--   Add a new calculated field to the report dataset that uses an expression to extract parts of the string. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
-  
+-   Add a new calculated field to the report dataset that uses an expression to extract parts of the string. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).    
 -   Change the report dataset query to use [!INCLUDE[tsql](../../includes/tsql-md.md)] functions to extract the date and time values independently to create separate columns. The following example shows how to use the function **DatePart** to add a column for the year and a column for the UTC time zone converted to minutes:  
   
      `SELECT`  
@@ -139,4 +142,3 @@ ms.author: maggies
   
 ## See Also  
  [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
-  

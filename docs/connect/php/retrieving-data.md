@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Retrieving Data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

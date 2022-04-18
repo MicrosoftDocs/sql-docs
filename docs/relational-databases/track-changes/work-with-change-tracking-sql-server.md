@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "change tracking [SQL Server], ensuring consistent results"
   - "change tracking [SQL Server], handling changes"
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Work with Change Tracking (SQL Server)

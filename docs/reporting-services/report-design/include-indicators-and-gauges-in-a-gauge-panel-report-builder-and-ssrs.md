@@ -1,6 +1,6 @@
 ---
-title: "Include Indicators and Gauges in a Gauge Panel (Report Builder) | Microsoft Docs"
-description: Find out about using gauges and indicators in the gauge panel, a top-level container, in your reports in Report Builder. 
+title: "Include indicators and gauges in a gauge panel in paginated report | Microsoft Docs"
+description: Find out about using gauges and indicators in the gauge panel, a top-level container, in your paginated reports in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Include Indicators and Gauges in a Gauge Panel (Report Builder and SSRS)
-  The gauge panel is the top-level container that holds one or more gauges and indicators. Indicators can be embedded in gauges or placed next to them in the gauge panel.  
+# Include indicators and gauges in a gauge panel in paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  The gauge panel is the top-level container that holds one or more gauges and indicators in a paginated report. Indicators can be embedded in gauges or placed next to them in the gauge panel.  
   
  If the indicator and gauge are adjacent in the gauge panel and show data from different fields, you might want to add labels to make it clear what data the gauge and indicator convey.  
   

@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 839f9c67-4cd4-4e07-a0ef-ba62591e9e5a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLServerClob Methods
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

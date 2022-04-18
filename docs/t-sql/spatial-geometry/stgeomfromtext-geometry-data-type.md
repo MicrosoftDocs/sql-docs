@@ -53,7 +53,7 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
 ## Examples  
  The following example uses `STGeomFromText()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0);  
 SELECT @g.ToString();  

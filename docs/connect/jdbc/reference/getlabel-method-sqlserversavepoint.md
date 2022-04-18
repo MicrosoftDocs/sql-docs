@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: ccc32b87-8451-46c8-a173-068d33374e57
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getLabel Method (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

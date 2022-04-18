@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "application compatibility issues [ODBC]"
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Types of Applications
 ODBC applications can be classified as follows:  

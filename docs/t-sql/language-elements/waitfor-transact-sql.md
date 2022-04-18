@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "WAITFOR statement"
   - "timing executions"
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # WAITFOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

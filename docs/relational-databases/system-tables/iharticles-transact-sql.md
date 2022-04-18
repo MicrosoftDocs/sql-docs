@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHarticles system table"
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # IHarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

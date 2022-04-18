@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "SQLFreeStmt function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLFreeStmt (Visual FoxPro ODBC Driver)
 > [!NOTE]  

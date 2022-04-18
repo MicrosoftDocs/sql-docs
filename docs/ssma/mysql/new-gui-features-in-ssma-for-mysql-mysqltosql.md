@@ -8,17 +8,17 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # New GUI Features in SSMA for MySQL (MySQLToSQL)
 This chapter describes new features of SSMA User Interface  
   
 ## Layouts  
-This feature allows you to choose one of two predefined windows lay-out or create you own layout. To access layout submenu, on the View menu point to Layouts. There you can choose one of the existing layouts, add current layout or manage layouts.  
+This feature allows you to choose one of two predefined windows layout or create you own layout. To access layout submenu, on the View menu point to Layouts. There you can choose one of the existing layouts, add current layout or manage layouts.  
   
 ### Add Current Layout  
-To save current windows layout, on the View menu point to Layouts, then click Add Current Layout.  
+To save the current layout, on the View menu point to Layouts, then click Add Current Layout.  
   
 ### Choose predefined layout  
 To choose one of the predefined layouts, on the View menu point to Layouts, then click Default Layout or Without Explorers. You can also use shortcuts Ctrl+Alt+1 or Ctrl+Alt+2 for predefined layouts respectively.  

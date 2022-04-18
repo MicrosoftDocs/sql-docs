@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "operators [Transact-SQL], about operators"
   - "operators [Transact-SQL]"
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Operators (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

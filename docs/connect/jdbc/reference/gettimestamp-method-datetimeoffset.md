@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: e51dffdb-438b-4e74-a042-c064ae473f4d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getTimestamp Method (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

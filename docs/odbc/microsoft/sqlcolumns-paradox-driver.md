@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Paradox driver [ODBC], SQLColumns"
 ms.assetid: d7831c7d-8be9-40a7-bc70-8d89db8fe8c9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLColumns (Paradox Driver)
 > [!NOTE]  

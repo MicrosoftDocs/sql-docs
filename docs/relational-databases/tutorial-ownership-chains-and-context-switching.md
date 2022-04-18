@@ -1,14 +1,16 @@
 ---
 description: "Tutorial: Ownership Chains and Context Switching"
 title: "Tutorial: Ownership Chains and Context Switching"
-ms.custom: seo-dt-2019
+ms.custom:
+  - seo-dt-2019
+  - intro-quickstart
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "context switching [SQL Server], tutorials"
   - "ownership chains [SQL Server]"
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b

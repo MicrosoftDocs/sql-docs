@@ -51,7 +51,7 @@ UnionAggregate ( geography_operand )
 ## Examples  
  The following example performs a `UnionAggregate` on a set of **geography** location points within a city.  
   
- ```
+ ```sql
  USE AdventureWorks2012  
  GO  
  SELECT City,  

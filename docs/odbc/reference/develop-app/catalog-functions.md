@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "functions [ODBC], catalog functions"
 ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Catalog Functions
 All databases have a structure that outlines how data will be stored in the database. For example, a simple sales order database might have the structure shown in the following illustration, in which the ID columns are used to link the tables.  

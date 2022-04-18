@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Excel driver [ODBC], SQLSetConnectOption"
 ms.assetid: 528d21d1-4516-4497-9da4-7b87d77e622a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLSetConnectOption (Excel Driver)
 > [!NOTE]  

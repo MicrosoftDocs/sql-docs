@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "messages [SQL Server], formats"
   - "errors [SQL Server], formats"
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # FORMATMESSAGE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

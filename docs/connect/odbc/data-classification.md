@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "07/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-daenge
+ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -25,7 +25,7 @@ For managing sensitive data, SQL Server and Azure SQL Server introduced the abil
 
 For more information on how to assign classification to columns, see [SQL Data Discovery and Classification](../../relational-databases/security/sql-data-discovery-and-classification.md).
 
-Microsoft ODBC Driver 17.2 allows the retrieval of this metadata via SQLGetDescField using the SQL_CA_SS_DATA_CLASSIFICATION field identifier.
+Microsoft ODBC Driver 17.2 or later allows the retrieval of this metadata via SQLGetDescField using the SQL_CA_SS_DATA_CLASSIFICATION field identifier.
 
 ## Format
 

@@ -1,21 +1,23 @@
 ---
 title: "Introducing data virtualization with PolyBase"
 description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure blob storage.
-ms.date: 03/23/2021
+ms.date: 03/08/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: "overview"
-f1_keywords: 
+f1_keywords:
   - "PolyBase"
   - "PolyBase, guide"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PolyBase"
   - "PolyBase, overview"
   - "Hadoop import"
   - "Hadoop export"
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
-ms.custom: contperf-fy21q2
+ms.custom:
+  - contperf-fy21q2
+  - intro-overview
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
@@ -34,9 +36,6 @@ PolyBase enables your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 
 A key use case for data virtualization with the PolyBase feature is to allow the data to stay in its original location and format. You can virtualize the external data through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, so that it can be queried in place like any other table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This process minimizes the need for ETL processes for data movement. This data virtualization scenario is possible with the use of PolyBase connectors.
 
-> [!NOTE]
-> Some functionality of the PolyBase feature is in private preview for **Azure SQL managed instances**, including the ability to query external data (Parquet files) in Azure Data Lake Storage (ADLS) Gen2. Private preview includes access to client libraries and documentation for testing purposes that are not yet available publicly. If you are interested and ready to invest some time in trying out the functionalities and sharing your feedback and questions, please review the [Azure SQL Managed Instance PolyBase Private Preview Guide](https://sqlmipg.blob.core.windows.net/azsqlpolybaseshare/Azure_SQL_Managed_Instance_Polybase_Private_Preview_Onboarding_Guide.pdf).
-
 ### Supported SQL products and services
 
 PolyBase provides these same functionalities for the following SQL products from Microsoft:
@@ -45,6 +44,9 @@ PolyBase provides these same functionalities for the following SQL products from
 - [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions (Linux)
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[pdw](../../includes/sspdw-md.md)] (PDW), hosted in the Analytics Platform System (APS) 
 - [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]
+
+> [!NOTE]
+> Data virtualization using PolyBase feature is available in preview for **Azure SQL Managed Instance**, scoped to querying external data stored in files in Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage. Visit [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview) to learn more.
 
 ### PolyBase connectors
 
@@ -71,7 +73,7 @@ PolyBase provides these same functionalities for the following SQL products from
 - [MongoDB](polybase-configure-mongodb.md)
 - [Hadoop](polybase-configure-hadoop.md)*
 
-\* PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).
+\* PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH), through SQL Server 2019. [!INCLUDE[polybase-java-connector-banner-retirement](../../includes/polybase-java-connector-banner-retirement.md)]
 
  To use PolyBase in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
@@ -115,7 +117,9 @@ PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../include
 
 - **Push computation to Hadoop.** PolyBase pushes some computations to the external source to optimize the overall query. The query optimizer makes a cost-based decision to push computation to Hadoop, if that will improve query performance.  The query optimizer uses statistics on external tables to make the cost-based decision. Pushing computation creates MapReduce jobs and leverages Hadoop's distributed computational resources. For more information, see [Pushdown computations in PolyBase](polybase-pushdown-computation.md). 
 
-- **Scale compute resources.** To improve query performance, you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md). This enables parallel data transfer between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances and Hadoop nodes, and it adds compute resources for operating on the external data.
+- **Scale compute resources.** To improve query performance, you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md). This enables parallel data transfer between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances and Hadoop nodes, and it adds compute resources for operating on the external data. 
+
+[!INCLUDE[polybase-scaleout-banner-retirement](../../includes/polybase-scaleout-banner-retirement.md)]
 
 ## Next steps
 

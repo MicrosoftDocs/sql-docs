@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "integrated authentication"
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Integrated Authentication
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

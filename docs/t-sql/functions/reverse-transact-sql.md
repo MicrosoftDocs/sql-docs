@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "REVERSE function"
   - "reverse character expressions"
 ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVERSE (Transact-SQL)

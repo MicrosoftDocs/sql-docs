@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SQLGetInfo function [ODBC], Paradox Driver"
 ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLGetInfo (Paradox Driver)
 > [!NOTE]  

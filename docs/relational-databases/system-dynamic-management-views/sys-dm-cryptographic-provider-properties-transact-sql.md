@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_cryptographic_provider_properties dynamic management view"
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.author: wiassaf
 |provider_version|**nvarchar(256)**|Version of the provider in the format '*aa.bb.cccc.dd*'.|  
 |sqlcrypt_version|**nvarchar(256)**|Major version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cryptographic API in the format '*aa.bb.cccc.dd*'.|  
 |friendly_name|**nvarchar(2048)**|Name supplied by the provider.|  
-|authentication_type|**nvarchar(256)**|WINDOWS, BASIC, or OTHER.|  
+|authentication_type|**nvarchar(256)**|`WINDOWS`, `BASIC`, or `OTHER`.|  
 |symmetric_key_support|**tinyint**|0 (not supported)<br /><br /> 1 (supported)|  
 |symmetric_key_export|**tinyint**|0 (not supported)<br /><br /> 1 (supported)|  
 |symmetric_key_import|**tinyint**|0 (not supported)<br /><br /> 1 (supported)|  

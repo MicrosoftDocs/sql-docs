@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "user-defined types [CLR integration], ADO.NET"
   - "data adapters [CLR integration]"
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Accessing User-Defined Types - Updating UDT Columns with DataAdapters
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

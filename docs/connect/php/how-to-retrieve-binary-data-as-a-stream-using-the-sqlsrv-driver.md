@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "streaming data"
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # How to: Retrieve Binary Data as a Stream Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "SELECT DISTINCT limitations [ODBC]"
 ms.assetid: c8896e28-af94-46e6-bc3f-1af657e38462
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SELECT DISTINCT Limitations
 The DISTINCT keyword does not apply to binary data.

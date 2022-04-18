@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "compatibility [ODBC], application and driver compatibility"
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Types of Drivers
 ODBC drivers can be classified as follows:  

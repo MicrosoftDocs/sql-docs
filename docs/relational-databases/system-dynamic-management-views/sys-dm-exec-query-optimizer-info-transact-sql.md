@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_optimizer_info dynamic management view"
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_optimizer_info (Transact-SQL)
@@ -39,8 +39,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Permissions  
 
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.   
-On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.
+
+On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
     
 ## Remarks  
  **sys.dm_exec_query_optimizer_info** contains the following properties (counters). All occurrence values are cumulative and are set to 0 at system restart. All values for value fields are set to NULL at system restart. All value-column values that specify an average use the occurrence value from the same row as the denominator in the calculation of the average. All query optimizations are measured when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determines changes to **dm_exec_query_optimizer_info**, including both user- and system-generated queries. Execution of an already-cached plan does not change values in **dm_exec_query_optimizer_info**, only optimizations are significant.  

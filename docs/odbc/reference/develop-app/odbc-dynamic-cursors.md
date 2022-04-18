@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "dynamic cursors [ODBC]"
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ODBC Dynamic Cursors
 A dynamic cursor is just that: dynamic. It can detect any changes made to the membership, order, and values of the result set after the cursor is opened. For example, suppose a dynamic cursor fetches two rows and another application then updates one of those rows and deletes the other. If the dynamic cursor then attempts to refetch those rows, it will not find the deleted row but will return the new values for the updated row.  

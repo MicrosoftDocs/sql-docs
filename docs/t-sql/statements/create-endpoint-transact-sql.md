@@ -158,8 +158,8 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  For options that are specific to SERVICE_BROKER, see "SERVICE_BROKER Options," later in this section. For options that are specific to DATABASE_MIRRORING, see "DATABASE_MIRRORING Options," later in this section.  
   
- AUTHENTICATION **=** \<authentication_options> 
- Specifies the TCP/IP authentication requirements for connections for this endpoint. The default is WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options>  
+ Specifies the TCP/IP authentication requirements for connections for this endpoint. The default value is `WINDOWS`.
   
  The supported authentication methods include NTLM and or Kerberos or both.  
   
@@ -321,6 +321,3 @@ GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
  [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
-

@@ -1,19 +1,23 @@
 ---
 title: Deploy HDFS or Spark with high availability
-titleSuffix: SQL Server Big Data Clusters 
+titleSuffix: SQL Server Big Data Clusters
 description: Learn how to deploy SQL Server Big Data Clusters to with high availability.
-author: mihaelablendea
-ms.author: mihaelab 
-ms.reviewer: mikeray
-ms.date: 01/07/2020
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: hudequei
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Deploy HDFS name node and shared Spark services in a highly available configuration
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 In addition to deploying SQL Server master instance in a highly available configuration using availability groups, you can deploy other mission critical services in the big data cluster to ensure an increased level of reliability. You can configure `HDFS name node` and the shared Spark services grouped under `sparkhead` with an additional replica. In this case, `Zookeeper` is also deployed in the big data cluster to server as cluster coordinator and metadata store for following services: 
 
@@ -91,7 +95,7 @@ As a best practice, in a production deployment, you must also configure HDFS blo
 
 ## Known limitations
 
-The known issues and limitations with configuring high availability for the Hadoop services in the SQL Server big data clusters include:
+The known issues and limitations with configuring high availability for the Hadoop services in SQL Server Big Data Clusters include:
 
 - All configurations must be specified at the time of the big data cluster deployment. With SQL Server 2019 CU1 release, you cannot enable the high availability configuration after deployment.
 

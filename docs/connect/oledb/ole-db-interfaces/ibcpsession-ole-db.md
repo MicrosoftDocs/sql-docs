@@ -12,7 +12,7 @@ apitype: "COM"
 helpviewer_keywords: 
   - "IBCPSession interface"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # IBCPSession (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

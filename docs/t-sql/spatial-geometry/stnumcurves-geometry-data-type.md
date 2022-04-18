@@ -43,7 +43,7 @@ This method returns the number of curves in a **geometry** instance when the ins
 ### A. Using STNumCurves() on a CircularString instance  
  The following example shows how to get the number of curves in a `CircularString` instance:  
   
-```
+```sql
  DECLARE @g geometry;  
  SET @g = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');  
  SELECT @g.STNumCurves();
@@ -52,7 +52,7 @@ This method returns the number of curves in a **geometry** instance when the ins
 ### B. Using STNumCurves() on a CompoundCurve instance  
  The following example uses `STNumCurves()` to return the number of curves in a `CompoundCurve` instance.  
   
-```
+```sql
  DECLARE @g geometry;  
  SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');  
  SELECT @g.STNumCurves();

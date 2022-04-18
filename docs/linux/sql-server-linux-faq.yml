@@ -4,7 +4,7 @@ metadata:
   description: This article provides answers to frequently asked questions (FAQ) about SQL Server running on Linux.
   author: VanMSFT 
   ms.author: vanto
-  ms.date: 10/23/2019
+  ms.date: 12/16/2021
   ms.topic: conceptual
   ms.prod: sql
   ms.technology: linux
@@ -80,9 +80,9 @@ sections:
           
              Microsoft maintains package repositories for installing SQL Server and supports installation via native package managers such as yum, zypper, and apt. To quickly install, see one of the [quickstarts](sql-server-linux-setup.md#platforms).
           
-          1. **Can I install SQL Server on the Linux Subsystem for Windows 10?**
+          1. **Can I install SQL Server on the Linux Subsystem for Windows 10 or Windows 11?**
           
-             No. Linux running on Windows 10 is currently not a supported platform for SQL Server and related tools.
+             No. Linux running on Windows 10 or Windows 11 is currently not a supported platform for SQL Server and related tools.
           
           1. **Which Linux file systems can SQL Server use for data files?**
           
@@ -119,7 +119,7 @@ sections:
              You can use [system dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) to collect various types of information about SQL Server, including Linux process information. You can use [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) to improve query performance. Other tools, such as the built-in [Performance Dashboard](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in), work remotely in SQL Server Management Studio (SSMS) from Windows.
           
              > [!TIP]
-             > One way to improve performance is to properly configure your Linux operating system and the SQL Server insance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
+             > One way to improve performance is to properly configure your Linux operating system and the SQL Server instance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
           
       - question: Administration
         answer: |
@@ -166,5 +166,9 @@ sections:
            1. **Is Symbolic links supported for SQL Server data and log directories?** 
               
               No, symbolic links are not supported for SQL Server data and log directories. To change the default data and log directories, see [Change the default data or log directory location](sql-server-linux-configure-mssql-conf.md#datadir).
+           
+           1. **Can we remove the Builtin\Administrator account from SQL Server on Linux and containers instances?** 
+              
+              Dropping *Builtin\administrators* for SQL Server on Linux breaks execution of some of the system stored procedures. We suggest to not remove or drop the *Builtin\administrator* account from SQL Server on Linux/containers.
               
           [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

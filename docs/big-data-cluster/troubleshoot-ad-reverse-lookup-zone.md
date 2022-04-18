@@ -2,16 +2,18 @@
 title: AD mode deployment stopped - missing reverse lookup zone entry for DC
 titleSuffix: SQL Server Big Data Cluster
 description: Deployment of BDC with AD mode stuck due to missing reverse lookup zone entry for the domain controller in the domain controller DNS server.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: hudequei
 ms.date: 04/21/2020
-ms.topic: how-to
+ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
 # AD mode deployment stopped - missing reverse lookup zone entry for DC
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Deployment in Active Directory (AD) mode freezes. Check symptoms to see if cause is the domain controller DNS server is missing reverse lookup zone entry. 
 

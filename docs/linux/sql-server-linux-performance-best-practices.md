@@ -166,10 +166,11 @@ net.core.rmem_max = 4194304
 net.core.wmem_default = 262144
 net.core.wmem_max = 1048576
 kernel.numa_balancing=0
-kernel.sched_latency_ns = 60000000
-kernel.sched_migration_cost_ns = 500000
-kernel.sched_min_granularity_ns = 15000000
-kernel.sched_wakeup_granularity_ns = 2000000
+#Note: If you are using Linux distributions with kernel versions greater than 4.18, please comment the following options as shown; otherwise, uncomment the following options if you are using distributions with kernel versions less than 4.18.
+# kernel.sched_latency_ns = 60000000
+# kernel.sched_migration_cost_ns = 500000
+# kernel.sched_min_granularity_ns = 15000000
+# kernel.sched_wakeup_granularity_ns = 2000000
 ```
 
 To enable this Tuned profile, save these definitions in a **tuned.conf** file under a `/usr/lib/tuned/mssql` folder, and enable the profile using the following commands:

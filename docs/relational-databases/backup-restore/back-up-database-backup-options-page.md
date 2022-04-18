@@ -12,8 +12,8 @@ f1_keywords:
   - "sql13.swb.backupdatabase.options.f1"
   - "swb.backupdatabase.options.f1"
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Back Up Database (Backup Options Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

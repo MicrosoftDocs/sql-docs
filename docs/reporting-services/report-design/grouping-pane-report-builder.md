@@ -1,6 +1,6 @@
 ---
-title: "Grouping Pane (Report Builder) | Microsoft Docs"
-description: Display row groups and column groups for a currently selected tablix data region. Find out about the grouping pane in Report Builder. 
+title: "Grouping pane in a paginated report | Microsoft Docs"
+description: Display row groups and column groups for a currently selected tablix data region in a paginated report. Find out about the grouping pane in Report Builder. 
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -16,8 +16,11 @@ ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Grouping Pane (Report Builder)
-  The Grouping pane displays the row groups and column groups for the currently selected tablix data region. The Grouping pane is not available for the Chart or Gauge data regions. The Grouping pane contains a Row Groups pane and a Column Groups pane. The Grouping pane has two modes: default and Advanced. Default mode displays a hierarchical view of the dynamic members for row and column groups. Advanced mode displays both dynamic and static members for row and column groups. A group is a named set of data from a report dataset that is displayed on a data region. Groups are organized into hierarchies that include static and dynamic members. For more information, see [Understanding Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+# Grouping pane in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  The Grouping pane in a paginated report displays the row groups and column groups for the currently selected tablix data region. The Grouping pane is not available for the Chart or Gauge data regions. The Grouping pane contains a Row Groups pane and a Column Groups pane. The Grouping pane has two modes: default and Advanced. Default mode displays a hierarchical view of the dynamic members for row and column groups. Advanced mode displays both dynamic and static members for row and column groups. A group is a named set of data from a report dataset that is displayed on a data region. Groups are organized into hierarchies that include static and dynamic members. For more information, see [Understanding Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  If you do not see the Grouping pane, on the **View** tab, in the **Show/Hid**e group, click **Grouping**.  

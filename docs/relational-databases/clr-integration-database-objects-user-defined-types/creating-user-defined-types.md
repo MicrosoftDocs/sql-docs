@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "user-defined types [CLR integration], creating"
   - "UDTs [CLR integration], creating"
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # Creating User-Defined Types
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +36,6 @@ Reconfigure
   
 ## Example  
  The following code listing defines the Point UDT, which is described in detail in [Coding User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
-  
- The complete code listings for the other examples discussed in this section can be obtained by installing the CLR samples. For instructions on installing these samples, see [SQL Server Database Engine Samples](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   

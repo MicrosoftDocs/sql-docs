@@ -46,7 +46,7 @@ ms.author: mlandzic
 ## Examples  
  The following example creates a `LineString` instance and uses `STLength()` to find the length of the instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
 SELECT @g.STLength();  

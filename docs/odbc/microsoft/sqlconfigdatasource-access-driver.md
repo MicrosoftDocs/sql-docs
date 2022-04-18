@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Access driver [ODBC], SQLConfigDataSource"
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLConfigDataSource (Access Driver)
 > [!NOTE]  

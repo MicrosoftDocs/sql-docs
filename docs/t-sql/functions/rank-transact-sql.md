@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ranking rows"
   - "RANK function [Transact-SQL]"
 ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RANK (Transact-SQL)

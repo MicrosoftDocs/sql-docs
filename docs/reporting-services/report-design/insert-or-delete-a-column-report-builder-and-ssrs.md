@@ -1,5 +1,5 @@
 ---
-title: "Insert or Delete a Column (Report Builder) | Microsoft Docs"
+title: "Insert or delete a column in a paginated report | Microsoft Docs"
 description: Add or delete columns in a tablix data region in a paginated report. In Report Builder, the tablix data region can be a table, a matrix, or a list.
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,8 +12,11 @@ ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Insert or Delete a Column (Report Builder and SSRS)
-  You can add or delete columns in a tablix data region in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report. The tablix data region can be a table, a matrix, or a list. The following procedures do not apply to the chart and gauge data regions.  
+# Insert or delete a column in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  You can add or delete columns in a tablix data region in a paginated report. The tablix data region can be a table, a matrix, or a list. The following procedures do not apply to the chart and gauge data regions.  
   
  In a tablix data region, you can add columns that are associated with a group (inside a group) or that are not associated with a group (outside a group). A column that is inside a group repeats once per unique group value. For example, a column inside a group based the value in a data column that contains color names, repeats once per distinct color name. For nested groups, a column can be outside the child group but inside the parent group. In this case, the row repeats once for each unique value in the parent group.  
   

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "PUBLISHINGSERVERNAME function"
   - "Publishers [SQL Server replication], names"
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # Replication Functions - PUBLISHINGSERVERNAME
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

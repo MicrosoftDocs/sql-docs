@@ -2,7 +2,7 @@
 title: "Use sqlcmd with Scripting Variables"
 description: Learn how to use scripting variables to make a script that that can be used in multiple scenarios.
 ms.custom: seo-lt-2019
-ms.date: "08/09/2016"
+ms.date: "10/14/2021"
 ms.prod: sql
 ms.technology: ssms
 ms.reviewer: ""
@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "scripting variables [SQL Server]"
   - "sqlcmd utility, scripts"
   - "setvar command"
-ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -277,7 +276,7 @@ VALUES('$(tablename)');
 GO
 ```
   
- At the `sqlcmd` prompt, when no variable is set equal to `$(tablename)`, the following statements return the row.  
+ At the `sqlcmd` prompt, when no variable is set equal to `$(tablename)`, the following statements return the row and also return the message "'tablename' scripting variable not defined." By default, the **sqlcmd** flag `-b` is not set. If `-b` is set, **sqlcmd** will terminate after the "variable not defined" error.
   
 ```
 C:\> sqlcmd

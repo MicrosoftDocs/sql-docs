@@ -25,7 +25,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC SQLPERF (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 
 Provides transaction log space usage statistics for all databases. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] it can also be used to reset wait and latch statistics.

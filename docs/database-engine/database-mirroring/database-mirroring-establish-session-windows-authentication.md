@@ -1,6 +1,6 @@
 ---
 title: "Configure database mirroring"
-description: "Steps to configure a database mirroring relationship between a principal and mirror using windows authentication."
+description: "Steps to configure a database mirroring relationship between a principal and mirror using Windows authentication."
 ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -217,6 +217,3 @@ ms.author: mikeray
  [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
-  
-  
-

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ending batches [SQL Server]"
   - "GO command"
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # SQL Server Utilities Statements - GO
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

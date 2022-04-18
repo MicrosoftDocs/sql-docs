@@ -1,5 +1,5 @@
 ---
-title: "Create a Recursive Hierarchy Group (Report Builder) | Microsoft Docs"
+title: "Create a recursive hierarchy group in a paginated report | Microsoft Docs"
 description: Learn about organizing data in a paginated report, from a single report dataset that includes hierarchical levels, by using a recursive hierarchy group.
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,8 +12,11 @@ ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Create a Recursive Hierarchy Group (Report Builder and SSRS)
-In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, a recursive hierarchy group organizes data from a single report dataset that includes multiple hierarchical levels, such as the report-to structure for manager-employee relationships in an organizational hierarchy.  
+# Create a recursive hierarchy group in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+In paginated reports, a recursive hierarchy group organizes data from a single report dataset that includes multiple hierarchical levels, such as the report-to structure for manager-employee relationships in an organizational hierarchy.  
   
  Before you can organize data in a table as a recursive hierarchy group, you must have a single dataset that contains all the hierarchical data, You must have separate fields for the item to group and for the item to group by. For example, a dataset where you want to group employees recursively under their manager might contain a name, an employee name, an employee ID, and a manager ID.  
   

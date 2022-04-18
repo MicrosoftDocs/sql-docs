@@ -14,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 # New Alias (Alias Tab)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   An alias is an alternate name that can be used to make a connection. The alias encapsulates the required elements of a connection string, and exposes them with a name chosen by the user. Use the **Alias** page on the **Alias - New** dialog box to specify the elements of the connection string for an alias. To change the connection string of an existing alias, see [&#60;Alias&#62; Properties &#40;Alias Tab&#41;](../../tools/configuration-manager/alias-properties-alias-tab.md).  
   
  All values in the **Properties** grid do not have to be completed. Valid combinations vary depending on the protocol selected. See the topics listed below for examples of valid combinations.  

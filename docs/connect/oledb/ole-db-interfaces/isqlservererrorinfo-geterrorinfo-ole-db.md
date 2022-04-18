@@ -14,7 +14,7 @@ apitype: "COM"
 helpviewer_keywords: 
   - "GetErrorInfo method"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 description: "ALTER TABLE index_option (Transact-SQL)"
-title: " | Microsoft Docs"
+title: "ALTER TABLE index_option (Transact-SQL)"
 ms.custom: ""
 ms.date: 06/26/2019
 ms.prod: sql
@@ -38,7 +38,7 @@ ms.author: wiassaf
   | ONLINE = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
   | DATA_COMPRESSION = { NONE |ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
-      [ ON PARTITIONS ( { <partition_number_expression> | <range> }   
+      [ ON PARTITIONS ({ <partition_number_expression> | <range> }   
       [ , ...n ] ) ]  
   | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }  
 }  

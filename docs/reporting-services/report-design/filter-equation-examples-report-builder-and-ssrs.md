@@ -1,6 +1,6 @@
 ---
-title: "Filter Equation Examples (Report Builder) | Microsoft Docs"
-description:  Find out how to create a report filter. Consider these examples of often-used filters to create your own. 
+title: "Filter equation examples in a paginated report | Microsoft Docs"
+description:  Find out how to create a paginated report filter. Consider these examples of often-used filters to create your own. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -14,8 +14,11 @@ ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Filter Equation Examples (Report Builder and SSRS)
-  To create a filter, you must specify one or more filter equations. A filter equation includes an expression, a data type, an operator, and a value. This topic provides examples of commonly used filters.  
+# Filter equation examples in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  To create a filter in a paginated report, you must specify one or more filter equations. A filter equation includes an expression, a data type, an operator, and a value. This topic provides examples of commonly used filters.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

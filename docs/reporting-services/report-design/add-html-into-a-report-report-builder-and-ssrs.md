@@ -1,6 +1,6 @@
 ---
-title: "Add HTML into a Report (Report Builder) | Microsoft Docs"
-description: Find out how to import HTML using a placeholder from a field in your dataset to use in your report in Report Builder.
+title: "Add HTML into a paginated report | Microsoft Docs"
+description: Find out how to import HTML using a placeholder from a field in your dataset to use in your paginated report in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add HTML into a Report (Report Builder and SSRS)
-  Using a placeholder, you can import HTML from a field in your dataset for use in the report. By default, a placeholder represents plain text, so you will need to change the placeholder mark-up type to HTML. For more information, see [Importing HTML into a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  
+# Add HTML into a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Using a placeholder, you can import HTML from a field in your dataset for use in the paginated report. By default, a placeholder represents plain text, so you will need to change the placeholder mark-up type to HTML. For more information, see [Importing HTML into a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

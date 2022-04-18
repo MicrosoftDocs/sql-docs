@@ -1,14 +1,15 @@
 ---
 description: "Installing Integration Services Versions Side by Side"
 title: "Installing Integration Services Versions Side by Side | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+  - intro-installation
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "interoperability and coexistence [Integration Services]"
   - "Integration Services, interoperability and coexistence"
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9

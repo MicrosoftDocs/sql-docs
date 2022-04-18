@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "RECONFIGURE"
   - "RECONFIGURE, WITH OVERRIDE statement"
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # RECONFIGURE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

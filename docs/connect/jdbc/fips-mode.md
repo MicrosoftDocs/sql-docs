@@ -9,7 +9,7 @@ ms.reviewer: genemi
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # FIPS mode
 

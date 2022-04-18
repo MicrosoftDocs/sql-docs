@@ -2,11 +2,11 @@
 title: Troubleshoot Kubernetes
 titleSuffix: SQL Server Big Data Clusters
 description: This article provides useful commands for monitoring and troubleshooting a SQL Server 2019 big data cluster.
-author: mihaelablendea 
-ms.author: mihaelab
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: hudequei
 ms.date: 06/22/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
@@ -14,6 +14,8 @@ ms.technology: big-data-cluster
 # Troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article describes several useful Kubernetes commands that you can use to monitor and troubleshoot a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. It shows how to view in-depth details of a pod or other Kubernetes artifacts that are located in the big data cluster. This article also covers common tasks, such as copying files to or from a container running one of the SQL Server big data cluster services.
 
@@ -201,7 +203,7 @@ You can launch the Kubernetes dashboard for additional information about the clu
 
 To launch the Kubernetes dashboard run:
 
-```bash
+```azurecli
 az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 

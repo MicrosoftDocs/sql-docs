@@ -4,8 +4,8 @@
 title: "rx_neural_network: Neural Net" 
 description: "Neural networks for regression modeling and for Binary and multi-class classification." 
 keywords: "models, classification, regression, neural network, dnn" 
-author: "garyericson"
-ms.author: "garye" 
+author: WilliamDAssafMSFT
+ms.author: wiassaf 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
@@ -154,7 +154,7 @@ The default value is `sgd`.
 
 The Net# definition of the structure of the neural
 network. For more information about the Net# language, see
-[Reference Guide](https://azure.microsoft.com/documentation/articles/machine-learning-azure-ml-netsharp-reference-guide/)
+[Reference Guide](/azure/machine-learning/classic/azure-ml-netsharp-reference-guide)
 
 
 ### init_wts_diameter

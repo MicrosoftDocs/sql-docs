@@ -10,10 +10,12 @@ ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
+  - "quorum [SQL Server], Always On and WSFC quorum"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
+  - "failover clustering [SQL Server], Always On Availability Groups"
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # WSFC Disaster Recovery through Forced Quorum (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -108,7 +110,7 @@ ms.author: chadam
   
 -   [Configure Cluster Quorum NodeWeight Settings](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
+-   [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
 ##  <a name="RelatedContent"></a> Related Content  
   

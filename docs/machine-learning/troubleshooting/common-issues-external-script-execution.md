@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 04/08/2021
 ms.topic: troubleshooting
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
@@ -233,4 +233,4 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 
 [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
-[Troubleshoot database engine connections](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
+[Troubleshoot database engine connections](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection)

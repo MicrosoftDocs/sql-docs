@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 6a9171a4-3e44-44ea-a453-23f57e5320e9
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # setShort Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -54,7 +54,7 @@ Returns 1 if a **geometry** instance crosses another **geometry** instance. Retu
 ## Examples  
  The following example uses `STCrosses()` to test two `geometry` instances to see if they cross.  
   
-```  
+```sql
 DECLARE @g geometry;  
 DECLARE @h geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0)', 0);  

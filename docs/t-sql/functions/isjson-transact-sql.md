@@ -9,13 +9,14 @@ ms.topic: reference
 f1_keywords: 
   - "ISJSON"
   - "ISJSON_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "ISJSON function"
   - "JSON, validating"
 ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: chadam
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 # ISJSON (Transact-SQL)

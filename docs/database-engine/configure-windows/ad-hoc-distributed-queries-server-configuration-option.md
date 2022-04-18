@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OPENDATASOURCE function, ad hoc distributed queries option"
   - "ad hoc access"
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # ad hoc distributed queries Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,10 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
       ORDER BY GroupName, Name') AS a;  
 GO  
 ```  
-  
+## Azure SQL Database and Azure SQL Managed Instance
+See the [Features comparison: Azure SQL Database and Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/database/features-comparison) for reference. 
+
+
 ## See Also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   

@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: df85a514-ab43-4bf6-98dd-f7f37fad1850
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getObject Method (int, java.util.Map) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

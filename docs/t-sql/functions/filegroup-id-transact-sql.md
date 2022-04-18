@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "IDs [SQL Server], filegroups"
   - "names [SQL Server], filegroups"
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 ---
 # FILEGROUP_ID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

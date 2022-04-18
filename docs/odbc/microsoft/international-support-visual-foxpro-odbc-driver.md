@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], international support"
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # International Support (Visual FoxPro ODBC Driver)
 The Microsoft Visual FoxPro ODBC Driver supports:  

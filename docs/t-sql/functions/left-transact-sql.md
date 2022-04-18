@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "LEFT function"
   - "leftmost character of expression"
 ms.assetid: 44a8c71b-63d8-458b-8b5d-99d570067c3c
-author: cawrites
-ms.author: chadam
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LEFT (Transact-SQL)

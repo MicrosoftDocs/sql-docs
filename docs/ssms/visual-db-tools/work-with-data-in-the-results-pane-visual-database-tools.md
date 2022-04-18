@@ -112,9 +112,9 @@ These tips may help you work successfully with data in the Results pane.
 ### What can not be represented fully  
 What is returned to the Results pane from the database is greatly controlled by the provider for the data source you are using. The Results pane can't always translate the data from all database management systems. Here are come cases where this is so.  
   
--   Binary data types are often not useful for people working in the Results pane and they can take a very long time to download. So they are represented by *<Binary data>* or *Null*.  
+-   Binary data types are often not useful for people working in the Results pane and they can take a very long time to download. So they are represented by *\<Binary data\>* or *Null*.  
   
--   Precision and scale can not always be preserved. For example, the Results pane supports a precision of 27. If data is of a data type with a greater precision, the data may be truncated or may be represented by *<Unable to read data>*.  
+-   Precision and scale can not always be preserved. For example, the Results pane supports a precision of 27. If data is of a data type with a greater precision, the data may be truncated or may be represented by *\<Unable to read data\>*.  
   
 ## See Also  
 [Perform Basic Operations with Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

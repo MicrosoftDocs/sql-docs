@@ -50,7 +50,7 @@ Returns 1 if a **geometry** instance spatially touches another **geometry** inst
 ## Examples  
  The following example uses `STTouches()` to test two `geometry` instances to see if they touch.  
   
-```  
+```sql
 DECLARE @g geometry;  
 DECLARE @h geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);  

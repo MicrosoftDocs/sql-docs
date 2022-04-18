@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: reference
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLServerResultSetMetaData Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

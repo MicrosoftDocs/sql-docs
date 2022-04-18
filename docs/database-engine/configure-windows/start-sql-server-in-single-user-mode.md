@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "starting SQL Server, single-user mode"
   - "single-user mode [SQL Server]"
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Start SQL Server in Single-User Mode
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ For example, **-m"SQLCMD"** limits connections to a single connection and that c
 The following example starts the SQL Server instance in single-user mode and only allows connection through the SQL Server Management Studio Query Editor.
 
 ```console
-net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+net start "SQL Server (MSSQLSERVER)" /m"Microsoft SQL Server Management Studio - Query"
 ```
 
 ## Note for Clustered installations  

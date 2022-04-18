@@ -9,11 +9,13 @@ ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
   - "Transparent Data Encryption, AlwaysOn Availability Groups"
+  - "Transparent Data Encryption, Always On Availability Groups"
   - "TDE, AlwaysOn Availability Groups"
+  - "TDE, Always On Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Add an encrypted database to an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "DBase driver [ODBC], SQLColAttributes"
 ms.assetid: ed44de2b-0b01-4dce-a340-f5eb3aac30b7
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # SQLColAttributes (dBASE Driver)
 > [!NOTE]  

@@ -14,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Agent Properties (Advanced Tab)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   Five properties appear on the **Advanced** tab by default. If custom properties are defined, they also appear on this tab, with their values.  
   
 ## Options  

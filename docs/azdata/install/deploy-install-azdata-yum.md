@@ -2,13 +2,15 @@
 title: Install azdata with yum
 titleSuffix: 
 description: Learn how to install the azdata tool with yum.
-author: MikeRayMSFT 
+author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-installation
 ---
 
 # Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] with yum

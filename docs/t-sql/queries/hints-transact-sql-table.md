@@ -258,7 +258,7 @@ Is equivalent to READUNCOMMITTED. For more information, see READUNCOMMITTED late
 > For UPDATE or DELETE statements: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-Instructs the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to return a message as soon as a lock is encountered on the table. NOWAIT is equivalent to specifying `SET LOCK_TIMEOUT 0` for a specific table. The NOWAIT hint does not work when the TABLOCK hint is also included. To terminate a query without waiting when using the TABLOCK hint, preface the query with `SETLOCK_TIMEOUT 0;` instead.  
+Instructs the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to return a message as soon as a lock is encountered on the table. NOWAIT is equivalent to specifying `SET LOCK_TIMEOUT 0` for a specific table. The NOWAIT hint does not work when the TABLOCK hint is also included. To terminate a query without waiting when using the TABLOCK hint, preface the query with `SET LOCK_TIMEOUT 0;` instead.  
   
 PAGLOCK  
 Takes page locks either where individual locks are ordinarily taken on rows or keys, or where a single table lock is ordinarily taken. By default, uses the lock mode appropriate for the operation. When specified in transactions operating at the SNAPSHOT isolation level, page locks are not taken unless PAGLOCK is combined with other table hints that require locks, such as UPDLOCK and HOLDLOCK.  

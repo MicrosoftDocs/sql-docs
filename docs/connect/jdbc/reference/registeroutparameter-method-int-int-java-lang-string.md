@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 3eb5c384-6751-4d50-be23-0c2ccc35593c
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # registerOutParameter Method (int, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

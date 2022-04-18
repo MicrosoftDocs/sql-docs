@@ -318,4 +318,4 @@ This concludes the tutorial for creating a table report with sparkline charts. F
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 
 [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

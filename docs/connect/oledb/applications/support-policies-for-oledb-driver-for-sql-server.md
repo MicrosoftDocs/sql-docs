@@ -1,7 +1,7 @@
 ---
 title: "Support policies for OLE DB Driver for SQL Server"
 description: "Learn about the support policies for OLE DB Driver for SQL Server and what operating systems and SQL database versions are supported with each driver version."
-ms.date: "06/04/2021"
+ms.date: "02/15/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -9,7 +9,7 @@ ms.custom: ""
 ms.technology: connectivity
 ms.topic: "reference"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Support policies for OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,6 +24,7 @@ OLE DB Driver for SQL Server is tested with and supports connections to the foll
 
 | Database version&nbsp;&#8594;<br />&#8595; Driver version | Azure SQL Database | Azure Synapse Analytics | Azure SQL Managed Instance | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|---|---|---|---|---|---|---|---|
+|19.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.5|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -37,16 +38,17 @@ OLE DB Driver for SQL Server is tested with and supports connections to the foll
 
 The following table lists which operating systems are supported by OLE DB Driver for SQL Server.  
 
-| Operating system&nbsp;&#8594;<br />&#8595; Driver version | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
-|----|---|---|---|---|---|---|
-|18.6|Yes|Yes|Yes|Yes|Yes|Yes|
-|18.5|Yes|Yes|Yes|Yes|Yes|Yes|
-|18.4|Yes|Yes|Yes|Yes|Yes|Yes|
-|18.3|Yes|Yes|Yes|Yes|Yes|Yes|
-|18.2|Yes|Yes|Yes|Yes|Yes|Yes|
-|18.1|   |Yes|Yes|Yes|Yes|Yes|
-|18.0|   |Yes|Yes|Yes|Yes|Yes|
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| Operating system&nbsp;&#8594;<br />&#8595; Driver version | Windows Server 2022 | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
+|----|---|---|---|---|---|---|---|
+|19.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|18.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|18.5|   |Yes|Yes|Yes|Yes|Yes|Yes|
+|18.4|   |Yes|Yes|Yes|Yes|Yes|Yes|
+|18.3|   |Yes|Yes|Yes|Yes|Yes|Yes|
+|18.2|   |Yes|Yes|Yes|Yes|Yes|Yes|
+|18.1|   |   |Yes|Yes|Yes|Yes|Yes|
+|18.0|   |   |Yes|Yes|Yes|Yes|Yes|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Supported on Windows Server 2012 with [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 <sup>2</sup> Supported on Windows Server 2012 R2 with [April 2014 update](https://go.microsoft.com/fwlink/?linkid=2073785) and [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
@@ -60,8 +62,8 @@ ADO applications can use the OLE DB Driver for SQL Server, but if they do so the
 
 ## OLE DB support policies  
 
-Applications can use the OLE DB provider (SQLOLEDB) included with the Windows operating system. However, that is in maintenance mode and no longer updated. Use the OLE DB Driver for SQL Server (MSOLEDBSQL) instead.
+Applications can use the OLE DB provider (SQLOLEDB) included with the Windows operating system. However, that is in maintenance mode and no longer updated. Use the OLE DB Driver for SQL Server (MSOLEDBSQL19 or MSOLEDBSQL) instead.
 
 ## See also  
 
-[Building applications with OLE DB Driver for SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)
+[Building applications with OLE DB Driver for SQL Server](building-applications-with-oledb-driver-for-sql-server.md)

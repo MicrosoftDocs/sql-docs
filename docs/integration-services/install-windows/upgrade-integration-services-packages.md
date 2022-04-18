@@ -30,6 +30,9 @@ manager: erikre
   
 > [!NOTE]  
 >  When you run a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] package using the **dtexec** utility (dtexec.exe) that is installed with the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the temporary package upgrade increases the execution time. The rate of increase in package execution time varies depending on the size of the package. To avoid an increase in the execution time, it is recommended that you upgrade the package before running it.  
+
+> [!NOTE]  
+> For Script components referencing SSIS related assemblies which bind with version, upgrade process will not take care of but keep them unchanged. Manual update reference to the new version is needed. 
   
 |Upgrade Method|Type of Upgrade|  
 |--------------------|---------------------|  

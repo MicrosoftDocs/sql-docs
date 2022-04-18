@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using encryption
 

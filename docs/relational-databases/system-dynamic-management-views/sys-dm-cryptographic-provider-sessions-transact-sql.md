@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_cryptographic_provider_sessions dynamic management function"
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

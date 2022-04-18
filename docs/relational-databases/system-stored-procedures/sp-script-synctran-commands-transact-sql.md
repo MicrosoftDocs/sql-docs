@@ -8,6 +8,8 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_script_synctran_commands"
   - "sp_script_synctran_commands_TSQL"

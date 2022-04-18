@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "data types [SQL Server], status information"
   - "TYPEPROPERTY function"
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TYPEPROPERTY (Transact-SQL)

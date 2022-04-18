@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "CONTINUE keyword"
   - "WHILE keyword"
 ms.assetid: 0f1def4e-b0ca-4175-ad58-7c8c9153dab7
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # CONTINUE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

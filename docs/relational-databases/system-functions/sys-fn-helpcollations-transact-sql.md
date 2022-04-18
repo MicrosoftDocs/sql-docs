@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "collations [SQL Server], supported"
   - "fn_helpcollations function"
 ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_helpcollations (Transact-SQL)
@@ -78,5 +78,6 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
 ## See Also
 
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
-[COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
+[COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)      
+[Collation and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md)  
 [Database collation support for Azure Synapse Analytics](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

@@ -15,7 +15,7 @@ ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This guide provides instructions to create a two-node shared disk failover cluster for SQL Server on Red Hat Enterprise Linux. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](https://clusterlabs.org/). The SQL Server instance is active on either one node or the other.
+This guide provides instructions to create a two-node shared disk failover cluster for SQL Server on Red Hat Enterprise Linux. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/high_availability_add-on_overview/red_hat_enterprise_linux-7-high_availability_add-on_overview-en-us.pdf) built on top of [Pacemaker](https://clusterlabs.org/). The SQL Server instance is active on either one node or the other.
 
 > [!NOTE] 
 > Access to Red Hat HA add-on and documentation requires a subscription. 
@@ -24,7 +24,7 @@ As the following diagram shows, storage is presented to two servers. Clustering 
 
 ![Red Hat Enterprise Linux 7 Shared Disk SQL Cluster](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-For more information on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+For more information on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/index).
 
 
 > [!NOTE] 

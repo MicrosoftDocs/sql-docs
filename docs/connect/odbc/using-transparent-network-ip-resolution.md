@@ -2,7 +2,7 @@
 title: "Using Transparent Network IP Resolution"
 description: "Learn about Transparent Network IP Resolution in the ODBC Driver for SQL Server and how it affects the MultiSubnetFailover feature."
 ms.custom: ""
-ms.date: "05/06/2020"
+ms.date: "03/14/2022"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Using Transparent Network IP Resolution with the ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-TransparentNetworkIPResolution is a revision of the existing MultiSubnetFailover feature, available in Microsoft ODBC Driver 13.1 for SQL Server, that affects the connection sequence of the driver in the case where the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. It interacts with MultiSubnetFailover to provide the following three connection sequences:
+TransparentNetworkIPResolution is a revision of the existing MultiSubnetFailover feature, available starting with Microsoft ODBC Driver 13.1 for SQL Server, that affects the connection sequence of the driver in the case where the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. It interacts with MultiSubnetFailover to provide the following three connection sequences:
 
 * 0: One IP is attempted, followed by all IPs in parallel
 * 1: All IPs are attempted in parallel
@@ -37,7 +37,7 @@ The `TransparentNetworkIPResolution` connection string and DSN keyword controls 
 
 Keyword|Values|Default
 -|-|-
-`TransparentNetworkIPResolution`|`Yes`, `No`|`Yes`
+`TransparentNetworkIPResolution`|`Enabled`, `Disabled`|`Enabled`
 
 The `SQL_COPT_SS_TNIR` pre-connection attribute allows an application to control this setting programmatically:
 

@@ -5,10 +5,8 @@ ms.date: 05/06/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "reports [Reporting Services]"
   - "SSRS"
   - "reports [Reporting Services], about reports"
@@ -17,6 +15,8 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
+ms.custom:
+  - intro-overview
 ---
 
 # What is SQL Server Reporting Services (SSRS)?
@@ -70,7 +70,7 @@ Mobile computing has shifted the devices we need to work, meaning people today h
 
 What you need with these widely different screen form factors is a responsive layout that adapts to these different screen sizes and orientations. For that we've added a new report type: mobile reports, based on the Datazen technology we acquired about a year ago and integrated into the product. You can migrate your existing Datazen reports to Reporting Services with the [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/download/details.aspx?id=53128).
 
-You create these mobile reports in the new [Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) app. Then in the native [Power BI apps for mobile devices](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) for Windows 10, iOS, Android, and HTML5, you can access the data you have in Power BI, the cloud, or SSRS.
+You create these mobile reports in the new [Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) app. Then in the native [Power BI apps for mobile devices](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) for Windows, iOS, Android, and HTML5, you can access the data you have in Power BI, the cloud, or SSRS.
 
 As you create visualizations, Mobile Report Publisher automatically generates sample data. This feature allows you to see how the visualization will look with your data, and what kind of data works well in each visualization.
 
@@ -119,4 +119,4 @@ More [Reporting Services Developer Documentation](../reporting-services/reportin
 * [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 * [Install Report Builder](../reporting-services/install-windows/install-report-builder.md)
 
-* More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+* More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

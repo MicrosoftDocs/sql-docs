@@ -1,20 +1,21 @@
 ---
 title: "Planning a SQL Server Installation | Microsoft Docs"
 description: This article helps you plan to install SQL Server. It includes links to resources needed for SQL Server installation.
-ms.custom: ""
+ms.custom:
+  - intro-quickstart
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: quickstart
-helpviewer_keywords: 
+helpviewer_keywords:
   - "installing SQL Server, planning"
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-author: cawrites
-ms.author: chadam
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Planning a SQL Server Installation
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
   To install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], follow these steps:  
   

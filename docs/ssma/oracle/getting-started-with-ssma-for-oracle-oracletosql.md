@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "SSMA for Oracle, Metadata Explorers"
   - "SSMA for Oracle, Toolbars"
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-author: "nahk-ivanov"
-ms.author: "alexiva"
-manager: alexiva
+author: cpichuka 
+ms.author: cpichuka 
+manager: madhuriy
 ---
 # Explore SSMA for Oracle interface
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle lets you quickly convert Oracle database schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemas, upload the resulting schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and migrate data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

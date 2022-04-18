@@ -48,7 +48,7 @@ Returns a specified geometry in a **geometry collection**.
 ## Examples  
  The following example creates a `MultiPoint``geometry collection` and uses `STGeometryN()` to find the second `geometry` instance of the collection.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);  
 SELECT @g.STGeometryN(2).ToString();  

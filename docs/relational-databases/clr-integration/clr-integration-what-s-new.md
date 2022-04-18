@@ -4,12 +4,13 @@ description: Microsoft SQL Server hosting CLR is called CLR integration. This ar
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.custom: ""
+ms.custom:
+  - intro-whats-new
 ms.technology: clr
 ms.topic: conceptual
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 ---
 # CLR Integration - What&#39;s New
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

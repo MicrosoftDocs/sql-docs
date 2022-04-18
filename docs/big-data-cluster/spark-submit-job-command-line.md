@@ -2,8 +2,8 @@
 title: "Submit Spark jobs: Command-line tools"
 titleSuffix: SQL Server Big Data Clusters
 description: Submit Spark jobs on SQL Server Big Data Clusters by using command-line tools.
-author: dacoelho
-ms.author: dacoelho
+author: HugoMSFT
+ms.author: hudequei
 ms.reviewer: MikeRayMSFT
 ms.date: 04/01/2021
 ms.topic: reference
@@ -16,6 +16,8 @@ ms.technology: big-data-cluster
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article provides guidance about how to use command-line tools to run Spark jobs on SQL Server Big Data Clusters.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Prerequisites
 
@@ -213,6 +215,8 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.py 
 --config '{"spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"}' \
 -n MyETLPipelinePySpark --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
+> [!WARNING]
+> The "name" or "n" parameter for batch name should be unique each time a new batch is created.
 
 # [PySpark and curl, using Livy](#tab/curl/pyspark)
 
@@ -234,6 +238,8 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 }
 EOF
 ```
+> [!WARNING]
+> The "name" parameter should be unique each time a new batch is created.
 
 # [Scala and azdata](#tab/azdata/scala)
 
@@ -249,6 +255,9 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar
 --config '{"spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"}' \
 -n MyETLPipeline --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
+
+> [!WARNING]
+> The "name" or "n" parameter for batch name should be unique each time a new batch is created.
 
 # [Scala and curl, using Livy](#tab/curl/scala)
 
@@ -271,6 +280,8 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 }
 EOF
 ```
+> [!WARNING]
+> The "name" parameter for batch name should be unique each time a new batch is created.
 
 # [SQL and azdata](#tab/azdata/sql)
 
@@ -285,6 +296,8 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.sql
 --config '{"spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"}' \
 -n MyETLPipelineSQL --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
+> [!WARNING]
+> The "name" or "n" parameter for batch name should be unique each time a new batch is created.
 
 # [SQL and curl, using Livy](#tab/curl/sql)
 
@@ -306,6 +319,8 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 }
 EOF
 ```
+> [!WARNING]
+> The "name" parameter should be unique each time a new batch is created.
 
 ---
 

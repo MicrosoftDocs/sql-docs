@@ -40,7 +40,7 @@ The Oracle database is supported on all operating systems and platforms.
 
 ## Installation
 
-To install the connector for Oracle database, download and run the installer from [the latest version of Microsoft connector for Oracle](https://www.microsoft.com/download/details.aspx?id=58228). Then follow the directions in the installation wizard.
+To install the connector for Oracle database, download and run the installer from [the latest version of Microsoft connector for Oracle](https://aka.ms/SSISMSOracleConnector). Then follow the directions in the installation wizard.
 
 After you install the Connector, you must restart the SQL Server Integration Service to be sure that the Oracle source and destination can work correctly.
 

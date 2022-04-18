@@ -56,7 +56,7 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
 ## Examples  
  The following example uses `STGeomFromText()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
 SELECT @g.ToString();  

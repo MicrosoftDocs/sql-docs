@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sys.dm_exec_external_operations management view"
   - "dm_exec_external_operations management view"
 ms.assetid: d268217a-85b8-4b7f-9cd1-87865eba2be1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_external_operations (Transact-SQL)

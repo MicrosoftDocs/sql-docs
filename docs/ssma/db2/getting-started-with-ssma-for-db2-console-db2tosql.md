@@ -2,14 +2,15 @@
 description: "Getting Started with SSMA  for DB2 Console (DB2ToSQL)"
 title: "Getting Started with SSMA  for DB2 Console (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.custom: ""
+ms.custom:
+  - intro-get-started
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-author: "nahk-ivanov"
-ms.author: "alexiva"
+author: cpichuka 
+ms.author: cpichuka 
 ---
 # Getting Started with SSMA  for DB2 Console (DB2ToSQL)
 This section describes the procedure to launch and get started with the DB2 console application. Also listed, herein, are the conventions used in a typical SSMA Console output window.  

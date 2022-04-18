@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "C data types [ODBC], buffers"
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Data Buffer Type
 The C data type of a buffer is specified by the application. With a single variable, this occurs when the application allocates the variable. With generic memory - that is, memory pointed to by a pointer of type void - this occurs when the application casts the memory to a particular type. The driver discovers this type in two ways:  

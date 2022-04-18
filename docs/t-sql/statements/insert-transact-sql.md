@@ -205,8 +205,9 @@ OUTPUT Clause
   
  You can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] row constructor (also called a table value constructor) to specify multiple rows in a single INSERT statement. The row constructor consists of a single VALUES clause with multiple value lists enclosed in parentheses and separated by a comma. For more information, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
 
-> [!NOTE]  
-> In Azure Synapse Analytics, insert values can only be constant literal values or variable references. To insert a non-literal, set a variable to non-constant value and insert the variable.
+> [!NOTE]
+> Table value constructor is not supported in Azure Synapse Analytics. Instead, subsequent `INSERT` statements can be executed to insert multiple rows. In Azure Synapse Analytics, insert values can only be constant literal values or variable references. To insert a non-literal, set a variable to non-constant value and insert the variable.
+
 
  DEFAULT  
  Forces the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to load the default value defined for a column. If a default does not exist for the column and the column allows null values, NULL is inserted. For a column defined with the **timestamp** data type, the next timestamp value is inserted. DEFAULT is not valid for an identity column.  

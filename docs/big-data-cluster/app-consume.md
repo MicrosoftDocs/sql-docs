@@ -2,9 +2,9 @@
 title: Consume applications
 titleSuffix: SQL Server Big Data Clusters
 description: Consume an application deployed on SQL Server Big Data Clusters using a RESTful web service.
-author: cloudmelon
-ms.author: melqin
-ms.reviewer: mikeray
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: wiassaf
 ms.date: 06/22/2020
 ms.metadata: seo-lt-2019
 ms.topic: conceptual
@@ -17,6 +17,8 @@ ms.technology: big-data-cluster
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to consume an app deployed on a SQL Server big data cluster using a RESTful web service.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Prerequisites
 

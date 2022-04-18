@@ -7,14 +7,16 @@ ms.service: sql-database
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 keywords: 
   - "elastic pool"
   - "elastic pool, management"
 f1_keywords: 
   - "DATABASE_SERVICE_OBJECTIVES_TSQL"
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---

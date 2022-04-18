@@ -1,7 +1,7 @@
 ---
 title: "Supported combinations of SharePoint & Reporting Services server | Microsoft Docs"
 description: "A SQL Server Reporting Services report server installed in SharePoint mode requires a version of SharePoint and the SQL Server Reporting Services add-in (rsSharePoint.msi) for SharePoint products, which you install on the SharePoint servers."
-ms.date: 12/04/2019
+ms.date: 08/15/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
 ms.custom: seo-lt-2019​, seo-mmd-2019
@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 A SQL Server Reporting Services report server installed in SharePoint mode requires a version of SharePoint and the SQL Server Reporting Services add-in (rsSharePoint.msi) for SharePoint products, which you install on the SharePoint servers. This topic summarizes the supported combinations.
 
 > [!NOTE]
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016. To add a report within a SharePoint site using SQL Server Reporting Services 2017 and later, use the [Report Viewer web part](../../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md).
 
 ## Supported combinations of SharePoint and Reporting Services components
 
@@ -77,4 +77,4 @@ A SQL Server Reporting Services report server installed in SharePoint mode requi
  [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

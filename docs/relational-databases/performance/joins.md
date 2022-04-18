@@ -2,7 +2,7 @@
 title: "Joins (SQL Server) | Microsoft Docs"
 description: Learn about the types of join operations that SQL Server employs. SQL Server supports vertical table partitioning, or columnar storage, using join operations.
 ms.custom: ""
-ms.date: "07/19/2019"
+ms.date: "12/19/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
@@ -131,7 +131,7 @@ A nested loops join is particularly effective if the outer input is small and th
 
 When the OPTIMIZED attribute of a Nested Loops join operator is set to **True**, it means that an Optimized Nested Loops (or Batch Sort) is used to minimize I/O when the inner side table is large, regardless of it being parallelized or not. The presence of this optimization in a given plan may not be very obvious when analyzing an execution plan, given the sort itself is a hidden operation. But by looking in the plan XML for the attribute OPTIMIZED, this indicates the Nested Loops join may try to reorder the input rows to improve I/O performance.
 
-## <a name="merge"></a> Understanding Merge joins
+## <a name="merge"></a> Merge joins
 If the two join inputs are not small but are sorted on their join column (for example, if they were obtained by scanning sorted indexes), a merge join is the fastest join operation. If both join inputs are large and the two inputs are of similar sizes, a merge join with prior sorting and a hash join offer similar performance. However, hash join operations are often much faster if the two input sizes differ significantly from each other.       
 
 The merge join requires both inputs to be sorted on the merge columns, which are defined by the equality (ON) clauses of the join predicate. The query optimizer typically scans an index, if one exists on the proper set of columns, or it places a sort operator below the merge join. In rare cases, there may be multiple equality clauses, but the merge columns are taken from only some of the available equality clauses.    
@@ -144,7 +144,7 @@ If a residual predicate is present, all rows that satisfy the merge predicate ev
 
 Merge join itself is very fast, but it can be an expensive choice if sort operations are required. However, if the data volume is large and the desired data can be obtained presorted from existing B-tree indexes, merge join is often the fastest available join algorithm.    
 
-## <a name="hash"></a> Understanding Hash joins
+## <a name="hash"></a> Hash joins
 Hash joins can efficiently process large, unsorted, nonindexed inputs. They are useful for intermediate results in complex queries because:
 -   Intermediate results are not indexed (unless explicitly saved to disk and then indexed) and often are not suitably sorted for the next operation in the query plan.
 -   Query optimizers estimate only intermediate result sizes. Because estimates can be very inaccurate for complex queries, algorithms to process intermediate results not only must be efficient, but also must degrade gracefully if an intermediate result turns out to be much larger than anticipated.   
@@ -184,7 +184,7 @@ The term hash bailout is sometimes used to describe grace hash joins or recursiv
 
 For more information about hash bailout, see [Hash Warning Event Class](../../relational-databases/event-classes/hash-warning-event-class.md).    
 
-## <a name="adaptive"></a> Understanding Adaptive joins
+## <a name="adaptive"></a> Adaptive joins
 [Batch mode](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) Adaptive Joins enable the choice of a [Hash Join](#hash) or [Nested Loops](#nested_loops) join method to be deferred until **after** the first input has been scanned. The Adaptive Join operator defines a threshold that is used to decide when to switch to a Nested Loops plan. A query plan can therefore dynamically switch to a better join strategy during execution without having to be recompiled. 
 
 > [!TIP]
@@ -361,7 +361,8 @@ NULL        three  NULL        NULL
 
 The results do not make it easy to distinguish a NULL in the data from a NULL that represents a failure to join. When null values are present in data being joined, it is usually preferable to omit them from the results by using a regular join.    
 
-## See Also  
+## Next steps
+
 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [Comparison Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)    
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   

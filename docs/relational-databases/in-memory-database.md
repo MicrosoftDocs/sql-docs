@@ -36,17 +36,19 @@ A fast volatile cache that fronts a considerably slower but durable media has be
 
 [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md) expands the buffer pool for database files residing on byte-addressable persistent memory storage devices for both Windows and Linux platforms with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
-## Memory-optimized `tempdb` metadata
+## Memory-optimized tempdb metadata
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] introduces a new feature that is [memory-optimized tempdb metadata](./databases/tempdb-database.md#memory-optimized-tempdb-metadata), which effectively removes some contention bottlenecks and unlocks a new level of scalability for tempdb-heavy workloads.
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] introduces a new feature that is [memory-optimized tempdb metadata](./databases/tempdb-database.md#memory-optimized-tempdb-metadata), which effectively removes some contention bottlenecks and unlocks a new level of scalability for `tempdb`-heavy workloads.
+
+For more information on recent `tempb` improvements including memory-optimized metadata in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and newer features, review [System Page Latch Concurrency Enhancements (Ep. 6) | Data Exposed](/shows/data-exposed/system-page-latch-concurrency-enhancements).
 
 ## In-memory OLTP
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-[In-memory OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) is a database technology available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios.
+[In-memory OLTP](./in-memory-oltp/overview-and-usage-scenarios.md) is a database technology available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios.
 
 ## Configuring persistent memory support for Linux
 

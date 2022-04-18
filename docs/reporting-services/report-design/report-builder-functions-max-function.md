@@ -1,6 +1,6 @@
 ---
-title: "Max Function (Report Builder) | Microsoft Docs"
-description: Learn about the Max function, which returns the maximum value of all non-null numeric values specified by the expression in Report Builder.
+title: "Max function in a paginated report | Microsoft Docs"
+description: Learn about the Max function in a paginated report, which returns the maximum value of all non-null numeric values specified by the expression in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +12,11 @@ ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Report Builder Functions - Max Function
-  Returns the maximum value of all non-null numeric values specified by the expression, in the context of the given scope.  
+# Report Builder functions - Max function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the maximum value of all non-null numeric values specified by the expression, in the context of the given scope in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -2,22 +2,29 @@
 title: Deploy offline
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to perform an offline deployment of a SQL Server 2019 Big Data Cluster and how to load container images into a private repository.
-author: mihaelablendea 
-ms.author: mihaelab
-ms.reviewer: mikeray
-ms.date: 11/04/2019
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: wiassaf
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-deployment
 ---
 
 # Perform an offline deployment of a SQL Server big data cluster
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article describes how to perform an offline deployment of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Big data clusters must have access to a Docker repository from which to pull container images. An offline installation is one where the required images are placed into a private Docker repository. That private repository is then used as the image source for a new deployment.
 
 ## Prerequisites
 
 - Docker Engine on any supported Linux distribution or Docker for Mac/Windows. Validate the engine version against the tested configurations on the [SQL Server Big Data Clusters release notes](release-notes-big-data-cluster.md).For more information, see [Install Docker](https://docs.docker.com/engine/installation/). 
+
+> [!WARNING]
+> The parameter ```imagePullPolicy``` is required to be set as ```"Always"``` in the deployment profile control.json file.
 
 ## Load images into a private repository
 
@@ -49,10 +56,9 @@ The following steps describe how to pull the big data cluster container images f
    ```PowerShell
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
- 
+
 > [!WARNING]
 > Do not modify the big data cluster images once they are pushed into your private repository. Performing a deployment with modified images will result in an unsupported big data cluster setup.
-
 
 ### <a id="images"></a> Big data cluster container images
 

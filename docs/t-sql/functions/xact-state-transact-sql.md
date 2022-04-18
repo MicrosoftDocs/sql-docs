@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "transactions [SQL Server], state"
   - "active transactions"
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XACT_STATE (Transact-SQL)

@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Asynchronous Execution (Notification Method) Sample
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

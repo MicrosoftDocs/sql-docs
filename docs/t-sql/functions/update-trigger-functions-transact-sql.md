@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "verifying column updates"
   - "checking column updates"
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-author: julieMSFT
-ms.author: jrasnick
+author: LitKnd
+ms.author: kendralittle
 ---
 # UPDATE - Trigger Functions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

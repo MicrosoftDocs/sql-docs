@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Application security
 

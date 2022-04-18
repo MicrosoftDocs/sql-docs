@@ -2,7 +2,7 @@
 title: "Best practices with Query Store"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
-ms.date: "6/09/2021"
+ms.date: "4/4/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -18,6 +18,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 [!INCLUDE [SQL Server ASDB, ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article outlines the best practices for using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store with your workload.
+
+> [!NOTE]
+> In Azure Synapse Analytics, configuration options for Query Store are not supported. 
 
 ## <a name="SSMS"></a> Use the latest [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
@@ -42,7 +45,7 @@ To adjust these options as your workload grows, see [Keep Query Store adjusted t
 | STALE_QUERY_THRESHOLD_DAYS |Time-based cleanup policy that controls the retention period of persisted runtime statistics and inactive queries |30 |Enforced for new databases and databases with previous default (367) |
 | SIZE_BASED_CLEANUP_MODE |Specifies whether automatic data cleanup takes place when Query Store data size approaches the limit |AUTO |Enforced for all databases |
 | QUERY_CAPTURE_MODE |Specifies whether all queries or only a subset of queries are tracked |AUTO |Enforced for all databases |
-| FLUSH_INTERVAL_SECONDS |Specifies maximum period during which captured runtime statistics are kept in memory, before flushing to disk |900 |Enforced for new databases |
+| DATA_FLUSH_INTERVAL_SECONDS |Specifies maximum period during which captured runtime statistics are kept in memory, before flushing to disk |900 |Enforced for new databases |
 | | | | |
 
 > [!IMPORTANT]
@@ -288,13 +291,13 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;
 ```
 
-The difference between the `actual_state_desc` and `desired_state_desc` indicates that a change of the operation mode occurred automatically. The most common change is for Query Store to silently switch to read-only mode. In extremely rare circumstances, Query Store can end up in the ERROR state because of internal errors.
+The difference between the `actual_state_desc` and `desired_state_desc` indicates that a change of the operation mode occurred automatically. The most common change is for Query Store to silently switch to read-only mode. In extremely rare circumstances, Query Store can end up in the [ERROR state](#error-state) because of internal errors.
 
-When the actual state is read-only, use the **readonly_reason** column to determine the root cause. Typically, you find that Query Store transitioned to read-only mode because the size quota was exceeded. In that case, the **readonly_reason** is set to 65536. For other reasons, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
+When the actual state is read-only, use the `readonly_reason` column to determine the root cause. Typically, you find that Query Store transitioned to read-only mode because the size quota was exceeded. In that case, the `readonly_reason` is set to 65536. For other reasons, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
 Consider the following steps to switch Query Store to read-write mode and activate data collection:
 
-- Increase the maximum storage size by using the **MAX_STORAGE_SIZE_MB** option of **ALTER DATABASE**.
+- Increase the maximum storage size by using the **MAX_STORAGE_SIZE_MB** option of `ALTER DATABASE`.
 - Clean up Query Store data by using the following statement:
 
   ```sql
@@ -332,7 +335,32 @@ FROM sys.database_query_store_options;
 
 If the problem persists, it indicates that corruption of Query Store data is persisted on the disk.
 
-Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], Query Store can be recovered by executing the `sys.sp_query_store_consistency_check` stored procedure within the affected database. Query Store must be disabled before you attempt the recovery operation. For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you need to clear the data from Query Store as shown.
+Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], Query Store can be recovered by executing the `sys.sp_query_store_consistency_check` stored procedure within the affected database. Query Store must be disabled before you attempt the recovery operation. Here is a sample query to use or modify to accomplish the consistency check and recovery of QDS:
+
+```sql
+IF EXISTS (SELECT * FROM sys.database_query_store_options WHERE actual_state=3) 
+BEGIN
+  BEGIN TRY
+    ALTER DATABASE [QDS] SET QUERY_STORE = OFF
+    Exec [QDS].dbo.sp_query_store_consistency_check
+    ALTER DATABASE [QDS] SET QUERY_STORE = ON
+    ALTER DATABASE [QDS] SET QUERY_STORE (OPERATION_MODE = READ_WRITE)
+  END TRY
+ 
+  BEGIN CATCH 
+    SELECT  
+      ERROR_NUMBER() AS ErrorNumber  
+      ,ERROR_SEVERITY() AS ErrorSeverity  
+      ,ERROR_STATE() AS ErrorState  
+      ,ERROR_PROCEDURE() AS ErrorProcedure  
+      ,ERROR_LINE() AS ErrorLine  
+      ,ERROR_MESSAGE() AS ErrorMessage; 
+  END CATCH;   
+END
+```
+
+
+For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you need to clear the data from Query Store as shown.
 
 If the recovery was unsuccessful, you can try clearing Query Store before you set the read-write mode.
 
@@ -369,6 +397,7 @@ Keep the most relevant data in Query Store. The following table describes typica
 ## Keep the most relevant data in Query Store
 
 Configure Query Store to contain only the relevant data so that it runs continuously and provides a great troubleshooting experience with a minimal impact on your regular workload.
+
 The following table provides best practices:
 
 |Best practice|Setting|
@@ -392,6 +421,56 @@ Consider the following options:
   - Use a [plan guide](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md) to force parameterization only for the selected query.
   - Configure forced parameterization by using the [parameterization database option](../../relational-databases/databases/database-properties-options-page.md#miscellaneous) command, if there are a small number of different query plans in your workload. An example is when the ratio between the count of distinct query_hash and the total number of entries in `sys.query_store_query` is much less than 1.
 - Set QUERY_CAPTURE_MODE to AUTO to automatically filter out ad-hoc queries with small resource consumption.
+
+> [!TIP]
+> When using an Object-Relational Mapping (ORM) solution such as Entity Framework (EF), application queries like manual LINQ query trees or certain raw SQL queries may not be parameterized, which impacts plan re-use and the ability to track queries in the Query Store. For more information, see [EF Query caching and parameterization](/ef/core/performance/advanced-performance-topics) and [EF Raw SQL Queries](/ef/core/querying/raw-sql).
+
+### Find non-parameterized queries in Query Store
+
+You can find the number of plans stored in Query Store using the below query, using query store DMVs, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]:
+
+```sql
+SELECT count(Pl.plan_id) AS plan_count, Qry.query_hash, Txt.query_text_id, Txt.query_sql_text
+FROM sys.query_store_plan AS Pl
+INNER JOIN sys.query_store_query AS Qry
+    ON Pl.query_id = Qry.query_id
+INNER JOIN sys.query_store_query_text AS Txt
+    ON Qry.query_text_id = Txt.query_text_id
+GROUP BY Qry.query_hash, Txt.query_text_id, Txt.query_sql_text
+ORDER BY plan_count desc;
+```
+
+The following sample creates an [Extended Events session](../extended-events/extended-events.md) to capture the event `query_store_db_diagnostics`, which can be useful in diagnosing query resource consumption. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this extended event session creates an event file in the SQL Server Log folder by default. For example, in a default [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] installation on Windows, the event file (.xel file) should be created in the folder `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`. For [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], specify an Azure Blob Storage location instead. For more information, see [XEvent event_file for Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file#phase-2-transact-sql-code-that-uses-azure-storage-container). The event 'qds.query_store_db_diagnostics' is not available for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+
+
+```sql
+CREATE EVENT SESSION [QueryStore_Troubleshoot] ON SERVER 
+ADD EVENT qds.query_store_db_diagnostics(
+      ACTION(sqlos.system_thread_id,sqlos.task_address,sqlos.task_time,sqlserver.database_id,sqlserver.database_name))
+ADD TARGET package0.event_file(SET filename=N'QueryStore',max_file_size=(100))
+WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF);
+```
+
+With this data you can find plan count in the Query Store, and also many other stats as well. Look for the `plan_count`, `query_count`, `max_stmt_hash_map_size_kb`, and `max_size_mb` columns in the event data, in order to understand the amount of memory used and number of plans that are tracked by Query Store. If the plan count is higher than normal, it may indicate an increase in non-parameterized queries. Use the below Query Store DMVs query to review the parameterized queries and non-parameterized queries in the Query Store.
+
+For parameterized queries:
+```sql
+SELECT qsq.query_id, qsqt.query_sql_text
+FROM sys.query_store_query AS qsq 
+INNER JOIN sys.query_store_query_text AS qsqt
+ON qsq.query_text_id= qsqt.query_text_id 
+WHERE qsq.query_parameterization_type<>0 or qsqt.query_sql_text like '%@%';
+```
+
+For non-parameterized queries:
+
+```sql
+SELECT qsq.query_id, qsqt.query_sql_text
+FROM sys.query_store_query AS qsq 
+INNER JOIN sys.query_store_query_text AS qsqt
+ON qsq.query_text_id= qsqt.query_text_id 
+WHERE query_parameterization_type=0;
+```
 
 ## <a name="Drop"></a> Avoid a DROP and CREATE pattern for containing objects
 

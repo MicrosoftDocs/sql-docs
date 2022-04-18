@@ -272,5 +272,5 @@ ms.author: maggies
   
 -   [Microsoft Q & A: SQL Server Reporting Services](/answers/topics/sql-server-reporting-services.html)  
   
--   Got feedback or more questions? Visit [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
+-   Got feedback or more questions? Share [ideas for SQL](https://feedback.azure.com/forums/908035-sql-server).  
   

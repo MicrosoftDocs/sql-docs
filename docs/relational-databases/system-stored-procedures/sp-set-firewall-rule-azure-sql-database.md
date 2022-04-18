@@ -41,7 +41,7 @@ sp_set_firewall_rule [@name =] 'name',
   
 |Name|Datatype|Description|  
 |----------|--------------|-----------------|  
-|[@name =] 'name'|**NVARCHAR(128)**|The name used to describe and distinguish the server-level firewall setting.|  
+|[@name =] 'name'|**NVARCHAR(128)**|The name used to describe and distinguish the server-level firewall setting. The value passed in must match this parameter's data type (NVARCHAR).|  
 |[@start_ip_address =] 'start_ip_address'|**VARCHAR(50)**|The lowest IP address in the range of the server-level firewall setting. IP addresses equal to or greater than this can attempt to connect to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server. The lowest possible IP address is `0.0.0.0`.|  
 |[@end_ip_address =] 'end_ip_address'|**VARCHAR(50)**|The highest IP address in the range of the server-level firewall setting. IP addresses equal to or less than this can attempt to connect to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server. The highest possible IP address is `255.255.255.255`.<br /><br /> Note: Azure connection attempts are allowed when both this field and the *start_ip_address* field equals `0.0.0.0`.|  
   
@@ -51,6 +51,8 @@ sp_set_firewall_rule [@name =] 'name',
  When you add a server-level firewall setting where the beginning and ending IP addresses are equal to `0.0.0.0`, you enable access to your [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server from Azure. Provide a value to the *name* parameter that will help you remember what the server-level firewall setting is for.  
   
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to authenticate a connection and server-level firewall rules are temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ 
+This is an extended stored procedure, so the data type of the value passed in for each parameter must match the parameter definition.
   
 ## Permissions  
  Only the server-level principal login created by the provisioning process or an Azure Active Directory principal assigned as admin can create or modify server level firewall rules. The user must be connected to the master database to execute sp_set_firewall_rule.  

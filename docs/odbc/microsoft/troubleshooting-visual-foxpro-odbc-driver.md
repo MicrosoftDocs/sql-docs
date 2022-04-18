@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "background fetching [ODBC]"
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Troubleshooting (Visual FoxPro ODBC Driver)
 The following sections discuss how to improve performance and solve problems you might encounter while using the Visual FoxPro ODBC Driver.  

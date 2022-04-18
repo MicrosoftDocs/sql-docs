@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "SQLSetPos function [ODBC], updating rows"
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # Updating Rows in the Rowset with SQLSetPos
 The update operation of **SQLSetPos** makes the data source update one or more selected rows of a table, using data in the application buffers for each bound column (unless the value in the length/indicator buffer is SQL_COLUMN_IGNORE). Columns that are not bound will not be updated.  

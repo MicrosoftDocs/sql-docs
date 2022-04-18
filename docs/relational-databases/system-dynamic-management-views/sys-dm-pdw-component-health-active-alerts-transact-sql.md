@@ -7,9 +7,11 @@ ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_component_health_active_alerts (Transact-SQL)

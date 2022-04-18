@@ -5,10 +5,10 @@ description: Learn how to embed Python code in SQL Server stored procedures and 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/28/2020  
+ms.date: 09/17/2021  
 ms.topic: tutorial
-author: garyericson
-ms.author: garye
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
 ---

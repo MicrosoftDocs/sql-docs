@@ -8,6 +8,8 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
+dev_langs: 
+  - "TSQL"
 f1_keywords: 
   - "sp_get_redirected_publisher_TSQL"
   - "sp_get_redirected_publisher"

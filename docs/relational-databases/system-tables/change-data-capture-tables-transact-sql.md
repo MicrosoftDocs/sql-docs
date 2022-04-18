@@ -11,8 +11,8 @@ ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
-author: cawrites
-ms.author: chadam
+author: LitKnd
+ms.author: kendralittle
 ---
 # Change Data Capture Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

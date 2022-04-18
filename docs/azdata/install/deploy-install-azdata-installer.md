@@ -1,14 +1,15 @@
 ---
 title: Install Azure Data CLI (azdata) with Windows Installer
-titleSuffix:
-description: Learn how to install the Azure Data CLI (azdata) tool with the installer. 
-author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 09/30/2020
+description: Learn how to install the Azure Data CLI (azdata) tool with the installer.
+author: danibunny
+ms.author: dacoelho
+ms.reviewer: wiassaf
+ms.date: 11/18/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.custom:
+  - intro-installation
 ---
 
 # Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] with Windows Installer
@@ -30,7 +31,7 @@ To uninstall `azdata` with Windows Installer, follow the instructions for the ap
 
 | Platform      | Instructions                                           |
 | ------------- |--------------------------------------------------------|
-| Windows 10| Start > Settings > Apps                                |
+| Windows 10 and 11 | Start > Settings > Apps & Features                                |
 | Windows 8     | Start > Control Panel > Programs > Uninstall a program |
 
 The program to uninstall is called `Azure Data CLI` . Select this application, then click the `Uninstall` button.

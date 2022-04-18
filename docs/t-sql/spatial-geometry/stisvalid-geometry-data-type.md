@@ -46,7 +46,7 @@ Returns true if a **geometry** instance is well-formed, based on its Open Geospa
 ## Examples  
  The following example creates a `geometry` instance and uses `STIsValid()` to test if the instance is valid.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
 SELECT @g.STIsValid();  

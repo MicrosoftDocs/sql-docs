@@ -15,7 +15,7 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 630b659f-eb36-4277-b04e-9a2e6134f795
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ---
 # getAsciiStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

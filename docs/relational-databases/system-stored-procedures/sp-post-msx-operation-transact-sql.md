@@ -41,7 +41,7 @@ sp_post_msx_operation
   
 ## Arguments  
 `[ @operation = ] 'operation'`
- The type of operation for the posted operation. *operation*is **varchar(64)**, with no default. Valid operations depend upon *object_type*.  
+ The type of operation for the posted operation. *operation* is **varchar(64)**, with no default. Valid operations depend upon *object_type*.  
   
 |Object type|Operation|  
 |-----------------|---------------|  

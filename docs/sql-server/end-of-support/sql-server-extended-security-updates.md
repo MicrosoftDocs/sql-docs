@@ -119,11 +119,11 @@ You can either register a [single SQL Server instance](#single-sql-server-instan
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-empty-list.png" alt-text="Screenshot showing an empty list of SQL Servers list on the Azure Arc portal":::
 
-1. Select **Register servers** to add a disconnected SQL Server instance.
+1. Select **Register Servers** to add a disconnected SQL Server instance.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png" alt-text="Screenshot showing the two options for adding connected or registered servers":::
 
-1. On the next screen, you can choose to add a single or multiple SQL Server instances. The option for **Single SQL instance** is selected by default.
+1. On the next screen, you can choose to add a single or multiple SQL Server instances. The option for **Single SQL Instance** is selected by default.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-sql-registration-options.png" alt-text="Screenshot showing the Add SQL Registrations options":::
 
@@ -155,11 +155,11 @@ Multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances can
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-empty-list.png" alt-text="Screenshot showing an empty list of SQL Servers list on the Azure Arc portal":::
 
-1. Select **Register servers** to add a disconnected SQL Server instance.
+1. Select **Register Servers** to add a disconnected SQL Server instance.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png" alt-text="Screenshot showing the two options for adding connected or registered servers":::
 
-1. On this screen, you can choose to add a single or multiple SQL Server instances. Select the option for **Multiple SQL instances**.
+1. On this screen, you can choose to add a single or multiple SQL Server instances. Select the option for **Multiple SQL Instances**.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-multiple-sql-instances.png" alt-text="Screenshot showing the Multiple SQL instances option":::
 

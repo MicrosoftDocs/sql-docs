@@ -363,4 +363,4 @@ After installation finishes, open SSMS and connect to your supported SQL Server 
 
 ## Next steps
 
-After you've prepared your environment, you're ready to start [replicating your database](managed-instance-link-use-ssms-to-replicate-database.md). To learn more, review [Link feature for Azure SQL Managed Instance](link-feature.md). 
+After you've prepared your environment, you're ready to start [replicating your database](managed-instance-link-use-ssms-to-replicate-database.md). To learn more, review [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md). 

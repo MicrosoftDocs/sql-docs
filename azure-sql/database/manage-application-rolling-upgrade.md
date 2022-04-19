@@ -16,7 +16,7 @@ ms.date: 02/13/2019
 # Manage rolling upgrades of cloud applications by using SQL Database active geo-replication
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Learn how to use [active geo-replication](auto-failover-group-overview.md) in Azure SQL Database to enable rolling upgrades of your cloud application. Because upgrades are disruptive operations, they should be part of your business-continuity planning and design. In this article, we look at two different methods of orchestrating the upgrade process and discuss the benefits and tradeoffs of each option. For the purposes of this article, we refer to an application that consists of a website that's connected to a single database as its data tier. Our goal is to upgrade version 1 (V1) of the application to version 2 (V2) without any significant impact on the user experience.
+Learn how to use [active geo-replication](auto-failover-group-sql-db.md) in Azure SQL Database to enable rolling upgrades of your cloud application. Because upgrades are disruptive operations, they should be part of your business-continuity planning and design. In this article, we look at two different methods of orchestrating the upgrade process and discuss the benefits and tradeoffs of each option. For the purposes of this article, we refer to an application that consists of a website that's connected to a single database as its data tier. Our goal is to upgrade version 1 (V1) of the application to version 2 (V2) without any significant impact on the user experience.
 
 When evaluating upgrade options, consider these factors:
 
@@ -148,6 +148,6 @@ The two upgrade methods described in the article differ in complexity and dollar
 
 * For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 * To learn about Azure SQL Database active geo-replication, see [Create readable secondary databases using active geo-replication](active-geo-replication-overview.md).
-* To learn about Azure SQL Database auto-failover groups, see [Use auto-failover groups to enable transparent and coordinated failover of multiple databases](auto-failover-group-overview.md).
+* To learn about Azure SQL Database auto-failover groups, see [Use auto-failover groups to enable transparent and coordinated failover of multiple databases](auto-failover-group-sql-db.md).
 * To learn about staging environments in Azure App Service, see [Set up staging environments in Azure App Service](/azure/app-service/deploy-staging-slots).
 * To learn about Azure Traffic Manager profiles, see [Manage an Azure Traffic Manager profile](/azure/traffic-manager/traffic-manager-manage-profiles).

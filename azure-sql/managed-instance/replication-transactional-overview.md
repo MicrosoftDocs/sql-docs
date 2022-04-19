@@ -146,7 +146,7 @@ In this configuration, a database in Azure SQL Database or Azure SQL Managed Ins
 
 ## With failover groups
 
-If a **publisher** or **distributor** SQL Managed Instance is in a [failover group](../database/auto-failover-group-overview.md), the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover occurs. The following activities are needed in this scenario:
+If a **publisher** or **distributor** SQL Managed Instance is in a [failover group](auto-failover-group-sql-mi.md), the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover occurs. The following activities are needed in this scenario:
 
 1. Stop all replication jobs running on the database, if there are any.
 1. Drop subscription metadata from publisher by running the following script on publisher database:

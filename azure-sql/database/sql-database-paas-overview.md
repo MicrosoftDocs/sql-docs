@@ -129,7 +129,7 @@ In addition, SQL Database provides built-in [business continuity and global scal
 - [Active geo-replication](active-geo-replication-overview.md):
 
   The single database and pooled databases options allow you to configure up to four readable secondary databases in either the same or globally distributed Azure datacenters. For example, if you have a SaaS application with a catalog database that has a high volume of concurrent read-only transactions, use active geo-replication to enable global read scale. This removes bottlenecks on the primary that are due to read workloads. For managed instances, use auto-failover groups.
-- [Auto-failover groups](auto-failover-group-overview.md):
+- [Auto-failover groups](auto-failover-group-sql-db.md):
 
   All SQL Database deployment options allow you to use failover groups to enable high availability and load balancing at global scale. This includes transparent geo-replication and failover of large sets of databases, elastic pools, and managed instances. Failover groups enable the creation of globally distributed SaaS applications, with minimal administration overhead. This leaves all the complex monitoring, routing, and failover orchestration to SQL Database.
 - [Zone-redundant databases](high-availability-sla.md):

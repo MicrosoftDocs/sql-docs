@@ -169,5 +169,5 @@ Confirm that you want to perform the operation.
 ## Next steps
 
 * To learn more about active geo-replication, see [active geo-replication](active-geo-replication-overview.md).
-* To learn about auto-failover groups, see [Auto-failover groups](auto-failover-group-overview.md)
+* To learn about auto-failover groups, see [Auto-failover groups](auto-failover-group-sql-db.md)
 * For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).

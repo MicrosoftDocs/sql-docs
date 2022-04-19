@@ -57,7 +57,7 @@ In this step, you create a resource group, server, single database, and server-l
 
 ## 2 - Create the failover group
 
-In this step, you' will create a [failover group](auto-failover-group-overview.md) between an existing server and a new server in another region. Then add the sample database to the failover group.
+In this step, you' will create a [failover group](auto-failover-group-sql-db.md) between an existing server and a new server in another region. Then add the sample database to the failover group.
 
 # [Azure portal](#tab/azure-portal)
 

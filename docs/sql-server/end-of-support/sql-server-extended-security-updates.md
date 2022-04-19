@@ -117,15 +117,15 @@ You can either register a [single SQL Server instance](#single-sql-server-instan
 
 1. To register a disconnected machine, select **Add** from the menu at the top of the screen.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-empty-list.png" alt-text="Screenshot showing an empty list of SQL Servers list on the Azure Arc portal":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-empty-list.png" alt-text="Screenshot of an empty list of SQL Servers list on the Azure Arc portal.":::
 
 1. Select **Register Servers** to add a disconnected SQL Server instance.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png" alt-text="Screenshot showing the two options for adding connected or registered servers":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png" alt-text="Screenshot of the two options for adding connected or registered servers.":::
 
 1. On the next screen, you can choose to add a single or multiple SQL Server instances. The option for **Single SQL Instance** is selected by default.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-sql-registration-options.png" alt-text="Screenshot showing the Add SQL Registrations options":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-sql-registration-options.png" alt-text="Screenshot of the Add SQL Registrations options.":::
 
 1. Choose the **Subscription** and **Resource group** for your registered SQL Server instance.
 
@@ -153,15 +153,15 @@ Multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances can
 
 1. To register a disconnected machine, select **Add** from the menu at the top of the screen.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-empty-list.png" alt-text="Screenshot showing an empty list of SQL Servers list on the Azure Arc portal":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-empty-list.png" alt-text="Screenshot of an empty list of SQL Servers list on the Azure Arc portal.":::
 
 1. Select **Register Servers** to add a disconnected SQL Server instance.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png" alt-text="Screenshot showing the two options for adding connected or registered servers":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png" alt-text="Screenshot of the two options for adding connected or registered servers.":::
 
 1. On this screen, you can choose to add a single or multiple SQL Server instances. Select the option for **Multiple SQL Instances**.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-multiple-sql-instances.png" alt-text="Screenshot showing the Multiple SQL instances option":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-multiple-sql-instances.png" alt-text="Screenshot of the Multiple SQL Instances option.":::
 
 1. Select the Browse icon to upload the CSV file containing multiple disconnected SQL Server instances.
 
@@ -173,15 +173,15 @@ Now you can continue to the [Confirmation](#confirmation) section.
 
 1. We recommend using the `Year1OrderID` tag to link your SQL Server instances to your ESU invoice number for easy reference. The `Year1EntitlementConfirmed` tag is automatically filled in.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-tags.png" alt-text="Screenshot showing tags":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-tags.png" alt-text="Screenshot of confirmation tags.":::
 
 1. Before you can add your SQL Server instances, you must agree to the terms of use and privacy policy.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-terms.png" alt-text="Screenshot showing terms and conditions":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-terms.png" alt-text="Screenshot of the terms of use.":::
 
 1. Once you have added your SQL Server instances, you will see them in the portal after a few minutes. Because they were added manually, they will always show in a disconnected state, with the description **Registered**.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-connected-servers.png" alt-text="Screenshot showing two registered SQL Server instances on the Azure Arc portal":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-connected-servers.png" alt-text="Screenshot of two registered SQL Server instances on the Azure Arc portal.":::
 
 ### Link ESU invoice to registered servers
 
@@ -193,15 +193,15 @@ Follow these steps to link an ESU invoice to your Azure Arc SQL Server instances
 
 1. Use the checkboxes next to each server to select which machines you would like to link, and then select **Link ESU invoice**.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-select.png" alt-text="Screenshot showing all SQL Server instances on the Azure Arc blade":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-select.png" alt-text="Screenshot of all SQL Server instances on the Azure Arc blade.":::
 
 1. Fill in the ESU invoice number in the **Invoice ID** section, and then select **Link invoice**.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-save.png" alt-text="Screenshot showing the invoice ID on the Link ESU invoice page":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-save.png" alt-text="Screenshot of the invoice ID on the Link ESU invoice page.":::
 
 1. The servers you linked to the ESU invoice now show a valid ESU expiration date.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-linked.png" alt-text="Screenshot showing SQL Server instances with a valid ESU expiration value":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-linked.png" alt-text="Screenshot of SQL Server instances with a valid ESU expiration value.":::
 
 ### Formatting requirements for CSV file
 
@@ -240,11 +240,11 @@ To download ESUs, follow these steps:
 
 1. Select a server from the list.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-list-of-servers.png" alt-text="Screenshot showing a list of servers, with one server highlighted":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-list-of-servers.png" alt-text="Screenshot of a list of servers, with one server highlighted.":::
 
 1. Download security updates from here, if and when they are made available.
 
-    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-available-updates.png" alt-text="Screenshot showing available security updates":::
+    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-available-updates.png" alt-text="Screenshot of available security updates.":::
 
 ## Supported regions
 

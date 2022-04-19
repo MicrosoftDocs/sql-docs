@@ -755,7 +755,7 @@ The driver now supports retrieving parameter metadata with prepared statements f
 
 ### Azure Active Directory
 
-Azure AD authentication is a mechanism of connecting to Azure SQL Database v12 by using identities in Azure AD. Use Azure AD authentication to centrally manage identities of database users and as an alternative to SQL Server authentication.
+Azure AD authentication is a mechanism of connecting to Azure SQL Database using identities in Azure AD. Use Azure AD authentication to centrally manage identities of database users and as an alternative to SQL Server authentication.
 
 You can use JDBC Driver 6.0 to specify your Azure AD credentials in the JDBC connection string to connect to Azure SQL Database. For details, see the authentication property in the [Setting the connection properties](setting-the-connection-properties.md) article.
 

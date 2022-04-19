@@ -67,7 +67,7 @@ landingContent:
           - text: Active-geo replication
             url: active-geo-replication-overview.md 
           - text: Auto-failover groups
-            url: auto-failover-group-overview.md 
+            url: auto-failover-group-sql-db.md 
           - text: Automated backups
             url: automated-backups-overview.md
           - text: Recover with backup 

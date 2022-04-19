@@ -133,7 +133,7 @@ landingContent:
           - text: High availability
             url: ../database/high-availability-sla.md
           - text: Auto-failover groups
-            url: ../database/auto-failover-group-overview.md 
+            url: auto-failover-group-sql-mi.md 
           - text: Automated backups
             url: ../database/automated-backups-overview.md
           - text: Recover with backup 

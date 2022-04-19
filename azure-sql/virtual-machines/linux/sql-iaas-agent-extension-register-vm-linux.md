@@ -158,4 +158,4 @@ For more information, see the following articles:
 * [Overview of SQL Server on a Windows VM](sql-server-on-linux-vm-what-is-iaas-overview.md)
 * [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
 * [Pricing guidance for SQL Server on a Windows VM](../windows/pricing-guidance.md)
-* [Release notes for SQL Server on a Windows VM](../windows/doc-changes-updates-release-notes.md)
+* [Release notes for SQL Server on a Windows VM](../windows/doc-changes-updates-release-notes-whats-new.md)

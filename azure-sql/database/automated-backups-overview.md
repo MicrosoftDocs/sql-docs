@@ -16,7 +16,7 @@ ms.date: 01/10/2022
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-[!INCLUDE [GDPR-related guidance](../includes/gdpr-intro-sentence.md)]
+[!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
 
 ## What is a database backup?
 
@@ -257,7 +257,7 @@ All database backups are taken with the CHECKSUM option to provide additional ba
 
 When you migrate your database from a DTU-based service tier to a vCore-based service tier, the PITR retention is preserved to ensure that your application's data recovery policy isn't compromised. If the default retention doesn't meet your compliance requirements, you can change the PITR retention period. For more information, see [Change the PITR backup retention period](#change-the-short-term-retention-policy).
 
-[!INCLUDE [GDPR-related guidance](../includes/gdpr-intro-sentence.md)]
+[!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
 
 ## Change the short-term retention policy
 

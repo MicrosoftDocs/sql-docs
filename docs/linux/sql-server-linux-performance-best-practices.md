@@ -107,7 +107,7 @@ In the example above, UUID represents the device that you can find using the ***
 
 #### SQL Server and Forced Unit Access (FUA) I/O subsystem capability
 
-There are certain versions of supported Linux distributions that provide support for FUA I/O subsystem capability to provide data durability. SQL Server uses FUA capability to provide highly efficient and reliable I/O for SQL server workload. For additional information on FUA support by Linux distribution and its impact for SQL Server, read following blog: [SQL Server On Linux: Forced Unit Access (FUA) Internals](https://bobsql.com/sql-server-on-linux-forced-unit-access-fua-internals/)
+There are certain versions of supported Linux distributions that provide support for FUA I/O subsystem capability to provide data durability. SQL Server uses FUA capability to provide highly efficient and reliable I/O for SQL server workload. For additional information on FUA support by Linux distribution and its impact for SQL Server, read following blog: [SQL Server On Linux: Forced Unit Access (FUA) Internals](https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-on-linux-forced-unit-access-fua-internals/ba-p/3199102)
 
 SUSE Linux Enterprise Server 12 SP5 and Red Hat Enterprise Linux 8.0 onwards support FUA capability in the I/O subsystem. If you're using SQL Server 2017 CU6 and above or SQL Server 2019, you should use following configuration for high performing and efficient I/O implementation with FUA by SQL Server.
 

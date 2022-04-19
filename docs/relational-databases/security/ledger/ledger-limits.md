@@ -1,6 +1,6 @@
 ---
 title: "Limitations for ledger"
-description: Limitations of the ledger feature
+description: Limitations and considerations for the ledger feature
 ms.date: "04/05/2022"
 ms.service: sql-database
 ms.subservice: security
@@ -24,7 +24,6 @@ Consider the following when working with ledger.
 - Automated digest management with ledger tables by using [Azure Storage immutable blobs](/azure/storage/blobs/immutable-storage-overview) doesn't offer the ability for users to use [LRS](/azure/storage/common/storage-redundancy#locally-redundant-storage) accounts.
 - When a ledger database is created, all new tables created by default (without specifying the `APPEND_ONLY = ON` clause) in the database will be [updatable ledger tables](ledger-updatable-ledger-tables.md). To create [append-only ledger tables](ledger-append-only-ledger-tables.md), use the `APPEND_ONLY = ON` clause in the [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) statements.
 - A transaction can update up to 200 ledger tables.
-- 
 
 ## Ledger Table Limitations
 
@@ -52,7 +51,8 @@ Consider the following when working with ledger.
 - FILESTREAM
 
 ### Temporal Table Limitations
-Updatable ledger tables are based on the technology of [Temporal Tables](https://docs.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver15) and inherits most of the [limitations](https://docs.microsoft.com/en-us/sql/relational-databases/tables/temporal-table-considerations-and-limitations?view=sql-server-ver15) but not all of them. Below is a list of limitations that is inherited from Temporal tables.
+
+Updatable ledger tables are based on the technology of [Temporal Tables](/sql/relational-databases/tables/temporal-tables) and inherits most of the [limitations](/sql/relational-databases/tables/temporal-table-considerations-and-limitations) but not all of them. Below is a list of limitations that is inherited from Temporal tables.
 
 - If the name of a history table is specified during history table creation, you must specify the schema and table name and also the name of the ledger view.
 - By default, the history table is PAGE compressed.

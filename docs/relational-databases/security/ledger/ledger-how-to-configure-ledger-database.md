@@ -15,7 +15,7 @@ ms.date: "04/05/2022"
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-In this article, we will describe how you can configure a [ledger database](ledger-overview.md) through the Azure portal, T-SQL,PowerShell, or the Azure CLI.
+This article provides information on configuring a [ledger database](ledger-overview.md) using the Azure portal, T-SQL, PowerShell, or the Azure CLI.
 
 ## Prerequisites
 

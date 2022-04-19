@@ -20,7 +20,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 ## Prerequisites
 
 - Have an active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [Create a database in SQL Database with ledger enabled](ledger-create-a-single-database-with-ledger-enabled.md).
+- [Configure a ledger database](ledger-how-to-configure-ledger-database.md).
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md) or [create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md).
 
 ## Run ledger verification for SQL Database
@@ -41,12 +41,19 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
        THROW;
    END CATCH
    ```
-> [!NOTE]
-> The verification script can also be found in the Azure Portal. Open the [Azure portal](https://portal.azure.com/) and locate the database you want to verify. Select that database in SQL Database.
-In **Security**, select the **Ledger** option. :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected."::: In the **Ledger** pane, select **</> Verify database**, and select the **copy** icon in the pre-populated text in the window. :::image type="content" source="media/ledger/ledger-portal-verify.png" alt-text="Azure portal verify database button":::   
 
+   > [!NOTE]
+   > The verification script can also be found in the Azure Portal. Open the [Azure portal](https://portal.azure.com/) and locate the database you want to verify. Select that database in SQL Database.
 
-3. Execute the query. You'll see that **digest_locations** returns the current location of where your database digests are stored and any previous locations. **Result** returns the success or failure of ledger verification.
+1. In **Security**, select the **Ledger** option. 
+
+   :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected."::: 
+
+1. In the **Ledger** pane, select **</> Verify database**, and select the **copy** icon in the pre-populated text in the window. 
+
+   :::image type="content" source="media/ledger/ledger-portal-verify.png" alt-text="Azure portal verify database button":::   
+
+1. Execute the query. You'll see that **digest_locations** returns the current location of where your database digests are stored and any previous locations. **Result** returns the success or failure of ledger verification.
 
    :::image type="content" source="media/ledger/verification_script_exectution.png" alt-text="Screenshot of running ledger verification by using Azure Data Studio.":::
 
@@ -89,8 +96,6 @@ In **Security**, select the **Ledger** option. :::image type="content" source="m
        ```s
 
 # [T-SQL using a manual generated digest](#tab/t-sql-manual)
-
-
 
 1. Connect to your database by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
 1. Create a new query with the following T-SQL statement:
@@ -137,7 +142,10 @@ In **Security**, select the **Ledger** option. :::image type="content" source="m
        }
    ]';
    ```
->[!NOTE] In this example, we call the sp_generate_database_ledger_digest stored procedure to generate the digest and use it immediately for verification. However, when a customer is using a custom trusted storage, they could save the digest in the trusted storage for a later verification.
+
+> [!NOTE]
+> In this example, we call the `sp_generate_database_ledger_digest` stored procedure to generate the digest and use it immediately for verification. However, when a customer is using a custom trusted storage, they could save the digest in the trusted storage for a later verification.
+
 ---
 
 ## Next steps

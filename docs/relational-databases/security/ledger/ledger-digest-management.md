@@ -56,6 +56,18 @@ The returned result set is a single row of data. It should be saved to the trust
     }
 ```
 
+## Digest management considerations
+
+### Database restore
+
+Restoring the database back to an earlier point in time, also known as Point in Time Restore, is an operation frequently used when a mistake occurs and users need to quickly revert the state of the database back to an earlier point in time. When uploading the generated digests to Azure Storage, we'll capture the *create time* of the database that these digests map to. Every time the database is restored, it's tagged with a new *create time* and this technique allows us to store the digests across different “incarnations” of the database. Ledger preserves the information regarding when a restore operation occurred, allowing the verification process to use all the relevant digests across the various incarnations of the database. Additionally, users can inspect all digests for different create times to identify when the database was restored and how far back it was restored to. Since this data is written in immutable storage, this information will be protected as well.
+
+### Active geo-replication
+
+Replication across geographic regions is asynchronous for performance reasons and, thus, allows the secondary database to be slightly behind compared to the primary. In the event of a geographic failover, any latest data that hasn't yet been replicated is lost. Ledger will only issue database digests for data that has been replicated to geographic secondaries to guarantee that digests will never reference data that might be lost in case of a geographic failover. This only applies for automatic generation and storage of database digests.
+
+Dropping the link between the primary and the secondaries when ledger digests are configured isn't supported. You should first disable the *Enable automatic digest storage* database setting, remove the synchronization between the primary and the secondary and re-enable the *Enable automatic digest storage* database setting.
+
 ## Next steps
 
 - [Ledger overview](ledger-overview.md)

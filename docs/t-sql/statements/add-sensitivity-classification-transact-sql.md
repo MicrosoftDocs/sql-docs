@@ -4,8 +4,8 @@ description: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL)"
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-author: DavidTrigano
-ms.author: datrigan
+ms.author: matripathy
+author: Madhumitatripathy
 ms.reviewer: vanto
 f1_keywords:
   - "ADD SENSITIVITY CLASSIFICATION"
@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "data classification"
   - "rank"
 ms.custom: ""
-ms.date: 06/10/2020
+ms.date: 04/19/2022
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || =azure-sqldw-latest"
 ---
 
@@ -98,7 +98,7 @@ Is an identifier based on a predefined set of values which define sensitivity ra
 
 ## Permissions
 
-Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFICATION is implied by the database permission ALTER, or by the server permission CONTROL SERVER.
+Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFICATION is implied by the database permission CONTROL, or by the server permission CONTROL SERVER.
 
 ## Examples  
 

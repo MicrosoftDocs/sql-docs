@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'Lesson 1: Creating the Target Database'
 description: "In this lesson, you will learn to create the target database and all the Service Broker target objects that do not have dependencies on the initiator database."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -21,9 +21,9 @@ In this lesson, you will learn to create the target database and all the Service
 ### Create a Service Broker endpoint
 
 - Copy and paste the following code into a Query Editor window. Then, run it to create a Service Broker endpoint for this instance of the Database Engine. A Service Broker endpoint establishes the network address to which Service Broker messages are sent. This endpoint uses the Service Broker default of TCP port 4022, and establishes that the remote instances of the Database Engine will use Windows Authentication connections to send messages.
-    
+
     Windows Authentication works when both computers are in the same domain or trusted domains. If the computers are not in trusted domains, use certificate security for the endpoints. For more information, see [How to: Create Certificates for Service Broker Transport Security (Transact-SQL)](how-to-create-certificates-for-service-broker-transport-security-transact-sql.md).
-    
+
     ```sql
         USE master;
         GO
@@ -65,13 +65,13 @@ In this lesson, you will learn to create the target database and all the Service
 - Copy and paste the following code into a Query Editor window. Change the file name that is specified in the BACKUP CERTIFICATE statement to refer to a folder on your system. Then, run the code to create the target certificate that is used to encrypt messages. The folder that you specify should have permissions that prevent access from accounts other than your Windows account and the Windows account the instance of the Database Engine is running under. For Lesson 2, you must manually copy the **InstTargetCertificate.cer** file to a folder that can be accessed from the initiator instance.
 
     ```sql
-        CREATE CERTIFICATE InstTargetCertificate 
+        CREATE CERTIFICATE InstTargetCertificate
              AUTHORIZATION TargetUser
              WITH SUBJECT = 'Target Certificate',
                   EXPIRY_DATE = N'12/31/2010';
-        
+
         BACKUP CERTIFICATE InstTargetCertificate
-          TO FILE = 
+          TO FILE =
         N'C:\storedcerts\$ampleSSBCerts\InstTargetCertificate.cer';
         GO
     ```
@@ -108,7 +108,7 @@ In this lesson, you will learn to create the target database and all the Service
 
     ```sql
         CREATE QUEUE InstTargetQueue;
-        
+
         CREATE SERVICE [//TgtDB/2InstSample/TargetService]
                AUTHORIZATION TargetUser
                ON QUEUE InstTargetQueue
@@ -118,7 +118,7 @@ In this lesson, you will learn to create the target database and all the Service
 
 ## Next Steps
 
-You have successfully created the databases that will be used for the tutorial. Next, you will create the **InstInitiatorDB** and configure it with the objects required to support the initiator end of a Service Broker Conversation. See [Lesson 2: Creating the Initiator Database](lesson-2-creating-the-initiator-database.md).
+You have successfully created the databases that will be used for the tutorial. Next, you will create the **InstInitiatorDB** and configure it with the objects required to support the initiator end of a Service Broker Conversation. For more information, see [Lesson 2: Creating the Initiator Database](lesson-2-creating-the-initiator-database.md).
 
 ## See also
 

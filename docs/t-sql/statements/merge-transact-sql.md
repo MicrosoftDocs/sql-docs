@@ -262,8 +262,9 @@ Specifies the graph match pattern. For more information about the arguments for 
 
 >[!NOTE]
 > In Azure Synapse Analytics, the MERGE command (preview) has following differences compared to SQL server and Azure SQL database.  
+> - Using MERGE to update a distribution key column is not supported.
 > - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
-> - During the preview, MERGE…WHEN NOT MATCHED INSERT is not supported for tables with IDENTITY columns.  
+> - MERGE…WHEN NOT MATCHED INSERT is not supported for tables with IDENTITY columns.  
 > - Table value constructor cannot be used in the USING clause for the source table. Use `SELECT ... UNION ALL` to create a derived source table with multiple rows.
 > - The support for tables with different distribution types is described in this table:
 >

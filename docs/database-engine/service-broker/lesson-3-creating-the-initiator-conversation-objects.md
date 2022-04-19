@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'Lesson 3: Creating the Initiator Conversation Objects'
 description: "In this lesson, you will learn to build all the objects that enable a database to initiate a conversation with another database."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -21,7 +21,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 ### Switch to the InitiatorDB database
 
 - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **InitiatorDB** database.
- 
+
     ```sql
         USE InitiatorDB;
         GO
@@ -59,7 +59,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
     ```sql
         CREATE QUEUE InitiatorQueue2DB;
-        
+
         CREATE SERVICE [//InitDB/2DBSample/InitiatorService]
                ON QUEUE InitiatorQueue2DB;
         GO
@@ -67,7 +67,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
 ## Next Steps
 
-You have successfully configured the **InitiatorDB** and **TargetDB** to support a conversation between the two databases. Next, you will complete a conversation that uses the configuration. See [Lesson 4: Beginning a Conversation and Transmitting Messages](lesson-4-beginning-a-conversation-and-transmitting-messages.md).
+You have successfully configured the **InitiatorDB** and **TargetDB** to support a conversation between the two databases. Next, you will complete a conversation that uses the configuration. For more information, see [Lesson 4: Beginning a Conversation and Transmitting Messages](lesson-4-beginning-a-conversation-and-transmitting-messages.md).
 
 ## See also
 

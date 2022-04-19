@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'How to: Configure Target Services for Anonymous Dialog Security (Transact-SQL)'
 description: "SQL Server uses dialog security for any conversation to a service for which a remote service binding exists in the database that hosts the initiating service. If the remote service binding specifies ANONYMOUS = ON, the dialog uses anonymous security."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -26,7 +26,7 @@ SQL Server uses dialog security for any conversation to a service for which a re
     > The certificate must be encrypted with the master key. For more information, see [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md).
 
 3. Back up the certificate to a file.
-  
+
     > [!NOTE]
     > Only back up the certificate for this user. Do not back up or distribute the private key associated with the certificate.
 
@@ -43,46 +43,46 @@ SQL Server uses dialog security for any conversation to a service for which a re
 ```sql
     USE AdventureWorks2008R2;
     GO
-    
+
     --------------------------------------------------------------------
     -- This script configures security for a local user in the database.
     -- The script creates a user in this database, creates a certificate
     -- for the user, writes the certificate to the file system, and
     -- grants permissions to the user. Since this service is a target
     -- service, no remote service binding is necessary.
-    
+
     -- Create a user without a login. For convenience,
     -- the name of the user is based on the name of the
     -- the remote service.
-    
+
     CREATE USER [SupplierOrdersUser]
         WITHOUT LOGIN;
     GO
-    
+
     -- Create a certificate for the initiating service
     -- to use to send messages to the target service.
-    
+
     CREATE CERTIFICATE [SupplierOrdersCertificate]
         AUTHORIZATION [SupplierOrdersUser]
         WITH SUBJECT = 'Certificate for the SupplierOrders service user.';
     GO
-    
+
     -- Backup the certificate. Provide the certificate file
     -- to the administrator for the database that hosts
     -- the other service.
-    
+
     BACKUP CERTIFICATE [SupplierOrdersCertificate]
        TO FILE = 'C:\Certificates\SupplierOrders.cer';
     GO
-    
+
     -- Grant receive on the orders queue to the local user.
-    
+
     GRANT RECEIVE ON SupplierOrdersQueue
         TO [SupplierOrdersUser];
     GO
-    
+
     -- Grant send on the service to public.
-    
+
     GRANT SEND ON SERVICE::[SupplierOrders] TO public ;
 ```
 

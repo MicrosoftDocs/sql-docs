@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'Lesson 1: Creating the Databases'
 description: "In this lesson, you will learn to create the databases and enable the trustworthy option."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -25,14 +25,14 @@ In this lesson, you will learn to create the databases and enable the trustworth
     ```sql
         USE master;
         GO
-        
+
         IF EXISTS (SELECT * FROM sys.databases
                    WHERE name = N'TargetDB')
              DROP DATABASE TargetDB;
         GO
         CREATE DATABASE TargetDB;
         GO
-        
+
         IF EXISTS (SELECT * FROM sys.databases
                    WHERE name = N'InitiatorDB')
              DROP DATABASE InitiatorDB;
@@ -45,7 +45,7 @@ In this lesson, you will learn to create the databases and enable the trustworth
 
 ## Next Steps
 
-You have successfully created the databases that will be used for the tutorial. Next, you will configure the **TargetDB** with the objects that are required to support the target end of a Service Broker Conversation. See [Lesson 2: Creating the Target Conversation Objects](lesson-2-creating-the-target-conversation-objects.md).
+You have successfully created the databases that will be used for the tutorial. Next, you will configure the **TargetDB** with the objects that are required to support the target end of a Service Broker Conversation. For more information, see [Lesson 2: Creating the Target Conversation Objects](lesson-2-creating-the-target-conversation-objects.md).
 
 ## See also
 

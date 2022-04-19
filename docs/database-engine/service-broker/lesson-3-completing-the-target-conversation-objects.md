@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'Lesson 3: Completing the Target Conversation Objects'
 description: "In this lesson, you will learn to create the linked server and routes from the target instance of the Database Engine to the initiator instance."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -26,10 +26,10 @@ In this lesson, you will learn to create the linked server and routes from the t
         USE InstTargetDB
         GO
         CREATE USER InitiatorUser WITHOUT LOGIN;
-        
+
         CREATE CERTIFICATE InstInitiatorCertificate
            AUTHORIZATION InitiatorUser
-           FROM FILE = 
+           FROM FILE =
         N'C:\storedcerts\$ampleSSBCerts\InstInitiatorCertificate.cer';
         GO
     ```
@@ -42,21 +42,21 @@ In this lesson, you will learn to create the linked server and routes from the t
 
     ```sql
         DECLARE @Cmd NVARCHAR(4000);
-        
+
         SET @Cmd = N'USE InstTargetDB;
         CREATE ROUTE InstInitiatorRoute
         WITH SERVICE_NAME =
                N''//InstDB/2InstSample/InitiatorService'',
              ADDRESS = N''TCP://MyInitiatorComputer:4022'';';
-        
+
         EXEC (@Cmd);
-        
+
         SET @Cmd = N'USE msdb
         CREATE ROUTE InstTargetRoute
         WITH SERVICE_NAME =
                 N''//TgtDB/2InstSample/TargetService'',
              ADDRESS = N''LOCAL''';
-        
+
         EXEC (@Cmd);
         GO
         GRANT SEND
@@ -71,7 +71,7 @@ In this lesson, you will learn to create the linked server and routes from the t
 
 ## Next Steps
 
-You have successfully finished configuring the target database to support a Service Broker conversation to the initiator database. Next, you will begin a conversation in the initiator database and send a request message to the target service. See [Lesson 4: Beginning the Conversation](lesson-4-beginning-the-conversation.md).
+You have successfully finished configuring the target database to support a Service Broker conversation to the initiator database. Next, you will begin a conversation in the initiator database and send a request message to the target service. For more information, see [Lesson 4: Beginning the Conversation](lesson-4-beginning-the-conversation.md).
 
 ## See also
 

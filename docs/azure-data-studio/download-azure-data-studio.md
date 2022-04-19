@@ -34,8 +34,8 @@ Azure Data Studio 1.36.0 is the latest general availability (GA) version.
 | Platform | Download |
 |----------|----------|
 | Windows | [User installer](https://go.microsoft.com/fwlink/?linkid=2193235) (recommended)<br>[System installer](https://go.microsoft.com/fwlink/?linkid=2193326)<br>[.zip file](https://go.microsoft.com/fwlink/?linkid=2193236) |
-| macOS | [.zip file](https://go.microsoft.com/fwlink/?linkid=2193237) |
-| Linux | [.deb file](https://go.microsoft.com/fwlink/?linkid=2193327)<br>[.rpm file](https://go.microsoft.com/fwlink/?linkid=2193238)<br>[.tar.gz file](https://go.microsoft.com/fwlink/?linkid=) |
+| macOS | [.zip file](https://go.microsoft.com/fwlink/?linkid=2192971) |
+| Linux | [.deb file](https://go.microsoft.com/fwlink/?linkid=2193327)<br>[.rpm file](https://go.microsoft.com/fwlink/?linkid=2193238)<br>[.tar.gz file](https://go.microsoft.com/fwlink/?linkid=2193237) |
 
 > [!Note]
 > Azure Data Studio currently does not support the ARM architecture.
@@ -54,19 +54,19 @@ We recommend the *user installer*, which simplifies installations and updates an
 
 **User installer** (recommended)
 
-1. Download and run the [Azure Data Studio user installer for Windows](https://go.microsoft.com/fwlink/?linkid=2187459).
+1. Download and run the [Azure Data Studio user installer for Windows](https://go.microsoft.com/fwlink/?linkid=2193235).
 
 2. Start the Azure Data Studio app.
 
 **System installer**
 
-1. Download and run the [Azure Data Studio system installer for Windows](https://go.microsoft.com/fwlink/?linkid=2187520).
+1. Download and run the [Azure Data Studio system installer for Windows](https://go.microsoft.com/fwlink/?linkid=2193326).
 
 2. Start the Azure Data Studio app.
 
 **.zip file**
 
-1. Download the [Azure Data Studio .zip file for Windows](https://go.microsoft.com/fwlink/?linkid=2187460).
+1. Download the [Azure Data Studio .zip file for Windows](https://go.microsoft.com/fwlink/?linkid=2193236).
 
 2. Go to the downloaded file and extract it.
 
@@ -105,7 +105,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 ### macOS installation
 
-1. Download [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2187461).
+1. Download [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2192971).
 
 2. To expand the contents of the .zip file, double-click it.
 
@@ -115,7 +115,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 #### Install with a .deb file
 
-1. Download Azure Data Studio for Linux by using the [.deb](https://go.microsoft.com/fwlink/?linkid=2187522) file.
+1. Download Azure Data Studio for Linux by using the [.deb](https://go.microsoft.com/fwlink/?linkid=2193327) file.
 
 2. To extract the .deb file, open a new terminal window, and then run the following commands:
 
@@ -139,7 +139,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 #### Install with an .rpm file
 
-1. Download Azure Data Studio for Linux by using the [.rpm](https://go.microsoft.com/fwlink/?linkid=2187521) file.
+1. Download Azure Data Studio for Linux by using the [.rpm](https://go.microsoft.com/fwlink/?linkid=2193238) file.
 
 2. To extract the file, open a new terminal window, and then run the following commands:
 
@@ -163,7 +163,7 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 #### Install with a .tar.gz file
 
-1. Download Azure Data Studio for Linux by using the [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2187462) file.
+1. Download Azure Data Studio for Linux by using the [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2193237) file.
 
 2. To extract the file, open a new terminal window, and then run the following commands:
 

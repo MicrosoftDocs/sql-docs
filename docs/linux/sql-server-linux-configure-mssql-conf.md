@@ -448,7 +448,7 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
     | **filtered** | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump.
     | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. This is not controlled by **coredump.captureminiandfull** setting. |
 
-## <a id="Edition"></a> Edition
+## <a id="edition"></a> Edition
 
 The edition of SQL Server can be changed using the **set-edition** option. To change the edition of SQL Server, the SQL Server service first needs to be stopped. For more information on available SQL Server on Linux editions, see [SQL Server editions](sql-server-linux-editions-and-components-2019.md#-editions)
 

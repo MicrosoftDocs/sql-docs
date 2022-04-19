@@ -89,11 +89,11 @@ Adding nullable columns is supported. Ledger is designed to ignore NULL values w
 
 ### Dropping columns and tables
 
-Normally, dropping a column/table completely erases the underlying data from the database and is, therefore, fundamentally incompatible with the ledger functionality that requires data to be immutable. Instead of deleting the data, ledger simply renames the objects being dropped so that they're logically removed from the user schema but physically remain in the database. Any dropped columns are also hidden from the ledger table schema, so that they're invisible to the user application. However, the data of such dropped objects remains available for the ledger verification process, and allows users to inspect any historical data through the corresponding ledger views. Dropping columns in ledger tables is captured in sys.ledger_column_history. Dropping a ledger table is captured in sys.ledger_table_history. Dropping ledger tables and its dependent objects are marked as dropped in system catalog views and renamed: 
-- Dropped ledger tables are marked as dropped by setting is_dropped_ledger_table in sys.tables and renamed using the following format: MSSQL_DroppedLedgerTable_<dropped_ledger_table_name>_<GUID>.
-- Dropped history tables for updatable ledger tables are renamed using the following format: MSSQL_DroppedLedgerHistory_<dropped_history_table_name>_<GUID>.
-- Dropped ledger views are marked as dropped by setting is_dropped_ledger_view in sys.views and renamed using the following format: MSSQL_DroppedLedgerView_<dropped_ledger_view_name>_<GUID>.
+Normally, dropping a column/table completely erases the underlying data from the database and is, therefore, fundamentally incompatible with the ledger functionality that requires data to be immutable. Instead of deleting the data, ledger simply renames the objects being dropped so that they're logically removed from the user schema but physically remain in the database. Any dropped columns are also hidden from the ledger table schema, so that they're invisible to the user application. However, the data of such dropped objects remains available for the ledger verification process, and allows users to inspect any historical data through the corresponding ledger views. Dropping columns in ledger tables is captured in sys.ledger_column_history. Dropping a ledger table is captured in sys.ledger_table_history. Dropping ledger tables and its dependent objects are marked as dropped in system catalog views and renamed:
 
+- Dropped ledger tables are marked as dropped by setting `is_dropped_ledger_table` in **sys.tables** and renamed using the following format:` MSSQL_DroppedLedgerTable_<dropped_ledger_table_name>_<GUID>`.
+- Dropped history tables for updatable ledger tables are renamed using the following format: `MSSQL_DroppedLedgerHistory_<dropped_history_table_name>_<GUID>`.
+- Dropped ledger views are marked as dropped by setting `is_dropped_ledger_view` in **sys.views** and renamed using the following format: `MSSQL_DroppedLedgerView_<dropped_ledger_view_name>_<GUID>`.
 
 ### Altering Columns
 

@@ -31,8 +31,10 @@ This article provides information on configuring a [ledger database](ledger-over
 1. In the **Ledger** pane, select **Enable for all future tables in this database**. :::image type="content" source="media/ledger/enable-ledger-database.png" alt-text="Screenshot that shows the selection for enabling a ledger database.":::
 1. Click **Apply** to save this setting.
 
-# [T-SQL](#tab/PowerShell)
-### Enable ledger database
+# [T-SQL](#tab/t-sql)
+
+## Enable ledger database using T-SQL
+
 Open a query editor like SQL Server Management Studio or Azure Data Studio and connect to your logical SQL Server. The below example creates a General Purpose database. The WITH LEDGER=ON clause will create the ledger database.
 
 ```sql
@@ -47,7 +49,8 @@ GO
 ```
 
 # [PowerShell](#tab/PowerShell)
-### Enable ledger database
+
+## Enable ledger database using PowerShell
 
 Create a single ledger database with the [New-AzSqlDatabase](/powershell/module/az.sql/New-AzSqlDatabase) cmdlet.
 The below example creates a serverless database. The parameter -EnableLedger will create the ledger database.
@@ -66,8 +69,10 @@ $database = New-AzSqlDatabase  -ResourceGroupName $resourceGroupName `
     -EnableLedger
 $database
 ```
+
 # [Azure CLI](#tab/AzureCLI)
-### Enable ledger database
+
+## Enable ledger database using the Azure CLI
 
 Create a ledger database with the [az sql db create](/cli/azure/sql/db) command. The following command creates a serverless database with ledger enabled. *Note: Make sure you modify the parameters resource-group, server and name*
 
@@ -82,6 +87,7 @@ az sql db create \
     --compute-model Serverless \
     --ledger-on
 ```
+
 ---
 
 ## Next steps

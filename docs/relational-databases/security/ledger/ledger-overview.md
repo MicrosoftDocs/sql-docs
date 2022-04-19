@@ -120,7 +120,7 @@ Ideally, users should run ledger verification only when the organization that's 
 ## Next steps
 
 - [Create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md)
-- [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables)
+- [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md)
 - [Configure automatic database digests](ledger-how-to-configure-automatic-database-digest.md)
 - [Configure a ledger database](ledger-how-to-configure-ledger-database.md)
 - [Verify a ledger table to detect tampering](ledger-verify-database.md)

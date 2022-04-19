@@ -11,7 +11,7 @@ ms.custom:
   - seodec18
   - contperf-fy21q4
   - intro-overview
-ms.date: 03/17/2022 
+ms.date: 04/20/2022 
 ---
 
 # Download and install Azure Data Studio
@@ -26,23 +26,23 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 
 ## Download Azure Data Studio
 
-Azure Data Studio 1.35.1 is the latest general availability (GA) version.
+Azure Data Studio 1.36.0 is the latest general availability (GA) version.
 
-- Release number: 1.35.1
-- Release date: March 17, 2022
+- Release number: 1.36.0
+- Release date: April 20, 2022
 
 | Platform | Download |
 |----------|----------|
-| Windows | [User installer](https://go.microsoft.com/fwlink/?linkid=2187459) (recommended)<br>[System installer](https://go.microsoft.com/fwlink/?linkid=2187520)<br>[.zip file](https://go.microsoft.com/fwlink/?linkid=2187460) |
-| macOS | [.zip file](https://go.microsoft.com/fwlink/?linkid=2187461) |
-| Linux | [.deb file](https://go.microsoft.com/fwlink/?linkid=2187522)<br>[.rpm file](https://go.microsoft.com/fwlink/?linkid=2187521)<br>[.tar.gz file](https://go.microsoft.com/fwlink/?linkid=2187462) |
+| Windows | [User installer](https://go.microsoft.com/fwlink/?linkid=2193235) (recommended)<br>[System installer](https://go.microsoft.com/fwlink/?linkid=2193326)<br>[.zip file](https://go.microsoft.com/fwlink/?linkid=2193236) |
+| macOS | [.zip file](https://go.microsoft.com/fwlink/?linkid=2193237) |
+| Linux | [.deb file](https://go.microsoft.com/fwlink/?linkid=2193327)<br>[.rpm file](https://go.microsoft.com/fwlink/?linkid=2193238)<br>[.tar.gz file](https://go.microsoft.com/fwlink/?linkid=) |
 
 > [!Note]
 > Azure Data Studio currently does not support the ARM architecture.
 
 If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
 
-## Install Azure Data Studio 
+## Install Azure Data Studio
 
 ### Windows installation
 

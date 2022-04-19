@@ -16,7 +16,7 @@ ms.custom: seo-dt-2019
 # Configure SQL Server Agent mail to use Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This topic describes how to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to use [Database Mail](database-mail.md) to send notification and alerts in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+  This article describes how to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to use [Database Mail](database-mail.md) to send notification and alerts in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
 - For information on how to enable and configure Database Mail, see [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md). 
 - For an example using [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).
@@ -45,7 +45,7 @@ The following steps are not necessary in [!INCLUDE[ssazuremi_md](../../includes/
  
 -   In Object Explorer, expand a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
--   Right-click **SQL Server Agent**, and then click **Properties**.  
+-   Right-click **SQL Server Agent**, and then select **Properties**.  
   
 -   Select **Alert System**.  
   

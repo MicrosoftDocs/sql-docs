@@ -42,16 +42,16 @@ ms.author: wiassaf
 ---
 # Configure Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to enable and configure [Database Mail](database-mail.md) using the Database Mail Configuration Wizard, and create a Database Mail Configuration script using templates.  
+  This article describes how to enable and configure [Database Mail](database-mail.md) using the Database Mail Configuration Wizard, and create a Database Mail Configuration script using templates.  
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
- Use the **DatabaseMail XPs** option to enable Database Mail on this server. For more information, see [Database Mail XPs Server Configuration Option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) reference topic.  
+ Use the **DatabaseMail XPs** option to enable Database Mail on this server. For more information, see [Database Mail XPs Server Configuration Option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) reference article.  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
  Enabling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker in any database requires a database lock. If Service Broker was deactivated in `msdb`, to enable Database Mail, first stop [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent so Service Broker can obtain the necessary lock.  
   
 ###  <a name="Security"></a> Security  
- To configure Database Mail you must be a member of the **sysadmin** fixed server role. To send Database Mail you must be a member of the **DatabaseMailUserRole** database role in the `msdb` database.  
+ To configure Database Mail, you must be a member of the **sysadmin** fixed server role. To send an email with Database Mail, you must be a member of the **DatabaseMailUserRole** database role in the `msdb` database.  
   
 ##  <a name="DBWizard"></a> Use the Database Mail Configuration Wizard  
 
@@ -160,7 +160,7 @@ ms.author: wiassaf
  Specify the user name and password required by the SMTP server.  
   
  **User name**  
- Type the user name that Database Mail uses to log in to the SMTP server. The user name is required if the SMTP server requires basic authentication.  
+ Type the user name that Database Mail uses to sign in to the SMTP server. The user name is required if the SMTP server requires basic authentication.  
   
  **Password**  
  Type the password that Database Mail uses to log in to the SMTP server. The password is required if the SMTP server requires basic authentication.  
@@ -238,7 +238,7 @@ ms.author: wiassaf
  Type a description for the profile. The description is optional.  
   
  **SMTP accounts**  
- Choose one or more accounts for the profile. The priority sets the order in which Database Mail uses the accounts. If no accounts are listed, you must click **Add** to continue, and add a new SMTP account.  
+ Choose one or more accounts for the profile. The priority sets the order in which Database Mail uses the accounts. If no accounts are listed, you must select **Add** to continue, and add a new SMTP account.  
   
  **Add**  
  Add an account to the profile.  
@@ -257,7 +257,7 @@ ms.author: wiassaf
 ###  <a name="ExistingProfile"></a> Manage Existing Profile page  
  Use this page to manage an existing Database Mail profile. A Database Mail profile is a collection of Database Mail accounts. Profiles improve reliability in cases where an e-mail server becomes unreachable, by providing alternative Database Mail accounts. At least one Database Mail account is required. For more information about setting the priority of Database Mail accounts in the profile, see [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).  
   
- Use the **Move Up** and **Move Down** buttons to change the order in which Database Mail accounts are used. This order is determined by a value called the sequence number. **Move Up** lowers the sequence number and **Move Down** increases the sequence number. The sequence number determines the order in which Database Mail uses accounts in the profile. For a new e-mail message, Database Mail starts with the account that has the lowest sequence number. Should that account fail, Database Mail uses the account with the next highest sequence number, and so on until either Database Mail sends the message successfully, or the account with the highest sequence number fails. If the account with the highest sequence number fails, the Database Mail pauses attempts to send the mail for the amount of time configured in the Database Mail **AccountRetryDelay** parameter, then starts the process of attempting to send the mail again, starting with the lowest sequence number. Use the Database Mail **AccountRetryAttempts** parameter, to configure the number of times that the external mail process attempts to send the e-mail message using each account in the specified profile. You can configure the **AccountRetryDelay** and **AccountRetryAttempts** parameters on the **Configure System Parameters** page of the Database Mail Configuration Wizard.  
+ Use the **Move Up** and **Move Down** buttons to change the order in which Database Mail accounts are used. This order is determined by a value called the sequence number. **Move Up** lowers the sequence number and **Move Down** increases the sequence number. The sequence number determines the order in which Database Mail uses accounts in the profile. For a new e-mail message, Database Mail starts with the account that has the lowest sequence number. Should that account fail, Database Mail uses the account with the next highest sequence number, and so on, until either Database Mail sends the message successfully, or the account with the highest sequence number fails. If the account with the highest sequence number fails, the Database Mail pauses attempts to send the mail for the amount of time configured in the Database Mail **AccountRetryDelay** parameter, then starts the process of attempting to send the mail again, starting with the lowest sequence number. Use the Database Mail **AccountRetryAttempts** parameter, to configure the number of times that the external mail process attempts to send the e-mail message using each account in the specified profile. You can configure the **AccountRetryDelay** and **AccountRetryAttempts** parameters on the **Configure System Parameters** page of the Database Mail Configuration Wizard.  
   
  **Profile name**  
  Select the name of the profile to manage.  
@@ -295,7 +295,7 @@ ms.author: wiassaf
   
   
 ###  <a name="AddAccount"></a> Add Account to Profile Page  
- Use this page to choose the account to add to the profile. Either choose an existing account from the **Account name** box, or click **New Account**.  
+ Use this page to choose the account to add to the profile. Either choose an existing account from the **Account name** box, or select **New Account**.  
   
  **Account name**  
  Select the name of the account to add to the profile.  
@@ -390,7 +390,7 @@ ms.author: wiassaf
  The maximum size of an attachment, in bytes.  
   
  **Prohibited Attachment File Extensions**  
- A comma-separated list of extensions which cannot be sent as an attachment to an e-mail message. Click the browse button (**...**) to add additional extensions.  
+ A comma-separated list of extensions that cannot be sent as an attachment to an e-mail message. Select the browse button (**...**) to add additional extensions.  
   
  **Database Mail Executable Minimum Lifetime (seconds)**  
  The minimum amount of time, in seconds, that the external mail process remains active. The process remains active as long as there are e-mails in the Database Mail queue. This parameter specifies the time the process remains active if there are no messages to process.  
@@ -437,8 +437,7 @@ ms.author: wiassaf
  The **mailitem_id** of the test e-mail message.  
   
  **Troubleshoot**  
- Click to open Books Online to the [Troubleshooting Database Mail](/previous-versions/sql/sql-server-2008-r2/ms188663(v=sql.105))topic.  
-  
+ Opens this Docs article.
   
   
 ##  <a name="Template"></a> Use SQL Server Management Studio templates to generate T-SQL

@@ -197,7 +197,7 @@ You can't perform a point-in-time restore on a geo-secondary database. You can d
 > [!IMPORTANT]
 > Geo-restore is the most basic disaster-recovery solution available in SQL Database and SQL Managed Instance. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) up to 1 hour and an estimated recovery time of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and is not critical to the business, geo-restore is an appropriate disaster-recovery solution. 
 >
-> For business-critical applications that require large databases and must ensure business continuity, use [Auto-failover groups](auto-failover-group-overview.md). It offers a much lower RPO and recovery time objective, and the capacity is always guaranteed. 
+> For business-critical applications that require large databases and must ensure business continuity, use [Auto-failover groups](auto-failover-group-sql-db.md). It offers a much lower RPO and recovery time objective, and the capacity is always guaranteed. 
 >
 > For more information about business continuity choices, see [Overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 
@@ -266,4 +266,4 @@ Automatic backups protect your databases from user and application errors, accid
 - [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md)
 - [SQL Database automated backups](automated-backups-overview.md)
 - [Long-term retention](long-term-retention-overview.md)
-- To learn about faster recovery options, see [Active geo-replication](active-geo-replication-overview.md) or [Auto-failover groups](auto-failover-group-overview.md).
+- To learn about faster recovery options, see [Active geo-replication](active-geo-replication-overview.md) or [Auto-failover groups](auto-failover-group-sql-db.md).

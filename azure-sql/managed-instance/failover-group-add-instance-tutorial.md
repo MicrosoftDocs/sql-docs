@@ -1164,7 +1164,7 @@ In this tutorial, you configured a failover group between two managed instances.
 
 > [!div class="checklist"]
 > - Create a primary managed instance.
-> - Create a secondary managed instance as part of a [failover group](../database/auto-failover-group-overview.md). 
+> - Create a secondary managed instance as part of a [failover group](auto-failover-group-sql-mi.md). 
 > - Test failover.
 
 Advance to the next quickstart on how to connect to SQL Managed Instance, and how to restore a database to SQL Managed Instance: 

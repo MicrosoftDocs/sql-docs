@@ -170,7 +170,7 @@ Once the move completes, remove the resources in the source region to avoid unne
 
 Create a failover group between each source managed instance and the corresponding target instance of SQL Managed Instance.
 
-Replication of all databases on each instance will be initiated automatically. For more information, see [Auto-failover groups](auto-failover-group-overview.md).
+Replication of all databases on each instance will be initiated automatically. For more information, see [Auto-failover groups](auto-failover-group-sql-db.md).
 
 ### Monitor the preparation process
 

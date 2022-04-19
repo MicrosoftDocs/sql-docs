@@ -175,7 +175,7 @@ This portion of the tutorial uses the following Azure CLI cmdlets:
 
 ## 3 - Create the failover group
 
-In this step, you'll create a [failover group](auto-failover-group-overview.md) between an existing server and a new server in another region. Then add the elastic pool to the failover group.
+In this step, you'll create a [failover group](auto-failover-group-sql-db.md) between an existing server and a new server in another region. Then add the elastic pool to the failover group.
 
 # [Azure portal](#tab/azure-portal)
 
@@ -567,7 +567,7 @@ In this tutorial, you added an Azure SQL Database elastic pool to a failover gro
 >
 > - Create a single database.
 > - Add the database into an elastic pool.
-> - Create a [failover group](auto-failover-group-overview.md) for two elastic pools between two servers.
+> - Create a [failover group](auto-failover-group-sql-db.md) for two elastic pools between two servers.
 > - Test failover.
 
 Advance to the next tutorial on how to migrate using DMS.

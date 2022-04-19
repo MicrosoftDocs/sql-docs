@@ -162,7 +162,7 @@ These are the current limitations of the Hyperscale service tier.  We're activel
 | SQL Managed Instance | Azure SQL Managed Instance isn't currently supported with Hyperscale databases. |
 | Elastic Pools |  Elastic Pools aren't currently supported with Hyperscale.|
 | Migration of databases with In-Memory OLTP objects | Hyperscale supports a subset of In-Memory OLTP objects, including memory-optimized table types, table variables, and natively compiled modules. However, when any kind of In-Memory OLTP objects are present in the database being migrated, migration from Premium and Business Critical service tiers to Hyperscale is not supported. To migrate such a database to Hyperscale, all In-Memory OLTP objects and their dependencies must be dropped. After the database is migrated, these objects can be recreated. Durable and non-durable memory-optimized tables are not currently supported in Hyperscale, and must be changed to disk tables.|
-| Geo-replication | [Geo-replication](active-geo-replication-overview.md) and [auto-failover groups](auto-failover-group-overview.md) on Hyperscale is now in public preview. |
+| Geo-replication | [Geo-replication](active-geo-replication-overview.md) and [auto-failover groups](auto-failover-group-sql-db.md) on Hyperscale is now in public preview. |
 | Intelligent Database Features | With the exception of the "Force Plan" option, all other Automatic Tuning options aren't yet supported on Hyperscale: options may appear to be enabled, but there won't be any recommendations or actions made. |
 | Query Performance Insights | Query Performance Insights is currently not supported for Hyperscale databases. |
 | Shrink Database | DBCC SHRINKDATABASE or DBCC SHRINKFILE isn't currently supported for Hyperscale databases. |

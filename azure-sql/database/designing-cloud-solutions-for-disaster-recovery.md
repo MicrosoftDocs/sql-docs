@@ -16,7 +16,7 @@ ms.date: 07/28/2020
 # Designing globally available services using Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-When building and deploying cloud services with Azure SQL Database, you use [active geo-replication](active-geo-replication-overview.md) or [auto-failover groups](auto-failover-group-overview.md) to provide resilience to regional outages and catastrophic failures. The same feature allows you to create globally distributed applications optimized for local access to the data. This article discusses common application patterns, including the benefits and trade-offs of each option.
+When building and deploying cloud services with Azure SQL Database, you use [active geo-replication](active-geo-replication-overview.md) or [auto-failover groups](auto-failover-group-sql-db.md) to provide resilience to regional outages and catastrophic failures. The same feature allows you to create globally distributed applications optimized for local access to the data. This article discusses common application patterns, including the benefits and trade-offs of each option.
 
 > [!NOTE]
 > If you are using Premium or Business Critical databases and elastic pools, you can make them resilient to regional outages by converting them to zone redundant deployment configuration. See [Zone-redundant databases](high-availability-sla.md).  
@@ -165,5 +165,5 @@ Your specific cloud disaster recovery strategy can combine or extend these desig
 
 * For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md)
 * To learn about active geo-replication, see [Active geo-replication](active-geo-replication-overview.md).
-* To learn about auto-failover groups, see [Auto-failover groups](auto-failover-group-overview.md).
+* To learn about auto-failover groups, see [Auto-failover groups](auto-failover-group-sql-db.md).
 * For information about active geo-replication with elastic pools, see [Elastic pool disaster recovery strategies](disaster-recovery-strategies-for-applications-with-elastic-pool.md).

@@ -79,7 +79,7 @@ ESUs don't include technical support, but you can use an active support contract
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] cannot provide technical support for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances (both on-premises, and in hosting environments) that are not covered with an ESU subscription.
 
-## ESU Availability and Deployment
+## ESU availability and deployment
 
 ESUs are available to customers running their workload in Azure, on-premises, or hosted environments.
 
@@ -268,7 +268,7 @@ The following list shows the supported regions for this service:
 - West US 2
 - West US 3
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 General frequently asked questions about Extended Security updates can be found at the [Extended security updates FAQ](https://www.microsoft.com/cloud-platform/extended-security-updates). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific frequently asked questions are listed below.
 
@@ -320,7 +320,7 @@ For customers who don't have Software Assurance, the alternative option to get a
 
 **Does this offer apply to older versions of SQL Server?**
 
-No. For versions before [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] we we recommend upgrading to the latest supported versions, but customers can upgrade to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to take advantage of this offer.
+No. For versions before [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] we recommend upgrading to the latest supported versions, but customers can upgrade to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to take advantage of this offer.
 
 > [!TIP]  
 > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.

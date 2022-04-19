@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016"
 
 There are several approaches to consider when you are planning to upgrade the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from a prior release of SQL Server in order to minimize downtime and risk. You can perform an upgrade in-place, migrate to a new installation, or perform a rolling upgrade. The following diagram will help you to choose amongst these approaches. Each of the approaches in the diagram are also discussed below. To assist you with the decision points in the diagram, please also review [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).
 
-:::image type="content" source="../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png" alt-text="Database Engine Upgrade Method Decision Tree":::
+:::image type="content" source="../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png" alt-text="Diagram that shows a Database Engine Upgrade Method Decision Tree.":::
 
 ## Download
 
@@ -27,10 +27,10 @@ There are several approaches to consider when you are planning to upgrade the [!
 
 > [!NOTE]  
 > You may also consider upgrading the Azure SQL Database or virtualizing your SQL Server environment as part of your upgrade plan. These articles are out of scope for this article, but here are some links:
-
-> - [SQL Server on Azure Virtual Machines overview](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
-> - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
-> - [Selecting a SQL Server option in Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview).
+>  
+>- [SQL Server on Azure Virtual Machines overview](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
+>- [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
+>- [Selecting a SQL Server option in Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview).
 
 ## Upgrade in-place
 
@@ -48,7 +48,7 @@ This approach is frequently used in the following scenarios:
 
 The following diagram provides a high-level overview of the steps required for an in-place upgrade of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-:::image type="content" source="../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png" alt-text="Database Engine Upgrade Non-HA In-Place Upgrade":::
+:::image type="content" source="../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png" alt-text="Diagram that shows a Database Engine Upgrade Non-HA In-Place Upgrade.":::
 
 For detailed steps, see [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).
 
@@ -92,11 +92,11 @@ The steps required for a new installation upgrade vary slightly depending upon w
 
 - **Attached storage environment:** If you have a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment using attached storage, the following diagram and the links within the diagram to guide you through the steps required for a new installation upgrade of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-    :::image type="content" source="../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png" alt-text="New installation upgrade method using backup and restore for attached storage":::
+    :::image type="content" source="../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png" alt-text="Diagram that shows a new installation upgrade method using backup and restore for attached storage.":::
 
 - **SAN storage environment:**  If you have a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment using SAN storage, the following diagram and the links within the diagram to guide you through the steps required for a new installation upgrade of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-    :::image type="content" source="../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png" alt-text="New installation upgrade method using detach and attach for SAN storage":::
+    :::image type="content" source="../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png" alt-text="Diagram that shows a new installation upgrade method using detach and attach for SAN storage.":::
 
 ## Rolling upgrade
 

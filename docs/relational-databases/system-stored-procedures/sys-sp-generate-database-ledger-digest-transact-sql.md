@@ -29,6 +29,8 @@ For more information on database ledger, see [Azure SQL Database ledger](/azure/
 ```syntaxsql
 EXEC sys.sp_generate_database_ledger_digest
 ```
+## Arguments
+None
 
 ## Return code values
 
@@ -58,11 +60,5 @@ Users with the **public** role are allowed to execute this stored procedure.
 
 ## See also
 
-- [sys.database_ledger_transactions (Transact-SQL)](../system-catalog-views/sys-database-ledger-transactions-transact-sql.md)
-- [sys.database_ledger_blocks (Transact-SQL)](../system-catalog-views/sys-database-ledger-blocks-transact-sql.md)
-- [sys.ledger_table_history (Transact-SQL)](../system-catalog-views/sys-ledger-table-history-transact-sql.md)
-- [sys.ledger_column_history (Transact-SQL)](../system-catalog-views/sys-ledger-column-history-transact-sql.md)
-- [sys.database_ledger_digest_locations (Transact-SQL)](../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)
-- [sys.sp_verify_database_ledger (Transact-SQL)](sys-sp-verify-database-ledger-transact-sql.md)
-- [sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)](sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)
-- [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+- [Digest Management](/docs/relational-databases/security/ledger/ledger-digest-management.md)
+- [Ledger Overview](/doc/relational-databases/security/ledger/ledger-overview.md)

@@ -1019,7 +1019,7 @@ Specifies how the point-in-time restore and long-term retention backups for a da
 
 #### LEDGER = {ON | OFF}
 
-When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created.
+When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. See [Configure a ledger database](docs\relational-databases\security\ledger\ledger-how-to-configure-ledger-database.md).
 
 #### MAXSIZE
 Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.
@@ -1330,7 +1330,7 @@ CREATE DATABASE test_zone_redundancy
 ### Create a ledger database
 
 ```sql
-CREATEDATABASE MyLedgerDB ( EDITION = 'GeneralPurpose' ) WITH LEDGER = ON;
+CREATE DATABASE MyLedgerDB ( EDITION = 'GeneralPurpose' ) WITH LEDGER = ON;
 ```
 
 ## See also

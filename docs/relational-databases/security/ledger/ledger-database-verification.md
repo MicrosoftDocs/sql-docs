@@ -80,6 +80,7 @@ Return codes for `sp_verify_database_ledger` and `sp_verify_database_ledger_from
 ## Next steps
 
 - [Ledger overview](ledger-overview.md)
-- [Updatable ledger tables](ledger-updatable-ledger-tables.md)   
-- [Append-only ledger tables](ledger-append-only-ledger-tables.md)   
-- [Database ledger](ledger-database-ledger.md)
+- [Verify a ledger table to detect tampering](ledger-verify-database.md)
+- [sys.database_ledger_digest_locations](/sql/relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql)
+- [sp_verify_database_ledger_from_digest_storage](/sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql)
+- [sp_verify_database_ledger](/sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql)

@@ -1,6 +1,6 @@
 ---
-title: "Limitations for Azure SQL Database ledger"
-description: Limitations of the ledger feature in Azure SQL Database
+title: "Limitations for ledger"
+description: Limitations of the ledger feature
 ms.date: "04/05/2022"
 ms.service: sql-database
 ms.subservice: security
@@ -80,7 +80,7 @@ Ledger tables are based on the technology of [Temporal Tables](https://docs.micr
     - Permissions
     - Row-level security predicates 
 
-## Schema changes limitations
+## Schema changes consideration
 
 ### Adding columns
 
@@ -114,8 +114,8 @@ Dropping the link between the primary and the secondaries when ledger digests ar
 
 ## Next steps
 
+- [Ledger Overview](ledger-overview.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
 - [Database ledger](ledger-database-ledger.md)
-- [Digest management](ledger-digest-management.md)
-- [Database verification](ledger-database-verification.md)
+

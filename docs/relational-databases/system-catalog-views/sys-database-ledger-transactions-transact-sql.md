@@ -36,12 +36,5 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 
-- [sys.database_ledger_blocks (Transact-SQL)](sys-database-ledger-blocks-transact-sql.md)
-- [sys.ledger_table_history (Transact-SQL)](sys-ledger-table-history-transact-sql.md)
-- [sys.ledger_column_history (Transact-SQL)](sys-ledger-column-history-transact-sql.md)
-- [sys.database_ledger_digest_locations (Transact-SQL)](sys-database-ledger-digest-locations-transact-sql.md)
-- [sys.sp_generate_database_ledger_digest (Transact-SQL)](../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md)
-- [sys.sp_verify_database_ledger (Transact-SQL)](../system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md)
-- [sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)](../system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql.md)
-- [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
-
+- [What is the database ledger?](/docs/relational-databases/security/ledger/ledger-database-ledger.md)
+- [Ledger Overview](/docs/relational-databases/security/ledger/ledger-overview.md)

@@ -15,7 +15,7 @@ ms.date: "04/05/2022"
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-In this article, we will describe how you can configure a [ledger database](ledger-overview.md)  through the Azure portal, PowerShell, or the Azure CLI.
+In this article, we will describe how you can configure a [ledger database](ledger-overview.md) through the Azure portal, T-SQL,PowerShell, or the Azure CLI.
 
 ## Prerequisites
 
@@ -29,7 +29,22 @@ In this article, we will describe how you can configure a [ledger database](ledg
 1. Open the [Azure portal](https://portal.azure.com/) and locate the database for which you want to enable automatic digest storage. Select that database in SQL Database.
 1. In **Security**, select the **Ledger** option. :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected."::: 
 1. In the **Ledger** pane, select **Enable for all future tables in this database**. :::image type="content" source="media/ledger/enable-ledger-database.png" alt-text="Screenshot that shows the selection for enabling a ledger database.":::
-1. Click **Apply** to save this setting. 
+1. Click **Apply** to save this setting.
+
+# [T-SQL](#tab/PowerShell)
+### Enable ledger database
+Open a query editor like SQL Server Management Studio or Azure Data Studio and connect to your logical SQL Server. The below example creates a General Purpose database. The WITH LEDGER=ON clause will create the ledger database.
+
+```sql
+CREATE DATABASE Database01
+	(
+	  EDITION = 'GeneralPurpose',
+	  SERVICE_OBJECTIVE='GP_Gen5_2',
+	  MAXSIZE = 2 GB
+	)
+	WITH LEDGER = ON;
+GO 
+```
 
 # [PowerShell](#tab/PowerShell)
 ### Enable ledger database
@@ -72,8 +87,3 @@ az sql db create \
 ## Next steps
 
 - [Ledger overview](ledger-overview.md)
-- [SQL Database ledger](ledger-database-ledger.md)
-- [Digest management](ledger-digest-management.md)
-- [Database verification](ledger-database-verification.md)
-- [Append-only ledger tables](ledger-append-only-ledger-tables.md)
-- [Updatable ledger tables](ledger-updatable-ledger-tables.md)

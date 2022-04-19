@@ -64,8 +64,7 @@ az sql db ledger-digest-uploads enable \
 ## Next steps
 
 - [Ledger overview](ledger-overview.md)
-- [SQL Database ledger](ledger-database-ledger.md)
 - [Digest management](ledger-digest-management.md)
-- [Database verification](ledger-database-verification.md)
-- [Append-only ledger tables](ledger-append-only-ledger-tables.md)
-- [Updatable ledger tables](ledger-updatable-ledger-tables.md)
+- [Verify a ledger table to detect tampering](ledger-verify-database.md)
+- [sys.database_ledger_digest_locations](/sql/relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql)
+- [sp_verify_database_ledger_from_digest_storage](/sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql)

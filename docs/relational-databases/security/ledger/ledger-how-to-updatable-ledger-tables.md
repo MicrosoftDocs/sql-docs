@@ -145,9 +145,5 @@ We'll create an account balance table with the following schema.
 ## Next steps
 
 - [Database ledger](ledger-database-ledger.md)
-- [Digest management](ledger-digest-management.md)
-- [Database verification](ledger-database-verification.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
-- [Create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md)
-- [Verify a ledger table to detect tampering](ledger-verify-database.md)

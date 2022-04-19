@@ -59,6 +59,5 @@ The returned result set is a single row of data. It should be saved to the trust
 ## Next steps
 
 - [Ledger overview](ledger-overview.md)
-- [Updatable ledger tables](ledger-updatable-ledger-tables.md)   
-- [Append-only ledger tables](ledger-append-only-ledger-tables.md)   
-- [Database ledger](ledger-database-ledger.md)
+- [Configure automatic database digests](ledger-how-to-configure-automatic-database-digest.md)
+- [sys.sp_generate_database_ledger_digest](/sql/relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql)

@@ -1,6 +1,6 @@
 ---
 title: "Create and use append-only ledger tables"
-description: Learn how to create and use append-only ledger tables in Azure SQL Database.
+description: Learn how to create and use append-only ledger tables.
 ms.date: "04/05/2022"
 ms.service: sql-database
 ms.subservice: security
@@ -95,10 +95,4 @@ We'll create a `KeyCardEvents` table with the following schema.
 
 ## Next steps
 
-- [Database ledger](ledger-database-ledger.md) 
-- [Digest management](ledger-digest-management.md)
-- [Database verification](ledger-database-verification.md)
-- [Append-only ledger tables](ledger-append-only-ledger-tables.md) 
-- [Updatable ledger tables](ledger-updatable-ledger-tables.md)
-- [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md)
-- [Verify a ledger table to detect tampering](ledger-verify-database.md)
+- [Append-only ledger tables](ledger-append-only-ledger-tables.md)

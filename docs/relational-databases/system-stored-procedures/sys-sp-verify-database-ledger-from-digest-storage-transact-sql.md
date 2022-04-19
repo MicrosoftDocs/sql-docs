@@ -56,7 +56,7 @@ Example of the input JSON document:
 
 ## Result sets
 
-None.
+1 row with 1 column called: last_verified_block_id
 
 ## Permissions
 
@@ -64,11 +64,6 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 
-- [sys.database_ledger_transactions (Transact-SQL)](../system-catalog-views/sys-database-ledger-transactions-transact-sql.md)
-- [sys.database_ledger_blocks (Transact-SQL)](../system-catalog-views/sys-database-ledger-blocks-transact-sql.md)
-- [sys.ledger_table_history (Transact-SQL)](../system-catalog-views/sys-ledger-table-history-transact-sql.md)
-- [sys.ledger_column_history (Transact-SQL)](../system-catalog-views/sys-ledger-column-history-transact-sql.md)
-- [sys.database_ledger_digest_locations (Transact-SQL)](../system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)
-- [sys.sp_generate_database_ledger_digest (Transact-SQL)](sys-sp-generate-database-ledger-digest-transact-sql.md)
-- [sys.sp_verify_database_ledger (Transact-SQL)](sys-sp-verify-database-ledger-transact-sql.md)
-- [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+- [Database Verification](/docs/relational-databases/security/ledger/ledger-database-verification.md)
+- [Verify a ledger table to detect tampering](/docs/relational-databases/security/ledger/ledger-verify-database.md)
+- [Ledger Overview](/doc/relational-databases/security/ledger/ledger-overview.md)

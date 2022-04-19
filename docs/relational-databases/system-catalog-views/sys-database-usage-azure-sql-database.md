@@ -36,11 +36,14 @@ monikerRange: "= azuresqldb-current"
 |sku|This column is unused and is preserved for backwards compatibility.|  
 |quantity|This column is unused and is preserved for backwards compatibility.|  
  
+## See also
+
+- [Diagnose and troubleshoot high CPU on Azure SQL Database](/azure/azure-sql/database/high-cpu-diagnose-troubleshoot)
+- [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking)
+
 ## Next steps
 
 Learn more about Azure SQL Database in the following articles:
 
 - [Azure SQL Database Catalog Views](azure-sql-database-catalog-views.md)
 - [sys.resource_stats (Azure SQL Database)](sys-resource-stats-azure-sql-database.md)
-- [Diagnose and troubleshoot high CPU on Azure SQL Database](/azure/azure-sql/database/high-cpu-diagnose-troubleshoot)
-- [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking)

@@ -39,12 +39,15 @@ monikerRange: "= azuresqldb-current"
 |**time_period**|This column is unused and is preserved for backwards compatibility.|  
 |**quantity**|This column is unused and is preserved for backwards compatibility.|  
   
+## See also
+
+- [Azure SQL Database and Azure Synapse Analytics connectivity architecture](/azure/azure-sql/database/connectivity-architecture)
+- [Diagnose and troubleshoot high CPU on Azure SQL Database](/azure/azure-sql/database/high-cpu-diagnose-troubleshoot)
+
 ## Next steps
 
 Learn more about Azure SQL Database in the following articles:
 
 - [Azure SQL Database Catalog Views](azure-sql-database-catalog-views.md)
 - [sys.database_connection_stats (Azure SQL Database)](sys-database-connection-stats-azure-sql-database.md)
-- [Azure SQL Database and Azure Synapse Analytics connectivity architecture](/azure/azure-sql/database/connectivity-architecture)
 - [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/troubleshoot-common-errors-issues)
-- [Diagnose and troubleshoot high CPU on Azure SQL Database](/azure/azure-sql/database/high-cpu-diagnose-troubleshoot)

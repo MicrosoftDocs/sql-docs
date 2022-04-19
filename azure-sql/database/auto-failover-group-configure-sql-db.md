@@ -397,7 +397,7 @@ To illustrate the change sequence, we will assume server A is the primary server
 
 <!--
 There is some overlap of content in the following articles, be sure to make changes to all if necessary:
-/azure-sql/auto-failover-group-overview.md
+/azure-sql/auto-failover-group-sql-db.md
 /azure-sql/database/auto-failover-group-sql-db.md
 /azure-sql/database/auto-failover-group-configure-sql-db.md
 /azure-sql/managed-instance/auto-failover-group-sql-mi.md

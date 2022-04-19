@@ -31,7 +31,7 @@ To get started, review [Configure auto-failover group](auto-failover-group-confi
 
 ## Overview
 
-[!INCLUDE [auto-failover-groups-overview](../includes/auto-failover-group-overview.md)]
+[!INCLUDE [auto-failover-groups-overview](../includes/auto-failover-group-sql-db.md)]
 
 
 ## <a name="terminology-and-capabilities"></a> Terminology and capabilities

@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "data classification"
   - "rank"
 ms.custom: ""
-ms.date: 06/10/2020
+ms.date: 04/19/2022
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || =azure-sqldw-latest"
 ---
 

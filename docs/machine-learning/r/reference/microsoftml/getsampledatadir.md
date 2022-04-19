@@ -4,8 +4,8 @@
 title: "getSampleDataDir function (MicrosoftML) " 
 description: " Location where downloaded sample data is stored. " 
 keywords: "(MicrosoftML), getSampleDataDir, transform" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "rothja"
+ms.author: "jroth" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

@@ -39,7 +39,7 @@ ms.custom: seo-dt-2019
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
 
-The following steps are not necessary in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], which is already configured to look for a profile called `AzureManagedInstance_dbmail_profile`.
+The following steps are not necessary in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], which is already configured to look for a profile called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
 
  **To configure SQL Server Agent to use Database Mail in SQL Server**  
  

@@ -50,7 +50,6 @@ Azure Data Studio 1.36.0 is the latest general availability (GA) release.
 | Notebooks | Fixed keyboard navigation issues|
 | Notebooks | Fixed .NET Interactive log errors on startup|
 | Notebooks | Fixed inconsistencies with notebook URI handling|
-| SQL Binding| Fixed time out issues as a result of introducing SQL Bindings |
 
 For a full list of bug fixes addressed for the April 2022 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/84?closed=1).
 

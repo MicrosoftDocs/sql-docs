@@ -79,7 +79,7 @@ To create a service endpoint policy, follow these steps:
 1. Select **+ Create a resource**. 
 1. In the search pane, enter _service endpoint policy_, select **Service endpoint policy**, and then select **Create**.
 
-   ![Create service endpoint policy](media/service-endpoint-policies-configure/create-sep-resource.png)
+   ![Create service endpoint policy](media/service-endpoint-policies-configure/create-sep-add-resource.png)
 
 1. Fill in the following values on the **Basics** page:
 

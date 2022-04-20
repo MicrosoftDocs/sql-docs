@@ -158,7 +158,7 @@ Azure Data Studio 1.34.0 is the latest general availability (GA) release.
 
 | New item | Details |
 |----------|---------|
-| SQL Migration extension | Added 'Currently restoring backup file' in the migration progress details page of Azure SQL Migration extension when backup files location is Azure Storage blob container |
+| SQL Migration extension | Added 'Currently restoring backup file' in the migration progress details page of Azure SQL migration extension when backup files location is Azure Storage blob container |
 | Notebooks | Added undo/redo support |
 | SQL Database Projects extension | Support for project build with .NET 6 in SQL Database Projects extension |
 | SQL Database Projects extension | Publish to container in SQL Database Projects extension |
@@ -170,9 +170,9 @@ Azure Data Studio 1.34.0 is the latest general availability (GA) release.
 
 | New Item | Details |
 |----------|---------|
-| SQL Migration | Fix for multiple database migrations when using network share as backup files location in Azure SQL Migration extension |
-| SQL Migration | Fix for multiple database migrations when using blob storage containers as backup files location in Azure SQL Migration extension |
-| SQL Migration| Fix to pre-populate target database names in the migration wizard in Azure SQL Migration extension |
+| SQL Migration | Fix for multiple database migrations when using network share as backup files location in Azure SQL migration extension |
+| SQL Migration | Fix for multiple database migrations when using blob storage containers as backup files location in Azure SQL migration extension |
+| SQL Migration| Fix to pre-populate target database names in the migration wizard in Azure SQL migration extension |
 | Grid | Fix to column sorting in grids where the presence of null values could lead to unexpected results |
 | Notebooks | Fix for Python upgrades when two or more notebooks were open |
 

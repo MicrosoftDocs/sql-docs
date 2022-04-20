@@ -33,15 +33,15 @@ Consider the following prerequisites:
 - The subnet range for the secondary virtual network must not overlap the subnet range of the primary virtual network.
 - The collation and time zone of the secondary managed instance must match that of the primary managed instance.
 - When connecting the two gateways, the **Shared Key** should be the same for both connections.
-- You'll need to either configure [ExpressRoute](../../expressroute/expressroute-howto-circuit-portal-resource-manager.md) or create a gateway for the virtual network of each SQL Managed Instance, connect the two gateways, and then create the failover group. 
-- Deploy both managed instances to [paired regions](../../availability-zones/cross-region-replication-azure.md) for performance reasons. Managed instances residing in geo-paired regions have much better performance compared to unpaired regions. 
+- You'll need to either configure [ExpressRoute](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager) or create a gateway for the virtual network of each SQL Managed Instance, connect the two gateways, and then create the failover group. 
+- Deploy both managed instances to [paired regions](/azure/availability-zones/cross-region-replication-azure) for performance reasons. Managed instances residing in geo-paired regions have much better performance compared to unpaired regions. 
 
 ## Create primary virtual network gateway
 
-If you haven't configured [ExpressRoute](../../expressroute/expressroute-howto-circuit-portal-resource-manager.md), you can create the primary virtual network gateway with the Azure portal, or PowerShell.
+If you haven't configured [ExpressRoute](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager), you can create the primary virtual network gateway with the Azure portal, or PowerShell.
 
 > [!NOTE]
-> The SKU of the gateway affects throughput performance. This article deploys a gateway with the most basic SKU (`HwGw1`). Deploy a higher SKU (example: `VpnGw3`) to achieve higher throughput. For all available options, see [Gateway SKUs](../../vpn-gateway/vpn-gateway-about-vpngateways.md#benchmark) 
+> The SKU of the gateway affects throughput performance. This article deploys a gateway with the most basic SKU (`HwGw1`). Deploy a higher SKU (example: `VpnGw3`) to achieve higher throughput. For all available options, see [Gateway SKUs](/azure/vpn-gateway/vpn-gateway-about-vpngateways#benchmark) 
 
 # [Portal](#tab/azure-portal)
 
@@ -348,7 +348,7 @@ The listener endpoint is in the form of `fog-name.database.windows.net`, and is 
 
 ## <a name="creating-a-failover-group-between-managed-instances-in-different-subscriptions"></a> Create group between instances in different subscriptions
 
-You can create a failover group between SQL Managed Instances in two different subscriptions, as long as subscriptions are associated to the same [Azure Active Directory Tenant](../../active-directory/fundamentals/active-directory-whatis.md#terminology). When using PowerShell API, you can do it by specifying the `PartnerSubscriptionId` parameter for the secondary SQL Managed Instance. When using REST API, each instance ID included in the `properties.managedInstancePairs` parameter can have its own Subscription ID.
+You can create a failover group between SQL Managed Instances in two different subscriptions, as long as subscriptions are associated to the same [Azure Active Directory Tenant](/azure/active-directory/fundamentals/active-directory-whatis#terminology). When using PowerShell API, you can do it by specifying the `PartnerSubscriptionId` parameter for the secondary SQL Managed Instance. When using REST API, each instance ID included in the `properties.managedInstancePairs` parameter can have its own Subscription ID.
   
 > [!IMPORTANT]
 > Azure portal does not support creation of failover groups across different subscriptions. Also, for the existing failover groups across different subscriptions and/or resource groups, failover can't be initiated manually via portal from the primary SQL Managed Instance. Initiate it from the geo-secondary instance instead.
@@ -388,10 +388,10 @@ When you set up a failover group between primary and secondary SQL Managed Insta
 - The two instances of SQL Managed Instance need to be in different Azure regions.
 - The two instances of SQL Managed Instance need to be the same service tier, and have the same storage size.
 - Your secondary instance of SQL Managed Instance must be empty (no user databases).
-- The virtual networks used by the instances of SQL Managed Instance need to be connected through a [VPN Gateway](../../vpn-gateway/vpn-gateway-about-vpngateways.md) or [Express Route](../../expressroute/expressroute-howto-circuit-portal-resource-manager.md). When two virtual networks connect through an on-premises network, ensure there's no firewall rule blocking ports 5022, and 11000-11999. Global VNet Peering is supported with the limitation described in the note below.
+- The virtual networks used by the instances of SQL Managed Instance need to be connected through a [VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) or [Express Route](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager). When two virtual networks connect through an on-premises network, ensure there's no firewall rule blocking ports 5022, and 11000-11999. Global VNet Peering is supported with the limitation described in the note below.
 
    > [!IMPORTANT]
-   > [On 9/22/2020 support for global virtual network peering for newly created virtual clusters was announced](https://azure.microsoft.com/updates/global-virtual-network-peering-support-for-azure-sql-managed-instance-now-available/). It means that global virtual network peering is supported for SQL managed instances created in empty subnets after the announcement date, as well for all the subsequent managed instances created in those subnets. For all the other SQL managed instances peering support is limited to the networks in the same region due to the [constraints of global virtual network peering](../../virtual-network/virtual-network-manage-peering.md#requirements-and-constraints). See also the relevant section of the [Azure Virtual Networks frequently asked questions](../../virtual-network/virtual-networks-faq.md#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers) article for more details. To be able to use global virtual network peering for SQL managed instances from virtual clusters created before the announcement date, consider configuring non-default [maintenance window](../database/maintenance-window.md) on the instances, as it will move the instances into new virtual clusters that support global virtual network peering.
+   > [On 9/22/2020 support for global virtual network peering for newly created virtual clusters was announced](https://azure.microsoft.com/updates/global-virtual-network-peering-support-for-azure-sql-managed-instance-now-available/). It means that global virtual network peering is supported for SQL managed instances created in empty subnets after the announcement date, as well for all the subsequent managed instances created in those subnets. For all the other SQL managed instances peering support is limited to the networks in the same region due to the [constraints of global virtual network peering](/azure/virtual-network/virtual-network-manage-peering#requirements-and-constraints). See also the relevant section of the [Azure Virtual Networks frequently asked questions](/azure/virtual-network/virtual-networks-faq#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers) article for more details. To be able to use global virtual network peering for SQL managed instances from virtual clusters created before the announcement date, consider configuring non-default [maintenance window](../database/maintenance-window.md) on the instances, as it will move the instances into new virtual clusters that support global virtual network peering.
 
 - The two SQL Managed Instance VNets can't have overlapping IP addresses.
 - You need to set up your Network Security Groups (NSG) such that ports 5022 and the range 11000~12000 are open inbound and outbound for connections from the subnet of the other managed instance. This is to allow replication traffic between the instances.
@@ -416,9 +416,9 @@ There's some overlap of content in the following articles, be sure to make chang
 /azure-sql/managed-instance/auto-failover-group-configure-sql-mi.md
 -->
 
-Permissions for a failover group are managed via [Azure role-based access control (Azure RBAC)](../../role-based-access-control/overview.md). 
+Permissions for a failover group are managed via [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview). 
 
-Azure RBAC write access is necessary to create and manage failover groups. The [SQL Managed Instance Contributor](../../role-based-access-control/built-in-roles.md#sql-managed-instance-contributor) role has all the necessary permissions to manage failover groups.
+Azure RBAC write access is necessary to create and manage failover groups. The [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role has all the necessary permissions to manage failover groups.
 
 The following table lists specific permission scopes for Azure SQL Managed Instance: 
 

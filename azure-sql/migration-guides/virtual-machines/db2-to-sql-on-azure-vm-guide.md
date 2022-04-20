@@ -154,6 +154,6 @@ The Data SQL Engineering team developed these resources. This team's core charte
 
 After migration, review the [Post-migration validation and optimization guide](/sql/relational-databases/post-migration-validation-and-optimization-guide). 
 
-For Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios, see [Data migration services and tools](../../../dms/dms-tools-matrix.md).
+For Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios, see [Data migration services and tools](/azure/dms/dms-tools-matrix).
 
 For video content, see [Overview of the migration journey](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).

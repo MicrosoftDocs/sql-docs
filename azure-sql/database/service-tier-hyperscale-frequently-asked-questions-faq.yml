@@ -241,7 +241,7 @@ sections:
       - question: |
           Can I move my on-premises SQL Server database, or my SQL Server database in a cloud virtual machine to Hyperscale?
         answer: |
-          Yes. You can use all existing migration technologies to migrate to Hyperscale, including transactional replication, and any other data movement technologies (Bulk Copy, Azure Data Factory, Azure Databricks, SSIS). See also the [Azure Database Migration Service](../../dms/dms-overview.md), which supports many migration scenarios.
+          Yes. You can use all existing migration technologies to migrate to Hyperscale, including transactional replication, and any other data movement technologies (Bulk Copy, Azure Data Factory, Azure Databricks, SSIS). See also the [Azure Database Migration Service](/azure/dms/dms-overview), which supports many migration scenarios.
           
       - question: |
           What is my downtime during migration from an on-premises or virtual machine environment to Hyperscale, and how can I minimize it?
@@ -257,7 +257,7 @@ sections:
       - question: |
           Can I read data from blob storage and do fast load (like Polybase in Azure Synapse Analytics)?
         answer: |
-          You can have a client application read data from Azure Storage and load data load into a Hyperscale database (just like you can with any other database in Azure SQL Database). Polybase is currently not supported in Azure SQL Database. As an alternative to provide fast load, you can use [Azure Data Factory](../../data-factory/index.yml), or use a Spark job in [Azure Databricks](/azure/azure-databricks/) with the [Spark connector for SQL](spark-connector.md). The Spark connector to SQL supports bulk insert.
+          You can have a client application read data from Azure Storage and load data load into a Hyperscale database (just like you can with any other database in Azure SQL Database). Polybase is currently not supported in Azure SQL Database. As an alternative to provide fast load, you can use [Azure Data Factory](/azure/data-factory/index), or use a Spark job in [Azure Databricks](/azure/azure-databricks/) with the [Spark connector for SQL](spark-connector.md). The Spark connector to SQL supports bulk insert.
           
           It is also possible to bulk read data from Azure Blob store using BULK INSERT or OPENROWSET: [Examples of Bulk Access to Data in Azure Blob Storage](/sql/relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage#accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location).
           
@@ -276,7 +276,7 @@ sections:
       - question: |
           Does Hyperscale support migration from other data sources such as Amazon Aurora, MySQL, PostgreSQL, Oracle, DB2, and other database platforms?
         answer: |
-          Yes. [Azure Database Migration Service](../../dms/dms-overview.md) supports many migration scenarios.
+          Yes. [Azure Database Migration Service](/azure/dms/dms-overview) supports many migration scenarios.
           
   - name: Business continuity and disaster recovery questions
     questions:
@@ -318,7 +318,7 @@ sections:
       - question: |
           Can I perform geo-restore with a Hyperscale database?
         answer: |
-          Yes. Geo-restore is fully supported. Unlike point-in-time restore, geo-restore requires a size-of-data operation. Data files are copied in parallel, so the duration of this operation depends primarily on the size of the largest file in the database, rather than on total database size. Geo-restore time will be significantly shorter if the database is restored in the Azure region that is [paired](../../availability-zones/cross-region-replication-azure.md) with the region of the source database.
+          Yes. Geo-restore is fully supported. Unlike point-in-time restore, geo-restore requires a size-of-data operation. Data files are copied in parallel, so the duration of this operation depends primarily on the size of the largest file in the database, rather than on total database size. Geo-restore time will be significantly shorter if the database is restored in the Azure region that is [paired](/azure/availability-zones/cross-region-replication-azure) with the region of the source database.
           
       - question: |
           Can I set up geo-replication with a Hyperscale database?

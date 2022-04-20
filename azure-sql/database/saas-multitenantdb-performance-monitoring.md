@@ -191,4 +191,4 @@ In this tutorial you learn how to:
 ## Additional resources
 
 <!--* [Additional tutorials that build upon the Wingtip Tickets SaaS Multi-tenant Database application deployment](saas-multitenantdb-wingtip-app-overview.md#sql-database-wingtip-saas-tutorials)-->
-* [Azure automation](../../automation/automation-intro.md)
+* [Azure automation](/azure/automation/automation-intro)

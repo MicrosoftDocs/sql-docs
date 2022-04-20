@@ -32,8 +32,8 @@ Moving a SQL Server VM to a different region requires doing the following:
 
 ## Verify prerequisites 
 
-- Confirm that moving from your source region to your target region [is supported](../../../site-recovery/azure-to-azure-support-matrix.md#region-support).  
-- Review the [scenario architecture and components](../../../site-recovery/azure-to-azure-architecture.md) as well as the [support limitations and requirements](../../../site-recovery/azure-to-azure-support-matrix.md). 
+- Confirm that moving from your source region to your target region [is supported](/azure/site-recovery/azure-to-azure-support-matrix#region-support).  
+- Review the [scenario architecture and components](/azure/site-recovery/azure-to-azure-architecture) as well as the [support limitations and requirements](/azure/site-recovery/azure-to-azure-support-matrix). 
 - Verify account permissions. If you created your free Azure account, you're the administrator of your subscription. If you're not the subscription administrator, work with the administrator to assign the permissions that you need. To enable replication for a VM and copy data using Azure Site Recovery, you must have: 
     - Permissions to create a VM. The *Virtual Machine Contributor* built-in role has these permissions, which include: 
         - Permissions to create a VM in the selected resource group. 
@@ -60,10 +60,10 @@ Prepare both the source SQL Server VM and the target region for the move.
 - Make sure that you create a target resource for every component that's identified in the source networking layout. This step is important to ensure that your VMs have all the functionality and features in the target region that you had in the source region. 
     - Azure Site Recovery automatically discovers and creates a virtual network when you enable replication for the source VM. You can also pre-create a network and assign it to the VM in the user flow for enabling replication. You need to manually create any other resources in the target region.
 - To create the most commonly used network resources that are relevant for you based on the source VM configuration, see the following documentation: 
-    - [Network security groups](../../../virtual-network/tutorial-filter-network-traffic.md) 
-    - [Load balancer](../../../load-balancer/quickstart-load-balancer-standard-internal-portal.md)
-    - [Public IP address](../../../virtual-network/ip-services/virtual-network-public-ip-address.md)
-    - For any additional networking components, see the [networking documentation](../../../virtual-network/virtual-networks-overview.md).
+    - [Network security groups](/azure/virtual-network/tutorial-filter-network-traffic) 
+    - [Load balancer](/azure/load-balancer/quickstart-load-balancer-standard-internal-portal)
+    - [Public IP address](/azure/virtual-network/ip-services/virtual-network-public-ip-address)
+    - For any additional networking components, see the [networking documentation](/azure/virtual-network/virtual-networks-overview).
 - Manually create a non-production network in the target region if you want to test the configuration before you perform the final move to the target region. We recommend this step because it ensures minimal interference with the production network. 
 
 ## Configure Azure Site Recovery vault

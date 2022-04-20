@@ -26,7 +26,7 @@ If your environment meets the prerequisites and you're familiar with using ARM t
 The SQL Server VM ARM template requires the following:
 
 - The latest version of the [Azure CLI](/cli/azure/install-azure-cli) and/or [PowerShell](/powershell/scripting/install/installing-powershell). 
-- A preconfigured [resource group](../../../azure-resource-manager/management/manage-resource-groups-portal.md#create-resource-groups) with a prepared [virtual network](../../../virtual-network/quick-create-portal.md) and [subnet](../../../virtual-network/virtual-network-manage-subnet.md#add-a-subnet).
+- A preconfigured [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) with a prepared [virtual network](/azure/virtual-network/quick-create-portal) and [subnet](/azure/virtual-network/virtual-network-manage-subnet#add-a-subnet).
 - An Azure subscription. If you don't have one, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
 
@@ -76,7 +76,7 @@ More SQL Server on Azure VM templates can be found in the [quickstart template g
 
 3. Select **Review + create**. After the SQL Server VM has been deployed successfully, you get a notification.
 
-The Azure portal is used to deploy the template. In addition to the Azure portal, you can also use Azure PowerShell, the Azure CLI, and REST API. To learn other deployment methods, see [Deploy templates](../../../azure-resource-manager/templates/deploy-powershell.md).
+The Azure portal is used to deploy the template. In addition to the Azure portal, you can also use Azure PowerShell, the Azure CLI, and REST API. To learn other deployment methods, see [Deploy templates](/azure/azure-resource-manager/templates/deploy-powershell).
 
 ## Review deployed resources
 
@@ -117,7 +117,7 @@ Write-Host "Press [ENTER] to continue..."
 For a step-by-step tutorial that guides you through the process of creating a template, see:
 
 > [!div class="nextstepaction"]
-> [ Tutorial: Create and deploy your first ARM template](../../../azure-resource-manager/templates/template-tutorial-create-first-template.md)
+> [ Tutorial: Create and deploy your first ARM template](/azure/azure-resource-manager/templates/template-tutorial-create-first-template)
 
 For other ways to deploy a SQL Server VM, see: 
 - [Azure portal](create-sql-vm-portal.md)

@@ -25,7 +25,7 @@ In this article you can find a content reference to various guides, scripts, and
 - [Import a DB from a BACPAC](../database/database-import.md)
 - [Export a DB to BACPAC](../database/database-export.md)
 - [Load data with BCP](../load-from-csv-with-bcp.md)
-- [Load data with Azure Data Factory](../../data-factory/connector-azure-sql-database.md?toc=/azure/sql-database/toc.json)
+- [Load data with Azure Data Factory](/azure/data-factory/connector-azure-sql-database?toc=/azure/sql-database/toc.json)
 
 ## Network configuration
 
@@ -102,7 +102,7 @@ In this article you can find a content reference to various guides, scripts, and
 ## Develop applications
 
 - [Connectivity](../database/connect-query-content-reference-guide.md#libraries)
-- [Use Spark Connector](../../cosmos-db/create-sql-api-spark.md)
+- [Use Spark Connector](/azure/cosmos-db/create-sql-api-spark)
 - [Authenticate an app](../database/application-authentication-get-client-id-keys.md)
 - [Use batching for better performance](../performance-improve-use-batching.md)
 - [Connectivity guidance](../database/troubleshoot-common-connectivity-issues.md)

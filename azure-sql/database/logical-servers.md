@@ -27,13 +27,13 @@ A server in SQL Database and Azure Synapse:
 - Is the parent resource for databases, elastic pools, and data warehouses
 - Provides a namespace for databases, elastic pools, and data warehouse database
 - Is a logical container with strong lifetime semantics - delete a server and it deletes its databases, elastic pools, and SQK pools
-- Participates in [Azure role-based access control (Azure RBAC)](../../role-based-access-control/overview.md) - databases, elastic pools, and data warehouse database within a server inherit access rights from the server
+- Participates in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) - databases, elastic pools, and data warehouse database within a server inherit access rights from the server
 - Is a high-order element of the identity of databases, elastic pools, and data warehouse database for Azure resource management purposes (see the URL scheme for databases and pools)
 - Collocates resources in a region
 - Provides a connection endpoint for database access (`<serverName>`.database.windows.net)
 - Provides access to metadata regarding contained resources via DMVs by connecting to a master database
 - Provides the scope for management policies that apply to its databases - logins, firewall, audit, threat detection, and such
-- Is restricted by a quota within the parent subscription (six servers per subscription by default - [see Subscription limits here](../../azure-resource-manager/management/azure-subscription-service-limits.md))
+- Is restricted by a quota within the parent subscription (six servers per subscription by default - [see Subscription limits here](/azure/azure-resource-manager/management/azure-subscription-service-limits))
 - Provides the scope for database quota and DTU or vCore quota for the resources it contains (such as 45,000 DTU)
 - Is the versioning scope for capabilities enabled on contained resources
 - Server-level principal logins can manage all databases on a server
@@ -103,7 +103,7 @@ To create and manage servers, databases, and firewalls with Azure PowerShell, us
 
 ## Manage servers, databases, and firewalls using the Azure CLI
 
-To create and manage servers, databases, and firewalls with the [Azure CLI](/cli/azure), use the following [Azure CLI SQL Database](/cli/azure/sql/db) commands. Use the [Cloud Shell](../../cloud-shell/overview.md) to run the CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows. For creating and managing elastic pools, see [Elastic pools](elastic-pool-overview.md).
+To create and manage servers, databases, and firewalls with the [Azure CLI](/cli/azure), use the following [Azure CLI SQL Database](/cli/azure/sql/db) commands. Use the [Cloud Shell](/azure/cloud-shell/overview) to run the CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows. For creating and managing elastic pools, see [Elastic pools](elastic-pool-overview.md).
 
 | Cmdlet | Description |
 | --- | --- |

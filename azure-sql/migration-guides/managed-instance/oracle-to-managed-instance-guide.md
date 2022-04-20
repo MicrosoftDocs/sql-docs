@@ -264,7 +264,7 @@ The Data SQL Engineering team developed these resources. This team's core charte
 
 ## Next steps
 
-- For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Services and tools for data migration](../../../dms/dms-tools-matrix.md).
+- For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Services and tools for data migration](/azure/dms/dms-tools-matrix).
 
 - To learn more about SQL Managed Instance, see:
   - [An overview of Azure SQL Managed Instance](../../managed-instance/sql-managed-instance-paas-overview.md)

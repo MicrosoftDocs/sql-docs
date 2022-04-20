@@ -183,7 +183,7 @@ The **Event File** target might experience network latency or failures while per
 
 - [Azure Storage Cmdlets](/powershell/module/Azure.Storage)
 - [Using Azure PowerShell with Azure Storage](/powershell/module/az.storage/)
-- [How to use Blob storage from .NET](../../storage/blobs/storage-quickstart-blobs-dotnet.md)
+- [How to use Blob storage from .NET](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
 - [CREATE CREDENTIAL (Transact-SQL)](/sql/t-sql/statements/create-credential-transact-sql)
 - [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)
 - The Azure *Service Updates* webpage, narrowed by parameter to Azure SQL Database:

@@ -76,7 +76,7 @@ Azure creates the resource group and pins a shortcut to the resource group in th
 
 The next step is to create the networks and subnet in the Azure resource group.
 
-The solution uses one virtual network and one subnet. The [Virtual network overview](../../../virtual-network/virtual-networks-overview.md) provides more information about networks in Azure.
+The solution uses one virtual network and one subnet. The [Virtual network overview](/azure/virtual-network/virtual-networks-overview) provides more information about networks in Azure.
 
 To create the virtual network in the Azure portal:
 
@@ -113,7 +113,7 @@ Azure returns you to the portal dashboard and notifies you when the new network 
 
 ## Create availability sets
 
-Before you create virtual machines, you need to create availability sets. Availability sets reduce the downtime for planned or unplanned maintenance events. An Azure availability set is a logical group of resources that Azure places on physical fault domains and update domains. A fault domain ensures that the members of the availability set have separate power and network resources. An update domain ensures that members of the availability set aren't brought down for maintenance at the same time. For more information, see [Manage the availability of virtual machines](../../../virtual-machines/availability.md?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+Before you create virtual machines, you need to create availability sets. Availability sets reduce the downtime for planned or unplanned maintenance events. An Azure availability set is a logical group of resources that Azure places on physical fault domains and update domains. A fault domain ensures that the members of the availability set have separate power and network resources. An update domain ensures that members of the availability set aren't brought down for maintenance at the same time. For more information, see [Manage the availability of virtual machines](/azure/virtual-machines/availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
 
 You need two availability sets. One is for the domain controllers. The second is for the SQL Server VMs.
 
@@ -173,7 +173,7 @@ The following table shows the settings for these two machines:
 | **Diagnostics storage account** |*Automatically created* |
 
    >[!IMPORTANT]
-   >You can only place a VM in an availability set when you create it. You can't change the availability set after a VM is created. See [Manage the availability of virtual machines](../../../virtual-machines/availability.md).
+   >You can only place a VM in an availability set when you create it. You can't change the availability set after a VM is created. See [Manage the availability of virtual machines](/azure/virtual-machines/availability).
 
 Azure creates the virtual machines.
 
@@ -352,7 +352,7 @@ Before you proceed consider the following design decisions.
 
 * **Storage - Azure Managed Disks**
 
-   For the virtual machine storage, use Azure Managed Disks. Microsoft recommends Managed Disks for SQL Server virtual machines. Managed Disks handles storage behind the scenes. In addition, when virtual machines with Managed Disks are in the same availability set, Azure distributes the storage resources to provide appropriate redundancy. For more information, see [Azure Managed Disks Overview](../../../virtual-machines/managed-disks-overview.md). For specifics about managed disks in an availability set, see [Use Managed Disks for VMs in an availability set](../../../virtual-machines/availability.md).
+   For the virtual machine storage, use Azure Managed Disks. Microsoft recommends Managed Disks for SQL Server virtual machines. Managed Disks handles storage behind the scenes. In addition, when virtual machines with Managed Disks are in the same availability set, Azure distributes the storage resources to provide appropriate redundancy. For more information, see [Azure Managed Disks Overview](/azure/virtual-machines/managed-disks-overview). For specifics about managed disks in an availability set, see [Use Managed Disks for VMs in an availability set](/azure/virtual-machines/availability).
 
 * **Network - Private IP addresses in production**
 

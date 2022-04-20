@@ -33,11 +33,11 @@ For example, for database `Database1` on `Server1` the following is a possible v
 
 ### Event Hub
 
-Audit events are written to the namespace and event hub that was defined during auditing configuration, and are captured in the body of [Apache Avro](https://avro.apache.org/) events and stored using JSON formatting with UTF-8 encoding. To read the audit logs, you can use [Avro Tools](../../event-hubs/event-hubs-capture-overview.md#use-avro-tools) or similar tools that process this format.
+Audit events are written to the namespace and event hub that was defined during auditing configuration, and are captured in the body of [Apache Avro](https://avro.apache.org/) events and stored using JSON formatting with UTF-8 encoding. To read the audit logs, you can use [Avro Tools](/azure/event-hubs/event-hubs-capture-overview#use-avro-tools) or similar tools that process this format.
 
 ### Log Analytics
 
-Audit events are written to Log Analytics workspace defined during auditing configuration, to the `AzureDiagnostics` table with the category `SQLSecurityAuditEvents`. For additional useful information about Log Analytics search language and commands, see [Log Analytics search reference](../../azure-monitor/logs/log-query-overview.md).
+Audit events are written to Log Analytics workspace defined during auditing configuration, to the `AzureDiagnostics` table with the category `SQLSecurityAuditEvents`. For additional useful information about Log Analytics search language and commands, see [Log Analytics search reference](/azure/azure-monitor/logs/log-query-overview).
 
 ## <a id="subheading-1"></a>Audit log fields
 

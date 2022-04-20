@@ -31,7 +31,7 @@ If you're new to SQL Server on Azure VMs, check out the *SQL Server on Azure VM 
 
 [SQL Server on Azure Virtual Machines](https://azure.microsoft.com/services/virtual-machines/sql-server/) enables you to use full versions of SQL Server in the cloud without having to manage any on-premises hardware. SQL Server virtual machines (VMs) also simplify licensing costs when you pay as you go.
 
-Azure virtual machines run in many different [geographic regions](https://azure.microsoft.com/regions/) around the world. They also offer a variety of [machine sizes](../../../virtual-machines/sizes.md). The virtual machine image gallery allows you to create a SQL Server VM with the right version, edition, and operating system. This makes virtual machines a good option for many different SQL Server workloads.
+Azure virtual machines run in many different [geographic regions](https://azure.microsoft.com/regions/) around the world. They also offer a variety of [machine sizes](/azure/virtual-machines/sizes). The virtual machine image gallery allows you to create a SQL Server VM with the right version, edition, and operating system. This makes virtual machines a good option for many different SQL Server workloads.
 
 
 ## Feature benefits
@@ -71,7 +71,7 @@ For videos about the latest features to optimize SQL Server VM performance and a
 
 ## High availability & disaster recovery
 
-On top of the built-in [high availability provided by Azure virtual machines](../../../virtual-machines/availability.md), you can also leverage the high availability and disaster recovery features provided by SQL Server. 
+On top of the built-in [high availability provided by Azure virtual machines](/azure/virtual-machines/availability), you can also leverage the high availability and disaster recovery features provided by SQL Server. 
 
 To learn more, see the overview of [Always On availability groups](availability-group-overview.md), and [Always On failover cluster instances](failover-cluster-instance-overview.md). For more details, see the [business continuity overview](business-continuity-high-availability-disaster-recovery-hadr-overview.md). 
 
@@ -136,9 +136,9 @@ The Customer Experience Improvement Program (CEIP) is enabled by default. This p
 
 Since SQL Server on Azure VMs is integrated into the Azure platform, review resources from related products and services that interact with the SQL Server on Azure VM ecosystem: 
 
-- **Windows virtual machines**: [Azure Virtual Machines overview](../../../virtual-machines/windows/overview.md)
-- **Storage**: [Introduction to Microsoft Azure Storage](../../../storage/common/storage-introduction.md)
-- **Networking**: [Virtual Network overview](../../../virtual-network/virtual-networks-overview.md), [IP addresses in Azure](../../../virtual-network/ip-services/public-ip-addresses.md), [Create a Fully Qualified Domain Name in the Azure portal](../../../virtual-machines/create-fqdn.md)
+- **Windows virtual machines**: [Azure Virtual Machines overview](/azure/virtual-machines/windows/overview)
+- **Storage**: [Introduction to Microsoft Azure Storage](/azure/storage/common/storage-introduction)
+- **Networking**: [Virtual Network overview](/azure/virtual-network/virtual-networks-overview), [IP addresses in Azure](/azure/virtual-network/ip-services/public-ip-addresses), [Create a Fully Qualified Domain Name in the Azure portal](/azure/virtual-machines/create-fqdn)
 - **SQL**: [SQL Server documentation](/sql/index), [Azure SQL Database comparison](../../azure-sql-iaas-vs-paas-what-is-overview.md)
 
 

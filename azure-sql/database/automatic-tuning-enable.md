@@ -127,7 +127,7 @@ The following steps can be considered to rectify this issue:
 
 As automatic tuning is an Azure feature, to use it you will need to use Azure's built-in roles. Using SQL Authentication only will not be sufficient to use the feature from the Azure portal.
 
-To use automatic tuning, the minimum required permission to grant to the user is Azure's built-in [SQL Database contributor](../../role-based-access-control/built-in-roles.md#sql-db-contributor) role. You can also consider using higher privilege roles such as SQL Server Contributor, SQL Managed Instance Contributor, Contributor, and Owner.
+To use automatic tuning, the minimum required permission to grant to the user is Azure's built-in [SQL Database contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role. You can also consider using higher privilege roles such as SQL Server Contributor, SQL Managed Instance Contributor, Contributor, and Owner.
 
 ## Configure automatic tuning e-mail notifications
 

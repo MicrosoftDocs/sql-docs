@@ -185,7 +185,7 @@ Once the Azure AD server principal (login) has been created, and provided with `
         GO
         ```
 
-1. Create a SQL Managed Instance login for a group in Azure AD. The group will need to exist in Azure AD before you can add the login to SQL Managed Instance. See [Create a basic group and add members using Azure Active Directory](../../active-directory/fundamentals/active-directory-groups-create-azure-portal.md). Create a group _mygroup_ and add members to this group.
+1. Create a SQL Managed Instance login for a group in Azure AD. The group will need to exist in Azure AD before you can add the login to SQL Managed Instance. See [Create a basic group and add members using Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal). Create a group _mygroup_ and add members to this group.
 
 1. Open a new query window in SQL Server Management Studio.
 

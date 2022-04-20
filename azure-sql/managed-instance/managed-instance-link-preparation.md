@@ -181,7 +181,7 @@ For the link to work, you must have network connectivity between SQL Server and 
 
 Deploying SQL Server on Azure Virtual Machines in the same Azure virtual network that hosts SQL Managed Instance is the simplest method, because network connectivity will automatically exist between the two instances. To learn more, see the detailed tutorial [Deploy and configure an Azure VM to connect to Azure SQL Managed Instance](./connect-vm-instance-configure.md). 
 
-If your SQL Server on Azure Virtual Machines instance is in a different virtual network from your managed instance, either connect the two Azure virtual networks by using [global virtual network peering](https://techcommunity.microsoft.com/t5/azure-sql/new-feature-global-vnet-peering-support-for-azure-sql-managed/ba-p/1746913) or configure [VPN gateways](../../vpn-gateway/tutorial-create-gateway-portal.md). 
+If your SQL Server on Azure Virtual Machines instance is in a different virtual network from your managed instance, either connect the two Azure virtual networks by using [global virtual network peering](https://techcommunity.microsoft.com/t5/azure-sql/new-feature-global-vnet-peering-support-for-azure-sql-managed/ba-p/1746913) or configure [VPN gateways](/azure/vpn-gateway/tutorial-create-gateway-portal). 
 
 >[!NOTE]
 > Global virtual network peering is enabled by default on managed instances provisioned after November 2020. [Raise a support ticket](../database/quota-increase-request.md) to enable global virtual network peering on older instances. 
@@ -192,7 +192,7 @@ If your SQL Server on Azure Virtual Machines instance is in a different virtual 
 If your SQL Server instance is hosted outside Azure, establish a VPN connection between SQL Server and SQL Managed Instance by using either of these options: 
 
 - [Site-to-site VPN connection](/office365/enterprise/connect-an-on-premises-network-to-a-microsoft-azure-virtual-network)
-- [Azure ExpressRoute connection](../../expressroute/expressroute-introduction.md)
+- [Azure ExpressRoute connection](/azure/expressroute/expressroute-introduction)
 
 > [!TIP]
 > We recommend ExpressRoute for the best network performance when you're replicating data. Provision a gateway with enough bandwidth for your use case. 
@@ -207,7 +207,7 @@ The following table describes port actions for each environment:
 |:---|:-----|
 |SQL Server (in Azure) | Open both inbound and outbound traffic on port 5022 for the network firewall to the entire subnet IP range of SQL Managed Instance. If necessary, do the same on the SQL Server host OS (Windows/Linux) firewall. Create a network security group (NSG) rule in the virtual network that hosts the VM to allow communication on port 5022. |
 |SQL Server (outside Azure) | Open both inbound and outbound traffic on port 5022 for the network firewall to the entire subnet IP range of SQL Managed Instance. If necessary, do the same on the SQL Server host OS (Windows/Linux) firewall. |
-|SQL Managed Instance |[Create an NSG rule](../../virtual-network/manage-network-security-group.md#create-a-security-rule) in the Azure portal to allow inbound and outbound traffic from the IP address of SQL Server on port 5022 to the virtual network that hosts SQL Managed Instance. |
+|SQL Managed Instance |[Create an NSG rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) in the Azure portal to allow inbound and outbound traffic from the IP address of SQL Server on port 5022 to the virtual network that hosts SQL Managed Instance. |
 
 Use the following PowerShell script on the Windows host of the SQL Server instance to open ports in the Windows firewall: 
 

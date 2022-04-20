@@ -15,17 +15,17 @@ ms.custom: azure-synapse, subject-rbac-steps
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
 
 
-Auditing for [Azure SQL Database](sql-database-paas-overview.md) and [Azure Synapse Analytics](../../synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is.md) supports writing database events to an [Azure Storage account](../../storage/common/storage-account-overview.md) behind a virtual network and firewall.
+Auditing for [Azure SQL Database](sql-database-paas-overview.md) and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) supports writing database events to an [Azure Storage account](/azure/storage/common/storage-account-overview) behind a virtual network and firewall.
 
 This article explains two ways to configure Azure SQL Database and Azure storage account for this option. The first uses the Azure portal, the second uses REST.
 
 ## Background
 
-[Azure Virtual Network (VNet)](../../virtual-network/virtual-networks-overview.md) is the fundamental building block for your private network in Azure. VNet enables many types of Azure resources, such as Azure Virtual Machines (VM), to securely communicate with each other, the internet, and on-premises networks. VNet is similar to a traditional network in your own data center, but brings with it additional benefits of Azure infrastructure such as scale, availability, and isolation.
+[Azure Virtual Network (VNet)](/azure/virtual-network/virtual-networks-overview) is the fundamental building block for your private network in Azure. VNet enables many types of Azure resources, such as Azure Virtual Machines (VM), to securely communicate with each other, the internet, and on-premises networks. VNet is similar to a traditional network in your own data center, but brings with it additional benefits of Azure infrastructure such as scale, availability, and isolation.
 
-To learn more about the VNet concepts, Best practices and many more, see [What is Azure Virtual Network](../../virtual-network/virtual-networks-overview.md).
+To learn more about the VNet concepts, Best practices and many more, see [What is Azure Virtual Network](/azure/virtual-network/virtual-networks-overview).
 
-To learn more about how to create a virtual network, see [Quickstart: Create a virtual network using the Azure portal](../../virtual-network/quick-create-portal.md).
+To learn more about how to create a virtual network, see [Quickstart: Create a virtual network using the Azure portal](/azure/virtual-network/quick-create-portal).
 
 ## Prerequisites
 
@@ -33,10 +33,10 @@ For audit to write to a storage account behind a VNet or firewall, the following
 
 > [!div class="checklist"]
 >
-> * A general-purpose v2 storage account. If you have a general-purpose v1 or blob storage account, [upgrade to a general-purpose v2 storage account](../../storage/common/storage-account-upgrade.md). For more information, see [Types of storage accounts](../../storage/common/storage-account-overview.md#types-of-storage-accounts).
+> * A general-purpose v2 storage account. If you have a general-purpose v1 or blob storage account, [upgrade to a general-purpose v2 storage account](/azure/storage/common/storage-account-upgrade). For more information, see [Types of storage accounts](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
 > * The storage account must be on the same tenant and at the same location as the [logical SQL server](logical-servers.md) (it's OK to be on different subscriptions).
 > * The Azure Storage account requires `Allow trusted Microsoft services to access this storage account`. Set this on the Storage Account **Firewalls and Virtual networks**.
-> * You must have `Microsoft.Authorization/roleAssignments/write` permission on the selected storage account. For more information, see [Azure built-in roles](../../role-based-access-control/built-in-roles.md).
+> * You must have `Microsoft.Authorization/roleAssignments/write` permission on the selected storage account. For more information, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
 
 ## Configure in Azure portal
 
@@ -114,10 +114,10 @@ To configure SQL Audit to write events to a storage account behind a VNet or Fir
 
 1. Assign the Storage Blob Data Contributor role to the server hosting the database that you registered with Azure Active Directory (Azure AD) in the previous step.
 
-    For detailed steps, see [Assign Azure roles using the Azure portal](../../role-based-access-control/role-assignments-portal.md).
+    For detailed steps, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
    > [!NOTE]
-   > Only members with Owner privilege can perform this step. For various Azure built-in roles, refer to [Azure built-in roles](../../role-based-access-control/built-in-roles.md).
+   > Only members with Owner privilege can perform this step. For various Azure built-in roles, refer to [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
 
 1. Configure the [server's blob auditing policy](/rest/api/sql/server%20auditing%20settings/createorupdate), without specifying a *storageAccountAccessKey*:
 
@@ -145,7 +145,7 @@ To configure SQL Audit to write events to a storage account behind a VNet or Fir
 
 ## Using Azure Resource Manager template
 
-You can configure auditing to write database events on a storage account behind virtual network and firewall using [Azure Resource Manager](../../azure-resource-manager/management/overview.md) template, as shown in the following example:
+You can configure auditing to write database events on a storage account behind virtual network and firewall using [Azure Resource Manager](/azure/azure-resource-manager/management/overview) template, as shown in the following example:
 
 > [!IMPORTANT]
 > In order to use storage account behind virtual network and firewall, you need to set **isStorageBehindVnet** parameter to true

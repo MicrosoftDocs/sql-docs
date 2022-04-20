@@ -45,11 +45,11 @@ Whenever the database engine or the operating system is upgraded, or a failure i
 
 ## General Purpose service tier zone redundant availability
 
-Zone-redundant configuration for the general purpose service tier is offered for both serverless and provisioned compute. This configuration utilizes [Azure Availability Zones](../../availability-zones/az-overview.md)  to replicate databases across multiple physical locations within an Azure region. By selecting zone-redundancy, you can make your new and existing serverless and provisioned general purpose single databases and elastic pools resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes of the application logic.
+Zone-redundant configuration for the general purpose service tier is offered for both serverless and provisioned compute. This configuration utilizes [Azure Availability Zones](/azure/availability-zones/az-overview)  to replicate databases across multiple physical locations within an Azure region. By selecting zone-redundancy, you can make your new and existing serverless and provisioned general purpose single databases and elastic pools resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes of the application logic.
 
 Zone-redundant configuration for the general purpose tier has two layers:  
 
-- A stateful data layer with the database files (.mdf/.ldf) that are stored in ZRS(zone-redundant storage). Using [ZRS](../../storage/common/storage-redundancy.md) the data and log files are synchronously copied across three physically isolated Azure availability zones.
+- A stateful data layer with the database files (.mdf/.ldf) that are stored in ZRS(zone-redundant storage). Using [ZRS](/azure/storage/common/storage-redundancy) the data and log files are synchronously copied across three physically isolated Azure availability zones.
 - A stateless compute layer that runs the sqlservr.exe process and contains only transient and cached data, such as TempDB, model databases on the attached SSD, and plan cache, buffer pool, and columnstore pool in memory. This stateless node is operated by Azure Service Fabric that initializes sqlservr.exe, controls health of the node, and performs failover to another node if necessary. For zone-redundant serverless and provisioned general purpose databases, nodes with spare capacity are readily available in other Availability Zones for failover.
 
 The zone-redundant version of the high availability architecture for the general purpose service tier is illustrated by the following diagram:
@@ -75,12 +75,12 @@ As an extra benefit, the premium availability model includes the ability to redi
 
 ## Premium and Business Critical service tier zone redundant availability 
 
-By default, the cluster of nodes for the premium availability model is created in the same datacenter. With the introduction of [Azure Availability Zones](../../availability-zones/az-overview.md), SQL Database can place different replicas of the Business Critical database to different availability zones in the same region. To eliminate a single point of failure, the control ring is also duplicated across multiple zones as three gateway rings (GW). The routing to a specific gateway ring is controlled by [Azure Traffic Manager](../../traffic-manager/traffic-manager-overview.md) (ATM). Because the zone-redundant configuration in the Premium or Business Critical service tiers does not create additional database redundancy, you can enable it at no extra cost. By selecting a zone-redundant configuration, you can make your Premium or Business Critical databases resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. You can also convert any existing Premium or Business Critical databases or pools to the zone-redundant configuration.
+By default, the cluster of nodes for the premium availability model is created in the same datacenter. With the introduction of [Azure Availability Zones](/azure/availability-zones/az-overview), SQL Database can place different replicas of the Business Critical database to different availability zones in the same region. To eliminate a single point of failure, the control ring is also duplicated across multiple zones as three gateway rings (GW). The routing to a specific gateway ring is controlled by [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) (ATM). Because the zone-redundant configuration in the Premium or Business Critical service tiers does not create additional database redundancy, you can enable it at no extra cost. By selecting a zone-redundant configuration, you can make your Premium or Business Critical databases resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. You can also convert any existing Premium or Business Critical databases or pools to the zone-redundant configuration.
 
 Because the zone-redundant databases have replicas in different datacenters with some distance between them, the increased network latency may increase the commit time and thus impact the performance of some OLTP workloads. You can always return to the single-zone configuration by disabling the zone-redundancy setting. This process is an online operation similar to the regular service tier upgrade. At the end of the process, the database or pool is migrated from a zone-redundant ring to a single zone ring or vice versa.
 
 > [!IMPORTANT]
-> This feature is not available in SQL Managed Instance. In SQL Database, when using the Business Critical tier, zone-redundant configuration is only available when the Gen5 hardware is selected. For up to date information about the regions that support zone-redundant databases, see [Services support by region](../../availability-zones/az-region.md).
+> This feature is not available in SQL Managed Instance. In SQL Database, when using the Business Critical tier, zone-redundant configuration is only available when the Gen5 hardware is selected. For up to date information about the regions that support zone-redundant databases, see [Services support by region](/azure/availability-zones/az-region).
 
 The zone-redundant version of the high availability architecture is illustrated by the following diagram:
 
@@ -97,8 +97,8 @@ The availability model in Hyperscale includes four layers:
 
 - A stateless compute layer that runs the `sqlservr.exe` processes and contains only transient and cached data, such as non-covering RBPEX cache, TempDB, model database, etc. on the attached SSD, and plan cache, buffer pool, and columnstore pool in memory. This stateless layer includes the primary compute replica and optionally a number of secondary compute replicas that can serve as failover targets.
 - A stateless storage layer formed by page servers. This layer is the distributed storage engine for the `sqlservr.exe` processes running on the compute replicas. Each page server contains only transient and cached data, such as covering RBPEX cache on the attached SSD, and data pages cached in memory. Each page server has a paired page server in an active-active configuration to provide load balancing, redundancy, and high availability.
-- A stateful transaction log storage layer formed by the compute node running the Log service process, the transaction log landing zone, and transaction log long-term storage. Landing zone and long-term storage use Azure Storage, which provides availability and [redundancy](../../storage/common/storage-redundancy.md) for transaction log, ensuring data durability for committed transactions.
-- A stateful data storage layer with the database files (.mdf/.ndf) that are stored in Azure Storage and are updated by page servers. This layer uses data availability and [redundancy](../../storage/common/storage-redundancy.md) features of Azure Storage. It guarantees that every page in a data file will be preserved even if processes in other layers of Hyperscale architecture crash, or if compute nodes fail.
+- A stateful transaction log storage layer formed by the compute node running the Log service process, the transaction log landing zone, and transaction log long-term storage. Landing zone and long-term storage use Azure Storage, which provides availability and [redundancy](/azure/storage/common/storage-redundancy) for transaction log, ensuring data durability for committed transactions.
+- A stateful data storage layer with the database files (.mdf/.ndf) that are stored in Azure Storage and are updated by page servers. This layer uses data availability and [redundancy](/azure/storage/common/storage-redundancy) features of Azure Storage. It guarantees that every page in a data file will be preserved even if processes in other layers of Hyperscale architecture crash, or if compute nodes fail.
 
 Compute nodes in all Hyperscale layers run on Azure Service Fabric, which controls health of each node and performs failovers to available healthy nodes as necessary.
 
@@ -203,8 +203,8 @@ Azure SQL Database and Azure SQL Managed Instance feature a built-in high availa
 
 ## Next steps
 
-- Learn about [Azure Availability Zones](../../availability-zones/az-overview.md)
-- Learn about [Service Fabric](../../service-fabric/service-fabric-overview.md)
-- Learn about [Azure Traffic Manager](../../traffic-manager/traffic-manager-overview.md)
+- Learn about [Azure Availability Zones](/azure/availability-zones/az-overview)
+- Learn about [Service Fabric](/azure/service-fabric/service-fabric-overview)
+- Learn about [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview)
 - Learn [How to initiate a manual failover on SQL Managed Instance](../managed-instance/user-initiated-failover.md)
 - For more options for high availability and disaster recovery, see [Business Continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md)

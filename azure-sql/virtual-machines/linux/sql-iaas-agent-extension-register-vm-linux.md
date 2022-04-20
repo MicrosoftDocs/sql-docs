@@ -40,7 +40,7 @@ To utilize the SQL IaaS Agent extension, you must first [register your subscript
 To register your SQL Server VM with the extension, you'll need:
 
 - An [Azure subscription](https://azure.microsoft.com/free/).
-- An Azure Resource Model [Ubuntu Linux virtual machine](../../../virtual-machines/linux/quick-create-portal.md) with [SQL Server 2017 (or greater)](https://www.microsoft.com/sql-server/sql-server-downloads) deployed to the public or Azure Government cloud.
+- An Azure Resource Model [Ubuntu Linux virtual machine](/azure/virtual-machines/linux/quick-create-portal) with [SQL Server 2017 (or greater)](https://www.microsoft.com/sql-server/sql-server-downloads) deployed to the public or Azure Government cloud.
 - The latest version of [Azure CLI](/cli/azure/install-azure-cli) or [Azure PowerShell (5.0 minimum)](/powershell/azure/install-az-ps).
 
 ## Register subscription with RP

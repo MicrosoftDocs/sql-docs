@@ -515,7 +515,7 @@ The following variables, functions, and views return different results:
 ### VNET
 - VNet can be deployed using Resource Model - Classic Model for VNet is not supported.
 - After a SQL Managed Instance is created, moving the SQL Managed Instance or VNet to another resource group or subscription is not supported.
-- For SQL Managed Instances hosted in virtual clusters that are created before September 22, 2020, [global peering](../../virtual-network/virtual-networks-faq.md#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers) is not supported. You can connect to these resources via ExpressRoute or VNet-to-VNet through VNet Gateways.
+- For SQL Managed Instances hosted in virtual clusters that are created before September 22, 2020, [global peering](/azure/virtual-network/virtual-networks-faq#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers) is not supported. You can connect to these resources via ExpressRoute or VNet-to-VNet through VNet Gateways.
 
 ### Failover groups
 System databases are not replicated to the secondary instance in a failover group. Therefore, scenarios that depend on objects from the system databases will be impossible on the secondary instance unless the objects are manually created on the secondary.

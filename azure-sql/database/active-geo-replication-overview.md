@@ -29,7 +29,7 @@ Active geo-replication is designed as a business continuity solution that lets y
 > Active geo-replication is not supported by Azure SQL Managed Instance. For geographic failover of instances of SQL Managed Instance, use [Auto-failover groups](auto-failover-group-overview.md).
 
 > [!NOTE]
-> To migrate SQL databases from Azure Germany using active geo-replication, see [Migrate SQL Database using active geo-replication](../../germany/germany-migration-databases.md#migrate-sql-database-using-active-geo-replication).
+> To migrate SQL databases from Azure Germany using active geo-replication, see [Migrate SQL Database using active geo-replication](/azure/germany/germany-migration-databases#migrate-sql-database-using-active-geo-replication).
 
 If your application requires a stable connection endpoint and automatic geo-failover support in addition to geo-replication, use [Auto-failover groups](auto-failover-group-overview.md).
 
@@ -239,7 +239,7 @@ To measure lag with respect to changes on the primary database that have been ha
 
 ## <a name="programmatically-managing-active-geo-replication"></a> Programmatically manage active geo-replication
 
-As discussed previously, active geo-replication can also be managed programmatically using T-SQL, Azure PowerShell, and REST API. The following tables describe the set of commands available. Active geo-replication includes a set of Azure Resource Manager APIs for management, including the [Azure SQL Database REST API](/rest/api/sql/) and [Azure PowerShell cmdlets](/powershell/azure/). These APIs support Azure role-based access control (Azure RBAC). For more information on how to implement access roles, see [Azure role-based access control (Azure RBAC)](../../role-based-access-control/overview.md).
+As discussed previously, active geo-replication can also be managed programmatically using T-SQL, Azure PowerShell, and REST API. The following tables describe the set of commands available. Active geo-replication includes a set of Azure Resource Manager APIs for management, including the [Azure SQL Database REST API](/rest/api/sql/) and [Azure PowerShell cmdlets](/powershell/azure/). These APIs support Azure role-based access control (Azure RBAC). For more information on how to implement access roles, see [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview).
 
 ### <a name="t-sql-manage-failover-of-single-and-pooled-databases"></a> T-SQL: Manage geo-failover of single and pooled databases
 

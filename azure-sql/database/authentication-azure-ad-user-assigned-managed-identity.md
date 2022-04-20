@@ -18,12 +18,12 @@ ms.date: 03/09/2022
 > [!NOTE]
 > User-assigned managed identity for Azure SQL is in **public preview**. 
 
-Azure Active Directory (AD) supports two types of managed identities: System-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](../../active-directory/managed-identities-azure-resources/overview.md#managed-identity-types).
+Azure Active Directory (AD) supports two types of managed identities: System-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types).
 
 A system-assigned managed identity is automatically assigned to a managed instance when it is created. When using Azure AD authentication with Azure SQL Managed Instance, a managed identity must be assigned to the server identity. Previously, only a system-assigned managed identity could be assigned to the Managed Instance or SQL Database server identity. With support for user-assigned managed identity, the UMI can be assigned to Azure SQL Managed Instance or Azure SQL Database as the instance or server identity. This feature is now supported for SQL Database. 
 
 > [!NOTE]
-> This article applies only to dedicated SQL pools (formerly SQL DW) in standalone Azure SQL servers. For more information on user-assigned managed identities for dedicated pools in Azure Synapse workspaces, see [Using a user-assigned managed identity](../../synapse-analytics/security/workspaces-encryption.md#using-a-user-assigned-managed-identity).
+> This article applies only to dedicated SQL pools (formerly SQL DW) in standalone Azure SQL servers. For more information on user-assigned managed identities for dedicated pools in Azure Synapse workspaces, see [Using a user-assigned managed identity](/azure/synapse-analytics/security/workspaces-encryption#using-a-user-assigned-managed-identity).
 
 ## Benefits of using user-assigned managed identities
 
@@ -40,14 +40,14 @@ There are several benefits of using UMI as a server identity.
 
 ## Creating a user-assigned managed identity
 
-For information on how to create a user-assigned managed identity, see [Manage user-assigned managed identities](../../active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities.md).
+For information on how to create a user-assigned managed identity, see [Manage user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities).
 
 ## Permissions
 
 Once the UMI is created, some permissions are needed to allow the UMI to read from [Microsoft Graph](/graph/api/resources/azure-ad-overview) as the server identity. Grant the permissions below, or give the UMI the [Directory Readers](authentication-aad-directory-readers-role-tutorial.md) role. These permissions should be granted before provisioning an Azure SQL logical server or managed instance. Once the permissions are granted to the UMI, they're enabled for all servers or instances that are created with the UMI assigned as a server identity.
 
 > [!IMPORTANT]
-> Only a [Global Administrator](../../active-directory/roles/permissions-reference.md#global-administrator) or [Privileged Role Administrator](../../active-directory/roles/permissions-reference.md#privileged-role-administrator) can grant these permissions.
+> Only a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Privileged Role Administrator](/azure/active-directory/roles/permissions-reference#privileged-role-administrator) can grant these permissions.
 
 - [**User.Read.All**](/graph/permissions-reference#user-permissions) - allows access to Azure AD user information
 - [**GroupMember.Read.All**](/graph/permissions-reference#group-permissions) – allows access to Azure AD group information
@@ -194,4 +194,4 @@ The ARM template used in [Creating an Azure SQL logical server using a user-assi
 > [Create an Azure SQL Managed Instance with a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)
 
 > [!div class="nextstepaction"]
-> [Using a user-assigned managed identity in Azure Synapse workspaces](../../synapse-analytics/security/workspaces-encryption.md#using-a-user-assigned-managed-identity)
+> [Using a user-assigned managed identity in Azure Synapse workspaces](/azure/synapse-analytics/security/workspaces-encryption#using-a-user-assigned-managed-identity)

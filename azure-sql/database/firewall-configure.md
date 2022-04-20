@@ -106,8 +106,8 @@ When an application from Azure tries to connect to the server, the firewall chec
 
 To be able to create and manage IP firewall rules for the Azure SQL Server, you will need to either be:
 
-- in the [SQL Server Contributor](../../role-based-access-control/built-in-roles.md#sql-server-contributor) role
-- in the [SQL Security Manager](../../role-based-access-control/built-in-roles.md#sql-security-manager) role
+- in the [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor) role
+- in the [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) role
 - the owner of the resource that contains the Azure SQL Server
 
 ## Create and manage IP firewall rules

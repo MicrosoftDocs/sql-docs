@@ -48,11 +48,11 @@ After you've verified that your source environment is supported, start with the 
 
 In the Discover phase, scan the network to identify all SQL Server instances and features used by your organization. 
 
-Use [Azure Migrate](../../../migrate/migrate-services-overview.md) to assess migration suitability of on-premises servers, perform performance-based sizing, and provide cost estimations for running them in Azure. 
+Use [Azure Migrate](/azure/migrate/migrate-services-overview) to assess migration suitability of on-premises servers, perform performance-based sizing, and provide cost estimations for running them in Azure. 
 
 Alternatively, use the [Microsoft Assessment and Planning Toolkit (the "MAP Toolkit")](https://www.microsoft.com/download/details.aspx?id=7826) to assess your current IT infrastructure. The toolkit provides a powerful inventory, assessment, and reporting tool to simplify the migration planning process. 
 
-For more information about tools available to use for the Discover phase, see [Services and tools available for data migration scenarios](../../../dms/dms-tools-matrix.md). 
+For more information about tools available to use for the Discover phase, see [Services and tools available for data migration scenarios](/azure/dms/dms-tools-matrix). 
 
 ### Assess 
 
@@ -84,7 +84,7 @@ To learn more, see [Perform a SQL Server migration assessment with Data Migratio
 If the assessment encounters multiple blockers to confirm that your database it not ready for an Azure SQL Database migration, then alternatively consider:
 
 - [Azure SQL Managed Instance](../managed-instance/sql-server-to-managed-instance-overview.md) if there are multiple instance-scoped dependencies
-- [SQL Server on Azure Virtual Machines](../virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md) if both SQL Database and SQL Managed Instance fail to be suitable targets. 
+- [SQL Server on Azure Virtual Machines](/azure/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview) if both SQL Database and SQL Managed Instance fail to be suitable targets. 
 
 
 
@@ -138,7 +138,7 @@ To migrate databases from SQL Server to Azure SQL Database using DMS, follow the
 1. Map the source and target databases for migration and then select the tables you want to migrate.
 1. Review the migration summary and select **Run migration**. You can then monitor the migration activity and check the progress of your database migration.
 
-For a detailed tutorial, see [Migrate SQL Server to an Azure SQL Database using DMS](../../../dms/tutorial-sql-server-to-azure-sql.md). 
+For a detailed tutorial, see [Migrate SQL Server to an Azure SQL Database using DMS](/azure/dms/tutorial-sql-server-to-azure-sql). 
 
 ## Data sync and cutover
 
@@ -147,7 +147,7 @@ When using migration options that continuously replicate / sync data changes fro
 After you verify that data is same on both the source and the target, you can cutover from the source to the target environment. It is important to plan the cutover process with business / application teams to ensure minimal interruption during cutover does not affect business continuity. 
 
 > [!IMPORTANT]
-> For details on the specific steps associated with performing a cutover as part of migrations using DMS, see [Performing migration cutover](../../../dms/tutorial-sql-server-to-azure-sql.md).
+> For details on the specific steps associated with performing a cutover as part of migrations using DMS, see [Performing migration cutover](/azure/dms/tutorial-sql-server-to-azure-sql).
 
 ## Migration recommendations
 
@@ -157,7 +157,7 @@ To speed up migration to Azure SQL Database, you should consider the following r
 |--|--|--|
 | **Source (typically on premises)** |Primary bottleneck during migration in source is DATA I/O and latency on DATA file which needs to be monitored carefully.  |Based on DATA IO and DATA file latency and depending on whether it’s a virtual machine or physical server, you will have to engage storage admin and explore options to mitigate the bottleneck. |
 |**Target (Azure SQL Database)**|Biggest limiting factor is the log generation rate and latency on log file. With Azure SQL Database, you can get a maximum of 96-MB/s log generation rate. | To speed up migration, scale up the target SQL DB to Business Critical Gen5 8 vCore to get the maximum log generation rate of 96 MB/s and also achieve low latency for log file. The [Hyperscale](../../database/service-tier-hyperscale.md) service tier provides 100-MB/s log rate regardless of chosen service level |
-|**Network** |Network bandwidth needed is equal to max log ingestion rate 96 MB/s (768 Mb/s) |Depending on network connectivity from your on-premises data center to Azure, check your network bandwidth (typically [Azure ExpressRoute](../../../expressroute/expressroute-introduction.md#bandwidth-options)) to accommodate for the maximum log ingestion rate. |
+|**Network** |Network bandwidth needed is equal to max log ingestion rate 96 MB/s (768 Mb/s) |Depending on network connectivity from your on-premises data center to Azure, check your network bandwidth (typically [Azure ExpressRoute](/azure/expressroute/expressroute-introduction#bandwidth-options)) to accommodate for the maximum log ingestion rate. |
 |**Virtual machine used for Data Migration Assistant (DMA)** |CPU is the primary bottleneck for the virtual machine running DMA |Things to consider to speed up data migration by using </br>- Azure compute intensive VMs </br>- Use at least F8s_v2 (8 vcore) VM for running DMA </br>- Ensure the VM is running in the same Azure region as target |
 |**Azure Database Migration Service (DMS)** |Compute resource contention and database objects consideration for DMS |Use Premium 4 vCore. DMS automatically takes care of database objects like foreign keys, triggers, constraints, and non-clustered indexes and doesn't need manual intervention.  |
 
@@ -193,11 +193,11 @@ To learn more, see [managing Azure SQL Database after migration](../../database/
 
 ## Next steps
 
-- For a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks, see [Service and tools for data migration](../../../dms/dms-tools-matrix.md).
+- For a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks, see [Service and tools for data migration](/azure/dms/dms-tools-matrix).
 
 
 - To learn more about [Azure Migrate](https://azure.microsoft.com/services/azure-migrate) see
-   - [Azure Migrate](../../../migrate/migrate-services-overview.md)
+   - [Azure Migrate](/azure/migrate/migrate-services-overview)
 
 - To learn more about SQL Database see:
 	- [An Overview of Azure SQL Database](../../database/sql-database-paas-overview.md)

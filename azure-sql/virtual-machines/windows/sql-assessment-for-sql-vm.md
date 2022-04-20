@@ -27,7 +27,7 @@ To learn more, watch this video on [SQL best practices assessment](/shows/Data-E
 Once the SQL best practices assessment feature is enabled, your SQL Server instance and databases are scanned to provide recommendations for things like indexes, deprecated features, enabled or missing trace flags, statistics, etc. Recommendations are surfaced to the [SQL VM management page](manage-sql-vm-portal.md) of the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines). 
 
 
-Assessment results are uploaded to your [Log Analytics workspace](../../../azure-monitor/logs/quick-create-workspace.md) using [Microsoft Monitoring Agent (MMA)](../../../azure-monitor/agents/log-analytics-agent.md). If your VM is already configured to use Log Analytics, the SQL best practices assessment feature uses the existing connection.  Otherwise, the MMA extension is installed to the SQL Server VM and connected to the specified Log Analytics workspace.
+Assessment results are uploaded to your [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) using [Microsoft Monitoring Agent (MMA)](/azure/azure-monitor/agents/log-analytics-agent). If your VM is already configured to use Log Analytics, the SQL best practices assessment feature uses the existing connection.  Otherwise, the MMA extension is installed to the SQL Server VM and connected to the specified Log Analytics workspace.
 
 Assessment run time depends on your environment (number of databases, objects, and so on), with a duration from a few minutes, up to an hour. Similarly, the size of the assessment result also depends on your environment. Assessment runs against your instance and all databases on that instance. In our testing, we observed that an assessment run can have up to 5-10% CPU impact on the machine. In these tests, the assessment was done while a TPC-C like application was running against the SQL Server.
 
@@ -36,7 +36,7 @@ Assessment run time depends on your environment (number of databases, objects, a
 To use the SQL best practices assessment feature, you must have the following prerequisites: 
 
 - Your SQL Server VM must be registered with the [SQL Server IaaS extension in full mode](sql-agent-extension-manually-register-single-vm.md#full-mode). 
-- A [Log Analytics workspace](../../../azure-monitor/logs/quick-create-workspace.md) in the same subscription as your SQL Server VM to upload assessment results to. 
+- A [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) in the same subscription as your SQL Server VM to upload assessment results to. 
 - SQL Server needs to be 2012 or higher version.
 
 
@@ -48,7 +48,7 @@ To enable SQL best practices assessments, follow these steps:
 1. Select **SQL best practices assessments** under **Settings**. 
 1. Select **Enable SQL best practices assessments** or **Configuration** to navigate to the **Configuration** page. 
 1. Check the **Enable SQL best practices assessments** box and provide the following:
-    1. The [Log Analytics workspace](../../../azure-monitor/logs/quick-create-workspace.md) that assessments will be uploaded to. If the SQL Server VM has not been associated with a workspace previously, then choose an existing workspace in the subscription from the drop-down. Otherwise, the previously-associated workspace is already populated.  
+    1. The [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) that assessments will be uploaded to. If the SQL Server VM has not been associated with a workspace previously, then choose an existing workspace in the subscription from the drop-down. Otherwise, the previously-associated workspace is already populated.  
     1. The **Run schedule**. You can choose to run assessments on demand, or automatically on a schedule. If you choose a schedule, then provide the frequency (weekly or monthly), day of week, recurrence (every 1-6 weeks), and the time of day your assessments should start (local to VM time). 
 1. Select **Apply** to save your changes and deploy the Microsoft Monitoring Agent to your SQL Server VM if it's not deployed already. An Azure portal notification will tell you once the SQL best practices assessment feature is ready for your SQL Server VM. 
     
@@ -103,18 +103,18 @@ You may encounter some of the following known issues when using SQL best practic
 
 ### Configuration error for Enable SQL best practices assessment
 
-If your virtual machine is already associated with a Log Analytics workspace that you don't have access to or that is in another subscription, you will see an error in the configuration blade. For the former, you can either obtain permissions for that workspace or switch your VM to a different Log Analytics workspace by following [these instructions](../../../azure-monitor/agents/agent-manage.md) to remove Microsoft Monitoring Agent. 
+If your virtual machine is already associated with a Log Analytics workspace that you don't have access to or that is in another subscription, you will see an error in the configuration blade. For the former, you can either obtain permissions for that workspace or switch your VM to a different Log Analytics workspace by following [these instructions](/azure/azure-monitor/agents/agent-manage) to remove Microsoft Monitoring Agent. 
 
 ### Deployment failure for Enable or Run Assessment 
 
-Refer to the [deployment history](../../../azure-resource-manager/templates/deployment-history.md) of the resource group containing the SQL VM to view the error message associated with the failed action. 
+Refer to the [deployment history](/azure/azure-resource-manager/templates/deployment-history) of the resource group containing the SQL VM to view the error message associated with the failed action. 
  
 ### Failed assessments 
 
 If the assessment or uploading the results failed for some reason, the status of that run will indicate the failure. Clicking on the status will open a context pane where you can see the details about the failure and possible ways to remediate the issue.
 
 >[!TIP]
->If you have enforced TLS 1.0 or higher in Windows and disabled older SSL protocols as described [here](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel#schannel-specific-registry-keys), then you must also ensure that .NET Framework is [configured](../../../azure-monitor/agents/agent-windows.md#configure-agent-to-use-tls-12) to use strong cryptography. 
+>If you have enforced TLS 1.0 or higher in Windows and disabled older SSL protocols as described [here](/troubleshoot/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel#schannel-specific-registry-keys), then you must also ensure that .NET Framework is [configured](/azure/azure-monitor/agents/agent-windows#configure-agent-to-use-tls-12) to use strong cryptography. 
 
 ## Next steps
 

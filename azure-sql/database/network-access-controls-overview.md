@@ -23,7 +23,7 @@ You can use the following network access controls to selectively allow access to
 - Allow Azure Services: When set to ON, other resources within the Azure boundary, for example an Azure Virtual Machine, can access SQL Database
 - IP firewall rules: Use this feature to explicitly allow connections from a specific IP address, for example from on-premises machines
 
-You can also allow private access to the database from [virtual networks](../../virtual-network/virtual-networks-overview.md) via:
+You can also allow private access to the database from [virtual networks](/azure/virtual-network/virtual-networks-overview) via:
 
 - Virtual network firewall rules: Use this feature to allow traffic from a specific virtual network within the Azure boundary
 - Private Link: Use this feature to create a private endpoint for [logical SQL server](logical-servers.md) within a specific virtual network
@@ -118,7 +118,7 @@ Be aware of the following Azure Networking terms as you explore Virtual network 
 
 **Subnet:** A virtual network contains **subnets**. Any Azure virtual machines (VMs) that you have are assigned to subnets. One subnet can contain multiple VMs or other compute nodes. Compute nodes that are outside of your virtual network can't access your virtual network unless you configure your security to allow access.
 
-**Virtual network service endpoint:** A [Virtual network service endpoint](../../virtual-network/virtual-network-service-endpoints-overview.md) is a subnet whose property values include one or more formal Azure service type names. In this article we're interested in the type name of **Microsoft.Sql**, which refers to the Azure service named SQL Database.
+**Virtual network service endpoint:** A [Virtual network service endpoint](/azure/virtual-network/virtual-network-service-endpoints-overview) is a subnet whose property values include one or more formal Azure service type names. In this article we're interested in the type name of **Microsoft.Sql**, which refers to the Azure service named SQL Database.
 
 **Virtual network rule:** A virtual network rule for your server is a subnet that is listed in the access control list (ACL) of your server. To be in the ACL for your database in SQL Database, the subnet must contain the **Microsoft.Sql** type name. A virtual network rule tells your server to accept communications from every node that is on the subnet.
 
@@ -126,7 +126,7 @@ Be aware of the following Azure Networking terms as you explore Virtual network 
 
 The Azure SQL Database firewall allows you to specify IP address ranges from which communications are accepted into SQL Database. This approach is fine for stable IP addresses that are outside the Azure private network. However, virtual machines (VMs) within the Azure private network are configured with *dynamic* IP addresses. Dynamic IP addresses can change when your VM is restarted and in turn invalidate the IP-based firewall rule. It would be folly to specify a dynamic IP address in a firewall rule, in a production environment.
 
-You can work around this limitation by obtaining a *static* IP address for your VM. For details, see [Create a virtual machine with a static public IP address using the Azure portal](../../virtual-network/ip-services/virtual-network-deploy-static-pip-arm-portal.md). However, the static IP approach can become difficult to manage, and it's costly when done at scale.
+You can work around this limitation by obtaining a *static* IP address for your VM. For details, see [Create a virtual machine with a static public IP address using the Azure portal](/azure/virtual-network/ip-services/virtual-network-deploy-static-pip-arm-portal). However, the static IP approach can become difficult to manage, and it's costly when done at scale.
 
 Virtual network rules are easier alternative to establish and to manage access from a specific subnet that contains your VMs.
 
@@ -135,7 +135,7 @@ Virtual network rules are easier alternative to establish and to manage access f
 
 ## Private Link
 
-Private Link allows you to connect to a server via a **private endpoint**. A private endpoint is a private IP address within a specific [virtual network](../../virtual-network/virtual-networks-overview.md) and Subnet.
+Private Link allows you to connect to a server via a **private endpoint**. A private endpoint is a private IP address within a specific [virtual network](/azure/virtual-network/virtual-networks-overview) and Subnet.
 
 ## Next steps
 

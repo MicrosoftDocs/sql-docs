@@ -30,8 +30,8 @@ SQL Server VMs deployed through marketplace images automatically follow default 
 To use the automated storage configuration settings, your virtual machine requires the following characteristics:
 
 * Provisioned with a [SQL Server gallery image](sql-server-on-azure-vm-iaas-what-is-overview.md#payasyougo) or registered with the [SQL IaaS extension]().
-* Uses the [Resource Manager deployment model](../../../azure-resource-manager/management/deployment-models.md).
-* Uses [premium SSDs](../../../virtual-machines/disks-types.md).
+* Uses the [Resource Manager deployment model](/azure/azure-resource-manager/management/deployment-models).
+* Uses [premium SSDs](/azure/virtual-machines/disks-types).
 
 ## New VMs
 
@@ -47,13 +47,13 @@ Choose the drive location for your data files and log files, specifying the disk
 
 ![SQL Server VM Storage Configuration During Provisioning](./media/storage-configuration/sql-vm-storage-configuration.png)
 
-The disk configuration is completely customizable so that you can configure the storage topology, disk type and IOPs you need for your SQL Server VM workload. You also have the ability to use UltraSSD (preview) as an option for the **Disk type** if your SQL Server VM is in one of the supported regions (East US 2, SouthEast Asia and North Europe) and you've enabled [ultra disks for your subscription](../../../virtual-machines/disks-enable-ultra-ssd.md).
+The disk configuration is completely customizable so that you can configure the storage topology, disk type and IOPs you need for your SQL Server VM workload. You also have the ability to use UltraSSD (preview) as an option for the **Disk type** if your SQL Server VM is in one of the supported regions (East US 2, SouthEast Asia and North Europe) and you've enabled [ultra disks for your subscription](/azure/virtual-machines/disks-enable-ultra-ssd).
 
 Configure your tempdb database settings under **Tempdb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB. Currently, during deployment, the max number of tempdb files is 8, but more files can be added after the SQL Server VM is deployed.
 
 ![Screenshot that shows where you can configure the tempdb storage for your SQL VM](./media/create-sql-vm-portal/storage-configuration-tempdb-storage.png)
 
-Additionally, you have the ability to set the caching for the disks. Azure VMs have a multi-tier caching technology called [Blob Cache](../../../virtual-machines/premium-storage-performance.md#disk-caching) when used with [Premium Disks](../../../virtual-machines/disks-types.md#premium-ssds). Blob Cache uses a combination of the Virtual Machine RAM and local SSD for caching.
+Additionally, you have the ability to set the caching for the disks. Azure VMs have a multi-tier caching technology called [Blob Cache](/azure/virtual-machines/premium-storage-performance#disk-caching) when used with [Premium Disks](/azure/virtual-machines/disks-types#premium-ssds). Blob Cache uses a combination of the Virtual Machine RAM and local SSD for caching.
 
 Disk caching for Premium SSD can be *ReadOnly*, *ReadWrite* or *None*.
 
@@ -121,7 +121,7 @@ You can also configure the settings for tempdb directly from the portal. Select 
 This section provides a reference for the storage configuration changes that Azure automatically performs during SQL Server VM provisioning or configuration in the Azure portal.
 
 * Azure configures a storage pool from storage selected from your VM. The next section of this topic provides details about storage pool configuration.
-* Automatic storage configuration always uses [premium SSDs](../../../virtual-machines/disks-types.md) P30 data disks. Consequently, there is a 1:1 mapping between your selected number of Terabytes and the number of data disks attached to your VM.
+* Automatic storage configuration always uses [premium SSDs](/azure/virtual-machines/disks-types) P30 data disks. Consequently, there is a 1:1 mapping between your selected number of Terabytes and the number of data disks attached to your VM.
 
 For pricing information, see the [Storage pricing](https://azure.microsoft.com/pricing/details/storage) page on the **Disk Storage** tab.
 
@@ -198,7 +198,7 @@ To enable Write Acceleration using the Azure portal, follow these steps:
 
 ## Disk striping
 
-For more throughput, you can add additional data disks and use disk striping. To determine the number of data disks, analyze the throughput and bandwidth required for your SQL Server data files, including the log and tempdb. Throughput and bandwidth limits vary by VM size. To learn more, see [VM Size](../../../virtual-machines/sizes.md)
+For more throughput, you can add additional data disks and use disk striping. To determine the number of data disks, analyze the throughput and bandwidth required for your SQL Server data files, including the log and tempdb. Throughput and bandwidth limits vary by VM size. To learn more, see [VM Size](/azure/virtual-machines/sizes)
 
 
 * For Windows 8/Windows Server 2012 or later, use [Storage Spaces](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11)) with the following guidelines:
@@ -250,7 +250,7 @@ In Windows Server 2008 to 2012 R2, the default value for `-StorageSubsystemFrien
 
   * If you are using [Storage Spaces Direct (S2D)](/windows-server/storage/storage-spaces/storage-spaces-direct-in-vm) with [SQL Server Failover Cluster Instances](./failover-cluster-instance-storage-spaces-direct-manually-configure.md), you must configure a single pool. Although different volumes can be created on that single pool, they will all share the same characteristics, such as the same caching policy.
 
-  * Determine the number of disks associated with your storage pool based on your load expectations. Keep in mind that different VM sizes allow different numbers of attached data disks. For more information, see [Sizes for virtual machines](../../../virtual-machines/sizes.md?toc=/azure/virtual-machines/windows/toc.json).
+  * Determine the number of disks associated with your storage pool based on your load expectations. Keep in mind that different VM sizes allow different numbers of attached data disks. For more information, see [Sizes for virtual machines](/azure/virtual-machines/sizes?toc=/azure/virtual-machines/windows/toc.json).
 
 
 ## Next steps

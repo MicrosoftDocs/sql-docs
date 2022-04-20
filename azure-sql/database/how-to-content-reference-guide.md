@@ -24,7 +24,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Import a DB from a BACPAC](database-import.md)
 - [Export a DB to BACPAC](database-export.md)
 - [Load data with BCP](../load-from-csv-with-bcp.md)
-- [Load data with ADF](../../data-factory/connector-azure-sql-database.md?toc=/azure/sql-database/toc.json)
+- [Load data with ADF](/azure/data-factory/connector-azure-sql-database?toc=/azure/sql-database/toc.json)
 
 ## Configure features
 

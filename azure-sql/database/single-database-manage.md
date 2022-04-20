@@ -77,7 +77,7 @@ To create and manage servers, single and pooled databases, and server-level fire
 
 ## Azure CLI
 
-To create and manage the servers, databases, and firewalls with [Azure CLI](/cli/azure), use the following [Azure CLI](/cli/azure/sql/db) commands. Use the [Cloud Shell](../../cloud-shell/overview.md) to run Azure CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows. For creating and managing elastic pools, see [Elastic pools](elastic-pool-overview.md).
+To create and manage the servers, databases, and firewalls with [Azure CLI](/cli/azure), use the following [Azure CLI](/cli/azure/sql/db) commands. Use the [Cloud Shell](/azure/cloud-shell/overview) to run Azure CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows. For creating and managing elastic pools, see [Elastic pools](elastic-pool-overview.md).
 
 > [!TIP]
 > For an Azure CLI quickstart, see [Create a single Azure SQL Database using Azure CLI](az-cli-script-samples-content-guide.md). For Azure CLI example scripts, see [Use CLI to create a database in Azure SQL Database and configure a SQL Database firewall rule](scripts/create-and-configure-database-cli.md) and [Use CLI to monitor and scale a database in Azure SQL Database](scripts/monitor-and-scale-database-cli.md).

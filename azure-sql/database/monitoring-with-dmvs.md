@@ -28,7 +28,7 @@ For detailed information on dynamic management views, see [Dynamic Management Vi
 
 ## Monitor with SQL insights
 
-[Azure Monitor SQL insights](../../azure-monitor/insights/sql-insights-overview.md) is a tool for monitoring managed instances, databases in Azure SQL Database, and SQL Server instances in Azure SQL VMs. This service uses a remote agent to capture data from dynamic management views (DMVs) and routes the data to Azure Log Analytics, where it can be monitored and analyzed. You can view this data from [Azure Monitor](../../azure-monitor/overview.md) in provided views, or access the Log data directly to run queries and analyze trends. To start using Azure Monitor SQL insights, see [Enable SQL insights](../../azure-monitor/insights/sql-insights-enable.md).
+[Azure Monitor SQL insights](/azure/azure-monitor/insights/sql-insights-overview) is a tool for monitoring managed instances, databases in Azure SQL Database, and SQL Server instances in Azure SQL VMs. This service uses a remote agent to capture data from dynamic management views (DMVs) and routes the data to Azure Log Analytics, where it can be monitored and analyzed. You can view this data from [Azure Monitor](/azure/azure-monitor/overview) in provided views, or access the Log data directly to run queries and analyze trends. To start using Azure Monitor SQL insights, see [Enable SQL insights](/azure/azure-monitor/insights/sql-insights-enable).
 
 ## Permissions
 

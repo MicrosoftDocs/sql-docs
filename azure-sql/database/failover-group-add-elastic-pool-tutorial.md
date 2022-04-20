@@ -573,4 +573,4 @@ In this tutorial, you added an Azure SQL Database elastic pool to a failover gro
 Advance to the next tutorial on how to migrate using DMS.
 
 > [!div class="nextstepaction"]
-> [Tutorial: Migrate SQL Server to a pooled database using DMS](../../dms/tutorial-sql-server-to-azure-sql.md?toc=/azure/sql-database/toc.json)
+> [Tutorial: Migrate SQL Server to a pooled database using DMS](/azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/sql-database/toc.json)

@@ -16,7 +16,7 @@ ms.custom: ignite-fall-2021
 # Move Azure SQL Managed Instance across subnets
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Azure SQL Managed Instance must be deployed inside a dedicated subnet within an Azure [virtual network](../../virtual-network/virtual-networks-overview.md). The number of managed instances that can be deployed within the subnet depends on the size of the subnet (subnet range).
+Azure SQL Managed Instance must be deployed inside a dedicated subnet within an Azure [virtual network](/azure/virtual-network/virtual-networks-overview). The number of managed instances that can be deployed within the subnet depends on the size of the subnet (subnet range).
 
 This article teaches you to move your managed instance from one subnet to another, similar to scaling vCores or changing the instance service tier. SQL Managed Instance is available during the move, except during a short downtime caused by a failover at the end of the update - typically lasting up to 10 seconds, even if long-running transactions are interrupted. 
 
@@ -214,4 +214,4 @@ az sql mi op list -g myResourceGroup --mi mySqlManagedInstance
 - For a features and comparison list, see [common SQL features](../database/features-comparison.md).
 - For more information about VNet configuration, see [SQL Managed Instance VNet configuration](connectivity-architecture-overview.md).
 - For a quickstart that creates a managed instance and restores a database from a backup file, see [Create a managed instance](instance-create-quickstart.md).
-- For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](../../dms/tutorial-sql-server-to-managed-instance.md).
+- For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).

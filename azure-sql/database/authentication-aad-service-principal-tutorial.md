@@ -57,7 +57,7 @@ In this tutorial, you learn how to:
     For more information, see the [Set-AzSqlServer](/powershell/module/az.sql/set-azsqlserver) command.
 
     > [!IMPORTANT]
-    > If an Azure AD Identity is set up for the Azure SQL logical server, the [**Directory Readers**](../../active-directory/roles/permissions-reference.md#directory-readers) permission must be granted to the identity. We will walk through this step in following section. **Do not** skip this step as Azure AD authentication will stop working.
+    > If an Azure AD Identity is set up for the Azure SQL logical server, the [**Directory Readers**](/azure/active-directory/roles/permissions-reference#directory-readers) permission must be granted to the identity. We will walk through this step in following section. **Do not** skip this step as Azure AD authentication will stop working.
     >
     > With [Microsoft Graph](/graph/overview) support for Azure SQL, the Directory Readers role can be replaced with using lower level permissions. For more information, see [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
     > 
@@ -155,7 +155,7 @@ For a similar approach on how to set the **Directory Readers** permission for SQ
 
 ## Create a service principal (an Azure AD application) in Azure AD
 
-Register your application if you have not already done so. To register an app, you need to either be an Azure AD admin or a user assigned the Azure AD *Application Developer* role. For more information about assigning roles, see [Assign administrator and non-administrator roles to users with Azure Active Directory](../../active-directory/fundamentals/active-directory-users-assign-role-azure-portal.md).
+Register your application if you have not already done so. To register an app, you need to either be an Azure AD admin or a user assigned the Azure AD *Application Developer* role. For more information about assigning roles, see [Assign administrator and non-administrator roles to users with Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).
 
 Completing an app registration generates and displays an **Application ID**.
 
@@ -169,7 +169,7 @@ To register your application:
 
     ![App ID displayed](./media/active-directory-interactive-connect-azure-sql-db/image2.png)
 
-1. You'll also need to create a client secret for signing in. Follow the guide here to [upload a certificate or create a secret for signing in](../../active-directory/develop/howto-create-service-principal-portal.md#authentication-two-options).
+1. You'll also need to create a client secret for signing in. Follow the guide here to [upload a certificate or create a secret for signing in](/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options).
 
 1. Record the following from your application registration. It should be available from your **Overview** pane:
     - **Application ID**
@@ -177,7 +177,7 @@ To register your application:
 
 In this tutorial, we'll be using *AppSP* as our main service principal, and *myapp* as the second service principal user that will be created in Azure SQL by *AppSP*. You'll need to create two applications, *AppSP* and *myapp*.
 
-For more information on how to create an Azure AD application, see the article [How to: Use the portal to create an Azure AD application and service principal that can access resources](../../active-directory/develop/howto-create-service-principal-portal.md).
+For more information on how to create an Azure AD application, see the article [How to: Use the portal to create an Azure AD application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal).
 
 ## Create the service principal user in Azure SQL Database
 
@@ -281,9 +281,9 @@ Once a service principal is created in Azure AD, create the user in SQL Database
 ## Next steps
 
 - [Azure Active Directory service principal with Azure SQL](authentication-aad-service-principal.md)
-- [What are managed identities for Azure resources?](../../active-directory/managed-identities-azure-resources/overview.md)
-- [How to use managed identities for App Service and Azure Functions](../../app-service/overview-managed-identity.md)
+- [What are managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview)
+- [How to use managed identities for App Service and Azure Functions](/azure/app-service/overview-managed-identity)
 - [Azure AD Service Principal authentication to SQL DB - Code Sample](https://techcommunity.microsoft.com/t5/azure-sql-database/azure-ad-service-principal-authentication-to-sql-db-code-sample/ba-p/481467)
-- [Application and service principal objects in Azure Active Directory](../../active-directory/develop/app-objects-and-service-principals.md)
+- [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals)
 - [Create an Azure service principal with Azure PowerShell](/powershell/azure/create-azure-service-principal-azureps)
 - [Directory Readers role in Azure Active Directory for Azure SQL](authentication-aad-directory-readers-role.md)

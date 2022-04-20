@@ -27,11 +27,11 @@ There is typically a trade-off between optimizing for costs and optimizing for p
 
 For a prescriptive approach, gather performance counters using PerfMon/LogMan and capture SQL Server wait statistics to better understand general pressures and potential bottlenecks of the source environment. 
 
-Start by collecting the CPU, memory, [IOPS](../../../virtual-machines/premium-storage-performance.md#iops), [throughput](../../../virtual-machines/premium-storage-performance.md#throughput), and [latency](../../../virtual-machines/premium-storage-performance.md#latency) of the source workload at peak times following the [application performance checklist](../../../virtual-machines/premium-storage-performance.md#application-performance-requirements-checklist). 
+Start by collecting the CPU, memory, [IOPS](/azure/virtual-machines/premium-storage-performance#iops), [throughput](/azure/virtual-machines/premium-storage-performance#throughput), and [latency](/azure/virtual-machines/premium-storage-performance#latency) of the source workload at peak times following the [application performance checklist](/azure/virtual-machines/premium-storage-performance#application-performance-requirements-checklist). 
 
 Gather data during peak hours such as workloads during your typical business day, but also other high load processes such as end-of-day processing, and weekend ETL workloads. Consider scaling up your resources for atypically heavily workloads, such as end-of-quarter processing, and then scale done once the workload completes. 
 
-Use the performance analysis to select the [VM Size](../../../virtual-machines/sizes-memory.md) that can scale to your workload's performance requirements.
+Use the performance analysis to select the [VM Size](/azure/virtual-machines/sizes-memory) that can scale to your workload's performance requirements.
 
 
 ## Storage

@@ -100,14 +100,14 @@ There are two authentication methods offered in SQL Database:
 
 Traditional Windows authentication is not supported. Azure Active Directory (Azure AD) is a centralized identity and access management service. With this you can very conveniently provide single sign-on (SSO) access to the personnel in your organization. What this means is that the credentials are shared across Azure services for simpler authentication.
 
-Azure AD supports [Azure AD Multi-Factor Authentication](authentication-mfa-ssms-overview.md) and with a [few clicks](../../active-directory/hybrid/how-to-connect-install-express.md) Azure AD can be integrated with Windows Server Active Directory. SQL Authentication works exactly like you’ve been using it in the past. You provide a username/password and you can authenticate users to any database on a given server. This also allows SQL Database and Azure Synapse Analytics to offer Multi-Factor Authentication and guest user accounts within an Azure AD domain. If you already have an Active Directory on-premises, you can federate the directory with Azure Active Directory to extend your directory to Azure.
+Azure AD supports [Azure AD Multi-Factor Authentication](authentication-mfa-ssms-overview.md) and with a [few clicks](/azure/active-directory/hybrid/how-to-connect-install-express) Azure AD can be integrated with Windows Server Active Directory. SQL Authentication works exactly like you’ve been using it in the past. You provide a username/password and you can authenticate users to any database on a given server. This also allows SQL Database and Azure Synapse Analytics to offer Multi-Factor Authentication and guest user accounts within an Azure AD domain. If you already have an Active Directory on-premises, you can federate the directory with Azure Active Directory to extend your directory to Azure.
 
 |**If you...**|**SQL Database / Azure Synapse Analytics**|
 |---|---|
 |Prefer not to use Azure Active Directory (Azure AD) in Azure|Use [SQL authentication](security-overview.md)|
-|Used AD on SQL Server on-premises|[Federate AD with Azure AD](../../active-directory/hybrid/whatis-hybrid-identity.md), and use Azure AD authentication. With this, you can use Single Sign-On.|
+|Used AD on SQL Server on-premises|[Federate AD with Azure AD](/azure/active-directory/hybrid/whatis-hybrid-identity), and use Azure AD authentication. With this, you can use Single Sign-On.|
 |Need to enforce Multi-Factor Authentication|Require Multi-Factor Authentication as a policy through [Microsoft Conditional Access](conditional-access-configure.md), and use [Azure AD Universal authentication with Multi-Factor Authentication support](authentication-mfa-ssms-overview.md).|
-|Have guest accounts from Microsoft accounts (live.com, outlook.com) or other domains (gmail.com)|Use [Azure AD Universal authentication](authentication-mfa-ssms-overview.md) in SQL Database/Data Warehouse, which leverages [Azure AD B2B Collaboration](../../active-directory/external-identities/what-is-b2b.md).|
+|Have guest accounts from Microsoft accounts (live.com, outlook.com) or other domains (gmail.com)|Use [Azure AD Universal authentication](authentication-mfa-ssms-overview.md) in SQL Database/Data Warehouse, which leverages [Azure AD B2B Collaboration](/azure/active-directory/external-identities/what-is-b2b).|
 |Are logged in to Windows using your Azure AD credentials from a federated domain|Use [Azure AD integrated authentication](authentication-aad-configure.md).|
 |Are logged in to Windows using credentials from a domain not federated with Azure|Use [Azure AD integrated authentication](authentication-aad-configure.md).|
 |Have middle-tier services which need to connect to SQL Database or Azure Synapse Analytics|Use [Azure AD integrated authentication](authentication-aad-configure.md).|
@@ -208,15 +208,15 @@ The following diagram shows the key store options for the column master keys in 
 
 The network traffic between your organization and SQL Database would generally get routed over the public network. However, if you choose to optimize this path and make it more secure, you can look into Azure ExpressRoute. ExpressRoute essentially lets you extend your corporate network into the Azure platform over a private connection. By doing so, you do not go over the public Internet. You also get higher security, reliability, and routing optimization that translates to lower network latencies and much faster speeds than you would normally experience going over the public internet. If you are planning on transferring a significant chunk of data between your organization and Azure, using ExpressRoute can yield cost benefits. You can choose from three different connectivity models for the connection from your organization to Azure:
 
-- [Cloud Exchange Co-location](../../expressroute/expressroute-connectivity-models.md#CloudExchange)
-- [Any-to-any](../../expressroute/expressroute-connectivity-models.md#IPVPN)
-- [Point-to-Point](../../expressroute/expressroute-connectivity-models.md#Ethernet)
+- [Cloud Exchange Co-location](/azure/expressroute/expressroute-connectivity-models#CloudExchange)
+- [Any-to-any](/azure/expressroute/expressroute-connectivity-models#IPVPN)
+- [Point-to-Point](/azure/expressroute/expressroute-connectivity-models#Ethernet)
 
-ExpressRoute also allows you to burst up to 2x the bandwidth limit you purchase for no additional charge. It is also possible to configure cross region connectivity using ExpressRoute. To see a list of ExpressRoute connectivity providers, see: [ExpressRoute Partners and Peering Locations](../../expressroute/expressroute-locations.md). The following articles describe Express Route in more detail:
+ExpressRoute also allows you to burst up to 2x the bandwidth limit you purchase for no additional charge. It is also possible to configure cross region connectivity using ExpressRoute. To see a list of ExpressRoute connectivity providers, see: [ExpressRoute Partners and Peering Locations](/azure/expressroute/expressroute-locations). The following articles describe Express Route in more detail:
 
-- [Introduction on Express Route](../../expressroute/expressroute-introduction.md)
-- [Prerequisites](../../expressroute/expressroute-prerequisites.md)
-- [Workflows](../../expressroute/expressroute-workflows.md)
+- [Introduction on Express Route](/azure/expressroute/expressroute-introduction)
+- [Prerequisites](/azure/expressroute/expressroute-prerequisites)
+- [Workflows](/azure/expressroute/expressroute-workflows)
 
 ### Is SQL Database compliant with any regulatory requirements, and how does that help with my own organization's compliance
 
@@ -276,7 +276,7 @@ You can query the [sys.dm_db_resource_stats](/sql/relational-databases/system-dy
 
 #### Azure SQL Analytics (Preview) in Azure Monitor logs
 
-[Azure Monitor logs](../../azure-monitor/insights/azure-sql.md) allows you to collect and visualize key Azure SQL Database performance metrics, supporting up to 150,000 databases and 5,000 SQL Elastic pools per workspace. You can use it to monitor and receive notifications. You can monitor SQL Database and elastic pool metrics across multiple Azure subscriptions and elastic pools and can be used to identify issues at each layer of an application stack.
+[Azure Monitor logs](/azure/azure-monitor/insights/azure-sql) allows you to collect and visualize key Azure SQL Database performance metrics, supporting up to 150,000 databases and 5,000 SQL Elastic pools per workspace. You can use it to monitor and receive notifications. You can monitor SQL Database and elastic pool metrics across multiple Azure subscriptions and elastic pools and can be used to identify issues at each layer of an application stack.
 
 ### I am noticing performance issues: How does my SQL Database troubleshooting methodology differ from SQL Server
 

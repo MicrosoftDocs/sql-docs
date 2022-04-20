@@ -36,14 +36,14 @@ Hyperscale databases use [snapshot backup technology](#hyperscale-backups-and-st
 
 ### Backup storage redundancy
 
-By default, Azure SQL Database and Azure SQL Managed Instance store data in geo-redundant [storage blobs](../../storage/common/storage-redundancy.md) that are replicated to a [paired region](../../availability-zones/cross-region-replication-azure.md). Geo-redundancy helps to protect against outages impacting backup storage in the primary region and allows you to restore your server to a different region in the event of a disaster. 
+By default, Azure SQL Database and Azure SQL Managed Instance store data in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps to protect against outages impacting backup storage in the primary region and allows you to restore your server to a different region in the event of a disaster. 
 
 The option to configure backup storage redundancy provides the flexibility to choose between locally redundant, zone-redundant, or geo-redundant storage blobs. To ensure that your data stays within the same region where your managed instance or database in Azure SQL Database is deployed, you can change the default geo-redundant backup storage redundancy and configure either locally redundant or zone-redundant storage blobs for backups. Storage redundancy mechanisms store multiple copies of your data so that it is protected from planned and unplanned events, including transient hardware failure, network or power outages, or massive natural disasters. The configured backup storage redundancy is applied to both short-term backup retention settings that are used for point in time restore (PITR) and long-term retention backups used for long-term backups (LTR). 
 
 For Azure SQL Database, backup storage redundancy can be configured at the time of database creation or can be updated for an existing database; the changes made to an existing database apply to future backups only. After the backup storage redundancy of an existing database is updated, it may take up to 48 hours for the changes to be applied. Geo-restore is disabled as soon as a database is updated to use local or zone redundant storage. For Hyperscale databases, the selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy. Learn more in [Hyperscale backups and storage redundancy](#hyperscale-backups-and-storage-redundancy).
 
 > [!IMPORTANT]
-> Zone-redundant storage is currently only available in [certain regions](../../storage/common/storage-redundancy.md#zone-redundant-storage). 
+> Zone-redundant storage is currently only available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
 
 ### Backup usage
 
@@ -496,7 +496,7 @@ Hyperscale supports configurable storage redundancy. When creating a Hyperscale 
 Backup storage redundancy for Hyperscale databases can only be set during database creation. This setting cannot be modified once the resource is provisioned. Geo-restore is only available when geo-redundant storage (RA-GRS) has been chosen for backup storage redundancy. The [database copy](database-copy.md) process can be used to update the storage redundancy settings for an existing Hyperscale database. Copying a database to a different storage type will be a size-of-data operation. Find example code in [configure backup storage redundancy](#configure-backup-storage-redundancy).
 
 > [!IMPORTANT]
-> Zone-redundant storage is currently only available in [certain regions](../../storage/common/storage-redundancy.md#zone-redundant-storage). 
+> Zone-redundant storage is currently only available in [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
 
 ### Restoring a Hyperscale database to a different region
 
@@ -678,7 +678,7 @@ For more information, see [New-AzSqlInstance](/powershell/module/az.sql/new-azsq
 ## Use Azure Policy to enforce backup storage redundancy
 
 If you have data residency requirements that require you to keep all your data in a single Azure region, you may want to enforce zone-redundant or locally redundant backups for your SQL Database or Managed Instance using Azure Policy. 
-Azure Policy is a service that you can use to create, assign, and manage policies that apply rules to Azure resources. Azure Policy helps you to keep these resources compliant with your corporate standards and service level agreements. For more information, see [Overview of Azure Policy](../../governance/policy/overview.md). 
+Azure Policy is a service that you can use to create, assign, and manage policies that apply rules to Azure resources. Azure Policy helps you to keep these resources compliant with your corporate standards and service level agreements. For more information, see [Overview of Azure Policy](/azure/governance/policy/overview). 
 
 ### Built-in backup storage redundancy policies 
 
@@ -696,7 +696,7 @@ To enforce data residency requirements at an organizational level, these policie
 > [!IMPORTANT]
 > Azure policies are not enforced when creating a database via T-SQL. To enforce data residency when creating a database using T-SQL, [use 'LOCAL' or 'ZONE' as input to BACKUP_STORAGE_REDUNDANCY paramater in CREATE DATABASE statement](/sql/t-sql/statements/create-database-transact-sql#create-database-using-zone-redundancy-for-backups).
 
-Learn how to assign policies using the [Azure portal](../../governance/policy/assign-policy-portal.md) or [Azure PowerShell](../../governance/policy/assign-policy-powershell.md)
+Learn how to assign policies using the [Azure portal](/azure/governance/policy/assign-policy-portal) or [Azure PowerShell](/azure/governance/policy/assign-policy-powershell)
 
 ## Next steps
 

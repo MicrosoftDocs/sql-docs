@@ -142,7 +142,7 @@ In this configuration, a database in Azure SQL Database or Azure SQL Managed Ins
 - Configure VPN peering between the virtual networks of replication participants if the virtual networks are different.
 
 > [!NOTE]
-> You may encounter error 53 when connecting to an Azure Storage File if the outbound network security group (NSG) port 445 is blocked when the distributor is an Azure SQL Managed Instance database and the subscriber is on-premises. [Update the vNet NSG](../../storage/files/storage-troubleshoot-windows-file-connection-problems.md) to resolve this issue.
+> You may encounter error 53 when connecting to an Azure Storage File if the outbound network security group (NSG) port 445 is blocked when the distributor is an Azure SQL Managed Instance database and the subscriber is on-premises. [Update the vNet NSG](/azure/storage/files/storage-troubleshoot-windows-file-connection-problems) to resolve this issue.
 
 ## With failover groups
 

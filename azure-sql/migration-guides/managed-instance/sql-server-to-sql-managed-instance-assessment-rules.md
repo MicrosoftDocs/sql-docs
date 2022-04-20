@@ -594,7 +594,7 @@ More information: [Stored Procedure differences in Azure SQL Managed Instance](.
 
 To start migrating your SQL Server to Azure SQL Managed Instance, see the [SQL Server to SQL Managed Instance migration guide](sql-server-to-managed-instance-guide.md).
 
-- For a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks, see [Service and tools for data migration](../../../dms/dms-tools-matrix.md).
+- For a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks, see [Service and tools for data migration](/azure/dms/dms-tools-matrix).
 
 - To learn more about Azure SQL Managed Instance, see:
    - [Service Tiers in Azure SQL Managed Instance](../../managed-instance/sql-managed-instance-paas-overview.md#service-tiers)

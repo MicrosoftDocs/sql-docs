@@ -13,8 +13,8 @@ the link in the **Policy Version** column to view the source on the
 
 > [!IMPORTANT]
 > Each control below is associated with one or more
-> [Azure Policy](../../../governance/policy/overview.md) definitions. These policies may
-> help you [assess compliance](../../../governance/policy/how-to/get-compliance-data.md)
+> [Azure Policy](/azure/governance/policy/overview) definitions. These policies may
+> help you [assess compliance](/azure/governance/policy/how-to/get-compliance-data)
 > with the control; however, there often is not a one-to-one or complete match between a control and
 > one or more policies. As such, **Compliant** in Azure Policy refers only to the policies
 > themselves; this doesn't ensure you're fully compliant with all requirements of a control. In

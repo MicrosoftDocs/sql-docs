@@ -19,8 +19,6 @@ The Database Migration Assessment for Oracle extension in Azure Data Studio help
 
 - An [Oracle database](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) running version 10 g or higher.
 - [Azure Data Studio installed](../download-azure-data-studio.md).
-- [Extension for Oracle installed](extension-for-oracle.md)
-
 ## Install Azure Data Studio extension
 
 Follow the steps below to install the Database Migration Assessment for Oracle extension in Azure Data Studio.
@@ -79,9 +77,8 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="assessment details":::
 
-    The scale factor multiplier that is applied to the performance metrics utilization ( CPU, Memory, IOPS, Storage)  The multiple value is to factor scenario  issues such as seasonal usage, short performance history, partial workload migration etc. 
-    If the recommended SKU needs to factor additional load , the multiplier should be greater than 1. Example: Burst Load, Seasonal usage , future capacity planning etc. The other scenario , when you move only partial Oracle to workload , then the multiplier should be less than 1.
- The percentile value of the performance sample set to be considered for sizing the Azure target.
+    If the recommended SKU needs to consider additional peak load , the scale factor multiplier should be greater than 1. Example: Burst Load, Seasonal usage , future capacity planning etc. Whereas , when  partial Oracle schema workload is considered  migrated , then the multiplier should be less than 1.
+The percentile value of the performance sample set to be considered for sizing the Azure target.
 
 9. Select **Run new Assessment**.
     1. Now, you see the new Assessment in the last five sections.
@@ -110,12 +107,17 @@ The following database details tab provides the breakup per schema basis. It sho
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-per-schema-basis.png" alt-text="per schema basis":::
 
+>[!Note]
+>The following system or Oracle built-in schemas are excluded in the workload assessment
+'SYSTEM','CTXSYS','DBSNMP','EXFSYS','LBACSYS','MDSYS','MGMT_VIEW' 'OLAPSYS','ORDDATA','OWBSYS','ORDPLUGINS','ORDSYS','OUTLN','SI_INFORMTN_SCHEMA','SYS 'SYSMAN','WK_TEST','WKSYS','WKPROXY','WMSYS','XDB','DIP','MDDATA','ORACLE_OCM', 'SPATIAL_CSW_ADMIN_USR','SPATIAL_WFS_ADMIN_USR','XS$NULL','PERFSTAT','SQLTXPLAIN','DMSYS','TSMSYS','WKSYS','DVSYS','OJVMSYS','GSMADMIN_INTERNAL','APPQOSSYS','DVSYS','DVF','AUDSYS','MGMT_VIEW','ODM','ODM_MTR','TRACESRV','MTMSYS','OWBSYS_AUDIT','WEBSYS','WK_PROXY','OSE$HTTP$ADMIN','DBMS_PRIVILEGE_CAPTURE','CSMIG','MGDSYS','SDE','DBSFWUSER','APEX','FLOW_'
+
+
 The SKU recommendation provides the suitable Azure SQL target and the reasoning and justification of the Azure SQL target.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-skus.png" alt-text="Sku recommendations":::
 
 >[!Note]
-> If automatic workload repository (AWR) feature is enabled, then the SKU recommender will use the DBA_HIST_ views to gather the performance metrics metadata. Otherwise, the recommender will use server configuration and other system views information for sizing the Azure SQL target.
+> If automatic workload repository (AWR) feature is enabled at Oracle instance, then the SKU recommender will use the DBA_HIST_ views to gather the performance metrics metadata. Otherwise, the recommender will use server configuration and other system views information for sizing the Azure SQL target.
  
 The feature assessment provides the Oracle to Azure SQL mapped assessment and migration effort to identify the suitability.
 

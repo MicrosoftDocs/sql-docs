@@ -79,6 +79,10 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="assessment details":::
 
+    The scale factor multiplier that is applied to the performance metrics utilization ( CPU, Memory, IOPS, Storage)  The multiple value is to factor scenario  issues such as seasonal usage, short performance history, partial workload migration etc. 
+    If the recommended SKU needs to factor additional load , the multiplier should be greater than 1. Example: Burst Load, Seasonal usage , future capacity planning etc. The other scenario , when you move only partial Oracle to workload , then the multiplier should be less than 1.
+ The percentile value of the performance sample set to be considered for sizing the Azure target.
+
 9. Select **Run new Assessment**.
     1. Now, you see the new Assessment in the last five sections.
 
@@ -104,12 +108,15 @@ When you Select on view detail report, it first shows the summary of the Assessm
 
 The following database details tab provides the breakup per schema basis. It shows how many schemas are discovered, how complex it can be to migrate, and the estimated time to migrate your database in hours.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-per-schema-basis.png" alt-text="per schma basis":::
+:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-per-schema-basis.png" alt-text="per schema basis":::
 
 The SKU recommendation provides the suitable Azure SQL target and the reasoning and justification of the Azure SQL target.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-skus.png" alt-text="Sku recommendations":::
 
+>[!Note]
+> If automatic workload repository (AWR) feature is enabled, then the SKU recommender will use the DBA_HIST_ views to gather the performance metrics metadata. Otherwise, the recommender will use server configuration and other system views information for sizing the Azure SQL target.
+ 
 The feature assessment provides the Oracle to Azure SQL mapped assessment and migration effort to identify the suitability.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-mapped-assessment.png" alt-text="Mapped assessment":::

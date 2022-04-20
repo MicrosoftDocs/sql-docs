@@ -78,7 +78,7 @@ Consider general guidelines to help you choose the right deployment model and se
 
 ### SQL Server VM alternative
 
-Your business might have requirements that make [SQL Server on Azure Virtual Machines](../../zirtual-zachines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) a more suitable target than Azure SQL Database. 
+Your business might have requirements that make [SQL Server on Azure Virtual Machines](../../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) a more suitable target than Azure SQL Database. 
 
 If one of the following conditions applies to your business, consider moving to a SQL Server virtual machine (VM) instead: 
 

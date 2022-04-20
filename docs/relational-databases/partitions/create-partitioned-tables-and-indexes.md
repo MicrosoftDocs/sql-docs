@@ -3,7 +3,7 @@ description: "Create partitioned tables and indexes"
 title: "Create partitioned tables and indexes"
 titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
 ms.custom: ""
-ms.date: "4/5/2022"
+ms.date: "4/20/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -34,28 +34,22 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Create partitioned tables and indexes
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-You can create a [partitioned table or index](partitioned-tables-and-indexes.md) in SQL Server, Azure SQL Database, and Azure SQL Managed Instance by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The data in partitioned tables and indexes is horizontally divided into units that can be spread across more than one filegroup in a database. Partitioning can make large tables and indexes more manageable and scalable.
+You can create a [partitioned table or index](partitioned-tables-and-indexes.md) in SQL Server, Azure SQL Database, and Azure SQL Managed Instance by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The data in partitioned tables and indexes is horizontally divided into units that can be spread across more than one filegroup in a database, or stored in a single filegroup.. Partitioning can make large tables and indexes more manageable and scalable.
 
 Creating a partitioned table or index typically happens in three or four parts:  
   
-1.  Optionally [create a filegroup](../../t-sql/statements/alter-database-transact-sql-set-options.md) or filegroups and corresponding data files that will hold the partitions specified by the partition scheme. The main reason to place partitions on multiple filegroups is to ensure you can independently perform backup and restore operations on partitions. If this is not required, you may choose to assign all partitions to a single filegroup, using either an existing filegroup, such as `PRIMARY`, or a new filegroup with related data file(s).
+1.  Optionally [create a filegroup](../../t-sql/statements/alter-database-transact-sql-set-options.md) or filegroups and corresponding data files that will hold the partitions specified by the partition scheme. The main reason to place partitions on multiple filegroups is to ensure you can independently perform backup and restore operations on filegroups. If this is not required, you may choose to assign all partitions to a single filegroup, using either an existing filegroup, such as `PRIMARY`, or a new filegroup with related data file(s). In nearly all scenarios, you will achieve all [benefits of partitioning](partitioned-tables-and-indexes.md#benefits-of-partitioning) whether or not you use multiple filegroups.
   
 2.  Create a [partition function](../../t-sql/statements/create-partition-function-transact-sql.md) that maps the rows of a table or index into partitions based on the values of a specified column.  
   
 3.  Create a [partition scheme](../../t-sql/statements/create-partition-scheme-transact-sql.md) that maps the partitions of a partitioned table or index to one filegroup or to multiple filegroups.  
   
-4.  Create or modify a table or index and specify the partition scheme as the storage location, along with the column that will serve as the partitioning column.
+4.  Create or alter a table or index and specify the partition scheme as the storage location, along with the column that will serve as the partitioning column.
  
 > [!NOTE]
-> Only the `PRIMARY` filegroup is supported in Azure SQL Database. For optimized backup and restore, consider the [Hyperscale service tier](/azure/azure-sql/database/service-tier-hyperscale), which has a unique architecture that provides nearly instantaneous database backups and fast database restores.
+> Partitioning is fully supported in Azure SQL Database. Because only the `PRIMARY` filegroup is supported in Azure SQL Database, all partitions must be placed on the `PRIMARY` filegroup.
 
 Table partitioning is also available in dedicated SQL pools in Azure Synapse Analytics, with some syntax differences. Learn more in [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition).
-  
-## <a name="Restrictions"></a> Limitations
-  
--   The scope of a partition function and scheme is limited to the database in which they have been created. Within the database, partition functions reside in a separate namespace from other functions.  
-  
--   If any rows within a partition function have partitioning columns with null values, these rows are allocated to the left-most partition. However, if NULL is specified as a boundary value and RIGHT is indicated, the left-most partition remains empty and NULL values are placed in the second partition.  
   
 ## Permissions  
 
@@ -69,13 +63,13 @@ Creating a partitioned table requires CREATE TABLE permission in the database an
 
 ## Create a partitioned table on one filegroup using Transact-SQL
 
-If you do not need to independently perform backup and restore operations on partitions, partitioning a table using a single filegroup simplifies management of the partitioned table over time.
+If you do not need to independently perform backup and restore operations on filegroups, partitioning a table using a single filegroup simplifies management of the partitioned table over time.
 
-This example is suitable for Azure SQL Database, which does not support adding files and filegroups. Table partitioning is supported in Azure SQL Database by creating partitions in the PRIMARY filegroup. For SQL Server and Azure SQL Managed Instance, you may wish to specify a user-created filegroup, depending on your filegroup and file management practices.
+This example is suitable for Azure SQL Database, which does not support adding files and filegroups. Table partitioning is supported in Azure SQL Database by creating partitions in the `PRIMARY` filegroup. For SQL Server and Azure SQL Managed Instance, you may wish to specify a user-created filegroup, depending on your filegroup and file management practices.
 
 The example steps through creating a partitioned table in SQL Server Management Studio (SSMS) using Transact-SQL and assigns all partitions to the `PRIMARY` filegroup. The example:
 
-- Creates a [RANGE LEFT partition function](partitioned-tables-and-indexes.md#partition-function) named `myRangePF1` with three boundary values. Three boundary values will result in a partitioned table with four partitions.
+- Creates a [RANGE RIGHT partition function](partitioned-tables-and-indexes.md#partition-function) named `myRangePF1` with three boundary values using the [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) data type. Three boundary values will result in a partitioned table with four partitions.
 - Creates a partition scheme named `myRangePS1` that uses the `ALL TO` syntax to assign all partitions in the `myRangePF1` partition function to the `PRIMARY` filegroup.
 - Creates a table named `PartitionTable` on the `myRangePS1` partition scheme, specifying a column named `col1` as the partitioning column.
   
@@ -86,8 +80,8 @@ The example steps through creating a partitioned table in SQL Server Management 
 1.  Copy and paste the following example into the query window and select **Execute**. This example creates a partition function and a partition scheme. A new table is created with the partition scheme specified as the storage location.
 
 ```sql
-CREATE PARTITION FUNCTION myRangePF1 (int)  
-    AS RANGE LEFT FOR VALUES (1, 100, 1000) ;  
+CREATE PARTITION FUNCTION myRangePF1 (datetime2(0))  
+    AS RANGE RIGHT FOR VALUES ('2022-04-01', '2022-05-01', '2022-06-01') ;  
 GO  
 
 CREATE PARTITION SCHEME myRangePS1  
@@ -95,7 +89,7 @@ CREATE PARTITION SCHEME myRangePS1
     ALL TO ('PRIMARY') ;  
 GO  
 
-CREATE TABLE dbo.PartitionTable (col1 int PRIMARY KEY, col2 char(10))  
+CREATE TABLE dbo.PartitionTable (col1 datetime2(0) PRIMARY KEY, col2 char(10))  
     ON myRangePS1 (col1) ;  
 GO
 ```
@@ -105,13 +99,13 @@ GO
 
 Follow the steps in this section to create one or more filegroups, corresponding files, and a partitioned table using Transact-SQL in SSMS.
 
-Both SQL Server and Azure SQL Managed Instance support creating filegroups and files. Azure SQL Managed Instance automatically configures the path for all database files added, so syntax on `ALTER DATABASE ADD FILE` commands does not allow the `FILENAME` parameter. Azure SQL Database supports creating partitioned tables only in the PRIMARY filegroup. Find example code for Azure SQL Database in [Create a partitioned table on one filegroup using Transact-SQL](#create-a-partitioned-table-on-one-filegroup-using-transact-sql).
+Both SQL Server and Azure SQL Managed Instance support creating filegroups and files. Azure SQL Managed Instance automatically configures the path for all database files added, so the `ALTER DATABASE ADD FILE` command in Azure SQL Managed Instance does not allow the `FILENAME` parameter. Azure SQL Database supports creating partitioned tables only in the `PRIMARY` filegroup. Find example code for Azure SQL Database in [Create a partitioned table on one filegroup using Transact-SQL](#create-a-partitioned-table-on-one-filegroup-using-transact-sql).
   
-This example uses the [AdventureWorks sample database](../../samples/adventureworks-install-configure.md). The example:
+Run the following example against an empty database. The example:
 
-- Adds four new filegroups to the AdventureWorks2019 database.
+- Adds four new filegroups to a database.
 - Adds one file to each filegroup.
-- Creates a [RANGE LEFT partition function](partitioned-tables-and-indexes.md#partition-function) called `myRangePF1` with three boundary values that will partition a table into four partitions.
+- Creates a [RANGE RIGHT partition function](partitioned-tables-and-indexes.md#partition-function) called `myRangePF1` with three boundary values that will partition a table into four partitions.
 - Creates a partition scheme called `myRangePS1` that applies `myRangePF1` to the four new filegroups.
 - Creates a partitioned table called `PartitionTable` that uses `myRangePS1` to partition `col1`.
   
@@ -119,67 +113,72 @@ This example uses the [AdventureWorks sample database](../../samples/adventurewo
   
 2.  On the Standard bar, select **New Query**.  
   
-3.  This example creates new filegroups, a partition function, and a partition scheme. A new table is created with the partition scheme specified as the storage location. Copy and paste the following example into the query window. 
+3.  This example creates a new database and uses it. It then creates new filegroups, a partition function, and a partition scheme. A new table is created with the partition scheme specified as the storage location. Copy and paste the following example into the query window. 
 
     If you are using a managed instance, remove the `FILENAME` parameter and associated value from the `ALTER DATABASE ADD FILE` command. The managed instance will determine the file path for you automatically.
 
     If you are using a SQL Server instance, customize the value for the `FILENAME` parameter to a location appropriate for your instance.
 
+    If you wish to use an existing database, remove the `CREATE DATABASE` command and alter the `USE` statement to the appropriate database name.
+
     SELECT **Execute**.
   
     ```sql  
-    USE AdventureWorks2019;  
-    GO  
+    CREATE DATABASE PartitionTest;
+    GO
+
+    USE PartitionTest;
+    GO
     
-    ALTER DATABASE AdventureWorks2019  
+    ALTER DATABASE CURRENT  
     ADD FILEGROUP test1fg;  
     GO  
-    ALTER DATABASE AdventureWorks2019  
+    ALTER DATABASE CURRENT  
     ADD FILEGROUP test2fg;  
     GO  
-    ALTER DATABASE AdventureWorks2019  
+    ALTER DATABASE CURRENT  
     ADD FILEGROUP test3fg;  
     GO  
-    ALTER DATABASE AdventureWorks2019  
+    ALTER DATABASE CURRENT  
     ADD FILEGROUP test4fg;   
   
-    ALTER DATABASE AdventureWorks2019   
+    ALTER DATABASE CURRENT   
     ADD FILE   
     (  
-        NAME = test1dat1,  
-        FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\t1dat1.ndf',  
+        NAME = partitiontest1,  
+        FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\partitiontest1.ndf',  
         SIZE = 5MB,  
         MAXSIZE = 100MB,  
         FILEGROWTH = 5MB  
     )  
     TO FILEGROUP test1fg;  
-    ALTER DATABASE AdventureWorks2019   
+    ALTER DATABASE CURRENT   
     ADD FILE   
     (  
-        NAME = test2dat2,  
-        FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\t2dat2.ndf',  
+        NAME = partitiontest2,  
+        FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\partitiontest2.ndf',  
         SIZE = 5MB,  
         MAXSIZE = 100MB,  
         FILEGROWTH = 5MB  
     )  
     TO FILEGROUP test2fg;  
     GO  
-    ALTER DATABASE AdventureWorks2019   
+    ALTER DATABASE CURRENT   
     ADD FILE   
     (  
-        NAME = test3dat3,  
-        FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\t3dat3.ndf',  
+        NAME = partitiontest3,  
+        FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\partitiontest3.ndf',  
         SIZE = 5MB,  
         MAXSIZE = 100MB,  
         FILEGROWTH = 5MB  
     )  
     TO FILEGROUP test3fg;  
     GO  
-    ALTER DATABASE AdventureWorks2019   
+    ALTER DATABASE CURRENT   
     ADD FILE   
     (  
-        NAME = test4dat4,  
-        FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\t4dat4.ndf',  
+        NAME = partitiontest4,  
+        FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\partitiontest4.ndf',  
         SIZE = 5MB,  
         MAXSIZE = 100MB,  
         FILEGROWTH = 5MB  
@@ -187,8 +186,8 @@ This example uses the [AdventureWorks sample database](../../samples/adventurewo
     TO FILEGROUP test4fg;  
     GO  
     
-    CREATE PARTITION FUNCTION myRangePF1 (int)  
-        AS RANGE LEFT FOR VALUES (1, 100, 1000) ;  
+    CREATE PARTITION FUNCTION myRangePF1 (datetime2(0))  
+        AS RANGE RIGHT FOR VALUES ('2022-04-01', '2022-05-01', '2022-06-01') ;  
     GO  
     
     CREATE PARTITION SCHEME myRangePS1  
@@ -196,7 +195,7 @@ This example uses the [AdventureWorks sample database](../../samples/adventurewo
         TO (test1fg, test2fg, test3fg, test4fg) ;  
     GO  
     
-    CREATE TABLE PartitionTable (col1 int PRIMARY KEY, col2 char(10))  
+    CREATE TABLE PartitionTable (col1 datetime2(0) PRIMARY KEY, col2 char(10))  
         ON myRangePS1 (col1) ;  
     GO  
     ```  
@@ -487,6 +486,10 @@ LEFT JOIN sys.partition_range_values AS rv2
 WHERE i.type <= 1 AND t.name = 'PartitionTable'
 ORDER BY t.name, p.partition_number;
 ```
+
+## <a name="Restrictions"></a> Limitations
+
+Learn about limitations as well as performance considerations for partitioning in [Limitations](partitioned-tables-and-indexes.md#limitations) 
 
 ## Next steps
 

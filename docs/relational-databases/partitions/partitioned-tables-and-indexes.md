@@ -3,7 +3,7 @@ description: "Partitioned tables and indexes"
 title: "Partitioned tables and indexes"
 titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
 ms.custom: ""
-ms.date: "4/5/2022"
+ms.date: "4/20/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -98,7 +98,7 @@ The primary reason for placing your partitions on multiple filegroups is to make
 Managing files and filegroups for partitioned tables may add significant complexity to administrative tasks over time. If your backup and restore procedures do not benefit from the use of multiple filegroups, a single filegroup for all partitions is recommended.
 
 > [!NOTE]
-> Only the `PRIMARY` filegroup is supported in Azure SQL Database. For optimized backup and restore, consider the [Hyperscale service tier](/azure/azure-sql/database/service-tier-hyperscale), which has a unique architecture that provides nearly instantaneous database backups and fast database restores.
+> Partitioning is fully supported in Azure SQL Database. Because only the `PRIMARY` filegroup is supported in Azure SQL Database, all partitions must be placed on the `PRIMARY` filegroup.
 
 Find example code to create filegroups for SQL Server and Azure SQL Managed Instance in [ALTER DATABASE (Transact-SQL) File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
@@ -139,6 +139,12 @@ An index partitioned independently from its corresponding table. That is, the in
 The process by which the query optimizer accesses only the relevant partitions to satisfy the filter criteria of the query.
 
 Learn more about partition elimination and related concepts in [Query Processing Enhancements on Partitioned Tables and Indexes](../query-processing-architecture-guide.md#query-processing-enhancements-on-partitioned-tables-and-indexes).
+
+## Limitations
+  
+- The scope of a partition function and scheme is limited to the database in which they have been created. Within the database, partition functions reside in a separate namespace from other functions.  
+  
+- If any rows in a partitioned table have NULLs in the partitioning column, these rows are placed on the left-most partition. However, if NULL is specified as the first boundary value and RANGE RIGHT is specified in the partition function definition, then the left-most partition remains empty, and NULLs are placed in the second partition.  
 
 ## Performance guidelines  
 

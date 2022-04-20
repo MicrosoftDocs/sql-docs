@@ -51,7 +51,7 @@ Choose your names now, and write them down.
 
 1. To open the Wingtip Tickets SaaS database-per-tenant deployment template in the Azure portal, select **Deploy to Azure**.
 
-   [![Image showing a button labeled "Deploy to Azure".](../../media/template-deployments/deploy-to-azure.svg)](https://aka.ms/deploywingtipdpt)
+   [![Image showing a button labeled "Deploy to Azure".](../media/template-deployments/deploy-to-azure.svg)](https://aka.ms/deploywingtipdpt)
 
 1. Enter values in the template for the required parameters.
 
@@ -116,7 +116,7 @@ A central **Events Hub** page provides a list of links to the tenants in your de
 
 ### Azure Traffic Manager
 
-The Wingtip application uses [*Azure Traffic Manager*](../../traffic-manager/traffic-manager-overview.md) to control the distribution of incoming requests. The URL to access the events page for a specific tenant uses the following format:
+The Wingtip application uses [*Azure Traffic Manager*](/azure/traffic-manager/traffic-manager-overview) to control the distribution of incoming requests. The URL to access the events page for a specific tenant uses the following format:
 
 - http://events.wingtip-dpt.&lt;user&gt;.trafficmanager.net/fabrikamjazzclub
 
@@ -136,7 +136,7 @@ The Wingtip application uses [*Azure Traffic Manager*](../../traffic-manager/tr
   - The catalog is implemented by using *shard map management*.
 - The Events Hub uses extended metadata in the catalog to construct the list-of-events page URLs for each tenant.
 
-In a production environment, typically you create a CNAME DNS record to [*point a company internet domain*](../../traffic-manager/traffic-manager-point-internet-domain.md) to the Traffic Manager DNS name.
+In a production environment, typically you create a CNAME DNS record to [*point a company internet domain*](/azure/traffic-manager/traffic-manager-point-internet-domain) to the Traffic Manager DNS name.
 
 > [!NOTE]
 > It may not be immediately obvious what the use of the traffic manager is in this tutorial. The goal of this series of tutorials is to showcase patterns that can handle the scale of a complex production environment. In such a case, for example, you would have multiple web apps distributed across the globe, co-located with databases and you would need traffic manager to route between these instances.

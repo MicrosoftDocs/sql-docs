@@ -22,7 +22,7 @@ ms.author: mathoma
 
 SQL Server on Azure Virtual Machines enables you to use full versions of SQL Server in the cloud without having to manage any on-premises hardware. SQL Server VMs also simplify licensing costs when you pay as you go.
 
-Azure virtual machines run in many different [geographic regions](https://azure.microsoft.com/regions/) around the world. They also offer a variety of [machine sizes](../../../virtual-machines/sizes.md). The virtual machine image gallery allows you to create a SQL Server VM with the right version, edition, and operating system. This makes virtual machines a good option for a many different SQL Server workloads. 
+Azure virtual machines run in many different [geographic regions](https://azure.microsoft.com/regions/) around the world. They also offer a variety of [machine sizes](/azure/virtual-machines/sizes). The virtual machine image gallery allows you to create a SQL Server VM with the right version, edition, and operating system. This makes virtual machines a good option for a many different SQL Server workloads. 
 
 If you're new to Azure SQL, check out the *SQL Server on Azure VM Overview* video from our in-depth [Azure SQL video series](/shows/Azure-SQL-for-Beginners?WT.mc_id=azuresql4beg_azuresql-ch9-niner):
 > [!VIDEO https://docs.microsoft.com/shows/Azure-SQL-for-Beginners/SQL-Server-on-Azure-VM-Overview-4-of-61/player]
@@ -64,17 +64,17 @@ When you configure SQL Server on Linux, you install the Database Engine package 
 
 ### Linux virtual machines
 
-* [Azure Virtual Machines overview](../../../virtual-machines/linux/overview.md)
+* [Azure Virtual Machines overview](/azure/virtual-machines/linux/overview)
 
 ### Storage
 
-* [Introduction to Microsoft Azure Storage](../../../storage/common/storage-introduction.md)
+* [Introduction to Microsoft Azure Storage](/azure/storage/common/storage-introduction)
 
 ### Networking
 
-* [Virtual Network overview](../../../virtual-network/virtual-networks-overview.md)
-* [IP addresses in Azure](../../../virtual-network/ip-services/public-ip-addresses.md)
-* [Create a Fully Qualified Domain Name in the Azure portal](../../../virtual-machines/create-fqdn.md)
+* [Virtual Network overview](/azure/virtual-network/virtual-networks-overview)
+* [IP addresses in Azure](/azure/virtual-network/ip-services/public-ip-addresses)
+* [Create a Fully Qualified Domain Name in the Azure portal](/azure/virtual-machines/create-fqdn)
 
 ### SQL
 

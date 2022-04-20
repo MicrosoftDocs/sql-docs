@@ -37,7 +37,7 @@ This article requires that your availability groups are already configured.
 View related articles:
 
 * [Configure Always On availability groups in Azure VM (GUI)](availability-group-manually-configure-tutorial-single-subnet.md)   
-* [Configure a VNet-to-VNet connection by using Azure Resource Manager and PowerShell](../../../vpn-gateway/vpn-gateway-vnet-vnet-rm-ps.md)
+* [Configure a VNet-to-VNet connection by using Azure Resource Manager and PowerShell](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps)
 
 By walking through this article, you create and configure a load balancer in the Azure portal. After the process is complete, you configure the cluster to use the IP address from the load balancer for the availability group listener.
 
@@ -180,7 +180,7 @@ The next step is to configure the listener on the cluster, and bring the listene
 
 In this step, you manually create the availability group listener in Failover Cluster Manager and SQL Server Management Studio.
 
-[!INCLUDE [ag-listener-configure](../../../../includes/virtual-machines-ag-listener-configure.md)]
+[!INCLUDE [ag-listener-configure](../../includes/virtual-machines-ag-listener-configure.md)]
 
 ### Verify the configuration of the listener
 
@@ -214,7 +214,7 @@ The SQLCMD connection automatically connects to the SQL Server instance that hos
 
 ## Create an IP address for an additional availability group
 
-Each availability group uses a separate listener. Each listener has its own IP address. Use the same load balancer to hold the IP address for additional listeners. Add only the primary IP address of the VM to the back-end pool of the load balancer as the [secondary VM IP address does not support floating IP](../../../load-balancer/load-balancer-floating-ip.md).
+Each availability group uses a separate listener. Each listener has its own IP address. Use the same load balancer to hold the IP address for additional listeners. Add only the primary IP address of the VM to the back-end pool of the load balancer as the [secondary VM IP address does not support floating IP](/azure/load-balancer/load-balancer-floating-ip).
 
 To add an IP address to a load balancer with the Azure portal, do the following steps:
 

@@ -129,4 +129,4 @@ Instances that have failed to create are still present as a resource and:
 - For a features and comparison list, see [Common SQL features](../database/features-comparison.md).
 - For more information about VNet configuration, see [SQL Managed Instance VNet configuration](connectivity-architecture-overview.md).
 - For a quickstart that creates a managed instance and restores a database from a backup file, see [Create a managed instance](instance-create-quickstart.md).
-- For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](../../dms/tutorial-sql-server-to-managed-instance.md).
+- For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).

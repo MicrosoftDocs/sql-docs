@@ -11,6 +11,7 @@ author: LitKnd
 ms.author: kendralittle
 ms.reviewer: sashan, moslake, mathoma
 ms.date: 11/09/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Azure Hybrid Benefit - Azure SQL Database & SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](includes/appliesto-sqldb-sqlmi.md)]

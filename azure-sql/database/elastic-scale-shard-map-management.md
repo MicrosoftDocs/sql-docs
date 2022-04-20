@@ -262,7 +262,7 @@ If the new range of key values is not already part of an existing mapping and no
 
 For scenarios that require data movement, however, the split-merge tool is needed to orchestrate the data movement between shards in combination with the necessary shard map updates. For details on using the split-merge tool, see [Overview of split-merge](elastic-scale-overview-split-and-merge.md)
 
-[!INCLUDE [elastic-scale-include](../../../includes/elastic-scale-include.md)]
+[!INCLUDE [elastic-scale-include](../includes/elastic-scale-include.md)]
 
 <!--Image references-->
 [1]: ./media/elastic-scale-shard-map-management/listmapping.png

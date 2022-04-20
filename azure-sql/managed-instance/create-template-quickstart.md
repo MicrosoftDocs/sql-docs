@@ -16,11 +16,11 @@ ms.date: 06/22/2020
 
 This quickstart focuses on the process of deploying an Azure Resource Manager template (ARM template) to create an Azure SQL Managed Instance and vNet. [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) is an intelligent, fully managed, scalable cloud database, with almost 100% feature parity with the SQL Server database engine.
 
-[!INCLUDE [About Azure Resource Manager](../../../includes/resource-manager-quickstart-introduction.md)]
+[!INCLUDE [About Azure Resource Manager](../includes/resource-manager-quickstart-introduction.md)]
 
 If your environment meets the prerequisites and you're familiar with using ARM templates, select the **Deploy to Azure** button. The template will open in the Azure portal.
 
-[![Deploy to Azure](../../media/template-deployments/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.sql%2Fsqlmi-new-vnet%2Fazuredeploy.json)
+[![Deploy to Azure](../media/template-deployments/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.sql%2Fsqlmi-new-vnet%2Fazuredeploy.json)
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 The template used in this quickstart is from [Azure Quickstart Templates](https://azure.microsoft.com/resources/templates/sqlmi-new-vnet/).
 
-:::code language="json" source="~/quickstart-templates/quickstarts/microsoft.sql/sqlmi-new-vnet/azuredeploy.json":::
+:::code language="json" source="~/../quickstart-templates/quickstarts/microsoft.sql/sqlmi-new-vnet/azuredeploy.json":::
 
 These resources are defined in the template:
 

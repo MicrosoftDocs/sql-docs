@@ -64,7 +64,7 @@ The performance counters will be updated by all cache operations performed on th
 
 [Elastic Database features overview](elastic-scale-introduction.md)  
 
-[!INCLUDE [elastic-scale-include](../../../includes/elastic-scale-include.md)]
+[!INCLUDE [elastic-scale-include](../includes/elastic-scale-include.md)]
 
 <!--Anchors-->
 <!--Image references-->

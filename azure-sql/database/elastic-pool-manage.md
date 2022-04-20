@@ -33,7 +33,7 @@ From here you can make any combination of the following changes and save them al
 
 ## PowerShell
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
 
@@ -60,7 +60,7 @@ To create and manage SQL Database elastic pools and pooled databases with Azure 
 
 ## Azure CLI
 
-To create and manage SQL Database elastic pools with [Azure CLI](/cli/azure), use the following [Azure CLI SQL Database](/cli/azure/sql/db) commands. Use the [Cloud Shell](../../cloud-shell/overview.md) to run Azure CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows.
+To create and manage SQL Database elastic pools with [Azure CLI](/cli/azure), use the following [Azure CLI SQL Database](/cli/azure/sql/db) commands. Use the [Cloud Shell](/azure/cloud-shell/overview) to run Azure CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows.
 
 > [!TIP]
 > For Azure CLI example scripts, see [Use CLI to move a database in SQL Database in a SQL elastic pool](scripts/move-database-between-elastic-pools-cli.md) and [Use Azure CLI to scale a SQL elastic pool in Azure SQL Database](scripts/scale-pool-cli.md).

@@ -173,4 +173,4 @@ Transactional properties are guaranteed for all operations local to a shard. For
 
 To detach a shard, or to reattach a shard, see [Using the RecoveryManager class to fix shard map problems](elastic-database-recovery-manager.md).
 
-[!INCLUDE [elastic-scale-include](../../../includes/elastic-scale-include.md)]
+[!INCLUDE [elastic-scale-include](../includes/elastic-scale-include.md)]

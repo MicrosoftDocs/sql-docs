@@ -24,7 +24,7 @@ When you're migrating a database protected by [Transparent Data Encryption (TDE)
 > * Extract the certificate from a file to a base-64 string
 > * Upload it using a PowerShell cmdlet
 
-For an alternative option using a fully managed service for seamless migration of both a TDE-protected database and a corresponding certificate, see [How to migrate your on-premises database to Azure SQL Managed Instance using Azure Database Migration Service](../../dms/tutorial-sql-server-to-managed-instance.md).
+For an alternative option using a fully managed service for seamless migration of both a TDE-protected database and a corresponding certificate, see [How to migrate your on-premises database to Azure SQL Managed Instance using Azure Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).
 
 > [!IMPORTANT]
 > A migrated certificate is used for restore of the TDE-protected database only. Soon after restore is done, the migrated certificate gets replaced by a different protector, either a service-managed certificate or an asymmetric key from the key vault, depending on the type of the TDE you set on the instance.
@@ -43,7 +43,7 @@ Make sure you have the following:
 * Azure PowerShell module [installed and updated](/powershell/azure/install-az-ps).
 * [Az.Sql module](https://www.powershellgallery.com/packages/Az.Sql).
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Managed Instance, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRM modules are substantially identical.
@@ -158,7 +158,7 @@ If the certificate is kept in the SQL Server local machine certificate store, it
 
 # [Azure CLI](#tab/azure-cli)
 
-You need to first [set up an Azure key vault](../../key-vault/general/manage-with-cli2.md) with your *.pfx* file.
+You need to first [set up an Azure key vault](/azure/key-vault/general/manage-with-cli2) with your *.pfx* file.
 
 1. Start with preparation steps in PowerShell:
 

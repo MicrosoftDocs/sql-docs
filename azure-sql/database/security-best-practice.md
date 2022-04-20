@@ -10,6 +10,7 @@ ms.author: vanto
 ms.topic: article
 ms.date: 04/13/2021
 ms.reviewer: kendralittle, mathoma
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Playbook for addressing common security requirements with Azure SQL Database and Azure SQL Managed Instance
@@ -81,7 +82,7 @@ Central identity management offers the following benefits:
 
 **Best practices**:
 
-- Create an Azure AD tenant and [create users](../../active-directory/fundamentals/add-users-azure-active-directory.md) to represent human users and create [service principals](../../active-directory/develop/app-objects-and-service-principals.md) to represent apps, services, and automation tools. Service principals are equivalent to service accounts in Windows and Linux.
+- Create an Azure AD tenant and [create users](/azure/active-directory/fundamentals/add-users-azure-active-directory) to represent human users and create [service principals](/azure/active-directory/develop/app-objects-and-service-principals) to represent apps, services, and automation tools. Service principals are equivalent to service accounts in Windows and Linux.
 
 - Assign access rights to resources to Azure AD principals via group assignment: Create Azure AD groups, grant access to groups, and add individual members to the groups. In your database, create contained database users that map your Azure AD groups. To assign permissions inside the database, put the users that are associated with your Azure AD groups in database roles with the appropriate permissions.
   - See the articles, [Configure and manage Azure Active Directory authentication with SQL](authentication-aad-configure.md) and [Use Azure AD for authentication with SQL](authentication-aad-overview.md).
@@ -104,7 +105,7 @@ Central identity management offers the following benefits:
 > - Azure AD authentication is recorded in Azure SQL audit logs, but not in Azure AD sign-in logs.
 > - Azure RBAC permissions granted in Azure do not apply to Azure SQL Database or SQL Managed Instance  permissions. Such permissions must be created/mapped manually using existing SQL permissions.
 > - On the client-side, Azure AD authentication needs access to the internet or via User Defined Route (UDR) to a virtual network.
-> - The Azure AD access token is cached on the client side and its lifetime depends on token configuration. See the article, [Configurable token lifetimes in Azure Active Directory](../../active-directory/develop/active-directory-configurable-token-lifetimes.md)
+> - The Azure AD access token is cached on the client side and its lifetime depends on token configuration. See the article, [Configurable token lifetimes in Azure Active Directory](/azure/active-directory/develop/active-directory-configurable-token-lifetimes)
 > - For guidance on troubleshooting Azure AD Authentication issues, see the following blog: [Troubleshooting Azure AD](https://techcommunity.microsoft.com/t5/azure-sql-database/troubleshooting-problems-related-to-azure-ad-authentication-with/ba-p/1062991).
 
 ### Azure AD Multi-Factor Authentication
@@ -115,17 +116,17 @@ Azure AD Multi-Factor Authentication helps provides additional security by requi
 
 **How to implement**:
 
-- [Enable Multi-Factor Authentication](../../active-directory/authentication/concept-mfa-howitworks.md) in Azure AD using Conditional Access and use interactive authentication.
+- [Enable Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) in Azure AD using Conditional Access and use interactive authentication.
 
 - The alternative is to enable Multi-Factor Authentication for the entire Azure AD or AD domain.
 
 **Best practices**:
 
 - Activate Conditional Access in Azure AD (requires Premium subscription).
-  - See the article, [Conditional Access in Azure AD](../../active-directory/conditional-access/overview.md).  
+  - See the article, [Conditional Access in Azure AD](/azure/active-directory/conditional-access/overview).  
 
 - Create Azure AD group(s) and enable Multi-Factor Authentication policy for selected groups using Azure AD Conditional Access.
-  - See the article, [Plan Conditional Access Deployment](../../active-directory/conditional-access/plan-conditional-access.md).
+  - See the article, [Plan Conditional Access Deployment](/azure/active-directory/conditional-access/plan-conditional-access).
 
 - Multi-Factor Authentication can be enabled for the entire Azure AD or for the whole Active Directory federated with Azure AD.
 
@@ -168,9 +169,9 @@ Password-based authentication methods are a weaker form of authentication. Crede
 
 **Best practices**:
 
-- Use [managed identities for Azure resources](../../active-directory/managed-identities-azure-resources/overview.md).
-  - [System-assigned managed identity](../../active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql.md)
-  - [User-assigned managed identity](../../active-directory/managed-identities-azure-resources/how-to-manage-ua-identity-portal.md)
+- Use [managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview).
+  - [System-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql)
+  - [User-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/how-to-manage-ua-identity-portal)
   - [Use Azure SQL Database from Azure App Service with managed identity (without code changes)](https://github.com/Azure-Samples/app-service-msi-entityframework-dotnet)
 
 - Use cert-based authentication for an application.
@@ -236,8 +237,8 @@ Assign only the necessary [permissions](/sql/relational-databases/security/permi
 
 - In Azure Resource Manager:
   - Use built-in roles if available or Azure custom roles and assign the necessary permissions.
-    - [Azure built-in roles](../../role-based-access-control/built-in-roles.md)
-    - [Azure custom roles](../../role-based-access-control/custom-roles.md)
+    - [Azure built-in roles](/azure/role-based-access-control/built-in-roles)
+    - [Azure custom roles](/azure/role-based-access-control/custom-roles)
 
 **Best practices**:
 
@@ -294,7 +295,7 @@ Separation of Duties, also called Segregation of Duties describes the requiremen
   - Example: [Tutorial: Signing Stored Procedures with a Certificate](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)
 
 - Implement Transparent Data Encryption (TDE) with customer-managed keys in Azure Key Vault to enable Separation of Duties between data owner and security owner.
-  - See the article, [Configure customer-managed keys for Azure Storage encryption from the Azure portal](../../storage/common/customer-managed-keys-configure-key-vault.md).
+  - See the article, [Configure customer-managed keys for Azure Storage encryption from the Azure portal](/azure/storage/common/customer-managed-keys-configure-key-vault).
 
 - To ensure that a DBA can't see data that is considered highly sensitive and can still do DBA tasks, you can use Always Encrypted with role separation.
   - See the articles, [Overview of Key Management for Always Encrypted](/sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted), [Key Provisioning with Role Separation](/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell#KeyProvisionWithRoles), and [Column Master Key Rotation with Role Separation](/sql/relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell#column-master-key-rotation-with-role-separation).
@@ -337,8 +338,8 @@ For the readers that want to dive deeper into SoD, we recommend the following re
   - [Signing Stored Procedures](/dotnet/framework/data/adonet/sql/signing-stored-procedures-in-sql-server)
 
 - For Azure Resource Management:
-  - [Azure built-in roles](../../role-based-access-control/built-in-roles.md)
-  - [Azure custom roles](../../role-based-access-control/custom-roles.md)
+  - [Azure built-in roles](/azure/role-based-access-control/built-in-roles)
+  - [Azure custom roles](/azure/role-based-access-control/custom-roles)
   - [Using Azure AD Privileged Identity Management for elevated access](https://www.microsoft.com/itshowcase/using-azure-ad-privileged-identity-management-for-elevated-access)
 
 ### Perform regular code reviews
@@ -531,7 +532,7 @@ In SQL Managed Instance:
 
 - Restricting access to Azure SQL Database and SQL Managed Instance by connecting on a private endpoint (for example, using a private data path):
   - A managed instance can be isolated inside a virtual network to prevent external access. Applications and tools that are in the same or peered virtual network in the same region could access it directly. Applications and tools that are in different region could use virtual-network-to-virtual-network connection or ExpressRoute circuit peering to establish connection. Customer should use Network Security Groups (NSG) to restrict access over port 1433 only to resources that require access to a managed instance.
-  - For a SQL Database, use the [Private Link](../../private-link/private-endpoint-overview.md) feature that provides a dedicated private IP for the server inside your virtual network. You can also use [Virtual network service endpoints with virtual network firewall rules](vnet-service-endpoint-rule-overview.md) to restrict access to your servers.
+  - For a SQL Database, use the [Private Link](/azure/private-link/private-endpoint-overview) feature that provides a dedicated private IP for the server inside your virtual network. You can also use [Virtual network service endpoints with virtual network firewall rules](vnet-service-endpoint-rule-overview.md) to restrict access to your servers.
   - Mobile users should use point-to-site VPN connections to connect over the data path.
   - Users connected to their on-premises network should use site-to-site VPN connection or ExpressRoute to connect over the data path.
 
@@ -540,14 +541,14 @@ In SQL Managed Instance:
   - For SQL Managed Instance, use Network Security Groups (NSG) to restrict access over port 3342 only to required resources. For more information, see [Use a managed instance securely with public endpoints](../managed-instance/public-endpoint-overview.md).
 
 > [!NOTE]
-> The SQL Managed Instance public endpoint is not enabled by default and it and must be explicitly enabled. If company policy disallows the use of public endpoints, use [Azure Policy](../../governance/policy/overview.md) to prevent enabling public endpoints in the first place.
+> The SQL Managed Instance public endpoint is not enabled by default and it and must be explicitly enabled. If company policy disallows the use of public endpoints, use [Azure Policy](/azure/governance/policy/overview) to prevent enabling public endpoints in the first place.
 
 - Set up Azure Networking components:
-  - Follow [Azure best practices for network security](../../security/fundamentals/network-best-practices.md).
-  - Plan Virtual Network configuration per best practices outlined in [Azure Virtual Network frequently asked questions (FAQ)](../../virtual-network/virtual-networks-faq.md) and plan.
+  - Follow [Azure best practices for network security](/azure/security/fundamentals/network-best-practices).
+  - Plan Virtual Network configuration per best practices outlined in [Azure Virtual Network frequently asked questions (FAQ)](/azure/virtual-network/virtual-networks-faq) and plan.
   - Segment a virtual network into multiple subnets and assign resources for similar role to the same subnet (for example, front-end vs back-end resources).
-  - Use [Network Security Groups (NSGs)](../../virtual-network/network-security-groups-overview.md) to control traffic between subnets inside the Azure virtual network boundary.
-  - Enable [Azure Network Watcher](../../network-watcher/network-watcher-monitoring-overview.md) for your subscription to monitor inbound and outbound network traffic.
+  - Use [Network Security Groups (NSGs)](/azure/virtual-network/network-security-groups-overview) to control traffic between subnets inside the Azure virtual network boundary.
+  - Enable [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) for your subscription to monitor inbound and outbound network traffic.
 
 ### Configure Power BI for secure connections to SQL Database/SQL Managed Instance
 
@@ -567,13 +568,13 @@ In SQL Managed Instance:
 
 - For a simple Web App, connecting over public endpoint requires setting **Allow Azure Services** to ON.
 
-- [Integrate your app with an Azure Virtual Network](../../app-service/overview-vnet-integration.md) for private data path connectivity to a managed instance. Optionally, you can also deploy a Web App with [App Service Environments (ASE)](../../app-service/environment/intro.md).
+- [Integrate your app with an Azure Virtual Network](/azure/app-service/overview-vnet-integration) for private data path connectivity to a managed instance. Optionally, you can also deploy a Web App with [App Service Environments (ASE)](/azure/app-service/environment/intro).
 
 - For Web App with ASE or virtual network Integrated Web App connecting to a database in SQL Database, you can use [virtual network service endpoints and virtual network firewall rules](vnet-service-endpoint-rule-overview.md) to limit access from a specific virtual network and subnet. Then set **Allow Azure Services** to OFF. You can also connect ASE to a managed instance in SQL Managed Instance over a private data path.  
 
-- Ensure that your Web App is configured per the article, [Best practices for securing platform as a service (PaaS) web and mobile applications using Azure App Service](../../security/fundamentals/paas-applications-using-app-services.md).
+- Ensure that your Web App is configured per the article, [Best practices for securing platform as a service (PaaS) web and mobile applications using Azure App Service](/azure/security/fundamentals/paas-applications-using-app-services).
 
-- Install [Web Application Firewall (WAF)](../../web-application-firewall/ag/ag-overview.md) to protect your web app from common exploits and vulnerabilities.
+- Install [Web Application Firewall (WAF)](/azure/web-application-firewall/ag/ag-overview) to protect your web app from common exploits and vulnerabilities.
 
 ### Configure Azure virtual machine hosting for secure connections to SQL Database/SQL Managed Instance
 
@@ -581,17 +582,17 @@ In SQL Managed Instance:
 
 - Use a combination of Allow and Deny rules on the NSGs of Azure virtual machines to control which regions can be accessed from the VM.
 
-- Ensure that your VM is configured per the article, [Security best practices for IaaS workloads in Azure](../../security/fundamentals/iaas.md).
+- Ensure that your VM is configured per the article, [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas).
 
 - Ensure that all VMs are associated with a specific virtual network and subnet.
 
-- Evaluate if you need the default route 0.0.0.0/Internet per the guidance at [about forced tunneling](../../vpn-gateway/vpn-gateway-forced-tunneling-rm.md#about-forced-tunneling).
+- Evaluate if you need the default route 0.0.0.0/Internet per the guidance at [about forced tunneling](/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm#about-forced-tunneling).
   - If yes – for example, front-end subnet - then keep the default route.
   - If no – for example, middle tier or back-end subnet – then enable force tunneling so no traffic goes over Internet to reach on-premises (a.k.a cross-premises).
 
-- Implement [optional default routes](../../virtual-network/virtual-networks-udr-overview.md#optional-default-routes) if you're using peering or connecting to on-premises.
+- Implement [optional default routes](/azure/virtual-network/virtual-networks-udr-overview#optional-default-routes) if you're using peering or connecting to on-premises.
 
-- Implement [User Defined Routes](../../virtual-network/virtual-networks-udr-overview.md#user-defined) if you need to send all traffic in the virtual network to a Network Virtual Appliance for packet inspection.
+- Implement [User Defined Routes](/azure/virtual-network/virtual-networks-udr-overview#user-defined) if you need to send all traffic in the virtual network to a Network Virtual Appliance for packet inspection.
 
 - Use [virtual network service endpoints](vnet-service-endpoint-rule-overview.md) for secure access to PaaS services like Azure Storage via the Azure backbone network.
 
@@ -605,7 +606,7 @@ Distributed Denial of Service (DDoS) attacks are attempts by a malicious user to
 
 DDoS protection is automatically enabled as part of the Azure Platform. It includes always-on traffic monitoring and real-time mitigation of network-level attacks on public endpoints.
 
-- Use [Azure DDoS Protection](../../ddos-protection/ddos-protection-overview.md) to monitor public IP addresses associated to resources deployed in virtual networks.
+- Use [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview) to monitor public IP addresses associated to resources deployed in virtual networks.
 
 - Use [Advanced Threat Protection for Azure SQL Database](threat-detection-overview.md) to detect Denial of Service (DoS) attacks against databases.
 
@@ -638,7 +639,7 @@ Advanced threat protection enables you to detect and respond to potential threat
 
 **Best practices**:
 
-- Configure [Microsoft Defender for SQL](azure-defender-for-sql.md) for a specific server or a managed instance. You can also configure Microsoft Defender for SQL for all servers and managed instances in a subscription by enabling [Microsoft Defender for Cloud](../../security-center/security-center-pricing.md).
+- Configure [Microsoft Defender for SQL](azure-defender-for-sql.md) for a specific server or a managed instance. You can also configure Microsoft Defender for SQL for all servers and managed instances in a subscription by enabling [Microsoft Defender for Cloud](/azure/security-center/security-center-pricing).
 
 - For a full investigation experience, it's recommended to enable [SQL Database Auditing](../../azure-sql/database/auditing-overview.md). With auditing, you can track database events and write them to an audit log in an Azure Storage account or Azure Log Analytics workspace.
 
@@ -673,7 +674,7 @@ Restrict access to the storage account to support Separation of Duties and to se
 **How to implement**:
 
 - When saving Audit logs to Azure Storage, make sure that access to the Storage Account is restricted to the minimal security principles. Control who has access to the storage account.
-- For more information, see [Authorizing access to Azure Storage](../../storage/common/authorize-data-access.md?toc=%2fazure%2fstorage%2fblobs%2ftoc.json).
+- For more information, see [Authorizing access to Azure Storage](/azure/storage/common/authorize-data-access?toc=%2fazure%2fstorage%2fblobs%2ftoc.json).
 
 **Best practices**:
 
@@ -725,7 +726,7 @@ Discover columns that potentially contain sensitive data. What is considered sen
 
 - Continuously monitor the status of recommended sensitive data in SQL Vulnerability Assessment. Track the sensitive data discovery rule and identify any drift in the recommended columns for classification.  
 
-- Use classification in a way that is tailored to the specific needs of your organization. Customize your Information Protection policy (sensitivity labels, information types, discovery logic) in the [SQL Information Protection](../../security-center/security-center-info-protection-policy.md) policy in Microsoft Defender for Cloud.
+- Use classification in a way that is tailored to the specific needs of your organization. Customize your Information Protection policy (sensitivity labels, information types, discovery logic) in the [SQL Information Protection](/azure/security-center/security-center-info-protection-policy) policy in Microsoft Defender for Cloud.
 
 ### Track access to sensitive data
 
@@ -772,7 +773,7 @@ Today, Azure SQL Database and SQL Managed Instance offers the following techniqu
 - If using a server in SQL Database, set the following options:
   - Allow Azure Services to OFF.
   - Only allow traffic from the subnet containing your Azure VM by setting up a VNet Firewall rule.
-  - Use [Private Link](../../private-link/private-endpoint-overview.md)
+  - Use [Private Link](/azure/private-link/private-endpoint-overview)
 - For SQL Managed Instance, using private IP access by default addresses the first data exfiltration concern of a rogue VM. Turn on the subnet delegation feature on a subnet to automatically set the most restrictive policy on a SQL Managed Instance subnet.
 - The Rogue DBA concern is more exposed with SQL Managed Instance as it has a larger surface area and networking requirements are visible to customers. The best mitigation for this is applying all of the practices in this security guide to prevent the Rogue DBA scenario in the first place (not only for data exfiltration). Always Encrypted is one method to protect sensitive data by encrypting it and keeping the key inaccessible for the DBA.
 

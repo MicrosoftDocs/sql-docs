@@ -11,6 +11,7 @@ author: srinia
 ms.author: srinia
 ms.reviewer: mathoma, kendralittle
 ms.date: 12/18/2018
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # In-Memory sample
 [!INCLUDE[appliesto-sqldb-sqlmi](includes/appliesto-sqldb-sqlmi.md)]

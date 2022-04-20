@@ -13,6 +13,7 @@ ms.author: matripathy
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 02/22/2022
 tags: azure-synapse
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Data Discovery & Classification
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
@@ -56,11 +57,11 @@ The classification includes two metadata attributes:
 
 Data Discovery & Classification comes with a built-in set of sensitivity labels and a built-in set of information types and discovery logic. You can customize this taxonomy and define a set and ranking of classification constructs specifically for your environment.
 
-You define and customize of your classification taxonomy in one central place for your entire Azure organization. That location is in [Microsoft Defender for Cloud](../../security-center/security-center-introduction.md), as part of your security policy. Only someone with administrative rights on the organization's root management group can do this task.
+You define and customize of your classification taxonomy in one central place for your entire Azure organization. That location is in [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction), as part of your security policy. Only someone with administrative rights on the organization's root management group can do this task.
 
 As part of policy management, you can define custom labels, rank them, and associate them with a selected set of information types. You can also add your own custom information types and configure them with string patterns. The patterns are added to the discovery logic for identifying this type of data in your databases.
 
-For more information, see [Customize the SQL information protection policy in Microsoft Defender for Cloud (Preview)](../../security-center/security-center-info-protection-policy.md).
+For more information, see [Customize the SQL information protection policy in Microsoft Defender for Cloud (Preview)](/azure/security-center/security-center-info-protection-policy).
 
 After the organization-wide policy has been defined, you can continue classifying individual databases by using your customized policy.
 
@@ -156,10 +157,10 @@ This is the required action to modify the data classification of a database are:
 
 - Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels/*
 
-Learn more about role-based permissions in [Azure RBAC](../../role-based-access-control/overview.md).
+Learn more about role-based permissions in [Azure RBAC](/azure/role-based-access-control/overview).
 
 > [!NOTE]
-> The Azure SQL built-in roles in this section apply to a dedicated SQL pool (formerly SQL DW) but are not available for dedicated SQL pools and other SQL resources within Azure Synapse workspaces. For SQL resources in Azure Synapse workspaces, use the available actions for data classification to create custom Azure roles as needed for labelling. For more information on the `Microsoft.Synapse/workspaces/sqlPools` provider operations, see [Microsoft.Synapse](../../role-based-access-control/resource-provider-operations.md#microsoftsynapse).
+> The Azure SQL built-in roles in this section apply to a dedicated SQL pool (formerly SQL DW) but are not available for dedicated SQL pools and other SQL resources within Azure Synapse workspaces. For SQL resources in Azure Synapse workspaces, use the available actions for data classification to create custom Azure roles as needed for labelling. For more information on the `Microsoft.Synapse/workspaces/sqlPools` provider operations, see [Microsoft.Synapse](/azure/role-based-access-control/resource-provider-operations#microsoftsynapse).
 
 ## Manage classifications
 
@@ -222,11 +223,11 @@ You can use the following SQL drivers to retrieve classification metadata:
 
 ## FAQ - Advanced classification capabilities
 
-**Question**: Will [Microsoft Purview](../../purview/overview.md) replace SQL Data Discovery & Classification or will SQL Data Discovery & Classification be retired soon?
-**Answer**: We continue to support SQL Data Discovery & Classification and encourage you to adopt [Microsoft Purview](../../purview/overview.md) which has richer capabilities to drive advanced classification capabilities and data governance. If we decide to retire any service, feature, API or SKU, you will receive advance notice including a migration or transition path. Learn more about Microsoft Lifecycle policies here.
+**Question**: Will [Microsoft Purview](/azure/purview/overview) replace SQL Data Discovery & Classification or will SQL Data Discovery & Classification be retired soon?
+**Answer**: We continue to support SQL Data Discovery & Classification and encourage you to adopt [Microsoft Purview](/azure/purview/overview) which has richer capabilities to drive advanced classification capabilities and data governance. If we decide to retire any service, feature, API or SKU, you will receive advance notice including a migration or transition path. Learn more about Microsoft Lifecycle policies here.
 
 ## Next steps
 
 - Consider configuring [Azure SQL Auditing](../../azure-sql/database/auditing-overview.md) for monitoring and auditing access to your classified sensitive data.
 - For a presentation that includes data Discovery & Classification, see [Discovering, classifying, labeling & protecting SQL data | Data Exposed](https://www.youtube.com/watch?v=itVi9bkJUNc).
-- To classify your Azure SQL Databases and Azure Synapse Analytics with Microsoft Purview labels using T-SQL commands, see [Classify your Azure SQL data using Microsoft Purview labels](../../sql-database/scripts/sql-database-import-purview-labels.md).
+- To classify your Azure SQL Databases and Azure Synapse Analytics with Microsoft Purview labels using T-SQL commands, see [Classify your Azure SQL data using Microsoft Purview labels](/azure/sql-database/scripts/sql-database-import-purview-labels).

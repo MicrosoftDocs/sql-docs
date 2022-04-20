@@ -143,7 +143,7 @@
       - name: Intelligent Insights
         href: database/intelligent-insights-overview.md
       - name: SQL Analytics
-        href: ../azure-monitor/insights/azure-sql.md?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/azure-monitor/insights/azure-sql?toc=%2fazure%2fazure-sql%2ftoc.json
       - name: Automatic tuning
         href: database/automatic-tuning-overview.md
       - name: In-memory OLTP
@@ -244,7 +244,7 @@
       - name: Move resources to a new region
         href: database/move-resources-across-regions.md
       - name: Load data with ADF
-        href: ../data-factory/connector-azure-sql-database.md?toc=/azure/azure-sql/toc.json
+        href: /azure/data-factory/connector-azure-sql-database?toc=/azure/azure-sql/toc.json
     - name: Develop data applications
       items:
       - name: Overview
@@ -254,13 +254,13 @@
       - name: Use Spark Connector
         href: database/spark-connector.md
       - name: Use ASP.NET App Service
-        href: ../app-service/app-service-web-tutorial-dotnet-sqldatabase.md?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase?toc=%2fazure%2fazure-sql%2ftoc.json
       - name: Use Azure Functions
-        href: ../azure-functions/functions-scenario-database-table-cleanup.md?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/azure-functions/functions-scenario-database-table-cleanup?toc=%2fazure%2fazure-sql%2ftoc.json
       - name: Use Azure Logic Apps
-        href: ../connectors/connectors-create-api-sqlazure.md?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/connectors/connectors-create-api-sqlazure?toc=%2fazure%2fazure-sql%2ftoc.json
       - name: Index with Azure Cognitive Search
-        href: ../search/search-howto-connecting-azure-sql-database-to-azure-search-using-indexers.md?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/search/search-howto-connecting-azure-sql-database-to-azure-search-using-indexers?toc=%2fazure%2fazure-sql%2ftoc.json
       - name: Server-side CLR/.NET integration
         href: /sql/relational-databases/clr-integration/common-language-runtime-integration-overview?toc=/azure/azure-sql/toc.json
       - name: Java
@@ -348,7 +348,7 @@
     - name: Move data
       items: 
       - name: Migrate using DMS
-        href: ../dms/tutorial-sql-server-to-azure-sql.md?toc=/azure/azure-sql/toc.json
+        href: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/azure-sql/toc.json
       - name: Set up SQL Data Sync
         href: database/sql-data-sync-sql-server-configure.md
       - name: Migrate SQLite to serverless
@@ -923,7 +923,7 @@
   - name: Tutorials
     items:
     - name: Migrate using DMS
-      href: ../dms/tutorial-sql-server-to-managed-instance.md?toc=/azure/azure-sql/toc.json
+      href: /azure/dms/tutorial-sql-server-to-managed-instance?toc=/azure/azure-sql/toc.json
     - name: Configure security
       href: managed-instance/aad-security-configure-tutorial.md
     - name: Add instance to failover group
@@ -1001,7 +1001,7 @@
           - name: Train and score a model
             href: /sql/machine-learning/tutorials/quickstart-python-train-score-model?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Deploy ONNX models
-            href: ../azure-sql-edge/deploy-onnx.md?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /azure/azure-sql-edge/deploy-onnx?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
         - name: R
           items:
           - name: Run R scripts

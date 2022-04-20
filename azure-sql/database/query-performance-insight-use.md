@@ -33,7 +33,7 @@ Query Performance Insight requires that [Query Store](/sql/relational-databases/
 
 ## Permissions
 
-You need the following [Azure role-based access control (Azure RBAC)](../../role-based-access-control/overview.md) permissions to use Query Performance Insight:
+You need the following [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) permissions to use Query Performance Insight:
 
 * **Reader**, **Owner**, **Contributor**, **SQL DB Contributor**, or **SQL Server Contributor** permissions are required to view the top resource-consuming queries and charts.
 * **Owner**, **Contributor**, **SQL DB Contributor**, or **SQL Server Contributor** permissions are required to view query text.
@@ -118,7 +118,7 @@ By default, Query Performance Insight shows the top five CPU-consuming queries w
    >
    > For example, a query might have consumed a substantial amount of DTU for a while, although its total consumption in the observed period is less than the other top-consuming queries. In such a case, resource utilization of this query would not appear on the chart.
    >
-   > If you need to understand top query executions beyond the limitations of Query Performance Insight, consider using [Azure SQL Insights](../../azure-monitor/insights/sql-insights-overview.md) for advanced database performance monitoring and troubleshooting.
+   > If you need to understand top query executions beyond the limitations of Query Performance Insight, consider using [Azure SQL Insights](/azure/azure-monitor/insights/sql-insights-overview) for advanced database performance monitoring and troubleshooting.
    > 
 
 ## View individual query details
@@ -274,4 +274,4 @@ Applying these settings will eventually make Query Store collect telemetry for n
 
 ## Next steps
 
-Consider using [Azure SQL Analytics](../../azure-monitor/insights/azure-sql.md) for advanced performance monitoring of a large fleet of single and pooled databases, elastic pools, managed instances and instance databases.
+Consider using [Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql) for advanced performance monitoring of a large fleet of single and pooled databases, elastic pools, managed instances and instance databases.

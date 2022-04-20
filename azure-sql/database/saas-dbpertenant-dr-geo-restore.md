@@ -52,15 +52,15 @@ Disaster recovery (DR) is an important consideration for many applications, whet
  * Repatriate databases to their original region with minimal impact to tenants when the outage is resolved.  
 
 > [!NOTE]
-> The application is recovered into the paired region of the region in which the application is deployed. For more information, see [Azure paired regions](../../availability-zones/cross-region-replication-azure.md).   
+> The application is recovered into the paired region of the region in which the application is deployed. For more information, see [Azure paired regions](/azure/availability-zones/cross-region-replication-azure).   
 
 This tutorial uses features of Azure SQL Database and the Azure platform to address these challenges:
 
-* [Azure Resource Manager templates](../../azure-resource-manager/templates/quickstart-create-templates-use-the-portal.md), to reserve all needed capacity as quickly as possible. Azure Resource Manager templates are used to provision a mirror image of the original servers and elastic pools in the recovery region. A separate server and pool are also created for provisioning new tenants.
+* [Azure Resource Manager templates](/azure/azure-resource-manager/templates/quickstart-create-templates-use-the-portal), to reserve all needed capacity as quickly as possible. Azure Resource Manager templates are used to provision a mirror image of the original servers and elastic pools in the recovery region. A separate server and pool are also created for provisioning new tenants.
 * [Elastic Database Client Library](elastic-database-client-library.md) (EDCL), to create and maintain a tenant database catalog. The extended catalog includes periodically refreshed pool and database configuration information.
 * [Shard management recovery features](elastic-database-recovery-manager.md) of the EDCL, to maintain database location entries in the catalog during recovery and repatriation.  
 * [Geo-restore](recovery-using-backups.md#geo-restore), to recover the catalog and tenant databases from automatically maintained geo-redundant backups. 
-* [Asynchronous restore operations](../../azure-resource-manager/management/async-operations.md), sent in tenant-priority order, are queued for each pool by the system and processed in batches so the pool isn't overloaded. These operations can be canceled before or during execution if necessary.   
+* [Asynchronous restore operations](/azure/azure-resource-manager/management/async-operations), sent in tenant-priority order, are queued for each pool by the system and processed in batches so the pool isn't overloaded. These operations can be canceled before or during execution if necessary.   
 * [Geo-replication](active-geo-replication-overview.md), to repatriate databases to the original region after the outage. There is no data loss and minimal impact on the tenant when you use geo-replication.
 * [SQL server DNS aliases](./dns-alias-overview.md), to allow the catalog sync process to connect to the active catalog regardless of its location.  
 
@@ -99,7 +99,7 @@ In this task, you start a process to sync the configuration of the servers, elas
 
 > [!IMPORTANT]
 > For simplicity, the sync process and other long-running recovery and repatriation processes are implemented in these samples as local PowerShell jobs or sessions that run under your client user login. The authentication tokens issued when you log in expire after several hours, and the jobs will then fail. 
-> In a production scenario, long-running processes should be implemented as reliable Azure services of some kind, running under a service principal. See [Use Azure PowerShell to create a service principal with a certificate](../../active-directory/develop/howto-authenticate-service-principal-powershell.md). 
+> In a production scenario, long-running processes should be implemented as reliable Azure services of some kind, running under a service principal. See [Use Azure PowerShell to create a service principal with a certificate](/azure/active-directory/develop/howto-authenticate-service-principal-powershell). 
 
 1. In the PowerShell ISE, open the ...\Learning Modules\UserConfig.psm1 file. Replace `<resourcegroup>` and `<user>` on lines 10 and 11 with the value used when you deployed the app. Save the file.
 
@@ -175,7 +175,7 @@ Imagine there's an outage in the region in which the application is deployed, an
 
 	* The script opens in a new PowerShell window and then starts a set of PowerShell jobs that run in parallel. These jobs restore servers, pools, and databases to the recovery region.
 
-	* The recovery region is the paired region associated with the Azure region in which you deployed the application. For more information, see [Azure paired regions](../../availability-zones/cross-region-replication-azure.md). 
+	* The recovery region is the paired region associated with the Azure region in which you deployed the application. For more information, see [Azure paired regions](/azure/availability-zones/cross-region-replication-azure). 
 
 3. Monitor the status of the recovery process in the PowerShell window.
 

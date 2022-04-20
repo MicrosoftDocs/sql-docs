@@ -18,7 +18,7 @@ Configure a database in SQL Database and client application for failover to a re
 
 > [!div class="checklist"]
 >
-> - Create a [failover group](auto-failover-group-overview.md)
+> - Create a [failover group](auto-failover-group-sql-db.md)
 > - Run a Java application to query a database in SQL Database
 > - Test failover
 
@@ -26,7 +26,7 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 ## Prerequisites
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
@@ -51,12 +51,12 @@ To complete the tutorial, make sure you've installed the following items:
 
 ## Create a failover group
 
-Using Azure PowerShell, create [failover groups](auto-failover-group-overview.md) between an existing server and a new server in another region. Then add the sample database to the failover group.
+Using Azure PowerShell, create [failover groups](auto-failover-group-sql-db.md) between an existing server and a new server in another region. Then add the sample database to the failover group.
 
 # [PowerShell](#tab/azure-powershell)
 
 > [!IMPORTANT]
-> [!INCLUDE [sample-powershell-install](../../../includes/sample-powershell-install-no-ssh.md)]
+> [!INCLUDE [sample-powershell-install](../includes/sample-powershell-install-no-ssh.md)]
 
 To create a failover group, run the following script:
 

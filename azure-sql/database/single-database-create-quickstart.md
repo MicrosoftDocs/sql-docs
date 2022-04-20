@@ -75,11 +75,11 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 The Azure CLI code blocks in this section create a resource group, server, single database, and server-level IP firewall rule for access to the server. Make sure to record the generated resource group and server names, so you can manage these resources later.
 
-[!INCLUDE [quickstarts-free-trial-note](../../../includes/quickstarts-free-trial-note.md)]
+[!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
 
-[!INCLUDE [azure-cli-prepare-your-environment.md](../../../includes/azure-cli-prepare-your-environment-h3.md)]
+[!INCLUDE [azure-cli-prepare-your-environment.md](../includes/azure-cli-prepare-your-environment-h3.md)]
 
-[!INCLUDE [cli-launch-cloud-shell-sign-in.md](../../../includes/cli-launch-cloud-shell-sign-in.md)]
+[!INCLUDE [cli-launch-cloud-shell-sign-in.md](../includes/cli-launch-cloud-shell-sign-in.md)]
 
 ### Set parameter values
 
@@ -87,25 +87,25 @@ The following values are used in subsequent commands to create the database and 
 
 Change the location as appropriate for your environment. Replace `0.0.0.0` with the IP address range to match your specific environment. Use the public IP address of the computer you're using to restrict access to the server to only your IP address.
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="SetParameterValues":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="SetParameterValues":::
 
 ### Create a resource group
 
 Create a resource group with the [az group create](/cli/azure/group) command. An Azure resource group is a logical container into which Azure resources are deployed and managed. The following example creates a resource group named *myResourceGroup* in the *eastus* location:
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="CreateResourceGroup":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="CreateResourceGroup":::
 
 ### Create a server
 
 Create a server with the [az sql server create](/cli/azure/sql/server) command.
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="CreateServer":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="CreateServer":::
 
 ### Configure a server-based firewall rule
 
 Create a firewall rule with the [az sql server firewall-rule create](/cli/azure/sql/server/firewall-rule) command.
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="CreateFirewallRule":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="CreateFirewallRule":::
 
 ### Create a single database
 
@@ -128,11 +128,11 @@ az sql db create \
 
 The Azure CLI code blocks in this section use the [az sql up](/cli/azure/sql#az-sql-up) command to simplify the database creation process.  With it, you can create a database and all of its associated resources with a single command. This includes the resource group, server name, server location, database name, and login information. The database is created with a default pricing tier of General Purpose, Provisioned, Gen5, 2 vCores.
 
-[!INCLUDE [quickstarts-free-trial-note](../../../includes/quickstarts-free-trial-note.md)]
+[!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
 
-[!INCLUDE [azure-cli-prepare-your-environment-h3.md](../../../includes/azure-cli-prepare-your-environment-h3.md)]
+[!INCLUDE [azure-cli-prepare-your-environment-h3.md](../includes/azure-cli-prepare-your-environment-h3.md)]
 
-[!INCLUDE [cli-launch-cloud-shell-sign-in.md](../../../includes/cli-launch-cloud-shell-sign-in.md)]
+[!INCLUDE [cli-launch-cloud-shell-sign-in.md](../includes/cli-launch-cloud-shell-sign-in.md)]
 
 ### Set parameter values
 
@@ -140,7 +140,7 @@ The following values are used in subsequent commands to create the database and 
 
 Change the location as appropriate for your environment. Replace `0.0.0.0` with the IP address range to match your specific environment.
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="SetParameterValues":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="SetParameterValues":::
 
 > [!NOTE]
 > [az sql up](/cli/azure/sql#az-sql-up) is currently in preview and does not currently support the serverless compute tier. Also, the use of non-alphabetic and non-numeric characters in the database name are not currently supported.
@@ -321,7 +321,7 @@ az group delete --name $resourceGroup
 
 # [Azure CLI (sql up)](#tab/azure-cli-sql-up)
 
-[!INCLUDE [cli-clean-up-resources.md](../../../includes/cli-clean-up-resources.md)]
+[!INCLUDE [cli-clean-up-resources.md](../includes/cli-clean-up-resources.md)]
 
 ```azurecli
 az group delete --name $resourceGroup
@@ -348,4 +348,4 @@ Remove-AzResourceGroup -Name $resourceGroupName
 Want to optimize and save on your cloud spending?
 
 > [!div class="nextstepaction"]
-> [Start analyzing costs with Cost Management](../../cost-management-billing/costs/quick-acm-cost-analysis.md?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn)
+> [Start analyzing costs with Cost Management](/azure/cost-management-billing/costs/quick-acm-cost-analysis?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn)

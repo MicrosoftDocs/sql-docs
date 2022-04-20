@@ -20,7 +20,7 @@ This guide will introduce you to the Azure Automation service, and how it can be
 
 ## About Azure Automation
 
-[Azure Automation](https://azure.microsoft.com/services/automation/) is an Azure service for simplifying cloud management through process automation. Using Azure Automation, long-running, manual, error-prone, and frequently repeated tasks can be automated to increase reliability, efficiency, and time to value for your organization. For information on getting started, see [Azure Automation intro](../../automation/automation-intro.md)
+[Azure Automation](https://azure.microsoft.com/services/automation/) is an Azure service for simplifying cloud management through process automation. Using Azure Automation, long-running, manual, error-prone, and frequently repeated tasks can be automated to increase reliability, efficiency, and time to value for your organization. For information on getting started, see [Azure Automation intro](/azure/automation/automation-intro)
 
 Azure Automation provides a workflow execution engine with high reliability and high availability, and that scales to meet your needs as your organization grows. In Azure Automation, processes can be kicked off manually, by third-party systems, or at scheduled intervals so that tasks happen exactly when needed.
 
@@ -32,14 +32,14 @@ With Azure Automation, you can manage databases in Azure SQL Database by using [
 
 Azure Automation also has the ability to communicate with SQL servers directly, by issuing SQL commands using PowerShell.
 
-The runbook and module galleries for [Azure Automation](../../automation/automation-runbook-gallery.md) offer a variety of runbooks from Microsoft and the community that you can import into Azure Automation. To use one, download a runbook from the gallery, or you can directly import runbooks from the gallery, or from your Automation account in the Azure portal.
+The runbook and module galleries for [Azure Automation](/azure/automation/automation-runbook-gallery) offer a variety of runbooks from Microsoft and the community that you can import into Azure Automation. To use one, download a runbook from the gallery, or you can directly import runbooks from the gallery, or from your Automation account in the Azure portal.
 
 >[!NOTE]
-> The Automation runbook may run from a range of IP addresses at any datacenter in an Azure region. To learn more, see [Automation region DNS records](../../automation/how-to/automation-region-dns-records.md).
+> The Automation runbook may run from a range of IP addresses at any datacenter in an Azure region. To learn more, see [Automation region DNS records](/azure/automation/how-to/automation-region-dns-records).
 
 ## Next steps
 
 Now that you've learned the basics of Azure Automation and how it can be used to manage Azure SQL Database, follow these links to learn more about Azure Automation.
 
-- [Azure Automation Overview](../../automation/automation-intro.md)
-- [My first runbook](../../automation/learn/powershell-runbook-managed-identity.md)
+- [Azure Automation Overview](/azure/automation/automation-intro)
+- [My first runbook](/azure/automation/learn/powershell-runbook-managed-identity)

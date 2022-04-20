@@ -48,11 +48,11 @@ After you've verified that your source environment is supported, start with the 
 
 In the Discover phase, scan the network to identify all SQL Server instances and features used by your organization. 
 
-Use [Azure Migrate](../../../migrate/migrate-services-overview.md) to assess migration suitability of on-premises servers, perform performance-based sizing, and provide cost estimations for running them in Azure. 
+Use [Azure Migrate](/azure/migrate/migrate-services-overview) to assess migration suitability of on-premises servers, perform performance-based sizing, and provide cost estimations for running them in Azure. 
 
 Alternatively, use the [Microsoft Assessment and Planning Toolkit (the "MAP Toolkit")](https://www.microsoft.com/download/details.aspx?id=7826) to assess your current IT infrastructure. The toolkit provides a powerful inventory, assessment, and reporting tool to simplify the migration planning process. 
 
-For more information about tools available to use for the Discover phase, see [Services and tools available for data migration scenarios](../../../dms/dms-tools-matrix.md). 
+For more information about tools available to use for the Discover phase, see [Services and tools available for data migration scenarios](/azure/dms/dms-tools-matrix). 
 
 After data sources have been discovered, assess any on-premises SQL Server instance(s) that can be migrated to Azure SQL Managed Instance to identify migration blockers or compatibility issues.
 Proceed to the following steps to assess and migrate databases to Azure SQL Managed Instance:
@@ -68,11 +68,11 @@ Proceed to the following steps to assess and migrate databases to Azure SQL Mana
 
 ### Assess 
 
-[!INCLUDE [assess-estate-with-azure-migrate](../../../../includes/azure-migrate-to-assess-sql-data-estate.md)]
+[!INCLUDE [assess-estate-with-azure-migrate](../../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 Determine whether SQL Managed Instance is compatible with the database requirements of your application. SQL Managed Instance is designed to provide easy lift and shift migration for most existing applications that use SQL Server. However, you may sometimes require features or capabilities that aren't yet supported and the cost of implementing a workaround is too high.
 
-The [Azure SQL migration extension for Azure Data Studio](../../../dms/migration-using-azure-data-studio.md) provides a seamless wizard based experience to assess, get Azure recommendations and migrate your SQL Server databases on-premises to SQL Server on Azure Virtual Machines. Besides, highlighting any migration blockers or warnings, the extension also includes an option for Azure recommendations to collect your databases' performance data [to recommend a right-sized Azure SQL Managed Instance](../../../dms/ads-sku-recommend.md) to meet the performance needs of your workload (with the least price).
+The [Azure SQL migration extension for Azure Data Studio](/azure/dms/migration-using-azure-data-studio) provides a seamless wizard based experience to assess, get Azure recommendations and migrate your SQL Server databases on-premises to SQL Server on Azure Virtual Machines. Besides, highlighting any migration blockers or warnings, the extension also includes an option for Azure recommendations to collect your databases' performance data [to recommend a right-sized Azure SQL Managed Instance](/azure/dms/ads-sku-recommend) to meet the performance needs of your workload (with the least price).
 
 You can also use the Data Migration Assistant (version 4.1 and later) to assess databases to get: 
 
@@ -99,7 +99,7 @@ If SQL Managed Instance isn't a suitable target for your workload, SQL Server on
 
 #### Scaled assessments and analysis
 
-If you have multiple servers or databases that require Azure readiness assessment, you can automate the process by using scripts using one of the following options. To learn more about using scripting see [Migrate databases at scale using automation](../../../dms/migration-dms-powershell-cli.md).
+If you have multiple servers or databases that require Azure readiness assessment, you can automate the process by using scripts using one of the following options. To learn more about using scripting see [Migrate databases at scale using automation](/azure/dms/migration-dms-powershell-cli).
 
 - [Az.DataMigration PowerShell module](/powershell/module/az.datamigration)
 - [az datamigration CLI extension](/cli/azure/datamigration)
@@ -116,7 +116,7 @@ Data Migration Assistant also supports consolidation of the assessment reports f
 
 ### Deploy to an optimally sized managed instance
 
-You can use the [Azure SQL migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension) to get right-sized Azure SQL Managed Instance recommendation. The extension collects performance data from your source SQL Server instance to provide right-sized Azure recommendation that meets your workload's performance needs with minimal cost. To learn more, see [Get right-sized Azure recommendation for your on-premises SQL Server database(s)](../../../dms/ads-sku-recommend.md)
+You can use the [Azure SQL migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension) to get right-sized Azure SQL Managed Instance recommendation. The extension collects performance data from your source SQL Server instance to provide right-sized Azure recommendation that meets your workload's performance needs with minimal cost. To learn more, see [Get right-sized Azure recommendation for your on-premises SQL Server database(s)](/azure/dms/ads-sku-recommend)
 
 Based on the information in the discover and assess phase, create an appropriately sized target SQL Managed Instance. You can do so by using the [Azure portal](../../managed-instance/instance-create-quickstart.md), [PowerShell](../../managed-instance/scripts/create-configure-managed-instance-powershell.md), or an [Azure Resource Manager (ARM) Template](../../managed-instance/create-template-quickstart.md).
 
@@ -163,7 +163,7 @@ For other migration tools, see [Compare migration options](sql-server-to-managed
 
 ### Migrate using the Azure SQL migration extension for Azure Data Studio (minimal downtime)
 
-To perform a minimal downtime migration using Azure Data Studio, follow the high level steps below. For a detailed step-by-step tutorial, see [Migrate SQL Server to an Azure SQL Managed Instance online using Azure Data Studio](../../../dms/tutorial-sql-server-managed-instance-online-ads.md):
+To perform a minimal downtime migration using Azure Data Studio, follow the high level steps below. For a detailed step-by-step tutorial, see [Migrate SQL Server to an Azure SQL Managed Instance online using Azure Data Studio](/azure/dms/tutorial-sql-server-managed-instance-online-ads):
 
 1. Download and install [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) and the [Azure SQL migration extension](/sql/azure-data-studio/extensions/azure-sql-migration-extension).
 1. Launch the Migrate to Azure SQL wizard in the extension in Azure Data Studio.
@@ -242,7 +242,7 @@ After you verify that data is the same on both source and target, you can cut ov
 
 > [!IMPORTANT]
 >  
-> For details on the specific steps associated with performing a cutover as part of migrations using DMS, see [Performing migration cutover](../../../dms/tutorial-sql-server-managed-instance-online.md#performing-migration-cutover).
+> For details on the specific steps associated with performing a cutover as part of migrations using DMS, see [Performing migration cutover](/azure/dms/tutorial-sql-server-managed-instance-online#performing-migration-cutover).
 
 ## Post-migration
 
@@ -275,7 +275,7 @@ Some SQL Server features are only available once the [database compatibility lev
 
 ## Next steps
 
-- See [Service and tools for data migration](../../../dms/dms-tools-matrix.md) for a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks.
+- See [Service and tools for data migration](/azure/dms/dms-tools-matrix) for a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks.
 
 - To learn more about Azure SQL Managed Instance see:
    - [Service Tiers in Azure SQL Managed Instance](../../managed-instance/sql-managed-instance-paas-overview.md#service-tiers)

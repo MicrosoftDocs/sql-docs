@@ -12,6 +12,7 @@ author: Ninarn
 ms.author: ninarn
 ms.reviewer: kendralittle, mathoma
 ms.date: 02/18/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Quickstart: Use the Azure portal's query editor (preview) to query an Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

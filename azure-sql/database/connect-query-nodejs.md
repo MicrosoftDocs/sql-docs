@@ -12,6 +12,7 @@ ms.author: drskwier
 ms.reviewer: kendralittle, mathoma, v-masebo
 ms.date: 05/19/2021
 ms.custom: seo-javascript-september2019, seo-javascript-october2019, sqldbrb=2, devx-track-js, mode-api
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Quickstart: Use Node.js to query a database in Azure SQL Database or Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -180,7 +181,7 @@ Open a command prompt and create a folder named *sqltest*. Open the folder you c
     ```
 
 > [!NOTE]
-> For more information about using managed identity for authentication, complete the tutorial to [access data via managed identity](../../app-service/tutorial-connect-msi-sql-database.md).
+> For more information about using managed identity for authentication, complete the tutorial to [access data via managed identity](/azure/app-service/tutorial-connect-msi-sql-database).
 
 > [!NOTE]
 > The code example uses the **AdventureWorksLT** sample database in Azure SQL Database.

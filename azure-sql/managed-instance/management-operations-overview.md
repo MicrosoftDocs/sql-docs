@@ -27,7 +27,7 @@ All management operations can be categorized as follows:
 - Instance update (changing instance properties, such as vCores or reserved storage)
 - Instance deletion
 
-To support [deployments within Azure virtual networks](../../virtual-network/virtual-network-for-azure-services.md) and provide isolation and security for customers, SQL Managed Instance relies on [virtual clusters](connectivity-architecture-overview.md#high-level-connectivity-architecture). The virtual cluster represents a dedicated set of isolated virtual machines deployed inside the customer's virtual network subnet. Essentially, every managed instance deployed to an empty subnet results in a new virtual cluster buildout.
+To support [deployments within Azure virtual networks](/azure/virtual-network/virtual-network-for-azure-services) and provide isolation and security for customers, SQL Managed Instance relies on [virtual clusters](connectivity-architecture-overview.md#high-level-connectivity-architecture). The virtual cluster represents a dedicated set of isolated virtual machines deployed inside the customer's virtual network subnet. Essentially, every managed instance deployed to an empty subnet results in a new virtual cluster buildout.
 
 Subsequent management operations on managed instances may impact the underlying virtual cluster. Changes that impact the underlying virtual cluster may affect the duration of management operations, as deploying additional virtual machines comes with an overhead that you need to consider when you plan new deployments or updates to existing managed instances.
 
@@ -170,4 +170,4 @@ To learn how to cancel management operation, see [Canceling management operation
 - For a features and comparison list, see [Common SQL features](../database/features-comparison.md).
 - For more information about VNet configuration, see [SQL Managed Instance VNet configuration](connectivity-architecture-overview.md).
 - For a quickstart that creates a managed instance and restores a database from a backup file, see [Create a managed instance](instance-create-quickstart.md).
-- For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](../../dms/tutorial-sql-server-to-managed-instance.md).
+- For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).

@@ -9,6 +9,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 09/22/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Using Azure Policy to enforce Azure Active Directory only authentication with Azure SQL
@@ -28,7 +29,7 @@ In this article, you learn how to:
 
 ## Prerequisite
 
-- Have permissions to manage Azure Policy. For more information, see [Azure RBAC permissions in Azure Policy](../../governance/policy/overview.md#azure-rbac-permissions-in-azure-policy).
+- Have permissions to manage Azure Policy. For more information, see [Azure RBAC permissions in Azure Policy](/azure/governance/policy/overview#azure-rbac-permissions-in-azure-policy).
 
 ## Create an Azure Policy
 

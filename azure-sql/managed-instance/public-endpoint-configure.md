@@ -14,7 +14,7 @@ ms.date: 02/08/2021
 # Configure public endpoint in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Public endpoint for a [managed instance](./sql-managed-instance-paas-overview.md) enables data access to your managed instance from outside the [virtual network](../../virtual-network/virtual-networks-overview.md). You are able to access your managed instance from multi-tenant Azure services like Power BI, Azure App Service, or an on-premises network. By using the public endpoint on a managed instance, you do not need to use a VPN, which can help avoid VPN throughput issues.
+Public endpoint for a [managed instance](./sql-managed-instance-paas-overview.md) enables data access to your managed instance from outside the [virtual network](/azure/virtual-network/virtual-networks-overview). You are able to access your managed instance from multi-tenant Azure services like Power BI, Azure App Service, or an on-premises network. By using the public endpoint on a managed instance, you do not need to use a VPN, which can help avoid VPN throughput issues.
 
 In this article, you'll learn how to:
 
@@ -30,7 +30,7 @@ In this article, you'll learn how to:
 Due to the sensitivity of data that is in a managed instance, the configuration to enable managed instance public endpoint requires a two-step process. This security measure adheres to separation of duties (SoD):
 
 - Enabling public endpoint on a managed instance needs to be done by the managed instance admin. The managed instance admin can be found on **Overview** page of your managed instance resource.
-- Allowing traffic using a network security group that needs to be done by a network admin. For more information, see [network security group permissions](../../virtual-network/manage-network-security-group.md#permissions).
+- Allowing traffic using a network security group that needs to be done by a network admin. For more information, see [network security group permissions](/azure/virtual-network/manage-network-security-group#permissions).
 
 ## Enabling public endpoint for a managed instance in the Azure portal
 

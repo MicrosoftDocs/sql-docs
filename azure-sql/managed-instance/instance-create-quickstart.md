@@ -52,7 +52,7 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
    | **Managed instance name** | Any valid name.|For valid names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming).|
    | **Region** |The region in which you want to create the managed instance.|For information about regions, see [Azure regions](https://azure.microsoft.com/regions/).|
    | **Managed instance admin login** | Any valid username. | For valid names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). Don't use "serveradmin" because that's a reserved server-level role.|
-   | **Password** | Any valid password.| The password must be at least 16 characters long and meet the [defined complexity requirements](../../virtual-machines/windows/faq.yml#what-are-the-password-requirements-when-creating-a-vm-).|
+   | **Password** | Any valid password.| The password must be at least 16 characters long and meet the [defined complexity requirements](/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-).|
 
 - Select **Configure Managed Instance** to size compute and storage resources and to review the pricing tiers. Use the sliders or text boxes to specify the amount of storage and the number of virtual cores. When you're finished, select **Apply** to save your selection. 
 
@@ -107,7 +107,7 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 ### Tags
 
-- Add tags to resources in your Azure Resource Manager template (ARM template). [Tags](../../azure-resource-manager/management/tag-resources.md) help you logically organize your resources. The tag values show up in cost reports and allow for other management activities by tag. 
+- Add tags to resources in your Azure Resource Manager template (ARM template). [Tags](/azure/azure-resource-manager/management/tag-resources) help you logically organize your resources. The tag values show up in cost reports and allow for other management activities by tag. 
 
 - Consider at least tagging your new SQL Managed Instance with the Owner tag to identify who created, and the Environment tag to identify whether this system is Production, Development, etc. For more information, see [Develop your naming and tagging strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
  
@@ -193,7 +193,7 @@ To learn about how to connect to SQL Managed Instance:
 - For a quickstart that shows how to connect to SQL Managed Instance from an on-premises client computer by using a point-to-site connection, see [Configure a point-to-site connection](point-to-site-p2s-configure.md).
 
 To restore an existing SQL Server database from on-premises to SQL Managed Instance: 
-- Use the [Azure Database Migration Service for migration](../../dms/tutorial-sql-server-to-managed-instance.md) to restore from a database backup file. 
+- Use the [Azure Database Migration Service for migration](/azure/dms/tutorial-sql-server-to-managed-instance) to restore from a database backup file. 
 - Use the [T-SQL RESTORE command](restore-sample-database-quickstart.md) to restore from a database backup file.
 
-For advanced monitoring of SQL Managed Instance database performance with built-in troubleshooting intelligence, see [Monitor Azure SQL Managed Instance by using Azure SQL Analytics](../../azure-monitor/insights/azure-sql.md).
+For advanced monitoring of SQL Managed Instance database performance with built-in troubleshooting intelligence, see [Monitor Azure SQL Managed Instance by using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql).

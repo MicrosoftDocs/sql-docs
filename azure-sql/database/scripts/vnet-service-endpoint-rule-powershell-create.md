@@ -16,7 +16,7 @@ tags: azure-synapse
 # PowerShell: Create a Virtual Service endpoint and VNet rule for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../../includes/appliesto-sqldb.md)]
 
-*Virtual network rules* are one firewall security feature that controls whether the [logical SQL server](../logical-servers.md) for your [Azure SQL Database](../sql-database-paas-overview.md) databases, elastic pools, or databases in [Azure Synapse](../../../synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is.md) accept communications that are sent from particular subnets in virtual networks.
+*Virtual network rules* are one firewall security feature that controls whether the [logical SQL server](../logical-servers.md) for your [Azure SQL Database](../sql-database-paas-overview.md) databases, elastic pools, or databases in [Azure Synapse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) accept communications that are sent from particular subnets in virtual networks.
 
 > [!IMPORTANT]
 > This article applies to Azure SQL Database, including Azure Synapse (formerly SQL DW). For simplicity, the term Azure SQL Database in this article applies to databases belonging to either Azure SQL Database or Azure Synapse. This article does *not* apply to Azure SQL Managed Instance because it does not have a service endpoint associated with it.
@@ -31,7 +31,7 @@ For more background, see [Virtual Service endpoints for Azure SQL Database][sql-
 > [!TIP]
 > If all you need is to assess or add the Virtual Service endpoint *type name* for Azure SQL Database to your subnet, you can skip ahead to our more [direct PowerShell script](#a-verify-subnet-is-endpoint-ps-100).
 
-[!INCLUDE [updated-for-az](../../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../../includes/updated-for-az.md)]
 
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the [`Az.Sql` Cmdlets](/powershell/module/az.sql). For the older module, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.

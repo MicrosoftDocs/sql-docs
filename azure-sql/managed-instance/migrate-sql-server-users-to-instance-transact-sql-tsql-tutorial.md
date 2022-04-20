@@ -336,4 +336,4 @@ The specified schema name "testGroupUser@aadsqlmi.net" either does not exist or 
 
 ## Next steps
 
-[Tutorial: Migrate SQL Server to Azure SQL Managed Instance offline using DMS](../../dms/tutorial-sql-server-to-managed-instance.md?toc=/azure/sql-database/toc.json)
+[Tutorial: Migrate SQL Server to Azure SQL Managed Instance offline using DMS](/azure/dms/tutorial-sql-server-to-managed-instance?toc=/azure/sql-database/toc.json)

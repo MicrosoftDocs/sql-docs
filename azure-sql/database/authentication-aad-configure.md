@@ -12,13 +12,14 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 04/09/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Configure and manage Azure AD authentication with Azure SQL
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-This article shows you how to create and populate an Azure Active Directory (Azure AD) instance, and then use Azure AD with [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](../../synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is.md). For an overview, see [Azure Active Directory authentication](authentication-aad-overview.md).
+This article shows you how to create and populate an Azure Active Directory (Azure AD) instance, and then use Azure AD with [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). For an overview, see [Azure Active Directory authentication](authentication-aad-overview.md).
 
 ## Azure AD authentication methods
 
@@ -31,34 +32,34 @@ Azure AD authentication supports the following authentication methods:
     - Azure AD pass-through authentication
   - Federated authentication
 
-For more information on Azure AD authentication methods, and which one to choose, see [Choose the right authentication method for your Azure Active Directory hybrid identity solution](../../active-directory/hybrid/choose-ad-authn.md).
+For more information on Azure AD authentication methods, and which one to choose, see [Choose the right authentication method for your Azure Active Directory hybrid identity solution](/azure/active-directory/hybrid/choose-ad-authn).
 
 For more information on Azure AD hybrid identities, setup, and synchronization, see:
 
-- Password hash authentication - [Implement password hash synchronization with Azure AD Connect sync](../../active-directory/hybrid/how-to-connect-password-hash-synchronization.md)
-- Pass-through authentication - [Azure Active Directory Pass-through Authentication](../../active-directory/hybrid/how-to-connect-pta-quick-start.md)
-- Federated authentication - [Deploying Active Directory Federation Services in Azure](/windows-server/identity/ad-fs/deployment/how-to-connect-fed-azure-adfs) and [Azure AD Connect and federation](../../active-directory/hybrid/how-to-connect-fed-whatis.md)
+- Password hash authentication - [Implement password hash synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization)
+- Pass-through authentication - [Azure Active Directory Pass-through Authentication](/azure/active-directory/hybrid/how-to-connect-pta-quick-start)
+- Federated authentication - [Deploying Active Directory Federation Services in Azure](/windows-server/identity/ad-fs/deployment/how-to-connect-fed-azure-adfs) and [Azure AD Connect and federation](/azure/active-directory/hybrid/how-to-connect-fed-whatis)
 
 ## Create and populate an Azure AD instance
 
 Create an Azure AD instance and populate it with users and groups. Azure AD can be the initial Azure AD managed domain. Azure AD can also be an on-premises Active Directory Domain Services that is federated with the Azure AD.
 
 For more information, see:
-- [Integrating your on-premises identities with Azure Active Directory](../../active-directory/hybrid/whatis-hybrid-identity.md)
-- [Add your own domain name to Azure AD](../../active-directory/fundamentals/add-custom-domain.md)
+- [Integrating your on-premises identities with Azure Active Directory](/azure/active-directory/hybrid/whatis-hybrid-identity)
+- [Add your own domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain)
 - [Microsoft Azure now supports federation with Windows Server Active Directory](https://azure.microsoft.com/blog/windows-azure-now-supports-federation-with-windows-server-active-directory/)
-- [What is Azure Active Directory?](../../active-directory/fundamentals/active-directory-whatis.md)
+- [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Manage Azure AD using Windows PowerShell](/powershell/module/azuread)
-- [Hybrid Identity Required Ports and Protocols](../../active-directory/hybrid/reference-connect-ports.md).
+- [Hybrid Identity Required Ports and Protocols](/azure/active-directory/hybrid/reference-connect-ports).
 
 ## Associate or add an Azure subscription to Azure Active Directory
 
-1. Associate your Azure subscription to Azure Active Directory by making the directory a trusted directory for the Azure subscription hosting the database. For details, see [Associate or add an Azure subscription to your Azure Active Directory tenant](../../active-directory/fundamentals/active-directory-how-subscriptions-associated-directory.md).
+1. Associate your Azure subscription to Azure Active Directory by making the directory a trusted directory for the Azure subscription hosting the database. For details, see [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory).
 
 2. Use the directory switcher in the Azure portal to switch to the subscription associated with domain.
 
    > [!IMPORTANT]
-   > Every Azure subscription has a trust relationship with an Azure AD instance. This means that it trusts that directory to authenticate users, services, and devices. Multiple subscriptions can trust the same directory, but a subscription trusts only one directory. This trust relationship that a subscription has with a directory is unlike the relationship that a subscription has with all other resources in Azure (websites, databases, and so on), which are more like child resources of a subscription. If a subscription expires, then access to those other resources associated with the subscription also stops. But the directory remains in Azure, and you can associate another subscription with that directory and continue to manage the directory users. For more information about resources, see [Understanding resource access in Azure](../../active-directory/external-identities/add-users-administrator.md). To learn more about this trusted relationship see [How to associate or add an Azure subscription to Azure Active Directory](../../active-directory/fundamentals/active-directory-how-subscriptions-associated-directory.md).
+   > Every Azure subscription has a trust relationship with an Azure AD instance. This means that it trusts that directory to authenticate users, services, and devices. Multiple subscriptions can trust the same directory, but a subscription trusts only one directory. This trust relationship that a subscription has with a directory is unlike the relationship that a subscription has with all other resources in Azure (websites, databases, and so on), which are more like child resources of a subscription. If a subscription expires, then access to those other resources associated with the subscription also stops. But the directory remains in Azure, and you can associate another subscription with that directory and continue to manage the directory users. For more information about resources, see [Understanding resource access in Azure](/azure/active-directory/external-identities/add-users-administrator). To learn more about this trusted relationship see [How to associate or add an Azure subscription to Azure Active Directory](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory).
 
 ## Azure AD admin with a server in SQL Database
 
@@ -348,14 +349,14 @@ For more information about CLI commands, see [az sql server](/cli/azure/sql/serv
 ## Configure your client computers
 
 > [!NOTE]
-> [System.Data.SqlClient](/dotnet/api/system.data.sqlclient) uses the Azure Active Directory Authentication Library (ADAL), which will be deprecated. If you're using the [System.Data.SqlClient](/dotnet/api/system.data.sqlclient) namespace for Azure Active Directory authentication, migrate applications to [Microsoft.Data.SqlClient](/sql/connect/ado-net/introduction-microsoft-data-sqlclient-namespace) and the [Microsoft Authentication Library (MSAL)](../../active-directory/develop/msal-migration.md). For more information about using Azure AD authentication with SqlClient, see [Using Azure Active Directory authentication with SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
+> [System.Data.SqlClient](/dotnet/api/system.data.sqlclient) uses the Azure Active Directory Authentication Library (ADAL), which will be deprecated. If you're using the [System.Data.SqlClient](/dotnet/api/system.data.sqlclient) namespace for Azure Active Directory authentication, migrate applications to [Microsoft.Data.SqlClient](/sql/connect/ado-net/introduction-microsoft-data-sqlclient-namespace) and the [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration). For more information about using Azure AD authentication with SqlClient, see [Using Azure Active Directory authentication with SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
 >
 > SSMS and SSDT still uses the Azure Active Directory Authentication Library (ADAL). If you want to continue using *ADAL.DLL* in your applications, you can use the links in this section to install the latest SSMS, ODBC, and OLE DB driver that contains the latest *ADAL.DLL* library.
 
 On all client machines, from which your applications or users connect to SQL Database or Azure Synapse using Azure AD identities, you must install the following software:
 
 - .NET Framework 4.6 or later from [https://msdn.microsoft.com/library/5a4x27ek.aspx](/dotnet/framework/install/guide-for-developers).
-- [Microsoft Authentication Library (MSAL)](../../active-directory/develop/msal-migration.md) or Azure Active Directory Authentication Library for SQL Server (*ADAL.DLL*). Below are the download links to install the latest SSMS, ODBC, and OLE DB driver that contains the *ADAL.DLL* library.
+- [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration) or Azure Active Directory Authentication Library for SQL Server (*ADAL.DLL*). Below are the download links to install the latest SSMS, ODBC, and OLE DB driver that contains the *ADAL.DLL* library.
   - [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms)
   - [ODBC Driver 17 for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver15&preserve-view=true)
   - [OLE DB Driver 18 for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver15&preserve-view=true)
@@ -446,7 +447,7 @@ The following procedures show you how to connect to SQL Database with an Azure A
 
 ### Active Directory integrated authentication
 
-Use this method if you are logged into Windows using your Azure Active Directory credentials from a federated domain, or a managed domain that is configured for seamless single sign-on for pass-through and password hash authentication. For more information, see [Azure Active Directory Seamless Single Sign-On](../../active-directory/hybrid/how-to-connect-sso.md).
+Use this method if you are logged into Windows using your Azure Active Directory credentials from a federated domain, or a managed domain that is configured for seamless single sign-on for pass-through and password hash authentication. For more information, see [Azure Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/how-to-connect-sso).
 
 1. Start Management Studio or Data Tools and in the **Connect to Server** (or **Connect to Database Engine**) dialog box, in the **Authentication** box, select **Azure Active Directory - Integrated**. No password is needed or can be entered because your existing credentials will be presented for the connection.
 
@@ -484,7 +485,7 @@ The following procedures show you how to connect to a SQL Database with an Azure
 
 ### Active Directory integrated authentication
 
-To use integrated Windows authentication, your domain's Active Directory must be federated with Azure Active Directory, or should be a managed domain that is configured for seamless single sign-on for pass-through or password hash authentication. For more information, see [Azure Active Directory Seamless Single Sign-On](../../active-directory/hybrid/how-to-connect-sso.md).
+To use integrated Windows authentication, your domain's Active Directory must be federated with Azure Active Directory, or should be a managed domain that is configured for seamless single sign-on for pass-through or password hash authentication. For more information, see [Azure Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/how-to-connect-sso).
 
 Your client application (or a service) connecting to the database must be running on a domain-joined machine under a user's domain credentials.
 
@@ -513,7 +514,7 @@ Learn more about Azure AD authentication methods using the demo code samples ava
 
 ## Azure AD token
 
-This authentication method allows middle-tier services to obtain [JSON Web Tokens (JWT)](../../active-directory/develop/id-tokens.md) to connect to the database in SQL Database, the SQL Managed Instance, or Azure Synapse by obtaining a token from Azure AD. This method enables various application scenarios including service identities, service principals, and applications using certificate-based authentication. You must complete four basic steps to use Azure AD token authentication:
+This authentication method allows middle-tier services to obtain [JSON Web Tokens (JWT)](/azure/active-directory/develop/id-tokens) to connect to the database in SQL Database, the SQL Managed Instance, or Azure Synapse by obtaining a token from Azure AD. This method enables various application scenarios including service identities, service principals, and applications using certificate-based authentication. You must complete four basic steps to use Azure AD token authentication:
 
 1. Register your application with Azure Active Directory and get the client ID for your code.
 2. Create a database user representing the application. (Completed earlier in step 6.)
@@ -529,7 +530,7 @@ conn.AccessToken = "Your JWT token";
 conn.Open();
 ```
 
-For more information, see [SQL Server Security Blog](/archive/blogs/sqlsecurity/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth). For information about adding a certificate, see [Get started with certificate-based authentication in Azure Active Directory](../../active-directory/authentication/active-directory-certificate-based-authentication-get-started.md).
+For more information, see [SQL Server Security Blog](/archive/blogs/sqlsecurity/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth). For information about adding a certificate, see [Get started with certificate-based authentication in Azure Active Directory](/azure/active-directory/authentication/active-directory-certificate-based-authentication-get-started).
 
 ### sqlcmd
 

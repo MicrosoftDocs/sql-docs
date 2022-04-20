@@ -11,6 +11,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: mathoma, kendralittle
 ms.date: 01/25/2019
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Load data from CSV into Azure SQL Database or SQL Managed Instance (flat files)
 [!INCLUDE[appliesto-sqldb-sqlmi](includes/appliesto-sqldb-sqlmi.md)]

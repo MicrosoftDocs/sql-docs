@@ -55,7 +55,7 @@ The following properties apply to each DNS alias for your server:
   - When you drop a server, the Azure system also drops all DNS aliases that refer to the server.
 - *Not bound to any region:* DNS aliases are not bound to a region. Any DNS aliases can be updated to refer to a server that resides in any geographic region.
   - However, when updating an alias to refer to another server, both servers must exist in the same Azure *subscription*.
-- *Permissions:* To manage a DNS alias, the user must have *Server Contributor* permissions, or higher. For more information, see [Get started with Azure role-based access control in the Azure portal](../../role-based-access-control/overview.md).
+- *Permissions:* To manage a DNS alias, the user must have *Server Contributor* permissions, or higher. For more information, see [Get started with Azure role-based access control in the Azure portal](/azure/role-based-access-control/overview).
 
 ## Manage your DNS aliases
 
@@ -75,7 +75,7 @@ Also, the REST APIs can be seen in GitHub at:
 
 ### PowerShell for managing your DNS aliases
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
 

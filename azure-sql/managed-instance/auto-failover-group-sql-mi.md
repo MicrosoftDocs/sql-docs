@@ -103,11 +103,11 @@ For more information about creating the secondary SQL Managed Instance in the sa
 
 ## <a name="using-geo-paired-regions"></a> Use paired regions
 
-Deploy both managed instances to [paired regions](../../availability-zones/cross-region-replication-azure.md) for performance reasons. SQL Managed Instance failover groups in paired regions have better performance compared to unpaired regions.
+Deploy both managed instances to [paired regions](/azure/availability-zones/cross-region-replication-azure) for performance reasons. SQL Managed Instance failover groups in paired regions have better performance compared to unpaired regions.
 
 ## <a name="enabling-replication-traffic-between-two-instances"></a> Enable geo-replication traffic between two instances
 
-Because each managed instance is isolated in its own VNet, two-directional traffic between these VNets must be allowed. See [Azure VPN gateway](../../vpn-gateway/vpn-gateway-about-vpngateways.md)
+Because each managed instance is isolated in its own VNet, two-directional traffic between these VNets must be allowed. See [Azure VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
 
 
 
@@ -202,9 +202,9 @@ There is some overlap of content in the following articles, be sure to make chan
 /azure-sql/managed-instance/auto-failover-group-configure-sql-mi.md
 -->
 
-Permissions for a failover group are managed via [Azure role-based access control (Azure RBAC)](../../role-based-access-control/overview.md). 
+Permissions for a failover group are managed via [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview). 
 
-Azure RBAC write access is necessary to create and manage failover groups. The [SQL Managed Instance Contributor](../../role-based-access-control/built-in-roles.md#sql-managed-instance-contributor) has all the necessary permissions to manage failover groups.
+Azure RBAC write access is necessary to create and manage failover groups. The [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) has all the necessary permissions to manage failover groups.
 
 For specific permission scopes, review how to [configure auto-failover groups in Azure SQL Managed Instance](auto-failover-group-configure-sql-mi.md#permissions). 
 
@@ -220,7 +220,7 @@ Be aware of the following limitations:
 
 ## <a name="programmatically-managing-failover-groups"></a> Programmatically manage failover groups
 
-Auto-failover groups can also be managed programmatically using Azure PowerShell, Azure CLI, and REST API. The following tables describe the set of commands available. Active geo-replication includes a set of Azure Resource Manager APIs for management, including the [Azure SQL Database REST API](/rest/api/sql/) and [Azure PowerShell cmdlets](/powershell/azure/). These APIs require the use of resource groups and support Azure role-based access control (Azure RBAC). For more information on how to implement access roles, see [Azure role-based access control (Azure RBAC)](../../role-based-access-control/overview.md).
+Auto-failover groups can also be managed programmatically using Azure PowerShell, Azure CLI, and REST API. The following tables describe the set of commands available. Active geo-replication includes a set of Azure Resource Manager APIs for management, including the [Azure SQL Database REST API](/rest/api/sql/) and [Azure PowerShell cmdlets](/powershell/azure/). These APIs require the use of resource groups and support Azure role-based access control (Azure RBAC). For more information on how to implement access roles, see [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview).
 
 
 # [PowerShell](#tab/azure-powershell)

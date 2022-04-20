@@ -18,7 +18,7 @@ ms.date: 06/21/2019
 Azure SQL Database offers the following capabilities for recovering from an outage:
 
 - [Active geo-replication](active-geo-replication-overview.md)
-- [Auto-failover groups](auto-failover-group-overview.md)
+- [Auto-failover groups](auto-failover-group-sql-db.md)
 - [Geo-restore](recovery-using-backups.md#point-in-time-restore)
 - [Zone-redundant databases](high-availability-sla.md)
 
@@ -30,13 +30,13 @@ To learn about business continuity scenarios and the features supporting these s
 > Both primary and secondary databases are required to have the same service tier. It is also strongly recommended that the secondary database is created with the same compute size (DTUs or vCores) as the primary. For more information, see [Upgrading or downgrading as primary database](active-geo-replication-overview.md#upgrading-or-downgrading-primary-database).
 >
 > Use one or several failover groups to manage failover of multiple databases.
-> If you add an existing geo-replication relationship to the failover group, make sure the geo-secondary is configured with the same service tier and compute size as the primary. For more information, see [Use auto-failover groups to enable transparent and coordinated failover of multiple databases](auto-failover-group-overview.md).
+> If you add an existing geo-replication relationship to the failover group, make sure the geo-secondary is configured with the same service tier and compute size as the primary. For more information, see [Use auto-failover groups to enable transparent and coordinated failover of multiple databases](auto-failover-group-sql-db.md).
 
 ## Prepare for the event of an outage
 
 For success with recovery to another data region using either failover groups or geo-redundant backups, you need to prepare a server in another data center outage to become the new primary server should the need arise as well as have well-defined steps documented and tested to ensure a smooth recovery. These preparation steps include:
 
-- Identify the server in another region to become the new primary server. For geo-restore, this is generally a server in the [paired region](../../availability-zones/cross-region-replication-azure.md) for the region in which your database is located. This eliminates the additional traffic cost during the geo-restoring operations.
+- Identify the server in another region to become the new primary server. For geo-restore, this is generally a server in the [paired region](/azure/availability-zones/cross-region-replication-azure) for the region in which your database is located. This eliminates the additional traffic cost during the geo-restoring operations.
 - Identify, and optionally define, the server-level IP firewall rules needed on for users to access the new primary database.
 - Determine how you are going to redirect users to the new primary server, such as by changing connection strings or by changing DNS entries.
 - Identify, and optionally create, the logins that must be present in the master database on the new primary server, and ensure these logins have appropriate permissions in the master database, if any. For more information, see [SQL Database security after disaster recovery](active-geo-replication-security-configure.md)
@@ -103,7 +103,7 @@ You need to make sure that all the logins used by your application exist on the 
 
 You need to make sure your existing alert rule settings are updated to map to the recovered database and the different server.
 
-For more information about database alert rules, see [Receive Alert Notifications](../../azure-monitor/alerts/alerts-overview.md) and [Track Service Health](../../service-health/service-notifications.md).
+For more information about database alert rules, see [Receive Alert Notifications](/azure/azure-monitor/alerts/alerts-overview) and [Track Service Health](/azure/service-health/service-notifications).
 
 ### Enable auditing
 

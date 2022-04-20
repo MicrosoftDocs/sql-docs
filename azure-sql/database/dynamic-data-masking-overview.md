@@ -12,6 +12,7 @@ ms.author: matripathy
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 04/05/2022
 tags: azure-synpase
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Dynamic data masking 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
@@ -84,9 +85,9 @@ You can use the REST API to programmatically manage data masking policy and rule
 ## Permissions
 
 These are the built-in roles to configure dynamic data masking is:
-- [SQL Security Manager](../../role-based-access-control/built-in-roles.md#sql-security-manager)
-- [SQL DB Contributor](../../role-based-access-control/built-in-roles.md#sql-db-contributor)
-- [SQL Server Contributor](../../role-based-access-control/built-in-roles.md#sql-server-contributor)
+- [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-security-manager)
+- [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor)
+- [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor)
 
 These are the required actions to use dynamic data masking:
 

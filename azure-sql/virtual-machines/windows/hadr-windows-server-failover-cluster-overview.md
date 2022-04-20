@@ -132,7 +132,7 @@ To adjust threshold settings, see [cluster best practices](hadr-cluster-best-pra
 
 ## Node location
 
-Nodes in a Windows cluster on virtual machines in Azure may be physically separated within the same Azure region, or they can be in different regions. The distance may introduce network latency, much like having cluster nodes spread between locations in your own facilities would. In cloud environments, the difference is that within a region you may not be aware of the distance between nodes.  Moreover, some other factors like physical and virtual components, number of hops, etc. can also contribute to increased latency. If latency between the nodes is a concern, consider placing the nodes of the cluster within a [proximity placement group](../../../virtual-machines/co-location.md) to guarantee network proximity.
+Nodes in a Windows cluster on virtual machines in Azure may be physically separated within the same Azure region, or they can be in different regions. The distance may introduce network latency, much like having cluster nodes spread between locations in your own facilities would. In cloud environments, the difference is that within a region you may not be aware of the distance between nodes.  Moreover, some other factors like physical and virtual components, number of hops, etc. can also contribute to increased latency. If latency between the nodes is a concern, consider placing the nodes of the cluster within a [proximity placement group](/azure/virtual-machines/co-location) to guarantee network proximity.
 
 ## Resource limits
 
@@ -160,7 +160,7 @@ Consider the following limitations when you're working with FCI or availability 
 
 ### MSDTC 
 
-Azure Virtual Machines support Microsoft Distributed Transaction Coordinator (MSDTC) on Windows Server 2019 with storage on Clustered Shared Volumes (CSV) and [Azure Standard Load Balancer](../../../load-balancer/load-balancer-overview.md) or on SQL Server VMs that are using Azure shared disks. 
+Azure Virtual Machines support Microsoft Distributed Transaction Coordinator (MSDTC) on Windows Server 2019 with storage on Clustered Shared Volumes (CSV) and [Azure Standard Load Balancer](/azure/load-balancer/load-balancer-overview) or on SQL Server VMs that are using Azure shared disks. 
 
 On Azure Virtual Machines, MSDTC isn't supported for Windows Server 2016 or earlier with Clustered Shared Volumes because:
 

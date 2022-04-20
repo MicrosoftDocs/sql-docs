@@ -16,7 +16,7 @@ ms.date: 07/28/2020
 # Designing globally available services using Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-When building and deploying cloud services with Azure SQL Database, you use [active geo-replication](active-geo-replication-overview.md) or [auto-failover groups](auto-failover-group-overview.md) to provide resilience to regional outages and catastrophic failures. The same feature allows you to create globally distributed applications optimized for local access to the data. This article discusses common application patterns, including the benefits and trade-offs of each option.
+When building and deploying cloud services with Azure SQL Database, you use [active geo-replication](active-geo-replication-overview.md) or [auto-failover groups](auto-failover-group-sql-db.md) to provide resilience to regional outages and catastrophic failures. The same feature allows you to create globally distributed applications optimized for local access to the data. This article discusses common application patterns, including the benefits and trade-offs of each option.
 
 > [!NOTE]
 > If you are using Premium or Business Critical databases and elastic pools, you can make them resilient to regional outages by converting them to zone redundant deployment configuration. See [Zone-redundant databases](high-availability-sla.md).  
@@ -30,10 +30,10 @@ In this scenario, the applications have the following characteristics:
 * Web tier and data tier must be collocated to reduce latency and traffic cost
 * Fundamentally, downtime is a higher business risk for these applications than data loss
 
-In this case, the application deployment topology is optimized for handling regional disasters when all application components need to fail over together. The diagram below shows this topology. For geographic redundancy, the application’s resources are deployed to Region A and B. However, the resources in Region B are not utilized until Region A fails. A failover group is configured between the two regions to manage database connectivity, replication and failover. The web service in both regions is configured to access the database via the read-write listener **&lt;failover-group-name&gt;.database.windows.net** (1). Azure Traffic Manager is set up to use [priority routing method](../../traffic-manager/traffic-manager-configure-priority-routing-method.md) (2).  
+In this case, the application deployment topology is optimized for handling regional disasters when all application components need to fail over together. The diagram below shows this topology. For geographic redundancy, the application’s resources are deployed to Region A and B. However, the resources in Region B are not utilized until Region A fails. A failover group is configured between the two regions to manage database connectivity, replication and failover. The web service in both regions is configured to access the database via the read-write listener **&lt;failover-group-name&gt;.database.windows.net** (1). Azure Traffic Manager is set up to use [priority routing method](/azure/traffic-manager/traffic-manager-configure-priority-routing-method) (2).  
 
 > [!NOTE]
-> [Azure Traffic Manager](../../traffic-manager/traffic-manager-overview.md) is used throughout this article for illustration purposes only. You can use any load-balancing solution that supports priority routing method.
+> [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) is used throughout this article for illustration purposes only. You can use any load-balancing solution that supports priority routing method.
 
 The following diagram shows this configuration before an outage:
 
@@ -76,7 +76,7 @@ This option is best suited for applications with the following characteristics:
 * Any data loss is high business risk. The database failover can only be used as a last resort if the outage is caused by a catastrophic failure.
 * The application supports read-only and read-write modes of operations and can operate in "read-only mode" for a period of time.
 
-In this pattern, the application switches to read-only mode when the read-write connections start getting time-out errors. The web application is deployed to both regions and includes a connection to the read-write listener endpoint and different connection to the read-only listener endpoint (1). The Traffic Manager profile should use [priority routing](../../traffic-manager/traffic-manager-configure-priority-routing-method.md). [End point monitoring](../../traffic-manager/traffic-manager-monitoring.md) should be enabled for the application endpoint in each region (2).
+In this pattern, the application switches to read-only mode when the read-write connections start getting time-out errors. The web application is deployed to both regions and includes a connection to the read-write listener endpoint and different connection to the read-only listener endpoint (1). The Traffic Manager profile should use [priority routing](/azure/traffic-manager/traffic-manager-configure-priority-routing-method). [End point monitoring](/azure/traffic-manager/traffic-manager-monitoring) should be enabled for the application endpoint in each region (2).
 
 The following diagram illustrates this configuration before an outage:
 
@@ -113,14 +113,14 @@ In this scenario the application has the following characteristics:
 
 In order to meet these requirements you need to guarantee that the user device **always** connects to the application deployed in the same geography for the read-only operations, such as browsing data, analytics etc. Whereas the OLTP operations are processed in the same geography **most of the time**. For example, during the day time OLTP operations are processed in the same geography, but during the off hours they could be processed in a different geography. If the end-user activity mostly happens during the working hours, you can guarantee the optimal performance for most of the users most of the time. The following diagram shows this topology.
 
-The application’s resources should be deployed in each geography where you have substantial usage demand. For example, if your application is actively used in the United States, European Union and South East Asia the application should be deployed to all of these geographies. The primary database should be dynamically switched from one geography to the next at the end of the working hours. This method is called “follow the sun”. The OLTP workload always connects to the database via the read-write listener **&lt;failover-group-name&gt;.database.windows.net** (1). The read-only workload connects to the local database directly using the databases server endpoint **&lt;server-name&gt;.database.windows.net** (2). Traffic Manager is configured with the [performance routing method](../../traffic-manager/traffic-manager-configure-performance-routing-method.md). It ensures that the end-user’s device is connected to the web service in the closest region. Traffic Manager should be set up with end point monitoring enabled for each web service end point (3).
+The application’s resources should be deployed in each geography where you have substantial usage demand. For example, if your application is actively used in the United States, European Union and South East Asia the application should be deployed to all of these geographies. The primary database should be dynamically switched from one geography to the next at the end of the working hours. This method is called “follow the sun”. The OLTP workload always connects to the database via the read-write listener **&lt;failover-group-name&gt;.database.windows.net** (1). The read-only workload connects to the local database directly using the databases server endpoint **&lt;server-name&gt;.database.windows.net** (2). Traffic Manager is configured with the [performance routing method](/azure/traffic-manager/traffic-manager-configure-performance-routing-method). It ensures that the end-user’s device is connected to the web service in the closest region. Traffic Manager should be set up with end point monitoring enabled for each web service end point (3).
 
 > [!NOTE]
 > The failover group configuration defines which region is used for failover. Because the new primary is in a different geography the failover results in longer latency for both OLTP and read-only workloads until the impacted region is back online.
 
 ![Scenario 3. Configuration with primary in East US.](./media/designing-cloud-solutions-for-disaster-recovery/scenario3-a.png)
 
-At the end of the day, for example at 11 PM local time, the active databases should be switched to the next region (North Europe). This task can be fully automated by using [Azure Logic Apps](../../logic-apps/logic-apps-overview.md). The task involves the following steps:
+At the end of the day, for example at 11 PM local time, the active databases should be switched to the next region (North Europe). This task can be fully automated by using [Azure Logic Apps](/azure/logic-apps/logic-apps-overview). The task involves the following steps:
 
 * Switch primary server in the failover group to North Europe using friendly failover (1)
 * Remove the failover group between East US and North Europe
@@ -165,5 +165,5 @@ Your specific cloud disaster recovery strategy can combine or extend these desig
 
 * For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md)
 * To learn about active geo-replication, see [Active geo-replication](active-geo-replication-overview.md).
-* To learn about auto-failover groups, see [Auto-failover groups](auto-failover-group-overview.md).
+* To learn about auto-failover groups, see [Auto-failover groups](auto-failover-group-sql-db.md).
 * For information about active geo-replication with elastic pools, see [Elastic pool disaster recovery strategies](disaster-recovery-strategies-for-applications-with-elastic-pool.md).

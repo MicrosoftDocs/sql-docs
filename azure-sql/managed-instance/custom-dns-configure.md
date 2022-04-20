@@ -16,12 +16,12 @@ ms.date: 07/17/2019
 # Configure a custom DNS for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Azure SQL Managed Instance must be deployed within an Azure [virtual network (VNet)](../../virtual-network/virtual-networks-overview.md). There are a few scenarios (for example, db mail, linked servers to other SQL Server instances in your cloud or hybrid environment) that require private host names to be resolved from SQL Managed Instance. In this case, you need to configure a custom DNS inside Azure. 
+Azure SQL Managed Instance must be deployed within an Azure [virtual network (VNet)](/azure/virtual-network/virtual-networks-overview). There are a few scenarios (for example, db mail, linked servers to other SQL Server instances in your cloud or hybrid environment) that require private host names to be resolved from SQL Managed Instance. In this case, you need to configure a custom DNS inside Azure. 
 
 Because SQL Managed Instance uses the same DNS for its inner workings, configure the custom DNS server so that it can resolve public domain names.
 
 > [!IMPORTANT]
-> Always use a fully qualified domain name (FQDN) for the mail server, for the SQL Server instance, and for other services, even if they're within your private DNS zone. For example, use `smtp.contoso.com` for your mail server because `smtp` won't resolve correctly. Creating a linked server or replication that references SQL Server VMs inside the same virtual network also requires an FQDN and a default DNS suffix. For example, `SQLVM.internal.cloudapp.net`. For more information, see [Name resolution that uses your own DNS server](../../virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances.md#name-resolution-that-uses-your-own-dns-server).
+> Always use a fully qualified domain name (FQDN) for the mail server, for the SQL Server instance, and for other services, even if they're within your private DNS zone. For example, use `smtp.contoso.com` for your mail server because `smtp` won't resolve correctly. Creating a linked server or replication that references SQL Server VMs inside the same virtual network also requires an FQDN and a default DNS suffix. For example, `SQLVM.internal.cloudapp.net`. For more information, see [Name resolution that uses your own DNS server](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#name-resolution-that-uses-your-own-dns-server).
 
 > [!IMPORTANT]
 > Updating virtual network DNS servers won't affect SQL Managed Instance immediately. See [how to synchronize virtual network DNS servers setting on SQL Managed Instance virtual cluster](synchronize-vnet-dns-servers-setting-on-virtual-cluster.md) for more details.

@@ -91,7 +91,7 @@ To convert existing databases to use the tools, see [Migrate existing databases 
 
 To see the specifics of the elastic pool, see [Price and performance considerations for an elastic pool](elastic-pool-overview.md), or create a new pool with [elastic pools](elastic-pool-manage.md).  
 
-[!INCLUDE [elastic-scale-include](../../../includes/elastic-scale-include.md)]
+[!INCLUDE [elastic-scale-include](../includes/elastic-scale-include.md)]
 
 <!--Anchors-->
 <!--Image references-->

@@ -10,6 +10,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, kendralittle
 ms.date: 11/07/2018
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Use In-Memory OLTP to improve your application performance in Azure SQL Database and Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](includes/appliesto-sqldb-sqlmi.md)]

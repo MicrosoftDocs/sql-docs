@@ -129,7 +129,7 @@ A central **Events Hub** webpage provides a list of links to the tenants in your
 
 ### Azure Traffic Manager
 
-To control the distribution of incoming requests, the Wingtip app uses [Azure Traffic Manager](../../traffic-manager/traffic-manager-overview.md). The events page for each tenant includes the tenant name in its URL. Each URL also includes your specific User value. Each URL obeys the shown format by using the following steps:
+To control the distribution of incoming requests, the Wingtip app uses [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview). The events page for each tenant includes the tenant name in its URL. Each URL also includes your specific User value. Each URL obeys the shown format by using the following steps:
 
 - http://events.wingtip-mt.&lt;user&gt;.trafficmanager.net/*fabrikamjazzclub*
 
@@ -143,7 +143,7 @@ To control the distribution of incoming requests, the Wingtip app uses [Azure Tr
 1. The **Events Hub** lists all the tenants that are registered in the catalog, and their venues.
 2. The **Events Hub** uses extended metadata in the catalog to retrieve the tenant's name associated with each mapping to construct the URLs.
 
-In a production environment, you typically create a CNAME DNS record to [point a company internet domain](../../traffic-manager/traffic-manager-point-internet-domain.md) to the traffic manager profile.
+In a production environment, you typically create a CNAME DNS record to [point a company internet domain](/azure/traffic-manager/traffic-manager-point-internet-domain) to the traffic manager profile.
 
 ## Start generating load on the tenant databases
 

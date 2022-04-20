@@ -9,6 +9,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 05/10/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Create Azure AD guest users and set as an Azure AD admin

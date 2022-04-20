@@ -15,7 +15,7 @@ ms.date: 03/12/2019
 # What is a logical SQL server in Azure SQL Database and Azure Synapse?
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
 
-In Azure SQL Database and Azure Synapse Analytics, a server is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer [logins](logins-create-manage.md), [firewall rules](firewall-configure.md), [auditing rules](../../azure-sql/database/auditing-overview.md), [threat detection policies](threat-detection-configure.md), and [auto-failover groups](auto-failover-group-overview.md). A server can be in a different region than its resource group. The server must exist before you can create a database in Azure SQL Database or a data warehouse database in Azure Synapse Analytics. All databases managed by a single server are created within the same region as the server.
+In Azure SQL Database and Azure Synapse Analytics, a server is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer [logins](logins-create-manage.md), [firewall rules](firewall-configure.md), [auditing rules](../../azure-sql/database/auditing-overview.md), [threat detection policies](threat-detection-configure.md), and [auto-failover groups](auto-failover-group-sql-db.md). A server can be in a different region than its resource group. The server must exist before you can create a database in Azure SQL Database or a data warehouse database in Azure Synapse Analytics. All databases managed by a single server are created within the same region as the server.
 
 This server is distinct from a SQL Server instance that you may be familiar with in the on-premises world. Specifically, there are no guarantees regarding location of the databases or data warehouse database in relation to the server that manages them. Furthermore, neither Azure SQL Database nor Azure Synapse expose any instance-level access or features. In contrast, the instance databases in a managed instance are all physically co-located - in the same way that you are familiar with SQL Server in the on-premises or virtual machine world.
 
@@ -27,13 +27,13 @@ A server in SQL Database and Azure Synapse:
 - Is the parent resource for databases, elastic pools, and data warehouses
 - Provides a namespace for databases, elastic pools, and data warehouse database
 - Is a logical container with strong lifetime semantics - delete a server and it deletes its databases, elastic pools, and SQK pools
-- Participates in [Azure role-based access control (Azure RBAC)](../../role-based-access-control/overview.md) - databases, elastic pools, and data warehouse database within a server inherit access rights from the server
+- Participates in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) - databases, elastic pools, and data warehouse database within a server inherit access rights from the server
 - Is a high-order element of the identity of databases, elastic pools, and data warehouse database for Azure resource management purposes (see the URL scheme for databases and pools)
 - Collocates resources in a region
 - Provides a connection endpoint for database access (`<serverName>`.database.windows.net)
 - Provides access to metadata regarding contained resources via DMVs by connecting to a master database
 - Provides the scope for management policies that apply to its databases - logins, firewall, audit, threat detection, and such
-- Is restricted by a quota within the parent subscription (six servers per subscription by default - [see Subscription limits here](../../azure-resource-manager/management/azure-subscription-service-limits.md))
+- Is restricted by a quota within the parent subscription (six servers per subscription by default - [see Subscription limits here](/azure/azure-resource-manager/management/azure-subscription-service-limits))
 - Provides the scope for database quota and DTU or vCore quota for the resources it contains (such as 45,000 DTU)
 - Is the versioning scope for capabilities enabled on contained resources
 - Server-level principal logins can manage all databases on a server
@@ -74,7 +74,7 @@ To manage an existing database, navigate to the **SQL databases** page and click
 
 ## Manage servers, databases, and firewalls using PowerShell
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
 
@@ -103,7 +103,7 @@ To create and manage servers, databases, and firewalls with Azure PowerShell, us
 
 ## Manage servers, databases, and firewalls using the Azure CLI
 
-To create and manage servers, databases, and firewalls with the [Azure CLI](/cli/azure), use the following [Azure CLI SQL Database](/cli/azure/sql/db) commands. Use the [Cloud Shell](../../cloud-shell/overview.md) to run the CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows. For creating and managing elastic pools, see [Elastic pools](elastic-pool-overview.md).
+To create and manage servers, databases, and firewalls with the [Azure CLI](/cli/azure), use the following [Azure CLI SQL Database](/cli/azure/sql/db) commands. Use the [Cloud Shell](/azure/cloud-shell/overview) to run the CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows. For creating and managing elastic pools, see [Elastic pools](elastic-pool-overview.md).
 
 | Cmdlet | Description |
 | --- | --- |

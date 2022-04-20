@@ -11,6 +11,7 @@ author: kfarlee
 ms.author: kfarlee
 ms.reviewer: mathoma, kendralittle, nvraparl, wiassaf
 ms.date: 02/18/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Accelerated Database Recovery in Azure SQL 
 [!INCLUDE[appliesto-sqldb-sqlmi](includes/appliesto-sqldb-sqlmi.md)]

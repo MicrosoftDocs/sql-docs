@@ -61,13 +61,13 @@ On the **Basics** tab, provide the following information:
 1. Under **Instance details**:
     1. Type _SQLVM_ for the **Virtual machine name**. 
     1. Choose a location for your **Region**. 
-    1. For the purpose of this quickstart, leave **Availability options** set to _No infrastructure redundancy required_. To find out more information about availability options, see [Availability](../../../virtual-machines/availability.md). 
+    1. For the purpose of this quickstart, leave **Availability options** set to _No infrastructure redundancy required_. To find out more information about availability options, see [Availability](/azure/virtual-machines/availability). 
     1. In the **Image** list, select _Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016_. 
     1. Choose to **Change size** for the **Size** of the virtual machine and select the **A2 Basic** offering. Be sure to clean up your resources once you're done with them to prevent any unexpected charges. 
 
    ![Instance details](./media/sql-vm-create-portal-quickstart/basics-instance-details.png)
 
-1. Under **Administrator account**, provide a username, such as _azureuser_ and a password. The password must be at least 12 characters long and meet the [defined complexity requirements](../../../virtual-machines/windows/faq.yml#what-are-the-password-requirements-when-creating-a-vm-).
+1. Under **Administrator account**, provide a username, such as _azureuser_ and a password. The password must be at least 12 characters long and meet the [defined complexity requirements](/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-).
 
    ![Administrator account](./media/sql-vm-create-portal-quickstart/basics-administrator-account.png)
 
@@ -119,7 +119,7 @@ You can monitor the deployment from the Azure portal. The **Notifications** butt
 
 Use the following steps to connect to the SQL Server virtual machine with Remote Desktop:
 
-[!INCLUDE [Connect to SQL Server VM with remote desktop](../../../../includes/virtual-machines-sql-server-remote-desktop-connect.md)]
+[!INCLUDE [Connect to SQL Server VM with remote desktop](../../includes/virtual-machines-sql-server-remote-desktop-connect.md)]
 
 After you connect to the SQL Server virtual machine, you can launch SQL Server Management Studio and connect with Windows Authentication using your local administrator credentials. If you enabled SQL Server Authentication, you can also connect with SQL Authentication using the SQL login and password you configured during provisioning.
 
@@ -127,7 +127,7 @@ Access to the machine enables you to directly change machine and SQL Server sett
 
 ## Clean up resources
 
-If you do not need your SQL VM to run continually, you can avoid unnecessary charges by stopping it when not in use. You can also permanently delete all resources associated with the virtual machine by deleting its associated resource group in the portal. This permanently deletes the virtual machine as well, so use this command with care. For more information, see [Manage Azure resources through portal](../../../azure-resource-manager/management/manage-resource-groups-portal.md).
+If you do not need your SQL VM to run continually, you can avoid unnecessary charges by stopping it when not in use. You can also permanently delete all resources associated with the virtual machine by deleting its associated resource group in the portal. This permanently deletes the virtual machine as well, so use this command with care. For more information, see [Manage Azure resources through portal](/azure/azure-resource-manager/management/manage-resource-groups-portal).
 
 
 ## Next steps

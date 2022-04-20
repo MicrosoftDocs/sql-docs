@@ -58,7 +58,7 @@ The preceding diagram shows the following resources in the same resource group:
 Before you complete the instructions in this article, you should already have:
 
 - An Azure subscription. Get started for [free](https://azure.microsoft.com/free/). 
-- [Two or more prepared Windows Azure virtual machines](failover-cluster-instance-prepare-vm.md) in an [availability set](../../../virtual-machines/windows/tutorial-availability-sets.md#create-an-availability-set).
+- [Two or more prepared Windows Azure virtual machines](failover-cluster-instance-prepare-vm.md) in an [availability set](/azure/virtual-machines/windows/tutorial-availability-sets#create-an-availability-set).
 - An account that has permissions to create objects on both Azure virtual machines and in Active Directory.
 - The latest version of [PowerShell](/powershell/azure/install-az-ps). 
 
@@ -218,7 +218,7 @@ If you deployed your SQL Server VMs in multiple subnets, skip this step. If you 
 
 ## Limitations
 
-- Azure virtual machines support Microsoft Distributed Transaction Coordinator (MSDTC) on Windows Server 2019 with storage on CSVs and a [standard load balancer](../../../load-balancer/load-balancer-overview.md). MSDTC is not supported on Windows Server 2016 and earlier. 
+- Azure virtual machines support Microsoft Distributed Transaction Coordinator (MSDTC) on Windows Server 2019 with storage on CSVs and a [standard load balancer](/azure/load-balancer/load-balancer-overview). MSDTC is not supported on Windows Server 2016 and earlier. 
 - Disks that have been attached as NTFS-formatted disks can be used with Storage Spaces Direct only if the disk eligibility option is unchecked, or cleared, when storage is being added to the cluster. 
 - Only registering with the SQL IaaS Agent extension in [lightweight management mode](sql-server-iaas-agent-extension-automate-management.md#management-modes) is supported.
 - Failover cluster instances using Storage Spaces Direct as the shared storage do not support using a disk witness for the quorum of the cluster. Use a cloud witness instead. 

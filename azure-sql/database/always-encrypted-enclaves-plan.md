@@ -30,9 +30,9 @@ Intel SGX is a hardware-based trusted execution environment technology. Intel SG
 
 ## Plan for attestation in Azure SQL Database
 
-[Microsoft Azure Attestation](../../attestation/overview.md) is a solution for attesting Trusted Execution Environments (TEEs), including Intel SGX enclaves in Azure SQL databases using DC-series hardware.
+[Microsoft Azure Attestation](/azure/attestation/overview) is a solution for attesting Trusted Execution Environments (TEEs), including Intel SGX enclaves in Azure SQL databases using DC-series hardware.
 
-To use Azure Attestation for attesting Intel SGX enclaves in Azure SQL Database, you need to create an [attestation provider](../../attestation/basic-concepts.md#attestation-provider) and configure it with the Microsoft-provided attestation policy. See [Configure attestation for Always Encrypted using Azure Attestation](always-encrypted-enclaves-configure-attestation.md)
+To use Azure Attestation for attesting Intel SGX enclaves in Azure SQL Database, you need to create an [attestation provider](/azure/attestation/basic-concepts#attestation-provider) and configure it with the Microsoft-provided attestation policy. See [Configure attestation for Always Encrypted using Azure Attestation](always-encrypted-enclaves-configure-attestation.md)
 
 ## Roles and responsibilities when configuring SGX enclaves and attestation
 

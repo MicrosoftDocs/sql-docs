@@ -11,6 +11,7 @@ author: yorek
 ms.author: damauri
 ms.reviewer: mathoma, urmilano, kendralittle
 ms.date: 12/17/2018
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Multi-model capabilities of Azure SQL Database and SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](includes/appliesto-sqldb-sqlmi.md)]
@@ -29,7 +30,7 @@ Consider using the multi-model capabilities of Azure SQL in the following cases:
 The following sections describe the most important multi-model capabilities of Azure SQL.
 
 > [!Note]
-> You can use JSONPath expressions, XQuery/XPath expressions, spatial functions, and graph query expressions in the same Transact-SQL query to access any data that you stored in the database. Any tool or programming language that can execute Transact-SQL queries can also use that query interface to access multi-model data. This is the key difference from multi-model databases such as [Azure Cosmos DB](../cosmos-db/index.yml), which provide specialized APIs for data models.
+> You can use JSONPath expressions, XQuery/XPath expressions, spatial functions, and graph query expressions in the same Transact-SQL query to access any data that you stored in the database. Any tool or programming language that can execute Transact-SQL queries can also use that query interface to access multi-model data. This is the key difference from multi-model databases such as [Azure Cosmos DB](/azure/cosmos-db/index), which provide specialized APIs for data models.
 
 ## Graph features
 

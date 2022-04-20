@@ -13,6 +13,7 @@ author: emlisa
 ms.author: emlisa
 ms.reviewer: kendralittle, mathoma
 ms.date: 10/18/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Overview of business continuity with Azure SQL Database & Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -45,7 +46,7 @@ SQL Database and SQL Managed Instance also provide several business continuity f
 - You can [restore a deleted database](recovery-using-backups.md#deleted-database-restore) to the point at which it was deleted if the **server has not been deleted**.
 - [Long-term backup retention](long-term-retention-overview.md) enables you to keep the backups up to 10 years.  
 - [Active geo-replication](active-geo-replication-overview.md) enables you to create readable replicas and manually failover to any replica in case of a datacenter outage or application upgrade.
-- [Auto-failover group](auto-failover-group-overview.md#terminology-and-capabilities) allows the application to automatically recover in case of a datacenter outage.
+- [Auto-failover group](auto-failover-group-sql-db.md#terminology-and-capabilities) allows the application to automatically recover in case of a datacenter outage.
 
 ## Recover a database within the same Azure region
 
@@ -55,7 +56,7 @@ If the maximum supported backup retention period for point-in-time restore (PITR
 
 ## Compare geo-replication with failover groups
 
-[Auto-failover groups](auto-failover-group-overview.md#terminology-and-capabilities) simplify the deployment and usage of [geo-replication](active-geo-replication-overview.md) and add the additional capabilities as described in the following table:
+[Auto-failover groups](auto-failover-group-sql-db.md#terminology-and-capabilities) simplify the deployment and usage of [geo-replication](active-geo-replication-overview.md) and add the additional capabilities as described in the following table:
 
 |                                              | Geo-replication | Failover groups  |
 |:---------------------------------------------| :-------------- | :----------------|
@@ -74,7 +75,7 @@ Although rare, an Azure datacenter can have an outage. When an outage occurs, it
 
 - One option is to wait for your database to come back online when the datacenter outage is over. This works for applications that can afford to have the database offline. For example, a development project or free trial you don't need to work on constantly. When a datacenter has an outage, you do not know how long the outage might last, so this option only works if you don't need your database for a while.
 - Another option is to restore a database on any server in any Azure region using [geo-redundant database backups](recovery-using-backups.md#geo-restore) (geo-restore). Geo-restore uses a geo-redundant backup as its source and can be used to recover a database even if the database or datacenter is inaccessible due to an outage.
-- Finally, you can quickly recover from an outage if you have configured either geo-secondary using [active geo-replication](active-geo-replication-overview.md) or an [auto-failover group](auto-failover-group-overview.md) for your database or databases. Depending on your choice of these technologies, you can use either manual or automatic failover. While failover itself takes only a few seconds, the service will take at least 1 hour to activate it. This is necessary to ensure that the failover is justified by the scale of the outage. Also, the failover may result in small data loss due to the nature of asynchronous replication.
+- Finally, you can quickly recover from an outage if you have configured either geo-secondary using [active geo-replication](active-geo-replication-overview.md) or an [auto-failover group](auto-failover-group-sql-db.md) for your database or databases. Depending on your choice of these technologies, you can use either manual or automatic failover. While failover itself takes only a few seconds, the service will take at least 1 hour to activate it. This is necessary to ensure that the failover is justified by the scale of the outage. Also, the failover may result in small data loss due to the nature of asynchronous replication.
 
 As you develop your business continuity plan, you need to understand the maximum acceptable time before the application fully recovers after the disruptive event. The time required for application to fully recover is known as Recovery time objective (RTO). You also need to understand the maximum period of recent data updates (time interval) the application can tolerate losing when recovering from an unplanned disruptive event. The potential data loss is known as Recovery point objective (RPO).
 

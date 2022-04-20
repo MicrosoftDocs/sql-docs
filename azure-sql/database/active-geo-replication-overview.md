@@ -26,12 +26,12 @@ Active geo-replication is designed as a business continuity solution that lets y
 
 
 > [!NOTE]
-> Active geo-replication is not supported by Azure SQL Managed Instance. For geographic failover of instances of SQL Managed Instance, use [Auto-failover groups](auto-failover-group-overview.md).
+> Active geo-replication is not supported by Azure SQL Managed Instance. For geographic failover of instances of SQL Managed Instance, use [Auto-failover groups](auto-failover-group-sql-db.md).
 
 > [!NOTE]
-> To migrate SQL databases from Azure Germany using active geo-replication, see [Migrate SQL Database using active geo-replication](../../germany/germany-migration-databases.md#migrate-sql-database-using-active-geo-replication).
+> To migrate SQL databases from Azure Germany using active geo-replication, see [Migrate SQL Database using active geo-replication](/azure/germany/germany-migration-databases#migrate-sql-database-using-active-geo-replication).
 
-If your application requires a stable connection endpoint and automatic geo-failover support in addition to geo-replication, use [Auto-failover groups](auto-failover-group-overview.md).
+If your application requires a stable connection endpoint and automatic geo-failover support in addition to geo-replication, use [Auto-failover groups](auto-failover-group-sql-db.md).
 
 The following diagram illustrates a typical configuration of a geo-redundant cloud application using Active geo-replication.
 
@@ -114,7 +114,7 @@ To achieve full business continuity, adding database regional redundancy is only
 To ensure that your application can immediately access the new primary after geo-failover, validate that authentication and network access for your secondary server are properly configured. For details, see [SQL Database security after disaster recovery](active-geo-replication-security-configure.md). Also validate that backup retention policy on the secondary database matches that of the primary. This setting is not a part of the database and is not replicated from the primary. By default, the geo-secondary is configured with a default PITR retention period of seven days. For details, see [SQL Database automated backups](automated-backups-overview.md).
 
 > [!IMPORTANT]
-> If your database is a member of a failover group, you cannot initiate its failover using the geo-replication failover command. Use the failover command for the group. If you need to failover an individual database, you must remove it from the failover group first. See  [Auto-failover groups](auto-failover-group-overview.md) for details.
+> If your database is a member of a failover group, you cannot initiate its failover using the geo-replication failover command. Use the failover command for the group. If you need to failover an individual database, you must remove it from the failover group first. See  [Auto-failover groups](auto-failover-group-sql-db.md) for details.
 
 ## <a name="configuring-secondary-database"></a> Configure geo-secondary
 
@@ -239,7 +239,7 @@ To measure lag with respect to changes on the primary database that have been ha
 
 ## <a name="programmatically-managing-active-geo-replication"></a> Programmatically manage active geo-replication
 
-As discussed previously, active geo-replication can also be managed programmatically using T-SQL, Azure PowerShell, and REST API. The following tables describe the set of commands available. Active geo-replication includes a set of Azure Resource Manager APIs for management, including the [Azure SQL Database REST API](/rest/api/sql/) and [Azure PowerShell cmdlets](/powershell/azure/). These APIs support Azure role-based access control (Azure RBAC). For more information on how to implement access roles, see [Azure role-based access control (Azure RBAC)](../../role-based-access-control/overview.md).
+As discussed previously, active geo-replication can also be managed programmatically using T-SQL, Azure PowerShell, and REST API. The following tables describe the set of commands available. Active geo-replication includes a set of Azure Resource Manager APIs for management, including the [Azure SQL Database REST API](/rest/api/sql/) and [Azure PowerShell cmdlets](/powershell/azure/). These APIs support Azure role-based access control (Azure RBAC). For more information on how to implement access roles, see [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview).
 
 ### <a name="t-sql-manage-failover-of-single-and-pooled-databases"></a> T-SQL: Manage geo-failover of single and pooled databases
 
@@ -259,7 +259,7 @@ As discussed previously, active geo-replication can also be managed programmatic
 
 ### <a name="powershell-manage-failover-of-single-and-pooled-databases"></a> PowerShell: Manage geo-failover of single and pooled databases
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
 
@@ -292,7 +292,7 @@ As discussed previously, active geo-replication can also be managed programmatic
 - For sample scripts, see:
   - [Configure and failover a single database using active geo-replication](scripts/setup-geodr-and-failover-database-powershell.md).
   - [Configure and failover a pooled database using active geo-replication](scripts/setup-geodr-and-failover-elastic-pool-powershell.md).
-- SQL Database also supports auto-failover groups. For more information, see using [auto-failover groups](auto-failover-group-overview.md).
+- SQL Database also supports auto-failover groups. For more information, see using [auto-failover groups](auto-failover-group-sql-db.md).
 - For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 - To learn about Azure SQL Database automated backups, see [SQL Database automated backups](automated-backups-overview.md).
 - To learn about using automated backups for recovery, see [Restore a database from the service-initiated backups](recovery-using-backups.md).

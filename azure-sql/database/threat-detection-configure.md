@@ -54,5 +54,5 @@ Learn more about Advanced Threat Protection and Microsoft Defender for SQL in th
 - [Advanced Threat Protection in SQL Managed Instance](../managed-instance/threat-detection-configure.md)
 - [Microsoft Defender for SQL](azure-defender-for-sql.md)
 - [Auditing for Azure SQL Database and Azure Synapse Analytics](auditing-overview.md)
-- [Microsoft Defender for Cloud](../../security-center/security-center-introduction.md)
+- [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction)
 - For more information on pricing, see the [SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/)

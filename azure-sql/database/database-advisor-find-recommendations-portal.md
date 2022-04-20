@@ -19,7 +19,7 @@ You can use the Azure portal to find performance recommendations that can optimi
 
 ## Viewing recommendations
 
-To view and apply performance recommendations, you need the correct [Azure role-based access control (Azure RBAC)](../../role-based-access-control/overview.md) permissions in Azure. **Reader**, **SQL DB Contributor** permissions are required to view recommendations, and **Owner**, **SQL DB Contributor** permissions are required to execute any actions; create or drop indexes and cancel index creation.
+To view and apply performance recommendations, you need the correct [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) permissions in Azure. **Reader**, **SQL DB Contributor** permissions are required to view recommendations, and **Owner**, **SQL DB Contributor** permissions are required to execute any actions; create or drop indexes and cancel index creation.
 
 Use the following steps to find performance recommendations on the Azure portal:
 
@@ -166,4 +166,4 @@ Monitor your recommendations and continue to apply them to refine performance. D
 
 * [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
 * [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql)
-* [Azure role-based access control (Azure RBAC)](../../role-based-access-control/overview.md)
+* [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview)

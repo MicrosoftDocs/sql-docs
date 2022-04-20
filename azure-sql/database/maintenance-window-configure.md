@@ -9,6 +9,7 @@ author: scott-kim-sql
 ms.author: scottkim
 ms.reviewer: kendralittle, mathoma
 ms.date: 03/07/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Configure maintenance window
 
@@ -161,7 +162,7 @@ When Cloud Shell opens, verify that **Bash** is selected for your environment. S
 
 ### Sign in to Azure
 
-Cloud Shell is automatically authenticated under the initial account signed-in with. Use the following script to sign in using a different subscription, replacing `<Subscription ID>` with your Azure Subscription ID.  [!INCLUDE [quickstarts-free-trial-note](../../../includes/quickstarts-free-trial-note.md)]
+Cloud Shell is automatically authenticated under the initial account signed-in with. Use the following script to sign in using a different subscription, replacing `<Subscription ID>` with your Azure Subscription ID.  [!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
 
 ```azurecli-interactive
 subscription="<subscriptionId>" # add subscription here

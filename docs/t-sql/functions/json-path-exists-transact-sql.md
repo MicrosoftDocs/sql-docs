@@ -14,7 +14,7 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2022||>
 ---
 # JSON_PATH_EXISTS (Transact-SQL)
 
-[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Tests whether a specified SQL/JSON path exists in the input JSON string.  
   

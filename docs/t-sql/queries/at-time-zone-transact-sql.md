@@ -105,8 +105,7 @@ The **datetimeoffset** value in the target time zone.
     --Result: 2015-10-25 01:01:00 +02:00  
 
     /*
-      Time from the "overlapped interval" is presented with standard time 
-      offset (before the change)
+      Time from the "overlapped interval" is presented with DST offset (before the change)
     */
     SELECT CONVERT(DATETIME2(0), '2015-10-25T02:00:00', 126)
     AT TIME ZONE 'Central European Standard Time';  

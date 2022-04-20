@@ -94,8 +94,8 @@ GO
 |TRUE|NULL|The item represents a directory.|  
 |TRUE|\<value>|This is an invalid combination that will be caught by a system-defined constraint.|  
   
-##  <a name="alwayson"></a> Using Virtual Network Names (VNNs) with AlwaysOn Availability Groups  
- When the database that contains FILESTREAM or FileTable data belongs to an AlwaysOn availability group:  
+##  <a name="alwayson"></a> Using Virtual Network Names (VNNs) with Always On Availability Groups  
+ When the database that contains FILESTREAM or FileTable data belongs to an Always On availability group:  
   
 -   The FILESTREAM and FileTable functions accept or return virtual network names (VNNs) instead of computer names. For more information about these functions, see [Filestream and FileTable Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   

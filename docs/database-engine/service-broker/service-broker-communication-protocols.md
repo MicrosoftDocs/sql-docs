@@ -1,12 +1,12 @@
-﻿---
+---
 title: Service Broker Communication Protocols
 description: "Service Broker uses a broker-specific protocol to communicate with remote brokers."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -17,6 +17,7 @@ ms.date: "03/30/2022"
 Service Broker uses a broker-specific protocol to communicate with remote brokers. The broker manages connections separately from the normal pool of client connections. In order for two SQL Server instances to exchange Service Broker messages, each instance must be able to send TCP/IP traffic to the port that the other instance uses for Service Broker communications. By convention, Service Broker often uses port 4022 for broker-to-broker communication. However, the exact port is specified when the endpoint is created.
 
 ## Protocol Layers
+
 Service Broker takes a layered approach to communication. Each layer builds on the underlying layer to help ensure reliable delivery. This approach allows an application to operate without knowledge of the location of the remote service or the physical transport that the broker uses to communicate. In most cases, these protocols are transparent to an application. However, understanding the role each protocol layer plays may help in troubleshooting problems with an application.
 
 The highest-level protocol that the broker uses is the dialog protocol. The dialog protocol layer handles reliable, sequenced message transmission. The dialog protocol layer generates sequence numbers for messages, generates acknowledgment messages, delivers messages to the proper queues, and fragments and reassembles messages. The dialog protocol handles authentication and encryption for a dialog.
@@ -84,9 +85,9 @@ A Service Broker transmission object is an in-memory object that manages and rec
 A dialog requests a transmission object when it does the following:
 
 - Sends a message through the transmission queue. This includes the following:
-    
+
     - All messages sent to a remote instance of the Database Engine
-    
+
     - Messages to sent queues in the local instance if the message cannot be directly inserted into the destination queue
 
 - Receives either a remote message or a message that comes from a local transmission queue.
@@ -98,6 +99,7 @@ To free memory, Service Broker periodically stores batches of inactive transmiss
 Transmission objects are not used for either sending or receiving local messages that can be inserted directly into the destination queue.
 
 ## Network Communication Flow
+
 The following illustration presents a high-level view of Service Broker network communication between two SQL Server instances.
 
 ![Broker network communication between two instances](media/broker-network-communication.gif "Broker network communication between two instances")

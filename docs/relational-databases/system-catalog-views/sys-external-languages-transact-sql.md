@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sys.external_languages catalog view"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: dphansen
+ms.reviewer: rothja
 manager: cgronlun
 monikerRange: ">=sql-server-ver15"
 ---

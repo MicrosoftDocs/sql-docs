@@ -1,12 +1,12 @@
-﻿---
+---
 title: Certificates and Service Broker
 description: "This topic describes how SQL Server uses certificates for Service Broker remote security."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -22,7 +22,7 @@ Service Broker remote security maps an operation from outside an instance to a S
 
 SQL Server uses certificates to verify the identity of a remote database, and to identify the local database principal for the operation. Therefore, installing a certificate in SQL Server constitutes a statement of trust in the database that holds the private key for the certificate. Carefully manage the certificates that you install and the remote service bindings that you create.
 
-> [!Note]
+> [!NOTE]
 > Only install certificates from trusted sources. Do not distribute private keys.
 
 To verify the identity of a remote server, SQL Server must receive information that can be decrypted with the public key in a certificate owned by a local database principal. If SQL Server can successfully decrypt the information, it means that the remote database contains the private key that corresponds to the public key in the local certificate. Once SQL Server verifies the identity of a remote database, the remote database can act with the permissions of the local database principal.

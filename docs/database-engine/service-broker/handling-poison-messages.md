@@ -4,9 +4,9 @@ description: "This topic describes one way that an application that uses Service
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -50,30 +50,30 @@ The following example defines the activation stored procedure for the applicatio
           DECLARE @conversationHandle UNIQUEIDENTIFIER ;
           DECLARE @messageBody VARBINARY(MAX) ;
           DECLARE @messageTypeName NVARCHAR(256) ;
-    
+
           SAVE TRANSACTION UndoReceive ;
-    
-            WAITFOR ( 
+
+            WAITFOR (
                       RECEIVE TOP(1)
                         @messageTypeName = message_type_name,
                         @messageBody = message_body,
                         @conversationHandle = conversation_handle
                         FROM ExpenseQueue
                      ), TIMEOUT 500 ;
-    
+
             IF @@ROWCOUNT = 0
             BEGIN
               ROLLBACK TRANSACTION ;
               BREAK ;
             END ;
-    
+
             -- Typical message processing loop: dispatch to a stored
             -- procedure based on the message type name.  End conversation
             -- with an error for unknown message types.
-    
+
             -- Process expense report messages. If processing fails,
             -- roll back to the save point and track the failed message.
-    
+
             IF (@messageTypeName =
                   '//Adventure-Works.com/AccountsPayable/ExpenseReport')
               BEGIN
@@ -93,10 +93,10 @@ The following example defines the activation stored procedure for the applicatio
                  END ;
                END ;
             ELSE
-    
+
             -- For error messages and end dialog messages, end the
             -- conversation.
-    
+
             IF (@messageTypeName =
                   'https://schemas.microsoft.com/SQL/ServiceBroker/Error' OR
                  @messageTypeName =
@@ -105,8 +105,8 @@ The following example defines the activation stored procedure for the applicatio
                 END CONVERSATION @conversationHandle ;
                 EXEC dbo.ClearMessageTracking @conversationHandle ;
               END ;
-    
-    
+
+
              COMMIT TRANSACTION ;
         END ;
     END ;
@@ -121,12 +121,12 @@ The stored procedure TrackMessage tracks the number of times that a message has 
     BEGIN
       IF @conversationHandle IS NULL
         RETURN ;
-    
+
       DECLARE @count INT ;
       SET @count = NULL ;
       SET @count = (SELECT count FROM dbo.ExpenseServiceFailedMessages
                       WHERE conversation_handle = @conversationHandle) ;
-    
+
       IF @count IS NULL
         BEGIN
           INSERT INTO dbo.ExpenseServiceFailedMessages

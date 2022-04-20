@@ -4,9 +4,9 @@ description: "In this lesson, you will learn to create a stored procedure to pro
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -39,12 +39,12 @@ In this lesson, you will learn to create a stored procedure to process messages 
         DECLARE @RecvReqDlgHandle UNIQUEIDENTIFIER;
         DECLARE @RecvReqMsg NVARCHAR(100);
         DECLARE @RecvReqMsgName sysname;
-        
+
         WHILE (1=1)
         BEGIN
-        
+
           BEGIN TRANSACTION;
-      
+
           WAITFOR
           ( RECEIVE TOP(1)
               @RecvReqDlgHandle = conversation_handle,
@@ -52,22 +52,22 @@ In this lesson, you will learn to create a stored procedure to process messages 
               @RecvReqMsgName = message_type_name
             FROM TargetQueueIntAct
           ), TIMEOUT 5000;
-        
+
           IF (@@ROWCOUNT = 0)
           BEGIN
             ROLLBACK TRANSACTION;
             BREAK;
           END
-        
+
           IF @RecvReqMsgName =
              N'//AWDB/InternalAct/RequestMessage'
           BEGIN
              DECLARE @ReplyMsg NVARCHAR(100);
              SELECT @ReplyMsg =
              N'<ReplyMsg>Message for Initiator service.</ReplyMsg>';
-        
+
              SEND ON CONVERSATION @RecvReqDlgHandle
-                    MESSAGE TYPE 
+                    MESSAGE TYPE
                     [//AWDB/InternalAct/ReplyMessage]
                     (@ReplyMsg);
           END
@@ -81,9 +81,9 @@ In this lesson, you will learn to create a stored procedure to process messages 
           BEGIN
              END CONVERSATION @RecvReqDlgHandle;
           END
-            
+
           COMMIT TRANSACTION;
-      
+
         END
       GO
   ```
@@ -105,7 +105,7 @@ In this lesson, you will learn to create a stored procedure to process messages 
 
 ## Next Steps
 
-You have successfully configured AdventureWorks2008R2 to support a conversation between the **//AWDB/InternalAct/InitiatorService** and the **//AWDB/InternalAct/TargetService**. Next, you will complete a conversation using the configuration. See [Lesson 3: Beginning a Conversation and Transmitting Messages](lesson-3-beginning-a-conversation-and-transmitting-messages.md).
+You have successfully configured AdventureWorks2008R2 to support a conversation between the **//AWDB/InternalAct/InitiatorService** and the **//AWDB/InternalAct/TargetService**. Next, you will complete a conversation using the configuration. For more information, see [Lesson 3: Beginning a Conversation and Transmitting Messages](lesson-3-beginning-a-conversation-and-transmitting-messages.md).
 
 ## See also
 

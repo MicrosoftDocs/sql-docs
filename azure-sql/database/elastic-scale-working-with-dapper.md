@@ -167,7 +167,7 @@ The approaches outlined in this document entail a couple of limitations:
 ## Conclusion
 Applications using Dapper and DapperExtensions can easily benefit from elastic database tools for Azure SQL Database. Through the steps outlined in this document, those applications can use the tool's capability for data-dependent routing by changing the creation and opening of new [SqlConnection](/dotnet/api/system.data.sqlclient.sqlconnection) objects to use the [OpenConnectionForKey](/dotnet/api/microsoft.azure.sqldatabase.elasticscale.shardmanagement.rangeshardmap-1) call of the elastic database client library. This limits the application changes required to those places where new connections are created and opened. 
 
-[!INCLUDE [elastic-scale-include](../../../includes/elastic-scale-include.md)]
+[!INCLUDE [elastic-scale-include](../includes/elastic-scale-include.md)]
 
 <!--Image references-->
 [1]: ./media/elastic-scale-working-with-dapper/dapperimage1.png

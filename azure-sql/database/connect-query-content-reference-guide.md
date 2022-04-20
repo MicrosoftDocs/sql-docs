@@ -46,7 +46,7 @@ Get the connection information you need to connect to the database in Azure SQL 
 3. On the **Overview** page, review the fully qualified server name next to **Server name** for the database in Azure SQL Database or the fully qualified server name (or IP address) next to **Host** for an Azure SQL Managed Instance or SQL Server on Azure VM. To copy the server name or host name, hover over it and select the **Copy** icon.
 
 > [!NOTE]
-> For connection information for SQL Server on Azure VM, see [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md#connect-to-sql-server).
+> For connection information for SQL Server on Azure VM, see [Connect to a SQL Server instance](../zirtual-zachines/windows/sql-vm-create-portal-quickstart.md#connect-to-sql-server).
 
 ## Get ADO.NET connection information (optional - SQL Database only)
 

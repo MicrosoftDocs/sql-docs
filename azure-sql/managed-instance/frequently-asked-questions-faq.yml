@@ -62,10 +62,10 @@ sections:
           No, and currently there are no committed plans to increase the number of databases on SQL Managed Instance. 
           
           ### Where can I migrate if I have more than 16TB of data?
-          You can consider migrating to other Azure flavors that suit your workload: [Azure SQL Database Hyperscale](../database/service-tier-hyperscale.md) or [SQL Server on Azure Virtual Machines](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md).
+          You can consider migrating to other Azure flavors that suit your workload: [Azure SQL Database Hyperscale](../database/service-tier-hyperscale.md) or [SQL Server on Azure Virtual Machines](../zirtual-zachines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md).
           
           ### Where can I migrate if I have specific hardware requirements such as larger RAM to vCore ratio or more CPUs?
-          You can consider migrating to [SQL Server on Azure Virtual Machines](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) or [Azure SQL Database](../database/sql-database-paas-overview.md) memory/cpu optimized.
+          You can consider migrating to [SQL Server on Azure Virtual Machines](../zirtual-zachines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) or [Azure SQL Database](../database/sql-database-paas-overview.md) memory/cpu optimized.
           
       - question: |
           Known issues and defects

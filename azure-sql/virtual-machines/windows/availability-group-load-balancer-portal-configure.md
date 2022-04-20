@@ -180,7 +180,7 @@ The next step is to configure the listener on the cluster, and bring the listene
 
 In this step, you manually create the availability group listener in Failover Cluster Manager and SQL Server Management Studio.
 
-[!INCLUDE [ag-listener-configure](../../../../includes/virtual-machines-ag-listener-configure.md)]
+[!INCLUDE [ag-listener-configure](../../includes/virtual-machines-ag-listener-configure.md)]
 
 ### Verify the configuration of the listener
 

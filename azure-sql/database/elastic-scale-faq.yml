@@ -66,4 +66,4 @@ sections:
           No. For **split** operations, the target database must exist with the appropriate schema and be registered with the Shard Map Manager.  For **merge**
           operations, you must delete the shard from the shard map manager and then delete the database.
           
-          [!INCLUDE [elastic-scale-include](../../../includes/elastic-scale-include.md)]
+          [!INCLUDE [elastic-scale-include](../includes/elastic-scale-include.md)]

@@ -26,7 +26,7 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 ## Prerequisites
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
@@ -56,7 +56,7 @@ Using Azure PowerShell, create [failover groups](auto-failover-group-overview.md
 # [PowerShell](#tab/azure-powershell)
 
 > [!IMPORTANT]
-> [!INCLUDE [sample-powershell-install](../../../includes/sample-powershell-install-no-ssh.md)]
+> [!INCLUDE [sample-powershell-install](../includes/sample-powershell-install-no-ssh.md)]
 
 To create a failover group, run the following script:
 

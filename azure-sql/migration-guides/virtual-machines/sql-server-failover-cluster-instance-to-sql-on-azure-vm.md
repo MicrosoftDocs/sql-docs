@@ -363,9 +363,9 @@ Your SQL Server failover cluster instance  is ready.
 ## Post-migration best practices
 
 - For SQL Server:
-    -  Install [SQL Server IaaS Agent extension](../../virtual-machines/windows/sql-server-iaas-agent-extension-automate-management.md) to automate management and administration tasks. 
-    - [Optimize](../../virtual-machines/windows/performance-guidelines-best-practices-checklist.md) SQL Server performance on Azure VMs. 
-    - Understand [pricing](../../virtual-machines/windows/pricing-guidance.md#free-licensed-sql-server-editions) for SQL Server on Azure. 
+    -  Install [SQL Server IaaS Agent extension](../../zirtual-zachines/windows/sql-server-iaas-agent-extension-automate-management.md) to automate management and administration tasks. 
+    - [Optimize](../../zirtual-zachines/windows/performance-guidelines-best-practices-checklist.md) SQL Server performance on Azure VMs. 
+    - Understand [pricing](../../zirtual-zachines/windows/pricing-guidance.md#free-licensed-sql-server-editions) for SQL Server on Azure. 
 - For increased resilience:
     - Keep data secure by backing up Azure VMs using the [Azure Backup service](../../../backup/quick-backup-vm-portal.md). 
     - Keep workloads running and continuously available by replicating Azure VMs to a secondary region with [Site Recovery](../../../site-recovery/azure-to-azure-tutorial-enable-replication.md).

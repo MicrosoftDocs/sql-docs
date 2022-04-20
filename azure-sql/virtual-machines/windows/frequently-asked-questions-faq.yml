@@ -25,7 +25,7 @@ summary: |
   
   This article provides answers to some of the most common questions about running [SQL Server on Windows Azure Virtual Machines (VMs)](https://azure.microsoft.com/services/virtual-machines/sql-server/).
   
-  [!INCLUDE [support-disclaimer](../../../../includes/support-disclaimer.md)]
+  [!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
   
 
 sections:

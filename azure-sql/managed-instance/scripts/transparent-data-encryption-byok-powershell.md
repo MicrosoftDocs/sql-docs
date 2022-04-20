@@ -24,9 +24,9 @@ This PowerShell script example configures Transparent Data Encryption (TDE) with
 
 - An existing managed instance. See [Use PowerShell to create a managed instance](create-configure-managed-instance-powershell.md).
 
-[!INCLUDE [quickstarts-free-trial-note](../../../../includes/quickstarts-free-trial-note.md)]
-[!INCLUDE [updated-for-az](../../../../includes/updated-for-az.md)]
-[!INCLUDE [cloud-shell-try-it.md](../../../../includes/cloud-shell-try-it.md)]
+[!INCLUDE [quickstarts-free-trial-note](../../includes/quickstarts-free-trial-note.md)]
+[!INCLUDE [updated-for-az](../../includes/updated-for-az.md)]
+[!INCLUDE [cloud-shell-try-it.md](../../includes/cloud-shell-try-it.md)]
 
 Using PowerShell locally or using Azure Cloud Shell requires Azure PowerShell 2.3.2 or a later version. If you need to upgrade, see [Install Azure PowerShell module](/powershell/azure/install-az-ps), or run the below sample script to install the module for the current user:
 

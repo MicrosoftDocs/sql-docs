@@ -15,7 +15,7 @@ ms.date: 07/23/2021
 # Extended events in Azure SQL Database 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-[!INCLUDE [sql-database-xevents-selectors-1-include](../../../includes/sql-database-xevents-selectors-1-include.md)]
+[!INCLUDE [sql-database-xevents-selectors-1-include](../includes/sql-database-xevents-selectors-1-include.md)]
 
 The feature set of extended events in Azure SQL Database is a robust subset of the features on SQL Server and Azure SQL Managed Instance.
 

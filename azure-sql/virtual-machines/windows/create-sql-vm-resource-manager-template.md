@@ -15,7 +15,7 @@ ms.reviewer: mathoma
 
 Use this Azure Resource Manager template (ARM template) to deploy a SQL Server on Azure Virtual Machine (VM). 
 
-[!INCLUDE [About Azure Resource Manager](../../../../includes/resource-manager-quickstart-introduction.md)]
+[!INCLUDE [About Azure Resource Manager](../../includes/resource-manager-quickstart-introduction.md)]
 
 If your environment meets the prerequisites and you're familiar with using ARM templates, select the **Deploy to Azure** button. The template will open in the Azure portal.
 

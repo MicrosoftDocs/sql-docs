@@ -27,7 +27,7 @@ ms.custom: devx-track-azurepowershell
 
 Automated Backup automatically configures [Managed Backup to Microsoft Azure](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure) for all existing and new databases on an Azure VM running SQL Server 2014 Standard or Enterprise. This enables you to configure regular database backups that utilize durable Azure Blob storage. Automated Backup depends on the [SQL Server infrastructure as a service (IaaS) Agent Extension](sql-server-iaas-agent-extension-automate-management.md).
 
-[!INCLUDE [learn-about-deployment-models](../../../../includes/learn-about-deployment-models-rm-include.md)]
+[!INCLUDE [learn-about-deployment-models](../../includes/learn-about-deployment-models-rm-include.md)]
 
 ## Prerequisites
 To use Automated Backup, consider the following prerequisites:
@@ -94,7 +94,7 @@ You can use PowerShell to configure Automated Backup. Before you begin, you must
 - [Download and install the latest Azure PowerShell](https://aka.ms/webpi-azps).
 - Open Windows PowerShell and associate it with your account with the **Connect-AzAccount** command. 
 
-[!INCLUDE [updated-for-az.md](../../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az.md](../../includes/updated-for-az.md)]
 
 
 ### <a id="verifysettings"></a> Verify current settings

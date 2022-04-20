@@ -36,7 +36,7 @@ Migrating to SQL Server on Azure Virtual Machines requires the following resourc
 
 - [Azure SQL migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension).
 - An [Azure Migrate project](../../../migrate/create-manage-projects.md) (only required for SQL Server discovery in your data estate).
-- A prepared target [SQL Server on Azure Virtual Machines](../../virtual-machines/windows/create-sql-vm-portal.md) instance that's the same or greater version than the SQL Server source.
+- A prepared target [SQL Server on Azure Virtual Machines](../../zirtual-zachines/windows/create-sql-vm-portal.md) instance that's the same or greater version than the SQL Server source.
 - [Connectivity between Azure and on-premises](/azure/architecture/reference-architectures/hybrid-networking).
 - [Choosing an appropriate migration strategy](sql-server-to-sql-on-azure-vm-migration-overview.md#migrate).
 
@@ -49,7 +49,7 @@ Before you begin your migration, you need to discover the topology of your SQL e
 Azure Migrate assesses migration suitability of on-premises computers, performs performance-based sizing, and provides cost estimations for running on-premises. To plan for the migration, use Azure Migrate to [identify existing data sources and details about the features](../../../migrate/concepts-assessment-calculation.md) your SQL Server instances use. This process involves scanning the network to identify all of your SQL Server instances in your organization with the version and features in use.
 
 > [!IMPORTANT]
-> When you choose a target Azure virtual machine for your SQL Server instance, be sure to consider the [Performance guidelines for SQL Server on Azure Virtual Machines](../../virtual-machines/windows/performance-guidelines-best-practices-checklist.md).
+> When you choose a target Azure virtual machine for your SQL Server instance, be sure to consider the [Performance guidelines for SQL Server on Azure Virtual Machines](../../zirtual-zachines/windows/performance-guidelines-best-practices-checklist.md).
 
 For more discovery tools, see the [services and tools](../../../dms/dms-tools-matrix.md#business-justification-phase) available for data migration scenarios.
 
@@ -59,7 +59,7 @@ When migrating from SQL Server on-premises to SQL Server on Azure Virtual Machin
 
 Before migration, it's still a good practice to run an assessment of your SQL Server databases to identify migration blockers (if any) and the [Azure SQL migration extension for Azure Data Studio](../../../dms/migration-using-azure-data-studio.md) does that before migration.
 
-[!INCLUDE [assess-estate-with-azure-migrate](../../../../includes/azure-migrate-to-assess-sql-data-estate.md)]
+[!INCLUDE [assess-estate-with-azure-migrate](../../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 #### Assess user databases
 
@@ -129,7 +129,7 @@ To perform a minimal downtime migration using Azure Data Studio, follow the high
 
 To perform a standard migration by using backup and restore:
 
-1. Set up connectivity to SQL Server on Azure Virtual Machines based on your requirements. For more information, see [Connect to a SQL Server virtual machine on Azure (Resource Manager)](../../virtual-machines/windows/ways-to-connect-to-sql.md).
+1. Set up connectivity to SQL Server on Azure Virtual Machines based on your requirements. For more information, see [Connect to a SQL Server virtual machine on Azure (Resource Manager)](../../zirtual-zachines/windows/ways-to-connect-to-sql.md).
 1. Pause or stop any applications that are using databases intended for migration.
 1. Ensure user databases are inactive by using [single user mode](/sql/relational-databases/databases/set-a-database-to-single-user-mode).
 1. Perform a full database backup to an on-premises location.
@@ -145,12 +145,12 @@ The following table provides a list of components and recommended migration meth
 | **Feature** | **Component** | **Migration methods** |
 | --- | --- | --- |
 | **Databases** | Model | Script with SQL Server Management Studio. |
-|| TempDB | Plan to move tempDB onto [Azure VM temporary disk (SSD)](../../virtual-machines/windows/performance-guidelines-best-practices-checklist.md#storage)) for best performance. Be sure to pick a VM size that has a sufficient local SSD to accommodate your tempDB. |
-|| User databases with FileStream | Use the [Backup and restore](../../virtual-machines/windows/migrate-to-vm-from-sql-server.md#back-up-and-restore) methods for migration. Data Migration Assistant doesn't support databases with FileStream. |
+|| TempDB | Plan to move tempDB onto [Azure VM temporary disk (SSD)](../../zirtual-zachines/windows/performance-guidelines-best-practices-checklist.md#storage)) for best performance. Be sure to pick a VM size that has a sufficient local SSD to accommodate your tempDB. |
+|| User databases with FileStream | Use the [Backup and restore](../../zirtual-zachines/windows/migrate-to-vm-from-sql-server.md#back-up-and-restore) methods for migration. Data Migration Assistant doesn't support databases with FileStream. |
 | **Security** | SQL Server and Windows logins | Use Data Migration Assistant to [migrate user logins](/sql/dma/dma-migrateserverlogins). |
 || SQL Server roles | Script with SQL Server Management Studio. |
-|| Cryptographic providers | Recommend [converting to use Azure Key Vault](../../virtual-machines/windows/azure-key-vault-integration-configure.md). This procedure uses the [SQL VM resource provider](../../virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md). |
-| **Server objects** | Backup devices | Replace with database backup by using [Azure Backup](../../../backup/backup-sql-server-database-azure-vms.md), or write backups to [Azure Storage](../../virtual-machines/windows/azure-storage-sql-server-backup-restore-use.md) (SQL Server 2012 SP1 CU2 +). This procedure uses the [SQL VM resource provider](../../virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md).|
+|| Cryptographic providers | Recommend [converting to use Azure Key Vault](../../zirtual-zachines/windows/azure-key-vault-integration-configure.md). This procedure uses the [SQL VM resource provider](../../zirtual-zachines/windows/sql-agent-extension-manually-register-single-vm.md). |
+| **Server objects** | Backup devices | Replace with database backup by using [Azure Backup](../../../backup/backup-sql-server-database-azure-vms.md), or write backups to [Azure Storage](../../zirtual-zachines/windows/azure-storage-sql-server-backup-restore-use.md) (SQL Server 2012 SP1 CU2 +). This procedure uses the [SQL VM resource provider](../../zirtual-zachines/windows/sql-agent-extension-manually-register-single-vm.md).|
 || Linked servers | Script with SQL Server Management Studio. |
 || Server triggers | Script with SQL Server Management Studio. |
 | **Replication** | Local publications | Script with SQL Server Management Studio. |
@@ -192,7 +192,7 @@ The post-migration phase is crucial for reconciling any data accuracy issues, ve
 For more information about these issues and the steps to mitigate them, see:
 
 - [Post-migration validation and optimization guide](/sql/relational-databases/post-migration-validation-and-optimization-guide)
-- [Tuning performance in Azure SQL virtual machines](../../virtual-machines/windows/performance-guidelines-best-practices-checklist.md)
+- [Tuning performance in Azure SQL virtual machines](../../zirtual-zachines/windows/performance-guidelines-best-practices-checklist.md)
 - [Azure cost optimization center](https://azure.microsoft.com/overview/cost-optimization/)
 
 ## Next steps
@@ -201,7 +201,7 @@ For more information about these issues and the steps to mitigate them, see:
 - For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Services and tools for data migration](../../../dms/dms-tools-matrix.md).
 - To learn more about Azure SQL, see:
    - [Deployment options](../../azure-sql-iaas-vs-paas-what-is-overview.md)
-   - [SQL Server on Azure Virtual Machines](../../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md)
+   - [SQL Server on Azure Virtual Machines](../../zirtual-zachines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md)
    - [Azure Total Cost of Ownership (TCO) Calculator](https://azure.microsoft.com/pricing/tco/calculator/)
 
 - To learn more about the framework and adoption cycle for cloud migrations, see:
@@ -209,8 +209,8 @@ For more information about these issues and the steps to mitigate them, see:
    - [Best practices for costing and sizing workloads for migration to Azure](/azure/cloud-adoption-framework/migrate/azure-best-practices/migrate-best-practices-costs)
 
 - For information about licensing, see:
-   - [Bring your own license with the Azure Hybrid Benefit](../../virtual-machines/windows/licensing-model-azure-hybrid-benefit-ahb-change.md)
-   - [Get free extended support for SQL Server 2008 and SQL Server 2008 R2](../../virtual-machines/windows/sql-server-2008-extend-end-of-support.md)
+   - [Bring your own license with the Azure Hybrid Benefit](../../zirtual-zachines/windows/licensing-model-azure-hybrid-benefit-ahb-change.md)
+   - [Get free extended support for SQL Server 2008 and SQL Server 2008 R2](../../zirtual-zachines/windows/sql-server-2008-extend-end-of-support.md)
 
 - To assess the application access layer, see [Data Access Migration Toolkit (preview)](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit).
 - For information about how to perform A/B testing for the data access layer, see [Overview of Database Experimentation Assistant](/sql/dea/database-experimentation-assistant-overview).

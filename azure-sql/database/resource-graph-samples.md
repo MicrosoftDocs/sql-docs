@@ -18,7 +18,7 @@ and [Resource Graph samples by Table](../../governance/resource-graph/samples/sa
 
 ## Sample queries
 
-[!INCLUDE [azure-resource-graph-samples-cat-sql](../../../includes/resource-graph/samples/bycat/azure-sql.md)]
+[!INCLUDE [azure-resource-graph-samples-cat-sql](../includes/resource-graph/samples/bycat/azure-sql.md)]
 
 ## Next steps
 

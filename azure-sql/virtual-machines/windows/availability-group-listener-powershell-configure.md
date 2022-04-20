@@ -38,9 +38,9 @@ Related topics include:
 * [Configure AlwaysOn Availability Groups in Azure VM (GUI)](availability-group-manually-configure-tutorial-single-subnet.md)   
 * [Configure a VNet-to-VNet connection by using Azure Resource Manager and PowerShell](../../../vpn-gateway/vpn-gateway-vnet-vnet-rm-ps.md)
 
-[!INCLUDE [updated-for-az.md](../../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az.md](../../includes/updated-for-az.md)]
 
-[!INCLUDE [Start your PowerShell session](../../../../includes/sql-vm-powershell.md)]
+[!INCLUDE [Start your PowerShell session](../../includes/sql-vm-powershell.md)]
 
 ## Verify PowerShell version
 
@@ -189,7 +189,7 @@ $ILB | Add-AzLoadBalancerRuleConfig -Name $LBConfigRuleName -FrontendIpConfigura
 
 ## Configure the listener
 
-[!INCLUDE [ag-listener-configure](../../../../includes/virtual-machines-ag-listener-configure.md)]
+[!INCLUDE [ag-listener-configure](../../includes/virtual-machines-ag-listener-configure.md)]
 
 ## Set the listener port in SQL Server Management Studio
 

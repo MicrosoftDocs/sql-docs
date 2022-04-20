@@ -54,3 +54,4 @@ This operation requires **SELECT** on the source table, **INSERT** in the target
 
 - [Ledger considerations and limitations](/docs/relational-databases/security/ledger/ledger-limits.md)
 - [Ledger Overview](/docs/relational-databases/security/ledger/ledger-overview.md)
+- [How to convert regular tables into ledger tables](ledger-how-to-convert-regular-tables-into-ledger-tables.md)

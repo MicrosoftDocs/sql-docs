@@ -54,3 +54,4 @@ For every append-only ledger table, the system automatically generates a view, c
 
 - [Create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md)
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md)
+- [How to convert regular tables into ledger tables](ledger-how-to-convert-regular-tables-into-ledger-tables.md)

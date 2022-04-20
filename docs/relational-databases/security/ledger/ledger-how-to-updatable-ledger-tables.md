@@ -147,3 +147,4 @@ We'll create an account balance table with the following schema.
 - [Database ledger](ledger-database-ledger.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
+- [How to convert regular tables into ledger tables](ledger-how-to-convert-regular-tables-into-ledger-tables.md)

@@ -27,7 +27,7 @@ Consider the following when working with ledger.
 
 ## Ledger Table Limitations
 
-- Existing tables in a database that aren't ledger tables can't be converted to ledger tables.
+- Existing tables in a database that aren't ledger tables can't be converted to ledger tables. See also [How to convert regular tables into ledger tables](ledger-how-to-convert-regular-tables-into-ledger-tables.md)
 - After a ledger table is created, it can't be reverted to a table that isn't a ledger table.
 - Deleting older data in [append-only ledger tables](ledger-append-only-ledger-tables.md) or the history table of [updatable ledger tables](ledger-updatable-ledger-tables.md) isn't supported.
 - TRUNCATE TABLE isn't supported.

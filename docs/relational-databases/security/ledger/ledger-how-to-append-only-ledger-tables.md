@@ -96,3 +96,4 @@ We'll create a `KeyCardEvents` table with the following schema.
 ## Next steps
 
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
+- [How to convert regular tables into ledger tables](ledger-how-to-convert-regular-tables-into-ledger-tables.md)

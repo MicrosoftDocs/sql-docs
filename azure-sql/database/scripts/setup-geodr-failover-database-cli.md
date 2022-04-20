@@ -29,7 +29,7 @@ This Azure CLI script example configures active geo-replication for a single dat
 
 ### Run the script
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/setup-geodr-and-failover/setup-geodr-and-failover-single-database.sh" id="FullScript":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/setup-geodr-and-failover/setup-geodr-and-failover-single-database.sh" id="FullScript":::
 
 ## Clean up resources
 

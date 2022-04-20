@@ -32,7 +32,7 @@ This Azure CLI script example creates an Azure SQL Managed Instance in a dedicat
 
 ### Run the script
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/managed-instance/create-managed-instance.sh" id="FullScript":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/managed-instance/create-managed-instance.sh" id="FullScript":::
 
 ## Clean up resources
 

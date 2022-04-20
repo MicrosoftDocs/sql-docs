@@ -29,7 +29,7 @@ This Azure CLI script example creates a copy of an existing database in a new se
 
 ### Run the script
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/copy-database-to-new-server/copy-database-to-new-server.sh" id="FullScript":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/copy-database-to-new-server/copy-database-to-new-server.sh" id="FullScript":::
 
 ## Clean up resources
 

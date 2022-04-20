@@ -92,7 +92,7 @@ The following values are used in subsequent commands to create the database and 
 
 Before running the sample code, change the `location` as appropriate for your environment. Replace `0.0.0.0` with the IP address range to match your specific environment. Use the public IP address of the computer you're using to restrict access to the server to only your IP address.
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" range="4-18":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" range="4-18":::
 
 ```azurecli-interactive
 let "randomIdentifier=$RANDOM*$RANDOM"

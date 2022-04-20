@@ -29,7 +29,7 @@ This Azure CLI script example scales a single database in Azure SQL Database to 
 
 ### Run the script
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/monitor-and-scale-database/monitor-and-scale-database.sh" id="FullScript":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/monitor-and-scale-database/monitor-and-scale-database.sh" id="FullScript":::
 
 > [!TIP]
 > Use [az sql db op list](/cli/azure/sql/db/op?#az-sql-db-op-list) to get a list of operations performed on the database, and use [az sql db op cancel](/cli/azure/sql/db/op#az-sql-db-op-cancel) to cancel an update operation on the database.

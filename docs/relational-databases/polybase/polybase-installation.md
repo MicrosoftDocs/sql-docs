@@ -148,6 +148,8 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
+
 ## <a id="enable"></a> Enable PolyBase
 
 After installation, PolyBase must be enabled to access its features. Use the following Transact-SQL command. SQL 2019 instances deployed during Big Data Cluster installation have this setting enabled by default.

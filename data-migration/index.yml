@@ -32,7 +32,7 @@ conceptualContent:
           url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
           itemType: how-to-guide
         - text: Migrate SQL Server to Azure video
-          url: https://docs.microsoft.com/shows/data-exposed/migrate-sql-server-to-azure?WT.mc_id=dataexposed-c9-niner-mighub
+          url: /shows/data-exposed/migrate-sql-server-to-azure?WT.mc_id=dataexposed-c9-niner-mighub
           itemType: video          
     - title: "Oracle to"
       links:

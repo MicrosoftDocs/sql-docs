@@ -29,7 +29,7 @@ This Azure CLI script example configures SQL Database auditing and Advanced Thre
 
 ### Run the script
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/database-auditing-and-threat-detection/database-auditing-and-threat-detection.sh" id="FullScript":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/database-auditing-and-threat-detection/database-auditing-and-threat-detection.sh" id="FullScript":::
 
 ## Clean up resources
 

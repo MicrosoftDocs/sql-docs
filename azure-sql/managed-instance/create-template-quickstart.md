@@ -30,7 +30,7 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 The template used in this quickstart is from [Azure Quickstart Templates](https://azure.microsoft.com/resources/templates/sqlmi-new-vnet/).
 
-:::code language="json" source="~/quickstart-templates/quickstarts/microsoft.sql/sqlmi-new-vnet/azuredeploy.json":::
+:::code language="json" source="~/../quickstart-templates/quickstarts/microsoft.sql/sqlmi-new-vnet/azuredeploy.json":::
 
 These resources are defined in the template:
 

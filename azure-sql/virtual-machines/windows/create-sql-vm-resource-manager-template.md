@@ -34,7 +34,7 @@ The SQL Server VM ARM template requires the following:
 
 The template used in this quickstart is from [Azure Quickstart Templates](https://azure.microsoft.com/resources/templates/sql-vm-new-storage/).
 
-:::code language="json" source="~/quickstart-templates/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage/azuredeploy.json":::
+:::code language="json" source="~/../quickstart-templates/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage/azuredeploy.json":::
 
 Five Azure resources are defined in the template: 
 

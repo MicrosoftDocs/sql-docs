@@ -31,7 +31,7 @@ This sample requires an existing Managed Instance, see [Use Azure CLI to create 
 
 ### Run the script
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/transparent-data-encryption/setup-tde-byok-sqlmi.sh" id="FullScript":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/transparent-data-encryption/setup-tde-byok-sqlmi.sh" id="FullScript":::
 
 ## Clean up resources
 

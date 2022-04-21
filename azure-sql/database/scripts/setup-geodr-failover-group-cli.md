@@ -27,7 +27,7 @@ ms.date: 01/26/2022
 
 ### Run the script
 
-:::code language="azurecli" source="~/azure_cli_scripts/sql-database/setup-geodr-and-failover/setup-geodr-and-failover-database-failover-group.sh" id="FullScript":::
+:::code language="azurecli" source="~/../azure_cli_scripts/sql-database/setup-geodr-and-failover/setup-geodr-and-failover-database-failover-group.sh" id="FullScript":::
 
 ## Clean up resources
 

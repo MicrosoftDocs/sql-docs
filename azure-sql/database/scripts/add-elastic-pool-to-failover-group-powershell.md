@@ -25,7 +25,7 @@ If you choose to install and use PowerShell locally, this tutorial requires Az P
 
 ## Sample scripts
 
-[!code-powershell-interactive[main](../../../../powershell_scripts/sql-database/failover-groups/add-elastic-pool-to-failover-group-az-ps.ps1 "Add elastic pool to a failover group")]
+[!code-powershell-interactive[main](~/../powershell_scripts/sql-database/failover-groups/add-elastic-pool-to-failover-group-az-ps.ps1 "Add elastic pool to a failover group")]
 
 ## Clean up deployment
 

@@ -25,7 +25,7 @@ If you choose to install and use PowerShell locally, this tutorial requires Az P
 
 ## Copy a database to a new server
 
-[!code-powershell-interactive[main](../../../../powershell_scripts/sql-database/copy-database-to-new-server/copy-database-to-new-server.ps1?highlight=20-23 "Copy database to new server")]
+[!code-powershell-interactive[main](~/../powershell_scripts/sql-database/copy-database-to-new-server/copy-database-to-new-server.ps1?highlight=20-23 "Copy database to new server")]
 
 ## Clean up deployment
 

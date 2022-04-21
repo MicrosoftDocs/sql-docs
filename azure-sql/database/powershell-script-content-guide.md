@@ -18,8 +18,8 @@ ms.date: 03/25/2019
 
 Azure SQL Database and Azure SQL Managed Instance enable you to configure your databases, instances, and pools using Azure PowerShell.
 
-[!INCLUDE [quickstarts-free-trial-note](../../../includes/quickstarts-free-trial-note.md)]
-[!INCLUDE [cloud-shell-try-it.md](../../../includes/cloud-shell-try-it.md)]
+[!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
+[!INCLUDE [cloud-shell-try-it.md](../includes/cloud-shell-try-it.md)]
 
 If you choose to install and use the PowerShell locally, this tutorial requires AZ PowerShell 1.4.0 or later. If you need to upgrade, see [Install Azure PowerShell module](/powershell/azure/install-az-ps). If you are running PowerShell locally, you also need to run `Connect-AzAccount` to create a connection with Azure.
 

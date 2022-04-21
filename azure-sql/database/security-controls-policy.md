@@ -19,9 +19,9 @@ page lists the **compliance domains** and **security controls** for Azure SQL Da
 Managed Instance. You can assign the built-ins for a **security control** individually to help make
 your Azure resources compliant with the specific standard.
 
-[!INCLUDE [azure-policy-compliancecontrols-introwarning](../../../includes/policy/standards/intro-warning.md)]
+[!INCLUDE [azure-policy-compliancecontrols-introwarning](../includes/policy/standards/intro-warning.md)]
 
-[!INCLUDE [azure-policy-compliancecontrols-sql](../../../includes/policy/standards/byrp/microsoft.sql.md)]
+[!INCLUDE [azure-policy-compliancecontrols-sql](../includes/policy/standards/byrp/microsoft.sql.md)]
 
 ## Next steps
 

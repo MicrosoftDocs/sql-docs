@@ -162,7 +162,7 @@ Suppose your application has robust custom retry logic. It might retry the conne
 
 The connection string that's necessary to connect to your database is slightly different from the string used to connect to SQL Server. You can copy the connection string for your database from the [Azure portal](https://portal.azure.com/).
 
-[!INCLUDE [sql-database-include-connection-string-20-portalshots](../../../includes/sql-database-include-connection-string-20-portalshots.md)]
+[!INCLUDE [sql-database-include-connection-string-20-portalshots](../includes/sql-database-include-connection-string-20-portalshots.md)]
 
 <a id="b-connection-ip-address" name="b-connection-ip-address"></a>
 
@@ -172,7 +172,7 @@ You must configure SQL Database to accept communication from the IP address of t
 
 If you forget to configure the IP address, your program fails with a handy error message that states the necessary IP address.
 
-[!INCLUDE [sql-database-include-ip-address-22-portal](../../../includes/sql-database-include-ip-address-22-v12portal.md)]
+[!INCLUDE [sql-database-include-ip-address-22-portal](../includes/sql-database-include-ip-address-22-v12portal.md)]
 
 For more information, see
 [Configure firewall settings in SQL Database](firewall-configure.md).

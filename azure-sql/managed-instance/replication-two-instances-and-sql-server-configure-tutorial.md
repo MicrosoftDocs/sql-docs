@@ -81,7 +81,7 @@ Create a SQL Server virtual machine using the [Azure portal](https://portal.azur
 - Resource group: the same as the managed instance
 - Virtual network: `sql-vm-sub-vnet`
 
-For more information about deploying a SQL Server VM to Azure, see [Quickstart: Create a SQL Server VM](../virtual-machines/windows/sql-vm-create-portal-quickstart.md).
+For more information about deploying a SQL Server VM to Azure, see [Quickstart: Create a SQL Server VM](../zirtual-zachines/windows/sql-vm-create-portal-quickstart.md).
 
 ## Configure VNet peering
 

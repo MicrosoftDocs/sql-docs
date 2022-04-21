@@ -16,7 +16,7 @@ ms.date: 01/10/2022
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-[!INCLUDE [GDPR-related guidance](../../../includes/gdpr-intro-sentence.md)]
+[!INCLUDE [GDPR-related guidance](../includes/gdpr-intro-sentence.md)]
 
 ## What is a database backup?
 
@@ -257,7 +257,7 @@ All database backups are taken with the CHECKSUM option to provide additional ba
 
 When you migrate your database from a DTU-based service tier to a vCore-based service tier, the PITR retention is preserved to ensure that your application's data recovery policy isn't compromised. If the default retention doesn't meet your compliance requirements, you can change the PITR retention period. For more information, see [Change the PITR backup retention period](#change-the-short-term-retention-policy).
 
-[!INCLUDE [GDPR-related guidance](../../../includes/gdpr-intro-sentence.md)]
+[!INCLUDE [GDPR-related guidance](../includes/gdpr-intro-sentence.md)]
 
 ## Change the short-term retention policy
 
@@ -287,7 +287,7 @@ To change the PITR backup retention period or the differential backup frequency 
 
 Prepare your environment for the Azure CLI.
 
-[!INCLUDE[azure-cli-prepare-your-environment-no-header](../../../includes/azure-cli-prepare-your-environment-no-header.md)]
+[!INCLUDE[azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
 
 #### [SQL Database](#tab/single-database)
 
@@ -334,7 +334,7 @@ az sql midb short-term-retention-policy set \
 
 ### Change the short-term retention policy using PowerShell
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 > [!IMPORTANT]
 > The PowerShell AzureRM module is still supported by SQL Database and SQL Managed Instance, but all future development is for the Az.Sql module. For more information, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module are substantially identical to those in the AzureRm modules.
 

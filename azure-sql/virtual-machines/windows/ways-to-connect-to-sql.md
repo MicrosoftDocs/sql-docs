@@ -112,17 +112,17 @@ When changing SQL Server connectivity settings, Azure does not automatically ena
 
 First, connect to the SQL Server virtual machine with remote desktop.
 
-[!INCLUDE [Connect to SQL Server VM with remote desktop](../../../../includes/virtual-machines-sql-server-remote-desktop-connect.md)]
+[!INCLUDE [Connect to SQL Server VM with remote desktop](../../includes/virtual-machines-sql-server-remote-desktop-connect.md)]
 
 Next, enable the TCP/IP protocol with **SQL Server Configuration Manager**.
 
-[!INCLUDE [Connect to SQL Server VM with remote desktop](../../../../includes/virtual-machines-sql-server-connection-tcp-protocol.md)]
+[!INCLUDE [Connect to SQL Server VM with remote desktop](../../includes/virtual-machines-sql-server-connection-tcp-protocol.md)]
 
 ## Connect with SSMS
 
 The following steps show how to create an optional DNS label for your Azure VM and then connect with SQL Server Management Studio (SSMS).
 
-[!INCLUDE [Connect to SQL Server in a VM Resource Manager](../../../../includes/virtual-machines-sql-server-connection-steps-resource-manager.md)]
+[!INCLUDE [Connect to SQL Server in a VM Resource Manager](../../includes/virtual-machines-sql-server-connection-steps-resource-manager.md)]
 
 ## <a id="manual"></a> Manual configuration and troubleshooting
 

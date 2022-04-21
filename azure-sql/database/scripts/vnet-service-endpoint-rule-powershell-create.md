@@ -31,7 +31,7 @@ For more background, see [Virtual Service endpoints for Azure SQL Database][sql-
 > [!TIP]
 > If all you need is to assess or add the Virtual Service endpoint *type name* for Azure SQL Database to your subnet, you can skip ahead to our more [direct PowerShell script](#a-verify-subnet-is-endpoint-ps-100).
 
-[!INCLUDE [updated-for-az](../../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../../includes/updated-for-az.md)]
 
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the [`Az.Sql` Cmdlets](/powershell/module/az.sql). For the older module, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.

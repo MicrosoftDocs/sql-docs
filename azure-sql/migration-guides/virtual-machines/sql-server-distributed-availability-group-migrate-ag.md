@@ -21,9 +21,9 @@ This article is intended for databases participating in an availability group, a
 
 ## Initial setup
 
-The first step is to create your SQL Server VMs in Azure. You can do so by using the [Azure portal](../../virtual-machines/windows/sql-vm-create-portal-quickstart.md), [Azure PowerShell](../../virtual-machines/windows/sql-vm-create-powershell-quickstart.md), or an [ARM template](../../virtual-machines/windows/create-sql-vm-resource-manager-template.md). 
+The first step is to create your SQL Server VMs in Azure. You can do so by using the [Azure portal](../../zirtual-zachines/windows/sql-vm-create-portal-quickstart.md), [Azure PowerShell](../../zirtual-zachines/windows/sql-vm-create-powershell-quickstart.md), or an [ARM template](../../zirtual-zachines/windows/create-sql-vm-resource-manager-template.md). 
 
-Be sure to configure your SQL Server VMs according to the [prerequisites](sql-server-distributed-availability-group-migrate-prerequisites.md). Choose between a single subnet deployment, which relies on an Azure Load Balancer or distributed network name to route traffic to  your availability group listener, or a multi-subnet deployment which does not have such a requirement. The multi-subnet deployment is recommended. To learn more, see [connectivity](../../virtual-machines/windows/availability-group-overview.md#connectivity). 
+Be sure to configure your SQL Server VMs according to the [prerequisites](sql-server-distributed-availability-group-migrate-prerequisites.md). Choose between a single subnet deployment, which relies on an Azure Load Balancer or distributed network name to route traffic to  your availability group listener, or a multi-subnet deployment which does not have such a requirement. The multi-subnet deployment is recommended. To learn more, see [connectivity](../../zirtual-zachines/windows/availability-group-overview.md#connectivity). 
 
 For simplicity, join your target SQL Server VMs to the same domain as your source SQL Server instances. Otherwise, join your target SQL Server VM to a domain that's federated with the domain of your source SQL Server instances. 
 
@@ -165,7 +165,7 @@ ALTER AVAILABILITY GROUP [AzureAG]   GRANT CREATE ANY DATABASE;
 GO 
 ```
 
-Finally, create a listener (**AzureAG_LST**) for your target availability group (**AzureAG**). If you deployed your SQL Server VMs to multiple subnets, create your listener using Transact-SQL. If you deployed your SQL Server VMs to a single subnet, configure either an [Azure Load Balancer](../../virtual-machines/windows/availability-group-vnn-azure-load-balancer-configure.md), or a [distributed network name](../../virtual-machines/windows/availability-group-distributed-network-name-dnn-listener-configure.md) for your listener. 
+Finally, create a listener (**AzureAG_LST**) for your target availability group (**AzureAG**). If you deployed your SQL Server VMs to multiple subnets, create your listener using Transact-SQL. If you deployed your SQL Server VMs to a single subnet, configure either an [Azure Load Balancer](../../zirtual-zachines/windows/availability-group-vnn-azure-load-balancer-configure.md), or a [distributed network name](../../zirtual-zachines/windows/availability-group-distributed-network-name-dnn-listener-configure.md) for your listener. 
 
 To create your listener, run this script on the primary replica of the availability group in Azure. 
 

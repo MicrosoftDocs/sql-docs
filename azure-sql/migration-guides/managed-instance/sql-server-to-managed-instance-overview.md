@@ -69,7 +69,7 @@ Another key consideration in the selection of the target service tier in Azure S
 
 ### SQL Server VM alternative
 
-Your business might have requirements that make [SQL Server on Azure Virtual Machines](../../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) a more suitable target than Azure SQL Managed Instance. 
+Your business might have requirements that make [SQL Server on Azure Virtual Machines](../../zirtual-zachines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) a more suitable target than Azure SQL Managed Instance. 
 
 If one of the following conditions applies to your business, consider moving to a SQL Server virtual machine (VM) instead: 
 

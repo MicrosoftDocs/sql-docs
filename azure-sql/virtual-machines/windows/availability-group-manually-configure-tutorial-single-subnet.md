@@ -505,7 +505,7 @@ The next thing to do is to configure an availability group listener on the failo
 > This tutorial shows how to create a single listener, with one ILB IP address. To create one or more listeners using one or more IP addresses, see [Create availability group listener and load balancer | Azure](availability-group-listener-powershell-configure.md?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
 >
 
-[!INCLUDE [ag-listener-configure](../../../../includes/virtual-machines-ag-listener-configure.md)]
+[!INCLUDE [ag-listener-configure](../../includes/virtual-machines-ag-listener-configure.md)]
 
 ## Set listener port
 

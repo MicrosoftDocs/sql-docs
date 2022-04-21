@@ -33,7 +33,7 @@ When this feature is enabled, it automatically installs the SQL Server Connector
 > You can also configure Key Vault integration by using a template. For more information, see [Azure quickstart template for Azure Key Vault integration](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/vm-sql-existing-keyvault-update).
 
 
-[!INCLUDE [Prepare for Key Vault integration](../../../../includes/virtual-machines-sql-server-akv-prepare.md)]
+[!INCLUDE [Prepare for Key Vault integration](../../includes/virtual-machines-sql-server-akv-prepare.md)]
 
   >[!NOTE]
   > Extensible Key Management (EKM) Provider version  1.0.4.0 is installed on the SQL Server VM through the [SQL infrastructure as a service (IaaS) extension](./sql-server-iaas-agent-extension-automate-management.md). Upgrading the SQL IaaS extension will not update the provider version. Please considering manually upgrading the EKM provider version if needed (for example, when migrating to a SQL Managed Instance).
@@ -60,4 +60,4 @@ When you're finished, select the **Apply** button on the bottom of the **Securit
 > [!NOTE]
 > The credential name we created here will be mapped to a SQL login later. This allows the SQL login to access the key vault. 
 
-[!INCLUDE [Key Vault integration next steps](../../../../includes/virtual-machines-sql-server-akv-next-steps.md)]
+[!INCLUDE [Key Vault integration next steps](../../includes/virtual-machines-sql-server-akv-next-steps.md)]

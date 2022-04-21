@@ -68,7 +68,7 @@ Proceed to the following steps to assess and migrate databases to Azure SQL Mana
 
 ### Assess 
 
-[!INCLUDE [assess-estate-with-azure-migrate](../../../../includes/azure-migrate-to-assess-sql-data-estate.md)]
+[!INCLUDE [assess-estate-with-azure-migrate](../../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 Determine whether SQL Managed Instance is compatible with the database requirements of your application. SQL Managed Instance is designed to provide easy lift and shift migration for most existing applications that use SQL Server. However, you may sometimes require features or capabilities that aren't yet supported and the cost of implementing a workaround is too high.
 

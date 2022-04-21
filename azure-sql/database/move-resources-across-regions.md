@@ -38,7 +38,7 @@ This article provides a general workflow for moving resources to a different reg
 > [!NOTE]
 > To move Azure SQL databases and elastic pools to a different Azure region, you can also use Azure Resource Mover (in preview). Refer [this tutorial](../../resource-mover/tutorial-move-region-sql.md) for detailed steps to do the same.
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 
 ## Move a database
 

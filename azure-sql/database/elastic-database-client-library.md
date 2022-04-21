@@ -69,7 +69,7 @@ In general, customers using Elastic Database tools can expect to get full T-SQL 
 
 <!-- Additional resources H2 -->
 
-[!INCLUDE [elastic-scale-include](../../../includes/elastic-scale-include.md)]
+[!INCLUDE [elastic-scale-include](../includes/elastic-scale-include.md)]
 
 
 <!--Anchors-->

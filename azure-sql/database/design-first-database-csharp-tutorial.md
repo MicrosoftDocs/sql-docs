@@ -106,7 +106,7 @@ Your IP address can now pass through the IP firewall. You can now connect to you
 > [!IMPORTANT]
 > By default, access through the SQL Database IP firewall is enabled for all Azure services. Click **OFF** on this page to disable access for all Azure services.
 
-[!INCLUDE [sql-database-csharp-adonet-create-query-2](../../../includes/sql-database-csharp-adonet-create-query-2.md)]
+[!INCLUDE [sql-database-csharp-adonet-create-query-2](../includes/sql-database-csharp-adonet-create-query-2.md)]
 
 ## Next steps
 

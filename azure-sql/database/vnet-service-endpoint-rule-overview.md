@@ -140,7 +140,7 @@ PolyBase and the COPY statement are commonly used to load data into Azure Synaps
     | Assign access to | User, group, or service principal |
     | Members | Server or workspace hosting your dedicated SQL pool that you've registered with Azure AD |
 
-    ![Screenshot that shows Add role assignment page in Azure portal.](../../../includes/role-based-access-control/media/add-role-assignment-page.png)
+    ![Screenshot that shows Add role assignment page in Azure portal.](../includes/role-based-access-control/media/add-role-assignment-page.png)
 
    > [!NOTE]
    > Only members with Owner privilege on the storage account can perform this step. For various Azure built-in roles, see [Azure built-in roles](../../role-based-access-control/built-in-roles.md).

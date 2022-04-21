@@ -28,7 +28,7 @@ JSON functions, first introduced in SQL Server 2016, enable you to combine NoSQL
 You see how JSON functions connect relational and NoSQL concepts in SQL Server and Azure SQL Database in the following video:
 
 *JSON as a bridge between NoSQL and relational worlds*
-> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
+> [!VIDEO https://channel9.msdn.com/events/DataDriven-SQLServer2016/JSON-as-bridge-betwen-NoSQL-relational-worlds/player]
 
 -->
 

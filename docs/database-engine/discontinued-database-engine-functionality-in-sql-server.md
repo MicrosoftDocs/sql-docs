@@ -75,10 +75,10 @@ For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Tra
 
 ### See also
 
-- [Deprecated database engine features in SQL Server 2019](deprecated-database-engine-features-in-sql-server-version-15.md)
+- [Deprecated database engine features in SQL Server 2019](./deprecated-database-engine-features-in-sql-server-2019.md)
 - [Deprecated database engine features in SQL Server 2017](deprecated-database-engine-features-in-sql-server-2017.md)
 - [Deprecated database engine features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
-- [Breaking changes to database engine features in SQL Server 2019](breaking-changes-to-database-engine-features-in-sql-server-version-15.md)
+- [Breaking changes to database engine features in SQL Server 2019](./breaking-changes-to-database-engine-features-in-sql-server-2019.md)
 - [Breaking changes to database engine features in SQL Server 2017](breaking-changes-to-database-engine-features-in-sql-server-2017.md)
 - [Breaking changes to database engine features in SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 - [Deprecated features in SQL Server replication](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)

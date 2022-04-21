@@ -208,7 +208,7 @@ Using variables with partition switching on databases or tables with change data
 **Availability of CDC in Azure SQL Databases**  
 CDC can only be enabled on databases tiers S3 and above. Sub-core (Basic, S0, S1, S2) Azure SQL Databases are not supported for CDC.
 
-Dbcopy from database tiers above S3 having CDC enabled to a sub-core SLO presently retains the CDC artifacts, but we'll remove the CDC artifacts in future releases.
+Dbcopy from database tiers above S3 having CDC enabled to a sub-core SLO presently retains the CDC artifacts, but CDC artifacts may be removed in the future.
 
 **Capture and Cleanup Customization on Azure SQL Databases**   
 Configuring the frequency of the capture and the cleanup processes for CDC in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the scheduler.
@@ -217,12 +217,12 @@ Configuring the frequency of the capture and the cleanup processes for CDC in Az
 CDC does not support the values for computed columns even if the computed column is defined as persisted. Computed columns that are included in a capture instance always have a value of `NULL`. This behavior is intended, and not a bug.
 
 **Point-in-time restore (PITR)**  
-If you enable CDC on your database as an AAD user, it is not possible to Point-in-time restore (PITR) to a sub-core SLO. It is recommended that you restore the database to the same as the source or higher SLO, and then disable CDC if necessary.
+If you enable CDC on your database as an Microsoft Azure Active Directory (Azure AD) user, it is not possible to Point-in-time restore (PITR) to a sub-core SLO. It is recommended that you restore the database to the same as the source or higher SLO, and then disable CDC if necessary.
 
-**Azure Active Directory (AAD)**  
-If you create a database in Azure SQL Database as an AAD user and enable change data capture (CDC) on it, a SQL user (for example, even sysadmin role) won't be able to disable/make changes to CDC artifacts. However, another AAD user will be able to enable/disable CDC on the same database.
+**Microsoft Azure Active Directory (Azure AD)**  
+If you create a database in Azure SQL Database as an Microsoft Azure Active Directory (Azure AD) user and enable change data capture (CDC) on it, a SQL user (for example, even sysadmin role) won't be able to disable/make changes to CDC artifacts. However, another Azure AD user will be able to enable/disable CDC on the same database.
 
-Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an AAD user won't work.
+Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an Azure AD user won't work.
 
 **Aggressive log truncation**  
 While enabling change data capture (CDC) on your Azure SQL Database, please be aware that aggressive log truncation is disabled (the CDC scan uses the database transaction log).
@@ -232,16 +232,16 @@ Enabling change data capture (CDC) on a database disables aggressive log truncat
 **CDC fails after ALTER COLUMN to VARCHAR and VARBINARY**  
 When the datatype of a column on a CDC-enabled table is changed from `TEXT to VARCHAR` or `IMAGE to VARBINARY` and an existing row is updated to an off-row value. After the update, the CDC scan will result in errors.
 
-**Enabling CDC fails on restored Azure SQL DB created with AAD**  
-Enabling CDC will fail if you create a database in Azure SQL Database as an AAD user and do not enable CDC, then restore the database and enable CDC on the restored database.
+**Enabling CDC fails on restored Azure SQL DB created with Microsoft Azure Active Directory (Azure AD)**  
+Enabling CDC will fail if you create a database in Azure SQL Database as a Microsoft Azure Active Directory (Azure AD) user and don't enable CDC, then restore the database and enable CDC on the restored database.
 
-Until we fix it in upcoming releases, here are the mitigation options:
+Here are the mitigation options we currently offer for this issue:
 
-- Login as AAD admin of the server
+- Login as Azure AD admin of the server
 - Run the command below on the restored DB
 
 ```sql
-ALTER AUTHORIZATION ON DATABASE::[<restored_db_name>] TO [<aad_admin_login_name>];
+ALTER AUTHORIZATION ON DATABASE::[<restored_db_name>] TO [<azuread_admin_login_name>];
 
 EXEC sys.sp_cdc_enable_db
 ```

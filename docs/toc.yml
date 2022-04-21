@@ -13686,6 +13686,8 @@ items:
         href: relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md
       - name: sys.sp_cdc_stop_job
         href: relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md
+      - name: sys.sp_cdc_set_scheduler_job
+        href: relational-databases/system-stored-procedures/sys-cdc-set-scheduler-job-transact-sql.md
     - name: Cursor
       href: relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md
       items:

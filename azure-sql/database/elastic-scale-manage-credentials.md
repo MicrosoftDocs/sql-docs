@@ -75,4 +75,4 @@ As with the admin credentials, do not use values in the form of "username@server
 
 [Elastic Database jobs](elastic-jobs-overview.md)
 
-[!INCLUDE [elastic-scale-include](../../../includes/elastic-scale-include.md)]
+[!INCLUDE [elastic-scale-include](../includes/elastic-scale-include.md)]

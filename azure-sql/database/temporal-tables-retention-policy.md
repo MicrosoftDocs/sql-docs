@@ -11,6 +11,7 @@ author: MladjoA
 ms.author: mlandzic
 ms.reviewer: kendralittle, mathoma
 ms.date: 10/18/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Manage historical data in Temporal tables with retention policy
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

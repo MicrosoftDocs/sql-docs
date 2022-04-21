@@ -43,15 +43,15 @@ Before your target SQL Server VMs are ready for migration, make sure they meet t
 
 The source and target SQL Server instance must have an established network connection. 
 
-If the source SQL Server instance is located on an on-premises network, configure a [Site-to-site VPN connection](/microsoft-365/enterprise/connect-an-on-premises-network-to-a-microsoft-azure-virtual-network) or an [Azure ExpressRoute connection](../../../expressroute/expressroute-introduction.md) between the on-premises network and the virtual network where your target SQL Server VM resides. 
+If the source SQL Server instance is located on an on-premises network, configure a [Site-to-site VPN connection](/microsoft-365/enterprise/connect-an-on-premises-network-to-a-microsoft-azure-virtual-network) or an [Azure ExpressRoute connection](/azure/expressroute/expressroute-introduction) between the on-premises network and the virtual network where your target SQL Server VM resides. 
 
-If your source SQL Server instance is located on an Azure virtual network that is different than the target SQL Server VM, then configure [virtual network peering](../../../virtual-network/virtual-network-peering-overview.md). 
+If your source SQL Server instance is located on an Azure virtual network that is different than the target SQL Server VM, then configure [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). 
 
 ## Authentication 
 
 To simplify authentication between your source and target SQL Server instance, join both servers to the same domain, preferably with the domain being on the source side and apply domain-based authentication. Since this is the recommended approach, the steps in this tutorial series assume both source and target SQL Server instance are part of the same domain. 
 
-If the source and target servers are part of different domains, configure [federation](../../../active-directory/hybrid/whatis-fed.md) between the two domains, or configure a [domain-independent availability group](../../virtual-machines/windows/availability-group-clusterless-workgroup-configure.md). 
+If the source and target servers are part of different domains, configure [federation](/azure/active-directory/hybrid/whatis-fed) between the two domains, or configure a [domain-independent availability group](../../virtual-machines/windows/availability-group-clusterless-workgroup-configure.md). 
 
 
 ## Next steps

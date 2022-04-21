@@ -135,19 +135,19 @@ To get the best performance you can try the following strategies:
 
 ## Store the imported or exported .BACPAC file
 
-The .BACPAC file can be stored in [Azure Blobs](../../storage/blobs/storage-blobs-overview.md), or [Azure Files](../../storage/files/storage-files-introduction.md).
+The .BACPAC file can be stored in [Azure Blobs](/azure/storage/blobs/storage-blobs-overview), or [Azure Files](/azure/storage/files/storage-files-introduction).
 
 To achieve the best performance, use Azure Files. SqlPackage operates with the filesystem so it can access Azure Files directly.
 
 To reduce cost, use Azure Blobs, which cost less than a premium Azure file share. However, it will require you to copy the [.BACPAC file](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) between the the blob and the local file system before the import or export operation. As a result the process will take longer.
 
-To upload or download .BACPAC files, see [Transfer data with AzCopy and Blob storage](../../storage/common/storage-use-azcopy-v10.md#transfer-data), and [Transfer data with AzCopy and file storage](../../storage/common/storage-use-azcopy-files.md).
+To upload or download .BACPAC files, see [Transfer data with AzCopy and Blob storage](/azure/storage/common/storage-use-azcopy-v10#transfer-data), and [Transfer data with AzCopy and file storage](/azure/storage/common/storage-use-azcopy-files).
 
-Depending on your environment, you might need to [Configure Azure Storage firewalls and virtual networks](../../storage/common/storage-network-security.md).
+Depending on your environment, you might need to [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
 ## Next steps
 
 - To learn how to connect to and query an imported SQL Database, see [Quickstart: Azure SQL Database: Use SQL Server Management Studio to connect and query data](connect-query-ssms.md).
 - For a SQL Server Customer Advisory Team blog about migrating using BACPAC files, see [Migrating from SQL Server to Azure SQL Database using BACPAC Files](https://techcommunity.microsoft.com/t5/DataCAT/Migrating-from-SQL-Server-to-Azure-SQL-Database-using-Bacpac/ba-p/305407).
 - For a discussion of the entire SQL Server database migration process, including performance recommendations, see [SQL Server database migration to Azure SQL Database](migrate-to-database-from-sql-server.md).
-- To learn how to manage and share storage keys and shared access signatures securely, see [Azure Storage Security Guide](../../storage/blobs/security-recommendations.md).
+- To learn how to manage and share storage keys and shared access signatures securely, see [Azure Storage Security Guide](/azure/storage/blobs/security-recommendations).

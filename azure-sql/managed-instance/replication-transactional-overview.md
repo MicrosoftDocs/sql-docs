@@ -142,11 +142,11 @@ In this configuration, a database in Azure SQL Database or Azure SQL Managed Ins
 - Configure VPN peering between the virtual networks of replication participants if the virtual networks are different.
 
 > [!NOTE]
-> You may encounter error 53 when connecting to an Azure Storage File if the outbound network security group (NSG) port 445 is blocked when the distributor is an Azure SQL Managed Instance database and the subscriber is on-premises. [Update the vNet NSG](../../storage/files/storage-troubleshoot-windows-file-connection-problems.md) to resolve this issue.
+> You may encounter error 53 when connecting to an Azure Storage File if the outbound network security group (NSG) port 445 is blocked when the distributor is an Azure SQL Managed Instance database and the subscriber is on-premises. [Update the vNet NSG](/azure/storage/files/storage-troubleshoot-windows-file-connection-problems) to resolve this issue.
 
 ## With failover groups
 
-If a **publisher** or **distributor** SQL Managed Instance is in a [failover group](../database/auto-failover-group-overview.md), the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover occurs. The following activities are needed in this scenario:
+If a **publisher** or **distributor** SQL Managed Instance is in a [failover group](auto-failover-group-sql-mi.md), the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover occurs. The following activities are needed in this scenario:
 
 1. Stop all replication jobs running on the database, if there are any.
 1. Drop subscription metadata from publisher by running the following script on publisher database:

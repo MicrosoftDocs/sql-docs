@@ -17,20 +17,20 @@ This article contains reference for monitoring Azure SQL Database with Azure Mon
 
 ## Metrics
 
-For more on using Azure Monitor SQL Insights (preview) for all products in the [Azure SQL family](../../azure-sql/index.yml), see [Monitor your SQL deployments with SQL Insights (preview)](../../azure-monitor/insights/sql-insights-overview.md).
+For more on using Azure Monitor SQL Insights (preview) for all products in the [Azure SQL family](../../azure-sql/index.yml), see [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview).
 
-For data specific to Azure SQL Database, see [Data for Azure SQL Database](../../azure-monitor/insights/sql-insights-overview.md#data-for-azure-sql-database).
+For data specific to Azure SQL Database, see [Data for Azure SQL Database](/azure/azure-monitor/insights/sql-insights-overview#data-for-azure-sql-database).
 
 For a complete list of metrics, see: 
-- [Microsoft.Sql/servers/databases](../../azure-monitor/essentials/metrics-supported.md#microsoftsqlserversdatabases)
-- [Microsoft.Sql/managedInstances](../../azure-monitor/essentials/metrics-supported.md#microsoftsqlmanagedinstances)
-- [Microsoft.Sql/servers/elasticPools](../../azure-monitor/essentials/metrics-supported.md#microsoftsqlserverselasticpools)
+- [Microsoft.Sql/servers/databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases)
+- [Microsoft.Sql/managedInstances](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances)
+- [Microsoft.Sql/servers/elasticPools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools)
 
 ## Resource logs
 
 This section lists the types of resource logs you can collect for Azure SQL Database. 
 
-For reference, see a list of [all resource logs category types supported in Azure Monitor](../../azure-monitor/essentials/resource-logs-schema.md).
+For reference, see a list of [all resource logs category types supported in Azure Monitor](/azure/azure-monitor/essentials/resource-logs-schema).
 
 For a reference of resource log types collected for Azure SQL Database, see [Streaming export of Azure SQL Database Diagnostic telemetry for export](metrics-diagnostic-telemetry-logging-streaming-export-configure.md#diagnostic-telemetry-for-export)
 

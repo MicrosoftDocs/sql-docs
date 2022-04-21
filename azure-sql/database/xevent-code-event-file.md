@@ -11,11 +11,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: kendralittle, mathoma
 ms.date: 03/25/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Event File target code for extended events in Azure SQL Database and SQL Managed Instance
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb-sqlmi.md)]
 
-[!INCLUDE [sql-database-xevents-selectors-1-include](../../../includes/sql-database-xevents-selectors-1-include.md)]
+[!INCLUDE [sql-database-xevents-selectors-1-include](../includes/sql-database-xevents-selectors-1-include.md)]
 
 You want a complete code sample for a robust way to capture and report information for an extended event.
 
@@ -30,7 +31,7 @@ This article presents a two-phase code sample:
 
 ## Prerequisites
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
@@ -507,7 +508,7 @@ Suppose you wanted to run the preceding Transact-SQL sample on Microsoft SQL Ser
 
 For more info about accounts and containers in the Azure Storage service, see:
 
-- [How to use Blob storage from .NET](../../storage/blobs/storage-quickstart-blobs-dotnet.md)
+- [How to use Blob storage from .NET](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
 - [Naming and Referencing Containers, Blobs, and Metadata](/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata)
 - [Working with the Root Container](/rest/api/storageservices/Working-with-the-Root-Container)
 - [Lesson 1: Create a stored access policy and a shared access signature on an Azure container](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#1---create-stored-access-policy-and-shared-access-storage)

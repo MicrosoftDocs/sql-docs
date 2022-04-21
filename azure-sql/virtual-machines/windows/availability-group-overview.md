@@ -40,7 +40,7 @@ The following diagram illustrates an availability group for SQL Server on Azure 
 
 ## VM redundancy 
 
-To increase redundancy and high availability, SQL Server VMs should either be in the same [availability set](../../../virtual-machines/availability-set-overview.md), or different [availability zones](../../../availability-zones/az-overview.md).
+To increase redundancy and high availability, SQL Server VMs should either be in the same [availability set](/azure/virtual-machines/availability-set-overview), or different [availability zones](/azure/availability-zones/az-overview).
 
 Placing a set of VMs in the same availability set protects from outages within a data center caused by equipment failure (VMs within an Availability Set do not share resources) or from updates (VMs within an availability set are not updated at the same time). 
 
@@ -48,7 +48,7 @@ Availability Zones protect against the failure of an entire data center, with ea
 
 When creating Azure VMs, you must choose between configuring Availability Sets vs Availability Zones.  An Azure VM cannot participate in both. 
 
-While Availability Zones may provide better availability than Availability Sets (99.99% vs 99.95%), performance should also be a consideration. VMs within an Availability Set can be placed in a [proximity placement group](../../../virtual-machines/co-location.md) which guarantees that they are close to each other, minimizing network latency between them. VMs located in different Availability Zones will have greater network latency between them, which can increase the time it takes to synchronize data between the primary and secondary replica(s). This may cause delays on the primary replica as well as increase the chance of data loss in the event of an unplanned failover. It is important to test the proposed solution under load and ensure that it meets SLAs for both performance and availability.
+While Availability Zones may provide better availability than Availability Sets (99.99% vs 99.95%), performance should also be a consideration. VMs within an Availability Set can be placed in a [proximity placement group](/azure/virtual-machines/co-location) which guarantees that they are close to each other, minimizing network latency between them. VMs located in different Availability Zones will have greater network latency between them, which can increase the time it takes to synchronize data between the primary and secondary replica(s). This may cause delays on the primary replica as well as increase the chance of data loss in the event of an unplanned failover. It is important to test the proposed solution under load and ensure that it meets SLAs for both performance and availability.
 
 ## Connectivity
 
@@ -64,7 +64,7 @@ Additionally, there are some behavior differences between the functionality of t
 - **Existing connections**: Connections made to a *specific database* within a failing-over availability group will close, but other connections to the primary replica will remain open since the DNN stays online during the failover process. This is different than a traditional VNN environment where all connections to the primary replica typically close when the availability group fails over, the listener goes offline, and the primary replica transitions to the secondary role. When using a DNN listener, you may need to adjust application connection strings to ensure that connections are redirected to the new primary replica upon failover.
 - **Open transactions**: Open transactions against a database in a failing-over availability group will close and roll back, and you need to *manually* reconnect. For example, in SQL Server Management Studio, close the query window and open a new one. 
 
-Setting up a VNN listener in Azure requires a load balancer. There are two main options for load balancers in Azure: external (public) or internal. The external (public) load balancer is internet-facing and is associated with a public virtual IP that's accessible over the internet. An internal load balancer supports only clients within the same virtual network. For either load balancer type, you must enable [Direct Server Return](../../../load-balancer/load-balancer-multivip-overview.md#rule-type-2-backend-port-reuse-by-using-floating-ip). 
+Setting up a VNN listener in Azure requires a load balancer. There are two main options for load balancers in Azure: external (public) or internal. The external (public) load balancer is internet-facing and is associated with a public virtual IP that's accessible over the internet. An internal load balancer supports only clients within the same virtual network. For either load balancer type, you must enable [Direct Server Return](/azure/load-balancer/load-balancer-multivip-overview#rule-type-2-backend-port-reuse-by-using-floating-ip). 
 
 You can still connect to each availability replica separately by connecting directly to the service instance. Also, because availability groups are backward compatible with database mirroring clients, you can connect to the availability replicas like database mirroring partners as long as the replicas are configured similarly to database mirroring:
 

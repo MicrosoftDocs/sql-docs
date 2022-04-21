@@ -11,6 +11,7 @@ ms.author: kendralittle
 ms.reviewer: mathoma
 ms.date: 12/10/2021
 ms.topic: how-to
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Export to a BACPAC file - Azure SQL Database and Azure SQL Managed Instance
 
@@ -115,6 +116,6 @@ Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $Se
 - To learn about long-term backup retention of a single database and pooled databases as an alternative to exporting a database for archive purposes, see [Long-term backup retention](long-term-retention-overview.md). You can use SQL Agent jobs to schedule [copy-only database backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server) as an alternative to long-term backup retention.
 - To learn about importing a BACPAC to a SQL Server database, see [Import a BACPAC to a SQL Server database](/sql/relational-databases/data-tier-applications/import-a-BACPAC-file-to-create-a-new-user-database).
 - To learn about exporting a BACPAC from a SQL Server database, see [Export a Data-tier Application](/sql/relational-databases/data-tier-applications/export-a-data-tier-application)
-- To learn about using the Data Migration Service to migrate a database, see [Migrate from SQL Server to Azure SQL Database offline using DMS](../../dms/tutorial-sql-server-to-azure-sql.md).
+- To learn about using the Data Migration Service to migrate a database, see [Migrate from SQL Server to Azure SQL Database offline using DMS](/azure/dms/tutorial-sql-server-to-azure-sql).
 - If you are exporting from SQL Server as a prelude to migration to Azure SQL Database, see [Migrate a SQL Server database to Azure SQL Database](migrate-to-database-from-sql-server.md).
-- To learn how to manage and share storage keys and shared access signatures securely, see [Azure Storage Security Guide](../../storage/blobs/security-recommendations.md).
+- To learn how to manage and share storage keys and shared access signatures securely, see [Azure Storage Security Guide](/azure/storage/blobs/security-recommendations).

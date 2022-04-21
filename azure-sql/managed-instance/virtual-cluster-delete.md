@@ -16,7 +16,7 @@ ms.date: 03/25/2022
 # Delete a subnet after deleting an Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article provides guidelines on how to manually delete a subnet after deleting the last Azure SQL Managed Instance residing in it. You can [delete a virtual network subnet](../../virtual-network/virtual-network-manage-subnet.md#delete-a-subnet) only if there are no resources in the subnet.
+This article provides guidelines on how to manually delete a subnet after deleting the last Azure SQL Managed Instance residing in it. You can [delete a virtual network subnet](/azure/virtual-network/virtual-network-manage-subnet#delete-a-subnet) only if there are no resources in the subnet.
 
 SQL Managed Instances are deployed into [virtual clusters](connectivity-architecture-overview.md#virtual-cluster-connectivity-architecture). Each virtual cluster is associated with a subnet and **automatically deployed** together with first instance creation. In the same way, a virtual cluster is **automatically removed** together with last instance deletion leaving the subnet empty and ready for removal. 
 

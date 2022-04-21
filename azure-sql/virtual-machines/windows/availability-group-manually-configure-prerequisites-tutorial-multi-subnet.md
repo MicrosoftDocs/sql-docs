@@ -65,7 +65,7 @@ To create the resource group in the Azure portal, follow these steps:
 
 ## Create network and subnets
 
-Next, create the virtual network and three subnets. To learn more, see [Virtual network overview](../../../virtual-network/virtual-networks-overview.md). 
+Next, create the virtual network and three subnets. To learn more, see [Virtual network overview](/azure/virtual-network/virtual-networks-overview). 
 
 To create the virtual network in the Azure portal, follow these steps:
 
@@ -348,7 +348,7 @@ For the highest level of redundancy, resiliency and availability deploy the VMs 
 
 **Storage - Azure Managed Disks**   
 
-For the virtual machine storage, use Azure Managed Disks. Microsoft recommends Managed Disks for SQL Server virtual machines as they handle storage behind the scenes. For more information, see [Azure Managed Disks Overview](../../../virtual-machines/managed-disks-overview.md). 
+For the virtual machine storage, use Azure Managed Disks. Microsoft recommends Managed Disks for SQL Server virtual machines as they handle storage behind the scenes. For more information, see [Azure Managed Disks Overview](/azure/virtual-machines/managed-disks-overview). 
 
 **Network - Private IP addresses in production**   
 

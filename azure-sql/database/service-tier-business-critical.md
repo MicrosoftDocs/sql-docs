@@ -12,6 +12,7 @@ author: danimir
 ms.author: danil
 ms.reviewer: kendralittle, mathoma, urmilano
 ms.date: 04/13/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Business Critical tier - Azure SQL Database and Azure SQL Managed Instance 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -80,7 +81,7 @@ The following table shows resource limits for both Azure SQL Database and Azure 
 | **Log write throughput** | Single databases: [12 MB/s per vCore (max 96 MB/s)](resource-limits-vcore-single-databases.md) <br> Elastic pools: [15 MB/s per vCore (max 120 MB/s)](resource-limits-vcore-elastic-pools.md) | [4 MB/s per vCore (max 48 MB/s)](../managed-instance/resource-limits.md#service-tier-characteristics) |
 | **Availability** | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-database/) <br> 99.995% SLA with [zone redundancy](high-availability-sla.md#premium-and-business-critical-service-tier-zone-redundant-availability) | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/)|
 | **Backups** | RA-GRS, 1-35 days (7 days by default) | RA-GRS, 1-35 days (7 days by default)| 
-| [**Read-only replicas**](read-scale-out.md) |1 built-in high availability replica is readable <br> 0 - 4 [geo-replicas](active-geo-replication-overview.md) |1 built-in high availability replica is readable <br> 0 - 1 geo-replicas using [auto-failover groups](auto-failover-group-overview.md#best-practices-for-sql-managed-instance)  | 
+| [**Read-only replicas**](read-scale-out.md) |1 built-in high availability replica is readable <br> 0 - 4 [geo-replicas](active-geo-replication-overview.md) |1 built-in high availability replica is readable <br> 0 - 1 geo-replicas using [auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md)  | 
 | **Pricing/Billing** |[vCore, reserved storage, backup storage, and geo-replicas](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/> High availability replicas aren't charged. <br/>IOPS isn't charged. |[vCore, reserved storage, backup storage, and geo-replicas](https://azure.microsoft.com/pricing/details/sql-database/managed/) are charged. <br/> High availability replicas aren't charged. <br/>IOPS isn't charged.  | 
 | **Discount models** |[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions | 
 
@@ -90,5 +91,5 @@ The following table shows resource limits for both Azure SQL Database and Azure 
 
 - Find resource characteristics (number of cores, I/O, memory) of Business Critical tier in [SQL Managed Instance](../managed-instance/resource-limits.md#service-tier-characteristics), Single database in [vCore model](resource-limits-vcore-single-databases.md) or [DTU model](resource-limits-dtu-single-databases.md#premium-service-tier), or Elastic pool in [vCore model](resource-limits-vcore-elastic-pools.md) and [DTU model](resource-limits-dtu-elastic-pools.md#premium-elastic-pool-limits).
 - Learn about [General Purpose](service-tier-general-purpose.md) and [Hyperscale](service-tier-hyperscale.md) service tiers.
-- Learn about [Service Fabric](../../service-fabric/service-fabric-overview.md).
+- Learn about [Service Fabric](/azure/service-fabric/service-fabric-overview).
 - For more options for high availability and disaster recovery, see [Business Continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md).

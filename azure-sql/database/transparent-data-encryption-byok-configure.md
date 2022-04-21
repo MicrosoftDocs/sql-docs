@@ -11,6 +11,7 @@ author: shohamMSFT
 ms.author: shohamd
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 06/23/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # PowerShell and Azure CLI: Enable Transparent Data Encryption with customer-managed key from Azure Key Vault
@@ -20,10 +21,10 @@ ms.date: 06/23/2021
 This article walks through how to use a key from Azure Key Vault for Transparent Data Encryption (TDE) on Azure SQL Database or Azure Synapse Analytics. To learn more about the TDE with Azure Key Vault integration - Bring Your Own Key (BYOK) Support, visit [TDE with customer-managed keys in Azure Key Vault](transparent-data-encryption-byok-overview.md).
 
 > [!NOTE] 
-> Azure SQL now supports using a RSA key stored in a Managed HSM as TDE Protector. Azure Key Vault Managed HSM is a fully managed, highly available, single-tenant, standards-compliant cloud service that enables you to safeguard cryptographic keys for your cloud applications, using FIPS 140-2 Level 3 validated HSMs. Learn more about [Managed HSMs](../../key-vault/managed-hsm/index.yml).
+> Azure SQL now supports using a RSA key stored in a Managed HSM as TDE Protector. Azure Key Vault Managed HSM is a fully managed, highly available, single-tenant, standards-compliant cloud service that enables you to safeguard cryptographic keys for your cloud applications, using FIPS 140-2 Level 3 validated HSMs. Learn more about [Managed HSMs](/azure/key-vault/managed-hsm/index).
 
 > [!NOTE]
-> This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)). For documentation on Transparent Data Encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](../../synapse-analytics/security/workspaces-encryption.md).
+> This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)). For documentation on Transparent Data Encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
 
 ## Prerequisites for PowerShell
 
@@ -31,20 +32,20 @@ This article walks through how to use a key from Azure Key Vault for Transparent
 - [Recommended but Optional] Have a hardware security module (HSM) or local key store for creating a local copy of the TDE Protector key material.
 - You must have Azure PowerShell installed and running.
 - Create an Azure Key Vault and Key to use for TDE.
-  - [Instructions for using a hardware security module (HSM) and Key Vault](../../key-vault/keys/hsm-protected-keys.md)
+  - [Instructions for using a hardware security module (HSM) and Key Vault](/azure/key-vault/keys/hsm-protected-keys)
     - The key vault must have the following property to be used for TDE:
-  - [soft-delete](../../key-vault/general/soft-delete-overview.md) and purge protection
+  - [soft-delete](/azure/key-vault/general/soft-delete-overview) and purge protection
 - The key must have the following attributes to be used for TDE:
   - No expiration date
   - Not disabled
   - Able to perform *get*, *wrap key*, *unwrap key* operations
-- To use a Managed HSM key, follow instructions to [create and activate a Managed HSM using Azure CLI](../../key-vault/managed-hsm/quick-create-cli.md)
+- To use a Managed HSM key, follow instructions to [create and activate a Managed HSM using Azure CLI](/azure/key-vault/managed-hsm/quick-create-cli)
 
 # [PowerShell](#tab/azure-powershell)
 
 For Az module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
 
-For specifics on Key Vault, see [PowerShell instructions from Key Vault](../../key-vault/secrets/quick-create-powershell.md) and [How to use Key Vault soft-delete with PowerShell](../../key-vault/general/key-vault-recovery.md).
+For specifics on Key Vault, see [PowerShell instructions from Key Vault](/azure/key-vault/secrets/quick-create-powershell) and [How to use Key Vault soft-delete with PowerShell](/azure/key-vault/general/key-vault-recovery).
 
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager (RM) module is still supported, but all future development is for the Az.Sql module. The AzureRM module will continue to receive bug fixes until at least December 2020.  The arguments for the commands in the Az module and in the AzureRm modules are substantially identical. For more about their compatibility, see [Introducing the new Azure PowerShell Az module](/powershell/azure/new-azureps-module-az).
@@ -74,7 +75,7 @@ Use the [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvau
    ```
 
 For adding permissions to your server on a Managed HSM, add the 'Managed HSM Crypto Service Encryption User' local RBAC role to the server. This will enable the server to perform get, wrap key, unwrap key operations on the keys in the Managed HSM.
-[Instructions for provisioning server access on Managed HSM](../../key-vault/managed-hsm/role-management.md)
+[Instructions for provisioning server access on Managed HSM](/azure/key-vault/managed-hsm/role-management)
 
 ## Add the Key Vault key to the server and set the TDE Protector
 
@@ -135,7 +136,7 @@ Get-AzSqlDatabaseTransparentDataEncryptionActivity -ResourceGroupName <SQLDataba
 
 To install the required version of Azure CLI (version 2.0 or later) and connect to your Azure subscription, see [Install and Configure the Azure Cross-Platform Command-Line Interface 2.0](/cli/azure/install-azure-cli).
 
-For specifics on Key Vault, see [Manage Key Vault using Azure CLI 2.0](../../key-vault/general/manage-with-cli2.md) and [How to use Key Vault soft-delete with the CLI](../../key-vault/general/key-vault-recovery.md).
+For specifics on Key Vault, see [Manage Key Vault using Azure CLI 2.0](/azure/key-vault/general/manage-with-cli2) and [How to use Key Vault soft-delete with the CLI](/azure/key-vault/general/key-vault-recovery).
 
 ## Assign an Azure AD identity to your server
 

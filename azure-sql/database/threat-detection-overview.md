@@ -12,14 +12,15 @@ ms.author: datrigan
 ms.reviewer: kendralittle, vanto, sstein, mathoma
 ms.date: 06/09/2021
 tags: azure-synapse
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # SQL Advanced Threat Protection
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)] :::image type="icon" source="../media/applies-to/yes.png" border="false":::SQL Server on Azure VM :::image type="icon" source="../media/applies-to/yes.png" border="false":::Azure Arc-enabled SQL Server
 
-Advanced Threat Protection for [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [Azure Synapse Analytics](../../synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is.md), [SQL Server on Azure Virtual Machines](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) and [Azure Arc-enabled SQL Server](/sql/sql-server/azure-arc/overview) detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit databases.
+Advanced Threat Protection for [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is), [SQL Server on Azure Virtual Machines](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md) and [Azure Arc-enabled SQL Server](/sql/sql-server/azure-arc/overview) detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit databases.
 
-Advanced Threat Protection is part of the [Microsoft Defender for SQL](../../security-center/defender-for-sql-introduction.md) offering, which is a unified package for advanced SQL security capabilities. Advanced Threat Protection can be accessed and managed via the central Microsoft Defender for SQL portal.
+Advanced Threat Protection is part of the [Microsoft Defender for SQL](/azure/security-center/defender-for-sql-introduction) offering, which is a unified package for advanced SQL security capabilities. Advanced Threat Protection can be accessed and managed via the central Microsoft Defender for SQL portal.
 
 ## Overview
 
@@ -29,7 +30,7 @@ For a full investigation experience, it is recommended to enable auditing, which
 
 ## Alerts
 
-Advanced Threat Protection detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit databases. For a list of alerts, see the [Alerts for SQL Database and Azure Synapse Analytics in Microsoft Defender for Cloud](../../security-center/alerts-reference.md#alerts-sql-db-and-warehouse).
+Advanced Threat Protection detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit databases. For a list of alerts, see the [Alerts for SQL Database and Azure Synapse Analytics in Microsoft Defender for Cloud](/azure/security-center/alerts-reference#alerts-sql-db-and-warehouse).
 
 ## Explore detection of a suspicious event
 
@@ -63,5 +64,5 @@ Click **Advanced Threat Protection alert** to launch the Microsoft Defender for 
 - Learn more about [Advanced Threat Protection in Azure SQL Managed Instance](../managed-instance/threat-detection-configure.md).
 - Learn more about [Microsoft Defender for SQL](azure-defender-for-sql.md).
 - Learn more about [Azure SQL Database auditing](../../azure-sql/database/auditing-overview.md)
-- Learn more about [Microsoft Defender for Cloud](../../security-center/security-center-introduction.md)
+- Learn more about [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction)
  For more information on pricing, see the [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/)

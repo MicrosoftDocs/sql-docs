@@ -12,6 +12,7 @@ ms.author: mireks
 ms.reviewer: kendralittle, vanto, mathoma
 ms.date: 12/15/2021
 tags: azure-synapse
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Using multi-factor Azure Active Directory authentication
@@ -41,7 +42,7 @@ The interactive method that also supports Azure AD multi-factor authentication (
 
 Azure AD MFA helps safeguard access to data and applications while meeting user demand for a simple sign-in process. It delivers strong authentication with a range of easy verification options (phone call, text message, smart cards with pin, or mobile app notification), allowing users to choose the method they prefer. Interactive MFA with Azure AD can result in a pop-up dialog box for validation.
 
-For a description of Azure AD multi-factor authentication, see [multi-factor authentication](../../active-directory/authentication/concept-mfa-howitworks.md).
+For a description of Azure AD multi-factor authentication, see [multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
 For configuration steps, see [Configure Azure SQL Database multi-factor authentication for SQL Server Management Studio](authentication-mfa-ssms-configure.md).
 
 ### Azure AD domain name or tenant ID parameter
@@ -62,7 +63,7 @@ If you are running SSMS 18.x or later, the AD domain name or tenant ID is no lon
 
 ### Azure AD business to business support
 
-Azure AD users that are supported for Azure AD B2B scenarios as guest users (see [What is Azure B2B collaboration](../../active-directory/external-identities/what-is-b2b.md)) can connect to SQL Database and Azure Synapse as individual users or members of an Azure AD group created in the associated Azure AD, and mapped manually using the [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql) statement in a given database. 
+Azure AD users that are supported for Azure AD B2B scenarios as guest users (see [What is Azure B2B collaboration](/azure/active-directory/external-identities/what-is-b2b)) can connect to SQL Database and Azure Synapse as individual users or members of an Azure AD group created in the associated Azure AD, and mapped manually using the [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql) statement in a given database. 
 
 For example, if `steve@gmail.com` is invited to Azure AD `contosotest` (with the Azure AD domain `contosotest.onmicrosoft.com`), a user `steve@gmail.com` must be created for a specific database (such as **MyDatabase**) by an Azure AD SQL administrator or Azure AD DBO by executing the Transact-SQL `create user [steve@gmail.com] FROM EXTERNAL PROVIDER` statement. If `steve@gmail.com` is part of an Azure AD group, such as `usergroup` then this group must be created for a specific database (such as **MyDatabase**) by an Azure AD SQL administrator, or Azure AD DBO by executing the Transact-SQL statement `create user [usergroup] FROM EXTERNAL PROVIDER` statement. 
 
@@ -79,7 +80,7 @@ After the database user or group is created, then the user `steve@gmail.com` can
 - SSMS version 17.2 provides DacFx Wizard support for Export/Extract/Deploy Data database. Once a specific user is authenticated through the initial authentication dialog using Universal Authentication, the DacFx Wizard functions the same way it does for all other authentication methods.
 - The SSMS Table Designer does not support Universal Authentication.
 - There are no additional software requirements for Active Directory Universal Authentication except that you must use a supported version of SSMS.  
-- See the following link for the latest Microsoft Authentication Library (MSAL) version for Universal authentication: [Overview of the Microsoft Authentication Library (MSAL)](../../active-directory/develop/msal-overview.md#languages-and-frameworks).  
+- See the following link for the latest Microsoft Authentication Library (MSAL) version for Universal authentication: [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview#languages-and-frameworks).  
 
 ## Next steps
 

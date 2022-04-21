@@ -313,7 +313,7 @@ sections:
           
           ### Can I get the source IP ranges that are used for the inbound management traffic?
           
-          Yes. You could analyze traffic coming through your networks security group by [configuring Network Watcher flow logs](../../network-watcher/network-watcher-monitoring-overview.md#analyze-traffic-to-or-from-a-network-security-group).
+          Yes. You could analyze traffic coming through your networks security group by [configuring Network Watcher flow logs](/azure/network-watcher/network-watcher-monitoring-overview#analyze-traffic-to-or-from-a-network-security-group).
           
           ### Can I set NSG to control access to the data endpoint (port 1433)?
           
@@ -344,7 +344,7 @@ sections:
           
           ### Can I change the subnet address range?
           
-          Not if there are managed instances inside. This is an Azure networking infrastructure limitation. You are only allowed to [add additional address space to an empty subnet](../../virtual-network/virtual-network-manage-subnet.md#change-subnet-settings). 
+          Not if there are managed instances inside. This is an Azure networking infrastructure limitation. You are only allowed to [add additional address space to an empty subnet](/azure/virtual-network/virtual-network-manage-subnet#change-subnet-settings). 
           
           ### Can I move my managed instance to another subnet?
           
@@ -396,9 +396,9 @@ sections:
           
           Express Route circuit peering is the preferred way to do that. Global virtual network peering is supported with the limitation described in the note below.  
           
-          In September 2020, we announced [global virtual network peering for newly created virtual clusters](https://azure.microsoft.com/updates/global-virtual-network-peering-support-for-azure-sql-managed-instance-now-available/). That means that global virtual network peering is supported for SQL Managed Instances created in empty subnets after the announcement date, as well for all the subsequent managed instances created in those subnets. For all the other SQL Managed Instances peering support is limited to the networks in the same region due to the [constraints of global virtual network peering](../../virtual-network/virtual-network-manage-peering.md#requirements-and-constraints). See also the relevant section of the [Azure Virtual Networks frequently asked questions](../../virtual-network/virtual-networks-faq.md#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers) article for more details. 
+          In September 2020, we announced [global virtual network peering for newly created virtual clusters](https://azure.microsoft.com/updates/global-virtual-network-peering-support-for-azure-sql-managed-instance-now-available/). That means that global virtual network peering is supported for SQL Managed Instances created in empty subnets after the announcement date, as well for all the subsequent managed instances created in those subnets. For all the other SQL Managed Instances peering support is limited to the networks in the same region due to the [constraints of global virtual network peering](/azure/virtual-network/virtual-network-manage-peering#requirements-and-constraints). See also the relevant section of the [Azure Virtual Networks frequently asked questions](/azure/virtual-network/virtual-networks-faq#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers) article for more details. 
           
-          If Express Route circuit peering and global virtual network peering is not possible, the only other option is to create Site-to-Site VPN connection ([Azure portal](../../vpn-gateway/tutorial-site-to-site-portal.md), [PowerShell](../../vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell.md), [Azure CLI](../../vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-cli.md)).
+          If Express Route circuit peering and global virtual network peering is not possible, the only other option is to create Site-to-Site VPN connection ([Azure portal](/azure/vpn-gateway/tutorial-site-to-site-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell), [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-cli)).
           
       - question: |
           Mitigate data exfiltration risks  
@@ -490,7 +490,7 @@ sections:
           
           ### Is it possible to cancel, exchange or refund reservations?
           
-          You can cancel, exchange or refund reservations with certain limitations. For more information, see [Self-service exchanges and refunds for Azure Reservations](../../cost-management-billing/reservations/exchange-and-refund-azure-reservations.md).
+          You can cancel, exchange or refund reservations with certain limitations. For more information, see [Self-service exchanges and refunds for Azure Reservations](/azure/cost-management-billing/reservations/exchange-and-refund-azure-reservations).
           
       - question: |
           Billing for Azure SQL Managed Instance and backup storage
@@ -501,7 +501,7 @@ sections:
           
           ### How can I track billing cost for my managed instance?
           
-          You can do so using the [Azure Cost Management solution](../../cost-management-billing/index.yml). Navigate to **Subscriptions** in the [Azure portal](https://portal.azure.com) and select **Cost Analysis**. 
+          You can do so using the [Azure Cost Management solution](/azure/cost-management-billing/index). Navigate to **Subscriptions** in the [Azure portal](https://portal.azure.com) and select **Cost Analysis**. 
           
           Use the **Accumulated costs** option and then filter by the **Resource type** as `microsoft.sql/managedinstances`.
           
@@ -596,4 +596,4 @@ sections:
           
           ### How can I create Azure support request?
           
-          To learn how to create Azure support request, see [How to create Azure support request](../../azure-portal/supportability/how-to-create-azure-support-request.md).
+          To learn how to create Azure support request, see [How to create Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).

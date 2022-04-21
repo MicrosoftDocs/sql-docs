@@ -53,7 +53,7 @@ To choose an image, follow these steps:
 
 The **Basics** tab allows you to select the subscription, resource group, and instance details. 
 
-Using a new resource group is helpful if you are just testing or learning about SQL Server deployments in Azure. After you finish with your test, delete the resource group to automatically delete the VM and all resources associated with that resource group. For more information about resource groups, see [Azure Resource Manager Overview](../../../active-directory-b2c/overview.md).
+Using a new resource group is helpful if you are just testing or learning about SQL Server deployments in Azure. After you finish with your test, delete the resource group to automatically delete the VM and all resources associated with that resource group. For more information about resource groups, see [Azure Resource Manager Overview](/azure/active-directory-b2c/overview).
 
 On the **Basics** tab, provide the following information:
 
@@ -66,7 +66,7 @@ On the **Basics** tab, provide the following information:
 
     1. Enter a unique **Virtual machine name**.  
     1. Choose a location for your **Region**. 
-    1. For the purpose of this guide, leave **Availability options** set to _No infrastructure redundancy required_. To find out more information about availability options, see [Availability](../../../virtual-machines/availability.md). 
+    1. For the purpose of this guide, leave **Availability options** set to _No infrastructure redundancy required_. To find out more information about availability options, see [Availability](/azure/virtual-machines/availability). 
     1. In the **Image** list, select _Free SQL Server License: SQL Server 2019 Developer on Windows Server 2019_ if it's not already selected.
     1. Choose **Standard** for **Security type**. 
     1. Select **See all sizes** for the **Size** of the virtual machine and search for the **E4ds_v5** offering. This is one of the minimum recommended VM sizes for SQL Server on Azure VMs. If this is for testing purposes, be sure to clean up your resources once you're done with them to prevent any unexpected charges. For production workloads, see the recommended machine sizes and configuration in [Performance best practices for SQL Server in Azure Virtual Machines](./performance-guidelines-best-practices-vm-size.md).
@@ -74,9 +74,9 @@ On the **Basics** tab, provide the following information:
     ![Instance details](./media/create-sql-vm-portal/basics-instance-details.png)
 
 > [!IMPORTANT]
-> The estimated monthly cost displayed on the **Choose a size** window does not include SQL Server licensing costs. This estimate is the cost of the VM alone. For the Express and Developer editions of SQL Server, this estimate is the total estimated cost. For other editions, see the [Windows Virtual Machines pricing page](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) and select your target edition of SQL Server. Also see the [Pricing guidance for SQL Server Azure VMs](pricing-guidance.md) and [Sizes for virtual machines](../../../virtual-machines/sizes.md?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+> The estimated monthly cost displayed on the **Choose a size** window does not include SQL Server licensing costs. This estimate is the cost of the VM alone. For the Express and Developer editions of SQL Server, this estimate is the total estimated cost. For other editions, see the [Windows Virtual Machines pricing page](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) and select your target edition of SQL Server. Also see the [Pricing guidance for SQL Server Azure VMs](pricing-guidance.md) and [Sizes for virtual machines](/azure/virtual-machines/sizes?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
 
-* Under **Administrator account**, provide a username and password. The password must be at least 12 characters long and meet the [defined complexity requirements](../../../virtual-machines/windows/faq.yml#what-are-the-password-requirements-when-creating-a-vm-).
+* Under **Administrator account**, provide a username and password. The password must be at least 12 characters long and meet the [defined complexity requirements](/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-).
 
    ![Administrator account](./media/create-sql-vm-portal/basics-administrator-account.png)
 
@@ -84,7 +84,7 @@ On the **Basics** tab, provide the following information:
 
    ![Inbound port rules](./media/create-sql-vm-portal/basics-inbound-port-rules.png)
 
-You also have the option to enable the [Azure Hybrid Benefit](../../../virtual-machines/windows/hybrid-use-benefit-licensing.md) to use your own SQL Server license and save on licensing cost. 
+You also have the option to enable the [Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) to use your own SQL Server license and save on licensing cost. 
 
 
 ## Disks
@@ -94,7 +94,7 @@ On the **Disks** tab, configure your disk options.
 * Under **OS disk type**, select the type of disk you want for your OS from the drop-down. Premium is recommended for production systems but is not available for a Basic VM. To use a Premium SSD, change the virtual machine size. 
 * Under **Advanced**, select **Yes** under use **Managed Disks**.
 
-Microsoft recommends Managed Disks for SQL Server. Managed Disks handles storage behind the scenes. In addition, when virtual machines with Managed Disks are in the same availability set, Azure distributes the storage resources to provide appropriate redundancy. For more information, see [Azure Managed Disks Overview](../../../virtual-machines/managed-disks-overview.md). For specifics about managed disks in an availability set, see [Use managed disks for VMs in availability set](../../../virtual-machines/availability.md).
+Microsoft recommends Managed Disks for SQL Server. Managed Disks handles storage behind the scenes. In addition, when virtual machines with Managed Disks are in the same availability set, Azure distributes the storage resources to provide appropriate redundancy. For more information, see [Azure Managed Disks Overview](/azure/virtual-machines/managed-disks-overview). For specifics about managed disks in an availability set, see [Use managed disks for VMs in availability set](/azure/virtual-machines/availability).
 
 
   
@@ -264,7 +264,7 @@ You can monitor the deployment from the Azure portal. The **Notifications** butt
 
 Use the following steps to connect to the SQL Server virtual machine with Remote Desktop Protocol (RDP):
 
-[!INCLUDE [Connect to SQL Server VM with remote desktop](../../../../includes/virtual-machines-sql-server-remote-desktop-connect.md)]
+[!INCLUDE [Connect to SQL Server VM with remote desktop](../../includes/virtual-machines-sql-server-remote-desktop-connect.md)]
 
 After you connect to the SQL Server virtual machine, you can launch SQL Server Management Studio and connect with Windows Authentication using your local administrator credentials. If you enabled SQL Server Authentication, you can also connect with SQL Authentication using the SQL login and password you configured during provisioning.
 
@@ -279,7 +279,7 @@ In this walkthrough, you selected **Public** access for the virtual machine and 
 
 The following sections show how to connect over the internet to your SQL Server VM instance.
 
-[!INCLUDE [Connect to SQL Server in a VM Resource Manager](../../../../includes/virtual-machines-sql-server-connection-steps-resource-manager.md)]
+[!INCLUDE [Connect to SQL Server in a VM Resource Manager](../../includes/virtual-machines-sql-server-connection-steps-resource-manager.md)]
 
   > [!NOTE]
   > This example uses the common port 1433. However, this value will need to be modified if a different port (such as 1401) was specified during the deployment of the SQL Server VM. 

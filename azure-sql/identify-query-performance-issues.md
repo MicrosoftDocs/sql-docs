@@ -12,6 +12,7 @@ author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: mathoma, wiassaf, kendralittle
 ms.date: 03/18/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Detectable types of query performance bottlenecks in Azure SQL Database and Azure SQL Managed Instance

@@ -38,7 +38,7 @@ To configure active geo-replication, you need a database in Azure SQL Database. 
 
 Prepare your environment for the Azure CLI.
 
-[!INCLUDE [azure-cli-prepare-your-environment-no-header](../../../includes/azure-cli-prepare-your-environment-no-header.md)]
+[!INCLUDE [azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
 
 ---
 
@@ -61,7 +61,7 @@ After the secondary is created and seeded, data begins replicating from the prim
 
     :::image type="content" source="./media/active-geo-replication-configure-portal/azure-cli-create-geo-replica.png" alt-text="Configure geo-replication":::
 
-3. Select or create the server for the secondary database, and configure the **Compute + storage** options if necessary. You can select any region for your secondary server, but we recommend the [paired region](../../availability-zones/cross-region-replication-azure.md).
+3. Select or create the server for the secondary database, and configure the **Compute + storage** options if necessary. You can select any region for your secondary server, but we recommend the [paired region](/azure/availability-zones/cross-region-replication-azure).
 
     :::image type="content" source="./media/active-geo-replication-configure-portal/azure-portal-create-and-configure-replica.png" alt-text="{alt-text}":::
 
@@ -91,7 +91,7 @@ Select the database you want to set up for geo-replication. You'll need the foll
 > [!NOTE]
 > The secondary database must have the same service tier as the primary.
 
-You can select any region for your secondary server, but we recommend the [paired region](../../availability-zones/cross-region-replication-azure.md).
+You can select any region for your secondary server, but we recommend the [paired region](/azure/availability-zones/cross-region-replication-azure).
 
 Run the [az sql db replica create](/cli/azure/sql/db/replica#az-sql-db-replica-create) command.
 
@@ -169,5 +169,5 @@ Confirm that you want to perform the operation.
 ## Next steps
 
 * To learn more about active geo-replication, see [active geo-replication](active-geo-replication-overview.md).
-* To learn about auto-failover groups, see [Auto-failover groups](auto-failover-group-overview.md)
+* To learn about auto-failover groups, see [Auto-failover groups](auto-failover-group-sql-db.md)
 * For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).

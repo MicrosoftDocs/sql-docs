@@ -159,7 +159,7 @@ This example performs the following steps:
     }
    ```
 
-[!INCLUDE [elastic-scale-include](../../../includes/elastic-scale-include.md)]
+[!INCLUDE [elastic-scale-include](../includes/elastic-scale-include.md)]
 
 <!--Image references-->
 [1]: ./media/elastic-database-recovery-manager/recovery-manager.png

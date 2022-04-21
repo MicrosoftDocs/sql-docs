@@ -17,7 +17,7 @@ ms.date: 11/02/2021
 # Configure service endpoint policies (Preview) for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Virtual Network (VNet) Azure Storage [service endpoint policies](../../virtual-network/virtual-network-service-endpoint-policies-overview.md) allow you to filter egress virtual network traffic to Azure Storage, restricting data transfers to specific storage accounts.
+Virtual Network (VNet) Azure Storage [service endpoint policies](/azure/virtual-network/virtual-network-service-endpoint-policies-overview) allow you to filter egress virtual network traffic to Azure Storage, restricting data transfers to specific storage accounts.
 
 The ability to configure your endpoint policies and associate them with your SQL Managed Instance is currently in preview. 
 
@@ -40,7 +40,7 @@ Enabling service endpoint policies for your Azure SQL Managed Instance has the f
 
 - While in preview, this feature is available in all Azure regions where SQL Managed Instance is supported except for **China East 2**, **China North 2**,  **Central US EUAP**, **East US 2 EUAP**, **US Gov Arizona**, **US Gov Texas**, **US Gov Virginia**, and **West Central US**.
 - The feature is available only to virtual networks deployed through the Azure Resource Manager deployment model.
-- The feature is available only in subnets that have [service endpoints](../../virtual-network/virtual-network-service-endpoints-overview.md) for Azure Storage enabled.
+- The feature is available only in subnets that have [service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) for Azure Storage enabled.
 - Enabling service endpoints for Azure Storage also extends to include paired regions where you deploy the virtual network to support Read-Access Geo-Redundant storage (RA-GRS) and Geo-Redundant storage (GRS) traffic.
 - Assigning a service endpoint policy to a service endpoint upgrades the endpoint from regional to global scope. In other words, all traffic to Azure Storage will go through the service endpoint regardless of the region in which the storage account resides.
 
@@ -55,7 +55,7 @@ The following is a list of workflows that may contact Azure Storage:
 - [Restoring](restore-sample-database-quickstart.md) a database from Azure Storage.
 - Importing data with [BULK INSERT or OPENROWSET(BULK ...)](/sql/relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server).
 - Logging [extended events](../database/xevent-db-diff-from-svr.md) to an Event File target on Azure Storage.
-- [Azure DMS offline migration](../../dms/tutorial-sql-server-to-managed-instance.md) to Azure SQL Managed Instance.
+- [Azure DMS offline migration](/azure/dms/tutorial-sql-server-to-managed-instance) to Azure SQL Managed Instance.
 - [Log Replay Service migration](log-replay-service-migrate.md) to Azure SQL Managed Instance.
 - Synchronizing tables using [transactional replication](replication-transactional-overview.md).
 
@@ -79,7 +79,7 @@ To create a service endpoint policy, follow these steps:
 1. Select **+ Create a resource**. 
 1. In the search pane, enter _service endpoint policy_, select **Service endpoint policy**, and then select **Create**.
 
-   ![Create service endpoint policy](../../virtual-network/media/virtual-network-service-endpoint-policies-portal/create-sep-resource.png)
+   ![Create service endpoint policy](media/service-endpoint-policies-configure/create-sep-add-resource.png)
 
 1. Fill in the following values on the **Basics** page:
 
@@ -88,7 +88,7 @@ To create a service endpoint policy, follow these steps:
    - Name: Provide a name for your policy, such as **mySEP**.
    - Location: Select the region of the virtual network hosting the managed instance. 
 
-   ![Create service endpoint policy basics](../../virtual-network/media/virtual-network-service-endpoint-policies-portal/create-sep-basics.png)
+   ![Create service endpoint policy basics](media/service-endpoint-policies-configure/create-sep-basics.png)
 
 1. In **Policy definitions**, select **Add an alias** and enter the following information on the **Add an alias** pane:
    - Service Alias: Select /Services/Azure/ManagedInstance.
@@ -135,6 +135,6 @@ To associate your policy, follow these steps:
 
 ## Next steps
 
-- Learn more on [securing your Azure Storage accounts](../../storage/common/storage-network-security.md).
+- Learn more on [securing your Azure Storage accounts](/azure/storage/common/storage-network-security).
 - Read about [SQL Managed Instance's security capabilities](../database/security-overview.md).
 - Explore the [connectivity architecture](connectivity-architecture-overview.md) of SQL Managed Instance.

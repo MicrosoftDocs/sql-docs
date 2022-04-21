@@ -31,8 +31,8 @@ In this tutorial, you will learn how to:
 > - Test failover.
 
  There are multiple ways to establish connectivity between managed instances in different virtual networks, including:
- * [Azure ExpressRoute](../../expressroute/expressroute-howto-circuit-portal-resource-manager.md)
- * [Virtual network peering](../../virtual-network/virtual-network-peering-overview.md)
+ * [Azure ExpressRoute](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)
+ * [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview)
  * VPN gateways
 
 This tutorial provides steps for creating and connecting VPN gateways. If you prefer to use ExpressRoute or VNet peering, replace the gateway steps accordingly, or 
@@ -40,7 +40,7 @@ skip ahead to [Step 7](#create-a-failover-group) if you already have ExpressRout
 
 
   > [!NOTE]
-  > - When going through this tutorial, ensure you are configuring your resources with the [prerequisites for setting up failover groups for SQL Managed Instance](../database/auto-failover-group-overview.md#enabling-geo-replication-between-managed-instances-and-their-vnets). 
+  > - When going through this tutorial, ensure you are configuring your resources with the [prerequisites for setting up failover groups for SQL Managed Instance](auto-failover-group-sql-mi.md#enabling-replication-traffic-between-two-instances). 
   > - Creating a managed instance can take a significant amount of time. As a result, this tutorial may take several hours to complete. For more information on provisioning times, see [SQL Managed Instance management operations](sql-managed-instance-paas-overview.md#management-operations). 
 
 ## Prerequisites
@@ -64,7 +64,7 @@ To complete the tutorial, make sure you have the following items:
 
 In this step, you will create the resource group and the primary managed instance for your failover group using the Azure portal or PowerShell. 
 
-Deploy both managed instances to [paired regions](../../availability-zones/cross-region-replication-azure.md) for performance reasons. Managed instances residing in geo-paired regions have much better performance compared to unpaired regions. 
+Deploy both managed instances to [paired regions](/azure/availability-zones/cross-region-replication-azure) for performance reasons. Managed instances residing in geo-paired regions have much better performance compared to unpaired regions. 
 
 
 # [Portal](#tab/azure-portal) 
@@ -747,7 +747,7 @@ This portion of the tutorial uses the following PowerShell cmdlets:
 ## Create a primary gateway 
 
 > [!NOTE]
-> The SKU of the gateway affects throughput performance. This tutorial deploys a gateway with the most basic SKU (`HwGw1`). Deploy a higher SKU (example: `VpnGw3`) to achieve higher throughput. For all available options, see [Gateway SKUs](../../vpn-gateway/vpn-gateway-about-vpngateways.md#benchmark)
+> The SKU of the gateway affects throughput performance. This tutorial deploys a gateway with the most basic SKU (`HwGw1`). Deploy a higher SKU (example: `VpnGw3`) to achieve higher throughput. For all available options, see [Gateway SKUs](/azure/vpn-gateway/vpn-gateway-about-vpngateways#benchmark)
 
 # [Portal](#tab/azure-portal)
 
@@ -1121,7 +1121,7 @@ This portion of the tutorial uses the following PowerShell cmdlet:
 ## Full script
 
 # [PowerShell](#tab/azure-powershell)
-[!code-powershell-interactive[main](../../../powershell_scripts/sql-database/failover-groups/add-managed-instance-to-failover-group-az-ps.ps1 "Add SQL Managed Instance to a failover group")]
+[!code-powershell-interactive[main](~/../powershell_scripts/sql-database/failover-groups/add-managed-instance-to-failover-group-az-ps.ps1 "Add SQL Managed Instance to a failover group")]
 
 This script uses the following commands. Each command in the table links to command-specific documentation.
 
@@ -1164,7 +1164,7 @@ In this tutorial, you configured a failover group between two managed instances.
 
 > [!div class="checklist"]
 > - Create a primary managed instance.
-> - Create a secondary managed instance as part of a [failover group](../database/auto-failover-group-overview.md). 
+> - Create a secondary managed instance as part of a [failover group](auto-failover-group-sql-mi.md). 
 > - Test failover.
 
 Advance to the next quickstart on how to connect to SQL Managed Instance, and how to restore a database to SQL Managed Instance: 

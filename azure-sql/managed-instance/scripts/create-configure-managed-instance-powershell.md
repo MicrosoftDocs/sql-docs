@@ -22,13 +22,13 @@ This PowerShell script example creates a managed instance in a dedicated subnet 
 > [!IMPORTANT]
 > For limitations, see [supported regions](../resource-limits.md#supported-regions) and [supported subscription types](../resource-limits.md#supported-subscription-types).
 
-[!INCLUDE [cloud-shell-try-it.md](../../../../includes/cloud-shell-try-it.md)]
+[!INCLUDE [cloud-shell-try-it.md](../../includes/cloud-shell-try-it.md)]
 
 If you choose to install and use PowerShell locally, this tutorial requires Azure PowerShell 1.4.0 or later. If you need to upgrade, see [Install Azure PowerShell module](/powershell/azure/install-az-ps). If you are running PowerShell locally, you also need to run `Connect-AzAccount` to create a connection with Azure.
 
 ## Sample script
 
-[!code-powershell-interactive[main](../../../../powershell_scripts/sql-database/managed-instance/create-and-configure-managed-instance.ps1 "Create managed instance")]
+[!code-powershell-interactive[main](~/../powershell_scripts/sql-database/managed-instance/create-and-configure-managed-instance.ps1 "Create managed instance")]
 
 ## Clean up deployment
 

@@ -78,7 +78,7 @@ go
 
 ### Changing the connection type does not affect connections through the failover group endpoint
 
-If an instance participates in an [auto-failover group](../database/auto-failover-group-overview.md), changing the instance's [connection type](../managed-instance/connection-types-overview.md) doesn't take effect for the connections established through the failover group listener endpoint.
+If an instance participates in an [auto-failover group](auto-failover-group-sql-mi.md), changing the instance's [connection type](../managed-instance/connection-types-overview.md) doesn't take effect for the connections established through the failover group listener endpoint.
 
 **Workaround**: Drop and recreate auto-failover group after changing the connection type.
 

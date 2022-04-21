@@ -11,6 +11,7 @@ ms.author: dfurman
 ms.reviewer: kendralittle, mathoma
 ms.date: 04/06/2022
 ms.custom: devx-track-azurepowershell
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # vCore purchasing model overview - Azure SQL Database and Azure SQL Managed Instance 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -65,7 +66,7 @@ The following factors affect the amount of storage used for data and log files, 
 - In the General Purpose and Business Critical tiers, you are charged for the maximum storage size configured for a database, elastic pool, or managed instance.
 - For SQL Database, you can select any maximum data size between 1 GB and the supported storage size maximum, in 1 GB increments. For SQL Managed Instance, select data sizes in multiples of 32 GB up to the supported storage size maximum. 
 
-To monitor the current allocated and used data storage size in SQL Database, use the *allocated_data_storage* and *storage* Azure Monitor [metrics](../../azure-monitor/essentials/metrics-supported.md#microsoftsqlserversdatabases) respectively. 
+To monitor the current allocated and used data storage size in SQL Database, use the *allocated_data_storage* and *storage* Azure Monitor [metrics](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) respectively. 
 
 For both SQL Database and SQL Managed instance, to monitor the current allocated and used storage size of individual data and log files in a database by using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
 

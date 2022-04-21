@@ -47,7 +47,7 @@ To change the Connection Type using the Azure portal,open the Virtual Network pa
 
 - **Script to change connection type settings using PowerShell:**
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 
 The following PowerShell script shows how to change the connection type for a managed instance to `Redirect`.
 

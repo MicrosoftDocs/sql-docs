@@ -8,6 +8,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: kendralittle, vanto, mathoma, wiassaf
 ms.date: 02/14/2022
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Azure Active Directory service principal with Azure SQL
@@ -25,7 +26,7 @@ When an Azure AD application is registered using the Azure portal or a PowerShel
 - An application object
 - A service principal object
 
-For more information on Azure AD applications, see [Application and service principal objects in Azure Active Directory](../../active-directory/develop/app-objects-and-service-principals.md) and [Create an Azure service principal with Azure PowerShell](/powershell/azure/create-azure-service-principal-azureps).
+For more information on Azure AD applications, see [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) and [Create an Azure service principal with Azure PowerShell](/powershell/azure/create-azure-service-principal-azureps).
 
 SQL Database and SQL Managed Instance support the following Azure AD objects:
 
@@ -37,7 +38,7 @@ The T-SQL command `CREATE USER [Azure_AD_Object] FROM EXTERNAL PROVIDER` on beha
 
 ## Functionality of Azure AD user creation using service principals
 
-Supporting this functionality is useful in Azure AD application automation processes where Azure AD objects are created and maintained in SQL Database without human interaction. Service principals can be an Azure AD admin for the SQL logical server, as part of a group or an individual user. The application can automate Azure AD object creation in SQL Database when executed as a system administrator, and does not require any additional SQL privileges. This allows for a full automation of a database user creation. This feature also supports Azure AD system-assigned managed identity and user-assigned managed identity  that can be created as users in SQL Database on behalf of service principals. For more information, see [What are managed identities for Azure resources?](../../active-directory/managed-identities-azure-resources/overview.md)
+Supporting this functionality is useful in Azure AD application automation processes where Azure AD objects are created and maintained in SQL Database without human interaction. Service principals can be an Azure AD admin for the SQL logical server, as part of a group or an individual user. The application can automate Azure AD object creation in SQL Database when executed as a system administrator, and does not require any additional SQL privileges. This allows for a full automation of a database user creation. This feature also supports Azure AD system-assigned managed identity and user-assigned managed identity  that can be created as users in SQL Database on behalf of service principals. For more information, see [What are managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview)
 
 ## Enable service principals to create Azure AD users
 
@@ -66,7 +67,7 @@ To enable an Azure AD object creation in SQL Database on behalf of an Azure AD a
     > Server identity can be assigned using REST API and CLI commands as well. For more information, see [az sql server create](/cli/azure/sql/server#az-sql-server-create), [az sql server update](/cli/azure/sql/server#az-sql-server-update), and [Servers - REST API](/rest/api/sql/2020-08-01-preview/servers).
 
 
-2. Grant the Azure AD [**Directory Readers**](../../active-directory/roles/permissions-reference.md#directory-readers) permission to the server identity created or assigned to the server.
+2. Grant the Azure AD [**Directory Readers**](/azure/active-directory/roles/permissions-reference#directory-readers) permission to the server identity created or assigned to the server.
     - To grant this permission, follow the description used for SQL Managed Instance that is available in the following article: [Provision Azure AD admin (SQL Managed Instance)](authentication-aad-configure.md?tabs=azure-powershell#provision-azure-ad-admin-sql-managed-instance)
     - The Azure AD user who is granting this permission must be part of the Azure AD **Global Administrator** or **Privileged Roles Administrator** role.
     - For dedicated SQL pools in an Azure Synapse workspace, use the workspace's managed identity instead of the Azure SQL server identity.
@@ -74,7 +75,7 @@ To enable an Azure AD object creation in SQL Database on behalf of an Azure AD a
 > [!IMPORTANT]
 > With [Microsoft Graph](/graph/overview) support for Azure SQL, the Directory Readers role can be replaced with using lower level permissions. For more information, see [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
 >
-> Steps 1 and 2 must be executed in the above order. First, create or assign the server identity, followed by granting the [**Directory Readers**](../../active-directory/roles/permissions-reference.md#directory-readers) permission, or lower level permissions discussed in [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md). Omitting one of these steps, or both will cause an execution error during an Azure AD object creation in Azure SQL on behalf of an Azure AD application.
+> Steps 1 and 2 must be executed in the above order. First, create or assign the server identity, followed by granting the [**Directory Readers**](/azure/active-directory/roles/permissions-reference#directory-readers) permission, or lower level permissions discussed in [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md). Omitting one of these steps, or both will cause an execution error during an Azure AD object creation in Azure SQL on behalf of an Azure AD application.
 >
 > You can assign the **Directory Readers** role to a group in Azure AD. The group owners can then add the managed identity as a member of this group, which would bypass the need for a **Global Administrator** or **Privileged Roles Administrator** to grant the **Directory Readers** role. For more information on this feature, see [Directory Readers role in Azure Active Directory for Azure SQL](authentication-aad-directory-readers-role.md).
 

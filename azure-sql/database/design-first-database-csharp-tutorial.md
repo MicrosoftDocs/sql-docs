@@ -36,7 +36,7 @@ An installation of [Visual Studio 2019](https://www.visualstudio.com/downloads/)
 
 ## Create a blank database in Azure SQL Database
 
-A database in Azure SQL Database is created with a defined set of compute and storage resources. The database is created within an [Azure resource group](../../active-directory-b2c/overview.md) and is managed using an [logical SQL server](logical-servers.md).
+A database in Azure SQL Database is created with a defined set of compute and storage resources. The database is created within an [Azure resource group](/azure/active-directory-b2c/overview) and is managed using an [logical SQL server](logical-servers.md).
 
 Follow these steps to create a blank database.
 
@@ -106,7 +106,7 @@ Your IP address can now pass through the IP firewall. You can now connect to you
 > [!IMPORTANT]
 > By default, access through the SQL Database IP firewall is enabled for all Azure services. Click **OFF** on this page to disable access for all Azure services.
 
-[!INCLUDE [sql-database-csharp-adonet-create-query-2](../../../includes/sql-database-csharp-adonet-create-query-2.md)]
+[!INCLUDE [sql-database-csharp-adonet-create-query-2](../includes/sql-database-csharp-adonet-create-query-2.md)]
 
 ## Next steps
 
@@ -124,4 +124,4 @@ In this tutorial, you learned basic database tasks such as create a database and
 Advance to the next tutorial to learn about data migration.
 
 > [!div class="nextstepaction"]
-> [Migrate SQL Server to Azure SQL Database offline using DMS](../../dms/tutorial-sql-server-to-azure-sql.md)
+> [Migrate SQL Server to Azure SQL Database offline using DMS](/azure/dms/tutorial-sql-server-to-azure-sql)

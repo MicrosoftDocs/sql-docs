@@ -106,8 +106,8 @@ When an application from Azure tries to connect to the server, the firewall chec
 
 To be able to create and manage IP firewall rules for the Azure SQL Server, you will need to either be:
 
-- in the [SQL Server Contributor](../../role-based-access-control/built-in-roles.md#sql-server-contributor) role
-- in the [SQL Security Manager](../../role-based-access-control/built-in-roles.md#sql-security-manager) role
+- in the [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor) role
+- in the [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) role
 - the owner of the resource that contains the Azure SQL Server
 
 ## Create and manage IP firewall rules
@@ -181,7 +181,7 @@ EXECUTE sp_delete_firewall_rule @name = N'ContosoFirewallRule'
 
 ### Use PowerShell to manage server-level IP firewall rules
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all development is now for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az and AzureRm modules are substantially identical.
 

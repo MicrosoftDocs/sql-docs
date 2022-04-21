@@ -57,7 +57,7 @@ For more information on how to configure Automated Backup for SQL VMs, see one o
 
 ## <a id="azbackup"></a> Azure Backup for SQL VMs
 
-[Azure Backup](../../../backup/index.yml) provides an Enterprise class backup capability for SQL Server on Azure VMs. All backups are stored and managed in a Recovery Services vault. There are several advantages that this solution provides, especially for Enterprises:
+[Azure Backup](/azure/backup/index) provides an Enterprise class backup capability for SQL Server on Azure VMs. All backups are stored and managed in a Recovery Services vault. There are several advantages that this solution provides, especially for Enterprises:
 
 - **Zero-infrastructure backup**: You do not have to manage backup servers or storage locations.
 - **Scale**: Protect many SQL VMs and thousands of databases.
@@ -70,7 +70,7 @@ For more information on how to configure Automated Backup for SQL VMs, see one o
 - **Consolidated email alerts for failures**: Configure consolidated email notifications for any failures.
 - **Azure role-based access control**: Determine who can manage backup and restore operations through the portal.
 
-This Azure Backup solution for SQL VMs is generally available. For more information, see [Back up SQL Server database to Azure](../../../backup/backup-azure-sql-database.md).
+This Azure Backup solution for SQL VMs is generally available. For more information, see [Back up SQL Server database to Azure](/azure/backup/backup-azure-sql-database).
 
 ## <a id="manual"></a> Manual backup
 
@@ -86,7 +86,7 @@ The following sections describe several manual backup and restore options in mor
 
 ### Backup to attached disks
 
-For SQL Server on Azure VMs, you can use native backup and restore techniques using attached disks on the VM for the destination of the backup files. However, there is a limit to the number of disks you can attach to an Azure virtual machine, based on the [size of the virtual machine](../../../virtual-machines/sizes.md?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). There is also the overhead of disk management to consider.
+For SQL Server on Azure VMs, you can use native backup and restore techniques using attached disks on the VM for the destination of the backup files. However, there is a limit to the number of disks you can attach to an Azure virtual machine, based on the [size of the virtual machine](/azure/virtual-machines/sizes?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). There is also the overhead of disk management to consider.
 
 For an example of how to manually create a full database backup using SQL Server Management Studio (SSMS) or Transact-SQL, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 

@@ -355,7 +355,7 @@ The Data SQL Engineering team developed these resources. This team's core charte
 
 - To check the availability of services applicable to SQL Server, see the [Azure Global infrastructure center](https://azure.microsoft.com/global-infrastructure/services/?regions=all&amp;products=synapse-analytics,virtual-machines,sql-database).
 
-- For a matrix of the Microsoft and third-party services and tools that are available to help you with various database and data migration scenarios and specialized tasks, see [Services and tools for data migration](../../../dms/dms-tools-matrix.md).
+- For a matrix of the Microsoft and third-party services and tools that are available to help you with various database and data migration scenarios and specialized tasks, see [Services and tools for data migration](/azure/dms/dms-tools-matrix).
 
 - To learn more about Azure SQL, see:
    - [Deployment options](../../azure-sql-iaas-vs-paas-what-is-overview.md)

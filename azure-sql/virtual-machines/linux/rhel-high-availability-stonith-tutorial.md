@@ -30,7 +30,7 @@ This tutorial will use the Azure CLI to deploy resources in Azure.
 
 If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
-[!INCLUDE [azure-cli-prepare-your-environment.md](../../../../includes/azure-cli-prepare-your-environment.md)]
+[!INCLUDE [azure-cli-prepare-your-environment.md](../../includes/azure-cli-prepare-your-environment.md)]
 
 - This article requires version 2.0.30 or later of the Azure CLI. If using Azure Cloud Shell, the latest version is already installed.
 
@@ -38,7 +38,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
 If you have more than one subscription, [set the subscription](/cli/azure/manage-azure-subscriptions-azure-cli) that you want deploy these resources to.
 
-Use the following command to create a resource group `<resourceGroupName>` in a region. Replace `<resourceGroupName>` with a name of your choosing. We're using `East US 2` for this tutorial. For more information, see the following [Quickstart](../../../application-gateway/quick-create-cli.md).
+Use the following command to create a resource group `<resourceGroupName>` in a region. Replace `<resourceGroupName>` with a name of your choosing. We're using `East US 2` for this tutorial. For more information, see the following [Quickstart](/azure/application-gateway/quick-create-cli).
 
 ```azurecli-interactive
 az group create --name <resourceGroupName> --location eastus2
@@ -260,7 +260,7 @@ You should get results similar to the following once the command completes for e
 
 ### Test connection to the created VMs
 
-Connect to VM1 or the other VMs using the following command in Azure Cloud Shell. If you are unable to find your VM IPs, follow this [Quickstart on Azure Cloud Shell](../../../cloud-shell/quickstart.md#ssh-into-your-linux-vm).
+Connect to VM1 or the other VMs using the following command in Azure Cloud Shell. If you are unable to find your VM IPs, follow this [Quickstart on Azure Cloud Shell](/azure/cloud-shell/quickstart#ssh-into-your-linux-vm).
 
 ```azurecli-interactive
 ssh <username>@publicipaddress
@@ -449,9 +449,9 @@ In this section, we will enable and start the pcsd service, and then configure t
 
 ## Configure the fencing agent
 
-A STONITH device provides a fencing agent. The below instructions are modified for this tutorial. For more information, see [create a STONITH device](../../../virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker.md#create-stonith-device).
+A STONITH device provides a fencing agent. The below instructions are modified for this tutorial. For more information, see [create a STONITH device](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker#create-stonith-device).
  
-[Check the version of the Azure Fence Agent to ensure that it's updated](../../../virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker.md#cluster-installation). Use the following command:
+[Check the version of the Azure Fence Agent to ensure that it's updated](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker#cluster-installation). Use the following command:
 
 ```bash
 sudo yum info fence-agents-azure-arm
@@ -490,7 +490,7 @@ Description : The fence-agents-azure-arm package contains a fence agent for Azur
  
 ### Create a custom role for the fence agent
 
-Follow the tutorial to [Create an Azure custom role using Azure CLI](../../../role-based-access-control/tutorial-custom-role-cli.md#create-a-custom-role).
+Follow the tutorial to [Create an Azure custom role using Azure CLI](/azure/role-based-access-control/tutorial-custom-role-cli#create-a-custom-role).
 
 Your json file should look similar to the following:
 
@@ -695,7 +695,7 @@ We currently don't support AD authentication to the AG endpoint. Therefore, we m
 1. Connect to **all nodes** using SQL Server Management Studio (SSMS) or SQL CMD. Run the following commands to enable an AlwaysOn_health session and create a master key:
 
     > [!IMPORTANT]
-    > If you are connecting remotely to your SQL Server instance, you will need to have port 1433 open on your firewall. You'll also need to allow inbound connections to port 1433 in your NSG for each VM. For more information, see [Create a security rule](../../../virtual-network/manage-network-security-group.md#create-a-security-rule) for creating an inbound security rule.
+    > If you are connecting remotely to your SQL Server instance, you will need to have port 1433 open on your firewall. You'll also need to allow inbound connections to port 1433 in your NSG for each VM. For more information, see [Create a security rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) for creating an inbound security rule.
 
     - Replace the `<Master_Key_Password>` with your own password.
 

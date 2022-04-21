@@ -160,7 +160,7 @@ The Data SQL Engineering team developed these resources. This team's core charte
 
 ## Next steps
 
-- For Microsoft and third-party services and tools to assist you with various database and data migration scenarios, see [Service and tools for data migration](../../../dms/dms-tools-matrix.md).
+- For Microsoft and third-party services and tools to assist you with various database and data migration scenarios, see [Service and tools for data migration](/azure/dms/dms-tools-matrix).
 
 - To learn more about Azure SQL Database, see:
    - [An overview of SQL Database](../../database/sql-database-paas-overview.md)

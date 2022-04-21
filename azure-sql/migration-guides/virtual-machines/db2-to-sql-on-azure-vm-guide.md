@@ -84,7 +84,7 @@ To convert the schema, follow these steps:
     1. Provide authentication details. 
     1. Select **Connect**.
 
-    :::image type="content" source="../../../../includes/media/virtual-machines-sql-server-connection-steps/rm-ssms-connect.png" alt-text="Screenshot that shows the details needed to connect to your SQL Server on Azure VM.":::
+    :::image type="content" source="media/db2-to-sql-on-azure-vm-guide/rm-ssms-connect.png" alt-text="Screenshot that shows the details needed to connect to your SQL Server on Azure VM.":::
 
 1. Right-click the schema and then choose **Convert Schema**. Alternatively, you can choose **Convert Schema** from the top navigation bar after selecting your schema.
 
@@ -154,6 +154,6 @@ The Data SQL Engineering team developed these resources. This team's core charte
 
 After migration, review the [Post-migration validation and optimization guide](/sql/relational-databases/post-migration-validation-and-optimization-guide). 
 
-For Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios, see [Data migration services and tools](../../../dms/dms-tools-matrix.md).
+For Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios, see [Data migration services and tools](/azure/dms/dms-tools-matrix).
 
 For video content, see [Overview of the migration journey](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).

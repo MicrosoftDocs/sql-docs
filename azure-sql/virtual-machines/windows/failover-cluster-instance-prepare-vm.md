@@ -45,19 +45,19 @@ The configuration settings for your virtual machine vary depending on the storag
 
 ## Choose VM availability 
 
-The failover cluster feature requires virtual machines to be placed in an [availability set](../../../virtual-machines/linux/tutorial-availability-sets.md) or an [availability zone](../../../availability-zones/az-overview.md#availability-zones).
+The failover cluster feature requires virtual machines to be placed in an [availability set](/azure/virtual-machines/linux/tutorial-availability-sets) or an [availability zone](/azure/availability-zones/az-overview#availability-zones).
 
 Carefully select the VM availability option that matches your intended cluster configuration: 
 
 - **Azure shared disks**: the availability option varies if you're using Premium SSD or UltraDisk:
    - **Premium SSD Zone Redundant Storage (ZRS)**:
-   [Availability Zone](../../../availability-zones/az-overview.md#availability-zones) in different zones. [Premium SSD ZRS](../../../virtual-machines/disks-redundancy.md#zone-redundant-storage-for-managed-disks) replicates your Azure managed disk synchronously across three Azure availability zones in the selected region. VMs part of failover cluster can be placed in different availability zones, helping you achieve a zone-redundant SQL Server FCI that provides a VM availability SLA of 99.99%. Disk latency for ZRS is higher due to the cross-zonal copy of data.
+   [Availability Zone](/azure/availability-zones/az-overview#availability-zones) in different zones. [Premium SSD ZRS](/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks) replicates your Azure managed disk synchronously across three Azure availability zones in the selected region. VMs part of failover cluster can be placed in different availability zones, helping you achieve a zone-redundant SQL Server FCI that provides a VM availability SLA of 99.99%. Disk latency for ZRS is higher due to the cross-zonal copy of data.
    - **Premium SSD Locally Redundant Storage (LRS)**: 
-   [Availability Set](../../../virtual-machines/windows/tutorial-availability-sets.md#create-an-availability-set) in different fault/update domains for [Premium SSD LRS](../../../virtual-machines/disks-redundancy.md#locally-redundant-storage-for-managed-disks). You can also choose to place the VMs inside a [proximity placement group](../../../virtual-machines/windows/proximity-placement-groups-portal.md) to locate them closer to each other. Combining availability set and proximity placement group provides the lowest latency for shared disks as data is replicated locally within one data center and provides VM availability SLA of 99.95%.
+   [Availability Set](/azure/virtual-machines/windows/tutorial-availability-sets#create-an-availability-set) in different fault/update domains for [Premium SSD LRS](/azure/virtual-machines/disks-redundancy#locally-redundant-storage-for-managed-disks). You can also choose to place the VMs inside a [proximity placement group](/azure/virtual-machines/windows/proximity-placement-groups-portal) to locate them closer to each other. Combining availability set and proximity placement group provides the lowest latency for shared disks as data is replicated locally within one data center and provides VM availability SLA of 99.95%.
    - **Ultra Disk Locally Redundant Storage (LRS)**: 
-   [Availability zone](../../../virtual-machines/windows/create-portal-availability-zone.md#confirm-zone-for-managed-disk-and-ip-address) but the VMs must be placed in the same availability zone. [Ultra disks](../../../virtual-machines/disks-enable-ultra-ssd.md) offers lowest disk latency and is best for IO intensive workloads. Since all VMs part of the FCI have be in the same availability zone, the VM availability is only 99.9%. 
-- **Premium file shares**: [Availability set](../../../virtual-machines/windows/tutorial-availability-sets.md#create-an-availability-set) or [Availability Zone](../../../virtual-machines/windows/create-portal-availability-zone.md#confirm-zone-for-managed-disk-and-ip-address).
-- **Storage Spaces Direct**: [Availability Set](../../../virtual-machines/windows/tutorial-availability-sets.md#create-an-availability-set).
+   [Availability zone](/azure/virtual-machines/windows/create-portal-availability-zone#confirm-zone-for-managed-disk-and-ip-address) but the VMs must be placed in the same availability zone. [Ultra disks](/azure/virtual-machines/disks-enable-ultra-ssd) offers lowest disk latency and is best for IO intensive workloads. Since all VMs part of the FCI have be in the same availability zone, the VM availability is only 99.9%. 
+- **Premium file shares**: [Availability set](/azure/virtual-machines/windows/tutorial-availability-sets#create-an-availability-set) or [Availability Zone](/azure/virtual-machines/windows/create-portal-availability-zone#confirm-zone-for-managed-disk-and-ip-address).
+- **Storage Spaces Direct**: [Availability Set](/azure/virtual-machines/windows/tutorial-availability-sets#create-an-availability-set).
 
 > [!IMPORTANT]
 > You can't set or change the availability set after you've created a virtual machine.
@@ -86,7 +86,7 @@ If you want to route connections directly to your SQL Server FCI, place both vir
 
 This approach eliminates the need for an Azure Load Balancer or a distributed network name (DNN) when connecting to your SQL Server FCI. 
 
-If you choose to deploy your SQL Server VMs to multiple subnets, you'll first need to create the virtual network with two extra subnets, and once your SQL Server VMs are created, [assign secondary IP addresses to the VM](#assign-secondary-ip-addresses).  To learn more, see [Virtual network overview](../../../virtual-network/virtual-networks-overview.md). The subnet names and IP addresses in this section are provided as just an example, and may vary in your environment. 
+If you choose to deploy your SQL Server VMs to multiple subnets, you'll first need to create the virtual network with two extra subnets, and once your SQL Server VMs are created, [assign secondary IP addresses to the VM](#assign-secondary-ip-addresses).  To learn more, see [Virtual network overview](/azure/virtual-network/virtual-networks-overview). The subnet names and IP addresses in this section are provided as just an example, and may vary in your environment. 
 To create the virtual network in the Azure portal, follow these steps:
 
 1. Go to your resource group in the [Azure portal](https://portal.azure.com) and select **+ Create**
@@ -166,7 +166,7 @@ Place both virtual machines:
 - On the same virtual network as your domain controller and DNS server or on a virtual network that has suitable connectivity to your domain controller.
 - In the Azure availability set or availability zone.
 
-You can create an Azure virtual machine by using an image [with](sql-vm-create-portal-quickstart.md) or [without](../../../virtual-machines/windows/quick-create-portal.md) SQL Server preinstalled to it. If you choose the SQL Server image, you'll need to manually uninstall the SQL Server instance before installing the failover cluster instance.  
+You can create an Azure virtual machine by using an image [with](sql-vm-create-portal-quickstart.md) or [without](/azure/virtual-machines/windows/quick-create-portal) SQL Server preinstalled to it. If you choose the SQL Server image, you'll need to manually uninstall the SQL Server instance before installing the failover cluster instance.  
 
 ### Assign secondary IP addresses
 
@@ -254,7 +254,7 @@ This table details the ports that you might need to open, depending on your FCI 
 
 ## Join the domain
 
-You also need to join your virtual machines to the domain. You can do so by using a [quickstart template](../../../active-directory-domain-services/join-windows-vm-template.md#join-an-existing-windows-server-vm-to-a-managed-domain). 
+You also need to join your virtual machines to the domain. You can do so by using a [quickstart template](/azure/active-directory-domain-services/join-windows-vm-template#join-an-existing-windows-server-vm-to-a-managed-domain). 
 
 ## Review storage configuration
 

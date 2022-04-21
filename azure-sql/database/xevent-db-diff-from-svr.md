@@ -11,11 +11,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: kendralittle, mathoma
 ms.date: 07/23/2021
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Extended events in Azure SQL Database 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-[!INCLUDE [sql-database-xevents-selectors-1-include](../../../includes/sql-database-xevents-selectors-1-include.md)]
+[!INCLUDE [sql-database-xevents-selectors-1-include](../includes/sql-database-xevents-selectors-1-include.md)]
 
 The feature set of extended events in Azure SQL Database is a robust subset of the features on SQL Server and Azure SQL Managed Instance.
 
@@ -183,7 +184,7 @@ The **Event File** target might experience network latency or failures while per
 
 - [Azure Storage Cmdlets](/powershell/module/Azure.Storage)
 - [Using Azure PowerShell with Azure Storage](/powershell/module/az.storage/)
-- [How to use Blob storage from .NET](../../storage/blobs/storage-quickstart-blobs-dotnet.md)
+- [How to use Blob storage from .NET](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
 - [CREATE CREDENTIAL (Transact-SQL)](/sql/t-sql/statements/create-credential-transact-sql)
 - [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)
 - The Azure *Service Updates* webpage, narrowed by parameter to Azure SQL Database:

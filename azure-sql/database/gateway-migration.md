@@ -21,7 +21,7 @@ Microsoft periodically refreshes hardware to optimize the customer experience. D
 To avoid service disruptions during refreshes, allow the communication with SQL Gateway IP subnet ranges for the region. Review [SQL Gateway IP subnet ranges](connectivity-architecture.md#gateway-ip-addresses) and include the ranges for your region.
 
 
-Customers can [use the Azure portal to set up activity log alerts](../../service-health/alerts-activity-log-service-notifications-portal.md).
+Customers can [use the Azure portal to set up activity log alerts](/azure/service-health/alerts-activity-log-service-notifications-portal).
 
 
 ## Status updates

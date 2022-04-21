@@ -23,7 +23,7 @@ For a quickstart showing you how to create a managed instance, see [Quickstart: 
 
 ## PowerShell: Create and configure managed instances
 
-[!INCLUDE [updated-for-az](../../../includes/updated-for-az.md)]
+[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRM modules are substantially identical.
 
@@ -47,7 +47,7 @@ To create and manage managed instances with Azure PowerShell, use the following 
 
 ## Azure CLI: Create and configure managed instances
 
-To create and configure managed instances with [Azure CLI](/cli/azure), use the following [Azure CLI commands for SQL Managed Instance](/cli/azure/sql/mi). Use [Azure Cloud Shell](../../cloud-shell/overview.md) to run Azure CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows.
+To create and configure managed instances with [Azure CLI](/cli/azure), use the following [Azure CLI commands for SQL Managed Instance](/cli/azure/sql/mi). Use [Azure Cloud Shell](/azure/cloud-shell/overview) to run Azure CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows.
 
 > [!TIP]
 > For an Azure CLI quickstart, see [Working with SQL Managed Instance using Azure CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44).

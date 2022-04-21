@@ -11,6 +11,7 @@ author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: kendralittle, mathoma, urmilano, wiassaf
 ms.date: 06/25/2019
+monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 
 # Dynamically scale database resources with minimal downtime

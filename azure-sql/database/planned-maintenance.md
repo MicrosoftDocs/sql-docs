@@ -38,11 +38,11 @@ Any client production application that connects to a cloud database service shou
 
 ### Service Health Alert
 
-If you want to receive alerts for service issues or planned maintenance activities, you can use Service Health alerts in the Azure portal with appropriate event type and action groups. For more information, see this [Receive alerts on Azure service notifications](../../service-health/alerts-activity-log-service-notifications-portal.md#create-service-health-alert-using-azure-portal).
+If you want to receive alerts for service issues or planned maintenance activities, you can use Service Health alerts in the Azure portal with appropriate event type and action groups. For more information, see this [Receive alerts on Azure service notifications](/azure/service-health/alerts-activity-log-service-notifications-portal#create-service-health-alert-using-azure-portal).
 
 ## Resource health
 
-If your database is experiencing log-on failures, check the [Resource Health](../../service-health/resource-health-overview.md#get-started) window in the [Azure portal](https://portal.azure.com) for the current status. The Health History section contains the downtime reason for each event (when available).
+If your database is experiencing log-on failures, check the [Resource Health](/azure/service-health/resource-health-overview#get-started) window in the [Azure portal](https://portal.azure.com) for the current status. The Health History section contains the downtime reason for each event (when available).
 
 ## Maintenance window feature
 

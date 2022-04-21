@@ -21,9 +21,9 @@ ms.author: mikeray
 # What is change data capture (CDC)?
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-In this article, learn about change data capture (CDC), which records activity on a database when tables and rows have been modified. Change data capture is generally available in Azure SQL Databases, SQL Server, and Azure SQL Managed Instance.
+In this article, learn about change data capture (CDC), which records activity on a database when tables and rows have been modified. Change data capture is generally available in Azure SQL Database, SQL Server, and Azure SQL Managed Instance.
 
-## Overview 
+## Overview
 
 Change data capture (CDC) uses the SQL Server agent to record insert, update, and delete activity that applies to a table. This makes the details of the changes available in an easily consumed relational format. Column information and the metadata that is required to apply the changes to a target environment is captured for the modified rows and stored in change tables that mirror the column structure of the tracked source tables. Table-valued functions are provided to allow systematic access to the change data by consumers.  
   
@@ -205,28 +205,46 @@ Change data capture cannot be enabled on tables with a clustered columnstore ind
 **Partition switching with variables**   
 Using variables with partition switching on databases or tables with change data capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching) to learn more. 
 
-**Availability of CDC in Azure SQL Databases**
-CDC can only be enabled on databases tiers above Standard 3 (S3+). Basic, S0, S1, S2 and subcore Azure SQL Databases are not supported for CDC. 
+**Availability of CDC in Azure SQL Databases**  
+CDC can only be enabled on databases tiers S3 and above. Sub-core (Basic, S0, S1, S2) Azure SQL Databases are not supported for CDC.
 
-**Capture and Cleanup Customization on Azure SQL Databases**
+Dbcopy from database tiers above S3 having CDC enabled to a sub-core SLO presently retains the CDC artifacts, but we'll remove the CDC artifacts in future releases.
+
+**Capture and Cleanup Customization on Azure SQL Databases**   
 Configuring the frequency of the capture and the cleanup processes for CDC in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the scheduler.
 
-**ANSI_WARNINGS on CDC for Azure SQL Databases**
-DDL operations bypassing ANSI_WARNINGS will cause the CDC scheduler to fail. 
+**Computed columns**  
+CDC does not support the values for computed columns even if the computed column is defined as persisted. Computed columns that are included in a capture instance always have a value of `NULL`. This behavior is intended, and not a bug.
 
-**Computed columns**
-CDC does not support the values for computed columns even if the computed column is defined as persisted. Computed columns that are included in a capture instance always have a value of NULL. This behavior is intended, and not a bug.
+**Point-in-time restore (PITR)**  
+If you enable CDC on your database as an AAD user, it is not possible to Point-in-time restore (PITR) to a sub-core SLO. It is recommended that you restore the database to the same as the source or higher SLO, and then disable CDC if necessary.
 
-**Point-in-time restore (PITR)**
-If you enabled CDC on your database as an AAD user, PITR will not work and it will fail. PITR will only work when you enable CDC on your database as a SQL user.
-
-**Azure Active Directory (AAD)**
-If you create a database in Azure SQL Database as an AAD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another AAD user will be able to enable/disable change data capture on the same database.
+**Azure Active Directory (AAD)**  
+If you create a database in Azure SQL Database as an AAD user and enable change data capture (CDC) on it, a SQL user (for example, even sysadmin role) won't be able to disable/make changes to CDC artifacts. However, another AAD user will be able to enable/disable CDC on the same database.
 
 Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an AAD user won't work.
 
-**Aggressive log truncation**
-When enabling CDC on your Azure SQL Database, you should ensure that aggressive log truncation is disabled (the CDC scan uses the database log).
+**Aggressive log truncation**  
+While enabling change data capture (CDC) on your Azure SQL Database, please be aware that aggressive log truncation is disabled (the CDC scan uses the database transaction log).
+
+Enabling change data capture (CDC) on a database disables aggressive log truncation behavior. Active transactions will continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This might result in the transaction log getting full and the database going into read-only mode.
+
+**CDC fails after ALTER COLUMN to VARCHAR and VARBINARY**  
+When the datatype of a column on a CDC-enabled table is changed from `TEXT to VARCHAR` or `IMAGE to VARBINARY` and an existing row is updated to an off-row value. After the update, the CDC scan will result in errors.
+
+**Enabling CDC fails on restored Azure SQL DB created with AAD**  
+Enabling CDC will fail if you create a database in Azure SQL Database as an AAD user and do not enable CDC, then restore the database and enable CDC on the restored database.
+
+Until we fix it in upcoming releases, here are the mitigation options:
+
+- Login as AAD admin of the server
+- Run the command below on the restored DB
+
+```sql
+ALTER AUTHORIZATION ON DATABASE::[<restored_db_name>] TO [<aad_admin_login_name>];
+
+EXEC sys.sp_cdc_enable_db
+```
 
 ## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

@@ -25,8 +25,8 @@ To migrate your Db2 database to SQL Server, you need:
 
 - To verify that your [source environment is supported](/sql/ssma/db2/installing-ssma-for-Db2-client-Db2tosql#prerequisites).
 - [SQL Server Migration Assistant (SSMA) for Db2](https://www.microsoft.com/download/details.aspx?id=54254).
-- [Connectivity](../../zirtual-zachines/windows/ways-to-connect-to-sql.md) between your source environment and your SQL Server VM in Azure. 
-- A target [SQL Server on Azure VM](../../zirtual-zachines/windows/create-sql-vm-portal.md). 
+- [Connectivity](../../virtual-machines/windows/ways-to-connect-to-sql.md) between your source environment and your SQL Server VM in Azure. 
+- A target [SQL Server on Azure VM](../../virtual-machines/windows/create-sql-vm-portal.md). 
 
 ## Pre-migration
 

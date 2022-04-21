@@ -129,7 +129,7 @@ landingContent:
           - text: High availability & disaster recovery
             url: virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview.md
           - text: Performance guidelines
-            url: ./zirtual-zachines/windows/performance-guidelines-best-practices-checklist.md
+            url: ./virtual-machines/windows/performance-guidelines-best-practices-checklist.md
 
   # Card
   - title: Migrate from SQL Server

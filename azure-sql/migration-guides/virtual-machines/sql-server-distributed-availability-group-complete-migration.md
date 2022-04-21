@@ -45,16 +45,16 @@ To failover your distributed availability group, review [failover to secondary a
 
 After the failover, update the connection string of your application to connect to the new primary replica in Azure. At this point, you can choose to maintain the distributed availability group, or use `DROP AVAILABILITY GROUP [DAG]` on the both the source and target SQL Server instances to drop it. 
 
-If your domain controller is on the source side, validate that your target SQL Server VMs in Azure have joined the domain before abandoning the source SQL Server instances. Do not delete the domain controller on the source side until you [create a domain](../../zirtual-zachines/windows/availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md#create-domain-controllers) on the source side in Azure and add your SQL Server VMs to this new domain. 
+If your domain controller is on the source side, validate that your target SQL Server VMs in Azure have joined the domain before abandoning the source SQL Server instances. Do not delete the domain controller on the source side until you [create a domain](../../virtual-machines/windows/availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md#create-domain-controllers) on the source side in Azure and add your SQL Server VMs to this new domain. 
 
 
 ## Next steps
 
-For a tutorial showing you how to migrate a database to SQL Server on Azure Virtual Machines using the T-SQL RESTORE command, see [Migrate a SQL Server database to SQL Server on a virtual machine](../../zirtual-zachines/windows/migrate-to-vm-from-sql-server.md). 
+For a tutorial showing you how to migrate a database to SQL Server on Azure Virtual Machines using the T-SQL RESTORE command, see [Migrate a SQL Server database to SQL Server on a virtual machine](../../virtual-machines/windows/migrate-to-vm-from-sql-server.md). 
 
-For information about SQL Server on Azure Virtual Machines, see the [Overview](../../zirtual-zachines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md). 
+For information about SQL Server on Azure Virtual Machines, see the [Overview](../../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md). 
 
-For information about connecting apps to SQL Server on Azure Virtual Machines, see [Connect applications](../../zirtual-zachines/windows/ways-to-connect-to-sql.md). 
+For information about connecting apps to SQL Server on Azure Virtual Machines, see [Connect applications](../../virtual-machines/windows/ways-to-connect-to-sql.md). 
 
 
 

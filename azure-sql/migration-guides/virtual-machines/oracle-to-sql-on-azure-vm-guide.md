@@ -25,7 +25,7 @@ To migrate your Oracle schema to SQL Server on Azure Virtual Machines, you need:
 
 - A supported source environment.
 - [SQL Server Migration Assistant (SSMA) for Oracle](https://www.microsoft.com/download/details.aspx?id=54258).
-- A target [SQL Server VM](../../zirtual-zachines/windows/sql-vm-create-portal-quickstart.md).
+- A target [SQL Server VM](../../virtual-machines/windows/sql-vm-create-portal-quickstart.md).
 - The [necessary permissions for SSMA for Oracle](/sql/ssma/oracle/connecting-to-oracle-database-oracletosql) and the [provider](/sql/ssma/oracle/connect-to-oracle-oracletosql).
 - Connectivity and sufficient permissions to access the source and the target.
 
@@ -359,7 +359,7 @@ The Data SQL Engineering team developed these resources. This team's core charte
 
 - To learn more about Azure SQL, see:
    - [Deployment options](../../azure-sql-iaas-vs-paas-what-is-overview.md)
-   - [SQL Server on Azure Virtual Machines](../../zirtual-zachines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md)
+   - [SQL Server on Azure Virtual Machines](../../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md)
    - [Azure total Cost of Ownership Calculator](https://azure.microsoft.com/pricing/tco/calculator/)
 
 
@@ -368,8 +368,8 @@ The Data SQL Engineering team developed these resources. This team's core charte
    -  [Best practices to cost and size workloads migrated to Azure](/azure/cloud-adoption-framework/migrate/azure-best-practices/migrate-best-practices-costs) 
 
 - For information about licensing, see:
-   - [Bring your own license with the Azure Hybrid Benefit](../../zirtual-zachines/windows/licensing-model-azure-hybrid-benefit-ahb-change.md)
-   - [Get free extended support for SQL Server 2008 and SQL Server 2008 R2](../../zirtual-zachines/windows/sql-server-2008-extend-end-of-support.md)
+   - [Bring your own license with the Azure Hybrid Benefit](../../virtual-machines/windows/licensing-model-azure-hybrid-benefit-ahb-change.md)
+   - [Get free extended support for SQL Server 2008 and SQL Server 2008 R2](../../virtual-machines/windows/sql-server-2008-extend-end-of-support.md)
 
 - To assess the application access layer, use [Data Access Migration Toolkit Preview](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit).
 - For details on how to do data access layer A/B testing, see [Overview of Database Experimentation Assistant](/sql/dea/database-experimentation-assistant-overview).

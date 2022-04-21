@@ -73,7 +73,7 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
 ## See also
 
-- [Hardware and Software Requirements for Installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
+- [Hardware and Software Requirements for Installing SQL Server](./install/hardware-and-software-requirements-for-installing-sql-server-2019.md)
 
 ## Machine Learning Services
 

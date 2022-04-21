@@ -1,5 +1,6 @@
 ---
-description: "Poll servers controls how frequently the target server connects to the master server to download instructions and upload the results of job execution."
+description: "Poll servers control how frequently the target server connects to the master server to download instructions and upload the results of job execution."
+
 title: "Poll Servers"
 ms.custom: seo-lt-2019
 ms.date: 04/18/2022

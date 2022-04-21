@@ -32,7 +32,7 @@ Azure Data Studio 1.36.0 is the latest general availability (GA) release.
 |----------|---------|
 | Table Designer | Added support for System Versioning, Memory Optimized, and Graph Tables. |
 | Query Plan Viewer | Added support icons and additional support for searching within plans. Added additional telemetry to Execution Plans. Provided support on plan toolbar to enable or disable tooltips. Added support for saving .sql plan files on Azure Data Studio  |
-| SQL Projects |Introduced new SQL Project format based on an SDK-Stye project file |
+| SQL Projects |Introduced new SQL Project format based on an SDK-Style project file |
 | Azure SQL Migration Extension | Announcing General Availability of the Azure SQL Migration Extension |
 | .NET Interactive Notebooks extension | This extension provides additional multi-language support to Jupyter Notebooks. Please reference [.NET Notebooks in Visual Studio Code](https://devblogs.microsoft.com/dotnet/net-interactive-with-sql-net-notebooks-in-visual-studio-code/)for an introduction to using SQL and .NET interactive |
 

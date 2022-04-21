@@ -3,7 +3,7 @@ title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to  configure SQL Server settings on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 04/19/2022
+ms.date: 04/21/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -91,9 +91,9 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 * These examples run mssql-conf by specifying the full path: **/opt/mssql/bin/mssql-conf**. If you choose to navigate to that path instead, run mssql-conf in the context of the current directory: **./mssql-conf**.
 
-## <a id="ad-auth"></a> Configure Active Directory (AD) authentication
+## <a id="ad-auth"></a> Configure Active Directory authentication
 
-The **setup-ad-keytab** option can be used to create a keytab, but the user and Service Principal Names (SPNs) must have been created to use this option. The AD utility, [**adutil**](sql-server-linux-ad-auth-adutil-introduction.md) can be used to create users, SPNs, and keytabs.
+The **setup-ad-keytab** option can be used to create a keytab, but the user and Service Principal Names (SPNs) must have been created to use this option. The Active Directory utility, [**adutil**](sql-server-linux-ad-auth-adutil-introduction.md) can be used to create users, SPNs, and keytabs.
 
 For options on using **setup-ad-keytab**, run the following command:
 

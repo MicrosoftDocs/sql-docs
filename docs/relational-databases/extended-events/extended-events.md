@@ -14,7 +14,7 @@ author: LitKnd
 ms.author: kendralittle
 ms.custom:
   - intro-overview
-ms.date: 03/29/2022
+ms.date: 04/18/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database SQL Managed instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] The Extended Events architecture enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem. Extended Events is highly configurable, lightweight, and scales very well. For more information, see [Extended Events Architecture](extended-events.md#extended-events-architecture).
+The Extended Events architecture enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem. Extended Events is highly configurable, lightweight, and scales very well. For more information, see [Extended Events Architecture](extended-events.md#extended-events-architecture).
 
 Extended Events replace the deprecated [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) and SQL Server Profiler features.
 

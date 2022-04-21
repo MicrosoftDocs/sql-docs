@@ -31,8 +31,8 @@ In this tutorial, you will learn how to:
 > - Test failover.
 
  There are multiple ways to establish connectivity between managed instances in different virtual networks, including:
- * [Azure ExpressRoute](../../expressroute/expressroute-howto-circuit-portal-resource-manager.md)
- * [Virtual network peering](../../virtual-network/virtual-network-peering-overview.md)
+ * [Azure ExpressRoute](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)
+ * [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview)
  * VPN gateways
 
 This tutorial provides steps for creating and connecting VPN gateways. If you prefer to use ExpressRoute or VNet peering, replace the gateway steps accordingly, or 
@@ -64,7 +64,7 @@ To complete the tutorial, make sure you have the following items:
 
 In this step, you will create the resource group and the primary managed instance for your failover group using the Azure portal or PowerShell. 
 
-Deploy both managed instances to [paired regions](../../availability-zones/cross-region-replication-azure.md) for performance reasons. Managed instances residing in geo-paired regions have much better performance compared to unpaired regions. 
+Deploy both managed instances to [paired regions](/azure/availability-zones/cross-region-replication-azure) for performance reasons. Managed instances residing in geo-paired regions have much better performance compared to unpaired regions. 
 
 
 # [Portal](#tab/azure-portal) 
@@ -747,7 +747,7 @@ This portion of the tutorial uses the following PowerShell cmdlets:
 ## Create a primary gateway 
 
 > [!NOTE]
-> The SKU of the gateway affects throughput performance. This tutorial deploys a gateway with the most basic SKU (`HwGw1`). Deploy a higher SKU (example: `VpnGw3`) to achieve higher throughput. For all available options, see [Gateway SKUs](../../vpn-gateway/vpn-gateway-about-vpngateways.md#benchmark)
+> The SKU of the gateway affects throughput performance. This tutorial deploys a gateway with the most basic SKU (`HwGw1`). Deploy a higher SKU (example: `VpnGw3`) to achieve higher throughput. For all available options, see [Gateway SKUs](/azure/vpn-gateway/vpn-gateway-about-vpngateways#benchmark)
 
 # [Portal](#tab/azure-portal)
 

@@ -83,7 +83,7 @@ landingContent:
           - text: Understand the performance diagnostics log
             url: intelligent-insights-use-diagnostics-log.md
           - text: Azure SQL Analytics
-            url: ../../azure-monitor/insights/azure-sql.md
+            url: /azure/azure-monitor/insights/azure-sql
           - text: Detectable performance patterns
             url: intelligent-insights-troubleshoot-performance.md
           - text: Intelligent query processing

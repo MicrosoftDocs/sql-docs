@@ -47,7 +47,7 @@ To create and manage managed instances with Azure PowerShell, use the following 
 
 ## Azure CLI: Create and configure managed instances
 
-To create and configure managed instances with [Azure CLI](/cli/azure), use the following [Azure CLI commands for SQL Managed Instance](/cli/azure/sql/mi). Use [Azure Cloud Shell](../../cloud-shell/overview.md) to run Azure CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows.
+To create and configure managed instances with [Azure CLI](/cli/azure), use the following [Azure CLI commands for SQL Managed Instance](/cli/azure/sql/mi). Use [Azure Cloud Shell](/azure/cloud-shell/overview) to run Azure CLI in your browser, or [install](/cli/azure/install-azure-cli) it on macOS, Linux, or Windows.
 
 > [!TIP]
 > For an Azure CLI quickstart, see [Working with SQL Managed Instance using Azure CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44).

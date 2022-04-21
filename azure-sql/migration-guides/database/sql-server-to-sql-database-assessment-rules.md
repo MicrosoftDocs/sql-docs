@@ -494,7 +494,7 @@ Review impacted objects section in Azure Migrate to see all objects using xp_cmd
 
 To start migrating your SQL Server to Azure SQL Database, see the [SQL Server to SQL Database migration guide](sql-server-to-sql-database-guide.md).
 
-- For a matrix of available Microsoft and third-party services and tools to assist you with various database and data migration scenarios as well as specialty tasks, see [Service and tools for data migration](../../../dms/dms-tools-matrix.md).
+- For a matrix of available Microsoft and third-party services and tools to assist you with various database and data migration scenarios as well as specialty tasks, see [Service and tools for data migration](/azure/dms/dms-tools-matrix).
 
 - To learn more about SQL Database, see:
    - [Overview of Azure SQL Database](../../database/sql-database-paas-overview.md)

@@ -36,7 +36,7 @@ The following section describes the configuration of auditing on your managed in
 
       > [!IMPORTANT]
       > - Use a storage account in the same region as the managed instance to avoid cross-region reads/writes. 
-      > - If your storage account is behind a Virtual Network or a Firewall, please see [Grant access from a virtual network](../../storage/common/storage-network-security.md#grant-access-from-a-virtual-network).
+      > - If your storage account is behind a Virtual Network or a Firewall, please see [Grant access from a virtual network](/azure/storage/common/storage-network-security#grant-access-from-a-virtual-network).
       > - If you change retention period from 0 (unlimited retention) to any other value, please note that retention will only apply to logs written after retention value was changed (logs written during the period when retention was set to unlimited are preserved, even after retention is enabled).
 
    1. In the storage account, go to **Overview** and click **Blobs**.
@@ -52,7 +52,7 @@ The following section describes the configuration of auditing on your managed in
       ![Create blob container configuration](./media/auditing-configure/3_create_container_config.png)
 
     > [!IMPORTANT]
-    > Customers wishing to configure an immutable log store for their server- or database-level audit events should follow the [instructions provided by Azure Storage](../../storage/blobs/immutable-time-based-retention-policy-overview.md#allow-protected-append-blobs-writes). (Please ensure you have selected **Allow additional appends** when you configure the immutable blob storage.)
+    > Customers wishing to configure an immutable log store for their server- or database-level audit events should follow the [instructions provided by Azure Storage](/azure/storage/blobs/immutable-time-based-retention-policy-overview#allow-protected-append-blobs-writes). (Please ensure you have selected **Allow additional appends** when you configure the immutable blob storage.)
   
 3. After you create the container for the audit logs, there are two ways to configure it as the target for the audit logs: [using T-SQL](#blobtsql) or [using the SQL Server Management Studio (SSMS) UI](#blobssms):
 
@@ -234,7 +234,7 @@ To consume audit logs data from Event Hubs, you will need to set up a stream to 
 
 If audit logs are written to Azure Monitor logs, they are available in the Log Analytics workspace, where you can run advanced searches on the audit data. As a starting point, navigate to the Log Analytics workspace. Under the **General** section, click **Logs** and enter a simple query, such as: `search "SQLSecurityAuditEvents"` to view the audit logs.  
 
-Azure Monitor logs gives you real-time operational insights using integrated search and custom dashboards to readily analyze millions of records across all your workloads and servers. For additional useful information about Azure Monitor logs search language and commands, see [Azure Monitor logs search reference](../../azure-monitor/logs/log-query-overview.md).
+Azure Monitor logs gives you real-time operational insights using integrated search and custom dashboards to readily analyze millions of records across all your workloads and servers. For additional useful information about Azure Monitor logs search language and commands, see [Azure Monitor logs search reference](/azure/azure-monitor/logs/log-query-overview).
 
 [!INCLUDE [azure-monitor-log-analytics-rebrand](../includes/azure-monitor-log-analytics-rebrand.md)]
 

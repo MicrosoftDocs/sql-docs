@@ -16,7 +16,7 @@ ms.date: 03/13/2019
 # Quickstart: Configure a point-to-site connection to Azure SQL Managed Instance from on-premises
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This quickstart demonstrates how to connect to Azure SQL Managed Instance using [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) (SSMS) from an on-premises client computer over a point-to-site connection. For information about point-to-site connections, see [About Point-to-Site VPN](../../vpn-gateway/point-to-site-about.md).
+This quickstart demonstrates how to connect to Azure SQL Managed Instance using [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) (SSMS) from an on-premises client computer over a point-to-site connection. For information about point-to-site connections, see [About Point-to-Site VPN](/azure/vpn-gateway/point-to-site-about).
 
 ## Prerequisites
 
@@ -102,4 +102,4 @@ After you connect, you can view your system and user databases in the Databases 
 
 - For a quickstart showing how to connect from an Azure virtual machine, see [Configure a point-to-site connection](point-to-site-p2s-configure.md).
 - For an overview of the connection options for applications, see [Connect your applications to SQL Managed Instance](connect-application-instance.md).
-- To restore an existing SQL Server database from on-premises to a managed instance, you can use [Azure Database Migration Service for migration](../../dms/tutorial-sql-server-to-managed-instance.md) or the [T-SQL RESTORE command](restore-sample-database-quickstart.md) to restore from a database backup file.
+- To restore an existing SQL Server database from on-premises to a managed instance, you can use [Azure Database Migration Service for migration](/azure/dms/tutorial-sql-server-to-managed-instance) or the [T-SQL RESTORE command](restore-sample-database-quickstart.md) to restore from a database backup file.

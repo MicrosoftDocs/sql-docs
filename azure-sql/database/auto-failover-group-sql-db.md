@@ -152,14 +152,14 @@ If you are using [Virtual Network service endpoints and rules](vnet-service-endp
 
 If your business continuity plan requires failover using groups with automatic failover, you can restrict access to your database in SQL Database by using public IP firewall rules. To support automatic failover, follow these steps:
 
-1. [Create a public IP](../../virtual-network/ip-services/virtual-network-public-ip-address.md#create-a-public-ip-address).
-2. [Create a public load balancer](../../load-balancer/quickstart-load-balancer-standard-public-portal.md) and assign the public IP to it.
-3. [Create a virtual network and the virtual machines](../../load-balancer/quickstart-load-balancer-standard-public-portal.md) for your front-end components.
-4. [Create network security group](../../virtual-network/network-security-groups-overview.md) and configure inbound connections.
-5. Ensure that the outbound connections are open to Azure SQL Database in a region by using an `Sql.<Region>` [service tag](../../virtual-network/network-security-groups-overview.md#service-tags).
+1. [Create a public IP](/azure/virtual-network/ip-services/virtual-network-public-ip-address#create-a-public-ip-address).
+2. [Create a public load balancer](/azure/load-balancer/quickstart-load-balancer-standard-public-portal) and assign the public IP to it.
+3. [Create a virtual network and the virtual machines](/azure/load-balancer/quickstart-load-balancer-standard-public-portal) for your front-end components.
+4. [Create network security group](/azure/virtual-network/network-security-groups-overview) and configure inbound connections.
+5. Ensure that the outbound connections are open to Azure SQL Database in a region by using an `Sql.<Region>` [service tag](/azure/virtual-network/network-security-groups-overview#service-tags).
 6. Create a [SQL Database firewall rule](firewall-configure.md) to allow inbound traffic from the public IP address you create in step 1.
 
-For more information on how to configure outbound access and what IP to use in the firewall rules, see [Load balancer outbound connections](../../load-balancer/load-balancer-outbound-connections.md).
+For more information on how to configure outbound access and what IP to use in the firewall rules, see [Load balancer outbound connections](/azure/load-balancer/load-balancer-outbound-connections).
 
 The above configuration will ensure that an automatic geo-failover will not block connections from the front-end components and assumes that the application can tolerate the longer latency between the front end and the data tier.
 
@@ -199,9 +199,9 @@ There is some overlap of content in the following three articles, be sure to mak
 /azure-sql/managed-instance/auto-failover-group-configure-sql-mi.md
 -->
 
-Permissions for a failover group are managed via [Azure role-based access control (Azure RBAC)](../../role-based-access-control/overview.md). 
+Permissions for a failover group are managed via [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview). 
 
-Azure RBAC write access is necessary to create and manage failover groups. The [SQL Server Contributor role](../../role-based-access-control/built-in-roles.md#sql-server-contributor) has all the necessary permissions to manage failover groups.
+Azure RBAC write access is necessary to create and manage failover groups. The [SQL Server Contributor role](/azure/role-based-access-control/built-in-roles#sql-server-contributor) has all the necessary permissions to manage failover groups.
 
 For specific permission scopes, review how to [configure auto-failover groups in Azure SQL Database](auto-failover-group-sql-db.md#permissions). 
 
@@ -215,7 +215,7 @@ Be aware of the following limitations:
 
 ## <a name="programmatically-managing-failover-groups"></a> Programmatically manage failover groups
 
-As discussed previously, auto-failover groups can also be managed programmatically using Azure PowerShell, Azure CLI, and REST API. The following tables describe the set of commands available. Active geo-replication includes a set of Azure Resource Manager APIs for management, including the [Azure SQL Database REST API](/rest/api/sql/) and [Azure PowerShell cmdlets](/powershell/azure/). These APIs require the use of resource groups and support Azure role-based access control (Azure RBAC). For more information on how to implement access roles, see [Azure role-based access control (Azure RBAC)](../../role-based-access-control/overview.md).
+As discussed previously, auto-failover groups can also be managed programmatically using Azure PowerShell, Azure CLI, and REST API. The following tables describe the set of commands available. Active geo-replication includes a set of Azure Resource Manager APIs for management, including the [Azure SQL Database REST API](/rest/api/sql/) and [Azure PowerShell cmdlets](/powershell/azure/). These APIs require the use of resource groups and support Azure role-based access control (Azure RBAC). For more information on how to implement access roles, see [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview).
 
 
 # [PowerShell](#tab/azure-powershell)

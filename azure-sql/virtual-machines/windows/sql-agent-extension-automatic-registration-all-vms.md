@@ -30,7 +30,7 @@ Registering your SQL Server VM with the [SQL IaaS Agent extension](sql-server-ia
 When automatic registration is enabled, a job runs daily to detect whether or not SQL Server is installed on all the unregistered VMs in the subscription. This is done by copying the SQL IaaS agent extension binaries to the VM, then running a one-time utility that checks for the SQL Server registry hive. If the SQL Server hive is detected, the virtual machine is registered with the  extension in lightweight mode. If no SQL Server hive exists in the registry, the binaries are removed. Automatic registration can take up to 4 days to detect newly created SQL Server VMs.
 
 > [!CAUTION]
-> If the SQL Server hive is not present in the registry, removing the binaries might be impacted if there are [resource locks](../../../governance/blueprints/concepts/resource-locking.md#locking-modes-and-states) in place. 
+> If the SQL Server hive is not present in the registry, removing the binaries might be impacted if there are [resource locks](/azure/governance/blueprints/concepts/resource-locking#locking-modes-and-states) in place. 
 
 
 Once automatic registration is enabled for a subscription, all current and future VMs that have SQL Server installed will be registered with the SQL IaaS Agent extension **in lightweight mode without downtime, and without restarting the SQL Server service**. You still need to [manually upgrade to full manageability mode](sql-agent-extension-manually-register-single-vm.md#upgrade-to-full) to take advantage of the full feature set. The license type automatically defaults to that of the VM image. If you use a pay-as-you-go image for your VM, then your license type will be `PAYG`, otherwise your license type will be `AHUB` by default. 
@@ -47,8 +47,8 @@ By default, Azure VMs with SQL Server 2016 or later installed will be automatica
 
 To register your SQL Server VM with the extension, you'll need: 
 
-- An [Azure subscription](https://azure.microsoft.com/free/) and, at minimum, [contributor role](../../../role-based-access-control/built-in-roles.md#all) permissions.
-- An Azure Resource Model [Windows Server 2008 R2 (or later) virtual machine](../../../virtual-machines/windows/quick-create-portal.md) with [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) deployed to the public or Azure Government cloud. Windows Server 2008 is not supported. 
+- An [Azure subscription](https://azure.microsoft.com/free/) and, at minimum, [contributor role](/azure/role-based-access-control/built-in-roles#all) permissions.
+- An Azure Resource Model [Windows Server 2008 R2 (or later) virtual machine](/azure/virtual-machines/windows/quick-create-portal) with [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) deployed to the public or Azure Government cloud. Windows Server 2008 is not supported. 
 
 
 ## Enable

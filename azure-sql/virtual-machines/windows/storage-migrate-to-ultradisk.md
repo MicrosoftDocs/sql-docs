@@ -33,7 +33,7 @@ Complete a [full backup](backup-restore.md) up of your database.
 
 Attach the Ultra SSD to your virtual machine once you have enabled ultradisk compatibility on the VM. 
 
-Ultra disk is supported on a subset of VM sizes and regions. Before proceeding, validate that your VM is in a region, zone, and size that supports ultra disk. You can [determine and validate VM size and region](../../../virtual-machines/disks-enable-ultra-ssd.md#determine-vm-size-and-region-availability) using the Azure CLI or PowerShell. 
+Ultra disk is supported on a subset of VM sizes and regions. Before proceeding, validate that your VM is in a region, zone, and size that supports ultra disk. You can [determine and validate VM size and region](/azure/virtual-machines/disks-enable-ultra-ssd#determine-vm-size-and-region-availability) using the Azure CLI or PowerShell. 
 
 ### Enable compatibility
 
@@ -47,7 +47,7 @@ To enable compatibility, follow these steps:
 
 1. Select **Yes** to **Enable Ultra disk compatibility**. 
 
-   :::image type="content" source="../../../virtual-machines/media/virtual-machines-disks-getting-started-ultra-ssd/enable-ultra-disks-existing-vm.png" alt-text="Screenshot that shows the Yes option.":::
+   :::image type="content" source="/azure/virtual-machines/media/virtual-machines-disks-getting-started-ultra-ssd/enable-ultra-disks-existing-vm.png" alt-text="Screenshot that shows the Yes option.":::
 
 1. Select **Save**. 
 
@@ -55,7 +55,7 @@ To enable compatibility, follow these steps:
 
 ### Attach disk
 
-Use the Azure portal to attach an ultra disk to your virtual machine. For details, see [Attach an ultra disk](../../../virtual-machines/disks-enable-ultra-ssd.md#attach-an-ultra-disk).
+Use the Azure portal to attach an ultra disk to your virtual machine. For details, see [Attach an ultra disk](/azure/virtual-machines/disks-enable-ultra-ssd#attach-an-ultra-disk).
 
 Once the disk is attached, start your VM once more using the Azure portal. 
 

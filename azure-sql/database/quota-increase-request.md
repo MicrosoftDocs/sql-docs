@@ -121,4 +121,4 @@ The final step is to fill in the remaining details of your SQL Database quota re
 
 After you submit your request, it will be reviewed. You will be contacted with an answer based on the information you provided in the form.
 
-For more information about other Azure limits, see [Azure subscription and service limits, quotas, and constraints](../../azure-resource-manager/management/azure-subscription-service-limits.md).
+For more information about other Azure limits, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).

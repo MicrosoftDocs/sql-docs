@@ -48,7 +48,7 @@ Remember that elastic database transactions don't require installing MSDTC. Inst
 
 Azure provides several offerings to host .NET applications. A comparison of the different offerings is available in [Azure App Service, Cloud Services, and Virtual Machines comparison](/azure/architecture/guide/technology-choices/compute-decision-tree). If the guest OS of the offering is smaller than .NET 4.6.1 required for elastic transactions, you need to upgrade the guest OS to 4.6.1.
 
-For Azure App Service, upgrades to the guest OS are currently not supported. For Azure Virtual Machines, simply log into the VM and run the installer for the latest .NET framework. For Azure Cloud Services, you need to include the installation of a newer .NET version into the startup tasks of your deployment. The concepts and steps are documented in [Install .NET on a Cloud Service Role](../../cloud-services/cloud-services-dotnet-install-dotnet.md).  
+For Azure App Service, upgrades to the guest OS are currently not supported. For Azure Virtual Machines, simply log into the VM and run the installer for the latest .NET framework. For Azure Cloud Services, you need to include the installation of a newer .NET version into the startup tasks of your deployment. The concepts and steps are documented in [Install .NET on a Cloud Service Role](/azure/cloud-services/cloud-services-dotnet-install-dotnet).  
 
 Note that the installer for .NET 4.6.1 may require more temporary storage during the bootstrapping process on Azure cloud services than the installer for .NET 4.6. To ensure a successful installation, you need to increase temporary storage for your Azure cloud service in your ServiceDefinition.csdef file in the LocalResources section and the environment settings of your startup task, as shown in the following sample:
 
@@ -229,7 +229,7 @@ Use the following PowerShell cmdlets to manage cross-server communication relati
 
 ## Transactions for SQL Managed Instance
 
-Distributed transactions are supported across databases within multiple instances. When transactions cross managed instance boundaries, the participating instances need to be in a mutual security and communication relationship. This is done by creating a [Server Trust Group](../managed-instance/server-trust-group-overview.md), which can be done by using the Azure portal or Azure PowerShell or the Azure CLI. If instances are not on the same Virtual network then you must configure [Virtual network peering](../../virtual-network/virtual-network-peering-overview.md) and Network security group inbound and outbound rules need to allow ports 5024 and 11000-12000 on all participating Virtual networks.
+Distributed transactions are supported across databases within multiple instances. When transactions cross managed instance boundaries, the participating instances need to be in a mutual security and communication relationship. This is done by creating a [Server Trust Group](../managed-instance/server-trust-group-overview.md), which can be done by using the Azure portal or Azure PowerShell or the Azure CLI. If instances are not on the same Virtual network then you must configure [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview) and Network security group inbound and outbound rules need to allow ports 5024 and 11000-12000 on all participating Virtual networks.
 
   ![Server Trust Groups on Azure Portal][3]
 

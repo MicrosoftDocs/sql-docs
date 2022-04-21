@@ -15,7 +15,7 @@ ms.date: 11/04/2019
 
 # Stream data into Azure SQL Database using Azure Stream Analytics integration (preview)
 
-Users can now ingest, process, view, and analyze real-time streaming data into a table directly from a database in Azure SQL Database. They do so in the Azure portal using [Azure Stream Analytics](../../stream-analytics/stream-analytics-introduction.md). This experience enables a wide variety of scenarios such as connected car, remote monitoring, fraud detection, and many more. In the Azure portal, you can select an events source (Event Hub/IoT Hub), view incoming real-time events, and select a table to store events. You can also write Azure Stream Analytics Query Language queries in the portal to transform incoming events and store them in the selected table. This new entry point is in addition to the creation and configuration experiences that already exist in Stream Analytics. This experience starts from the context of your database, enabling you to quickly set up a Stream Analytics job and navigate seamlessly between the database in Azure SQL Database and Stream Analytics experiences.
+Users can now ingest, process, view, and analyze real-time streaming data into a table directly from a database in Azure SQL Database. They do so in the Azure portal using [Azure Stream Analytics](/azure/stream-analytics/stream-analytics-introduction). This experience enables a wide variety of scenarios such as connected car, remote monitoring, fraud detection, and many more. In the Azure portal, you can select an events source (Event Hub/IoT Hub), view incoming real-time events, and select a table to store events. You can also write Azure Stream Analytics Query Language queries in the portal to transform incoming events and store them in the selected table. This new entry point is in addition to the creation and configuration experiences that already exist in Stream Analytics. This experience starts from the context of your database, enabling you to quickly set up a Stream Analytics job and navigate seamlessly between the database in Azure SQL Database and Stream Analytics experiences.
 
 ![Stream Analytics flow](./media/stream-data-stream-analytics-integration/stream-analytics-flow.png)
 
@@ -26,7 +26,7 @@ Users can now ingest, process, view, and analyze real-time streaming data into a
 - Additional ease of use with preview data: Preview incoming data from the events source (Event Hub/IoT Hub) in the context of selected table
 
 > [!IMPORTANT]
-> An Azure Stream Analytics job can output to Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse Analytics. For more information, see [Outputs](../../stream-analytics/stream-analytics-define-outputs.md).
+> An Azure Stream Analytics job can output to Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse Analytics. For more information, see [Outputs](/azure/stream-analytics/stream-analytics-define-outputs).
 
 ## Prerequisites
 
@@ -72,13 +72,13 @@ To complete the steps in this article, you need the following resources:
 
    - Your **Input** (input events source) from which you'll ingest data  
    - Your **Output** (output table) which will store transformed data
-   - Sample [SAQL query](../../stream-analytics/stream-analytics-stream-analytics-query-patterns.md) with SELECT statement.
+   - Sample [SAQL query](/azure/stream-analytics/stream-analytics-stream-analytics-query-patterns) with SELECT statement.
    - **Input preview**: Shows snapshot of latest incoming data from input events source.
      - The serialization type in your data is automatically detected (JSON/CSV). You can manually change it as well to JSON/CSV/AVRO.
      - You can preview incoming data in the Table format or Raw format.
      - If your data shown isn't current, select **Refresh** to see the latest events.
      - Select **Select time range** to test your query against a specific time range of incoming events.
-     - Select **Upload sample input** to test your query by uploading a sample JSON/CSV file. For more information about testing a SAQL query, see [Test an Azure Stream Analytics job with sample data](../../stream-analytics/stream-analytics-test-query.md).
+     - Select **Upload sample input** to test your query by uploading a sample JSON/CSV file. For more information about testing a SAQL query, see [Test an Azure Stream Analytics job with sample data](/azure/stream-analytics/stream-analytics-test-query).
 
      ![test query](./media/stream-data-stream-analytics-integration/test-query.png)
 
@@ -98,14 +98,14 @@ To complete the steps in this article, you need the following resources:
 7. After you're done authoring & testing the query, select **Save query**. Select **Start Stream Analytics job** to start ingesting transformed data into the SQL table. Once you finalize the following fields, **start** the job.
    - **Output start time**: This defines the time of the first output of the job.  
      - Now: The job will start now and process new incoming data.
-     - Custom: The job will start now but will process data from a specific point in time (that can be in the past or the future). For more information, see [How to start an Azure Stream Analytics job](../../stream-analytics/start-job.md).
+     - Custom: The job will start now but will process data from a specific point in time (that can be in the past or the future). For more information, see [How to start an Azure Stream Analytics job](/azure/stream-analytics/start-job).
    - **Streaming units**: Azure Stream Analytics is priced by the number of streaming units required to process the data into the service. For more information, see [Azure Stream Analytics pricing](https://azure.microsoft.com/pricing/details/stream-analytics/).
    - **Output data error handling**:  
      - Retry: When an error occurs, Azure Stream Analytics retries writing the event indefinitely until the write succeeds. There's no timeout for retries. Eventually all subsequent events are blocked from processing by the event that is retrying. This option is the default output error handling policy.
      - Drop: Azure Stream Analytics will drop any output event that results in a data conversion error. The dropped events can't be recovered for reprocessing later. All transient errors (for example, network errors) are retried regardless of the output error handling policy configuration.
-   - **SQL Database output settings**: An option for inheriting the partitioning scheme of your previous query step, to enable fully parallel topology with multiple writers to the table. For more information, see [Azure Stream Analytics output to Azure SQL Database](../../stream-analytics/stream-analytics-sql-output-perf.md).
+   - **SQL Database output settings**: An option for inheriting the partitioning scheme of your previous query step, to enable fully parallel topology with multiple writers to the table. For more information, see [Azure Stream Analytics output to Azure SQL Database](/azure/stream-analytics/stream-analytics-sql-output-perf).
    - **Max batch count**: The recommended upper limit on the number of records sent with every bulk insert transaction.  
-    For more information about output error handling, see [Output error policies in Azure Stream Analytics](../../stream-analytics/stream-analytics-output-error-policy.md).  
+    For more information about output error handling, see [Output error policies in Azure Stream Analytics](/azure/stream-analytics/stream-analytics-output-error-policy).  
 
      ![start job](./media/stream-data-stream-analytics-integration/start-job.png)
 
@@ -119,5 +119,5 @@ To complete the steps in this article, you need the following resources:
 
 ## Next steps
 
-- [Azure Stream Analytics documentation](../../stream-analytics/index.yml)
-- [Azure Stream Analytics solution patterns](../../stream-analytics/stream-analytics-solution-patterns.md)
+- [Azure Stream Analytics documentation](/azure/stream-analytics/index)
+- [Azure Stream Analytics solution patterns](/azure/stream-analytics/stream-analytics-solution-patterns)

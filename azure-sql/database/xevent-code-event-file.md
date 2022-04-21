@@ -507,7 +507,7 @@ Suppose you wanted to run the preceding Transact-SQL sample on Microsoft SQL Ser
 
 For more info about accounts and containers in the Azure Storage service, see:
 
-- [How to use Blob storage from .NET](../../storage/blobs/storage-quickstart-blobs-dotnet.md)
+- [How to use Blob storage from .NET](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
 - [Naming and Referencing Containers, Blobs, and Metadata](/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata)
 - [Working with the Root Container](/rest/api/storageservices/Working-with-the-Root-Container)
 - [Lesson 1: Create a stored access policy and a shared access signature on an Azure container](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#1---create-stored-access-policy-and-shared-access-storage)

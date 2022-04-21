@@ -61,7 +61,7 @@ adls://<container>@<storage_account>.dfs.core.windows.net/<path>/<file_name>.par
 
 
 
-If you're new to data virtualization and want to quickly test functionality, start by querying publicly available data sets available in [Azure Open Datasets](../../open-datasets/dataset-catalog.md), like the [Bing COVID-19 dataset](../../open-datasets/dataset-bing-covid-19.md?tabs=azure-storage) allowing anonymous access. 
+If you're new to data virtualization and want to quickly test functionality, start by querying publicly available data sets available in [Azure Open Datasets](/azure/open-datasets/dataset-catalog), like the [Bing COVID-19 dataset](/azure/open-datasets/dataset-bing-covid-19?tabs=azure-storage) allowing anonymous access. 
 
 Use the following endpoints to query the Bing COVID-19 data sets: 
 
@@ -133,7 +133,7 @@ FROM OPENROWSET(
 
 The `OPENROWSET` command also allows querying multiple files or folders by using wildcards in the BULK path.
 
-The following example uses the [NYC yellow taxi trip records open data set](../../open-datasets/dataset-taxi-yellow.md):
+The following example uses the [NYC yellow taxi trip records open data set](/azure/open-datasets/dataset-taxi-yellow):
 
 ```sql
 --Query all files with .parquet extension in folders matching name pattern:
@@ -383,7 +383,7 @@ Issues with query execution are typically caused by managed instance not being a
 - Wrong or mistyped location path.
 - SAS key validity: it could be expired i.e. out of its validity period, containing a typo, starting with a question mark.
 - SAS key persmissions allowed: Read at minimum, and List if wildcards are used
-- Blocked inbound traffic on the storage account. Check [Managing virtual network rules for Azure Storage](../../storage/common/storage-network-security.md?tabs=azure-portal#managing-virtual-network-rules) for more details and make sure that access from managed instance VNet is allowed.
+- Blocked inbound traffic on the storage account. Check [Managing virtual network rules for Azure Storage](/azure/storage/common/storage-network-security?tabs=azure-portal#managing-virtual-network-rules) for more details and make sure that access from managed instance VNet is allowed.
 - Outbound traffic blocked on the managed instance using [storage endpoint policy](service-endpoint-policies-configure.md#configure-policies). Allow outbound traffic to the storage account.
 
 ## Next steps

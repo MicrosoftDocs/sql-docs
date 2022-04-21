@@ -83,5 +83,5 @@ The following table shows resource limits for both Azure SQL Database and Azure 
 
 - Find resource characteristics (number of cores, I/O, memory) of the General Purpose/standard tier in [SQL Managed Instance](../managed-instance/resource-limits.md#service-tier-characteristics), single database in [vCore model](resource-limits-vcore-single-databases.md) or [DTU model](resource-limits-dtu-single-databases.md#single-database-storage-sizes-and-compute-sizes), or elastic pool in [vCore model](resource-limits-vcore-elastic-pools.md) and [DTU model](resource-limits-dtu-elastic-pools.md#standard-elastic-pool-limits).
 - Learn about [Business Critical](service-tier-business-critical.md) and [Hyperscale](service-tier-hyperscale.md) service tiers.
-- Learn about [Service Fabric](../../service-fabric/service-fabric-overview.md).
+- Learn about [Service Fabric](/azure/service-fabric/service-fabric-overview).
 - For more options for high availability and disaster recovery, see [Business Continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md).

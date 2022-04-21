@@ -42,13 +42,13 @@ You might consider executing a [manual failover](../database/high-availability-s
 User initiating a failover will need to have one of the following Azure roles:
 
 - Subscription Owner role, or
-- [Managed Instance Contributor](../../role-based-access-control/built-in-roles.md#sql-managed-instance-contributor) role, or
+- [Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role, or
 - Custom role with the following permission:
   - `Microsoft.Sql/managedInstances/failover/action`
 
 ### Using PowerShell
 
-The minimum version of Az.Sql needs to be [v2.9.0](https://www.powershellgallery.com/packages/Az.Sql/2.9.0). Consider using [Azure Cloud Shell](../../cloud-shell/overview.md) from the Azure portal that always has the latest PowerShell version available. 
+The minimum version of Az.Sql needs to be [v2.9.0](https://www.powershellgallery.com/packages/Az.Sql/2.9.0). Consider using [Azure Cloud Shell](/azure/cloud-shell/overview) from the Azure portal that always has the latest PowerShell version available. 
 
 As a pre-requirement, use the following PowerShell script to install required Azure modules. In addition, select the subscription where Managed Instance you wish to failover is located.
 
@@ -121,7 +121,7 @@ API response will be one of the following two:
 - 202 Accepted
 - One of the 400 request errors.
 
-Operation status can be tracked through reviewing API responses in response headers. For more information, see [Status of asynchronous Azure operations](../../azure-resource-manager/management/async-operations.md).
+Operation status can be tracked through reviewing API responses in response headers. For more information, see [Status of asynchronous Azure operations](/azure/azure-resource-manager/management/async-operations).
 
 ## Monitor the failover
 

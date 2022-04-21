@@ -24,8 +24,8 @@ To monitor the performance of a database in Azure SQL Database and Azure SQL Man
 | [Query Performance Insight](#generate-intelligent-assessments-of-performance-issues) | **Yes** | No | No |
 | [Monitor using DMVs](monitoring-with-dmvs.md) | **Yes** | **Yes** | No |
 | [Monitor using query store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)  | **Yes** | **Yes** | No |
-| [SQL Insights (preview)](../../azure-monitor/insights/sql-insights-overview.md) in [Azure Monitor](../../azure-monitor/essentials/monitor-azure-resource.md) | **Yes** |  **Yes** | **Yes** | 
-| [Azure SQL Analytics (preview)](../../azure-monitor/insights/azure-sql.md) using [Azure Monitor Logs](../../azure-monitor/logs/data-platform-logs.md) \* | **Yes** | **Yes** | No |
+| [SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview) in [Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) | **Yes** |  **Yes** | **Yes** | 
+| [Azure SQL Analytics (preview)](/azure/azure-monitor/insights/azure-sql) using [Azure Monitor Logs](/azure/azure-monitor/logs/data-platform-logs) \* | **Yes** | **Yes** | No |
 
 \* For solutions requiring low latency monitoring, Azure SQL Analytics (preview) is not recommended.
 
@@ -46,9 +46,9 @@ Outside of the Azure portal, the database engine has its own monitoring and diag
 
 Both offerings use different pipelines to present data to a variety of endpoints for coming Azure SQL Database metrics. 
 
-- [Azure SQL Insights (preview)](../../azure-monitor/insights/sql-insights-overview.md) is project inside Azure Monitor that can provide advanced insights into Azure SQL database activity. It is deployed via a customer-managed VM using Telegraf as a collection agent that connects to SQL sources, collects data, and moves data into Log Analytics.
+- [Azure SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview) is project inside Azure Monitor that can provide advanced insights into Azure SQL database activity. It is deployed via a customer-managed VM using Telegraf as a collection agent that connects to SQL sources, collects data, and moves data into Log Analytics.
 
-- [Azure SQL Analytics (preview)](../../azure-monitor/insights/azure-sql.md) also requires Log Analytics to provide advanced insights into Azure SQL database activity.
+- [Azure SQL Analytics (preview)](/azure/azure-monitor/insights/azure-sql) also requires Log Analytics to provide advanced insights into Azure SQL database activity.
 
 - Azure diagnostic telemetry is a separate, streaming source of data for Azure SQL Database and Azure SQL Managed Instance. Not to be confused with the Azure SQL Insights (preview) product, SQLInsights is a log inside Intelligent Insights, and is one of several packages of telemetry emitted by Azure diagnostic settings. Diagnostic settings are a feature that contains Resource Log categories (formerly known as Diagnostic Logs). For more information, see [Diagnostic telemetry for export](metrics-diagnostic-telemetry-logging-streaming-export-configure.md?tabs=azure-portal#diagnostic-telemetry-for-export).
     - Azure SQL Analytics (preview) consumes the resource logs coming from the diagnostic telemetry (configurable under **Diagnostic Settings** in the Azure portal), while Azure SQL Insights (preview) uses a different pipeline to collect Azure SQL telemetry.
@@ -129,14 +129,14 @@ You configure diagnostic settings to stream categories of metrics and resource l
 
 ### Log Analytics workspace in Azure Monitor
 
-You can stream metrics and resource logs to a [Log Analytics workspace in Azure Monitor](../../azure-monitor/essentials/resource-logs.md#send-to-log-analytics-workspace). Data streamed here can be consumed by [SQL Analytics (preview)](../../azure-monitor/insights/azure-sql.md), which is a cloud only monitoring solution that provides intelligent monitoring of your databases that includes performance reports, alerts, and mitigation recommendations. Data streamed to a Log Analytics workspace can be analyzed with other monitoring data collected and also enables you to leverage other Azure Monitor features such as alerts and visualizations.
+You can stream metrics and resource logs to a [Log Analytics workspace in Azure Monitor](/azure/azure-monitor/essentials/resource-logs#send-to-log-analytics-workspace). Data streamed here can be consumed by [SQL Analytics (preview)](/azure/azure-monitor/insights/azure-sql), which is a cloud only monitoring solution that provides intelligent monitoring of your databases that includes performance reports, alerts, and mitigation recommendations. Data streamed to a Log Analytics workspace can be analyzed with other monitoring data collected and also enables you to leverage other Azure Monitor features such as alerts and visualizations.
 
 > [!NOTE]
-> Azure SQL Analytics (preview) is an integration with Azure Monitor, where many monitoring solutions are no longer in active development. [Monitor your SQL deployments with SQL Insights (preview)](../../azure-monitor/insights/sql-insights-overview.md).
+> Azure SQL Analytics (preview) is an integration with Azure Monitor, where many monitoring solutions are no longer in active development. [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview).
 
 ### Azure Event Hubs
 
-You can stream metrics and resource logs to [Azure Event Hubs](../../azure-monitor/essentials/resource-logs.md#send-to-azure-event-hubs). Streaming diagnostic telemetry to event hubs to provide the following functionality:
+You can stream metrics and resource logs to [Azure Event Hubs](/azure/azure-monitor/essentials/resource-logs#send-to-azure-event-hubs). Streaming diagnostic telemetry to event hubs to provide the following functionality:
 
 - **Stream logs to third-party logging and telemetry systems**
 
@@ -146,11 +146,11 @@ You can stream metrics and resource logs to [Azure Event Hubs](../../azure-monit
   The highly scalable publish-subscribe nature of event hubs allows you to flexibly ingest metrics and resource logs into a custom telemetry platform. See [Designing and Sizing a Global Scale Telemetry Platform on Azure Event Hubs](https://azure.microsoft.com/documentation/videos/build-2015-designing-and-sizing-a-global-scale-telemetry-platform-on-azure-event-Hubs/) for details.
 - **View service health by streaming data to Power BI**
 
-  Use Event Hubs, Stream Analytics, and Power BI to transform your diagnostics data into near real-time insights on your Azure services. See [Stream Analytics and Power BI: A real-time analytics dashboard for streaming data](../../stream-analytics/stream-analytics-power-bi-dashboard.md) for details on this solution.
+  Use Event Hubs, Stream Analytics, and Power BI to transform your diagnostics data into near real-time insights on your Azure services. See [Stream Analytics and Power BI: A real-time analytics dashboard for streaming data](/azure/stream-analytics/stream-analytics-power-bi-dashboard) for details on this solution.
 
 ### Azure Storage
 
-Stream metrics and resource logs to [Azure Storage](../../azure-monitor/essentials/resource-logs.md#send-to-azure-storage). Use Azure storage to archive vast amounts of diagnostic telemetry for a fraction of the cost of the previous two streaming options.
+Stream metrics and resource logs to [Azure Storage](/azure/azure-monitor/essentials/resource-logs#send-to-azure-storage). Use Azure storage to archive vast amounts of diagnostic telemetry for a fraction of the cost of the previous two streaming options.
 
 ## Use Extended Events 
 
@@ -160,4 +160,4 @@ Additionally, you can use [Extended Events](/sql/relational-databases/extended-e
 
 - For more information about intelligent performance recommendations for single and pooled databases, see [Database advisor performance recommendations](database-advisor-implement-performance-recommendations.md).
 - For more information about automatically monitoring database performance with automated diagnostics and root cause analysis of performance issues, see [Azure SQL Intelligent Insights](intelligent-insights-overview.md).
-- [Monitor your SQL deployments with SQL Insights (preview)](../../azure-monitor/insights/sql-insights-overview.md)
+- [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview)

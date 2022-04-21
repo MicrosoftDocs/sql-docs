@@ -18,7 +18,7 @@ ms.date: 09/12/2019
 
 This article explains how to create a valid virtual network and subnet where you can deploy Azure SQL Managed Instance.
 
-Azure SQL Managed Instance must be deployed within an Azure [virtual network](../../virtual-network/virtual-networks-overview.md). This deployment enables the following scenarios:
+Azure SQL Managed Instance must be deployed within an Azure [virtual network](/azure/virtual-network/virtual-networks-overview). This deployment enables the following scenarios:
 
 - Secure private IP address
 - Connecting to SQL Managed Instance directly from an on-premises network

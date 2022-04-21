@@ -505,7 +505,7 @@ See [Get connection information](./connect-query-ssms.md#get-server-connection-i
 
 If these steps don't resolve your problem, try to collect more data and then contact support. If your application is a cloud service, enable logging. This step returns a UTC time stamp of the failure. Additionally, SQL Database returns the tracing ID. [Microsoft Customer Support Services](https://azure.microsoft.com/support/options/) can use this information.
 
-For more information about how to enable logging, see [Enable diagnostics logging for apps in Azure App Service](../../app-service/troubleshoot-diagnostic-logs.md).
+For more information about how to enable logging, see [Enable diagnostics logging for apps in Azure App Service](/azure/app-service/troubleshoot-diagnostic-logs).
 
 ## Next steps
 

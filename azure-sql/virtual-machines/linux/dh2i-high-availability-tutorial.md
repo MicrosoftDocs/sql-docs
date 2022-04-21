@@ -35,7 +35,7 @@ In this tutorial, we are going to set up a DxEnterprise cluster using [DxAdmin C
 
 ## Prerequisites
 
-- Create four VMs in Azure. Follow the [Quickstart: Create Linux virtual machine in Azure portal](../../../virtual-machines/linux/quick-create-portal.md) article to create Linux based virtual machines. Similarly, for creating the Windows based virtual machine, follow the [Quickstart: Create a Windows virtual machine in the Azure portal](../../../virtual-machines/windows/quick-create-portal.md) article.
+- Create four VMs in Azure. Follow the [Quickstart: Create Linux virtual machine in Azure portal](/azure/virtual-machines/linux/quick-create-portal) article to create Linux based virtual machines. Similarly, for creating the Windows based virtual machine, follow the [Quickstart: Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal) article.
 - Install .NET 3.1 on all the Linux-based VMs that are going to be part of the cluster. Follow the instructions documented [here](/dotnet/core/install/linux) based on the Linux operating system that you choose.
 - A valid DxEnterprise license with availability group management features enabled will be required. For more information, see [DxEnterprise Free Trial](https://dh2i.com/trial/) about how you can obtain a free trial.
 
@@ -96,7 +96,7 @@ Connect to the Windows client machine running DxAdmin to connect to the cluster 
 
 ## Create the Internal Azure Load balancer for Listener (optional)
 
-In this optional step, you can create and configure the Azure Load balancer that holds the IP addresses for the availability group listeners. For more information on Azure Load Balancer, refer [Azure Load Balancer](../../../load-balancer/load-balancer-overview.md). To configure the Azure load balancer and availability group listener using DxAdmin, follow the DxEnterprise [Azure Load Balancer Quick Start Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-azure-load-balancer-quick-start-guide/).
+In this optional step, you can create and configure the Azure Load balancer that holds the IP addresses for the availability group listeners. For more information on Azure Load Balancer, refer [Azure Load Balancer](/azure/load-balancer/load-balancer-overview). To configure the Azure load balancer and availability group listener using DxAdmin, follow the DxEnterprise [Azure Load Balancer Quick Start Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-azure-load-balancer-quick-start-guide/).
 
 After this step, you should have an availability group listener created and mapped to the Internal Azure load balancer.
 
@@ -118,6 +118,6 @@ For more information on more operations within DxEnterprise, access the [DxEnter
 ## Next Steps
 
 - Learn more about [Availability Groups on Linux](/sql/linux/sql-server-linux-availability-group-overview)
-- [Quickstart: Create Linux virtual machine in Azure portal](../../../virtual-machines/linux/quick-create-portal.md)
-- [Quickstart: Create a Windows virtual machine in the Azure portal](../../../virtual-machines/windows/quick-create-portal.md)
+- [Quickstart: Create Linux virtual machine in Azure portal](/azure/virtual-machines/linux/quick-create-portal)
+- [Quickstart: Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal)
 - [Supported platforms for SQL Server 2019 on Linux](/sql/linux/sql-server-linux-release-notes-2019#supported-platforms)

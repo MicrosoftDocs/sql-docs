@@ -21,7 +21,7 @@ In this quickstart, you'll use SQL Server Management Studio (SSMS) to restore a 
 > [!VIDEO https://www.youtube.com/embed/RxWYojo_Y3Q]
 
 > [!NOTE]
-> For more information on migration using Azure Database Migration Service, see [Tutorial: Migrate SQL Server to an Azure Managed Instance using Database Migration Service](../../dms/tutorial-sql-server-to-managed-instance.md).
+> For more information on migration using Azure Database Migration Service, see [Tutorial: Migrate SQL Server to an Azure Managed Instance using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).
 > For more information on various migration methods, see [SQL Server to Azure SQL Managed Instance Guide](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).
 
 ## Prerequisites
@@ -36,7 +36,7 @@ This quickstart:
   - [Configure a point-to-site connection to SQL Managed Instance from on-premises](point-to-site-p2s-configure.md).
 
 > [!NOTE]
-> For more information on backing up and restoring a SQL Server database using Azure Blob storage and a [Shared Access Signature (SAS) key](../../storage/common/storage-sas-overview.md), see [SQL Server Backup to URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url).
+> For more information on backing up and restoring a SQL Server database using Azure Blob storage and a [Shared Access Signature (SAS) key](/azure/storage/common/storage-sas-overview), see [SQL Server Backup to URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url).
 
 ## Restore from a backup file using the restore wizard
 

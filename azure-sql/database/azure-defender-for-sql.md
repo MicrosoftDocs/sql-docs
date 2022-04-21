@@ -23,7 +23,7 @@ Microsoft Defender for Cloud provides a set of advanced SQL security capabilitie
 - [Vulnerability Assessment](sql-vulnerability-assessment.md) is an easy-to-configure service that can discover, track, and help you remediate potential database vulnerabilities. It provides visibility into your security state, and it includes actionable steps to resolve security issues and enhance your database fortifications.
 - [Advanced Threat Protection](threat-detection-overview.md) detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit your database. It continuously monitors your database for suspicious activities, and it provides immediate security alerts on potential vulnerabilities, Azure SQL injection attacks, and anomalous database access patterns. Advanced Threat Protection alerts provide details of the suspicious activity and recommend action on how to investigate and mitigate the threat.
 
-Enable Microsoft Defender for SQL once to enable all these included features. With one click, you can enable Microsoft Defender for all databases on your [server](logical-servers.md) in Azure or in your SQL Managed Instance. Enabling or managing Microsoft Defender for Cloud settings requires belonging to the [SQL security manager](../../role-based-access-control/built-in-roles.md#sql-security-manager) role, or one of the database or server admin roles.
+Enable Microsoft Defender for SQL once to enable all these included features. With one click, you can enable Microsoft Defender for all databases on your [server](logical-servers.md) in Azure or in your SQL Managed Instance. Enabling or managing Microsoft Defender for Cloud settings requires belonging to the [SQL security manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) role, or one of the database or server admin roles.
 
 For more information about Microsoft Defender for SQL pricing, see the [Microsoft Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/security-center/).
 
@@ -99,4 +99,4 @@ To view and manage Microsoft Defender for Cloud settings:
 
 - Learn more about [Vulnerability Assessment](sql-vulnerability-assessment.md)
 - Learn more about [Advanced Threat Protection](threat-detection-configure.md)
-- Learn more about [Microsoft Defender for Cloud](../../security-center/security-center-introduction.md)
+- Learn more about [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction)

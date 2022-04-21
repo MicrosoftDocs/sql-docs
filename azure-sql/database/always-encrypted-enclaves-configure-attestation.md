@@ -18,11 +18,11 @@ ms.custom: devx-track-azurepowershell
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-[Microsoft Azure Attestation](../../attestation/overview.md) is a solution for attesting Trusted Execution Environments (TEEs), including Intel Software Guard Extensions (Intel SGX) enclaves. 
+[Microsoft Azure Attestation](/azure/attestation/overview) is a solution for attesting Trusted Execution Environments (TEEs), including Intel Software Guard Extensions (Intel SGX) enclaves. 
 
 To use Azure Attestation for attesting Intel SGX enclaves used for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) in Azure SQL Database, you need to:
 
-1. Create an [attestation provider](../../attestation/basic-concepts.md#attestation-provider) and configure it with the recommended attestation policy.
+1. Create an [attestation provider](/azure/attestation/basic-concepts#attestation-provider) and configure it with the recommended attestation policy.
 
 2. Determine the attestation URL and share it with application administrators.
 
@@ -31,9 +31,9 @@ To use Azure Attestation for attesting Intel SGX enclaves used for [Always Encry
 
 ## Create and configure an attestation provider
 
-An [attestation provider](../../attestation/basic-concepts.md#attestation-provider) is a resource in Azure Attestation that evaluates [attestation requests](../../attestation/basic-concepts.md#attestation-request) against [attestation policies](../../attestation/basic-concepts.md#attestation-request) and issues [attestation tokens](../../attestation/basic-concepts.md#attestation-token). 
+An [attestation provider](/azure/attestation/basic-concepts#attestation-provider) is a resource in Azure Attestation that evaluates [attestation requests](/azure/attestation/basic-concepts#attestation-request) against [attestation policies](/azure/attestation/basic-concepts#attestation-request) and issues [attestation tokens](/azure/attestation/basic-concepts#attestation-token). 
 
-Attestation policies are specified using the [claim rule grammar](../../attestation/claim-rule-grammar.md).
+Attestation policies are specified using the [claim rule grammar](/azure/attestation/claim-rule-grammar).
 
 > [!IMPORTANT]
 > An attestation provider gets created with the default policy for Intel SGX enclaves, which does not validate the code running inside the enclave. Microsoft strongly advises you set the below recommended policy, and not use the default policy, for Always Encrypted with secure enclaves.
@@ -68,13 +68,13 @@ The above policy verifies:
 
 For instructions for how to create an attestation provider and configure with an attestation policy using:
 
-- [Quickstart: Set up Azure Attestation with Azure portal](../../attestation/quickstart-portal.md)
+- [Quickstart: Set up Azure Attestation with Azure portal](/azure/attestation/quickstart-portal)
     > [!IMPORTANT]
     > When you configure your attestation policy with Azure portal, set Attestation Type to `SGX-IntelSDK`.
-- [Quickstart: Set up Azure Attestation with Azure PowerShell](../../attestation/quickstart-powershell.md)
+- [Quickstart: Set up Azure Attestation with Azure PowerShell](/azure/attestation/quickstart-powershell)
     > [!IMPORTANT]
     > When you configure your attestation policy with Azure PowerShell, set the `Tee` parameter to `SgxEnclave`.
-- [Quickstart: Set up Azure Attestation with Azure CLI](../../attestation/quickstart-azure-cli.md)
+- [Quickstart: Set up Azure Attestation with Azure CLI](/azure/attestation/quickstart-azure-cli)
     > [!IMPORTANT]
     > When you configure your attestation policy with Azure CLI, set the `attestation-type` parameter to `SGX-IntelSDK`.
 
@@ -95,7 +95,7 @@ Use the `Get-AzAttestation` cmdlet to retrieve the attestation provider properti
 Get-AzAttestation -Name $attestationProviderName -ResourceGroupName $attestationResourceGroupName
 ```
 
-For more information, see [Create and manage an attestation provider](../../attestation/quickstart-powershell.md#create-and-manage-an-attestation-provider).
+For more information, see [Create and manage an attestation provider](/azure/attestation/quickstart-powershell#create-and-manage-an-attestation-provider).
 
 ## Next Steps
 

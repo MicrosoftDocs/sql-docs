@@ -16,7 +16,7 @@ ms.date: 04/06/2022
 # Determine required subnet size and range for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Azure SQL Managed Instance must be deployed within an Azure [virtual network](../../virtual-network/virtual-networks-overview.md). The number of managed instances that can be deployed in the subnet of a virtual network depends on the size of the subnet (subnet range).
+Azure SQL Managed Instance must be deployed within an Azure [virtual network](/azure/virtual-network/virtual-networks-overview). The number of managed instances that can be deployed in the subnet of a virtual network depends on the size of the subnet (subnet range).
 
 When you create a managed instance, Azure allocates a number of virtual machines that depend on the tier you selected during provisioning. Because these virtual machines are associated with your subnet, they require IP addresses. To ensure high availability during regular operations and service maintenance, Azure might allocate more virtual machines. The number of required IP addresses in a subnet then becomes larger than the number of managed instances in that subnet.
 

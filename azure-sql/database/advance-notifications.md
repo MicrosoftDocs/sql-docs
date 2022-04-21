@@ -81,13 +81,13 @@ The following table shows additional notifications that may be sent while mainte
 
 ## Permissions
 
-While Advance Notifications can be sent to any email address, Azure subscription RBAC (role-based access control) policy determines who can access the links in the email. Querying resource graph is covered by [Azure RBAC](../../role-based-access-control/overview.md) access management.  To enable read access, each recipient should have resource group level read access. For more information, see [Steps to assign an Azure role](../../role-based-access-control/role-assignments-steps.md).
+While Advance Notifications can be sent to any email address, Azure subscription RBAC (role-based access control) policy determines who can access the links in the email. Querying resource graph is covered by [Azure RBAC](/azure/role-based-access-control/overview) access management.  To enable read access, each recipient should have resource group level read access. For more information, see [Steps to assign an Azure role](/azure/role-based-access-control/role-assignments-steps).
 
 ## Retrieve the list of impacted resources
 
-[Azure Resource Graph](../../governance/resource-graph/overview.md) is an Azure service designed to extend Azure Resource Management. The Azure Resource Graph Explorer provides efficient and performant resource exploration with the ability to query at scale across a given set of subscriptions so that you can effectively govern your environment. 
+[Azure Resource Graph](/azure/governance/resource-graph/overview) is an Azure service designed to extend Azure Resource Management. The Azure Resource Graph Explorer provides efficient and performant resource exploration with the ability to query at scale across a given set of subscriptions so that you can effectively govern your environment. 
 
-You can use the Azure Resource Graph Explorer to query for maintenance events. For an introduction on how to run these queries, see [Quickstart: Run your first Resource Graph query using Azure Resource Graph Explorer](../../governance/resource-graph/first-query-portal.md).
+You can use the Azure Resource Graph Explorer to query for maintenance events. For an introduction on how to run these queries, see [Quickstart: Run your first Resource Graph query using Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal).
 
 When the advanced notification for planned maintenance is received, you will get a link that opens Azure Resource Graph and executes the query for the exact event, similar to the following. Note that the `notificationId` value is unique per maintenance event.  
 
@@ -105,12 +105,12 @@ resources
 | project resource, status, resourceGroup, location, startTimeUtc, endTimeUtc, impactType
 ```
 
-For the full reference of the sample queries and how to use them across tools like PowerShell or Azure CLI, visit [Azure Resource Graph sample queries for Azure Service Health](../../service-health/resource-graph-samples.md).
+For the full reference of the sample queries and how to use them across tools like PowerShell or Azure CLI, visit [Azure Resource Graph sample queries for Azure Service Health](/azure/service-health/resource-graph-samples).
 
 
 ## Next steps
 
 - [Maintenance window](maintenance-window.md)
 - [Maintenance window FAQ](maintenance-window-faq.yml)
-- [Overview of alerts in Microsoft Azure](../../azure-monitor/alerts/alerts-overview.md)
-- [Email Azure Resource Manager Role](../../azure-monitor/alerts/action-groups.md#email-azure-resource-manager-role)
+- [Overview of alerts in Microsoft Azure](/azure/azure-monitor/alerts/alerts-overview)
+- [Email Azure Resource Manager Role](/azure/azure-monitor/alerts/action-groups#email-azure-resource-manager-role)

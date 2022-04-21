@@ -18,7 +18,7 @@ tag: azure-synpase
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-[Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](../../synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is.md) support Microsoft Conditional Access.
+[Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) support Microsoft Conditional Access.
 
 The following steps show how to configure Azure SQL Database, SQL Managed Instance, or Azure Synapse to enforce a Conditional Access policy.  
 
@@ -32,7 +32,7 @@ The following steps show how to configure Azure SQL Database, SQL Managed Instan
 > [!NOTE]
 > The below example uses Azure SQL Database, but you should select the appropriate product that you want to configure conditional access.
 
-1. Sign in to the Azure portal, select **Azure Active Directory**, and then select **Conditional Access**. For more information, see [Azure Active Directory Conditional Access technical reference](../../active-directory/conditional-access/concept-conditional-access-conditions.md).  
+1. Sign in to the Azure portal, select **Azure Active Directory**, and then select **Conditional Access**. For more information, see [Azure Active Directory Conditional Access technical reference](/azure/active-directory/conditional-access/concept-conditional-access-conditions).  
    ![Conditional Access blade](./media/conditional-access-configure/conditional-access-blade.png)
 
 2. In the **Conditional Access-Policies** blade, click **New policy**, provide a name, and then click **Configure rules**.  

@@ -170,7 +170,7 @@ The Data SQL Engineering team developed these resources. This team's core charte
 
 - To help estimate the cost savings you can realize by migrating your workloads to Azure, see the [Azure total cost of ownership calculator](https://aka.ms/azure-tco).
 
-- For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Service and tools for data migration](../../../dms/dms-tools-matrix.md).
+- For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Service and tools for data migration](/azure/dms/dms-tools-matrix).
 
 - For other migration guides, see [Azure Database Migration Guide](https://datamigration.microsoft.com/). 
 

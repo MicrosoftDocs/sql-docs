@@ -82,12 +82,12 @@ The app showcases venues that host events.  The venues are the tenants of the ap
 
    ![Events](./media/saas-standaloneapp-get-started-deploy/fabrikam.png)
 
-To control the distribution of incoming requests, the app uses [*Azure Traffic Manager*](../../traffic-manager/traffic-manager-overview.md). Each tenant-specific app instance includes the tenant name as part of the domain name in the URL. All the tenant URLs include your specific **User** value. The URLs follow the following format:
+To control the distribution of incoming requests, the app uses [*Azure Traffic Manager*](/azure/traffic-manager/traffic-manager-overview). Each tenant-specific app instance includes the tenant name as part of the domain name in the URL. All the tenant URLs include your specific **User** value. The URLs follow the following format:
 - http://events.&lt;venuename&gt;.&lt;user&gt;.trafficmanager.net
 
 Each tenant's database **Location** is included in the app settings of the corresponding deployed app.
 
-In a production environment, typically you create a CNAME DNS record to [*point a company internet domain*](../../traffic-manager/traffic-manager-point-internet-domain.md) to the URL of the traffic manager profile.
+In a production environment, typically you create a CNAME DNS record to [*point a company internet domain*](/azure/traffic-manager/traffic-manager-point-internet-domain) to the URL of the traffic manager profile.
 
 
 ## Explore the servers and tenant databases

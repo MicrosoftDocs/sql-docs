@@ -161,7 +161,7 @@ You can use [adaptive query processing](/sql/relational-databases/performance/in
 
 ## Advanced security and compliance
 
-SQL Database provides a range of [built-in security and compliance features](../../active-directory/identity-protection/concept-identity-protection-security-overview.md) to help your application meet various security and compliance requirements.
+SQL Database provides a range of [built-in security and compliance features](/azure/active-directory/identity-protection/concept-identity-protection-security-overview) to help your application meet various security and compliance requirements.
 
 > [!IMPORTANT]
 > Microsoft has certified Azure SQL Database (all deployment options) against a number of compliance standards. For more information, see the [Microsoft Azure Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942), where you can find the most current list of SQL Database compliance certifications.

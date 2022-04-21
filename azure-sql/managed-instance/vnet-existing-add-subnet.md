@@ -16,7 +16,7 @@ ms.date: 03/17/2020
 # Configure an existing virtual network for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Azure SQL Managed Instance must be deployed within an Azure [virtual network](../../virtual-network/virtual-networks-overview.md) and the subnet dedicated for managed instances only. You can use the existing virtual network and subnet if they're configured according to the [SQL Managed Instance virtual network requirements](connectivity-architecture-overview.md#network-requirements).
+Azure SQL Managed Instance must be deployed within an Azure [virtual network](/azure/virtual-network/virtual-networks-overview) and the subnet dedicated for managed instances only. You can use the existing virtual network and subnet if they're configured according to the [SQL Managed Instance virtual network requirements](connectivity-architecture-overview.md#network-requirements).
 
 If one of the following cases applies to you, you can validate and modify your network by using the script explained in this article:
 

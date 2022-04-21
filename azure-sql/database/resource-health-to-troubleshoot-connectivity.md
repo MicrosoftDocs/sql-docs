@@ -15,7 +15,7 @@ ms.date: 03/24/2021
 # Use Resource Health to troubleshoot connectivity for Azure SQL Database and Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-[Resource Health](../../service-health/resource-health-overview.md#get-started) for Azure SQL Database and Azure SQL Managed Instance helps you diagnose and get support when an Azure issue impacts your SQL resources. It informs you about the current and past health of your resources and helps you mitigate issues. Resource Health provides technical support when you need help with Azure service issues.
+[Resource Health](/azure/service-health/resource-health-overview#get-started) for Azure SQL Database and Azure SQL Managed Instance helps you diagnose and get support when an Azure issue impacts your SQL resources. It informs you about the current and past health of your resources and helps you mitigate issues. Resource Health provides technical support when you need help with Azure service issues.
 
 ![Overview](./media/resource-health-to-troubleshoot-connectivity/sql-resource-health-overview.jpg)
 
@@ -69,6 +69,6 @@ Reconfigurations are considered transient conditions and are expected from time 
 
 - Learn more about [retry logic for transient errors](troubleshoot-common-connectivity-issues.md#retry-logic-for-transient-errors).
 - [Troubleshoot, diagnose, and prevent SQL connection errors](troubleshoot-common-connectivity-issues.md).
-- Learn more about [configuring Resource Health alerts](../../service-health/resource-health-alert-arm-template-guide.md).
-- Get an overview of [Resource Health](../../service-health/resource-health-overview.md).
-- Review [Resource Health FAQ](../../service-health/resource-health-faq.yml).
+- Learn more about [configuring Resource Health alerts](/azure/service-health/resource-health-alert-arm-template-guide).
+- Get an overview of [Resource Health](/azure/service-health/resource-health-overview).
+- Review [Resource Health FAQ](/azure/service-health/resource-health-faq).

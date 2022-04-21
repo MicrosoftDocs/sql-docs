@@ -31,8 +31,8 @@ Most management operations are [long running operations](management-operations-o
 
 There are several ways to monitor managed instance management operations:
 
-- [Resource group deployments](../../azure-resource-manager/templates/deployment-history.md)
-- [Activity log](../../azure-monitor/essentials/activity-log.md)
+- [Resource group deployments](/azure/azure-resource-manager/templates/deployment-history)
+- [Activity log](/azure/azure-monitor/essentials/activity-log)
 - [Managed instance operations API](#managed-instance-operations-api)
 
 
@@ -113,4 +113,4 @@ For detailed commands explanation, see [az sql mi op](/cli/azure/sql/mi/op).
 - For a features and comparison list, see [common SQL features](../database/features-comparison.md).
 - For more information about VNet configuration, see [SQL Managed Instance VNet configuration](connectivity-architecture-overview.md).
 - For a quickstart that creates a managed instance and restores a database from a backup file, see [Create a managed instance](instance-create-quickstart.md).
-- For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](../../dms/tutorial-sql-server-to-managed-instance.md).
+- For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).

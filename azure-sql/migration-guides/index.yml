@@ -77,9 +77,9 @@ landingContent:
       - linkListType: deploy 
         links:
           - text: Azure Migrate 
-            url: ../../migrate/migrate-services-overview.md
+            url: /azure/migrate/migrate-services-overview
           - text: Azure Database Migration Service (DMS)
-            url: ../../dms/dms-overview.md
+            url: /azure/dms/dms-overview
           - text: Data Migration Assistant (DMA)
             url: /sql/dma/dma-migrateonpremsqltosqldb
           - text: Transactional replication
@@ -89,6 +89,6 @@ landingContent:
           - text: Bulk copy
             url: /sql/relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server
           - text: Azure Data Factory
-            url: ../../data-factory/connector-azure-sql-database.md
+            url: /azure/data-factory/connector-azure-sql-database
           - text: SQL Data Sync
             url: ../database/sql-data-sync-data-sql-server-sql-database.md

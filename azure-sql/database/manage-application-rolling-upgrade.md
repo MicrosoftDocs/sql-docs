@@ -149,5 +149,5 @@ The two upgrade methods described in the article differ in complexity and dollar
 * For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 * To learn about Azure SQL Database active geo-replication, see [Create readable secondary databases using active geo-replication](active-geo-replication-overview.md).
 * To learn about Azure SQL Database auto-failover groups, see [Use auto-failover groups to enable transparent and coordinated failover of multiple databases](auto-failover-group-overview.md).
-* To learn about staging environments in Azure App Service, see [Set up staging environments in Azure App Service](../../app-service/deploy-staging-slots.md).
-* To learn about Azure Traffic Manager profiles, see [Manage an Azure Traffic Manager profile](../../traffic-manager/traffic-manager-manage-profiles.md).
+* To learn about staging environments in Azure App Service, see [Set up staging environments in Azure App Service](/azure/app-service/deploy-staging-slots).
+* To learn about Azure Traffic Manager profiles, see [Manage an Azure Traffic Manager profile](/azure/traffic-manager/traffic-manager-manage-profiles).

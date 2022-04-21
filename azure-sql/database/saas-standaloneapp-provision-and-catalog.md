@@ -23,7 +23,7 @@ This article has two major parts:
 
 ## Standalone application per tenant pattern
 
-The standalone app per tenant pattern is one of several patterns for multi-tenant SaaS applications.  In this pattern, a standalone app is provisioned for each tenant. The application comprises application level components and an Azure SQL Database.  Each tenant app can be deployed in the vendor’s subscription.  Alternatively, Azure offers a [managed applications program](../../azure-resource-manager/managed-applications/overview.md) in which an app can be deployed in a tenant’s subscription and managed by the vendor on the tenant’s behalf.
+The standalone app per tenant pattern is one of several patterns for multi-tenant SaaS applications.  In this pattern, a standalone app is provisioned for each tenant. The application comprises application level components and an Azure SQL Database.  Each tenant app can be deployed in the vendor’s subscription.  Alternatively, Azure offers a [managed applications program](/azure/azure-resource-manager/managed-applications/overview) in which an app can be deployed in a tenant’s subscription and managed by the vendor on the tenant’s behalf.
 
    ![app-per-tenant pattern](./media/saas-standaloneapp-provision-and-catalog/standalone-app-pattern.png)
 

@@ -57,7 +57,7 @@ $ResourceGroupName = "sqlvm2"
 
 Define the storage account and the type of storage to be used by the virtual machine.
 
-Modify as you want, and then run the following cmdlet to initialize these variables. We recommend using [premium SSDs](../../../virtual-machines/disks-types.md#premium-ssds) for production workloads.
+Modify as you want, and then run the following cmdlet to initialize these variables. We recommend using [premium SSDs](/azure/virtual-machines/disks-types#premium-ssds) for production workloads.
 
 ```powershell
 $StorageName = $ResourceGroupName + "storage"
@@ -284,7 +284,7 @@ $Credential = Get-Credential -Message "Type the name and password of the local a
 Now you're ready to set the virtual machine's operating system properties with the [Set-AzVMOperatingSystem](/powershell/module/az.compute/set-azvmoperatingsystem) cmdlet.
 
 - Set the type of operating system as Windows.
-- Require the [virtual machine agent](../../../virtual-machines/extensions/agent-windows.md) to be installed.
+- Require the [virtual machine agent](/azure/virtual-machines/extensions/agent-windows) to be installed.
 - Specify that the cmdlet enables auto update.
 - Specify the variables that you previously initialized for the virtual machine name, the computer name, and the credential.
 

@@ -25,9 +25,9 @@ monikerRange: ">=sql-server-2017"
 ## Pre-upgrade Checklist  
 
 - Before upgrading from one edition of [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] to another, verify that the functionality you are currently using is supported in the edition to which you are moving.  
-- Verify supported [hardware and software](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).
+- Verify supported [hardware and software](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md).
 - Before upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enable Windows Authentication for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and verify the default configuration: that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a member of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin group.
-- To upgrade to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], you must be running a supported operating system. For more information, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).  
+- To upgrade to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], you must be running a supported operating system. For more information, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md).  
 - Upgrade will be blocked if there is a pending restart.  
 - Upgrade will be blocked if the Windows Installer service is not running.
 
@@ -139,7 +139,7 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
 ## See also  
 
 - [Editions and supported features of [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md)
-- [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
+- [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md)
 
 ## Next steps
 

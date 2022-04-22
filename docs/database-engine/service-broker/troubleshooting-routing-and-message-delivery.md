@@ -1,12 +1,12 @@
-﻿---
+---
 title: Troubleshooting Routing and Message Delivery
 description: "This section provides suggestions to correct common problems related to routing and message delivery."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -18,7 +18,7 @@ This section provides suggestions to correct common problems related to routing 
 
 ## Technique: Diagnosing Message Delivery
 
-If messages are not successfully delivered between two services, use the **ssbdiagnose** utility to generate a runtime report of a conversation. The runtime report will display any errors encountered by the conversation operations. If errors are encountered, **ssbdiagnose** will also analyze the configuration between the services and report any configuration problems it finds. For more information, see [ssbdiagnose Utility](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md).
+If messages are not successfully delivered between two services, use the **ssbdiagnose** utility to generate a runtime report of a conversation. The runtime report will display any errors encountered by the conversation operations. If errors are encountered, **ssbdiagnose** will also analyze the configuration between the services and report any configuration problems it finds. For more information, see [Ssbdiagnose Utility](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md).
 
 ## Problem: Messages Remain in the Transmission Queue
 
@@ -145,7 +145,7 @@ The destination did not accept the message. This can indicate that the service n
 
 Verify that a Service Broker endpoint exists. If no endpoint exists, create one. If an endpoint does exist, verify that the state of the endpoint is STARTED. For more information, see [Service Broker Endpoints](service-broker-endpoints.md). For more information about how to create an endpoint, see [How to: Activate Service Broker Networking (Transact-SQL)](how-to-activate-service-broker-networking-transact-sql.md).
 
-## Problem: Transmission Status Shows “An Existing Connection Was Forcibly Closed By the Remote Host”
+## Problem: Transmission Status Shows "An Existing Connection Was Forcibly Closed By the Remote Host"
 
 Transport security might be incorrectly configured, or the TCP/IP address for the route specifies a port that is being used by a service other than Service Broker.
 

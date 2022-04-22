@@ -4,9 +4,9 @@ description: "All messages sent by Service Broker are part of a conversation."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -45,7 +45,7 @@ Applications are responsible for indicating when they are finished with a dialog
 
 A conversation timer allows an application to receive a message at a specific time. When the conversation timer expires, SQL Server inserts a message for the conversation into the queue for the conversation, at the endpoint that started the conversation timer. An application can use a conversation timer for any purpose. One common use for a conversation timer is to respond to delays in responses from the remote service. Another common use is to create a service that sends messages to the remote service at set intervals. For example, a service might use a conversation timer to report on the current state of SQL Server every few minutes. Applications can also use a conversation timer to activate a stored procedure at a certain time. This allows Service Broker to support scheduled activities.
 
-Each participant in a conversation can set one conversation timer per conversation. The conversation timer is not shared with the other participant, and the conversation timer does not affect the lifetime of the conversation. Instead, when the timer expires, the local Service Broker adds a time-out message to the queue for the local service. A time-out message has the type name **https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer**
+Each participant in a conversation can set one conversation timer per conversation. The conversation timer is not shared with the other participant, and the conversation timer does not affect the lifetime of the conversation. Instead, when the timer expires, the local Service Broker adds a time-out message to the queue for the local service. A time-out message has the type name `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`
 
 ## See also
 

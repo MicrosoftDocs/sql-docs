@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'Lesson 3: Dropping the Conversation Objects'
 description: "In this lesson, you will learn to drop the objects that enabled a database to support a conversation in the database."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -39,34 +39,34 @@ In this lesson, you will learn to drop the objects that enabled a database to su
                    N'//AWDB/1DBSample/TargetService')
              DROP SERVICE
              [//AWDB/1DBSample/TargetService];
-        
+
         IF EXISTS (SELECT * FROM sys.service_queues
                    WHERE name = N'TargetQueue1DB')
              DROP QUEUE TargetQueue1DB;
-        
+
         -- Drop the intitator queue and service if they already exist.
         IF EXISTS (SELECT * FROM sys.services
                    WHERE name =
                    N'//AWDB/1DBSample/InitiatorService')
              DROP SERVICE
              [//AWDB/1DBSample/InitiatorService];
-        
+
         IF EXISTS (SELECT * FROM sys.service_queues
                    WHERE name = N'InitiatorQueue1DB')
              DROP QUEUE InitiatorQueue1DB;
-        
+
         IF EXISTS (SELECT * FROM sys.service_contracts
                    WHERE name =
                    N'//AWDB/1DBSample/SampleContract')
              DROP CONTRACT
              [//AWDB/1DBSample/SampleContract];
-        
+
         IF EXISTS (SELECT * FROM sys.service_message_types
                    WHERE name =
                    N'//AWDB/1DBSample/RequestMessage')
              DROP MESSAGE TYPE
              [//AWDB/1DBSample/RequestMessage];
-        
+
         IF EXISTS (SELECT * FROM sys.service_message_types
                    WHERE name =
                    N'//AWDB/1DBSample/ReplyMessage')

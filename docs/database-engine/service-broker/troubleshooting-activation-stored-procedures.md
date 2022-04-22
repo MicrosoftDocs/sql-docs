@@ -1,12 +1,12 @@
-﻿---
+---
 title: Troubleshooting Activation Stored Procedures
 description: "Activated stored procedures run on a background session."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -18,7 +18,7 @@ Activated stored procedures run on a background session. Therefore, the techniqu
 
 ## Technique: Analyzing the Service Broker Configuration
 
-If activated stored procedures do not run successfully, use the **ssbdiagnose** utility to look for configuration errors in the associated services. For more information, see [ssbdiagnose Utility](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md).
+If activated stored procedures do not run successfully, use the **ssbdiagnose** utility to look for configuration errors in the associated services. For more information, see [Ssbdiagnose Utility](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md).
 
 ## Technique: Viewing Activation Stored Procedure Output
 

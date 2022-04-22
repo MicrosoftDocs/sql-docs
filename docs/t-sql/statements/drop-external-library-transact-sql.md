@@ -14,8 +14,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "DROP EXTERNAL LIBRARY"
-author: dphansen
-ms.author: davidph
+author: rothja
+ms.author: jroth
 manager: cgronlund
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---

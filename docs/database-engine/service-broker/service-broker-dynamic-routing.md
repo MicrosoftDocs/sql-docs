@@ -4,9 +4,9 @@ description: "For most scenarios, Service Broker applications use routes configu
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -24,9 +24,9 @@ When Service Broker cannot find a route for a conversation, Service Broker check
 
 ## Creating the Broker Configuration Notice Service
 
-To create a service for dynamic routing, create a service named **SQL/ServiceBroker/BrokerConfiguration** that accepts conversations on the contract **https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice**. You then create a route to the service in the routing table for database that will use dynamic routing.
+To create a service for dynamic routing, create a service named **SQL/ServiceBroker/BrokerConfiguration** that accepts conversations on the contract `https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice`. You then create a route to the service in the routing table for database that will use dynamic routing.
 
-Requests for routes use the message type **https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRoute**. The message is in XML format, and contains the name of the service for which routing information should be available.
+Requests for routes use the message type `https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRoute`. The message is in XML format, and contains the name of the service for which routing information should be available.
 
 For example, the following message is a request for a route to the service http://Adventure-Works.com/Elsewhere:
 

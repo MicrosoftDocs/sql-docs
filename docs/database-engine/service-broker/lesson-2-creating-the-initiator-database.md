@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'Lesson 2: Creating the Initiator Database'
 description: "In this lesson, you will learn to create the initiator database and all the initiator Service Broker objects that are used in this tutorial."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -53,7 +53,7 @@ In this lesson, you will learn to create the initiator database and all the init
         GO
         USE InstInitiatorDB;
         GO
-        
+
         CREATE MASTER KEY
                ENCRYPTION BY PASSWORD = N'<EnterStrongPassword2Here>';
         GO
@@ -70,9 +70,9 @@ In this lesson, you will learn to create the initiator database and all the init
              AUTHORIZATION InitiatorUser
              WITH SUBJECT = N'Initiator Certificate',
                   EXPIRY_DATE = N'12/31/2010';
-        
+
         BACKUP CERTIFICATE InstInitiatorCertificate
-          TO FILE = 
+          TO FILE =
         N'C:\storedcerts\$ampleSSBCerts\InstInitiatorCertificate.cer';
         GO
     ```
@@ -109,7 +109,7 @@ In this lesson, you will learn to create the initiator database and all the init
 
     ```sql
         CREATE QUEUE InstInitiatorQueue;
-        
+
         CREATE SERVICE [//InstDB/2InstSample/InitiatorService]
                AUTHORIZATION InitiatorUser
                ON QUEUE InstInitiatorQueue;
@@ -122,10 +122,10 @@ In this lesson, you will learn to create the initiator database and all the init
 
     ```sql
         CREATE USER TargetUser WITHOUT LOGIN;
-        
-        CREATE CERTIFICATE InstTargetCertificate 
+
+        CREATE CERTIFICATE InstTargetCertificate
            AUTHORIZATION TargetUser
-           FROM FILE = 
+           FROM FILE =
         N'C:\storedcerts\$ampleSSBCerts\InstTargetCertificate.cer'
         GO
     ```
@@ -133,39 +133,39 @@ In this lesson, you will learn to create the initiator database and all the init
 ### Create routes
 
 - Copy and paste the following code into a Query Editor window. Change the string **MyTargetComputer** to the name of the computer that is running your target instance. Then, run the code to create routes to the target service and initiator service, and a remote service binding that associates the **TargetUser** with the target service route.
-    
+
     The following CREATE ROUTE statements assume that there are no duplicate service names in the target instance. If multiple databases on the target instance have services with the same name, use the BROKER_INSTANCE clause to specify the database on which you want to open a conversation.
 
     ```sql
         DECLARE @Cmd NVARCHAR(4000);
-        
+
         SET @Cmd = N'USE InstInitiatorDB;
         CREATE ROUTE InstTargetRoute
         WITH SERVICE_NAME =
                N''//TgtDB/2InstSample/TargetService'',
              ADDRESS = N''TCP://MyTargetComputer:4022'';';
-        
+
         EXEC (@Cmd);
-        
+
         SET @Cmd = N'USE msdb
         CREATE ROUTE InstInitiatorRoute
         WITH SERVICE_NAME =
                N''//InstDB/2InstSample/InitiatorService'',
              ADDRESS = N''LOCAL''';
-        
+
         EXEC (@Cmd);
         GO
         CREATE REMOTE SERVICE BINDING TargetBinding
               TO SERVICE
                  N'//TgtDB/2InstSample/TargetService'
               WITH USER = TargetUser;
-        
+
         GO
     ```
 
 ## Next Steps
 
-You have successfully created the initiator databases that will be used for the tutorial. Next, you will finish configuring the target database by creating the target objects that have dependencies on initiator objects. See [Lesson 3: Completing the Target Conversation Objects](lesson-3-completing-the-target-conversation-objects.md).
+You have successfully created the initiator databases that will be used for the tutorial. Next, you will finish configuring the target database by creating the target objects that have dependencies on initiator objects. For more information, see [Lesson 3: Completing the Target Conversation Objects](lesson-3-completing-the-target-conversation-objects.md).
 
 ## See also
 

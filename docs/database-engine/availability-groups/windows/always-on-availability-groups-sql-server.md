@@ -12,6 +12,7 @@ helpviewer_keywords:
   - "secondary replicas, see Availability Groups [SQL Server]"
   - "availability [SQL Server]"
   - "AlwaysOn [SQL Server], see Availability Groups [SQL Server]"
+  - "Always On [SQL Server], see Availability Groups [SQL Server]"
   - "Availability Groups [SQL Server]"
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT

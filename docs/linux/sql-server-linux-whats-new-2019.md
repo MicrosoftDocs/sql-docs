@@ -57,6 +57,6 @@ To install SQL Server on Linux, use one of the following tutorials:
 - [Run on Docker](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true)
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml). To see other improvements introduced in SQL Server 2019, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true).
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml). To see other improvements introduced in SQL Server 2019, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-2019.md?preserve-view=true&view=sql-server-ver15).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

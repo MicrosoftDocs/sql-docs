@@ -1,9 +1,8 @@
 ---
-description: "Modify a Partition Function"
-title: "Modify a Partition Function"
-
+description: "Modify a partition function"
+title: "Modify a partition function"
 ms.custom: ""
-ms.date: "4/6/2022"
+ms.date: "4/22/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -13,7 +12,7 @@ author: LitKnd
 ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Modify a Partition Function
+# Modify a partition function
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 You can change the way a table or index is partitioned in SQL Server, Azure SQL Database, and Azure SQL Managed Instance by adding or subtracting the number of partitions specified, in increments of 1, in the partition function of the partitioned table or index by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. When you add a partition, you do so by "splitting" an existing partition into two partitions and redefining the boundaries of the new partitions. When you drop a partition, you do so by "merging" the boundaries of two partitions into one. This last action repopulates one partition and leaves the other partition unassigned. Review [best practices](../../t-sql/statements/alter-partition-function-transact-sql.md#best-practices) before modifying a partition function.

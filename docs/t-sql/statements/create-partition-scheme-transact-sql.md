@@ -2,7 +2,7 @@
 description: "CREATE PARTITION SCHEME (Transact-SQL)"
 title: "CREATE PARTITION SCHEME (Transact-SQL)"
 ms.custom: ""
-ms.date: "4/5/2022"
+ms.date: "4/22/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

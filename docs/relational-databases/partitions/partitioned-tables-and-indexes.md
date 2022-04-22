@@ -3,7 +3,7 @@ description: "Partitioned tables and indexes"
 title: "Partitioned tables and indexes"
 titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
 ms.custom: ""
-ms.date: "4/20/2022"
+ms.date: "4/22/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 

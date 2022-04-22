@@ -2,7 +2,7 @@
 description: "$PARTITION (Transact-SQL)"
 title: "$PARTITION (Transact-SQL)"
 ms.custom: ""
-ms.date: "4/5/2022"
+ms.date: "4/22/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -44,10 +44,10 @@ Is the name of the database that contains the partition function.
 Is the name of any existing partition function against which a set of partitioning column values are being applied.  
   
 *expression*  
-
 Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) whose data type must either match or be implicitly convertible to the data type of its corresponding partitioning column. *expression* can also be the name of a partitioning column that currently participates in *partition_function_name*.  
   
-## Return Types  
+## Return types
+
 **int**  
   
 ## Remarks  
@@ -133,7 +133,6 @@ The query should return the following results:
 | 101  | another row  |
 | 500  | a third row  |
 | 501  | a fourth row |
-
   
 ## Next steps
 

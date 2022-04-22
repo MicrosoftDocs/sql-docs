@@ -11,6 +11,8 @@ ms.prod: sql
 ---
 # Connect your SQL Server to Azure Arc
 
+Beginning in SQL Server 2022 (Preview), you can deploy an instance of SQL Server from the command prompt that is connected to Azure Arc. See [Deploy - connected to Azure Arc](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#deploy---connected-to-azure-arc).
+
 You can connect your SQL Server instance to Azure Arc by following these steps.
 
 ## Prerequisites
@@ -43,7 +45,6 @@ Run:
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
 ---
-
 
 ## Initiate the connection from Azure
 

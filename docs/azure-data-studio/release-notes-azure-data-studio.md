@@ -8,7 +8,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: seodec18, contperf-fy21q4
-ms.date: 04/20/2022
+ms.date: 04/22/2022
 ---
 
 # Release notes for Azure Data Studio
@@ -19,43 +19,18 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### April 2022 release
+### April 2022 (hotfix)
 
-Azure Data Studio 1.36.0 is the latest general availability (GA) release.
+Azure Data Studio 1.36.1 is the latest general availability (GA) release.
 
-- Release number: 1.36.0
-- Release date: April 20, 2022
+- Release number: 1.36.1
+- Release date: April 22, 2022
 
-#### What's new in 1.36.0
-
-| New item | Details |
-|----------|---------|
-| Table Designer | Added support for System Versioning, Memory Optimized, and Graph Tables. |
-| Query Plan Viewer | Added support icons and additional support for searching within plans. Added additional telemetry to Execution Plans. Provided support on plan toolbar to enable or disable tooltips. Added support for saving .sql plan files on Azure Data Studio  |
-| SQL Projects |Introduced new SQL Project format based on an SDK-Style project file |
-| Azure SQL Migration Extension | Announcing General Availability of the Azure SQL Migration Extension |
-| .NET Interactive Notebooks extension | This extension provides additional multi-language support to Jupyter Notebooks. Please reference [.NET Notebooks in Visual Studio Code](https://devblogs.microsoft.com/dotnet/net-interactive-with-sql-net-notebooks-in-visual-studio-code/)for an introduction to using SQL and .NET interactive |
-
-#### Bug fixes in 1.36.0
+#### Bug fixes in 1.36.1
 
 | New Item | Details |
 |----------|---------|
-| Table Designer | Added missing validation rules for primary key column specifications |
-| Table Designer | Now able to add description to Primary Key ,Foreign Key, and check constraints|
-| Table Designer | Fixed bug that prevents the primary key checkbox from being unchecked for unsupported primary key types|
-| Query Plan Viewer | Added option to turn off tooltip in execution plan|
-| Query Plan Viewer | Fixed display and sizing issues |
-| Query Plan Viewer | Fixed latency issues while switching tabs when execution plan is shown |
-| Query Editor | Fixed performance issues in Query Editor |
-| Notebooks | Fixed keyboard navigation issues|
-| Notebooks | Fixed .NET Interactive log errors on startup|
-| Notebooks | Fixed inconsistencies with notebook URI handling|
-
-For a full list of bug fixes addressed for the April 2022 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/84?closed=1).
-
-#### Known issues in 1.36.0
-
-For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
+| Table Designer | Fix for timeout occurring when viewing table list  |
 
 ## Azure Data Studio feedback
 
@@ -65,7 +40,8 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------|
-| [February 2022](#february-2022) | 1.35.0 | February 24, 2022 |[hotfix](#february-2022-hotfix)| 
+| [April 2022](#april-2022) | 1.36.0 | April 20, 2022 |[hotfix](#april-2022-hotfix)|
+| [February 2022](#february-2022) | 1.35.0 | February 24, 2022 |[hotfix](#february-2022-hotfix)|
 | [December 2021](#december-2021) | 1.34.0 | December 15, 2021 | N/A |  
 | [October 2021](#october-2021) | 1.33.0 | October 27, 2021 | N/A |
 | [August 2021](#august-2021) | 1.32.0 | August 18, 2021 | N/A |
@@ -104,9 +80,43 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 > [!Note]
 > All previous versions of Azure Data Studio are not supported.
 
-### February 2022 (hotfix)
+### April 2022
 
-Azure Data Studio 1.35.1 is the latest general availability (GA) release.
+- Release number: 1.36.0
+- Release date: April 20, 2022
+
+#### What's new in 1.36.0
+
+| New item | Details |
+|----------|---------|
+| Table Designer | Added support for System Versioning, Memory Optimized, and Graph Tables. |
+| Query Plan Viewer | Added support icons and additional support for searching within plans. Added additional telemetry to Execution Plans. Provided support on plan toolbar to enable or disable tooltips. Added support for saving .sql plan files on Azure Data Studio  |
+| SQL Projects |Introduced new SQL Project format based on an SDK-Style project file |
+| Azure SQL Migration Extension | Announcing General Availability of the Azure SQL Migration Extension |
+| .NET Interactive Notebooks extension | This extension provides additional multi-language support to Jupyter Notebooks. Please reference [.NET Notebooks in Visual Studio Code](https://devblogs.microsoft.com/dotnet/net-interactive-with-sql-net-notebooks-in-visual-studio-code/)for an introduction to using SQL and .NET interactive |
+
+#### Bug fixes in 1.36.0
+
+| New Item | Details |
+|----------|---------|
+| Table Designer | Added missing validation rules for primary key column specifications |
+| Table Designer | Now able to add description to Primary Key ,Foreign Key, and check constraints|
+| Table Designer | Fixed bug that prevents the primary key checkbox from being unchecked for unsupported primary key types|
+| Query Plan Viewer | Added option to turn off tooltip in execution plan|
+| Query Plan Viewer | Fixed display and sizing issues |
+| Query Plan Viewer | Fixed latency issues while switching tabs when execution plan is shown |
+| Query Editor | Fixed performance issues in Query Editor |
+| Notebooks | Fixed keyboard navigation issues|
+| Notebooks | Fixed .NET Interactive log errors on startup|
+| Notebooks | Fixed inconsistencies with notebook URI handling|
+
+For a full list of bug fixes addressed for the April 2022 release, visit the [bugs and issues list on GitHub](https://github.com/microsoft/azuredatastudio/milestone/84?closed=1).
+
+#### Known issues in 1.36.0
+
+For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
+
+### February 2022 (hotfix)
 
 - Release number: 1.35.1
 - Release date: March 17, 2022
@@ -119,8 +129,6 @@ Azure Data Studio 1.35.1 is the latest general availability (GA) release.
 | Query Editor | Excel number format  |
 
 ### February 2022
-
-Azure Data Studio 1.35.0 is the latest general availability (GA) release.
 
 - Release number: 1.35.0
 - Release date: February 24, 2022
@@ -148,8 +156,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 ### December 2021
 
-Azure Data Studio 1.34.0 is the latest general availability (GA) release.
-
 - Release number: 1.34.0
 - Release date: December 15, 2021
 
@@ -176,8 +182,6 @@ Azure Data Studio 1.34.0 is the latest general availability (GA) release.
 | Notebooks | Fix for Python upgrades when two or more notebooks were open |
 
 ### October 2021
-
-Azure Data Studio 1.33.0 is the latest general availability (GA) release.
 
 - Release number: 1.33.0
 - Release date: October 27, 2021
@@ -220,8 +224,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 ### August 2021
 
-Azure Data Studio 1.32.0 is the latest general availability (GA) release.
-
 - Release number: 1.32.0
 - Release date: August 18, 2021
 
@@ -253,8 +255,6 @@ For a full list of bug fixes addressed for the August 2021 release, visit the [b
 For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ### July Hotfix 2021
-
-Azure Data Studio 1.31.1 is the latest general availability (GA) release.
 
 - Release number: 1.31.1
 - Release date: July 29, 2021

@@ -1,6 +1,6 @@
 ---
 title: APPROX_PERCENTILE_CONT (Transact-SQL)
-description: "APPROXIMATE PERCENTILE CONT (Transact-SQL)"
+description: A function that returns an approximate interpolated value from the set of values in a group based on percentile value and sort specification.
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference

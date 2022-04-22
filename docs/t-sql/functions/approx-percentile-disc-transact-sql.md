@@ -1,6 +1,6 @@
 ---
 title: APPOX_PERCENTILE_DISC (Transact-SQL)
-description: "APPROXIMATE PERCENTILE DISC (Transact-SQL)"
+description: A function that returns the value from the set of values in a group based on the provided percentile and sort specification.
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference

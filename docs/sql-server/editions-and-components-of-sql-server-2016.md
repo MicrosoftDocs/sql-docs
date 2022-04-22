@@ -44,7 +44,7 @@ This topic provides details of features supported by the SQL Server editions.
 
 For information about other versions, see:
 
-* [SQL Server 2019](editions-and-components-of-sql-server-version-15.md).  
+* [SQL Server 2019](./editions-and-components-of-sql-server-2019.md).  
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md).  
 * [SQL Server 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014&preserve-view=true).
 
@@ -387,4 +387,3 @@ For information about the Business Intelligence Client features supported by the
   
 ## See Also  
  [Install SQL Server](../database-engine/install-windows/install-sql-server.md)  
- 

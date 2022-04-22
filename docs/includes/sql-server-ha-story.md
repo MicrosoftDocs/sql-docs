@@ -5,7 +5,7 @@ One common task everyone deploying SQL Server has to account for is making sure 
 SQL Server 2017 introduces many new features or enhancements to existing ones, some of which are for availability. The biggest addition to SQL Server 2017 is the support for SQL Server on Linux distributions. For a full list of the new features in SQL Server, see the topics: 
 
 - [What's new in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
-- [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
+- [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-2019.md)
 - [What's new for SQL Server 2017 on Linux](../linux/sql-server-linux-whats-new.md)
 - [What's new for SQL Server 2019 on Linux](../linux/sql-server-linux-whats-new-2019.md)
 

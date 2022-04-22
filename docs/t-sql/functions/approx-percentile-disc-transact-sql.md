@@ -16,8 +16,8 @@ author: blakhani-msft
 ms.author: blakhani 
 ms.reviewer: "maghan"
 ms.custom: ""
-ms.date: "05/24/2022"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.date: "04/24/2022"
+monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current"
 ---
 
 # APPROX_PERCENTILE_DISC (Transact-SQL)
@@ -26,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 This function returns the value from the set of values in a group based on the provided percentile and sort specification. Since this is an approximate function, the output would be within rank based error bound with certain confidence. As this approximate percentile is based on a discrete distribution of the column values, the output value would be equal to one of the specific values in the column. This function can be used as an alternative to PERCENTILE_DISC for large datasets where negligible error with faster response is acceptable as compared to accurate percentile value with slow response time.
 
-[Transact-SQL Syntax Conventions](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)  
+[Transact-SQL Syntax Conventions](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)  
 
 ## Syntax
 
@@ -88,7 +88,7 @@ function implementation guarantees up to a 1.33% error bounds within a 99% confi
 
 Under compatibility level 110 and higher, WITHIN GROUP is a reserved
 keyword. For more information, see [ALTER DATABASE Compatibility Level
-(Transact-SQL).](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)
+(Transact-SQL).](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)
 
 ## Examples
 

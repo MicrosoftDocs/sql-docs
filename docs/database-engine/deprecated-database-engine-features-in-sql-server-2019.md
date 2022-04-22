@@ -47,6 +47,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 ### See also
 
-- [Breaking changes to database engine features in SQL Server 2019](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md)
+- [Breaking changes to database engine features in SQL Server 2019](./breaking-changes-to-database-engine-features-in-sql-server-2019.md)
 - [Discontinued database engine functionality in SQL Server](../database-engine/discontinued-database-engine-functionality-in-sql-server.md)
 - [SQL Server database engine backward compatibility](./discontinued-database-engine-functionality-in-sql-server.md)

@@ -24,7 +24,7 @@ This tutorial demonstrates how to configure a highly available SQL Server instan
 > * Create an SA password
 > * Create storage
 > * Create the deployment
-> * Connect with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms)
+> * Connect with [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 > * Verify failure and recovery
 
 ## HA solution on Kubernetes running in Azure Kubernetes Service
@@ -297,7 +297,7 @@ You can use the following applications to connect to the SQL Server instance.
 
 * [SQL Server Data Tools (SSDT)](./sql-server-linux-develop-use-ssdt.md)
 
-* [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-server)
+* [Azure Data Studio](../azure-data-studio/quickstart-sql-server.md)
 
 * sqlcmd
 

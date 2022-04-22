@@ -29,12 +29,12 @@ Table partitioning is also available in dedicated SQL pools in Azure Synapse Ana
   
     -   Create a new partitioned table with the desired partition function, and then insert the data from the old table into the new table by using either an INSERT INTO ... SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or the **Manage Partition Wizard** in [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md).  
   
-    -   Create a partitioned clustered index on a heap.  
+    -   Create a partitioned [clustered index](../../t-sql/statements/create-index-transact-sql.md) on a heap.  
   
         > [!NOTE]  
         >  Dropping a partitioned clustered index results in a partitioned heap.  
   
-    -   Drop and rebuild an existing partitioned index by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE INDEX statement with the DROP EXISTING = ON clause.  
+    -   Drop and rebuild an existing partitioned index by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] [CREATE INDEX statement with the DROP EXISTING = ON](../../t-sql/statements/create-index-transact-sql.md#drop_existing---on--off-) clause.  
   
     -   Perform a sequence of ALTER PARTITION FUNCTION statements.  
   
@@ -80,23 +80,23 @@ ORDER BY PartitionFunction, PartitionScheme, SchemaName, PartitionedTable;
   
 2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and select **Execute**.  
-  
-    ```  
-    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
+3.  Copy and paste the following example into the query window and select **Execute**. 
+
+    This example:
+    - Checks for a previous version of the partition function `myRangePF1` and deletes it if it is found.
+    - Creates a partition function called `myRangePF1` that partitions a table into four partitions.
+    - Splits the partition between boundary_values 100 and 1000 to create a partition between boundary_values 100 and 500 and a partition between boundary_values 500 and 1000.  
+
+    ```sql
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO
-
-    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
+ 
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  
 
-    --Split the partition between boundary_values 100 and 1000  
-    --to create two partitions between boundary_values 100 and 500  
-    --and between boundary_values 500 and 1000.  
     ALTER PARTITION FUNCTION myRangePF1 ()  
     SPLIT RANGE (500);  
     ```  
@@ -115,7 +115,7 @@ ORDER BY PartitionFunction, PartitionScheme, SchemaName, PartitionedTable;
     - Merges the partition between boundary_values 1 and 100 with the partition between boundary_values 100 and 1,000.
     - This results in the partition function `myRangePF1` having two boundary points, 1 and 1,000.
  
-    ```
+    ```sql
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  

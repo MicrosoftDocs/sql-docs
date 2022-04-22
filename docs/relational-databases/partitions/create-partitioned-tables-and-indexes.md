@@ -464,7 +464,7 @@ The query uses the `type` column in [sys.indexes](../system-catalog-views/sys-in
 
 ```sql
 SELECT SCHEMA_NAME(t.schema_id) AS SchemaName, t.name AS TableName, i.name AS IndexName, 
-    p.partition_number, f.name, f.type_desc, p.rows, rv.value, 
+    p.partition_number AS PartitionNumber, f.name AS PartitionFunctionName, p.rows AS Rows, rv.value AS BoundaryValue, 
 CASE WHEN ISNULL(rv.value, rv2.value) IS NULL THEN 'N/A' 
 ELSE
     CASE WHEN f.boundary_value_on_right = 0 AND rv2.value IS NULL THEN '>=' 
@@ -500,14 +500,14 @@ ORDER BY t.name, p.partition_number;
 
 The `TextComparison` column describes the possible range of values in each partition based on the definition of the [partition function](partitioned-tables-and-indexes.md#partition-function). Here is a view of example results from the query:
 
-| SchemaName | TableName      | IndexName                      | partition_number | name | type_desc | rows | value                   | TextComparison                                   |
-|------------|----------------|--------------------------------|------------------|------|-----------|------|-------------------------|--------------------------------------------------|
-| dbo        | PartitionTable | PK__Partitio__357D0D3E4F5BA703 | 1                | test | RANGE     | 0    | 2022-03-01 00:00:00.000 | >= Min Value and < Mar  1 2022 12:00AM           |
-| dbo        | PartitionTable | PK__Partitio__357D0D3E4F5BA703 | 2                | test | RANGE     | 2    | 2022-04-01 00:00:00.000 | >= Mar  1 2022 12:00AM and < Apr  1 2022 12:00AM |
-| dbo        | PartitionTable | PK__Partitio__357D0D3E4F5BA703 | 3                | test | RANGE     | 1    | 2022-05-01 00:00:00.000 | >= Apr  1 2022 12:00AM and < May  1 2022 12:00AM |
-| dbo        | PartitionTable | PK__Partitio__357D0D3E4F5BA703 | 4                | test | RANGE     | 0    | 2022-06-01 00:00:00.000 | >= May  1 2022 12:00AM and < Jun  1 2022 12:00AM |
-| dbo        | PartitionTable | PK__Partitio__357D0D3E4F5BA703 | 5                | test | RANGE     | 1    | 2022-07-01 00:00:00.000 | >= Jun  1 2022 12:00AM and < Jul  1 2022 12:00AM |
-| dbo        | PartitionTable | PK__Partitio__357D0D3E4F5BA703 | 6                | test | RANGE     | 0    | NULL                    | >= Jul  1 2022 12:00AM and < Max Value           |
+| SchemaName | TableName      | IndexName         | PartitionNumber | PartitionFunctionName | rows | BoundaryValue           | TextComparison                                   |
+|------------|----------------|-------------------|-----------------|-----------------------|------|-------------------------|--------------------------------------------------|
+| dbo        | PartitionTable | PK_PartitionTable | 1               | PFTest                | 0    | 2022-03-01 00:00:00.000 | >= Min Value and < Mar  1 2022 12:00AM           |
+| dbo        | PartitionTable | PK_PartitionTable | 2               | PFTest                | 2    | 2022-04-01 00:00:00.000 | >= Mar  1 2022 12:00AM and < Apr  1 2022 12:00AM |
+| dbo        | PartitionTable | PK_PartitionTable | 3               | PFTest                | 1    | 2022-05-01 00:00:00.000 | >= Apr  1 2022 12:00AM and < May  1 2022 12:00AM |
+| dbo        | PartitionTable | PK_PartitionTable | 4               | PFTest                | 0    | 2022-06-01 00:00:00.000 | >= May  1 2022 12:00AM and < Jun  1 2022 12:00AM |
+| dbo        | PartitionTable | PK_PartitionTable | 5               | PFTest                | 1    | 2022-07-01 00:00:00.000 | >= Jun  1 2022 12:00AM and < Jul  1 2022 12:00AM |
+| dbo        | PartitionTable | PK_PartitionTable | 6               | PFTest                | 0    | NULL                    | >= Jul  1 2022 12:00AM and < Max Value           |
 
 ## <a name="Restrictions"></a> Limitations
 

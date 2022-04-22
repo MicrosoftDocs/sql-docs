@@ -53,7 +53,7 @@ This example uses the [AdventureWorks sample database](../../samples/adventurewo
     > [!NOTE]
     > For simplicity, this code creates new filegroups but does not assign files to them. This  allows the demonstration of how to modify the partition scheme but is not a complete example of configuring a partitioned object. Find examples of creating partitioned tables and indexes in [Create partitioned tables and indexes](create-partitioned-tables-and-indexes.md).
   
-    ```  
+    ```sql
     USE AdventureWorks2019;  
     GO
     -- add five new filegroups to the AdventureWorks2019 database  

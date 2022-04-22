@@ -82,8 +82,6 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 ### April 2022
 
-Azure Data Studio 1.36.0 is the latest general availability (GA) release.
-
 - Release number: 1.36.0
 - Release date: April 20, 2022
 
@@ -120,8 +118,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 ### February 2022 (hotfix)
 
-Azure Data Studio 1.35.1 is the latest general availability (GA) release.
-
 - Release number: 1.35.1
 - Release date: March 17, 2022
 
@@ -133,8 +129,6 @@ Azure Data Studio 1.35.1 is the latest general availability (GA) release.
 | Query Editor | Excel number format  |
 
 ### February 2022
-
-Azure Data Studio 1.35.0 is the latest general availability (GA) release.
 
 - Release number: 1.35.0
 - Release date: February 24, 2022
@@ -162,8 +156,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 ### December 2021
 
-Azure Data Studio 1.34.0 is the latest general availability (GA) release.
-
 - Release number: 1.34.0
 - Release date: December 15, 2021
 
@@ -190,8 +182,6 @@ Azure Data Studio 1.34.0 is the latest general availability (GA) release.
 | Notebooks | Fix for Python upgrades when two or more notebooks were open |
 
 ### October 2021
-
-Azure Data Studio 1.33.0 is the latest general availability (GA) release.
 
 - Release number: 1.33.0
 - Release date: October 27, 2021
@@ -234,8 +224,6 @@ For a list of the current known issues, visit the [issues list on GitHub](https:
 
 ### August 2021
 
-Azure Data Studio 1.32.0 is the latest general availability (GA) release.
-
 - Release number: 1.32.0
 - Release date: August 18, 2021
 
@@ -267,8 +255,6 @@ For a full list of bug fixes addressed for the August 2021 release, visit the [b
 For a list of the current known issues, visit the [issues list on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue).
 
 ### July Hotfix 2021
-
-Azure Data Studio 1.31.1 is the latest general availability (GA) release.
 
 - Release number: 1.31.1
 - Release date: July 29, 2021

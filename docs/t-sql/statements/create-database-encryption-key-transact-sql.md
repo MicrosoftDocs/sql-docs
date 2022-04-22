@@ -84,7 +84,7 @@ Specifies the name of the asymmetric key used to encrypt the database encryption
 ## Remarks  
 A database encryption key is required before a database can be encrypted by using *Transparent Database Encryption* (TDE). When a database is transparently encrypted, the whole database is encrypted at the file level, without any special code modifications. The certificate or asymmetric key that is used to encrypt the database encryption key must be located in the master system database.
 
-Certificates or asymmetric keys used for TDE are limited to a private key size of 3456 bits.
+Certificates or asymmetric keys used for TDE are limited to a private key size of 3072 bits.
   
 Database encryption statements are allowed only on user databases.  
   

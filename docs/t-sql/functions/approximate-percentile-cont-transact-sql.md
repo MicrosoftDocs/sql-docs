@@ -1,11 +1,7 @@
 ---
-description: "PERCENTILE_CONT (Transact-SQL)"
-title: "PERCENTILE_CONT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/20/2015"
+title: APPROX_PERCENTILE_CONT (Transact-SQL)
+description: "APPROXIMATE PERCENTILE CONT (Transact-SQL)"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -16,107 +12,105 @@ dev_langs:
 helpviewer_keywords: 
   - "analytic functions, PERCENTILE_CONT"
   - "PERCENTILE_CONT function"
-ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
-author: LitKnd
-ms.author: kendralittle
+author: blakhani-msft
+ms.author: blakhani 
+ms.reviewer: "maghan"
+ms.custom: ""
+ms.date: "05/24/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# PERCENTILE_CONT (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Calculates a percentile based on a continuous distribution of the column value in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The result is interpolated and might not be equal to any of the specific values in the column.  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
+# APPROX_PERCENTILE_CONT (Transact-SQL)
+
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+
+This function returns an approximate interpolated value from the set of values in a group based on percentile value and sort specification. Since this is an approximate function, the output would be within rank based error bound with certain confidence. The percentile value returned by this function is based on a continuous distribution of the column values and the result would be interpolated. Due to this, the output might not be one of values in the data set. One of the common use cases for this function is to avoid the data outliers. This function can be used as an alternative to PERCENTILE_CONT for large datasets where negligible error with faster response is acceptable as compared to accurate percentile value with slow response time.
+
+[Transact-SQL Syntax Conventions](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)  
+
+## Syntax
+
 ```syntaxsql
-PERCENTILE_CONT ( numeric_literal )   
-    WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )  
-    OVER ( [ <partition_by_clause> ] )  
-```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+APPROX_PERCENTILE_CONT (numeric_literal)
+WITHIN GROUP (ORDER BY order_by_expression [ASC|DESC]) 
+```
 
-## Arguments
- *numeric_literal*  
- The percentile to compute. The value must range between 0.0 and 1.0.  
-  
- WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
- Specifies a list of numeric values to sort and compute the percentile over. Only one *order_by_expression* is allowed. The expression must evaluate to an exact or approximate numeric type, with no other data types allowed. Exact numeric types are **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney**, and **money**. Approximate numeric types are **float** and **real**. The default sort order is ascending.  
-  
- OVER **(** \<partition_by_clause> **)**  
- Divides the result set produced by the FROM clause into partitions to which the percentile function is applied. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). The \<ORDER BY clause> and \<rows or range clause> of the OVER syntax can't be specified in a PERCENTILE_CONT function.  
-  
-## Return Types  
- **float(53)**  
-  
-## Compatibility Support  
- Under compatibility level 110 and higher, WITHIN GROUP is a reserved keyword. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
-  
-## General Remarks  
- Any nulls in the data set are ignored.  
-  
- PERCENTILE_CONT is nondeterministic. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
-  
-## Examples  
-  
-### A. Basic syntax example  
- The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. These functions may not return the same value. PERCENTILE_CONT interpolates the appropriate value, which may or may not exist in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
-  
-```sql  
-USE AdventureWorks2012;  
-  
-SELECT DISTINCT Name AS DepartmentName  
-      ,PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY ph.Rate)   
-                            OVER (PARTITION BY Name) AS MedianCont  
-      ,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY ph.Rate)   
-                            OVER (PARTITION BY Name) AS MedianDisc  
-FROM HumanResources.Department AS d  
-INNER JOIN HumanResources.EmployeeDepartmentHistory AS dh   
-    ON dh.DepartmentID = d.DepartmentID  
-INNER JOIN HumanResources.EmployeePayHistory AS ph  
-    ON ph.BusinessEntityID = dh.BusinessEntityID  
-WHERE dh.EndDate IS NULL;  
-```  
-  
- Here is a partial result set.  
-  
- ```
-DepartmentName        MedianCont    MedianDisc
---------------------   ----------   ----------
-Document Control       16.8269      16.8269
-Engineering            34.375       32.6923
-Executive              54.32695     48.5577
-Human Resources        17.427850    16.5865
-```  
+## Argument
 
-### B. Basic syntax example  
- The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. These functions may not return the same value. PERCENTILE_CONT interpolates the appropriate value, which may or may not exist in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
+*numeric_literal*
+
+The percentile to compute. The value must range between 0.0 and 1.0.
+
+*order_by_expression*
+
+Specifies a list of numeric values to sort and compute the percentile
+over. Only one *order_by_expression* is allowed. The default sort order
+is ascending (ASC).  The expression must evaluate to an exact or
+approximate numeric type, with no other data types allowed. Exact
+numeric types are int, bigint, smallint, tinyint, numeric, bit, decimal,
+smallmoney, and money. Approximate numeric types are float and real.
+
+## Return type
+
+float(53)
+
+## Remarks
+
+Any nulls in the data set are ignored.
+
+Approximate percentile functions use KLL sketch. The sketch is built by
+reading the stream of data. Due to the algorithm used, this function
+requires less memory than its non-approximate counterpart
+([PERCENTILE_CONT](https://docs.microsoft.com/en-us/sql/t-sql/functions/percentile-cont-transact-sql))
+
+This function provides rank-based error guarantees not value based. The
+function implementation guarantees up to a 1.33% error.
+
+## Known Behaviors
+
+- If the trace flag is not enabled below error message would be raised
+
+    Msg 195, Level 15, State 22, Line 1 </br>
+    'approx_percentile_cont' is not a recognized built-in function name
+
+- The output of the function may not be the same in all executions. The algorithm used for these
+functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random
+values are picked. This functions provide rank-based error guarantees not value based.
+- The
+function implementation guarantees up to a 1.33% error bounds within a 99% confidence.
+
+## Compatibility Support
+
+Under compatibility level 110 and higher, WITHIN GROUP is a reserved
+keyword. For more information, see [ALTER DATABASE Compatibility Level
+(Transact-SQL).](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)
+
+## Examples
+
+The following example creates a table, populates it, and executes a
+sample query.
+
+```sql
+SET NOCOUNT ON
+GO
+DROP TABLE IF EXISTS tblEmployee;
+GO
+CREATE TABLE tblEmployee (
+EmplId INT IDENTITY(1,1) PRIMARY KEY CLUSTERED,
+DeptId INT,
+Salary int);
+GO
+INSERT INTO tblEmployee
+VALUES (1, 31),(1, 33), (1, 18), (2, 25),(2, 35),(2, 10), (2, 10),(3,
+1), (3,NULL), (4,NULL), (4,NULL);
+GO
+SELECT DeptId,
+APPROX_PERCENTILE_CONT(0.10) WITHIN GROUP(ORDER BY Salary) AS 'P10',
+APPROX_PERCENTILE_CONT(0.90) WITHIN GROUP(ORDER BY Salary) AS 'P90'
+FROM tblEmployee
+GROUP BY DeptId;
+```
   
-```sql  
--- Uses AdventureWorks  
-  
-SELECT DISTINCT DepartmentName  
-,PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY BaseRate)  
-    OVER (PARTITION BY DepartmentName) AS MedianCont  
-,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY BaseRate)  
-    OVER (PARTITION BY DepartmentName) AS MedianDisc  
-FROM dbo.DimEmployee; 
-```  
-  
- Here is a partial result set.  
-  
- ```
-DepartmentName        MedianCont    MedianDisc
---------------------   ----------   ----------
-Document Control       16.826900    16.8269
-Engineering            34.375000    32.6923
-Human Resources        17.427850    16.5865
-Shipping and Receiving 9.250000      9.0000
-```  
-  
-## See Also  
- [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
-  
- 
+## See Also
+
+[PERCENTILE_CONT](../../t-sql/functions/percentile-cont-transact-sql.md)

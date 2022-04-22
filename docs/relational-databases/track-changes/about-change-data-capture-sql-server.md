@@ -230,15 +230,15 @@ While enabling change data capture (CDC) on your Azure SQL Database, please be a
 Enabling change data capture (CDC) on a database disables aggressive log truncation behavior. Active transactions will continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This might result in the transaction log getting full and the database going into read-only mode.
 
 **CDC fails after ALTER COLUMN to VARCHAR and VARBINARY**  
-When the datatype of a column on a CDC-enabled table is changed from `TEXT to VARCHAR` or `IMAGE to VARBINARY` and an existing row is updated to an off-row value. After the update, the CDC scan will result in errors.
+When the datatype of a column on a CDC-enabled table is changed from `TEXT` to `VARCHAR` or `IMAGE` to `VARBINARY` and an existing row is updated to an off-row value. After the update, the CDC scan will result in errors.
 
 **Enabling CDC fails on restored Azure SQL DB created with Microsoft Azure Active Directory (Azure AD)**  
 Enabling CDC will fail if you create a database in Azure SQL Database as a Microsoft Azure Active Directory (Azure AD) user and don't enable CDC, then restore the database and enable CDC on the restored database.
 
-Here are the mitigation options we currently offer for this issue:
+To resolve this issue, follow these steps: 
 
 - Login as Azure AD admin of the server
-- Run the command below on the restored DB
+- Run ALTER AUTHORIZATION command on the database: 
 
 ```sql
 ALTER AUTHORIZATION ON DATABASE::[<restored_db_name>] TO [<azuread_admin_login_name>];

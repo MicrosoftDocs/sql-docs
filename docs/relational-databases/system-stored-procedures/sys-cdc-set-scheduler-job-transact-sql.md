@@ -20,6 +20,7 @@ helpviewer_keywords:
 ms.assetid:
 author: abhimantiwari
 ms.author: abhtiwar
+monikerRange: "= azuresqldb-current"
 ---
 # sys.sp_cdc_set_scheduler_job (Transact-SQL)
 [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]

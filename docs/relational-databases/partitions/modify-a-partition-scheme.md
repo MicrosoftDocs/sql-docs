@@ -28,7 +28,7 @@ Table partitioning is also available in dedicated SQL pools in Azure Synapse Ana
 Any filegroup affected by ALTER PARTITION SCHEME must be online.  
 
 > [!NOTE]
-> In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only primary filegroups are supported.  
+> Azure SQL Database supports only the `PRIMARY` filegroup.  
   
 ## Permissions  
 

@@ -34,15 +34,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Create partitioned tables and indexes
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-You can create a [partitioned table or index](partitioned-tables-and-indexes.md) in SQL Server, Azure SQL Database, and Azure SQL Managed Instance by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The data in partitioned tables and indexes is horizontally divided into units that can be spread across more than one filegroup in a database, or stored in a single filegroup.. Partitioning can make large tables and indexes more manageable and scalable.
+You can create a [partitioned table or index](partitioned-tables-and-indexes.md) in SQL Server, Azure SQL Database, and Azure SQL Managed Instance by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The data in partitioned tables and indexes is horizontally divided into units that can be spread across more than one filegroup in a database, or stored in a single filegroup. Partitioning can make large tables and indexes more manageable and scalable.
 
 Creating a partitioned table or index typically happens in three or four parts:  
   
 1.  Optionally [create a filegroup](../../t-sql/statements/alter-database-transact-sql-set-options.md) or filegroups and corresponding data files that will hold the partitions specified by the partition scheme. The main reason to place partitions on multiple filegroups is to ensure you can independently perform backup and restore operations on filegroups. If this is not required, you may choose to assign all partitions to a single filegroup, using either an existing filegroup, such as `PRIMARY`, or a new filegroup with related data file(s). In nearly all scenarios, you will achieve all [benefits of partitioning](partitioned-tables-and-indexes.md#benefits-of-partitioning) whether or not you use multiple filegroups.
   
-2.  Create a [partition function](../../t-sql/statements/create-partition-function-transact-sql.md) that maps the rows of a table or index into partitions based on the values of a specified column.  
+2.  Create a [partition function](../../t-sql/statements/create-partition-function-transact-sql.md) that maps the rows of a table or index into partitions based on the values of a specified column. You can use a single partition function to partition multiple objects.
   
-3.  Create a [partition scheme](../../t-sql/statements/create-partition-scheme-transact-sql.md) that maps the partitions of a partitioned table or index to one filegroup or to multiple filegroups.  
+3.  Create a [partition scheme](../../t-sql/statements/create-partition-scheme-transact-sql.md) that maps the partitions of a partitioned table or index to one filegroup or to multiple filegroups. You can use a single partition scheme to partition multiple objects.
   
 4.  Create or alter a table or index and specify the partition scheme as the storage location, along with the column that will serve as the partitioning column.
  
@@ -111,7 +111,7 @@ Run the following example against an empty database. The example:
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, select **New Query**.  
+2.  On the Standard toolbar, select **New Query**.  
   
 3.  This example creates a new database and uses it. It then creates new filegroups, a partition function, and a partition scheme. A new table is created with the partition scheme specified as the storage location. Copy and paste the following example into the query window. 
 
@@ -130,57 +130,53 @@ Run the following example against an empty database. The example:
     USE PartitionTest;
     GO
     
-    ALTER DATABASE CURRENT  
+    ALTER DATABASE PartitionTest  
     ADD FILEGROUP test1fg;  
     GO  
-    ALTER DATABASE CURRENT  
+    ALTER DATABASE PartitionTest  
     ADD FILEGROUP test2fg;  
     GO  
-    ALTER DATABASE CURRENT  
+    ALTER DATABASE PartitionTest  
     ADD FILEGROUP test3fg;  
     GO  
-    ALTER DATABASE CURRENT  
+    ALTER DATABASE PartitionTest  
     ADD FILEGROUP test4fg;   
   
-    ALTER DATABASE CURRENT   
+    ALTER DATABASE PartitionTest   
     ADD FILE   
     (  
         NAME = partitiontest1,  
         FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\partitiontest1.ndf',  
         SIZE = 5MB,  
-        MAXSIZE = 100MB,  
         FILEGROWTH = 5MB  
     )  
     TO FILEGROUP test1fg;  
-    ALTER DATABASE CURRENT   
+    ALTER DATABASE PartitionTest   
     ADD FILE   
     (  
         NAME = partitiontest2,  
         FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\partitiontest2.ndf',  
         SIZE = 5MB,  
-        MAXSIZE = 100MB,  
         FILEGROWTH = 5MB  
     )  
     TO FILEGROUP test2fg;  
     GO  
-    ALTER DATABASE CURRENT   
+    ALTER DATABASE PartitionTest   
     ADD FILE   
     (  
         NAME = partitiontest3,  
         FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\partitiontest3.ndf',  
         SIZE = 5MB,  
-        MAXSIZE = 100MB,  
         FILEGROWTH = 5MB  
     )  
     TO FILEGROUP test3fg;  
     GO  
-    ALTER DATABASE CURRENT   
+    ALTER DATABASE PartitionTest   
     ADD FILE   
     (  
         NAME = partitiontest4,  
         FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\partitiontest4.ndf',  
         SIZE = 5MB,  
-        MAXSIZE = 100MB,  
         FILEGROWTH = 5MB  
     )  
     TO FILEGROUP test4fg;  
@@ -217,7 +213,7 @@ If you wish to place your partitioned table on one or more new [filegroups](part
     > [!WARNING]  
     >  When specifying multiple filegroups, you must always have one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
   
-1. Continue adding rows until you have created all of the filegroups for the partitioned table.  
+1. Continue adding rows until you have created all of the filegroups for the partitioned table or tables.  
   
 1. Select **OK**.  
   
@@ -235,7 +231,7 @@ If you wish to place your partitioned table on one or more new [filegroups](part
   
 1.  In the **Create Partition Wizard**, on the **Welcome to the Create Partition Wizard** page, select **Next**.  
   
-1.  On the **Select a Partitioning Column** page, in the **Available partitioning columns** grid, select the column on which you want to partition your table. Only columns with data types that can be used to partition data will be displayed in the **Available partitioning columns** grid. If you select a computed column as the partitioning column, the column must be designated as a persisted column.  
+1.  On the **Select a Partitioning Column** page, in the **Available partitioning columns** grid, select the column on which you want to partition your table. Only columns with data types that can be used to partition data will be displayed in the **Available partitioning columns** grid. If you select a computed column as the partitioning column, the column must be created as a persisted column.  
   
      The choices you have for the partitioning column and the values range are determined primarily by the extent to which your data can be grouped in a logical way. For example, you may choose to divide your data into logical groupings by months or quarters of a year. The queries you plan to make against your data will determine whether this logical grouping is adequate for managing your table partitions. All data types are valid for use as partitioning columns, except **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, alias data types, or CLR user-defined data types.  
   
@@ -245,7 +241,7 @@ If you wish to place your partitioned table on one or more new [filegroups](part
      Allows you to select a partitioned table that contains related data to join with this table on the partitioning column. Tables with partitions joined on the partitioning columns are typically queried more efficiently.  
   
      **Storage-align non-unique indexes and unique indexes with an indexed partition column**  
-     Aligns all indexes of the table that are partitioned with the same partition scheme. When a table and its indexes are aligned, you can move partitions in and out of partitioned tables more effectively, because your data is partitioned with the same algorithm.  
+     Aligns all indexes of the table that are partitioned with the same partition scheme. When a table and its indexes are aligned, you can move partitions in and out of partitioned tables more effectively, because your data is partitioned in the same way.  
   
      After selecting the partitioning column and any other options, select **Next**.  
   
@@ -382,20 +378,19 @@ If you wish to place your partitioned table on one or more new [filegroups](part
   
  The **Create Partition Wizard** creates the partition function and scheme and then applies the partitioning to the specified table. To verify the table partitioning, in Object Explorer, right-click the table and select **Properties**. Select the **Storage** page. The page displays information such as the name of the partition function and scheme and the number of partitions.
 
-## Query metadata for partitioned tables
+## Query metadata of partitioned tables and indexes
 
-You can query metadata to determine if a table is partitioned, the boundary points for a partitioned table, the partitioning column for a partitioned table, and the number of rows in each partition.
+You can query metadata to determine if a table is partitioned, the boundary points for a partitioned table, the partitioning column for a partitioned table, the number of rows in each partition, and if [data compression](../data-compression/data-compression.md) has been implemented on partitions.
 
 ### Determine if a table is partitioned  
   
-The following query returns one or more rows if the table `PartitionTable` is partitioned. If the table is not partitioned, no rows are returned.  
+The following query returns one or more rows if the table `PartitionTable` is partitioned, or if any nonclustered indexes on the table are partitioned. If the table is not partitioned and no nonclustered indexes on the table are partitioned, no rows are returned.  
   
 ```sql
-SELECT *   
+SELECT SCHEMA_NAME(t.schema_id) AS SchemaName, *   
 FROM sys.tables AS t   
 JOIN sys.indexes AS i   
     ON t.[object_id] = i.[object_id]   
-    AND i.[type] IN (0,1)   
 JOIN sys.partition_schemes ps   
     ON i.data_space_id = ps.data_space_id   
 WHERE t.name = 'PartitionTable';   
@@ -405,9 +400,13 @@ GO
 ### Determine the boundary values for a partitioned table  
   
 The following query returns the boundary values for each partition in the `PartitionTable` table.  
+
+The query uses the `type` column in [sys.indexes](../system-catalog-views/sys-indexes-transact-sql.md) to return only information for the clustered index of the table, or for the base table if the table is a [heap](../indexes/heaps-tables-without-clustered-indexes.md). To include any partitioned nonclustered indexes in the query results, remove or comment out `AND i.type <= 1` from the query.
   
 ```sql
-SELECT t.name AS TableName, i.name AS IndexName, p.partition_number, p.partition_id, i.data_space_id, f.function_id, f.type_desc, r.boundary_id, r.value AS BoundaryValue   
+SELECT SCHEMA_NAME(t.schema_id) AS SchemaName, t.name AS TableName, i.name AS IndexName, 
+    p.partition_number, p.partition_id, i.data_space_id, f.function_id, f.type_desc, 
+    r.boundary_id, r.value AS BoundaryValue   
 FROM sys.tables AS t  
 JOIN sys.indexes AS i  
     ON t.object_id = i.object_id  
@@ -419,20 +418,27 @@ JOIN sys.partition_functions AS f
     ON s.function_id = f.function_id  
 LEFT JOIN sys.partition_range_values AS r   
     ON f.function_id = r.function_id and r.boundary_id = p.partition_number  
-WHERE t.name = 'PartitionTable' AND i.type <= 1  
-ORDER BY p.partition_number;  
+WHERE 
+    t.name = 'PartitionTable' 
+    AND i.type <= 1  
+ORDER BY SchemaName, t.name, i.name, p.partition_number;  
 ```  
   
 ### Determine the partition column for a partitioned table  
   
-The following query returns the name of the partitioning column for table `PartitionTable`.  
+The following query returns the name of the partitioning column for table `PartitionTable`. 
+
+The query uses the `type` column in [sys.indexes](../system-catalog-views/sys-indexes-transact-sql.md) to return only information for the clustered index of the table, or for the base table if the table is a [heap](../indexes/heaps-tables-without-clustered-indexes.md). To include any partitioned nonclustered indexes in the query results, remove or comment out `AND i.type <= 1` from the query.
   
 ```sql
+
 SELECT   
-    t.[object_id] AS ObjectID   
+    t.[object_id] AS ObjectID
+    , SCHEMA_NAME(t.schema_id) AS SchemaName
     , t.name AS TableName   
     , ic.column_id AS PartitioningColumnID   
-    , c.name AS PartitioningColumnName   
+    , c.name AS PartitioningColumnName
+    , i.name as IndexName
 FROM sys.tables AS t   
 JOIN sys.indexes AS i   
     ON t.[object_id] = i.[object_id]   
@@ -446,25 +452,28 @@ JOIN sys.index_columns AS ic
 JOIN sys.columns AS c   
     ON t.[object_id] = c.[object_id]   
     AND ic.column_id = c.column_id   
-WHERE t.name = 'PartitionTable' ;   
+WHERE t.name = 'PartitionTable';   
 GO  
 ```  
 
-### Determine the rows in each partition, and comparison descriptions
+### Determine the rows describe the possible range of values in each partition
 
-The following query returns the rows by partition for table `PartitionTable`, and a description of the comparison operators for the partition scheme in use. *Query original provided by Kalen Delaney.*
-    
+The following query returns the rows by partition for table `PartitionTable`, and a description of the 'comparison operators' for the partition function in use. *Query original provided by Kalen Delaney.*
+
+The query uses the `type` column in [sys.indexes](../system-catalog-views/sys-indexes-transact-sql.md) to return only information for the clustered index of the table, or for the base table if the table is a [heap](../indexes/heaps-tables-without-clustered-indexes.md). To include any partitioned nonclustered indexes in the query results, remove or comment out `AND i.type <= 1` from the query.
+
 ```sql
-SELECT t.name AS TableName, i.name AS IndexName , p.partition_number, f.name, f.type_desc, p.rows, rv.value, 
+SELECT SCHEMA_NAME(t.schema_id) AS SchemaName, t.name AS TableName, i.name AS IndexName, 
+    p.partition_number, f.name, f.type_desc, p.rows, rv.value, 
 CASE WHEN ISNULL(rv.value, rv2.value) IS NULL THEN 'N/A' 
 ELSE
-    CASE WHEN boundary_value_on_right = 0 AND rv2.value IS NULL THEN '>=' 
-        WHEN boundary_value_on_right = 0 THEN '>' 
+    CASE WHEN f.boundary_value_on_right = 0 AND rv2.value IS NULL THEN '>=' 
+        WHEN f.boundary_value_on_right = 0 THEN '>' 
         ELSE '>=' 
-    END + ' ' + ISNULL(CONVERT(varchar(15), rv2.value), 'Min Value') + ' ' + 
-        CASE boundary_value_on_right WHEN 1 THEN 'and <' 
+    END + ' ' + ISNULL(CONVERT(varchar(64), rv2.value), 'Min Value') + ' ' + 
+        CASE f.boundary_value_on_right WHEN 1 THEN 'and <' 
                 ELSE 'and <=' END 
-        + ' ' + ISNULL(CONVERT(varchar(15), rv.value), 'Max Value') 
+        + ' ' + ISNULL(CONVERT(varchar(64), rv.value), 'Max Value') 
 END AS TextComparison
 FROM sys.tables AS t  
 JOIN sys.indexes AS i  
@@ -483,9 +492,22 @@ LEFT JOIN sys.partition_range_values AS rv
 LEFT JOIN sys.partition_range_values AS rv2
     ON f.function_id = rv2.function_id
     AND p.partition_number - 1= rv2.boundary_id
-WHERE i.type <= 1 AND t.name = 'PartitionTable'
+WHERE 
+    t.name = 'PartitionTable'
+    AND i.type <= 1 
 ORDER BY t.name, p.partition_number;
 ```
+
+The `TextComparison` column describes the possible range of values in each partition based on the definition of the [partition function](partitioned-tables-and-indexes.md#partition-function). Here is a view of example results from the query:
+
+| SchemaName | TableName      | IndexName                      | partition_number | name | type_desc | rows | value                   | TextComparison                                   |
+|------------|----------------|--------------------------------|------------------|------|-----------|------|-------------------------|--------------------------------------------------|
+| dbo        | PartitionTable | PK__Partitio__357D0D3E4F5BA703 | 1                | test | RANGE     | 0    | 2022-03-01 00:00:00.000 | >= Min Value and < Mar  1 2022 12:00AM           |
+| dbo        | PartitionTable | PK__Partitio__357D0D3E4F5BA703 | 2                | test | RANGE     | 2    | 2022-04-01 00:00:00.000 | >= Mar  1 2022 12:00AM and < Apr  1 2022 12:00AM |
+| dbo        | PartitionTable | PK__Partitio__357D0D3E4F5BA703 | 3                | test | RANGE     | 1    | 2022-05-01 00:00:00.000 | >= Apr  1 2022 12:00AM and < May  1 2022 12:00AM |
+| dbo        | PartitionTable | PK__Partitio__357D0D3E4F5BA703 | 4                | test | RANGE     | 0    | 2022-06-01 00:00:00.000 | >= May  1 2022 12:00AM and < Jun  1 2022 12:00AM |
+| dbo        | PartitionTable | PK__Partitio__357D0D3E4F5BA703 | 5                | test | RANGE     | 1    | 2022-07-01 00:00:00.000 | >= Jun  1 2022 12:00AM and < Jul  1 2022 12:00AM |
+| dbo        | PartitionTable | PK__Partitio__357D0D3E4F5BA703 | 6                | test | RANGE     | 0    | NULL                    | >= Jul  1 2022 12:00AM and < Max Value           |
 
 ## <a name="Restrictions"></a> Limitations
 

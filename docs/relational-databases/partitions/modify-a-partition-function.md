@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Modify a Partition Function
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-You can change the way a table or index is partitioned in SQL Server, Azure SQL Database, and Azure SQL Managed Instance by adding or subtracting the number of partitions specified, in increments of 1, in the partition function of the partitioned table or index by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. When you add a partition, you do so by "splitting" an existing partition into two partitions and redefining the boundaries of the new partitions. When you drop a partition, you do so by "merging" the boundaries of two partitions into one. This last action repopulates one partition and leaves the other partition unassigned.  
+You can change the way a table or index is partitioned in SQL Server, Azure SQL Database, and Azure SQL Managed Instance by adding or subtracting the number of partitions specified, in increments of 1, in the partition function of the partitioned table or index by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. When you add a partition, you do so by "splitting" an existing partition into two partitions and redefining the boundaries of the new partitions. When you drop a partition, you do so by "merging" the boundaries of two partitions into one. This last action repopulates one partition and leaves the other partition unassigned. Review [best practices](../../t-sql/statements/alter-partition-function-transact-sql.md#best-practices) before modifying a partition function.
   
 > [!CAUTION]  
 >  More than one table or index can use the same partition function. When you modify a partition function, you affect all of them in a single transaction. Check the [partition function's dependencies](#query-partitioned-objects-in-a-database) before modifying it.  
@@ -59,6 +59,7 @@ The following query lists all partitioned objects in a database. This can be use
 SELECT 
 	PF.name AS PartitionFunction,
 	ds.name AS PartitionScheme,
+    OBJECT_SCHEMA_NAME(si.object_id) as SchemaName,
 	OBJECT_NAME(si.object_id) AS PartitionedTable, 
 	si.name as IndexName
 FROM sys.indexes AS si
@@ -70,7 +71,7 @@ JOIN sys.partition_functions AS PF
 	ON PF.function_id = PS.function_id
 WHERE ds.type = 'PS'
 AND OBJECTPROPERTYEX(si.object_id, 'BaseType') = 'U'
-ORDER BY PartitionFunction, PartitionScheme, PartitionedTable;
+ORDER BY PartitionFunction, PartitionScheme, SchemaName, PartitionedTable;
 ```  
 
 ## Split a partition with Transact-SQL
@@ -106,23 +107,24 @@ ORDER BY PartitionFunction, PartitionScheme, PartitionedTable;
   
 2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and select **Execute**.  
-  
-    ```  
-    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
+3.  Copy and paste the following example into the query window and select **Execute**. 
+
+    This example:
+    - Checks if a previous version of the partition function `myRangePF1` exists, and deletes it if it is found.  
+    - Creates a partition function called `myRangePF1` with three boundary values, which will result in four partitions.
+    - Merges the partition between boundary_values 1 and 100 with the partition between boundary_values 100 and 1,000.
+    - This results in the partition function `myRangePF1` having two boundary points, 1 and 1,000.
+ 
+    ```
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO 
 
-    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  
 
-    --Merge the partitions between boundary_values 1 and 100  
-    --and between boundary_values 100 and 1000 to create one partition  
-    --between boundary_values 1 and 1000.  
     ALTER PARTITION FUNCTION myRangePF1 ()  
     MERGE RANGE (100);  
     ```  

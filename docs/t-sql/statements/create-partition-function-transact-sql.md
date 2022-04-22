@@ -166,7 +166,7 @@ GO
 ```  
   
 ### F. Creating partitions for multiple years  
- The following partition function partitions a table or index into 50 partitions on a **datetime2** column. There is one partitions for each month between January 2007 and January 2011.  
+ The following partition function partitions a table or index into 50 partitions on a **datetime2** column. There is one partition for each month between January 2007 and January 2011.  
   
 ```sql  
 --Create date partition function with increment by month.  

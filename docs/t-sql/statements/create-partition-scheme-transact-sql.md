@@ -33,7 +33,7 @@ ms.author: wiassaf
 # CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Creates a scheme in the current database that maps the partitions of a partitioned table or index to one or more filegroups. The number and domain of the partitions of a partitioned table or index are determined in a partition function. A partition function must first be created in a [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) statement before creating a partition scheme.  
+Creates a scheme in the current database that maps the partitions of a partitioned table or index to one or more filegroups. The values that map the rows of a table or index into partitions are specified in a partition function. A partition function must first be created in a [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) statement before creating a partition scheme.  
 
 >[!NOTE]
 >In Azure SQL Database only primary filegroups are supported. Learn more about filegroups and partitioning strategies in [Filegroups](../../relational-databases/partitions/partitioned-tables-and-indexes.md#filegroups).
@@ -60,18 +60,18 @@ Is the name of the partition scheme. Partition scheme names must be unique withi
 Is the name of the partition function using the partition scheme. Partitions created by the partition function are mapped to the filegroups specified in the partition scheme. *partition_function_name* must already exist in the database. A single partition cannot contain both FILESTREAM and non-FILESTREAM filegroups.  
   
 ALL  
-Specifies that all partitions map to the filegroup provided in *file_group_name*, or to the primaryfilegroup if **[**PRIMARY**]** is specified. If ALL is specified, only one *file_group_name* can bespecified.  
+Specifies that all partitions map to the filegroup provided in *file_group_name*, or to the primary filegroup if **[**PRIMARY**]** is specified. If ALL is specified, only one *file_group_name* can be specified.  
  
 *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
 Specifies the names of the filegroups to hold the partitions specified by*partition_function_name*. *file_group_name* must already exist in the database.  
  
-If **[**PRIMARY**]** is specified, the partition is stored on the primary filegroup. If ALL isspecified, only one *file_group_name* can be specified. Partitions are assigned to filegroups,starting with partition 1, in the order in which the filegroups are listed in [ **,**_...n_]. Thesame *file_group_name* can be specified more than one time in [ **,**_...n_]. If *n* is notsufficient to hold the number of partitions specified in *partition_function_name*, CREATEPARTITION SCHEME fails with an error.  
+If **[**PRIMARY**]** is specified, the partition is stored on the primary filegroup. If ALL is specified, only one *file_group_name* can be specified. Partitions are assigned to filegroups,starting with partition 1, in the order in which the filegroups are listed in [ **,**_...n_]. The same *file_group_name* can be specified more than one time in [ **,**_...n_]. If *n* is not sufficient to hold the number of partitions specified in *partition_function_name*, CREATEPARTITION SCHEME fails with an error.  
  
-If *partition_function_name* generates less partitions than filegroups, the first unassignedfilegroup is marked NEXT USED, and an information message displays naming the NEXT USED filegroup.If ALL is specified, the sole *file_group_name* maintains its NEXT USED property for this*partition_function_name*. The NEXT USED filegroup will receive an additional partition if one iscreated in an ALTER PARTITION FUNCTION statement. To create additional unassigned filegroups tohold new partitions, use ALTER PARTITION SCHEME.  
+If *partition_function_name* generates fewer partitions than filegroups, the first unassigned filegroup is marked NEXT USED, and an information message displays naming the NEXT USED filegroup. If ALL is specified, the sole *file_group_name* maintains its NEXT USED property for this*partition_function_name*. The NEXT USED filegroup will receive an additional partition if one is created in an ALTER PARTITION FUNCTION statement. To create additional unassigned filegroups to hold new partitions, use ALTER PARTITION SCHEME.  
  
-When you specify the primary filegroup in *file_group_name* [ **,**_...n_], PRIMARY must bedelimited, as in **[**PRIMARY**]**, because it is a keyword.  
+When you specify the primary filegroup in *file_group_name* [ **,**_...n_], PRIMARY must be delimited, as in **[**PRIMARY**]**, because it is a keyword.  
  
-Only PRIMARY is supported for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. See example Ebelow. 
+Only PRIMARY is supported for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. See example below. 
   
 ## Permissions
 

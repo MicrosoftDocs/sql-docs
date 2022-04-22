@@ -31,7 +31,7 @@ ms.author: wiassaf
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Alters a partition function by splitting or merging its boundary values. Running an ALTER PARTITION FUNCTION statement can split one table partition or index that uses the partition function into two partitions. The statement can also merge two partitions into one less partition.  
+Alters a partition function by splitting or merging its boundary values. Running an ALTER PARTITION FUNCTION statement can split one table or index partition that uses the partition function into two partitions. The statement can also merge two partitions into one partition.  
   
 > [!CAUTION]  
 >  More than one table or index can use the same partition function. ALTER PARTITION FUNCTION affects all of them in a single transaction.  

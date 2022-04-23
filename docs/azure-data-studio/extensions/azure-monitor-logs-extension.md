@@ -52,7 +52,7 @@ Find your **Log Analytics Workspace** in the [Azure portal](https://ms.portal.az
 
 To set up an Azure Monitor Log workspace, follow the steps below.
 
-1. Select **Add connection** from the **Connections** pane.
+1. Select **Add Connection** from the **Connections** pane.
 
 2. Fill in the **Connection Details** information.
     1. For **Connection type**, select *Azure Monitor Logs*.

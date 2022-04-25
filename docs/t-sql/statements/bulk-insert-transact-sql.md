@@ -99,13 +99,9 @@ BULK INSERT Sales.Orders
 FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Azure SQL Database.
-
 Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the *data_file* can be in Azure Blob Storage. In that case, you need to specify **data_source_name** option. For an example, see [Import data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
-> [!IMPORTANT]
->  
-> Azure SQL Database only supports reading from Azure Blob Storage.
+Azure SQL Database only supports reading from Azure Blob Storage.
 
 #### BATCHSIZE = *batch_size*
 
@@ -163,8 +159,6 @@ Specifies the file used to collect rows that have formatting errors and can't be
 
 The error file is created when the command is executed. An error occurs if the file already exists. Additionally, a control file that has the extension `.ERROR.txt` is created, which references each row in the error file and provides error diagnostics. As soon as the errors have been corrected, the data can be loaded.
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
-
 Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the *error_file_path* can be in Azure Blob Storage.
 
 #### ERRORFILE_DATA_SOURCE = '*errorfile_data_source_name*'
@@ -205,7 +199,6 @@ Specifies that empty columns should retain a null value during the bulk-import o
 
 Specifies the approximate number of kilobytes (KB) of data per batch as *kilobytes_per_batch*. By default, KILOBYTES_PER_BATCH is unknown. For information about performance considerations, see [Performance considerations](#performance-considerations) later in this article.
 
-
 #### LASTROW = *last_row*
 
 Specifies the number of the last row to load. The default is 0, which indicates the last row in the specified data file.
@@ -228,11 +221,9 @@ Indicates the approximate number of rows of data in the data file.
 
 By default, all the data in the data file is sent to the server as a single transaction, and the number of rows in the batch is unknown to the query optimizer. If you specify ROWS_PER_BATCH (with a value > 0) the server uses this value to optimize the bulk-import operation. The value specified for ROWS_PER_BATCH should approximately the same as the actual number of rows. For information about performance considerations, see [Performance considerations](#performance-considerations) later in this article.
 
-
 #### TABLOCK
 
 Specifies that a table-level lock is acquired for the duration of the bulk-import operation. A table can be loaded concurrently by multiple clients if the table has no indexes and TABLOCK is specified. By default, locking behavior is determined by the table option **table lock on bulk load**. Holding a lock for the duration of the bulk-import operation reduces lock contention on the table, in some cases can significantly improve performance. For information about performance considerations, see [Performance considerations](#performance-considerations) later in this article.
-
 
 For a columnstore index, the locking behavior is different because it's internally divided into multiple rowsets. Each thread loads data exclusively into each rowset by taking an X lock on the rowset allowing parallel data load with concurrent data load sessions. The use of TABLOCK option will cause thread to take an X lock on the table (unlike BU lock for traditional rowsets) which will prevent other concurrent threads to load data concurrently.
 
@@ -265,9 +256,7 @@ Specifies the full path of a format file. A format file describes the data file 
 - The column delimiters vary.
 - There are other changes in the data format. Format files are typically created by using the **bcp** utility and modified with a text editor as needed. For more information, see [bcp Utility](../../tools/bcp-utility.md) and [Create a format file](../../relational-databases/import-export/create-a-format-file-sql-server.md).
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Azure SQL Database.
-
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the `format_file_path` can be in Azure Blob Storage.
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], and in Azure SQL Database, `format_file_path` can be in Azure Blob Storage.
 
 #### FIELDTERMINATOR = '*field_terminator*'
 
@@ -357,7 +346,6 @@ The BULK INSERT statement can be executed within a user-defined transaction to i
 
 ### Import data from a CSV file
 
-
 Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], BULK INSERT supports the CSV format, as does Azure SQL Database.
 
 Before [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], comma-separated value (CSV) files aren't supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bulk-import operations. However, in some cases, a CSV file can be used as the data file for a bulk import of data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about the requirements for importing data from a CSV data file, see [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
@@ -374,7 +362,7 @@ When using a format file with BULK INSERT, you can specify up to 1024 fields onl
 
 If the number of pages to be flushed in a single batch exceeds an internal threshold, a full scan of the buffer pool might occur to identify which pages to flush when the batch commits. This full scan can hurt bulk-import performance. A likely case of exceeding the internal threshold occurs when a large buffer pool is combined with a slow I/O subsystem. To avoid buffer overflows on large machines, either don't use the TABLOCK hint (which will remove the bulk optimizations) or use a smaller batch size (which preserves the bulk optimizations).
 
-You should test various batch sizes with your data load to find out what works best for you.
+You should test various batch sizes with your data load to find out what works best for you. Keep in mind that the batch size has partial rollback implications. If your process fails, you may have to do additional manual work to remove a part of the rows that were inserted successfully, before a failure occurred.
 
 With Azure SQL Database, consider temporarily increasing the performance level of the database or instance prior to the import if you're importing a large volume of data.
 

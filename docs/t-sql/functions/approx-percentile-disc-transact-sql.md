@@ -40,7 +40,7 @@ WITHIN GROUP (ORDER BY order_by_expression [ASC|DESC]
 *numeric_literal*
 
 The percentile to compute. The value must range between 0.0 and 1.0. to
-calculate 10^th^ percentile, the value passed would be 0.10.
+calculate 10th percentile, the value passed would be 0.10.
 
 *order_by_expression*
 

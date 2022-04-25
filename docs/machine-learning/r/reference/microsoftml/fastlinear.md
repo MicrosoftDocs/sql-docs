@@ -4,8 +4,8 @@
 title: "fastLinear function (MicrosoftML) " 
 description: " Creates a list containing the function name and arguments to train a  Fast Linear model with [rxEnsemble](rxEnsemble.md). " 
 keywords: "(MicrosoftML), fastLinear" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "rothja"
+ms.author: "jroth" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

@@ -2,7 +2,7 @@
 description: "GRANT Database Permissions (Transact-SQL)"
 title: "GRANT Database Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/22/2019
+ms.date: 04/19/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -140,6 +140,7 @@ A database is a securable contained by the server that is its parent in the perm
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|
 |ALTER ANY SECURITY POLICY<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
+|ALTER ANY SENSITIVITY CLASSIFICATION<br /> **Applies to**: SQL Server (SQL Server 2019 and later), Azure SQL Database.|CONTROL|CONTROL SERVER|
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|
 |ALTER ANY USER|ALTER|CONTROL SERVER|

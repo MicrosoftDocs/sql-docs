@@ -4,8 +4,8 @@
 title: "stopwordsDefault function (MicrosoftML) " 
 description: " Text transforms that can be performed on data before training  a model. " 
 keywords: "(MicrosoftML), stopwordsDefault, featurizeText, stopwordsCustom, termDictionary, transform" 
-author: "dphansen"
-ms.author: "davidph" 
+author: "rothja"
+ms.author: "jroth" 
 manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 

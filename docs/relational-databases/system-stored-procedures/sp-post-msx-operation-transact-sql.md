@@ -41,7 +41,7 @@ sp_post_msx_operation
   
 ## Arguments  
 `[ @operation = ] 'operation'`
- The type of operation for the posted operation. *operation*is **varchar(64)**, with no default. Valid operations depend upon *object_type*.  
+ The type of operation for the posted operation. *operation* is **varchar(64)**, with no default. Valid operations depend upon *object_type*.  
   
 |Object type|Operation|  
 |-----------------|---------------|  
@@ -73,7 +73,7 @@ sp_post_msx_operation
 ## Remarks  
  **sp_post_msx_operation** must be run from the **msdb** database.  
   
- **sp_post_msx_operation** can always be called safely because it first determines if the current server is a multiserver Microsoft SQL Server Agent and, if so, whether *object*is a multiserver job.  
+ **sp_post_msx_operation** can always be called safely because it first determines if the current server is a multiserver Microsoft SQL Server Agent and, if so, whether *object* is a multiserver job.  
   
  After an operation has been posted, it appears in the **sysdownloadlist** table. After a job has been created and posted, subsequent changes to that job must also be communicated to the target servers (TSX). This is also accomplished using the download list.  
   

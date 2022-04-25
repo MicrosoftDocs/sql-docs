@@ -1,7 +1,7 @@
 ---
 title: "BULK INSERT (Transact-SQL)"
 description: "Transact-SQL reference for the BULK INSERT statement."
-ms.date: 04/13/2022
+ms.date: 04/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: randolphwest
@@ -46,7 +46,7 @@ BULK INSERT
    [ [ , ] CHECK_CONSTRAINTS ]
    [ [ , ] CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
    [ [ , ] DATAFILETYPE =
-      { 'char' | 'native'| 'widechar' | 'widenative' } ]
+      { 'char' | 'native' | 'widechar' | 'widenative' } ]
    [ [ , ] DATA_SOURCE = 'data_source_name' ]
    [ [ , ] ERRORFILE = 'file_name' ]
    [ [ , ] ERRORFILE_DATA_SOURCE = 'errorfile_data_source_name' ]
@@ -363,7 +363,7 @@ When using a format file with BULK INSERT, you can specify up to 1024 fields onl
 
 If the number of pages to be flushed in a single batch exceeds an internal threshold, a full scan of the buffer pool might occur to identify which pages to flush when the batch commits. This full scan can hurt bulk-import performance. A likely case of exceeding the internal threshold occurs when a large buffer pool is combined with a slow I/O subsystem. To avoid buffer overflows on large machines, either don't use the TABLOCK hint (which will remove the bulk optimizations) or use a smaller batch size (which preserves the bulk optimizations).
 
-You should test various batch sizes with your data load to find out what works best for you. Keep in mind that the batch size has partial rollback implications. If your process fails, you may have to do additional manual work to remove a part of the rows that were inserted successfully, before a failure occurred.
+You should test various batch sizes with your data load to find out what works best for you. Keep in mind that the batch size has partial rollback implications. If your process fails and before you use BULK INSERT again, you may have to do additional manual work to remove a part of the rows that were inserted successfully, before a failure occurred.
 
 With Azure SQL Database, consider temporarily increasing the performance level of the database or instance prior to the import if you're importing a large volume of data.
 

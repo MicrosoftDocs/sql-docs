@@ -23,7 +23,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ""
 ms.custom: "seo-lt-2019"
-ms.date: 02/17/2022
+ms.date: 04/25/2022
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest"
 ---
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)

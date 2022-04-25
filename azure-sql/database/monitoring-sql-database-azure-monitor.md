@@ -23,12 +23,12 @@ View your Azure Monitor metrics for all connected resources by going to the Azur
 
 ## Azure Monitor SQL Insights (preview)
 
-Some services in Azure have a focused, pre-built monitoring dashboard in the Azure portal that can be enabled to provide a starting point for monitoring your service. These special dashboards are called "insights" and are not enabled by default. For more on using Azure Monitor SQL Insights for all products in the [Azure SQL family](../../azure-sql/index.yml), see [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview). 
+Some services in Azure have a focused, pre-built monitoring dashboard in the Azure portal that can be enabled to provide a starting point for monitoring your service. These special dashboards are called "insights" and are not enabled by default. For more on using Azure Monitor SQL Insights for all products in the [Azure SQL family](index.yml), see [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview). 
 
 After creating a monitoring profile, you can configure your Azure Monitor SQL Insights for SQL-specific metrics for Azure SQL Database, SQL Managed Instance, and Azure VMs running SQL Server.
 
 > [!NOTE]
-> Azure SQL Analytics (preview) is an integration with Azure Monitor, where many monitoring solutions are no longer in active development. For more monitoring options, see [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](../../azure-sql/database/monitor-tune-overview.md).
+> Azure SQL Analytics (preview) is an integration with Azure Monitor, where many monitoring solutions are no longer in active development. For more monitoring options, see [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](monitor-tune-overview.md).
 
 ## Monitoring data 
 

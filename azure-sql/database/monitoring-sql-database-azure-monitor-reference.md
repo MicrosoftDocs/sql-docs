@@ -17,7 +17,7 @@ This article contains reference for monitoring Azure SQL Database with Azure Mon
 
 ## Metrics
 
-For more on using Azure Monitor SQL Insights (preview) for all products in the [Azure SQL family](../../azure-sql/index.yml), see [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview).
+For more on using Azure Monitor SQL Insights (preview) for all products in the [Azure SQL family](../index.yml), see [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview).
 
 For data specific to Azure SQL Database, see [Data for Azure SQL Database](/azure/azure-monitor/insights/sql-insights-overview#data-for-azure-sql-database).
 

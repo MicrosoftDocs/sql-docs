@@ -78,7 +78,7 @@ BULK INSERT
 
 #### *database_name*
 
-Specifies the database name in which the specified table or view resides. If not specified, *database_name* is the current database.
+The database name in which the specified table or view resides. If not specified, *database_name* is the current database.
 
 #### *schema_name*
 

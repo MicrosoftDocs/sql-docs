@@ -101,7 +101,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Azure SQL Database.
 
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the *data_file* can be in Azure Blob Storage. In that case, you need to specify **data_source_name** option. For an example, see [Importing data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the *data_file* can be in Azure Blob Storage. In that case, you need to specify **data_source_name** option. For an example, see [Import data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
 >  
@@ -155,7 +155,7 @@ Specifies that BULK INSERT performs the import operation using the specified dat
 
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Azure SQL Database.
 
-Specifies a named external data source pointing to the Azure Blob Storage location of the file that will be imported. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). For an example, see [Importing data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
+Specifies a named external data source pointing to the Azure Blob Storage location of the file that will be imported. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). For an example, see [Import data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 #### ERRORFILE ='*error_file_path*'
 
@@ -392,7 +392,7 @@ To resolve this error, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 For more information about this and other security considerations for using BULK INSERT, see [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
-When importing from Azure Blob Storage and the data isn't public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key encrypted with a [MASTER KEY](create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command. For an example, see [Importing data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
+When importing from Azure Blob Storage and the data isn't public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key encrypted with a [MASTER KEY](create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command. For an example, see [Import data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 ### Permissions
 
@@ -503,7 +503,7 @@ This example will also work for UTF-8 files that don't use fixed-width format.
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
-### F. Import data from a file in Azure Blob Storage
+### <a id="f-importing-data-from-a-file-in-azure-blob-storage"></a> F. Import data from a file in Azure Blob Storage
 
 The following example shows how to load data from a CSV file in an Azure Blob Storage location on which you've created a SAS key. The Azure Blob Storage location is configured as an external data source, which requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
 

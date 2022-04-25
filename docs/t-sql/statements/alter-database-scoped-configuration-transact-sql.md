@@ -23,7 +23,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ""
 ms.custom: "seo-lt-2019"
-ms.date: 02/17/2022
+ms.date: 04/25/2022
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest"
 ---
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -99,6 +99,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
     | EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS = { ON | OFF }
     | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
+    | OPTIMIZED_PLAN_FORCING = { ON | OFF }
 }
 ```
 
@@ -424,6 +425,12 @@ ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF** }
 **APPLIES TO**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 If asynchronous statistics update is enabled, enabling this configuration will cause the background request updating statistics to wait for a Sch-M lock on a low priority queue, to avoid blocking other sessions in high concurrency scenarios. For more information, see [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async).
+
+OPTIMIZED_PLAN_FORCING **=** { **ON** | OFF }
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Preview) and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (Preview)
+
+Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as a compilation replay script. A compiliation replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute. Learn more in [Optimized plan forcing with Query Store](../../relational-databases/performance/optimized-plan-forcing-query-store.md).
 
 ## <a name="Permissions"></a> Permissions
 

@@ -334,7 +334,8 @@ To bulk export or import SQLXML data, use one of the following data types in you
 |SQLNCHAR or SQLNVARCHAR|The data is sent as Unicode. The effect is the same as specifying the DATAFILETYPE **= 'widechar'** without specifying a format file.|
 |SQLBINARY or SQLVARBIN|The data is sent without any conversion.|
 
-## General remarks
+<a id="general-remarks"></a>
+## Remarks 
 
 For a comparison of the BULK INSERT statement, the INSERT ... SELECT \* FROM OPENROWSET(BULK...) statement, and the **bcp** command, see [Bulk Import and Export of Data &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).
 

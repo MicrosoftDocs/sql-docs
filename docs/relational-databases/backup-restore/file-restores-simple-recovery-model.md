@@ -40,7 +40,7 @@ ms.author: kendralittle
   
      In an *online file restore*, if database is online at restore time, it remains online during the file restore. However, each filegroup in which a file is being restored is offline during the restore operation. After all the files in an offline filegroup are recovered, the filegroup is automatically brought online.  
   
-     For information about support for online page and file restore, see [Database Engine Features and Tasks](../../sql-server/what-s-new-in-sql-server-ver15.md). For more information about online restores, see [Online Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
+     For information about support for online page and file restore, see [Database Engine Features and Tasks](../../sql-server/what-s-new-in-sql-server-2019.md). For more information about online restores, see [Online Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
     > [!TIP]  
     >  If you want the database to be offline for a file restore, take the database offline before you start the restore sequence by executing the following [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement: ALTER DATABASE *database_name* SET OFFLINE.  
@@ -101,4 +101,3 @@ ms.author: kendralittle
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Complete Database Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  

@@ -70,19 +70,19 @@ probability.
 
 - If the trace flag is not enabled below error message would be raised
 
-    Msg 195, Level 15, State 22, Line 1 </br>
-    'approx_percentile_cont' is not a recognized built-in function name
+  Msg 195, Level 15, State 22, Line 1 </br>
+  'approx_percentile_disc' is not a recognized built-in function name
+
 - In the current release, the size of the sketch is limited to a page (8 KB) due to which you may get below error while calculating discrete approx. percentile for decimal or numeric data types with larger data set.
 
-    Msg 9836, Level 16, State 10, Line 17 </br>
-    Internal APPROX_PERCENTILE_* runtime error('6'): APPROX_PERCENTILE_* add item  </br>
+  Msg 9836, Level 16, State 10, Line 17 </br>
+  Internal APPROX_PERCENTILE_* runtime error('6'): APPROX_PERCENTILE_* add item  </br>
 
-    To  workaround above error, use cast/convert to change decimal or numeric data type to float data type or use continuous approximate percentile function.
-- The output of the functions may not be the same in all executions. The algorithm used for these
-functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random
-values are picked. This functions provide rank-based error guarantees not value based.
-- The
-function implementation guarantees up to a 1.33% error bounds within a 99% confidence.
+  To  workaround above error, use cast/convert to change decimal or numeric data type to float data type or use continuous approximate percentile function.
+
+- The output of the functions may not be the same in all executions. The algorithm used for these functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random values are picked. This functions provide rank-based error guarantees not value based.
+
+- The function implementation guarantees up to a 1.33% error bounds within a 99% confidence.
 
 ## Compatibility Support
 

@@ -90,7 +90,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-latest-assessment-status.png" alt-text="latest assessment status":::
 
-11. Select refresh until the Assessment completes. The status updates to show you 1 of 3 statuses - **success**, **failed** or **in-progress**.
+11. Select refresh until the Assessment completes. The status updates to show you 1 of 4 statuses - **success**, **failed** , **in-progress** or **canceled**.
 
 ## View Assessment
 
@@ -108,7 +108,7 @@ The following database details tab provides the breakup per schema basis. It sho
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-per-schema-basis.png" alt-text="per schema basis":::
 
-This estimation is based on a statistical model that applies to the object count, lines of code, enabled features and size of the database. For more accurate estimate on the code conversion, use [SQL Server migration Assistant for Oracle](https://docs.microsoft.com/en-us/sql/ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql). The estimation may vary based on 
+This estimation is based on a statistical model that applies to the object count, lines of code, enabled features and size of the database. For more accurate estimate on the code conversion, use [SQL Server migration Assistant for Oracle](https://docs.microsoft.com/sql/ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql). The estimation may vary based on 
 
 
 >[!Note]
@@ -169,8 +169,7 @@ Mac  - /Users/username/.dmaoracle/logs
     Reason: Few features do not have the latest usage statistics available in the Oracle metadata store.
 ## Next steps
 
-- [Data Schema Conversion](database-schema-conversion-toolkit.md)
 - [Azure SQL Migration extension](azure-sql-migration-extension.md)
 - [Oracle extension](extension-for-oracle.md)
-- [Data Schema Conversion](database-schema-conversion-toolkit.md)
+- [Data Schema Conversion](/dsct/database-schema-conversion-toolkit.md)
 - [Add extensions](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)

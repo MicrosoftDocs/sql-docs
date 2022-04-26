@@ -2,7 +2,7 @@
 description: "sys.query_store_runtime_stats (Transact-SQL)"
 title: "sys.query_store_runtime_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/28/2021"
+ms.date: "4/26/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -102,20 +102,23 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=s
 |**min_page_server_io_reads**|**bigint**|Minimum number of page server I/O reads for the query plan within the aggregation interval (expressed as a number of 8 KB pages read).<br><br/>**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Hyperscale</br>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (non-hyperscale) will always return zero (0).|
 |**max_page_server_io_reads**|**bigint**|Maximum number of page server I/O reads for the query plan within the aggregation interval (expressed as a number of 8 KB pages read).<br><br/>**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Hyperscale</br>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (non-hyperscale) will always return zero (0).|
 |**stdev_page_server_io_reads**|**float**|Standard deviation of the number of page server I/O reads for the query plan within the aggregation interval (expressed as a number of 8 KB pages read).<br><br/>**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Hyperscale</br>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (non-hyperscale) will always return zero (0).|
+|**replica_group_id**|**bigint**|Identifies the replica set number for this replica.<BR/><BR/>**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])|
   
 ## Permissions  
 Requires the `VIEW DATABASE STATE` permission.  
   
-## See Also  
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
- [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)   
-  
+## Next steps
+
+Learn more about Query Store in the following articles:
+
+- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+- [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
+- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
+- [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
+- [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)
+- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
+- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
+- [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)

@@ -134,17 +134,39 @@ ALTER DATABASE CURRENT SET QUERY_STORE = ON;
 GO
 
 ALTER DATABASE CURRENT  
- FOR SECONDARY SET QUERY_STORE = ON ( 
+FOR SECONDARY SET QUERY_STORE = ON ( 
         OPERATION_MODE = READ_WRITE 
 );
 GO
 ```
 
-You can validate that Query Store is enabled on the secondary by connecting to the database on the secondary replica and executing the following Transact-SQL:
+You can validate that Query Store is enabled on a secondary replica by connecting to the database on the secondary replica and executing the following Transact-SQL:
 
 ```sql
 SELECT desired_state, desired_state_desc, actual_state, actual_state_desc, readonly_reason
 FROM sys.database_query_store_options;
+GO
+```
+
+The following sample results from querying [sys.database_query_store_options](../system-catalog-views/sys-database-query-store-options-transact-sql.md) indicate that the Query Store is in a read/write state for the secondary. The `readonly_reason` of 8 indicates that this is a secondary replica. These results indicate that Query Store has been enabled successfully on the secondary replica.
+
+desired_state | desired_state_desc | actual_state | actual_state_desc | readonly_reason
+--------------|--------------------|--------------|-------------------|-----------------
+2|READ_WRITE|2|READ_WRITE|8
+
+### Performance considerations for Query Store for secondary replicas
+
+The channel used by secondary replicas to send query information back to the primary replica is the same channel used to keep secondary replicas up to date. Data is stored in the same tables on the primary replica that Query Store uses for queries executed on the primary replica, which causes the size of Query Store to grow.
+
+Thus, when a system is under significant load, you may notice some slowdown because of the channel being overloaded. Further, the same adhoc query capture issues that exist for Query Store today will continue for workloads run on secondary replicas. Learn more about how to [Keep the most relevant data in Query Store](best-practice-with-the-query-store.md#keep-the-most-relevant-data-in-query-store).
+
+### Disable Query Store for secondary replicas
+
+To disable Query Store for secondary replicas, connect to the database on the primary replica and run the following code:
+
+```sql
+ALTER DATABASE CURRENT  
+FOR SECONDARY SET QUERY_STORE = OFF;
 GO
 ```
 

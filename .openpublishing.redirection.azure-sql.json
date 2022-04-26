@@ -204,6 +204,11 @@
             "source_path_from_root": "/articles/azure-sql/database/service-tiers-general-purpose-business-critical.md",
             "redirect_url": "/azure/azure-sql/database/service-tiers-vcore",
             "redirect_document_id": false
-        }                                                                                                                  
+        },                                                                                    
+        {
+            "source_path_from_root": "/azure/azure-sql/virtual-machines/windows/sql-server-2008-extend-end-of-support.md",
+            "redirect_url": "/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support",
+            "redirect_document_id": true
+        }
     ]
 }

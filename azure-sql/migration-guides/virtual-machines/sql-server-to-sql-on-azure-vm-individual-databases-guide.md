@@ -10,7 +10,7 @@ ms.topic: how-to
 author: markjones-msft
 ms.author: markjon
 ms.reviewer: chadam, mathoma, randolphwest
-ms.date: 04/11/2022
+ms.date: 04/26/2022
 ---
 
 # Migration guide: SQL Server to SQL Server on Azure Virtual Machines
@@ -210,7 +210,7 @@ For more information about these issues and the steps to mitigate them, see:
 
 - For information about licensing, see:
    - [Bring your own license with the Azure Hybrid Benefit](../../virtual-machines/windows/licensing-model-azure-hybrid-benefit-ahb-change.md)
-   - [Get free extended support for SQL Server 2008 and SQL Server 2008 R2](../../virtual-machines/windows/sql-server-2008-extend-end-of-support.md)
+   - [Get free extended support for SQL Server 2012](../../virtual-machines/windows/sql-server-extend-end-of-support.md)
 
 - To assess the application access layer, see [Data Access Migration Toolkit (preview)](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit).
 - For information about how to perform A/B testing for the data access layer, see [Overview of Database Experimentation Assistant](/sql/dea/database-experimentation-assistant-overview).

@@ -16358,6 +16358,8 @@ items:
           href: t-sql/functions/json-query-transact-sql.md
         - name: JSON_MODIFY
           href: t-sql/functions/json-modify-transact-sql.md
+        - name: JSON_PATH_EXISTS
+          href: t-sql/functions/json-path-exists-transact-sql.md
       - name: Mathematical
         href: t-sql/functions/mathematical-functions-transact-sql.md
         items:

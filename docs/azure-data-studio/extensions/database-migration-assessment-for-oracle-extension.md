@@ -58,7 +58,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-manage-database-connection.png" alt-text="mangae database connection":::
 
-6. Select **Oracle Assessment**.
+6. Select **Migration Assessment**.
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-select-oracle-assessment.png" alt-text="manage database connection":::
 
@@ -81,16 +81,15 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     The percentile value of the performance sample set to be considered for sizing the Azure target.
 
-9. Select **Run new Assessment**.
-    1. Now, you see the new Assessment in the last five sections.
+9. Now, you see the new Assessment in the last five sections.
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-demo.png" alt-text="name the assessment demo1":::
 
-10. You can select the assessment link, and it takes you to the assessment details page. You can get the latest assessment status.
+10. On Click on the assessment link to view assessment details page. You can view the latest assessment status.
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-latest-assessment-status.png" alt-text="latest assessment status":::
 
-11. Select refresh until the Assessment completes. The status updates to show you 1 of 4 statuses - **success**, **failed** , **in-progress** or **canceled**.
+11. Click refresh or wait until the Assessment completes. The assessment status page refreshes frequently. The default value is 15 seconds. The status updates to show you 1 of 4 statuses - **success**, **failed** , **in-progress** or **canceled**.
 
 ## View Assessment
 
@@ -108,7 +107,7 @@ The following database details tab provides the breakup per schema basis. It sho
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-per-schema-basis.png" alt-text="per schema basis":::
 
-This estimation is based on a statistical model that applies to the object count, lines of code, enabled features and size of the database. For more accurate estimate on the code conversion, use [SQL Server migration Assistant for Oracle](https://docs.microsoft.com/sql/ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql). The estimation may vary based on 
+This estimation is based on a statistical model that applies to the object count, lines of code, enabled features and size of the database. For more accurate estimate on the code conversion, use [SQL Server migration Assistant for Oracle](https://docs.microsoft.com/sql/ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql). 
 
 
 >[!Note]
@@ -116,7 +115,7 @@ This estimation is based on a statistical model that applies to the object count
 'SYSTEM','CTXSYS','DBSNMP','EXFSYS','LBACSYS','MDSYS','MGMT_VIEW' 'OLAPSYS','ORDDATA','OWBSYS','ORDPLUGINS','ORDSYS','OUTLN','SI_INFORMTN_SCHEMA','SYS 'SYSMAN','WK_TEST','WKSYS','WKPROXY','WMSYS','XDB','DIP','MDDATA','ORACLE_OCM', 'SPATIAL_CSW_ADMIN_USR','SPATIAL_WFS_ADMIN_USR','XS$NULL','PERFSTAT','SQLTXPLAIN','DMSYS','TSMSYS','WKSYS','DVSYS','OJVMSYS','GSMADMIN_INTERNAL','APPQOSSYS','DVSYS','DVF','AUDSYS','MGMT_VIEW','ODM','ODM_MTR','TRACESRV','MTMSYS','OWBSYS_AUDIT','WEBSYS','WK_PROXY','OSE$HTTP$ADMIN','DBMS_PRIVILEGE_CAPTURE','CSMIG','MGDSYS','SDE','DBSFWUSER','APEX','FLOW_'
 
 
-The SKU recommendation provides the suitable Azure SQL target and the reasoning and justification of the Azure SQL target.
+The SKU recommendation provides the suitable Azure SQL target , its service tier and the metric thresholds that has been used to provide the recommended SKU.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-skus.png" alt-text="Sku recommendations":::
 
@@ -156,17 +155,24 @@ Mac  - /Users/username/.dmaoracle/logs
 ### Common Errors
 
 1. Error GE-1002 Path provided does not exist
+    
     Reason: Missing files or missing permission on the assessment folder
+    
     Possible Solution:
     a. User has read and write permission on the assessment folder
     b. If there is a missing file or folder, delete the assessment and generate a new assessment 
+
 1. Encountered connection timeout exception while interacting with Oracle.
-    Reason: Failed to Connect to Oracle Instance
+   
+     Reason: Failed to Connect to Oracle Instance
+
     Possible Solution:
     a. Check if the port Oracle is running is not blocked by firewall rules
     b. Perform tnsping and see if the Service ID gets resolved.
+
 1. Feature Data Collection Warning
-    Reason: Few features do not have the latest usage statistics available in the Oracle metadata store.
+   
+     Reason: Few features do not have the latest usage statistics available in the Oracle metadata store.
 ## Next steps
 
 - [Azure SQL Migration extension](azure-sql-migration-extension.md)

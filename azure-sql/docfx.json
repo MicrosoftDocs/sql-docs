@@ -64,7 +64,12 @@
       "brand": "azure",
       "toc_preview": true,
       "titleSuffix": "Azure SQL",
-      "recommendations": true
+      "recommendations": true,
+      "_op_documentIdPathDepotMapping": {
+        "./": {
+           "depot_name": "Azure.azure-documents"
+        }
+      }
     },
     "fileMetadata": {
       "breadcrumb_path": {

@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 04/05/2022
+ms.date: 04/25/2022
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -110,6 +110,14 @@ Initial release.
 
 
 ## SQL Server 2017 Reporting Services
+
+## 14.0.600.1860, 2022/04/26 
+*(Product Version: 14.0.600.1860)*
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Fixed an issue rendering some reports in Edge browser.  | &nbsp; |
+| Fixed an issue for some locales when working with data from an Essbase datasource.  | &nbsp; |
 
 ## 14.0.600.1763, 2021/06/28 
 *(Product Version: 14.0.600.1763)*

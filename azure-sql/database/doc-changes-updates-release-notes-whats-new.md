@@ -10,7 +10,7 @@ ms.subservice: service-overview
 ms.custom: sqldbrb=2, references_regions, ignite-fall-2021
 ms.devlang: 
 ms.topic: conceptual
-ms.date: 03/07/2022
+ms.date: 04/26/2022
 ---
 # What's new in Azure SQL Database?
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -40,7 +40,6 @@ The following table lists the features of Azure SQL Database that are currently 
 | [SQL Analytics](/azure/azure-monitor/insights/azure-sql)|Azure SQL Analytics is an advanced cloud monitoring solution for monitoring performance of all of your Azure SQL databases at scale and across multiple subscriptions in a single view. Azure SQL Analytics collects and visualizes key performance metrics with built-in intelligence for performance troubleshooting.|
 | [SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview) | SQL Insights (preview) is a comprehensive solution for monitoring any product in the Azure SQL family. SQL Insights (preview) uses dynamic management views to expose the data you need to monitor health, diagnose problems, and tune performance.|
 | [Zone redundant configuration for Hyperscale databases](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | The zone redundant configuration feature utilizes [Azure Availability Zones](/azure/availability-zones/az-overview#availability-zones) to replicate databases across multiple physical locations within an Azure region. By selecting [zone redundancy](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview), you can make your Hyperscale databases resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic.|
-|||
 
 ## General availability (GA)
 
@@ -54,7 +53,6 @@ The following table lists the features of Azure SQL Database that have transitio
 | [Azure Active Directory-only authentication](authentication-azure-ad-only-authentication.md) | November 2021 | It's possible to configure your Azure SQL Database to allow authentication only from Azure Active Directory. | 
 | [Azure AD service principal](authentication-aad-service-principal.md) |  September 2021 | Azure Active Directory (Azure AD) supports user creation in Azure SQL Database on behalf of Azure AD applications (service principals).| 
 | [Audit management operations](../database/auditing-overview.md#auditing-of-microsoft-support-operations) |  March 2021 | Azure SQL audit capabilities enable you to audit operations done by Microsoft support engineers when they need to access your SQL assets during a support request, enabling more transparency in your workforce. | 
-
 
 
 ## Documentation changes

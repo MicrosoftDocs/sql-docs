@@ -158,7 +158,7 @@ sections:
           The transaction log on hyperscale is practically infinite, with the restriction that a single transaction cannot generate more than 1TB of log. Additionally, if using [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server), at most 1 TB of log can be generated since the start of the  oldest active transaction. It is recommended to avoid unnecessarily large transactions to stay below this limit. Other than the restrictions stated, you do not need to worry about running out of log space on a system that has a high log throughput. However, log generation rate might be throttled for continuous aggressively writing workloads. The peak sustained log generation rate is 100 MB/s.
 
       - question: |
-          Does my `tempdb` scale as my database grows?
+          Does my tempdb scale as my database grows?
         answer: |
           Your `tempdb` database is located on local SSD storage and is sized proportionally to the compute size that you provision. Your `tempdb` is optimized to provide maximum performance benefits. `tempdb` size is not configurable and is managed for you. To determine maximum `tempdb` size for your database, see [Hyperscale storage and compute sizes](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen5).
 
@@ -407,7 +407,7 @@ sections:
           End-user. Not automatic.  
 
       - question: |
-          Does the size of my `tempdb` database and RBPEX cache also grow as the compute is scaled up?
+          Does the size of my tempdb database and RBPEX cache also grow as the compute is scaled up?
         answer: |
           Yes. The `tempdb` database and [RBPEX cache](service-tier-hyperscale.md#distributed-functions-architecture) size on compute nodes will scale up automatically as the number of cores is increased. For details, see [Hyperscale storage and compute sizes](resource-limits-vcore-single-databases.md#hyperscale---provisioned-compute---gen5).
           
@@ -454,7 +454,7 @@ sections:
           No. HA replicas are used as high availability failover targets, so they need to have the same configuration as the primary to provide expected performance after failover. [Named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) provide the ability to scale each replica independently.
 
       - question: |
-          Do I get different `tempdb` sizing for my primary compute and my HA replicas?
+          Do I get different tempdb sizing for my primary compute and my HA replicas?
         answer: |
           No. Your `tempdb` database is configured based on the provisioned compute size, your HA replicas are the same size, including `tempdb`, as the primary compute. On [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview), `tempdb` is sized according to the compute size of the replica, thus it can be smaller or larger than `tempdb` on the primary.
 

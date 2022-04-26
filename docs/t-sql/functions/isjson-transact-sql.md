@@ -44,7 +44,7 @@ ISJSON ( expression [, json_type_constraint] )
 
 ## Return Value
 
- Returns 1 if the string contains valid JSON; otherwise, returns 0. Returns null if *expression* is null.If the *json_type_constraint* is omitted, the function tests if the input is a valid JSON object or array and returns 1 otherwise, it is 0. If the *json_type_constraint* is specified then the function checks for the JSON type as follows:
+ Returns 1 if the string contains valid JSON; otherwise, returns 0. Returns null if *expression* is null. If the statement omits *json_type_constraint*, the function tests if the input is a valid JSON object or array and returns 1 otherwise, it returns 0. If the *json_type_constraint* is specified then the function checks for the JSON type as follows:
 
 |Value|Description|  
 |-----|-----------|

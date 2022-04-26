@@ -496,7 +496,7 @@ Backup and restore operations for Hyperscale databases are fast regardless of da
 Hyperscale supports short-term backup retention (STR) of 7 days by default; long-term retention (LTR) policies aren't currently supported.
 
 > [!NOTE]
-> Hyperscale short-term backup retention up to 35 days is now in Preview. 
+> Short-term backup retention up to 35 days for Hyperscale databases is now in preview. 
 
 ### Hyperscale backup scheduling
 

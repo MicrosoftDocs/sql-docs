@@ -82,7 +82,9 @@ Install the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVer
   
 3.  On the **Product Key** page, select an option button to indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or a production version of the product that has a PID key. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
-4.  On the **License Terms** page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  On the **License Terms** page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../includes/msconame-md.md)].
+
+      [!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 5.  On the **Setup Support Files** page, click **Install** to install or update the Setup Support files for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   

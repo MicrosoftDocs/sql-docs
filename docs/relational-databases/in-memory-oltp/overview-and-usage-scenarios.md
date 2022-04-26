@@ -37,7 +37,6 @@ To use [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in your database, you use o
 - *Memory-optimized table types* are used for table-valued parameters (TVPs), as well as intermediate result sets in stored procedures. These can be used instead of traditional table types. Table variables and TVPs that are declared using a memory-optimized table type inherit the benefits of non-durable memory-optimized tables: efficient data access, and no IO.
 - *Natively compiled T-SQL modules* are used to further reduce the time taken for an individual transaction by reducing CPU cycles required to process the operations. You declare a Transact-SQL module to be natively compiled at create time. At this time, the following T-SQL modules can be natively compiled: stored procedures, triggers, and scalar user-defined functions.
 
-There is a sample of these objects [later in this article](#sample-script).
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] is built into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Because these objects behave similar to their traditional counterparts, you can often gain performance benefits while making only minimal changes to the database and the application. Plus, you can have both memory-optimized and traditional disk-based tables in the same database, and run queries across the two. You will find a Transact-SQL script with an example for each of these types of objects towards the bottom of this article.
 
@@ -75,7 +74,7 @@ Common application patterns are:
 
 Use a memory-optimized table for the data ingestion. If the ingestion consists mostly of inserts (rather than updates) and [!INCLUDE[hek_2](../../includes/hek-2-md.md)] storage footprint of the data is a concern, either
 
-- Use a job to regularly batch-offload data to a disk-based table with a [Clustered Columnstore index](../indexes/columnstore-indexes-overview.md), using a job that does `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; or
+- Use a job to regularly batch-offload data to a disk-based table with a [clustered columnstore index](../indexes/columnstore-indexes-overview.md), using a job that does `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; or
 - Use a [temporal memory-optimized table](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) to manage historical data - in this mode, historical data lives on disk, and data movement is managed by the system.
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples repository contains a smart grid application that uses a temporal memory-optimized table, a memory-optimized table type, and a natively compiled stored procedure, to speed up data ingestion, while managing the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] storage footprint of the sensor data:
@@ -85,7 +84,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples repository
 
 ### Caching and session state
 
-The [!INCLUDE[hek_2](../../includes/hek-2-md.md)] technology makes SQL attractive for maintaining session state (for example, for an ASP.NET application) and for caching.
+The [!INCLUDE[hek_2](../../includes/hek-2-md.md)] technology makes the database engine in SQL Server or Azure SQL databases an attractive platform for maintaining session state (for example, for an ASP.NET application) and for caching.
 
 ASP.NET session state is a successful use case for [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], one customer was about to achieve 1.2 Million requests per second. In the meantime, they have started using [!INCLUDE[hek_2](../../includes/hek-2-md.md)] for the caching needs of all mid-tier applications in the enterprise. Details: [How bwin is using [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] [!INCLUDE[hek_2](../../includes/hek-2-md.md)] to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
@@ -117,9 +116,9 @@ To get started see: [Improving temp table and table variable performance using m
 
 ETL workflows often include load of data into a staging table, transformations of the data, and load into the final tables.
 
-#### Implementation considerations
-
 Use non-durable memory-optimized tables for the data staging. They completely remove all IO, and make data access more efficient.
+
+#### Implementation considerations
 
 If you perform transformations on the staging table as part of the workflow, you can use natively compiled stored procedures to speed up these transformations. If you can do these transformations in parallel, you get additional scaling benefits from the memory-optimization.
 

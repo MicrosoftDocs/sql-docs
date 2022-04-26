@@ -2,7 +2,7 @@
 description: "ISJSON (Transact-SQL)"
 title: "ISJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/26/2022
+ms.date: 04/26/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference

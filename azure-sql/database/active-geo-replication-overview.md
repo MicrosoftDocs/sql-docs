@@ -23,6 +23,7 @@ Active geo-replication is designed as a business continuity solution that lets y
 > - Primary can have only one geo-secondary replica.
 > - Restore or database copy from geo-secondary is not supported.
 > - Can't use geo-secondary as a source for geo-replication to another database.
+> - Audit records are not logged on Geo-secondaries when connecting with ApplicationIntent=Readonly.
 
 
 > [!NOTE]

@@ -77,8 +77,9 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="assessment details":::
 
-    If the recommended SKU needs to consider additional peak load , the scale factor multiplier should be greater than 1. Example: Burst Load, Seasonal usage , future capacity planning etc. Whereas , when  partial Oracle schema workload is considered  migrated , then the multiplier should be less than 1.
-The percentile value of the performance sample set to be considered for sizing the Azure target.
+    If the recommended SKU needs to consider additional peak load, the scale factor multiplier should be greater than 1. Example: Burst Load, Seasonal usage, future capacity planning etc. Whereas, when  partial Oracle schema workload is considered  migrated, then the multiplier should be less than 1.
+
+    The percentile value of the performance sample set to be considered for sizing the Azure target.
 
 9. Select **Run new Assessment**.
     1. Now, you see the new Assessment in the last five sections.
@@ -107,7 +108,7 @@ The following database details tab provides the breakup per schema basis. It sho
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-per-schema-basis.png" alt-text="per schema basis":::
 
-This estimation is based on a statistical model that applies to the object count, lines of code, enabled features and size of the database. For more accurate estimate on the code conversion , use [SQL Server migration Assistant for Oracle](https://docs.microsoft.com/en-us/sql/ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql). The estimation may vary based on 
+This estimation is based on a statistical model that applies to the object count, lines of code, enabled features and size of the database. For more accurate estimate on the code conversion, use [SQL Server migration Assistant for Oracle](https://docs.microsoft.com/en-us/sql/ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql). The estimation may vary based on 
 
 
 >[!Note]
@@ -124,7 +125,7 @@ The SKU  recommendation evaluates various performance metrics - CPU, memory, IOP
 >[!Note]
 > If automatic workload repository (AWR) feature is enabled at Oracle instance, then the SKU recommender will use the DBA_HIST_ views to gather the performance metrics metadata. Otherwise, the recommender will use server configuration and other system views information for sizing the Azure SQL target.
  
-The feature assessment provides the Oracle to Azure SQL mapped features and the effort required for migrating those capability to Azure SQL target.
+The feature assessment provides the Oracle to Azure SQL mapped features and the effort required for migrating those capabilities to Azure SQL target.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-mapped-assessment.png" alt-text="Mapped assessment":::
 
@@ -138,7 +139,7 @@ You can also cancel an ongoing assessment, delete an assessment and move assessm
 
 1. Go to extension marketplace and search for Database Migration Assessment for Oracle.
 1. click on the manage icon and click extension settings
-1. Provide the new assessment path under Oracle Assessment : Assessment Path
+1. Provide the new assessment path under Oracle Assessment: Assessment Path
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-extension.png" alt-text="change assessment path":::
  
@@ -158,14 +159,14 @@ Mac  - /Users/username/.dmaoracle/logs
     Reason: Missing files or missing permission on the assessment folder
     Possible Solution:
     a. User has read and write permission on the assessment folder
-    b. In case of missing file or folder, delete the assessment and generate a new assessment 
+    b. If there is a missing file or folder, delete the assessment and generate a new assessment 
 1. Encountered connection timeout exception while interacting with Oracle.
     Reason: Failed to Connect to Oracle Instance
     Possible Solution:
     a. Check if the port Oracle is running is not blocked by firewall rules
     b. Perform tnsping and see if the Service ID gets resolved.
 1. Feature Data Collection Warning
-    Reason : Few features dont have the latest usage statistics available in the Oracle metadata store.
+    Reason: Few features do not have the latest usage statistics available in the Oracle metadata store.
 ## Next steps
 
 - [Data Schema Conversion](database-schema-conversion-toolkit.md)

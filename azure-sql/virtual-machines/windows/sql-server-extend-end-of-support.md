@@ -20,7 +20,7 @@ ms.custom: "seo-lt-2019"
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-SQL Server 2012 has reached the [end of its support (EOS) life cycle](https://docs.microsoft.com/lifecycle/products/microsoft-sql-server-2012). Because many customers are still using this version, we're providing several options to continue getting support. You can migrate your on-premises SQL Server instances to Azure virtual machines (VMs), migrate to Azure SQL Database, or stay on-premises and purchase extended security updates.
+SQL Server 2012 has reached the [end of its support (EOS) life cycle](/lifecycle/products/microsoft-sql-server-2012). Because many customers are still using this version, we're providing several options to continue getting support. You can migrate your on-premises SQL Server instances to Azure virtual machines (VMs), migrate to Azure SQL Database, or stay on-premises and purchase extended security updates.
 
 > [!TIP]
 >  
@@ -30,7 +30,7 @@ Unlike with a managed instance, migrating to an Azure VM does not require recert
 
 The rest of this article provides considerations for migrating your SQL Server instance to an Azure VM.
 
-For more information about end of support options, see [End of support](../../../docs/sql-server/end-of-support/sql-server-end-of-support-overview.md).
+For more information about end of support options, see [End of support](/sql/sql-server/end-of-support/sql-server-end-of-support-overview).
 
 ## Provisioning
 
@@ -88,4 +88,4 @@ Extended security updates for SQL Server VMs are delivered through the Microsoft
 - [Create a SQL Server VM in the Azure portal](sql-vm-create-portal-quickstart.md)
 - [FAQ for SQL Server on Azure Virtual Machines](frequently-asked-questions-faq.yml)
 
-Find out more about [end of support](../../../docs/sql-server/end-of-support/sql-server-end-of-support-overview.md) options and [Extended Security Updates](../../../docs/sql-server/end-of-support/sql-server-extended-security-updates.md).
+Find out more about [end of support](/sql/sql-server/end-of-support/sql-server-end-of-support-overview) options and [Extended Security Updates](/sql/sql-server/end-of-support/sql-server-extended-security-updates).

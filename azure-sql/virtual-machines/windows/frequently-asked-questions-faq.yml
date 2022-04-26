@@ -231,7 +231,7 @@ sections:
       - question: |
           How can I get free extended security updates for my end of support SQL Server instances?
         answer: |
-             You can get [free extended security updates](sql-server-extend-end-of-support.md) by moving your SQL Server as-is to an Azure virtual machine. For more information, see [end of support options](../../../docs/sql-server/end-of-support/sql-server-end-of-support-overview.md). 
+             You can get [free extended security updates](sql-server-extend-end-of-support.md) by moving your SQL Server as-is to an Azure virtual machine. For more information, see [end of support options](/sql/sql-server/end-of-support/sql-server-end-of-support-overview). 
             
              
           

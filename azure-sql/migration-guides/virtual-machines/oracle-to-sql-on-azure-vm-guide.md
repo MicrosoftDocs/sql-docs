@@ -27,7 +27,7 @@ To migrate your Oracle schema to SQL Server on Azure Virtual Machines, you need:
 - A supported source environment.
 - [SQL Server Migration Assistant (SSMA) for Oracle](https://www.microsoft.com/download/details.aspx?id=54258).
 - A target [SQL Server VM](../../virtual-machines/windows/sql-vm-create-portal-quickstart.md).
-- The [necessary permissions for SSMA for Oracle](../../../docs/ssma/oracle/connecting-to-oracle-database-oracletosql.md) and the [provider](../../../docs/ssma/oracle/connect-to-oracle-oracletosql.md).
+- The [necessary permissions for SSMA for Oracle](/sql/ssma/oracle/connecting-to-oracle-database-oracletosql.md) and the [provider](/sql/ssma/oracle/connect-to-oracle-oracletosql).
 - Connectivity and sufficient permissions to access the source and the target.
 
 ## Pre-migration
@@ -187,13 +187,13 @@ To publish your schema and migrate the data, follow these steps:
 
    :::image type="content" source="./media/oracle-to-sql-on-azure-vm-guide/data-migration-report.png" alt-text="Screenshot that shows the Data Migration Report.":::
 
-1. Connect to your SQL Server on Azure Virtual Machines instance by using [SQL Server Management Studio](../../../docs/ssms/download-sql-server-management-studio-ssms.md). Validate the migration by reviewing the data and schema:
+1. Connect to your SQL Server on Azure Virtual Machines instance by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms). Validate the migration by reviewing the data and schema:
 
    :::image type="content" source="./media/oracle-to-sql-on-azure-vm-guide/validate-in-ssms.png" alt-text="Screenshot that shows a SQL Server instance in SSMA.":::
 
 Instead of using SSMA, you could use SQL Server Integration Services (SSIS) to migrate the data. To learn more, see:
 
-- The article [SQL Server Integration Services](../../../docs/integration-services/sql-server-integration-services.md).
+- The article [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services).
 - The white paper [SSIS for Azure and Hybrid Data Movement](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/SSIS%20Hybrid%20and%20Azure.docx).
 
 ## Post-migration
@@ -246,13 +246,13 @@ Microsoft SQL Server Migration Assistant for Oracle Tester (SSMA Tester) allows 
 
    In this example, stored procedure `ADD_REGION` and table `REGION` are selected.
 
-   To learn more, see  [Selecting and configuring objects to test.](../../../docs/ssma/oracle/selecting-and-configuring-objects-to-test-.md)
+   To learn more, see  [Selecting and configuring objects to test.](/sql/ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql)
 
 1. Next, select the tables, foreign keys and other dependent objects from the Oracle object tree in the left window.
 
    :::image type="content" source="./media/oracle-to-sql-on-azure-vm-guide/tester-select-configure-affected.png" alt-text="Screenshot that shows step to select and configure affected object.":::
 
-   To learn more, see [Selecting and configuring affected objects](../../../docs/ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md).
+   To learn more, see [Selecting and configuring affected objects](/sql/ssma/oracle/selecting-and-configuring-affected-objects-oracletosql).
 
 1. Review the evaluation sequence of objects. Change the order by clicking the buttons in the grid..
 
@@ -262,7 +262,7 @@ Microsoft SQL Server Migration Assistant for Oracle Tester (SSMA Tester) allows 
 
    :::image type="content" source="./media/oracle-to-sql-on-azure-vm-guide/tester-finalize-case.png" alt-text="Screenshot that shows step to  finalize object.":::
 
-   For more information on test case settings, [Finishing test case preparation](../../../docs/ssma/oracle/finishing-test-case-preparation-oracletosql.md).
+   For more information on test case settings, [Finishing test case preparation](/sql/ssma/oracle/finishing-test-case-preparation-oracletosql).
 
 1. Click on finish to create the test case.
 
@@ -310,7 +310,7 @@ When SSMA Tester runs a test case, the test engine executes the objects selected
 The post-migration phase is crucial for reconciling any data accuracy problems and verifying completeness. It's also critical for addressing performance issues with the workload.
 
 > [!Note]
-> For more information about these problems and specific steps to mitigate them, see the [Post-migration validation and optimization guide](../../../docs/relational-databases/post-migration-validation-and-optimization-guide.md).
+> For more information about these problems and specific steps to mitigate them, see the [Post-migration validation and optimization guide](/sql/relational-databases/post-migration-validation-and-optimization-guide).
 
 ## Migration resources
 
@@ -347,4 +347,4 @@ The Data SQL Engineering team developed these resources. This team's core charte
    - [Get free extended support for SQL Server 2012](../../virtual-machines/windows/sql-server-extend-end-of-support.md)
 
 - To assess the application access layer, use [Data Access Migration Toolkit Preview](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit).
-- For details on how to do data access layer A/B testing, see [Overview of Database Experimentation Assistant](../../../docs/dea/database-experimentation-assistant-overview.md).
+- For details on how to do data access layer A/B testing, see [Overview of Database Experimentation Assistant](/sql/dea/database-experimentation-assistant-overview).

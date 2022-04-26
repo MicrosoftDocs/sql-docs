@@ -42,7 +42,8 @@ ISJSON ( expression [, json_type_constraint] )
 
   Specifies the JSON type to check in the input. Valid values are VALUE, ARRAY, OBJECT or SCALAR. Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
-## Return Value
+## Return value
+
 
  Returns 1 if the string contains valid JSON; otherwise, returns 0. Returns null if *expression* is null. If the statement omits *json_type_constraint*, the function tests if the input is a valid JSON object or array and returns 1 otherwise, it returns 0. If the *json_type_constraint* is specified then the function checks for the JSON type as follows:
 
@@ -121,5 +122,6 @@ The following example returns 1 since the input is a valid JSON scalar according
 SELECT ISJSON('"test string"', SCALAR)
 ```
 
-## See Also  
+## See also  
+
  [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

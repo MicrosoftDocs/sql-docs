@@ -18,7 +18,7 @@ The Database Migration Assessment for Oracle extension in Azure Data Studio help
 ## Pre-requisites
 
 - An [Oracle database](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) running version 10 g or higher.
-- [Azure Data Studio installed](../download-azure-data-studio.md).
+- [Azure Data Studio version 1.35  or above](../download-azure-data-studio.md).
 ## Install Azure Data Studio extension
 
 Follow the steps below to install the Database Migration Assessment for Oracle extension in Azure Data Studio.
@@ -97,15 +97,18 @@ Once the Assessment is complete, a consolidated output is generated for each Azu
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-view-assessment.png" alt-text="view assessment":::
 
-Each card has three sections. It shows the overall feasibility of the migration to the SQL target. It also drills down on various workloads under various migration complexity categories. There's a feature compatibility score that provides the feature assessment review result. SKU recommendation provides the proper sizing of the target.
+Each card has three sections. The card shows the overall feasibility of the migration to the SQL target.  Also drills down on various workloads under various migration complexity categories. The feature compatibility section that provides the feature assessment review result. SKU recommendation provides the proper sizing of the target.
 
-When you Select on view detail report, it first shows the summary of the Assessment.
+When you click on view detail report, it first shows the summary of the Assessment.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-card-sections.png" alt-text="card sections":::
 
-The following database details tab provides the breakup per schema basis. It shows how many schemas are discovered, how complex it can be to migrate, and the estimated time to migrate your database in hours.
+The following database details tab provides the breakup per schema basis. It shows the list of schemas are discovered, the migration feasibility, and the estimated time to convert schema in hours.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-per-schema-basis.png" alt-text="per schema basis":::
+
+This estimation is based on a statistical model that applies to the object count, lines of code, enabled features and size of the database. For more accurate estimate on the code conversion , use [SQL Server migration Assistant for Oracle](https://docs.microsoft.com/en-us/sql/ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql). The estimation may vary based on 
+
 
 >[!Note]
 >The following system or Oracle built-in schemas are excluded in the workload assessment
@@ -115,6 +118,8 @@ The following database details tab provides the breakup per schema basis. It sho
 The SKU recommendation provides the suitable Azure SQL target and the reasoning and justification of the Azure SQL target.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-skus.png" alt-text="Sku recommendations":::
+
+The SKU  recommendation evaluates various performance metrics - CPU, memory, IOPS, latency and storage. Based on the usage and the configuration data, the recommender 
 
 >[!Note]
 > If automatic workload repository (AWR) feature is enabled at Oracle instance, then the SKU recommender will use the DBA_HIST_ views to gather the performance metrics metadata. Otherwise, the recommender will use server configuration and other system views information for sizing the Azure SQL target.
@@ -128,11 +133,31 @@ You can also download the report for offline viewing by selecting download combi
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-downlaod-report.png" alt-text="downlaod assessment report":::
 
 ## Troubleshoot
+### Logging 
 
-You can troubleshoot this extension with the migration tool.
+The extension has the errors, warning and other diagnostic logging written in the default log path. 
+Windows - C:\Users\username\.dmaoracle\logs\<date>.txt
+Linux  - ~/home/username/.dmaoracle/logs
+Mac  - /Users/username/.dmaoracle/logs
 
+### Common Errors
+
+1. Error GE-1002 Path provided does not exist
+    Reason: Missing files or missing permission on the assessment folder
+    Possible Solution:
+    a. User has read and write permission on the assessment folder
+    b. In case of missing file or folder, delete the assessment and generate a new assessment 
+1. Encountered connection timeout exception while interacting with Oracle.
+    Reason: Failed to Connect to Oracle Instance
+    Possible Solution:
+    a. Check if the port Oracle is running is not blocked by firewall rules
+    b. Perform tnsping and see if the Service ID gets resolved.
+1. Feature Data Collection Warning
+    Reason : Few features dont have the latest usage statistics available in the Oracle metadata store.
 ## Next steps
 
+- [Data Schema Conversion](database-schema-conversion-toolkit.md)
 - [Azure SQL Migration extension](azure-sql-migration-extension.md)
 - [Oracle extension](extension-for-oracle.md)
+- [Data Schema Conversion](database-schema-conversion-toolkit.md)
 - [Add extensions](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)

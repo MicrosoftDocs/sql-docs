@@ -2,10 +2,10 @@
 title: "Overview and Usage Scenarios"
 description: Learn about In-Memory OLTP, a technology in SQL Server and Azure SQL Database for optimized transaction processing. Review examples and additional resources.
 ms.custom: ""
-ms.date: "03/02/2022"
+ms.date: 04/26/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: wiassaf
+ms.reviewer: wiassaf, randolphwest
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 dev_langs: 
@@ -28,18 +28,18 @@ This article covers the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] technology
 
 Now, where does this performance gain come from? In essence, [!INCLUDE[hek_2](../../includes/hek-2-md.md)] improves performance of transaction processing by making data access and transaction execution more efficient, and by removing lock and latch contention between concurrently executing transactions. [!INCLUDE[hek_2](../../includes/hek-2-md.md)] isn't fast because it's in-memory; it's fast because it's optimized around the data being in-memory. Data storage, access, and processing algorithms were redesigned from the ground up to take advantage of the latest enhancements in in-memory and high concurrency computing.
 
-Now, just because data lives in-memory doesn't mean you lose it when there is a failure. By default, all transactions are fully durable, meaning that you have the same durability guarantees you get for any other table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: as part of transaction commit, all changes are written to the transaction log on disk. If there's a failure at any time after the transaction commits, your data is there when the database comes back online. In addition, [!INCLUDE[hek_2](../../includes/hek-2-md.md)] works with all high availability and disaster recovery capabilities of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], like [Always On availability groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), [Always On Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md), backup/restore, etc.
+Now, just because data lives in-memory doesn't mean you lose it when there's a failure. By default, all transactions are fully durable, meaning that you have the same durability guarantees you get for any other table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: as part of transaction commit, all changes are written to the transaction log on disk. If there's a failure at any time after the transaction commits, your data is there when the database comes back online. In addition, [!INCLUDE[hek_2](../../includes/hek-2-md.md)] works with all high availability and disaster recovery capabilities of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], like [Always On availability groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), [Always On Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md), backup/restore, etc.
 
-To leverage [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in your database, you use one or more of the following types of objects:
+To use [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in your database, you use one or more of the following types of objects:
 
 - *Memory-optimized tables* are used for storing user data. You declare a table to be memory-optimized at create time.
-- *Non-durable tables* are used for transient data, either for caching or for intermediate result set (replacing traditional temp tables). A non-durable table is a memory-optimized table that is declared with DURABILITY=SCHEMA_ONLY, meaning that changes to these tables do not incur any IO. This avoids consuming log IO resources for cases where durability isn't a concern.
+- *Non-durable tables* are used for transient data, either for caching or for intermediate result set (replacing traditional temp tables). A non-durable table is a memory-optimized table that is declared with DURABILITY=SCHEMA_ONLY, meaning that changes to these tables don't incur any IO. This avoids consuming log IO resources for cases where durability isn't a concern.
 - *Memory-optimized table types* are used for table-valued parameters (TVPs), as well as intermediate result sets in stored procedures. These can be used instead of traditional table types. Table variables and TVPs that are declared using a memory-optimized table type inherit the benefits of non-durable memory-optimized tables: efficient data access, and no IO.
 - *Natively compiled T-SQL modules* are used to further reduce the time taken for an individual transaction by reducing CPU cycles required to process the operations. You declare a Transact-SQL module to be natively compiled at create time. At this time, the following T-SQL modules can be natively compiled: stored procedures, triggers, and scalar user-defined functions.
 
-There are sample of these objects [later in this article](#sample-script).
+There is a sample of these objects [later in this article](#sample-script).
 
-[!INCLUDE[hek_2](../../includes/hek-2-md.md)] is built into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. And because these objects behave similar to their traditional counterparts, you can often gain performance benefits while making only minimal changes to the database and the application. Plus, you can have both memory-optimized and traditional disk-based tables in the same database, and run queries across the two. You find a Transact-SQL script showing an example for each of these types of objects towards the bottom of this article.
+[!INCLUDE[hek_2](../../includes/hek-2-md.md)] is built into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Because these objects behave similar to their traditional counterparts, you can often gain performance benefits while making only minimal changes to the database and the application. Plus, you can have both memory-optimized and traditional disk-based tables in the same database, and run queries across the two. You will find a Transact-SQL script with an example for each of these types of objects towards the bottom of this article.
 
 ## Usage scenarios for [!INCLUDE[hek_2](../../includes/hek-2-md.md)]
 
@@ -85,23 +85,23 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples repository
 
 ### Caching and session state
 
-The [!INCLUDE[hek_2](../../includes/hek-2-md.md)] technology makes SQL really attractive for maintaining session state (for example, for an ASP.NET application) and for caching.
+The [!INCLUDE[hek_2](../../includes/hek-2-md.md)] technology makes SQL attractive for maintaining session state (for example, for an ASP.NET application) and for caching.
 
-ASP.NET session state is a very successful use case for [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], one customer was about to achieve 1.2 Million requests per second. In the meantime, they have started using [!INCLUDE[hek_2](../../includes/hek-2-md.md)] for the caching needs of all mid-tier applications in the enterprise. Details: [How bwin is using [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] [!INCLUDE[hek_2](../../includes/hek-2-md.md)] to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
+ASP.NET session state is a successful use case for [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], one customer was about to achieve 1.2 Million requests per second. In the meantime, they have started using [!INCLUDE[hek_2](../../includes/hek-2-md.md)] for the caching needs of all mid-tier applications in the enterprise. Details: [How bwin is using [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] [!INCLUDE[hek_2](../../includes/hek-2-md.md)] to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 #### Implementation considerations
 
 You can use non-durable memory-optimized tables as a simple key-value store by storing a BLOB in a varbinary(max) column. Alternatively, you can implement a semi-structured cache with [JSON support](https://azure.microsoft.com/blog/json-support-is-generally-available-in-azure-sql-database/) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Finally, you can create a full relational cache through non-durable tables with a full relational schema, including various data types and constraints.
 
-Get started with memory-optimizing ASP.NET session state by leveraging the scripts published on GitHub to replace the objects created by the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session state provider: [aspnet-session-state](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/aspnet-session-state)
+Get started with memory-optimizing ASP.NET session state by using the scripts published on GitHub to replace the objects created by the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session state provider: [aspnet-session-state](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/aspnet-session-state)
 
 #### Customer case study
 
 - bwin increased throughput with ASP.NET session state even further and implemented an enterprise-wide mid-tier caching system, with [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]: [How bwin is using [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] [!INCLUDE[hek_2](../../includes/hek-2-md.md)] to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/).
 
-### Tempdb object replacement
+### tempdb object replacement
 
-Leverage non-durable tables and memory-optimized table types to replace your traditional TempDB based structures, such as temporary tables, table variables, and table-valued parameters (TVPs).
+Use non-durable tables and memory-optimized table types to replace your traditional `tempdb` based structures, such as temporary tables, table variables, and table-valued parameters (TVPs).
 
 Memory-optimized table variables and non-durable tables typically reduce CPU and completely remove log IO, when compared with traditional table variables and #temp table.
 
@@ -109,10 +109,9 @@ Memory-optimized table variables and non-durable tables typically reduce CPU and
 
 To get started see: [Improving temp table and table variable performance using memory optimization.](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
 
-#### Customer case studies
+#### Customer case study
 
 - One customer was able to improve performance by 40%, just by replacing traditional TVPs with memory-optimized TVPs: [High Speed IoT Data Ingestion Using [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in Azure](/archive/blogs/sqlserverstorageengine/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure)
-- SentryOne significantly improved data ingestion capacity with almost zero latency in their monitoring solution by swapping tables in tempdb to [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tables as part of their enterprise scalability improvements: [Solution provider breaks through performance ceiling with data monitoring innovation.](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### ETL (Extract Transform Load)
 
@@ -232,7 +231,7 @@ GO
 - Perf demo using [!INCLUDE[hek_2](../../includes/hek-2-md.md)] can be found at: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [17-minute video explaining [!INCLUDE[hek_2](../../includes/hek-2-md.md)] and showing the demo](https://www.youtube.com/watch?v=UHhYhSCJil4)
 
-## See Also
+## See also
 
 - [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] overview and usage scenarios](overview-and-usage-scenarios.md)
 - [Optimize Performance using In-Memory Technologies in Azure SQL](/azure/sql-database/sql-database-in-memory)

@@ -53,7 +53,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 20.04. It can
 
 ## <a id="requirements"></a> Prerequisites
 
-- Docker Engine 1.8+ on any supported Linux distribution. For more information, see [Install Docker](https://docs.docker.com/engine/installation/). For more information on hardware requirements and processor support, see [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md#pmosr).
+- Docker Engine 1.8+ on any supported Linux distribution. For more information, see [Install Docker](https://docs.docker.com/engine/installation/). For more information on hardware requirements and processor support, see [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md#pmosr).
 - Docker **overlay2** storage driver. This is the default for most users. If you aren't using this storage provider and need to change, see the instructions and warnings in the [docker documentation for configuring overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
 - Minimum of 2 GB of disk space.
 - Minimum of 2 GB of RAM.
@@ -303,7 +303,7 @@ Before starting the following steps, make sure that you've selected your preferr
 4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). It will be ready for connection, once the SQL Server error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the SQL Server error log inside the container using the command:
 
    ```bash
-   docker exec -t sqlrhel cat /var/opt/mssql/log/errorlog | grep connection
+   docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
 The `--hostname` parameter as discussed above, changes the internal name of the container to a custom value. This changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:

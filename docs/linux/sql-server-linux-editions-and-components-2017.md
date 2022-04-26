@@ -241,7 +241,7 @@ The following features and services are not available SQL Server 2017 on Linux. 
 <sup>1</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
 
 ## Next steps
- [Editions and supported features for SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
+ [Editions and supported features for SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-2019.md)  
  [Editions and supported features for SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Editions and supported features for SQL Server 2016 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [Installation for SQL Server](../database-engine/install-windows/install-sql-server.md)  

@@ -56,7 +56,7 @@ This topic describes how the following features interact with change data captur
   
 -   If a database is detached and attached to the same server or another server, change data capture remains enabled.  
   
--   If a database is attached or restored with the **KEEP_CDC** option to any edition other than Standard, Enterprise, or Managed Instance, the operation is blocked because change data capture requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, Enterprise, or Managed Instance editions. Error message 934 is displayed:  
+-   If a database is attached or restored with the **KEEP_CDC** option to any edition other than Standard, Enterprise, or SQL Managed Instance, the operation is blocked because change data capture requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, Enterprise, or SQL Managed Instance editions. Error message 934 is displayed:  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports change data capture.`  
   
@@ -78,13 +78,13 @@ This topic describes how the following features interact with change data captur
 
 Running point-in-time-restore (PITR) on a Azure SQL Database that has change data capture enabled will not preserve the change data capture artifacts (e.g. system tables). After PITR, CDC artifacts will not be available.
 
-If you enabled CDC on your database as an AAD user, PITR will not work and it will fail. PITR will only work when you enable CDC on your database as a SQL user.
+If you enabled CDC on your database as an Azure AD user, PITR will not work and it will fail. PITR will only work when you enable CDC on your database as a SQL user.
 
 ##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Database 
 
-If you create a database in Azure SQL Database as an AAD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another AAD user will be able to enable/disable change data capture on the same database. 
+If you create a database in Azure SQL Database as an Azure AD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another Azure AD user will be able to enable/disable change data capture on the same database. 
 
-Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an AAD user won't work. 
+Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an Azure AD user won't work. 
 
 
 ## See Also  

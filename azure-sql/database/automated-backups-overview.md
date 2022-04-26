@@ -528,7 +528,7 @@ To view backup and data storage metrics in the Azure portal, follow these steps:
 1.	Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
 2.	Select the Metrics page in the **Monitoring** section.
 
-:::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Hyperscale Backup storage metrics":::
+:::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage metrics":::
 
 3.  From the Metric drop-down list, select the **Data backup Storage** and **Log Backup Storage** metrics with an appropriate aggregation rule. 
 

@@ -10,10 +10,12 @@ ms.author: wiassaf
 ms.custom:
   - seo-lt-2019
   - intro-installation
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
+monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Install pre-trained machine learning models on SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+This article does not apply to SQL Server 2022.
 
 This article explains how to use PowerShell to add free pre-trained machine learning models for *sentiment analysis* and *image featurization* to a SQL Server instance having R or Python integration. The pre-trained models are built by Microsoft and ready-to-use, added to an instance as a post-install task. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
 

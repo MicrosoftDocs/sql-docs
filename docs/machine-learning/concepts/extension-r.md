@@ -19,7 +19,7 @@ This article describes the R extension for running external Python scripts with 
 - Base R distribution with standard libraries and tools
 - Microsoft R libraries:
   - [RevoScaleR](../r/ref-r-revoscaler.md) for analytics at scale
-  - [MicrosoftML](../r/ref-r-microsoftml.md) for machine learning algorithms
+  - [MicrosoftML](../r/ref-r-microsoftml.md) for machine learning algorithms. **Applies to SQL Server 2019 and prior versions.**
   - Other libraries for accessing data or R code in SQL Server
 
 ## R components

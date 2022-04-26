@@ -40,9 +40,7 @@ This section contains the following stored procedures used to configure the Quer
 
 -   [sp_query_store_set_hints (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md)  
 
--   [sp_query_store_clear_message_queues (Transact-SQL)](sp-query-store-clear-message-queues.md)
-
-    **APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+-   [sp_query_store_clear_message_queues (Transact-SQL)](sp-query-store-clear-message-queues-transact-sql.md)
 
 ## Next steps
 

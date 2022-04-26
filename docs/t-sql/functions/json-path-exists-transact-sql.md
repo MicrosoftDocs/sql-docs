@@ -2,15 +2,15 @@
 description: "JSON_PATH_EXISTS (Transact-SQL)"
 title: "JSON_PATH_EXISTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/24/2022
+ms.date: 04/26/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-author: "jovanpop-msft"
-ms.author: "jovanpop"
+author: "uc-msft"
+ms.author: "umajay"
 dev_langs: 
   - "TSQL"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2022||>= sql-server-linux-2022"
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 # JSON_PATH_EXISTS (Transact-SQL)
 

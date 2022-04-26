@@ -2,7 +2,7 @@
 description: "ISJSON (Transact-SQL)"
 title: "ISJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/24/2022
+ms.date: 06/26/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "ISJSON function"
   - "JSON, validating"
 ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
-author: "jovanpop-msft"
-ms.author: "jovanpop"
+author: "uc-msft"
+ms.author: "umajay"
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 # ISJSON (Transact-SQL)
@@ -84,7 +84,7 @@ The following example returns rows in which the column `json_col` contains valid
 ```sql  
 SELECT id, json_col
 FROM tab1
-WHERE ISJSON(json_col) > 0 
+WHERE ISJSON(json_col) = 1 
 ```  
 
 ### Example 3

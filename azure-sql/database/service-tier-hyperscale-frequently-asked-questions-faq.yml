@@ -241,7 +241,7 @@ sections:
       - question: |
           Can I move my on-premises SQL Server database, or my SQL Server database in a cloud virtual machine to Hyperscale?
         answer: |
-          Yes. You can use all existing migration technologies to migrate to Hyperscale, including transactional replication, and any other data movement technologies (Bulk Copy, Azure Data Factory, Azure Databricks, SSIS). See also the [Azure Database Migration Service](../../dms/dms-overview.md), which supports many migration scenarios.
+          Yes. You can use all existing migration technologies to migrate to Hyperscale, including transactional replication, and any other data movement technologies (Bulk Copy, Azure Data Factory, Azure Databricks, SSIS). See also the [Azure Database Migration Service](/azure/dms/dms-overview), which supports many migration scenarios.
           
       - question: |
           What is my downtime during migration from an on-premises or virtual machine environment to Hyperscale, and how can I minimize it?
@@ -257,7 +257,7 @@ sections:
       - question: |
           Can I read data from blob storage and do fast load (like Polybase in Azure Synapse Analytics)?
         answer: |
-          You can have a client application read data from Azure Storage and load data load into a Hyperscale database (just like you can with any other database in Azure SQL Database). Polybase is currently not supported in Azure SQL Database. As an alternative to provide fast load, you can use [Azure Data Factory](../../data-factory/index.yml), or use a Spark job in [Azure Databricks](/azure/azure-databricks/) with the [Spark connector for SQL](spark-connector.md). The Spark connector to SQL supports bulk insert.
+          You can have a client application read data from Azure Storage and load data load into a Hyperscale database (just like you can with any other database in Azure SQL Database). Polybase is currently not supported in Azure SQL Database. As an alternative to provide fast load, you can use [Azure Data Factory](/azure/data-factory/index), or use a Spark job in [Azure Databricks](/azure/azure-databricks/) with the [Spark connector for SQL](spark-connector.md). The Spark connector to SQL supports bulk insert.
           
           It is also possible to bulk read data from Azure Blob store using BULK INSERT or OPENROWSET: [Examples of Bulk Access to Data in Azure Blob Storage](/sql/relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage#accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location).
           
@@ -276,7 +276,7 @@ sections:
       - question: |
           Does Hyperscale support migration from other data sources such as Amazon Aurora, MySQL, PostgreSQL, Oracle, DB2, and other database platforms?
         answer: |
-          Yes. [Azure Database Migration Service](../../dms/dms-overview.md) supports many migration scenarios.
+          Yes. [Azure Database Migration Service](/azure/dms/dms-overview) supports many migration scenarios.
           
   - name: Business continuity and disaster recovery questions
     questions:
@@ -318,7 +318,7 @@ sections:
       - question: |
           Can I perform geo-restore with a Hyperscale database?
         answer: |
-          Yes. Geo-restore is fully supported. Unlike point-in-time restore, geo-restore requires a size-of-data operation. Data files are copied in parallel, so the duration of this operation depends primarily on the size of the largest file in the database, rather than on total database size. Geo-restore time will be significantly shorter if the database is restored in the Azure region that is [paired](../../availability-zones/cross-region-replication-azure.md) with the region of the source database.
+          Yes. Geo-restore is fully supported. Unlike point-in-time restore, geo-restore requires a size-of-data operation. Data files are copied in parallel, so the duration of this operation depends primarily on the size of the largest file in the database, rather than on total database size. Geo-restore time will be significantly shorter if the database is restored in the Azure region that is [paired](/azure/availability-zones/cross-region-replication-azure) with the region of the source database.
           
       - question: |
           Can I set up geo-replication with a Hyperscale database?
@@ -328,17 +328,17 @@ sections:
       - question: |
           Can I take a Hyperscale database backup and restore it to my on-premises server, or on SQL Server in a VM?
         answer: |
-          No. The storage format for Hyperscale databases is different from any released version of SQL Server, and you don’t control backups or have access to them. To take your data out of a Hyperscale database, you can extract data using any data movement technologies, i.e. Azure Data Factory, Azure Databricks, SSIS, etc.
+          No. The storage format for Hyperscale databases is different from any released version of SQL Server, and you don't control backups or have access to them. To take your data out of a Hyperscale database, you can extract data using any data movement technologies, i.e. Azure Data Factory, Azure Databricks, SSIS, etc.
 
       - question: |
           Will I be charged for backup storage costs in Hyperscale?
         answer: |
-           Yes. Effective May 4th 2022, backups for all new databases will be charged based on the backup storage and selected storage redundancy at rates captured in [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/). For Hyperscale databases created before 4th May 2022, backups will be charged only if backup retention is set to be greater than 7 days. 
+           Yes. Effective May 4th 2022, backups for all new databases are charged based on the backup storage and selected storage redundancy at rates captured in [Azure SQL Database pricing page](https://azure.microsoft.com/pricing/details/sql-database/single/). For Hyperscale databases created before 4th May 2022, backups will be charged only if backup retention is set to be greater than 7 days. 
 
       - question: |
           How can I measure backup storage size in my Hyperscale database?
         answer: |
-          Details on how to measure backup storage size are captured in [Automated Backups](automated-backups-overview.md#hyperscale-backup-storage-costs)
+          Details on how to measure backup storage size are captured in [Automated Backups](automated-backups-overview.md#hyperscale-backup-storage-costs).
 
       - question: |
           How do I know what my backup bill will be?
@@ -348,12 +348,12 @@ sections:
       - question: |
           How will my workload influence my backup storage costs?
         answer: |
-          Backup costs will be higher for workloads that add, modify, or delete large volumes of data in the database. Conversely, workloads that are mostly read-only may have small.
+          Backup costs will be higher for workloads that add, modify, or delete large volumes of data in the database. Conversely, workloads that are mostly read-only may have small backup costs.
 
       - question: |
           How can I minimize backup storage costs?
         answer: |
-          Details on how to minimize the backup storage costs are captured in [Automated Backups](automated-backups-overview.md#reduce-backup-storage-consumption)        
+          Details on how to minimize the backup storage costs are captured in [Automated Backups](automated-backups-overview.md#reduce-backup-storage-consumption).       
 
 
       

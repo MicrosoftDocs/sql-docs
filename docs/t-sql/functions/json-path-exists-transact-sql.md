@@ -2,7 +2,7 @@
 description: "JSON_PATH_EXISTS (Transact-SQL)"
 title: "JSON_PATH_EXISTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 04/26/2022
+ms.date: 4/26/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference

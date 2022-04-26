@@ -119,25 +119,37 @@ The SKU recommendation provides the suitable Azure SQL target and the reasoning 
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-skus.png" alt-text="Sku recommendations":::
 
-The SKU  recommendation evaluates various performance metrics - CPU, memory, IOPS, latency and storage. Based on the usage and the configuration data, the recommender 
+The SKU  recommendation evaluates various performance metrics - CPU, memory, IOPS, latency and storage. Based on the usage and the configuration data, the recommender provides the suitable SQL target and the appropriate service tier.
 
 >[!Note]
 > If automatic workload repository (AWR) feature is enabled at Oracle instance, then the SKU recommender will use the DBA_HIST_ views to gather the performance metrics metadata. Otherwise, the recommender will use server configuration and other system views information for sizing the Azure SQL target.
  
-The feature assessment provides the Oracle to Azure SQL mapped assessment and migration effort to identify the suitability.
+The feature assessment provides the Oracle to Azure SQL mapped features and the effort required for migrating those capability to Azure SQL target.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-mapped-assessment.png" alt-text="Mapped assessment":::
 
-You can also download the report for offline viewing by selecting download combined reports or download individual reports.
+You can download the report for offline viewing by selecting download combined reports or download individual reports.
 
-:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-downlaod-report.png" alt-text="downlaod assessment report":::
+:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-downlaod-report.png" alt-text="download assessment report":::
 
+You can also cancel an ongoing assessment, delete an assessment and move assessments to another directory.
+
+## Change Assessment Directory
+
+1. Go to extension marketplace and search for Database Migration Assessment for Oracle.
+1. click on the manage icon and click extension settings
+1. Provide the new assessment path under Oracle Assessment : Assessment Path
+
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-extension.png" alt-text="change assessment path":::
+ 
 ## Troubleshoot
 ### Logging 
 
 The extension has the errors, warning and other diagnostic logging written in the default log path. 
 Windows - C:\Users\username\.dmaoracle\logs\<date>.txt
+
 Linux  - ~/home/username/.dmaoracle/logs
+
 Mac  - /Users/username/.dmaoracle/logs
 
 ### Common Errors

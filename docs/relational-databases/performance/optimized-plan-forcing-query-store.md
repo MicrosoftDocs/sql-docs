@@ -13,7 +13,8 @@ dev_langs:
  - "TSQL"
 author: thesqlsith
 ms.author: derekw 
-monikerRange: "=azuresqldb-current||>=sql-server-2022||>=sql-server-linux-2022||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
+
 ---
 # Optimized plan forcing with Query Store
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]

@@ -8,7 +8,7 @@ ms.author: maghan
 ms.reviewer: niball
 ms.topic: conceptual
 ms.custom:
-ms.date: 04/28/2022
+ms.date: 04/27/2022
 ---
 
 # Database Migration Assessment for Oracle extension (Preview)
@@ -20,6 +20,7 @@ The Database Migration Assessment for Oracle extension in Azure Data Studio help
 - An [Oracle database](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) running version 10 g or higher.
 - [Azure Data Studio version 1.35  or above](../download-azure-data-studio.md).
 - Oracle user should have CONNECT and SELECT ANY DICTIONARY privileges assigned.
+
 ## Install Azure Data Studio extension
 
 Follow the steps below to install the Database Migration Assessment for Oracle extension in Azure Data Studio.
@@ -76,9 +77,8 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
             1. If the recommended SKU needs to consider other peak load, the scale factor multiplier should be greater than 1. Example: Burst Load, Seasonal usage, future capacity planning etc. Whereas, when  partial Oracle schema workload is considered  migrated, then the multiplier should be less than 1.
 
         1. In the **Percentile utilization** field, enter the percentile value for sizing the Azure target.
-            
-            1. The percentile value of the performance sample set to be considered for sizing the Azure target.
 
+            1. The percentile value of the performance sample set to be considered for sizing the Azure target.
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="assessment details":::
 
@@ -114,16 +114,15 @@ This estimation is based on a statistical model that applies to the object count
 >The following system or Oracle built-in schemas are excluded in the workload assessment
 'SYSTEM','CTXSYS','DBSNMP','EXFSYS','LBACSYS','MDSYS','MGMT_VIEW' 'OLAPSYS','ORDDATA','OWBSYS','ORDPLUGINS','ORDSYS','OUTLN','SI_INFORMTN_SCHEMA','SYS 'SYSMAN','WK_TEST','WKSYS','WKPROXY','WMSYS','XDB','DIP','MDDATA','ORACLE_OCM', 'SPATIAL_CSW_ADMIN_USR','SPATIAL_WFS_ADMIN_USR','XS$NULL','PERFSTAT','SQLTXPLAIN','DMSYS','TSMSYS','WKSYS','DVSYS','OJVMSYS','GSMADMIN_INTERNAL','APPQOSSYS','DVSYS','DVF','AUDSYS','MGMT_VIEW','ODM','ODM_MTR','TRACESRV','MTMSYS','OWBSYS_AUDIT','WEBSYS','WK_PROXY','OSE$HTTP$ADMIN','DBMS_PRIVILEGE_CAPTURE','CSMIG','MGDSYS','SDE','DBSFWUSER','APEX','FLOW_'
 
-
 The SKU recommendation provides the suitable Azure SQL target, its service tier and the metric thresholds that have been used to provide the recommended SKU.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-skus.png" alt-text="Sku recommendations":::
 
 The SKU  recommendation evaluates various performance metrics - CPU, memory, IOPS, latency and storage. Based on the usage and the configuration data, the recommender provides the suitable SQL target and the appropriate service tier.
 
->[!Note]
+> [!Note]
 > If automatic workload repository (AWR) feature is enabled at Oracle instance, then the SKU recommender will use the DBA_HIST_ views to gather the performance metrics metadata. Otherwise, the recommender will use server configuration and other system views information for sizing the Azure SQL target.
- 
+
 The feature assessment provides the Oracle to Azure SQL mapped features and the effort required for migrating those capabilities to Azure SQL target.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-mapped-assessment.png" alt-text="Mapped assessment":::
@@ -140,22 +139,23 @@ You can also cancel an ongoing assessment and move assessments to another direct
 1. Click on the manage icon and click extension settings.
 1. Provide the new assessment path under Oracle Assessment: Assessment Path.
 
-    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-extension.png" alt-text="change assessment path":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-extension.png" alt-text="Screen capture shows the Change assessment path":::
+
 ## Troubleshoot
 
 ### Delete assessment
 
 1. Go to the assessment directory. The assessment directory path is shown in the  Oracle Assessment:Assessment Path settings under the manage extension.
-    Default Assessment Path 
+    Default Assessment Path
     - Windows -  C:\Users\\<username\>\\.dmaoracle
     - Linux  - ~/home/\<username\>/.dmaoracle/logs
     - Mac  - /Users/\<username\>/.dmaoracle/logs
 
-1. For each Oracle server, there will be separate folder inside .dmaoracle
-1. Traverse through the folder and identify the folder matching the assessment name.
-1. Delete the particular folder.
+2. For each Oracle server, there will be separate folder inside .dmaoracle
+3. Traverse through the folder and identify the folder matching the assessment name.
+4. Delete the particular folder.
 
-### Logging 
+### Logging
 
 The extension has the errors, warning and other diagnostic logging written in the default log directory. 
 
@@ -176,24 +176,25 @@ Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio
 ### Known issues
 
 1. Error GE-1002 Path provided does not exist.
-    
+
     Reason: Missing files or missing permission on the assessment folder.
- 
+
    Possible Solution:
     a. User has read and write permission on the assessment folder.
     b. If there is a missing file or folder, delete the assessment and generate a new assessment.
 
-1. Encountered connection timeout exception while interacting with Oracle.
-   
+2. Encountered connection timeout exception while interacting with Oracle.
+
      Reason: Failed to Connect to Oracle Instance.
 
     Possible Solution:
     a. Check if the port Oracle is running on isn't blocked by firewall rules.
     b. Perform tnsping and see if the Service ID gets resolved.
 
-1. Feature Data Collection Warning
-   
+3. Feature Data Collection Warning
+
      Reason: Few features don't have the latest usage statistics available in the Oracle metadata store.
+
 ## Next steps
 
 - [Azure SQL Migration extension](azure-sql-migration-extension.md)

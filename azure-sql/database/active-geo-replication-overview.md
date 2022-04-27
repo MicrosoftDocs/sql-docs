@@ -36,7 +36,7 @@ If your application requires a stable connection endpoint and automatic geo-fail
 
 The following diagram illustrates a typical configuration of a geo-redundant cloud application using Active geo-replication.
 
-![active geo-replication](./media/active-geo-replication-overview/geo-replication.png)
+![active geo-replication](./media/active-geo-replication-overview/geo-replication-updated.png)
 
 If for any reason your primary database fails, you can initiate a geo-failover to any of your secondary databases. When a secondary is promoted to the primary role, all other secondaries are automatically linked to the new primary.
 

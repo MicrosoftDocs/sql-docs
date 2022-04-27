@@ -90,7 +90,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-latest-assessment-status.png" alt-text="latest assessment status":::
 
-11. Click refresh or wait until the Assessment completes. The assessment status page refreshes frequently. The default value is 15 seconds. The status updates to show you 1 of 4 statuses - **success**, **failed** , **in-progress** or **canceled**.
+11. Click refresh or wait until the Assessment completes.The assessment status page refreshes frequently.The default value is 15 seconds. The status updates to show you 1 of 4 statuses - **success**, **failed** , **in-progress** or **canceled**.
 
 ## View Assessment
 
@@ -108,7 +108,7 @@ The following database details tab provides the breakup per schema basis. It sho
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-per-schema-basis.png" alt-text="per schema basis":::
 
-This estimation is based on a statistical model that applies to the object count, lines of code, enabled features and size of the database. For more accurate estimate on the code conversion, use [SQL Server migration Assistant for Oracle](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md).
+This estimation is based on a statistical model that applies to the object count, lines of code, enabled features and size of the database. For more accurate estimate on the code conversion, use [SQL Server migration Assistant for Oracle](../../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md).
 
 >[!Note]
 >The following system or Oracle built-in schemas are excluded in the workload assessment
@@ -167,8 +167,8 @@ Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio
 1. Error GE-1002 Path provided does not exist
     
     Reason: Missing files or missing permission on the assessment folder
-    
-    Possible Solution:
+ 
+   Possible Solution:
     a. User has read and write permission on the assessment folder
     b. If there is a missing file or folder, delete the assessment and generate a new assessment 
 
@@ -187,5 +187,5 @@ Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio
 
 - [Azure SQL Migration extension](azure-sql-migration-extension.md)
 - [Oracle extension](extension-for-oracle.md)
-- [Data Schema Conversion](/dsct/database-schema-conversion-toolkit.md)
+- [Data Schema Conversion](dsct/database-schema-conversion-toolkit.md)
 - [Add extensions](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)

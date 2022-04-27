@@ -2,7 +2,7 @@
 title: "Query Store hints (Preview)"
 description: "Learn about Query Store hints, which can be used to shape query plans without changing application code."
 ms.custom: ""
-ms.date: "3/7/2022"
+ms.date: "4/27/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -158,7 +158,7 @@ FROM sys.query_store_query_hints
 WHERE query_id = 39;
 ```
 
- Finally, remove the hint from `query_id` 39, using [sp_query_store_clear_hints](sys-sp-query-store-clear-hints-transact-sql.md).  
+ Finally, remove the hint from `query_id` 39, using [sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md).  
 
 ```sql
 EXEC sys.sp_query_store_clear_hints @query_id = 39;

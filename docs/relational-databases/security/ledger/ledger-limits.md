@@ -1,7 +1,7 @@
 ---
 title: "Limitations for ledger"
 description: Limitations and considerations for the ledger feature
-ms.date: "04/05/2022"
+ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.reviewer: kendralittle, mathoma
@@ -12,7 +12,7 @@ ms.author: vanto
 
 # Ledger considerations and limitations
 
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 There are some considerations and limitations to be aware of when working with ledger tables, due to the nature of system-versioning and immutable data.
 

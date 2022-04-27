@@ -1,7 +1,7 @@
 ---
 title: "Recover ledger database after tampering"
 description: This article discusses how to recover a database after discovering that it's been tampered with using the ledger feature.
-ms.date: "04/05/2022"
+ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.reviewer: kendralittle, mathoma
@@ -12,7 +12,7 @@ ms.author: vanto
 
 # Recover ledger database after tampering
 
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 ## How to recover after tampering occurs?
 

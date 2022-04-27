@@ -2,7 +2,7 @@
 description: "sys.sp_copy_data_in_batches (Transact-SQL)"
 title: "sys.sp_copy_data_in_batches (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2021"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -54,4 +54,4 @@ This operation requires **SELECT** on the source table, **INSERT** in the target
 
 - [Ledger considerations and limitations](/docs/relational-databases/security/ledger/ledger-limits.md)
 - [Ledger Overview](/docs/relational-databases/security/ledger/ledger-overview.md)
-- [How to convert regular tables into ledger tables](ledger-how-to-convert-regular-tables-into-ledger-tables.md)
+- [How to convert regular tables into ledger tables](/docs/relational-databases/security/ledger/ledger-how-to-convert-regular-tables-into-ledger-tables.md)

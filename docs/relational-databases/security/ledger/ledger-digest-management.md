@@ -1,7 +1,7 @@
 ---
 title: "Digest management"
 description: This article provides information on digest management for a ledger database.
-ms.date: "04/05/2022"
+ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.reviewer: kendralittle, mathoma
@@ -12,7 +12,7 @@ ms.author: vanto
 
 # Digest management
 
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [Azure SQL Database](../../../includes/applies-to-version/asdb.md)]
 
 ## Database digests
 

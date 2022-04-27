@@ -8,12 +8,12 @@ ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: kendralittle, mathoma
-ms.date: "04/05/2022"
+ms.date: "05/24/2022"
 ---
 
 # Verify a ledger table to detect tampering
 
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 In this article, you'll verify the integrity of the data in your ledger tables. If you have enabled the setting **Enable automatic digest storage** on your Azure SQL Database, follow the *T-SQL using automatic digest storage*. Otherwise, follow the *T-SQL using a manual generated digest*.
 

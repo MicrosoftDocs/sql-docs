@@ -62,6 +62,8 @@ landingContent:
             url: ledger-how-to-append-only-ledger-tables.md
           - text: Create updatable ledger tables
             url: ledger-how-to-updatable-ledger-tables.md
+          - text: Convert regular tables into ledger tables
+            url: ledger-how-to-convert-regular-tables-into-ledger-tables.md
           - text: How to configure automatic database digests
             url: ledger-how-to-configure-automatic-database-digest.md
           - text: How to verify a ledger table to detect tampering
@@ -77,8 +79,6 @@ landingContent:
             url: ledger-digest-management.md
           - text: Database verification
             url: ledger-database-verification.md
-          - text: Ledger auditing
-            url: ledger-audit.md
           - text: Recover ledger database after tampering
             url: ledger-recovery-after-tampering.md
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: kendralittle, mathoma
-ms.date: "04/05/2022"
+ms.date: "05/24/2022"
 ---
 
 # Configure automatic database digests
 
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [Azure SQL Database](../../../includes/applies-to-version/asdb.md)]
 
 In this article, we will describe how you can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI.
 

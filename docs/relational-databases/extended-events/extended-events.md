@@ -1,6 +1,6 @@
 ---
-title: "XEvents overview - SQL Server"
-description: The SQL Server Extended Events architecture lets you collect data necessary to identify and troubleshoot a performance problem. It is configurable and scalable.
+title: "XEvents overview - SQL Server, Azure SQL Database, and Azure SQL Managed Instance"
+description: The Extended Events architecture lets you collect data necessary to identify and troubleshoot a performance problem in SQL Server, Azure SQL Database, and Azure SQL Managed Instance. It is configurable and scalable.
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -19,14 +19,16 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 
 # Extended events overview
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-[!INCLUDE [SQL Server Azure SQL Database SQL Managed instance](../../includes/applies-to-version/sql-asdbmi.md)]
-
-The Extended Events architecture enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem. Extended Events is highly configurable, lightweight, and scales very well. For more information, see [Extended Events Architecture](extended-events.md#extended-events-architecture).
+The Extended Events architecture enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem in SQL Server, Azure SQL Database, and Azure SQL Managed Instance. Extended Events is highly configurable, lightweight, and scales very well. For more information, see [Extended Events Architecture](extended-events.md#extended-events-architecture).
 
 Extended Events replace the deprecated [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) and SQL Server Profiler features.
 
 Give XEvents a try: [Quickstart: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
+
+> [!NOTE]  
+> Azure SQL Database supports only database-scoped sessions. Learn how [Code examples can differ for Azure SQL Database and SQL Managed Instance](#code-examples-can-differ-for-azure-sql-database-and-sql-managed-instance) and more about [Extended events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr).
 
 ## Benefits of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  
 

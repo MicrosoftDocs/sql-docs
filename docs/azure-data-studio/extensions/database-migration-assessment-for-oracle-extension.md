@@ -56,7 +56,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
 5. Right-click on the Oracle connection and select **Manage**.
 
-    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-manage-database-connection.png" alt-text="manage database ":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-manage-database-connection.png" alt-text="manage database":::
 
 6. Select **Migration Assessment**.
 

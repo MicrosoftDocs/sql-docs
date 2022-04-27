@@ -304,7 +304,7 @@ This simple example shows how to change the distribution method for a table. To 
 
 In most cases you won't need to change a hash-distributed table to a round-robin table. More often, you might need to change a round-robin table to a hash distributed table. For example, you might initially load a new table as round-robin and then later move it to a hash-distributed table to get better join performance.
 
-This example uses the AdventureWorksDW sample database. To load the [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] version, see [Load sample data into [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)
+This example uses the AdventureWorksDW sample database. To load the [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] version, see [Load sample data into [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/data-factory/load-azure-sql-data-warehouse)
  
 ```sql
 -- DimSalesTerritory is hash-distributed.

@@ -39,17 +39,11 @@ WITHIN GROUP (ORDER BY order_by_expression [ASC|DESC]
 
 *numeric_literal*
 
-The percentile to compute. The value must range between 0.0 and 1.0. to
-calculate 10th percentile, the value passed would be 0.10.
+The percentile to compute. The value must range between 0.0 and 1.0. to calculate 10th percentile, the value passed would be 0.10.
 
 *order_by_expression*
 
-Specifies a list of values to sort and compute the percentile over. The
-default sort order is ascending (ASC).  Only numeric data types are
-allowed. The expression must evaluate to an exact or approximate numeric
-type, with no other data types allowed. Exact numeric types are int,
-bigint, smallint, tinyint, numeric, bit, decimal, smallmoney, and money.
-Approximate numeric types are float and real.
+Specifies a list of values to sort and compute the percentile over. The default sort order is ascending (ASC).  Only numeric data types are allowed. The expression must evaluate to an exact or approximate numeric type, with no other data types allowed. Exact numeric types are int, bigint, smallint, tinyint, numeric, bit, decimal, smallmoney, and money. Approximate numeric types are float and real.
 
 ## Return types
 
@@ -59,12 +53,9 @@ The return type is determined by the *order_by_expression* type.
 
 Any nulls in the data set are ignored.
 
-Approximate percentile functions use KLL sketch. The sketch is built by
-reading the stream of data.
+Approximate percentile functions use KLL sketch. The sketch is built by reading the stream of data.
 
-This function provides rank-based error guarantees not value based. The
-function implementation guarantees up to a 1.33% error rate within a 99%
-probability.
+This function provides rank-based error guarantees not value based. The function implementation guarantees up to a 1.33% error rate within a 99% probability.
 
 ## Known Behaviors
 
@@ -80,20 +71,17 @@ probability.
 
   To  workaround above error, use cast/convert to change decimal or numeric data type to float data type or use continuous approximate percentile function.
 
-- The output of the functions may not be the same in all executions. The algorithm used for these functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random values are picked. This functions provide rank-based error guarantees not value based.
+- The output of the functions may not be the same in all executions. The algorithm used for these functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random values are picked. These functions provide rank-based error guarantees not value based.
 
 - The function implementation guarantees up to a 1.33% error bounds within a 99% confidence.
 
 ## Compatibility Support
 
-Under compatibility level 110 and higher, WITHIN GROUP is a reserved
-keyword. For more information, see [ALTER DATABASE Compatibility Level
-(Transact-SQL).](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)
+Under compatibility level 110 and higher, WITHIN GROUP is a reserved keyword. For more information, see [ALTER DATABASE Compatibility Level (Transact-SQL).](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 ## Examples
 
-The following example creates a table, populates it and runs the sample
-query.
+The following example creates a table, populates it and runs the sample query.
 
 ```sql
 SET NOCOUNT ON

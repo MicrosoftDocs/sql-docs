@@ -57,38 +57,28 @@ float(53)
 ## Remarks
 
 Any nulls in the data set are ignored.
+ 
+Approximate percentile functions use KLL sketch. The sketch is built by reading the stream of data. Due to the algorithm used, this function requires less memory than its non-approximate counterpart ([PERCENTILE_CONT](/sql/t-sql/functions/percentile-cont-transact-sql)).
 
-Approximate percentile functions use KLL sketch. The sketch is built by
-reading the stream of data. Due to the algorithm used, this function
-requires less memory than its non-approximate counterpart
-([PERCENTILE_CONT](/sql/t-sql/functions/percentile-cont-transact-sql))
-
-This function provides rank-based error guarantees not value based. The
-function implementation guarantees up to a 1.33% error.
+This function provides rank-based error guarantees not value based. The function implementation guarantees up to a 1.33% error.
 
 ## Known Behaviors
 
 - If the trace flag is not enabled below error message would be raised
 
-    Msg 195, Level 15, State 22, Line 1 </br>
-    'approx_percentile_cont' is not a recognized built-in function name
+  Msg 195, Level 15, State 22, Line 1 </br>
+  'approx_percentile_cont' is not a recognized built-in function name
 
-- The output of the function may not be the same in all executions. The algorithm used for these
-functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random
-values are picked. This functions provide rank-based error guarantees not value based.
-- The
-function implementation guarantees up to a 1.33% error bounds within a 99% confidence.
+- The output of the function may not be the same in all executions. The algorithm used for these functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random values are picked. These functions provide rank-based error guarantees not value based.
+- The function implementation guarantees up to a 1.33% error bounds within a 99% confidence.
 
 ## Compatibility Support
 
-Under compatibility level 110 and higher, WITHIN GROUP is a reserved
-keyword. For more information, see [ALTER DATABASE Compatibility Level
-(Transact-SQL).](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)
+Under compatibility level 110 and higher, WITHIN GROUP is a reserved keyword. For more information, see [ALTER DATABASE Compatibility Level (Transact-SQL).](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)
 
 ## Examples
 
-The following example creates a table, populates it, and executes a
-sample query.
+The following example creates a table, populates it, and executes a sample query.
 
 ```sql
 SET NOCOUNT ON

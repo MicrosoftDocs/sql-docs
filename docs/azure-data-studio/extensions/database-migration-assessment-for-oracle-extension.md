@@ -78,7 +78,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="assessment details":::
 
-    If the recommended SKU needs to consider additional peak load, the scale factor multiplier should be greater than 1. Example: Burst Load, Seasonal usage, future capacity planning etc. Whereas, when  partial Oracle schema workload is considered  migrated, then the multiplier should be less than 1.
+    If the recommended SKU needs to consider other peak load, the scale factor multiplier should be greater than 1. Example: Burst Load, Seasonal usage, future capacity planning etc. Whereas, when  partial Oracle schema workload is considered  migrated, then the multiplier should be less than 1.
 
     The percentile value of the performance sample set to be considered for sizing the Azure target.
 
@@ -90,7 +90,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-latest-assessment-status.png" alt-text="latest assessment status":::
 
-11. Click refresh or wait until the Assessment completes.The assessment status page refreshes frequently.The default value is 15 seconds. The status updates to show you 1 of 4 statuses - **success**, **failed** , **in-progress** or **canceled**.
+11. Click refresh or wait until the Assessment completes. The assessment status page refreshes frequently. The default value is 15 seconds. The status updates to show you 1 of 4 statuses - **success**, **failed** , **in-progress** or **canceled**.
 
 ## View Assessment
 
@@ -115,7 +115,7 @@ This estimation is based on a statistical model that applies to the object count
 'SYSTEM','CTXSYS','DBSNMP','EXFSYS','LBACSYS','MDSYS','MGMT_VIEW' 'OLAPSYS','ORDDATA','OWBSYS','ORDPLUGINS','ORDSYS','OUTLN','SI_INFORMTN_SCHEMA','SYS 'SYSMAN','WK_TEST','WKSYS','WKPROXY','WMSYS','XDB','DIP','MDDATA','ORACLE_OCM', 'SPATIAL_CSW_ADMIN_USR','SPATIAL_WFS_ADMIN_USR','XS$NULL','PERFSTAT','SQLTXPLAIN','DMSYS','TSMSYS','WKSYS','DVSYS','OJVMSYS','GSMADMIN_INTERNAL','APPQOSSYS','DVSYS','DVF','AUDSYS','MGMT_VIEW','ODM','ODM_MTR','TRACESRV','MTMSYS','OWBSYS_AUDIT','WEBSYS','WK_PROXY','OSE$HTTP$ADMIN','DBMS_PRIVILEGE_CAPTURE','CSMIG','MGDSYS','SDE','DBSFWUSER','APEX','FLOW_'
 
 
-The SKU recommendation provides the suitable Azure SQL target , its service tier and the metric thresholds that has been used to provide the recommended SKU.
+The SKU recommendation provides the suitable Azure SQL target, its service tier and the metric thresholds that have been used to provide the recommended SKU.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-skus.png" alt-text="Sku recommendations":::
 
@@ -177,12 +177,12 @@ Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio
      Reason: Failed to Connect to Oracle Instance.
 
     Possible Solution:
-    a. Check if the port Oracle is running is not blocked by firewall rules.
+    a. Check if the port Oracle is running on isn't blocked by firewall rules.
     b. Perform tnsping and see if the Service ID gets resolved.
 
 1. Feature Data Collection Warning
    
-     Reason: Few features do not have the latest usage statistics available in the Oracle metadata store.
+     Reason: Few features don't have the latest usage statistics available in the Oracle metadata store.
 ## Next steps
 
 - [Azure SQL Migration extension](azure-sql-migration-extension.md)

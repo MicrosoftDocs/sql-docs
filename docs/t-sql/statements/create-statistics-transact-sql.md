@@ -126,7 +126,7 @@ Is the name of the statistics to create.
 Is the name of the table, indexed view, or external table on which to create the statistics. To create statistics on another database, specify a qualified table name.  
   
 *column [ ,...n]*  
-One or more columns to be included in the statistics. The columns should be in priority order from left to right. Only the first column is used for creating the histogram. All columns are used for cross-column orrelation statistics called densities.  
+One or more columns to be included in the statistics. The columns should be in priority order from left to right. Only the first column is used for creating the histogram. All columns are used for cross-column correlation statistics called densities.  
   
 You can specify any column that can be specified as an index key column with the following exceptions:  
   

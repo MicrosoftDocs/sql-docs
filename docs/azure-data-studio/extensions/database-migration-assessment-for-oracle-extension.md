@@ -175,23 +175,27 @@ Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio
 
 ### Known issues
 
-1. Error GE-1002 Path provided does not exist.
+- Error GE-1002 Path provided does not exist.
 
     Reason: Missing files or missing permission on the assessment folder.
 
    Possible Solution:
+   
     a. User has read and write permission on the assessment folder.
+    
     b. If there is a missing file or folder, delete the assessment and generate a new assessment.
 
-2. Encountered connection timeout exception while interacting with Oracle.
+- Encountered connection timeout exception while interacting with Oracle.
 
      Reason: Failed to Connect to Oracle Instance.
 
     Possible Solution:
+    
     a. Check if the port Oracle is running on isn't blocked by firewall rules.
+    
     b. Perform tnsping and see if the Service ID gets resolved.
 
-3. Feature Data Collection Warning
+- Feature Data Collection Warning
 
      Reason: Few features don't have the latest usage statistics available in the Oracle metadata store.
 

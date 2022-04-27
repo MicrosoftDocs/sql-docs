@@ -42,7 +42,7 @@ CREATE TABLE [dbo].[Employees](
 	);
 ```
 
-The easiest way to create an [append-only ledger table](ledger-append-only-ledger-tables.md) or [updatable ledger table](ledger-updatable-ledger-tables.md) is scripting the original table and add the `LEDGER = ON` clause. In the script below, we're creating a [new updatable ledger table](ledger-how-to-updatable-ledger-tables) `Employees_LedgerTable` based on the schema of the `Employees` table.
+The easiest way to create an [append-only ledger table](ledger-append-only-ledger-tables.md) or [updatable ledger table](ledger-updatable-ledger-tables.md) is scripting the original table and add the `LEDGER = ON` clause. In the script below, we're creating a [new updatable ledger table](ledger-how-to-updatable-ledger-tables.md) `Employees_LedgerTable` based on the schema of the `Employees` table.
 
 ```sql
 	CREATE TABLE [dbo].[Employees_LedgerTable](

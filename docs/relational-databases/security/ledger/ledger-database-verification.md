@@ -8,11 +8,12 @@ ms.reviewer: kendralittle, mathoma
 ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
+zone_pivot_groups: as1-azuresql-sql
 ---
 
 # Database verification
 
-[!INCLUDE [Azure SQL Database](../../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Ledger provides a form of data integrity called *forward integrity*, which provides evidence of data tampering on data in your ledger tables. The database verification process takes as input one or more previously generated database digests. It then recomputes the hashes stored in the database ledger based on the current state of the ledger tables. If the computed hashes don't match the input digests, the verification fails. The failure indicates that the data has been tampered with. The verification process reports all inconsistencies that it detects.
 
@@ -28,6 +29,8 @@ You accomplish database verification through two stored procedures, depending on
 
 > [!IMPORTANT]
 > Database verification requires the *View Ledger Content* permission. For details on permissions related to ledger tables, see [Permissions](/sql/relational-databases/security/permissions-database-engine#asdbpermissions).
+
+::: zone pivot="as1-azure-sql-database"
 
 ### Database verification that uses automatic digest storage
 
@@ -49,7 +52,14 @@ BEGIN CATCH
 END CATCH
 ```
 
+::: zone-end
+
 ### Database verification that uses manual digest storage
+
+::: zone pivot="as1-sql-server"
+> [!NOTE]
+> Database verification using automatic digest storage is currently available in Azure SQL Database, but not SQL Server. At the top, you are currently selecting the article for **SQL Server**. Change the selection to **Azure SQL Database** to see information on the automatic digest storage feature.
+::: zone-end
 
 When you're using manual digest storage for generating and storing database digests, the stored procedure [sp_verify_database_ledger](/sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql) is used to verify the ledger database. The JSON content of the digest is appended in the stored procedure. When you're running database verification, you can choose to verify all tables in the database or verify specific tables. 
 

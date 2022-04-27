@@ -146,7 +146,7 @@ You can also cancel an ongoing assessment, delete an assessment and move assessm
 ### Logging 
 
 The extension has the errors, warning and other diagnostic logging written in the default log directory. 
-Windows - C:\Users\\<username\>\.dmaoracle\logs\
+Windows - C:\Users\\<username\>\\.dmaoracle\logs\
 
 Linux  - ~/home/\<username\>/.dmaoracle/logs
 
@@ -156,11 +156,11 @@ By default, the extension stores last 7 log files.
 
 To change the log directory, update LogDirectory property.
 
-Windows - C:\Users\\<username\>\.azuredatastudio\extensions\microsoft.azuredatastudio-dma-oracle-\<VersionNumber\>\bin\service\Properties\ConfigSettings\extension-settings.json
+Windows - C:\Users\\<username\>\\.azuredatastudio\extensions\microsoft.azuredatastudio-dma-oracle-\<VersionNumber\>\bin\service\Properties\ConfigSettings\extension-settings.json
 
-Linux  - ~/home/\<username\>/.azuredatastudio\extensions\microsoft.azuredatastudio-dma-oracle-\<VersionNumber\>\bin\service\Properties\ConfigSettings\extension-settings.json
+Linux  - ~/home/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/\<VersionNumber\>/bin/service/Properties/ConfigSettings/extension-settings.json
 
-Mac  - /Users/\<username\>/.azuredatastudio\extensions\microsoft.azuredatastudio-dma-oracle-\<VersionNumber\>\bin\service\Properties\ConfigSettings\extension-settings.json
+Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/\<VersionNumber\>/bin/service/Properties/ConfigSettings/extension-settings.json
 
 ### Common Errors
 

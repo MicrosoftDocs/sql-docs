@@ -1,5 +1,6 @@
 ---
-description: "sp_estimate_data_compression_savings (Transact-SQL)"
+description: "The sp_estimate_data_compression_savings system stored procedure returns the current size of the requested object and estimates the object size for the requested compression state."
+
 title: "sp_estimate_data_compression_savings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/08/2022"
@@ -100,7 +101,8 @@ sp_estimate_data_compression_savings
  If the index or partition ID does not exist, no results are returned.  
   
 ## Permissions  
- Requires `SELECT` permission on the table, `VIEW DATABASE STATE` and `VIEW DEFINITION` on the database containing the table and on tempdb.
+ Requires `SELECT` permission on the table, `VIEW DATABASE STATE` and `VIEW DEFINITION` on the database containing the table and on `tempdb`.
+
   
 ## Limitations and Restrictions  
  Prior to SQL Server 2019, this procedure did not apply to columnstore indexes, and therefore did not accept the data compression parameters COLUMNSTORE and COLUMNSTORE_ARCHIVE.  Starting with SQL Server 2019, and in Azure SQL Database and Azure SQL Managed Instance, columnstore indexes can be used both as a source object for estimation, and as a requested compression type.

@@ -8,7 +8,7 @@ ms.topic: tutorial
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: kendralittle, mathoma
-ms.date: 09/21/2020
+ms.date: 04/27/2022
 ms.custom: seoapril2019 sqldbrb=1
 ---
 # Tutorial: Secure a database in Azure SQL Database
@@ -331,6 +331,9 @@ To enable or verify encryption:
 
 > [!NOTE]
 > To view encryption status, connect to the database using [SSMS](connect-query-ssms.md) and query the `encryption_state` column of the [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) view. A state of `3` indicates the database is encrypted.
+
+> [!NOTE]
+> Some items considered customer content, such as table names, object names, and index names, may be transmitted in log files for support and troubleshooting by Microsoft.
 
 ## Next steps
 

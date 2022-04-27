@@ -8,7 +8,7 @@ ms.author: maghan
 ms.reviewer: niball
 ms.topic: conceptual
 ms.custom:
-ms.date: 04/25/2022
+ms.date: 04/28/2022
 ---
 
 # Database Migration Assessment for Oracle extension (Preview)
@@ -34,7 +34,7 @@ Follow the steps below to install the Database Migration Assessment for Oracle e
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/install-database-migration-assessment-for-oracle-extension.png" alt-text="install extension":::
 
-## Run Assessment
+## Run assessment
 
 Once the assessment extension installs, the next step is to connect to Oracle your database, collect metadata information from your Oracle instance and generate an assessment report.
 
@@ -92,7 +92,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
 11. Click refresh or wait until the Assessment completes. The assessment status page refreshes frequently. The default value is 15 seconds. The status updates to show you 1 of 4 statuses - **success**, **failed** , **in-progress** or **canceled**.
 
-## View Assessment
+## View assessment
 
 Once the Assessment is complete, a consolidated output is generated for each Azure SQL target. Currently, these targets include **SQL Server on Azure Virtual Machines**, **Azure SQL Database**, and **Azure SQL Managed Instance**.
 
@@ -143,7 +143,7 @@ You can also cancel an ongoing assessment and move assessments to another direct
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-extension.png" alt-text="change assessment path":::
 ## Troubleshoot
 
-### Delete Assessment
+### Delete assessment
 
 1. Go to the assessment directory. The assessment directory path is shown in the  Oracle Assessment:Assessment Path settings under the manage extension.
     Default Assessment Path : C:\Users\\<username\>\\.dmaoracle
@@ -170,7 +170,7 @@ Linux  - ~/home/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastud
 
 Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/\<VersionNumber\>/bin/service/Properties/ConfigSettings/extension-settings.json
 
-### Common Errors
+### Known issues
 
 1. Error GE-1002 Path provided does not exist.
     

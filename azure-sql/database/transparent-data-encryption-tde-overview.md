@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: shohamMSFT
 ms.author: shohamd
 ms.reviewer: kendralittle, vanto, mathoma
-ms.date: 06/23/2021
+ms.date: 04/27/2022
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Transparent data encryption for SQL Database, SQL Managed Instance, and Azure Synapse Analytics
@@ -21,6 +21,9 @@ monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 > [!NOTE]
 > This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)). For documentation on Transparent Data Encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
+
+> [!NOTE]
+> Some items considered customer content, such as table names, object names, and index names, may be transmitted in log files for support and troubleshooting by Microsoft.
 
 TDE performs real-time I/O encryption and decryption of the data at the page level. Each page is decrypted when it's read into memory and then encrypted before being written to disk. TDE encrypts the storage of an entire database by using a symmetric key called the Database Encryption Key (DEK). On database startup, the encrypted DEK is decrypted and then used for decryption and re-encryption of the database files in the SQL Server database engine process. DEK is protected by the TDE protector. TDE protector is either a service-managed certificate (service-managed transparent data encryption) or an asymmetric key stored in [Azure Key Vault](/azure/key-vault/general/security-features) (customer-managed transparent data encryption).
 
@@ -149,7 +152,9 @@ Use the following set of commands for Azure SQL Database and Azure Synapse:
 |[Get Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/get)|Gets the TDE configuration for a database.|
 |[List Transparent Data Encryption Configuration Results](/rest/api/sql/transparentdataencryptionactivities/listbyconfiguration)|Gets the encryption result for a database.|
 
-## See Also
+## Next steps
+
+Learn more about related concepts in the following articles:
 
 - SQL Server running on an Azure virtual machine also can use an asymmetric key from Key Vault. The configuration steps are different from using an asymmetric key in SQL Database and SQL Managed Instance. For more information, see [Extensible key management by using Azure Key Vault (SQL Server)](/sql/relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server).
 - For a general description of TDE, see [Transparent data encryption](/sql/relational-databases/security/encryption/transparent-data-encryption).

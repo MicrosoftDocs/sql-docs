@@ -8,7 +8,7 @@ ms.custom: sqldbrb=2
 author: VanMSFT
 ms.author: vanto
 ms.topic: article
-ms.date: 04/13/2021
+ms.date: 04/27/2022
 ms.reviewer: kendralittle, mathoma
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
@@ -222,7 +222,7 @@ The principle of least privilege states that users shouldn't have more privilege
 Assign only the necessary [permissions](/sql/relational-databases/security/permissions-database-engine) to complete the required tasks:
 
 - In SQL Databases:
-  - Use granular permissions and user-defined database roles (or server-roles in Managed Instance):
+  - Use granular permissions and user-defined database roles (or server-roles in SQL Managed Instance):
     1. Create the required roles
        - [CREATE ROLE](/sql/t-sql/statements/create-role-transact-sql)
        - [CREATE SERVER ROLE](/sql/t-sql/statements/create-server-role-transact-sql)
@@ -404,6 +404,9 @@ Encryption at rest is the cryptographic protection of data when it is persisted 
 
 - If you're using customer-managed keys in Azure Key Vault, follow the articles, [Guidelines for configuring TDE with Azure Key Vault](transparent-data-encryption-byok-overview.md#recommendations-when-configuring-akv) and [How to configure Geo-DR with Azure Key Vault](transparent-data-encryption-byok-overview.md#geo-dr-and-customer-managed-tde).
 
+> [!NOTE]
+> Some items considered customer content, such as table names, object names, and index names, may be transmitted in log files for support and troubleshooting by Microsoft.
+
 ### Protect sensitive data in use from high-privileged, unauthorized users
 
 Data in use is the data stored in memory of the database system during the execution of SQL queries. If your database stores sensitive data, your organization may be required to ensure that high-privileged users are prevented from viewing sensitive data in your database. High-privilege users, such as Microsoft operators or DBAs in your organization should be able to manage the database, but prevented from viewing and potentially exfiltrating sensitive data from the memory of the SQL process or by querying the database.
@@ -418,7 +421,7 @@ The policies that determine which data is sensitive and whether the sensitive da
 
 - Always Encrypted isn't a substitute to encrypt data at rest (TDE) or in transit (SSL/TLS). Always Encrypted shouldn't be used for non-sensitive data to minimize performance and functionality impact. Using Always Encrypted in conjunction with TDE and Transport Layer Security (TLS) is recommended for comprehensive protection of data at-rest, in-transit, and in-use.
 
-- Assess the impact of encrypting the identified sensitive data columns before you deploy Always Encrypted in a production database. In general, Always Encrypted reduces the functionality of queries on encrypted columns and has other limitations, listed in [Always Encrypted - Feature Details](/sql/relational-databases/security/encryption/always-encrypted-database-engine#feature-details). Therefore, you may need to rearchitect your application to re-implement the functionality, a query does not support, on the client side or/and refactor your database schema, including the definitions of stored procedures, functions, views and triggers. Existing applications may not work with encrypted columns if they do not adhere to the restrictions and limitations of Always Encrypted. While the ecosystem of Microsoft tools, products and services supporting Always Encrypted is growing, a number of them do not work with encrypted columns. Encrypting a column may also impact query performance, depending on the characteristics of your workload.
+- Assess the impact of encrypting the identified sensitive data columns before you deploy Always Encrypted in a production database. In general, Always Encrypted reduces the functionality of queries on encrypted columns and has other limitations, listed in [Always Encrypted - Feature Details](/sql/relational-databases/security/encryption/always-encrypted-database-engine#feature-details). Therefore, you may need to rearchitect your application to reimplement the functionality, a query does not support, on the client side or/and refactor your database schema, including the definitions of stored procedures, functions, views and triggers. Existing applications may not work with encrypted columns if they do not adhere to the restrictions and limitations of Always Encrypted. While the ecosystem of Microsoft tools, products and services supporting Always Encrypted is growing, a number of them do not work with encrypted columns. Encrypting a column may also impact query performance, depending on the characteristics of your workload.
 
 - Manage Always Encrypted keys with role separation if you're using Always Encrypted to protect data from malicious DBAs. With role separation, a security admin creates the physical keys. The DBA creates the column master key and column encryption key metadata objects describing the physical keys in the database. During this process, the security admin doesn't need access to the database, and the DBA doesn't need access to the physical keys in plaintext.
   - See the article, [Managing Keys with Role Separation](/sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted#managing-keys-with-role-separation) for details.
@@ -434,7 +437,7 @@ The policies that determine which data is sensitive and whether the sensitive da
 
 - If you're concerned about third parties accessing your data legally without your consent, ensure that all application and tools that have access to the keys and data in plaintext run outside of Microsoft Azure Cloud. Without access to the keys, the third party will have no way of decrypting the data unless they bypass the encryption.
 
-- Always Encrypted doesn't easily support granting temporary access to the keys (and the protected data). For example, if you need to share the keys with a DBA to allow the DBA to do some cleansing operations on sensitive and encrypted data. The only way to reliability revoke the access to the data from the DBA will be to rotate both the column encryption keys and the column master keys protecting the data, which is an expensive operation.
+- Always Encrypted doesn't easily support granting temporary access to the keys (and the protected data). For example, if you need to share the keys with a DBA to allow the DBA to do some cleansing operations on sensitive and encrypted data. The only way to reliably revoke the access to the data from the DBA will be to rotate both the column encryption keys and the column master keys protecting the data, which is an expensive operation.
 
 - To access the plaintext values in encrypted columns, a user needs to have access to the Column Master Key (CMK) that protects columns, which is configured in the key store holding the CMK. The user also needs to have the **VIEW ANY COLUMN MASTER KEY DEFINITION** and **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** database permissions.
 

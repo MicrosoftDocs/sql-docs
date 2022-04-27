@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: SudhirRaparla 
 ms.author: nvraparl
 ms.reviewer: kendralittle, mathoma, wiassaf, danil
-ms.date: 01/10/2022
+ms.date: 04/26/2022
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Automated backups - Azure SQL Database & Azure SQL Managed Instance
@@ -25,7 +25,8 @@ Database backups are an essential part of any business continuity and disaster r
 
 ## Backup and restore essentials
 
-Databases in Azure SQL Managed instance and non-Hyperscale databases in Azure SQL Database use SQL Server engine technology to back up and restore data. Hyperscale databases have a unique architecture and leverage a different technology for backup and restore: see [Hyperscale backups and storage redundancy](#hyperscale-backups-and-storage-redundancy).
+Databases in Azure SQL Managed Instance and non-Hyperscale databases in Azure SQL Database use SQL Server engine technology to back up and restore data. Hyperscale databases have a unique architecture and leverage a different technology for backup and restore. To learn more, see [Hyperscale backups and storage redundancy](#hyperscale-backups-and-storage-redundancy).
+
 
 ### Backup frequency
 
@@ -99,7 +100,7 @@ To perform a restore, see [Restore database from backups](recovery-using-backups
 
 ## Backup scheduling
 
-The first full backup is scheduled immediately after a new database is created or restored. This backup usually completes within 30 minutes, but it can take longer when the database is large. For example, the initial backup can take longer on a restored database or a database copy, which would typically be larger than a new database. After the first full backup, all further backups are scheduled and managed  automatically. The exact timing of all database backups is determined by the SQL Database or SQL Managed Instance service as it balances the overall system workload. You cannot change the schedule of backup jobs or disable them.
+The first full backup is scheduled immediately after a new database is created or restored. This backup usually completes within 30 minutes, but it can take longer when the database is large. For example, the initial backup can take longer on a restored database or a database copy, which would typically be larger than a new database. After the first full backup, all further backups are scheduled and managed  automatically. The exact timing of all database backups is determined by the SQL Database or SQL Managed Instance service as it balances the overall system workload. You cannot change the schedule of backup jobs or disable them. Hyperscale uses a different backup scheduling mechanism, refer to [Hyperscale backup scheduling](#hyperscale-backup-scheduling) for more details.
 
 > [!IMPORTANT]
 > For a new, restored, or copied database, point-in-time restore capability becomes available from the time when the initial transaction log backup that follows the initial full backup is created.
@@ -108,7 +109,7 @@ The first full backup is scheduled immediately after a new database is created o
 
 With SQL Server backup and restore technology, restoring a database to a point in time requires an uninterrupted backup chain consisting of one full backup, optionally one differential backup, and one or more transaction log backups. Azure SQL Database and Azure SQL Managed Instance backup schedules include one full backup every week. Therefore, to provide PITR within the entire retention period, the system must store additional full, differential, and transaction log backups for up to a week longer than the configured retention period. 
 
-In other words, for any point in time during the retention period, there must be a full backup that is older than the oldest time of the retention period, as well as an uninterrupted chain of differential and transaction log backups from that full backup until the next full backup.
+In other words, for any point in time during the retention period, there must be a full backup that is older than the oldest time of the retention period, as well as an uninterrupted chain of differential and transaction log backups from that full backup until the next full backup. Hyperscale databases use a different backup scheduling mechanism, for more details see [Hyperscale backup scheduling](#hyperscale-backup-scheduling) and for more details on how to monitor storage costs see [Hyperscale backup storage costs](#hyperscale-backup-storage-costs).
 
 > [!NOTE]
 > To provide PITR, additional backups are stored for up to a week longer than the configured retention period. Backup storage is charged at the same rate for all backups. 
@@ -127,6 +128,8 @@ Azure SQL Database and Azure SQL Managed Instance compute your total used backup
 For vCore databases in Azure SQL Database, the storage consumed by each type of backup (full, differential, and log) is reported on the database monitoring pane as a separate metric. The following diagram shows how to monitor the backup storage consumption for a single database. This feature is currently not available for managed instances.
 
 ![Monitor database backup consumption in the Azure portal](./media/automated-backups-overview/backup-metrics.png)
+
+Instructions on how to monitor consumption in Hyperscale can be found in [Hyperscale monitor backup consumption](#hyperscale-monitor-backup-consumption)
 
 ### Fine-tune backup storage consumption
 
@@ -150,7 +153,10 @@ For all new, restored, and copied databases, Azure SQL Database and Azure SQL Ma
 > [!NOTE]
 > A 24-hour differential backup frequency may increase the time required to restore the database. 
 
-Except for Hyperscale and Basic tier databases, you can [change backup retention period](#change-the-short-term-retention-policy) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. For Azure SQL Managed Instance only, it is possible to set the PITR backup retention rate once a database has been deleted in the 0-35 days range. 
+Except for Basic tier databases, you can [change backup retention period](#change-the-short-term-retention-policy) per each active database in the 1-35 day range. As described in [Backup storage consumption](#backup-storage-consumption), backups stored to enable PITR may be older than the retention period. For Azure SQL Managed Instance only, it is possible to set the PITR backup retention rate once a database has been deleted in the 0-35 days range.
+
+> [!NOTE]
+> Short-term back up retention of 1-35 days for Hyperscale databases is now in Preview. To learn more, review [Managing backup retention in Hyperscale](#hyperscale-backups-and-storage-redundancy). 
 
 If you delete a database, the system keeps backups in the same way it would for an online database with its specific retention period. You cannot change backup retention period for a deleted database.
 
@@ -198,6 +204,8 @@ For managed instances, the total billable backup storage size is aggregated at t
 `Total billable backup storage size = (total size of full backups + total size of differential backups + total size of log backups) – maximum instance data storage`
 
 Total billable backup storage, if any, will be charged in GB/month as per the rate of the backup storage redundancy used. This backup storage consumption will depend on the workload and size of individual databases, elastic pools, and managed instances. Heavily modified databases have larger differential and log backups, because the size of these backups is proportional to the amount of changed data. Therefore, such databases will have higher backup charges.
+
+Formulae used to calculate backup storage costs for Hyperscale databases can be found in [Hyperscale backup storage costs](#hyperscale-backup-storage-costs). 
 
 Azure SQL Database and Azure SQL Managed Instance compute your total billable backup storage as a cumulative value across all backup files. Every hour, this value is reported to the Azure billing pipeline, which aggregates this hourly usage to get your backup storage consumption at the end of each month. If a database is deleted, backup storage consumption will gradually decrease as older backups age out and are deleted. Because differential backups and log backups require an earlier full backup to be restorable, all three backup types are purged together in weekly sets. Once all backups are deleted, billing stops. 
 
@@ -476,9 +484,9 @@ For more information, see [Backup Retention REST API](/rest/api/sql/backupshortt
 
 Hyperscale databases in Azure SQL Database use a [unique architecture](service-tier-hyperscale.md#distributed-functions-architecture) with highly scalable storage and compute performance tiers.
 
-Hyperscale backups are snapshot based and are nearly instantaneous. Log generated is stored in long term Azure storage for the backup retention period. Hyperscale architecture does not use full database backups or log backups and the backup and restore considerations described in the previous sections of this article do not apply.
+Hyperscale backups are snapshot based and are nearly instantaneous. Log generated is stored in long term Azure storage for the backup retention period. Hyperscale architecture does not use full database backups or log backups and hence the backup frequency, storage costs, scheduling, storage and redundancy and restore capabilities described in the previous sections of this article do not apply.
 
-### Backup and restore performance for Hyperscale databases
+### Hyperscale backup and restore performance
 
 Storage and compute separation enables Hyperscale to push down backup and restore operation to the storage layer to reduce the processing burden on the primary compute replica. As a result, database backups don't impact performance of the primary compute node. 
 
@@ -486,11 +494,58 @@ Backup and restore operations for Hyperscale databases are fast regardless of da
 
 ### Hyperscale backup retention
 
-Hyperscale backup retention is currently seven days; long-term retention policies aren't currently supported.
+Hyperscale supports short-term backup retention (STR) of 7 days by default; long-term retention (LTR) policies aren't currently supported.
+
+> [!NOTE]
+> Short-term backup retention up to 35 days for Hyperscale databases is now in preview. 
+
+### Hyperscale backup scheduling
+
+There are no traditional full, differential, and transaction log backups for Hyperscale databases. Instead, regular storage snapshots of data files are taken. The generated transaction log is retained as-is for the configured retention period. At restore time, relevant transaction log records are applied to the restored storage snapshot, resulting in a transactionally-consistent database without any data loss as of the specified point in time within the retention period. 
+
+### Hyperscale backup storage costs
+
+Hyperscale backup storage cost depends on the choice of region and backup storage redundancy. It also depends on the workload type. Write-heavy workloads are more likely to change data pages frequently, which results in larger storage snapshots. Such workloads also generate more transaction log, contributing to the overall backup costs. Backup storage is charged per GB/month consumed, for pricing details see the [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/single/) page. 
+
+For Hyperscale, billable backup storage is calculated as follows: 
+
+`Total billable backup storage size = (Data backup storage size + Log backup storage size)` 
+
+Data storage size is not included in the billable backup as it is already billed as allocated database storage. 
+
+Deleted Hyperscale databases incur backup costs to support recovery to a point in time before deletion. For a deleted Hyperscale database, billable backup storage is calculated as follows: 
+
+`Total billable backup storage size for deleted Hyperscale database = (Data storage size + Data backup size + Log backup storage size) * (remaining backup retention period after deletion/configured backup retention period)` 
+
+Data storage size is included in the formula because allocated database storage is not billed separately for a deleted database. For a deleted database, data is stored post deletion to enable recovery during the configured backup retention period. Billable backup storage for a deleted database reduces gradually over time after it is deleted. It becomes zero when backups are no longer retained, and recovery is no longer possible. However if it is a permanent deletion and backups are no longer needed, to optimize costs you can reduce retention before deleting the database.
+
+### Hyperscale monitor backup consumption
+
+In Hyperscale, data backup storage size (snapshot backup size), data storage size(database size) and log backup storage size(transactions log backup size) are reported via Azure Monitor metrics. 
+
+To view backup and data storage metrics in the Azure portal, follow these steps: :
+
+1.	Go to the Hyperscale database for which you'd like to monitor backup and data storage metrics.
+2.	Select the Metrics page in the **Monitoring** section.
+
+:::image type="content" source="./media/automated-backups-overview/hyperscale-backup-storage-metrics.png" alt-text="Screenshot of the Azure portal showing the Hyperscale Backup storage metrics":::
+
+3.  From the Metric drop-down list, select the **Data backup Storage** and **Log Backup Storage** metrics with an appropriate aggregation rule. 
+
+
+#### Reduce backup storage consumption
+
+Backup storage consumption for a Hyperscale database depends on the retention period, choice of region, backup storage redundancy and workload type. Consider some of the following tuning techniques to reduce your backup storage consumption for a Hyperscale database:
+
+- Reduce the [backup retention period](#change-the-short-term-retention-policy-using-the-azure-portal) to the minimum possible for your needs.
+- Avoid doing large write-operations, such as index maintenance, more frequently than you need to. For index maintenance recommendations, see [Optimize index maintenance to improve query performance and reduce resource consumption](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes.md).
+- For large data-load operations, consider using data compression when appropriate.
+- Use the `tempdb` database instead of permanent tables in your application logic to store temporary results and/or transient data.
+- Use locally-redundant or zone-redundant backup storage when geo-restore capability is unnecessary (for example: dev/test environments). 
 
 ### Hyperscale storage redundancy applies to both data storage and backup storage
 
-Hyperscale supports configurable storage redundancy. When creating a Hyperscale database, you can choose your preferred storage type: read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS) Azure standard storage. The selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy.
+Hyperscale supports configurable storage redundancy. When creating a Hyperscale database, you can choose your preferred storage type: read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS) Azure standard storage. The selected storage redundancy option is used for the lifetime of the database for both data storage redundancy and backup storage redundancy.
 
 ### Consider storage redundancy carefully when you create a Hyperscale database
 

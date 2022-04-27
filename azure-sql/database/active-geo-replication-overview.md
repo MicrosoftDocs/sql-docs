@@ -197,7 +197,7 @@ To create a geo-secondary in a subscription different from the subscription of t
 10. After the geo-secondary is successfully created, the users, logins, and firewall rules created by this procedure can be removed.
 
 > [!NOTE]
-> Cross-subscription geo-replication operations including setup and geo-failover are only supported using T-SQL commands.
+> Cross-subscription geo-replication operations including setup and geo-failover are only supported using REST API & T-SQL commands.
 > 
 > Adding a geo-secondary using T-SQL is not supported when connecting to the primary server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, adding a geo-secondary is supported when connected to the primary server from a public IP address. Once a geo-secondary is added, public access can be [denied](connectivity-settings.md#deny-public-network-access).
 > 

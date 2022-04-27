@@ -8,6 +8,8 @@ ms.topic: reference
 f1_keywords: 
   - "DATEDIFF_BIG"
   - "DATEDIFF_BIG_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "DATEDIFF_BIG function [SQL Server]"
   - "dates [SQL Server]. functions"

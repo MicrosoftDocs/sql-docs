@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sys.dm_exec_distributed_requests management view"
   - "dm_exec_distributed_requests management view"
 ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_distributed_sql_requests (Transact-SQL)

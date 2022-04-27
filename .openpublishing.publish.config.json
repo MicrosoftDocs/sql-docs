@@ -2,6 +2,20 @@
   "build_entry_point": "docs",
   "docsets_to_publish": [
     {
+      "docset_name": "azure-sql",
+      "build_source_folder": "azure-sql",
+      "build_output_subfolder": "azure-sql",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
       "docset_name": "data-migration",
       "build_source_folder": "data-migration",
       "build_output_subfolder": "data-migration",
@@ -40,13 +54,11 @@
     }
   ],
   "notification_subscribers": [],
-  "sync_notification_subscribers": null,
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/sql-docs",
   "git_repository_branch_open_to_public_contributors": "live",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "contribution_branch_mappings": null,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -54,6 +66,30 @@
       "branch": "main",
       "branch_mapping": {}
     },
+    {
+      "path_to_root": "azure",
+      "url": "https://github.com/MicrosoftDocs/azure-docs-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "azure_cli_scripts",
+      "url": "https://github.com/Azure-Samples/azure-cli-samples",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "powershell_scripts",
+      "url": "https://github.com/Azure/azure-docs-powershell-samples",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "quickstart-templates",
+      "url": "https://github.com/Azure/azure-quickstart-templates",
+      "branch": "master",
+      "branch_mapping": {}
+    },    
     {
       "path_to_root": "samples",
       "url": "https://github.com/dotnet/samples",
@@ -101,11 +137,13 @@
       "template_folder": "_themes.pdf"
     }
   },
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  },
+  "docs_build_engine": {},
+  "contribution_branch_mappings": null,
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "enable_branch_build_custom_validation": true,
-  "enable_pull_request_custom_validation": true
-}
+  "enable_pull_request_custom_validation": true, 
+  "redirection_files": [
+    ".openpublishing.redirection.azure-sql.json" 
+  ]
+ }

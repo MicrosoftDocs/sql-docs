@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Cluster
 description: TRestore HDFS admin rights.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 ms.date: 04/21/2020
 ms.topic: troubleshooting
 ms.prod: sql

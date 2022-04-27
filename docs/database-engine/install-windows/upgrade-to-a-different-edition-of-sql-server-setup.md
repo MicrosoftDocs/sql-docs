@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-author: MikeRayMSFT
-ms.author: mikeray
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Upgrade to a Different Edition of SQL Server (Setup)
@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2016"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports edition upgrade among various editions of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. For information about supported edition upgrade paths, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md). Before you initiate the edition upgrade of an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], review the following articles:  
 
-  [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)
+  [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
 - [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)  
 - [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  
 - [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
@@ -86,4 +86,3 @@ setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriateP
 ## See Also  
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Backward Compatibility_deleted](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
-  

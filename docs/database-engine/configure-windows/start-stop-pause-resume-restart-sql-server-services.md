@@ -35,9 +35,9 @@ helpviewer_keywords:
   - "SQL Server Database Engine setting startup options"
   - "administering SQL Server, starting and stopping services"
   - "Management Studio [SQL Server], starting or stopping services"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: rwestMSFT
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: randolphwest
 ---
 
 # Start, stop, pause, resume, and restart SQL Server services
@@ -58,7 +58,7 @@ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] service can be the default insta
 
 ### SQL Server Agent service
 
-The SQL Server Agent service executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](../../ssms/agent/sql-server-agent.md). SQL Server Agent is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).
+The SQL Server Agent service executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](../../ssms/agent/sql-server-agent.md). SQL Server Agent is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md).
 
 ### SQL Server Browser service
 

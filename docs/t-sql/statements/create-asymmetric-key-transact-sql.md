@@ -120,7 +120,9 @@ CREATE ASYMMETRIC KEY asym_key_name
   
  By default, the private key is protected by the database master key. If no database master key has been created, a password is required to protect the private key.  
   
- The private key can be 512, 1024, or 2048 bits long.  
+ The private key can be 512, 1024, or 2048 bits long.
+ 
+ Asymmetric Keys used for TDE are limited to a private key size of 3072 bits.
   
 ## Permissions  
  Requires CREATE ASYMMETRIC KEY permission on the database. If the AUTHORIZATION clause is specified, requires IMPERSONATE permission on the database principal, or ALTER permission on the application role. Only Windows logins, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins, and application roles can own asymmetric keys. Groups and roles cannot own asymmetric keys.  

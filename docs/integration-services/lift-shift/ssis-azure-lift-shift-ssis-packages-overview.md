@@ -1,7 +1,7 @@
 ---
 title: "Deploy and run SSIS packages in Azure | Microsoft Docs"
 description: Learn how you can move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Microsoft Azure cloud.
-ms.date: "09/23/2018"
+ms.date: "04/06/2022"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -77,12 +77,6 @@ You can also install additional components - for example, you can install a driv
 If you have an Enterprise Edition license, additional components are available. For more info, see [Provision Enterprise Edition for the Azure-SSIS Integration Runtime](/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition).
 
 If you're an ISV, you can update the installation of your licensed components to make them available on Azure. For more info, see [Install paid or licensed custom components for the Azure-SSIS integration runtime](/azure/data-factory/how-to-develop-azure-ssis-ir-licensed-components).
-
-### Transaction support
-
-With SQL Server on premises and on Azure virtual machines, you can use Microsoft Distributed Transaction Coordinator (MSDTC) transactions. To configure MSDTC on each node of the Azure-SSIS IR, use the custom setup capability. For more info, see [Custom setup for the Azure-SSIS integration runtime](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
-
-With Azure SQL Database, you can only use elastic transactions. For more info, see [Distributed transactions across cloud databases](/azure/sql-database/sql-database-elastic-transactions-overview).
 
 ## Deploy and run packages
 

@@ -11,6 +11,8 @@ ms.topic: reference
 f1_keywords: 
   - "ALTER DATABASE SCOPED CREDENTIAL"
   - "ALTER_DATABASE_SCOPED_CREDENTIAL_TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "ALTER DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], ALTER DATABASE SCOPED CREDENTIAL statement"

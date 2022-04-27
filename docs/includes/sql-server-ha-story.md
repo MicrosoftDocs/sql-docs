@@ -5,7 +5,7 @@ One common task everyone deploying SQL Server has to account for is making sure 
 SQL Server 2017 introduces many new features or enhancements to existing ones, some of which are for availability. The biggest addition to SQL Server 2017 is the support for SQL Server on Linux distributions. For a full list of the new features in SQL Server, see the topics: 
 
 - [What's new in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
-- [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
+- [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-2019.md)
 - [What's new for SQL Server 2017 on Linux](../linux/sql-server-linux-whats-new.md)
 - [What's new for SQL Server 2019 on Linux](../linux/sql-server-linux-whats-new-2019.md)
 
@@ -123,7 +123,7 @@ After a failover, ownership changes as is seen in the picture below.
  
 There is zero data loss with an FCI, but the underlying shared storage is a single point of failure since there is one copy of the data. FCIs are often combined with another availability method, such as an availability group or log shipping, to have redundant copies of databases. The additional method deployed should use physically separate storage from the FCI. When the FCI fails over to another node, it stops on one node and starts on another, not unlike powering off a server and turning it on. An FCI goes through the normal recovery process, meaning any transactions that need to be rolled forward will be, and any transactions that are incomplete will be rolled back. Therefore, the database is consistent from a data point to the time of the failure or manual failover, hence no data loss. Databases are only available after recovery is complete, so recovery time will depend on many factors, and will generally be longer than failing over an availability group. The tradeoff is that when you fail over an availability group, there may be additional tasks required to make a database usable, such as enabling a SQL Server Agent job.
 
-Like an availability group, FCIs abstract which node of the underlying cluster is hosting it. An FCI always retains the same name. Applications and end users never connect to the nodes; the unique name assigned to the FCI is used. An FCI can participate in an availability group as one of the instances hosing either a primary or secondary replica.
+Like an availability group, FCIs abstract which node of the underlying cluster is hosting it. An FCI always retains the same name. Applications and end users never connect to the nodes; the unique name assigned to the FCI is used. An FCI can participate in an availability group as one of the instances hosting either a primary or secondary replica.
 
 The list below highlights some differences with FCIs on Windows Server versus Linux:
 

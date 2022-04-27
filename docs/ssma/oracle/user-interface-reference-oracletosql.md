@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 160d4784-d108-4705-932d-763558912804
-author: "nahk-ivanov"
-ms.author: "alexiva"
-manager: alexiva
+author: cpichuka 
+ms.author: cpichuka 
+manager: madhuriy
 ---
 # User Interface Reference (OracleToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle.  

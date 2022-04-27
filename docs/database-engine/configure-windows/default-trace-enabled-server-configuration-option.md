@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "traces [SQL Server], logs"
   - "default trace enabled option"
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # default trace enabled Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

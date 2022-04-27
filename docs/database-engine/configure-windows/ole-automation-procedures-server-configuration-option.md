@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Ole Automation Procedures option"
 ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
-author: markingmyname
-ms.author: maghan
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # Ole Automation Procedures Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

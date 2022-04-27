@@ -4,7 +4,7 @@ description: Learn how to backup and restore SQL Server databases on Linux. Also
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 11/14/2017
+ms.date: 03/31/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -14,7 +14,7 @@ ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-You can take backups of databases from SQL Server 2017 on Linux with many different options. On a Linux server, you can use **sqlcmd** to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup functionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob storage service](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+You can take backups of databases from SQL Server on Linux with many different options. On a Linux server, you can use **sqlcmd** to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup functionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob storage service](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 > [!IMPORTANT]
 > SQL Server on Linux only supports backing up to Azure Blob storage using block blobs. Using a storage key for backup and restore will result in a page blog being used, which isn't supported. Use a Shared Access Signature instead. For information on block blogs versus page blogs, see [Backup to block blob vs. page blob](../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob).
@@ -56,7 +56,7 @@ sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/dat
 
 ## Restore a database
 
-In the following example **sqlcmd** connects to the local instance of SQL Server and restores the demodb database. Note that the `NORECOVERY` option is used to allow for additional restores of log file backups. If you do not plan to restore additional log files, remove the `NORECOVERY` option.
+In the following example **sqlcmd** connects to the local instance of SQL Server and restores the demodb database. The `NORECOVERY` option is used to allow for additional restores of log file backups. If you don't plan to restore additional log files, remove the `NORECOVERY` option.
 
 ```bash
 sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/mssql/data/demodb.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
@@ -73,20 +73,20 @@ The following command restores the previous transaction log backup.
 sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak'"
 ```
 
-## Backup and Restore with SQL Server Management Studio (SSMS)
+## Backup and restore with SQL Server Management Studio (SSMS)
 
-You can use SSMS from a Windows computer to connect to a Linux database and take a backup through the user-interface.
+You can use [SSMS](../ssms/download-sql-server-management-studio-ssms.md) from a Windows computer to connect to a Linux database and take a backup through the user-interface.
 
 >[!NOTE] 
 > Use the latest version of SSMS to connect to SQL Server. To download and install the latest version, see [Download SSMS](../ssms/download-sql-server-management-studio-ssms.md). For more information on how to use SSMS, see [Use SSMS to Manage SQL Server on Linux](sql-server-linux-manage-ssms.md).
 
 The following steps walk through taking a backup with SSMS. 
 
-1. Start SSMS and connect to your server in SQL Server 2017 on Linux.
+1. Start SSMS and connect to your SQL Server on Linux instance.
 
-1. In Object Explorer, right-click on your database, Click **Tasks**, and then click **Back Up...**.
+1. In **Object Explorer**, right-click on your database, select **Tasks**, and then select **Back Up...**.
 
-1. In the **Backup Up Database** dialog, verify the parameters and options, and click **OK**.
+1. In the **Backup Up Database** dialog, verify the parameters and options, and select **OK**.
  
 SQL Server completes the database backup.
 
@@ -94,13 +94,13 @@ SQL Server completes the database backup.
 
 The following steps walk you through restoring a database with SSMS.
 
-1. In SSMS right-click **Databases** and click **Restore Databases...**. 
+1. In SSMS right-click **Databases** and select **Restore Databases...**. 
 
-1. Under **Source** click **Device:** and then click the ellipses (...).
+1. Under **Source**, select **Device:** and then select the ellipses (...).
 
-1. Locate your database backup file and click **OK**. 
+1. Locate your database backup file and select **OK**. 
 
-1. Under **Restore plan**, verify the backup file and settings. Click **OK**. 
+1. Under **Restore plan**, verify the backup file and settings. Select **OK**. 
 
 1. SQL Server restores the database. 
 

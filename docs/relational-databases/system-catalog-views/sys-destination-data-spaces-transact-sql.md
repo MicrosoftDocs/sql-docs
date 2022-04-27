@@ -17,8 +17,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.destination_data_spaces catalog view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 ---
 # sys.destination_data_spaces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

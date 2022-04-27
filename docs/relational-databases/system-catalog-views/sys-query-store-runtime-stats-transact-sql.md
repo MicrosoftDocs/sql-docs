@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "query_store_runtime_stats catalog view"
   - "sys.query_store_runtime_stats catalog view"
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_runtime_stats (Transact-SQL)
@@ -48,16 +48,16 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=s
 |**min_cpu_time**|**bigint**|Minimum CPU time for the query plan within the aggregation interval (reported in microseconds).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
 |**max_cpu_time**|**bigint**|Maximum CPU time for the query plan within the aggregation interval (reported in microseconds).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
 |**stdev_cpu_time**|**float**|CPU time standard deviation for the query plan within the aggregation interval (reported in microseconds).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**avg_logical_io_reads**|**float**|Average number of logical I/O reads for the query plan within the aggregation interval. (expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**last_logical_io_reads**|**bigint**|Last number of logical I/O reads for the query plan within the aggregation interval. (expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**min_logical_io_reads**|**bigint**|Minimum number of logical I/O reads for the query plan within the aggregation interval. (expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**max_logical_io_reads**|**bigint**|Maximum number of logical I/O reads for the query plan within the aggregation interval.(expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**stdev_logical_io_reads**|**float**|Number of logical I/O reads standard deviation for the query plan within the aggregation interval. (expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**avg_logical_io_writes**|**float**|Average number of logical I/O writes for the query plan within the aggregation interval.<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**last_logical_io_writes**|**bigint**|Last number of logical I/O writes for the query plan within the aggregation interval.<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**min_logical_io_writes**|**bigint**|Minimum number of logical I/O writes for the query plan within the aggregation interval.<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**max_logical_io_writes**|**bigint**|Maximum number of logical I/O writes for the query plan within the aggregation interval.<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
-|**stdev_logical_io_writes**|**float**|Number of logical I/O writes standard deviation for the query plan within the aggregation interval.<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**avg_logical_io_reads**|**float**|Average number of logical I/O reads for the query plan within the aggregation interval (expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**last_logical_io_reads**|**bigint**|Last number of logical I/O reads for the query plan within the aggregation interval (expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**min_logical_io_reads**|**bigint**|Minimum number of logical I/O reads for the query plan within the aggregation interval (expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**max_logical_io_reads**|**bigint**|Maximum number of logical I/O reads for the query plan within the aggregation interval (expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**stdev_logical_io_reads**|**float**|Number of logical I/O reads standard deviation for the query plan within the aggregation interval (expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**avg_logical_io_writes**|**float**|Average number of logical I/O writes for the query plan within the aggregation interval (expressed as a number of 8 KB pages written).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**last_logical_io_writes**|**bigint**|Last number of logical I/O writes for the query plan within the aggregation interval (expressed as a number of 8 KB pages written).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**min_logical_io_writes**|**bigint**|Minimum number of logical I/O writes for the query plan within the aggregation interval (expressed as a number of 8 KB pages written).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**max_logical_io_writes**|**bigint**|Maximum number of logical I/O writes for the query plan within the aggregation interval (expressed as a number of 8 KB pages written).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
+|**stdev_logical_io_writes**|**float**|Number of logical I/O writes standard deviation for the query plan within the aggregation interval (expressed as a number of 8 KB pages written).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
 |**avg_physical_io_reads**|**float**|Average number of physical I/O reads for the query plan within the aggregation interval (expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
 |**last_physical_io_reads**|**bigint**|Last number of physical I/O reads for the query plan within the aggregation interval (expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|
 |**min_physical_io_reads**|**bigint**|Minimum number of physical I/O reads for the query plan within the aggregation interval (expressed as a number of 8 KB pages read).<br/>**Note:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will always return zero (0).|

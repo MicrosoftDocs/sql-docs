@@ -1,9 +1,9 @@
 ---
 title: Restore a SQL Server database in Docker
-description: This tutorial shows how restore a SQL Server database backup in a new Linux Docker container.
+description: This tutorial shows how to restore a SQL Server database backup in a new Linux Docker container.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 03/31/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -47,7 +47,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. Open a bash terminal on Linux/Mac or an elevated PowerShell session on Windows.
+1. Open a bash terminal on Linux or an elevated PowerShell session on Windows.
 
 1. Pull the SQL Server 2017 Linux container image from Docker Hub.
 
@@ -60,7 +60,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
    ```
 
    > [!TIP]
-   > Throughout this tutorial, docker command examples are given for both the bash shell (Linux/Mac) and PowerShell (Windows).
+   > Throughout this tutorial, docker command examples are given for both the bash shell (Linux) and PowerShell (Windows).
 
 1. To run the container image with Docker, you can use the following command:
 
@@ -80,10 +80,9 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
    
    > [!IMPORTANT]
    > Host volume mapping for **Docker on Windows** does not currently support mapping the complete `/var/opt/mssql` directory. However, you can map a subdirectory, such as `/var/opt/mssql/data` to your host machine.
-   >
-   > Host volume mapping for **Docker on Mac** with the SQL Server on Linux image is not supported at this time. Use data volume containers instead. This restriction is specific to the `/var/opt/mssql` directory. Reading from a mounted directory works fine. For example, you can mount a host directory using -v on Mac and restore a backup from a .bak file that resides on the host.
 
-   This command creates a SQL Server 2017 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
+
+   This command creates a SQL Server 2017 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1data**. This is used to persist the data created by SQL Server.
 
    > [!IMPORTANT]
    > This example uses a data volume container within Docker. If you instead chose to map a host directory, note that there are limitations for this approach on Docker for Mac and Windows. For more information, see [Configure SQL Server container images on Docker](./sql-server-linux-docker-container-configure.md#persist).
@@ -147,7 +146,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
    >
    > Host volume mapping for **Docker on Mac** with the SQL Server on Linux image is not supported at this time. Use data volume containers instead. This restriction is specific to the `/var/opt/mssql` directory. Reading from a mounted directory works fine. For example, you can mount a host directory using -v on Mac and restore a backup from a .bak file that resides on the host.
 
-   This command creates a SQL Server 2019 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
+   This command creates a SQL Server 2019 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1data**. This is used to persist the data created by SQL Server.
 
 1. To view your Docker containers, use the `docker ps` command.
 
@@ -211,7 +210,7 @@ This tutorial uses the [Wide World Importers sample database](../samples/wide-wo
 
 ## Restore the database
 
-The backup file is now located inside the container. Before restoring the backup, it is important to know the logical file names and file types inside the backup. The following Transact-SQL commands inspect the backup and perform the restore using **sqlcmd** in the container.
+The backup file is now located inside the container. Before restoring the backup, it's important to know the logical file names and file types inside the backup. The following Transact-SQL commands inspect the backup and perform the restore using **sqlcmd** in the container.
 
 > [!TIP]
 > This tutorial uses **sqlcmd** inside the container, because the container comes with this tool pre-installed. However, you can also run Transact-SQL statements with other client tools outside of the container, such as [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) or [SQL Server Management Studio](sql-server-linux-manage-ssms.md). To connect, use the host port that was mapped to port 1433 in the container. In this example, that is **localhost,1401** on the host machine and **Host_IP_Address,1401** remotely.
@@ -231,7 +230,7 @@ The backup file is now located inside the container. Before restoring the backup
       -Q "RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/wwi.bak'"
    ```
 
-   You should see output similar to the following:
+   You should see an output similar to the following:
 
    ```
    LogicalName   PhysicalName
@@ -256,7 +255,7 @@ The backup file is now located inside the container. Before restoring the backup
       -Q "RESTORE DATABASE WideWorldImporters FROM DISK = '/var/opt/mssql/backup/wwi.bak' WITH MOVE 'WWI_Primary' TO '/var/opt/mssql/data/WideWorldImporters.mdf', MOVE 'WWI_UserData' TO '/var/opt/mssql/data/WideWorldImporters_userdata.ndf', MOVE 'WWI_Log' TO '/var/opt/mssql/data/WideWorldImporters.ldf', MOVE 'WWI_InMemory_Data_1' TO '/var/opt/mssql/data/WideWorldImporters_InMemory_Data_1'"
    ```
 
-   You should see output similar to the following:
+   You should see an output similar to the following:
 
    ```
    Processed 1464 pages for database 'WideWorldImporters', file 'WWI_Primary' on file 1.
@@ -304,7 +303,7 @@ You should see **WideWorldImporters** in the list of databases.
 
 ## Make a change
 
-The following steps make a change in the database.
+Follow these steps to make a change in the database.
 
 1. Run a query to view the top 10 items in the **Warehouse.StockItems** table.
 
@@ -351,7 +350,7 @@ The following steps make a change in the database.
       -Q "UPDATE WideWorldImporters.Warehouse.StockItems SET StockItemName='USB missile launcher (Dark Green)' WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1"
    ```
 
-   You should see output similar to the following text:
+   You should see an output similar to the following text:
 
    ```
    (1 rows affected)
@@ -428,7 +427,7 @@ In addition to taking database backups for protecting your data, you can also us
    docker stop sql1
    ```
 
-1. Remove the container. This does not delete the previously created **sql1data** data volume container and the persisted data in it.
+1. Remove the container. This doesn't delete the previously created **sql1data** data volume container and the persisted data in it.
 
    ```bash
    sudo docker rm sql1
@@ -483,7 +482,7 @@ In addition to taking database backups for protecting your data, you can also us
    docker stop sql1
    ```
 
-1. Remove the container. This does not delete the previously created **sql1data** data volume container and the persisted data in it.
+1. Remove the container. This doesn't delete the previously created **sql1data** data volume container and the persisted data in it.
 
    ```bash
    sudo docker rm sql1

@@ -11,6 +11,7 @@ ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, AlwaysOn Availability Groups"
+  - "Reporting Services, Always On Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT

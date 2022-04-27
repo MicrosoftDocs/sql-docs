@@ -45,19 +45,18 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 2. In the **Connection Details**, fill out the fields.
     1. In **Connection type** field, select **Oracle**.
     2. In the **Data Source** field, type in your Oracle server name and instance.
-        1. You can provide the TNS name as well.
+        1. You can provide the TNS name as well. (Make sure that ```ORACLE_HOME``` environment variable is set and TNSNAMES.ORA file is located in the ```<ORACLE_HOME>/network/admin folder```. )
     3. In the **User Id** field, provide the database username.
     4. In the **Password** field, provide the database password.
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-connections-details.png" alt-text="connection details":::
-
 3. Select **Connect**.
 
 4. Now, a new connection appears in the connection details menu.
 
 5. Right-click on the Oracle connection and select **Manage**.
 
-    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-manage-database-connection.png" alt-text="mangae database connection":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-manage-database-connection.png" alt-text="manage database connection":::
 
 6. Select **Migration Assessment**.
 
@@ -74,13 +73,14 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
         1. In the **Target Platform** field, enter the destination migration database.
             1. For example, **SQL**.
         1. In the **Scale factor** field, enter the multiplier value.
+            1. If the recommended SKU needs to consider other peak load, the scale factor multiplier should be greater than 1. Example: Burst Load, Seasonal usage, future capacity planning etc. Whereas, when  partial Oracle schema workload is considered  migrated, then the multiplier should be less than 1.
+
         1. In the **Percentile utilization** field, enter the percentile value for sizing the Azure target.
+            
+            1. The percentile value of the performance sample set to be considered for sizing the Azure target.
+
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="assessment details":::
-
-    If the recommended SKU needs to consider other peak load, the scale factor multiplier should be greater than 1. Example: Burst Load, Seasonal usage, future capacity planning etc. Whereas, when  partial Oracle schema workload is considered  migrated, then the multiplier should be less than 1.
-
-    The percentile value of the performance sample set to be considered for sizing the Azure target.
 
 9. Now, you see the new Assessment in the last five sections.
 
@@ -146,7 +146,11 @@ You can also cancel an ongoing assessment and move assessments to another direct
 ### Delete assessment
 
 1. Go to the assessment directory. The assessment directory path is shown in the  Oracle Assessment:Assessment Path settings under the manage extension.
-    Default Assessment Path : C:\Users\\<username\>\\.dmaoracle
+    Default Assessment Path 
+    - Windows -  C:\Users\\<username\>\\.dmaoracle
+    - Linux  - ~/home/\<username\>/.dmaoracle/logs
+    - Mac  - /Users/\<username\>/.dmaoracle/logs
+
 1. For each Oracle server, there will be separate folder inside .dmaoracle
 1. Traverse through the folder and identify the folder matching the assessment name.
 1. Delete the particular folder.
@@ -156,7 +160,7 @@ You can also cancel an ongoing assessment and move assessments to another direct
 The extension has the errors, warning and other diagnostic logging written in the default log directory. 
 Windows - C:\Users\\<username\>\\.dmaoracle\logs\
 
-Linux  - ~/home/\<username\>/.dmaoracle/logs
+Linux  - ~/.dmaoracle/logs
 
 Mac  - /Users/\<username\>/.dmaoracle/logs
 
@@ -166,7 +170,7 @@ To change the log directory, update LogDirectory property.
 
 Windows - C:\Users\\<username\>\\.azuredatastudio\extensions\microsoft.azuredatastudio-dma-oracle-\<VersionNumber\>\bin\service\Properties\ConfigSettings\extension-settings.json
 
-Linux  - ~/home/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/\<VersionNumber\>/bin/service/Properties/ConfigSettings/extension-settings.json
+Linux  - ~/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/\<VersionNumber\>/bin/service/Properties/ConfigSettings/extension-settings.json
 
 Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio-dma-oracle-/\<VersionNumber\>/bin/service/Properties/ConfigSettings/extension-settings.json
 

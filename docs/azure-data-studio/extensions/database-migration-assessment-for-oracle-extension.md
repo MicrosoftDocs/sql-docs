@@ -158,15 +158,14 @@ You can also cancel an ongoing assessment and move assessments to another direct
 ### Logging 
 
 The extension has the errors, warning and other diagnostic logging written in the default log directory. 
-Windows - C:\Users\\<username\>\\.dmaoracle\logs\
 
-Linux  - ~/.dmaoracle/logs
-
-Mac  - /Users/\<username\>/.dmaoracle/logs
+- Windows - C:\Users\\<username\>\\.dmaoracle\logs\
+- Linux  - ~/.dmaoracle/logs
+- Mac  - /Users/\<username\>/.dmaoracle/logs
 
 By default, the extension stores last 7 log files. 
 
-To change the log directory, update LogDirectory property.
+To change the log directory, update LogDirectory property in the extension settings file.
 
 Windows - C:\Users\\<username\>\\.azuredatastudio\extensions\microsoft.azuredatastudio-dma-oracle-\<VersionNumber\>\bin\service\Properties\ConfigSettings\extension-settings.json
 

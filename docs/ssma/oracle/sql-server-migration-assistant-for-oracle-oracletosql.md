@@ -8,7 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 84abdd92-682c-404b-879d-7879bdf5b468
-f1_keywords: "ssma.oracle.general.f1"
+f1_keywords: 
+  - "ssma.oracle.general.f1"
 author: cpichuka 
 ms.author: cpichuka 
 manager: madhuriy

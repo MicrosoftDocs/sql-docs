@@ -13,7 +13,7 @@ zone_pivot_groups: as1-azuresql-sql
 
 # Digest management
 
-[!INCLUDE [Azure SQL Database](../../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 ## Database digests
 

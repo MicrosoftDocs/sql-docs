@@ -58,7 +58,7 @@ END CATCH
 
 ::: zone pivot="as1-sql-server"
 > [!NOTE]
-> Database verification using automatic digest storage is currently available in Azure SQL Database, but not SQL Server. At the top, you are currently selecting the article for **SQL Server**. Change the selection to **Azure SQL Database** to see information on the automatic digest storage feature.
+> Database verification using automatic digest storage is currently available in Azure SQL Database, but not SQL Server. At the top, you are currently selecting the article for **SQL Server**. Change the selection to **Azure SQL Database** to see information on database verification using automatic digest storage.
 ::: zone-end
 
 When you're using manual digest storage for generating and storing database digests, the stored procedure [sp_verify_database_ledger](/sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql) is used to verify the ledger database. The JSON content of the digest is appended in the stored procedure. When you're running database verification, you can choose to verify all tables in the database or verify specific tables. 

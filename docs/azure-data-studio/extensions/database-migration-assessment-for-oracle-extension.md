@@ -137,8 +137,8 @@ You can also cancel an ongoing assessment, delete an assessment and move assessm
 ## Change Assessment Directory
 
 1. Go to extension marketplace and search for Database Migration Assessment for Oracle.
-1. click on the manage icon and click extension settings
-1. Provide the new assessment path under Oracle Assessment: Assessment Path
+1. Click on the manage icon and click extension settings.
+1. Provide the new assessment path under Oracle Assessment: Assessment Path.
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-extension.png" alt-text="change assessment path":::
  
@@ -164,20 +164,20 @@ Mac  - /Users/\<username\>/.azuredatastudio/extensions/microsoft.azuredatastudio
 
 ### Common Errors
 
-1. Error GE-1002 Path provided does not exist
+1. Error GE-1002 Path provided does not exist.
     
-    Reason: Missing files or missing permission on the assessment folder
+    Reason: Missing files or missing permission on the assessment folder.
  
    Possible Solution:
-    a. User has read and write permission on the assessment folder
-    b. If there is a missing file or folder, delete the assessment and generate a new assessment 
+    a. User has read and write permission on the assessment folder.
+    b. If there is a missing file or folder, delete the assessment and generate a new assessment.
 
 1. Encountered connection timeout exception while interacting with Oracle.
    
-     Reason: Failed to Connect to Oracle Instance
+     Reason: Failed to Connect to Oracle Instance.
 
     Possible Solution:
-    a. Check if the port Oracle is running is not blocked by firewall rules
+    a. Check if the port Oracle is running is not blocked by firewall rules.
     b. Perform tnsping and see if the Service ID gets resolved.
 
 1. Feature Data Collection Warning

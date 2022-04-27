@@ -108,7 +108,7 @@ The following database details tab provides the breakup per schema basis. It sho
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-per-schema-basis.png" alt-text="per schema basis":::
 
-This estimation is based on a statistical model that applies to the object count, lines of code, enabled features and size of the database. For more accurate estimate on the code conversion, use [SQL Server migration Assistant for Oracle](../../sql/ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql).
+This estimation is based on a statistical model that applies to the object count, lines of code, enabled features and size of the database. For more accurate estimate on the code conversion, use [SQL Server migration Assistant for Oracle](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md).
 
 >[!Note]
 >The following system or Oracle built-in schemas are excluded in the workload assessment

@@ -32,7 +32,7 @@ Review the following checklist for a brief overview of the storage best practice
 - Monitor the application and [determine storage bandwidth and latency requirements](/azure/virtual-machines/premium-storage-performance#counters-to-measure-application-performance-requirements) for SQL Server data, log, and tempdb files before choosing the disk type. 
 - To optimize storage performance, plan for highest uncached IOPS available and use data caching as a performance feature for data reads while avoiding [virtual machine and disks capping](/azure/virtual-machines/premium-storage-performance#throttling).
 - Place data, log, and tempdb files on separate drives.
-    - For the data drive, only use [premium P30 and P40 disks](/azure/virtual-machines/disks-types#premium-ssds) to ensure the availability of cache support
+    - For the data drive, only use [premium P30 and P40 or smaller disks](/azure/virtual-machines/disks-types#premium-ssds) to ensure the availability of cache support
     - For the log drive plan for capacity and test performance versus cost while evaluating the [premium P30 - P80 disks](/azure/virtual-machines/disks-types#premium-ssds)
       - If submillisecond storage latency is required, use [Azure ultra disks](/azure/virtual-machines/disks-types#ultra-disks) for the transaction log.
       - For M-series virtual machine deployments consider [write accelerator](/azure/virtual-machines/how-to-enable-write-accelerator) over using Azure ultra disks.

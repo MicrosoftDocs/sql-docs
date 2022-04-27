@@ -61,7 +61,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
         [ [ , ] NORECOMPUTE ]   
         [ [ , ] INCREMENTAL = { ON | OFF } ] 
         [ [ , ] MAXDOP = max_degree_of_parallelism ]
-        [ [ , ] AUTO_DROP = ON
+        [ [ , ] AUTO_DROP = { ON | OFF } ]
     ] ;  
   
 <filter_predicate> ::=   

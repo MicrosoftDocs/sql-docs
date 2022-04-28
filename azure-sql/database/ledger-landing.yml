@@ -50,7 +50,7 @@ landingContent:
       - linkListType: quickstart
         links:
           - text: Create an Azure SQL Database with ledger enabled
-            url: ledger-create-a-single-database-with-ledger-enabled
+            url: ledger-create-a-single-database-with-ledger-enabled.md
 
 
   # Card 

@@ -45,19 +45,12 @@ landingContent:
 
 
   # Card 
-  - title: Ledger quickstarts
-    linkLists:
-      - linkListType: quickstart
-        links:
-          - text: Configure a ledger database
-            url: ledger-how-to-configure-ledger-database.md
-
-
-  # Card 
   - title: Using ledger
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Configure a ledger database
+            url: ledger-how-to-configure-ledger-database.md
           - text: Create append-only ledger tables
             url: ledger-how-to-append-only-ledger-tables.md
           - text: Create updatable ledger tables

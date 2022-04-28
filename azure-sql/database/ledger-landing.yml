@@ -28,7 +28,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is ledger?
-            url: /docs/relational-databases/security/ledger/ledger-overview.md
+            url: /sql/relational-databases/security/ledger/ledger-overview
 
 
   # Card 
@@ -37,11 +37,11 @@ landingContent:
       - linkListType: concept
         links:
           - text: What is the database ledger?
-            url: /docs/relational-databases/security/ledger/ledger-database-ledger.md
+            url: /sql/relational-databases/security/ledger/ledger-database-ledger
           - text: Append-only ledger tables
-            url: /docs/relational-databases/security/ledger/ledger-append-only-ledger-tables.md
+            url: /sql/relational-databases/security/ledger/ledger-append-only-ledger-tables
           - text: Updatable ledger tables
-            url: /docs/relational-databases/security/ledger/ledger-updatable-ledger-tables.md
+            url: /sql/relational-databases/security/ledger/ledger-updatable-ledger-tables
 
 
   # Card 
@@ -50,7 +50,7 @@ landingContent:
       - linkListType: quickstart
         links:
           - text: Create an Azure SQL Database with ledger enabled
-            url: ledger-create-a-single-database-with-ledger-enabled.md
+            url: ledger-create-a-single-database-with-ledger-enabled
 
 
   # Card 
@@ -59,11 +59,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Create append-only ledger tables
-            url: /docs/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables.md
+            url: /sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables
           - text: Create updatable ledger tables
-            url: /docs/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables.md
+            url: /sql/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables
           - text: How to verify a ledger table to detect tampering
-            url: /docs/relational-databases/security/ledger/ledger-verify-database.md
+            url: /sql/relational-databases/security/ledger/ledger-verify-database
 
 
   # Card
@@ -72,11 +72,11 @@ landingContent:
       - linkListType: concept
         links:
           - text: Digest management and database verification
-            url: /docs/relational-databases/security/ledger/ledger-digest-management.md
+            url: /sql/relational-databases/security/ledger/ledger-digest-management
           - text: Database verification
-            url: /docs/relational-databases/security/ledger/ledger-database-verification.md
+            url: /sql/relational-databases/security/ledger/ledger-database-verification
           - text: Recover ledger database after tampering
-            url: /docs/relational-databases/security/ledger/ledger-recovery-after-tampering.md
+            url: /sql/relational-databases/security/ledger/ledger-recovery-after-tampering
 
   # Card
   - title: Ledger references

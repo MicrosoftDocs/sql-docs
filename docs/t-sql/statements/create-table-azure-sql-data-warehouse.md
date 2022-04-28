@@ -158,7 +158,8 @@ Distributes the rows evenly across all the distributions in a round-robin fashio
 Stores one copy of the table on each Compute node. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] the table is stored on a distribution database on each Compute node. For [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This behavior is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="TablePartitionOptions"></a> Table partition options
-For guidance on using table partitions, see [Partitioning tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition).
+For guidance on using table partitions, see [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition).
+
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 Creates one or more table partitions. These partitions are horizontal table slices that allow you to apply operations to subsets of rows regardless of whether the table is stored as a heap, clustered index, or clustered columnstore index. Unlike the distribution column, table partitions don't determine the distribution where each row is stored. Instead, table partitions determine how the rows are grouped and stored within each distribution.  

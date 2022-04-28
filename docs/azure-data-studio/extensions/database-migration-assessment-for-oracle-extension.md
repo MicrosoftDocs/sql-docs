@@ -82,7 +82,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="assessment details":::
 
-9. Now, you see the new Assessment in the last five sections.
+9. Now, you see the new assessment in the last five assessment section.
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-demo.png" alt-text="name the assessment demo1":::
 
@@ -148,8 +148,8 @@ You can also cancel an ongoing assessment and move assessments to another direct
 1. Go to the assessment directory. The assessment directory path is shown in the  Oracle Assessment:Assessment Path settings under the manage extension.
     Default Assessment Path
     - Windows -  C:\Users\\<username\>\\.dmaoracle
-    - Linux  - ~/home/\<username\>/.dmaoracle/logs
-    - Mac  - /Users/\<username\>/.dmaoracle/logs
+    - Linux  - ~/home/\<username\>/.dmaoracle/
+    - Mac  - /Users/\<username\>/.dmaoracle/
 
 2. For each Oracle server, there will be separate folder inside .dmaoracle
 3. Traverse through the folder and identify the folder matching the assessment name.

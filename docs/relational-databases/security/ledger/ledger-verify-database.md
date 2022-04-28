@@ -16,7 +16,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 [!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-In this article, you'll verify the integrity of the data in your ledger tables. If you've enabled the setting **Enable automatic digest storage** on your Azure SQL Database, follow the *[T-SQL using automatic digest storage](#run-ledger-verification-for-sql-database)* section. Otherwise, follow the *[T-SQL using a manual generated digest](#run-ledger-verification-for-sql-database)* section.
+In this article, you'll verify the integrity of the data in your ledger tables. If you've enabled the setting **Enable automatic digest storage** on your Azure SQL Database, follow the *[T-SQL using automatic digest storage](#run-ledger-verification-for-the-database)* section. Otherwise, follow the *[T-SQL using a manual generated digest](#run-ledger-verification-for-the-database)* section.
 
 ## Prerequisites
 

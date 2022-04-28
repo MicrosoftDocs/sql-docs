@@ -49,17 +49,33 @@ The following sections provide an overview of these features.
   * Improve memory management in large memory servers to reduce out of memory conditions
   * Add a new stored procedure to manually release unused memory on demand
 
-* Concurrent GAM and SGAM updates allows multiple threads updating GAM and SGAM pages under S latch.
+* Concurrent global allocation map (GAM) and shared global allocation map (SGAM) updates allows multiple threads updating GAM and SGAM pages under S latch.
 * Degree of parallelism (DOP) feedback automatically adjusts degree of parallelism for repeating queries to optimize for workloads where excessive parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. See [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).
-* Multiple TCP connections for Distributed Availability Groups
+* Multiple TCP connections for distributed availability groups
   * Enables the use of multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.
+* Optimized plan forcing using compilation replay
+  * This feature improves the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps
+* Data Virtualization - ODBC driver refresh
+
 
 ## Language improvements
 
+### Approximate percentile
+
 * Approximate Percentile - There are two new approximate percentile functions introduced.
-  * [APPROX_PERCENTILE_CONT](../docs/approximate-percentile/APPROX_PERCENTILE_CONT.md)
-  * [APPROX_PERCENTILE_DISC](../docs/approximate-percentile/APPROX_PERCENTILE_DISC.md) 
-* [Auto Drop Statistics](https://github.com/microsoft/SQLEAP/blob/main/docs/auto%20drop%20statistics)
+  * [APPROX_PERCENTILE_CONT (Transact-SQL)](../t-sql/functions/approx-percentile-cont-transact-sql.md)
+  * [APPROX_PERCENTILE_DISC (Transact-SQL)](../t-sql/functions/approx-percentile-disc-transact-sql.md)
+
+### Time series functions
+
+* [DATE_BUCKET](https://docs.microsoft.com/en-us/azure/azure-sql-edge/date-bucket-tsql)
+* [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)
+* GENERATE_SERIES
+* [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)
+
+
+## Statistics 
+* Statistics [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)
 
 ## Business continuity and disaster recovery
 
@@ -71,6 +87,12 @@ The following sections provide an overview of these features.
 ## Access control
 
 SQL Server 2022 Preview introduces new granular permissions and roles.
+
+### Granular permiissions for dynamic data masking
+
+Granular permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
+
+## TDS 8.0 - TDS wrapped in TLS
 
 ### New granular permissions
 
@@ -107,7 +129,8 @@ SQL Server 2022 Preview introduces new granular permissions and roles.
 ## Setup options
 
 |New feature or update | Details |
-|:---|:---| 
+|:---|:---|
+|Install Azure Arc agent via SQL Server command line setup |[Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt)|
 
 ## <a id="ml"></a> SQL Server Machine Learning Services
 

@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: Azure SQL Database ledger documentation
-summary: "Find documentation about Azure SQL Database ledger"
+title: Ledger documentation
+summary: "Find documentation about ledger for SQL Server 2022 and Azure SQL Database"
 
 metadata:
   title: Azure SQL Database ledger documentation
-  description: "Find ledger documentation for Azure SQL Database"
+  description: "Find ledger documentation for SQL Server 2022 and Azure SQL Database"
   ms.service: sql-database
   ms.subservice: security
   ms.tgt_pltfrm: na
@@ -23,12 +23,12 @@ landingContent:
 # Start card title with a verb
 
   # Card 
-  - title: Azure SQL Database ledger overview
+  - title: Ledger overview
     linkLists:
       - linkListType: overview
         links:
-          - text: What is Azure SQL Database ledger?
-            url: ledger-overview.md
+          - text: What is ledger?
+            url: /docs/relational-databases/security/ledger/ledger-overview.md
 
 
   # Card 
@@ -37,11 +37,11 @@ landingContent:
       - linkListType: concept
         links:
           - text: What is the database ledger?
-            url: ledger-database-ledger.md
+            url: /docs/relational-databases/security/ledger/ledger-database-ledger.md
           - text: Append-only ledger tables
-            url: ledger-append-only-ledger-tables.md
+            url: /docs/relational-databases/security/ledger/ledger-append-only-ledger-tables.md
           - text: Updatable ledger tables
-            url: ledger-updatable-ledger-tables.md
+            url: /docs/relational-databases/security/ledger/ledger-updatable-ledger-tables.md
 
 
   # Card 
@@ -59,13 +59,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Create append-only ledger tables
-            url: ledger-how-to-append-only-ledger-tables.md
+            url: /docs/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables.md
           - text: Create updatable ledger tables
-            url: ledger-how-to-updatable-ledger-tables.md
-          - text: How to access the digests stored in Azure Confidential Ledger (ACL)
-            url: ledger-how-to-access-acl-digest.md
+            url: /docs/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables.md
           - text: How to verify a ledger table to detect tampering
-            url: ledger-verify-database.md
+            url: /docs/relational-databases/security/ledger/ledger-verify-database.md
 
 
   # Card
@@ -74,10 +72,11 @@ landingContent:
       - linkListType: concept
         links:
           - text: Digest management and database verification
-            url: ledger-digest-management-and-database-verification.md
-          - text: Ledger auditing
-            url: ledger-audit.md
-
+            url: /docs/relational-databases/security/ledger/ledger-digest-management.md
+          - text: Database verification
+            url: /docs/relational-databases/security/ledger/ledger-database-verification.md
+          - text: Recover ledger database after tampering
+            url: /docs/relational-databases/security/ledger/ledger-recovery-after-tampering.md
 
   # Card
   - title: Ledger references
@@ -118,3 +117,5 @@ landingContent:
             url: /sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql
           - text: sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)
             url: /sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql
+          - text: sys.sp_copy_data_in_batches (Transact-SQL)
+            url: /sql/relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql

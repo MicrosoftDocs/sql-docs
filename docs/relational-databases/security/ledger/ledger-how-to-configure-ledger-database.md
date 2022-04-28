@@ -1,6 +1,6 @@
 ---
 title: Configure a ledger database
-description: This article discusses how to configure a ledger database
+description: This article discusses how to configure a ledger database in Azure SQL Database and SQL Server 2022
 ms.service: sql-database
 ms.subservice: security
 ms.devlang:

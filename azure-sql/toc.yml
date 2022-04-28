@@ -431,21 +431,21 @@
         - name: Ledger
           items:
           - name: Ledger
-            href: database/ledger-landing.yml
+            href: database/ledger-landing.yml?view=azuresql-db
           - name: Ledger overview
-            href: database/ledger-overview.md
+            href: /docs/relational-databases/security/ledger/ledger-overview.md?view=azuresql-db
           - name: Database ledger
-            href: database/ledger-database-ledger.md
+            href: /docs/relational-databases/security/ledger/ledger-database-ledger.md?view=azuresql-db
           - name: Updatable ledger tables
-            href: database/ledger-updatable-ledger-tables.md
+            href: /docs/relational-databases/security/ledger/ledger-updatable-ledger-tables.md?view=azuresql-db
           - name: Append-only ledger tables
-            href: database/ledger-append-only-ledger-tables.md
-          - name: Digest management and database verification
-            href: database/ledger-digest-management-and-database-verification.md
-          - name: Ledger auditing
-            href: database/ledger-audit.md
+            href: /docs/relational-databases/security/ledger/ledger-append-only-ledger-tables.md?view=azuresql-db
+          - name: Digest management
+            href: /docs/relational-databases/security/ledger/ledger-digest-management.md?view=azuresql-db
+          - name: Database verification
+            href: /docs/relational-databases/security/ledger/ledger-database-verification.md?view=azuresql-db
           - name: Ledger limitations
-            href: database/ledger-limits.md
+            href: /docs/relational-databases/security/ledger/ledger-limits.md?view=azuresql-db
         - name: Network access controls
           href: database/network-access-controls-overview.md
         - name: Outbound firewall rules
@@ -633,14 +633,11 @@
       - name: Ledger
         items:
         - name: Create append-only ledger tables
-          href: database/ledger-how-to-append-only-ledger-tables.md
+          href: /docs/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables.md?view=azuresql&preserve-view=true
         - name: Create updatable ledger tables
-          href: database/ledger-how-to-updatable-ledger-tables.md
-        - name: Access Azure Confidential Ledger digest
-          displayName: Access Azure Confidential Ledger digest
-          href: database/ledger-how-to-access-acl-digest.md
+          href: /docs/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables.md?view=azuresql&preserve-view=true
         - name: Verify ledger database for tampering
-          href: database/ledger-verify-database.md
+          href: /docs/relational-databases/security/ledger/ledger-verify-database.md?view=azuresql&preserve-view=true
       - name: vNet endpoints - PowerShell
         href: database/scripts/vnet-service-endpoint-rule-powershell-create.md
 

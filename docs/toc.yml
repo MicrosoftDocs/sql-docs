@@ -8328,6 +8328,18 @@ items:
         href: relational-databases/security/auditing/view-a-sql-server-audit-log.md
       - name: Write audit events to Windows log
         href: relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md
+    - name: Ledger
+      items:
+      - name: Create append-only ledger tables
+        href: relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables.md?view=sql-server-ver16&preserve-view=true
+      - name: Create updatable ledger tables
+        href: relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables.md?view=sql-server-ver16&preserve-view=true
+      - name: Convert regular tables into ledger tables
+        href: relational-databases/security/ledger/ledger-how-to-convert-regular-tables-into-ledger-tables.md?view=sql-server-ver16&preserve-view=true
+      - name: How to configure automatic database digests
+        href: relational-databases/security/ledger/ledger-how-to-configure-automatic-database-digest.md?view=sql-server-ver16&preserve-view=true
+      - name: Verify ledger database for tampering
+        href: relational-databases/security/ledger/ledger-verify-database.md?view=sql-server-ver16&preserve-view=true
   - name: Concepts
     items:
     - name: Protecting SQL Server Intellectual Property
@@ -8413,6 +8425,26 @@ items:
         href: relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md
       - name: Audit records
         href: relational-databases/security/auditing/sql-server-audit-records.md
+    - name: Ledger
+      items:
+      - name: Ledger
+        href: relational-databases/security/ledger/ledger-landing-sql-server.yml
+      - name: Ledger overview
+        href: relational-databases/security/ledger/ledger-overview.md?view=sql-server-ver16&preserve-view=true
+      - name: Database ledger
+        href: relational-databases/security/ledger/ledger-database-ledger.md?view=sql-server-ver16&preserve-view=true
+      - name: Updatable ledger tables
+        href: relational-databases/security/ledger/ledger-updatable-ledger-tables.md?view=sql-server-ver16&preserve-view=true
+      - name: Append-only ledger tables
+        href: relational-databases/security/ledger/ledger-append-only-ledger-tables.md?view=sql-server-ver16&preserve-view=true
+      - name: Digest management
+        href: relational-databases/security/ledger/ledger-digest-management.md?view=sql-server-ver16&preserve-view=true
+      - name: Database verification
+        href: relational-databases/security/ledger/ledger-database-verification.md?view=sql-server-ver16&preserve-view=true
+      - name: Recover ledger database after tampering
+        href: relational-databases/security/ledger/ledger-recovery-after-tampering.md?view=sql-server-ver16&preserve-view=true
+      - name: Ledger limitations
+        href: relational-databases/security/ledger/ledger-limits.md?view=sql-server-ver16&preserve-view=true
   - name: Tutorials
     items:
     - name: Always Encrypted
@@ -14829,6 +14861,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md
       - name: sp_changeobjectowner
         href: relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md
+      - name: sp_copy_data_in_batches
+        href: relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql.md
       - name: sp_control_dbmasterkey_password
         href: relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md
       - name: sp_dbfixedrolepermission

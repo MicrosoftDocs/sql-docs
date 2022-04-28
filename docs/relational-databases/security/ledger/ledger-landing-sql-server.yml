@@ -27,7 +27,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What is database ledger?
+          - text: What is ledger?
             url: ledger-overview.md
 
 

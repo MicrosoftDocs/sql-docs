@@ -82,7 +82,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="assessment details":::
 
-9. Now, you see the new assessment in the last five assessment section.
+9. Now, you see the new assessment in the last five assessments section.
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-demo.png" alt-text="name the assessment demo1":::
 

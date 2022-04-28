@@ -39,9 +39,9 @@ You can create query optimization statistics on one or more columns of a table o
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+## <a name="BeforeYouBegin"></a> Before You Begin  
   
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+### <a name="Restrictions"></a> Limitations and Restrictions  
   
 - Before creating statistics with the CREATE STATISTICS statement, verify that the AUTO_CREATE_STATISTICS option is set at the database level. This will ensure that the query optimizer continues to routinely create single-column statistics for query predicate columns.  
   
@@ -49,26 +49,26 @@ You can create query optimization statistics on one or more columns of a table o
   
 - You cannot drop, rename, or alter the definition of a table column that is defined in a filtered statistics predicate.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Security
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permissions
  Requires that the user be the table or indexed view owner, or a member of one of the following roles: **sysadmin** fixed server role, **db_owner** fixed database role, or the **db_ddladmin** fixed database role.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
-#### To create statistics  
+#### To create statistics
   
-1. In **Object Explorer**, click the plus sign to expand the database in which you want to create a new statistic.  
+1. In **Object Explorer**, Select the plus sign to expand the database in which you want to create a new statistic.  
+
+2. Select the plus sign to expand the **Tables** folder.
+
+3. Select the plus sign to expand the table in which you want to create a new statistic.  
+
+4. Right-select the **Statistics** folder and select **New Statistics...**.  
   
-2. Click the plus sign to expand the **Tables** folder.  
+    The following properties show on the **General** page in the **New Statistics on Table**_table\_name_ dialog box.  
   
-3. Click the plus sign to expand the table in which you want to create a new statistic.  
-  
-4. Right-click the **Statistics** folder and select **New Statistics...**.  
-  
-     The following properties show on the **General** page in the **New Statistics on Table**_table\_name_ dialog box.  
-  
-     **Table Name**  
+    **Table Name**  
      Displays the name of the table described by the statistics.  
   
      **Statistics Name**  
@@ -115,9 +115,9 @@ You can create query optimization statistics on one or more columns of a table o
      **Filter Expression**  
      Defines which data rows to include in the filtered statistics. For example, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5. In the **New Statistics on Table**_table\_name_ dialog box, on the **General** page, click **Add**.  
+5. In the **New Statistics on Table**_table\_name_ dialog box, on the **General** page, Select **Add**.  
   
-     The following properties show in the **Select Columns** dialog box. This information is read-only.  
+    The following properties show in the **Select Columns** dialog box. This information is read-only.  
   
      **Name**  
      Displays the name of the column described by the statistics. This can be a single column or a combination of columns in a single table.  
@@ -134,9 +134,9 @@ You can create query optimization statistics on one or more columns of a table o
      **Allow NULLs**  
      Indicates whether the column accepts NULL values.  
   
-6. In the **Select Columns** dialog box, select the check box or check boxes of each column for which you want to create a statistic and then click **OK**.  
+6. In the **Select Columns** dialog box, select the check box or check boxes of each column for which you want to create a statistic and then Select **OK**.  
   
-7. In the **New Statistics on Table**_table\_name_ dialog box, click **OK**.  
+7. In the **New Statistics on Table**_table\_name_ dialog box, Select **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -144,12 +144,12 @@ You can create query optimization statistics on one or more columns of a table o
   
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2. On the Standard bar, click **New Query**.  
+2. On the Standard bar, Select **New Query**.  
   
-3. Copy and paste the following example into the query window and click **Execute**.  
+3. Copy and paste the following example into the query window and Select **Execute**.  
   
     ```sql
-    USE AdventureWorks2012;   
+   USE AdventureWorks2012;   
     GO  
     -- Create new statistic object called ContactMail1  
     -- on the BusinessEntityID and EmailPromotion columns in the Person.Person table.   

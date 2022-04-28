@@ -42,8 +42,8 @@ To learn more, see [Statistics](../../relational-databases/statistics/statistics
   
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
-  
 -- Create statistics on an external table  
+
 CREATE STATISTICS statistics_name   
 ON { table_or_indexed_view_name } ( column [ ,...n ] )   
     [ WITH FULLSCAN ] ;  
@@ -136,20 +136,21 @@ You can specify any column that can be specified as an index key column with the
   
 - CLR user-defined type columns can be specified if the type supports binary ordering. Computed columns defined as method invocations of a user-defined type column can be specified if the methods are marked deterministic.  
   
-WHERE \<filter_predicate> 
+WHERE \<filter_predicate>
 Specifies an expression for selecting a subset of rows to include when creating the statistics object. Statistics that are created with a filter predicate are called filtered statistics. The filter predicate uses simple comparison logic and cannot reference a computed column, a UDT column, a spatial data type column, or a **hierarchyID** data type column. Comparisons using NULL literals are not allowed with the comparison operators. Use the IS NULL and IS NOT NULL operators instead.  
   
 Here are some examples of filter predicates for the Production.BillOfMaterials table:  
   
 - `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
-  
 - `WHERE ComponentID IN (533, 324, 753)`  
-  
 - `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
 For more information about filter predicates, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
-FULLSCAN  
+#### FULLSCAN
+
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4) and later (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1)
+
 Compute statistics by scanning all rows. FULLSCAN and SAMPLE 100 PERCENT have the same results. FULLSCAN cannot be used with the SAMPLE option.  
   
 When omitted, SQL Server uses sampling to create the statistics, and determines the sample size that is required to create a high quality query plan  
@@ -169,12 +170,12 @@ When **ON**, the statistics will retain the creation sampling percentage for sub
 > [!NOTE]
 > If the table is truncated, all statistics built on the truncated HoBT will revert to using the default sampling percentage.
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4) and later (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).
-  
-STATS_STREAM **=**_stats_stream_  
+STATS_STREAM **=**_stats_stream_
+
 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-NORECOMPUTE  
+#### NORECOMPUTE
+
 Disable the automatic statistics update option, AUTO_STATISTICS_UPDATE, for *statistics_name*. If this option is specified, the query optimizer will complete any in-progress statistics updates for *statistics_name* and disable future updates.  
   
 To re-enable statistics updates, remove the statistics with [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) and then run CREATE STATISTICS without the NORECOMPUTE option.  
@@ -184,7 +185,10 @@ To re-enable statistics updates, remove the statistics with [DROP STATISTICS](..
   
 For more information about the AUTO_STATISTICS_UPDATE option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). For more information about disabling and re-enabling statistics updates, see [Statistics](../../relational-databases/statistics/statistics.md).  
   
-INCREMENTAL = { ON | OFF }  
+#### INCREMENTAL = { ON | OFF }
+
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.
+
 When **ON**, the statistics created are per partition statistics. When **OFF**, stats are combined for all partitions. The default is **OFF**.  
   
 If per partition statistics are not supported an error is generated. Incremental stats are not supported for following statistics types:  
@@ -197,26 +201,35 @@ If per partition statistics are not supported an error is generated. Incremental
 - Statistics created on internal tables.  
 - Statistics created with spatial indexes or XML indexes.  
   
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.  
-  
-MAXDOP = *max_degree_of_parallelism*  
+#### MAXDOP = *max_degree_of_parallelism*  
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
- Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
+Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
- *max_degree_of_parallelism* can be:  
+*max_degree_of_parallelism* can be:  
   
- 1  
- Suppresses parallel plan generation.  
+1  
+Suppresses parallel plan generation.  
   
- \>1  
- Restricts the maximum number of processors used in a parallel statistic operation to the specified number or fewer based on the current system workload.  
+\>1  
+Restricts the maximum number of processors used in a parallel statistic operation to the specified number or fewer based on the current system workload.  
   
- 0 (default)  
- Uses the actual number of processors or fewer based on the current system workload.  
+0 (default)  
+Uses the actual number of processors or fewer based on the current system workload.  
   
- \<update_stats_stream_option> 
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+\<update_stats_stream_option>
+
+[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+
+### AUTO_DROP
+
+**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later.
+
+Currently, if statistics are created by a third party tool on a customer database, those statistics objects can block or interfere with schema changes the customer may desire.
+
+This feature allows the creation of statistics objects in a mode such that a schema change will *not* be blocked by the statistics, but instead the statistics will be droppped. In this way, auto drop statistics behave like auto created statistics.
+It is worth noting that trying to set or unset the *Auto_Drop* property on auto created statistics may raise errors - auto created statistics will always be auto drop. Some backups, when restored, may have this property set incorrectly until the next time the statistics object is updated (manually or automatically). However, auto created statistics always behave like auto drop statistics.
 
 ## Permissions
 
@@ -228,7 +241,7 @@ Requires one of these permissions:
   
 ## General Remarks
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use tempdb to sort the sampled rows before building statistics.  
+SQL Server can use tempdb to sort the sampled rows before building statistics.  
   
 ### Statistics for external tables  
 
@@ -256,7 +269,7 @@ The [sys.sql_expression_dependencies](../../relational-databases/system-catalog-
   
 ## Examples  
 
-### Examples use the AdventureWorks database.  
+Examples use the AdventureWorks database
 
 ### A. Using CREATE STATISTICS with SAMPLE number PERCENT
 
@@ -314,7 +327,7 @@ CREATE STATISTICS NamePurchase  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
 ```  
   
-### Examples using AdventureWorksDW database.
+### Examples using AdventureWorksDW database
   
 ### F. Create statistics on two columns
 
@@ -340,7 +353,27 @@ The following example creates the `CustomerStatsSampleScan` statistics, based on
 ```sql  
 CREATE STATISTICS CustomerStatsSampleScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
-```  
+```
+
+### I. Using CREATE STATISTICS with AUTO_DROP
+
+To use Auto Drop statistics, just add the following to the "WITH" clause of statistics create or update.
+
+```sql
+AUTO_DROP = ON
+```
+
+Create:
+
+```sql
+CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH AUTO_DROP = ON
+```
+
+Update:
+
+```sql
+UPDATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH AUTO_DROP = ON
+```
   
 ## See Also
 

@@ -18,7 +18,7 @@ ms.author: kendralittle
 
   ![Backup to Azure blob graphic](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Backup to Azure blob graphic")  
   
- This topic introduces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups to and restoring from [Microsoft Azure Blob Storage](/azure/storage/blobs/storage-quickstart-blobs-dotnet). It also provides a summary of the benefits of using Azure Blob Storage to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups.  
+ This topic introduces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups to and restoring from [Microsoft Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction). It also provides a summary of the benefits of using Azure Blob Storage to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups.  
   
  SQL Server supports storing backups to Azure Blob Storage in the following ways:  
   

@@ -315,7 +315,8 @@ Each user-defined table is divided into multiple smaller tables that are stored 
  
 Each distribution contains all table partitions. For example, if there are 60 distributions and four table partitions plus one empty partition, there will be 300 partitions (5 x 60= 300). If the table is a clustered columnstore index, there will be one columnstore index per partition, which means you'll have 300 columnstore indexes.
 
-We recommend using fewer table partitions to ensure each columnstore index has enough rows to take advantage of the benefits of columnstore indexes. For more information, see [Partitioning tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition) and [Indexing tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index)  
+We recommend using fewer table partitions to ensure each columnstore index has enough rows to take advantage of the benefits of columnstore indexes. For more information, see [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition) and [Indexes on dedicated SQL pool tables in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index).
+
 
 ### Rowstore table (heap or clustered index)
 

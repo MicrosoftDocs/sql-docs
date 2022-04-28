@@ -14,7 +14,7 @@ ms.author: vanto
 monikerRange: "=azuresqldb-current"
 ---
 # sys.database_ledger_blocks (Transact-SQL)
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Captures the cryptographically chained blocks, each of which represents a block of transactions against ledger tables.
 

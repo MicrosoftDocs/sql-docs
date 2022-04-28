@@ -16,7 +16,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 # sys.ledger_table_history (Transact-SQL)
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Captures the cryptographically protected history of operations on ledger tables: creating ledger tables, renaming ledger tables or ledger views, and dropping ledger tables.
 

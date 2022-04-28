@@ -106,7 +106,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  The schema for the table. Specifying *schema* is optional. If blank, the default schema will be used.  
   
  *table_name*  
- The name of the new table. To create a local temporary table, precede the table name with #.  For explanations and guidance on temporary tables, see [Temporary tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-temporary). 
+ The name of the new table. To create a local temporary table, precede the table name with `#`.  For explanations and guidance on temporary tables, see [Temporary tables in dedicated SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-temporary). 
+
 
  *column_name*  
  The name of a table column.

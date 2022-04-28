@@ -65,6 +65,9 @@ For more syntax options related to the Query Store, see [ALTER DATABASE SET Opti
 > [!IMPORTANT]
 > For information on enabling Query Store and keeping it adjusted to your workload, refer to [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
 
+> [!NOTE]
+> Query Store cannot be enabled for the Azure Synapse Analytics Serverless SQL Pool.
+
 ## <a name="About"></a> Information in the Query Store
 
 Execution plans for any specific query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typically evolve over time due to a number of different reasons such as statistics changes, schema changes, creation/deletion of indexes, etc. The procedure cache (where cached query plans are stored) only stores the latest execution plan. Plans also get evicted from the plan cache due to memory pressure. As a result, query performance regressions caused by execution plan changes can be non-trivial and time consuming to resolve.

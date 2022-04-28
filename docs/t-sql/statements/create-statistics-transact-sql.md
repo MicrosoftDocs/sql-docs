@@ -222,7 +222,7 @@ Uses the actual number of processors or fewer based on the current system worklo
 
 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-#### AUTO_DROP
+#### AUTO_DROP = { ON | OFF }
 
 **Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later.
 

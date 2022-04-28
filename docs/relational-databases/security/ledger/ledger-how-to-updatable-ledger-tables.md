@@ -142,7 +142,6 @@ We'll create an account balance table with the following schema.
 
    :::image type="content" source="media/ledger/sql-updatable-how-to-3.png" alt-text="Screenshot that shows ledger table example 3.":::
 
-
 ## Next steps
 
 - [Database ledger](ledger-database-ledger.md)

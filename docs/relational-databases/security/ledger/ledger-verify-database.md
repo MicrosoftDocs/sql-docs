@@ -16,17 +16,21 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 [!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-In this article, you'll verify the integrity of the data in your ledger tables. If you have enabled the setting **Enable automatic digest storage** on your Azure SQL Database, follow the *T-SQL using automatic digest storage*. Otherwise, follow the *T-SQL using a manual generated digest*.
+In this article, you'll verify the integrity of the data in your ledger tables. If you've enabled the setting **Enable automatic digest storage** on your Azure SQL Database, follow the *[T-SQL using automatic digest storage](#run-ledger-verification-for-sql-database)* section. Otherwise, follow the *[T-SQL using a manual generated digest](#run-ledger-verification-for-sql-database)* section.
 
 ## Prerequisites
 
-- Have an active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
+- Have an active Azure subscription if you're using Azure SQL Database. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Configure a ledger database](ledger-how-to-configure-ledger-database.md).
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md) or [create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md).
+- [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
 
-## Run ledger verification for SQL Database
+## Run ledger verification for the database
 
 # [T-SQL using automatic digest storage](#tab/t-sql-automatic)
+
+> [!NOTE]
+> Automatic digest storage is only applicable to Azure SQL Database. If you are using SQL Server, switch over to the *T-SQL using a manual generated digest* tab.
 
 1. Connect to your database by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
 
@@ -46,19 +50,19 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
    > [!NOTE]
    > The verification script can also be found in the Azure Portal. Open the [Azure portal](https://portal.azure.com/) and locate the database you want to verify. Select that database in SQL Database.
 
-1. In **Security**, select the **Ledger** option. 
+1. In **Security**, select the **Ledger** option.
 
-   :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected."::: 
+   :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected.":::
 
-1. In the **Ledger** pane, select **</> Verify database**, and select the **copy** icon in the pre-populated text in the window. 
+1. In the **Ledger** pane, select **</> Verify database**, and select the **copy** icon in the pre-populated text in the window.
 
-   :::image type="content" source="media/ledger/ledger-portal-verify.png" alt-text="Azure portal verify database button":::   
+   :::image type="content" source="media/ledger/ledger-portal-verify.png" alt-text="Azure portal verify database button":::
 
 1. Execute the query. You'll see that **digest_locations** returns the current location of where your database digests are stored and any previous locations. **Result** returns the success or failure of ledger verification.
 
    :::image type="content" source="media/ledger/verification_script_exectution.png" alt-text="Screenshot of running ledger verification by using Azure Data Studio.":::
 
-1. Open the **digest_locations** result set to view the locations of your digests. The following example shows two digest storage locations for this database: 
+1. Open the **digest_locations** result set to view the locations of your digests. The following example shows two digest storage locations for this database:
 
    - **path** indicates the location of the digests.
    - **last_digest_block_id** indicates the block ID of the last digest stored in the **path** location.
@@ -80,7 +84,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
        ```
 
    > [!IMPORTANT]
-   > When you run ledger verification, inspect the location of **digest_locations** to ensure digests used in verification are retrieved from the locations you expect. You want to make sure that a privileged user hasn't changed locations of digest storage to an unprotected storage location, such as Azure Storage, without a configured and locked immutability policy.
+   > When you run ledger verification, inspect the location of **digest_locations** to ensure digests used in verification are retrieved from the locations you expect. You want to make sure that a privileged user hasn't changed locations of the digest storage to an unprotected storage location, such as Azure Storage, without a configured and locked immutability policy.
 
 1. Verification returns the following message in the **Results** window.
 
@@ -94,7 +98,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
   
        ```output
        Failed to execute query. Error: The hash of block xxxx in the database ledger doesn't match the hash provided in the digest for this block.
-       ```s
+       ```
 
 # [T-SQL using a manual generated digest](#tab/t-sql-manual)
 
@@ -105,13 +109,13 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
    EXECUTE sp_generate_database_ledger_digest;
    ```
 
-1. Execute the query. The results contain the latest database digest and represent the hash of the database at the current point in time. Copy the contents of the results to be used in the next step. 
+1. Execute the query. The results contain the latest database digest and represent the hash of the database at the current point in time. Copy the contents of the results to be used in the next step.
 
    :::image type="content" source="media/ledger/ledger-retrieve-digest.png" alt-text="Screenshot that shows retrieving digest results by using Azure Data Studio.":::
 
 1. Create a new query with the following T-SQL statement. Replace `<YOUR DATABASE DIGEST>` with the digest you copied in the previous step.
 
-   ```
+   ```sql
    EXECUTE sp_verify_database_ledger N'
    <YOUR DATABASE DIGEST>
    ';
@@ -124,7 +128,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
    > [!TIP]
    > Running ledger verification with the latest digest will only verify the database from the time the digest was generated until the time the verification was run. To verify that the historical data in your database wasn't tampered with, run verification by using multiple database digest files. Start with the point in time for which you want to verify the database. An example of a verification passing multiple digests would look similar to the following query.
 
-   ```
+   ```sql
    EXECUTE sp_verify_database_ledger N'
    [
        {
@@ -145,7 +149,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
    ```
 
 > [!NOTE]
-> In this example, we call the `sp_generate_database_ledger_digest` stored procedure to generate the digest and use it immediately for verification. However, when a customer is using a custom trusted storage, they could save the digest in the trusted storage for a later verification.
+> In this example, we call the [sp_generate_database_ledger_digest](/sql/relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql) stored procedure to generate the digest and use it immediately for verification. However, when a customer is using a custom trusted storage, they could save the digest in the trusted storage for a later verification.
 
 ---
 
@@ -155,3 +159,4 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 - [sys.database_ledger_digest_locations](/sql/relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql)
 - [sp_verify_database_ledger_from_digest_storage](/sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql)
 - [sp_verify_database_ledger](/sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql)
+- [sp_generate_database_ledger_digest](/sql/relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql)

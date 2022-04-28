@@ -23,7 +23,7 @@ Ledger and the historical data are managed transparently, offering protection wi
 
 :::image type="content" source="media/ledger/ledger-table-architecture.png" alt-text="Diagram of the ledger table architecture.":::
 
-## Use cases for ledger 
+## Use cases for ledger
 
 ### Streamlining audits
 
@@ -64,9 +64,10 @@ Both updatable ledger tables and append-only ledger tables provide tamper-eviden
 
 ### Ledger database
 
-In a ledger database, all user data is tamper evident and stored in ledger tables. A ledger database can contain only ledger tables. Each table is, by default, created as an updatable ledger table, with the default name of the history table, ledger view and the default names of additional columns. You can create an append-only ledger table by specifying specifying the `APPEND_ONLY = ON` clause in your [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) statement. If you don't want the system to automatically add the columns and uses the default names, you'll have to use the full [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) syntax. Ledger databases provide an easy-to-use solution for applications that require the integrity of all data to be protected.  
+In a ledger database, all user data is tamper evident and stored in ledger tables. A ledger database can contain only ledger tables. Each table is, by default, created as an updatable ledger table, with the default name of the history table, ledger view and the default names of additional columns. You can create an append-only ledger table by specifying the `APPEND_ONLY = ON` clause in your [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) statement. If you don't want the system to automatically add the columns and uses the default names, you'll have to use the full [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) syntax. Ledger databases provide an easy-to-use solution for applications that require the integrity of all data to be protected.  
 
-Remark: A ledger database can only be enabled during the creation of you database. This option cannot be changed after you create your database. 
+> [!NOTE]
+> A ledger database can only be enabled during the creation of your database. This option can't be changed after you create your database. 
 
 ### Updatable ledger tables
 
@@ -98,23 +99,26 @@ Every 30 seconds, the transactions that the database processes are SHA-256 hashe
 
 ### Database digests
 
-The hash of the latest block in the database ledger is called the [database digest](ledger-digest-management.md). It represents the state of all ledger tables in the database at the time that the block was generated. 
+> [!NOTE]
+> This database digest section only applies to Azure SQL Database, and not SQL Server.
+
+The hash of the latest block in the database ledger is called the [database digest](ledger-digest-management.md). It represents the state of all ledger tables in the database at the time that the block was generated.
 
 When a block is formed, its associated database digest is published and stored outside the database in tamper-proof storage. Because database digests represent the state of the database at the time that they were generated, protecting the digests from tampering is paramount. An attacker who has access to modify the digests would be able to:
 
 1. Tamper with the data in the database.
 2. Generate the hashes that represent the database with those changes.
-3. Modify the digests to represent the updated hash of the transactions in the block. 
+3. Modify the digests to represent the updated hash of the transactions in the block.
 
-Ledger provides the ability to automatically generate and store the database digests in [immutable storage](/azure/storage/blobs/immutable-storage-overview) or [Azure Confidential Ledger](/azure/confidential-ledger/index), to prevent tampering. Alternatively, users can manually generate database digests and store them in the location of their choice. Database digests are used for later verifying that the data stored in ledger tables has not been tampered with.
+Ledger provides the ability to automatically generate and store the database digests in [immutable storage](/azure/storage/blobs/immutable-storage-overview) or [Azure Confidential Ledger](/azure/confidential-ledger/index), to prevent tampering. Alternatively, users can manually generate database digests and store them in the location of their choice. Database digests are used for later verifying that the data stored in ledger tables hasn't been tampered with.
 
 ### Ledger verification
 
-The ledger feature doesn't allow users to modify its content. However, an attacker or system administrator who has control of the machine can bypass all system checks and directly tamper with the data. For example, an attacker or system administrator can edit the database files in storage. Ledger can't prevent such attacks but guarantees that any tampering will be detected when the ledger data is verified. 
+The ledger feature doesn't allow users to modify its content. However, an attacker or system administrator who has control of the machine can bypass all system checks and directly tamper with the data. For example, an attacker or system administrator can edit the database files in storage. Ledger can't prevent such attacks but guarantees that any tampering will be detected when the ledger data is verified.
 
 The [ledger verification](ledger-database-verification.md) process takes as input one or more previously generated database digests and recomputes the hashes stored in the database ledger based on the current state of the ledger tables. If the computed hashes don't match the input digests, the verification fails, indicating that the data has been tampered with. Ledger then reports all inconsistencies that it has detected.
 
-Because the ledger verification recomputes all of the hashes for transactions in the database, it can be a resource-intensive process for databases with large amounts of data. Users should run the ledger verification only when they need to verify the integrity of their database, rather than running it continuously. 
+Because the ledger verification recomputes all of the hashes for transactions in the database, it can be a resource-intensive process for databases with large amounts of data. Users should run the ledger verification only when they need to verify the integrity of their database, rather than running it continuously.
 
 Ideally, users should run ledger verification only when the organization that's hosting the data goes through an audit and needs to provide cryptographic evidence about the integrity of the data to another party. To reduce the cost of verification, the feature exposes options to verify individual ledger tables or only a subset of the ledger tables.
 

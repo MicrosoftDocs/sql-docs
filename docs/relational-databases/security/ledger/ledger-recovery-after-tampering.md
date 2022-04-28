@@ -23,7 +23,7 @@ The most straightforward way to repair any kind of tampering is to restore the d
 
 Depending on the type of tampering, there are cases where you can repair the ledger without losing data. You should consider two categories of tampering events.
 
-### Tampering did not affect further transactions
+### Tampering didn't affect further transactions
 
 The tampering event modified some data stored in the ledger but didn't affect any further transactions. This might be because the attack was detected before any transactions would operate over the tampered data or because the attack only affected data in a way that doesn't affect new transactions. For example, if you use a ledger table to store banking transaction details, tampering with details of existing transactions doesn't impact new transactions, which will work over the current balances.
 
@@ -43,7 +43,7 @@ If the attacker tampered with the database ledger, recomputing the hashes of blo
 
 ## Recommendation
 
-Ideally, you want to minimize or even eliminate the gap between the time the attack occurred and the time it was detected. Microsoft recommends scheduling the [ledger verification](ledger-database-verification.md) regularly to avoid a restore of the database from days or months ago after tampering was detected. The interval of the verification should be decided by the customer, but be aware that ledger verification can be resource consuming. Microsoft recommends to run this during a maintenance window or off peak hours.
+Ideally, you want to minimize or even eliminate the gap between the time the attack occurred and the time it was detected. Microsoft recommends scheduling the [ledger verification](ledger-database-verification.md) regularly to avoid a restore of the database from days or months ago after tampering was detected. The interval of the verification should be decided by the customer, but be aware that ledger verification can be resource consuming. We recommend running this during a maintenance window or off peak hours.
 
 Scheduling database verification can be done with Elastic Jobs or Azure Automation.
 

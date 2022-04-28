@@ -18,7 +18,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 [!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Copies data from the source table to the target table after verifying that their schema is identical in terms of number of columns, column names and their data types. TRANSACTION ID, SEQUENCE NUMBER and  GENERATED ALWAYS columns are ignored since they are system generated and this allows copying data from a regular table to a ledger table and vice versa. Indexes between the tables can be different but the target table can only be a Heap or have a clustered index. The data is copied in batches in individual transactions. If the operation fails, the target table will be partially populated. 
+Copies data from the source table to the target table after verifying that their schema is identical in terms of number of columns, column names and their data types. `TRANSACTION ID`, `SEQUENCE NUMBER`, and `GENERATED ALWAYS` columns are ignored since they're system generated and this allows copying data from a regular table to a ledger table and vice versa. Indexes between the tables can be different but the target table can only be a Heap or have a clustered index. The data is copied in batches in individual transactions. If the operation fails, the target table will be partially populated.
 
 For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview)
 
@@ -48,7 +48,7 @@ None.
 
 ## Permissions
 
-This operation requires **SELECT** on the source table, **INSERT** in the target table and **ALTER** on the target table if there are FK or Check constraints that will be disabled or an Identity column that will be adjusted. 
+This operation requires **SELECT** on the source table, **INSERT** in the target table, and **ALTER** on the target table if there are Foreign Key or Check constraints that will be disabled or an Identity column that will be adjusted.
 
 ## See also
 

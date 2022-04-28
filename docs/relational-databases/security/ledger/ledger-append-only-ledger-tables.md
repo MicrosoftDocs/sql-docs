@@ -15,7 +15,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 [!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Append-only ledger tables allow only `INSERT` operations on your tables, which ensures that privileged users such as database administrators can't alter data through traditional [Data Manipulation Language](/sql/t-sql/queries/queries) operations. Append-only ledger tables are ideal for systems that don't update or delete records, such as security information event and management systems or blockchain systems where data needs to be replicated from the blockchain to a database. Because there are no `UPDATE` or `DELETE` operations on an append-only table, there's no need for a corresponding history table as there is with [updatable ledger tables](ledger-updatable-ledger-tables.md).
+Append-only ledger tables allow only `INSERT` operations on your tables, which ensure that privileged users such as database administrators can't alter data through traditional [Data Manipulation Language](/sql/t-sql/queries/queries) operations. Append-only ledger tables are ideal for systems that don't update or delete records, such as security information event and management systems or blockchain systems where data needs to be replicated from the blockchain to a database. Because there are no `UPDATE` or `DELETE` operations on an append-only table, there's no need for a corresponding history table as there is with [updatable ledger tables](ledger-updatable-ledger-tables.md).
 
 :::image type="content" source="media/ledger/ledger-table-architecture-append-only.png" alt-text="Diagram that shows architecture of ledger tables.":::
 

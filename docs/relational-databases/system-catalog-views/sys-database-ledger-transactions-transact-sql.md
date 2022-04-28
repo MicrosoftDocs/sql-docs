@@ -11,7 +11,7 @@ dev_langs:
   - "TSQL"
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 # sys.database_ledger_transactions (Transact-SQL)
 

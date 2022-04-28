@@ -11,11 +11,11 @@ dev_langs:
   - "TSQL"
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 # sys.database_ledger_digest_locations (Transact-SQL)
 
-[!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Captures the current and the historical ledger digest storage endpoints for the ledger feature.
 

@@ -50,7 +50,7 @@ sections:
           - Fast database restores regardless of database size (restores are from storage snapshots)
           - Higher log throughput regardless of database size and the number of vCores
           - Read Scale-out using one or more read-only replicas, used for read offloading and as hot standbys.
-          - Rapid scaling up of compute, in constant time, to be more powerful to accommodate the heavy workload and then scale down, in constant time. This is similar to scaling up and down between a P6 and a P11, for example, but is much faster as this is not a size of data operation.
+          - Rapid scaling up of compute, in constant time, to be more powerful to accommodate the heavy workload and then scale down, in constant time. This is similar to scaling up and down between a 4-core and a 32-core database, for example, but is much faster as this is not a size of data operation.
           
       - question: |
           What regions currently support Hyperscale?
@@ -93,7 +93,7 @@ sections:
       - question: |
           Does Hyperscale require my application programming model to change?
         answer: |
-          No, your application programming model stays the same as for any other MSSQL database. You use your connection string as usual and the other regular ways to interact with your Hyperscale database.
+          No, your application programming model stays the same as for any other MSSQL database. You use your connection string as usual and the other regular ways to interact with your Hyperscale database. Once using Hyperscale, your application can take advantage of features such as [secondary replicas](service-tier-hyperscale-replicas.md).
 
       - question: |
           What transaction isolation level is the default in a Hyperscale database?
@@ -122,11 +122,6 @@ sections:
         answer: |
           No. PolyBase is not supported in Azure SQL Database.
 
-      - question: |
-          Are compute nodes containerized?
-        answer: |
-          No. Hyperscale processes run on [Service Fabric](https://azure.microsoft.com/services/service-fabric/) nodes (VMs), not in containers.
-
   - name: Hyperscale compute questions
     questions:
       - question: |
@@ -154,7 +149,7 @@ sections:
         answer: |
           In Hyperscale databases, data resiliency is provided at the storage level. You only need one replica (the primary) to provide resiliency. When the compute replica is down, a new replica is created automatically with no data loss.
           
-          However, if there's only the primary replica, it may take a minute or two to create a new replica after failover, vs. seconds in case when an HA secondary replica is available. The new replica will have cold caches initially, which may result in higher storage latency and degraded query performance immediately after failover.
+          However, if there's only the primary replica, it may take a minute or two to create a new replica after failover, vs. seconds in case when an HA secondary replica is available. The new replica will have cold caches initially, which may result in higher storage latency and reduced query performance immediately after failover.
           
           For mission-critical apps that require high availability with minimal failover impact, you should provision at least 2 compute replicas including the primary compute replica. That way there is a hot-standby replica available that serves as a failover target.
           
@@ -196,7 +191,7 @@ sections:
       - question: |
           Can I manage or define files or filegroups with Hyperscale?
         answer: |
-          No. Data files are added automatically to the `PRIMARY` filegroup. The common reasons for creating additional filegroups do not apply in the Hyperscale storage architecture.
+          No. Data files are added automatically to the `PRIMARY` filegroup. The common reasons for creating additional filegroups do not apply in the Hyperscale storage architecture, or in Azure SQL Database more broadly.
 
       - question: |
           Can I provision a hard cap on the data growth for my database?
@@ -284,7 +279,7 @@ sections:
       - question: |
           What SLAs are provided for a Hyperscale database?
         answer: |
-          See [SLA for Azure SQL Database](https://azure.microsoft.com/support/legal/sla/azure-sql-database). Additional secondary compute replicas increase availability.
+          See [SLA for Azure SQL Database](https://azure.microsoft.com/support/legal/sla/azure-sql-database). We recommend adding HA secondary replicas for critical workloads. This provides faster failover, and reduces potential performance impact immediately after failover.
           
       - question: |
           Are the database backups managed for me by Azure SQL Database?

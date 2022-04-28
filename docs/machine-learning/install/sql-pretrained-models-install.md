@@ -13,7 +13,8 @@ ms.custom:
 monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Install pre-trained machine learning models on SQL Server
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+[!INCLUDE [SQL Server 2019 and prior](../../includes/applies-to-version/sqlserver2019-and-prior.md)]
 
 This article does not apply to SQL Server 2022.
 

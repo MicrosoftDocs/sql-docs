@@ -1,25 +1,22 @@
 ---
-title: Install on Windows
-description: Learn how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
+title: Install SQL Server 2022 ML Services on Windows
+description: Learn how to install SQL Server 2022 Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/27/2022
+ms.date: 04/15/2021
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
   - seo-lt-2019
   - intro-installation
-monikerRange: "<=sql-server-ver15"
+monikerRange: ">=sql-server-ver16"
 ---
-# Install SQL Server Machine Learning Services (Python and R) on Windows
+# Install SQL Server 2022 Machine Learning Services (Python and R) on Windows
 
-[!INCLUDE [SQL Server 2019 and prior](../../includes/applies-to-version/sqlserver2019-and-prior.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 Learn how to install [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
-
-> [!IMPORTANT]
-> These instructions apply to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. For [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], refer to [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md).
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 

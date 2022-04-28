@@ -9,7 +9,7 @@ items:
   items:
   - name: What's New
     items:
-    - name: SQL Server 2022
+    - name: SQL Server 2022 Preview
       href: sql-server/what-s-new-in-sql-server-2022.md
     - name: SQL Server 2019
       href: sql-server/what-s-new-in-sql-server-2019.md

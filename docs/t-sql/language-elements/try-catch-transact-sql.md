@@ -325,9 +325,7 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
+   
 ### D. Using TRY...CATCH  
  The following example shows a `SELECT` statement that will generate a divide-by-zero error. The error causes execution to jump to the associated `CATCH` block.  
   

@@ -78,7 +78,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 [ ; ]  
   
 <with_option> ::=  
-      DROP_EXISTING = { ON | OFF } -- default is OFF  
+      DROP_EXISTING = { ON | **OFF** } -- default is OFF  
     | MAXDOP = max_degree_of_parallelism 
     | ONLINE = { ON | OFF } 
     | COMPRESSION_DELAY  = { 0 | delay [ Minutes ] }  
@@ -102,7 +102,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
     [ORDER (column [,...n] ) ]  
-    [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
+    [ WITH ( DROP_EXISTING = { ON | **OFF** } ) ] -- default is OFF 
 [;]  
 
 ```
@@ -139,9 +139,10 @@ Specifies the one-, two-, or three-part name of the table to be stored as a clus
 ##### DROP_EXISTING = [OFF] | ON
 
    `DROP_EXISTING = ON` specifies to drop the existing index, and create a new columnstore index.  
+   
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
-       WITH (DROP_EXISTING = ON);
+WITH (DROP_EXISTING = ON);
 ```
    The default, DROP_EXISTING = OFF expects the index name is the same as the existing name. An error occurs is the specified index name already exists.  
   
@@ -155,7 +156,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
   
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
-       WITH (MAXDOP = 2);
+WITH (MAXDOP = 2);
 ```
 
    For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
@@ -166,7 +167,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
    
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
-       WITH ( COMPRESSION_DELAY = 10 Minutes );
+WITH ( COMPRESSION_DELAY = 10 MINUTES );
 ```
 
    For recommendations on when to use COMPRESSION_DELAY, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
@@ -178,7 +179,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
   
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
-       WITH ( DATA_COMPRESSION = COLUMNSTORE_ARCHIVE );
+WITH ( DATA_COMPRESSION = COLUMNSTORE_ARCHIVE );
 ```
    For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
 
@@ -188,7 +189,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
-       WITH ( ONLINE = ON );
+WITH ( ONLINE = ON );
 ```
 
 #### ON options 
@@ -222,9 +223,11 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 
 #### WITH options
 ##### DROP_EXISTING = [OFF] | ON  
-   DROP_EXISTING = ON The existing index is dropped and rebuilt. The index name specified must be the same as a currently existing index; however, the index definition can be modified. For example, you can specify different columns, or index options.
+   DROP_EXISTING = ON   
+   The existing index is dropped and rebuilt. The index name specified must be the same as a currently existing index; however, the index definition can be modified. For example, you can specify different columns, or index options.
   
-   DROP_EXISTING = OFF An error is displayed if the specified index name already exists. The index type cannot be changed by using DROP_EXISTING. In backward compatible syntax, WITH DROP_EXISTING is equivalent to WITH DROP_EXISTING = ON.  
+   DROP_EXISTING = OFF   
+   An error is displayed if the specified index name already exists. The index type cannot be changed by using DROP_EXISTING. In backward compatible syntax, WITH DROP_EXISTING is equivalent to WITH DROP_EXISTING = ON.  
 
 ###### MAXDOP = *max_degree_of_parallelism*  
    Overrides the [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) configuration option for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
@@ -244,7 +247,8 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 - `OFF` specifies that the index is not available for use while the new copy is being built. In nonclustered index, the base table remains available, only the nonclustered columnstore index is not used to satisfy queries until the new index is complete. 
 
 ```sql
-CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
+CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) 
+WITH ( ONLINE = ON );
 ```
 
 ##### COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
@@ -490,8 +494,8 @@ GO
     CREATE TABLE MyFactTable (  
         ProductKey [INT] NOT NULL,  
         OrderDateKey [INT] NOT NULL,  
-         DueDateKey [INT] NOT NULL,  
-         ShipDateKey [INT] NOT NULL )  
+        DueDateKey [INT] NOT NULL,  
+        ShipDateKey [INT] NOT NULL)  
     )  
     WITH (  
         CLUSTERED INDEX ( ProductKey )  
@@ -604,17 +608,18 @@ WITH ( DROP_EXISTING = ON );
  This example creates a nonclustered columnstore index on a rowstore table. Only one columnstore index can be created in this situation. The columnstore index requires extra storage since it contains a copy of the data in the rowstore table. This example creates a simple table and a clustered index, and then demonstrates the syntax of creating a nonclustered columnstore index.  
   
 ```sql  
-CREATE TABLE SimpleTable  
-(ProductKey [INT] NOT NULL,   
-OrderDateKey [INT] NOT NULL,   
-DueDateKey [INT] NOT NULL,   
-ShipDateKey [INT] NOT NULL);  
+CREATE TABLE SimpleTable (  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);   
 GO  
+
 CREATE CLUSTERED INDEX cl_simple ON SimpleTable (ProductKey);  
 GO  
+
 CREATE NONCLUSTERED COLUMNSTORE INDEX csindx_simple  
-ON SimpleTable  
-(OrderDateKey, DueDateKey, ShipDateKey);  
+ON SimpleTable (OrderDateKey, DueDateKey, ShipDateKey);  
 GO  
 ```  
   
@@ -623,11 +628,10 @@ GO
   
 ```sql  
 CREATE NONCLUSTERED COLUMNSTORE INDEX csindx_simple  
-ON SimpleTable  
-(OrderDateKey, DueDateKey, ShipDateKey)  
+ON SimpleTable (OrderDateKey, DueDateKey, ShipDateKey)  
 WITH (DROP_EXISTING =  ON,   
     MAXDOP = 2)  
-ON "default"  
+ON "default";  
 GO  
 ```  
   
@@ -658,7 +662,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
     ```sql  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
-    -- update mytable --  
+    -- update mytable
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
     ```  
   
@@ -751,15 +755,15 @@ DROP INDEX cci_xdimProduct ON xdimProduct;
 
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
-ORDER ( SHIPDATE );
+ORDER (SHIPDATE);
 ```
 
 ### G. Convert a clustered columnstore index to an ordered clustered columnstore index
 
 ```sql  
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
-ORDER ( SHIPDATE );
-WITH (DROP_EXISTING = ON)
+ORDER (SHIPDATE)
+WITH (DROP_EXISTING = ON);
 ```
 
 ### H. Add a column to the ordering of an ordered clustered columnstore index
@@ -767,13 +771,14 @@ WITH (DROP_EXISTING = ON)
 ```sql
 -- The original ordered clustered columnstore index was ordered on SHIPDATE column only.  Add PRODUCTKEY column to the ordering.
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
-ORDER ( SHIPDATE, PRODUCTKEY );
-WITH (DROP_EXISTING = ON)
+ORDER (SHIPDATE, PRODUCTKEY)
+WITH (DROP_EXISTING = ON);
 ```
+
 ### I. Change the ordinal of ordered columns  
 ```sql
 -- The original ordered clustered columnstore index was ordered on SHIPDATE, PRODUCTKEY.  Change the ordering to PRODUCTKEY, SHIPDATE.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
-ORDER ( PRODUCTKEY,SHIPDATE );
-WITH (DROP_EXISTING = ON)
+ORDER (PRODUCTKEY,SHIPDATE)
+WITH (DROP_EXISTING = ON);
 ```

@@ -2,7 +2,7 @@
 description: "sys.dm_xe_session_event_actions (Transact-SQL)"
 title: "sys.dm_xe_session_event_actions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "3/30/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -22,9 +22,11 @@ author: rwestMSFT
 ms.author: randolphwest
 ---
 # sys.dm_xe_session_event_actions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Returns information about event session actions. Actions are executed when events are fired.  
+Returns information about event session actions for *active* server-scoped sessions. Actions are executed when events are fired.
+
+Azure SQL Database supports only database-scoped sessions. See [sys.dm_xe_database_session_event_actions](sys-dm-xe-database-session-event-actions-azure-sql-database.md).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -35,9 +37,10 @@ ms.author: randolphwest
 |event_package_guid|**uniqueidentifier**|The GUID for the package that contains the event. Is not nullable.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+
+Requires VIEW SERVER STATE permission on the server.  
   
-### Relationship Cardinalities  
+### Relationship cardinalities  
   
 |From|To|Relationship|  
 |----------|--------|------------------|  
@@ -45,8 +48,12 @@ ms.author: randolphwest
 |sys.dm_xe_session_event_actions.action_name,<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_session_events.event_package_guid|Many-to-one|  
 |sys.dm_xe_session_event_actions.event_name,<br /><br /> sys.dm_xe_session_event_actions.event_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|Many-to-one|  
   
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
-  
-  
+## Next steps
 
+Learn more about related concepts in the following articles:
+
+- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [sys.dm_xe_sessions (Transact-SQL)](sys-dm-xe-sessions-transact-sql.md)
+- [sys.dm_xe_session_events (Transact-SQL)](sys-dm-xe-session-events-transact-sql.md)
+- [Extended events overview](../extended-events/extended-events.md)
+- [Quickstart: Extended events](../extended-events/quick-start-extended-events-in-sql-server.md)

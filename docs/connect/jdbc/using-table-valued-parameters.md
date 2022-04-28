@@ -1,8 +1,8 @@
 ---
-title: "Using table-valued parameters"
-description: "Table-valued parameters provide an efficient way to send multiple rows of data from a client to SQL Server in a single parameterized command."
+title: Using table-valued parameters
+description: Table-valued parameters provide an efficient way to send multiple rows of data from a client to SQL Server in a single parameterized command.
 ms.custom: ""
-ms.date: "11/19/2019"
+ms.date: 04/21/2022
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -23,7 +23,7 @@ Column values in table-valued parameters can be accessed using standard Transact
 > [!NOTE]  
 > Support for Table-Valued Parameters is available starting with  Microsoft JDBC Driver 6.0 for SQL Server.
 >
-> You cannot return data in a table-valued parameter. Table-valued parameters are input-only; the OUTPUT keyword is not supported.  
+> You can't return data in a table-valued parameter. Table-valued parameters are input-only; the OUTPUT keyword is not supported.  
   
  For more information about table-valued parameters, see the following resources.  
   
@@ -32,7 +32,6 @@ Column values in table-valued parameters can be accessed using standard Transact
 | [Table-Valued Parameters (Database Engine)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) in SQL Server Books Online | Describes how to create and use table-valued parameters                             |
 | [User-Defined Table Types](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in SQL Server Books Online                  | Describes user-defined table types that are used to declare table-valued parameters |
 
-  
 ## Passing multiple rows in previous versions of SQL Server  
 
 Before table-valued parameters were introduced to SQL Server 2008, the options for passing multiple rows of data to a stored procedure or a parameterized SQL command were limited. A developer could choose from the following options for passing multiple rows to the server:  
@@ -43,18 +42,18 @@ Before table-valued parameters were introduced to SQL Server 2008, the options f
   
 - Create a series of individual SQL statements for data modifications that affect multiple rows. Changes can be submitted to the server individually or batched into groups. However, even when submitted in batches that contain multiple statements, each statement is executed separately on the server.  
   
-- Use the bcp utility program or [SQLServerBulkCopy](using-bulk-copy-with-the-jdbc-driver.md) to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.
+- Use the bcp utility program or [SQLServerBulkCopy](using-bulk-copy-with-the-jdbc-driver.md) to load many rows of data into a table. Although this technique is efficient, it doesn't support server-side processing unless the data is loaded into a temporary table or table variable.
   
 ## Creating table-valued parameter types  
 
-Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL `CREATE TYPE` statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in SQL Server Books Online.  
+Table-valued parameters are based on strongly typed table structures that are defined by using Transact-SQL `CREATE TYPE` statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in SQL Server Books Online.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```
 
-After creating a table type, you can declare table-valued parameters based on that type. The following Transact-SQL fragment demonstrates how to declare a table-valued parameter in a stored procedure definition. Note that the `READONLY` keyword is required for declaring a table-valued parameter.  
+After creating a table type, you can declare table-valued parameters based on that type. The following Transact-SQL fragment demonstrates how to declare a table-valued parameter in a stored procedure definition. The `READONLY` keyword is required for declaring a table-valued parameter.  
 
 ```sql
 CREATE PROCEDURE usp_UpdateCategories
@@ -85,19 +84,19 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 
 There are several limitations to table-valued parameters:  
   
-- You cannot pass table-valued parameters to user defined functions.  
+- You can't pass table-valued parameters to user defined functions.  
   
-- Table-valued parameters can only be indexed to support UNIQUE or PRIMARY KEY constraints. SQL Server does not maintain statistics on table-valued parameters.  
+- Table-valued parameters can only be indexed to support UNIQUE or PRIMARY KEY constraints. SQL Server doesn't maintain statistics on table-valued parameters.  
   
-- Table-valued parameters are read-only in Transact-SQL code. You cannot update the column values in the rows of a table-valued parameter and you cannot insert or delete rows. To modify the data that is passed to a stored procedure or parameterized statement in table-valued parameter, you must insert the data into a temporary table or into a table variable.  
+- Table-valued parameters are read-only in Transact-SQL code. You can't update the column values in the rows of a table-valued parameter and you can't insert or delete rows. To modify the data that is passed to a stored procedure or parameterized statement in table-valued parameter, you must insert the data into a temporary table or into a table variable.  
   
-- You cannot use ALTER TABLE statements to modify the design of table-valued parameters.
+- You can't use ALTER TABLE statements to modify the design of table-valued parameters.
 
 - You can stream large objects in a table-valued parameter.  
   
 ## Configuring a table-valued parameter
 
-Beginning with Microsoft JDBC Driver 6.0 for SQL Server, table-valued parameters are supported with a parameterized statement or a parameterized stored procedure. Table-valued parameters can be populated from a SQLServerDataTable, from a ResultSet or from a user provided implementation of the ISQLServerDataRecord interface. When setting a table-valued parameter for a prepared query, you must specify a type name which must match the name of a compatible type previously created on the server.  
+Beginning with Microsoft JDBC Driver 6.0 for SQL Server, table-valued parameters are supported with a parameterized statement or a parameterized stored procedure. Table-valued parameters can be populated from a SQLServerDataTable, from a ResultSet or from a user provided implementation of the ISQLServerDataRecord interface. When setting a table-valued parameter for a prepared query, you must specify a type name, which must match the name of a compatible type previously created on the server.  
   
 The following two code fragments demonstrate how to configure a table-valued parameter with a SQLServerPreparedStatement and with a SQLServerCallableStatement to insert data. Here sourceTVPObject can be a SQLServerDataTable, or a ResultSet or an ISQLServerDataRecord object. The examples assume connection is an active Connection object.  
 
@@ -144,6 +143,31 @@ SQLServerPreparedStatement pStmt =
             "INSERT INTO dbo.Categories SELECT * FROM ?;");  
 pStmt.setStructured(1, "dbo.CategoryTableType", sourceDataTable);  
 pStmt.execute();  
+```
+
+This example is similar to the previous one. The only difference is that it sets the TVP Name on the `SQLServerDataTable` instead of relying on casting `PreparedStatement` to a `SQLServerPreparedStatement` to use the `setStructured` method.
+
+```java
+/* Assumes connection is an active Connection object. */
+
+// Create an in-memory data table.
+SQLServerDataTable sourceDataTable = new SQLServerDataTable();
+sourceDataTable.setTvpName("dbo.CategoryTableType");
+
+// Define metadata for the data table.
+sourceDataTable.addColumnMetadata("CategoryID" ,java.sql.Types.INTEGER);
+sourceDataTable.addColumnMetadata("CategoryName" ,java.sql.Types.NVARCHAR);
+
+// Populate the data table.
+sourceDataTable.addRow(1, "CategoryNameValue1");
+sourceDataTable.addRow(2, "CategoryNameValue2");
+
+// Pass the data table as a table-valued parameter using a prepared statement.
+PreparedStatement pStmt =
+        connection.prepareStatement(
+            "INSERT INTO dbo.Categories SELECT * FROM ?;");
+pStmt.setObject(1, sourceDataTable);
+pStmt.execute();
 ```
 
 > [!NOTE]  
@@ -230,14 +254,14 @@ pStmt.execute();
 
 ### SQLServerMetaData
 
-This class represents metadata for a column. It is used in the ISQLServerDataRecord interface to pass column metadata to the table-valued parameter. The methods in this class are:  
+This class represents metadata for a column. It's used in the ISQLServerDataRecord interface to pass column metadata to the table-valued parameter. The methods in this class are:  
 
 | Name                                                                                                                                                                             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public SQLServerMetaData(String columnName, int sqlType, int precision, int scale, boolean useServerDefault, boolean isUniqueKey, SQLServerSortOrder sortOrder, int sortOrdinal) | Initializes a new instance of SQLServerMetaData with the specified column name, sql type, precision, scale and server default. This form of the constructor supports table-valued parameters by allowing you to specify if the column is unique in the table-valued parameter, the sort order for the column, and the ordinal of the sort column. <br/><br/>useServerDefault - specifies if this column should use the default server value; Default value is false.<br>isUniqueKey - indicates if the column in the table-valued parameter is unique; Default value is false.<br>sortOrder  - indicates the sort order for a column; Default value is SQLServerSortOrder.Unspecified.<br>sortOrdinal - specifies ordinal of the sort column; sortOrdinal starts from 0; Default value is -1. |
-| public SQLServerMetaData( String columnName, int sqlType)                                                                                                                        | Initializes a new instance of SQLServerMetaData using the column name and the sql type.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| public SQLServerMetaData( String columnName, int sqlType, int length)                                                                                                                        | Initializes a new instance of SQLServerMetaData using the column name, the sql type and the length (for String data). The length is used to differentiate large strings from strings with length less than 4000 characters. Introduced in the version 7.2 of the JDBC driver.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| public SQLServerMetaData( String columnName, int sqlType, int precision, int scale)                                                                                              | Initializes a new instance of SQLServerMetaData using the column name, sql type, precision and scale.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| public SQLServerMetaData(String columnName, int sqlType)                                                                                                                        | Initializes a new instance of SQLServerMetaData using the column name and the sql type.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| public SQLServerMetaData(String columnName, int sqlType, int length)                                                                                                                        | Initializes a new instance of SQLServerMetaData using the column name, the sql type and the length (for String data). The length is used to differentiate large strings from strings with length less than 4000 characters. Introduced in the version 7.2 of the JDBC driver.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| public SQLServerMetaData(String columnName, int sqlType, int precision, int scale)                                                                                              | Initializes a new instance of SQLServerMetaData using the column name, sql type, precision and scale.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | Public SQLServerMetaData(SQLServerMetaData sqlServerMetaData)                                                                                                                    | Initializes a new instance of SQLServerMetaData from another SQLServerMetaData object.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | public String getColumName()                                                                                                                                                     | Retrieves the column name.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | public int getSqlType()                                                                                                                                                          | Retrieves the java sql Type.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -285,7 +309,7 @@ This class represents an interface that users can implement to stream data to a 
 | public SQLServerMetaData getColumnMetaData(int column); | Retrieves the column meta data of the given column index.                                               |
 | public int getColumnCount();                            | Retrieves the total number of columns.                                                                  |
 | public Object[] getRowData();                           | Retrieves the data for the current row as an array of Objects.                                          |
-| public boolean next();                                  | Moves to the next row. Returns True if the move is successful and there is a next row, false otherwise. |
+| public boolean next();                                  | Moves to the next row. Returns True if the move is successful and there's a next row, false otherwise. |
 
 ### SQLServerPreparedStatement
 

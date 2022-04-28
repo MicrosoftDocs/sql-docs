@@ -8,6 +8,7 @@ ms.reviewer: kendralittle, mathoma
 ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # What is the database ledger?
@@ -37,7 +38,7 @@ Because this is a regular table update, the system automatically guarantees its 
 
 :::image type="content" source="media/ledger/merkle-tree-transactions.png" alt-text="Diagram that shows a Merkle Tree storing the transactions of a ledger table.":::
 
-For more information on how ledger provides data integrity, see [Digest management](ledger-digest-management.md) and [database verification](ledger-database-verification.md).
+For more information on how ledger provides data integrity, see the articles, [Digest management](ledger-digest-management.md) and [Database verification](ledger-database-verification.md).
 
 ## Where are database transaction and block data stored?
 

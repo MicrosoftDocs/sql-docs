@@ -2,7 +2,7 @@
 description: "sys.ledger_column_history (Transact-SQL)"
 title: "sys.ledger_column_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/22/2022"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -11,15 +11,15 @@ dev_langs:
   - "TSQL"
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current"
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 # sys.ledger_column_history (Transact-SQL)
 
-[!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Captures the cryptographically protected history of operations on columns of ledger tables: adding, renaming, and dropping columns.
 
-For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview)
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|
@@ -86,4 +86,4 @@ ORDER BY t.[commit_time];
 ## See also
 
 - [Ledger considerations and limitations](/docs/relational-databases/security/ledger/ledger-limits.md)
-- [Ledger Overview](/docs/relational-databases/security/ledger/ledger-overview.md)
+- [Ledger overview](/docs/relational-databases/security/ledger/ledger-overview.md)

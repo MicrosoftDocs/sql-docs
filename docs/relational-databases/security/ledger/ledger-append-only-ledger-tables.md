@@ -8,6 +8,7 @@ ms.reviewer: kendralittle, mathoma
 ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Append-only ledger tables

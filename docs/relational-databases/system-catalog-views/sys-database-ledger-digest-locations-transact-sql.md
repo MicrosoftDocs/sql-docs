@@ -2,7 +2,7 @@
 description: "sys.database_ledger_digest_locations (Transact-SQL)"
 title: "sys.database_ledger_digest_locations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2021"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current"
 
 Captures the current and the historical ledger digest storage endpoints for the ledger feature.
 
-For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview).
+For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview).
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|

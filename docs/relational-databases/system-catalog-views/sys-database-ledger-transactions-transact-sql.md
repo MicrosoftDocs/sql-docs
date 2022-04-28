@@ -2,7 +2,7 @@
 description: "sys.database_ledger_transactions (Transact-SQL)"
 title: "sys.database_ledger_transactions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/22/2022"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -15,11 +15,11 @@ monikerRange: "=azuresqldb-current"
 ---
 # sys.database_ledger_transactions (Transact-SQL)
 
-[!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Captures the cryptographically protected history of database transactions against ledger tables in the database. A row in this view represents a database transaction.
 
-For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview).
+For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview).
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -37,4 +37,4 @@ Requires the **VIEW LEDGER CONTENT** permission.
 ## See also
 
 - [What is the database ledger?](/docs/relational-databases/security/ledger/ledger-database-ledger.md)
-- [Ledger Overview](/docs/relational-databases/security/ledger/ledger-overview.md)
+- [Ledger overview](/docs/relational-databases/security/ledger/ledger-overview.md)

@@ -8,6 +8,7 @@ ms.reviewer: kendralittle, mathoma
 ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Create and use append-only ledger tables

@@ -2,7 +2,7 @@
 description: "sys.database_ledger_blocks (Transact-SQL)"
 title: "sys.database_ledger_blocks (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2021"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -14,11 +14,11 @@ ms.author: vanto
 monikerRange: "=azuresqldb-current"
 ---
 # sys.database_ledger_blocks (Transact-SQL)
-[!INCLUDE [Azure SQL Database](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Captures the cryptographically chained blocks, each of which represents a block of transactions against ledger tables.
 
-For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview)
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|

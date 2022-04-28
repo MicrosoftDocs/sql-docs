@@ -2,7 +2,7 @@
 description: "sys.sp_generate_database_ledger_digest (Transact-SQL)"
 title: "sys.sp_generate_database_ledger_digest (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/22/2021"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current"
 
 Generates the ledger digest, which is the hash of the last block in sys.database_ledger_blocks. If the last block is open (transactions have been grouped to the block but no final block hash has been generated), this stored procedure will close the block and generate the hash. Future transactions will then be assigned to the next block.
 
-For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview)
+For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview)
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
@@ -60,5 +60,5 @@ Users with the **public** role are allowed to execute this stored procedure.
 
 ## See also
 
-- [Digest Management](/docs/relational-databases/security/ledger/ledger-digest-management.md)
-- [Ledger Overview](/doc/relational-databases/security/ledger/ledger-overview.md)
+- [Digest management](/docs/relational-databases/security/ledger/ledger-digest-management.md)
+- [Ledger overview](/doc/relational-databases/security/ledger/ledger-overview.md)

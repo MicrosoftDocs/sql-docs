@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: Azure SQL Database ledger documentation
-summary: "Find documentation about Azure SQL Database ledger"
+title: Ledger documentation
+summary: "Find documentation about ledger for SQL Server 2022 and Azure SQL Database"
 
 metadata:
-  title: Azure SQL Database ledger documentation
-  description: "Find ledger documentation for Azure SQL Database"
+  title: Ledger documentation
+  description: "Find ledger documentation for SQL Server 2022 and Azure SQL Database"
   ms.service: sql-database
   ms.subservice: security
   ms.tgt_pltfrm: na
@@ -14,7 +14,7 @@ metadata:
   author: VanMSFT
   ms.author: vanto
   ms.reviewer: kendralittle, mathoma
-  ms.date: 05/25/2021
+  ms.date: 05/24/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -23,11 +23,11 @@ landingContent:
 # Start card title with a verb
 
   # Card 
-  - title: Azure SQL Database ledger overview
+  - title: Ledger overview
     linkLists:
       - linkListType: overview
         links:
-          - text: What is Azure SQL Database ledger?
+          - text: What is database ledger?
             url: ledger-overview.md
 
 
@@ -122,3 +122,5 @@ landingContent:
             url: /sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql
           - text: sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)
             url: /sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql
+          - text: sys.sp_copy_data_in_batches (Transact-SQL)
+            url: /sql/relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql

@@ -2,7 +2,7 @@
 title: sys.tables (Transact-SQL)
 description: "sys.tables (Transact-SQL)"
 ms.custom: ""
-ms.date: "05/25/2021"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -57,10 +57,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |history_retention_period_unit_desc|**nvarchar(10)**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The text description of type of temporal history retention period unit. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
 |is_node|**bit**|**Applies to**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = This is a graph Node table. <br /><br />0 = This is not a graph Node table. |  
 |is_edge|**bit**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = This is a graph Edge table. <br /><br />0 = This is not a graph Edge table. |  
-|ledger_type|**tinyint**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value indicates if the table is a ledger table.<br/><br/>0 = NON_LEDGER_TABLE<br/>1 = HISTORY_TABLE (associated with an updatable ledger table)<br/>2 = UPDATABLE_LEDGER_TABLE<br/>3 = APPEND_ONLY_LEDGER_TABLE<br /><br />For more information on database ledger, see [Azure SQL Database ledger](/azure/azure-sql/database/ledger-overview).|
-|ledger_type_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The text description of a value in the ledger_type column:<br/><br/>NON_LEDGER_TABLE<br/>HISTORY_TABLE<br/>UPDATABLE_LEDGER_TABLE<br/>APPEND_ONLY_LEDGER_TABLE|  
-|ledger_view_id|**int**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>When ledger_type IN (2,3) returns object_id of the ledger view, otherwise returns NULL.|
-|is_dropped_ledger_table|**bit**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Indicates a ledger table that has been dropped.|
+|ledger_type|**tinyint**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value indicates if the table is a ledger table.<br/><br/>0 = NON_LEDGER_TABLE<br/>1 = HISTORY_TABLE (associated with an updatable ledger table)<br/>2 = UPDATABLE_LEDGER_TABLE<br/>3 = APPEND_ONLY_LEDGER_TABLE<br /><br />For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview).|
+|ledger_type_desc|**nvarchar(60)**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The text description of a value in the ledger_type column:<br/><br/>NON_LEDGER_TABLE<br/>HISTORY_TABLE<br/>UPDATABLE_LEDGER_TABLE<br/>APPEND_ONLY_LEDGER_TABLE|  
+|ledger_view_id|**int**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>When ledger_type IN (2,3) returns object_id of the ledger view, otherwise returns NULL.|
+|is_dropped_ledger_table|**bit**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Indicates a ledger table that has been dropped.|
 
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

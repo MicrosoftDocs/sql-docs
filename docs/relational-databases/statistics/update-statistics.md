@@ -9,7 +9,7 @@ helpviewer_keywords:
   - "statistics [SQL Server], updating"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
+ms.reviewer: "katsmith"
 ms.custom: ""
 ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -21,30 +21,31 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 You can update query optimization statistics on a table or indexed view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using UPDATE STATISTICS or the stored procedure `sp_updatestats` to update statistics more frequently than the default updates. 
   
- Updating statistics ensures that queries compile with up-to-date statistics. However, updating statistics causes queries to recompile. We recommend not updating statistics too frequently because there is a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application. UPDATE STATISTICS can use tempdb to sort the sample of rows for building statistics. 
+ Updating statistics ensures that queries compile with up-to-date statistics. However, updating statistics causes queries to recompile. We recommend not updating statistics too frequently because there is a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application. UPDATE STATISTICS can use tempdb to sort the sample of rows for building statistics.
   
  **In This Topic**
   
 - **Before you begin:**  
   
-     [Security](#Security)  
+    [Security](#Security)  
   
 - **To update a statistics object, using:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+    [SQL Server Management Studio](#SSMSProcedure)  
   
-     [Transact-SQL](#TsqlProcedure)  
+    [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+## <a name="BeforeYouBegin"></a> Before You Begin  
   
-###  <a name="Security"></a> Security  
+### <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- If using UPDATE STATISTICS or making changes through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], requires ALTER permission on the table or view. If using `sp_updatestats`, requires membership in the **sysadmin** fixed server role, or ownership of the database (**dbo**). 
+#### <a name="Permissions"></a> Permissions  
+
+If using UPDATE STATISTICS or making changes through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], requires ALTER permission on the table or view. If using `sp_updatestats`, requires membership in the **sysadmin** fixed server role, or ownership of the database (**dbo**).
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
-#### To update a statistics object  
+#### To update a statistics object
   
 1. In **Object Explorer**, click the plus sign to expand the database in which you want to update the statistic. 
   
@@ -58,7 +59,7 @@ You can update query optimization statistics on a table or indexed view in [!INC
   
 6. In the **Statistics Properties -**_statistics\_name_ dialog box, select the **Update statistics for these columns** check box and then click **OK**. 
   
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+## <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 ### To update a specific statistics object  
   
@@ -76,7 +77,7 @@ You can update query optimization statistics on a table or indexed view in [!INC
     GO  
     ```  
   
-### To update all statistics in a table  
+### To update all statistics in a table
   
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
   
@@ -109,8 +110,10 @@ For more information, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql
     EXEC sp_updatestats;  
     ```  
 
-For more information, see [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).  
-
 ### Automatic index and statistics management
 
 Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
+
+## Next steps
+
+For more information, see [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).

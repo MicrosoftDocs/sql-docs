@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "statistics [SQL Server]"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
+ms.reviewer: "katsmith"
 ms.custom: ""
 ms.date: "05/24/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -188,14 +188,16 @@ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfu
 
 ### AUTO_DROP option
 
-**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later.
+*Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later.
 
 Currently, if statistics are created by a third party tool on a customer database, those statistics objects can block or interfere with schema changes the customer may desire.
 
-This feature allows the creation of statistics objects in a mode such that a schema change will *not* be blocked by the statistics, but instead the statistics will be droppped. In this way, auto drop statistics behave like auto created statistics.
-It is worth noting that trying to set or unset the *Auto_Drop* property on auto created statistics may raise errors - auto created statistics will always be auto drop. Some backups, when restored, may have this property set incorrectly until the next time the statistics object is updated (manually or automatically). However, auto created statistics always behave like auto drop statistics.
+(Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])| This feature allows the creation of statistics objects in a mode such that a schema change will *not* be blocked by the statistics, but instead the statistics will be droppped. In this way, auto drop statistics behave like auto created statistics.
 
-To use Auto Drop statistics, just add the following to the "WITH" clause of statistics create or update
+> [!Note]
+> Trying to set or unset the *Auto_Drop* property on auto created statistics may raise errors - auto created statistics always uses auto drop. Some backups, when restored, may have this property set incorrectly until the next time the statistics object is updated (manually or automatically). However, auto created statistics always behave like auto drop statistics.
+
+To use Auto Drop statistics, just add the following to the "WITH" clause of statistics create or update.
 
 ```sql
 AUTO_DROP = ON
@@ -212,6 +214,8 @@ Update:
 ```sql
 UPDATE STATISTICS ... WITH AUTO_DROP = ON
 ```
+
+For more information see [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md#auto_drop)
 
 ### INCREMENTAL  
 

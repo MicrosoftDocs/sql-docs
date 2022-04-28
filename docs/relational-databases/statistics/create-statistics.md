@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "statistics [SQL Server], creating"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
+ms.reviewer: "katsmith"
 ms.custom: ""
 ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -39,9 +39,9 @@ You can create query optimization statistics on one or more columns of a table o
   
      [Transact-SQL](#TsqlProcedure)  
   
-## <a name="BeforeYouBegin"></a> Before You Begin  
+## <a name="BeforeYouBegin"></a> Before You Begin
   
-### <a name="Restrictions"></a> Limitations and Restrictions  
+### <a name="Restrictions"></a> Limitations and Restrictions
   
 - Before creating statistics with the CREATE STATISTICS statement, verify that the AUTO_CREATE_STATISTICS option is set at the database level. This will ensure that the query optimizer continues to routinely create single-column statistics for query predicate columns.  
   
@@ -49,14 +49,15 @@ You can create query optimization statistics on one or more columns of a table o
   
 - You cannot drop, rename, or alter the definition of a table column that is defined in a filtered statistics predicate.  
   
-###  <a name="Security"></a> Security
+### <a name="Security"></a> Security
   
-####  <a name="Permissions"></a> Permissions
+#### <a name="Permissions"></a> Permissions
+
  Requires that the user be the table or indexed view owner, or a member of one of the following roles: **sysadmin** fixed server role, **db_owner** fixed database role, or the **db_ddladmin** fixed database role.  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+### <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
-#### To create statistics
+#### Create statistics using SQL Server Management Studio
   
 1. In **Object Explorer**, Select the plus sign to expand the database in which you want to create a new statistic.  
 
@@ -138,9 +139,9 @@ You can create query optimization statistics on one or more columns of a table o
   
 7. In the **New Statistics on Table**_table\_name_ dialog box, Select **OK**.  
   
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+## <a name="TsqlProcedure"></a> Using Transact-SQL  
   
-#### To create statistics
+### Create statistics using Transact-SQL
   
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -171,4 +172,6 @@ You can create query optimization statistics on one or more columns of a table o
     GO  
     ```  
   
-For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).
+## Next steps
+
+For more information, see [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).

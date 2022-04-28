@@ -43,7 +43,7 @@ sections:
       - question: |
           Who should use the Hyperscale service tier?
         answer: |
-          The Hyperscale service tier is intended for customers who have large on-premises SQL Server databases and want to modernize their applications by moving to the cloud, or for customers who are already using Azure SQL Database and want to significantly expand the potential for database growth. Hyperscale is also intended for customers who seek both high performance and high scalability. With Hyperscale, you get:
+          The Hyperscale service tier is for all customers who require higher performance, fast backups, and/or storage and compute scalability, including both customers who are moving to the cloud to modernize their applications and customers who are already using other service tiers in Azure SQL Database. With Hyperscale, you get:
           
           - Database size up to 100 TB
           - Fast database backups regardless of database size (backups are based on storage snapshots)
@@ -77,9 +77,10 @@ sections:
             With  Hyperscale, you can scale up the primary compute size in terms of resources like CPU and memory, and then scale down, in constant time. Because the storage is shared, scaling up and scaling down is not a size of data operation.  
           - **Scaling In/Out**
           
-            With Hyperscale, you also get the ability to provision one or more additional compute replicas that you can use to serve your read requests. This means that you can use these additional compute replicas as read-only replicas to offload your read workload from the primary compute. In addition to read-only, these replicas also serve as hot-standbys in case of a failover from the primary.
-          
-            Provisioning of each of these additional compute replicas can be done in constant time and is an online operation. You can connect to these additional read-only compute replicas by setting the `ApplicationIntent` argument on your connection string to `ReadOnly`. Any connections  with the `ReadOnly` application intent are automatically routed to one of the additional read-only compute replicas.
+            With Hyperscale, you get the flexibility to include 3 types of secondary replicas to cater read scale-out, high availability, and geo-replication requirements. 
+            - Up to 4 [high-availability replicas](service-tier-hyperscale-replicas.md#high-availability-replica) having same compute size as primary to offload read workloads from the primary compute and to also serve as a hot-standby in case of an unexpected failure of the primary.
+            - Up to 30 [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) having same or different compute size than primary to cater massive read scale-out scenarios.  
+            - A [Geo-replica](service-tier-hyperscale-replicas.md#geo-replica-in-preview) in the same or different Azure region to offload that can enable regional resiliency.
           
   - name: Deep dive questions
     questions:

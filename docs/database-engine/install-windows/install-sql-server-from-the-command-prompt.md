@@ -126,7 +126,9 @@ The rest of the article provides a detailed description of the available paramet
   
  Regardless of the installation method, you are required to confirm acceptance of the software license terms as an individual or on behalf of an entity, unless your use of the software is governed by a separate agreement such as a Microsoft volume licensing agreement or a third-party agreement with an ISV or OEM.  
   
- The license terms are displayed for review and acceptance in the Setup user interface. Unattended installations (using the /Q or /QS parameters) must include the /IACCEPTSQLSERVERLICENSETERMS parameter. You can review the license terms separately at [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkId=148209).  
+ The license terms are displayed for review and acceptance in the Setup user interface. Unattended installations (using the /Q or /QS parameters) must include the /IACCEPTSQLSERVERLICENSETERMS parameter. You can review the license terms separately at [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkId=148209).
+
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 > [!NOTE] 
 > Depending on how you received the software (for example, through Microsoft volume licensing), your use of the software may be subject to additional terms and conditions.  
@@ -172,7 +174,7 @@ Parameters that are listed for a [!INCLUDE[ssDEnoversion](../../includes/ssdenov
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ACTION<br /><br /> **Required**|Required to indicate the installation workflow.<br /><br /> Supported values: **Install**.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Suppresses the privacy notice statement. By using this flag, you are agreeing with the [privacy notice](../../sql-server/sql-server-privacy.md).  |  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Required to acknowledge acceptance of the license terms.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Required to acknowledge acceptance of the license terms.<br/><br/>Beginning with SQL Server 2022, read the Microsoft SQL Server Software License Terms at https://aka.ms/useterms.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python Setup Control|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations that include the Anaconda Python package.**|Required to acknowledge acceptance of the license terms.| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R Setup Control|/IACCEPTROPENLICENSETERMS <br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations that include the Microsoft R Open package.**|Required to acknowledge acceptance of the license terms.| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ENU<br /><br /> **Optional**|Use this parameter to install the English version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|  
@@ -260,14 +262,53 @@ Parameters that are listed for a [!INCLUDE[ssDEnoversion](../../includes/ssdenov
 |Python/Machine Learning Services (In-Database)|/MPYCACHEDIRECTORY|Reserved for future use. Use %TEMP% to store Python .CAB files for installation on a computer that does not have an internet connection. |  
 |R/Machine Learning Services (In-Database)|/MRCACHEDIRECTORY|Use this parameter to specify the Cache directory for Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Standalone), or R feature support in SQL Server Machine Learning Services or Machine Learning Server (Standalone). This setting is typically used when installing R components from the [command line on a computer without Internet access](../../machine-learning/install/sql-ml-component-install-without-internet-access.md).|  
 |Java/Language Extensions| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **Optional** | Starting with SQL Server 2019, specifies installing Java with Language Extensions. If /SQL_INST_JAVA is provided without the /SQLJAVADIR parameter, it's assumed you want to install the Zulu Open JRE that is provided by the installation media. <br /><br /> Providing a path for /SQLJAVADIR indicates you would like to use an already-installed JRE or JDK. |
+|Azure Arc agent extension |/FEATURES=ARC<br/><br/>**Optional**| Connect the instance to Azure Arc. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURESUBSCRIPTIONID<br/><br/>**Optional**|Azure subscription the SQL Server instance resource will be created. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURERESOURCEGROUP<br/><br/>**Optional**| Azure resource group where the SQL Server instance resource will be created. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZUREREGION<br/><br/>**Optional**| Azure region where the SQL Server instance resource will be created. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURETENANTID<br/><br/>**Optional**| Azure tenant ID in which the service principal exists. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURESERVICEPRINCIPAL<br/><br/>**Optional**| Service principal to authenticate against given tenant id, subscription and resource group. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZURESERVICEPRINCIPALSECRET<br/><br/>**Optional**| Service principal secret. Starting with SQL Server 2022 (Preview).|
+|Azure Arc agent extension |/AZUREARCPROXY<br/><br/>**Optional**| Name of the proxy server used to connect to Azure Arc. Starting with SQL Server 2022 (Preview).|
   
-###### Sample Syntax:  
+### Sample syntax:
+
  To install a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components and enable instant file initialization for [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
   
 ```  
 setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
-  
+
+#### Deploy - connected to Azure Arc
+
+Beginning with SQL Server 2022 (preview) you can install the Azure Arc agent with the SQL Server extension when you are install SQL Server. When you install the Azure Arc agent with SQL Server extension you can automatically enable the instance for Azure Arc which will register the SQL Server instance as a resource in Azure and make it eligible to attach additional Azure management services to it.
+
+The following example deploys a SQL Server instance that is connected to Azure Arc. Before you run the example, replace the information in angle brackets ( `< ... > ` ) with your information.
+
+```console
+setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ARC /INSTANCENAME=<instance name> /SQLSYSADMINACCOUNTS="<sysadmin account>" /IACCEPTSQLSERVERLICENSETERMS /ONBOARDSQLTOARC /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<00000000-0000-0000-0000-000000000000" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region>
+```
+
+The following example installs the Azure Arc agent and SQL Server extension to manage an existing SQL Server instance and any other SQL Server instances that are installed.
+
+```console
+setup.exe /qs /ACTION=Install /FEATURES=ARC  /IACCEPTSQLSERVERLICENSETERMS /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<00000000-0000-0000-0000-000000000000" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region> 
+```
+
+The following example shows how to remove the SQL Server extension for Azure Arc agent from setup.
+
+> [!NOTE]
+> This command will not physically uninstall the SQL Server extension. Instead, the command will mark this feature as not selected in the setup. To remove the Azure resource for this instance, go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_HybridCompute/AzureArcCenterBlade/sqlServers) and delete.
+
+```console
+setup.exe /qs /ACTION=Uninstall /FEATURES=ARC  /IACCEPTSQLSERVERLICENSETERMS 
+```
+
+For more information about connecting to Azure Arc, see:
+
+- [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md)
+- [Connect your SQL Server to Azure Arc](../../sql-server/azure-arc/connect.md)
+
 ##  <a name="SysPrep"></a> SysPrep Parameters  
  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, see  
   
@@ -646,6 +687,8 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=MSSQLSERVER /Features=
 ```  
 setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name>" /Features=AS,SQL /INDICATEPROGRESS /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
+
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 #### Complete Failover Cluster Parameters  
  Use the parameters in the following table to develop command-line scripts for failover cluster complete. This is the second step in the advanced failover cluster install option. After you have run prepare on all the failover cluster nodes, you run this command on the node that owns the shared disks. For more information, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 

@@ -42,10 +42,12 @@
       href: extensions/add-extensions.md
     - name: Azure Arc extension
       href: extensions/azure-arc-extension.md
-    - name: Azure SQL Migration extension
+    - name: Azure SQL migration extension
       href: extensions/azure-sql-migration-extension.md
     - name: Azure Monitor Logs extension
       href: extensions/azure-monitor-logs-extension.md
+    - name: Database Migration Assessment for Oracle extension
+      href: extensions/database-migration-assessment-for-oracle-extension.md
     - name: Database Schema Conversion Toolkit
       href: extensions/dsct/toc.yml
     - name: Data Virtualization extension

@@ -1,7 +1,7 @@
 ---
 title: "End of support options"
-description: Learn about the different options available for SQL Server products that have reached end of support, such as SQL Server 2005, SQL Server 2008, and SQL Server 2008 R2. 
-ms.date: 02/24/2022
+description: Learn about the different options available for SQL Server products that have reached end of support, such as SQL Server SQL Server 2008, SQL Server 2008 R2, and 2012. 
+ms.date: 04/08/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -9,6 +9,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: pmasl
 monikerRange: ">=sql-server-2016"
+##RW##Phase1&&##RW##Phase2
 ---
 # SQL Server end of support options
 
@@ -47,9 +48,13 @@ Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached 
 ### Benefits
 
 - **Latest technology**: New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions introduce innovations that include performance, scalability, and high-availability features, and improved security.
+
 - **Control**: You have the most control over features and scalability, because you manage both hardware and software.
+
 - **Familiar environment**: If you're upgrading from an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this environment is the most similar.
+
 - **Wide applicability**: Applicable for database applications of any kind, including OLTP systems and data warehousing.
+
 - **Low risk for database applications**: When the database compatibility is at the same level as the legacy system, existing database applications are protected from functional and performance changes that can have detrimental effects. An application only needs to be fully re-certified when it needs to use features that are gated by a newer database compatibility setting. For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 
 ### Considerations
@@ -58,30 +63,30 @@ Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached 
 - **Downtime**: There could be downtime depending on your upgrade strategy. There's also an inherent risk of running into issues during an in-place upgrade process.
 - **Complexity**: If you're on Windows Server 2008 or [!INCLUDE[winserver2008r2-md](../../includes/winserver2008r2-md.md)], you also need to upgrade the OS as the newer versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may not be supported on those Windows versions. There's added risk during the OS upgrade process, so doing a side-by-side migration may be the more prudent, yet more costly, approach. In-place OS upgrades aren't supported on failover cluster instances for Windows Server 2008 or [!INCLUDE[winserver2008r2-md](../../includes/winserver2008r2-md.md)].
 
-  > [!NOTE]
+  > [!NOTE]  
   > Cluster OS rolling upgrades are available starting with Windows Server 2016.
 
 ### Resources
 
-- [Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)
+- [Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-rtm)
 - [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 What's new in:
 
 - [SQL Server 2016](../what-s-new-in-sql-server-2016.md)
 - [SQL Server 2017](../what-s-new-in-sql-server-2017.md)
-- [SQL Server 2019](../what-s-new-in-sql-server-ver15.md)
+- [SQL Server 2019](../what-s-new-in-sql-server-2019.md)
 
 Hardware requirements:
 
 - [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md)  
-- [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
+- [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-2019.md)
 
 Supported version and edition upgrades:
 
 - [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true)
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
-- [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
+- [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-2019.md)
 
 Tools:
 
@@ -268,26 +273,24 @@ Azure table storage has the following benefits:
 
 The following table provides an approximation of lifecycle dates for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] products. For greater details and accuracy, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) page.
 
-| **Version**     | **Release year** | **Mainstream Support end year** | **Extended Support end year** |
-| :---------------| :--------------- | :------------------------------ | :---------------------------- |
-| [SQL Server 2019](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202019) | 2019 | 2025 | 2030 |
-| [SQL Server 2017](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017) | 2017 | 2022 | 2027 |
-| [SQL Server 2016](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202016) | 2016 | 2021 | 2026 |
-| [SQL Server 2014](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202014) | 2014 | 2019 | 2024 |
-| [SQL Server 2012](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202012) | 2012 | 2017 | 2022 |
-| [SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008%20R2) | 2010 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
-| [SQL Server 2008](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008) | 2008 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
-| [SQL Server 2005](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202005) | 2006 | 2011 | [2016](https://www.microsoft.com/sql-server/sql-server-2005) |
-| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](/archive/blogs/cdnitmanagers/sql-server-2000-end-of-support-april-2013) |
+| **Version** | **Release year** | **Mainstream Support end year** | **Extended Support end year** |
+|:---|:---|:---|:---|
+| [SQL Server 2019](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202019) | 2019 | 2025 | 2030 |
+| [SQL Server 2017](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202017) | 2017 | 2022 | 2027 |
+| [SQL Server 2016](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202016) | 2016 | 2021 | 2026 |
+| [SQL Server 2014](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202014) | 2014 | 2019 | 2024 |
+| [SQL Server 2012](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202012) | 2012 | 2017 | 2022 |
+| [SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search??terms=SQL%20Server%202008%20R2) | 2010 | 2012 | 2019 |
+| [SQL Server 2008](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202008) | 2008 | 2012 | 2019 |
+| [SQL Server 2005](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202005) | 2006 | 2011 | 2016 |
+| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202000) | 2000 | 2005 | 2013 |
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > If any discrepancy exists between this table, and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Lifecycle page, then the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Lifecycle supersedes this table, as this table is meant to be used as an approximate reference.  
 
 ## Next Steps
 
 - [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
-- [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005)
-- [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)
 - [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
 - [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
 - [SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)

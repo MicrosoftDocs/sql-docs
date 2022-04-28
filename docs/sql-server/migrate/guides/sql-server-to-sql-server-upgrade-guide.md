@@ -215,7 +215,7 @@ environment.
 
 [Backup overview of SQL Server.](../../../relational-databases/backup-restore/backup-overview-sql-server.md)
 
-[Editions and supported features of SQL Server.](../../editions-and-components-of-sql-server-version-15.md)
+[Editions and supported features of SQL Server.](../../editions-and-components-of-sql-server-2019.md)
 
 ### Migrate schema and data
 

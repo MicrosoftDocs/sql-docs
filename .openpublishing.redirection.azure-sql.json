@@ -383,7 +383,7 @@
         {
           "source_path_from_root": "/azure-sql/virtual-machines/windows/sql/virtual-machines-windows-sql-performance.md",
           "redirect_url": "/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices",
-          "redirect_document_id": true
+          "redirect_document_id": false
         },
         {
           "source_path_from_root": "/azure-sql/virtual-machines/windows/sql/virtual-machines-windows-sql-server-pricing-guidance.md",

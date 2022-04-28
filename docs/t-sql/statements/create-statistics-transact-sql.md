@@ -362,21 +362,9 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;
 To use Auto Drop statistics, just add the following to the "WITH" clause of statistics create or update.
 
 ```sql
-AUTO_DROP = ON
-```
-
-Create:
-
-```sql
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH AUTO_DROP = ON
 ```
 
-Update:
-
-```sql
-UPDATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH AUTO_DROP = ON
-```
-  
 ## See Also
 
 - [Statistics](../../relational-databases/statistics/statistics.md)   

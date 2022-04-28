@@ -116,4 +116,4 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
 
 ## Next steps
 
-For more information, see [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).
+For more information, see [UPDATE STATISTICS (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).

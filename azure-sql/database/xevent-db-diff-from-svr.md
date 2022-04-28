@@ -10,7 +10,7 @@ ms.topic: reference
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: kendralittle, mathoma
-ms.date: 07/23/2021
+ms.date: 04/27/2022
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Extended events in Azure SQL Database 
@@ -68,13 +68,13 @@ Related articles provide two code samples:
 
 The extended events feature is supported by several [catalog views](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql). Catalog views tell you about *metadata or definitions* of user-created event sessions in the current database. The views do not return information about instances of active event sessions.
 
-| Name of<br/>catalog view | Description |
+| Name of catalog view | Description |
 |:--- |:--- |
-| `sys.database_event_session_actions` |Returns a row for each action on each event of an event session. |
-| `sys.database_event_session_events` |Returns a row for each event in an event session. |
-| `sys.database_event_session_fields` |Returns a row for each customize-able column that was explicitly set on events and targets. |
-| `sys.database_event_session_targets` |Returns a row for each event target for an event session. |
-| `sys.database_event_sessions` |Returns a row for each event session in the database. |
+| [sys.database_event_session_actions](/sql/relational-databases/system-catalog-views/sys-database-event-session-actions-azure-sql-database) |Returns a row for each action on each event of an event session. |
+| [sys.database_event_session_events](/sql/relational-databases/system-catalog-views/sys-database-event-session-events-azure-sql-database) |Returns a row for each event in an event session. |
+| [sys.database_event_session_fields](/sql/relational-databases/system-catalog-views/sys-database-event-session-fields-azure-sql-database) |Returns a row for each customize-able column that was explicitly set on events and targets. |
+| [sys.database_event_session_targets](/sql/relational-databases/system-catalog-views/sys-database-event-session-targets-azure-sql-database) |Returns a row for each event target for an event session. |
+| [sys.database_event_sessions](/sql/relational-databases/system-catalog-views/sys-database-event-sessions-azure-sql-database) |Returns a row for each event session in the database. |
 
 In Microsoft SQL Server, similar catalog views have names that include *.server\_* instead of *.database\_*. The name pattern is like `sys.server_event_%`.
 
@@ -84,11 +84,11 @@ Azure SQL Database has [dynamic management views (DMVs)](/sql/relational-databas
 
 | Name of DMV | Description |
 |:--- |:--- |
-| `sys.dm_xe_database_session_event_actions` |Returns information about event session actions. |
-| `sys.dm_xe_database_session_events` |Returns information about session events. |
-| `sys.dm_xe_database_session_object_columns` |Shows the configuration values for objects that are bound to a session. |
-| `sys.dm_xe_database_session_targets` |Returns information about session targets. |
-| `sys.dm_xe_database_sessions` |Returns a row for each event session that is scoped to the current database. |
+| [sys.dm_xe_database_session_event_actions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-database-session-event-actions-azure-sql-database) |Returns information about event session actions. |
+| [sys.dm_xe_database_session_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-database-session-events-azure-sql-database) |Returns information about session events. |
+| [sys.dm_xe_database_session_object_columns](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-database-session-object-columns-azure-sql-database) |Shows the configuration values for objects that are bound to a session. |
+| [sys.dm_xe_database_session_targets](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-database-session-targets-azure-sql-database) |Returns information about session targets. |
+| [sys.dm_xe_database_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-database-sessions-azure-sql-database) |Returns a row for each event session that is scoped to the current database. |
 
 In Microsoft SQL Server, similar catalog views are named without the *\_database* portion of the name, such as:
 
@@ -98,10 +98,10 @@ In Microsoft SQL Server, similar catalog views are named without the *\_database
 
 For extended events there are additional DMVs that are common to Azure SQL Database, Azure SQL Managed Instance, and Microsoft SQL Server:
 
-- `sys.dm_xe_map_values`
-- `sys.dm_xe_object_columns`
-- `sys.dm_xe_objects`
-- `sys.dm_xe_packages`
+- [sys.dm_xe_map_values](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-map-values-transact-sql)
+- [sys.dm_xe_object_columns](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql)
+- [sys.dm_xe_objects](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)
+- [sys.dm_xe_packages](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)
 
 <a name="sqlfindseventsactionstargets" id="sqlfindseventsactionstargets"></a>
 

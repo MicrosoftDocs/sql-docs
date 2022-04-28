@@ -28,7 +28,6 @@ The following table lists the features of Azure SQL Database that are currently 
 
 | Feature | Details |
 | ---| --- |
-| [Change data capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) | Change data capture (CDC) lets you track all the changes that occur on a database. Though this feature has been available for SQL Server for quite some time, using it with Azure SQL Database is currently in preview. |
 | [Elastic jobs](elastic-jobs-overview.md) | The elastic jobs feature is the SQL Server Agent replacement for Azure SQL Database as a PaaS offering.  |
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
 | [Elastic transactions](elastic-transactions-overview.md) | Elastic transactions allow you to execute transactions distributed among cloud databases in Azure SQL Database. |
@@ -47,6 +46,7 @@ The following table lists the features of Azure SQL Database that have transitio
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+| [Change data capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) | April 2022 | Change data capture (CDC) lets you track all the changes that occur on a database. Though this feature has been available for SQL Server for quite some time, using it with Azure SQL Database is now generally available. | 
 | [Zone redundant configuration for General Purpose tier](high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability) | April 2022 | The zone redundant configuration feature utilizes [Azure Availability Zones](/azure/availability-zones/az-overview#availability-zones) to replicate databases across multiple physical locations within an Azure region. By selecting [zone redundancy](high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability), you can make your provisioned and serverless General Purpose databases and elastic pools resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic.|
 | [Maintenance window](../database/maintenance-window.md)| March 2022 | The maintenance window feature allows you to configure maintenance schedule for your Azure SQL Database. [Maintenance window advance notifications](../database/advance-notifications.md), however, are in preview.|
 | [Storage redundancy for Hyperscale databases](automated-backups-overview.md#configure-backup-storage-redundancy) | March 2022 |  When creating a Hyperscale database, you can choose your preferred storage type: read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS) Azure standard storage. The selected storage redundancy option will be used for the lifetime of the database for both data storage redundancy and backup storage redundancy. |
@@ -64,6 +64,7 @@ Learn about significant changes to the Azure SQL Database documentation.
 | Changes | Details |
 | --- | --- |
 | **General Purpose tier Zone redundancy GA** | Enabling zone redundancy for your provisioned and serverless General Purpose databases and elastic pools is now generally available in select regions. To learn more, including region availability see [General Purpose zone redundancy](high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability). |
+| **Change data capture GA** | Change data capture (CDC) lets you track all the changes that occur on a database. Though this feature has been available for SQL Server for quite some time, using it with Azure SQL Database is now generally available. To learn more, see [Change data capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server).  | 
 
 ### March 2022
 

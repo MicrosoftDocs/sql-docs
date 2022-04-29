@@ -406,7 +406,7 @@
           "redirect_document_id": true
         },
         {
-          "source_path_from_root": "/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview.md",
+          "source_path_from_root": "/azure-sql/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview.md",
           "redirect_url": "/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview",
           "redirect_document_id": true
         },

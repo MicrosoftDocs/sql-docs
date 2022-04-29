@@ -446,7 +446,7 @@
           "redirect_document_id": true
         },
         {
-          "source_path": "/azure-sql/virtual-machines/windows/performance-guidelines-best-practices.md",
+          "source_path_from_root": "/azure-sql/virtual-machines/windows/performance-guidelines-best-practices.md",
           "redirect_url": "/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist",
           "redirect_document_id": false
         },
@@ -525,11 +525,6 @@
           "redirect_url": "/azure/azure-sql/database/scripts/auditing-threat-detection-cli",
           "redirect_document_id": false
         },
-        {
-          "source_path_from_root": "/azure-sql/database/scripts/sql-database-add-elastic-pool-to-failover-group-cli.md",
-          "redirect_url": "/azure/azure-sql/database/scripts/add-elastic-pool-to-failover-group-cli",
-          "redirect_document_id": false
-        },    
         {
           "source_path_from_root": "/azure-sql/database/scripts/sql-database-add-elastic-pool-to-failover-group-cli.md",
           "redirect_url": "/azure/azure-sql/database/scripts/add-elastic-pool-to-failover-group-cli",

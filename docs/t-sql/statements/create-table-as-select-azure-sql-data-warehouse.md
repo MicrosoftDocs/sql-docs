@@ -98,9 +98,10 @@ For details, see the [Arguments section](./create-table-azure-sql-data-warehouse
 The CTAS statement requires a distribution option and does not have default values. This is different from CREATE TABLE which has defaults. 
 
 `DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (Preview) 
-Distributes the rows based on the hash values of up to 8 columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance.  To enable this feature, set the database compatibility level to 9000 to join the preview.  Check  [ALTER DATABSE SCOPED CONFIGURATION](https://docs.microsoft.com/en-us/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-ver15) for details.
+Distributes the rows based on the hash values of up to 8 columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance.  To enable this feature, set the database compatibility level to 9000 to join the preview.  Check  [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md) for details.
 
-> [!NOTE] To load data into a table that's hash distributed on multiple columns, use CTAS statement and the data source needs be a Synapse SQL table.  
+> [!NOTE] 
+> To load data into a table that's hash distributed on multiple columns, use CTAS statement and the data source needs be a Synapse SQL table.  
 
 For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. 
 

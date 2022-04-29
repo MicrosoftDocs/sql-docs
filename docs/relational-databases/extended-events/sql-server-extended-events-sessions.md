@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ## Session States  
  The following illustration shows the various states of an Extended Events session.  
 
-![Extended event session state](../../relational-databases/extended-events/media/xesessionstate.png "Extended event session state")
+![Extended Event session state](../../relational-databases/extended-events/media/xesessionstate.png "Extended Event session state")
 
  Referring to the preceding figure, note that session state changes as the different DDL commands are issued for an event session. The following table describes these changes in state.  
   

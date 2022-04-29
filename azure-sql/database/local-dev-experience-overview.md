@@ -8,13 +8,30 @@ author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
 ms.topic: overview 
-ms.date: 04/28/2022
-
-
+ms.date: 04/29/2022
 ---
 
 # What is the local development experience for Azure SQL Database?
 
+The Azure SQL Database local development experience empowers developers and database professionals to design, edit, build/validate, publish, and run database schemas for databases in Azure SQL Database using a containerized environment. The Azure SQL Database local development experience provides extensions for VSCode and Azure Data Studio that allow users to source control database projects and work offline when needed. The local development experience offers close fidelity with the Azure SQL Database public service. The Azure SQL Database emulator can also be used as part of Continuous Integration and Continuous Deployment (CI/CD) processes to automate database validation and testing.
+
+## VSCode and Azure Data Studio extensions
+
+You can use the Azure SQL Database local development experience by installing two extensions. These extensions are available for both VSCode or Azure Data Studio. 
+
+The **Azure SQL Database extension** enables you to connect and run queries and scripts against a database. The database may be running in the Azure SQL Database emulator locally, or it may be a database in the global Azure SQL Database service.
+
+The **SQL Database Projects extension** enables you to capture an existing database schema and/or design new database objects using a declarative database design model. You can commit database schema to version control. You can also publish database schema to a database running in the Azure SQL Database emulator, or to a database running in the global Azure SQL Database service.
+
+Learn more in [VSCode and Azure Data Studio extensions for the Azure SQL Database local development experience](local-dev-experience-extensions.md).
+
+## Azure SQL Database emulator
+
+The Azure SQL Database emulator is a containerized database. Developers and database professionals can pull the Azure SQL Database emulator from an image in the Microsoft Container registry and run it on their own workstation. The Azure SQL Database emulator enables faster local and offline development workflows for Azure SQL Database.
+
+The Azure SQL Database emulator can also be used as part of local or hosted CI/CD pipelines to support unit and integration testing, without the need to use the global Azure SQL Database cloud service.
+
+Learn more in [Introducing the Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md).
 
 ## Next steps
 

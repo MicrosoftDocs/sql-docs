@@ -215,7 +215,7 @@ Update:
 UPDATE STATISTICS ... WITH AUTO_DROP = ON
 ```
 
-For more information see [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md#auto_drop)
+For more information see [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md#auto_drop---on--off-)
 
 ### INCREMENTAL  
 

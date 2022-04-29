@@ -32,8 +32,6 @@ The name of the update package can vary and may include a language, edition, and
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>
     ```
 
-    [!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
-
 - Setup can integrate the latest product updates with the main product installation so that the main product and its applicable updates are installed at the same time. You can prepare an installation of database engine instance to include product update: 
 
     ```

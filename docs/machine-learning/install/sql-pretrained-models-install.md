@@ -39,6 +39,8 @@ You must have administrator rights on the computer and SQL Server to add pre-tra
 
 External scripts must be enabled and SQL Server LaunchPad service must be running. Installation instructions provide the steps for enabling and verifying these capabilities. 
 
+Download and install the latest cumulative update for your version of SQL Server. See the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+
 ::: moniker range=">=sql-server-2017"
 [MicrosoftML R package](../r/ref-r-microsoftml.md) or [microsoftml Python package](../python/ref-py-microsoftml.md) contain the pre-trained models.
 
@@ -74,12 +76,18 @@ If the models are already installed, skip ahead to the [validation step](#verify
 
 ## Download the installation script
 
-Click [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) to download the file **Install-MLModels.ps1**.
+Visit [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) to download the file **Install-MLModels.ps1**.
 
 ## Execute with elevated privileges
 
 1. Start PowerShell. On the task bar, right-click the PowerShell program icon and select **Run as administrator**.
-2. Enter a fully-qualified path to the installation script file and include the instance name. Assuming the Downloads folder and a default instance, the command might look like this:
+2. The recommended execution policy during installation is "RemoteSigned". For more information on setting the PowerShell execution policy, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy). For example:
+
+   ```powershell
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+   ```
+
+3. Enter a fully-qualified path to the installation script file and include the instance name. Assuming the Downloads folder and a default instance, the command might look like this:
 
    ```powershell
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER

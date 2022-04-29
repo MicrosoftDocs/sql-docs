@@ -1,7 +1,7 @@
 ---
 title: Install on Linux
-titleSuffix: SQL Server 2019 Machine Learning Services
-description: 'Learn how to install SQL Server 2019 Machine Learning Services on Linux: Red Hat, Ubuntu, and SUSE.'
+titleSuffix: SQL Server Machine Learning Services
+description: 'Learn how to install SQL Server Machine Learning Services on Linux: Red Hat, Ubuntu, and SUSE.'
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 manager: rothja
@@ -9,21 +9,22 @@ ms.date: 05/24/2022
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
-monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
+monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ms.custom:
   - intro-installation
 ---
-# Install SQL Server 2019 Machine Learning Services (Python and R) on Linux
+# Install SQL Server Machine Learning Services (Python and R) on Linux
 
-[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
+[!INCLUDE [SQL Server 2022 - Linux](../includes/applies-to-version/sqlserver2022-linux.md)]
 
 This article guides you in the installation of [SQL Server Machine Learning Services](../machine-learning//sql-server-machine-learning-services.md) on Linux. Python and R scripts can be executed in-database using Machine Learning Services.
 
 You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#supportedplatforms).
 
+::: moniker range=">=sql-server-linux-ver15"
 > [!IMPORTANT]
-> Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. Refer to [Install SQL Server 2022 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning-sql-2022.md).
-
+> This article refers to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. For [!INCLUDE[sssql22-md](../../includes/sssql19-md.md)], see to [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning-sql-2022.md).
+::: moniker-end
 
 <a name="mro"></a>
 
@@ -33,13 +34,6 @@ You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SU
 
 * Check the SQL Server Linux repositories for the Python and R extensions. 
   If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
-
-* (R only) Microsoft R Open (MRO) provides the base R distribution for the R feature in SQL Server and is a prerequisite for using RevoScaleR, MicrosoftML, and other R packages installed with Machine Learning Services.
-    * The required version is MRO 3.5.2.
-    * Choose from the following two approaches to install MRO:
-        * Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.5.2) if you want this approach.
-        * Register the **packages.microsoft.com** repo as described below to install the MRO distribution: microsoft-r-open-mro and microsoft-r-open-mkl. 
-    * See the installation sections below for how to install MRO.
 
 * You should have a tool for running T-SQL commands. 
 
@@ -51,6 +45,7 @@ On an internet-connected device, packages are downloaded and installed independe
 
 Available installation packages:
 
+TODO DO WE NEED THIS?
 | Package name | Applies-to | Description |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | All | Extensibility framework used to run Python and R. |
@@ -64,7 +59,7 @@ Available installation packages:
 
 <a name="RHEL"></a>
 
-## Install on RHEL
+## Install on RHEL TODO
 
 Follow the steps below to install SQL Server Machine Learning Services on Red Hat Enterprise Linux (RHEL).
 
@@ -134,80 +129,311 @@ sudo yum install mssql-mlservices-packages-r-9.4.7*
 
 ## Install on Ubuntu
 
-Follow the steps below to install SQL Server Machine Learning Services on Ubuntu.
+Refer to [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md) for SQL Server 2022 on Linux installation. Then use the following steps to install SQL Server Machine Learning Services on Ubuntu:
 
-### Install MRO on Ubuntu
+ - [Install R on Ubuntu](#install-r-on-ubuntu)
+ - [Install Python on Ubuntu](#install-python-on-ubuntu)
 
-The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as mssql-mlservices-mml-r, will automatically include MRO as a package dependency.
+### Install R on Ubuntu
 
-```bash
-# Install as root
-sudo su
-
-# Optionally, if your system does not have the https apt transport option
-apt-get install apt-transport-https
-
-# Set the location of the package repo the "prod" directory containing the distribution.
-# This example specifies 20.04. Replace with 16.04 or 14.04 if you want those versions.
-wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
-
-# Register the repo
-dpkg -i packages-microsoft-prod.deb
-
-# Update packages on your system (required), including MRO installation
-sudo apt-get update
-```
-
-Installation Options for Python and R:
-
-*  Install language support based on your requirements (single or multiple languages).
-*  The *full installation* provides all available features the including pre-trained machine learning models.
-*  The *minimal installation* excludes the models but still has all of the functionality.
+The following commands register the repository providing the R language platform. 
 
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. 
 
-### Full installation 
+1. Begin installation as root.
 
-Includes:
-*  Open-source Python
-*  Open-source R
-*  Extensibility framework
-*  Microsoft-openmpi
-*  Python extensions
-*  R extensions
-*  Machine learning libraries
-*  Pre-trained models for Python and R
+    ```bash
+    sudo su
+    ```
 
-```bash
-# Install as root or sudo
-# Add everything (all R, Python)
-# There is no asterisk in this full install
-sudo apt-get install mssql-mlservices-mlm-py 
-sudo apt-get install mssql-mlservices-mlm-r 
-```
+2. Optionally, if your system does not have the `https apt transport` option:
 
-### Minimum installation 
+    ```bash
+    apt-get install apt-transport-https
+    ```
 
-Includes:
-*  Open-source Python
-*  Open-source R
-*  Extensibility framework
-*  Microsoft-openmpi
-*  Core Revo* libraries
-*  Machine learning libraries
+3. Set the location of the package repo the "prod" directory containing the distribution. This example specifies 20.04. Replace with 16.04 or 14.04 if you want those versions.
+
+    ```bash
+    wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
+    ```
+
+4. Register the repository.
 
 ```bash
-# Install as root or sudo
-# Minimum install of R, Python
-# No asterisk
-sudo apt-get install mssql-mlservices-packages-py
-sudo apt-get install mssql-mlservices-packages-r
+dpkg -i packages-microsoft-prod.deb
 ```
+
+5. Update packages on your system (required), including MRO installation
+
+    ```bash
+    sudo apt-get update
+    ```
+
+6. Install R 4.2 dependencies.
+
+```bash
+sudo apt-get update -y
+sudo apt-get install -y pcre2-utils
+sudo apt-get install -y libpcre2-dev
+sudo apt-get install -y libx11-dev xorg-dev libcurl4-openssl-dev
+sudo apt-get install -y libcurl4-gnutls-dev
+sudo apt-get install -y libncurses5-dev libncursesw5-dev
+```
+
+7. Download a recent R-Devel (4.2 version) build for Linux.
+
+    ```bash
+    Rversion=4.2
+    sudo apt-get update -y
+    sudo apt-get install -y r-base r-base-dev
+    wget https://stat.ethz.ch/R/daily/R-devel.tar.gz
+    tar -xf R-devel.tar.gz
+    DIR=$PWD
+    ```
+
+8. Create a directory to copy the R Runtime.
+
+    ```bash
+    mkdir -p $DIR/io/runtime/R$Rversion/
+    cd $DIR/R-devel
+    ```
+
+9. Enable the R shared library.
+
+    ```bash
+    ./configure --prefix=$DIR/io/runtime/R$Rversion --enable-R-shlib
+    make
+    make prefix=$DIR/io/runtime/R$Rversion install
+    export PATH=$DIR/io/runtime/R$Rversion/lib/R/bin:$PATH
+    ```
+
+10. Prepare RevoScaleR dependencies by retrieving the installation key, installing it, and then removing the public key. 
+
+    ```bash
+    cd /tmp
+    # Get the key
+    wget https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS-2019.PUB
+    # Install key
+    apt-key add GPG-PUB-KEY-INTEL-SW-PRODUCTS-2019.PUB
+    # Remove the public key file 
+    rm GPG-PUB-KEY-INTEL-SW-PRODUCTS-2019.PUB
+    # exit the root shell
+    ```
+
+11. Install the RevoScaleR dependencies.
+
+    ```bash
+    sudo sh -c 'echo deb https://apt.repos.intel.com/mkl all main > /etc/apt/sources.list.d/intel-mkl.list'
+    sudo apt-get update
+    
+    sudo apt-get install -y intel-mkl-2019.2-057
+    ```
+
+12. Install CompatibilityAPI and RevoScale R dependencies. There are two options to perform this, from the R terminal or shell.
+
+    ```R
+    # R Terminal
+    install.packages("iterators")
+    install.packages("foreach")
+    install.packages("R6")
+    install.packages("jsonlite")
+    ```
+
+    ```Shell
+    which R
+    cd /io/runtime/R4.2/lib/R/bin
+    ./R -e "install.packages('iterators',repos = 'http://cran.us.r-project.org')"
+    ./R -e "install.packages('foreach',repos = 'http://cran.us.r-project.org')"
+    ./R -e "install.packages('R6',repos = 'http://cran.us.r-project.org')"
+    ./R -e "install.packages('jsonlite',repos = 'http://cran.us.r-project.org')"
+    ```
+
+13. Download the [CompatibilityAPI for Linux](https://go.microsoft.com/fwlink/?LinkID=2193925).
+
+14. Install the CompatibilityAPI for Linux, using the following shell script.
+
+    ```shell
+    ./R -e "install.packages('CompatibilityAPI', repos = NULL, type='source')"
+    ```
+
+15. Download [RevoScaleR Linux](https://go.microsoft.com/fwlink/?LinkID=2193829).
+
+16. Install RevoScaleR Linux.
+
+    ```shell
+    ./R -e "install.packages('RevoScaleR', repos = NULL, type='source')"
+    ```
+
+17. Provision permissions of the BxlServer.
+
+TODO Bash or Shell?
+    ```bash
+    chmod +x /io/runtime/R4.2/lib/R/library/RevoScaleR/rxLibs/x64/BxlServer
+    ```
+
+18. Copy necessary libraries.
+    
+    ```bash
+    sudo cp /opt/intel/compilers_and_libraries_2019.2.187/linux/mkl/lib/intel64_lin/libmkl_gnu_thread.so /io/runtime/R4.2/lib/R/library/RevoScaleR/rxLibs/x64/libmkl_gnu_thread.so
+    sudo cp /opt/intel/compilers_and_libraries_2019.2.187/linux/mkl/lib/intel64_lin/libmkl_gf_lp64.so /io/runtime/R4.2/lib/R/library/RevoScaleR/rxLibs/x64/libmkl_gf_lp64.so
+    sudo cp /opt/intel/compilers_and_libraries_2019.2.187/linux/mkl/lib/intel64_lin/libmkl_core.so /io/runtime/R4.2/lib/R/library/RevoScaleR/rxLibs/x64/libmkl_core.so
+    sudo cp /opt/intel/compilers_and_libraries_2019.2.187/linux/mkl/lib/intel64_lin/libmkl_vml_mc3.so /io/runtime/R4.2/lib/R/library/RevoScaleR/rxLibs/x64/libmkl_vml_mc3.so
+    sudo cp /opt/intel/compilers_and_libraries_2019.2.187/linux/mkl/lib/intel64_lin/libmkl_vml_def.so /io/runtime/R4.2/lib/R/library/RevoScaleR/rxLibs/x64/libmkl_vml_def.so
+    
+    sudo cp /opt/intel/compilers_and_libraries_2019.2.187/linux/mkl/lib/intel64_lin/libmkl_def.so /io/runtime/R4.2/lib/R/library/RevoScaleR/rxLibs/x64/libmkl_def.so
+    sudo cp /opt/intel/compilers_and_libraries_2019.2.187/linux/mkl/lib/intel64_lin/libmkl_avx2.so /io/runtime/R4.2/lib/R/library/RevoScaleR/rxLibs/x64/libmkl_avx2.so
+    ```
+
+19. Verify RevoScaleR installation from the R terminal.
+
+    ```r
+    library("RevoScaleR")
+    ```
+
+20. Configure the installed R runtime with SQL Server for Linux.
+
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf set extensibility rbinpath /io/runtime/R4.2/lib/R/bin/R
+    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /io/runtime/R4.2/
+    
+    systemctl restart mssql-launchpadd.service
+    ```
+
+21. Configure SQL Server for Linux to allow external scripts using the `sp_configure` system stored procedure.
+
+    ```sql
+    EXEC sp_configure 'external scripts enabled', 1;
+    GO
+    RECONFIGURE
+    GO
+    ```
+
+22. Verify the installation by executing a simple T-SQL command to return the version of R:
+
+    ```sql
+    EXEC sp_execute_external_script @script=N'print(R.version)',@language=N'R';
+    GO
+    ```
+
+### Install Python on Ubuntu
+
+1. To install Python 3.10, first install the dependency packages necessary to configure Python.
+    
+    ```bash
+    sudo apt-get update -y
+    sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev
+    sudo apt-get install -y build-essential checkinstall
+    ```
+
+2. There are two options to install python, either from the source or using `apt install`:
+
+    To install from the source:
+    
+    ```bash
+    wget https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz
+    tar -xf Python-3.10.0.tgz
+    
+    cd Python-3.10.0
+    ./configure --enable-shared --libdir=/usr/lib && make && make altinstall
+    ```
+    
+    To install using `apt install`:
+    
+    ```bash
+    sudo apt install -y software-properties-common 
+    sudo add-apt-repository ppa:deadsnakes/ppa -y
+    sudo apt install  -y python3.10 libpython3.10
+    sudo apt install  -y python3.10-distutils
+    curl -sS  https://bootstrap.pypa.io/get-pip.py | python3.10
+    sudo python3.10 -m pip install /home/jarupatj/temp/revoscalepy-10.0.0-py3-none-any.whl
+    ```
+
+3. Prepare revoscalepy dependencies by retrieving the installation key, installing it, and then removing the public key. 
+
+    ```bash
+    cd /tmp
+    # now get the key:
+    wget https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS-2019.PUB
+    # now install that key
+    apt-key add GPG-PUB-KEY-INTEL-SW-PRODUCTS-2019.PUB
+    # now remove the public key file exit the root shell
+    rm GPG-PUB-KEY-INTEL-SW-PRODUCTS-2019.PUB
+    ```
+
+4. Install revoscalepy dependencies.
+
+    ```bash
+    sudo sh -c 'echo deb https://apt.repos.intel.com/mkl all main > /etc/apt/sources.list.d/intel-mkl.list'
+    sudo apt-get update
+    sudo apt-get install -y intel-mkl-2019.2-057
+    ```
+
+5. Download [revoscalepy for Linux](https://go.microsoft.com/fwlink/?LinkID=2193830).
+
+6. Install revoscalepy for the root user.
+
+    TODO WHAT IF NOT IN A CONTAINER?
+    
+    ```bash
+    # From host copy to docker container
+    docker cp drop_build_main_linux.zip <container id>:/
+    
+    #Back on docker container
+    unzip drop_build_main_linux.zip
+    
+    sudo -H pip3.10 install /drop_build_main_linux/revoscalepy/Linux/revoscalepy-10.0.0-py3-none-any.whl
+    ```
+
+7. Verify the revoscalepy installation from the python terminal. Verify the library can be imported.
+
+    ```python
+    import revoscalepy
+    ```
+
+8. Configure the installed python runtime with SQL Server. This step will differ based on what option you chose in step 2.
+
+    To verify the installation from source:
+
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /usr/local/bin/python3.10
+    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/local/
+    ```
+
+    To verify the installation from `apt install`:
+
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /usr/bin/python3.10
+    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/local/:/usr/local/lib/python3.10/dist-packages
+    ```
+
+9. Restart the Launchpad service.
+
+    ```bash
+    systemctl restart mssql-launchpadd.service
+    ```
+    
+10. Configure SQL Server for Linux to allow external scripts using the `sp_configure` system stored procedure.
+
+    ```sql
+    EXEC sp_configure 'external scripts enabled', 1;
+    GO
+    RECONFIGURE
+    GO
+    ```
+
+11. Verify the installation by executing a simple T-SQL command to return the version of python:
+
+    ```sql
+    EXEC sp_execute_external_script @script=N'import sys;print(sys.version)',@language=N'Python';
+    GO
+    ```
+
 
 <a name="SLES"></a>
 
-## Install on SLES
+## Install on SLES TODO
 
 Follow the steps below to install SQL Server Machine Learning Services on SUSE Linux Enterprise Server (SLES).
 

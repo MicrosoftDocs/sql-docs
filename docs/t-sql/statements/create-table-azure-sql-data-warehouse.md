@@ -62,7 +62,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
     {
-        DISTRIBUTION = HASH ( distribution_column_name )
+        DISTRIBUTION = HASH ( distribution_column_name ) 
+      | DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] ) -- Preview
       | DISTRIBUTION = ROUND_ROBIN -- default for Azure Synapse Analytics
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
     }
@@ -152,6 +153,8 @@ To understand how to choose the best distribution method and use distributed tab
 
 `DISTRIBUTION = HASH` ( *distribution_column_name* )
 Assigns each row to one distribution by hashing the value stored in *distribution_column_name*. The algorithm is deterministic, which means it always hashes the same value to the same distribution.  The distribution column should be defined as NOT NULL because all rows that have NULL are assigned to the same distribution.
+
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (Preview) Distributes the rows based on the hash values of up to 8 columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. To enable this feature, set the database compatibility level to 9000 to join the preview.  Check  [ALTER DATABSE SCOPED CONFIGURATION](https://docs.microsoft.com/en-us/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-ver15) for details.
 
 `DISTRIBUTION = ROUND_ROBIN`
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
@@ -467,9 +470,9 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> G. Create a hash-distributed table
+### <a name="HashDistributed"></a> G. Create a table that's hash-distributed on multiple columns (preview)
 
- The following example creates the same table as the previous example. However, for this table, rows are distributed (on the `id` column) instead of randomly spread like a ROUND_ROBIN table. The table is created with a CLUSTERED COLUMNSTORE INDEX, which gives better performance and data compression than a heap or rowstore clustered index.  
+  The following example creates the same table as the previous example. However, for this table, rows are distributed (on `id` and `zipCode` columns). The table is created with a CLUSTERED COLUMNSTORE INDEX, which gives better performance and data compression than a heap or rowstore clustered index.  
   
 ```sql
 CREATE TABLE myTable
@@ -480,7 +483,7 @@ CREATE TABLE myTable
   )  
 WITH  
   (   
-    DISTRIBUTION = HASH (id),   
+    DISTRIBUTION = HASH (id, zipCode),   
     CLUSTERED COLUMNSTORE INDEX  
   );  
 ```  

@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'Lesson 3: Beginning a Conversation and Transmitting Messages'
 description: "In this lesson, you will learn to complete a simple request-reply message cycle in a system configured with an internal activation stored procedure."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -23,7 +23,7 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
 [!INCLUDE [SQL Server Service Broker AdventureWorks2008R2](../../includes/service-broker-adventureworks-2008-r2.md)]
 
 - Copy and paste the following code into a Query Editor window. Then, run it to switch context to the **AdventureWorks2008R2** database.
-- 
+
     ```sql
         USE AdventureWorks2008R2;
         GO
@@ -36,9 +36,9 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
     ```sql
         DECLARE @InitDlgHandle UNIQUEIDENTIFIER;
         DECLARE @RequestMsg NVARCHAR(100);
-        
+
         BEGIN TRANSACTION;
-        
+
         BEGIN DIALOG @InitDlgHandle
              FROM SERVICE
               [//AWDB/InternalAct/InitiatorService]
@@ -48,19 +48,19 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
               [//AWDB/InternalAct/SampleContract]
              WITH
                  ENCRYPTION = OFF;
-        
+
         -- Send a message on the conversation
         SELECT @RequestMsg =
                N'<RequestMsg>Message for Target service.</RequestMsg>';
-        
+
         SEND ON CONVERSATION @InitDlgHandle
-             MESSAGE TYPE 
+             MESSAGE TYPE
              [//AWDB/InternalAct/RequestMessage]
              (@RequestMsg);
-        
+
         -- Diplay sent request.
         SELECT @RequestMsg AS SentRequestMsg;
-        
+
         COMMIT TRANSACTION;
         GO
     ```
@@ -73,27 +73,27 @@ In this lesson, you will learn to complete a simple request-reply message cycle 
 
 - Copy and paste the following code into a Query Editor window. Then, run it to receive the reply message and end the conversation. The RECEIVE statement retrieves the reply message from the **InitiatorQueueIntAct**. The END CONVERSATION statement ends the initiator side of the conversation and sends an **EndDialog** message to the target service. The last SELECT statement displays the text of the reply message so that you can confirm it is the same as what was sent in the previous step.
 
-    ```sql
+   ```sql
         DECLARE @RecvReplyMsg NVARCHAR(100);
         DECLARE @RecvReplyDlgHandle UNIQUEIDENTIFIER;
-        
+
         BEGIN TRANSACTION;
-        
+
         WAITFOR
         ( RECEIVE TOP(1)
             @RecvReplyDlgHandle = conversation_handle,
             @RecvReplyMsg = message_body
             FROM InitiatorQueueIntAct
         ), TIMEOUT 5000;
-        
+
         END CONVERSATION @RecvReplyDlgHandle;
-        
+
         -- Display recieved request.
         SELECT @RecvReplyMsg AS ReceivedReplyMsg;
-        
+
         COMMIT TRANSACTION;
         GO
-    ```
+   ```
 
 ### End the target side of the conversation
 

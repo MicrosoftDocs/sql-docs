@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 3/31/2022
+ms.date: 4/28/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -31,7 +31,7 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
 <!-- In addition to moniker ranges for SQL Server, SQL DB, APS, Synapse, and SQL MI, 
-     this article has version moniker ranges for SQL Server 2016, 2017, and 2019 due to the syntax differences between each. 
+     this article has version moniker ranges for SQL Server 2016, 2017 (Windows and Linux), and 2019 due to the syntax differences between each. 
      Use of the version selector above the TOC is important for this document.-->
 <!-- At this time the Azure SQL Edge moniker azuresqledge-current is not functional in sql-docs. 
      Per PMs, we have added Azure SQL Edge content to Azure SQL DB range. -->
@@ -71,12 +71,12 @@ Creates an external data source for PolyBase queries. External data sources are 
 - Data virtualization and data load using [PolyBase][intro_pb]
 - Bulk load operations using `BULK INSERT` or `OPENROWSET`
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+> [!NOTE]
+> This syntax varies between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server. To view the features of SQL Server 2019 and later, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver15&preserve-view=true#syntax).
 
 ## <a id="syntax"></a> Syntax for SQL Server 2016
 
-> [!NOTE]
-> This syntax varies between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server. To view the features of SQL Server 2019, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver15&preserve-view=true#syntax).
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
@@ -130,10 +130,7 @@ To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (
 
 #### TYPE = *[ HADOOP ]*
 
-Specifies the type of the external data source being configured. This parameter isn't always required, and should only be specified as `HADOOP` when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account. 
-
-> [!NOTE]
-> `TYPE` should be set to `HADOOP` even when accessing Azure Storage. 
+Specifies the type of the external data source being configured. In SQL Server 2016, this parameter is always required, and should only be specified as `HADOOP`. Supports connections to Cloudera CDH, Hortonworks HDP, or an Azure Storage account. The behavior of this parameter is different in later versions of SQL Server.
 
 For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage account, see [Create external data source to access data in Azure Storage using the wasb:// interface](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface) <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
 
@@ -300,35 +297,34 @@ WITH
 ::: moniker range="=sql-server-2017||=sql-server-linux-2017"
 
 ## Overview: SQL Server
-[!INCLUDE[SQL2016+](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE[SQL2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support these primary use cases:
 
 - Data virtualization and data load using [PolyBase][intro_pb]
 - Bulk load operations using `BULK INSERT` or `OPENROWSET`
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
-
-## <a id="syntax"></a> Syntax for SQL Server 2017
-
 ::: moniker-end
 
 ::: moniker range="=sql-server-linux-2017"
 
 > [!NOTE]
-> This syntax varies between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server. To view the features of SQL Server 2019, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver15&preserve-view=true#syntax).
+> This syntax varies between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server. To view the features of SQL Server 2019 and later, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver15&preserve-view=true#syntax).
 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017"
 
 > [!NOTE]
-> This syntax varies between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server. To view the features of SQL Server 2019, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true#syntax).
-
+> This syntax varies between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server. To view the features of SQL Server 2019 and later, see [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true#syntax).
 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sql-server-linux-2017"
+
+## <a id="syntax"></a> Syntax for SQL Server 2017
+  
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
@@ -594,22 +590,22 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15"
+::: moniker range=">=sql-server-ver15"
 
 ## Overview: SQL Server
-[!INCLUDE[SQL2016+](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)] and later
 
 Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support these primary use cases:
 
 - Data virtualization and data load using [PolyBase][intro_pb]
 - Bulk load operations using `BULK INSERT` or `OPENROWSET`
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
-
-## <a id="syntax"></a> Syntax for SQL Server 2019
-
 > [!NOTE]
-> This syntax varies between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server. 
+> This syntax varies between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server. This content applies to SQL Server 2019 and later.
+
+## <a id="syntax"></a> Syntax for SQL Server 2019 and later
+
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>

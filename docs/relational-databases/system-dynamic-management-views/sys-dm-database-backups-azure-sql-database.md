@@ -29,13 +29,13 @@ monikerRange: "= azuresqldb-current"
 
 
 > [!NOTE]
-> sys.dm_database_backups is introduced as part of Backup History for Azure SQL Database which is currently in preview.
+> sys.dm_database_backups DMV is currently in preview and is available for all Azure SQL Database service tiers except Hyperscale tier.
 
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  
 |backup_file_id|**uniqueidentifier**|ID of the generated backup file. Not null|
 |database_guid|**uniqueidentifier**|Logical Database ID of the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] on which the operation is performed. Not Null.|
-|physical_database_name|**nvarchar(128)**|Name of the Physical [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] on which the operation is performed.Not Null|
+|physical_database_name|**nvarchar(128)**|Name of the Physical [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] on which the operation is performed. Not Null|
 |server_name|**nvarchar(128)**|Name of the Physical server on which the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] which is being backed up is present. Not Null.|
 |backup_start_date|**datetime2(7)**|Timestamp when the Backup operation started. Not Null.|
 |backup_finish_date|**datetime2(7)**|Timestamp when the Backup operation finished. Not Null.|

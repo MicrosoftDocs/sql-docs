@@ -1,12 +1,12 @@
-﻿---
+---
 title: 'Lesson 1: Creating the Base Conversation Objects'
 description: "In this lesson, you will learn to build all the objects that enable a database to support a conversation in the database"
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -65,10 +65,10 @@ In this lesson, you will learn to build all the objects that enable a database t
 ### Create the target queue and service
 
 - Copy and paste the following code into a Query Editor window. Then, run it to create the queue and service that is used for the target. Because queues are referenced from the same database in a manner similar to tables and views, queue names are formatted like table or view names. The CREATE SERVICE statement associates the service with the **TargetQueueIntAct**. Therefore, all messages that are sent to the service will be received into the **TargetQueueIntAct**. The CREATE SERVICE also specifies that only conversations that use the **//AWDB/InternalAct/SampleContract** created earlier can use the service as a target service.
- 
+
     ```sql
         CREATE QUEUE TargetQueueIntAct;
-        
+
         CREATE SERVICE
                [//AWDB/InternalAct/TargetService]
                ON QUEUE TargetQueueIntAct
@@ -82,7 +82,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
     ```sql
         CREATE QUEUE InitiatorQueueIntAct;
-        
+
         CREATE SERVICE
                [//AWDB/InternalAct/InitiatorService]
                ON QUEUE InitiatorQueueIntAct;
@@ -91,7 +91,7 @@ In this lesson, you will learn to build all the objects that enable a database t
 
 ## Next Steps
 
-You have successfully configured AdventureWorks 2008 R2 to support a conversation between the **//AWDB/InternalAct/InitiatorService** and the **//AWDB/InternalAct/TargetService**. Next, you will create a stored procedure to support internal activation on the target queue. See [Lesson 2: Creating an Internal Activation Procedure](lesson-2-creating-an-internal-activation-procedure.md).
+You have successfully configured AdventureWorks 2008 R2 to support a conversation between the **//AWDB/InternalAct/InitiatorService** and the **//AWDB/InternalAct/TargetService**. Next, you will create a stored procedure to support internal activation on the target queue. For more information, see [Lesson 2: Creating an Internal Activation Procedure](lesson-2-creating-an-internal-activation-procedure.md).
 
 ## See also
 

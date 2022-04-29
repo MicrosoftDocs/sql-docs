@@ -1,12 +1,12 @@
-﻿---
+---
 title: Troubleshooting Conversation Priorities
 description: "This topic provides suggestions for correcting common symptoms related to Service Broker conversation priorities."
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -46,7 +46,7 @@ A RECEIVE statement that has a WHERE clause that specifies a conversation group 
 
 ## Symptom: Messages Are Not Assigned the Expected Priority Level
 
-View **sys.conversation_endpoint** to see if the conversation endpoint was assigned the expected priority level. If it was not, use **sys.conversation_priorites** to review the properties specified for the conversation priorities in the database against the contract, local service, and remote service that is used for the conversation endpoint.
+View **sys.conversation_endpoint** to see whether the conversation endpoint was assigned the expected priority level. If it was not, use **sys.conversation_priorites** to review the properties specified for the conversation priorities in the database against the contract, local service, and remote service that is used for the conversation endpoint.
 
 ## See also
 

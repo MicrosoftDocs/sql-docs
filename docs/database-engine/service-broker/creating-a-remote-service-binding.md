@@ -4,9 +4,9 @@ description: "To exchange messages with Service Broker, you must create the appr
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
 ---
 
@@ -23,7 +23,7 @@ When a conversation is initiated, Service Broker checks to see whether a remote 
 
 ## Requesting Remote Service Binding
 
-Requests for remote service bindings use the message type **https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRemoteServiceBinding**. The message is in XML format, and contains the name of the service for which remote service binding information should be available.
+Requests for remote service bindings use the message type `https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRemoteServiceBinding`. The message is in XML format, and contains the name of the service for which remote service binding information should be available.
 
 For example, the following message is a request for a remote service binding to the service **http://Adventure-Works.com/Elsewhere**:
 

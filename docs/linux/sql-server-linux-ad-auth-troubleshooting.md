@@ -182,7 +182,7 @@ renew until 01/04/2022 20:11:16
 
 ### Enable Kerberos and security-based PAL logging
 
-You can enable `security.kerberos` and `security.ldap` logging to identify specific error messages in the PAL (Platform Abstraction Layer). Create a `logger.ini` file with the content shown below at `/var/opt/mssql/log`, restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and then reproduce the failure. The PAL's AD error and debug messages will be logged to `/var/opt/mssql/log/security.log`.
+You can enable `security.kerberos` and `security.ldap` logging to identify specific error messages in the PAL (Platform Abstraction Layer). Create a `logger.ini` file with the content shown below at `/var/opt/mssql/`, restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and then reproduce the failure. The PAL's AD error and debug messages will be logged to `/var/opt/mssql/log/security.log`.
 
 ```ini
 [Output:security]

@@ -1,8 +1,6 @@
 ---
-description: "The LEAST logical functions returns the minimum value from a list of one or more expressions."
 title: "LEAST (Transact-SQL)"
-ms.custom: ""
-ms.date: "03/11/2022"
+description: "The LEAST logical functions returns the minimum value from a list of one or more expressions."
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -14,12 +12,15 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "LEAST function"
-author: jmsteen
-ms.author: josteen
-ms.reviewer: wiassaf
+author: WilliamDAssafMSFT 
+ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "03/11/2022"
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || =azure-sqldw-latest"
 ---
 # Logical Functions - LEAST (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-svrless-poolonly.md)]
 
  This function returns the minimum value from a list of one or more expressions. 

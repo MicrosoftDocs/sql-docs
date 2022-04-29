@@ -10,7 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
+  - "quorum [SQL Server], Always On and WSFC quorum"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
+  - "failover clustering [SQL Server], Always On Availability Groups"
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma

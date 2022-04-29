@@ -113,6 +113,10 @@ sections:
       - question: Does advance notification cover all maintenance events? 
         answer: | 
           No, advance notifications focus only on planned maintenance events that can cause a service interruption. 
+          
+      - question: Can I set alerts on the instance or resource group level?
+        answer: | 
+          Advance notifications are configured through [Service Health alerts](../../../../azure-docs/articles/service-health/alerts-activity-log-service-notifications-portal.md). Service health alerts support configuration of subscription, resource type, and region. Therefore, it is not possible to configure notification on the resource group or instance level. 
 
 
 additionalContent: |

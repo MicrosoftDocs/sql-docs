@@ -32,44 +32,11 @@ first H2, if one exists. You can find listed examples in [Write quickstart]
 - <!-- prerequisite 2 -->
 - <!-- prerequisite n -->
 
-
 ## [Section 1 heading]
-<!-- Introduction paragraph -->
 
-1. Sign in to the [<service> portal](url).
-1. <!-- Step 2 -->
-1. <!-- Step n -->
-
-## [Section 2 heading]
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
-
-## [Section n heading]
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
-
-<!-- 7. Clean up resources
-Required. If resources were created during the quickstart. If no resources were created, 
-state that there are no resources to clean up in this section.
--->
 
 ## Clean up resources
 
-If you're not going to continue to use this application, delete
-<resources> with the following steps:
-
-1. From the left-hand menu...
-1. ...click Delete, type...and then click Delete
-
-<!-- 8. Next steps
-Required: A single link in the blue box format. Point to the next logical quickstart 
-or tutorial in a series, or, if there are no other quickstarts or tutorials, to some 
-other cool thing the customer can do. 
--->
 
 ## Next steps
 

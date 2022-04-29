@@ -15,7 +15,7 @@ ms.date: 04/29/2022
 
 
 
-# Next steps
+## Next steps
 
 Learn more about the local development experience for Azure SQL Database:
 

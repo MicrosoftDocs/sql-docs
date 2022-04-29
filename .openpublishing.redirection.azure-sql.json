@@ -529,21 +529,6 @@
           "source_path_from_root": "/azure-sql/database/scripts/sql-database-add-elastic-pool-to-failover-group-cli.md",
           "redirect_url": "/azure/azure-sql/database/scripts/add-elastic-pool-to-failover-group-cli",
           "redirect_document_id": false
-        },          
-        {
-          "source_path_from_root": "/azure/sql-database/sql-database-managed-instance-create-manage",
-          "redirect_url": "/azure/azure-sql/managed-instance/instance-create-quickstart",
-          "redirect_document_id": false
-        },          
-        {
-          "source_path_from_root": "/azure/sql-database/sql-database-single-database.md",
-          "redirect_url": "/azure/azure-sql/database/sql-database-paas-overview",
-          "redirect_document_id": false
-        },  
-        {
-          "source_path_from_root": "/azure/sql-database/sql-database-managed-instance.md",
-          "redirect_url": "/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview",
-          "redirect_document_id": false
         }
     ]
 }

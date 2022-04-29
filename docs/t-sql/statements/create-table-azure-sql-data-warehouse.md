@@ -154,7 +154,23 @@ To understand how to choose the best distribution method and use distributed tab
 `DISTRIBUTION = HASH` ( *distribution_column_name* )
 Assigns each row to one distribution by hashing the value stored in *distribution_column_name*. The algorithm is deterministic, which means it always hashes the same value to the same distribution.  The distribution column should be defined as NOT NULL because all rows that have NULL are assigned to the same distribution.
 
-`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (Preview) Distributes the rows based on the hash values of up to 8 columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. To enable this feature, set the database compatibility level to 9000 to join the preview.  Check [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md)) for details.
+`DISTRIBUTION = HASH ( [distribution_column_name [, ...n]] )` (***Preview***) 
+Distributes the rows based on the hash values of up to 8 columns, allowing for more even distribution of the base table data, reducing the data skew over time and improving query performance. 
+
+>[!note]
+> To enable this feature, join the preview by changing the database's compatibility level to 9000.  Check [ALTER DATABSE SCOPED CONFIGURATION](./alter-database-scoped-configuration-transact-sql.md)) for details.
+`  
+ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 9000;
+`
+> At any given time, you can run this command to opt-out the preview. 
+`
+ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = 0;
+`
+>This will disable the multi-column distribution (MCD) feature (preview).  Existing MCD tables will stay but become unreadable.  Queries over MCD tables will 
+>return an error:
+>Msg 105115, Level 16, State 1, Line 1
+>Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this >feature is disabled.
+>To regain access to MCD table data, opt-in the preview again.
 
 `DISTRIBUTION = ROUND_ROBIN`
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].

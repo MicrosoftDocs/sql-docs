@@ -286,11 +286,6 @@
           "redirect_document_id": true
         },
         {
-          "source_path_from_root": "/azure/azure-sql/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial.md",
-          "redirect_url": "/azure/azure-sql/virtual-machines/windows/availability-group-manually-configure-tutorial",
-          "redirect_document_id": true
-        },
-        {
           "source_path_from_root": "/azure-sql/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview.md",
           "redirect_url": "/azure/azure-sql/virtual-machines/windows/availability-group-overview",
           "redirect_document_id": true

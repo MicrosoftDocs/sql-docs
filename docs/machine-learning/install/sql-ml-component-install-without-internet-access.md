@@ -21,7 +21,7 @@ By default, installers connect to Microsoft download sites to get required and u
 
 In-database analytics consist of database engine instance, plus additional components for R and Python integration, depending on the version of SQL Server. 
 
-+ Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
++ Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 + SQL Server 2019 includes R, Python, and Java.
 + SQL Server 2017 includes R and Python.
 + SQL Server 2016 is R-only.
@@ -40,7 +40,7 @@ Offline installation of SQL Server 2022 is similar to the normal installation ex
 1. Use SQL Setup to install the Machine Learning services feature.
 2. Download any desired runtimes and copy them to the offline installation server. Custom runtimes for SQL Server 2022 are customer-installed. CAB files are not used. 
 3. Download any desired packages and copy them to the offline installation server. Otherwise, refer to instructions for installation from SQL Setup and installation of any desired custom packages: 
- - [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](install/sql-machine-learning-services-windows-install-sql-2022.md)
+ - [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md)
  - [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md)
 
 ::: moniker-end
@@ -128,7 +128,7 @@ You can install SQL Server 2016 RTM, SP 1, or SP 2 as your first installation on
 
 ::: moniker-end
 
-::: moniker range="<=sql-server-ver15"
+::: moniker range="=sql-server-2016||=sql-server-2017||=sql-server-ver15"
 
 ## Transfer files
 
@@ -187,7 +187,7 @@ We recommend that you apply the latest cumulative update to both the database en
 2. On an internet connected device, go to the cumulative update list for your version of SQL Server. [See Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
 ::: moniker-end
 
-::: moniker range="<=sql-server-ver15"
+::: moniker range="=sql-server-2016||=sql-server-2017||=sql-server-ver15"
 3. Select the latest cumulative update to download the executable.
 
 4. Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
@@ -242,4 +242,4 @@ An initial offline installation of SQL Server R Services requires the same confi
 
 To use Machine Learning Services to execute Python and R scripts in-database, see:
 - [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]: [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
-- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]: [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md)
+- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]: [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md)

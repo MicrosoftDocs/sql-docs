@@ -23,7 +23,7 @@ You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SU
 
 ::: moniker range=">=sql-server-linux-ver15"
 > [!IMPORTANT]
-> This article refers to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. For [!INCLUDE[sssql22-md](../../includes/sssql19-md.md)], see to [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning-sql-2022.md).
+> This article refers to [!INCLUDE[sssql22-md](../includes/sssql22-md.md)]. For [!INCLUDE[sssql22-md](../includes/sssql19-md.md)], see to [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning-sql-2022.md).
 ::: moniker-end
 
 <a name="mro"></a>
@@ -45,7 +45,8 @@ On an internet-connected device, packages are downloaded and installed independe
 
 Available installation packages:
 
-TODO DO WE NEED THIS?
+TODO DO WE NEED THIS TABLE FOR SQL 2022?
+
 | Package name | Applies-to | Description |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | All | Extensibility framework used to run Python and R. |

@@ -10,7 +10,7 @@ ms.author: wiassaf
 ms.custom:
   - seo-lt-2019
   - intro-installation
-monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15"
+monikerRange: ">=sql-server-2016"
 ---
 # Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup
 [!INCLUDE [SQL Server 2016 2017 2019](../../includes/applies-to-version/sqlserver2016-2019-only.md)]

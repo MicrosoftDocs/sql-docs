@@ -886,7 +886,7 @@
           href: database/local-dev-experience-publish-emulator.md
         - name: Quickstarts
           items:
-            name: Create a local dev environment for Azure SQL DB
+          - name: Create a local dev environment for Azure SQL DB
             href: database/local-dev-experience-quickstart.md
         - name: Introducing the Azure SQL Database emulator
           href: database/local-dev-experience-azure-sql-database-emulator.md

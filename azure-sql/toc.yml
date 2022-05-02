@@ -905,11 +905,11 @@
           - name: Build a Project from the Command Line
             href: /sql/azure-data-studio/extensions/sql-database-project-extension-build-from-command-line?toc=/azure/azure-sql/toc.json
         - name: SQL Server extension for VSCode
-        items:
-          - name: SQL Server extension overview
-            href: /sql/tools/visual-studio-code/sql-server-develop-use-vscode?toc=/azure/azure-sql/toc.json
+          items:
+            - name: SQL Server extension overview
+              href: /sql/tools/visual-studio-code/sql-server-develop-use-vscode?toc=/azure/azure-sql/toc.json
       - name: Azure Data Studio >
-        href: azure-data-studio/index.yml
+        href: /sql/azure-data-studio/index.yml
       - name: SQL Server Management Studio (SSMS)
         items:
         - name: Download SSMS

@@ -261,3 +261,6 @@ You may also want to check the following PowerShell sample scripts for the commo
 - [Remove a transparent data encryption (TDE) protector for SQL Database](transparent-data-encryption-byok-remove-tde-protector.md)
 
 - [Manage transparent data encryption in SQL Managed Instance with your own key using PowerShell](../managed-instance/scripts/transparent-data-encryption-byok-powershell.md?toc=%2fpowershell%2fmodule%2ftoc.json)
+
+Additionally, enable [Microsoft Defender for SQL](/azure/defender-for-cloud/defender-for-sql-introduction) to secure your databases and their data, with functionalities for discovering and mitigating potential database vulnerabilities, and detecting anomalous activities that could indicate a threat to your databases.
+

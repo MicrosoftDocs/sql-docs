@@ -870,6 +870,27 @@
     - name: Azure Resource Graph queries
       href: database/resource-graph-samples.md
 
+  - name: Tools
+    items:
+      - name: Local dev experience for SQL DB
+      - items:
+        - name: Overview
+          displayName: Overview of local development environment
+          href: database/local-dev-experience-overview.md
+        - name: Setup
+          displayName: Setup local development environment
+          href: database/local-dev-experience-set-up-dev-environment.md
+        - name: SQL Database Projects extension
+          items:
+          - name: SQL Database Projects extension overview
+            href: /azure-data-studio/extensions/sql-database-project-extension
+          - name: Getting Started with the SQL Database Projects extension
+            href: /azure-data-studio/extensions/sql-database-project-extension-getting-started
+          - name: Build and Publish a Project
+            href: /azure-data-studio/extensions/sql-database-project-extension-build
+          - name: Build a Project from the Command Line
+            href: /azure-data-studio/extensions/sql-database-project-extension-build-from-command-line
+
 - name: SQL Managed Instance (SQL MI)
   items:
   - name: Documentation

@@ -67,24 +67,29 @@ Creates a relational index on a table or view. Also called a rowstore index beca
 
 For information on index design guidelines, refer to the [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md).
 
-**Simple examples:**
+**Examples:**
 
-```sql
--- Create a nonclustered index on a table or view
-CREATE INDEX index1 ON schema1.table1 (column1);
+1. Create a nonclustered index on a table or view
 
--- Create a clustered index on a table and use a 3-part name for the table
-CREATE CLUSTERED INDEX index1 ON database1.schema1.table1 (column1);
+    ```sql
+    CREATE INDEX index1 ON schema1.table1 (column1);
+    ```
 
--- Syntax for SQL Server and Azure SQL Database
--- Create a nonclustered index with a unique constraint
--- on 3 columns and specify the sort order for each column
-CREATE UNIQUE INDEX index1 ON schema1.table1 (column1 DESC, column2 ASC, column3 DESC);
-```
+1. Create a clustered index on a table and use a 3-part name for the table
+
+    ```sql
+    CREATE CLUSTERED INDEX index1 ON database1.schema1.table1 (column1);
+    ```
+
+1. Create a nonclustered index with a unique constraint and specify the sort order
+
+    ```sql
+    CREATE UNIQUE INDEX index1 ON schema1.table1 (column1 DESC, column2 ASC, column3 DESC);
+    ```
 
 **Key scenario:**
 
-Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], use a nonclustered index on a columnstore index to improve data warehousing query performance. For more information, see [Columnstore Indexes - Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], you can use a nonclustered index on a columnstore index to improve data warehousing query performance. For more information, see [Columnstore Indexes - Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
 For additional types of indexes, see:
 
@@ -220,7 +225,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 
 Creates a unique index on a table or view. A unique index is one in which no two rows are permitted to have the same index key value. A clustered index on a view must be unique.
 
-The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not allow creating a unique index on columns that already include duplicate values, whether or not `IGNORE_DUP_KEY` is set to ON. If this is tried, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error message. Duplicate values must be removed before a unique index can be created on the column or columns. Columns that are used in a unique index should be set to NOT NULL, because multiple null values are considered duplicates when a unique index is created.
+The [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't allow creating a unique index on columns that already include duplicate values, whether or not `IGNORE_DUP_KEY` is set to ON. If this is tried, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error message. Duplicate values must be removed before a unique index can be created on the column or columns. Columns that are used in a unique index should be set to NOT NULL, because multiple null values are considered duplicates when a unique index is created.
 
 #### CLUSTERED
 
@@ -230,7 +235,7 @@ A view with a unique clustered index is called an indexed view. Creating a uniqu
 
 Create the clustered index before creating any nonclustered indexes. Existing nonclustered indexes on tables are rebuilt when a clustered index is created.
 
-If `CLUSTERED` is not specified, a nonclustered index is created.
+If `CLUSTERED` isn't specified, a nonclustered index is created.
 
 > [!NOTE]  
 > Because the leaf level of a clustered index and the data pages are the same by definition, creating a clustered index and using the `ON partition_scheme_name` or `ON filegroup_name` clause effectively moves a table from the filegroup on which the table was created to the new partition scheme or filegroup. Before creating tables or indexes on specific filegroups, verify which filegroups are available and that they have enough empty space for the index.
@@ -297,12 +302,12 @@ Filtered indexes don't apply to XML indexes and full-text indexes. For UNIQUE in
 
 #### ON *partition_scheme_name* ( *column_name* )
 
-Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index will be mapped. The partition scheme must exist within the database by executing either [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) or [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. Any column in the base table can be specified, except when partitioning a UNIQUE index, *column_name* must be chosen from among those used as the unique key. This restriction allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to verify uniqueness of key values within a single partition only.
+Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index will be mapped. The partition scheme must exist within the database by executing either [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) or [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* isn't restricted to the columns in the index definition. Any column in the base table can be specified, except when partitioning a UNIQUE index, *column_name* must be chosen from among those used as the unique key. This restriction allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to verify uniqueness of key values within a single partition only.
 
 > [!NOTE]  
 > When you partition a non-unique, clustered index, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by default adds the partitioning column to the list of clustered index keys, if it is not already specified. When partitioning a non-unique, nonclustered index, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] adds the partitioning column as a non-key (included) column of the index, if it is not already specified.
 
-If *partition_scheme_name* or *filegroup* is not specified and the table is partitioned, the index is placed in the same partition scheme, using the same partitioning column, as the underlying table.
+If *partition_scheme_name* or *filegroup* isn't specified and the table is partitioned, the index is placed in the same partition scheme, using the same partitioning column, as the underlying table.
 
 > [!NOTE]  
 > You cannot specify a partitioning scheme on an XML index. If the base table is partitioned, the XML index uses the same partition scheme as the table.
@@ -311,13 +316,13 @@ For more information about partitioning indexes, [Partitioned Tables and Indexes
 
 #### ON *filegroup_name*
 
-Creates the specified index on the specified filegroup. If no location is specified and the table or view is not partitioned, the index uses the same filegroup as the underlying table or view. The filegroup must already exist.
+Creates the specified index on the specified filegroup. If no location is specified and the table or view isn't partitioned, the index uses the same filegroup as the underlying table or view. The filegroup must already exist.
 
 #### ON "default"
 
 Creates the specified index on the same filegroup or partition scheme as the table or view.
 
-The term default, in this context, is not a keyword. It is an identifier for the default filegroup and must be delimited, as in `ON "default"` or `ON [default]`. If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+The term default, in this context, isn't a keyword. It is an identifier for the default filegroup and must be delimited, as in `ON "default"` or `ON [default]`. If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 > [!NOTE]  
 > "default" does not indicate the database default filegroup in the context of `CREATE INDEX`. This differs from `CREATE TABLE`, where "default" locates the table on the database default filegroup.
@@ -330,9 +335,9 @@ _filestream_filegroup_name_ is the name of a FILESTREAM filegroup. The filegroup
 
 If the table is partitioned, the `FILESTREAM_ON` clause must be included and must specify a partition scheme of FILESTREAM filegroups that uses the same partition function and partition columns as the partition scheme for the table. Otherwise, an error is raised.
 
-If the table is not partitioned, the FILESTREAM column can't be partitioned. FILESTREAM data for the table must be stored in a single filegroup that is specified in the `FILESTREAM_ON` clause.
+If the table isn't partitioned, the FILESTREAM column can't be partitioned. FILESTREAM data for the table must be stored in a single filegroup that is specified in the `FILESTREAM_ON` clause.
 
-`FILESTREAM_ON NULL` can be specified in a `CREATE INDEX` statement if a clustered index is being created and the table does not contain a FILESTREAM column.
+`FILESTREAM_ON NULL` can be specified in a `CREATE INDEX` statement if a clustered index is being created and the table doesn't contain a FILESTREAM column.
 
 For more information, see [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).
 
@@ -369,10 +374,10 @@ Specifies index padding. The default is **OFF**.
 ON  
 The percentage of free space that is specified by *fillfactor* is applied to the intermediate-level pages of the index.
 
-OFF or *fillfactor* is not specified  
+OFF or *fillfactor* isn't specified  
 The intermediate-level pages are filled to near capacity, leaving sufficient space for at least one row of the maximum size the index can have, considering the set of keys on the intermediate pages.
 
-The `PAD_INDEX` option is useful only when FILLFACTOR is specified, because `PAD_INDEX` uses the percentage specified by FILLFACTOR. If the percentage specified for FILLFACTOR is not large enough to allow for one row, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] internally overrides the percentage to allow for the minimum. The number of rows on an intermediate index page is never less than two, regardless of how low the value of *fillfactor*.
+The `PAD_INDEX` option is useful only when FILLFACTOR is specified, because `PAD_INDEX` uses the percentage specified by FILLFACTOR. If the percentage specified for FILLFACTOR isn't large enough to allow for one row, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] internally overrides the percentage to allow for the minimum. The number of rows on an intermediate index page is never less than two, regardless of how low the value of *fillfactor*.
 
 In backward compatible syntax, `WITH PAD_INDEX` is equivalent to `WITH PAD_INDEX = ON`.
 
@@ -380,7 +385,7 @@ In backward compatible syntax, `WITH PAD_INDEX` is equivalent to `WITH PAD_INDEX
 
 Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make the leaf level of each index page during index creation or rebuild. The value for *fillfactor* must be an integer value from 1 to 100. Fill factor values 0 and 100 are the same in all respects. If *fillfactor* is 100, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates indexes with leaf pages filled to capacity.
 
-The `FILLFACTOR` setting applies only when the index is created or rebuilt. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not dynamically keep the specified percentage of empty space in the pages.
+The `FILLFACTOR` setting applies only when the index is created or rebuilt. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't dynamically keep the specified percentage of empty space in the pages.
 
 To view the fill factor setting, use `fill_factor` in `sys.indexes`.
 
@@ -513,7 +518,7 @@ For more information, see [How Online Index Operations Work](../../relational-da
 Index operation is resumable.
 
  OFF      
-Index operation is not resumable.
+Index operation isn't resumable.
 
 #### MAX_DURATION = *time* [MINUTES] used with `RESUMABLE = ON` (requires `ONLINE = ON`)
 
@@ -590,7 +595,7 @@ For more information about compression, see [Data Compression](../../relational-
 
 #### ON PARTITIONS ( { \<partition_number_expression> | \<range> } [ ,...*n* ] )
 
-Specifies the partitions to which the `DATA_COMPRESSION` setting applies. If the index is not partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause is not provided, the `DATA_COMPRESSION` option applies to all partitions of a partitioned index.
+Specifies the partitions to which the `DATA_COMPRESSION` setting applies. If the index isn't partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause isn't provided, the `DATA_COMPRESSION` option applies to all partitions of a partitioned index.
 
 `<partition_number_expression>` can be specified in the following ways:
 
@@ -633,7 +638,7 @@ Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and in [!INCL
 
 Limitations and Restrictions:
 
-- The `FILESTREAM_ON` option is not valid when you create a nonclustered index on a table stored as a clustered columnstore index.
+- The `FILESTREAM_ON` option isn't valid when you create a nonclustered index on a table stored as a clustered columnstore index.
 
 ## Unique indexes
 
@@ -641,7 +646,7 @@ When a unique index exists, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] chec
 
 ## Partitioned indexes
 
-Partitioned indexes are created and maintained in a similar manner to partitioned tables, but like ordinary indexes, they are handled as separate database objects. You can have a partitioned index on a table that is not partitioned, and you can have a nonpartitioned index on a table that is partitioned.
+Partitioned indexes are created and maintained in a similar manner to partitioned tables, but like ordinary indexes, they are handled as separate database objects. You can have a partitioned index on a table that isn't partitioned, and you can have a nonpartitioned index on a table that is partitioned.
 
 If you are creating an index on a partitioned table, and don't specify a filegroup on which to place the index, the index is partitioned in the same manner as the underlying table. This is because indexes, by default, are placed on the same filegroups as their underlying tables, and for a partitioned table in the same partition scheme that uses the same partitioning columns. When the index uses the same partition scheme and partitioning column as the table, the index is *aligned* with the table.
 
@@ -680,9 +685,9 @@ The SET options in the Required Value column are required whenever any of the fo
 
 If the SET options are incorrect, the following conditions can occur:
 
-- The filtered index is not created.
+- The filtered index isn't created.
 - The [!INCLUDE[ssDE](../../includes/ssde-md.md)] generates an error and rolls back INSERT, UPDATE, DELETE, or MERGE statements that change data in the index.
-- Query optimizer does not consider the index in the execution plan for any Transact-SQL statements.
+- Query optimizer doesn't consider the index in the execution plan for any Transact-SQL statements.
 
  For more information about Filtered Indexes, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md) and the [SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md).
 
@@ -737,7 +742,7 @@ For more information, see [Indexes on Computed Columns](../../relational-databas
 
 ## Included columns in indexes
 
-Non-key columns, called included columns, can be added to the leaf level of a nonclustered index to improve query performance by covering the query. That is, all columns referenced in the query are included in the index as either key or non-key columns. This allows the query optimizer to locate all the required information from an index scan; the table or clustered index data is not accessed. For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md) and the [SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md).
+Non-key columns, called included columns, can be added to the leaf level of a nonclustered index to improve query performance by covering the query. That is, all columns referenced in the query are included in the index as either key or non-key columns. This allows the query optimizer to locate all the required information from an index scan; the table or clustered index data isn't accessed. For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md) and the [SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md).
 
 ## Specifying index options
 
@@ -751,13 +756,13 @@ Non-key columns, called included columns, can be added to the leaf level of a no
 
 You can use the `DROP_EXISTING` clause to rebuild the index, add or drop columns, modify options, modify column sort order, or change the partition scheme or filegroup.
 
-If the index enforces a PRIMARY KEY or UNIQUE constraint and the index definition is not altered in any way, the index is dropped and re-created preserving the existing constraint. However, if the index definition is altered the statement fails. To change the definition of a PRIMARY KEY or UNIQUE constraint, drop the constraint and add a constraint with the new definition.
+If the index enforces a PRIMARY KEY or UNIQUE constraint and the index definition isn't altered in any way, the index is dropped and re-created preserving the existing constraint. However, if the index definition is altered the statement fails. To change the definition of a PRIMARY KEY or UNIQUE constraint, drop the constraint and add a constraint with the new definition.
 
-`DROP_EXISTING` enhances performance when you re-create a clustered index, with either the same or different set of keys, on a table that also has nonclustered indexes. `DROP_EXISTING` replaces the execution of a `DROP INDEX` statement on the old clustered index followed by the execution of a `CREATE INDEX` statement for the new clustered index. The nonclustered indexes are rebuilt once, and then only if the index definition has changed. The `DROP_EXISTING` clause does not rebuild the nonclustered indexes when the index definition has the same index name, key and partition columns, uniqueness attribute, and sort order as the original index.
+`DROP_EXISTING` enhances performance when you re-create a clustered index, with either the same or different set of keys, on a table that also has nonclustered indexes. `DROP_EXISTING` replaces the execution of a `DROP INDEX` statement on the old clustered index followed by the execution of a `CREATE INDEX` statement for the new clustered index. The nonclustered indexes are rebuilt once, and then only if the index definition has changed. The `DROP_EXISTING` clause doesn't rebuild the nonclustered indexes when the index definition has the same index name, key and partition columns, uniqueness attribute, and sort order as the original index.
 
 Whether the nonclustered indexes are rebuilt or not, they always remain in their original filegroups or partition schemes and use the original partition functions. If a clustered index is rebuilt to a different filegroup or partition scheme, the nonclustered indexes are not moved to coincide with the new location of the clustered index. Therefore, even the nonclustered indexes previously aligned with the clustered index, they may no longer be aligned with it. For more information about partitioned index alignment, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
-The `DROP_EXISTING` clause will not sort the data again if the same index key columns are used in the same order and with the same ascending or descending order, unless the index statement specifies a nonclustered index and the ONLINE option is set to OFF. If the clustered index is disabled, the `CREATE INDEX WITH DROP_EXISTING` operation must be performed with ONLINE set to OFF. If a nonclustered index is disabled and is not associated with a disabled clustered index, the `CREATE INDEX WITH DROP_EXISTING` operation can be performed with ONLINE set to OFF or ON.
+The `DROP_EXISTING` clause will not sort the data again if the same index key columns are used in the same order and with the same ascending or descending order, unless the index statement specifies a nonclustered index and the ONLINE option is set to OFF. If the clustered index is disabled, the `CREATE INDEX WITH DROP_EXISTING` operation must be performed with ONLINE set to OFF. If a nonclustered index is disabled and isn't associated with a disabled clustered index, the `CREATE INDEX WITH DROP_EXISTING` operation can be performed with ONLINE set to OFF or ON.
 
 > [!NOTE]  
 > When indexes with 128 extents or more are dropped or rebuilt, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits.
@@ -800,12 +805,12 @@ The following functionality is disabled for resumable index create operations:
 The following guidelines apply for resumable index operations:
 
 - Online index create is specified as resumable using the `RESUMABLE = ON` option.
-- The RESUMABLE option is not persisted in the metadata for a given index and applies only to the duration of a current DDL statement. Therefore, the `RESUMABLE = ON` clause must be specified explicitly to enable resumability.
+- The RESUMABLE option isn't persisted in the metadata for a given index and applies only to the duration of a current DDL statement. Therefore, the `RESUMABLE = ON` clause must be specified explicitly to enable resumability.
 - `MAX_DURATION` option is only supported for `RESUMABLE = ON` option.
 - `MAX_DURATION` for RESUMABLE option specifies the time interval for an index being built. Once this time is used the index build is either paused or it completes its execution. User decides when a build for a paused index can be resumed. The **time** in minutes for `MAX_DURATION` must be greater than 0 minutes and less or equal one week (7 \* 24 \* 60 = 10080 minutes). Having a long pause for an index operation may impact the DML performance on a specific table as well as the database disk capacity since both indexes the original one and the newly created one require disk space and need to be updated during DML operations. If `MAX_DURATION` option is omitted, the index operation will continue until its completion or until a failure occurs.
 - To pause immediately the index operation, you can stop (Ctrl-C) the ongoing command, execute the [ALTER INDEX](alter-index-transact-sql.md) PAUSE command, or execute the `KILL <session_id>` command. Once the command is paused, it can be resumed using [ALTER INDEX](alter-index-transact-sql.md) command.
 - Re-executing the original `CREATE INDEX` statement for resumable index, automatically resumes a paused index create operation.
-- The `SORT_IN_TEMPDB = ON` option is not supported for resumable index.
+- The `SORT_IN_TEMPDB = ON` option isn't supported for resumable index.
 - The DDL command with `RESUMABLE = ON` can't be executed inside an explicit transaction (can't be part of begin `TRAN ... COMMIT` block).
 - To resume/abort an index create/rebuild, use the [ALTER INDEX](alter-index-transact-sql.md) T-SQL syntax
 
@@ -863,9 +868,9 @@ To return information about indexes, you can use catalog views, system functions
 
 Data compression is described in the topic [Data Compression](../../relational-databases/data-compression/data-compression.md). The following are key points to consider:
 
-- Compression can allow more rows to be stored on a page, but does not change the maximum row size.
+- Compression can allow more rows to be stored on a page, but doesn't change the maximum row size.
 - Non-leaf pages of an index are not page compressed but can be row compressed.
-- Each nonclustered index has an individual compression setting, and does not inherit the compression setting of the underlying table.
+- Each nonclustered index has an individual compression setting, and doesn't inherit the compression setting of the underlying table.
 - When a clustered index is created on a heap, the clustered index inherits the compression state of the heap unless an alternative compression state is specified.
 
 The following restrictions apply to partitioned indexes:
@@ -893,7 +898,7 @@ To view information on existing indexes, you can query the [sys.indexes](../../r
 
 ## Version notes
 
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] does not support filegroup and filestream options.
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] doesn't support filegroup and filestream options.
 
 ## Examples: All versions. Uses the AdventureWorks database
 

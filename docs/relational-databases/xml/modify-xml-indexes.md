@@ -62,12 +62,21 @@ CREATE PRIMARY XML INDEX PIdx_T_XmlCol ON T(XmlCol);
 GO
 ALTER INDEX PIdx_T_XmlCol on T DISABLE;
 GO
--- Verify index is disabled.
+```
+
+Use the following sample to verify the index is disabled.
+
+```sql
 SELECT *
 FROM sys.xml_indexes
 WHERE object_id = object_id('T')
 AND name='PIdx_T_XmlCol';
--- Rebuild the index.
+GO
+```
+
+Use the following sample to rebuild the index.
+
+```sql
 ALTER INDEX PIdx_T_XmlCol on T REBUILD;
 GO
 ```

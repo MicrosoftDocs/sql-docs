@@ -232,8 +232,6 @@ For more information, see [Reorganize and Rebuild Indexes](../../relational-data
 
 #### PARTITION
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
 Specifies that only one partition of an index will be rebuilt or reorganized. PARTITION cannot be specified if *index_name* is not a partitioned index.
 
 PARTITION = ALL rebuilds all partitions.
@@ -241,17 +239,13 @@ PARTITION = ALL rebuilds all partitions.
 > [!WARNING]  
 > Creating and rebuilding nonaligned indexes on a table with more than 1,000 partitions is possible, but is not supported. Doing so may cause degraded performance or excessive memory consumption during these operations. Microsoft recommends using only aligned indexes when the number of partitions exceed 1,000.
 
-#### *partition_number*
-
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+***partition_number***
 
 The partition number of a partitioned index that is to be rebuilt or reorganized. *partition_number* is a constant expression that can reference variables. These include user-defined type variables or functions and user-defined functions, but cannot reference a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. *partition_number* must exist or the statement fails.
 
-#### WITH (<single_partition_rebuild_index_option>)
+**WITH (<single_partition_rebuild_index_option>)**
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
-`SORT_IN_TEMPDB`, `MAXDOP`, and `DATA_COMPRESSION` are the options that can be specified when you `REBUILD` a single partition `(PARTITION = *partition_number*)`. XML indexes cannot be specified in a single partition `REBUILD` operation.
+`SORT_IN_TEMPDB`, `MAXDOP`, and `DATA_COMPRESSION` are the options that can be specified when you `REBUILD` a single partition `(PARTITION = partition_number)`. XML indexes cannot be specified in a single partition `REBUILD` operation.
 
 #### DISABLE
 
@@ -321,8 +315,6 @@ Specifies index options without rebuilding or reorganizing the index. SET cannot
 
 #### PAD_INDEX = { ON | OFF }
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
 Specifies index padding. The default is OFF.
 
 ON  
@@ -337,8 +329,6 @@ For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/stat
 
 #### FILLFACTOR = *fillfactor*
 
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
 Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make the leaf level of each index page during index creation or alteration. The value for _fillfactor_ must be an integer value from 1 to 100. The default is 0. Fill factor values 0 and 100 are the same in all respects.
 
 An explicit `FILLFACTOR` setting applies only when the index is first created or rebuilt. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not dynamically keep the specified percentage of empty space in the pages. For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).
@@ -349,8 +339,6 @@ To view the fill factor setting, use `fill_factor` in `sys.indexes`.
 > Creating or altering a clustered index with a `FILLFACTOR` value affects the amount of storage space the data occupies, because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] redistributes the data when it creates the clustered index.
 
 #### SORT_IN_TEMPDB = { ON | OFF }
-
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies whether to store the sort results in **tempdb**. The default is OFF except for Azure SQL Database Hyperscale. For all index rebuild operations in Hyperscale, `SORT_IN_TEMPDB` is always ON, regardless of the option specified unless resumable index rebuild is used.
 
@@ -423,7 +411,7 @@ For an XML index or spatial index, only `ONLINE = OFF` is supported, and if ONLI
 >- [Editions and Supported Features for SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
 
 ON  
-Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This allows queries or updates to the underlying table and indexes to continue. At the start of the operation, a Shared (S) lock is very briefly held on the source object. At the end of the operation, an S lock is very briefly held on the source if a nonclustered index is being created. An Sch-M (Schema Modification) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. ONLINE cannot be set to ON when an index is being created on a local temporary table.
+Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This allows queries or updates to the underlying table and indexes to continue. At the start of the operation, a Shared (S) lock is very briefly held on the source object. At the end of the operation, an S lock is very briefly held on the source if a nonclustered index is being created. A Schema Modification (Sch-M) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. ONLINE cannot be set to ON when an index is being created on a local temporary table.
 
 OFF  
 Table locks are applied for the duration of the index operation. An offline index operation that creates, rebuilds, or drops a clustered, spatial, or XML index, or rebuilds or drops a nonclustered index, acquires a Schema modification (Sch-M) lock on the table. This prevents all user access to the underlying table for the duration of the operation. An offline index operation that creates a nonclustered index acquires a Shared (S) lock on the table. This prevents updates to the underlying table but allows read operations, such as SELECT statements.
@@ -452,7 +440,7 @@ Index operation is resumable.
 OFF  
 Index operation is not resumable.
 
-#### MAX_DURATION = *time* [**MINUTES**] used with `RESUMABLE = ON` (requires `ONLINE = ON`).
+#### MAX_DURATION = *time* [**MINUTES**] used with `RESUMABLE = ON` (requires `ONLINE = ON`)
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -466,8 +454,6 @@ Indicates time (an integer value specified in minutes) that a resumable online i
 
 #### ALLOW_ROW_LOCKS = { ON | OFF }
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
 Specifies whether row locks are allowed. The default is ON.
 
 ON  
@@ -477,8 +463,6 @@ OFF
 Row locks are not used.
 
 #### ALLOW_PAGE_LOCKS = { ON | OFF }
-
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies whether page locks are allowed. The default is ON.
 
@@ -498,8 +482,6 @@ Page locks are not used.
 Specifies whether or not to optimize for last-page insert contention. The default is OFF. For more information, see [Sequential Keys](./create-index-transact-sql.md#sequential-keys).
 
 #### MAXDOP = max_degree_of_parallelism
-
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Overrides the **max degree of parallelism** configuration option for the duration of the index operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.
 
@@ -561,8 +543,6 @@ For more information about compression, see [Data Compression](../../relational-
 
 #### ON PARTITIONS ( { \<partition_number_expression> | \<range\> } [,...n] )
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
 Specifies the partitions to which the DATA_COMPRESSION setting applies. If the index is not partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause is not provided, the DATA_COMPRESSION option applies to all partitions of a partitioned index.
 
 `<partition_number_expression>` can be specified in the following ways:
@@ -589,7 +569,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 Specifies whether an index or an index partition of an underlying table can be rebuilt online or offline. If `REBUILD ... ONLINE = ON` is performed, the data in this table is available for queries and data modification during the index operation. The default is **OFF**.
 
 ON  
-Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source  table. An Sch-S on the table is required in the Starting of the index rebuild and a Sch-M lock on the table at the end of the online index rebuild. Although both locks are short metadata locks, especially the Sch-M lock must wait for all blocking transactions to be completed. During the wait time the Sch-M lock blocks all other transactions that wait behind this lock when accessing the same table.
+Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source  table. A Schema Stability (Sch-S) lock on the table is required when starting the index rebuild, and a Schema Modification (Sch-M) lock is required on the table at the end of the online index rebuild. Although both metadata locks are short in duration, the Sch-M lock especially must wait for all blocking transactions to be completed. During the wait time the Sch-M lock blocks all other transactions that wait behind this lock when accessing the same table.
 
 > [!NOTE]  
 > Online index rebuild can set the `low_priority_lock_wait` options, see [WAIT_AT_LOW_PRIORITY with online index operations](#wait-at-low-priority).
@@ -738,7 +718,7 @@ The `low_priority_lock_wait` syntax allows for specifying `WAIT_AT_LOW_PRIORITY`
 
 In order to execute the DDL statement for an online index rebuild, all active blocking transactions running on a particular table must be completed. When the online index rebuild executes, it blocks all new transactions that are ready to start execution on this table. Although the duration of the lock for online index rebuild is very short, waiting for all open transactions on a given table to complete and blocking the new transactions to start, might significantly affect the throughput, causing a workload slow down or timeout, and significantly limit access to the underlying table.
 
-The `WAIT_AT_LOW_PRIORITY` option allows DBAs to manage the Sch-S and Sch-M locks required for online index rebuilds and allows them to select one of 3 options. In all 3 cases, if during the wait time `MAX_DURATION = n [minutes]`, there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.
+The `WAIT_AT_LOW_PRIORITY` option allows DBAs to manage the Schema Stability (Sch-S) locks and Schema Modify (Sch-M) locks required for online index rebuilds and allows them to select one of three options. In all three cases, if during the wait time `MAX_DURATION = n [minutes]`, there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.
 
 `WAIT_AT_LOW_PRIORITY` indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the `WAIT AT LOW PRIORITY` option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.
 
@@ -888,13 +868,19 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 
 ### B. Compress CLOSED delta rowgroups into the columnstore
 
-This example uses the `REORGANIZE` option to compresses each CLOSED delta rowgroup into the columnstore as a compressed  rowgroup.   This is not necessary, but is useful when the tuple-mover is not compressing CLOSED rowgroups fast enough.
+This example uses the `REORGANIZE` option to compresses each CLOSED delta rowgroup into the columnstore as a compressed  rowgroup. This isn't necessary, but is useful when the tuple-mover is not compressing CLOSED rowgroups fast enough.
+
+You can run both example in the `AdventureWorksDW` sample database.
+
+This sample will run REORGANIZE on all partitions.
 
 ```sql
--- Uses AdventureWorksDW
--- REORGANIZE all partitions
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
+```
 
+This sample will run REORGANIZE on a specific partition.
+
+```sql
 -- REORGANIZE a specific partition
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 0;
 ```
@@ -905,14 +891,19 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 
 The command `REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON )` compresses each OPEN and CLOSED delta rowgroup into the columnstore as a compressed  rowgroup. This empties the deltastore and forces all rows to get compressed into the columnstore. This is useful especially after performing many insert operations since these operations store the rows in one or more delta rowgroups.
 
-REORGANIZE combines rowgroups to fill rowgroups up to a maximum number of rows \<= 1,024,576. Therefore, when you compress all OPEN and CLOSED rowgroups you won't end up with lots of compressed rowgroups that only have a few rows in them. You want rowgroups to be as full as possible to reduce the compressed size and improve query performance.
+REORGANIZE combines rowgroups to fill rowgroups up to a maximum number of rows <= 1,024,576. Therefore, when you compress all OPEN and CLOSED rowgroups you won't end up with lots of compressed rowgroups that only have a few rows in them. You want rowgroups to be as full as possible to reduce the compressed size and improve query performance.
+
+The following examples use the `AdventureWorksDW2016` database.
+
+This example moves all OPEN and CLOSED delta rowgroups into the columnstore index.
 
 ```sql
--- Uses AdventureWorksDW2016
--- Move all OPEN and CLOSED delta rowgroups into the columnstore.
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);
+```
 
--- For a specific partition, move all OPEN AND CLOSED delta rowgroups into the columnstore
+This example moves all OPEN AND CLOSED delta rowgroups into the columnstore index for a specific partition.
+
+```sql
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 0 WITH (COMPRESS_ALL_ROW_GROUPS = ON);
 ```
 
@@ -925,9 +916,9 @@ Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], REORGANIZE d
 > [!NOTE]  
 > Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], rebuilding a columnstore index is no longer necessary in most situations since REORGANIZE physically removes deleted rows and merges rowgroups. The COMPRESS_ALL_ROW_GROUPS option forces all OPEN or CLOSED delta rowgroups into the columnstore which previously could only be done with a rebuild. REORGANIZE is online and occurs in the background so queries can continue as the operation happens.
 
+The following example performs a REORGANIZE to defragment the index by physically removing rows that have been logically deleted from the table, and merging rowgroups.
+
 ```sql
--- Uses AdventureWorks
--- Defragment by physically removing rows that have been logically deleted from the table, and merging rowgroups.
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
 ```
 
@@ -941,11 +932,9 @@ Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting 
 > [!NOTE]  
 > In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], `REORGANIZE` is only used to compress CLOSED rowgroups into the columnstore. The only way to perform defragmentation operations and to force all delta rowgroups into the columnstore is to rebuild the index.
 
-This example shows how to rebuild a clustered columnstore index and force all delta rowgroups into the columnstore. This first step prepares a table FactInternetSales2 with a clustered columnstore index and inserts data from the first four columns.
+This example shows how to rebuild a clustered columnstore index and force all delta rowgroups into the columnstore. This first step prepares a table `FactInternetSales2` in the `AdventureWorksDW` database with a clustered columnstore index, and inserts data from the first four columns.
 
 ```sql
--- Uses AdventureWorksDW
-
 CREATE TABLE dbo.FactInternetSales2 (
     ProductKey [int] NOT NULL,
     OrderDateKey [int] NOT NULL,
@@ -991,6 +980,8 @@ You can choose to reduce the size of a clustered columnstore index even further 
 
 The following example rebuilds a clustered columnstore index to use archival compression, and then shows how to remove the archival compression. The final result will use only columnstore compression.
 
+First, prepare the example by creating a table with a clustered columnstore index. Then, compress the table further by using archival compression.
+
 ```sql
 --Prepare the example by creating a table with a clustered columnstore index.
 CREATE TABLE SimpleTable (
@@ -1010,8 +1001,12 @@ WITH (DROP_EXISTING = ON);
 ALTER INDEX cci_SimpleTable ON SimpleTable
 REBUILD
 WITH (DATA_COMPRESSION = COLUMNSTORE_ARCHIVE);
+GO
+```
 
---Remove the archive compression and only use columnstore compression.
+This sample removes the archive compression and only use columnstore compression.
+
+```sql
 ALTER INDEX cci_SimpleTable ON SimpleTable
 REBUILD
 WITH (DATA_COMPRESSION = COLUMNSTORE);
@@ -1022,7 +1017,7 @@ GO
 
 ### A. Rebuild an index
 
-The following example rebuilds a single index on the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
+The following example rebuilds a single index on the `Employee` table in the `AdventureWorks2012` database.
 
 ```sql
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
@@ -1030,9 +1025,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
 
 ### B. Rebuild all indexes on a table and specify options
 
-The following example specifies the keyword ALL. This rebuilds all indexes associated with the table Production.Product in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Three options are specified.
-
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+The following example specifies the keyword ALL. This rebuilds all indexes associated with the table `Production.Product` in the `AdventureWorks2012` database. Three options are specified.
 
 ```sql
 ALTER INDEX ALL ON Production.Product
@@ -1057,7 +1050,7 @@ REBUILD WITH
 
 ### C. Reorganize an index with LOB compaction
 
-The following example reorganizes a single clustered index in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Note that specifying the `WITH (LOB_COMPACTION = ON)` option is not required because the default value is ON.
+The following example reorganizes a single clustered index in the `AdventureWorks2012` database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Note that specifying the `WITH (LOB_COMPACTION = ON)` option is not required because the default value is ON.
 
 ```sql
 ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION = ON);
@@ -1065,9 +1058,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
 
 ### D. Set options on an index
 
-The following example sets several options on the index `AK_SalesOrderHeader_SalesOrderNumber` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
-
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+The following example sets several options on the index `AK_SalesOrderHeader_SalesOrderNumber` in the `AdventureWorks2012` database.
 
 ```sql
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON
@@ -1082,7 +1073,7 @@ GO
 
 ### E. Disable an index
 
-The following example disables a nonclustered index on the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
+The following example disables a nonclustered index on the `Employee` table in the `AdventureWorks2012` database.
 
 ```sql
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
@@ -1090,7 +1081,7 @@ ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
 
 ### F. Disable constraints
 
-The following example disables a PRIMARY KEY constraint by disabling the PRIMARY KEY index in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The FOREIGN KEY constraint on the underlying table is automatically disabled and warning message is displayed.
+The following example disables a PRIMARY KEY constraint by disabling the PRIMARY KEY index in the `AdventureWorks2012` database. The FOREIGN KEY constraint on the underlying table is automatically disabled and warning message is displayed.
 
 ```sql
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;
@@ -1124,7 +1115,7 @@ GO
 
 ### H. Rebuild a partitioned index
 
-The following example rebuilds a single partition, partition number `5`, of the partitioned index `IX_TransactionHistory_TransactionDate` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Partition 5 is rebuilt online and the 10 minutes wait time for the low priority lock applies separately to every lock acquired by index rebuild operation. If during this time the lock cannot be obtained to complete index rebuild, the rebuild operation statement is aborted.
+The following example rebuilds a single partition, partition number `5`, of the partitioned index `IX_TransactionHistory_TransactionDate` in the `AdventureWorks2012` database. Partition 5 is rebuilt with `ONLINE=ON` and the 10 minutes wait time for the low priority lock applies separately to every lock acquired by index rebuild operation. If during this time the lock cannot be obtained to complete index rebuild, the rebuild operation statement itself is aborted, due to `ABORT_AFTER_WAIT = SELF`.
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 

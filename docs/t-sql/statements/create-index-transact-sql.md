@@ -265,7 +265,7 @@ You can create indexes on CLR user-defined type columns if the type supports bin
 
 Determines the ascending or descending sort direction for the particular index column. The default is **ASC**.
 
-#### INCLUDE (_column_ [ ,... *n* ] )
+#### INCLUDE (*column* [ ,... *n* ] )
 
 Specifies the non-key columns to be added to the leaf level of the nonclustered index. The nonclustered index can be unique or non-unique.
 
@@ -304,7 +304,7 @@ Specifies the partition scheme that defines the filegroups onto which the partit
 > [!NOTE]  
 > When you partition a non-unique, clustered index, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by default adds the partitioning column to the list of clustered index keys, if it is not already specified. When partitioning a non-unique, nonclustered index, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] adds the partitioning column as a non-key (included) column of the index, if it is not already specified.
 
-If _partition_scheme_name_ or _filegroup_ is not specified and the table is partitioned, the index is placed in the same partition scheme, using the same partitioning column, as the underlying table.
+If *partition_scheme_name* or *filegroup* is not specified and the table is partitioned, the index is placed in the same partition scheme, using the same partitioning column, as the underlying table.
 
 > [!NOTE]  
 > You cannot specify a partitioning scheme on an XML index. If the base table is partitioned, the XML index uses the same partition scheme as the table.
@@ -364,7 +364,7 @@ The view must be defined with SCHEMABINDING to create an index on it. A unique c
 
 Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the object can be a table stored with a clustered columnstore index.
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports the three-part name format _database_name_.[_schema_name_]._object_name_ when the *database_name* is the current database or the _database_name_ is `tempdb` and the _object_name_ starts with #.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports the three-part name format *database_name*.[*schema_name*]._object_name_ when the *database_name* is the current database or the *database_name* is `tempdb` and the *object_name* starts with #.
 
 #### \<relational_index_option>::=
 
@@ -379,10 +379,10 @@ Specifies index padding. The default is **OFF**.
 ON  
 The percentage of free space that is specified by *fillfactor* is applied to the intermediate-level pages of the index.
 
-OFF or _fillfactor_ is not specified      
+OFF or *fillfactor* is not specified  
 The intermediate-level pages are filled to near capacity, leaving sufficient space for at least one row of the maximum size the index can have, considering the set of keys on the intermediate pages.
 
-The `PAD_INDEX` option is useful only when FILLFACTOR is specified, because `PAD_INDEX` uses the percentage specified by FILLFACTOR. If the percentage specified for FILLFACTOR is not large enough to allow for one row, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] internally overrides the percentage to allow for the minimum. The number of rows on an intermediate index page is never less than two, regardless of how low the value of _fillfactor_.
+The `PAD_INDEX` option is useful only when FILLFACTOR is specified, because `PAD_INDEX` uses the percentage specified by FILLFACTOR. If the percentage specified for FILLFACTOR is not large enough to allow for one row, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] internally overrides the percentage to allow for the minimum. The number of rows on an intermediate index page is never less than two, regardless of how low the value of *fillfactor*.
 
 In backward compatible syntax, `WITH PAD_INDEX` is equivalent to `WITH PAD_INDEX = ON`.
 
@@ -390,7 +390,7 @@ In backward compatible syntax, `WITH PAD_INDEX` is equivalent to `WITH PAD_INDEX
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make the leaf level of each index page during index creation or rebuild. The value for _fillfactor_ must be an integer value from 1 to 100. Fill factor values 0 and 100 are the same in all respects. If _fillfactor_ is 100, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates indexes with leaf pages filled to capacity.
+Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make the leaf level of each index page during index creation or rebuild. The value for *fillfactor* must be an integer value from 1 to 100. Fill factor values 0 and 100 are the same in all respects. If *fillfactor* is 100, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates indexes with leaf pages filled to capacity.
 
 The `FILLFACTOR` setting applies only when the index is created or rebuilt. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not dynamically keep the specified percentage of empty space in the pages.
 
@@ -961,7 +961,7 @@ CREATE INDEX IX_FF ON dbo.FactFinance (FinanceKey, DateKey, OrganizationKey DESC
 
 ### E. Create a unique nonclustered index
 
-The following example creates a unique nonclustered index on the `Name` column of the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The index will enforce uniqueness on the data inserted into the `Name` column.
+The following example creates a unique nonclustered index on the `Name` column of the `Production.UnitMeasure` table in the `AdventureWorks2012` database. The index will enforce uniqueness on the data inserted into the `Name` column.
 
 ```sql
 CREATE UNIQUE INDEX AK_UnitMeasure_Name
@@ -1058,7 +1058,7 @@ Notice that none of the rows from the `Production.UnitMeasure` table were insert
 
 ### G. Using DROP_EXISTING to drop and re-create an index
 
-The following example drops and re-creates an existing index on the `ProductID` column of the `Production.WorkOrder` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by using the `DROP_EXISTING` option. The options `FILLFACTOR` and `PAD_INDEX` are also set.
+The following example drops and re-creates an existing index on the `ProductID` column of the `Production.WorkOrder` table in the `AdventureWorks2012` database by using the `DROP_EXISTING` option. The options `FILLFACTOR` and `PAD_INDEX` are also set.
 
 ```sql
 CREATE NONCLUSTERED INDEX IX_WorkOrder_ProductID
@@ -1141,7 +1141,7 @@ GO
 
 ### J. Create a partitioned index
 
-The following example creates a nonclustered partitioned index on `TransactionsPS1`, an existing partition scheme in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. This example assumes the partitioned index sample has been installed.
+The following example creates a nonclustered partitioned index on `TransactionsPS1`, an existing partition scheme in the `AdventureWorks2012` database. This example assumes the partitioned index sample has been installed.
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -1154,7 +1154,7 @@ GO
 
 ### K. Creating a filtered index
 
-The following example creates a filtered index on the Production.BillOfMaterials table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The filter predicate can include columns that are not key columns in the filtered index. The predicate in this example selects only the rows where EndDate is non-NULL.
+The following example creates a filtered index on the Production.BillOfMaterials table in the `AdventureWorks2012` database. The filter predicate can include columns that are not key columns in the filtered index. The predicate in this example selects only the rows where EndDate is non-NULL.
 
 ```sql
 CREATE NONCLUSTERED INDEX "FIBillOfMaterialsWithEndDate"

@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "compression [SQL Server], about compressed tables and indexes"
   - "data compression [Database Engine]"
   - "compressed tables [SQL Server]"
-ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -73,7 +72,7 @@ When you use row and page compression, be aware the following considerations:
 - Changing the compression setting of a heap requires all nonclustered indexes on the table to be rebuilt so that they have pointers to the new row locations in the heap.
 - You can enable or disable ROW or PAGE compression online or offline. Enabling compression on a heap is single threaded for an online operation.
 - The disk space requirements for enabling or disabling row or page compression are the same as for creating or rebuilding an index. For partitioned data, you can reduce the space that is required by enabling or disabling compression for one partition at a time.
-- To determine the compression state of partitions in a partitioned table, query the data_compression column of the sys.partitions catalog view.
+- To determine the compression state of partitions in a partitioned table, query the `data_compression` column of the `sys.partitions` catalog view.
 - When you are compressing indexes, leaf-level pages can be compressed with both row and page compression. Non-leaf-level pages do not receive page compression.
 - Because of their size, large-value data types are sometimes stored separately from the normal row data on special purpose pages. Data compression is not available for the data that is stored separately.
 - Tables that implemented the **vardecimal** storage format in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], retain that setting when upgraded. You can apply row compression to a table that has the **vardecimal** storage format. However, because row compression is a superset of the **vardecimal** storage format, there is no reason to retain the **vardecimal** storage format. Decimal values gain no additional compression when you combine the **vardecimal** storage format with row compression. You can apply page compression to a table that has the **vardecimal** storage format; however, the **vardecimal** storage format columns probably will not achieve additional compression.

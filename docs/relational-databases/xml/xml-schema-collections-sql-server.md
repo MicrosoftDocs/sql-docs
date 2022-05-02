@@ -162,15 +162,15 @@ The security model also allows permissions to create and use XML schema collecti
 
 ## <a id="info"></a> Getting information about XML schemas and schema collections
 
-XML schema collections are enumerated in the catalog view, sys.xml_schema_collections. The XML schema collection "sys" is defined by the system. It contains the predefined namespaces that can be used in all user-defined XML schema collections without having to load them explicitly. This list contains the namespaces for xml, xs, xsi, fn, and xdt. Two other catalog views are sys.xml_schema_namespaces, which enumerates all namespaces within each XML schema collection, and sys.xml_components, which enumerates all XML schema components within each XML schema.
+XML schema collections are enumerated in the catalog view, sys.xml_schema_collections. The XML schema collection `sys` is defined by the system. It contains the predefined namespaces that can be used in all user-defined XML schema collections without having to load them explicitly. This list contains the namespaces for `xml`, `xs`, `xsi`, `fn`, and `xdt`. Two other catalog views are `sys.xml_schema_namespaces`, which enumerates all namespaces within each XML schema collection, and `sys.xml_components`, which enumerates all XML schema components within each XML schema.
 
-The built-in function **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, yields an **xml** data type instance. This instance contains XML schema fragments for schemas that are contained in an XML schema collection, except the predefined XML schemas.
+The built-in function `XML_SCHEMA_NAMESPACE`, `schemaName, XmlSchemacollectionName, namespace-uri`, yields an **xml** data type instance. This instance contains XML schema fragments for schemas that are contained in an XML schema collection, except the predefined XML schemas.
 
 You can enumerate the contents of an XML schema collection in the following ways:
 
 - Write Transact-SQL queries on the appropriate catalog views for XML schema collections.
 
-- Use the built-in function **XML_SCHEMA_NAMESPACE()**. You can apply **xml** data type methods on the output of this function. However, you cannot modify the underlying XML schemas.
+- Use the built-in function `XML_SCHEMA_NAMESPACE()`. You can apply **xml** data type methods on the output of this function. However, you cannot modify the underlying XML schemas.
 
 These are illustrated in the following examples.
 

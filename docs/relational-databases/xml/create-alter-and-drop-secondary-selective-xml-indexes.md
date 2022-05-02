@@ -7,7 +7,6 @@ ms.prod_service: "database-engine"
 ms.reviewer: randolphwest
 ms.technology: xml
 ms.topic: conceptual
-ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: "seo-lt-2019"

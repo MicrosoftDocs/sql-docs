@@ -120,7 +120,7 @@ With the ability to rapidly spin up/down additional read-only compute nodes, the
 
 ## Create and manage Hyperscale databases
 
-You can create and manage Hyperscale databases using the [Azure portal](hyperscale-database-create-quickstart.md#portal), [Transact-SQL](hyperscale-database-create-quickstart.md#transact-sql), [PowerShell](hyperscale-database-create-quickstart.md#powershell), and the [Azure CLI](hyperscale-database-create-quickstart.md#azure-cli).
+You can create and manage Hyperscale databases using the Azure portal, Transact-SQL, PowerShell and Azure CLI. Refer [Quickstart: Create a Hyperscale database](hyperscale-database-create-quickstart.md#create-a-hyperscale-database).
 
 
 |  **Operation** |  **Details** | **Learn more** |

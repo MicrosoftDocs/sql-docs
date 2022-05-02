@@ -82,11 +82,11 @@ Creates an XML index on the specified **xml** column. When PRIMARY is specified,
 
 - A primary XML index on an **xml** column must exist before a secondary XML index can be created on the column.
 
-- An XML index can only be created on a single **xml** column. You cannot create an XML index on a non-**xml** column, nor can you create a relational index on an **xml** column.
+- An XML index can only be created on a single **xml** column. You can't create an XML index on a non-**xml** column, nor can you create a relational index on an **xml** column.
 
-- You cannot create an XML index, either primary or secondary, on an **xml** column in a view, on a table-valued variable with **xml** columns, or **xml** type variables.
+- You can't create an XML index, either primary or secondary, on an **xml** column in a view, on a table-valued variable with **xml** columns, or **xml** type variables.
 
-- You cannot create a primary XML index on a computed **xml** column.
+- You can't create a primary XML index on a computed **xml** column.
 
 - The SET option settings must be the same as those required for indexed views and computed column indexes. Specifically, the option ARITHABORT must be set to ON when an XML index is created and when inserting, deleting, or updating values in the **xml** column.
   
@@ -94,9 +94,9 @@ For more information, see [XML Indexes &#40;SQL Server&#41;](../../relational-da
 
 #### *index_name*
 
-The name of the index. Index names must be unique within a table but do not have to be unique within a database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).
+The name of the index. Index names must be unique within a table but don't have to be unique within a database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).
 
-Primary XML index names cannot start with the following characters: `#`, `##`, `@`, or `@@`.
+Primary XML index names can't start with the following characters: `#`, `##`, `@`, or `@@`.
 
 #### *xml_column_name*
 
@@ -143,10 +143,10 @@ Specifies index padding. The default is **OFF**.
 ON  
 The percentage of free space that is specified by *fillfactor* is applied to the intermediate-level pages of the index.
 
-OFF or *fillfactor* is not specified  
+OFF or *fillfactor* isn't specified  
 The intermediate-level pages are filled to near capacity, leaving sufficient space for at least one row of the maximum size the index can have, considering the set of keys on the intermediate pages.
 
-The PAD_INDEX option is useful only when FILLFACTOR is specified, because PAD_INDEX uses the percentage specified by FILLFACTOR. If the percentage specified for FILLFACTOR is not large enough to allow for one row, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] internally overrides the percentage to allow for the minimum. The number of rows on an intermediate index page is never less than two, regardless of how low the value of *fillfactor*.
+The PAD_INDEX option is useful only when FILLFACTOR is specified, because PAD_INDEX uses the percentage specified by FILLFACTOR. If the percentage specified for FILLFACTOR isn't large enough to allow for one row, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] internally overrides the percentage to allow for the minimum. The number of rows on an intermediate index page is never less than two, regardless of how low the value of *fillfactor*.
 
 #### FILLFACTOR = *fillfactor*
 
@@ -155,7 +155,7 @@ Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../include
 > [!NOTE]  
 > Fill factor values 0 and 100 are the same in all respects.
 
-The FILLFACTOR setting applies only when the index is created or rebuilt. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not dynamically keep the specified percentage of empty space in the pages. To view the fill factor setting, use the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view.
+The FILLFACTOR setting applies only when the index is created or rebuilt. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't dynamically keep the specified percentage of empty space in the pages. To view the fill factor setting, use the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view.
 
 > [!IMPORTANT]  
 > Creating a clustered index with a FILLFACTOR less than 100 affects the amount of storage space the data occupies because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] redistributes the data when it creates the clustered index.
@@ -176,7 +176,7 @@ In addition to the space required in the user database to create the index, **te
 
 #### IGNORE_DUP_KEY = OFF
 
-Has no effect for XML indexes because the index type is never unique. Do not set this option to ON, or else an error is raised.
+Has no effect for XML indexes because the index type is never unique. Don't set this option to ON, or else an error is raised.
 
 #### DROP_EXISTING = { ON | OFF }
 
@@ -188,13 +188,13 @@ The existing index is dropped and rebuilt. The index name specified must be the 
 OFF  
 An error is displayed if the specified index name already exists.
 
-The index type cannot be changed by using DROP_EXISTING. Also, a primary XML index cannot be redefined as a secondary XML index, or vice versa.
+The index type can't be changed by using DROP_EXISTING. Also, a primary XML index can't be redefined as a secondary XML index, or vice versa.
 
 #### ONLINE = OFF
 
-Specifies that underlying tables and associated indexes are not available for queries and data modification during the index operation. In this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], online index builds are not supported for XML indexes. If this option is set to ON for a XML index, an error is raised. Either omit the ONLINE option or set ONLINE to OFF.
+Specifies that underlying tables and associated indexes aren't available for queries and data modification during the index operation. In this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], online index builds aren't supported for XML indexes. If this option is set to ON for an XML index, an error is raised. Either omit the ONLINE option or set ONLINE to OFF.
 
-An offline index operation that creates, rebuilds, or drops a XML index, acquires a Schema modification (Sch-M) lock on the table. This prevents all user access to the underlying table for the duration of the operation.
+An offline index operation that creates, rebuilds, or drops an XML index, acquires a Schema modification (Sch-M) lock on the table. This prevents all user access to the underlying table during the operation.
 
 > [!NOTE]  
 > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
@@ -207,7 +207,7 @@ ON
 Row locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines when row locks are used.
 
 OFF  
-Row locks are not used.
+Row locks aren't used.
 
 #### ALLOW_PAGE_LOCKS = { ON | OFF }
 
@@ -217,11 +217,11 @@ ON
 Page locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines when page locks are used.
 
 OFF  
-Page locks are not used.
+Page locks aren't used.
 
 #### MAXDOP = *max_degree_of_parallelism*
 
-Overrides the [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) configuration option for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.
+Overrides the [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) configuration option during the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.
 
 > [!IMPORTANT]  
 > Although the MAXDOP option is syntactically supported for all XML indexes, for a primary XML index, CREATE XML INDEX uses only a single processor.
@@ -244,7 +244,7 @@ For more information, see [Configure Parallel Index Operations](../../relational
 
 ## Remarks
 
-Computed columns derived from **xml** data types can be indexed either as a key or included nonkey column as long as the computed column data type is allowable as an index key column or nonkey column. You cannot create a primary XML index on a computed **xml** column.
+Computed columns derived from **xml** data types can be indexed either as a key or included nonkey column as long as the computed column data type is allowable as an index key column or nonkey column. You can't create a primary XML index on a computed **xml** column.
 
 To view information about XML indexes, use the [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md) catalog view.
 
@@ -256,7 +256,7 @@ For more information about index creation, see the "Remarks" section in [CREATE 
 
 ## Examples
 
-The following examples all use the `AdventureWorks2012` sample database.
+The following examples use the `AdventureWorks2012` sample database.
 
 ### A. Creating a primary XML index
 

@@ -889,8 +889,8 @@
         - name: Extensions
           displayName: Extensions for the local development experience
           items:
-          -name: Overview
-          href: database/local-dev-experience-extensions.md
+          - name: Overview
+            href: database/local-dev-experience-extensions.md
           - name: SQL Database Projects extension
             items:
             - name: Overview

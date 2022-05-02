@@ -95,6 +95,11 @@ When Telnet connects successfully, you'll see a blank screen at the command wind
 
  ![Diagram of telnet][2]
 
+Use Powershell command to check the connectivity
+```
+Test-NetConnection -computer myserver.database.windows.net -port 1433
+```
+
 ### Check Connectivity using Psping
 
 [Psping](/sysinternals/downloads/psping) can be used as follows to check that the private endpoint  is listening for connections on port 1433.

@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: Madhumitatripathy
 ms.author: matripathy
 ms.reviewer: kendralittle, vanto, mathoma
-ms.date: 04/28/2022
+ms.date: 05/02/2022
 tags: azure-synapse
 ---
 # Data Discovery & Classification
@@ -56,7 +56,7 @@ The classification includes two metadata attributes:
 
 Azure SQL offers both SQL Information Protection policy and Microsoft Information Protection policy in data classification, and you can choose either of these two policies based on your requirement.
 
-:::image type="content" source="./media/data-discovery-and-classification-overview/protection-policy-types.png" alt-text="Screenshot of Information Protection Policy types":::
+:::image type="content" source="./media/data-discovery-and-classification-overview/protection-policy-types.png" alt-text="Screenshot of Information Protection policy types." lightbox="./media/data-discovery-and-classification-overview/protection-policy-types.png":::
 
 ### SQL Information Protection policy
 
@@ -129,18 +129,18 @@ Microsoft Information Protection (MIP) labels provide a simple and uniform way f
 1. To select **Microsoft Information Protection policy**, select the **Overview** tab, and select **Configure**.
 1. Select **Microsoft Information Protection policy** in the **Information Protection policy** options, and select **Save**.
 
-   :::image type="content" source="./media/data-discovery-and-classification-overview/select-microsoft-information-protection-policy.png" alt-text="Screenshot of selecting Microsoft Information Protection policy for Azure SQL Database":::
+   :::image type="content" source="./media/data-discovery-and-classification-overview/select-microsoft-information-protection-policy.png" alt-text="Screenshot of selecting Microsoft Information Protection policy for Azure SQL Database." lightbox="./media/data-discovery-and-classification-overview/select-microsoft-information-protection-policy.png":::
 
-1. If you go to the **Classification** tab, or select **Add classification**, you will now see M365 sensitivity labels appear in the **Sensitivity label** drop down. 
+1. If you go to the **Classification** tab, or select **Add classification**, you will now see M365 sensitivity labels appear in the **Sensitivity label** dropdown.
 
-   :::image type="content" source="./media/data-discovery-and-classification-overview/select-sensitivity-label.png" alt-text="Screenshot of Sensitivity label drop down":::
+   :::image type="content" source="./media/data-discovery-and-classification-overview/select-sensitivity-label.png" alt-text="Screenshot of Sensitivity label dropdown.":::
 
-   :::image type="content" source="./media/data-discovery-and-classification-overview/sensitivity-label-classification-tab.png" alt-text="Screenshot of Sensitivity label in the Classification tab":::
+   :::image type="content" source="./media/data-discovery-and-classification-overview/sensitivity-label-classification-tab.png" alt-text="Screenshot of Sensitivity label in the Classification tab." lightbox="./media/data-discovery-and-classification-overview/sensitivity-label-classification-tab.png":::
 
 - Information type is `[n/a]` while you are in MIP policy mode and automatic data discovery & recommendations remain disabled.
 - A warning icon may appear against an already classified column if the column was classified using a different Information Protection policy than the currently active policy. For example, if the column was classified with a label using SQL Information Protection policy earlier and now you are in Microsoft Information Protection policy mode. You will see a warning icon against that specific column. This warning icon does not indicate any problem, but is used only for information purposes.
 
-   :::image type="content" source="./media/data-discovery-and-classification-overview/classification-warning.png" alt-text="Screenshot of warnings for classified columns because of different Information Protection policies":::
+   :::image type="content" source="./media/data-discovery-and-classification-overview/classification-warning.png" alt-text="Screenshot of warnings for classified columns because of different Information Protection policies." lightbox="./media/data-discovery-and-classification-overview/classification-warning.png":::
 
 ## <a id="audit-sensitive-data"></a>Audit access to sensitive data
 
@@ -148,7 +148,7 @@ An important aspect of the classification is the ability to monitor access to se
 
 [![Audit log](./media/data-discovery-and-classification-overview/11_data_classification_audit_log.png)](./media/data-discovery-and-classification-overview/11_data_classification_audit_log.png#lightbox)
 
-These are the activites that are actually auditable with sensitivity information:
+These are the activities that are actually auditable with sensitivity information:
 - ALTER TABLE ... DROP COLUMN
 - BULK INSERT
 - DELETE
@@ -166,7 +166,7 @@ These are the activites that are actually auditable with sensitivity information
 - DBCC SHOW_STATISTICS
 - sys.dm_db_stats_histogram
 
-Use [sys.fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql) to returns information from an audit file stored in an Azure Storage account.
+Use [sys.fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql) to return information from an audit file stored in an Azure Storage account.
 
 ## <a id="permissions"></a>Permissions
 
@@ -261,7 +261,7 @@ You can use the following SQL drivers to retrieve classification metadata:
 ## FAQ - Advanced classification capabilities
 
 **Question**: Will [Azure Purview](/azure/purview/overview) replace SQL Data Discovery & Classification or will SQL Data Discovery & Classification be retired soon?
-**Answer**: We continue to support SQL Data Discovery & Classification and encourage you to adopt [Azure Purview](/azure/purview/overview) which has richer capabilities to drive advanced classification capabilities and data governance. If we decide to retire any service, feature, API or SKU, you will receive advance notice including a migration or transition path. Learn more about Microsoft Lifecycle policies here.
+**Answer**: We continue to support SQL Data Discovery & Classification and encourage you to adopt [Azure Purview](/azure/purview/overview) which has richer capabilities to drive advanced classification capabilities and data governance. If we decide to retire any service, feature, API or SKU, you will receive advance notice including a migration or transition path. Learn more about Microsoft Lifecycle policies [here](/lifecycle/index).
 
 ## Next steps
 

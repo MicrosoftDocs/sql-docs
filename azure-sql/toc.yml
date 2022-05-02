@@ -873,7 +873,7 @@
   - name: Tools
     items:
       - name: Local dev experience for SQL DB
-      - items:
+        items:
         - name: Overview
           displayName: Overview of local development environment
           href: database/local-dev-experience-overview.md

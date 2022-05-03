@@ -56,9 +56,10 @@ CREATE AVAILABILITY GROUP group_name
   | HEALTH_CHECK_TIMEOUT = milliseconds  
   | DB_FAILOVER  = { ON | OFF }   
   | DTC_SUPPORT  = { PER_DB | NONE }  
-  | [ BASIC | DISTRIBUTED ]
+  | [ BASIC | DISTRIBUTED | CONTAINED [ REUSE_SYSTEM_DATABASES ] ]
   | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
-  | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
+  | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE }
+ 
   
 <add_replica_spec>::=  
   <server_instance> WITH  
@@ -181,6 +182,10 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
 
  DISTRIBUTED  
  Used to create a distributed availability group. This option is used with the AVAILABILITY GROUP ON parameter to connect two availability groups in separate Windows Server Failover Clusters.  For more information, see [Distributed Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md). Distributed availability groups are supported beginning in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. 
+
+CONTAINED [REUSE_SYSTEM_DATABASES]
+Used to create a contained availability group.  This option is used to create an availability group with its own master and msdb databases, which are kept in sync across the set of replicas in the availability group.  
+The REUSE_SYSTEM_DATABASES option causes the contained master and msdb databases from a prior version of the AG to be used in the creation of this new availability group. For more information on contained availability groups, see [Contained Availability Group Overview &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/contained-ag-overview.md).
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Introduced in SQL Server 2017. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transaction waits until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it is in a "not synced" state and the replica marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica waits until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).

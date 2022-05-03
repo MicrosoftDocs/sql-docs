@@ -494,7 +494,7 @@ Backup and restore operations for Hyperscale databases are fast regardless of da
 
 ### Hyperscale backup retention
 
-Hyperscale supports short-term backup retention (STR) of 7 days by default; long-term retention (LTR) policies aren't currently supported.
+Default short-term backup retention (STR) for Hyperscale databases is 7 days; long-term retention (LTR) policies aren't currently supported.
 
 > [!NOTE]
 > Short-term backup retention up to 35 days for Hyperscale databases is now in preview. 
@@ -571,9 +571,6 @@ If you prefer, you can copy the database to a different region as well. Learn ab
 Backup storage redundancy for databases in Azure SQL Database can be configured at the time of database creation or can be updated for an existing database; the changes made to an existing database apply to future backups only. The default value is geo-redundant storage. For differences in pricing between locally redundant, zone-redundant and geo-redundant backup storage visit [managed instance pricing page](https://azure.microsoft.com/pricing/details/azure-sql/sql-managed-instance/single/). Storage redundancy for Hyperscale databases is unique: learn more in [Hyperscale backups and storage redundancy](#hyperscale-backups-and-storage-redundancy).
 
 For Azure SQL Managed Instance, backup storage redundancy is set at the instance level, and it is applied for all belonging managed databases. It can be configured at the time of an instance creation or updated for existing instances; the backup storage redundancy change would trigger then a new full backup per database and the change will apply for all future backups. The default storage redundancy type is geo-redundancy (RA-GRS).
-
-> [!NOTE]
-> Backup storage redundancy change for SQL Managed Instance is currently available only for the Public cloud via Azure Portal.
 
 ### Configure backup storage redundancy by using the Azure portal
 

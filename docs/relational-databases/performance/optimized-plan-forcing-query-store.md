@@ -19,15 +19,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 # Optimized plan forcing with Query Store
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-Query optimization and compilation is a multi-phased process of generating a “good-enough” query execution plan. In some cases, compilation can represent a large percentage of overall query execution time and consume significant system resources. Optimized plan forcing is part of the intelligent query processing family of features. Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as a compilation replay script. A compiliation replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
+Query optimization is a multi-phased process of generating a “good-enough” query execution plan. In some cases, query compilation, a part of query optimization, can represent a large percentage of overall query execution time and consume significant system resources. Optimized plan forcing is part of the intelligent query processing family of features. Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as a compilation replay script. A compilation replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
 
 ## Optimized plan forcing implementation
 
 When a query first goes through the compilation process, a threshold based on estimation of the time spent in optimization (based on the query optimizer input tree) will determine whether a compilation replay script is created. This threshold is not documented.
 
-After compilation completes, several runtime metrics become available to assess whether the previous estimation was correct. If it's confirmed the threshold was crossed, the compilation replay script is eligible for persistance. These runtime metrics include the number of objects accessed, the number of joins, the number of optimization tasks executed during optimization, and the actual optimization time.
+After compilation completes, several runtime metrics become available to assess whether the previous estimation was correct. If it's confirmed the threshold was crossed, the compilation replay script is eligible for persistence. These runtime metrics include the number of objects accessed, the number of joins, the number of optimization tasks executed during optimization, and the actual optimization time.
 
-The potential benefit of using a compilation replay script is also compared to the overhead of storing the compilation replay script. An estimation of the relative time to replay the compilation replay script is compared with the time that was just spent executing the normal optimization process, based on the number of optimization tasks stored in compilation replay script and the number of optimization tasks executed during normal compilation. If replaying the compilation replay script shows substantial benefit in reducing compilation time, the compilation replay script is persisted.
+The potential benefit of using a compilation replay script is also compared to the overhead of storing the compilation replay script. An estimation of the relative time to replay the compilation replay script is compared with the time that was spent executing the normal optimization process, based on the number of optimization tasks stored in compilation replay script and the number of optimization tasks executed during normal compilation. If replaying the compilation replay script shows substantial benefit in reducing compilation time, the compilation replay script is persisted.
 
 ## Considerations
 
@@ -40,11 +40,11 @@ The eligibility criteria for optimized plan forcing is:
 
 However, if the Query Store independently captures a query plan that was scoped out by optimized plan forcing, the compilation replay script will be created for a second recompilation of that same query, subject to default recompilation events. Learn more about recompilation in [Recompiling Execution Plans](../query-processing-architecture-guide.md#recompiling-execution-plans).
 
-Even if a compilation replay script was generated, it might not be persisted in the Query Store if the Query Store configured capture policies criteria isn't met, notably the number of execution of that statement, its cumulated compile, and execution times. In this case, the invalid compilation replay script will be removed from memory asynchronously.
+Even if a compilation replay script was generated, it might not be persisted in the Query Store if the Query Store configured capture policies criteria isn't met, notably the number of executions of that statement, its cumulated compile, and execution times. In this case, the invalid compilation replay script will be removed from memory asynchronously.
 
 ## Enable and disable optimized plan forcing
 
-To enable optimized plan forcing at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_PLAN_FORCING = ON` database scoped configuration. You must enable Query Store if it is not already enabled.
+To enable optimized plan forcing at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_PLAN_FORCING = ON` database scoped configuration. You must enable Query Store if it isn't already enabled.
 
 To disable optimized plan forcing at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_PLAN_FORCING = OFF` database scoped configuration.
 
@@ -80,9 +80,9 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_PLAN_FORCING = ON;
 GO
 ```
 
-### B. Select all queries which have a compilation replay script
+### B. Select all queries that have a compilation replay script
 
-The following example code selects all query_ids which have a compilations replay scripts in Query Store. Connect to the appropriate user database before running the example code.
+The following example code selects all query_ids that have a compilation replay script in Query Store. Connect to the appropriate user database before running the example code.
 
 ```sql
 SELECT 
@@ -109,7 +109,7 @@ Learn more in [sp_query_store_force_plan (Transact-SQL)](../system-stored-proced
 
 ### D. Select all queries where optimized plan forcing is disabled by Query Store
 
-The following example queries all plans which have been forced in Query Store where `is_optimized_plan_forcing_disabled` has been set to `1`. Before running the code, connect to the appropriate user database.
+The following example queries all plans that have been forced in Query Store where `is_optimized_plan_forcing_disabled` has been set to `1`. Before running the code, connect to the appropriate user database.
 
 ```sql
 SELECT 

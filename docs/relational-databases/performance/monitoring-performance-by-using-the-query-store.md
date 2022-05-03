@@ -148,7 +148,7 @@ FROM sys.database_query_store_options;
 GO
 ```
 
-The following sample results from querying [sys.database_query_store_options](../system-catalog-views/sys-database-query-store-options-transact-sql.md) indicate that the Query Store is in a read/write state for the secondary. The `readonly_reason` of 8 indicates that this is a secondary replica. These results indicate that Query Store has been enabled successfully on the secondary replica.
+The following sample results from querying [sys.database_query_store_options](../system-catalog-views/sys-database-query-store-options-transact-sql.md) indicate that the Query Store is in a read/write state for the secondary. The `readonly_reason` of 8 indicates that the query was run against a secondary replica. These results indicate that Query Store has been enabled successfully on the secondary replica.
 
 desired_state | desired_state_desc | actual_state | actual_state_desc | readonly_reason
 --------------|--------------------|--------------|-------------------|-----------------
@@ -742,7 +742,9 @@ EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
 
 ### Reduce compile time with optimized plan forcing
 
-Optimized plan forcing is part of the intelligent query processing family of features. Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as a compilation replay script. A compiliation replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
+**APPLIES TO:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and higher.
+
+Optimized plan forcing is part of the intelligent query processing family of features. Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as a compilation replay script. A compilation replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
 
 Learn more in [Optimized plan forcing with Query Store](optimized-plan-forcing-query-store.md).
 

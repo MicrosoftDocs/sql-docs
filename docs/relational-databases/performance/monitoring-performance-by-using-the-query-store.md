@@ -28,9 +28,12 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 ## <a name="Enabling"></a> Enabling the Query Store
 
- Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics databases, and is enabled by default for new Azure SQL Database databases.
+- Query Store is enabled by default for new Azure SQL Database and Azure SQL Managed Instance databases.
+- Query Store is enabled by default for all newly created databases in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] to enable features to better track performance history, troubleshoot query plan related issues, and enable new capabilities. 
+- Query Store is not enabled by default for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].
+- Query Store is not enabled by default for new Azure Synapse Analytics databases. 
 
-### Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+### Use the Query Store page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 1. In Object Explorer, right-click a database, and then select **Properties**.
 
@@ -41,7 +44,7 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 3. In the **Operation Mode (Requested)** box, select **Read Write**.
 
-### Use Transact-SQL Statements
+### Use Transact-SQL statements
 
 Use the `ALTER DATABASE` statement to enable the query store for a given database. For example:
 

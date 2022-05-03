@@ -3,7 +3,6 @@ title: "What is a contained availability group?"
 description: "An overview of the contained availability group feature of Always On availability groups within SQL Server."
 ms.date: "05/11/2020"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,7 +16,7 @@ ms.reviewer: mathoma
 
 # What is a contained availability group?
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 A contained availability group is an Always On availability group that supports:
 
@@ -63,7 +62,7 @@ For example, if your availability group `MyContainedAG` is hosted on server `SER
 
 #### Read-only routing and contained availability groups
 
-If you have configured read-only routing to redirect connections with read intent to a secondary replica ( see [Configure read-only routing for an Always On availability group](../../../configure-read-only-routing-for-an-availability-group-sql-server.md)) and you wish to connect using a login which is created in the contained availability group only, there are some additional considerations:
+If you have configured read-only routing to redirect connections with read intent to a secondary replica ( see [Configure read-only routing for an Always On availability group](./configure-read-only-routing-for-an-availability-group-sql-server.md)) and you wish to connect using a login which is created in the contained availability group only, there are some additional considerations:
 
 1. You must specify a database which is part of the contained availability group in the connection string
 1. The user specified in the connection string must have permission to access the database(s) in the contained availability group.
@@ -115,7 +114,7 @@ Log shipping can be configured if the source database is in the contained availa
 To configure log shipping with a contained availability group, do the following:
 
 1. Connect to the contained availability group listener.
-1. Configure [log shipping](../../../log-shipping/configure-log-shipping-sql-server.md) as you normally would.
+1. Configure [log shipping](../../log-shipping/configure-log-shipping-sql-server.md) as you normally would.
 1. After the log shipping job is configured, alter the job to connect to the contained availability group listener before taking a backup.
 
 ### Transparent Data Encryption (TDE)
@@ -124,7 +123,7 @@ To use transparent data encryption (TDE) with databases in a contained availabil
 
 Databases that use TDE rely on certificates in the `master` database to decrypt the Database Encryption Key (DEK). Without that certificate, SQL Server cannot decrypt databases encrypted with TDE or bring them online. In a contained availability group, SQL Server will check both `master` databases for the Database Master Key (DMK), the `master` database for the instance, and the contained `master` database within the contained availability group to decrypt the database. If it cannot find the certificate in either location, then SQL Server will be unable to bring the database online.
 
-To transfer the DMK from the `master` database of the instance, to the contained `master` database, see [Move a TDE Protected Database to Another SQL Server](../../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md), primarily focusing on the portions where the DMK is transferred from the old server to the new one.
+To transfer the DMK from the `master` database of the instance, to the contained `master` database, see [Move a TDE Protected Database to Another SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md), primarily focusing on the portions where the DMK is transferred from the old server to the new one.
 
 ## DDL changes
 
@@ -153,4 +152,4 @@ This option is only valid for CONTAINED availability groups, and specifies that 
 
 ## Next steps
 
-To configure an availability group, see [Contained availability group setup](./contained-ag-setup.md).
+To configure an availability group, see [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md).

@@ -138,31 +138,9 @@ Granular permissions for [Dynamic Data Masking](../relational-databases/security
 |:---|:---|
 |Install Azure Arc agent via SQL Server command line setup |[Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt)|
 
-## <a id="ml"></a> SQL Server Machine Learning Services
-
-|New feature or update | Details |
-|:---|:---|
-
 ## SQL Server Analysis Services
 
 This release introduces new features and improvements for performance, resource governance, and client support.
-
-| New feature or update | Details |
-|:---|:---|
-
-## SQL Server Integration Services
-
-This release introduces new features to improve file operations.
-
-| New feature or update | Details |
-|:---|:---|
-
-## SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
-
-| New feature or update | Details |
-|:---|:---|
-
-## SQL Server Reporting Services
 
 ## See also
 

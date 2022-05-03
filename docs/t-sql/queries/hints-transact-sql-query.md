@@ -177,7 +177,7 @@ If you specify a join hint in the same query's FROM clause for a specific table 
 
 Disables [Optimized plan forcing](../../relational-databases/performance/optimized-plan-forcing-query-store.md) for a query.
 
-Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as a compilation replay script. A compilation replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
+Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as a compilation replay script. A compilation replay script is stored as part of the compressed showplan XML in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
 
 #### EXPAND VIEWS  
 Specifies the indexed views are expanded. Also specifies the Query Optimizer won't consider any indexed view as a replacement for any query part. A view is expanded when the view definition replaces the view name in the query text.  

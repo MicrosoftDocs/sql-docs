@@ -59,8 +59,8 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
 * Degree of parallelism (DOP) feedback automatically adjusts degree of parallelism for repeating queries to optimize for workloads where excessive parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. See [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).
 * Multiple TCP connections for distributed availability groups
   * Enables the use of multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.
-* Optimized plan forcing using compilation replay
-  * This feature improves the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps
+* Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
+* Optimized plan forcing using compilation replay improves the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).
 * Data Virtualization - ODBC driver refresh
 
 

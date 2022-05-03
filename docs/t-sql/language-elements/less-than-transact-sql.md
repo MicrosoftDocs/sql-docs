@@ -17,7 +17,7 @@ author: LitKnd
 ms.author: kendralittle
 ms.custom: ""
 ms.date: "03/13/2017"
-monikerRange: ">=sql-server-2016"
+monikerRange: ">=sql-server-2019"
 ---
 
 # &lt; (Less Than) (Transact-SQL)

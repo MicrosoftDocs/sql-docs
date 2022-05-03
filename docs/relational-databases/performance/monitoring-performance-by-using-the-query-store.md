@@ -286,7 +286,13 @@ Catalog views present information about the Query Store.
         [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
     :::column-end:::
 :::row-end:::
-
+:::row:::
+    :::column:::
+        [sys.database_query_store_internal_state (Transact-SQL)](../system-catalog-views/sys-database-query-store-internal-state-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### Query Store stored procedures
 
@@ -318,9 +324,10 @@ Stored procedures configure the Query Store.
 :::row-end:::
 :::row:::
     :::column:::
-        sp_query_store_consistency_check &#40;Transact-SQL&#41;<sup>1</sup>
+        [sp_query_store_clear_message_queues (Transact-SQL)](../system-stored-procedures/sp-query-store-clear-message-queues-transact-sql.md)
     :::column-end:::
     :::column:::
+        sp_query_store_consistency_check &#40;Transact-SQL&#41;<sup>1</sup>
     :::column-end:::
 :::row-end:::
 

@@ -21,7 +21,7 @@ This topic describes how to create a SQL Server Agent proxy in [!INCLUDE[ssnover
   
 A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account defines a security context in which a job step can run. Each proxy corresponds to a security credential. To set permissions for a particular job step, create a proxy that has the required permissions for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent subsystem, and then assign that proxy to the job step.  
 
-On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) or [SQL Agent job limitations in SQL Managed Instance](/azure/azure-sql/managed-instance/job-automation-managed-instance?view=azuresql#sql-agent-job-limitations-in-sql-managed-instance) for details.
+On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) or [SQL Agent job limitations in SQL Managed Instance](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-limitations-in-sql-managed-instance) for details.
 
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   

@@ -1,6 +1,6 @@
 ---
-title: Configure automatic database digests
-description: This article discusses how to configure automatic database digest in Azure SQL Database using the Azure portal, PowerShell, and the Azure CLI.
+title: Enable automatic digest storage
+description: This article discusses how to enable automatic digest storage in Azure SQL Database using the Azure portal, PowerShell, and the Azure CLI.
 ms.service: sql-database
 ms.subservice: security
 ms.devlang:
@@ -12,7 +12,7 @@ ms.date: "05/24/2022"
 monikerRange: "= azuresqldb-current"
 ---
 
-# Configure automatic database digests
+# Enable automatic digest storage
 
 [!INCLUDE [Azure SQL Database](../../../includes/applies-to-version/asdb.md)]
 
@@ -28,7 +28,10 @@ In this article, we will describe how you can configure automatic generation and
 # [Portal](#tab/Portal)
 
 1. Open the [Azure portal](https://portal.azure.com/) and locate the database for which you want to enable automatic digest storage. Select that database in SQL Database.
-1. In **Security**, select the **Ledger** option. :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected."::: 
+> [!NOTE]
+> Enable automatic digest storage can also be configured when creating a new database.
+
+2. In **Security**, select the **Ledger** option. :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected."::: 
 1. In the **Ledger** pane, select **Enable automatic digest storage**. Select the storage type. You can choose between Azure Storage or Azure Confidential Ledger (ACL). Depending on the storage type you picked, you have to select an existing storage account or ACL, or create a new one. Note that the storage container name is fixed and cannot be modified. :::image type="content" source="media/ledger/automatic-digest-management.png" alt-text="Screenshot that shows the selections for enabling digest storage.":::
 1. Click **Save** to save your automatic digest storage configuration. 
 

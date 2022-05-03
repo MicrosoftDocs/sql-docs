@@ -17,12 +17,13 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 Updatable ledger tables are system-versioned tables on which users can perform updates and deletes while also providing tamper-evidence capabilities. When updates or deletes occur, all earlier versions of a row are preserved in a secondary table, known as the history table. The history table mirrors the schema of the updatable ledger table. When a row is updated, the latest version of the row remains in the ledger table, while its earlier version is inserted into the history table by the system, transparently to the application. 
 
+Both updatable ledger tables and [temporal tables](../../tables/temporal-tables.md) are system-versioned tables, for which the database engine captures historical row versions in secondary history tables. Either technology provides unique benefits. Updatable ledger tables make both the current and historical data tamper evident. Temporal tables support querying the data stored at any point in time instead of only the data that's correct at the current moment in time. You can use both technologies together by creating tables that are both updatable ledger tables and temporal tables.
+
 :::image type="content" source="media/ledger/ledger-table-architecture.png" alt-text="Diagram that shows ledger table architecture.":::
 
-An updatable ledger table can be created in two ways:
-
-- When you create a new database in the Azure portal by selecting **Enable ledger on all future tables in this database** during ledger configuration, or through specifying the `LEDGER = ON` argument in your [CREATE DATABASE (Transact-SQL)](/sql/t-sql/statements/create-database-transact-sql) statement. This action creates a ledger database and ensures that all future tables created in your database are updatable ledger tables by default.
-- When you create a new table on a database where ledger isn't enabled at the database level by specifying the `LEDGER = ON` argument in your [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) statement.
+You can create an updatable ledger table by specifying the `LEDGER = ON` argument in your [CREATE DATABASE (Transact-SQL)](/sql/t-sql/statements/create-database-transact-sql) statement.
+> [!TIP]
+> `LEDGER = ON` is optional when creating updatable ledger tables in a ledger database. By default, each table is an updatable ledger table in a ledger database.
 
 For information on options available when you specify the `LEDGER` argument in your T-SQL statement, see [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql).
 

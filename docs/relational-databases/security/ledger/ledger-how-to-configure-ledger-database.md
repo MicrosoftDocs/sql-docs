@@ -30,8 +30,8 @@ This article provides information on configuring a [ledger database](ledger-over
 
 # [Portal](#tab/Portal)
 
-1. Open the [Azure portal](https://portal.azure.com/) and locate the database for which you want to enable automatic digest storage. Select that database in SQL Database.
-1. In **Security**, select the **Ledger** option. :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected."::: 
+1. Open the [Azure portal](https://portal.azure.com/) and [create and Azure SQL Database](https://docs.microsoft.com/en-us/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal). 
+1. In the **Security** tab, select the **Ledger** option. :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected."::: 
 1. In the **Ledger** pane, select **Enable for all future tables in this database**. :::image type="content" source="media/ledger/enable-ledger-database.png" alt-text="Screenshot that shows the selection for enabling a ledger database.":::
 1. Select **Apply** to save this setting.
 
@@ -123,4 +123,4 @@ For more information, see [CREATE DATABASE (Transact-SQL)](/sql/t-sql/statements
 - [Ledger overview](ledger-overview.md)
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)
-- [How to convert regular tables into ledger tables](ledger-how-to-convert-regular-tables-into-ledger-tables.md)
+- [Configure automatic database digests](ledger-how-to-configure-automatic-database-digest.md)

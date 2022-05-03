@@ -21,9 +21,7 @@ Ledger provides a form of data integrity called *forward integrity*, which provi
 
 The verification process scans all ledger and history tables. It recomputes the SHA-256 hashes of their rows and compares them against the database digest files passed to the verification stored procedure. 
 
-For large ledger tables, database verification can be a resource-intensive process. You should use it only when you need to verify the integrity of a database. 
-
-The verification process can be executed hourly or daily for cases where the integrity of the database needs to be frequently monitored. Or it can be executed only when the organization that's hosting the data goes through an audit and needs to provide cryptographic evidence about the integrity of the data. To reduce the cost of verification, ledger exposes options to verify individual ledger tables or only a subset of the ledger tables. 
+Because the ledger verification recomputes all of the hashes for transactions in the database, it can be a resource-intensive process for databases with large amounts of data. To reduce the cost of verification, the feature exposes options to verify individual ledger tables or only a subset of the ledger tables.
 
 You accomplish database verification through two stored procedures, depending on whether you [use automatic digest storage](#database-verification-that-uses-automatic-digest-storage) or you [manually manage digests](#database-verification-that-uses-manual-digest-storage).
 
@@ -38,6 +36,8 @@ You accomplish database verification through two stored procedures, depending on
 When you're using automatic digest storage for generating and storing database digests, the location of the digest storage is in the system catalog view [sys.database_ledger_digest_locations](/sql/relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql) as JSON objects. Running database verification consists of executing the [sp_verify_database_ledger_from_digest_storage](/sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql) system stored procedure. Specify the JSON objects from the [sys.database_ledger_digest_locations](/sql/relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql)  system catalog view where database digests are configured to be stored. 
 
 When you use automatic digest storage, you can change storage locations throughout the lifecycle of the ledger tables.  For example, if you start by using Azure immutable storage to store your digest files, but later you want to use Azure Confidential Ledger instead, you can do so. This change in location is stored in [sys.database_ledger_digest_locations](/sql/relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql). 
+
+When you run ledger verification, inspect the location of **digest_locations** to ensure digests used in verification are retrieved from the locations you expect. You want to make sure that a privileged user hasn't changed locations of the digest storage to an unprotected storage location, such as Azure Storage, without a configured and locked immutability policy. 
 
 To simplify running verification when you use multiple digest storage locations, the following script will fetch the locations of the digests and execute verification by using those locations.
 
@@ -80,6 +80,12 @@ EXECUTE sp_verify_database_ledger N'
 ```
 
 Return codes for `sp_verify_database_ledger` and `sp_verify_database_ledger_from_digest_storage` are `0` (success) or `1` (failure).
+
+### Recommendation
+
+Ideally, you want to minimize or even eliminate the gap between the time the attack occurred and the time it was detected. Microsoft recommends scheduling the ledger verification] regularly to avoid a restore of the database from days or months ago after [tampering was detected](ledger-how-to-recover-after-tampering.md). The interval of the verification should be decided by the customer, but be aware that ledger verification can be resource consuming. We recommend running this during a maintenance window or off peak hours.
+
+Scheduling database verification can be done with Elastic Jobs or Azure Automation.
 
 ## Next steps
 

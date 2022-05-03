@@ -9,6 +9,8 @@ items:
   items:
   - name: What's New
     items:
+    - name: SQL Server 2022 Preview
+      href: sql-server/what-s-new-in-sql-server-2022.md
     - name: SQL Server 2019
       href: sql-server/what-s-new-in-sql-server-2019.md
     - name: SQL Server 2017
@@ -12863,7 +12865,7 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
       - name: sys.dm_database_replica_states (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md
-      - name: sys.dm_database_backups_azure-sql-database
+      - name: sys.dm_database_backups (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-database-backups-azure-sql-database.md  
       - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
@@ -13686,6 +13688,8 @@ items:
         href: relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md
       - name: sys.sp_cdc_stop_job
         href: relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md
+      - name: sys.sp_cdc_set_scheduler_job
+        href: relational-databases/system-stored-procedures/sys-cdc-set-scheduler-job-transact-sql.md
     - name: Cursor
       href: relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md
       items:
@@ -16114,6 +16118,10 @@ items:
         items:
         - name: APPROX_COUNT_DISTINCT
           href: t-sql/functions/approx-count-distinct-transact-sql.md
+        - name: APPROX_PERCENTILE_CONT
+          href: t-sql/functions/approx-percentile-cont-transact-sql.md
+        - name: APPROX_PERCENTILE_DISC
+          href: t-sql/functions/approx-percentile-disc-transact-sql.md
         - name: AVG
           href: t-sql/functions/avg-transact-sql.md
         - name: CHECKSUM_AGG

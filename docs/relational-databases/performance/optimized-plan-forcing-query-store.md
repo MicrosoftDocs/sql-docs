@@ -2,7 +2,7 @@
 title: "Optimized plan forcing with Query Store"
 description: Learn about optimized plan forcing and compilation replay scripts in Query Store.
 ms.custom: ""
-ms.date: "04/25/2022"
+ms.date: 05/03/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -31,26 +31,37 @@ The potential benefit of using a compilation replay script is also compared to t
 
 ## Considerations
 
-Optimized plan forcing is enabled by default for new databases in SQL Server 2022 and higher. The Query Store must be enabled for every database where optimized plan forcing is used.  
-
-The eligibility criteria for optimized plan forcing is:
+When the optimized plan forcing feature is enabled, the eligibility criteria for optimized plan forcing is:
 
 1. Only query plans that go through full optimization are eligible, which can be verified by the presence of the `StatementOptmLevel="FULL"` property.
 1. Statements with RECOMPILE hint and distributed queries are not eligible.
 
 However, if the Query Store independently captures a query plan that was scoped out by optimized plan forcing, the compilation replay script will be created for a second recompilation of that same query, subject to default recompilation events. Learn more about recompilation in [Recompiling Execution Plans](../query-processing-architecture-guide.md#recompiling-execution-plans).
 
-Even if a compilation replay script was generated, it might not be persisted in the Query Store if the Query Store configured capture policies criteria isn't met, notably the number of executions of that statement, its cumulated compile, and execution times. In this case, the invalid compilation replay script will be removed from memory asynchronously.
+Even if a compilation replay script was generated, it might not be persisted in the Query Store if the Query Store configured capture policies criteria isn't met, notably the number of executions of that statement and its cumulated compile and execution times. In this case, the invalid compilation replay script will be removed from memory asynchronously.
 
 ## Enable and disable optimized plan forcing
 
-To enable optimized plan forcing at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_PLAN_FORCING = ON` database scoped configuration. You must enable Query Store if it isn't already enabled.
+You can enable or disable optimized plan forcing for a database. When optimized plan forcing is enabled for a database, you may disable it for individual queries using the `DISABLE_OPTIMIZED_PLAN_FORCING` query hint. You may also disable optimized plan forcing for a query plan which is forced in Query Store.
+
+### Enable or disable optimized plan forcing for a database
+
+Optimized plan forcing is enabled by default for new databases created in SQL Server 2022 and higher. The Query Store must be enabled for every database where optimized plan forcing is used. Upgraded instances with existing databases or databases restored from a lower version of SQL Server will not have optimized plan forcing enabled by default.
+
+To enable optimized plan forcing at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_PLAN_FORCING = ON` database scoped configuration. You must enable Query Store if it isn't already enabled. Find example code in [Example A](#a-enable-query-store-and-optimized-plan-forcing-for-a-database), or learn more about Query Store in [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 
 To disable optimized plan forcing at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_PLAN_FORCING = OFF` database scoped configuration.
 
-## Optimized plan forcing in Query Store
+### Disable optimized plan forcing with a query hint
 
-The `sp_query_store_force_plan` procedure includes a `disabled_optimized_plan_forcing` parameter, with default OFF (0) (if the parameter is omitted from the procedure call).
+When the optimized plan forcing feature is enabled in a database, you can disable optimized plan forcing for an individual query by using the `DISABLE_OPTIMIZED_PLAN_FORCING` [query hint](../../t-sql/queries/hints-transact-sql-query.md).
+
+Find an example of applying this query hint in [Example E](#e-disable-optimized-plan-forcing-for-a-query).
+
+
+### Force a plan with Query Store, but disable optimized plan forcing
+
+The [sp_query_store_force_plan](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure includes a `disable_optimized_plan_forcing` parameter, with default OFF (0) (if the parameter is omitted from the procedure call).
 
 The `sys.query_store_plan` catalog view includes columns that indicate if the plan has an associated compilation replay script, and adds a new state to existing failure reason column specific to associated compilation replay script. Learn more in [sys.query_store_plan (Transact-SQL)](../system-catalog-views/sys-query-store-plan-transact-sql.md).
 
@@ -121,6 +132,20 @@ INNER JOIN sys.query_store_query_text AS t
     ON q.query_text_id = t.query_text_id
 WHERE p.is_optimized_plan_forcing_disabled = 1;
 GO
+```
+
+### E. Disable optimized plan forcing for a query
+
+The following example disables optimized plan forcing for a query using the `DISABLE_OPTIMIZED_PLAN_FORCING` [query hint](../../t-sql/queries/hints-transact-sql-query.md). The example uses the [AdventureWorks sample database](../../samples/adventureworks-install-configure.md).
+
+```sql
+SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
+FROM Sales.SalesOrderDetail  
+WHERE UnitPrice < $5.00  
+GROUP BY ProductID, OrderQty  
+ORDER BY ProductID, OrderQty  
+OPTION (DISABLE_OPTIMIZED_PLAN_FORCING);
+GO 
 ```
 
 ## Next steps

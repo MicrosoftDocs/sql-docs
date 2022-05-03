@@ -79,8 +79,6 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 | /MPYCACHEDIRECTORY | Reserved for future use. Use %TEMP% to store Python component CAB files for installation on computers that do not have an internet connection. |
 ::: moniker-end
 
-[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
-
 ## <a name="indb"></a> In-database instance installations
 
 In-database analytics are available for database engine instances, required for adding the **AdvancedAnalytics** feature to your installation. You can install a database engine instance with advanced analytics, or [add it to an existing instance](#add-existing). 

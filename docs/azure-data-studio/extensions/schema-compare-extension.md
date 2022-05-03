@@ -7,18 +7,17 @@ ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
 ms.reviewer: "maghan"
-ms.custom:
-- event-tier1-build-2022
-ms.date: 04/15/2022
+ms.custom: 
+ms.date: 5/24/2022
 ---
 
 # Schema Compare extension
 
-The Schema Compare extension provides an easy-to-use experience to compare two database definitions and apply the differences from the source to the target.
+The Schema Compare extension provides an easy-to-use experience to compare two database definitions and apply the differences from the source to the target.  This includes active database connections, dacpac files, and [SQL projects](sql-database-project-extension.md).
 
 ## Features
 
-* Compare schemas of two dacpac files or databases
+* Compare schemas between two dacpac files, databases, or SQL projects
 * View results as a set of actions that must be taken against the target for it to match the source
 * Selectively exclude actions listed in results
 * Set options that control the scope of the comparison
@@ -57,7 +56,17 @@ It can be tedious to manually manage and synchronize different database versions
 
 4. Select **Compare** to view the results of the comparison.
 
+## Update an existing SQL project from a database
+
+1. Install both the **Schema Compare** and **[SQL Database Project](sql-database-project-extension.md)** extensions.
+
+2. From a **Database dashboard** select the **Update Project from Database** option in the toolbar.
+
+3. Select the existing SQL project and the desired file structure for new objects.
+
+4. Choose **View changes in Schema Compare** to review the changes before applying them to the SQL project.
+
 ## Next steps
 
-To learn more about Schema Compare, visit [Use Schema Compare to Compare Different Database Definitions](../../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).
-Report issues and feature requests [here.](https://github.com/microsoft/azuredatastudio/issues)
+- [Learn more about Schema Compare in SSDT](../../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)
+- [Explore SQL database projects in Azure Data Studio](sql-database-project-extension.md)

@@ -479,7 +479,8 @@ For some applications, query design guidelines might not apply because you canno
 
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consider Query Store hints to force plans, instead of plan guides. For more information, see [Query Store hints (Preview)](../performance/query-store-hints.md).
   
-## See Also  
+## See also  
+
 
 - [Statistics for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)
 - [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)

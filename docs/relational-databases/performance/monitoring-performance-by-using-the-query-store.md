@@ -728,7 +728,7 @@ When using `sp_query_store_force_plan` you can only force plans that were record
 > [!NOTE]
 > Forcing plans in Query Store is not supported in Azure Synapse Analytics. 
 
-#### <a name="ctp23"><a/> Plan forcing support for fast forward and static cursors
+#### <a name="ctp23"></a> Plan forcing support for fast forward and static cursors
 
 Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and Azure SQL Database (all deployment models), Query Store supports the ability to force query execution plans for fast forward and static [!INCLUDE[tsql](../../includes/tsql-md.md)] and API cursors. Forcing is supported via `sp_query_store_force_plan` or through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Store reports.
 

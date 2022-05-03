@@ -146,11 +146,7 @@ This release introduces new features and improvements for performance, resource 
 
 - [`SqlServer` PowerShell module](https://www.powershellgallery.com/packages/Sqlserver)
 - [SQL Server PowerShell documentation](../powershell/sql-server-powershell.md)
-
-## Next steps
-
 - [SQL Server Workshops](https://aka.ms/sqlworkshops)
-- [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-version-15-release-notes.md)
-- [Microsoft [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]: Technical white paper](https://aka.ms/sql2019whitepaper)
+- [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

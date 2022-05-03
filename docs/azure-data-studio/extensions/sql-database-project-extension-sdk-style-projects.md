@@ -50,4 +50,4 @@ The `.dacpac` resulting from building an SDK-style SQL project is compatible wit
 
 ## Next steps
 
-- [Build and Publish a project with SQL Database Projects extension ](sql-database-project-extension-build.md)
+- [Build and Publish a project with the SQL Database Projects extension](sql-database-project-extension-build.md)

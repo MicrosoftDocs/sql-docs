@@ -74,7 +74,7 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
 
 ### Time series functions
 
-* [DATE_BUCKET](https://docs.microsoft.com/en-us/azure/azure-sql-edge/date-bucket-tsql)
+* [DATE_BUCKET](/azure/azure-sql-edge/date-bucket-tsql)
 * [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)
 * GENERATE_SERIES
 * [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)
@@ -147,6 +147,6 @@ This release introduces new features and improvements for performance, resource 
 - [`SqlServer` PowerShell module](https://www.powershellgallery.com/packages/Sqlserver)
 - [SQL Server PowerShell documentation](../powershell/sql-server-powershell.md)
 - [SQL Server Workshops](https://aka.ms/sqlworkshops)
-- [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md)
+- [[!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

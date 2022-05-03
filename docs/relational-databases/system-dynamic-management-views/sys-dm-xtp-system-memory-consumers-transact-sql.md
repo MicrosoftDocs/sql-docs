@@ -1,8 +1,8 @@
 ---
-description: "sys.dm_xtp_system_memory_consumers (Transact-SQL)"
+description: "Reports system level memory consumers for In-Memory OLTP."
 title: "sys.dm_xtp_system_memory_consumers (Transact-SQL)"
 ms.custom: ""
-ms.date: 04/21/2022
+ms.date: 04/27/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -39,11 +39,11 @@ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../i
 |memory_consumer_type|**int**|An integer that represents the type of the memory consumer with one of the following values:<br /><br />0 - Should not be displayed. Aggregates memory usage of two or more consumers.<br /><br />1 - LOOKASIDE: Tracks memory consumption for a system lookaside.<br /><br />2 - VARHEAP: Tracks memory consumption for a variable-length heap.<br /><br />4 - IO page pool: Tracks memory consumption for a system page pool used for IO operations.|
 |memory_consumer_type_desc|**nvarchar(16)**|The description of the type of memory consumer:<br /><br />0 - Should not be displayed<br /><br />1 - LOOKASIDE<br /><br />2 - VARHEAP<br /><br />4 - PGPOOL|
 |memory_consumer_desc|**nvarchar(64)**|Description of the memory consumer instance:<br /><br />VARHEAP:<br />System heap. General purpose. Currently only used to allocate garbage collection work items.<br />-OR-<br />Lookaside heap. Used by lookasides when the number of items contained in the lookaside list reaches a predetermined cap (usually around 5,000 items).<br /><br />PGPOOL: For IO system pools there are three different sizes: System 4K page pool, System 64 K page pool, and System 256 K page pool.|
-|lookaside_id|**bigint**|The ID of the thread-local, LOOKASIDE memory provider.|
+|lookaside_id|**bigint**|The ID of the thread-local, lookaside memory provider.|
 |pagepool_id|**bigint**|The ID of the thread-local, page pool memory provider.|
 |allocated_bytes|**bigint**|Number of bytes reserved for this consumer.|
-|used_bytes|**bigint**|Bytes used by this consumer. Applies only to VARHEAP and LOOKASIDE memory consumers.|
-|allocation_count|**int**|Number of allocations. For LOOKASIDE memory consumers, number of allocations from the system heap.|
+|used_bytes|**bigint**|Bytes used by this consumer. Applies only to varheap memory consumers.<br /><br />Starting with [!INCLUDE [sqlserver2022](../../includes/sssql22-md.md)], applies to varheap and lookaside memory consumers.|
+|allocation_count|**int**|Number of allocations.<br /><br />Starting with [!INCLUDE [sqlserver2022](../../includes/sssql22-md.md)], the number of allocations from the system heap for lookaside memory consumers.|
 |partition_count|**int**|Internal use only.|
 |sizeclass_count|**int**|Internal use only.|
 |min_sizeclass|**int**|Internal use only.|
@@ -52,7 +52,7 @@ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../i
 
 ## Permissions
 
- Requires VIEW SERVER STATE permissions on the server.
+Requires VIEW SERVER STATE permissions on the server.
 
 ## User scenario
 
@@ -60,6 +60,7 @@ This example outputs the system memory consumers for the SQL Server instance:
 
 ```sql
 SELECT memory_consumer_type_desc,
+       memory_consumer_desc,
        allocated_bytes / 1024 as allocated_bytes_kb, 
        used_bytes / 1024 as used_bytes_kb,
        allocation_count
@@ -69,7 +70,7 @@ FROM sys.dm_xtp_system_memory_consumers;
  The output shows all memory consumers at system level. For example, there are consumers for transaction look aside.
 
 ```output
-memory_consumer_type_name                memory_consumer_desc                           allocated_bytes_kb   used_bytes_kb        allocation_count
+memory_consumer_type_desc                memory_consumer_desc                           allocated_bytes_kb   used_bytes_kb        allocation_count
 -------------------------------          ---------------------                          -------------------  --------------       ----------------
 VARHEAP                                  Lookaside heap                                 0                    0                    0
 VARHEAP                                  System heap                                    768                  0                    2
@@ -92,7 +93,7 @@ PGPOOL                                   System 64K page pool                   
 PGPOOL                                   System 4K page pool                            24                   24                   6
 ```
 
- To see the total memory consumed by system allocators:
+To see the total memory consumed by system allocators:
 
 ```sql
 SELECT SUM(allocated_bytes) / (1024 * 1024) AS total_allocated_MB,

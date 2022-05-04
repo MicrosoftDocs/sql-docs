@@ -135,7 +135,8 @@ sections:
           Yes, in case that you have created a new resource, executed scaling operation, or changed maintenance window, your database or instance can end up on the machine that is already scheduled for upgrade. In this case, you will be notified only when deployment window starts and ends. For all future deployments you will get upfront notification about planned events.
           
       - question: Can I check if my instance has been upgraded in the last X days?
-        answer: You can check this only if you have configured advanced notifications in the service health. You can use [Azure Resource Graph explorer](/governance/resource-graph/overview) for [retrieving list of maintenance events[(maintenance-window.md#retrieving-list-of-maintenance-events) or use [Service Health overview page](/service-health/service-health-overview).
+        answer: |
+          You can check this only if you have configured advanced notifications in the service health. You can use [Azure Resource Graph explorer](/governance/resource-graph/overview) for [retrieving list of maintenance events[(maintenance-window.md#retrieving-list-of-maintenance-events) or use [Service Health overview page](/service-health/service-health-overview).
 
 additionalContent: |
  ## See Also

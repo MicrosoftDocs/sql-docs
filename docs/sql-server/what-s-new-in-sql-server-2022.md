@@ -37,7 +37,7 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
 
 * Allow Purview policies to be applied to any SQL Server instance that is enrolled in both Azure Arc and to Azure Purview data governance
 
-* Support for 3 roles:
+* Support for three roles:
   * SQL Performance Monitor
   * SQL Security Auditor
   * SQL Data Reader
@@ -46,7 +46,7 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
 ## Operations
 
 * Accelerated database recovery performance improvement
-  * Implements a persistent version store cleaner thread per database instead of per instance. Impreoves version cleanup when there are multiple databases on the same instance.
+  * Implements a persistent version store cleaner thread per database instead of per instance. Improves version cleanup when there are multiple databases on the same instance.
 
 ## Performance optimization
 
@@ -94,7 +94,7 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
 
 [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] introduces new granular permissions and roles.
 
-### Granular permiissions for dynamic data masking
+### Granular permissions for dynamic data masking
 
 Granular permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
 

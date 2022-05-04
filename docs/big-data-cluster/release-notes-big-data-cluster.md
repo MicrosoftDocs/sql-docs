@@ -5,13 +5,13 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 01/31/2022
+ms.date: 05/03/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# SQL Server Big Data Clusters platform release notes
+# SQL Server 2019 Big Data Clusters platform release notes
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -34,6 +34,7 @@ The following table contains the tested configuration matrix for each release of
 
 | Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ----------- | ------------ | ------- | ------- | ------------ | ----------- |
+| CU16 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU15 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU14 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU13 | Ubuntu 20.04 LTS | 1.20 | containerd 1.4.6<br/>CRI-O 1.20.0 | Block only | Block only |
@@ -49,7 +50,7 @@ Restrictions:
 Reference architecture and white papers for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be found on the following pages:
 
 * [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
-* [SQL Server Big Data Clusters partners](../sql-server/partner-big-data-cluster.md)
+* [SQL Server 2019 Big Data Clusters partners](../sql-server/partner-big-data-cluster.md)
 
 ## Release history
 
@@ -57,6 +58,7 @@ The following table lists the release history for [!INCLUDE[ssbigdataclusters-ve
 
 | Release <sup>1</sup> | [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
+| [CU16](release-notes-cumulative-update-16.md) |  15.0.4223.1  | 20.3.11   | May 2 2022 |
 | [CU15](release-notes-cumulative-update-15.md) |  15.0.4198.2  | 20.3.10   | Jan 27 2022 |
 | [CU14](release-notes-cumulative-update-14.md) |  15.0.4188.2  | 20.3.9    | Nov 22 2021 |
 | [CU13](release-notes-cumulative-update-13.md) |  15.0.4178.15 | 20.3.8    | Sept 9 2021 |

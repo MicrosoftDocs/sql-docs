@@ -1,9 +1,9 @@
 ---
-title: SQL Server Big Data Clusters partners
-description: Lists of third-party partners for implementing SQL Server Big Data Clusters.
+title: SQL Server 2019 Big Data Clusters partners
+description: Lists of third-party partners for implementing SQL Server 2019 Big Data Clusters.
 ms.topic: conceptual
 ms.custom: seo-dt-2019
-ms.date: 08/20/2021
+ms.date: 05/03/2022
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.prod_service: "database-engine"
@@ -11,9 +11,9 @@ ms.author: wiassaf
 ms.reviewer: dacoelho
 author: WilliamDAssafMSFT
 ---
-# SQL Server Big Data Clusters partners
+# SQL Server 2019 Big Data Clusters partners
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-For support implementing solutions with SQL Server Big Data Clusters, you can work with partners. This article identifies some Microsoft partners with solutions for Big Data Clusters.
+For support implementing solutions with SQL Server 2019 Big Data Clusters, you can work with partners. This article identifies some Microsoft partners with solutions for big data clusters.
 
 ## Our partners
 

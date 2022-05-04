@@ -49,7 +49,7 @@ items:
     - name: Install R custom runtime
       href: ../machine-learning/install/custom-runtime-r.md
     - name: Install Java custom runtime
-      href: ../machine-learning/install/windows-java.md
+      href: ../language-extensions/install/windows-java.md
   - name: Change default Python and R runtime
     href: ../machine-learning/install/change-default-language-runtime-version.md
   - name: Upgrade Python and R runtime with binding

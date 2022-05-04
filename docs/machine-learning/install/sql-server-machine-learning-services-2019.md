@@ -11,7 +11,7 @@ monikerRange: ">=sql-server-ver15"
 ---
 # SQL Server on Windows: Isolation changes for Machine Learning Services
 
-[!INCLUDE [SQL Server 2019 - Windows only](../../includes/applies-to-version/sqlserver2019-windows-only.md)] and [!INCLUDE [SQL Server 2022](_ss2022.md)] - Windows only
+[!INCLUDE [SQL Server 2019 - Windows only](../../includes/applies-to-version/sqlserver2019-windows-only.md)] and [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/_ss2022.md)] - Windows only
 
 This article describes the changes to the isolation mechanism in [Machine Learning Services](../sql-server-machine-learning-services.md) in SQL Server on Windows, first introduced in SQL Server 2019. These changes affect **SQLRUserGroup**, firewall rules, file permission, and implied authentication.
 

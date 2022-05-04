@@ -79,7 +79,7 @@ The Table Design consists of different table types and properties that dictate r
 
 ### Graph Tables
 
-Graph tables are used to establish relationships between entities in your database using node and edge table relationships. In Azure Data Studio, you can easily create these relationships directly on the GUI without having to manually type out long T-SQL statements. To read more on graph tables, check out [this documentaion on SQL Graph Architecture](/sql/relational-databases/graphs/sql-graph-architecture).
+Graph tables are used to establish relationships between entities in your database using node and edge table relationships. In Azure Data Studio, you can easily create these relationships directly on the GUI without having to manually type out long T-SQL statements. To read more on graph tables, check out [this documentation on SQL Graph Architecture](/sql/relational-databases/graphs/sql-graph-architecture).
 Nodes are simply entities within databases. Edges are used to depict the relationships between nodes. For example, a Customer node table holds all the Customer nodes belonging to a graph. A "lives in" edge holds all the edges that connects the customer nodes according to where they live. A single dot represents a node table, while the two unshaded dots represent edge tables as shown below
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-node-vs-edge.png" alt-text="Table Designer showing node and edge graph table types":::

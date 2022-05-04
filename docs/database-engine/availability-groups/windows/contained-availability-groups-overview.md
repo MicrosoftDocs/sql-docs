@@ -12,11 +12,12 @@ ms.assetid:
 author: kfarlee
 ms.author: kfarlee
 ms.reviewer: mathoma
+monikerRange: ">=sql-server-ver16"
 ---
 
 # What is a contained availability group?
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
 A contained availability group is an Always On availability group that supports:
 
@@ -62,10 +63,10 @@ For example, if your availability group `MyContainedAG` is hosted on server `SER
 
 #### Read-only routing and contained availability groups
 
-If you have configured read-only routing to redirect connections with read intent to a secondary replica ( see [Configure read-only routing for an Always On availability group](./configure-read-only-routing-for-an-availability-group-sql-server.md)) and you wish to connect using a login which is created in the contained availability group only, there are some additional considerations:
+If you have configured read-only routing to redirect connections with read intent to a secondary replica (see [Configure read-only routing for an Always On availability group](./configure-read-only-routing-for-an-availability-group-sql-server.md)) and you wish to connect using a login which is created in the contained availability group only, there are some additional considerations:
 
-1. You must specify a database which is part of the contained availability group in the connection string
-1. The user specified in the connection string must have permission to access the database(s) in the contained availability group.
+- You must specify a database which is part of the contained availability group in the connection string
+- The user specified in the connection string must have permission to access the database(s) in the contained availability group.
 
 For example in the following connection string, where AdventureWorks is a database within the contained availability group which has MyContainedListener, and where _MyUser_ is a user defined in the contained availability group and none of the participating instances:
 

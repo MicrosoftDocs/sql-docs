@@ -111,9 +111,9 @@ Database1 can be a single or pooled database. Copying between different tier poo
 
    ```sql
    -- Execute on the master database to start copying
-   CREATE DATABASE "Database2"
-   AS COPY OF "Database1"
-   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = "pool1" ) );
+   CREATE DATABASE Database2
+   AS COPY OF Database1
+   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = 'pool1' ) );
    ```
 
 ### Copy to a different server
@@ -129,6 +129,13 @@ CREATE DATABASE Database2 AS COPY OF server1.Database1;
 
 > [!IMPORTANT]
 > Both servers' firewalls must be configured to allow inbound connection from the IP of the client issuing the T-SQL CREATE DATABASE ... AS COPY OF command. To determine the source IP address of current connection, execute `SELECT client_net_address FROM sys.dm_exec_connections WHERE session_id = @@SPID;`
+
+Similarly, the below command copies Database1 on server1 to a new database named Database2 within an elastic pool called pool2, on server2.
+
+```sql
+-- Execute on the master database of the target server (server2) to start copying from Server1 to Server2
+CREATE DATABASE Database2 AS COPY OF server1.Database1 (SERVICE_OBJECTIVE = ELASTIC_POOL( name = 'pool2' ) );
+```
 
 ### Copy to a different subscription
 

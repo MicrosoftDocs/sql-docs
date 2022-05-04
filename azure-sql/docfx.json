@@ -67,7 +67,8 @@
       "recommendations": true,
       "_op_documentIdPathDepotMapping": {
         "./": {
-           "depot_name": "Azure.azure-documents"
+          "depot_name": "Azure.azure-documents",
+          "folder_relative_path_in_docset": "articles/azure-sql/"
         }
       }
     },

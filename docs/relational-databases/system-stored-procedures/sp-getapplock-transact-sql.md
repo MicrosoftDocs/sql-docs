@@ -80,7 +80,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 -   The database ID of the database containing the lock resource.  
   
--   The database principle specified in the @DbPrincipal parameter.  
+-   The database principal specified in the @DbPrincipal parameter.  
   
 -   The lock name specified in the @Resource parameter.  
   

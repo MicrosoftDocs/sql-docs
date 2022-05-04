@@ -1011,6 +1011,8 @@ items:
           href: database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md
         - name: Basic availability groups
           href: database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md
+        - name: Contained availability groups
+          href: database-engine/availability-groups/windows/contained-availability-groups-overview.md
         - name: Distributed availability groups
           href: database-engine/availability-groups/windows/distributed-availability-groups.md
         - name: Domain-independent availability groups

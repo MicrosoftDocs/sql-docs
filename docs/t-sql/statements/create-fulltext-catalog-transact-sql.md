@@ -1,39 +1,30 @@
 ---
+title: "CREATE FULLTEXT CATALOG (Transact-SQL)"
 description: "CREATE FULLTEXT CATALOG (Transact-SQL)"
-title: "CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/12/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
-  - "CATALOG_TSQL"
-  - "CREATE_FULLTEXT_TSQL"
-  - "FULLTEXT_TSQL"
-  - "FULLTEXT CATALOG"
-  - "CREATE FULLTEXT CATALOG"
-  - "CREATE_FULLTEXT_CATALOG_TSQL"
-  - "CATALOG"
-  - "FULLTEXT_CATALOG_TSQL"
-  - "CREATE FULLTEXT"
-  - "FULLTEXT"
-dev_langs: 
+  - "catalog_TSQL"
+ dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "full-text catalogs [SQL Server], creating"
   - "CREATE FULLTEXT CATALOG statement"
-ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "09/12/2017"
 ---
+
 # CREATE FULLTEXT CATALOG (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Creates a full-text catalog for a database. One full-text catalog can have several full-text indexes, but a full-text index can only be part of one full-text catalog. Each database can contain zero or more full-text catalogs.  
-  
- You cannot create full-text catalogs in the **master**, **model**, or **tempdb** databases.  
+Creates a full-text catalog for a database. One full-text catalog can have several full-text indexes, but a full-text index can only be part of one full-text catalog. Each database can contain zero or more full-text catalogs.  
+ 
+You cannot create full-text catalogs in the **master**, **model**, or **tempdb** databases.  
   
 > [!IMPORTANT]  
 >  Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a full-text catalog is a virtual object and does not belong to any filegroup. A full-text catalog is a logical concept that refers to a group of full-text indexes.  

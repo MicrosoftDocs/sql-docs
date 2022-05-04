@@ -5,7 +5,7 @@ author: ronortloff
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: how-to
-ms.date: 04/17/2018
+ms.date: 05/06/2022
 ms.author: rortloff
 ms.custom:
  - seo-dt-2019

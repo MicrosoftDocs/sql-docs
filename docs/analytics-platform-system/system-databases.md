@@ -5,7 +5,7 @@ author: ronortloff
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 05/06/2022
 ms.author: rortloff
 ms.reviewer: martinle
 ms.custom:
@@ -15,7 +15,7 @@ ms.custom:
 
 # System databases in Parallel Data Warehouse
 
-System databases are databases that SQL Server PDW uses to manage users, databases, and temporary data. SQL Server PDW includes the following system databases: master, and tempdb.  
+System databases are databases that SQL Server Parallel Data Warehouse (PDW) uses to manage users, databases, and temporary data. SQL Server PDW includes the following system databases: `master` and `tempdb`.  
   
 ## System databases  
   

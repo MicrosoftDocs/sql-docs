@@ -27,6 +27,8 @@ items:
       href: sql-server/editions-and-components-of-sql-server-2016.md
   - name: Release Notes
     items:
+    - name: SQL Server 2022
+      href: sql-server/sql-server-2022-release-notes.md
     - name: SQL Server 2019
       href: sql-server/sql-server-2019-release-notes.md
     - name: SQL Server 2017

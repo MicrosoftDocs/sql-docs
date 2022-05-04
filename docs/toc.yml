@@ -7038,6 +7038,8 @@ items:
         href: relational-databases/performance/how-query-store-collects-data.md
       - name: Query Store hints
         href: relational-databases/performance/query-store-hints.md
+      - name: Optimized plan forcing
+        href: relational-databases/performance/optimized-plan-forcing-query-store.md
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md
       items:
@@ -12447,6 +12449,8 @@ items:
         href: relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md
       - name: sys.query_store_query_hints
         href: relational-databases/system-catalog-views/sys-query-store-query-hints-transact-sql.md
+      - name: sys.database_query_store_internal_state
+        href: relational-databases/system-catalog-views/sys-database-query-store-internal-state-transact-sql.md        
     - name: Scalar Types
       href: relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md
       items:
@@ -14346,6 +14350,8 @@ items:
         href: relational-databases/system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md
       - name: sp_query_store_unforce_plan
         href: relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md
+      - name: sp_query_store_clear_message_queues
+        href: relational-databases/system-stored-procedures/sp-query-store-clear-message-queues-transact-sql.md   
         
     - name: Replication
       href: relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md

@@ -13,11 +13,11 @@ ms.date: 04/30/2022
 
 # Table Designer in Azure Data Studio (Preview)
 
-The table design (preview) in Azure Data Studio provides a modern, visual editor experience which enables data professionals to create and customize table structures, along with an editor for Transact-SQL. With Azure Data Studio, you can now create and manage your tables inside databases in your existing server connections.
+The table designer (preview) in Azure Data Studio provides a modern, visual editor experience which enables data professionals to create and customize table structures, along with an editor for Transact-SQL. With Azure Data Studio, you can now create and manage your tables inside databases in your existing server connections.
 
 ## Why Table Designer?
 
-The Table Designer in Azure Data Studio provides data professionals and software developers an efficient way to configure and manage entity and object relationships and properties directly in their databases using the graphical user interface (GUI).
+The Table Designer in Azure Data Studio provides users an efficient way to configure and manage entity and object relationships and properties directly in their databases using the graphical user interface (GUI).
 
 ## Overview of Table Designer
 
@@ -33,7 +33,7 @@ To create a table, right-click the Tables node in your database and select "New 
 
 #### Editing a table
 
-You can edit the name of your table and add new columns to it. A default table is created with default name of “NewTable” which has one column by default. Let us update our table name to “Cities” and give it column names “CityName,” and “Population" as shown below.The column field is highlighted by default which means that whatever changes you make will be in reference to the column property. We will assign “CityName” as our Primary Key/Identifier for this table by checking the "Primary Key" checkbox. To read more on Primary Keys, [see this SQL Server documentation on Primary Keys](/sql/relational-databases/tables/primary-and-foreign-key-constraints).
+You can edit the name of your table and add new columns to it. A default table is created with default name of “NewTable” which has one column by default. Let us update our table name to “Cities” and give it column names “CityName,” and “Population" as shown below. The column field is highlighted by default which means that whatever changes you make will be in reference to the column property. We will assign “CityName” as our Primary Key/Identifier for this table by checking the "Primary Key" checkbox. To read more on Primary Keys, [see this SQL Server documentation on Primary Keys](/sql/relational-databases/tables/primary-and-foreign-key-constraints).
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-changing-column-name-adding-new-column-with-primary-key.png" alt-text="Table Designer showing how to edit table name and add column showing primary key identifier":::
 
@@ -80,7 +80,7 @@ The Table Design consists of different table types and properties that dictate r
 ### Graph Tables
 
 Graph tables are used to establish relationships between entities in your database using node and edge table relationships. In Azure Data Studio, you can easily create these relationships directly on the GUI without having to manually type out long T-SQL statements. To read more on graph tables, check out [this documentaion on SQL Graph Architecture](/sql/relational-databases/graphs/sql-graph-architecture).
-Nodes are simply entities within databases. Edges are used to depict the relationships between nodes. For example, a Customer node table holds all the Customer nodes belonging to a graph. A "lives in" edge hols all the edges that connects the customer nodes according to where they live. A single dot represents a node table, while the two unshaded dots represent edge tables as shown below
+Nodes are simply entities within databases. Edges are used to depict the relationships between nodes. For example, a Customer node table holds all the Customer nodes belonging to a graph. A "lives in" edge holds all the edges that connects the customer nodes according to where they live. A single dot represents a node table, while the two unshaded dots represent edge tables as shown below
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-node-vs-edge.png" alt-text="Table Designer showing node and edge graph table types":::
 
@@ -89,7 +89,7 @@ Nodes are simply entities within databases. Edges are used to depict the relatio
 
 Creating a graph table is simplified in Azure Data Studio. This can be done directly in the Table Properties pane in your GUI. Please note that to create graph tables, a new table has to be created. Graph tables cannot be implemented for existing tables. 
 
-In this example below, we are going to create two node tables; Person, City table and an edge table called "lives" with an edge constraint to establish the relationship between the two aforementioned node tables, i.e "Person **lives in** City". To follow along a more robust T-SQL version of a graph-table creation, feel free to follow along the example in [this documentation](/sql/relational-databases/graphs/sql-graph-sample) 
+In this example below, we are going to create two node tables; Person, City table and an edge table called "lives" with an edge constraint to establish the relationship between the two aforementioned node tables, i.e. "Person **lives in** City". To follow along a more robust T-SQL version of a graph-table creation, feel free to follow along the example in [this documentation](/sql/relational-databases/graphs/sql-graph-sample) 
 
 
 
@@ -100,7 +100,7 @@ So, lets drop the "Cities" table we already created and re-create it, making sur
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-Creating a Node Graph Table.png" alt-text="Table Designer Showing how to create a node graph table":::
 
-Lets do the same for our "Persons" node table
+Let's do the same for our "Persons" node table
 
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-creating-person-node-table.png" alt-text="Table Designer showing how to create a node graph table":::

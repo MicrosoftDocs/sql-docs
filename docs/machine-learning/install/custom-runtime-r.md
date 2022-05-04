@@ -73,8 +73,8 @@ Use the following SQL script to verify the installation and functionality of the
 
 ```sql
 EXEC sp_execute_external_script
-	@language =N'myR',
-	@script=N'
+    @language =N'myR',
+    @script=N'
 print(R.home());
 print(file.path(R.home("bin"), "R"));
 print(R.version);

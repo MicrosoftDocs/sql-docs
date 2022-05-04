@@ -51,7 +51,7 @@ For more information on which SQL Server editions support Python and R integrati
 
 For local installations, you must run the setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
-If you encounter any installation errors during setup, check the log in the Setup Bootstrap log folder. For example, `C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log\Summary.txt`.
+If you encounter any installation errors during setup, check the log in the Setup Bootstrap log folder. For example, `%ProgramFiles%\Microsoft SQL Server\160\Setup Bootstrap\Log\Summary.txt`.
 
 1. Start the setup wizard for SQL Server.
   
@@ -92,19 +92,19 @@ If you encounter any installation errors during setup, check the log in the Setu
   The following sample scripts can be adapted for the installation:
 
   ```r
-  R CMD INSTALL "\\sqlcl\team\Engine\Extensibility\revo_test\privates\BYOR\R\Windows\dependencies\CompatibilityAPI.zip"
-  R CMD INSTALL "\\sqlcl\team\Engine\Extensibility\revo_test\privates\BYOR\R\Windows\revoscale\10.0.0.76\RevoScaleR.zip"
+  R CMD INSTALL "c:\temp\CompatibilityAPI.zip"
+  R CMD INSTALL "c:\temp\RevoScaleR.zip"
   ```
 
 7. Configure the installed R runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in an R application folder depending on the installation, usually in one of these two locations: 
 
-- Application installation path: `c:\Program Files\R\R-devel\library\RevoScaleR\rxLibs\x64` 
-- User library path: `C:\Users\<username>\AppData\Local\R\win-library\4.2\RevoScaleR\rxLibs\x64`
+- Application installation path: `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64` 
+- User library path: `%localappdata%\R\win-library\4.2\RevoScaleR\rxLibs\x64`
 
   The following script can be used to configure the installed R runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
 
   ```cmd
-  .\RegisterRext.exe /configure /rhome:"C:\Program Files\R\R-devel" /instance:"MSSQLSERVER"
+  .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
   ```
 
 8. Using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:
@@ -138,7 +138,15 @@ If you encounter any installation errors during setup, check the log in the Setu
 
     -[revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924)
 
-7. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:
+7. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the user's application library folder, for example:  `C:\Users\<alias>\AppData\Local\Programs\Python\Python310\Lib\site-packages\revoscalepy\rxLibs`.
+
+  The following script can be used to configure the installed Python runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
+
+  ```cmd
+  .\RegisterRext.exe /configure /pythonhome:"C:\Users\<alias>\AppData\Local\Programs\Python\Python310" /instance:"MSSQLSERVER"
+  ```
+
+8. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1;
@@ -151,14 +159,6 @@ If you encounter any installation errors during setup, check the log in the Setu
     EXEC sp_configure  'external scripts enabled';
     ```
 
-8. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the user's application library folder, for example:  `C:\Users\<alias>\AppData\Local\Programs\Python\Python310\Lib\site-packages\revoscalepy\rxLibs`.
-
-  The following script can be used to configure the installed Python runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
-
-  ```cmd
-  .\RegisterRext.exe /configure /pythonhome:"C:\Users\<alias>\AppData\Local\Programs\Python\Python310" /instance:"MSSQLSERVER"
-  ```
-
 9. Restart the SQL Server service. Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. You can restart the service using the right-click **Restart** command for the instance in the SSMS Object Explorer, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
 10. Verify the installation by executing a simple command to return the version of Python:
@@ -170,52 +170,7 @@ If you encounter any installation errors during setup, check the log in the Setu
 
 ## Install Java
 
-
-
-
-<a name="apply-cu"></a>
-
-## Apply updates
-
-### Existing installation
-
-If you have added Machine Learning Services to an existing SQL Server instance and have previously applied a Cumulative Update (CU), the versions of your database engine and the Machine Learning Services feature might be different. This may result in unexpected behavior or errors. 
-
-Follow these steps to bring the Machine Learning Services to the same version as your database engine.
-
-1. Determine the Cumulative Update (CU) you have for the database engine. Run this T-SQL statement:
-
-   ```sql
-   SELECT @@VERSION
-   ```
-
-   For more information, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level#machine-learning-services).
-
-1. Download the [Cumulative Update (CU)](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) that you have installed for the database engine.
-
-1. Run the installation of the Cumulative Update (CU) and follow the instructions to install the CU for Machine Learning Services.
-
-### New installation
-
-If you install Machine Learning Services with a new installation of SQL Server database engine, we recommend that you apply the latest cumulative update to both the database engine and machine learning components.
-
-On internet-connected devices, cumulative updates are typically applied through Windows Update, but you can also use the steps below for controlled updates. When you apply the update for the database engine, setup pulls cumulative updates for any Python or R features you installed on the same instance. 
-
-Disconnected servers require extra steps. For more information, see [Install on computers with no internet access > Apply cumulative updates](sql-ml-component-install-without-internet-access.md#apply-cu).
-
-1. Start with a baseline instance already installed: SQL Server initial release.
-
-2. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
-
-3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
-
-4. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features. Setup downloads the CAB files necessary to update all features.
-
-   ![Summary of installed features](media/cumulative-update-feature-selection.png)
-
-5. Continue through the wizard, accepting the licensing terms for R and Python distributions. 
-
-::: moniker-end
+For information on installing and using Java, see [Install SQL Server Language Extensions on Windows](../../language-extensions/install/windows-java.md).
 
 ## Additional configuration
 

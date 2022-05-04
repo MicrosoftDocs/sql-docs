@@ -5,7 +5,7 @@ description: Learn how to install SQL Server Java Language Extension on Red Hat,
 author: rothja
 ms.author: jroth
 manager: cgronlun
-ms.date: 11/12/2020
+ms.date: 05/03/2022
 ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
@@ -159,7 +159,8 @@ FROM (CONTENT = N'/opt/mssql-extensibility/lib/java-lang-extension.tar.gz',
     FILE_NAME = 'javaextension.so', 
     ENVIRONMENT_VARIABLES = N'{"JRE_HOME":"/opt/mssql/lib/zulu-jre-11"}')
 ```
-For the Java extension, the environment variable “JRE_HOME” is used to determine the path to find and initialize the JVM from.
+
+For the Java extension, the environment variable "JRE_HOME" is used to determine the path to find and initialize the JVM from.
 
 CREATE EXTERNAL LANGUAGE ddl provides a parameter (ENVIRONMENT_VARIABLES) to set environment variables specifically for the process hosting the extension. This is the recommended and most effective way to set environment variables required by external language extensions.
 

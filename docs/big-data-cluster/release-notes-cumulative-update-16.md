@@ -41,7 +41,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 ## System environment
 
 * __Operating System__: Ubuntu 20.04.5 LTS
-* __SQL Server__: 15.0.4198.2
+* __SQL Server__: 15.0.4223.1 
     * __Java__: Azul Zulu JRE 11.0.9.1
     * __Python__: 3.7.2 (miniconda 4.5.12)
     * __R__: Microsoft R 3.5.2
@@ -126,9 +126,9 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 |    chardet    |    4.0.0    |    libuv    |    1.41.1    |    tenacity    |    7.0.0    |
 |    charls    |    2.2.0    |    libvorbis    |    1.3.7    |    tensorboard    |    2.4.1    |
 |    click    |    8.0.1    |    libwebp-base    |    1.2.0    |    tensorboard-plugin-wit    |    1.8.0    |
-|    cloudpickle    |    1.6.0    |    libxcb    |    1.14    |    tensorflow    |    2.6.0    |
-|    conda    |    4.9.2    |    libxgboost    |    1.4.0    |    tensorflow-base    |    2.6.0    |
-|    conda-package-handling    |    1.7.3    |    libxkbcommon    |    1.0.3    |    tensorflow-estimator    |    2.6.0    |
+|    cloudpickle    |    1.6.0    |    libxcb    |    1.14    |    tensorflow    |    2.6.3    |
+|    conda    |    4.9.2    |    libxgboost    |    1.4.0    |    tensorflow-base    |    2.6.3    |
+|    conda-package-handling    |    1.7.3    |    libxkbcommon    |    1.0.3    |    tensorflow-estimator    |    2.6.3    |
 |    configparser    |    5.0.2    |    libxml2    |    2.9.12    |    termcolor    |    1.1.0    |
 |    cryptography    |    3.4.7    |    libzopfli    |    1.0.3    |    textblob    |    0.15.3    |
 |    cudatoolkit    |    11.1.1    |    lightgbm    |    3.2.1    |    threadpoolctl    |    2.1.0    |

@@ -56,3 +56,29 @@ SELECT *
 FROM sys.dm_database_backups     
 ORDER BY backup_finish_date DESC;  
 ```  
+ A friendlier resultset by joining with  sys.databases and using CASE statement.
+ 
+ ```
+ SELECT
+  db.name,
+  backup_start_date, 
+  backup_finish_date,
+  CASE backup_type
+  WHEN 'D' THEN 'Full'
+  WHEN 'I' THEN 'Differential'
+  WHEN 'L' THEN 'Transaction Log'
+  END AS BackupType, 
+  CASE in_retention
+  WHEN 1 THEN 'In Retention'
+  WHEN 0 THEN 'Out of Retention'
+  END AS is_Bakcup_Available
+FROM sys.dm_database_backups AS ddb
+JOIN sys.databases AS db
+ON ddb.physical_database_name = db.physical_database_name
+/*
+--excluding master database
+WHERE db.name <> 'master'
+*/
+ORDER BY backup_start_date DESC
+```
+ 

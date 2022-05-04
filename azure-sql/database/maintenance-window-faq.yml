@@ -118,6 +118,24 @@ sections:
         answer: | 
           Advance notifications are configured through [Service Health alerts](/service-health/alerts-activity-log-service-notifications-portal). Service health alerts support configuration of subscription, resource type, and region. Therefore, it is not possible to configure notification on the resource group or instance level. 
 
+      - question: Can I configure alerts using PowerShell or Azure CLI?
+        answer: | 
+          There are no PowerShell and Azure CLI commands dedicated to configuring Service Health alerts. However, you can use ARM template and leverage any standard method for deploying it by using CLI and PowerShell. Just follow the guidelines from [quickstart: Create activity log alerts on service notifications using an ARM template](/service-health/alerts-activity-log-service-notifications-arm).
+          
+      - question: Can I check the list of resources that will be impacted by the event that I got notified for?
+        answer: |
+          Yes, you can [retrieve the list of impacted resources](advance-notifications.md#retrieve-the-list-of-impacted-resources) by using [Azure Resource Graph explorer](/governance/resource-graph/overview). Notification that you get through the email contains notification ID and link to the explorer. 
+          
+      - question: The notification says In Progress, but window has not started yet?
+        answer: |
+          There is a period of 1 hour in which notifications are being sent. This means that you can receive notification 25 to 24 hours before the event, 1 hour to 1 minute before the window opens, and 1 minute to 1 hour after the window is closed. Even though the notification title is "In Progress", the content of the notification contains the maintenance window start and end time and that is the moment when deployments will begin and end.  
+          
+      - question: Is there a scenario where I don't get notification about planned event?
+        answer: |
+          Yes, in case that you have created a new resource, executed scaling operation, or changed maintenance window, your database or instance can end up on the machine that is already scheduled for upgrade. In this case, you will be notified only when deployment window starts and ends. For all future deployments you will get upfront notification about planned events.
+          
+      - question: Can I check if my instance has been upgraded in the last X days?
+        answer: You can check this only if you have configured advanced notifications in the service health. You can use [Azure Resource Graph explorer](/governance/resource-graph/overview) for [retrieving list of maintenance events[(maintenance-window.md#retrieving-list-of-maintenance-events) or use [Service Health overview page](/service-health/service-health-overview).
 
 additionalContent: |
  ## See Also

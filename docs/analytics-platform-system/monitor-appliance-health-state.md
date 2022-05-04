@@ -29,7 +29,7 @@ To retrieve component status by using the Admin Console:
   
 1. On the Appliance State page, select a specific node to view the node details.  
   
-    ![Screenshot shows the P D W Admin Console State.](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
+   ![Screenshot shows the P D W Admin Console State.](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
 ## Monitor Component Status By Using System Views
 

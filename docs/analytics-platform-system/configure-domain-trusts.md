@@ -27,7 +27,7 @@ Follow these steps to configure a forwarder on SQL Server PDW DNS.
    - In the **Virtual Machines** pane, right-click **appliance_domain-AD01**, and select **Connect**.
    - Sign in to appliance_domain-AD01 as the appliance domain administrator.
 
-1. While on appliance_domain-AD01, open the DNS Manager (dnsmgmt.msc).
+1. While on appliance_domain-AD01, open the DNS Manager (`dnsmgmt.msc`).
 1. Right-click your DNS server (appliance_domain-AD01), and then select **Properties**.
 1. On the **Advanced** tab, clear the checkbox for **Disable recursion** (also disables forwarders) to permit forwarders. Then select **Apply**.
 1. On the **Forwarders** tab, select **Edit**.
@@ -39,7 +39,7 @@ Follow these steps to configure a forwarder on SQL Server PDW DNS.
    - Sign in to appliance_domain-AD02 as the appliance domain administrator.
    - While on appliance_domain-AD02, perform the preceding steps 3 through 8.
 
-![Screenshot that shows the D N S Manager with the Edit Forwarders dialog box open.](./media/configure-domain-trusts/dns-manager.png "SQL_Server_PDW_DNS_manager")
+   ![Screenshot that shows the D N S Manager with the Edit Forwarders dialog box open.](./media/configure-domain-trusts/dns-manager.png "SQL_Server_PDW_DNS_manager")
 
 ## Configure a forward lookup zone on the corporate DNS
 
@@ -56,7 +56,7 @@ Follow these steps to configure a forwarder on SQL Server PDW DNS.
 
 1. Complete the **New Zone Wizard** to create a Primary zone, and specify an IPv4 reverse lookup zone. In the **Network ID** box, provide enough of the IP address to indicate the IP addresses that belong to this zone. (Typically, the first three octets of the SQL Server PDW IP addresses are enough.) See your domain administrator for the preferred selection for the other options or if your IP addresses aren't typical.
 
-![Screenshot that shows a New Zone Wizard page.](./media/configure-domain-trusts/new-zone-wizard.png "SQL_Server_PDW_new_zone_wizard")
+   ![Screenshot that shows a New Zone Wizard page.](./media/configure-domain-trusts/new-zone-wizard.png "SQL_Server_PDW_new_zone_wizard")
 
 ## Add records for CTL and appliance Active Directory nodes on the corporate DNS
 
@@ -67,7 +67,7 @@ Follow these steps to configure a forwarder on SQL Server PDW DNS.
    - Select **Add Host** to create a reverse lookup entry for the control node.
 1. Repeat the New Host process to create a pointer record for both appliance_domain-AD01 and appliance_domain-AD02.
 
-![Screenshot that shows the New Host dialog box in the D N S Manager.](./media/configure-domain-trusts/dns-manager-new-host.png "SQL_Server_PDW_dns_manager_new_host")
+   ![Screenshot that shows the New Host dialog box in the D N S Manager.](./media/configure-domain-trusts/dns-manager-new-host.png "SQL_Server_PDW_dns_manager_new_host")
 
 > [!TIP]
 > At this point, you should be able to successfully use ping to connect to the FQDNs of the SQL Server PDWControl node, appliance_domain-AD01, and appliance_domain-AD02 by using the following ping commands: ping PDW_region-CTL01.appliance_domain.local, ping appliance_domain-AD01.appliance_domain.local, and ping appliance_domain-AD02.appliance_domain.local.
@@ -84,7 +84,7 @@ Follow these steps to configure a forwarder on SQL Server PDW DNS.
 1. To close the **Resource Record Type** dialog, select **Done**.
 1. Repeat steps 4 through 8 to create _ldap and _kerberos records for appliance_domain-AD02.
 
-![Screenshot that shows the _Kerberos Properties dialog box in the D N S Manager.](./media/configure-domain-trusts/dns-manager-kerberos-properties.png "SQL_Server_PDW_dns_manager_kerberos_properties")
+   ![Screenshot that shows the _Kerberos Properties dialog box in the D N S Manager.](./media/configure-domain-trusts/dns-manager-kerberos-properties.png "SQL_Server_PDW_dns_manager_kerberos_properties")
 
 ## Add aliases for the CTL and Active Directory nodes to the corporate DNS
 
@@ -95,10 +95,10 @@ Follow these steps to configure a forwarder on SQL Server PDW DNS.
 1. In the **Fully qualified domain name (FQDN) for target host** box, enter the full internal name of appliance_domain-AD01. You can also select **Browse** to find it on the DNS in the forward lookup zone with the SQL Server PDW appliance domain name.
 1. Repeat steps 4 through 6 to create a FabAd02 alias for appliance_domain-AD02.
 
-> [!NOTE]
-> These aliases should be used when you access the PDW from the corporate domain.
+   > [!NOTE]
+   > These aliases should be used when you access the PDW from the corporate domain.
 
-![Screenshot that shows the p d w Properties dialog box in the D N S Manager.](./media/configure-domain-trusts/dns-manager-pdw-properties.png "SQL_Server_PDW_dns_manager_pdw_properties")
+   ![Screenshot that shows the p d w Properties dialog box in the D N S Manager.](./media/configure-domain-trusts/dns-manager-pdw-properties.png "SQL_Server_PDW_dns_manager_pdw_properties")
 
 > [!TIP]
 > At this point, you should be able to successfully use ping to connect to the alias names of the SQL Server PDW control and Active Directory nodes in the format ping PdwControl and ping FabAd01 and ping FabAD02.
@@ -122,7 +122,7 @@ Use this procedure to validate a trust.
 1. Select the new trust in the list of incoming trusts, and then select **Properties**. Select **Validate**.
 1. Select **Yes**, validate the incoming trust, and then enter appliance domain administrator credentials.
 
-![Screenshot that shows the Active Directory Domains Services dialog box which verifies that the trust has been validated.](./media/configure-domain-trusts/ad-domain-services.png "SQL_Server_PDW_ad_domain_trust")
+   ![Screenshot that shows the Active Directory Domains Services dialog box which verifies that the trust has been validated.](./media/configure-domain-trusts/ad-domain-services.png "SQL_Server_PDW_ad_domain_trust")
 
 ## Next steps
 

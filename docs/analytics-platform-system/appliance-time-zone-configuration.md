@@ -27,8 +27,8 @@ The **Time Zone** page enables you to set the time zone for all nodes on your An
 1. Select **Apply** to save your changes.  
   
 1. Restart the appliance services by using the **Services Status** page in the Configuration Manager. If you're also planning to change the privileges, you can do that before restarting the appliance.  
-  
-![Screenshot shows the Application Time Zone Configuration page.](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
+
+   ![Screenshot shows the Application Time Zone Configuration page.](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
   
 ## Next steps
 

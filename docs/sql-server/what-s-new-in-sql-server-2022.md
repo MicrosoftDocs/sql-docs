@@ -1,26 +1,27 @@
 ---
 title: "What's new in SQL Server 2022 | Microsoft Docs"
 description: Learn about new features for SQL Server 2022 (16.x), which gives you choices of development languages, data types, environments, and operating systems.
-ms.date: 11/04/2019
+ms.date: 05/04/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: "article"
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=sql-server-ver16"
+monikerRange: ">=sql-server-ver15"
 ms.custom:
   - intro-whats-new
 ---
+
 # What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]
 
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sqlserver2022](../includes/applies-to-version/sqlserver2022.md)]
 
 [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud environments, and operating systems.
 
 This article summarizes the new features and enhancements for [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
 
-For more information and known issues, see [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-version-15-release-notes.md).
+For more information and known issues, see [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md).
 
 For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../azure-data-studio/download-azure-data-studio.md).
 
@@ -36,12 +37,11 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
 
 * Allow Purview policies to be applied to any SQL Server instance that is enrolled in both Azure Arc and to Azure Purview data governance
 
-- Support for 3 roles:
-    - SQL Performance Monitor
-    - SQL Security Auditor
-    - SQL Data Reader
-- Distributed Availability
-
+* Support for three roles:
+  * SQL Performance Monitor
+  * SQL Security Auditor
+  * SQL Data Reader
+* Distributed Availability
 
 ## Operations
 
@@ -92,7 +92,7 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
 
 ## Access control
 
-SQL Server 2022 Preview introduces new granular permissions and roles.
+[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] introduces new granular permissions and roles.
 
 ### Granular permissions for dynamic data masking
 
@@ -140,13 +140,13 @@ Granular permissions for [Dynamic Data Masking](../relational-databases/security
 
 ## SQL Server Analysis Services
 
-This release introduces new features and improvements for performance, resource governance, and client support.
+This release introduces new features and improvements for performance, resource governance, and client support. For specific updates, see [What's new in SQL Server Analysis Services](/analysis-services/what-s-new-in-sql-server-analysis-services).
 
 ## See also
 
-- [`SqlServer` PowerShell module](https://www.powershellgallery.com/packages/Sqlserver)
-- [SQL Server PowerShell documentation](../powershell/sql-server-powershell.md)
-- [SQL Server Workshops](https://aka.ms/sqlworkshops)
-- [[!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md)
+* [`SqlServer` PowerShell module](https://www.powershellgallery.com/packages/Sqlserver)
+* [SQL Server PowerShell documentation](../powershell/sql-server-powershell.md)
+* [SQL Server Workshops](https://aka.ms/sqlworkshops)
+* [[!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -27,6 +27,8 @@ items:
       href: sql-server/editions-and-components-of-sql-server-2016.md
   - name: Release Notes
     items:
+    - name: SQL Server 2022
+      href: sql-server/sql-server-2022-release-notes.md
     - name: SQL Server 2019
       href: sql-server/sql-server-2019-release-notes.md
     - name: SQL Server 2017
@@ -55,6 +57,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 16
+          href: big-data-cluster/release-notes-cumulative-update-16.md
         - name: Cumulative Update 15
           href: big-data-cluster/release-notes-cumulative-update-15.md
         - name: Cumulative Update 14
@@ -1011,6 +1015,8 @@ items:
           href: database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md
         - name: Basic availability groups
           href: database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md
+        - name: Contained availability groups
+          href: database-engine/availability-groups/windows/contained-availability-groups-overview.md
         - name: Distributed availability groups
           href: database-engine/availability-groups/windows/distributed-availability-groups.md
         - name: Domain-independent availability groups

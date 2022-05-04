@@ -200,7 +200,7 @@ Used to create a distributed availability group. This option is used with the AV
 Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 Create a contained availability group.  This option is used to create an availability group with its own `master` and `msdb` databases, which are kept in sync across the set of replicas in the availability group.  
-The REUSE_SYSTEM_DATABASES option causes the contained `master` and `msdb` databases from a prior version of the availability group to be used in the creation of this new availability group. For more information on contained availability groups, see [Contained availability group Overview &#40;Always On availability groups&#41;](../../database-engine/availability-groups/windows/contained-ag-overview.md).
+The REUSE_SYSTEM_DATABASES option causes the contained `master` and `msdb` databases from a prior version of the availability group to be used in the creation of this new availability group. For more information on contained availability groups, see [Contained availability group Overview &#40;Always On availability groups&#41;](../../database-engine/availability-groups/windows/contained-availability-groups-overview.md).
 
 #### REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 

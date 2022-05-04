@@ -1,7 +1,7 @@
 ---
-title: SQL Server Big Data Clusters CU16 release notes
+title: SQL Server 2019 Big Data Clusters CU16 release notes
 titleSuffix: SQL Server Big Data Clusters
-description: This article describes the SQL Server Big Data Clusters Cumulative Update 16 contents.
+description: This article describes the SQL Server 2019 Big Data Clusters Cumulative Update 16 contents.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# SQL Server Big Data Clusters CU16 release notes
+# SQL Server 2019 Big Data Clusters CU16 release notes
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -21,7 +21,7 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 
    > [!WARNING]
    > On Cumulative Update 15, __the upgrade order is critical__. Upgrade your big data cluster to CU15 __before__ upgrading the Kubernetes cluster to version 1.21. If the Kubernetes cluster is upgraded to version 1.21 before BDC is upgraded to CU14 or CU15 then the cluster will end up in error state and the BDC upgrade will not succeed. In this case, reverting back to kubernetes version 1.20 will fix the problem.
-   > <br/> This __doesn't affect new deployments__ of SQL Server Big Data Clusters CU15 on Kubernetes API 1.21 clusters.
+   > <br/> This __doesn't affect new deployments__ of SQL Server 2019 Big Data Clusters CU15 on Kubernetes API 1.21 clusters.
 
 For detailed SQL Server engine changes, check the [official SQL Server 2019 CU16 knowledge base article KB5011644](https://support.microsoft.com/help/5011644).
 
@@ -36,7 +36,7 @@ For detailed SQL Server engine changes, check the [official SQL Server 2019 CU16
 Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be found on the following pages:
 
 * [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
-* [SQL Server Big Data Clusters partners](../sql-server/partner-big-data-cluster.md)
+* [SQL Server 2019 Big Data Clusters partners](../sql-server/partner-big-data-cluster.md)
 
 ## System environment
 

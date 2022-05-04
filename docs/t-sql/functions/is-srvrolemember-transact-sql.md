@@ -77,7 +77,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
  When the login parameter is a domain login or based on a Windows group and the domain controller is inaccessible, calls to IS_SRVROLEMEMBER will fail and might return incorrect or incomplete data.  
   
- If the domain controller is not available, the call to IS_SRVROLEMEMBER will return accurate information when the Windows principle can be authenticated locally, such as a local Windows account or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
+ If the domain controller is not available, the call to IS_SRVROLEMEMBER will return accurate information when the Windows principal can be authenticated locally, such as a local Windows account or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
  **IS_SRVROLEMEMBER** always returns 0 when a Windows group is used as the login argument, and this Windows group is a member of another Windows group which is, in turn, a member of the specified server role.  
   

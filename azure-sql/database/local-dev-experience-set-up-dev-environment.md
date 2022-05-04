@@ -19,9 +19,10 @@ This article teaches you to set up the local development experience for Azure SQ
 Before you configure the local development environment for Azure SQL Database, make sure you have met the following hardware and software requirements:
 
 - Software requirements:
-    - <!-- OS requirements -->
+    - Currently supported on Windows 10 or later release, MacOS Mojave or later release, and Linux (preferably Ubuntu 18.04 or later release)
 - Minimum hardware requirements:
-    - <!-- RAM and disk space minimums  -->
+    - 8 GB RAM
+    - 10 GB available disk space
 
 ## Install Docker Desktop
 
@@ -37,9 +38,38 @@ The local development environment for Azure SQL Database works in both [VSCode](
 
 ## Install extensions
 
+In Azure Data Studio, there is no need for installing these extensions as they're automatically installed for you together with the tool.
+
 <!--Steps to install the Azure SQL Database extension-->
+### Install the Azure SQL Database extension in VS Code
+
+1. In Visual Studio Code, select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P**, or press **F1** to open the **Command Palette**.
+
+2. In the **Command Palette**, select **Extensions: Install Extensions** from the dropdown.
+
+3. In the **Extensions** pane, type *mssql*.
+
+4. Select the **Azure SQL Database** extension, and then select **Install**.
+
+5. After the installation completes, select **Reload** to enable the extension.
+
+You can find more details on how to use this extension in VS Code [here](https://docs.microsoft.com/sql/tools/visual-studio-code/sql-server-develop-use-vscode?view=sql-server-ver15).
 
 <!--Steps to install the SQL Database Projects extension-->
+### Install the SQL Database extension in VS Code
+
+1. In Visual Studio Code, select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P**, or press **F1** to open the **Command Palette**.
+
+2. In the **Command Palette**, select **Extensions: Install Extensions** from the dropdown.
+
+3. In the **Extensions** pane, type *mssql*.
+
+4. Select the **SQL Database Projects** extension, and then select **Install**.
+
+5. After the installation completes, select **Reload** to enable the extension.
+
+More details on how to use this extension in VS Code [here](https://docs.microsoft.comsql/azure-data-studio/extensions/sql-database-project-extension?view=azuresqldb-current)
+
 
 ## Begin using your local development environment
 

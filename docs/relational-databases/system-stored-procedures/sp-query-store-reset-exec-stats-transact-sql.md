@@ -44,8 +44,6 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ## Return Code Values  
  0 (success) or 1 (failure)  
   
-## Remarks  
-  
 ## Permissions  
  Requires the **ALTER** permission on the database. 
   

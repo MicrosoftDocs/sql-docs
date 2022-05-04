@@ -40,13 +40,13 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
     - SQL Performance Monitor
     - SQL Security Auditor
     - SQL Data Reader
-- Distributed Availabilit
+- Distributed Availability
 
 
 ## Operations
 
 * Accelerated database recovery performance improvement
-  * Implements a persistent version store cleaner thread per database instead of per instance. Impreoves version cleanup when there are multiple databases on the same instance.
+  * Implements a persistent version store cleaner thread per database instead of per instance. Improves version cleanup when there are multiple databases on the same instance.
 
 ## Performance optimization
 
@@ -94,7 +94,7 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
 
 SQL Server 2022 Preview introduces new granular permissions and roles.
 
-### Granular permiissions for dynamic data masking
+### Granular permissions for dynamic data masking
 
 Granular permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
 

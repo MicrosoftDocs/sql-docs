@@ -9,6 +9,8 @@ items:
   items:
   - name: What's New
     items:
+    - name: SQL Server 2022 Preview
+      href: sql-server/what-s-new-in-sql-server-2022.md
     - name: SQL Server 2019
       href: sql-server/what-s-new-in-sql-server-2019.md
     - name: SQL Server 2017
@@ -12863,7 +12865,7 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
       - name: sys.dm_database_replica_states (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md
-      - name: sys.dm_database_backups_azure-sql-database
+      - name: sys.dm_database_backups (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-database-backups-azure-sql-database.md  
       - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md

@@ -17,7 +17,7 @@ author: LitKnd
 ms.author: kendralittle
 ms.custom: ""
 ms.date: "03/13/2017"
-monikerRange: ">=sql-server-2019"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # &lt; (Less Than) (Transact-SQL)

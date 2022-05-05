@@ -120,6 +120,8 @@
     href: server-groups.md
   - name: Source control
     href: source-control.md
+  - name: Table designer
+    href: table-designer-azure-data-studio.md
 - name: How-to guides
   items:
   - name: Notebooks

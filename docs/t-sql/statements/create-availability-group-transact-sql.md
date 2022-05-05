@@ -185,13 +185,19 @@ For more information regarding this setting, see [Database Level Health Detectio
   
 #### DTC_SUPPORT  = { PER_DB | NONE }  
 
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])   
+
 Specifies whether cross-database transactions are supported through the distributed transaction coordinator (DTC). Cross-database transactions are only supported beginning in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. PER_DB creates the availability group with support for these transactions. For more information, see [Cross-Database Transactions and Distributed Transactions for Always On availability groups and Database Mirroring &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
 #### BASIC
 
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
+
 Used to create a basic availability group. Basic availability groups are limited to one database and two replicas: a primary replica and one secondary replica. This option is a replacement for the deprecated database mirroring feature on SQL Server Standard Edition. For more information, see [Basic availability groups &#40;Always On availability groups&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). Basic availability groups are supported beginning in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
 
 #### DISTRIBUTED  
+
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
 Used to create a distributed availability group. This option is used with the AVAILABILITY GROUP ON parameter to connect two availability groups in separate Windows Server Failover Clusters.  For more information, see [Distributed availability groups &#40;Always On availability groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md). Distributed availability groups are supported beginning in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. 
 
@@ -204,11 +210,13 @@ The REUSE_SYSTEM_DATABASES option causes the contained `master` and `msdb` datab
 
 #### REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)])
+
 Introduced in SQL Server 2017. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transaction waits until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it is in a "not synced" state and the replica marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica waits until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
 
 #### CLUSTER_TYPE
 
-Introduced in SQL Server 2017.
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]).
 
 Used to identify if the availability group is on a Windows Server Failover Cluster (WSFC).  Set to WSFC when availability group is on a failover cluster instance on a Windows Server failover cluster. Set to EXTERNAL when the cluster is managed by a cluster manager that is not a Windows Server failover cluster, like Linux Pacemaker. Set to NONE when availability group not using WSFC for cluster coordination. For example, when an availability group includes Linux servers with no cluster manager. 
 
@@ -278,7 +286,7 @@ Is a port number that is associated with the mirroring endpoint of the partner s
   
 #### AVAILABILITY_MODE = {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY }  
 
-SYNCHRONOUS_COMMIT or ASYNCHRONOUS_COMMIT specifies whether the primary replica has to wait for the secondary replica to acknowledge the hardening (writing) of the log records to disk before the primary replica can commit the transaction on a given primary database. The transactions on different databases on the same primary replica can commit independently. SQL Server 2017 CU 1 introduces CONFIGURATION_ONLY. CONFIGURATION_ONLY replica only applies to availability groups with CLUSTER_TYPE = EXTERNAL or CLUSTER_TYPE = NONE. 
+SYNCHRONOUS_COMMIT or ASYNCHRONOUS_COMMIT specifies whether the primary replica has to wait for the secondary replica to acknowledge the hardening (writing) of the log records to disk before the primary replica can commit the transaction on a given primary database. The transactions on different databases on the same primary replica can commit independently. [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] CU1 introduces CONFIGURATION_ONLY. CONFIGURATION_ONLY replica only applies to availability groups with `CLUSTER_TYPE = EXTERNAL` or `CLUSTER_TYPE = NONE`. 
   
 ##### SYNCHRONOUS_COMMIT  
 
@@ -292,7 +300,7 @@ Specifies that the primary replica commits transactions without waiting for this
 
 Specifies that the primary replica synchronously commit availability group configuration metadata to the master database on this replica. The replica will not contain user data. This option:
 
-- Can be hosted on any edition of SQL Server, including Express Edition.
+- Can be hosted on any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], including Express Edition.
 - Requires the data mirroring endpoint of the CONFIGURATION_ONLY replica to be type `WITNESS`.
 - Can not be altered.
 - Is not valid when `CLUSTER_TYPE = WSFC`.
@@ -311,7 +319,7 @@ Specifies the failover mode of the availability replica that you are defining.
 Enables automatic failover. This option is supported only if you also specify AVAILABILITY_MODE = SYNCHRONOUS_COMMIT. You can specify AUTOMATIC for two availability replicas, including the primary replica.  
   
 > [!NOTE]  
->  SQL Server Failover Cluster Instances (FCIs) do not support automatic failover by availability groups, so any availability replica that is hosted by an FCI can only be configured for manual failover.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instances (FCIs) do not support automatic failover by availability groups, so any availability replica that is hosted by an FCI can only be configured for manual failover.  
   
 ##### MANUAL  
 
@@ -370,7 +378,7 @@ For more information, see [Active Secondaries: Readable Secondary Replicas &#40;
   
 #### READ_ONLY_ROUTING_URL ='TCP://_system-address_:_port_'  
 
-Specifies the URL to be used for routing read-intent connection requests to this availability replica. This is the URL on which the SQL Server Database Engine listens. Typically, the default instance of the SQL Server Database Engine listens on TCP port 1433.  
+Specifies the URL to be used for routing read-intent connection requests to this availability replica. This is the URL on which the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]  listens. Typically, the default instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens on TCP port 1433.
   
 For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
   
@@ -420,7 +428,7 @@ Specifies that when this availability replica is the primary replica, read-only 
 
 #### READ_WRITE_ROUTING_URL = { ('_server_instance_') }
 
-Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]) 
 
 Specifies server instances that host availability replicas for this availability group that meet the following requirements when running under the primary role:
 -   The replica spec PRIMARY_ROLE includes READ_WRITE_ROUTING_URL.
@@ -439,7 +447,7 @@ For more information about the session-timeout period, see [Overview of Always O
   
 #### AVAILABILITY GROUP ON  
 
-Specifies two availability groups that constitute a *distributed availability group*. Each availability group is part of its own Windows Server Failover Cluster (WSFC). When you create a distributed availability group, the availability group on the current SQL Server Instance becomes the primary availability group. The second availability group becomes the secondary availability group.  
+Specifies two availability groups that constitute a *distributed availability group*. Each availability group is part of its own Windows Server Failover Cluster (WSFC). When you create a distributed availability group, the availability group on the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance becomes the primary availability group. The second availability group becomes the secondary availability group.  
   
 You need to join the secondary availability group to the distributed availability group. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
@@ -586,7 +594,7 @@ The following example creates an availability group named `MyAg` for two user da
 |Group Option|Setting|Description|  
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|This automated backup preference indicates that backups should occur on a secondary replica except when the primary replica is the only replica online (this is the default behavior). For the AUTOMATED_BACKUP_PREFERENCE setting to have any effect, you need to script backup jobs on the availability databases to take the automated backup preference into account.|  
-|FAILURE_CONDITION_LEVEL|3|This failure condition level setting specifies that an automatic failover should be initiated on critical SQL Server internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping.|  
+|FAILURE_CONDITION_LEVEL|3|This failure condition level setting specifies that an automatic failover should be initiated on critical [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping.|  
 |HEALTH_CHECK_TIMEOUT|600000|This health check timeout value, 60 seconds, specifies that the WSFC cluster waits 60000 milliseconds for the [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure to return server-health information about a server instance that is hosting a synchronous-commit replica with automatic before the cluster assumes that the host server instance is slow or not responding. (The default value is 30000 milliseconds).|  
   
 Three availability replicas are to be hosted by the default server instances on computers named `COMPUTER01`, `COMPUTER02`, and `COMPUTER03`. The following table summarizes the values specified for the replica options of each replica.  

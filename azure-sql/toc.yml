@@ -896,20 +896,20 @@
             href: database/local-dev-experience-extensions.md
           - name: SQL Database Projects extension
             items:
-            - name: Overview
-              displayName: Overview of the SQL Database Projects extension >>
+            - name: Overview >>
+              displayName: Overview of the SQL Database Projects extension
               href: /sql/azure-data-studio/extensions/sql-database-project-extension
-            - name: Get started
-              displayName: Get started with SQL Database Projects >>
+            - name: Get started >>
+              displayName: Get started with SQL Database Projects
               href: /sql/azure-data-studio/extensions/sql-database-project-extension-getting-started
             - name: Build and publish a project >>
               href: /sql/azure-data-studio/extensions/sql-database-project-extension-build
-            - name: Build a project from the command line >>
+            - name: Build from the command line >>
               href: /sql/azure-data-studio/extensions/sql-database-project-extension-build-from-command-line
           - name: SQL Server extension for VSCode
             items:
-              - name: Overview
-                displayName: Overview of the SQL Server extension for VSCode >>
+              - name: Overview >>
+                displayName: Overview of the SQL Server extension for VSCode
                 href: /sql/tools/visual-studio-code/sql-server-develop-use-vscode
         - name: Plan
           displayName: Plan for the local development experience

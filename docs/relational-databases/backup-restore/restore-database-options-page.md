@@ -47,7 +47,8 @@ ms.author: kendralittle
  
  When doing a restore using backup file of a published database to the same server where the database was created and with same database name, keep_replication is not needed.
 
-When running “restore with recovery” and not restoring from a backup file, add keep_replication switch to preserve replication settings.
+When running RESTORE WITH RECOVERY and not restoring from a backup file, add the KEEP_REPLICATION option to preserve replication settings.
+
 
   
  For more information, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  

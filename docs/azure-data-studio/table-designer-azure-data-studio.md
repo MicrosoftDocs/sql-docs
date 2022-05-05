@@ -146,7 +146,7 @@ As seen in script pane in the image above, we need to create the clause that wil
 
 ### Memory-Optimized Tables
 
-Creating Memory-Optimized Tables can be done directly in Azure Data Studio. All it takes is checking a box at the time of table creation and the table in your database is memory-optimized! Just like Graph Tables, Memory-Optimized Tables can only be created on new tables, not already existing ones. Memory-Optimized tables must have non-clustered primary key.
+Creating Memory-Optimized Tables can be done directly in Azure Data Studio. All it takes is checking a box at the time of table creation and the table in your database is memory-optimized! Just like Graph Tables, Memory-Optimized Tables can only be created on new tables, not already existing ones. Memory-Optimized tables must have non-clustered primary key. For an introduction to Memory-Optimized Tables, check out the [Introduction to Memory-Optimized Tables](/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables) article.
 
 #### Create a Memory-Optimized Table
 

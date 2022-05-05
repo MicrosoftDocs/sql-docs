@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 # sp_change_feed_disable_db (Transact-SQL)
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Disable the change feed at the database level, and subsequently the metadata for all the associated tables for [Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link). For more information, see [Manage Azure Synapse Link for SQL Server](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
+Disable the change feed at the database level, and subsequently the metadata for all the associated tables for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 
 ## Syntax  
    
@@ -56,5 +56,5 @@ When the change feed is disabled with active table groups, all connections and s
 
 ## Next steps
 
-- [Manage Azure Synapse Link for SQL Server](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
+- [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
 - [Get started with Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)

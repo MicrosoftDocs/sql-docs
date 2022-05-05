@@ -1,6 +1,6 @@
 ---
-title: "Azure Synapse Link for SQL Server change feed"
-description: Learn about the Azure Synapse Link for SQL Server change feed, introduced for SQL Server 2022 to allow for real-time analytics of data from SQL Server to Azure Synapse.
+title: "Azure Synapse Link change feed for SQL Server 2022 and Azure SQL Database"
+description: Learn about the Azure Synapse Link for SQL Server change feed, introduced for SQL Server 2022 and Azure SQL Database to allow for real-time analytics of data from SQL Server or Azure SQL Database to Azure Synapse.
 ms.date: 05/24/2022
 ms.prod: sql
 ms.reviewer: ""
@@ -12,19 +12,18 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ms.custom:
 ---
 
-# Azure Synapse Link for SQL Server change feed
+# Azure Synapse Link change feed
 
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-This article includes detail on how the Azure Synapse Link for SQL Server change feed works. This new SQL Server 2022 feature is currently in preview. 
+This article includes detail on how the Azure Synapse Link change feed works. This new SQL Server 2022 and Azure SQL Database feature is currently in preview. 
 
-[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] introduces a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, called Azure Synapse Link. Azure Synapse Link for SQL Server provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. 
+[!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, called Azure Synapse Link. Azure Synapse Link provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. 
 
 - [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
-- For more information, see [Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link).
-- To get started quickly, see [Get started with Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022).
+- To get started quickly, see [Get started with Azure Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022) or [Get started with Synapse Link for Azure SQL Database (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database).
 
-The Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
+While Azure Synapse Link for Azure SQL Database involves user-provisioned Azure resources including an ADLS Gen2 storage account, the Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
 
 This feature is not currently available for Azure SQL Managed Instance.
 
@@ -36,7 +35,7 @@ The high-level architecture includes a multi-threaded approach for change captur
 - Change publishers are responsible for consuming the work in the queue, serializing the changes to CSV format, and then writing the serialized data to the landing zone in Azure Storage, in an Azure Data Lake Storage Gen2 container.
 - The commit thread is responsible for committing batches to the landing zone, once all writes for that batch have completed.
 
-For more information on the landing zone, see [Azure Synapse Link for SQL Server landing zone](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link#landing-zone).
+For more information on the landing zone for Azure Synapse Link for SQL Server, see [Azure Synapse Link for SQL Server landing zone](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link#landing-zone).
 
 An administrator of SQL Server can enable Azure Synapse Link on a table that is empty, or one that already contains data. 
 
@@ -46,7 +45,7 @@ An administrator of SQL Server can enable Azure Synapse Link on a table that is 
 
 The change feed use a CSV file for publishing these changes to Azure Synapse. This tabular format naturally aligns with writing row-granular data changes at a high cadence (on the order of seconds). Most CSV files should be relatively small.
 
-:::image type="content" source="media/synapse-link-sql-server-change-feed/azure-synapse-link-sql-server-change-feed.png" alt-text="A diagram of the Azure Synapse Link for SQL Server change feed data flow":::
+:::image type="content" source="media/synapse-link-sql-server-change-feed/azure-synapse-link-sql-server-change-feed.png" alt-text="A diagram of the Azure Synapse Link change feed data flow.":::
 
 At most, one change capture thread will work on any one database at a given time. At most, one change publisher thread will work on a specific table at a given time, however, different publish threads could be concurrently handling distinct tables in the same database. The single committer thread will commit changes for one database/batch at a time.
 

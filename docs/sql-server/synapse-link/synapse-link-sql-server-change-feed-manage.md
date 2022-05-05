@@ -1,6 +1,6 @@
 ---
-title: "Manage Azure Synapse Link for SQL Server"
-description: Learn about managing the Azure Synapse Link for SQL Server change feed with T-SQL.
+title: "Manage Azure Synapse Link for SQL Server and Azure SQL Database"
+description: Learn about managing the Azure Synapse Link change feed with T-SQL.
 ms.date: 05/24/2022
 ms.prod: sql
 ms.reviewer: ""
@@ -12,11 +12,11 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ms.custom:
 ---
 
-# Manage Azure Synapse Link for SQL Server 
+# Manage Azure Synapse Link for SQL Server and Azure SQL Database
 
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-This article provides details on managing Azure Synapse Link for SQL Server with T-SQL.
+This article provides details on managing Azure Synapse Link for SQL Server and Azure SQL Database with T-SQL.
 
 - [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - For more information, see [Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link).
@@ -36,7 +36,7 @@ EXECUTE sys.sp_change_feed_enable_db
 GO   
 ```
 
-For more information, see [sys.sp_change_feed_enable_db](../../relational-databases/system-stored-procedures/sp-change-feed-enable_db.md).
+For more information, see [sys.sp_change_feed_enable_db](../../relational-databases/system-stored-procedures/sp-change-feed-enable-db.md).
 
 ## Disable change feed for database
 
@@ -49,7 +49,7 @@ EXECUTE sys.sp_change_feed_disable_db
 GO 
 ```
 
-For more information, see [sys.sp_change_feed_disable_db](../../relational-databases/system-stored-procedures/sp-change-feed-disable_db.md).
+For more information, see [sys.sp_change_feed_disable_db](../../relational-databases/system-stored-procedures/sp-change-feed-disable-db.md).
 
 ## Create change feed a table group 
 
@@ -100,7 +100,7 @@ GO
 
 For more information, see [sp_change_feed_enable_table (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-change-feed-enable-table.md).
 
-### Drop change feed table
+## Drop change feed table
 
 To remove a change feed table from a change feed table group, use the `sys.sp_change_feed_disable_table` system stored procedure.
 
@@ -114,6 +114,36 @@ GO
 ```
 
 For more information, see [sp_change_feed_disable_table (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-change-feed-disable-table.md).
+
+## Monitor Azure Synapse Link for SQL Server
+
+The following system objects allow for querying the state of the Synapse Link feature from the source database.
+
+### View configuration
+
+To review the current configuration of link, execute the `sys.sp_help_change_feed` system stored procedure.
+
+```sql
+EXECUTE sys.sp_help_change_feed
+```
+
+For more information, see [sp_help_change_feed (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-change-feed.md).
+
+### Review change feed errors
+
+To review errors in the [Azure Synapse Link change feed](synapse-link-sql-server-change-feed.md), use the dynamic management view [sys.dm_change_feed_errors](sys-dm-change-feed-errors.md). This DMV will show errors from last 32 sessions. One session might include multiple errors, for example, retry attempts on landing zone failures. This DMV will also show errors faced during snapshot and incremental change publish process.
+
+```sql
+SELECT * FROM sys.dm_change_feed_errors;
+```
+
+### View current activity
+
+To view the current activity, use the dynamic management view [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](sys-dm-change-feed-log-scan-sessions.md). 
+
+```sql
+SELECT * FROM sys.dm_change_feed_log_scan_sessions;
+```
 
 ## See also
 

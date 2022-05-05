@@ -13259,6 +13259,10 @@ items:
       items:
       - name: sys.dm_db_objects_disabled_on_compatibility_level_change
         href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
+    - name: Azure Synapse Link
+      item:
+      - name: sys.dm_change_feed_errors
+        href: relational-databases/system-dynamic-management-views/sys-dm-change-feed-errors.md
     - name: Azure Synapse Analytics & Parallel Data Warehouse
       href: relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md
       items:
@@ -14968,6 +14972,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
       - name: sp_change_feed_enable_table
         href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
+      - name: sp_help_change_feed
+        href: relational-databases/system-stored-procedures/sp-help-change-feed.md
     - name: SQL Server Agent
       href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:

@@ -40,7 +40,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 |**batch_start_lsn** | | |
 |**batch_end_lsn** | | |
 |**tran_begin_lsn** | | `Begin_lsn` of the failed transaction. Will be `NULL` for snapshot errors. |
-|**tran_commit_lsn** | | Commit LSN for the change row in the change data row set on which the failure occurred. Will be `NULL` for snapshot  |errors.
+|**tran_commit_lsn** | | Commit LSN for the change row in the change data row set on which the failure occurred. Will be `NULL` for snapshot errors. |
 |**sequence_value** | | |
 |**command_id** | | Command ID from the change row that failed to publish. Will be `NULL` for snapshot errors. |
 

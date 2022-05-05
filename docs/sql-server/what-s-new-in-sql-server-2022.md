@@ -29,7 +29,7 @@ The following sections provide an overview of these features.
 
 ## Azure Synapse Link support
 
-Azure Synapse Link for SQL enables near real-time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. With a seamless integration between operational stores and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. For more information, see [What is Synapse Link for SQL? (Preview)](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview).
+Azure Synapse Link for SQL enables near real-time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. With a seamless integration between operational stores and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. For more information, see [What is Synapse Link for SQL? (Preview)](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview).
 
 ## Azure Purview integration
 

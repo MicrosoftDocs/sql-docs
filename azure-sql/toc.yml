@@ -886,6 +886,9 @@
           href: database/local-dev-experience-publish-emulator.md
         - name: The Azure SQL DB emulator
           href: database/local-dev-experience-azure-sql-database-emulator.md
+        - name: Quickstart
+          displayName: Create a local development environment
+          href: database/local-dev-experience-quickstart.md
         - name: Extensions
           displayName: Extensions for the local development experience
           items:
@@ -894,42 +897,23 @@
           - name: SQL Database Projects extension
             items:
             - name: Overview
-              displayName: Overview of the SQL Database Projects extension
-              href: /sql/azure-data-studio/extensions/sql-database-project-extension?toc=/azure/azure-sql/toc.json
+              displayName: Overview of the SQL Database Projects extension >>
+              href: /sql/azure-data-studio/extensions/sql-database-project-extension
             - name: Get started
-              displayName: Get started with SQL Database Projects
-              href: /sql/azure-data-studio/extensions/sql-database-project-extension-getting-started?toc=/azure/azure-sql/toc.json
-            - name: Build and publish a project
-              href: /sql/azure-data-studio/extensions/sql-database-project-extension-build?toc=/azure/azure-sql/toc.json
-            - name: Build a project from the command line
-              href: /sql/azure-data-studio/extensions/sql-database-project-extension-build-from-command-line?toc=/azure/azure-sql/toc.json
+              displayName: Get started with SQL Database Projects >>
+              href: /sql/azure-data-studio/extensions/sql-database-project-extension-getting-started
+            - name: Build and publish a project >>
+              href: /sql/azure-data-studio/extensions/sql-database-project-extension-build
+            - name: Build a project from the command line >>
+              href: /sql/azure-data-studio/extensions/sql-database-project-extension-build-from-command-line
           - name: SQL Server extension for VSCode
             items:
               - name: Overview
-                displayName: Overview of the SQL Server extension for VSCode
-                href: /sql/tools/visual-studio-code/sql-server-develop-use-vscode?toc=/azure/azure-sql/toc.json
-        - name: Quickstarts
-          items:
-          - name: Create local dev environment for SQL DB
-            displayName: Create a local development environment
-            href: database/local-dev-experience-quickstart.md
+                displayName: Overview of the SQL Server extension for VSCode >>
+                href: /sql/tools/visual-studio-code/sql-server-develop-use-vscode
         - name: Plan
           displayName: Plan for the local development experience
           href: database/local-dev-experience-plan.md
-      - name: Azure Data Studio >
-        href: /sql/azure-data-studio/
-      - name: SQL Server Management Studio (SSMS)
-        items:
-        - name: Download SSMS
-          href: /sql/ssms/download-sql-server-management-studio-ssms?toc=/azure/azure-sql/toc.json
-        - name: Release notes
-          displayName: Release notes for SSMS
-          href: /sql/ssms/release-notes-ssms?toc=/azure/azure-sql/toc.json
-        - name: Overview
-          displayName: Overview of SSMS
-          href: /sql/ssms/sql-server-management-studio-ssms?toc=/azure/azure-sql/toc.json
-        - name: Connect and query Azure SQL DB
-          href: /sql/ssms/quickstarts/ssms-connect-query-azure-sql?toc=/azure/azure-sql/toc.json
 
 - name: SQL Managed Instance (SQL MI)
   items:

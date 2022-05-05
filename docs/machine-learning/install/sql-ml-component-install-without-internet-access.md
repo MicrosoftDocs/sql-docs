@@ -12,40 +12,41 @@ ms.custom:
   - intro-installation
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Offline install SQL Server Machine Learning Services Python and R on computers with no internet access
+# Offline install SQL Server Machine Learning Services on Windows computers with no internet access
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article describes how to install SQL Server Machine Learning Services offline on computers with no internet access isolated behind a network firewall.
+This article describes how to install SQL Server Machine Learning Services on Windows offline on computers with no internet access isolated behind a network firewall.
 
 By default, installers connect to Microsoft download sites to get required and updated components for machine learning on SQL Server. If firewall constraints prevent the installer from reaching these sites, you can use an internet-connected device to download files, transfer files to an offline server, and then run setup.
 
+> [!NOTE]
+> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
+
 In-database analytics consist of database engine instance, plus additional components for R and Python integration, depending on the version of SQL Server. 
 
-+ Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
++ Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server 2022 Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning-sql-2022.md).
 + SQL Server 2019 includes R, Python, and Java.
 + SQL Server 2017 includes R and Python.
 + SQL Server 2016 is R-only.
-
-On an isolated server, machine learning and R/Python language-specific features are added through CAB files. 
-
-> [!NOTE]
-> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
 
 ::: moniker range="=sql-server-ver16"
 
 ## SQL Server 2022 offline install
 
-Offline installation of SQL Server 2022 is similar to the normal installation experience. 
+Offline installation of SQL Server 2022 is similar to the online installation experience. 
 
 1. Use SQL Setup to install the Machine Learning services feature.
 2. Download any desired runtimes and copy them to the offline installation server. Custom runtimes for SQL Server 2022 are customer-installed. CAB files are not used. 
 3. Download any desired packages and copy them to the offline installation server. Otherwise, refer to instructions for installation from SQL Setup and installation of any desired custom packages: 
  - [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md)
- - [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md)
+ - [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning-sql-2022.md)
 
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15"
+
+On an isolated server, machine learning and R/Python language-specific features are added through CAB files. 
+
 ## SQL Server 2019 offline install
 
 To install SQL Server Machine Learning Services (R and Python) on an isolated server, start by downloading the initial release of SQL Server and the corresponding CAB files for R and Python support. Even if you plan to immediately update your server to use the latest cumulative update, an initial release must be installed first.
@@ -78,6 +79,9 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017"
+
+On an isolated server, machine learning and R/Python language-specific features are added through CAB files. 
+
 ## SQL Server 2017 offline install
 
 To install SQL Server Machine Learning Services (R and Python) on an isolated server, start by downloading the initial release of SQL Server and the corresponding CAB files for R and Python support. Even if you plan to immediately update your server to use the latest cumulative update, an initial release must be installed first.
@@ -107,6 +111,8 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
+
+On an isolated server, machine learning and R language-specific features are added through CAB files. 
 
 ## SQL Server 2016 offline install
 

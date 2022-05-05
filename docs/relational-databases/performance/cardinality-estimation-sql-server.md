@@ -13,7 +13,7 @@ dev_langs:
 - "TSQL"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: ""
+ms.reviewer: "katsmith"
 ms.custom: ""
 ms.date: "05/24/2022"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -32,18 +32,18 @@ The first factor, cardinality, is used as an input parameter of the second facto
 
 Cardinality estimation (CE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is derived primarily from histograms that are created when indexes or statistics are created, either manually or automatically. Sometimes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also uses constraint information and logical rewrites of queries to determine cardinality.
 
-In the following cases, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot accurately calculate cardinalities. This causes inaccurate cost calculations that may cause suboptimal query plans. Avoiding these constructs in queries may improve query performance. Sometimes, alternative query formulations or other measures are possible and these are pointed out:
+In the following cases, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't accurately calculate cardinalities. This causes inaccurate cost calculations that may cause suboptimal query plans. Avoiding these constructs in queries may improve query performance. Sometimes, alternative query formulations or other measures are possible and these are pointed out:
 
 - Queries with predicates that use comparison operators between different columns of the same table.
 - Queries with predicates that use operators, and any one of the following are true:
   - There are no statistics on the columns involved on either side of the operators.
-  - The distribution of values in the statistics is not uniform, but the query seeks a highly selective value set. This situation can be especially true if the operator is anything other than the equality (=) operator.
+  - The distribution of values in the statistics isn't uniform, but the query seeks a highly selective value set. This situation can be especially true if the operator is anything other than the equality (=) operator.
   - The predicate uses the not equal to (!=) comparison operator or the `NOT` logical operator.
-- Queries that use any of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] built-in functions or a scalar-valued, user-defined function whose argument is not a constant value.
+- Queries that use any of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] built-in functions or a scalar-valued, user-defined function whose argument isn't a constant value.
 - Queries that involve joining columns through arithmetic or string concatenation operators.
-- Queries that compare variables whose values are not known when the query is compiled and optimized.
+- Queries that compare variables whose values aren't known when the query is compiled and optimized.
 
-This article illustrates how you can assess and choose the best CE configuration for your system. Most systems benefit from the latest CE because it is the most accurate. The CE predicts how many rows your query will likely return. The cardinality prediction is used by the Query Optimizer to generate the optimal query plan. With more accurate estimations, the Query Optimizer can usually do a better job of producing a more optimal query plan. 
+This article illustrates how you can assess and choose the best CE configuration for your system. Most systems benefit from the latest CE because it's the most accurate. The CE predicts how many rows your query will likely return. The cardinality prediction is used by the Query Optimizer to generate the optimal query plan. With more accurate estimations, the Query Optimizer can usually do a better job of producing a more optimal query plan. 
   
 Your application system could possibly have an important query whose plan is changed to a slower plan due to changes in the CE throughout versions. You have techniques and tools for identifying a query that performs slower due to CE issues. And you have options for how to address the ensuing performance issues.
   
@@ -60,8 +60,8 @@ In 1998, a major update of the CE was part of [!INCLUDE[ssNoVersion](../../inclu
 
 Subsequent updates started with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], meaning compatibility levels 120 and above. The CE updates for levels 120 and above incorporate updated assumptions and algorithms that work well on modern data warehousing and on OLTP workloads. From the CE 70 assumptions, the following model assumptions were changed starting with CE 120:
 
-- **Independence** becomes **Correlation:** The combination of the different column values are not necessarily independent. This may resemble more real-life data querying.
-- **Simple Containment** becomes **Base Containment:** Users might query for data that does not exist. For example, for an equality join between two tables, we use the base tables histograms to estimate the join selectivity, and then factor in the predicates selectivity.
+- **Independence** becomes **Correlation:** The combination of the different column values is not necessarily independent. This may resemble more real-life data querying.
+- **Simple Containment** becomes **Base Containment:** Users might query for data that doesn't exist. For example, for an equality join between two tables, we use the base tables histograms to estimate the join selectivity, and then factor in the predicates selectivity.
 
 ## Use Query Store to assess the CE version
 
@@ -112,7 +112,7 @@ For information about extended events as tailored for [!INCLUDE[ssSDS](../../inc
   
 Next are steps you can use to assess whether any of your most important queries perform worse under the latest CE. Some of the steps are performed by running a code sample presented in a preceding section. 
 
-1. Open [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Ensure your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]database is set to the highest available compatibility level.  
+1. Open [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Ensure your SQL Server database is set to the highest available compatibility level.  
   
 2. Perform the following preliminary steps:  
   
@@ -134,7 +134,7 @@ Next are steps you can use to assess whether any of your most important queries 
   
 6. In the results pane on the **Results** tab, double-click the cell that contains the statistics in XML format. A graphic query plan is displayed.  
   
-7. Right-click the first box in the graphic query plan, and then click **Properties**.  
+7. Right-click the first box in the graphic query plan, and then select **Properties**.  
   
 8. For later comparison with a different configuration, note the values for the following properties:  
   
@@ -178,7 +178,7 @@ Suppose that with CE 120 or above, a less efficient query plan is generated for 
   
     1. For example, setting the compatibility level 110 or lower activates CE 70, but it makes all queries subject to the previous CE model. 
 
-    2. Further, setting a lower compatibility level also misses a number of improvements in the query optimizer for latest versions, and affects all queries against the database.
+    2. Further, setting a lower compatibility level also misses many improvements in the query optimizer for latest versions, and affects all queries against the database.
 
 2. You could use `LEGACY_CARDINALITY_ESTIMATION` database option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
 
@@ -206,7 +206,7 @@ WHERE d.name = 'yourDatabase';
 GO  
 ```  
 
-For pre-existing databases running at lower compatibility levels, as long as the application does not need to leverage enhancements that are only available in a higher database compatibility level, it is a valid approach to maintain the previous database compatibility level. For new development work, or when an existing application requires use of new features such as [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md), as well as some new [!INCLUDE[tsql](../../includes/tsql-md.md)], plan to upgrade the database compatibility level to the latest available. For more information, see [Compatibility levels and Database Engine upgrades](../../database-engine/install-windows/compatibility-certification.md#compatibility-levels-and-database-engine-upgrades). 
+For pre-existing databases running at lower compatibility levels, as long as the application doesn't need to use enhancements that are only available in a higher database compatibility level, it's a valid approach to maintain the previous database compatibility level. For new development work, or when an existing application requires use of new features such as [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md), and some new [!INCLUDE[tsql](../../includes/tsql-md.md)], plan to upgrade the database compatibility level to the latest available. For more information, see [Compatibility levels and Database Engine upgrades](../../database-engine/install-windows/compatibility-certification.md#compatibility-levels-and-database-engine-upgrades). 
 
 > [!CAUTION]
 > Before changing database compatibility level, review [Best Practices for upgrading Database Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
@@ -221,7 +221,7 @@ For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database set at 
   
 ### Legacy cardinality estimator
 
-For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database set at compatibility level 120 and above, the legacy cardinality estimator (CE version 70) can be can be activated at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database set at compatibility level 120 and above, the legacy cardinality estimator (CE version 70) can be activated at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 
@@ -277,7 +277,7 @@ The Query Store gives you different ways that you can force the system to use a 
   
 - Execute `sys.sp_query_store_force_plan`.
   
-- In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], expand your **Query Store** node, right-click **Top Resource Consuming Nodes**, and then click **View Top Resource Consuming Nodes**. The display shows buttons labeled **Force Plan** and **Unforce Plan**.
+- In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], expand your **Query Store** node, right-click **Top Resource Consuming Nodes**, and then select **View Top Resource Consuming Nodes**. The display shows buttons labeled **Force Plan** and **Unforce Plan**.
   
 For more information about the Query Store, see [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md). 
 
@@ -285,13 +285,13 @@ For more information about the Query Store, see [Monitoring Performance By Using
 
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE[tsql](../../includes/tsql-md.md)] literal, such as `3`, `'ABC'`, `'2005-12-31'`, `1.0e3`, or `0x12345678`. For more information, see [Constant Folding](../../relational-databases/query-processing-architecture-guide.md#ConstantFolding).
 
-In addition, some expressions that are not constant folded but whose arguments are known at compile time, whether the arguments are parameters or constants, are evaluated by the result-set size (cardinality) estimator that is part of the Query Optimizer during optimization. For more information, see [Expression Evaluation](../../relational-databases/query-processing-architecture-guide.md#ExpressionEval).
+In addition, some expressions that aren't constant folded but whose arguments are known at compile time, whether the arguments are parameters or constants, are evaluated by the result-set size (cardinality) estimator that is part of the Query Optimizer during optimization. For more information, see [Expression Evaluation](../../relational-databases/query-processing-architecture-guide.md#ExpressionEval).
 
 ### Best Practices: Using constant folding and compile-time expression evaluation for generating optimal query plans
 
-To make sure you generate optimal query plans, it is best to design queries, stored procedures, and batches so that the Query Optimizer can accurately estimate the selectivity of the conditions in your query, based on statistics about your data distribution. Otherwise, the Query Optimizer must use a default estimate when estimating selectivity.
+To make sure you generate optimal query plans, it's best to design queries, stored procedures, and batches so that the Query Optimizer can accurately estimate the selectivity of the conditions in your query, based on statistics about your data distribution. Otherwise, the Query Optimizer must use a default estimate when estimating selectivity.
 
-To make sure that the Cardinality Estimator of the Query Optimizer provides good estimates, you should first make sure that the AUTO_CREATE_STATISTICS and AUTO_UPDATE_STATISTICS database SET options are ON (the default setting), or that you have manually created statistics on all columns referenced in a query condition. Then, when you are designing the conditions in your queries, do the following when it is possible:
+To make sure that the Cardinality Estimator of the Query Optimizer provides good estimates, you should first make sure that the AUTO_CREATE_STATISTICS and AUTO_UPDATE_STATISTICS database SET options are ON (the default setting), or that you have manually created statistics on all columns referenced in a query condition. Then, when you're designing the conditions in your queries, do the following when it's possible:
 
 - Avoid the use of local variables in queries. Instead, use parameters, literals, or expressions in the query.
 
@@ -307,13 +307,9 @@ To make sure that the Cardinality Estimator of the Query Optimizer provides good
 
   - Parameterize the query and execute it by using `sp_executesql`, and pass the value of the variable as a parameter to the query.
 
-technical
-Saved
-1,307 words
-
 ## Cardinality Estimation feedback
 
-Cardinality Estimation (CE) feedback is part of the Intelligent query processing family of features and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
+(Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])|, the Cardinality Estimation (CE) feedback is part of the Intelligent query processing family of features and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
 
 Because no single set of CE models and assumptions can accommodate the vast array of customer workloads and data distributions, CE feedback provides an adaptable solution based on query runtime characteristics. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality. Feedback is applied when significant model estimation errors resulting in performance drops are found.
 
@@ -327,7 +323,7 @@ Different versions of the Database Engine use different CE model assumptions bas
 
 CE feedback learns which CE model assumptions are optimal over time and then apply the historically most correct assumption:
 
-1. CE feedback **identifies** model-related assumptions and evaluates whether they are accurate for repeating queries.
+1. CE feedback **identifies** model-related assumptions and evaluates whether they're accurate for repeating queries.
 
 2. If an assumption looks incorrect, a subsequent execution of the same query is tested with a query plan that adjusts the impactful CE model assumption and **verifies** if it helps.
 
@@ -390,7 +386,7 @@ For more information, see [Versions of the CE](https://docs.microsoft.com/sql/re
 
 #### Optimizer row goal
 
-When the Query Optimizer estimates the cardinality of an execution plan, it usually assumes that all qualifying rows from all tables have to be processed. However, some query patterns cause the Query Optimizer to search for a plan that will return a smaller number of rows to reduce I/O. If the query specifies a target number of rows (row goal) that may be expected at runtime through the use of a `TOP`, `IN` or `EXISTS` keywords, the `FAST` query hint, or a `SET ROWCOUNT` statement, that row goal is used as part of the query optimization process such as in the following example:
+When the Query Optimizer estimates the cardinality of an execution plan, it usually assumes that all qualifying rows from all tables have to be processed. However, some query patterns cause the Query Optimizer to search for a plan that will return a smaller number of rows to reduce I/O. If the query specifies a target number of rows (row goal) that may be expected at runtime by using a `TOP`, `IN` or `EXISTS` keywords, the `FAST` query hint, or a `SET ROWCOUNT` statement, that row goal is used as part of the query optimization process such as in the following example:
 
 ```sql
 USE AdventureWorks2016_EXT;
@@ -403,11 +399,11 @@ GO
 
 When the row goal plan is applied, the estimated number of rows in the query plan is reduced because the Query Optimizer assumes that a smaller number of rows will have to be processed in order to reach the row goal.  
 
-While row goal is a beneficial optimization strategy for certain query patterns, if data is not uniformly distributed, more pages may be scanned than estimated, meaning that row goal becomes inefficient. CE feedback can disable the row goal scan and enable a seek when this inefficiency is detected.
+While row goal is a beneficial optimization strategy for certain query patterns, if data isn't uniformly distributed, more pages may be scanned than estimated, meaning that row goal becomes inefficient. CE feedback can disable the row goal scan and enable a seek when this inefficiency is detected.
 
 ### Considerations
 
-To enable CE feedback, enable database compatibility level 160 for the database you are connected to when executing the query. The Query Store must be enabled for every database where CE feedback is used.
+To enable CE feedback, enable database compatibility level 160 for the database you're connected to when executing the query. The Query Store must be enabled for every database where CE feedback is used.
 
 CE feedback activity is visible via the `query_feedback_analysis` and `query_feedback_validation` XEvents.
 
@@ -415,17 +411,17 @@ Hints set by CE feedback can be tracked using the [sys.query_store_query_hints](
 
 Feedback information can be tracked using the `sys.query_store_plan_feedback` catalog view. **NOTE:** This view may change in a later SQL Server 2022 CTP.
 
-Starting with CE feedback, a new `IsCEFeedbackAdjusted` attribute is available on the StmtSimple element to see whether CE Feedback adjustment was used. **NOTE:** This property is not yet available.
+Starting with CE feedback, a new `IsCEFeedbackAdjusted` attribute is available on the StmtSimple element to see whether CE Feedback adjustment was used. **NOTE:** This property isn't yet available.
 
 To disable CE feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET CE_FEEDBACK = OFF` database scoped configuration.
 
 To disable CE feedback at the query level, use the `DISABLE_CE_FEEDBACK` query hint.
 
-If a query has a query plan forced through Query Store, CE feedback will not be used for that query.
+If a query has a query plan forced through Query Store, CE feedback won't be used for that query.
 
-If a query uses hard-coded query hints or is using Query Store hints set by the user, CE feedback will not be used for that query. For more information, see [Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query) and [Query Store hints](https://docs.microsoft.com/sql/relational-databases/performance/query-store-hints).
+If a query uses hard-coded query hints or is using Query Store hints set by the user, CE feedback won't be used for that query. For more information, see [Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query) and [Query Store hints](https://docs.microsoft.com/sql/relational-databases/performance/query-store-hints).
 
-To allow CE feedback to override hard-coded query hints and Query Store user hints, use the `ALTER DATABASE SCOPED CONFIGURATION SET FORCE_CE_FEEDBACK = ON` database scoped configuration. **NOTE:** This configuration is not yet available.
+To allow CE feedback to override hard-coded query hints and Query Store user hints, use the `ALTER DATABASE SCOPED CONFIGURATION SET FORCE_CE_FEEDBACK = ON` database scoped configuration. **NOTE:** This configuration isn't yet available.
 
 ### Feedback and Reporting Issues
 
@@ -433,11 +429,11 @@ For feedback or questions, please email CEFfeedback@microsoft.com
 
 ## Examples of CE improvements  
   
-This section describes example queries that benefit from the enhancements implemented in the CE in recent releases. This is background information that does not call for specific action on your part. 
+This section describes example queries that benefit from the enhancements implemented in the CE in recent releases. This is background information that doesn't call for specific action on your part. 
   
 ### Example A. CE understands maximum value might be higher than when statistics were last gathered  
   
-Suppose statistics were last gathered for `OrderTable` on `2016-04-30`, when the maximum `OrderAddedDate` was `2016-04-30`. The CE 120 (and above version) understands that columns in `OrderTable` which have *ascending* data might have values larger than the maximum recorded by the statistics. This understanding improves the query plan for [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statements such as the following.
+Suppose statistics were last gathered for `OrderTable` on `2016-04-30`, when the maximum `OrderAddedDate` was `2016-04-30`. The CE 120 (and above version) understands that columns in `OrderTable`, which have *ascending* data might have values larger than the maximum recorded by the statistics. This understanding improves the query plan for [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statements such as the following.
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  
@@ -447,7 +443,7 @@ WHERE OrderAddedDate >= '2016-05-01';
   
 ### Example B. CE understands that filtered predicates on the same table are often correlated  
   
-In the following SELECT we see filtered predicates on `Model` and `ModelVariant`. We intuitively understand that when `Model` is 'Xbox' there is a chance the `ModelVariant` is 'One', given that Xbox has a variant called One.
+In the following SELECT we see filtered predicates on `Model` and `ModelVariant`. We intuitively understand that when `Model` is 'Xbox' there's a chance the `ModelVariant` is 'One', given that Xbox has a variant called One.
   
 Starting with CE 120, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] understands there might be a correlation between the two columns on the same table, `Model` and `ModelVariant`. The CE makes a more accurate estimation of how many rows will be returned by the query, and the [query optimizer](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) generates a more optimal plan.
   
@@ -460,7 +456,7 @@ ModelVariant = 'Series X';
   
 ### Example C. CE no longer assumes any correlation between filtered predicates from different tables
 
-Extensive new research on modern workloads and actual business data reveals that predicate filters from different tables usually do not correlate with each other. In the following query, the CE assumes there is no correlation between `s.type` and `r.date`. Therefore the CE makes a lower estimate of the number of rows returned. 
+Extensive new research on modern workloads and actual business data reveals that predicate filters from different tables usually don't correlate with each other. In the following query, the CE assumes there's no correlation between `s.type` and `r.date`. Therefore the CE makes a lower estimate of the number of rows returned. 
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  

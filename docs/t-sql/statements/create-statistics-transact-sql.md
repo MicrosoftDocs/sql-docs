@@ -230,7 +230,6 @@ Currently, if statistics are created by a third party tool on a customer databas
 
 (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])| This feature allows the creation of statistics objects in a mode such that a schema change will *not* be blocked by the statistics, but instead the statistics will be dropped. In this way, auto drop statistics behave like auto created statistics.
 
-
 > [!Note]
 > Trying to set or unset the *Auto_Drop* property on auto created statistics may raise errors - auto created statistics always uses auto drop. Some backups, when restored, may have this property set incorrectly until the next time the statistics object is updated (manually or automatically). However, auto created statistics always behave like auto drop statistics.
 

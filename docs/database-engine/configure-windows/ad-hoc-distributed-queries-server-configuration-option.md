@@ -61,7 +61,7 @@ GO
 
 ## Azure SQL Database and Azure SQL Managed Instance
 
-See the [Features comparison: Azure SQL Database and Azure SQL Managed Instance](/azure-sql/database/features-comparison) for reference.
+See the [Features comparison: Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/features-comparison) for reference.
 
 ## See also
 

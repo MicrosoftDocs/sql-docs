@@ -36,11 +36,11 @@ Returns a row for each classified item in the database.
 |**class_desc**|**varchar(16)**|A description of the class of the item on which the classification exists. will always have the value *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|Represents the ID of the table containing the classified column, corresponding with sys.all_objects.object_id|  
 |**minor_id**|**int**|Represents the ID of the column on which the classification exists, corresponding with sys.all_columns.column_id|   
-|**label**|**sysname**|The label (human readable) assigned for the sensitivity classification|  
-|**label_id**|**sysname**|An ID associated with the label, which can be used by an information protection system such as Azure Information Protection (AIP)|  
-|**information_type**|**sysname**|The information type (human readable) assigned for the sensitivity classification|  
-|**information_type_id**|**sysname**|An ID associated with the information type, which can be used by an information protection system such as Azure Information Protection (AIP)|  
-|**rank**|**int**|A numerical value of the rank: <br><br>0 for NONE<br>10 for LOW<br>20 for MEDIUM<br>30 for HIGH<br>40 for CRITICAL| 
+|**label**|**sql_variant**|The label (human readable) assigned for the sensitivity classification|  
+|**label_id**|**sql_variant**|An ID associated with the label, which can be used by an information protection system such as Azure Information Protection (AIP)|  
+|**information_type**|**sql_variant**|The information type (human readable) assigned for the sensitivity classification|  
+|**information_type_id**|**sql_variant**|An ID associated with the information type, which can be used by an information protection system such as Azure Information Protection (AIP)|  
+|**rank**|**sql_variant**|A numerical value of the rank: <br><br>0 for NONE<br>10 for LOW<br>20 for MEDIUM<br>30 for HIGH<br>40 for CRITICAL| 
 |**rank_desc**|**sysname**|Textual representation of the rank:  <br><br>NONE, LOW, MEDIUM, HIGH, CRITICAL|  
 | &nbsp; | &nbsp; | &nbsp; |
 

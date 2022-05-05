@@ -7,7 +7,7 @@ author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
 ms.topic: how-to 
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ---
 
 # Set up a local development environment for Azure SQL Database
@@ -19,7 +19,7 @@ This article teaches you to set up the local development experience for Azure SQ
 Before you configure the local development environment for Azure SQL Database, make sure you have met the following hardware and software requirements:
 
 - Software requirements:
-    - Currently supported on Windows 10 or later release, MacOS Mojave or later release, and Linux (preferably Ubuntu 18.04 or later release)
+    - Currently supported on Windows 10 or later release, macOS Mojave or later release, and Linux (preferably Ubuntu 18.04 or later release)
 - Minimum hardware requirements:
     - 8 GB RAM
     - 10 GB available disk space
@@ -53,7 +53,7 @@ In Azure Data Studio, there is no need for installing these extensions as they'r
 
 5. After the installation completes, select **Reload** to enable the extension.
 
-You can find more details on how to use this extension in VS Code [here](https://docs.microsoft.com/sql/tools/visual-studio-code/sql-server-develop-use-vscode?view=sql-server-ver15).
+Learn more about [how to use this extension in VS Code](/sql/tools/visual-studio-code/sql-server-develop-use-vscode).
 
 <!--Steps to install the SQL Database Projects extension-->
 ### Install the SQL Database extension in VS Code
@@ -68,7 +68,7 @@ You can find more details on how to use this extension in VS Code [here](https:/
 
 5. After the installation completes, select **Reload** to enable the extension.
 
-More details on how to use this extension in VS Code [here](https://docs.microsoft.comsql/azure-data-studio/extensions/sql-database-project-extension?view=azuresqldb-current)
+Learn more about [how to use this extension in VS Code](/sql/azure-data-studio/extensions/sql-database-project-extension)
 
 
 ## Begin using your local development environment
@@ -80,3 +80,9 @@ You have now set up your local development environment for Azure SQL Database. N
 Learn more about the local development experience for Azure SQL Database:
 
 - [What is the local development experience for Azure SQL Database?](local-dev-experience-overview.md)
+- [Create a database project for a local Azure SQL Database development environment](local-dev-experience-create-database-project.md)
+- [Publish a database project for Azure SQL Database to the local emulator](local-dev-experience-publish-emulator.md)
+- [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)
+- [VSCode and Azure Data Studio extensions for the Azure SQL Database local development experience](local-dev-experience-extensions.md)
+- [Introducing the Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md)
+- [Plan for the Azure SQL Database local development experience](local-dev-experience-plan.md)

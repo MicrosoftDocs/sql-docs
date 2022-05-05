@@ -7,83 +7,87 @@ author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
 ms.topic: quickstart 
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ---
 
 # Quickstart: Create a local development environment for Azure SQL Database
 
-Azure SQL Database local development experience provides a way to design, edit, build/validate, publish and run database schemas in a local Azure SQL Database emulator.
-
-Once database project gets to a more mature stage, developers can easily publish it to Azure SQL Database public service from the same environment, and manage the entire lifecycle of their databases (e.g. manage schema drifts and such).
-
-In this quickstart we will show how to go through the entire process leveraging the Azure SQL Database local development experience.
+The Azure SQL Database [local development experience](local-dev-experience-overview.md) provides a way to design, edit, build/validate, publish and run database schemas in a local Azure SQL Database emulator. When the Database Projects feature matures, developers will be able to easily publish Database Projects to the Azure SQL Database public service from the same environment, and manage the entire lifecycle of their databases (for example, manage schema drifts and such). This Quickstart teaches you the entire workflow that leverages the Azure SQL Database local development experience.
 
 ## Prerequisites
 
-Make sure you've followed the steps in the [Set up a local development environment for Azure SQL Database](local-dev-experience-set-up-dev-environment.md) guide.
+Before following this Quickstart, first complete the steps in the [Set up a local development environment for Azure SQL Database](local-dev-experience-set-up-dev-environment.md) guide.
 
 ## Getting Started with Database Projects
 
-* Create a new database project by going to the Projects viewlet or by searching Projects: New in the command palette.
-* Existing database projects can be opened by going to the Projects viewlet or by searching Projects: Open Existing in the command palette.
-* Start from an existing database by using the Create Project from Database from the command palette or database context menu.
-* Start from an OpenAPI/Swagger spec by using the Generate SQL Project from OpenAPI/Swagger spec command.
+In this Quickstart, we will create a blank Database Project.
 
-![Picture 1 - Create a new SQL Database project](./media/local-dev-experience-quickstart/pic1.jpg)
-
-First step is providing a name for the new SQL Database project:
+1. Create a new Database Project by going to the **Projects** viewlet or by searching for **Database Projects: New** in the command palette.
  
-![Picture 2 - Assign a name for the new project](./media/local-dev-experience-quickstart/pic2.jpg)
+    > [!NOTE] 
+    > Existing Database Projects can be opened by going to the **Projects** viewlet or by searching for **Database Projects: Open Existing** in the command palette. You can alternately start from an existing database by selecting **Create Project from Database** from the command palette or database context menu. Finally, you can start from an OpenAPI/Swagger spec by using the **Database Projects: Generate SQL Project from OpenAPI/Swagger spec** command in the command palette.
+    
+2. Select **SQL Database** as your project type.
 
-From here, you can start working on your project: creating or altering database objects like tables, views, stored procedures and scripts. such:
+    ![Screenshot of selecting the project type for a Database Project in VSCode.](./media/local-dev-experience-quickstart/database-project-select-project-type.jpg)
+    
+3. Provide a name for the new SQL Database Project.
  
-![Picture 3 - Create database objects](./media/local-dev-experience-quickstart/pic3.jpg)
-
-You can get edit and build time support for your SQL Database project objects and scripts by selecting Azure SQL Database as target platform for your project. 
-
-This will let Visual Studio Code to highlight syntax issues or the usage of unsupported features for the selected platform:
+    ![Screenshot of entering a name for a Database Project in VSCode.](./media/local-dev-experience-quickstart/database-project-enter-project-name.jpg)
+    
+4. Add objects to your Database Project. You can create or alter database objects like tables, views, stored procedures and scripts. For example, you can right-click on the Database Project name and select **Add Table**.
  
-![Picture 5 - Select Azure SQL Database as a target for this project](./media/local-dev-experience-quickstart/pic5.jpg)
+    ![Screenshot of adding a table from the Database Projects menu in VSCode.](./media/local-dev-experience-quickstart/database-project-add-folder.jpg)
+    
+5. Set the target platform for your project by right-clicking on your Database Project name and selecting **Change Target Platform**. Select **Azure SQL Database** as the target platform for your project.
+     
+    ![Screenshot of selecting Azure SQL Database as a target for a Database Project.](./media/local-dev-experience-quickstart/database-project-target-platform.jpg)
 
-Optionally, SQL Database project files can be put under source control together with your application projects:
+    Setting your target platform provides editing and build time support for your SQL Database Project objects and scripts. After selecting your target platform, VSCode will highlight syntax issues or the usage of unsupported features for the selected platform.
+   
+    Optionally, SQL Database Project files can be put under source control together with your application projects.
 
-![Picture 4 - Source control](./media/local-dev-experience-quickstart/pic4.jpg)
+6. Build your Database Project to validate that it will work against the Azure SQL Database platform. To build your project, right-click the Database Project name and select **Build**.
 
-You can build your project and validate that it will work against the selected platform:
+    ![Screenshot of selecting build from the Database Project menu in VSCode.](./media/local-dev-experience-quickstart/database-project-build.jpg)
+    
+7. Once your Database Project is ready to be tested, publish it to a target. To begin the publishing process, right-click on the name of your Database Project and select **Publish**.
 
-![Picture 6 - Building SQL Database project](./media/local-dev-experience-quickstart/pic6.jpg)
+    ![Screenshot of selecting Publish in the SQL Database Project menu in VSCode.](./media/local-dev-experience-quickstart/database-project-publish.jpg)
+    
+8. When publishing, you can choose to publish to either a new or existing server. In this example, we choose **Publish to a new server in a container**.
 
-Once database project is ready to get tested, you can publish it to a target:
+    ![Screenshot of selecting a publishing target in VSCode.](./media/local-dev-experience-quickstart/database-project-publish-container.jpg)
+    
+9. When publishing to a new server in a container, you will be prompted to choose between Azure SQL Database **lite** and **full** images for the Azure SQL Database emulator. With the **lite** image, you will get compatibility with most Azure SQL Database capabilities and a lightweight image that will take less to download and instantiate. If you select **full**, you will have access to advanced features like In-Memory Optimized tables, geo-spatial data types and more, but at the expense of more required resources.
 
-![Picture 7 - Publishing SQL Database project](./media/local-dev-experience-quickstart/pic7.jpg)
+    ![Screenshot of select an Azure SQL Database emulator in VSCode.](./media/local-dev-experience-quickstart/database-project-docker-image.jpg)
+    
+    You can create as many local instances as necessary, based on available resources, and manage their lifecycle through VS Code Docker Extension or CLI commands.
 
-You can select between an existing or a new server:
-
-![Picture 8 - Selecting a publishing target](./media/local-dev-experience-quickstart/pic8.jpg)
-
-And you select between Azure SQL Database “lite” and a “full” images. With the former, you will get compatibility with most of Azure SQL DB capabilities and a lightweight image that will take less to download and instantiate. Selecting “full”, you will have access to advanced features like In-memory optimized tables, geo-spatial data types and more, but at the expense of more required resources:
-
-![Picture 9 - Select an Azure SQL Database emulator](./media/local-dev-experience-quickstart/pic9.jpg)
-
-You can create as many local instances as necessary, based on available resources, and manage their lifecycle through VS Code Docker Extension or CLI commands.
-
-![Picture 10 - Manage emulator through CLI](./media/local-dev-experience-quickstart/pic10.jpg)
- 
-Once instances of your database projects are running, you can connect from VS Code mssql extension and test your scripts and queries, like any regular Azure SQL Database instance in the cloud:
+    ![Screenshot of managing the Azure SQL Database emulator through CLI.](./media/local-dev-experience-quickstart/database-project-publish-process.jpg)
+     
+10. Now that instances of your Database Projects are running, you can connect from the VSCode mssql extension and test your scripts and queries, like any regular database in Azure SQL Database. 
  
-![Picture 11 - Connecting and querying Azure SQL Database emulator](./media/local-dev-experience-quickstart/pic11.jpg)
+    ![Screenshot of connecting to and querying an Azure SQL Database emulator.](./media/local-dev-experience-quickstart/connect-query-azure-sql-database.jpg)
+     
+11. Following each iteration of adding or modifying objects in your Database Project, your Database Project can be rebuilt and deployed to one of the containerized instances running on the local machine, until it’s ready.
  
-For each iteration and modification, SQL project can be rebuilt and deployed to one of the containerized instances running on the local machine, until it’s ready.
+     ![Screenshot of iterating on a Database Project.](./media/local-dev-experience-quickstart/deploy-dacpac-succeeded.jpg)
+    
+12. The final step of the Database Project lifecycle is to publish the finished artifact to a new or existing database in Azure SQL Database using the mssql extension.
  
- ![Picture 12 - Iterate on local project](./media/local-dev-experience-quickstart/pic12.jpg)
-
-Last step of database project lifecycle can be to publish the finished artifact to a new or existing Azure SQL Database instance in the cloud through the mssql extension:
- 
-![Picture 13 - Publish project to Azure SQL Database public service](./media/local-dev-experience-quickstart/pic13.jpg)
+    ![Screenshot of publishing a Database Project to Azure SQL Database.](./media/local-dev-experience-quickstart/choose-connection-profile.jpg)
 
 
 ## Next steps
 
 Learn more about the local development experience for Azure SQL Database:
 
-- [What is the local development experience for Azure SQL Database?](local-dev-experience-overview.md)
+- [Set up a local development environment for Azure SQL Database](local-dev-experience-set-up-dev-environment.md)
+- [Create a Database Project for a local Azure SQL Database development environment](local-dev-experience-create-database-project.md)
+- [Publish a Database Project for Azure SQL Database to the local emulator](local-dev-experience-publish-emulator.md)
+- [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)
+- [VSCode and Azure Data Studio extensions for the Azure SQL Database local development experience](local-dev-experience-extensions.md)
+- [Introducing the Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md)
+- [Plan for the Azure SQL Database local development experience](local-dev-experience-plan.md)

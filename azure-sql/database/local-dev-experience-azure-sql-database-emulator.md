@@ -7,7 +7,7 @@ author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
 ms.topic: conceptual 
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ---
 
 # Introducing the Azure SQL Database emulator
@@ -42,7 +42,7 @@ and some others. While lack of compatibility with some of them can be impactful,
 
 In future releases, we plan to increase feature parity and provide higher-fidelity with Azure SQL Database public service.
 
-Please refer to the [Azure SQL Edge documentation](https://docs.microsoft.com/azure/azure-sql-edge/features) for more specific details.
+Refer to the [Azure SQL Edge documentation](/azure/azure-sql-edge/features) for more specific details.
 
 ## Next steps
 

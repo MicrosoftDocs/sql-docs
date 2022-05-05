@@ -1,5 +1,5 @@
 ---
-title: Create a database project for a local Azure SQL Database development environment
+title: Create a SQL Database Project for a local Azure SQL Database development environment
 description: Learn how to create a database project as part of the local development experience for Azure SQL Database.
 services: sql-database
 ms.service: sql-database
@@ -11,32 +11,39 @@ ms.date: 04/28/2022
 ms.custom: template-how-to 
 ---
 
-# Create a database project for a local Azure SQL Database development environment
+# Create a SQL Database Project for a local Azure SQL Database development environment
 
-<!-- 2. Introductory paragraph 
-Required. Lead with a light intro that describes, in customer-friendly language, 
-what the customer will learn, or do, or accomplish. Answer the fundamental “why 
-would I want to do this?” question. Keep it short.
--->
-
-[Add your introductory paragraph]
+The Azure SQL Database [local development experience](local-dev-experience-overview.md) empowers application developers and database professionals to design, edit, build/validate, publish, and run database schemas for databases directly on their workstation using an Azure SQL Database containerized environment. As part of this workflow, you will create a SQL Database Project. The SQL Database Project extension allows you to create a new blank project, create a new project from a database, and open previously created projects. 
 
 ## Prerequisites
 
-- <!-- prerequisite 1 -->
-- <!-- prerequisite 2 -->
-- <!-- prerequisite n -->
-<!-- remove this section if prerequisites are not needed -->
+Before creating or opening a SQL Database project, follow the steps in [Set up a local development environment for Azure SQL Database](local-dev-experience-set-up-dev-environment.md) to configure your environment.
 
-## [Section 1 heading]
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
+## Create an empty database project
 
+In the **Projects** view select the **New Project** button and enter a project name in the text input that appears.  In the "Select a Folder" dialog that appears, select a directory for the project's folder, .sqlproj file, and other contents to reside in.
+The empty project is opened and visible in the **Projects** view for editing.
+
+## Create a project from a database in Azure SQL Database
+
+In the **Project** view select the **Import Project from Database** button and connect to a database in Azure SQL Database.  Once the connection is established, select a database from the list available databases and set the name of the project.
+
+Finally, select a target structure of the extraction. The new project is opened and contains SQL scripts for the contents of the selected database.
+
+## Open an existing project
+
+In the **Projects** view, select the **Open Project** button and open an existing *.sqlproj* file from the file picker that appears. Existing projects can originate from Azure Data Studio, VS Code or [Visual Studio SQL Server Data Tools](../../ssdt/sql-server-data-tools.md).
+
+The existing project is opened and its contents are visible in the **Projects** view for editing.
 
 ## Next steps
 
 Learn more about the local development experience for Azure SQL Database:
 
 - [What is the local development experience for Azure SQL Database?](local-dev-experience-overview.md)
+- [Set up a local development environment for Azure SQL Database](local-dev-experience-set-up-dev-environment.md)
+- [Publish a database project for Azure SQL Database to the local emulator](local-dev-experience-publish-emulator.md)
+- [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)
+- [VSCode and Azure Data Studio extensions for the Azure SQL Database local development experience](local-dev-experience-extensions.md)
+- [Introducing the Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md)
+- [Plan for the Azure SQL Database local development experience](local-dev-experience-plan.md)

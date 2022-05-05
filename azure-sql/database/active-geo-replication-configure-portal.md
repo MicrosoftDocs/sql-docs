@@ -6,8 +6,8 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.custom: sqldbrb=1, devx-track-azurecli
 ms.topic: tutorial
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rajeshsetlem
 ms.reviewer: kendralittle, mathoma
 ms.date: 08/20/2021
 ---

@@ -7,8 +7,8 @@ ms.subservice: scale-out
 ms.custom: sqldbrb=1, devx-track-azurepowershell
 ms.devlang: 
 ms.topic: conceptual
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: kendralittle, mathoma
 ms.date: 1/20/2022
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"

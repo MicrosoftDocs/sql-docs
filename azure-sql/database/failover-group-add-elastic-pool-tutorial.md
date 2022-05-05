@@ -6,8 +6,8 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.custom: seo-lt-2019 sqldbrb=1, devx-track-azurecli
 ms.topic: tutorial
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: kendralittle, mathoma
 ms.date: 01/26/2022 
 ---

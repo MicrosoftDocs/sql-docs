@@ -8,34 +8,42 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.custom: 
-ms.date: 04/30/2022
+ms.date: 05/05/2022
 ---
 
 # Table Designer in Azure Data Studio (Preview)
 
-The table designer (preview) in Azure Data Studio provides a modern, visual editor experience which enables data professionals to create and customize table structures, along with an editor for Transact-SQL. With Azure Data Studio, you can now create and manage your tables inside databases in your existing server connections.
+The Table Designer (preview) in Azure Data Studio provides a modern, visual editor experience which enables users to create and customize table structures, along with an editor for Transact-SQL. With Azure Data Studio, you can now create and manage your tables inside databases in your active server connections.
 
 ## Why Table Designer?
 
-The Table Designer in Azure Data Studio provides users an efficient way to configure and manage entity and object relationships and properties directly in their databases using the graphical user interface (GUI).
+The Table Designer in Azure Data Studio provides users an efficient way to configure and manage tables, including relationships and properties, using the graphical user interface (GUI).
 
 ## Overview of Table Designer
 
-The table designer consists of a window split into three separate panes. The first pane, usually the widest pane by default, is the main view of the table design, consisting of tabs for the columns, foreign keys, constraint checks, and indexes. The second pane is used for defining the properties of your table. Lastly, the third pane is the read-only script editor for viewing the T-SQL script which is generated from the actions performed on the Table Designer GUI.
+The table designer consists of a window split into three separate panes. The first pane, usually the widest pane by default, is the main view of the table design, consisting of tabs for the columns, foreign keys, constraint checks, and indexes. The second pane is used for defining the properties of your table. Lastly, the third pane is the read-only script editor for viewing the T-SQL script which is generated from the actions performed on the Table Designer graphical user interface. The size of these panes can be adjusted by clicking and mouse dragging. 
 
 ### Creating and editing tables
 
 #### Creating a table
 
-To create a table, right-click the Tables node in your database and select "New Table". Please note that your server will need to be connected. This is indicated by the green dot at the bottom right corner of the server connection. If red (this means the connection is inactive or disconnected), simply left select once on the connection and this will spin up your connection.
+Before creating a table, you need to ensure that you are connected to the SQL server instance of the database that you are working on. For a tutorial on connecting to the SQL Server, check out the [Quickstart: Use Azure Data Studio to connect and query SQL Server](https://docs.microsoft.com/en-us/sql/azure-data-studio/quickstart-sql-server?view=sql-server-ver15) tutorial. 
+
+To create a table, right-click the Tables node in the object explorer and select "New Table". Please note that your server will need to be connected. This is indicated by the green dot at the bottom right corner of the server connection. If red (this means the connection is inactive or disconnected), left select once on the connection and this will spin up your connection.
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-showing-connection-and-new-table-creation.png" alt-text="Table Designer pane highlighting connection and new table addition":::
-
-#### Editing a table
 
 You can edit the name of your table and add new columns to it. A default table is created with default name of “NewTable” which has one column by default. Let us update our table name to “Cities” and give it column names “CityName,” and “Population" as shown below. The column field is highlighted by default which means that whatever changes you make will be in reference to the column property. We will assign “CityName” as our Primary Key/Identifier for this table by checking the "Primary Key" checkbox. To read more on Primary Keys, [see this SQL Server documentation on Primary Keys](/sql/relational-databases/tables/primary-and-foreign-key-constraints).
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-changing-column-name-adding-new-column-with-primary-key.png" alt-text="Table Designer showing how to edit table name and add column showing primary key identifier":::
+
+
+#### Editing an existing table
+
+To edit an existing table in the Table Designer, right-click on the table to edit and select "Design" from the menu. This opens up the table design view which then allows you to make edits where necessary. See below: 
+
+:::image type="content" source="media/table-designer-azure-data-studio/table-designer-editing-exisitng-tables.png" alt-text="Table Designer showing how to edit an existing table":::
+
 
 #### Changing column properties
 
@@ -51,7 +59,12 @@ To delete a column, simply select on the trash icon as highlighted below
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-deleting-column.png" alt-text="Table Designer showing how to delete a column":::
 
-Remember to save your work by using the “Ctrl + S” keys on your keyboard. Just like Visual Studio Code, an indicator that your work is NOT saved is the black circular dot that appears on the right hand side of the tab indicator that you are on. Once your work is saved, this dot disappears. Compare the images below.
+Remember to save your work by using the “Ctrl/Cmd + S” keys on your keyboard. Saving changes opens up a dialog box with options for either immediately applying the changes to the database or creating a script that applies the changes. See below:
+
+:::image type="content" source="media/table-designer-azure-data-studio/table-designer-save-dialog-box.PNG" alt-text="Table Designer showing save dialog box":::
+
+
+Just like Visual Studio Code, an indicator that your work is NOT saved is the shaded circular dot that appears on the right hand side of the tab indicator that you are on. Once your work is saved, this dot disappears. Compare the images below.
 
 First image below shows work that is not saved as indicated by the black dot. 
 
@@ -75,7 +88,7 @@ Remember to hit "Refresh" to confirm that your table has been deleted. To refres
 
 ## Table Types
 
-The Table Design consists of different table types and properties that dictate relationships within entities as well as the overall structure and maintenance of the table. 
+The Table Designer consists of different table types and properties that dictate relationships within entities as well as the overall structure of the table. 
 
 ### Graph Tables
 
@@ -133,7 +146,7 @@ As seen in script pane in the image above, we need to create the clause that wil
 
 ### Memory-Optimized Tables
 
-Creating Memory-Optimized Tables can be done directly on the GUI on Azure Data Studio. All it takes is checking a box at the time of table creation and the table in your database is memory-optimized! Just like Graph Tables, Memory-Optimized Tables can only be created on new tables, not already existing ones. Memory-Optimized tables must have non-clustered primary key.
+Creating Memory-Optimized Tables can be done directly in Azure Data Studio. All it takes is checking a box at the time of table creation and the table in your database is memory-optimized! Just like Graph Tables, Memory-Optimized Tables can only be created on new tables, not already existing ones. Memory-Optimized tables must have non-clustered primary key.
 
 #### Create a Memory-Optimized Table
 
@@ -154,7 +167,7 @@ Choosing "Schema and Data" saves both the schema and Data to memory in the event
 
 ### System-Versioned Tables
 
-System versioning in Azure Data Studio is also very straightforward! If you are new to system versioning, check out [Temporal Tables](/sql/relational-databases/tables/creating-a-system-versioned-temporal-table). System-versioned tables must have the period columns defined. 
+System versioning can also be done directly on Azure Data Studio. If you are new to system versioning, check out [Temporal Tables on SQL Server ](/sql/relational-databases/tables/creating-a-system-versioned-temporal-table). System-versioning tables must have the period columns defined. 
 
 
 #### Creating a System-Versioned Table

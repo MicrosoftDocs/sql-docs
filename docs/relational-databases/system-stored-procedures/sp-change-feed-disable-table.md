@@ -1,5 +1,5 @@
 ---
-description: "The sp_change_feed_disable_table system stored procedure adds a table to the change feed for Synapse Link for SQL Server."
+description: "The sp_change_feed_disable_table system stored procedure disables a table in the change feed for Synapse Link for SQL Server."
 title: "sp_change_feed_disable_table (Transact-SQL)"
 ms.custom: ""
 ms.date: "05/24/2022"

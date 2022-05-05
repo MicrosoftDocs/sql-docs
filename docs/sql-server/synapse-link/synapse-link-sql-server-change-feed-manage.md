@@ -16,7 +16,7 @@ ms.custom:
 
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-This article provides deatils on managing Azure Synapse Link for SQL Server with T-SQL.
+This article provides details on managing Azure Synapse Link for SQL Server with T-SQL.
 
 - [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - For more information, see [Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link).
@@ -24,27 +24,25 @@ This article provides deatils on managing Azure Synapse Link for SQL Server with
 
 The Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
 
+Only a member of the sysadmin server role in SQL Server or the db_owner database role can execute this procedure. 
+
 ## Enable change feed for database 
 
 To enable the change feed for a database and create internal metadata objects, use the `sys.sp_change_feed_enable_db` system stored procedure.
 
-Only a member of the sysadmin server role or db_owner database role can execute this procedure. 
-
 ```sql
 EXECUTE sys.sp_change_feed_enable_db  
-      @maxtrans INT 
+      @maxtrans 
 GO   
 ```
 
-The @maxtrans parameter specifies the maximum transactions to process in each cycle. For more information, see [sys.sp_change_feed_enable_db](../../relational-databases/system-stored-procedures/sp-change-feed-enable_db.md).
+For more information, see [sys.sp_change_feed_enable_db](../../relational-databases/system-stored-procedures/sp-change-feed-enable_db.md).
 
 ## Disable change feed for database
 
 To disable the change feed at the database level, and subsequently the metadata for all the associated tables, use the `sys.sp_change_feed_disable_db` system stored procedure. 
 
 When the change feed is disabled with active table groups, all connections and schedulers will be stopped immediately/forcefully without waiting for the current operations are completed. No new change feed table groups can be created for the database, and all the existing metadata describing the table groups will be deleted. Re-enabling change feed will result in clean initializations of all table groups and reseeding of all the data.  
-
-Only a member of the sysadmin server role or db_owner database role can execute this procedure. 
 
 ```sql
 EXECUTE sys.sp_change_feed_disable_db 
@@ -61,9 +59,9 @@ The SQL Server or the Azure SQL Database will maintain metadata specific to each
 
 ```sql
 EXECUTE sys.sp_change_feed_create_table_group
-    @table_group_id uniqueidentifier, -- Mandatory
-    @table_group_name nvarchar(140), -- Mandatory
-    @workspace_id nvarchar(247), -- Mandatory
+    @table_group_id uniqueidentifier,
+    @table_group_name nvarchar(140), 
+    @workspace_id nvarchar(247), 
     @destination_location nvarchar(512) = NULL,
     @destination_credential sysname = NULL
 GO
@@ -114,6 +112,8 @@ EXECUTE sys.sp_change_feed_disable_table
     @table_id uniqueidentifier
 GO
 ```
+
+For more information, see [sp_change_feed_disable_table (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-change-feed-disable-table.md).
 
 ## See also
 

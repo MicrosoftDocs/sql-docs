@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 # sp_change_feed_drop_table_group (Transact-SQL)
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Create a table group and internal metadata objects for [Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link). For more information, see [Manage Azure Synapse Link for SQL Server](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
+Drops a table group and internal metadata objects for [Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link). For more information, see [Manage Azure Synapse Link for SQL Server](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 
 ## Syntax  
    

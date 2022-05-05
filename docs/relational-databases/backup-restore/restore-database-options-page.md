@@ -45,7 +45,8 @@ ms.author: kendralittle
   
  Selecting this option is equivalent to using the KEEP_REPLICATION option in a [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement.  
  
- When doing a restore using backup file of a published database to the same server where the database was created and with same database name, keep_replication is not needed.
+ When doing a restore using a backup file of a published database to the same server where the database was created and with same database name, KEEP_REPLICATION is not needed.
+
 
 When running RESTORE WITH RECOVERY and not restoring from a backup file, add the KEEP_REPLICATION option to preserve replication settings.
 

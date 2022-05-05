@@ -51,8 +51,6 @@ items:
     items:
     - name: Introducing SQL Server Big Data Clusters
       href: big-data-cluster/big-data-cluster-overview.md
-    - name: Big data options on the Microsoft SQL Server platform
-      href: big-data-cluster/big-data-options.md
     - name: Release notes
       items:
         - name: Platform release notes
@@ -7700,6 +7698,14 @@ items:
       href: relational-databases/synonyms/create-synonyms.md
 - name: Reporting & Analytics
   items:
+  - name: Big data options on the Microsoft SQL Server platform
+    href: big-data-cluster/big-data-options.md  
+  - name: Synapse Link for SQL Server
+    items: 
+    - name: Synapse Link for SQL Server >
+      href: /azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link
+    - name: Synapse Link for SQL Server change feed
+      href: sql-server/synapse-link/synapse-link-sql-server-change-feed.md
   - name: Machine Learning Services > 
     href: machine-learning/
   - name: Analytics Platform System > 
@@ -14948,6 +14954,20 @@ items:
         href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
       - name: sp_special_columns_100
         href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
+    - name: Azure Synapse Link for SQL Server
+      items:
+      - name: sp_change_feed_create_table_group
+        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
+      - name: sp_change_feed_disable_db
+        href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
+      - name: sp_change_feed_disable_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md        
+      - name: sp_change_feed_drop_table_group
+        href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
+      - name: sp_change_feed_enable_db
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
+      - name: sp_change_feed_enable_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
     - name: SQL Server Agent
       href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:

@@ -31,7 +31,7 @@ This feature is not currently available for Azure SQL Managed Instance.
 
 The high-level architecture includes a multi-threaded approach for change capture, change publish, and change batch commit. 
 
-- Change capturers are responsible for harvesting the transaction log, determining what changes have occurred, and placing these changes in a queue. 
+- Change captures are responsible for harvesting the transaction log, determining what changes have occurred, and placing these changes in a queue. 
 - Change publishers are responsible for consuming the work in the queue, serializing the changes to CSV format, and then writing the serialized data to the landing zone in Azure Storage, in an Azure Data Lake Storage Gen2 container.
 - The commit thread is responsible for committing batches to the landing zone, once all writes for that batch have completed.
 
@@ -43,7 +43,7 @@ An administrator of SQL Server can enable Azure Synapse Link on a table that is 
 - The table must have a primary key.
 - In both scenarios, however, the Synapse Link supports low latency pushing of source table(s) changes to the landing zone in Azure Storage.
 
-The change feed use a CSV file for publishing these changes to Azure Synapse. This tabular format naturally aligns with writing row-granular data changes at a high cadence (on the order of seconds). Most CSV files should be relatively small.
+The change feed uses a CSV file for publishing these changes to Azure Synapse. This tabular format naturally aligns with writing row-granular data changes at a high cadence (on the order of seconds). Most CSV files should be relatively small.
 
 :::image type="content" source="media/synapse-link-sql-server-change-feed/azure-synapse-link-sql-server-change-feed.png" alt-text="A diagram of the Azure Synapse Link change feed data flow.":::
 
@@ -63,10 +63,10 @@ CDC works by harvesting the transaction log to capture all modifications perform
 
 A high-level summary of how the existing SQL Server CDC change capture process work is as follows:  
 
-1. When CDC is initialized, SQL Server will begin to maintain additional metadata about the database, specifically a LSN that represents the oldest commit record for transactions that have not yet been persisted to a CDC change table. This is called the `ReplEndLsn`. 
+1. When CDC is initialized, SQL Server will begin to maintain additional metadata about the database, specifically an LSN that represents the oldest commit record for transactions that have not yet been persisted to a CDC change table. This is called the `ReplEndLsn`. 
 2. When the capture job is executed, the first log scan starts from `ReplEndLsn` to find all the replicated commit transactions (up to a configurable maximum per batch) and save it to a hash table. 
 3. Then, a second log scan is performed from the oldest `BEGIN LSN` for the hashed transactions. 
-    a. Upon finding a log record marked for replication, the `rowsetid` will be resolved to a table id to determine if that table is enabled for CDC. 
+    a. Upon finding a log record marked for replication, the `rowsetid` will be resolved to a table unique identifier to determine if that table is enabled for CDC. 
     b. If the table is enabled for CDC, the column values and metadata are written into the CDC change table. 
 4. `ReplEndLsn` is advanced via `sp_repldone`. 
 5. GOTO 2.
@@ -80,7 +80,7 @@ One capture scan produces exactly one change batch for the landing zone in Azure
 Each change batch may contain many transactions that modify any number of tables. We will buffer the change data in-memory so it can be easily consumed by change publish workers, with the following characteristics:
  
 * Change data for a table will be appended to the landing in the same order that the modifications were performed (<LSN, SequenceNumber> order). This ordering requirement only applies to changes within a given table; serial write ordering across distinct tables does not need to be maintained because each table is modeled as a unique entity in the landing zone. 
-* Within a batch, change data for all tables must be completely written to the landing zone before committing the batch. 
+* Within a batch, change data for all tables must be written to the landing zone before committing the batch. 
 
 The above are critical from both a correctness and performance perspective. To guarantee that table changes are serialized to the landing zone in order, we make sure only one thread publishes changes for a table at a time. Additionally, to maximize performance and make sure our I/O to the landing zone can keep up with the OLTP log rate, we concurrently publish changes for different tables. 
 
@@ -88,17 +88,17 @@ The above are critical from both a correctness and performance perspective. To g
 
 Once the change capture has been performed, the change data lives in a cache to be consumed by change publisher(s). The publishers have a simple responsibility: transform the change data to a serialized format (CSV) and write the serialized data to the landing zone.
 
-When the change publisher detects that all the change data has been successfully written to the landing zone and the change capture has completed for the batch, it will append an item to the commit queue and the commit worker will eventually commit the batch. Change publishers need not wait for previous batches to be committed before beginning to publish subsequent batches.  
+When the change publisher detects that all the change data has been successfully written to the landing zone and the change capture has completed for the batch, it will append an item to the commit queue and the commit worker will eventually commit the batch. Change publishers do not need to wait for previous batches to be committed before beginning to publish subsequent batches.  
 
 To summarize, the change publisher worker operates as follows: 
 
-1. If no work available, wait on a partition to be added to work queue.
+1. If no is work available, wait on a partition to be added to work queue.
 2. For each change data row in partition, serialize data to CSV.
 3. Write serialized data to the landing zone in Azure Storage.
 4. If last change row in batch and change capture job is complete.
 5. Add batch to commit job queue.
 
-Each Azure Synapse Link for SQL Server table group in the instance has its own set of partitions, and partition on each table. This is an intentional decision to minimize the affect of an Azure Storage outage. Each topic publishes to a distinct landing zone. When a storage outage occurs, it can cause a landing zone to become unavailable which will block publications to that landing zone. Guaranteeing that each partition only spans tables in a single topic will prevent a single landing zone outage from blocking publications for other topics. 
+Each Azure Synapse Link for SQL Server table group in the instance has its own set of partitions, and partition on each table. This is an intentional decision to minimize the effect of an Azure Storage outage. Each topic publishes to a distinct landing zone. When a storage outage occurs, it can cause a landing zone to become unavailable which will block publications to that landing zone. Guaranteeing that each partition only spans tables in a single topic will prevent a single landing zone outage from blocking publications for other topics. 
 
 ### Change commit 
 
@@ -124,7 +124,7 @@ When an existing SQL Server table containing data is added to the Azure Synapse 
     h. Get end of log again for end LSN of reconciliation.  
     i. Update the state of `tab1` to be "Active". 
 
-Step 2b and 2h are the steps to write the start/end snapshot manifest to landing zone. 
+Step 2.b. and 2.h. are the steps to write the start/end snapshot manifest to landing zone. 
 
 ### High availability support
 

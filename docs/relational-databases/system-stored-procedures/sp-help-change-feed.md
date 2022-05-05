@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 # sp_help_change_feed (Transact-SQL)
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Monitors the current Synapse Link configuration. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
+Monitors the current configuration of the [Azure Synapse Link change feed](../../sql-server/synapse-link/synapse-link-sql-server-change-feed.md). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 
 ## Syntax  
    
@@ -35,8 +35,8 @@ EXECUTE sys.sp_help_change_feed;
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-| pollinterval | int | This is an integer value which describes the frequency that the log is scanned for any new changes, in seconds. By default this value is 60. It cannot currently be changed.| 
-| maxtrans | int | Maximum number of transactions to process in each scan cycle. The default value is 500. |
+| **pollinterval** | int | An integer value that describes the frequency that the log is scanned for any new changes, in seconds. By default this value is 60. It can't currently be changed.| 
+| **maxtrans** | int | Maximum number of transactions to process in each scan cycle. The default value is 500. |
 
 ## Remarks
 

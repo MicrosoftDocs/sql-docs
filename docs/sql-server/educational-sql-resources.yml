@@ -18,7 +18,7 @@ landingContent:
     - linkListType: learn 
       links:
       - text: Azure SQL for beginners
-        url: https://aka.ms/azuresql4beginners
+        url: /shows/azure-sql-for-beginners/
       - text: Azure SQL fundamentals 
         url: /learn/paths/azure-sql-fundamentals/
       - text: Azure SQL hands-on labs

@@ -7,7 +7,7 @@ author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
 ms.topic: conceptual 
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ---
 
 # VSCode and Azure Data Studio extensions for the Azure SQL Database local development experience
@@ -42,4 +42,3 @@ Learn more about the local development experience for Azure SQL Database:
 - [Publish a database project for Azure SQL Database to the local emulator](local-dev-experience-publish-emulator.md)
 - [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)
 - [Introducing the Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md)
-- [Plan for the Azure SQL Database local development experience](local-dev-experience-plan.md)

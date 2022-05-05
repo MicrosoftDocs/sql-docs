@@ -7,7 +7,7 @@ author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
 ms.topic: how-to 
-ms.date: 04/28/2022
+ms.date: 05/05/2022
 ms.custom: template-how-to 
 ---
 
@@ -32,7 +32,7 @@ Finally, select a target structure of the extraction. The new project is opened 
 
 ## Open an existing project
 
-In the **Projects** view, select the **Open Project** button and open an existing *.sqlproj* file from the file picker that appears. Existing projects can originate from Azure Data Studio, VS Code or [Visual Studio SQL Server Data Tools](../../ssdt/sql-server-data-tools.md).
+In the **Projects** view, select the **Open Project** button and open an existing *.sqlproj* file from the file picker that appears. Existing projects can originate from Azure Data Studio, VS Code or [Visual Studio SQL Server Data Tools](/sql/ssdt/sql-server-data-tools).
 
 The existing project is opened and its contents are visible in the **Projects** view for editing.
 
@@ -46,4 +46,3 @@ Learn more about the local development experience for Azure SQL Database:
 - [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)
 - [VSCode and Azure Data Studio extensions for the Azure SQL Database local development experience](local-dev-experience-extensions.md)
 - [Introducing the Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md)
-- [Plan for the Azure SQL Database local development experience](local-dev-experience-plan.md)

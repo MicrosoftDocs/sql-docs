@@ -53,4 +53,3 @@ Learn more about the local development experience for Azure SQL Database:
 - [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)
 - [VSCode and Azure Data Studio extensions for the Azure SQL Database local development experience](local-dev-experience-extensions.md)
 - [Introducing the Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md)
-- [Plan for the Azure SQL Database local development experience](local-dev-experience-plan.md)

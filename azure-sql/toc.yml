@@ -911,9 +911,6 @@
               - name: Overview >>
                 displayName: Overview of the mssql extension for VSCode
                 href: /sql/tools/visual-studio-code/sql-server-develop-use-vscode
-        - name: Plan
-          displayName: Plan for the local development experience
-          href: database/local-dev-experience-plan.md
 
 - name: SQL Managed Instance (SQL MI)
   items:

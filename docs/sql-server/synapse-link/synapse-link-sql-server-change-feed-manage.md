@@ -28,7 +28,7 @@ Only a member of the sysadmin server role in SQL Server or the db_owner database
 
 ## Enable change feed for database 
 
-To enable the change feed for a database and create internal metadata objects, use the `sys.sp_change_feed_enable_db` system stored procedure.
+To enable the change feed for a database and create internal metadata objects, use the [sys.sp_change_feed_enable_db](../../relational-databases/system-stored-procedures/sp-change-feed-enable-db.md) system stored procedure.
 
 ```sql
 EXECUTE sys.sp_change_feed_enable_db  
@@ -36,11 +36,9 @@ EXECUTE sys.sp_change_feed_enable_db
 GO   
 ```
 
-For more information, see [sys.sp_change_feed_enable_db](../../relational-databases/system-stored-procedures/sp-change-feed-enable-db.md).
-
 ## Disable change feed for database
 
-To disable the change feed at the database level, and subsequently the metadata for all the associated tables, use the `sys.sp_change_feed_disable_db` system stored procedure. 
+To disable the change feed at the database level, and subsequently the metadata for all the associated tables, use the [sys.sp_change_feed_disable_db](../../relational-databases/system-stored-procedures/sp-change-feed-disable-db.md) system stored procedure. 
 
 When the change feed is disabled with active table groups, all connections and schedulers will be stopped immediately/forcefully without waiting for the current operations are completed. No new change feed table groups can be created for the database, and all the existing metadata describing the table groups will be deleted. Re-enabling change feed will result in clean initializations of all table groups and reseeding of all the data.  
 
@@ -49,11 +47,9 @@ EXECUTE sys.sp_change_feed_disable_db
 GO 
 ```
 
-For more information, see [sys.sp_change_feed_disable_db](../../relational-databases/system-stored-procedures/sp-change-feed-disable-db.md).
-
 ## Create change feed a table group 
 
-To create the change feed metadata for a table group, use the `sys.sp_change_feed_create_table_group` system stored procedure.
+To create the change feed metadata for a table group, use the [sys.sp_change_feed_create_table_group](../../relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md) system stored procedure.
 
 The SQL Server or the Azure SQL Database will maintain metadata specific to each table group. A table group is the container for individual tables.
 
@@ -69,11 +65,10 @@ GO
 
 The Azure Storage location of the landing zone parameters, @destination_location and @destination_credential, can be `NULL` for Azure SQL Database.
 
-For more information, see [sp_change_feed_create_table_group (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md).
 
 ## Drop change feed table group 
 
-To drop the change feed metadata for a table group, use the `sys.sp_change_feed_drop_table_group` system stored procedure.
+To drop the change feed metadata for a table group, use the [sys.sp_change_feed_drop_table_group](../../relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md) system stored procedure.
 
 If a table group's change feed is dropped on the SQL Server or Azure SQL Database side, all replication activities for the individual change feed tables associated with this table group will stop. All the associated metadata is also deleted.  
 
@@ -83,11 +78,9 @@ EXECUTE sys.sp_change_feed_drop_table_group
 GO
 ```
 
-For more information, see [sp_change_feed_drop_table_group (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md).
-
 ## Enable change feed table 
 
-To add a new change feed table to an existing change feed table group, use the `sys.sp_change_feed_enable_table` system stored procedure.
+To add a new change feed table to an existing change feed table group, use the [sys.sp_change_feed_enable_table](../../relational-databases/system-stored-procedures/sp-change-feed-enable-table.md) system stored procedure.
 
 ```sql
 EXECUTE sys.sp_change_feed_enable_table 
@@ -98,11 +91,9 @@ EXECUTE sys.sp_change_feed_enable_table
 GO
 ```
 
-For more information, see [sp_change_feed_enable_table (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-change-feed-enable-table.md).
-
 ## Drop change feed table
 
-To remove a change feed table from a change feed table group, use the `sys.sp_change_feed_disable_table` system stored procedure.
+To remove a change feed table from a change feed table group, use the [sys.sp_change_feed_disable_table](../../relational-databases/system-stored-procedures/sp-change-feed-disable-table.md) system stored procedure.
 
 When `sys.sp_change_feed_disable_table` is called, publishing changes for this table will be immediately stopped. Changes scanned but not published yet will be ignored. The last changes published and synchronized to Azure Synapse cannot be guaranteed. To guarantee synchronization between source and target up to a certain time, verify the "last transaction commit time" on the target and then call this procedure.
 
@@ -113,25 +104,21 @@ EXECUTE sys.sp_change_feed_disable_table
 GO
 ```
 
-For more information, see [sp_change_feed_disable_table (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-change-feed-disable-table.md).
-
 ## Monitor Azure Synapse Link for SQL Server
 
 The following system objects allow for querying the state of the Synapse Link feature from the source database.
 
 ### View configuration
 
-To review the current configuration of link, execute the `sys.sp_help_change_feed` system stored procedure.
+To review the current configuration of link, execute the [sys.sp_help_change_feed](../../relational-databases/system-stored-procedures/sp-help-change-feed.md) system stored procedure.
 
 ```sql
 EXECUTE sys.sp_help_change_feed
 ```
 
-For more information, see [sp_help_change_feed (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-change-feed.md).
-
 ### Review change feed errors
 
-To review errors in the [Azure Synapse Link change feed](synapse-link-sql-server-change-feed.md), use the dynamic management view [sys.dm_change_feed_errors](sys-dm-change-feed-errors.md). This DMV will show errors from last 32 sessions. One session might include multiple errors, for example, retry attempts on landing zone failures. This DMV will also show errors faced during snapshot and incremental change publish process.
+To review errors in the [Azure Synapse Link change feed](synapse-link-sql-server-change-feed.md), use the dynamic management view [sys.dm_change_feed_errors](../../relational-databases/system-dynamic-management-views/sys-dm-change-feed-errors.md). This DMV will show errors from last 32 sessions. One session might include multiple errors, for example, retry attempts on landing zone failures. This DMV will also show errors faced during snapshot and incremental change publish process.
 
 ```sql
 SELECT * FROM sys.dm_change_feed_errors;
@@ -139,7 +126,7 @@ SELECT * FROM sys.dm_change_feed_errors;
 
 ### View current activity
 
-To view the current activity, use the dynamic management view [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](sys-dm-change-feed-log-scan-sessions.md). 
+To view the current activity, use the dynamic management view [sys.dm_change_feed_errors](../../relational-databases/system-dynamic-management-views/sys-dm-change-feed-errors.md).
 
 ```sql
 SELECT * FROM sys.dm_change_feed_log_scan_sessions;

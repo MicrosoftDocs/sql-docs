@@ -6,7 +6,7 @@ ms.subservice: high-availability
 ms.custom: sqldbrb=1
 ms.topic: conceptual
 author: rajeshsetlem
-ms.author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: kendralittle, mathoma
 ms.date: 4/14/2022
 ---

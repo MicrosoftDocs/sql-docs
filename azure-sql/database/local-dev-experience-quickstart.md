@@ -63,23 +63,23 @@ You can select between an existing or a new server:
 
 And you select between Azure SQL Database “lite” and a “full” images. With the former, you will get compatibility with most of Azure SQL DB capabilities and a lightweight image that will take less to download and instantiate. Selecting “full”, you will have access to advanced features like In-memory optimized tables, geo-spatial data types and more, but at the expense of more required resources:
 
-![Pic9](./media/local-dev-experience-quickstart/pic9.jpg)
+![Picture 9 - Select an Azure SQL Database emulator](./media/local-dev-experience-quickstart/pic9.jpg)
 
 You can create as many local instances as necessary, based on available resources, and manage their lifecycle through VS Code Docker Extension or CLI commands.
 
-![Pic10](./media/local-dev-experience-quickstart/pic10.jpg)
+![Picture 10 - Manage emulator through CLI](./media/local-dev-experience-quickstart/pic10.jpg)
  
 Once instances of your database projects are running, you can connect from VS Code mssql extension and test your scripts and queries, like any regular Azure SQL Database instance in the cloud:
  
-![Pic11](./media/local-dev-experience-quickstart/pic11.jpg)
+![Picture 11 - Connecting and querying Azure SQL Database emulator](./media/local-dev-experience-quickstart/pic11.jpg)
  
 For each iteration and modification, SQL project can be rebuilt and deployed to one of the containerized instances running on the local machine, until it’s ready.
  
- ![Pic12](./media/local-dev-experience-quickstart/pic12.jpg)
+ ![Picture 12 - Iterate on local project](./media/local-dev-experience-quickstart/pic12.jpg)
 
 Last step of database project lifecycle can be to publish the finished artifact to a new or existing Azure SQL Database instance in the cloud through the mssql extension:
  
-![Pic13](./media/local-dev-experience-quickstart/pic13.jpg)
+![Picture 13 - Publish project to Azure SQL Database public service](./media/local-dev-experience-quickstart/pic13.jpg)
 
 
 ## Next steps

@@ -31,8 +31,6 @@ Learn how to install [SQL Server 2022 Machine Learning Services](../sql-server-m
  
 + Don't install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
 
-+ Don't install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer running a database instance. A stand-alone server will compete for the same resources, diminishes the performance of both installations.
-
 + Side-by-side installation with other versions of Python and R is supported but isn't recommended. It's supported because the SQL Server instance uses its own copies of the open-source R and Anaconda distributions. It isn't recommended because running code that uses Python and R on a SQL Server computer outside SQL Server can lead to various problems:
     
   + Using a different library and executable files will create inconsistent results, than what you are running in SQL Server.
@@ -51,13 +49,13 @@ For more information on which SQL Server editions support Python and R integrati
 
 For local installations, you must run the setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
-If you encounter any installation errors during setup, check the log in the Setup Bootstrap log folder. For example, `%ProgramFiles%\Microsoft SQL Server\160\Setup Bootstrap\Log\Summary.txt`.
+If you encounter any installation errors during setup, check the summary log in the Setup Bootstrap log folder. For example, `%ProgramFiles%\Microsoft SQL Server\160\Setup Bootstrap\Log\Summary.txt`.
 
 1. Start the setup wizard for SQL Server.
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-    TODO ![New SQL Server stand-alone installation](media/machine-learning-services-windows-install-sql-2022/SQL-2022-setup-installation-page-machine-learning-services.png)
+    :::image type="content" source="media/machine-learning-services-windows-install-sql-2022/sql-server-2022-installation-center.png" alt-text="Screenshot of the SQL Server 2022 Installation Center":::
 
 3. On the **Feature Selection** page, select these options:
  
@@ -68,6 +66,10 @@ If you encounter any installation errors during setup, check the log in the Setu
   - **Machine Learning Services (In-Database)**
      
     This option installs the database services that support R and Python script execution.
+
+    This screenshot shows the minimum **Instance Features** to check when installing SQL Server 2022 Machine Learning Services.
+
+    :::image type="content" source="media/machine-learning-services-windows-install-sql-2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of the SQL Server 2022 Setup Feature selection showing check boxes next to Database Engine Services and Machine Learning Services and Language.":::
 
   Starting with SQL Server 2022, any desired R and Python runtimes or packages are installed outside of SQL Setup. The instructions follow in this article. 
 
@@ -134,9 +136,7 @@ If you encounter any installation errors during setup, check the log in the Setu
 
 5. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/) for Windows, and install.
 
-6. Install the latest version of RevoScalePY package and its dependencies: 
-
-    -[revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924)
+6. Install the latest version of RevoScalePY package and its dependencies: [revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924).
 
 7. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the user's application library folder, for example:  `C:\Users\<alias>\AppData\Local\Programs\Python\Python310\Lib\site-packages\revoscalepy\rxLibs`.
 

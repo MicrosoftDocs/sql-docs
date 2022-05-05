@@ -169,8 +169,6 @@ We recommend that you apply the latest cumulative update to both the database en
 
 6. Run SQL Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features.
 
-   ![Select features from the feature tree](media/cumulative-update-feature-selection.png "feature list")
-
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sql-server-ver15"

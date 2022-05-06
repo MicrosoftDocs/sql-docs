@@ -115,7 +115,8 @@ If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due 
 
 
 SELF
-Exit the online index rebuild DDL operation currently being executed without taking any action. The option SELF cannot be used with a MAX_DURATION of 0.
+SELF is the default option. Exit the online index rebuild DDL operation currently being executed without taking any action. The option SELF cannot be used with a MAX_DURATION of 0. 
+
 
 BLOCKERS
 Kill all user transactions that block the online index rebuild DDL operation so that the operation can continue. The BLOCKERS option requires the login to have ALTER ANY CONNECTION permission.

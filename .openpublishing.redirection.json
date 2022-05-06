@@ -41193,7 +41193,7 @@
     {
       "source_path": "docs/big-data-cluster/release-notes-cumulative-update-16.md",
       "redirect_url": "/sql/big-data-cluster/release-notes-big-data-cluster",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/big-data-cluster/configure-cluster.md",

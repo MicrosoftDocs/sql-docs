@@ -31,7 +31,7 @@ To install the extension:
 
 3. In the **Extensions** pane, type **mssql**.
 
-4. Select the *SQL Server (mssql)** extension, and then select **Install**.
+4. Select the **SQL Server (mssql)** extension, and then select **Install**.
 
 5. After the installation completes, select **Reload** to enable the extension.
 

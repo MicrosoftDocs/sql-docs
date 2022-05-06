@@ -21,7 +21,7 @@ Once a Database Project is ready to be deployed, the local development experienc
 
 A common example would be pushing the project to a GitHub repository that leverages GitHub Actions to automate database creation or apply schema changes to a database in Azure SQL Database. The Azure SQL Database emulator itself can also be used as part of Continuous Integration and Continuous Deployment (CI/CD) processes to automate database validation and testing.
 
-![Azure SQL Database local development experience end to end workflow](./media/local-dev-experience-overview/azure-sql-db-local-dev.png)
+![Diagram of the Azure SQL Database local development experience end-to-end workflow.](./media/local-dev-experience-overview/azure-sql-db-local-dev.png)
 
 ## VSCode and Azure Data Studio extensions
 

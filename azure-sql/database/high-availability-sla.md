@@ -8,8 +8,8 @@ ms.subservice: high-availability
 ms.custom: sqldbrb=2, references_regions
 ms.devlang: 
 ms.topic: conceptual
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: kendralittle, mathoma, emlisa
 ms.date: 04/13/2022
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"

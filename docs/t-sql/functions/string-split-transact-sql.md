@@ -100,7 +100,7 @@ In a practice run, the preceding SELECT returned following result table:
 The following example enables the `ordinal` column by passing 1 for the optional third argument:  
 
 ```sql
-SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ', 1);
+SELECT * FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ', 1);
 ```
 
 This statement then returns the following result table:  

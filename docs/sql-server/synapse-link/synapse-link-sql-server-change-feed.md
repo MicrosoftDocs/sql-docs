@@ -79,7 +79,7 @@ One capture scan produces exactly one change batch for the landing zone in Azure
 
 Each change batch may contain many transactions that modify any number of tables. We will buffer the change data in-memory so it can be easily consumed by change publish workers, with the following characteristics:
  
-* Change data for a table will be appended to the landing in the same order that the modifications were performed (<LSN, SequenceNumber> order). This ordering requirement only applies to changes within a given table; serial write ordering across distinct tables does not need to be maintained because each table is modeled as a unique entity in the landing zone. 
+* Change data for a table will be appended to the landing zone in the same order that the modifications were performed. This ordering requirement only applies to changes within a given table; serial write ordering across distinct tables does not need to be maintained because each table is modeled as a unique entity in the landing zone. 
 * Within a batch, change data for all tables must be written to the landing zone before committing the batch. 
 
 The above are critical from both a correctness and performance perspective. To guarantee that table changes are serialized to the landing zone in order, we make sure only one thread publishes changes for a table at a time. Additionally, to maximize performance and make sure our I/O to the landing zone can keep up with the OLTP log rate, we concurrently publish changes for different tables. 

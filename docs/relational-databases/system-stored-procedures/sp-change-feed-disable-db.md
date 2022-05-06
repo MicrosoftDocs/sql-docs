@@ -23,6 +23,8 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 
 Disable the change feed at the database level, and subsequently the metadata for all the associated tables for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 
+This stored procedure is used internally and is not recommended for direct administrative use.
+
 ## Syntax  
    
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -30,12 +32,6 @@ Disable the change feed at the database level, and subsequently the metadata for
 ```syntaxsql  
 EXECUTE sys.sp_change_feed_disable_db;
 ```  
-
-## Arguments  
-
-#### @maxtrans
-
-The @maxtrans parameter specifies the maximum transactions to process in each cycle.
   
 ## Permissions  
 

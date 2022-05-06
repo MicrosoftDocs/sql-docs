@@ -19,7 +19,7 @@ The Azure SQL Database local development experience allows application developer
 
 If you are using [VSCode](https://code.visualstudio.com/Docs), install the [mssql extension for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql). 
 
-This extension enables you to connect and run queries and testing scripts against a database. The database may be running in the Azure SQL Database emulator locally, or it may be a database in the global Azure SQL Database service. | Install the mssql extension.
+This extension enables you to connect and run queries and testing scripts against a database. The database may be running in the Azure SQL Database emulator locally, or it may be a database in the global Azure SQL Database service.
 
 The mssql extension for VSCode will automatically install the SQL Database Projects extension. The SQL Database Projects extension is bundled with the mssql extension so that it will automatically receive updates when you update the mssql extension.
 

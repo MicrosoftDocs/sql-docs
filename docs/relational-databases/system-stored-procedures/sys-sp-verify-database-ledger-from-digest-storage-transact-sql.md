@@ -44,6 +44,10 @@ A JSON document containing a list of ledger digests locations:
 |**last_digest_block_id**|**int**|The block ID for the last digest uploaded.|
 |**is_current**|**boolean**|Indicates whether this is the current path or a path used in the past.|
 
+[ @table_name = ] '*table_name*'
+ 
+The name of the ledger table you want to verify. This is an optional argument, if this is not specified the whole database ledger and the ledger tables are verified.
+
 Example of the input JSON document:
 
 ```json

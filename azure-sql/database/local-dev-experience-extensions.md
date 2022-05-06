@@ -19,11 +19,21 @@ The Azure SQL Database local development experience allows application developer
 
 If you are using [VSCode](https://code.visualstudio.com/Docs), install the [mssql extension for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql). 
 
-This extension enables you to connect and run queries and testing scripts against a database. The database may be running in the Azure SQL Database emulator locally, or it may be a database in the global Azure SQL Database service. | Install the mssql extension.
+This extension enables you to connect and run queries and testing scripts against a database. The database may be running in the Azure SQL Database emulator locally, or it may be a database in the global Azure SQL Database service.
 
 The mssql extension for VSCode will automatically install the SQL Database Projects extension. The SQL Database Projects extension is bundled with the mssql extension so that it will automatically receive updates when you update the mssql extension.
 
-Learn [how to install the mssql extension in VSCode](/sql/tools/visual-studio-code/sql-server-develop-use-vscode#install-the-mssql-extension-in-vs-code).
+To install the extension:
+
+1. In VSCode, select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P**, or press **F1** to open the **Command Palette**.
+
+2. In the **Command Palette**, select **Extensions: Install Extensions** from the dropdown.
+
+3. In the **Extensions** pane, type **mssql**.
+
+4. Select the **SQL Server (mssql)** extension, and then select **Install**.
+
+5. After the installation completes, select **Reload** to enable the extension.
 
 ## Azure Data Studio users
 
@@ -31,7 +41,17 @@ If you are using [Azure Data Studio](/sql/azure-data-studio/download-azure-data-
 
 You need only install the [SQL Database Projects extension (Preview)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode). The SQL Database Projects extension enables you to capture an existing database schema and/or design new database objects using a declarative database design model. You can commit database schema to version control. You can also publish database schema to a database running in the Azure SQL Database emulator, or to a database running in the global Azure SQL Database service. You may publish an entire database, or incremental changes to a database.
 
-Learn [how to install the SQL Database Projects extension](/sql/azure-data-studio/extensions/sql-database-project-extension#installation).
+To install the extension:
+
+1. In Azure Data Studio, select **View** > **Command Palette**, or press **Ctrl**+**Shift**+**P**, or press **F1** to open the **Command Palette**.
+
+2. In the **Command Palette**, select **Extensions: Install Extensions** from the dropdown.
+
+3. In the **Extensions** pane, type **SQL Database Projects**.
+
+4. Select the **SQL Database Projects** extension, and then select **Install**.
+
+5. After the installation completes, select **Reload** to enable the extension.
 
 ## Next steps
 

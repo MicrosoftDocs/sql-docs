@@ -1,8 +1,8 @@
 ---
-description: "sys.sp_query_store_set_hints (Transact-SQL)"
+description: "The sys.sp_query_store_set_hints system stored procedure creates or updates Query Store hints for a given query."
 title: "sys.sp_query_store_set_hints (Transact-SQL)"
 ms.custom: ""
-ms.date: "06/09/2021"
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,12 +20,12 @@ helpviewer_keywords:
   - "sp_query_store_set_hints"
 author: rwestMSFT
 ms.author: randolphwest
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sp_query_store_set_hints (Transact-SQL)
-[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
- Creates or updates [Query Store hints](../performance/query-store-hints.md) for a given query_id.
+ Creates or updates [Query Store hints](../performance/query-store-hints.md) for a given `query_id`.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,13 +44,13 @@ sp_query_store_set_hints
 
 Hints are specified in a valid T-SQL string format N'OPTION (..)'. 
 
-* If no Query Store hint exists for a specific query_id, a new Query Store hint will be created. 
-* If a Query Store hint already exists for a specific query_id, the last value provided will override previously specified values for the associated query. 
-* If a query_id doesn't exist, an error will be raised. 
+* If no Query Store hint exists for a specific `query_id`, a new Query Store hint will be created. 
+* If a Query Store hint already exists for a specific `query_id`, the last value provided will override previously specified values for the associated query. 
+* If a `query_id` doesn't exist, an error will be raised. 
 
 In the cases where a hint would cause a query to fail, the hint is ignored and the latest failure details can be viewed in [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md).
 
-To remove hints associated with a query_id, use the system stored procedure [sys.sp_query_store_clear_hints](sys-sp-query-store-clear-hints-transact-sql.md). 
+To remove hints associated with a `query_id`, use the system stored procedure [sys.sp_query_store_clear_hints](sys-sp-query-store-clear-hints-transact-sql.md). 
 
 ### Supported query hints (Preview)
 
@@ -90,9 +90,11 @@ The following query hints are currently unsupported:
   
 ## Examples  
 
+For more examples and information, see [Query Store hints](../performance/query-store-hints.md).
+
 ### Identify a query_id in Query Store
 
-The following example queries [sys.query_store_query_text](../system-catalog-views/sys-query-store-query-text-transact-sql.md) and [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md) to return the query_id for an executed query text fragment:
+The following example queries [sys.query_store_query_text](../system-catalog-views/sys-query-store-query-text-transact-sql.md) and [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md) to return the `query_id` for an executed query text fragment:
 
 ```sql
 SELECT q.query_id, qt.query_sql_text
@@ -106,7 +108,7 @@ GO
 
 ### Apply single hint
 
- The following example applies the RECOMPILE hint to query_id 39, identified in Query Store:
+ The following example applies the RECOMPILE hint to `query_id` 39, identified in Query Store:
   
 ```sql
 EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPILE)';
@@ -120,7 +122,7 @@ EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(USE HIN
 
 ### Apply multiple hints
 
-The following example applies multiple query hints to query_id 39, including RECOMPILE, MAXDOP 1, and the SQL 2012 query optimizer behavior:
+The following example applies multiple query hints to `query_id` 39, including RECOMPILE, MAXDOP 1, and the SQL 2012 query optimizer behavior:
 
 ```sql
 EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPILE, MAXDOP 1, USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_110''))';
@@ -136,7 +138,8 @@ FROM sys.query_store_query_hints
 WHERE query_id = 39;
 ```
 
-## See Also  
+## Next steps
+
 - [Query Store hints](../performance/query-store-hints.md)
 - [Table Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)  
 - [sp_query_store_clear_hints (Transact-SQL)](sys-sp-query-store-clear-hints-transact-sql.md)   

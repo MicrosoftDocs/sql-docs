@@ -1,5 +1,5 @@
 ---
-title: "Query Store hints (Preview)"
+title: "Query Store hints (preview)"
 description: "Learn about the Query Store hints feature, which can be used to shape query plans without changing application code."
 ms.custom: ""
 ms.date: "5/24/2022"
@@ -15,8 +15,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
-# Query Store hints (Preview)
-[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
+# Query Store hints (preview)
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article outlines the Query Store hints feature of the [Query Store](monitoring-performance-by-using-the-query-store.md). The Query Store hints feature provides an easy-to-use method for shaping query plans without changing application code. 
 

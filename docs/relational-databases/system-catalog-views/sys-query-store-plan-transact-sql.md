@@ -80,7 +80,34 @@ Finally, problems with the plan itself:
 
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  
-  
+
+## Examples
+
+### A. Find the reason SQL Server couldn't force a plan via QDS
+
+Pay attention to the `last_force_failure_reason_desc` and `force_failure_count` columns:
+
+```sql
+SELECT TOP 1000 
+	  p.query_id
+	, p.plan_id
+	, p.last_force_failure_reason_desc
+	, p.force_failure_count
+	, p.last_compile_start_time
+	, p.last_execution_time
+	, q.last_bind_duration
+	, q.query_parameterization_type_desc
+	, q.context_settings_id
+	, c.set_options
+	, c.status
+FROM sys.query_store_plan p
+	JOIN sys.query_store_query q ON p.query_id = q.query_id
+	JOIN sys.query_context_settings c ON c.context_settings_id = q.context_settings_id
+	LEFT JOIN sys.query_store_query_text t ON q.query_text_id = t.query_text_id
+WHERE p.is_forced_plan = 1 and p.last_force_failure_reason != 0
+```
+
+
 ## See Also  
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   

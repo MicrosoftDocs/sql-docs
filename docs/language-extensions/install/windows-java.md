@@ -47,9 +47,9 @@ Learn how to install the [Java Language Extension](../java-overview.md) componen
 > [!NOTE]
 > Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
 
-::: moniker range="=sql-server-ver16"
+::: moniker range=">=sql-server-ver16"
 
-With SQL Server 2022, you can download install any Java runtime, including the latest [Zulu Open JRE 11](https://www.azul.com/downloads/?package=jdk) or officially licensed Java runtimes.
+With SQL Server 2022, you can download and install any Java runtime, including the latest [Zulu Open JRE 11](https://www.azul.com/downloads/?package=jdk) or officially licensed Java runtimes.
 
 Java 11 is currently the supported version on Windows. The Java Runtime Environment (JRE) is the minimum requirement, but Java Development Kit (JDK) is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary. On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
@@ -88,7 +88,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver16"
+::: moniker range=">=sql-server-ver16"
 
 :::image type="content" source="../media/windows-java/2022/sql-server-2022-installation-center.png" alt-text="SQL Server 2022 installation":::
 
@@ -97,25 +97,23 @@ For local installations, you must run Setup as an administrator. If you install 
 1. On the **Feature Selection** page, select these options:
   
     - **Database Engine Services**
-  
-        To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+
+    To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
   
     - **Machine Learning Services and Language Extensions**
-  
-        This option installs the Language Extensions component that support Java code execution.
+
+    This option installs the Language Extensions component that support Java code execution.
 ::: moniker range="=sql-server-ver15"
+    - If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Machine Learning Services and Language Extensions** and **Java**.
 
-        - If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Machine Learning Services and Language Extensions** and **Java**.
+    - If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select **Java**.
 
-        - If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select **Java**.
-
-        If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
+    If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 
     ![Feature options for Language Extensions](../media/windows-java/2019/sql-install-feature-selection.png)
 ::: moniker-end
-
-::: moniker range="=sql-server-ver16"
-        - Select **Machine Learning Services and Language Extensions**. 
+::: moniker range=">=sql-server-ver16"
+    - Select **Machine Learning Services and Language Extensions**. 
 
     ![Feature options for Language Extensions](../media/windows-java/2022/sql-server-2022-machine-learning-services-feature-selection.png)
 ::: moniker-end
@@ -137,7 +135,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
     Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-6. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+1. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## Add the JRE_HOME variable
 
@@ -153,7 +151,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver16"
+::: moniker range=">=sql-server-ver16"
 
     This will depend on the runtime and the installation options. For example, the default installation folder for Zulu is `%ProgramFiles%\Zulu\JRE\`. 
 
@@ -167,7 +165,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 1. Create a new system variable for `JRE_HOME` with the value of the JDK/JRE path (found in step 1).
 
-::: moniker range="=sql-server-ver16"
+::: moniker range=">=sql-server-ver16"
 
 1. Register language extension
     Follow these steps to download and register the Java language extension, which is used for the Java custom runtime.
@@ -231,7 +229,7 @@ You can restart the service using the right-click **Restart** command for the in
 
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
-1. Connect to the instance where you installed Language Extensions, click **New Query** to open a query window, and run the following command:
+1. Connect to the instance where you installed Language Extensions, select **New Query** to open a query window, and run the following command:
 
     ```sql
     EXEC sp_configure;

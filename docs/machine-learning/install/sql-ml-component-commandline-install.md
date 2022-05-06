@@ -196,7 +196,7 @@ When adding in-database advanced analytics to an existing database engine instan
 Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
-
+::: moniker-end
 ::: moniker range="=sql-server-ver16"
 ## <a name="add-existing-2022"></a> Add advanced analytics to an existing database engine instance
 
@@ -219,7 +219,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS
 /IACCEPTSQLSERVERLICENSETERMS 
 ```
 ::: moniker-end
-::: moniker range="<=sql-server-ver15"
+::: moniker range="=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
 
 ## <a name="silent"></a> Silent install
 
@@ -235,6 +235,8 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 ::: moniker-end
 
 ## <a name="shared-feature"></a> Standalone server installations
+
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
 
 **Applies to: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]** only.
 

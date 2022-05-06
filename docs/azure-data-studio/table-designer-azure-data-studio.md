@@ -157,7 +157,7 @@ Choosing "Schema and Data" saves both the schema and Data to memory if there's a
 
 ### System-Versioned Tables
 
-System versioning can also be done directly on Azure Data Studio. If you're new to system versioning, check out [Temporal Tables on SQL Server ](/sql/relational-databases/tables/creating-a-system-versioned-temporal-table). System-versioning tables must have the period columns defined.
+System versioning can also be done directly on Azure Data Studio. If you're new to system versioning, check out [Temporal Tables on SQL Server ](/sql/relational-databases/tables/creating-a-system-versioned-temporal-table.md). System-versioning tables must have the period columns defined.
 
 #### Creating a System-Versioned Table
 

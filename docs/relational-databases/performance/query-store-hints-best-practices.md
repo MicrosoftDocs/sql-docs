@@ -24,30 +24,32 @@ This article details best practices for using [Query Store hints (Preview)](quer
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 - For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).
 
-Learn how to improve bulk loading with Query Store hints with this 14-minute video:
-
-> [!VIDEO https://channel9.msdn.com/Shows/data-exposed/using-query-store-hints-to-optimize-memory-grants-improving-performance/player?WT.mc_id=dataexposed-c9-niner]
-
-## Best use cases for Query Store hints
+## Use cases for Query Store hints
 
 Consider the following use cases as ideal of Query Store hints. For more information, see [When to use Query Store hints](query-store-hints.md#when-to-use-query-store-hints).
 
 > [!CAUTION]
 > Because the SQL Server Query Optimizer typically selects the best execution plan for a query, we recommend only using hints as a last resort for experienced developers and database administrators. For more information, see [Query Hints](../../t-sql/queries/hints-transact-sql-query.md).
 
-### Code cannot be changed
+### When code cannot be changed
 
 Using Query Store hints allows you to influence the execution plans of queries without changing application code or database objects. No other feature allows for you to apply query hints quickly and easily. 
 
+You can use Query Store hints, for example, to benefit ETLs without redeploying code. Learn how to improve bulk loading with Query Store hints with this 14-minute video:
+
+> [!VIDEO https://channel9.msdn.com/Shows/data-exposed/using-query-store-hints-to-optimize-memory-grants-improving-performance/player?WT.mc_id=dataexposed-c9-niner]
+
+Query Store hints are lightweight query tuning methods, but if a query becomes problematic it should be addressed with more substantial code changes. If you are regularly finding the need to apply Query Store hints to a query, consider a larger query rewrite. The SQL Server Query Optimizer typically selects the best execution plan for a query, we recommend only using hints as a last resort for experienced developers and database administrators. 
+
 For information on which query hints can be applied, see [Supported query hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md#supported-query-hints).
 
-### High transaction load, mission critical code
+### Under high transaction load or with mission critical code
 
 If code changes are impractical because of high uptime requirements or transactional load, Query Store hints can apply query hints to existing query workloads quickly. Adding and removing Query Store hints is easy.
 
 Query Store hints can be added and removed to batches of queries to adjust performance for windows timed for bursts of exceptional workload.
 
-### Replacement for plan guides
+### As a replacement for plan guides
 
 Previous to Query Store hints, a developer would have to rely on [plan guides](plan-guides.md) to accomplish similar tasks, which can be complex to use. Query Store hints are integrated with Query Store features of SQL Server Management Studio (SSMS), for visual exploration of queries. 
 
@@ -55,17 +57,26 @@ With plan guides, searching through all plans using query snippets is necessary.
 
 Query Store hints override hard-coded statement-level hints and existing plan guides. 
 
-## Query Store hints caveats
-
-Query Store hints are lightweight query tuning methods, but if a query becomes problematic it should be addressed with more substantial code changes. If you are regularly finding the need to apply Query Store hints to a query, consider a larger query rewrite. The SQL Server Query Optimizer typically selects the best execution plan for a query, we recommend only using hints as a last resort for experienced developers and database administrators. 
-
 ### Consider a newer compatibility level
 
 Query Store hints can be a valuable method when a newer database compatibility level is not available to you due to vendor specification or larger testing delays, for example. When a higher compatibility level is available to a database, consider upgrading the database compatibility level to take advantage of the latest performance optimizations and features of SQL Server.
 
+## Query Store hints considerations
+
+Consider the following scenarios when deploying Query Store hints.
+
 ### Data distribution changes
 
-Plan guides, forced plans via the Query Store, and Query Store hints override the optimizer's decision making. For example, if a Query Store hint helps a query in previous data distribution, it may be counter-productive if large-scale DML operations change the data. A new data distribution may cause the optimizer to make a better decision than the hint. This scenario is the most common consequence of forcing plan behavior.
+Plan guides, forced plans via the Query Store, and Query Store hints override the optimizer's decision making. The Query Store hint may be beneficial now, but not in the future. For example, if a Query Store hint helps a query in previous data distribution, it may be counter-productive if large-scale DML operations change the data. A new data distribution may cause the optimizer to make a better decision than the hint. This scenario is the most common consequence of forcing plan behavior. 
+
+### Regularly re-evaluate your Query Store hints strategy
+
+Re-evaluate your existing Query Store hints strategy in the following cases:
+
+ - After known large data distribution changes.
+ - When the service level objective (SLO) of your Azure SQL Database or Managed Instance or virtual machine has changed.
+ - Where plan fixing has become long-lived. Query Store hints are best used for short-term fixes.
+ - Unexpected performance regressions.
 
 ### Broad impact potential
 
@@ -79,8 +90,9 @@ Applying the RECOMPILE query hint with Query Store hints is not supported when t
 
 The RECOMPILE hint is not compatible with forced parameterization set at the database level. If the database has forced parameterization set, and the RECOMPILE hint is part of the hints string set in Query Store for a query, the Database Engine will ignore the RECOMPILE hint and will apply other hints if leveraged.
 
-<!-- t63 warning-->
+For information on which query hints can be applied, see [Supported query hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md#supported-query-hints).
 
+<!-- t63 warning-->
 
 ## See also
 

@@ -48,7 +48,7 @@ CHANGETABLE(CHANGES ...) takes a last synchronization version as an argument. Th
 
   The following illustration shows how CHANGETABLE(CHANGES ...) is used to obtain changes.
 
-  :::image type="content" source="../../relational-databases/track-changes/media/query_output.png" alt-text="Example of change tracking query output.":::
+  :::image type="content" source="../../relational-databases/track-changes/media/work-with-change-tracking-sql-server/query-output.png" alt-text="Diagram that shows an example of change tracking query output.":::
 
   In this example, Client A last synchronized at 9:30 AM, while Client B last synchronized at 10:30 AM. At 10:00 AM and again at 11:00 AM, several changes were made to the data. These tracked changes are summarized below.
 
@@ -454,13 +454,13 @@ Applications that require synchronization must consider the case in which a data
 
 1. At version 120, there's a failure and the database administrator restores the database with data loss. After the restore operation, the table contains data up through version 70, and the minimum synchronized version is still 50.
 
-  This means that the synchronized data store has data that no longer exists in the primary data store.
+   This means that the synchronized data store has data that no longer exists in the primary data store.
 
 1. T1 is updated many times. This brings the current version to 130.
 
 1. The client application synchronizes again and supplies a last-synchronized version of 100. The client validates this number successfully because 100 is greater than 50.
 
-  The client obtains changes between version 100 and 130. At this point, the client isn't aware that the changes between 70 and 100 aren't the same as before. The data on the client and server aren't synchronized.
+   The client obtains changes between version 100 and 130. At this point, the client isn't aware that the changes between 70 and 100 aren't the same as before. The data on the client and server aren't synchronized.
 
 If the database was recovered to a point after version 100, there would be no problems with synchronization. The client and server would synchronize data correctly during the next synchronization interval.
 

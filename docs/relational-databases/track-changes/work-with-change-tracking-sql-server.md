@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Applications that use change tracking must be able to obtain tracked changes, apply these changes to another data store, and update the source database. This topic describes how to perform these tasks, and also the role change tracking plays when a failover occurs and a database must be restored from a backup.
+Applications that use change tracking must be able to obtain tracked changes, apply these changes to another data store, and update the source database. This article describes how to perform these tasks, and also the role change tracking plays when a failover occurs and a database must be restored from a backup.
 
 ## <a id="Obtain"></a> Obtain changes by using change tracking functions
 
@@ -40,7 +40,7 @@ Applications can use the following functions to obtain the changes that are made
 CHANGETABLE(CHANGES ...) function  
 This rowset function is used to query for change information. The function queries the data stored in the internal change tracking tables. The function returns a results set that contains the primary keys of rows that have changed together with other change information such as the operation, columns updated and version for the row.
 
-CHANGETABLE(CHANGES ...) takes a last synchronization version as an argument. The last sychronization version is obtained using the `@last_synchronization_version` variable. The semantics of the last synchronization version are as follows:
+CHANGETABLE(CHANGES ...) takes a last synchronization version as an argument. The last synchronization version is obtained using the `@last_synchronization_version` variable. The semantics of the last synchronization version are as follows:
 
 - The calling client has obtained changes and knows about all changes up to and including the last synchronization version.
 
@@ -157,7 +157,7 @@ A database that has change tracking enabled has a version counter that increases
 
 Information about changes is maintained for a limited time. The length of time is controlled by the CHANGE_RETENTION parameter that can be specified as part of the ALTER DATABASE.
 
-Be aware that the time specified for CHANGE_RETENTION determines how frequently all applications must request changes from the database. If an application has a value for *last_synchronization_version* that is older than the minimum valid synchronization version for a table, that application cannot perform valid change enumeration. This is because some change information might have been cleaned up. Before an application obtains changes by using CHANGETABLE(CHANGES ...), the application must validate the value for *last_synchronization_version* that it plans to pass to CHANGETABLE(CHANGES ...). If the value of *last_synchronization_version* is not valid, that application must reinitialize all the data.
+The time specified for CHANGE_RETENTION determines how frequently all applications must request changes from the database. If an application has a value for *last_synchronization_version* that is older than the minimum valid synchronization version for a table, that application can't perform valid change enumeration. This is because some change information might have been cleaned up. Before an application obtains changes by using CHANGETABLE(CHANGES ...), the application must validate the value for *last_synchronization_version* that it plans to pass to CHANGETABLE(CHANGES ...). If the value of *last_synchronization_version* isn't valid, that application must reinitialize all the data.
 
 The following example shows how to verify the validity of the value of `last_synchronization_version` for each table.
 
@@ -190,9 +190,9 @@ Column tracking enables applications to obtain the data for only the columns tha
 
 Column tracking information appears in the SYS_CHANGE_COLUMNS column that is returned by the CHANGETABLE(CHANGES ...) function.
 
-Column tracking can be used so that NULL is returned for a column that has not changed. If the column can be changed to NULL, a separate column must be returned to indicate whether the column changed.
+Column tracking can be used so that NULL is returned for a column that hasn't changed. If the column can be changed to NULL, a separate column must be returned to indicate whether the column changed.
 
-In the following example, the `CT_ThumbnailPhoto` column will be `NULL` if that column did not change. This column could also be `NULL` because it was changed to `NULL` - the application can use the `CT_ThumbNailPhoto_Changed` column to determine whether the column changed.
+In the following example, the `CT_ThumbnailPhoto` column will be `NULL` if that column didn't change. This column could also be `NULL` because it was changed to `NULL` - the application can use the `CT_ThumbNailPhoto_Changed` column to determine whether the column changed.
 
 ```sql
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(
@@ -222,35 +222,35 @@ ON
 
 ### Obtain consistent and correct results
 
-Obtaining the changed data for a table requires multiple steps. Be aware that inconsistent or incorrect results could be returned if certain issues are not considered and handled.
+Obtaining the changed data for a table requires multiple steps. Inconsistent or incorrect results could be returned if certain issues aren't considered and handled.
 
-For example, to obtain the changes that were made to a Sales table and SalesOrders table, an application would perform the following steps:
+For example, to obtain the changes that were made to a `Sales` table and `SalesOrders` table, an application would perform the following steps:
 
 1. Validate the last synchronized version by using CHANGE_TRACKING_MIN_VALID_VERSION().
 
 1. Obtain the version that can be used to obtain change the next time by using CHANGE_TRACKING_CURRENT_VERSION().
 
-1. Obtain the changes for the Sales table by using CHANGETABLE(CHANGES ...).
+1. Obtain the changes for the `Sales` table by using CHANGETABLE(CHANGES ...).
 
-1. Obtain the changes for the SalesOrders table by using CHANGETABLE(CHANGES ...).
+1. Obtain the changes for the `SalesOrders` table by using CHANGETABLE(CHANGES ...).
 
 Two processes are occurring in the database that can affect the results that are returned by the previous steps:
 
 - The cleanup process runs in the background and removes change tracking information that is older than the specified retention period.
 
-  The cleanup process is a separate background process that uses the retention period that is specified when you configure change tracking for the database. The issue is that the cleanup process can occur in the time between when the last synchronization version was validated and when the call to CHANGETABLE(CHANGES...) is made. A last synchronization version that was just valid might no longer be valid by the time the changes are obtained. Therefore, incorrect results might be returned.
+  The cleanup process is a separate background process that uses the retention period that is specified when you configure change tracking for the database. The issue is that the cleanup process can occur in the time between when the last synchronization version was validated and when the call to CHANGETABLE(CHANGES...) is made. A last synchronization version that was valid might no longer be valid by the time the changes are retrieved. Therefore, incorrect results might be returned.
 
-- Ongoing DML operations are occurring in the Sales and SalesOrders tables, such as the following operations:
+- Ongoing DML operations are occurring in the Sales and `SalesOrders` tables, such as the following operations:
 
   - Changes can be made to the tables after the version for next time has been obtained by using CHANGE_TRACKING_CURRENT_VERSION(). Therefore, more changes can be returned than expected.
 
-  - A transaction could commit in the time between the call to obtain changes from the Sales table and the call to obtain changes from the SalesOrders table. Therefore, the results for the SalesOrder table could have foreign key value that does not exist in the Sales table.
+  - A transaction could commit in the time between the call to fetch changes from the `Sales` table and the call to fetch changes from the `SalesOrders` table. Therefore, the results for the `SalesOrder` table could have foreign key value that doesn't exist in the `Sales` table.
 
-To overcome the previously listed challenges, we recommend that you use snapshot isolation. This will help to ensure consistency of change information and avoid race conditions that are related to the background cleanup task. If you do not use snapshot transactions, developing an application that uses change tracking could require significantly more effort.
+To overcome the previously listed challenges, we recommend that you use snapshot isolation. This will help to ensure consistency of change information and avoid race conditions that are related to the background cleanup task. If you don't use snapshot transactions, developing an application that uses change tracking could require significantly more effort.
 
 #### Use snapshot isolation
 
-Change tracking has been designed to work well with snapshot isolation. Snapshot isolation must be enabled for the database. All the steps that are required to obtain changes must be included inside a snapshot transaction. This will ensure that all changes that are made to data while obtaining changes will not be visible to the queries inside the snapshot transaction.
+Change tracking has been designed to work well with snapshot isolation. Snapshot isolation must be enabled for the database. All the steps that are required to obtain changes must be included inside a snapshot transaction. This will ensure that all changes that are made to data while obtaining changes won't be visible to the queries inside the snapshot transaction.
 
 To obtain data inside a snapshot transaction, perform the following steps:
 
@@ -260,17 +260,17 @@ To obtain data inside a snapshot transaction, perform the following steps:
 
 1. Obtain the version to be used the next time by using CHANGE_TRACKING_CURRENT_VERSION().
 
-1. Obtain the changes for the Sales table by using CHANGETABLE(CHANGES ...)
+1. Obtain the changes for the `Sales` table by using CHANGETABLE(CHANGES ...)
 
-1. Obtain the changes for the Salesorders table by using CHANGETABLE(CHANGES ...)
+1. Obtain the changes for the `SalesOrders` table by using CHANGETABLE(CHANGES ...)
 
 1. Commit the transaction.
 
 Some points to remember as all steps to obtain changes are inside a snapshot transaction:
 
-- If cleanup occurs after the last synchronization version is validated, the results from CHANGETABLE(CHANGES ...) will still be valid as the delete operations performed by cleanup will not be visible inside the transaction.
+- If cleanup occurs after the last synchronization version is validated, the results from CHANGETABLE(CHANGES ...) will still be valid as the delete operations performed by cleanup won't be visible inside the transaction.
 
-- Any changes that are made to the Sales table or the SalesOrders table after the next synchronization version is obtained will not be visible, and the calls to CHANGETABLE(CHANGES ...) will never return changes with a version later than that returned by CHANGE_TRACKING_CURRENT_VERSION(). Consistency between the Sales table and the SalesOrders table will also be maintained, because the transactions that were committed in the time between calls to CHANGETABLE(CHANGES ...) will not be visible.
+- Any changes that are made to the `Sales` table or the `SalesOrders` table after the next synchronization version is obtained won't be visible, and the calls to CHANGETABLE(CHANGES ...) will never return changes with a version later than that returned by CHANGE_TRACKING_CURRENT_VERSION(). Consistency between the `Sales` table and the `SalesOrders` table will also be maintained, because the transactions that were committed in the time between calls to CHANGETABLE(CHANGES ...) won't be visible.
 
 The following example shows how snapshot isolation is enabled for a database.
 
@@ -295,12 +295,11 @@ For more information about snapshot transactions, see [SET TRANSACTION ISOLATION
 
 #### Cleanup and snapshot isolation
 
-Enabling both snapshot isolation and change tracking on either the same database, or on two different databases within the same instance
-can result in the cleanup process leaving expired rows in `sys.syscommittab` when there is an open transaction in the database with snapshot isolation. This can happen as the change tracking cleanup process takes an instance-wide low water mark (which is the safe cleanup version) into account when performing the cleanup. This is done to ensure the change tracking auto clean up process doesn't remove any rows that might be required by the open transaction in the database that has snapshot isolation enabled. Keep read committed snapshot isolation, and snapshot isolation transactions as short as possible to ensure expired rows from `sys.syscommittab` are cleaned up in a timely manner.
+Enabling both snapshot isolation and change tracking on either the same database, or on two different databases within the same instance can result in the cleanup process leaving expired rows in `sys.syscommittab` when there's an open transaction in the database with snapshot isolation. This can happen as the change tracking cleanup process takes an instance-wide low water mark (which is the safe cleanup version) into account when performing the cleanup. This is done to ensure the change tracking auto clean-up process doesn't remove any rows that might be required by the open transaction in the database that has snapshot isolation enabled. Keep read committed snapshot isolation, and snapshot isolation transactions as short as possible to ensure expired rows from `sys.syscommittab` are cleaned up in a timely manner.
 
 #### Alternatives to snapshot isolation
 
-There are alternatives to using snapshot isolation, but they require more work to make sure all application requirements are met. To make sure the *last_synchronization_version* is valid and data is not removed by the cleanup process before changes are obtained, do the following:
+There are alternatives to using snapshot isolation, but they require more work to make sure all application requirements are met. To make sure the *last_synchronization_version* is valid and data isn't removed by the cleanup process before changes are obtained, follow these steps:
 
 1. Check *last_synchronization_version* after the calls to CHANGETABLE().
 
@@ -310,13 +309,13 @@ Changes can occur after the synchronization version for the next enumeration has
 
 - Ignore changes that have a version larger than the new synchronization version.
 
-  This approach has the side effect that a new or updated row would be skipped if it was created or updated before the new synchronization version, but then updated afterward. If there is a new row, a referential integrity problem might occur if there was a row in another table that was created that referenced the skipped row. If there is an updated existing row, the row will be skipped and not synchronized until the next time.
+  This approach has the side effect that a new or updated row would be skipped if it was created or updated before the new synchronization version, but then updated afterward. If there's a new row, a referential integrity problem might occur if there was a row in another table that was created that referenced the skipped row. If there's an updated existing row, the row will be skipped and not synchronized until the next time.
 
 - Include all changes, even those that have a version larger than the new synchronization version.
 
   The rows that have a version larger than the new synchronization version will be obtained again on the next synchronization. This must be expected and handled by the application.
 
-In addition to the previous two options, you can devise approach that combines both options, depending on the operation. For example, you might want an application for which it is best to ignore changes newer than the next synchronization version in which the row was created or deleted, but updates are not ignored.
+In addition to the previous two options, you can devise approach that combines both options, depending on the operation. For example, you might want an application for which it is best to ignore changes newer than the next synchronization version in which the row was created or deleted, but updates aren't ignored.
 
 > [!NOTE]  
 > Choosing the approach that will work for the application when you are using change tracking (or any custom tracking mechanism), requires significant analysis. Therefore, it is much simpler to use snapshot isolation.
@@ -347,9 +346,9 @@ To perform the previous operations, a synchronization application can use the fo
 
 ### Check for conflicts
 
-In a two-way synchronization scenario, the client application must determine whether a row has not been updated since the application last obtained the changes.
+In a two-way synchronization scenario, the client application must determine whether a row hasn't been updated since the application last obtained the changes.
 
-The following example shows how to use the CHANGETABLE(VERSION ...) function to check for conflicts in the most efficient way, without a separate query. In the example, `CHANGETABLE(VERSION ...)` determines the `SYS_CHANGE_VERSION` for the row specified by `@product id`. `CHANGETABLE(CHANGES ...)` can obtain the same information, but that would be less efficient. If the value of `SYS_CHANGE_VERSION` for the row is larger than the value of `@last_sync_version`, there is a conflict. If there is a conflict, the row will not be updated. The `ISNULL()` check is required because there might be no change information available for the row. No change information would exist if the row had not been updated since change tracking was enabled or since the change information was cleaned up.
+The following example shows how to use the CHANGETABLE(VERSION ...) function to check for conflicts in the most efficient way, without a separate query. In the example, `CHANGETABLE(VERSION ...)` determines the `SYS_CHANGE_VERSION` for the row specified by `@product id`. `CHANGETABLE(CHANGES ...)` can obtain the same information, but that would be less efficient. If the value of `SYS_CHANGE_VERSION` for the row is larger than the value of `@last_sync_version`, there's a conflict. If there's a conflict, the row won't be updated. The `ISNULL()` check is required because there might be no change information available for the row. No change information would exist if the row hadn't been updated since change tracking was enabled or since the change information was cleaned up.
 
 ```sql
 -- Assumption: @last_sync_version has been validated.
@@ -412,7 +411,7 @@ WHERE
     @last_sync_version >= ISNULL (
     (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,
     (ProductID), (P.ProductID)) AS CT),
-       0)
+       0);
 ```
 
 ### Ensure consistent and correct results
@@ -436,8 +435,8 @@ CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID('SalesLT.Product')))
     BEGIN
         -- Try to update the row.
         -- Check @@ROWCOUNT and check for a conflict.
-    END
-COMMIT TRAN
+    END;
+COMMIT TRAN;
 ```
 
 > [!NOTE]  
@@ -445,15 +444,15 @@ COMMIT TRAN
 
 ## <a id="DataRestore"></a> Change tracking and data restore
 
-Applications that require synchronization must consider the case in which a database that has change tracking enabled reverts to an earlier version of the data. This can occur after a database is restored from a backup, when there is a failover to an asynchronous database mirror, or when there is a failure when using log shipping. The following scenario illustrates the issue:
+Applications that require synchronization must consider the case in which a database that has change tracking enabled reverts to an earlier version of the data. This can occur after a database is restored from a backup, when there's a failover to an asynchronous database mirror, or when there's a failure when using log shipping. The following scenario illustrates the issue:
 
-1. Table T1 is change tracked, and the minimum valid version for table is 50.
+1. Table T1 is change-tracked, and the minimum valid version for table is 50.
 
 1. A client application synchronizes data at version 100 and obtains information about all changes between versions 50 and 100.
 
 1. Additional changes are made to table T1 after version 100.
 
-1. At version 120, there is a failure and the database administrator restores the database with data loss. After the restore operation, the table contains data up through version 70, and the minimum synchronized version is still 50.
+1. At version 120, there's a failure and the database administrator restores the database with data loss. After the restore operation, the table contains data up through version 70, and the minimum synchronized version is still 50.
 
   This means that the synchronized data store has data that no longer exists in the primary data store.
 
@@ -461,15 +460,15 @@ Applications that require synchronization must consider the case in which a data
 
 1. The client application synchronizes again and supplies a last-synchronized version of 100. The client validates this number successfully because 100 is greater than 50.
 
-  The client obtains changes between version 100 and 130. At this point, the client is not aware that the changes between 70 and 100 are not the same as before. The data on the client and server are not synchronized.
+  The client obtains changes between version 100 and 130. At this point, the client isn't aware that the changes between 70 and 100 aren't the same as before. The data on the client and server aren't synchronized.
 
-Note that if the database was recovered to a point after version 100, there would be no problems with synchronization. The client and server would synchronize data correctly during the next synchronization interval.
+If the database was recovered to a point after version 100, there would be no problems with synchronization. The client and server would synchronize data correctly during the next synchronization interval.
 
-Change tracking does not provide support for recovering from the loss of data. However, there are two options for detecting these types of synchronization issues:
+Change tracking doesn't provide support for recovering from the loss of data. However, there are two options for detecting these types of synchronization issues:
 
-- Store a database version ID on the server, and update this value whenever a database is recovered or otherwise loses data. Each client application would store the ID, and each client would have to validate this ID when it synchronizes data. If data loss occurs, the IDs will not match and the clients would reinitialize. One drawback is if the data loss had not crossed the last synchronized boundary, the client might do unnecessary reinitialization.
+- Store a database version ID on the server, and update this value whenever a database is recovered or otherwise loses data. Each client application would store the ID, and each client would have to validate this ID when it synchronizes data. If data loss occurs, the IDs won't match and the clients would reinitialize. One drawback is if the data loss hadn't crossed the last synchronized boundary, the client might do unnecessary reinitialization.
 
-- When a client queries for changes, record the last synchronization version number for each client on the server. If there is a problem with the data, the last synchronized version numbers would not match. This indicates that a reinitialization is required.
+- When a client queries for changes, record the last synchronization version number for each client on the server. If there's a problem with the data, the last synchronized version numbers wouldn't match. This indicates that a reinitialization is required.
 
 ## See also
 

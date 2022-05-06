@@ -26,7 +26,7 @@ This article applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!
 
 ::: moniker range=">=sql-server-ver16"
 > [!IMPORTANT]
-> R and Python runtimes and packages are not shipped or installed with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. Instead, refer to [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+> R and Python runtimes and packages are not shipped or installed by SQL Setup for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. Instead, refer to [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 ::: moniker-end
 
 Below you will find download links to CAB files for each cumulative update. For more information about offline installs, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md#apply-cu).

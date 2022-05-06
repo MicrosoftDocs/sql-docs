@@ -19,7 +19,11 @@ ms.custom:
 
 This article guides you in the installation of [SQL Server Machine Learning Services](../machine-learning//sql-server-machine-learning-services.md) on Linux. Python and R scripts can be executed in-database using Machine Learning Services.
 
-You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#supportedplatforms).
+You can install Machine Learning Services on Ubuntu. Currently, Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) are unsupported. 
+
+You can install ML Services on a Docker container running a Linux distribution. Inside the Docker container, the steps would be the same as below.
+
+For more information, see [the Supported platforms section in the installation guidance for SQL Server on Linux](sql-server-linux-setup.md#supportedplatforms).
 
 > [!IMPORTANT]
 > This article refers to [!INCLUDE[sssql22-md](../includes/sssql22-md.md)]. For SQL Server 2019 on Linux, see to [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning.md).
@@ -233,7 +237,7 @@ The following commands register the repository providing the R language platform
 
 <a name="RHEL"></a>
 
-## Install on RHEL TODO
+## Install on RHEL
 
 Installation for SQL Server 2022 (Preview) Machine Learning Services for Red Hat Enterprise Linux (RHEL) is currently not supported.
 
@@ -298,25 +302,6 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 > [!Tip]
 > Several of the package management tools provide commands that can help you determine package dependencies. For yum, use `sudo yum deplist [package]`. For Ubuntu, use `sudo apt-get install --reinstall --download-only [package name]` followed by `dpkg -I [package name].deb`.
-
- 
-### Download site TODO
-
-Download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for Python and R are colocated with database engine package. Base version for the mlservices packages is 9.4.6.  
-
-### RHEL/8 paths
-
-|Package|Download location|
-|--|----|
-| mssql/mlservices packages | [https://packages.microsoft.com/rhel/8/mssql-server-2019/](https://packages.microsoft.com/rhel/8/mssql-server-2019/) |
-
-### Ubuntu/20.04 paths
-
-|Package|Download location|
-|--|----|
-| mssql/mlservices packages | [https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/) |
-
-Select extensions you want to use and download the packages necessary for a specific language. The filenames include platform information in the suffix.
 
 ## Next steps
 

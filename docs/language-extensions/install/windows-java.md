@@ -27,7 +27,7 @@ Learn how to install the [Java Language Extension](../java-overview.md) componen
 
 + SQL Server Setup is required if you want to install support for the Java Language Extension.
 
-+ Starting with SQL Server 2022, users can download and install any Java runtime as desired, including open source or officially licensed Java runtimes.
++ You can download and install any Java runtime as desired, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime. Starting with SQL Server 2022, no Java runtime is installed by SQL Setup.
 
 + A database engine instance is required. You cannot install just the Java Language Extension features, although you can add them incrementally to an existing instance.
 
@@ -49,7 +49,7 @@ Learn how to install the [Java Language Extension](../java-overview.md) componen
 
 ::: moniker range=">=sql-server-ver16"
 
-With SQL Server 2022, you can download and install any Java runtime, including the latest [Zulu Open JRE 11](https://www.azul.com/downloads/?package=jdk) or officially licensed Java runtimes.
+With SQL Server 2022, you can download and install any Java runtime, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime.
 
 Java 11 is currently the supported version on Windows. The Java Runtime Environment (JRE) is the minimum requirement, but Java Development Kit (JDK) is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary. On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
@@ -65,10 +65,11 @@ There are two ways to install and use Java with SQL Server 2019:
 
     Java 11 is currently the supported version on Windows. The Java Runtime Environment (JRE) is the minimum requirement, but Java Development Kit (JDK) is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary. On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
-::: moniker-end
-
 > [!NOTE]
 > Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for SQL Server 2019 is Java 11.
+
+::: moniker-end
+
 
 ## Get the installation media
 
@@ -165,7 +166,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 1. Find and copy the JRE home path.
 
-    This will depend on the runtime and the installation options. For example, the default installation folder for Zulu is `%ProgramFiles%\Zulu\JRE\`. 
+    This will depend on the runtime and the installation options.
 
     The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
 
@@ -208,7 +209,11 @@ For local installations, you must run Setup as an administrator. If you install 
 
 ## Grant access to non-default JRE folder
 
-If you did not install the default Zulu Open JRE that was included with SQL Server and did not install the JDK or JRE under program files, you need to perform the following steps. Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
+::: moniker range=">=sql-server-ver15"
+If you did not install the default Zulu Open JRE that was included with SQL Server and did not install the JDK or JRE under program files, you need to perform the following steps.
+::: moniker-end
+
+Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
 
 1. Give SQLRUserGroup permissions
 

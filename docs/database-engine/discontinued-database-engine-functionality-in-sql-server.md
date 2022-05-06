@@ -48,11 +48,9 @@ monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016"
     | **Language** | **Package** |
     | :-- | :-- |
     | Python | [microsoftml](../machine-learning/python/ref-py-microsoftml.md)| 
-    | R | [MicrosoftML (R)](../machine-learning/r/ref-r-microsoftml.md) | 
     | R | [olapR](../machine-learning/r/ref-r-olapr.md) | 
     | R | [sqlrutils](../machine-learning/r/ref-r-sqlrutils.md) | 
-    | R | [Microsoft R Open](https://mran.microsoft.com/rro) |
-    
+    | R | [MicrosoftML (R)](../machine-learning/r/ref-r-microsoftml.md) |
 
 
 ## Discontinued features in [!INCLUDE[sssql19](../includes/sssql19-md.md)]  

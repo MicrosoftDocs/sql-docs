@@ -94,6 +94,8 @@ For local installations, you must run Setup as an administrator. If you install 
 
 ::: moniker-end
 
+::: moniker range="=sql-server-ver15"
+
 1. On the **Feature Selection** page, select these options:
   
     - **Database Engine Services**
@@ -103,9 +105,8 @@ For local installations, you must run Setup as an administrator. If you install 
     - **Machine Learning Services and Language Extensions**
 
     This option installs the Language Extensions component that support Java code execution.
-::: moniker range="=sql-server-ver15"
-    - If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Machine Learning Services and Language Extensions** and **Java**.
 
+    - If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Machine Learning Services and Language Extensions** and **Java**.
     - If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select **Java**.
 
     If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
@@ -113,7 +114,16 @@ For local installations, you must run Setup as an administrator. If you install 
     ![Feature options for Language Extensions](../media/windows-java/2019/sql-install-feature-selection.png)
 ::: moniker-end
 ::: moniker range=">=sql-server-ver16"
-    - Select **Machine Learning Services and Language Extensions**. 
+
+1. On the **Feature Selection** page, select these options:
+  
+    - **Database Engine Services**
+
+    To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+  
+    - **Machine Learning Services and Language Extensions**
+
+    This option installs the Language Extensions component that support Java code execution.
 
     ![Feature options for Language Extensions](../media/windows-java/2022/sql-server-2022-machine-learning-services-feature-selection.png)
 ::: moniker-end
@@ -141,9 +151,9 @@ For local installations, you must run Setup as an administrator. If you install 
 
 `JRE_HOME` is a system environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows.
 
-1. Find and copy the JRE home path.
-
 ::: moniker range="=sql-server-ver15"
+
+1. Find and copy the JRE home path.
 
     For example, the JRE home path for the default Java runtime Zulu JRE 11.0.3 is `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Binn\AZUL-OpenJDK-JRE\`. 
     
@@ -152,6 +162,8 @@ For local installations, you must run Setup as an administrator. If you install 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver16"
+
+1. Find and copy the JRE home path.
 
     This will depend on the runtime and the installation options. For example, the default installation folder for Zulu is `%ProgramFiles%\Zulu\JRE\`. 
 

@@ -46,17 +46,6 @@ Available installation packages for SQL Server 2022 on Linux:
 |mssql-server-extensibility  | All | Extensibility framework used to run Python and R. |
 
 
-<a name="RHEL"></a>
-
-## Install on RHEL TODO
-
-```bash
-sudo yum install mssql-server-extensibility
-```
-
-TODO 
-
-
 <a name="ubuntu"></a>
 
 ## Install on Ubuntu
@@ -242,6 +231,11 @@ The following commands register the repository providing the R language platform
     GO
     ```
 
+<a name="RHEL"></a>
+
+## Install on RHEL TODO
+
+Installation for SQL Server 2022 (Preview) Machine Learning Services for Red Hat Enterprise Linux (RHEL) is currently not supported.
 
 <a name="SLES"></a>
 

@@ -133,7 +133,7 @@ Granular permissions for [Dynamic Data Masking](../relational-databases/security
 * `##MS_LoginManager##`
 
 ## Query Store improvements in SQL Server 2022
-Query Store is now on by default for all newly created SQL Server databases to help customers better track performance history, troubleshoot query plan related issues, and enable new capabilities in Azure SQL Database and SQL Server 2022. 
+Query Store is now on by default for all newly created SQL Server databases to help customers better track performance history, troubleshoot query plan related issues, and enable new capabilities in Azure SQL Database and SQL Server 2022. Additionally, Query Store hints are a preview feature in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
 
 In order to take advantage of SQL Server 2022 capabilities such as Query Store hints, CE Feedback, Degree of Parallelism (DOP) Feedback, and Memory Grant Feedback (MGF) persistence it is necessary to have Query Store enabled by default.
 

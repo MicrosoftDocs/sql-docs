@@ -132,11 +132,11 @@ The following commands register the repository providing the R language platform
     library("RevoScaleR")
     ```
 
-16. Configure the installed R runtime with SQL Server for Linux.
+16. Configure the installed R runtime with SQL Server for Linux. *RFolderVersion* is the version-specific folder name for your installation of R runtime, for example, `R4.2`.
 
     ```bash  
-    sudo /opt/mssql/bin/mssql-conf set extensibility rbinpath /path/to/RHOME/lib/R/bin/R
-    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /path/to/RHOME/
+    sudo /opt/mssql/bin/mssql-conf set extensibility rbinpath /path/to/RFolderVersion/lib/R/bin/R
+    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /path/to/RFolderVersion/
 
     systemctl restart mssql-launchpadd.service
     ```
@@ -150,7 +150,7 @@ The following commands register the repository providing the R language platform
     GO
     ```
 
-19. Verify the installation by executing a simple T-SQL command to return the version of R:
+18. Verify the installation by executing a simple T-SQL command to return the version of R:
 
     ```sql
     EXEC sp_execute_external_script @script=N'print(R.version)',@language=N'R';

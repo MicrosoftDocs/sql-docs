@@ -9,8 +9,8 @@ ms.subservice: high-availability
 ms.custom: sqldbrb=2
 ms.devlang: 
 ms.topic: conceptual
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: kendralittle, mathoma
 ms.date: 10/18/2021
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"

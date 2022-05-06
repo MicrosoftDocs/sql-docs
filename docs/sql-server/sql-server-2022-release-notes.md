@@ -15,7 +15,7 @@ monikerRange: "= sql-server-ver16"
 
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)]. For related information, see:
 
-> [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](what-s-new-in-sql-server-2022.md)
+> [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](what-s-new-in-sql-server-2022.md).
 
 ## [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]
 

@@ -60,18 +60,8 @@ CDC works by harvesting the transaction log to capture all modifications perform
 - In CDC, the change data is populated internally to a sibling table in the database.
 - In Azure Synapse Link, the data will be cached in memory to be consumed by another task (change publishing) and eventually written to a landing zone in Azure Storage. 
 - To parallelize further, CDC also has a cleanup job that is responsible for removing old entries from change tables, once they have expired or are no longer needed. Synapse Link will not require this; cleanup is the responsibility of the landing zone service in Azure Storage.
-
-A high-level summary of how the existing SQL Server CDC change capture process work is as follows:  
-
-1. When CDC is initialized, SQL Server will begin to maintain additional metadata about the database, specifically an LSN that represents the oldest commit record for transactions that have not yet been persisted to a CDC change table. This is called the `ReplEndLsn`. 
-2. When the capture job is executed, the first log scan starts from `ReplEndLsn` to find all the replicated commit transactions (up to a configurable maximum per batch) and save it to a hash table. 
-3. Then, a second log scan is performed from the oldest `BEGIN LSN` for the hashed transactions. 
-    a. Upon finding a log record marked for replication, the `rowsetid` will be resolved to a table unique identifier to determine if that table is enabled for CDC. 
-    b. If the table is enabled for CDC, the column values and metadata are written into the CDC change table. 
-4. `ReplEndLsn` is advanced via `sp_repldone`. 
-5. GOTO 2.
  
-For Azure Synapse Link, in Step 3b, the column values will be cached in a queue to be consumed by change publish workers. Each execution of the change capture process produces one batch of incremental changes for a database. The batch size is controlled by the number of transactions that the log reader processes, which is a configurable value. 
+For Azure Synapse Link, the column values will be cached in a queue to be consumed by change publish workers. Each execution of the change capture process produces one batch of incremental changes for a database. The batch size is controlled by the number of transactions that the log reader processes, which is a configurable value. 
 
 ### Change buffer and caching 
 
@@ -98,7 +88,7 @@ To summarize, the change publisher worker operates as follows:
 4. If last change row in batch and change capture job is complete.
 5. Add batch to commit job queue.
 
-Each Azure Synapse Link for SQL Server table group in the instance has its own set of partitions, and partition on each table. This is an intentional decision to minimize the effect of an Azure Storage outage. Each topic publishes to a distinct landing zone. When a storage outage occurs, it can cause a landing zone to become unavailable which will block publications to that landing zone. Guaranteeing that each partition only spans tables in a single topic will prevent a single landing zone outage from blocking publications for other topics. 
+Each Azure Synapse Link for SQL Server table group in the instance has its own set of partitions, and partition on each table. This is an intentional decision to minimize the effect of an Azure Storage outage. Each table group publishes to a distinct landing zone. When a storage outage occurs, it can cause a landing zone to become unavailable which will block publications to that landing zone. Guaranteeing that each partition only spans tables in a single table group will prevent a single landing zone outage from blocking publications for other table groups. 
 
 ### Change commit 
 
@@ -114,15 +104,15 @@ When an existing SQL Server table containing data is added to the Azure Synapse 
 
 1. Customer enables a table (i.e `tab1`) for Synapse publishing. This adds a row in metadata table `MSSynapseLinkTables` with the starting state as "Enabled". 
 2. A timer thread queries the metadata table periodically to poll for any tables with "Enabled" state. With some throttling mechanism, it starts the export process in another thread: 
-    a. Update the state of `tab1` to be "Exporting". 
-    b. Call landing zone library to signal start of full snapshot of `tab1`.  
-    c. Inform capture process to start capture changes for the tables. 
-    d. Extract schema from live schema and write to landing zone. 
-    e. Take brief shared table lock and retrieve the start LSN for reconciliation.  
-    f. Calls data extraction T-SQL to extract table to the destination. 
-    g. Update the state of `tab1` to be "Exported" state. 
-    h. Get end of log again for end LSN of reconciliation.  
-    i. Update the state of `tab1` to be "Active". 
+    1. Update the state of `tab1` to be "Exporting". 
+    1. Call landing zone library to signal start of full snapshot of `tab1`.  
+    1. Inform capture process to start capture changes for the tables. 
+    1. Extract schema from live schema and write to landing zone. 
+    1. Take brief shared table lock and retrieve the start LSN for reconciliation.  
+    1. Calls data extraction T-SQL to extract table to the destination. 
+    1. Update the state of `tab1` to be "Exported" state. 
+    1. Get end of log again for end LSN of reconciliation.  
+    1. Update the state of `tab1` to be "Active". 
 
 Step 2.b. and 2.h. are the steps to write the start/end snapshot manifest to landing zone. 
 

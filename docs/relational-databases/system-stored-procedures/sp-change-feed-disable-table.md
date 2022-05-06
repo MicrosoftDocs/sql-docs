@@ -61,11 +61,8 @@ The last changes published and synchronized to Azure Synapse cannot be guarantee
 ## See also  
 
 - [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
-- [sp_change_feed_enable_db (Transact-SQL)](sp-change-feed-enable-db.md)
 - [sp_change_feed_disable_db (Transact-SQL)](sp-change-feed-disable-db.md)
-- [sp_change_feed_create_table_group (Transact-SQL)](sp-change-feed-create-table-group.md)
 - [sp_change_feed_drop_table_group (Transact-SQL)](sp-change-feed-drop-table-group.md)
-- [sp_change_feed_enable_table (Transact-SQL)](sp-change-feed-enable-table.md)
 
 ## Next steps
 

@@ -13260,9 +13260,11 @@ items:
       - name: sys.dm_db_objects_disabled_on_compatibility_level_change
         href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
     - name: Azure Synapse Link
-      item:
+      items:
       - name: sys.dm_change_feed_errors
         href: relational-databases/system-dynamic-management-views/sys-dm-change-feed-errors.md
+      - name: sys.dm_change_feed_log_scan_sessions
+        href: relational-databases/system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md
     - name: Azure Synapse Analytics & Parallel Data Warehouse
       href: relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md
       items:
@@ -14960,18 +14962,12 @@ items:
         href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
     - name: Azure Synapse Link for SQL Server
       items:
-      - name: sp_change_feed_create_table_group
-        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
       - name: sp_change_feed_disable_db
         href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
       - name: sp_change_feed_disable_table
         href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md        
       - name: sp_change_feed_drop_table_group
         href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
-      - name: sp_change_feed_enable_db
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
-      - name: sp_change_feed_enable_table
-        href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
       - name: sp_help_change_feed
         href: relational-databases/system-stored-procedures/sp-help-change-feed.md
     - name: SQL Server Agent

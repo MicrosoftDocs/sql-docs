@@ -42,7 +42,7 @@ EXECUTE sys.sp_help_change_feed;
 
 ## Permissions  
 
-A user must have the VIEW PERFORMANCESTATE permission.
+Currently, a user must be a member of the sysadmin server role or db_owner database role.
 
 ## See also  
 

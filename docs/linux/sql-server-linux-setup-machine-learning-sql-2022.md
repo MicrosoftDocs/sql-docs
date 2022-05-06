@@ -21,10 +21,8 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 
 You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#supportedplatforms).
 
-::: moniker range="<=sql-server-linux-ver15"
 > [!IMPORTANT]
 > This article refers to [!INCLUDE[sssql22-md](../includes/sssql22-md.md)]. For SQL Server 2019 on Linux, see to [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning.md).
-::: moniker-end
 
 ## Pre-install checklist
 
@@ -133,10 +131,10 @@ The following commands register the repository providing the R language platform
 
 13. Download [RevoScaleR Linux](https://go.microsoft.com/fwlink/?LinkID=2193829).
 
-14. Install RevoScaleR Linux.
+14. Install RevoScaleR Linux, specifying the file relative path to the `.tar.gz` file.
 
     ```r
-    install.packages('RevoScaleR.tar.gz', repos = NULL)
+    install.packages('/path/to/RevoScaleR.tar.gz', repos = NULL)
     ```
 
 15. Verify RevoScaleR installation from the R terminal.
@@ -194,10 +192,10 @@ The following commands register the repository providing the R language platform
 
 5. Download [revoscalepy for Linux](https://go.microsoft.com/fwlink/?LinkID=2193830).
 
-6. Install revoscalepy for the root user.
+6. Install revoscalepy for the root user, specifying the relative file path to the `.whl` file.
 
     ```bash  
-    sudo -H pip install revoscalepy.whl
+    sudo -H pip install /path/to/revoscalepy.whl
     ```
 
 7. Verify the revoscalepy installation from the python terminal. Verify the library can be imported.

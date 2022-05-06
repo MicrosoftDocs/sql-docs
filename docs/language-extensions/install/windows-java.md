@@ -103,6 +103,7 @@ For local installations, you must run Setup as an administrator. If you install 
     - **Machine Learning Services and Language Extensions**
   
         This option installs the Language Extensions component that support Java code execution.
+::: moniker range="=sql-server-ver15"
 
         - If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Machine Learning Services and Language Extensions** and **Java**.
 
@@ -110,17 +111,25 @@ For local installations, you must run Setup as an administrator. If you install 
 
         If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 
-    ![Feature options for Language Extensions](../media/sql-install-feature-selection.png)
+    ![Feature options for Language Extensions](../media/windows-java/2019/sql-install-feature-selection.png)
+::: moniker-end
+
+::: moniker range="=sql-server-ver16"
+        - Select **Machine Learning Services and Language Extensions**. 
+
+    ![Feature options for Language Extensions](../media/windows-java/2022/sql-server-2022-machine-learning-services-feature-selection.png)
+::: moniker-end
+::: moniker range="=sql-server-ver15"
 
 1. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up.
 
     Select the **Install Open JRE 11.0.3 included with this installation**.
 
-    ![Choose Java install location](../media/sql-install-openjdk.png)
+    ![Choose Java install location](../media/windows-java/2019/sql-install-openjdk.png)
 
     > [!NOTE]
     > The **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
-
+::: moniker-end
 1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   
     + Database Engine Services
@@ -139,7 +148,7 @@ For local installations, you must run Setup as an administrator. If you install 
 ::: moniker range="=sql-server-ver15"
 
     For example, the JRE home path for the default Java runtime Zulu JRE 11.0.3 is `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Binn\AZUL-OpenJDK-JRE\`. 
-
+    
     Depending on your SQL Server installation path or if you chose another Java runtime, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
 
 ::: moniker-end
@@ -225,7 +234,7 @@ You can restart the service using the right-click **Restart** command for the in
 1. Connect to the instance where you installed Language Extensions, click **New Query** to open a query window, and run the following command:
 
     ```sql
-    sp_configure
+    EXEC sp_configure;
     ```
 
     The value for the property, `external scripts enabled`, should be **0** at this point. The feature is turned off by default and must be explicitly enabled by an administrator before you can run Java code.
@@ -234,6 +243,7 @@ You can restart the service using the right-click **Restart** command for the in
 
     ```sql
     EXEC sp_configure 'external scripts enabled', 1
+    GO
     RECONFIGURE WITH OVERRIDE
     ```
 
@@ -264,7 +274,7 @@ Use the following steps to verify that all components used to launch external sc
 1. In SQL Server Management Studio or Azure Data Studio, open a new query window, and run the following statement:
 
     ```sql
-    EXEC sp_configure 'external scripts enabled'
+    EXEC sp_configure 'external scripts enabled';
     ```
 
     The **run_value** is now set to 1.

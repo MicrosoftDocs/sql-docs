@@ -141,6 +141,9 @@ CREATE DATABASE Database2 AS COPY OF server1.Database1 (SERVICE_OBJECTIVE = ELAS
 
 You can use the steps in the [Copy a SQL Database to a different server](#copy-to-a-different-server) section to copy your database to a server in a different subscription using T-SQL. Make sure you use a login that has the same name and password as the database owner of the source database. Additionally, the login must be a member of the `dbmanager` role or a server administrator, on both source and target servers.
 
+> [!TIP]
+> When copying databases in the same Azure Active Directory tenant, authorization on the source and destination servers is simplified if you initiate the copy command using an AAD authentication login with sufficient access on both servers. The minimum necessary level of access is membership in the `dbmanager` role in the master database on both servers. For example, you can use an AAD login is a member of an AAD group designated as the server administrator on both servers.
+
 ```sql
 --Step# 1
 --Create login and user in the master database of the source server.

@@ -28,11 +28,7 @@ The Query Store feature provides you with insight on query plan choice and perfo
 > [!IMPORTANT]
 > If you are using Query Store for just in time workload insights in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
 
-<<<<<<< HEAD
 ## <a name="Enabling"></a> Enable Query Store
-=======
-## <a name="Enabling"></a> Enable the Query Store
->>>>>>> 80bb4ff33b54c53b35ff60bfc6cc7894daa27767
 
  Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics databases, and is enabled by default for new Azure SQL Database databases.
 

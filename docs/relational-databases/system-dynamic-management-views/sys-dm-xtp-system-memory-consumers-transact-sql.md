@@ -42,8 +42,8 @@ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../i
 |lookaside_id|**bigint**|The ID of the thread-local, lookaside memory provider.|
 |pagepool_id|**bigint**|The ID of the thread-local, page pool memory provider.|
 |allocated_bytes|**bigint**|Number of bytes reserved for this consumer.|
-|used_bytes|**bigint**|Bytes used by this consumer. Applies only to varheap memory consumers.|
-|allocation_count|**int**|Number of allocations.|
+|used_bytes|**bigint**|Bytes used by this consumer. Applies only to varheap memory consumers.<br /><br />Starting with [!INCLUDE [sqlserver2022](../../includes/sssql22-md.md)], applies to varheap and lookaside memory consumers.|
+|allocation_count|**int**|Number of allocations.<br /><br />Starting with [!INCLUDE [sqlserver2022](../../includes/sssql22-md.md)], the number of allocations from the system heap for lookaside memory consumers.|
 |partition_count|**int**|Internal use only.|
 |sizeclass_count|**int**|Internal use only.|
 |min_sizeclass|**int**|Internal use only.|

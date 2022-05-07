@@ -29,7 +29,7 @@ The following sections provide an overview of these features.
 
 ## Business continuity through Azure
 
-Disaster recovery in the cloud with [Link feature for Azure SQL Managed Instance (preview)](../../azure-sql/managed-instance/managed-instance-link-feature-overview.md).
+Disaster recovery in the cloud with [Link feature for Azure SQL Managed Instance (preview)](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview).
 
 ## Azure Synapse Link support
 
@@ -49,7 +49,7 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
 
 ## Additional security capabilities
 
-- In-database blockchain to create an immutable track record of data modifications over time. See [SQL Database ledger](../../azure-sql/database/ledger-landing.yml)
+- In-database blockchain to create an immutable track record of data modifications over time. See [SQL Database ledger](/azure/azure-sql/database/ledger-landing)
 - Azure Active Directory authentication
 - Enhanced encryption (TDS 8.0 - TDS wrapped in TLS)
 - Least privileges enablement for administrator tasks

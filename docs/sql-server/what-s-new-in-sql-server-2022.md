@@ -63,7 +63,6 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
 * Optimized plan forcing using compilation replay improves the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).
 * Data Virtualization - ODBC driver refresh
 
-
 ## Language improvements
 
 ### Approximate percentile
@@ -74,16 +73,25 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
 
 ### Time series functions
 
+Time series functions introduce the ability to store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.
+
 * [DATE_BUCKET](/azure/azure-sql-edge/date-bucket-tsql)
 * [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)
 * GENERATE_SERIES
 * [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)
 
+## Statistics
 
-## Statistics 
 * Statistics [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)
 
 ## Business continuity and disaster recovery
+
+* Contained availability groups - creates an Always On availability group that supports:
+
+  * Managing metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level.
+  * Specialized contained system databases within the availability group.
+
+  For more information, see [What is a contained availability group?](../database-engine/availability-groups/windows/contained-availability-groups-overview.md)
 
 * Distributed availability group lossless failover
   * Adds distributed availability group for support for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`. For more information, review [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md).
@@ -97,6 +105,10 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
 ### Granular permissions for dynamic data masking
 
 Granular permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
+
+### XML compression
+
+XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements.
 
 ## TDS 8.0 - TDS wrapped in TLS
 

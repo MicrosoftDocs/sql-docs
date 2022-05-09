@@ -88,5 +88,5 @@ dotnet build "/home/myuser/Documents/DatabaseProject1/DatabaseProject1.sqlproj" 
 ## Next steps
 
 - [SQL Database Projects extension](sql-database-project-extension.md)
-- [SDK-style SQL projects in SQL Database Projects extension](sql-database-project-extension-sdk-s.md)
+- [SDK-style SQL projects in SQL Database Projects extension](sql-database-project-extension-sdk-style-projects.md)
 - [Publish SQL database projects](sql-database-project-extension-build.md#publish-a-database-project)

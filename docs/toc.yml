@@ -10466,6 +10466,8 @@ items:
       href: tools/visual-studio-code/sql-server-develop-use-vscode.md
     - name: Query History
       href: tools/visual-studio-code/mssql-query-history.md
+    - name: SQL Database Projects
+      href: azure-data-studio/extensions/sql-database-project-extension.md
 - name: Tutorials
   items:
   - name: SQL Server

@@ -73,7 +73,8 @@ For details and known limitations, see [Create Synapse Link for SQL Server 2022 
   - Improve memory management in large memory servers to reduce out of memory conditions
   - Add a new stored procedure to manually release unused memory on demand
 
-- Concurrent global allocation map (GAM) and shared global allocation map (SGAM) updates allows multiple threads updating GAM and SGAM pages under S latch.
+- Concurrent update to global allocation map (GAM) pages and shared global allocation map (SGAM) pages reduces page latch contention while allocating/deallocating data pages and extents.
+- Improvements on buffer pool scan by using parallel tasks. Learn more about [Operations that trigger a buffer pool scan may run slowly on large-memory computers](https://go.microsoft.com/fwlink/?linkid=2132602).
 - Degree of parallelism (DOP) feedback automatically adjusts degree of parallelism for repeating queries to optimize for workloads where excessive parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. See [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).
 - Multiple TCP connections for distributed availability groups
   - Enables the use of multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.

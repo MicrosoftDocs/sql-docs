@@ -2,7 +2,7 @@
 title: "Create XML Indexes"
 description: Learn how to create primary and secondary XML indexes in SQL Server.
 ms.custom: ""
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: randolphwest
@@ -11,7 +11,6 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "indexes [XML in SQL Server]"
   - "XML indexes [SQL Server], creating"
-ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: MikeRayMSFT
 ms.author: mikeray
 ---
@@ -31,7 +30,7 @@ Note the following when you're creating an XML index:
 
 - If an XML index exists, the clustered, primary key of the table can't be modified. You'll have to drop all XML indexes on the table before modifying the primary key.
 
-- A primary XML index can be created on a single **xml** type column. You can't create any other type of index with the XML type column as a key column. However, you can include the **xml** L type column in a non-XML index. Each **xml** type column in a table can have its own primary XML index. However, only one primary XML index per **xml** type column is permitted.
+- A primary XML index can be created on a single **xml** type column. You can't create any other type of index with the **xml** type column as a key column. However, you can include the **xml** type column in a non-XML index. Each **xml** type column in a table can have its own primary XML index. However, only one primary XML index per **xml** type column is permitted.
 
 - XML indexes exist in the same namespace as non-XML indexes. Therefore, you can't have an XML index and a non-XML index on the same table with the same name.
 
@@ -47,12 +46,12 @@ Note the following when you're creating an XML index:
 
 - To change an **xml** type column from untyped to typed XML, or vice versa, by using the ALTER TABLE ALTER COLUMN option, no XML index on the column should exist. If one does exist, it must be dropped before the column type change is tried.
 
-- The option ARITHABORT must be set to ON when an XML index is created. To query, insert, delete, or update values in the XML column using XML data type methods, the same option must be set on the connection. If it is not, the XML data type methods will fail.
+- The option ARITHABORT must be set to ON when an XML index is created. To query, insert, delete, or update values in the XML column using **xml** data type methods, the same option must be set on the connection. If it isn't, the **xml** data type methods will fail.
 
-    > [!NOTE]  
-    > Information about an XML index can be found in catalog views. However, **sp_helpindex** is not supported. Examples provided later in this topic show how to query the catalog views to find XML index information.
+    > [!NOTE]
+    > Information about an XML index can be found in catalog views. However, **sp_helpindex** isn't supported. Examples provided later in this topic show how to query the catalog views to find XML index information.
 
-When creating or recreating a primary XML index on an XML data type column that contains values of the XML Schema types `xs:date` or `xs:dateTime` (or any subtypes of these types) that have a year of less than 1, the index creation will fail in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] allowed these values, so this problem can occur when creating indexes in a database generated in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).
+When creating or recreating a primary XML index on an **xml** data type column that contains values of the XML Schema types `xs:date` or `xs:dateTime` (or any subtypes of these types) that have a year of less than 1, the index creation will fail in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] allowed these values, so this problem can occur when creating indexes in a database generated in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).
 
 ### Example: Create a primary XML index
 
@@ -98,7 +97,7 @@ SELECT  *
 FROM    sys.xml_indexes;
 ```
 
- The values returned in the `secondary_type_desc` column can be NULL, PATH, VALUE, or PROPERTY. For the primary XML index, the value returned is NULL.
+The values returned in the `secondary_type_desc` column can be NULL, PATH, VALUE, or PROPERTY. For the primary XML index, the value returned is NULL.
 
 ### Example: Create secondary XML indexes
 
@@ -133,7 +132,7 @@ SELECT  *
 FROM    sys.xml_indexes;
 ```
 
- You can also query the catalog view for index information.
+You can also query the catalog view for index information.
 
 ```sql
 SELECT *
@@ -141,7 +140,7 @@ FROM sys.xml_indexes
 WHERE object_id = object_id('T');
 ```
 
- You can add sample data and then review the XML index information.
+You can add sample data and then review the XML index information.
 
 ```sql
 INSERT INTO T VALUES (1,

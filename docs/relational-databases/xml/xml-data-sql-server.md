@@ -12,7 +12,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.custom: ""
-ms.date: 05/05/2022
+ms.date: 05/09/2022
 # monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # XML data (SQL Server)
@@ -30,6 +30,8 @@ ms.date: 05/05/2022
 - The FOR XML clause, to retrieve relational data in XML format.
 
 - The OPENXML function, to retrieve XML data in relational format.
+
+- Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).
 
 ## Next steps
 

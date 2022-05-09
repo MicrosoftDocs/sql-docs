@@ -9,6 +9,7 @@ ms.date: 02/22/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+monikerRange: ">=sql-server-ver15"
 ---
 
 # Big data options on the Microsoft SQL Server platform

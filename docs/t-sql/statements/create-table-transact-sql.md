@@ -740,7 +740,7 @@ Specifies the order in which the column or columns participating in table constr
 Is the name of the partition scheme that defines the filegroups onto which the partitions of a partitioned table will be mapped. The partition scheme must exist within the database.
 
 [ _partition\_column\_name**.** ]   
-Specifies the column against which a partitioned table will be partitioned. The column must match that specified in the partition function that *partition_scheme_name* is using in terms of data type, length, and precision. A computed columns that participates in a partition function must be explicitly marked PERSISTED.
+Specifies the column against which a partitioned table will be partitioned. The column must match that specified in the partition function that *partition_scheme_name* is using in terms of data type, length, and precision. A computed column that participates in a partition function must be explicitly marked PERSISTED.
 
 > [!IMPORTANT]
 > We recommend that you specify NOT NULL on the partitioning column of partitioned tables, and also nonpartitioned tables that are sources or targets of ALTER TABLE...SWITCH operations. Doing this makes sure that any CHECK constraints on partitioning columns do not have to check for null values.
@@ -978,7 +978,7 @@ Specifies the retention period policy for the table. The retention period is spe
 MEMORY_OPTIMIZED    
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] does not support memory optimized tables in General Purpose tier.
 
-The value ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quickstart 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md).
+The value ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimize the performance of transaction processing. To get started with In-Memory OLTP see [Quickstart 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md).
 
 The default value OFF indicates that the table is disk-based.
 
@@ -1843,7 +1843,7 @@ CREATE TABLE [dbo].[data_retention_table]
 WITH (DATA_DELETION = ON ( FILTER_COLUMN = [dbdatetime2], RETENTION_PERIOD = 1 WEEKS ))
 ```
 
-### Y. Creating a updatable ledger table
+### Y. Creating an updatable ledger table
 
 The following example creates an updatable ledger table that is not a temporal table with an anonymous history table (the system will generate the name of the history table) and the generated ledger view name. As the names of the required generated always columns and the additional columns in the ledger view are not specified, the columns will have the default names.
 

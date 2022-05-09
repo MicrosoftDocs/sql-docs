@@ -111,7 +111,7 @@ In this example below, we're going to create two node tables; Person, City table
 
 So, lets drop the "Cities" table we already created and re-create it, making sure to check the Graph Table option in the Table Properties pane and select "Node" from the drop-down. Pay attention to the script change.
 
-:::image type="content" source="media/table-designer-azure-data-studio/table-designer-creating-a-node-graph-table.png" alt-text="":::
+:::image type="content" source="media/table-designer-azure-data-studio/table-designer-creating-a-node-graph-table.png" alt-text="Table Designer showing how to create node graph table":::
 
 Let's do the same for our "Persons" node table
 

@@ -38,8 +38,23 @@ ms.author: mathoma
 |[Related Content](#RelatedContent)|Contains a list of relevant resources that are external to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.|  
   
 ##  <a name="IsHadrEnabled"></a> Always On Availability Groups Is Not Enabled  
- The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must be enabled on each of the instances of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
-  
+
+The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must be enabled on each of the instances of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+
+If the Always On Availability Groups feature is not enabled, you will get this error message when you try to create an Availability group on SQL Server. 
+
+`The Always On Availability Groups feature must be enabled for server instance 'SQL1VM' before you can create an availability group on this instance. To enable this feature, open the SQL Server Configuration Manager, select SQL Server Services, right-click on the SQL Server service name, select Properties, and use the Always On Availability Groups tab of the Server Properties dialog. Enabling Always On Availability Groups may require that the server instance is hosted by a Windows Server Failover Cluster (WSFC) node. (Microsoft.SqlServer.Management.HadrTasks)`
+
+The error message clearly indicates that the AG feature is not enabled and also directs you how to enable it. 
+
+If SQL Server was installed and the Always On Availability Groups feature enabled before you install the Windows Failover Clustering feature, you may get this error you when you attempt to create an Always On AG. In such cases you can take the following steps to resolve it: 
+
+1. Disable the AG feature
+1. Restart SQL Server service
+1. Enable the AG feature back
+1. Again restart the SQL Service
+
+
 ##  <a name="Accounts"></a> Accounts  
  The accounts under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running must be correctly configured.  
   

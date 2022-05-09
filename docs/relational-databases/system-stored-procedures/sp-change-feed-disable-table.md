@@ -38,7 +38,6 @@ GO
 ```  
 
 ## Arguments  
-- 
 #### @table_group_id
 
 Required. Data type is uniqueidentifier. 

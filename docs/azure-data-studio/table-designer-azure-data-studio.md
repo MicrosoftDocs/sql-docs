@@ -111,7 +111,7 @@ In this example below, we're going to create two node tables; Person, City table
 
 So, lets drop the "Cities" table we already created and re-create it, making sure to check the Graph Table option in the Table Properties pane and select "Node" from the drop-down. Pay attention to the script change.
 
-:::image type="content" source="media/table-designer-azure-data-studio/table-designer-Creating a Node Graph Table.png" alt-text="Table Designer Showing how to create a node graph table":::
+:::image type="content" source="media/table-designer-azure-data-studio/table-designer-creating-a-node-graph-table.png" alt-text="":::
 
 Let's do the same for our "Persons" node table
 
@@ -157,7 +157,7 @@ Choosing "Schema and Data" saves both the schema and Data to memory if there's a
 
 ### System-Versioned Tables
 
-System versioning can also be done directly on Azure Data Studio. If you're new to system versioning, check out [Temporal Tables on SQL Server ](/sql/relational-databases/tables/creating-a-system-versioned-temporal-table.md). System-versioning tables must have the period columns defined.
+System versioning can also be done directly on Azure Data Studio. If you're new to system versioning, check out [Temporal Tables on SQL Server ](/sql/relational-databases/tables/creating-a-system-versioned-temporal-table). System-versioning tables must have the period columns defined.
 
 #### Creating a System-Versioned Table
 

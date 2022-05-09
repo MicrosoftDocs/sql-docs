@@ -93,7 +93,7 @@ ms.author: wiassaf
  OFF  
  An error message occurs when duplicate key values are inserted into a unique index. The entire INSERT operation is rolled back.  
   
- IGNORE_DUP_KEY cannot be set to ON  for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.  
+ IGNORE_DUP_KEY can't be set to ON  for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.  
   
  To view IGNORE_DUP_KEY, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
@@ -103,7 +103,7 @@ ms.author: wiassaf
  Specifies whether statistics are recomputed. The default is OFF.  
   
  ON  
- Out-of-date statistics are not automatically recomputed.  
+ Out-of-date statistics aren't automatically recomputed.  
   
  OFF  
  Automatic statistics updating are enabled.  
@@ -117,7 +117,7 @@ ms.author: wiassaf
  Row locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines when row locks are used.  
   
  OFF  
- Row locks are not used.  
+ Row locks aren't used.  
   
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
@@ -128,7 +128,7 @@ ms.author: wiassaf
  Page locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines when page locks are used.  
   
  OFF  
- Page locks are not used.  
+ Page locks aren't used.  
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
@@ -156,7 +156,7 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
 >  Unique nonclustered indexes cannot be created online. This includes indexes that are created due to a UNIQUE or PRIMARY KEY constraint.  
   
  ON  
- Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This enables queries or updates to the underlying table and indexes to proceed. At the start of the operation, a Shared (S) lock is held on the source object for a very short period of time. At the end of the operation, for a short period of time, an S (Shared) lock is acquired on the source if a nonclustered index is being created; or an SCH-M (Schema Modification) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. Although the online index locks are short metadata locks, especially the Sch-M lock must wait for all blocking transactions to be completed on this table. During the wait time the Sch-M lock blocks all other transactions that wait behind this lock when accessing the same table. ONLINE cannot be set to ON when an index is being created on a local temporary table.  
+ Long-term table locks aren't held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This enables queries or updates to the underlying table and indexes to proceed. At the start of the operation, a Shared (S) lock is held on the source object for a very short period of time. At the end of the operation, for a short period of time, an S (Shared) lock is acquired on the source if a nonclustered index is being created; or an SCH-M (Schema Modification) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. Although the online index locks are short metadata locks, especially the Sch-M lock must wait for all blocking transactions to be completed on this table. During the wait time, the Sch-M lock blocks all other transactions that wait behind this lock when accessing the same table. ONLINE cannot be set to ON when an index is being created on a local temporary table.  
   
 > [!NOTE]  
 >  Online index rebuild can set the *low_priority_lock_wait* options described later in this section. *low_priority_lock_wait* manages S and Sch-M lock priority during online index rebuild.  
@@ -172,7 +172,7 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
  MAXDOP **=**_max_degree_of_parallelism_  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
- Overrides the **max degree of parallelism** configuration option for the duration of the index operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
+ Overrides the **max degree of parallelism** configuration option during the index operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
  *max_degree_of_parallelism* can be:  
   
@@ -191,13 +191,13 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
  Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:  
   
  NONE  
- Table or specified partitions are not compressed. Applies only to rowstore tables; does not apply to columnstore tables.  
+ Table or specified partitions aren't compressed. Applies only to rowstore tables; doesn't apply to columnstore tables.  
   
  ROW  
- Table or specified partitions are compressed by using row compression. Applies only to rowstore tables; does not apply to columnstore tables.  
+ Table or specified partitions are compressed by using row compression. Applies only to rowstore tables; doesn't apply to columnstore tables.  
   
  PAGE  
- Table or specified partitions are compressed by using page compression. Applies only to rowstore tables; does not apply to columnstore tables.  
+ Table or specified partitions are compressed by using page compression. Applies only to rowstore tables; doesn't apply to columnstore tables.  
   
  COLUMNSTORE  
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.  
@@ -220,12 +220,12 @@ ON
 Columns using the **xml** data type are compressed.
 
 OFF   
-Columns using the **xml** data type are not compressed.
+Columns using the **xml** data type aren't compressed.
   
 ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)**  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
- Specifies the partitions to which the DATA_COMPRESSION or XML_COMPRESSION settings apply. If the table is not partitioned, the ON PARTITIONS argument generates an error. If the ON PARTITIONS clause is not provided, the DATA_COMPRESSION or XML_COMPRESSION option applies to all partitions of a partitioned table.  
+ Specifies the partitions to which the DATA_COMPRESSION or XML_COMPRESSION settings apply. If the table isn't partitioned, the ON PARTITIONS argument generates an error. If the ON PARTITIONS clause isn't provided, the DATA_COMPRESSION or XML_COMPRESSION option applies to all partitions of a partitioned table.  
 
 > [!NOTE]  
 > XML_COMPRESSION is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
@@ -258,7 +258,7 @@ REBUILD WITH
 ```  
 
 **\<single_partition_rebuild__option>**  
- In most cases, rebuilding an index rebuilds all partitions of a partitioned index. The following options, when applied to a single partition, do not rebuild all partitions.  
+ In most cases, rebuilding an index also rebuilds all partitions of a partitioned index. The following options, when applied to a single partition, don't rebuild all partitions.  
   
 -   SORT_IN_TEMPDB  
 -   MAXDOP  
@@ -268,7 +268,7 @@ REBUILD WITH
 **low_priority_lock_wait**  
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.  
   
- A **SWITCH** or online index rebuild completes as soon as there are no blocking operations for this table. *WAIT_AT_LOW_PRIORITY* indicates that if the **SWITCH** or online index rebuild operation cannot be completed immediately, it waits. The operation holds low priority locks, allowing other operations that hold locks conflicting with the DDL statement to proceed. Omitting the **WAIT AT LOW PRIORITY** option is equivalent to `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
+ A **SWITCH** or online index rebuild completes as soon as there are no blocking operations for this table. *WAIT_AT_LOW_PRIORITY* indicates that if the **SWITCH** or online index rebuild operation can't be completed immediately, it waits. The operation holds low priority locks, allowing other operations that hold locks conflicting with the DDL statement to proceed. Omitting the **WAIT AT LOW PRIORITY** option is equivalent to `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   
 MAX_DURATION = *time* [**MINUTES** ]  
  The wait time (an integer value specified in minutes) that the **SWITCH** or online index rebuild lock that must be acquired, waits when executing the DDL command. The SWITCH or online index rebuild operation attempts to complete immediately. If the operation is blocked for the **MAX_DURATION** time, one of the **ABORT_AFTER_WAIT** actions is executed. **MAX_DURATION** time is always in minutes, and the word **MINUTES** can be omitted.  

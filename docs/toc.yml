@@ -7707,12 +7707,16 @@ items:
   items:
   - name: Big data options on the Microsoft SQL Server platform
     href: big-data-cluster/big-data-options.md  
-  - name: Synapse Link for SQL Server
+  - name: Azure Synapse Link for SQL
     items: 
-    - name: Synapse Link for SQL Server >
+    - name: Azure Synapse Link for SQL Server >
       href: /azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link
-    - name: Synapse Link for SQL Server change feed
+    - name: Azure Synapse Link for Azure SQL Database >
+      href: /azure/synapse-analytics/synapse-link/sql-database-synapse-link
+    - name: Azure Synapse Link for SQL change feed
       href: sql-server/synapse-link/synapse-link-sql-server-change-feed.md
+    - name: Azure Synapse Link for SQL change feed management
+      href: sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md
   - name: Machine Learning Services > 
     href: machine-learning/
   - name: Analytics Platform System > 
@@ -13268,7 +13272,7 @@ items:
       items:
       - name: sys.dm_db_objects_disabled_on_compatibility_level_change
         href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
-    - name: Azure Synapse Link
+    - name: Azure Synapse Link for SQL
       items:
       - name: sys.dm_change_feed_errors
         href: relational-databases/system-dynamic-management-views/sys-dm-change-feed-errors.md
@@ -14971,7 +14975,7 @@ items:
         href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
       - name: sp_special_columns_100
         href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
-    - name: Azure Synapse Link for SQL Server
+    - name: Azure Synapse Link for SQL
       items:
       - name: sp_change_feed_disable_db
         href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md

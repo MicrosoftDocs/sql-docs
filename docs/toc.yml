@@ -7030,8 +7030,8 @@ items:
         href: relational-databases/performance/best-practice-with-the-query-store.md
       - name: How Query Store Collects Data
         href: relational-databases/performance/how-query-store-collects-data.md
-      - name: Query Store hints
-        href: relational-databases/performance/query-store-hints.md
+      - name: In-Memory OLTP
+        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
       - name: Optimized plan forcing
         href: relational-databases/performance/optimized-plan-forcing-query-store.md
       - name: In-Memory OLTP

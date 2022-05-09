@@ -163,6 +163,30 @@ Granular permissions for [Dynamic Data Masking](../relational-databases/security
 - `##MS_DatabaseManager##`
 - `##MS_LoginManager##`
 
+## Query Store improvements in SQL Server 2022
+Query Store is now on by default for all newly created SQL Server databases to help customers better track performance history, troubleshoot query plan related issues, and enable new capabilities in Azure SQL Database and SQL Server 2022. Additionally, Query Store hints are a preview feature in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
+
+In order to take advantage of SQL Server 2022 capabilities such as Query Store hints, CE Feedback, Degree of Parallelism (DOP) Feedback, and Memory Grant Feedback (MGF) persistence it is necessary to have Query Store enabled by default.
+
+- For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to SQL Server 2022, these databases will retain the previous Query Store settings.
+
+- For databases that are restored from previous SQL Server instances it is recommended to [enable Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Enabling) and separately evaluate the [database compatibility level settings](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) as some Intelligent Query Processing features are enabled by the compatibility level setting.
+
+If there is concern about the overhead Query Store may introduce, administrators can leverage custom capture policies to further tune what the Query Store captures. Custom capture policies are available to help further tune Query Store captures. Custom capture policies can be used to be more selective about which queries, and query details are captured. For example, an administrator may choose to capture only the most expensive queries, repeated queries, or the queries that have a high level of compute overhead. [Custom capture policies](../t-sql/statements/alter-database-transact-sql-set-options.md#query_capture_policy_option_list--) can help Query Store capture the most important queries in your workload. Note that except for the STALE_CAPTURE_POLICY_THRESHOLD option, these options define the OR conditions that need to happen for queries to be captured in the defined Stale Capture Policy Threshold value. For example, these are the default values in the `QUERY_CAPTURE_MODE = AUTO`:
+
+```sql
+...
+QUERY_CAPTURE_MODE = CUSTOM,
+QUERY_CAPTURE_POLICY = ( 
+STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS, 
+EXECUTION_COUNT = 30, 
+TOTAL_COMPILE_CPU_TIME_MS = 1000, 
+TOTAL_EXECUTION_CPU_TIME_MS = 100 
+)
+...
+```
+
+
 ## Setup options
 
 Install Azure Arc agent via SQL Server command line setup. For more information, see [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt).

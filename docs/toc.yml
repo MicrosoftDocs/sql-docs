@@ -16322,6 +16322,8 @@ items:
           href: t-sql/functions/current-timezone-transact-sql.md
         - name: CURRENT_TIMEZONE_ID
           href: t-sql/functions/current-timezone-id-transact-sql.md
+        - name: DATE_BUCKET
+          href: t-sql/functions/date-bucket-transact-sql.md
         - name: DATEADD
           href: t-sql/functions/dateadd-transact-sql.md
         - name: DATEDIFF
@@ -16967,6 +16969,8 @@ items:
           items:
           - name: Overview
             href: t-sql/language-elements/relational-operators-transact-sql.md
+          - name: GENERATE_SERIES
+            href: t-sql/functions/generate-series-transact-sql.md
           - name: OPENDATASOURCE
             href: t-sql/functions/opendatasource-transact-sql.md
           - name: OPENJSON

@@ -97,9 +97,9 @@ XML compression provides a method to compress off-row XML data for both XML colu
 
 Time series functions introduce the ability to store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.
 
-- [DATE_BUCKET](/azure/azure-sql-edge/date-bucket-tsql)
+- [DATE_BUCKET](../t-sql/functions/date-bucket-transact-sql.md)
 - [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)
-- GENERATE_SERIES
+- [GENERATE_SERIES](../t-sql/functions/generate-series-transact-sql.md)
 - [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)
 
 ### Statistics

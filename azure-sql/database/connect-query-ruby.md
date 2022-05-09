@@ -1,20 +1,25 @@
 ---
-title: Use Ruby to query
-description: This topic shows you how to use Ruby to create a program that connects to a database and query it using Transact-SQL statements.
+title: Use Ruby to connect to a database and query data
+description: This quickstart shows you how to use Ruby to create a program that connects to a database and query it using Transact-SQL statements.
 titleSuffix: Azure SQL Database & SQL Managed Instance
 services: sql-database
 ms.service: sql-database
 ms.subservice: connect
-ms.custom: sqldbrb=2, mode-other
+ms.custom:
+- sqldbrb=2
+- mode-other
+- kr2b-contr-experiment
 ms.devlang: ruby
 ms.topic: quickstart
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: kendralittle, mathoma
-ms.date: 05/29/2020
+ms.date: 05/10/2022
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
+
 # Quickstart: Use Ruby to query a database in Azure SQL Database or Azure SQL Managed Instance
+
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 This quickstart demonstrates how to use [Ruby](https://www.ruby-lang.org) to connect to a database and query data with Transact-SQL statements.
@@ -48,7 +53,7 @@ To complete this quickstart, you need the following prerequisites:
 
 ## Get server connection information
 
-Get the connection information you need to connect to a database in Azure SQL Database. You'll need the fully qualified server name or host name, database name, and login information for the upcoming procedures.
+Get the connection information you need to connect to a database in Azure SQL Database. You'll need the fully qualified server name or host name, database name, and sign-in information for the upcoming procedures.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -64,9 +69,6 @@ Get the connection information you need to connect to a database in Azure SQL Da
 1. In a text or code editor, create a new file named *sqltest.rb*.
 
 1. Add the following code. Substitute the values from your database in Azure SQL Database for `<server>`, `<database>`, `<username>`, and `<password>`.
-
-   >[!IMPORTANT]
-   >The code in this example uses the sample AdventureWorksLT data, which you can choose as source when creating your database. If your database has different data, use tables from your own database in the SELECT query. 
 
    ```ruby
    require 'tiny_tds'
@@ -88,17 +90,21 @@ Get the connection information you need to connect to a database in Azure SQL Da
    end
    ```
 
+   >[!IMPORTANT]
+   >The code in this example uses the sample AdventureWorksLT data, which you can choose as source when creating your database. If your database has different data, use tables from your own database in the SELECT query.
+
 ## Run the code
 
-1. At a command prompt, run the following command:
+1. In a command prompt window, run the following command:
 
    ```bash
    ruby sqltest.rb
    ```
-   
+
 1. Verify that the top 20 Category/Product rows from your database are returned. 
 
 ## Next steps
+
 - [Design your first database in Azure SQL Database](design-first-database-tutorial.md)
 - [GitHub repository for TinyTDS](https://github.com/rails-sqlserver/tiny_tds)
 - [Report issues or ask questions about TinyTDS](https://github.com/rails-sqlserver/tiny_tds/issues)

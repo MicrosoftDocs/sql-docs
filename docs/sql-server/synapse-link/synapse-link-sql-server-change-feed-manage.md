@@ -18,13 +18,15 @@ ms.custom:
 
 This article provides details on monitoring and managing Azure Synapse Link for SQL Server and Azure SQL Database with T-SQL.
 
-- [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
-- For more information, see [Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link).
-- To get started quickly, see [Get started with Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022).
+- [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
+- For more information, see [Azure Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link).
+- For more information, see [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link).
+- To get started quickly, see [Get started with Azure Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022).
+- To get started quickly, see [Get started with Azure Synapse Link for Azure SQL Database (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database).
 
 The Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
 
-Currently, only a member of the sysadmin server role in SQL Server or the db_owner database role can execute this procedure. 
+Currently, only a member of the sysadmin server role in SQL Server or the db_owner database role can execute these procedures. 
 
 The SQL Server or the Azure SQL Database will maintain metadata specific to each table group. 
 
@@ -50,7 +52,7 @@ SELECT * FROM sys.dm_change_feed_errors;
 
 ### View current activity
 
-To view the current activity, use the dynamic management view [sys.dm_change_feed_errors](../../relational-databases/system-dynamic-management-views/sys-dm-change-feed-errors.md).
+To view the current activity, use the dynamic management view [sys.dm_change_feed_log_scan_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md).
 
 ```sql
 SELECT * FROM sys.dm_change_feed_log_scan_sessions;

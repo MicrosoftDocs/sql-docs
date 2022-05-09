@@ -35,8 +35,18 @@ EXECUTE sys.sp_help_change_feed;
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-| **pollinterval** | int | An integer value that describes the frequency that the log is scanned for any new changes, in seconds. By default this value is 60. It can't currently be changed.| 
-| **maxtrans** | int | Maximum number of transactions to process in each scan cycle. The default value is 500. |
+| **table_group_id** | **uniqueidentifier** | The unique identifier of the table group.| 
+| **table_group_name** | **nvarchar(140)** | The name of the table group.| 
+| **destination_location** | **nvarchar(512)** | URL string of the landing zone folder.| 
+| **destination_credential** | **sysname** | The credential name to access the landing zone. |
+| **workspace_id** | **nvarchar(247)** | The related Synapse workspace Azure resource ID. |
+| **synapse_workgroup_name** | **nvarchar(50)** | The related Synapse workspace name. |
+| **schema_name** | **sysname** | The database schema name of the change feed table. | 
+| **table_name** | **sysname** | The name of the change feed table. | 
+| **table_id** | **uniqueidentifier** | The unique identifier for the change feed table. Generated during change feed setup workflow. | 
+| **table_object_id** | **int** | The object id of the change feed table. | 
+| **state** | **tinyint** | The state of the change feed table. | 
+| **version** | **binary(10)** | The version of the change feed table. | 
 
 ## Remarks
 

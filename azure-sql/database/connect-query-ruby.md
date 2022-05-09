@@ -41,7 +41,7 @@ To complete this quickstart, you need the following prerequisites:
   |||Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)| Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)|
 
   > [!IMPORTANT]
-  > The scripts in this article are written to use the Adventure Works database. With a SQL Managed Instance, you must either import the Adventure Works database into an instance database or modify the scripts in this article to use the Wide World Importers database.
+  > The scripts in this article are written to use the Adventure Works database. With a SQL Managed Instance, either import the Adventure Works database into an instance database or modify the scripts in this article to use the Wide World Importers database.
   
 - Ruby and related software for your operating system:
   
@@ -91,7 +91,7 @@ Get the connection information you need to connect to a database in Azure SQL Da
    ```
 
    >[!IMPORTANT]
-   >The code in this example uses the sample AdventureWorksLT data, which you can choose as source when creating your database. If your database has different data, use tables from your own database in the SELECT query.
+   >This example uses the sample AdventureWorksLT data, which you can choose as source when creating your database. If your database has different data, use tables from your own database in the SELECT query.
 
 ## Run the code
 

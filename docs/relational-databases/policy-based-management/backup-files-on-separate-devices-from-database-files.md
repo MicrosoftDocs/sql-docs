@@ -20,13 +20,13 @@ ms.author: drskwier
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This rule checks whether database files are on devices separate from the backup files. If database files and backup files are on the same device and the device fails, the database and backups will be unavailable. Also, putting the database and backup files on the separate devices optimizes the I/O performance for both the production use of the database and the writing of backups.  
+This rule checks whether database files are on devices separate from the backup files. If database files and backup files are on the same device and the device fails, the database and backups are unavailable. Also, putting the database and backup files on the separate devices optimizes the I/O performance for both the production use of the database and the writing of backups.  
   
 ## Best practices recommendations
 
 We recommend that a backup disk is a different disk than the database data and log disks. This precaution is necessary to make sure that you can access the backups if the data or log disk fails.
 
-If database files and backup files are on the same device and the device fails, the database and backups will be unavailable. Also, putting the database and backup files on the separate devices optimizes the I/O performance for both the production use of the database and the writing of backups.
+If database files and backup files are on the same device and the device fails, the database and backups are unavailable. Also, putting the database and backup files on the separate devices optimizes the I/O performance for both the production use of the database and the writing of backups.
   
 ## See also
 

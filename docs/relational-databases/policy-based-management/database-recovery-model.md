@@ -24,7 +24,7 @@ For SQL Server Enterprise and Standard editions, this rule checks for non-read-o
   
 ## Best practices recommendations  
 
-Production databases should be in full recovery mode, and the transaction log should be backed up frequently to help ensure recoverability with minimum data loss.
+Production databases should be in full recovery mode. The transaction log should be backed up frequently to help ensure recoverability with minimum data loss.
   
 ## See also
 

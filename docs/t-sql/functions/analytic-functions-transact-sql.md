@@ -30,11 +30,6 @@ SQL Server supports these analytic functions:
 - [PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
 - [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces the following new functions:
-
-- [DATE_BUCKET &#40;Transact-SQL&#41;](../../t-sql/functions/date-bucket-transact-sql.md)
-- [GENERATE_SERIES &#40;Transact-SQL&#41;](../../t-sql/functions/generate-series-transact-sql.md)
-  
 Analytic functions calculate an aggregate value based on a group of rows. Unlike aggregate functions, however, analytic functions can return multiple rows for each group. Use analytic functions to compute moving averages, running totals, percentages or top-N results within a group.
 
 ## See also

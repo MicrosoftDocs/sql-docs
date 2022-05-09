@@ -16170,8 +16170,12 @@ items:
         items:
         - name: CUME_DIST
           href: t-sql/functions/cume-dist-transact-sql.md
+        - name: DATE_BUCKET
+          href: t-sql/functions/date-bucket-transact-sql.md
         - name: FIRST_VALUE
           href: t-sql/functions/first-value-transact-sql.md
+        - name: GENERATE_SERIES
+          href: t-sql/functions/generate-series-transact-sql.md
         - name: LAG
           href: t-sql/functions/lag-transact-sql.md
         - name: LAST_VALUE

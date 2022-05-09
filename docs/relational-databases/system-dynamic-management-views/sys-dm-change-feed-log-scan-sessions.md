@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-  Returns activity for the Azure Synapse Link feature. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
+  Returns activity for the Azure Synapse Link fo SQL change feed. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

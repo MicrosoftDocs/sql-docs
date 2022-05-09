@@ -54,7 +54,7 @@ SELECT * FROM sys.dm_change_feed_errors;
 
 ### View current activity
 
-To view the current activity, use the dynamic management view [sys.dm_change_feed_log_scan_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md).
+To view the current activity, use the dynamic management view [sys.dm_change_feed_log_scan_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md), which returns activity for the Azure Synapse Link fo SQL change feed.
 
 ```sql
 SELECT * FROM sys.dm_change_feed_log_scan_sessions;

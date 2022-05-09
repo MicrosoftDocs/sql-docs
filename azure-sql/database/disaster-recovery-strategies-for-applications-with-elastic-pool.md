@@ -7,8 +7,8 @@ ms.subservice: elastic-pools
 ms.custom: sqldbrb-1
 ms.devlang:
 ms.topic: conceptual
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: kendralittle, mathoma
 ms.date: 01/25/2019
 ---

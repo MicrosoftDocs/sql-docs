@@ -55,8 +55,6 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
-        - name: Cumulative Update 16
-          href: big-data-cluster/release-notes-cumulative-update-16.md
         - name: Cumulative Update 15
           href: big-data-cluster/release-notes-cumulative-update-15.md
         - name: Cumulative Update 14
@@ -7026,16 +7024,16 @@ items:
     - name: Query Store
       href: relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       items:
-      - name: In-Memory OLTP
-        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
-      - name: Best Practice
+      - name: Best Practices for Monitoring
         href: relational-databases/performance/best-practice-with-the-query-store.md
-      - name: Usage Scenarios
-        href: relational-databases/performance/query-store-usage-scenarios.md
       - name: How Query Store Collects Data
         href: relational-databases/performance/how-query-store-collects-data.md
       - name: Query Store hints
         href: relational-databases/performance/query-store-hints.md
+      - name: Optimized plan forcing
+        href: relational-databases/performance/optimized-plan-forcing-query-store.md
+      - name: In-Memory OLTP
+        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md
       items:
@@ -7452,6 +7450,15 @@ items:
         href: relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
       - name: Validate Plan Guides After Upgrade
         href: relational-databases/performance/validate-plan-guides-after-upgrade.md
+    - name: Query Store
+      href: relational-databases/performance/tune-performance-with-the-query-store.md
+      items:
+      - name: Query Store hints
+        href: relational-databases/performance/query-store-hints.md
+      - name: Query Store hints best practices
+        href: relational-databases/performance/query-store-hints-best-practices.md
+      - name: Usage Scenarios
+        href: relational-databases/performance/query-store-usage-scenarios.md        
     - name: Query Tuning Assistant
       href: relational-databases/performance/upgrade-dbcompat-using-qta.md
     - name: Resource governor
@@ -12453,6 +12460,8 @@ items:
         href: relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md
       - name: sys.query_store_query_hints
         href: relational-databases/system-catalog-views/sys-query-store-query-hints-transact-sql.md
+      - name: sys.database_query_store_internal_state
+        href: relational-databases/system-catalog-views/sys-database-query-store-internal-state-transact-sql.md        
     - name: Scalar Types
       href: relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md
       items:
@@ -14358,6 +14367,8 @@ items:
         href: relational-databases/system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md
       - name: sp_query_store_unforce_plan
         href: relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md
+      - name: sp_query_store_clear_message_queues
+        href: relational-databases/system-stored-procedures/sp-query-store-clear-message-queues-transact-sql.md   
         
     - name: Replication
       href: relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md

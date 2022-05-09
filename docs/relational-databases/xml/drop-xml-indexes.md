@@ -2,7 +2,7 @@
 title: Drop XML indexes
 description: Learn how the DROP INDEX Transact-SQL statement can be used to drop existing primary or secondary XML and non-XML indexes.
 ms.custom: ""
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: randolphwest
@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "removing indexes"
   - "dropping indexes"
   - "XML indexes [SQL Server], dropping"
-ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: MikeRayMSFT
 ms.author: mikeray
 ---
@@ -49,9 +48,9 @@ DROP INDEX PIdx_T_XmlCol ON T;
 GO
 ```
 
- When a table is dropped, all the XML indexes on it are also automatically dropped. However, an XML column can't be dropped from a table if an XML index exists on the column.
+When a table is dropped, all the XML indexes on it are also automatically dropped. However, an XML column can't be dropped from a table if an XML index exists on the column.
 
- In the following example, an XML index is created on an **xml** type column. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).
+In the following example, an XML index is created on an **xml** type column. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).
 
 ```sql
 CREATE TABLE TestTable(
@@ -60,7 +59,7 @@ CREATE TABLE TestTable(
 GO
 ```
 
- Now, you can create a primary XML index on `Co12`.
+Now, you can create a primary XML index on `Co12`.
 
 ```sql
 CREATE PRIMARY XML INDEX PIdx_TestTable_Col2
@@ -70,7 +69,7 @@ GO
 
 ## Example: Creating an XML index by using the DROP_EXISTING index option
 
- In the following example, an XML index is created on a column `XmlColx`. Then, another XML index with the same name is created on a different column `XmlColy`. Because the `DROP_EXISTING` option is specified, the existing XML index on `XmlColx` is dropped and a new XML index on `XmlColy` is created.
+In the following example, an XML index is created on a column `XmlColx`. Then, another XML index with the same name is created on a different column `XmlColy`. Because the `DROP_EXISTING` option is specified, the existing XML index on `XmlColx` is dropped and a new XML index on `XmlColy` is created.
 
 ```sql
 DROP TABLE T

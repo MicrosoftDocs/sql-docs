@@ -104,7 +104,7 @@ The following commands register the repository providing the R language platform
 
 7. Download and install the version of R that is desired. Choose a version of R 4.2 or higher, [available for download directly from cran.r-project.org](https://cran.r-project.org/). Follow the instructions for the desired runtime.
 
-8. Install CompatibilityAPI and RevoScale R dependencies. There are two options to perform this, from the R terminal of the version you have installed.
+8. Install CompatibilityAPI and RevoScaleR dependencies. From the R terminal of the version you have installed, run the following:
 
     ```r
     # R Terminal
@@ -116,15 +116,15 @@ The following commands register the repository providing the R language platform
 
 11. Download the [CompatibilityAPI for Linux](https://go.microsoft.com/fwlink/?LinkID=2193925).
 
-12. Install the CompatibilityAPI for Linux, using the following shell script.
+12. Install CompatibilityAPI for Linux, specifying the absolute file path to the `.tar.gz` file.
 
     ```r
-    install.packages('CompatibilityAPI.tar.gz', repos = NULL)
+    install.packages('/path/to/CompatibilityAPI.tar.gz', repos = NULL)
     ```
 
 13. Download [RevoScaleR Linux](https://go.microsoft.com/fwlink/?LinkID=2193829).
 
-14. Install RevoScaleR Linux, specifying the file relative path to the `.tar.gz` file.
+14. Install RevoScaleR for Linux, specifying the absolute file path to the `.tar.gz` file.
 
     ```r
     install.packages('/path/to/RevoScaleR.tar.gz', repos = NULL)
@@ -139,8 +139,8 @@ The following commands register the repository providing the R language platform
 16. Configure the installed R runtime with SQL Server for Linux. *RFolderVersion* is the version-specific folder name for your installation of R runtime, for example, `R4.2`.
 
     ```bash  
-    sudo /opt/mssql/bin/mssql-conf set extensibility rbinpath /path/to/RFolderVersion/lib/R/bin/R
-    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /path/to/RFolderVersion/
+    /opt/mssql/bin/mssql-conf set extensibility rbinpath /path/to/RFolderVersion/lib/R/bin/R
+    /opt/mssql/bin/mssql-conf set extensibility datadirectories /path/to/RFolderVersion/
 
     systemctl restart mssql-launchpadd.service
     ```
@@ -185,7 +185,7 @@ The following commands register the repository providing the R language platform
 
 5. Download [revoscalepy for Linux](https://go.microsoft.com/fwlink/?LinkID=2193830).
 
-6. Install revoscalepy for the root user, specifying the relative file path to the `.whl` file.
+6. Install revoscalepy for the root user, specifying the absolute file path to the `.whl` file.
 
     ```bash  
     sudo -H pip install /path/to/revoscalepy.whl
@@ -197,7 +197,7 @@ The following commands register the repository providing the R language platform
     import revoscalepy
     ```
 
-8. Configure the installed python runtime with SQL Server. This step will differ based on what option you chose in step 2.
+8. Configure the installed Python runtime with SQL Server. This step will differ based on what option you chose in step 2.
 
     To verify the installation from source:
 

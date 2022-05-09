@@ -51,7 +51,7 @@ At most, one change capture thread will work on any one database at a given time
 
 ## Change capture
 
-Capturing changes for Azure Synapse Link is similar to the existing Change Data Capture (CDC) technology. There is no storage impact or locking on the source SQL Server tables, only the use of memory to serialize and publish the changes from the transaction log.
+Capturing changes for Azure Synapse Link is similar to the existing Change Data Capture (CDC) technology. The source of change data is the SQL Server transaction log. The change feed reads the log and adds information about changes to the landing zone.
 
 Let's compare the existing SQL Server CDC to Azure Synapse Link for SQL Server. The primary difference with Azure Synapse Link is how the change data is handled after being harvested from the log. 
 

@@ -183,7 +183,7 @@ For more information on Microsoft Azure Databricks, see [What is Databricks Data
 
 ## Hybrid
 
-### Using SQL Server 2022 with Synapse Link to Azure Synapse
+### Using SQL Server 2022 with Azure Synapse Link for SQL
 
 [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] contains a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, called Azure Synapse Link. Azure Synapse Link for SQL Server 2022 provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. It provides near real-time analysis and hybrid  transactional and analytical processing with minimal impact on operational systems. Once the data is in Synapse, you can combine it with many different data sources regardless of their size, scale, or format and run powerful analytics over all of it using your choice of Azure Machine Learning, Spark, or Power BI. Since the automated change feeds only push what is new or different, data transfer happens much faster and now allows for near real-time insights, with minimal impact on the performance of the source database in SQL Server 2022.
 

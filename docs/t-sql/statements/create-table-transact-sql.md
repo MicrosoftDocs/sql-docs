@@ -2,10 +2,10 @@
 description: "CREATE TABLE (Transact-SQL)"
 title: CREATE TABLE (Transact-SQL)
 ms.custom: ""
-ms.date: 05/25/2021
+ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -221,6 +221,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     [ DATA_COMPRESSION = { NONE | ROW | PAGE }
       [ ON PARTITIONS ( { <partition_number_expression> | <range> }
       [ , ...n ] ) ] ]
+    [ XML_COMPRESSION = { ON | OFF }
+      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
+      [ , ...n ] ) ] ]
     [ FILETABLE_DIRECTORY = <directory_name> ]
     [ FILETABLE_COLLATE_FILENAME = { <collation_name> | database_default } ]
     [ FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = <constraint_name> ]
@@ -279,10 +282,13 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
   | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
-  | COMPRESSION_DELAY= { 0 | delay [ Minutes ] }
+  | COMPRESSION_DELAY = { 0 | delay [ Minutes ] }
   | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }
        [ ON PARTITIONS ( { partition_number_expression | <range> }
        [ , ...n ] ) ]
+  | XML_COMPRESSION = { ON | OFF }
+      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
+      [ , ...n ] ) ] ]
 }
 
 <range> ::=
@@ -791,8 +797,22 @@ Applies only to columnstore indexes, including both nonclustered columnstore and
 
 For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
+XML_COMPRESSION   
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:
+
+ON   
+Columns using the **xml** data type are compressed.
+
+OFF   
+Columns using the **xml** data type are not compressed.
+
 ON PARTITIONS **(** { `<partition_number_expression>` | [ **,**...*n* ] **)**   
-Specifies the partitions to which the DATA_COMPRESSION setting applies. If the table is not partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause is not provided, the `DATA_COMPRESSION` option will apply to all partitions of a partitioned table.
+Specifies the partitions to which the `DATA_COMPRESSION` or `XML_COMPRESSION` settings apply. If the table is not partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause is not provided, the `DATA_COMPRESSION` option will apply to all partitions of a partitioned table.
+
+> [!NOTE]  
+> `XML_COMPRESSION` is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
 
 *partition_number_expression* can be specified in the following ways:
 
@@ -811,6 +831,17 @@ WITH
     DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
     DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 )
+```
+
+You can also specify the `XML_COMPRESSION` option more than once, for example:
+
+```sql
+WITH
+(
+  XML_COMPRESSION = OFF ON PARTITIONS (1),
+  XML_COMPRESSION = ON ON PARTITIONS (2, 4, 6 TO 8),
+  XML_COMPRESSION = OFF ON PARTITIONS (3, 5)
+);
 ```
 
 \<index_option> ::=   
@@ -1494,7 +1525,22 @@ WITH (DATA_COMPRESSION = ROW);
 
 For additional data compression examples, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
-### O. Creating a table that has sparse columns and a column set
+### O. Creating a table that uses XML compression
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+The following example creates a table that uses row compression.
+
+```sql
+CREATE TABLE dbo.T1
+(
+    c1 INT,
+    c2 XML
+)
+WITH (XML_COMPRESSION = ON);
+```
+
+### P. Creating a table that has sparse columns and a column set
 
 The following examples show to how to create a table that has a sparse column, and a table that has two sparse columns and a column set. The examples use the basic syntax. For more complex examples, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md) and [Use Column Sets](../../relational-databases/tables/use-column-sets.md).
 
@@ -1520,7 +1566,7 @@ CREATE TABLE T1
 );
 ```
 
-### P. Creating a system-versioned disk-based temporal table
+### Q. Creating a system-versioned disk-based temporal table
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -1570,7 +1616,7 @@ CREATE TABLE Department
 WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON));
 ```
 
-### Q. Creating a system-versioned memory-optimized temporal table
+### R. Creating a system-versioned memory-optimized temporal table
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -1631,7 +1677,7 @@ WITH
 );
 ```
 
-### R. Creating a table with encrypted columns
+### S. Creating a table with encrypted columns
 
 The following example creates a table with two encrypted columns. For more information, see [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
@@ -1653,7 +1699,7 @@ CREATE TABLE Customers (
 );
 ```
 
-### S. Create an inline filtered index
+### T. Create an inline filtered index
 
 Creates a table with an inline filtered index.
 
@@ -1665,7 +1711,7 @@ CREATE TABLE t1
 );
 ```
 
-### T. Create an inline index
+### U. Create an inline index
 
 The following shows how to use NONCLUSTERED inline for disk-based tables:
 
@@ -1690,7 +1736,7 @@ CREATE TABLE t3
 );
 ```
 
-### U. Create a temporary table with an anonymously named compound primary key
+### V. Create a temporary table with an anonymously named compound primary key
 
 Creates a table with an anonymously named compound primary key. This is useful to avoid run-time conflicts where two session-scoped temp tables, each in a separate session, use the same name for a constraint.
 
@@ -1715,7 +1761,7 @@ Could not create constraint or index. See previous errors.
 
 The problem arises from the fact that while the temp table name is unique, the constraint names are not.
 
-### V. Using global temporary tables in Azure SQL Database
+### W. Using global temporary tables in Azure SQL Database
 
 Session A creates a global temp table ##test in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 and adds 1 row
 
@@ -1783,7 +1829,7 @@ SELECT * FROM tempdb.sys.columns;
 SELECT * FROM tempdb.sys.database_files;
 ```   
 
-### W. Enable Data Retention Policy on a table
+### X. Enable Data Retention Policy on a table
 
 The following example creates a table with data retention enabled and a retention period of 1 week. This example applies to **Azure SQL Edge** only.
 
@@ -1797,7 +1843,7 @@ CREATE TABLE [dbo].[data_retention_table]
 WITH (DATA_DELETION = ON ( FILTER_COLUMN = [dbdatetime2], RETENTION_PERIOD = 1 WEEKS ))
 ```
 
-### X. Creating a updatable ledger table
+### Y. Creating a updatable ledger table
 
 The following example creates an updatable ledger table that is not a temporal table with an anonymous history table (the system will generate the name of the history table) and the generated ledger view name. As the names of the required generated always columns and the additional columns in the ledger view are not specified, the columns will have the default names.
 

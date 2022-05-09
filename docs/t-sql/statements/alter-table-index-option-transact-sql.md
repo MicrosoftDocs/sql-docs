@@ -2,17 +2,16 @@
 description: "ALTER TABLE index_option (Transact-SQL)"
 title: "ALTER TABLE index_option (Transact-SQL)"
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
+ms.reviewer: randolphwest
 ms.technology: t-sql
 ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "index_option"
-ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -35,9 +34,11 @@ ms.author: wiassaf
   | ALLOW_PAGE_LOCKS = { ON | OFF } 
   | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF } 
   | SORT_IN_TEMPDB = { ON | OFF }   
-  | ONLINE = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
   | DATA_COMPRESSION = { NONE |ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
+      [ ON PARTITIONS ({ <partition_number_expression> | <range> }   
+      [ , ...n ] ) ]  
+  | XML_COMPRESSION = { ON | OFF }  
       [ ON PARTITIONS ({ <partition_number_expression> | <range> }   
       [ , ...n ] ) ]  
   | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }  
@@ -210,10 +211,24 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
   
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)**
+XML_COMPRESSION   
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:
+
+ON   
+Columns using the **xml** data type are compressed.
+
+OFF   
+Columns using the **xml** data type are not compressed.
+  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)**  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
- Specifies the partitions to which the DATA_COMPRESSION setting applies. If the table is not partitioned, the ON PARTITIONS argument generates an error. If the ON PARTITIONS clause is not provided, the DATA_COMPRESSION option applies to all partitions of a partitioned table.  
+ Specifies the partitions to which the DATA_COMPRESSION or XML_COMPRESSION settings apply. If the table is not partitioned, the ON PARTITIONS argument generates an error. If the ON PARTITIONS clause is not provided, the DATA_COMPRESSION or XML_COMPRESSION option applies to all partitions of a partitioned table.  
+
+> [!NOTE]  
+> XML_COMPRESSION is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
   
 \<partition_number_expression> can be specified in the following ways:  
   
@@ -229,25 +244,26 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* 
 --For rowstore tables  
 REBUILD WITH   
 (  
-DATA_COMPRESSION = NONE ON PARTITIONS (1),   
-DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),   
-DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)  
+  DATA_COMPRESSION = NONE ON PARTITIONS (1),   
+  DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),   
+  DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)  
 )  
   
 --For columnstore tables  
 REBUILD WITH   
 (  
-DATA_COMPRESSION = COLUMNSTORE ON PARTITIONS (1, 3, 5),   
-DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)  
+  DATA_COMPRESSION = COLUMNSTORE ON PARTITIONS (1, 3, 5),   
+  DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)  
 )  
 ```  
-  
+
 **\<single_partition_rebuild__option>**  
  In most cases, rebuilding an index rebuilds all partitions of a partitioned index. The following options, when applied to a single partition, do not rebuild all partitions.  
   
 -   SORT_IN_TEMPDB  
 -   MAXDOP  
 -   DATA_COMPRESSION  
+-   XML_COMPRESSION  
   
 **low_priority_lock_wait**  
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.  
@@ -277,4 +293,3 @@ BLOCKERS
  [computed_column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-computed-column-definition-transact-sql.md)   
  [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
   
- 

@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||
 # Query Store hints (preview)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-This article outlines the Query Store hints feature of the [Query Store](monitoring-performance-by-using-the-query-store.md). The Query Store hints feature provides an easy-to-use method for shaping query plans without changing application code. 
+This article outlines how to apply query hints using the Query Store. Query Store hints provide an easy-to-use method for shaping query plans without changing application code. 
 
 Query Store hints are a preview feature in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. Query Store hints are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
 
@@ -60,7 +60,7 @@ To use Query Store hints:
 
 Once created, Query Store hints are persisted and survive restarts and failovers. Query Store hints override hard-coded statement-level hints and existing plan guide hints. 
 
-If a query hint contradicts what is possible for query optimization, the hint won't block query execution and the hint will not be applied. In the cases where a hint would cause a query to fail, the hint is ignored and the latest failure details can be viewed in [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md).
+If a query hint contradicts what is possible for query optimization, the hint won't block query execution and the hint won't be applied. In the cases where a hint would cause a query to fail, the hint is ignored and the latest failure details can be viewed in [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md).
 
 Watch this video for an overview of Query Store hints:
 
@@ -74,13 +74,16 @@ To create or update hints, use [sys.sp_query_store_set_hints](../system-stored-p
 * When creating or updating a Query Store hint, if a Query Store hint already exists for a specific `query_id`, the last value provided will override previously specified values for the associated query.
 * If a `query_id` doesn't exist, an error will be raised. 
 
-To remove hints associated with a query_id, use [sys.sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md).
+> [!Note]
+> For a complete list of hints that are supported, see [sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).
+
+To remove hints associated with a `query_id`, use [sys.sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md).
 
 ## Execution Plan XML attributes
 
 When hints are applied, the following result set appears in the StmtSimple element of the [Execution Plan](execution-plans.md) in [XML format](save-an-execution-plan-in-xml-format.md):
 
-|Attribute| Description|
+|**Attribute**| **Description**|
 |--|--|
 |QueryStoreStatementHintText|Actual Query Store hint(s) applied to the query|
 |QueryStoreStatementHintId|Unique identifier of a query hint|
@@ -118,7 +121,7 @@ The following walk-through of Query Store hints in Azure SQL Database uses an im
 
 ### B. Identify a query in Query Store
 
-The following example queries [sys.query_store_query_text](../system-catalog-views/sys-query-store-query-text-transact-sql.md) and [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md) to return the query_id for an executed query text fragment.
+The following example queries [sys.query_store_query_text](../system-catalog-views/sys-query-store-query-text-transact-sql.md) and [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md) to return the `query_id` for an executed query text fragment. 
 
 In this demo, the query we're attempting to tune is in the `SalesLT` sample database: 
 

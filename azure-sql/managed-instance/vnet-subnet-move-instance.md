@@ -72,6 +72,13 @@ Consider the following limitations when choosing a destination subnet for an exi
 - The DNS zone of the destination subnet must match the DNS zone of the source subnet as changing the DNS zone of a managed instance is not currently supported.
 - Instances running on Gen4 hardware must be upgraded to newer hardware since Gen4 is being retired. Upgrading hardware and moving to another subnet can be performed in one operation.
 
+If you want to migrate a SQL Managed Instance with an [auto-failover group](auto-failover-group-sql-mi.md), the following prerequisites apply: 
+- The target subnet needs to have the same security rules needed for failover group replication as the source subnet: 
+Open both inbound and outbound ports 5022 and the range 11000~11999 in the Network Security Group (NSG) for connections from the other managed instance subnet (the one that holds the failover group replica) to allow replication traffic between the two instances. 
+- The target subnet can't have an overlapping address range with the subnet that holds the secondary instance replica of the failover group. 
+For example, if MI1 is in subnet S1, the secondary instance in the failover group is MI2 in subnet S2, and we want to move MI1 to subnet S3, subnet S3 can't have an overlapping address range with subnet S2. 
+
+To learn more about setting up the network for auto-failover groups, review [Enable geo-replication between managed instances](auto-failover-group-configure-sql-mi.md#enabling-geo-replication-between-managed-instances-and-their-vnets). 
 
 ## Operation steps
 

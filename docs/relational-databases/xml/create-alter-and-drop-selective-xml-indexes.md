@@ -2,13 +2,12 @@
 title: "Create, alter, and drop selective XML indexes"
 description: Learn how to create a new selective XML index, or alter or drop an existing selective XML index.
 ms.custom: ""
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: randolphwest
 ms.technology: xml
 ms.topic: conceptual
-ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 author: MikeRayMSFT
 ms.author: mikeray
 ---
@@ -20,7 +19,7 @@ This article describes how to create a new selective XML index, or alter or drop
 
 For more information about selective XML indexes, see [Selective XML indexes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).
 
-## <a id="create"></a> Create a Selective XML Index
+## <a id="create"></a> Create a selective XML index
 
 Create a selective XML index using Transact-SQL, by calling the CREATE SELECTIVE XML INDEX statement. For more information, see [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).
 

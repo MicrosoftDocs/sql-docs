@@ -7028,14 +7028,14 @@ items:
       items:
       - name: Best Practices for Monitoring
         href: relational-databases/performance/best-practice-with-the-query-store.md
-      - name: Usage Scenarios
-        href: relational-databases/performance/query-store-usage-scenarios.md
       - name: How Query Store Collects Data
         href: relational-databases/performance/how-query-store-collects-data.md
       - name: In-Memory OLTP
         href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
       - name: Optimized plan forcing
         href: relational-databases/performance/optimized-plan-forcing-query-store.md
+      - name: In-Memory OLTP
+        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md
       items:
@@ -7460,7 +7460,7 @@ items:
       - name: Query Store hints best practices
         href: relational-databases/performance/query-store-hints-best-practices.md
       - name: Usage Scenarios
-        href: relational-databases/performance/query-store-usage-scenarios.md             
+        href: relational-databases/performance/query-store-usage-scenarios.md        
     - name: Query Tuning Assistant
       href: relational-databases/performance/upgrade-dbcompat-using-qta.md
     - name: Resource governor
@@ -16322,6 +16322,8 @@ items:
           href: t-sql/functions/current-timezone-transact-sql.md
         - name: CURRENT_TIMEZONE_ID
           href: t-sql/functions/current-timezone-id-transact-sql.md
+        - name: DATE_BUCKET
+          href: t-sql/functions/date-bucket-transact-sql.md
         - name: DATEADD
           href: t-sql/functions/dateadd-transact-sql.md
         - name: DATEDIFF
@@ -16967,6 +16969,8 @@ items:
           items:
           - name: Overview
             href: t-sql/language-elements/relational-operators-transact-sql.md
+          - name: GENERATE_SERIES
+            href: t-sql/functions/generate-series-transact-sql.md
           - name: OPENDATASOURCE
             href: t-sql/functions/opendatasource-transact-sql.md
           - name: OPENJSON

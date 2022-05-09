@@ -26,6 +26,8 @@ This article provides details on monitoring and managing Azure Synapse Link for 
 
 The Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
 
+For SQL Server, the landing zone is customer-managed and visible, but it is not recommended or supported to consume or modify the files in the landing zone. 
+
 Currently, only a member of the sysadmin server role in SQL Server or the db_owner database role can execute these procedures. 
 
 The SQL Server or the Azure SQL Database will maintain metadata specific to each table group. 

@@ -23,7 +23,8 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 
 Removes a table from the change feed for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 
-This stored procedure is used internally and is not recommended for direct administrative use.
+> [!NOTE]
+> This stored procedure is used internally and is not recommended for direct administrative use.
 
 ## Syntax  
    

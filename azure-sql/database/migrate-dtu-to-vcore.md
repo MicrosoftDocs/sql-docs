@@ -135,7 +135,7 @@ The mapping query returns the following result (some columns not shown for brevi
 |----------------|----------------|----------------------|-----------|-----------------------|-----------|-----------------------|
 |0.25|Gen4|0.42|0.250|7|0.425|5.05|
 
-We see that the DTU database has the equivalent of 0.25 logical CPUs (vCores), with 0.42 GB of memory per vCore, and is using Gen4 hardware. The smallest vCore service objectives in the Gen4 and Gen5 hardware configurations, **GP_Gen4_1** and **GP_Gen5_2**, provide more compute resources than the Standard S0 database, so a direct match is not possible. Since Gen4 hardware is being [decommissioned](https://azure.microsoft.com/updates/gen-4-hardware-on-azure-sql-database-approaching-end-of-life-in-2020/), the **GP_Gen5_2** option is preferred. Additionally, if the workload is well-suited for the [Serverless](serverless-tier-overview.md) compute tier, then **GP_S_Gen5_1** would be a closer match.
+We see that the DTU database has the equivalent of 0.25 logical CPUs (vCores), with 0.42 GB of memory per vCore, and is using Gen4 hardware. The smallest vCore service objectives in the Gen4 and standard-series (Gen5) hardware configurations, **GP_Gen4_1** and **GP_Gen5_2**, provide more compute resources than the Standard S0 database, so a direct match is not possible. Since Gen4 hardware is being [decommissioned](https://azure.microsoft.com/updates/gen-4-hardware-on-azure-sql-database-approaching-end-of-life-in-2020/), the **GP_Gen5_2** option is preferred. Additionally, if the workload is well-suited for the [Serverless](serverless-tier-overview.md) compute tier, then **GP_S_Gen5_1** would be a closer match.
 
 **Migrating a Premium P15 database**
 

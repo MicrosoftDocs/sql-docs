@@ -79,30 +79,30 @@ Compute tier options in the vCore model include the provisioned and [serverless]
 
 Hardware configurations in the vCore model include Gen4, Gen5, M-series, Fsv2-series, and DC-series. Hardware configuration defines compute and memory limits and other characteristics that impact workload performance.
 
-Certain hardware configurations such as Gen5 may use more than one type of processor (CPU), as described in [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory). While a given database or elastic pool tends to stay on the hardware with the same CPU type for a long time (commonly for multiple months), there are certain events that can cause a database or pool to be moved to hardware that uses a different CPU type. For example, a database or pool can be moved if it is scaled up or down to a different service objective, or if the current infrastructure in a datacenter is approaching its capacity limits, or if the currently used hardware is being decommissioned due to its end of life.
+Certain hardware configurations such as standard-series (Gen5) may use more than one type of processor (CPU), as described in [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory). While a given database or elastic pool tends to stay on the hardware with the same CPU type for a long time (commonly for multiple months), there are certain events that can cause a database or pool to be moved to hardware that uses a different CPU type. For example, a database or pool can be moved if it is scaled up or down to a different service objective, or if the current infrastructure in a datacenter is approaching its capacity limits, or if the currently used hardware is being decommissioned due to its end of life.
 
 For some workloads, a move to a different CPU type can change performance. SQL Database configures hardware with the goal to provide predictable workload performance even if CPU type changes, keeping performance changes within a narrow band. However, across the wide spectrum of customer workloads running in SQL Database, and as new types of CPUs become available, it is possible to occasionally see more noticeable changes in performance if a database or pool moves to a different CPU type.
 
 Regardless of CPU type used, resource limits for a database or elastic pool remain the same as long as the database stays on the same service objective.
 
-### Gen4/Gen5
+### Gen4/standard-series (Gen5)
 
-- Gen4/Gen5 hardware provides balanced compute and memory resources, and is suitable for most database workloads that do not have higher memory, higher vCore, or faster single vCore requirements as provided by Fsv2-series or M-series.
+- Gen4/standard-series (Gen5) hardware provides balanced compute and memory resources, and is suitable for most database workloads that do not have higher memory, higher vCore, or faster single vCore requirements as provided by Fsv2-series or M-series.
 
-For regions where Gen4/Gen5 is available, see [Gen4/Gen5 availability](#gen4gen5-1).
+For regions where Gen4/standard-series (Gen5) is available, see [Gen4/standard-series (Gen5) availability](#gen4gen5-1).
 
 ### Fsv2-series
 
 - Fsv2-series is a compute optimized hardware configuration delivering low CPU latency and high clock speed for the most CPU demanding workloads.
-- Depending on the workload, Fsv2-series can deliver more CPU performance per vCore than other types of hardware. For example, the 72 vCore Fsv2 compute size can provide more CPU performance than 80 vCores on Gen5, at lower cost.
-- Fsv2 provides less memory and tempdb per vCore than other hardware, so workloads sensitive to those limits may perform better on Gen5 or M-series.
+- Depending on the workload, Fsv2-series can deliver more CPU performance per vCore than other types of hardware. For example, the 72 vCore Fsv2 compute size can provide more CPU performance than 80 vCores on standard-series (Gen5), at lower cost.
+- Fsv2 provides less memory and tempdb per vCore than other hardware, so workloads sensitive to those limits may perform better on standard-series (Gen5) or M-series.
 
 Fsv2-series in only supported in the General Purpose tier. For regions where Fsv2-series is available, see [Fsv2-series availability](#fsv2-series-1).
 
 ### M-series
 
 - M-series is a memory optimized hardware configuration for workloads demanding more memory and higher compute limits than provided by other types of hardware.
-- M-series provides 29 GB per vCore and up to 128 vCores, which increases the memory limit relative to Gen5 by 8x to nearly 4 TB.
+- M-series provides 29 GB per vCore and up to 128 vCores, which increases the memory limit relative to standard-series (Gen5) by 8x to nearly 4 TB.
 
 M-series is only supported in the Business Critical tier and does not support zone redundancy. For regions where M-series is available, see [M-series availability](#m-series-1).
 
@@ -155,11 +155,11 @@ Follow the steps to change configuration, and select hardware configuration as d
 
 ### Hardware availability
 
-#### <a id="gen4gen5-1"></a> Gen4/Gen5
+#### <a id="gen4gen5-1"></a> Gen4/standard-series (Gen5)
 
 Gen4 hardware is [being retired](https://azure.microsoft.com/updates/gen-4-hardware-on-azure-sql-database-approaching-end-of-life-in-2020/) and is no longer available for new deployments. All new databases must be deployed on other hardware configurations.
 
-Gen5 hardware is available in all public regions worldwide.
+Standard-series (Gen5) hardware is available in all public regions worldwide.
 
 #### Fsv2-series
 

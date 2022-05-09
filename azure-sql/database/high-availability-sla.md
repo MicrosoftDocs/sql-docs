@@ -61,7 +61,7 @@ The zone-redundant version of the high availability architecture for the general
 > For general purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, and France Central. This is in preview in the following regions: East US, East US 2, Southeast Asia, Australia East, Japan East, and UK South. 
 
 > [!NOTE]
-> Zone-redundant configuration is not available in SQL Managed Instance. In SQL Database this feature is only available when the Gen5 hardware is selected.
+> Zone-redundant configuration is not available in SQL Managed Instance. In SQL Database this feature is only available when the standard-series (Gen5) hardware is selected.
 
 
 ## Premium and Business Critical service tier locally redundant availability
@@ -81,7 +81,7 @@ By default, the cluster of nodes for the premium availability model is created i
 Because the zone-redundant databases have replicas in different datacenters with some distance between them, the increased network latency may increase the commit time and thus impact the performance of some OLTP workloads. You can always return to the single-zone configuration by disabling the zone-redundancy setting. This process is an online operation similar to the regular service tier upgrade. At the end of the process, the database or pool is migrated from a zone-redundant ring to a single zone ring or vice versa.
 
 > [!IMPORTANT]
-> This feature is not available in SQL Managed Instance. In SQL Database, when using the Business Critical tier, zone-redundant configuration is only available when the Gen5 hardware is selected. For up to date information about the regions that support zone-redundant databases, see [Services support by region](/azure/availability-zones/az-region).
+> This feature is not available in SQL Managed Instance. In SQL Database, when using the Business Critical tier, zone-redundant configuration is only available when the standard-series (Gen5) hardware is selected. For up to date information about the regions that support zone-redundant databases, see [Services support by region](/azure/availability-zones/az-region).
 
 The zone-redundant version of the high availability architecture is illustrated by the following diagram:
 
@@ -115,7 +115,7 @@ Consider the following limitations:
 - Zone redundant configuration can only be specified during database creation. This setting cannot be modified once the resource is provisioned. Use [Database copy](database-copy.md), [point-in-time restore](recovery-using-backups.md#point-in-time-restore), or create a [geo-replica](active-geo-replication-overview.md) to update the zone redundant configuration for an existing Hyperscale database. When using one of these update options, if the target database is in a different region than the source or if the database backup storage redundancy from the target differs from the source database, the [copy operation](database-copy.md#database-copy-for-azure-sql-hyperscale) will be a size of data operation. Additionally, when using one of these update options the target database will not have the historical backup data from the source database for point-in-time restore.
 - Named replicas are not supported.
 - Only [zone-redundant backup](automated-backups-overview.md) is supported.
-- Only Gen5 hardware is supported.
+- Only standard-series (Gen5) hardware is supported.
 - [Geo-Restore](recovery-using-backups.md#geo-restore) is not currently supported.
 - Zone redundancy cannot currently be specified when migrating an existing database from another Azure SQL Database service tier to Hyperscale.
 

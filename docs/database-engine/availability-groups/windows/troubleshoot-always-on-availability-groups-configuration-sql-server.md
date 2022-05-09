@@ -39,21 +39,25 @@ ms.author: mathoma
   
 ##  <a name="IsHadrEnabled"></a> Always On Availability Groups Is Not Enabled  
 
-The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must be enabled on each of the instances of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must be enabled on each of the instances of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. 
 
 If the Always On Availability Groups feature is not enabled, you will get this error message when you try to create an Availability group on SQL Server. 
 
 `The Always On Availability Groups feature must be enabled for server instance 'SQL1VM' before you can create an availability group on this instance. To enable this feature, open the SQL Server Configuration Manager, select SQL Server Services, right-click on the SQL Server service name, select Properties, and use the Always On Availability Groups tab of the Server Properties dialog. Enabling Always On Availability Groups may require that the server instance is hosted by a Windows Server Failover Cluster (WSFC) node. (Microsoft.SqlServer.Management.HadrTasks)`
 
-The error message clearly indicates that the AG feature is not enabled and also directs you how to enable it. 
+The error message clearly indicates that the AG feature is not enabled and also directs you how to enable it. There are two scenarions where you can get in this state besides the obvious where you have not enabled AG. 
 
-If SQL Server was installed and the Always On Availability Groups feature enabled before you install the Windows Failover Clustering feature, you may get this error you when you attempt to create an Always On AG. In such cases you can take the following steps to resolve it: 
+1. If SQL Server was installed and the Always On Availability Groups feature enabled before you install the Windows Failover Clustering feature, you may get this error  when you attempt to create an Always On AG. 
+2. If you remove an existing Windows Failover Clustering feature and rebuild it while SQL Server still has Always On configured, when you attempt to use AG again this error may occur.
+
+In such cases you can take the following steps to resolve it: 
 
 1. Disable the AG feature
 1. Restart SQL Server service
 1. Enable the AG feature back
 1. Again restart the SQL Service
 
+For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
 
 ##  <a name="Accounts"></a> Accounts  
  The accounts under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running must be correctly configured.  
@@ -62,7 +66,7 @@ If SQL Server was installed and the Always On Availability Groups feature enable
   
     1.  If the partners run under the same domain account, the correct user logins exist automatically in both **master** databases. This simplifies the security configuration and is recommended.  
   
-    2.  If two server instances run under different accounts, the each account must be created in **master** on the remote server instance, and that login must be granted CONNECT permissions to connect to the database mirroring endpoint of that server instance. For more information, see[Set Up Login Accounts for Database Mirroring or Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  You can use the following query on each instance to check if the logins have CONNECT permissions:
+    2.  If two server instances run under different accounts, the each account must be created in **master** on the remote server instance, and that login must be granted CONNECT permissions to connect to the database mirroring endpoint of that server instance. For more information, see [Set Up Login Accounts for Database Mirroring or Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  You can use the following query on each instance to check if the logins have CONNECT permissions:
 
     ```sql
     SELECT 

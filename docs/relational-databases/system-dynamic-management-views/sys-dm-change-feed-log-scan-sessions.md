@@ -49,7 +49,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 
 ## Permissions  
 
-Currently, a user must be a member of the sysadmin server role or db_owner database role.
+Requires VIEW DATABASE STATE permission to query the `sys.dm_change_feed_log_scan_sessions` dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions](system-dynamic-management-views.md).
 
 ## See also  
 

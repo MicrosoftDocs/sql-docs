@@ -71,7 +71,7 @@ The following tables list the [!INCLUDE[tsql](../../includes/tsql-md.md)] date a
 |Function|Syntax|Return value|Return data type|Determinism|
 |---|---|---|---|---|
 |[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ( )|Returns a **datetime2(7)** value containing the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs. The returned value doesn't include the time zone offset.|**datetime2(7)**|Nondeterministic|
-|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|Returns a **datetimeoffset(7)** value containing the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs. The returned value includes the time zone offset.|**datetimeoffset(7)**|Nondeterministic|
+|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET&nbsp;(&nbsp;)|Returns a **datetimeoffset(7)** value containing the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs. The returned value includes the time zone offset.|**datetimeoffset(7)**|Nondeterministic|
 |[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|Returns a **datetime2(7)** value containing the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The function returns the date and time values as UTC time (Coordinated Universal Time).|**datetime2(7)**|Nondeterministic|
 
 #### Lower-precision system date and time functions
@@ -85,7 +85,8 @@ The following tables list the [!INCLUDE[tsql](../../includes/tsql-md.md)] date a
 ### <a name="GetDateandTimeParts"></a> Functions that return date and time parts
 
 |Function|Syntax|Return value|Return data type|Determinism|
-|--------------|------------|------------------|----------------------|-----------------|
+|---|---|---|---|---|
+|[DATE_BUCKET](../../t-sql/functions/date-bucket-transact-sql.md)|DATE_BUCKET ( *datepart*, *number*, *date*, *origin* )|Returns a value corresponding to the start of each date-time bucket from the timestamp defined by the *origin* parameter, or the default origin value of `1900-01-01 00:00:00.000` if the origin parameter isn't specified.|The return type depends on the argument supplied for *date*.|Nondeterministic|
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart*, *date* )|Returns a character string representing the specified *datepart* of the specified date.|**nvarchar**|Nondeterministic|
 |[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart*, *date* )|Returns an integer representing the specified *datepart* of the specified *date*.|**int**|Nondeterministic|
 |[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Returns an integer representing the day part of the specified *date*.|**int**|Deterministic|

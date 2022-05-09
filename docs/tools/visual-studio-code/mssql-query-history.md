@@ -24,7 +24,7 @@ Initially the query history view will be empty but once you execute a query it w
 ![Query History tab with queries](./media/mssql-query-history/query-history-tab-with-queries.png)
 
 Each row consists of three parts:
-- Status icon: The status icon will be a "✔️" if the query executed successfully. If any errors occurred a "❌" is shown.
+- Status icon: The status icon will be a "✔️" if the query executed successfully or an "❌" if an error occurred.
 - Query Text: The text of the query that was executed
 - Connection Info: The server and database the query was executed against
 
@@ -58,11 +58,11 @@ Currently all information is stored in memory and not persisted upon application
 
 ### Clear all history
 
-The action to clear all query history is also available from the command palette (**MS SQL: Clear All History**) and as an action button on the view. This will permanently delete **ALL** history rows.
+The action to clear all query history is also available from the command palette (**MS SQL: Clear All History**) and as an action button on the view. This action will permanently delete **ALL** history rows.
 
 ### Pause/Start query history capture
 
-The ability to pause and start query history capture is available from the command palette (**MS SQL: Toggle Query History Capture**) and as an action button on the panel. While paused no data will be stored for queries run.
+The ability to pause and start query history capture is available from the command palette (**MS SQL: Toggle Query History Capture**) and as an action button on the panel. While paused, no query execution data will be stored by query history.
 
 
 ## Next steps

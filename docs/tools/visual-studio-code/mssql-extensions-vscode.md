@@ -80,4 +80,4 @@ The mssql extension automatically installs the [SQL Tools Service](https://githu
 ## Next steps
 - [Use the mssql extension to query a SQL instance](sql-server-develop-use-vscode.md)
 - [Learn more about Visual Studio Code](https://code.visualstudio.com/docs)
-- [Learn mroe about contributing to the mssql extension ](https://github.com/Microsoft/vscode-mssql/wiki)
+- [Learn more about contributing to the mssql extension ](https://github.com/Microsoft/vscode-mssql/wiki)

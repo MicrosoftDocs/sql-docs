@@ -25,7 +25,7 @@ This article provides the detailed resource limits for databases in Azure SQL Da
 Each read-only replica has its own resources such as DTUs, workers, and sessions. Each read-only replica is subject to the resource limits detailed later in this article.
 
 > ![NOTE]
-> The Gen5 hardware has been renamed to the **standard-series (Gen5)**.
+> The Gen5 hardware has been renamed to the **standard-series (Gen5)** in the vCore purchasing model.
 
 ## Elastic pool: Storage sizes and compute sizes
 

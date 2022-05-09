@@ -37,7 +37,7 @@ You can set the service tier, compute size (service objective), and storage amou
 * [REST API](single-database-manage.md#rest-api)
 
 > ![NOTE]
-> The Gen5 hardware has been renamed to the **standard-series (Gen5)**.
+> The Gen5 hardware has been renamed to the **standard-series (Gen5)** in the vCore purchasing model.
 
 ## General purpose - serverless compute - standard-series (Gen5)
 

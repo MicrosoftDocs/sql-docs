@@ -59,6 +59,14 @@ The following table lists the features of Azure SQL Database that have transitio
 
 Learn about significant changes to the Azure SQL Database documentation.
 
+### May 2022
+
+| Changes | Details |
+| --- | --- |
+| **Gen5 rename** | The Gen5 hardware has been renamed to the **standard-series (Gen5)** in the vCore purchasing model.
+
+
+
 ### April 2022
 
 | Changes | Details |

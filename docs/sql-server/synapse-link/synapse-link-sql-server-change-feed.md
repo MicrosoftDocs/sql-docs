@@ -18,12 +18,12 @@ ms.custom:
 
 This article includes detail on how the Azure Synapse Link change feed works. This new SQL Server 2022 and Azure SQL Database feature is currently in preview. 
 
-[!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, called Azure Synapse Link. Azure Synapse Link provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. 
+[!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, called Azure Synapse Link for SQL. Azure Synapse Link for SQL provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. 
 
 - [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - To get started quickly, see [Get started with Azure Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022) or [Get started with Synapse Link for Azure SQL Database (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database).
 
-While Azure Synapse Link for Azure SQL Database involves user-provisioned Azure resources including an ADLS Gen2 storage account, the Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
+While Azure Synapse Link for SQL Server involves user-provisioned Azure resources including an ADLS Gen2 storage account, the Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
 
 This feature is not currently available for Azure SQL Managed Instance.
 

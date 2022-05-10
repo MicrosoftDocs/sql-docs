@@ -5,7 +5,7 @@ description: This article describes the updates and known issues for SQL Server 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 01/31/2022
+ms.date: 05/03/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -18,6 +18,14 @@ ms.technology: big-data-cluster
 The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The article lists cumulative update information for all the releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 For the latest release notes, see [SQL Server 2019 Big Data Clusters platform release notes](release-notes-big-data-cluster.md).
+
+## <a id="cu16"></a> CU16 (May 2022)
+
+Cumulative Update 16 (CU16) release for SQL Server 2019 Big Data Clusters.
+
+|Package version | Image tag | Contents |
+|-----|-----| ----- |
+|15.0.4223.1|[2019-CU15-ubuntu-20.04]| [SQL Server Big Data Clusters Cumulative Update 16](release-notes-cumulative-update-16.md) |
 
 ## <a id="cu15"></a> CU15 (January 2022)
 

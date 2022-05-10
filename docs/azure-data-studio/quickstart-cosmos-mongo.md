@@ -28,11 +28,11 @@ To complete this quickstart, you need Azure Data Studio and an Azure Cosmos DB A
 
 1. The first time you start Azure Data Studio the **Connection** dialog opens. If the **Connection** dialog doesn't open, select the **New Connection** icon in the **SERVERS** page:
 
-    :::image type="content" source="media/quickstart-cosmos-mongo/new-connection-icon.png" lightbox="media/quickstart-cosmos-mongo/new-connection-icon.png" alt-text="New connection icon in the Servers sidebar.":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/new-connection-icon.png" lightbox="media/quickstart-cosmos-mongo/new-connection-icon.png" alt-text="Screenshot of new connection icon in the Servers sidebar.":::
 
 1. In the dialog that appears, select **Browse**, and then select the **+** icon to sign in to Azure.
 
-    :::image type="content" source="media/quickstart-cosmos-mongo/add-azure-account.png" lightbox="media/quickstart-cosmos-mongo/add-azure-account.png" alt-text="Use + button to add new Azure account in the Connection dialog.":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/add-azure-account.png" lightbox="media/quickstart-cosmos-mongo/add-azure-account.png" alt-text="Screenshot of + button to add new Azure account in the Connection dialog.":::
 
 1. Once you're signed in to Azure, select the Azure Cosmos DB account you'd like to access or fill in the **Connection Details** from fields using the details in this table.
 
@@ -47,7 +47,7 @@ To complete this quickstart, you need Azure Data Studio and an Azure Cosmos DB A
     | **Server group** | *\<Default\>* | |
     | **Name (optional)** | | Enter any unique name to use in the **SERVERS** sidebar. |
 
-    :::image type="content" source="media/quickstart-cosmos-mongo/connection-credentials-form.png" lightbox="media/quickstart-cosmos-mongo/connection-credentials-form.png" alt-text="Dialog with credentials required to create a connection.":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/connection-credentials-form.png" lightbox="media/quickstart-cosmos-mongo/connection-credentials-form.png" alt-text="Screenshot of dialog with credentials required to create a connection.":::
 
 1. Select **Connect**.
 
@@ -62,7 +62,7 @@ The following steps will create a database named **SourceDatabase** and a collec
 
 1. Open the context menu for your account, and select **Create Database**.
 
-    :::image type="content" source="media/quickstart-cosmos-mongo/create-database-menu-option.png" lightbox="media/quickstart-cosmos-mongo/create-database-menu-option.png" alt-text="Create database option in MongoDB context menu.":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/create-database-menu-option.png" lightbox="media/quickstart-cosmos-mongo/create-database-menu-option.png" alt-text="Screenshot of create database option in MongoDB context menu.":::
 
 1. In the **Database** and **Collection** popup dialogs, use the details in this table.
 
@@ -78,7 +78,7 @@ The following steps will create a database named **SourceDatabase** and a collec
 
 1. Expand the **SourceDatabase** and **People** nodes in the **SERVERS** sidebar.
 
-    :::image type="content" source="media/quickstart-cosmos-mongo/servers-sidebar-tree.png" lightbox="media/quickstart-cosmos-mongo/servers-sidebar-tree.png" alt-text="Database and collection hierarchy under the Mongo account note in the SERVERS sidebar.":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/servers-sidebar-tree.png" lightbox="media/quickstart-cosmos-mongo/servers-sidebar-tree.png" alt-text="Screenshot of database and collection hierarchy under the Mongo account note in the SERVERS sidebar.":::
 
 ## Create a sample collection
 
@@ -86,15 +86,15 @@ The following steps will populate the **People** collection with a sample data s
 
 1. Select **Databases** to navigate to the list of databases in your account.
 
-    :::image type="content" source="media/quickstart-cosmos-mongo/navigate-databases.png" lightbox="media/quickstart-cosmos-mongo/navigate-databases.png" alt-text="Option to navigate to databases view.":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/navigate-databases.png" lightbox="media/quickstart-cosmos-mongo/navigate-databases.png" alt-text="Screenshot of option to navigate to databases view.":::
 
 1. Select the **SourceDatabase** item in the list of databases.
 
-    :::image type="content" source="media/quickstart-cosmos-mongo/database-list-item.png" lightbox="media/quickstart-cosmos-mongo/database-list-item.png" alt-text="SourceDatabase list item within databases list.":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/database-list-item.png" lightbox="media/quickstart-cosmos-mongo/database-list-item.png" alt-text="Screenshot of SourceDatabase list item within databases list.":::
 
 1. In the header menu, select **Import Sample Data**. In the confirmation dialog, select **Yes**.
 
-    :::image type="content" source="media/quickstart-cosmos-mongo/navigate-import.png" lightbox="media/quickstart-cosmos-mongo/navigate-import.png" alt-text="Option to perform an import":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/navigate-import.png" lightbox="media/quickstart-cosmos-mongo/navigate-import.png" alt-text="Screenshot of option to perform an import":::
 
 1. Wait for the import operation to complete.
 
@@ -107,7 +107,7 @@ The following steps will use the **Mongo Shell** to execute a query and view the
 
 1. In the menu for your database, select **Open Mongo Shell**.
 
-    :::image type="content" source="media/quickstart-cosmos-mongo/navigate-mongo-shell.png" lightbox="media/quickstart-cosmos-mongo/navigate-mongo-shell.png" alt-text="Menu option to open Mongo Shell.":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/navigate-mongo-shell.png" lightbox="media/quickstart-cosmos-mongo/navigate-mongo-shell.png" alt-text="Screenshot of menu option to open Mongo Shell.":::
 
 1. Execute the following query in the shell.
 
@@ -120,7 +120,7 @@ The following steps will use the **Mongo Shell** to execute a query and view the
 
 1. Observe the output of the query within the shell. The output should contain
 
-    :::image type="content" source="media/quickstart-cosmos-mongo/mongo-query-results.png" lightbox="media/quickstart-cosmos-mongo/mongo-query-results.png" alt-text="Mongo Shell query results.":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/mongo-query-results.png" lightbox="media/quickstart-cosmos-mongo/mongo-query-results.png" alt-text="Screenshot of Mongo Shell query results.":::
 
 ## Next steps
 

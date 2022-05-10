@@ -59,7 +59,7 @@ You can compile the sample with the following steps:
   
 Paste this code into your **Program.cs** file.  
   
-Then you must edit the strings for server name, password, and so on. You can find these strings in the method named **GetSqlConnectionStringBuilder**.  
+Then you must edit the strings for server name, password, and so on. You can find these strings in the method named **GetSqlConnectionString**.  
   
 NOTE: The connection string for server name is geared toward Azure SQL Database, because it includes the four character prefix of **tcp:**. But you can adjust the server string to connect to your Microsoft SQL Server.  
   
@@ -67,7 +67,7 @@ NOTE: The connection string for server name is geared toward Azure SQL Database,
 ```csharp
 using System;  // C#  
 using CG = System.Collections.Generic;  
-using QC = Microsoft.Data.SqlClient;  
+using QC = System.Data.SqlClient;  
 using TD = System.Threading;  
 	
 namespace RetryAdo2  
@@ -300,7 +300,7 @@ To prove the code handles persistent errors correctly, rerun the preceding test 
 4. Watch the console report success on a subsequent retry.  
   
   
-###  Step 2.d: Temporarily misspell the server name  
+###  Step 3.d: Temporarily misspell the server name  
   
 1. Temporarily add 40615 as another error number to **TransientErrorNumbers**, and recompile.  
 2. Set a breakpoint on the line: `new QC.SqlConnectionStringBuilder()`.  

@@ -83,50 +83,41 @@ For local installations, you must run Setup as an administrator. If you install 
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-3. On the **Feature Selection** page, select these options:
-
 ::: moniker range="=sql-server-ver15"
+
+3. On the **Feature Selection** page, select these options:
  
-   **Database Engine Services**
-   
-   To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
-   
-   **Machine Learning Services and Language Extensions**
-   
-   This option installs the Language Extensions component that support Java code execution.
-   
-   If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Machine Learning Services and Language Extensions** and **Java**.
+    **Database Engine Services**: To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+    
+    **Machine Learning Services and Language Extensions**: This option installs the Language Extensions component that support Java code execution.
+    
+    If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Machine Learning Services and Language Extensions** and **Java**.
+    
+    If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select **Java**.
+    
+    If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/   sql-machine-learning-services-windows-install.md).
+    
+    :::image type="content" source="../media/windows-java/2019/sql-install-feature-selection.png" alt-text="Screenshot of the Feature options for Language Extensions.":::
 
-   If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select **Java**.
-   
-   If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/   sql-machine-learning-services-windows-install.md).
-   
-   ![Screenshot of the Feature options for Language Extensions](../media/windows-java/2019/sql-install-feature-selection.png)
+    1. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up.
 
+    Select the **Install Open JRE 11.0.3 included with this installation**.
+    
+    :::image type="content" source="../media/windows-java/2019/sql-install-openjdk.png" alt-text="Screenshot of the Java install location.":::
+    
+    > [!NOTE]
+    > The **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
+    
 ::: moniker-end
 ::: moniker range=">=sql-server-ver16"
-  
-   **Database Engine Services**
-   
-   To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
-   
-   **Machine Learning Services and Language Extensions**
-   
-   This option installs the Language Extensions component that support Java code execution.
-   
-   ![Screenshot of the Feature options for Language Extensions](../media/windows-java/2022/sql-server-2022-machine-learning-services-feature-selection.png)
 
-::: moniker-end
-::: moniker range="=sql-server-ver15"
-
-3a. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up.
-
-   Select the **Install Open JRE 11.0.3 included with this installation**.
-
-   ![Screenshot of the Java install location](../media/windows-java/2019/sql-install-openjdk.png)
-
-   > [!NOTE]
-   > The **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
+3. On the **Feature Selection** page, select these options:
+ 
+    **Database Engine Services**: To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+    
+    **Machine Learning Services and Language Extensions**: This option installs the Language Extensions component that support Java code execution.
+    
+    :::image type="content" source="../media/windows-java/2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of the Feature options for Language Extensions.":::
 
 ::: moniker-end
 
@@ -169,7 +160,8 @@ For local installations, you must run Setup as an administrator. If you install 
 
 4. Create a new system variable for `JRE_HOME` with the value of the JDK/JRE path (found in step 1).
 
-::: moniker range=">=sql-server-ver15"
+::: moniker range="=sql-server-ver15"
+
 5. Restart [Launchpad](../concepts/extensibility-framework.md#launchpad).
 
     1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
@@ -179,8 +171,7 @@ For local installations, you must run Setup as an administrator. If you install 
 ::: moniker-end
 ::: moniker range=">=sql-server-ver16"
 
-5. Register language extension
-    Follow these steps to download and register the Java language extension, which is used for the Java custom runtime.
+5. Register language extension. Follow these steps to download and register the Java language extension, which is used for the Java custom runtime.
     
     1. Download the **java-lang-extension-windows-release.zip** file from [the Java language extension for SQL Server GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases). Download the latest Windows `java-lang-extension-windows.zip` file.
     
@@ -200,7 +191,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
     1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
-    1. Under SQL Server Services, right-click SQL Server Launchpad and select **Restart**.
+    2. Under SQL Server Services, right-click SQL Server Launchpad and select **Restart**.
 
 ::: moniker-end
 
@@ -243,17 +234,15 @@ You can restart the service using the right-click **Restart** command for the in
 
 ## Enable script execution
 
-1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
-
-2. Connect to the instance where you installed Language Extensions, select **New Query** to open a query window, and run the following command:
+1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Connect to the instance where you installed Language Extensions, select **New Query** to open a query window, and run the following command:
 
     ```sql
     EXEC sp_configure;
     ```
 
-    The value for the property, `external scripts enabled`, should be **0** at this point. The feature is turned off by default and must be explicitly enabled by an administrator before you can run Java code.
+    The feature is off (`value` = 0) by default and must be explicitly enabled by an administrator before you can run Java code.
 
-3. To enable the external scripting feature, run the following statement:
+1. To enable the external scripting feature, run the following statement:
 
     ```sql
     EXEC sp_configure 'external scripts enabled', 1

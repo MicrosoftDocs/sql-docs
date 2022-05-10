@@ -55,8 +55,6 @@ If you encounter any installation errors during setup, check the summary log in 
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-    :::image type="content" source="media/machine-learning-services-windows-install-sql-2022/sql-server-2022-installation-center.png" alt-text="Screenshot of the SQL Server 2022 Installation Center":::
-
 3. On the **Feature Selection** page, select these options:
  
   - **Database Engine Services**
@@ -69,7 +67,7 @@ If you encounter any installation errors during setup, check the summary log in 
 
     This screenshot shows the minimum **Instance Features** to check when installing SQL Server 2022 Machine Learning Services.
 
-    :::image type="content" source="media/machine-learning-services-windows-install-sql-2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of the SQL Server 2022 Setup Feature selection showing check boxes next to Database Engine Services and Machine Learning Services and Language.":::
+    :::image type="content" source="media/machine-learning-services-windows-install-sql-2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of feature selection showing check boxes next to Database Engine Services and Machine Learning Services and Language.":::
 
   Starting with SQL Server 2022, any desired R and Python runtimes or packages are installed outside of SQL Setup. The instructions follow in this article. 
 
@@ -91,12 +89,12 @@ If you encounter any installation errors during setup, check the summary log in 
   - [CompatibilityAPI Windows](https://go.microsoft.com/fwlink/?LinkID=2193827)
   - [RevoScaleR package for Windows](https://go.microsoft.com/fwlink/?LinkID=2193828)
 
-  The following sample scripts can be adapted for the installation:
-
-  ```r
-  R CMD INSTALL "c:\temp\CompatibilityAPI.zip"
-  R CMD INSTALL "c:\temp\RevoScaleR.zip"
-  ```
+    The following sample scripts can be adapted for the installation:
+    
+    ```r
+    R CMD INSTALL "c:\temp\CompatibilityAPI.zip"
+    R CMD INSTALL "c:\temp\RevoScaleR.zip"
+    ```
 
 7. Configure the installed R runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in an R application folder depending on the installation, usually in one of these two locations: 
 
@@ -140,11 +138,11 @@ If you encounter any installation errors during setup, check the summary log in 
 
 7. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the user's application library folder, for example:  `C:\Users\<alias>\AppData\Local\Programs\Python\Python310\Lib\site-packages\revoscalepy\rxLibs`.
 
-  The following script can be used to configure the installed Python runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
-
-  ```cmd
-  .\RegisterRext.exe /configure /pythonhome:"C:\Users\<alias>\AppData\Local\Programs\Python\Python310" /instance:"MSSQLSERVER"
-  ```
+    The following script can be used to configure the installed Python runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
+    
+    ```cmd
+    .\RegisterRext.exe /configure /pythonhome:"C:\Users\<alias>\AppData\Local\Programs\Python\Python310" /instance:"MSSQLSERVER"
+    ```
 
 8. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:
 

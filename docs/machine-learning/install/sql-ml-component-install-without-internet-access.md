@@ -38,8 +38,9 @@ Offline installation of SQL Server 2022 is similar to the online installation ex
 1. Use SQL Setup to install the Machine Learning services feature.
 2. Download any desired runtimes and copy them to the offline installation server. Custom runtimes for SQL Server 2022 are customer-installed. CAB files are not used for SQL Server 2022.
 3. Download any desired packages and copy them to the offline installation server. Otherwise, refer to instructions for installation from SQL Setup and installation of any desired custom packages: 
- - [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md)
- - [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning-sql-2022.md)
+
+   - [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md)
+   - [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning-sql-2022.md)
 
 ::: moniker-end
 

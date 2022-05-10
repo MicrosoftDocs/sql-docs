@@ -57,7 +57,7 @@ Take a look at the data types used in your R/Python code and do the following:
 
 + Make a checklist of possible data type issues.
 
-  All R/Python data types are supported by SQL Server machine Learning Services. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a greater variety of data types than does R or Python. Therefore, some implicit data type conversions are performed when moving [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data to and from your code. You might need to explicitly cast or convert some data.
+  All R/Python data types are supported by SQL Server Machine Learning Services. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a greater variety of data types than does R or Python. Therefore, some implicit data type conversions are performed when moving [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data to and from your code. You might need to explicitly cast or convert some data.
 
   NULL values are supported. However, R uses the `na` data construct to represent a missing value, which is similar to a null.
 

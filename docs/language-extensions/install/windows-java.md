@@ -81,24 +81,12 @@ For local installations, you must run Setup as an administrator. If you install 
 
 1. Start the setup wizard for SQL Server.
   
-1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
+2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
+
+3. On the **Feature Selection** page, select these options:
 
 ::: moniker range="=sql-server-ver15"
-
-:::image type="content" source="../media/windows-java/2019/sql-install.png" alt-text="SQL Server 2019 installation":::
-
-::: moniker-end
-
-::: moniker range=">=sql-server-ver16"
-
-:::image type="content" source="../media/windows-java/2022/sql-server-2022-installation-center.png" alt-text="SQL Server 2022 installation":::
-
-::: moniker-end
-
-::: moniker range="=sql-server-ver15"
-
-1. On the **Feature Selection** page, select these options:
-  
+ 
     - **Database Engine Services**
 
     To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
@@ -112,11 +100,10 @@ For local installations, you must run Setup as an administrator. If you install 
 
     If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 
-    ![Feature options for Language Extensions](../media/windows-java/2019/sql-install-feature-selection.png)
+    ![Screenshot of the Feature options for Language Extensions](../media/windows-java/2019/sql-install-feature-selection.png)
+
 ::: moniker-end
 ::: moniker range=">=sql-server-ver16"
-
-1. On the **Feature Selection** page, select these options:
   
     - **Database Engine Services**
 
@@ -126,27 +113,30 @@ For local installations, you must run Setup as an administrator. If you install 
 
     This option installs the Language Extensions component that support Java code execution.
 
-    ![Feature options for Language Extensions](../media/windows-java/2022/sql-server-2022-machine-learning-services-feature-selection.png)
+    ![Screenshot of the Feature options for Language Extensions](../media/windows-java/2022/sql-server-2022-machine-learning-services-feature-selection.png)
+
 ::: moniker-end
 ::: moniker range="=sql-server-ver15"
 
-1. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up.
+3a. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up.
 
-    Select the **Install Open JRE 11.0.3 included with this installation**.
+   Select the **Install Open JRE 11.0.3 included with this installation**.
 
-    ![Choose Java install location](../media/windows-java/2019/sql-install-openjdk.png)
+   ![Screenshot of the Java install location](../media/windows-java/2019/sql-install-openjdk.png)
 
-    > [!NOTE]
-    > The **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
+   > [!NOTE]
+   > The **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
+
 ::: moniker-end
-1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
+
+4. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   
     + Database Engine Services
     + Machine Learning Services and Language Extensions
 
     Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-1. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+5. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## Add the JRE_HOME variable
 
@@ -172,22 +162,22 @@ For local installations, you must run Setup as an administrator. If you install 
 
 ::: moniker-end
 
-1. In Control Panel, open **System and Security**, open **System**, and select **Advanced System Properties**.
+2. In Control Panel, open **System and Security**, open **System**, and select **Advanced System Properties**.
 
-1. Select **Environment Variables**.
+3. Select **Environment Variables**.
 
-1. Create a new system variable for `JRE_HOME` with the value of the JDK/JRE path (found in step 1).
+4. Create a new system variable for `JRE_HOME` with the value of the JDK/JRE path (found in step 1).
 
 ::: moniker range=">=sql-server-ver16"
 
-1. Register language extension
+4a. Register language extension
     Follow these steps to download and register the Java language extension, which is used for the Java custom runtime.
     
     1. Download the **java-lang-extension-windows-release.zip** file from [the Java language extension for SQL Server GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases). Download the latest Windows `java-lang-extension-windows.zip` file.
     
-    1. Use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Java language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
+    2. Use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Java language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
     
-    1. Modify the path in this statement to reflect the location of the downloaded language extension zip file (java-lang-extension-windows-release.zip) and the location your custom Java installation (`%ProgramFiles%\Python`).
+    3. Modify the path in this statement to reflect the location of the downloaded language extension zip file (java-lang-extension-windows-release.zip) and the location your custom Java installation (`%ProgramFiles%\Python`).
     
     ```sql
     CREATE EXTERNAL LANGUAGE [Java]
@@ -199,7 +189,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 ::: moniker-end
 
-1. Restart [Launchpad](../concepts/extensibility-framework.md#launchpad).
+5. Restart [Launchpad](../concepts/extensibility-framework.md#launchpad).
 
     1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
@@ -225,7 +215,7 @@ Run the **icacls** commands from an *elevated* line to grant access to the **SQL
     
     You can skip this step if you installed the JDK/JRE in the default folder under program files on Windows.
 
-1. Give AppContainer permissions
+2. Give AppContainer permissions
 
     ```cmd
     icacls "<PATH to JRE>" /grant *S-1-15-2-1:(OI)(CI)RX /T
@@ -246,7 +236,7 @@ You can restart the service using the right-click **Restart** command for the in
 
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
-1. Connect to the instance where you installed Language Extensions, select **New Query** to open a query window, and run the following command:
+2. Connect to the instance where you installed Language Extensions, select **New Query** to open a query window, and run the following command:
 
     ```sql
     EXEC sp_configure;
@@ -254,7 +244,7 @@ You can restart the service using the right-click **Restart** command for the in
 
     The value for the property, `external scripts enabled`, should be **0** at this point. The feature is turned off by default and must be explicitly enabled by an administrator before you can run Java code.
 
-1. To enable the external scripting feature, run the following statement:
+3. To enable the external scripting feature, run the following statement:
 
     ```sql
     EXEC sp_configure 'external scripts enabled', 1
@@ -294,7 +284,7 @@ Use the following steps to verify that all components used to launch external sc
 
     The **run_value** is now set to 1.
 
-1. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has language extensions installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md).
+2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has language extensions installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md).
 
 ## Additional configuration
 

@@ -8351,10 +8351,10 @@ items:
         href: relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables.md?view=sql-server-ver16&preserve-view=true
       - name: Create updatable ledger tables
         href: relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables.md?view=sql-server-ver16&preserve-view=true
-      - name: Convert regular tables into ledger tables
-        href: relational-databases/security/ledger/ledger-how-to-convert-regular-tables-into-ledger-tables.md?view=sql-server-ver16&preserve-view=true
-      - name: How to configure automatic database digests
-        href: relational-databases/security/ledger/ledger-how-to-configure-automatic-database-digest.md?view=sql-server-ver16&preserve-view=true
+      - name: Migrate data from regular tables to ledger tables
+        href: relational-databases/security/ledger/ledger-how-to-migrate-data-to-ledger-tables.md?view=sql-server-ver16&preserve-view=true
+      - name: Enable automatic digests storage
+        href: relational-databases/security/ledger/ledger-how-to-enable-automatic-digest-storage.md?view=sql-server-ver16&preserve-view=true
       - name: Verify ledger database for tampering
         href: relational-databases/security/ledger/ledger-verify-database.md?view=sql-server-ver16&preserve-view=true
   - name: Concepts
@@ -8459,7 +8459,7 @@ items:
       - name: Database verification
         href: relational-databases/security/ledger/ledger-database-verification.md?view=sql-server-ver16&preserve-view=true
       - name: Recover ledger database after tampering
-        href: relational-databases/security/ledger/ledger-recovery-after-tampering.md?view=sql-server-ver16&preserve-view=true
+        href: relational-databases/security/ledger/ledger-how-to-recover-after-tampering.md?view=sql-server-ver16&preserve-view=true
       - name: Ledger limitations
         href: relational-databases/security/ledger/ledger-limits.md?view=sql-server-ver16&preserve-view=true
   - name: Tutorials

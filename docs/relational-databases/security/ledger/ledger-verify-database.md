@@ -21,7 +21,6 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 ## Prerequisites
 
 - Have an active Azure subscription if you're using Azure SQL Database. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [Configure a ledger database](ledger-how-to-configure-ledger-database.md).
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md) or [create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md).
 - [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
 
@@ -47,16 +46,8 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
    END CATCH
    ```
 
-   > [!NOTE]
-   > The verification script can also be found in the Azure Portal. Open the [Azure portal](https://portal.azure.com/) and locate the database you want to verify. Select that database in SQL Database.
-
-1. In **Security**, select the **Ledger** option.
-
-   :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected.":::
-
-1. In the **Ledger** pane, select **</> Verify database**, and select the **copy** icon in the pre-populated text in the window.
-
-   :::image type="content" source="media/ledger/ledger-portal-verify.png" alt-text="Azure portal verify database button":::
+> [!NOTE]
+   > The verification script can also be found in the Azure Portal. Open the [Azure portal](https://portal.azure.com/) and locate the database you want to verify. In **Security**, select the **Ledger** option. In the **Ledger** pane, select **</> Verify database**.
 
 1. Execute the query. You'll see that **digest_locations** returns the current location of where your database digests are stored and any previous locations. **Result** returns the success or failure of ledger verification.
 

@@ -64,6 +64,10 @@ landingContent:
             url: /sql/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables
           - text: How to verify a ledger table to detect tampering
             url: /sql/relational-databases/security/ledger/ledger-verify-database
+          - text: Convert regular tables into ledger tables
+            url: /sql/relational-databases/security/ledger/ledger-how-to-convert-regular-tables-into-ledger-tables
+          - text: How to enable automatic digest storage
+            url: /sql/relational-databases/security/ledger/ledger-how-to-enable-automatic-digest-storage
 
 
   # Card
@@ -71,12 +75,12 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Digest management and database verification
+          - text: Digest management
             url: /sql/relational-databases/security/ledger/ledger-digest-management
           - text: Database verification
             url: /sql/relational-databases/security/ledger/ledger-database-verification
           - text: Recover ledger database after tampering
-            url: /sql/relational-databases/security/ledger/ledger-recovery-after-tampering
+            url: /sql/relational-databases/security/ledger/ledger-how-to-recover-after-tampering
 
   # Card
   - title: Ledger references

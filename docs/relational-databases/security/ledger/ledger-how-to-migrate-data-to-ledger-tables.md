@@ -1,6 +1,6 @@
 ---
-title: "Convert regular tables into ledger tables"
-description: Learn how to convert regular tables into ledger tables.
+title: "Migrate data from regular tables to ledger tables"
+description: Learn how to migrate data from regular tables to ledger tables.
 ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
@@ -11,13 +11,15 @@ ms.author: vanto
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
-# Convert regular tables into ledger tables
+# Migrate data from regular tables to ledger tables
 
 [!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
+Converting regular tables to ledger tables is not possible, but you can migrate the data from an existing regular table to a ledger table, and then replace the original table with the ledger table.
+
 When you're performing a database ledger verification, the process needs to order all operations within each transaction. If you use a `SELECT INTO` or `BULK INSERT` statement to copy a few billion rows from a regular table to a ledger table, it will all be done in one single transaction. This means lots of data needs to be fully sorted, which will be done in a single thread. The sorting operation will take a long time to complete.
 
-To convert a regular table into a ledger table, we recommend using the [sys.sp_copy_data_in_batches](../../../relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql.md) stored procedure. This will split the copy operation in batches of 10-100K rows per transaction. As a result, the database ledger verification will have smaller transactions that can be sorted in parallel. This helps the time of the database ledger verification tremendously.
+To convert a regular table into a ledger table, Microsoft recommends using the [sys.sp_copy_data_in_batches](../../../relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql.md) stored procedure. This will split the copy operation in batches of 10-100K rows per transaction. As a result, the database ledger verification will have smaller transactions that can be sorted in parallel. This helps the time of the database ledger verification tremendously.
 
 > [!NOTE]
 > The customer can still use other commands, services, or tools to copy the data from the source table to the target table. Make sure you avoid large transactions because this will have a performance impact on the database ledger verification.

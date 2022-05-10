@@ -1,5 +1,5 @@
 ---
-title: "Limitations for ledger"
+title: "Ledger considerations and limitations"
 description: Limitations and considerations for the ledger feature
 ms.date: "05/24/2022"
 ms.service: sql-database
@@ -17,19 +17,19 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 There are some considerations and limitations to be aware of when working with ledger tables due to the nature of system-versioning and immutable data.
 
-## General limitations
+## General considerations and limitations
 
 Consider the following when working with ledger.
 
 - A [ledger database](ledger-database-ledger.md), a database with the ledger property set to on, can't be converted to a regular database, with the ledger property set to off.
+- Automatic generation and storage of database digests is currently available in Azure SQL Database, but not supported on SQL Server.
 - Automated digest management with ledger tables by using [Azure Storage immutable blobs](/azure/storage/blobs/immutable-storage-overview) doesn't offer the ability for users to use [locally redundant storage (LRS)](/azure/storage/common/storage-redundancy#locally-redundant-storage) accounts.
 - When a ledger database is created, all new tables created by default (without specifying the `APPEND_ONLY = ON` clause) in the database will be [updatable ledger tables](ledger-updatable-ledger-tables.md). To create [append-only ledger tables](ledger-append-only-ledger-tables.md), use the `APPEND_ONLY = ON` clause in the [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) statements.
 - A transaction can update up to 200 ledger tables.
-- Automatic generation and storage of database digests is currently available in Azure SQL Database, but not supported on SQL Server.
 
-## Ledger table limitations
+## Ledger table considerations and limitations
 
-- Existing tables in a database that aren't ledger tables can't be converted to ledger tables. See [How to convert regular tables into ledger tables](ledger-how-to-convert-regular-tables-into-ledger-tables.md).
+- Existing tables in a database that aren't ledger tables can't be converted to ledger tables. For more information, see [Migrate data from regular tables to ledger tables](ledger-how-to-migrate-data-to-ledger-tables.md).
 - After a ledger table is created, it can't be reverted to a table that isn't a ledger table.
 - Deleting older data in [append-only ledger tables](ledger-append-only-ledger-tables.md) or the history table of [updatable ledger tables](ledger-updatable-ledger-tables.md) isn't supported.
 - `TRUNCATE TABLE` isn't supported.

@@ -136,7 +136,8 @@ The following commands register the repository providing the R language platform
     library("RevoScaleR")
     ```
 
-16. Configure the installed R runtime with SQL Server for Linux, where `path/to/` is the file path to the r binary, and `RFolderVersion` is the version-specific folder name for your installation of R runtime, for example, `R4.2`.
+16. Configure the installed R runtime with SQL Server for Linux, where `path/to/` is the file path to the R binary, and `RFolderVersion` is the version-specific folder name for your installation of R runtime, for example, `R4.2`.
+
 
     ```bash  
     /opt/mssql/bin/mssql-conf set extensibility rbinpath /path/to/RFolderVersion/lib/R/bin/R
@@ -205,7 +206,7 @@ The following commands register the repository providing the R language platform
 
     ```bash
     /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /path/to/pythonFolderVersion
-    /opt/mssql/bin/mssql-conf set extensibility datadirectories /path/to/:/path/to/lib/pythonFolderVersion/dist-packages
+    /opt/mssql/bin/mssql-conf set extensibility datadirectories /path/to/:/path/to/lib/pythonFolderVersion/dist-packages/
     ```
 
 9. Restart the Launchpad service.

@@ -50,6 +50,7 @@ You can compile the sample with the following steps:
     - Name the project **RetryAdo2**.  
 2. Open the Solution Explorer pane.  
     - See the name of your project.  
+    - On your project, [add a NuGet dependency](/nuget/quickstart/install-and-use-a-package-in-visual-studio) on the Microsoft.Data.SqlClient package.
     - See the name of the Program.cs file.  
 3. Open the Program.cs file.  
 4. Entirely replace the contents of the Program.cs file with the code in the following code block.  

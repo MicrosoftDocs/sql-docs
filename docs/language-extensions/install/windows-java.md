@@ -14,7 +14,7 @@ ms.custom:
 ---
 # Install SQL Server Java Language Extension on Windows
 
-[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)] and later
 
 Learn how to install the [Java Language Extension](../java-overview.md) component for SQL Server on Windows. The Java Language Extension is part of [SQL Server Language Extensions](../language-extensions-overview.md).
 
@@ -24,6 +24,9 @@ Learn how to install the [Java Language Extension](../java-overview.md) componen
 <a name="prerequisites"></a>
 
 ## Pre-install checklist
+
+> [!NOTE]
+> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
 
 + SQL Server Setup is required if you want to install support for the Java Language Extension.
 
@@ -101,13 +104,10 @@ For local installations, you must run Setup as an administrator. If you install 
 
     1. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up.
 
-    Select the **Install Open JRE 11.0.3 included with this installation**.
-    
-    :::image type="content" source="../media/windows-java/2019/sql-install-openjdk.png" alt-text="Screenshot of the Java install location.":::
-    
-    > [!NOTE]
-    > The **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
-    
+        Select the **Install Open JRE 11.0.3 included with this installation**. The **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
+        
+        :::image type="content" source="../media/windows-java/2019/sql-install-openjdk.png" alt-text="Screenshot of the Java install location.":::
+            
 ::: moniker-end
 ::: moniker range=">=sql-server-ver16"
 
@@ -215,15 +215,13 @@ Run the **icacls** commands from an *elevated* line to grant access to the **SQL
     
     You can skip this step if you installed the JDK/JRE in the default folder under program files on Windows.
 
-2. Give AppContainer permissions
+2. Give AppContainer permissions. This command grants permissions to the computer SID **S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
     ```cmd
     icacls "<PATH to JRE>" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
 
-    > [!NOTE]
-    > The above command grants permissions to the computer SID **S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
-
+    
 ## Restart the service
 
 When the installation is complete, restart the database engine before continuing to the next step, enabling script execution.

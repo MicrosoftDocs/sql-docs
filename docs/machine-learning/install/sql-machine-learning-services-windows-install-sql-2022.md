@@ -69,16 +69,12 @@ If you encounter any installation errors during setup, check the summary log in 
 
     :::image type="content" source="media/machine-learning-services-windows-install-sql-2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of feature selection showing check boxes next to Database Engine Services and Machine Learning Services and Language.":::
 
-  Starting with SQL Server 2022, any desired R and Python runtimes or packages are installed outside of SQL Setup. The instructions follow in this article. 
 
-  For information on installing and using Java, see [Install SQL Server Language Extensions on Windows](../../language-extensions/install/windows-java.md).
+4. **Next steps vary from previous versions:** Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer shipped or installed within SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. See the next sections and continue to step 5:
 
-4. **Next steps vary from previous versions:** Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer shipped or installed within SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. See the next sections to:
-
-- [Install R](#install-r)
-- [Install Python](#install-python)
-- [Install Java](#install-java)
-  
+    - [Install R](#install-r)
+    - [Install Python](#install-python)
+    - [Install Java](#install-java)
 
 ## Install R
 
@@ -174,6 +170,8 @@ For information on installing and using Java, see [Install SQL Server Language E
 
 If the external script verification step was successful, you can run R or Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
 
+Whether the additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.
+
 If you got an error when running the command, review the additional configuration steps in this section. You might need to make additional appropriate configurations to the service or database.
 
 At the instance level, additional configuration might include:
@@ -189,12 +187,7 @@ Starting with SQL Server 2019 on Windows, the isolation mechanism has changed. T
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
-On the database, you might need the following configuration updates:
-
-* [Give users permission to SQL Server Machine Learning Services](../../machine-learning/security/user-permission.md)
-
-> [!NOTE]
-> Whether the additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.
+On the database, you might need the following configuration updates: [Give users permission to SQL Server Machine Learning Services](../../machine-learning/security/user-permission.md).
 
 ## Suggested optimizations
 

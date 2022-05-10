@@ -49,12 +49,12 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-|Azure Purview integration|Apply Purview policies to any SQL Server instance that is enrolled in both Azure Arc and to Azure Purview data governance.<br/><br/>- Follow least privilege principal with Azure RBAC.|
+|Azure Purview integration|Apply Purview policies to any SQL Server instance that is enrolled in both Azure Arc and to Azure Purview data governance.<br/><br/>- Follow the principle of least privilege using Azure Purview data and access policies.|
 |Ledger | In-database blockchain to create an immutable track record of data modifications over time. See [SQL Database ledger](/azure/azure-sql/database/ledger-landing).|
 |Azure Active Directory authentication| Manage integrated authentication with Azure Active Directory.|
 |Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).| 
 |Enhanced encryption | TDS 8.0 - TDS wrapped in TLS.|
-|New permissions & roles | Enabled least privileged access for administrator tasks. See summary information in [New granular permissions & roles](#new-granular-permissions--roles).|
+|New permissions & roles | Enable least privileged access for administrative tasks. See summary information in [New granular permissions & roles](#new-granular-permissions--roles).|
 |Dynamic data masking | Granular permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).|
 | Support for PFX certificates | Supports certificate, and key backup and restore scenarios, along with integration with Azure Blob Storage service for the same. This enables adherence to security best practices and compliance standards guidelines that prohibit the usage of insecure or deprecated algorithms like RC4 and SHA-1.| 
 
@@ -112,7 +112,7 @@ This section summarizes the granular permissions and roles that SQL Server 2022 
 #### Granular permissions
 
 - `CREATE LOGIN` and `CREATE USER`
-  - Complements the existing `ALTER ANY LOGIN` or `USER` and allows permitting only the creation of accounts but not change existing accounts
+  - Complements the existing `ALTER ANY LOGIN` and the `ALTER ANY USER` permission respectively by permitting only the creation of accounts but not altering (changing) existing users or logins.
 
 - `VIEW SERVER SECURITY STATE` and `VIEW DATABASE SECURITY STATE`
   - All dynamic management views (DMV) in SQL Server are covered by `VIEW SERVER` respectively `VIEW DATABASE STATE`. A subset of DMVs contains information about the security configuration that is not necessary to disclose to for example performance monitoring tasks but would be required to conduct a security auditing. These are covered with this new permission
@@ -139,7 +139,9 @@ This section summarizes the granular permissions and roles that SQL Server 2022 
   - Allows connect to any database on the logical server
   - The ideal counterpart for `##MS_ServerStateReader##,` `##MS_DefinitionReader##` and `##MS_SecurityDefinitionReader##`
 - `##MS_DatabaseManager##`
+  - Can create and alter any database.
 - `##MS_LoginManager##`
+  - Can create and alter any login.
 
 ### Query Store improvements
 

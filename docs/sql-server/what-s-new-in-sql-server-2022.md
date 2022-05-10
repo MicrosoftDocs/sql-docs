@@ -33,9 +33,7 @@ Disaster recovery in the cloud with [Link feature for Azure SQL Managed Instance
 
 ## Azure Synapse Link support
 
-Azure Synapse Link for SQL enables near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology.
-
-For details and known limitations, see [Create Synapse Link for SQL Server 2022 (Preview) - Azure Synapse Analytics | Microsoft Docs](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022#known-limitations).
+Azure Synapse Link for SQL enables near real-time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. With a seamless integration between operational stores and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. For more information, see [What is Synapse Link for SQL? (Preview)](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview).
 
 ## Azure Purview integration
 

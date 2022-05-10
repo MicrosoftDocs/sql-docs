@@ -27,7 +27,7 @@ For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.m
 
 The following video introduces SQL Server 2022 Preview.
 
-> [!VIDEO https://channel9.msdn.com/Shows/data-exposed/introduction-to-sql-server-2022-ep1]
+> [!VIDEO https://channel9.msdn.com/Shows/data-exposed/introduction-to-sql-server-2022-ep1/player?WT.mc_id=dataexposed-c9-niner]
 
 For additional video content, see [What's new in SQL Server](https://microsoftmechanics.libsyn.com/podcast/whats-new-in-sql-server-2022).
 

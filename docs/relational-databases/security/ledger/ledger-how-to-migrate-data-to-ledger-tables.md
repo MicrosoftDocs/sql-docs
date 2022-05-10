@@ -15,7 +15,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ve
 
 [!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Converting regular tables to ledger tables is not possible, but you can migrate the data from an existing regular table to a ledger table, and then replace the original table with the ledger table.
+Converting regular tables to ledger tables isn't possible, but you can migrate the data from an existing regular table to a ledger table, and then replace the original table with the ledger table.
 
 When you're performing a database ledger verification, the process needs to order all operations within each transaction. If you use a `SELECT INTO` or `BULK INSERT` statement to copy a few billion rows from a regular table to a ledger table, it will all be done in one single transaction. This means lots of data needs to be fully sorted, which will be done in a single thread. The sorting operation will take a long time to complete.
 

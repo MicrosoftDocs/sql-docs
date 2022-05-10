@@ -16,14 +16,14 @@ monikerRange: "= azuresqldb-current"
 
 [!INCLUDE [Azure SQL Database](../../../includes/applies-to-version/asdb.md)]
 
-In this article, we will describe how you can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI.
+In this article, we'll describe how you can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI.
 
 ## Prerequisites
 
 - Have an active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - An Azure SQL Database
 
-## Enable automatic digest storage
+## Enable automatic digest storage using the Azure portal
 
 # [Portal](#tab/Portal)
 
@@ -31,12 +31,19 @@ In this article, we will describe how you can configure automatic generation and
 > [!NOTE]
 > Enable automatic digest storage can also be configured when creating a new database.
 
-2. In **Security**, select the **Ledger** option. :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected."::: 
-1. In the **Ledger** pane, select **Enable automatic digest storage**. Select the storage type. You can choose between Azure Storage or Azure Confidential Ledger (ACL). Depending on the storage type you picked, you have to select an existing storage account or ACL, or create a new one. Note that the storage container name is fixed and cannot be modified. :::image type="content" source="media/ledger/automatic-digest-management.png" alt-text="Screenshot that shows the selections for enabling digest storage.":::
-1. Click **Save** to save your automatic digest storage configuration. 
+1. In **Security**, select the **Ledger** option. 
+
+   :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected.":::
+
+1. In the **Ledger** pane, select **Enable automatic digest storage**. Select the storage type. You can choose between Azure Storage or Azure Confidential Ledger (ACL). Depending on the storage type you picked, you have to select an existing storage account or ACL, or create a new one. The storage container name is fixed and can't be modified.
+
+   :::image type="content" source="media/ledger/automatic-digest-management.png" alt-text="Screenshot that shows the selections for enabling digest storage.":::
+
+1. Select **Save** to save your automatic digest storage configuration.
 
 # [PowerShell](#tab/PowerShell)
-### Enable database digest uploads
+
+## Enable database digest uploads using PowerShell
 
 Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger, by using the [Enable-AzSqlDatabaseLedgerDigestUpload](/powershell/module/az.sql/enable-azsqldatabaseledgerdigestupload) cmdlet. When the endpoint parameter is an Azure Blob Storage endpoint, the database server will create a new container, named **sqldbledgerdigests**, within the storage account and it will start writing ledger digests to the container.
   
@@ -51,8 +58,10 @@ $ledgerDigestUploadConfig = Enable-AzSqlDatabaseLedgerDigestUpload `
      -Endpoint "https://mystorage.blob.core.windows.net"
 $ledgerDigestUploadConfig
 ```
+
 # [Azure CLI](#tab/AzureCLI)
-### Enable database digest uploads
+
+## Enable database digest uploads using the Azure CLI
 
 Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger, by using the [az sql db ledger-digest-uploads enable](/cli/azure/sql/db) command.  *Note: Make sure you modify the parameters name,resource-group, server and endpoint (ACL endpoint or Azure Storage endpoint)*
 
@@ -63,6 +72,7 @@ az sql db ledger-digest-uploads enable \
     --server Server01 \
     --endpoint https://mystorage.blob.core.windows.net
 ```
+
 ---
 
 ## Next steps

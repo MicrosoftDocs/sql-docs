@@ -18,11 +18,11 @@ ms.custom: kr2b-contr-experiment
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
-Whether or not the [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] is operating with Active Directory integration, `AZDATA_PASSWORD` is set during deployment. It provides a basic authentication to the cluster controller and master instance. This document describes how to manually update `AZDATA_PASSWORD`.
+Whether or not the [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] operates with Active Directory integration, `AZDATA_PASSWORD` is set during deployment. It provides a basic authentication to the cluster controller and master instance. This document describes how to manually update `AZDATA_PASSWORD`.
 
 ## Change AZDATA_PASSWORD for controller
 
-If the cluster is operating in non-Active Directory mode, update the Apache Knox Gateway password by doing the following steps:
+If the cluster operates in non-Active Directory mode, update the Apache Knox Gateway password by doing the following steps:
 
 1. Obtain the controller [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] credentials by running the following commands:
 
@@ -38,7 +38,7 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
    echo <password from kubectl command>  | base64 --decode && echo
    ```
 
-1. In a separate command window, expose the controller database server port:
+1. In a separate window, expose the controller database server port:
 
    ```bash
    kubectl port-forward controldb-0 1433:1433 --address 0.0.0.0 -n <cluster name>
@@ -89,7 +89,7 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
 
 After following the steps to update AZDATA_PASSWORD, [Grafana](app-monitor.md) and [Kibana](cluster-logging-kibana.md) still accept the old password. Grafana and Kibana don't have visibility to the new Kubernetes secret. You must update the password for Grafana and Kibana separately.
 
-## Update Grafana password
+### Update Grafana password
 
 Follow these options for manually updating the password for [Grafana](app-monitor.md).
 
@@ -110,7 +110,7 @@ Follow these options for manually updating the password for [Grafana](app-monito
     ```
     ---
 
-2. Generate the new password. 
+2. Generate the new password.
 
     ```bash
     htpasswd -nbs <username> <password>
@@ -152,36 +152,36 @@ Follow these options for manually updating the password for [Grafana](app-monito
        mssql-internal-controller-username: <username>
     ```
 
-6. Identify and delete the mgmtproxy pod.
+6. Identify and delete the `mgmtproxy` pod.
 
-    If necessary, identify the name of your mgmtproxy prod.
+    If necessary, identify the name of your `mgmtproxy` prod.
 
     ### [For Windows](#tab/for-windows)
-     On a Windows server you can use the following script:
+     On a Windows server, use the following script:
 
     ```bash
     kubectl get pods -n <namespace> -l app=mgmtproxy
     ```
 
     ### [For Linux](#tab/for-linux)
-     On Linux you can use the following script:
+     On a Linux computer, use the following script:
 
     ```bash
     kubectl get pods -n <namespace> | grep 'mgmtproxy'
     ```
     ---
 
-     Remove the mgmtproxy pod:
+     Remove the `mgmtproxy` pod:
 
     ```bash
     kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
     ```
 
-7. Wait for the mgmtproxy pod to come online and Grafana Dashboard to start.  
+7. Wait for the `mgmtproxy` pod to come online and Grafana Dashboard to start.  
 
     The wait isn't significant and the pod should be online within seconds. To check the status of the pod you can use the same `get pods` command as used in the previous step.
 
-    If you see the mgmtproxy pod doesn't promptly return to Ready status, use kubectl to describe the pod:
+    If you see the mgmtproxy pod doesn't promptly return to *Ready* status, use `kubectl` to describe the pod:
 
     ```bash
     kubectl describe pods mgmtproxy-xxxxx  -n <namespace>
@@ -189,14 +189,14 @@ Follow these options for manually updating the password for [Grafana](app-monito
 
     For troubleshooting and further log collection, use the Azure Data CLI [azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md) command.
 
-8. Now, sign in to Grafana using new password.
+8. Sign in to Grafana using new password.
 
-## Update the Kibana password
+### Update the Kibana password
 
 Follow these options for manually updating the password for [Kibana](cluster-logging-kibana.md).
 
 > [!IMPORTANT]
-> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Kibana. You will see a blank page when loading the dashboards using an unsupported browser. Consider the [Chromium-based Microsoft Edge](https://microsoftedgewelcome.microsoft.com/), or review [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+> The Internet Explorer browser and older Microsoft Edge browsers are not compatible with Kibana. An unsupported browser displays a blank page when loading the dashboards. Consider the [Chromium-based Microsoft Edge](https://microsoftedgewelcome.microsoft.com/), or review [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
 
 1. Open the Kibana URL.
 
@@ -207,9 +207,9 @@ Follow these options for manually updating the password for [Kibana](cluster-log
     azdata bdc endpoint list -e logsui -o table
     ```
 
-    For example: https:\//11.111.111.111:30777/kibana/app/kibana#/discover
+    For example: `https://11.111.111.111:30777/kibana/app/kibana#/discover`.
 
-2. On the left side pane, select the **Security** option.
+2. On the left pane, select the **Security** option.
 
     ![A screenshot of the menu on the left pane of Kibana, with the Security option chosen.](media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-1.jpg)
 
@@ -217,7 +217,7 @@ Follow these options for manually updating the password for [Kibana](cluster-log
 
     ![A screenshot of the security page, with the Internal User Database box chosen.](media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-2.jpg)
 
-4. You see the list of users under the heading **Internal Users Database**. Use this page to add, modify, and remove any users for Kibana endpoint access. For the user that needs the updated password, select **Edit** button on the row for the user.
+4. You see the list of users under the heading **Internal Users Database**. Use this page to add, modify, and remove any users for Kibana endpoint access. For the user that needs the updated password, select the **Edit** button on the row for the user.
 
     ![A screenshot of the Internal User Database page. In the list of users, for the KubeAdmin user, the Edit button is chosen.](media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-3.jpg)
 
@@ -228,7 +228,7 @@ Follow these options for manually updating the password for [Kibana](cluster-log
 6. Close the browser and reconnect to the Kibana URL using updated password.
 
 > [!Note]
-> After logging in with new password, if you see blank pages in Kibana, manually logout using the logout option at top right corner and sign in again.
+> After logging in with new password, if you see blank pages in Kibana, manually sign out using the link at top right corner and sign in again.
 
 ## Next steps
 

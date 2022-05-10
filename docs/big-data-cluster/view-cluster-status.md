@@ -59,24 +59,24 @@ The following articles list many of the Jupyter Notebooks that are available in 
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide a comprehensive administration experience by using Jupyter Notebooks. The provided notebooks cover cluster operations, management, monitoring, logging, and troubleshooting.
 
-To add the operational notebook repository from GitHub to Azure Data Studio, you can use keyboard shortcut **Ctrl**+**Shift**+**P** or select **View**, and then **Command Palette**. Select **Add Remote Book**.
+1. To add the operational notebook repository from GitHub to Azure Data Studio, you can use keyboard shortcut **Ctrl**+**Shift**+**P** or select **View**, and then **Command Palette**. Select **Add Remote Book**.
 
-In the **Add Remote Book** dialog box, select the desired latest version for operational notebooks. Select **Add**, as shown below:
+1. In the **Add Remote Book** dialog box, select the desired latest version for operational notebooks. Select **Add**, as shown below:
 
-![Screenshot that shows the Azure Data Studio palette.](media/view-cluster-status/bdc-ads-palette.png)
+   ![Screenshot that shows the Azure Data Studio palette.](media/view-cluster-status/bdc-ads-palette.png)
 
-Select **Jupyter Books: Add Remote Book**. A window opens that allows you to select a notebook.
+1. Select **Jupyter Books: Add Remote Book**. A window opens that allows you to select a notebook.
 
-> [!NOTE]
-> Make sure you select the correct notebook version. It should match the cumulative update version of your big data cluster.
+   > [!NOTE]
+   > Make sure you select the correct notebook version. It should match the cumulative update version of your big data cluster.
 
-Select the version of the notebooks base on the cumulative update of your big data cluster:
+1. Select the version of the notebooks base on the cumulative update of your big data cluster:
 
-![Screenshot that shows how to add a remote notebook.](media/view-cluster-status/bdc-remote-guides.png)
+   ![Screenshot that shows how to add a remote notebook.](media/view-cluster-status/bdc-remote-guides.png)
 
-When you select **Add**, you gain access to all the notebooks for your chosen version on the **Notebooks** tab of Azure Data Studio:
+1. When you select **Add**, you gain access to all the notebooks for your chosen version on the **Notebooks** tab of Azure Data Studio:
 
-![Screenshot that shows the notebooks for a specific version.](media/view-cluster-status/bdc-ads-guides.png)
+   ![Screenshot that shows the notebooks for a specific version.](media/view-cluster-status/bdc-ads-guides.png)
 
 ### How to use these notebooks
 

@@ -21,7 +21,7 @@ Beginning with Microsoft SQL Server 2019 CU8 Big Data Clusters, the encryption a
 
 SQL Server Big Data Clusters stores data in the following locations:
 
-* SQL Server. Master instance.
+* SQL Server master instance.
 * HDFS. Used by Storage pool and Spark.
 
 There are two approaches to transparently encrypt data in SQL Server Big Data Clusters:
@@ -50,26 +50,26 @@ For more information, see [Key Versions in [!INCLUDE[big-data-clusters-2019](../
 
 * System-managed keys
 
-  The Big Data Clusters KMS service will manage all keys and certificates for SQL Server and HDFS.
+  The Big Data Clusters KMS service manages all keys and certificates for SQL Server and HDFS.
 
 * User-defined keys
 
   User-defined keys to be managed by Big Data Clusters KMS, commonly known as bring your own key. SQL Server Big Data Clusters supports the custom definition of keys to be used for encryption on both SQL Server and HDFS components. The Big Data Clusters KMS manages those keys.
 
   > [!CAUTION]
-  > SQL Server master instance inherits the SQL Server TDE feature. However, manually loading custom keys from files into pods, registering them on SQL Server, and using them for TDE is not a supported scenario. The Big Data Clusters KMS won't manage those keys and it can lead to your databases being unreadable. In order to use external provided keys correctly, use the "External providers" feature as described in this article.
+  > SQL Server master instance inherits the SQL Server TDE feature. However, manually loading custom keys from files into pods, registering them on SQL Server, and using them for TDE is not a supported scenario. The Big Data Clusters KMS won't manage those keys. The situation can lead to your databases being unreadable. In order to use external provided keys correctly, use the "External providers" feature as described in this article.
 
 * External providers
 
-  External key solutions compatible with Big Data Clusters KMS are supported for encryption operation delegation. This feature is supported on SQL Server 2019 CU11+. With this feature enabled, the root key of encryption will be hosted outside of the Big Data Clusters Controller.
+  External key solutions compatible with Big Data Clusters KMS are supported for encryption operation delegation. This feature is supported on SQL Server 2019 CU11+. With this feature enabled, the root key of encryption is hosted outside of the Big Data Clusters Controller.
 
 ## Encryption at rest on SQL Server Big Data Clusters
 
 The Big Data Clusters KMS controller service provides support for system-managed keys and external provider-controlled keys to achieve data encryption at rest on both SQL Server and HDFS.
 
-Those keys and certificates are service-managed and this documentation provides operational guidance on how to interact with the service.
+Those keys and certificates are service-managed. This article provides operational guidance on how to interact with the service.
 
-The feature set introduces the Big Data Clusters KMS controller service to provide system-managed keys and certificates for data encryption at rest on both SQL Server and HDFS. Those keys and certificates are service-managed and this documentation provides operational guidance on how to interact with the service.
+The feature set introduces the Big Data Clusters KMS controller service to provide system-managed keys and certificates for data encryption at rest on both SQL Server and HDFS. Those keys and certificates are service-managed. This article provides operational guidance on how to interact with the service.
 
 * SQL Server instances use the established [Transparent data encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md) functionality.
 * HDFS uses native Hadoop KMS within each pod to interact with Big Data Clusters KMS on the controller. This approach enables HDFS encryption zones, which provide secure paths on HDFS.
@@ -123,7 +123,7 @@ On existing clusters, the upgrade process won't enforce new encryption or re-enc
 * SQL Server
 
   * SQL Server master instance. The upgrade process won't affect any master instance databases and installed TDE certificates. We recommend that you back up your databases and your manually installed TDE certificates before the upgrade process. We also recommend that you store those artifacts outside the big data cluster.
-  * Compute and storage pool. Those databases are system-managed, volatile and will be recreated and automatically encrypted on cluster upgrade.
+  * Compute and storage pool. Those databases are system-managed, volatile, and are recreated and automatically encrypted on cluster upgrade.
   * Data pool. Upgrade doesn't affect databases in the SQL Server instances part of data pool.
 
 * HDFS
@@ -137,7 +137,7 @@ No other steps are required.
 ### Upgrading to CU8 from CU6 or earlier
 
 > [!CAUTION]
-> Before upgrading to SQL Server Big Data Clusters CU8 perform a complete backup of your data.
+> Before upgrading to SQL Server Big Data Clusters CU8, perform a complete backup of your data.
 
 Encryption Zones won't be configured. The Hadoop KMS component won't be configured to use Big Data Clusters KMS. In order to configure and enable HDFS encryption zones after upgrade, follow instructions in the next section.
 
@@ -145,8 +145,8 @@ Encryption Zones won't be configured. The Hadoop KMS component won't be configur
 
 If you upgraded your cluster to CU8 (`azdata upgrade`) and want to enable HDFS encryption zones, there are two options:
 
-* Execution of the Azure Data Studio [Operational Notebook](cluster-manage-notebooks.md) named __SOP0128 - Enable HDFS Encryption zones in Big Data Clusters__ to perform the configuration.
-* Script execution as described below.
+* Execution of the Azure Data Studio [Operational Notebook](cluster-manage-notebooks.md) named **SOP0128 - Enable HDFS Encryption zones in Big Data Clusters** to perform the configuration.
+* Run the scripts, as described below.
 
 Requirements:
 

@@ -18,7 +18,7 @@ ms.custom: kr2b-contr-experiment
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
-This guide demonstrates how to use encryption at rest capabilities of SQL Server Big Data Clusters to encrypt HDFS folders using Encryption Zones. It also covers HDFS key management tasks.
+This article shows how to use the encryption at rest capabilities of SQL Server Big Data Clusters to encrypt HDFS folders using Encryption Zones. It also describes HDFS key management tasks.
 
 A default encryption zone, at */securelake*, is ready to be used. It was created with a system generated 256-bit key named `securelakekey`. This key can be used to create other encryption zones.
 
@@ -30,10 +30,10 @@ A default encryption zone, at */securelake*, is ready to be used. It was created
 
 ## Create an encryption zone using the provided system managed key
 
-1. Create your HDFS folder
+1. Create your HDFS folder by using this [azdata](../azdata/reference/reference-azdata.md) command:
 
    ```console
-   azdata bdc hdfs mkdir -p /user/zone/folder
+   azdata bdc hdfs mkdir --path /user/zone/folder
    ```
 
 1. Issue the encryption zone create command to encrypt the folder using the `securelakekey` key.
@@ -65,7 +65,7 @@ For more information on the way key versions are used on SQL Server Big Data Clu
 1. This approach creates a new version of the `securelakekey` with new key material.
 
    ```console
-   azdata hdfs bdc key roll -n securelakekey
+   azdata hdfs bdc key roll --name securelakekey
    ```
 
 1. Re-encrypt the encryption zone associated with the key above.
@@ -110,7 +110,7 @@ Possible sizes are 128, 192 256. The default is 256.
 
 ## Next steps
 
-Use azdata with Big Data Clusters, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+Use `azdata` with Big Data Clusters, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
 
 To use an external key provider for encryption at rest, see [External Key Providers in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](encryption-at-rest-external-provider.md).
 

@@ -29,7 +29,7 @@ For information on configuring and using encryption at rest see the following gu
 ## Prerequisites <a id="prereqs"></a>
 
 * [SQL Server 2019 Big Data Clusters release notes](release-notes-big-data-cluster.md). CU11+ required.
-* [Big data tools](deploy-big-data-tools.md) including azdata 20.3.5+.
+* [Big data tools](deploy-big-data-tools.md) including [azdata](../azdata/reference/reference-azdata.md) 20.3.5+.
 * SQL Server Big Data Clusters user with Kubernetes administrative privileges, a member of the clusterAdmins role. For more information, see [Manage big data cluster access in Active Directory mode](manage-user-access.md).
 * External provider template application. See [SQL Server BDC Encryption at Rest](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/encryption-at-rest-external-key-provider).
 
@@ -57,11 +57,11 @@ The following sections provide the steps required to configure an external key p
 
 Create a PEM file with a 2048-bit RSA key and upload it to the key value store in your external key provider.
 
-For example: The key file may be added to the KV store in Hashicorp Vault at path *bdc-encryption-secret* and the name of the secret can be rsa2048.
+For example, the key file may be added to the KV store in Hashicorp Vault at path *bdc-encryption-secret* and the name of the secret can be rsa2048.
 
 ### Customize and deploy the integration application on Big Data Clusters
 
-1. In your local machine, navigate to the folder containing [kms_plugin_app](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/encryption-at-rest-external-key-provider) Big Data Clusters AppDeploy template applications.
+1. In your local machine, navigate to the folder that contains [kms_plugin_app](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/encryption-at-rest-external-key-provider), the Big Data Clusters AppDeploy template applications.
 1. Customize the application by choosing one of the templates and adjusting it to your scenario:
 
    * File *custom_softhsm.py* contains a reference implementation using SoftHSM
@@ -69,10 +69,10 @@ For example: The key file may be added to the KV store in Hashicorp Vault at pat
    * File *custom_hcv.py* contains a HashiCorp Vault example
 
    > [!CAUTION]
-   > Don't change the function contracts or signatures, as those are the integration points. Change only the function implementations if needed.
+   > Don't change the function contracts or signatures, which are the integration points. Change only the function implementations, if needed.
 
 1. Name the file you're creating from the template above accordingly. For example, save *custom_softhsm.py* as *my_custom_integration_v1.py* and then perform your customizations. This approach is important for the next step.
-1. *app.py* is the entry point that will load the application, understand it completely before deploying. In this file, you're required to change line 11 to point to the custom file name without the .py extension from the previous step. Per example above, change:
+1. *app.py* is the entry point that will load the application. In this file, you're required to change line 11 to point to the custom file name without the .py extension from the previous step. Per the example above, change:
 
     ```python
     ...
@@ -96,8 +96,17 @@ For example: The key file may be added to the KV store in Hashicorp Vault at pat
     ...
     ```
 
-1. From the folder that has the *spec.yaml*, deploy the application to Big Data Clusters using this command: `azdata app create -s`
-1. Wait for the application deployment to complete and the ready status can be checked using this command: `azdata app list`
+1. From the folder that has the *spec.yaml*, deploy the application to Big Data Clusters by using this command:
+
+   ```console
+   azdata app create -s
+   ```
+
+1. Wait for the application deployment to complete and the ready status can be checked using this command: 
+
+   ```console
+   azdata app list
+   ```
 
 ### Configure Big Data Clusters to use the external key provider
 
@@ -108,9 +117,9 @@ export AZDATA_EXTERNAL_KEY_PIN=<your PIN/token here>
 ```
 
 > [!NOTE]
-> The integration application deployment process uses the token to access your external key provider. However the AZDATA_EXTERNAL_KEY_PIN variable is saved encrypted in Big Data Clusters control plane so that it can be interpreted by the application. A different authentication mechanism can be used too, but the application needs to be changed. Check the _custom*.py_ python application for the complete integration logic that's being used.
+> The integration application deployment process uses the token to access your external key provider. However the `AZDATA_EXTERNAL_KEY_PIN` variable is saved encrypted in Big Data Clusters control plane so that it can be interpreted by the application. A different authentication mechanism can be used too, but the application needs to be changed. Check the _custom*.py_ python application for the complete integration logic that's being used.
 
-Configure the key in Big Data Clusters using the following azdata command structure. Change the required parameters to your specific implementation. The following example uses a HashiCorp Vault structure as provided by *custom2.py*.
+Configure the key in Big Data Clusters using the following `azdata` command structure. Change the required parameters to your specific implementation. The following example uses a HashiCorp Vault structure as provided by *custom2.py*.
 
 ```bash
 azdata bdc kms update --app-name <YOUR-APP-NAME> --app-version <YOUR-APP-VERSION> \
@@ -155,19 +164,19 @@ azdata bdc hdfs key describe
 Get information about the version of the key protecting the EZ key:
 
 ```bash
-azdata bdc hdfs key describe -n <key name>
+azdata bdc hdfs key describe --name <key name>
 ```
 
 Roll your key to the new external managed key:
 
 ```bash
-azdata bdc hdfs key roll -n <new key name>
+azdata bdc hdfs key roll --name <new key name>
 ```
 
 Start encryption:
 
 ```bash
-azdata bdc hdfs encryption-zone reencrypt –path <your EZ path> --action start
+azdata bdc hdfs encryption-zone reencrypt –-path <your EZ path> --action start
 ```
 
 Verify the key hierarchy using the following commands:

@@ -26,7 +26,7 @@ dotnet build /p:NetCoreBuild=true
 ```
 
 > [!NOTE]
-> Using SDK-style SQL projects is currently in preview. 
+> The SDK-style SQL projects is currently in preview. 
 
 
 ## Non-SDK-style SQL projects
@@ -69,11 +69,11 @@ dotnet build /p:NetCoreBuild=true
 
     3. Clean target, necessary for supporting dual editing in SQL Server Data Tools (SSDT) and Azure Data Studio
 
-        ```console
-        <Target Name="AfterClean">
-            <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json"/>
-        </Target>
-        ```
+    ```console
+    <Target Name="AfterClean">
+        <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json"/>
+    </Target>
+    ```
 
 ### Build the project from the command line
 

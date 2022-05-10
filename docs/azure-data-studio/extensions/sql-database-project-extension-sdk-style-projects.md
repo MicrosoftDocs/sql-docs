@@ -17,7 +17,7 @@ ms.date: 5/24/2022
 This article introduces [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects  in the SQL Database Projects extension in Azure Data Studio or VS Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments.  The initial announcement is available in [TechCommunity](https://techcommunity.microsoft.com/t5/azure-sql-blog/microsoft-build-sql-the-next-frontier-of-sql-projects/ba-p/3290628).
 
 > [!NOTE]
-> Using SDK-style SQL projects is currently in preview. 
+> The SDK-style SQL projects is currently in preview. 
 
 ## Create an SDK-style database project
 

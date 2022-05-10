@@ -4757,6 +4757,8 @@ items:
     items:
     - name: Discontinued functionality in SQL Server
       href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+    - name: Deprecated in SQL Server 2022
+      href: database-engine/deprecated-database-engine-features-in-sql-server-2022.md
     - name: Deprecated in SQL Server 2019
       href: database-engine/deprecated-database-engine-features-in-sql-server-2019.md
     - name: Deprecated in SQL Server 2017

@@ -112,6 +112,12 @@ The following sections provide an overview of these features.
 | SQL Server Management Studio | |
 |Azure Data Studio | |
 
+## Machine Learning
+
+| New feature or update | Details |
+|:---|:---|
+|Bring your own runtime|SQL Machine Learning (ML) server is not available as a part of SQL Server 2022. For ML solutions, you can bring your own machine learning runtime. 
+
 ## Additional information
 
 This section provides additional information for the features highlighted above.

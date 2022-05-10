@@ -26,7 +26,7 @@ If you don't already have Azure Data Studio installed, see its [install instruct
 
 1. Select the extensions icon from the sidebar in Azure Data Studio.
 
-    :::image type="content" source="media/cosmos-mongo-extension/extensions-icon.png" lightbox="media/cosmos-mongo-extension/extensions-icon.png" alt-text="Extensions icon":::
+    :::image type="content" source="media/azure-cosmos-db-mongodb-extension/extensions-icon.png" lightbox="media/azure-cosmos-db-mongodb-extension/extensions-icon.png" alt-text="Screenshot of the extensions icon in the sidebar.":::
 
 2. Type *mongo* into the search bar. Select the **Azure Cosmos DB API for MongoDB** extension.
 
@@ -34,4 +34,4 @@ If you don't already have Azure Data Studio installed, see its [install instruct
 
 ## Next steps
 
-Learn how to connect and query [Azure Cosmos DB API for MongoDB](../quickstart-cosmos-mongo.md).
+Learn how to connect and query [Azure Cosmos DB API for MongoDB](../quickstart-azure-cosmos-db-mongodb.md).

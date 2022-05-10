@@ -79,7 +79,6 @@ The following sections provide an overview of these features.
 > [!NOTE]
 > To use Query Store features, enable Query Store. For instructions, see [Enable the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#enabling).
 
-
 ## Operations
 
 | New feature or update | Details |
@@ -115,9 +114,7 @@ The following sections provide an overview of these features.
 
 ## Machine Learning
 
-| New feature or update | Details |
-|:---|:---|
-|Bring your own runtime|SQL Machine Learning (ML) server is not available as a part of SQL Server 2022. For ML solutions, you can bring your own machine learning runtime. 
+Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install any desired custom runtime(s) and packages. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
 ## Additional information
 

@@ -31,7 +31,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 |**session_id** |**int**| ID of the session.<br /><br /> 0 = the data returned in this row is an aggregate of all sessions since the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started. |
 |**start_time** |**datetime**| Time the session began.<br /><br /> When `session_id` = 0, the time aggregated data collection began. |
 |**end_time** |**datetime**|Time the session ended.<br /><br /> `NULL` = session is active.<br /><br /> When `session_id` = 0, the time the last session ended.|
-|**duration** |**bigint**|The duration (in seconds) of the session.<br /><br /> 0 = the session does not contain change data capture transactions.<br /><br /> When `session_id` = 0, the sum of the duration (in seconds) of all sessions with change data capture transactions.|
+|**duration** |**int**|The duration (in seconds) of the session.<br /><br /> 0 = the session does not contain change data capture transactions.<br /><br /> When `session_id` = 0, the sum of the duration (in seconds) of all sessions with change feed transactions.|
 |**batch_processing_phase** |**nvarchar(200)**| The stage of scan reached in a particular log scan session. The following are the currently implemented phases:<BR>1: Reading configuration<BR>2: First scan, building hash table<BR>3: Second scan<BR>4: Second scan<BR>5: Second scan<BR>6: Schema versioning<BR>7: Last scan, publish and commit.<BR>8: Done|
 |**error_count** |**int**|Number of errors encountered.<br /><br /> When `session_id` = 0, the total number of errors in all sessions. |
 |**batch_start_lsn** |**nvarchar(23)**|Starting LSN for the session.<br /><br /> When `session_id` = 0, the starting LSN for the last session. |
@@ -40,7 +40,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 |**tran_count** |**bigint**|Number of change data capture transactions processed. This counter is populated in `batch_processing_phase` 2.<br /><br /> When `session_id` = 0, the number of processed transactions in all sessions. |
 |**currently_processed_commit_lsn** |**nvarchar(23)**|LSN of the last commit log record processed.<br /><br /> When `session_id` = 0, the last commit log record LSN for any session.|
 |**currently_processed_commit_time** |**datetime**|Time the last commit log record was processed.<br /><br /> When `session_id` = 0, the time the last commit log record for any session.|
-|**Log_record_count** | **bigint**|Number of log records scanned.<br /><br /> When `session_id` = 0, number of records scanned for all sessions.|
+|**log_record_count** | **bigint**|Number of log records scanned.<br /><br /> When `session_id` = 0, number of records scanned for all sessions.|
 |**schema_change_count** |**int**|Number of data definition language (DDL) operations detected. This counter is populated in `batch_processing_phase` 6.<br /><br /> When `session_id` = 0, the number of DDL operations processed in all sessions.|
 |**command_count** |**bigint**|Number of commands processed.<br /><br /> When `session_id` = 0, the number of commands processed in all sessions.|
 |**latency** | **int**|The difference, in seconds, between `end_time` and `currently_processed_commit_time`, in the session. This counter is populated at the end of `batch_processing_phase` 7.<br /><br /> When `session_id` = 0, the last nonzero latency value recorded by a session.|

@@ -1,5 +1,5 @@
 ---
-description: "The sp_change_feed_disable_db system stored procedure disables the Synapse Link for SQL Server change feed at the database level."
+description: "The sp_change_feed_disable_db system stored procedure disables the Azure Synapse Link for SQL change feed at the database level."
 title: "sp_change_feed_disable_db (Transact-SQL)"
 ms.custom: ""
 ms.date: "05/24/2022"
@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 Disable the change feed at the database level, and subsequently the metadata for all the associated tables for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 
 > [!NOTE]
-> This stored procedure is used internally and is not recommended for direct administrative use.
+> This stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio instead. Using this procedure will introduce inconsistency with Synapse Workspace configuration and keep Azure Synapse resources allocated.
 
 ## Syntax  
    

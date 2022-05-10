@@ -40,7 +40,7 @@ EXECUTE sys.sp_change_feed_disable_db;
 
 ## Remarks
 
-When the change feed is disabled with active table groups, all connections and schedulers will be stopped immediately/forcefully without waiting for the current operations are completed. No new change feed table groups can be created for the database, and all the existing metadata describing the table groups will be deleted. Re-enabling change feed will result in clean initializations of all table groups and reseeding of all the data.  
+When the change feed is disabled with active table groups, all connections and schedulers will be stopped immediately/forcefully without waiting for the current operations are completed. No new change feed table groups can be created for the database, and all the existing metadata describing the table groups will be deleted without waiting for the current operations to complete. Re-enabling change feed will result in clean initializations of all table groups and reseeding of all the data. 
 
 ## See also  
 

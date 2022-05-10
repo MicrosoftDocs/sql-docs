@@ -14,14 +14,14 @@ ms.date: 5/24/2022
 
 This article introduces the functionality of query history in the mssql extension for VS Code. Query History is displayed as a section in the SQL Server view, which is available in the side bar by default when the [mssql extension for VS Code](mssql-extensions-vscode.md) is installed.
 
-![Query History tab](./media/mssql-query-history/query-history-tab.png)
+::image type="content" alt-text="Screenshot of Query History viewlet with a blank area below the header." source="./media/mssql-query-history/query-history-tab.png":::
 
 
 ## View query history
 
 Initially the query history view will be empty but once you execute a query it will be captured and displayed in the window - with a separate row displayed for every execution.
 
-![Query History tab with queries](./media/mssql-query-history/query-history-tab-with-queries.png)
+::image type="content" alt-text="Screenshot of Query History tab with 2 select * queries listed with green check marks on the left." source="./media/mssql-query-history/query-history-tab-with-queries.png":::
 
 Each row consists of three parts:
 - Status icon: The status icon will be a "✔️" if the query executed successfully or an "❌" if an error occurred.
@@ -60,7 +60,7 @@ Currently all information is stored in memory and not persisted upon application
 
 The action to clear all query history is also available from the command palette (**MS SQL: Clear All History**) and as an action button on the view. This action will permanently delete **ALL** history rows.
 
-### Pause/Start query history capture
+### Pause/start query history capture
 
 The ability to pause and start query history capture is available from the command palette (**MS SQL: Toggle Query History Capture**) and as an action button on the panel. While paused, no query execution data will be stored by query history.
 

@@ -775,12 +775,12 @@ ON | OFF [ ( FORCED )  ] | CLEAR [ ALL ]
 Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ON     
-Enables the Query Store. ON is the default value beginning with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. 
+Enables the Query Store. 
 
 Many new performance features of SQL Server 2022 such as Query Store hints, CE Feedback, Degree of Parallelism (DOP) feedback, and Memory Grant feedback (MGF) persistence required Query Store to be enabled. For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to SQL Server 2022, these databases will retain the previous Query Store settings. If there is concern about the overhead Query Store may introduce, administrators can leverage [custom capture policies](#query_capture_policy_option_list--) with `QUERY_CAPTURE_MODE = CUSTOM`. For examples of how to enable the Query Store with custom capture policy options, see the Examples section later in this article.  
 
 OFF [ ( FORCED ) ]      
-Disables the Query Store. OFF is the default value for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes the Query Store to shut down as fast as possible. FORCED applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6, and later builds.
+Disables the Query Store. <!--OFF is the default value for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].--> FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes the Query Store to shut down as fast as possible. FORCED applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6, and later builds.
 
 > [!NOTE]  
 > Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 

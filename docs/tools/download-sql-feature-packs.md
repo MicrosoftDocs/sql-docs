@@ -31,7 +31,6 @@ This article provides a brief explanation of the various downloads and stand-alo
 | Feature | Description |
 |----|-----|
 | [SQL Server Backup to Windows Azure Tool](https://go.microsoft.com/fwlink/?LinkID=391033) | Microsoft SQL Server Backup to Windows Azure Tool enables backup to Windows Azure Blob Storage and encrypts and compresses SQL Server backups stored locally or in the cloud. |
-|||
 
 ## Command-line, programming, and T-SQL
 

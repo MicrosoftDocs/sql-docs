@@ -36,7 +36,7 @@ There are two types of blobs that can be stored in Microsoft Azure Blob Storage:
 
 If the storage key is used in the credential, page blob will be used; if the Shared Access Signature is used, block blob will be used.
 
-Backup to block blob is only available in SQL Server 2016 or later version. Backup to block blob instead of page blob if you are running SQL Server 2016 or later.
+Backup to block blob is only available in SQL Server 2016 or later version for backup to Azure Blob Storage. Backup to block blob instead of page blob if you are running SQL Server 2016 or later.
 
 The main reasons are:
 
@@ -62,7 +62,7 @@ If the SQL Server instance is hosted on Linux, including:
 - Azure Arc-enabled SQL Managed Instance
 - Any other Linux-based environment
 
-The only supported backup to URL pattern is to block blobs, using the Shared Access Signature.
+The only supported backup to URL for Azure Blob Storage is to block blobs, using the Shared Access Signature.
 
 ###  <a name="Blob"></a> Microsoft Azure Blob Storage  
 

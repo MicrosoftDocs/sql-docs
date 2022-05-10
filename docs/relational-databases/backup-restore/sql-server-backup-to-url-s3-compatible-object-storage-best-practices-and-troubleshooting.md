@@ -2,7 +2,7 @@
 title: "Back up to URL best practices & troubleshooting for S3-compatible object storage"
 description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to S3-compatible object storage.
 ms.custom: 
-ms.date: 05/09/2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-  This topic includes best practices and troubleshooting tips for SQL Server backup and restores to S3-compatible object storage.
+  This article includes best practices and troubleshooting tips for SQL Server backup and restores to S3-compatible object storage.
   
 > [!NOTE]
 > SQL Server backup and restore with S3-compatible object storage is in preview as a feature of SQL Server 2022.
@@ -27,9 +27,9 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md)
 
 
-Following are some quick ways to troubleshoot errors when backing up to or restoring from the S3 compliant object storage. To avoid errors due to unsupported options or limitations, and to review the list of limitations and support for BACKUP and RESTORE commands, see [SQL Backup and Restore with S3-compliant object storage](sql-server-backup-to-url-s3-compatible-object-storage.md#limitations).
+Following are some quick ways to troubleshoot errors when backing up to or restoring from the S3-compatible object storage. To avoid errors due to unsupported options or limitations, and to review the list of limitations and support for BACKUP and RESTORE commands, see [SQL Backup and Restore with S3-compliant object storage](sql-server-backup-to-url-s3-compatible-object-storage.md#limitations).
 
-## Correctly-formed URL
+## Correctly formed URL
 
 Here's an example of a virtual host URL formed correctly when issuing a T-SQL backup query such as follows:
 
@@ -65,7 +65,7 @@ Msg 3013, Level 16, State 1, Line 50
 BACKUP DATABASE is terminating abnormally.
 ```
 
-1. Note that the `<pathToBackup>` need not exist before running the backup T-SQL. It will be created in the storage server automatically. For example, if the user creates the bucket 'existingBucket' beforehand and not the path `'existingBucket/sqlbackups'`, the following will still run successfully:
+1. The `<pathToBackup>` need not exist before running the backup T-SQL. It will be created in the storage server automatically. For example, if the user creates the bucket 'existingBucket' beforehand and not the path `'existingBucket/sqlbackups'`, the following will still run successfully:
 
 ```sql
 BACKUP DATABASE AdventureWorks2019
@@ -99,7 +99,7 @@ The name of the credential is not required to match the exact URL path. Here is 
 1. `s3://10.193.16.183:8787/myS3Bucket/sqlbackups`
 1. `s3://10.193.16.183:8787/myS3Bucket`
 
-If there are multiple credentials matching search, such as more specific `s3://10.193.16.183:8787/myS3Bucket/sqlbackups` and more generic `s3://10.193.16.183:8787/myS3Bucket`, we will choose the most specific one. This will allow customers to setup more granular access control at directory level of what folders may be accessed from SQL Server. Bucket name needs to be present part of the credential name.
+If there are multiple credentials matching search, such as more specific `s3://10.193.16.183:8787/myS3Bucket/sqlbackups` and more generic `s3://10.193.16.183:8787/myS3Bucket`, we will choose the most specific one. This will allow you to set up more granular access control at directory level for what folders may be accessed from SQL Server. Bucket name needs to be present part of the credential name.
 
 ## Unsupported option FILE_SNAPSHOT
 
@@ -159,7 +159,7 @@ SQL Server has a maximum limit of 259 characters for a backup device name. The B
 
 ## Clock-skew correction
 
-The S3 storage might reject connection, giving a "InvalidSignatureException" error back to SQL Server whenever the time difference between SQL Host and S3 server is bigger than 15 minutes. On SQL Server it'll show as:
+The S3 storage might reject connection, giving a "InvalidSignatureException" error back to SQL Server whenever the time difference between SQL Host and S3 server is bigger than 15 minutes. On SQL Server it will show as:
 
 ```
 Msg 3201, Level 16, State 1, Line 28
@@ -170,7 +170,7 @@ BACKUP DATABASE is terminating abnormally.
 
 ## SQL Server on Linux support
 
-SQL Server uses `WinHttp` to implement client of HTTP REST APIs it uses. It relies on OS certificate store for validations of the TLS certificates being presented by HTTP(s) endpoint. However, SQL on Linux, delegates the certificate validation to SQLPAL which validates the endpoints' HTTPs certificates with the certificate shipped with PAL. Thus, customer provided self-signed certificates cannot be used on Linux for HTTPS validation.
+SQL Server uses `WinHttp` to implement client of HTTP REST APIs it uses. It relies on OS certificate store for validations of the TLS certificates being presented by HTTP(s) endpoint. However, SQL Server on Linux delegates the certificate validation to SQLPAL which validates the endpoints' HTTPS certificates with the certificate shipped with PAL. Thus, customer-provided self-signed certificates cannot be used on Linux for HTTPS validation.
 
 During backup/restore the customer will get the following error message on Linux:
 

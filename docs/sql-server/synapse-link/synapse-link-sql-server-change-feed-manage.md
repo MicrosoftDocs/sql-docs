@@ -16,13 +16,15 @@ ms.custom:
 
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-This article provides details on monitoring and managing Azure Synapse Link for SQL Server and Azure SQL Database with T-SQL.
+This article provides details on monitoring and managing [Azure Synapse Link for SQL change feed](synapse-link-sql-server-change-feed.md), with T-SQL.
 
 - [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
-- For more information, see [Azure Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link).
-- For more information, see [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link).
-- To get started quickly, see [Get started with Azure Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022).
-- To get started quickly, see [Get started with Azure Synapse Link for Azure SQL Database (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database).
+- For more information, see:
+    - [Azure Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link).
+    - [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link).
+- To get started quickly, see: 
+    - [Get started with Azure Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022) 
+    - [Get started with Azure Synapse Link for Azure SQL Database (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database)
 
 The Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
 
@@ -104,16 +106,15 @@ EXECUTE sys.sp_change_feed_disable_table
 GO
 ```
 
-
 ## See also
 
-- [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
+- [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [What's new in SQL Server 2022?](../what-s-new-in-sql-server-2022.md)
-- [Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link)
-- [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link)
-- [Synapse Link for Azure Cosmos DB](/azure/cosmos-db/synapse-link)
-- [Synapse Link for Dataverse](/powerapps/maker/data-platform/export-to-data-lake)
+- [Azure Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link)
+- [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link)
+- [Azure Synapse Link for Azure Cosmos DB](/azure/cosmos-db/synapse-link)
+- [Azure Synapse Link for Dataverse](/powerapps/maker/data-platform/export-to-data-lake)
 
 ## Next steps
 
-- [Get started with Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)
+- [Get started with Azure Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)

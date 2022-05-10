@@ -27,11 +27,11 @@ For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.m
 
 The following video provides a 13-minute introduction to SQL Server 2022 Preview.
 
-> [!VIDEO html5-player.libsyn.com/embed/episode/id/21195518]
+> [!VIDEO https://content.libsyn.com/p/4/7/f/47fe0476099b7fe0/Whats_new_in_SQL_Server_2022_2.mp4?c_id=115765223&cs_id=115765223&destination_id=1439993&response-content-type=video%2Fmp4&Expires=1652218342&Signature=ACoDGpVe2yh43PsDgnmTjEytJp~CkGkPvtloxDliJwvrAQrKGBqQVVLzWKYPRDMZE~g9P-DdrIMiXRyZArWHFNQoEHmRUhoMakmB489Ns7howT3stnEajJr4WKTflefjLMsaKQl9WvZQSunN~PPg3UOWfqUQ49RBnJAYGDQVURVmXKkCQ85ENOyCpw4NTidpJQvkNM-tmz6EORs4~2SkPKGdgs333~qXxXWc~GiI0X2F-drqUpjATl76DWChQoBtjgBiTzuC46iAOxjnh7-qcHBGjZ9Yone--Na3-hHmYdRuXy-oPAjZaM63Ooiyrrjx~ecrvB9xScd9LteSaDIkhw__&Key-Pair-Id=K1YS7LZGUP96OI]
 
-<!---
 <iframe title="Libsyn Player" style="border: none" src="//html5-player.libsyn.com/embed/episode/id/21195518/height/450/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/" height="450" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
---->
+
+
 
 The following sections provide an overview of these features.
 

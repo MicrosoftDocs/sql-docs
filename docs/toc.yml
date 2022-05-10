@@ -9,6 +9,8 @@ items:
   items:
   - name: What's New
     items:
+    - name: SQL Server 2022 Preview
+      href: sql-server/what-s-new-in-sql-server-2022.md
     - name: SQL Server 2019
       href: sql-server/what-s-new-in-sql-server-2019.md
     - name: SQL Server 2017
@@ -25,6 +27,8 @@ items:
       href: sql-server/editions-and-components-of-sql-server-2016.md
   - name: Release Notes
     items:
+    - name: SQL Server 2022
+      href: sql-server/sql-server-2022-release-notes.md
     - name: SQL Server 2019
       href: sql-server/sql-server-2019-release-notes.md
     - name: SQL Server 2017
@@ -1009,6 +1013,8 @@ items:
           href: database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md
         - name: Basic availability groups
           href: database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md
+        - name: Contained availability groups
+          href: database-engine/availability-groups/windows/contained-availability-groups-overview.md
         - name: Distributed availability groups
           href: database-engine/availability-groups/windows/distributed-availability-groups.md
         - name: Domain-independent availability groups
@@ -7020,16 +7026,16 @@ items:
     - name: Query Store
       href: relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       items:
-      - name: In-Memory OLTP
-        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
-      - name: Best Practice
+      - name: Best Practices for Monitoring
         href: relational-databases/performance/best-practice-with-the-query-store.md
-      - name: Usage Scenarios
-        href: relational-databases/performance/query-store-usage-scenarios.md
       - name: How Query Store Collects Data
         href: relational-databases/performance/how-query-store-collects-data.md
-      - name: Query Store hints
-        href: relational-databases/performance/query-store-hints.md
+      - name: In-Memory OLTP
+        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
+      - name: Optimized plan forcing
+        href: relational-databases/performance/optimized-plan-forcing-query-store.md
+      - name: In-Memory OLTP
+        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md
       items:
@@ -7446,6 +7452,15 @@ items:
         href: relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
       - name: Validate Plan Guides After Upgrade
         href: relational-databases/performance/validate-plan-guides-after-upgrade.md
+    - name: Query Store
+      href: relational-databases/performance/tune-performance-with-the-query-store.md
+      items:
+      - name: Query Store hints
+        href: relational-databases/performance/query-store-hints.md
+      - name: Query Store hints best practices
+        href: relational-databases/performance/query-store-hints-best-practices.md
+      - name: Usage Scenarios
+        href: relational-databases/performance/query-store-usage-scenarios.md        
     - name: Query Tuning Assistant
       href: relational-databases/performance/upgrade-dbcompat-using-qta.md
     - name: Resource governor
@@ -12473,6 +12488,8 @@ items:
         href: relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md
       - name: sys.query_store_query_hints
         href: relational-databases/system-catalog-views/sys-query-store-query-hints-transact-sql.md
+      - name: sys.database_query_store_internal_state
+        href: relational-databases/system-catalog-views/sys-database-query-store-internal-state-transact-sql.md        
     - name: Scalar Types
       href: relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md
       items:
@@ -12897,7 +12914,7 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
       - name: sys.dm_database_replica_states (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md
-      - name: sys.dm_database_backups_azure-sql-database
+      - name: sys.dm_database_backups (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-database-backups-azure-sql-database.md  
       - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
@@ -14372,6 +14389,8 @@ items:
         href: relational-databases/system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md
       - name: sp_query_store_unforce_plan
         href: relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md
+      - name: sp_query_store_clear_message_queues
+        href: relational-databases/system-stored-procedures/sp-query-store-clear-message-queues-transact-sql.md   
         
     - name: Replication
       href: relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md
@@ -16339,6 +16358,8 @@ items:
           href: t-sql/functions/current-timezone-transact-sql.md
         - name: CURRENT_TIMEZONE_ID
           href: t-sql/functions/current-timezone-id-transact-sql.md
+        - name: DATE_BUCKET
+          href: t-sql/functions/date-bucket-transact-sql.md
         - name: DATEADD
           href: t-sql/functions/dateadd-transact-sql.md
         - name: DATEDIFF
@@ -16984,6 +17005,8 @@ items:
           items:
           - name: Overview
             href: t-sql/language-elements/relational-operators-transact-sql.md
+          - name: GENERATE_SERIES
+            href: t-sql/functions/generate-series-transact-sql.md
           - name: OPENDATASOURCE
             href: t-sql/functions/opendatasource-transact-sql.md
           - name: OPENJSON

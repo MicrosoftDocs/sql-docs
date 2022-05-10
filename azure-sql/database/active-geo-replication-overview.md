@@ -5,8 +5,8 @@ ms.service: sql-database
 ms.subservice: high-availability
 ms.custom: sqldbrb=1
 ms.topic: conceptual
-author: emlisa
-ms.author: emlisa
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: kendralittle, mathoma
 ms.date: 4/14/2022
 ---
@@ -36,7 +36,7 @@ If your application requires a stable connection endpoint and automatic geo-fail
 
 The following diagram illustrates a typical configuration of a geo-redundant cloud application using Active geo-replication.
 
-![active geo-replication](./media/active-geo-replication-overview/geo-replication.png)
+![active geo-replication](./media/active-geo-replication-overview/geo-replication-updated.png)
 
 If for any reason your primary database fails, you can initiate a geo-failover to any of your secondary databases. When a secondary is promoted to the primary role, all other secondaries are automatically linked to the new primary.
 
@@ -197,7 +197,7 @@ To create a geo-secondary in a subscription different from the subscription of t
 10. After the geo-secondary is successfully created, the users, logins, and firewall rules created by this procedure can be removed.
 
 > [!NOTE]
-> Cross-subscription geo-replication operations including setup and geo-failover are only supported using T-SQL commands.
+> Cross-subscription geo-replication operations including setup and geo-failover are only supported using REST API & T-SQL commands.
 > 
 > Adding a geo-secondary using T-SQL is not supported when connecting to the primary server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, adding a geo-secondary is supported when connected to the primary server from a public IP address. Once a geo-secondary is added, public access can be [denied](connectivity-settings.md#deny-public-network-access).
 > 

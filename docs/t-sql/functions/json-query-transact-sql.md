@@ -75,8 +75,8 @@ If the format of *path* isn't valid, **JSON_QUERY** returns an error.
    "info": {
       "type": 1,
       "address": {
-         "town": "Bristol",
-         "county": "Avon",
+         "town": "Cheltenham",
+         "county": "Gloucestershire",
          "country": "England"
       },
       "tags": ["Sport", "Water polo"]
@@ -92,7 +92,7 @@ If the format of *path* isn't valid, **JSON_QUERY** returns an error.
 |$|Returns the entire JSON text.|Returns the entire JSON text.|N/a|  
 |$.info.type|NULL|Error|Not an object or array.<br /><br /> Use **JSON_VALUE** instead.|  
 |$.info.address.town|NULL|Error|Not an object or array.<br /><br /> Use **JSON_VALUE** instead.|  
-|$.info."address"|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N/a|  
+|$.info."address"|N'{ "town":"Cheltenham", "county":"Gloucestershire", "country":"England" }'|N'{ "town":"Cheltenham", "county":"Gloucestershire", "country":"England" }'|N/a|  
 |$.info.tags|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|N/a|  
 |$.info.type[0]|NULL|Error|Not an array.|  
 |$.info.none|NULL|Error|Property does not exist.|  

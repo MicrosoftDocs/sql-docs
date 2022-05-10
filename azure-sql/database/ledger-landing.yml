@@ -84,7 +84,7 @@ landingContent:
         links:
           - text: Current ledger limitations
             url: ledger-limits.md
-          - text: Azure SQL Database ledger whitepaper
+          - text: Ledger whitepaper
             url: https://aka.ms/sql-ledger-whitepaper
 
 

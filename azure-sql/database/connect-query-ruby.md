@@ -30,7 +30,7 @@ To complete this quickstart, you need the following prerequisites:
 
 - A database. You can use one of these quickstarts to create and then configure the database:
 
-  | Action | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
+  | Action | SQL Database | SQL Managed Instance | SQL Server on Azure Virtual Machines |
   |:--- |:--- |:---|:---|
   | Create| [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
   || [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) |
@@ -53,16 +53,16 @@ To complete this quickstart, you need the following prerequisites:
 
 ## Get server connection information
 
-Get the connection information you need to connect to a database in Azure SQL Database. You'll need the fully qualified server name or host name, database name, and sign-in information for the upcoming procedures.
+Get the information you need to connect to a database in Azure SQL Database. You'll need the fully qualified server name or host name, database name, and sign-in information for the upcoming procedures.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 2. Navigate to the **SQL databases**  or **SQL Managed Instances** page.
 
-3. On the **Overview** page, review the fully qualified server name next to **Server name** for a database in Azure SQL Database or the fully qualified server name (or IP address) next to **Host** for an Azure SQL Managed Instance or SQL Server on Azure VM. To copy the server name or host name, hover over it and select the **Copy** icon.
+3. On the **Overview** page, review the fully qualified server name next to **Server name** for a database in Azure SQL Database or the fully qualified server name (or IP address) next to **Host** for an Azure SQL Managed Instance or SQL Server on Virtual Machines. To copy the server name or host name, hover over it and select the **Copy** icon.
 
 > [!NOTE]
-> For connection information for SQL Server on Azure VM, see [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md#connect-to-sql-server).
+> For connection information for SQL Server on Azure Virtual Machines, see [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md#connect-to-sql-server).
 
 ## Create code to query your database in Azure SQL Database
 

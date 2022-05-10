@@ -95,13 +95,13 @@ Get the information you need to connect to a database in Azure SQL Database. You
 
 ## Run the code
 
-1. In a command prompt window, run the following command:
+1. At a command prompt, run the following command:
 
    ```bash
    ruby sqltest.rb
    ```
 
-1. Verify that the top 20 Category/Product rows from your database are returned. 
+1. Verify that the top 20 Category/Product rows from your database are returned.
 
 ## Next steps
 

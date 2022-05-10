@@ -47,9 +47,7 @@ EXECUTE sys.sp_help_change_feed;
 | **table_object_id** | **int** | The object id of the change feed table. | 
 | **state** | **tinyint** | The state of the change feed table. | 
 | **version** | **binary(10)** | The version of the change feed table. | 
-
-## Remarks
-
+ 
 ## Permissions  
 
 Currently, a user must be a member of the sysadmin server role or db_owner database role.

@@ -12,7 +12,7 @@ ms.date: 5/24/2022
 
 # mssql extension for Visual Studio Code
 
-This article introduces the **mssql** extension for Visual Studio Code (VS Code) to work with SQL Server and Azure SQL databases on Windows, macOS, and Linux. The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) provides querying capabilities for Azure SQL and SQL Server as well as additional features for developers with SQL Projects and SQL bindings for Azure Functions. The mssql extension for VS Code includes the [SQL Database Projects extension](../../azure-data-studio/extensions/sql-database-project-extension.md) with support for SQL projects on Windows, macOS, and Linux.
+This article introduces the **mssql** extension for Visual Studio Code (VS Code) to work with SQL Server and Azure SQL databases on Windows, macOS, and Linux. The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) provides querying capabilities for Azure SQL and SQL Server as well as additional features for developers with SQL Projects and SQL bindings for Azure Functions. The mssql extension for VS Code includes the [SQL Database Projects extension](../../azure-data-studio/extensions/sql-database-project-extension.md).
 
 
 ## Functionality overview
@@ -29,7 +29,7 @@ The following functionality is available in the mssql extension for VS Code:
 - Create Azure Functions with [SQL bindings](https://aka.ms/sqlbindings)
 
 
-### Azure Data Studio and mssql extension comparison
+### Comparing Azure Data Studio and the mssql extension
 
 Both [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) and the mssql extension for VS Code are available for Windows, macOS, and Linux. 
 
@@ -37,6 +37,7 @@ Benefits of working with Azure SQL and SQL Server in VS Code include:
 
 - single code editor for your SQL and other code (such as C#, Python, JavaScript, Java, PHP, and Go)
 - broad extension marketplace with extensions for remote development, Docker, and more
+- available for use in GitHub Codespaces
 
 
 You might consider using Azure Data Studio in addition to the mssql extension for VS Code if you would benefit from these capabilities:
@@ -45,6 +46,7 @@ You might consider using Azure Data Studio in addition to the mssql extension fo
 - graphical table designer and query plans
 - schema comparison for databases, SQL projects, and dacpacs
 - extensions for SQL Agent, SQL Profiler, and Flat File Import
+- SQL and .NET Interactive notebooks
 
 ## Install the mssql extension in VS Code
 
@@ -74,10 +76,10 @@ The mssql extension for VS Code is supported on Windows, macOS, and Linux.  The 
 
 ## SQL Tools Service
 
-The mssql extension automatically installs the [SQL Tools Service](https://github.com/microsoft/sqltoolsservice), an open source .NET-based API that provides services to several SQL tools, including [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) and the mssql extension for VS Code.  SQL Tools Service provides features such as common language service operations (IntelliSense auto-complete suggestions, peek definition, SQL error diagnostics, quickinfo hovers), connection management, and query execution.  The source code for SQL Tools Service is availabe on [GitHub](https://github.com/microsoft/sqltoolsservice).
+The mssql extension automatically installs the [SQL Tools Service](https://github.com/microsoft/sqltoolsservice), an open source .NET-based API that provides services to several SQL tools, including [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) and the mssql extension for VS Code.  SQL Tools Service provides features such as common language service operations (IntelliSense auto-complete suggestions, peek definition, SQL error diagnostics, quickinfo hovers), connection management, and query execution.  The source code for SQL Tools Service is available on [GitHub](https://github.com/microsoft/sqltoolsservice).
 
 
 ## Next steps
 - [Use the mssql extension to query a SQL instance](sql-server-develop-use-vscode.md)
 - [Learn more about Visual Studio Code](https://code.visualstudio.com/docs)
-- [Learn more about contributing to the mssql extension ](https://github.com/Microsoft/vscode-mssql/wiki)
+- [Learn more about contributing to the mssql extension](https://github.com/Microsoft/vscode-mssql/wiki)

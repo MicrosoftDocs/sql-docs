@@ -25,7 +25,7 @@ dotnet build /p:NetCoreBuild=true
 ```
 
 
-## Previous SQL projects
+## Non-SDK-style SQL projects
 
 ### Prerequisites
 
@@ -82,7 +82,7 @@ dotnet build "<sqlproj file path>" /p:NetCoreBuild=true /p:NETCoreTargetsPath="<
 For example, from `/usr/share/dotnet` on Linux:
 
 ```console
-dotnet build "/home/myuser/Documents/DatabaseProject1/DatabaseProject1.sqlproj" /p:NetCoreBuild=true /p:NETCoreTargetsPath="/home/myuser/.azuredatastudio-insiders/extensions/microsoft.sql-database-projects-0.x.x/BuildDirectory"  
+dotnet build "/home/myuser/Documents/DatabaseProject1/DatabaseProject1.sqlproj" /p:NetCoreBuild=true /p:NETCoreTargetsPath="/home/myuser/.azuredatastudio/extensions/microsoft.sql-database-projects-x.x.x/BuildDirectory"  
 ```
 
 ## Next steps

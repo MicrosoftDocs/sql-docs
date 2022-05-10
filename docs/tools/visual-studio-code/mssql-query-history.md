@@ -68,4 +68,4 @@ The ability to pause and start query history capture is available from the comma
 ## Next steps
 - [Use the mssql extension to query a SQL instance](sql-server-develop-use-vscode.md)
 - [Learn more about Visual Studio Code](https://code.visualstudio.com/docs)
-- [Learn more about contributing to the mssql extension ](https://github.com/Microsoft/vscode-mssql/wiki)
+- [Learn more about contributing to the mssql extension](https://github.com/Microsoft/vscode-mssql/wiki)

@@ -31,7 +31,7 @@ The Query Store feature provides you with insight on query plan choice and perfo
 ## <a name="Enabling"></a> Enable the Query Store
 
 - Query Store is enabled by default for new Azure SQL Database and Azure SQL Managed Instance databases.
-- Query Store is enabled by default for all newly created databases in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] to enable features to better track performance history, troubleshoot query plan related issues, and enable new capabilities. 
+- To enable features to better track performance history, troubleshoot query plan related issues, and enable new capabilities in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you will need to enable it.
 - Query Store is not enabled by default for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].
 - Query Store is not enabled by default for new Azure Synapse Analytics databases. 
 

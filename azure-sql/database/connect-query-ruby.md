@@ -1,7 +1,6 @@
 ---
-title: Use Ruby to connect to a database and query data
-description: This quickstart shows you how to use Ruby to create a program that connects to a database and query it using Transact-SQL statements.
-titleSuffix: Azure SQL Database & SQL Managed Instance
+title: Use Ruby with Azure SQL Database or SQL Managed Instance
+description: This quickstart shows you how to use Ruby to create a program that connects to a database and queries it using Transact-SQL statements.
 services: sql-database
 ms.service: sql-database
 ms.subservice: connect

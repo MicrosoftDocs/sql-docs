@@ -25,9 +25,9 @@ For more information and known issues, see [[!INCLUDE[sql-server-2022](../includ
 
 For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../azure-data-studio/download-azure-data-studio.md).
 
-The following video provides a 13-minute introduction to SQL Server 2022 Preview.
+The following video introduces SQL Server 2022 Preview.
 
-> [!VIDEO https://docs.microsoft.com/en-us/shows/data-exposed/introduction-to-sql-server-2022-ep1]
+> [!VIDEO https://channel9.msdn.com/Shows/data-exposed/introduction-to-sql-server-2022-ep1]
 
 For additional video content, see [What's new in SQL Server](https://microsoftmechanics.libsyn.com/podcast/whats-new-in-sql-server-2022).
 

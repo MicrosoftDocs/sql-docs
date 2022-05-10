@@ -27,111 +27,92 @@ For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.m
 
 The following sections provide an overview of these features.
 
-## Business continuity through Azure
+## Analytics
 
-Disaster recovery in the cloud with [Link feature for Azure SQL Managed Instance (preview)](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview).
+| New feature or update | Details |
+|:---|:---|
+|Azure Synapse Link for SQL|Get near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. <br/><br/> For details and known limitations, see [Create Synapse Link for SQL Server 2022 (Preview) - Azure Synapse Analytics [Microsoft Docs](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022#known-limitations).|
+|Object storage integration | Integrate SQL Server with S3 compatible object storage in addition to Azure storage. 
+|Data virtualization | ODBC driver refresh|
 
-## Azure Synapse Link support
+## Availability
 
-Azure Synapse Link for SQL enables near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology.
+| New feature or update | Details |
+|:---|:---|
+| Business continuity through Azure |Recover from on-premises instance to [Azure SQL Managed Instance with Link (preview)](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview).|
+|Contained availability group | Create an Always On availability group that:<br/>- Manages its own metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level. <br/>- Includes specialized contained system databases within the availability group. For more information, see [What is a contained availability group?](../database-engine/availability-groups/windows/contained-availability-groups-overview.md)|
+|Distributed availability group |- Lossless failover: Adds distributed availability group for support for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`. For more information, review [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md).<br/>- Enables the use of multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.|
+| Improved availability groups | Parallel redo and improvements for readable secondary replicas. |
+| Improved backup metadata | Last valid restore time|
 
-For details and known limitations, see [Create Synapse Link for SQL Server 2022 (Preview) - Azure Synapse Analytics | Microsoft Docs](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022#known-limitations).
+## Security
 
-## Azure Purview integration
+| New feature or update | Details |
+|:---|:---|
+|Azure Purview integration|Apply Purview policies to any SQL Server instance that is enrolled in both Azure Arc and to Azure Purview data governance.<br/><br/>- Follow least privilege principal with Azure RBAC.|
+|Ledger | In-database blockchain to create an immutable track record of data modifications over time.See [SQL Database ledger](/azure/azure-sql/database/ledger-landing).|
+|Azure Active Directory authentication| Manage integrated authentication with Azure Active Directory.|
+|Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).| 
+|Enhanced encryption | TDS 8.0 - TDS wrapped in TLS.|
+|New permissions & roles | Ennabled least privileged access for administrator tasks. See summary summary information in [New granular permissions & roles](#new-granular-permissions--roles).|
+|Dynamic data masking | Granular permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).|
+| Support for PFX certificates | Supports certificate, and key backup and restore scenarios, along with integration with Azure Blob Storage service for the same. This enables adherence to security best practices and compliance standards guidelines that prohibit the usage of insecure or deprecated algorithms like RC4 and SHA-1.| 
 
-- Allow Purview policies to be applied to any SQL Server instance that is enrolled in both Azure Arc and to Azure Purview data governance.
 
-- Follow least privilege principal with Azure RBAC. Support for three roles:
-  - SQL Performance Monitor
-  - SQL Security Auditor
-  - SQL Data Reader
-- Distributed Availability
+## Performance
 
-## Additional security capabilities
+| New feature or update | Details |
+|:---|:---|
+| Query Store improvements | Accelerated query performance with no code changes with improvements to: <br/><br/>- [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) on by default.<br/>- Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas)|
+|Memory grant feedback | Optimize memory allocation is stored in the query store, so when the memory grant information is available when the query returns to cache after eviction.|
+| Columnstore indexes | Improvements to string processing| 
+| In-memory OLTP management | - Improve memory management in large memory servers to reduce out of memory conditions <br/>- Add a new stored procedure to manually release unused memory on demand.|
+| Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s).|
+| [Query Store hints](../relational-databases/performance/query-store-hints.md) | Previously only available on Azure SQL Database and Azure SQL Managed Instance, now on SQL Server 2022 Preview.|
+| XML compression |XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).|
+| Buffer pool parallel scan | |
+| Additional optimization| Improvements to string processing for columnstore indexes <br/>
+|In-Memory OLTP memory management improvements| - Improve memory management in large memory servers to reduce out of memory conditions.<br/><br/>- Add a new stored procedure to manually release unused memory on demand.|
+|Improved concurrency| Concurrent global allocation map (GAM) and shared global allocation map (SGAM) updates allows multiple threads updating GAM and SGAM pages under S latch.|
+|Automatic Degree of parallelism (DOP) feedback |Automatically adjusts degree of parallelism for repeating queries to optimize for workloads where excessive parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. See [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).|
+| Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. See [Cardinality Estimation (SQL Server)](../relational-databases/performance/cardinality-estimation-sql-server.md. |
 
-- In-database blockchain to create an immutable track record of data modifications over time. See [SQL Database ledger](/azure/azure-sql/database/ledger-landing)
-- Azure Active Directory authentication
-- Enhanced encryption (TDS 8.0 - TDS wrapped in TLS)
-- Least privileges enablement for administrator tasks
-
-## Improved performance
-
-- Accelerated query performance with no code changes with improvements to:
-  - [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-    - On by default
-  - [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md)
 
 ## Operations
 
-- Accelerated database recovery performance improvement
-  - Implements a persistent version store cleaner thread per database instead of per instance. This feature improves version cleanup when there are multiple databases on the same instance.
+| New feature or update | Details |
+|:---|:---|
+| Accelerated database recovery improvement | Implements a persistent version store cleaner thread per database instead of per instance. This feature improves version cleanup when there are multiple databases on the same instance.|
+| Improved Snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client.
+| Setup attached to Azure | Install Azure Arc agent via SQL Server command line setup. For more information, see [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt).|
+| Optimized plan forcing| Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).|
+| Shrink database & file | Wait at low priority.|
+| Max server memory calculations | During setup, the installation will configure max server memory to align with recommendations. See [Server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md). |
 
-## Performance optimization
 
-- Improvements to string processing for columnstore indexes
-- In-Memory OLTP memory management improvements
-  - Improve memory management in large memory servers to reduce out of memory conditions
-  - Add a new stored procedure to manually release unused memory on demand
+ 
 
-- Concurrent global allocation map (GAM) and shared global allocation map (SGAM) updates allows multiple threads updating GAM and SGAM pages under S latch.
-- Degree of parallelism (DOP) feedback automatically adjusts degree of parallelism for repeating queries to optimize for workloads where excessive parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. See [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).
-- Multiple TCP connections for distributed availability groups
-  - Enables the use of multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.
-- Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
-- Optimized plan forcing using compilation replay improves the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).
-- Data Virtualization - ODBC driver refresh
+## Language
 
-### XML compression
+| New feature or update | Details |
+|:---|:---|
+|Approximate Percentile functions |- [APPROX_PERCENTILE_CONT (Transact-SQL)](../t-sql/functions/approx-percentile-cont-transact-sql.md)<br/>- [APPROX_PERCENTILE_DISC (Transact-SQL)](../t-sql/functions/approx-percentile-disc-transact-sql.md)|
+| CREATE STATISTICS | Adds [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)<br/><br/>Automatic statistics with low priority.|
+| Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br/>- [DATE_BUCKET](../t-sql/functions/date-bucket-transact-sql.md)<br/>- [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)<br/>- [GENERATE_SERIES](../t-sql/functions/generate-series-transact-sql.md)<br/>- [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)
+| JSON functions | - [ISJSON (Transact-SQL)](../t-sql/functions/isjson-transact-sql.md)<br/>-[JSON_PATH_EXISTS (Transact-SQL)](../t-sql/functions/json-path-exists-transact-sql.md)
+|SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function which uses the window in OVER clause is applied. See [SELECT (Transact-SQL)](../t-sql/queries/select-transact-sql.md).|
+| Resumable ALTER TABLE ADD CONSTRAINT | Support to pause, and resume a running ADD CONSTRAINT operation to perform it during maintenance windows. Resume such operation after failovers and system failures. Execute such operation on a large table despite the small log size available.
+|T-SQL functions | - [Logical Functions - GREATEST (Transact-SQL)](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [Logical Functions - LEAST (Transact-SQL)](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>-[STRING_SPLIT (Transact-SQL)](../t-sql/functions/string-split-transact-sql.md).|
 
-XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements.
+## Additional information
 
-## Language improvements
+This section provides additional information for the features highlighted above.
 
-### Approximate percentile
+### New granular permissions & roles
 
-- Approximate Percentile - There are two new approximate percentile functions introduced.
-  - [APPROX_PERCENTILE_CONT (Transact-SQL)](../t-sql/functions/approx-percentile-cont-transact-sql.md)
-  - [APPROX_PERCENTILE_DISC (Transact-SQL)](../t-sql/functions/approx-percentile-disc-transact-sql.md)
+This section summarizes the granular permissions and roles that SQL Server 2022 Preview introduces.
 
-### Time series functions
-
-Time series functions introduce the ability to store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.
-
-- [DATE_BUCKET](../t-sql/functions/date-bucket-transact-sql.md)
-- [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)
-- [GENERATE_SERIES](../t-sql/functions/generate-series-transact-sql.md)
-- [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)
-
-### Statistics
-
-- Statistics [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)
-
-## Additional business continuity and disaster recovery
-
-- Contained availability group - an Always On availability group that:
-
-  - Manages its own metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level.
-  - Includes specialized contained system databases within the availability group.
-
-  For more information, see [What is a contained availability group?](../database-engine/availability-groups/windows/contained-availability-groups-overview.md)
-
-- Distributed availability group lossless failover
-
-  - Adds distributed availability group for support for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`. For more information, review [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md).
-
-- Improved Snapshot backup support by adding T-SQL support for freezing/thawing I/O without requiring a VDI client
-
-## Additional security enhancements
-
-### Access control
-
-[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] introduces new granular permissions and roles.
-
-### Granular permissions for dynamic data masking
-
-Granular permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
-
-### New granular permissions
+#### Granular permissions
 
 - `CREATE LOGIN` and `CREATE USER`
   - Complements the existing `ALTER ANY LOGIN` or `USER` and allows permitting only the creation of accounts but not change existing accounts
@@ -146,7 +127,7 @@ Granular permissions for [Dynamic Data Masking](../relational-databases/security
 - `VIEW ANY CRYPTOGRAPHICALLY SECURED DEFINITION` and `VIEW CRYPTOGRAPHICALLY SECURED DEFINITION` (server and database)
   - There are a small number of columns in catalog views that contain data that is highly sensitive and should not be disclosed to everyone who may otherwise have access to the other columns. Examples: key values and passwords. While none of these are stored anywhere in clear text within SQL Server, having even access to the encrypted or hashed value may be considered too risky to disclose. These new permissions cover access to such data.
 
-### New roles
+#### Roles
 
 - `##MS_DefinitionReader##`
   - Holds `VIEW ANY DEFINITION`
@@ -163,10 +144,9 @@ Granular permissions for [Dynamic Data Masking](../relational-databases/security
 - `##MS_DatabaseManager##`
 - `##MS_LoginManager##`
 
-## Query Store improvements in SQL Server 2022
-Query Store is now on by default for all newly created SQL Server databases to help customers better track performance history, troubleshoot query plan related issues, and enable new capabilities in Azure SQL Database and SQL Server 2022. Additionally, Query Store hints are a preview feature in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
+### Query Store improvements
 
-In order to take advantage of SQL Server 2022 capabilities such as Query Store hints, CE Feedback, Degree of Parallelism (DOP) Feedback, and Memory Grant Feedback (MGF) persistence it is necessary to have Query Store enabled by default.
+Query Store is now on by default for all newly created SQL Server databases to help customers better track performance history, troubleshoot query plan related issues, and enable new capabilities in Azure SQL Database and SQL Server 2022. Additionally, Query Store hints are a preview feature in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
 
 - For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to SQL Server 2022, these databases will retain the previous Query Store settings.
 
@@ -185,11 +165,6 @@ TOTAL_EXECUTION_CPU_TIME_MS = 100
 )
 ...
 ```
-
-
-## Setup options
-
-Install Azure Arc agent via SQL Server command line setup. For more information, see [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt).
 
 ## SQL Server Analysis Services
 

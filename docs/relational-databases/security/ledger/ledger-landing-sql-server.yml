@@ -15,6 +15,8 @@ metadata:
   ms.author: vanto
   ms.reviewer: kendralittle, mathoma
   ms.date: 05/24/2022
+  monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+  titleSuffix: SQL Server and Azure SQL Database
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -42,6 +44,10 @@ landingContent:
             url: ledger-append-only-ledger-tables.md
           - text: Updatable ledger tables
             url: ledger-updatable-ledger-tables.md
+          - text: Digest management
+            url: ledger-digest-management.md
+          - text: Database verification
+            url: ledger-database-verification.md
 
 
   # Card 
@@ -61,17 +67,6 @@ landingContent:
             url: ledger-how-to-enable-automatic-digest-storage.md
           - text: How to verify a ledger table to detect tampering
             url: ledger-verify-database.md
-
-
-  # Card
-  - title: Ledger management, verification, and storage
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Digest management
-            url: ledger-digest-management.md
-          - text: Database verification
-            url: ledger-database-verification.md
           - text: Recover ledger database after tampering
             url: ledger-how-to-recover-after-tampering.md
 
@@ -83,7 +78,7 @@ landingContent:
         links:
           - text: Current ledger limitations
             url: ledger-limits.md
-          - text: Azure SQL Database ledger whitepaper
+          - text: Ledger whitepaper
             url: https://aka.ms/sql-ledger-whitepaper
 
 

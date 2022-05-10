@@ -33,6 +33,6 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 
-- [Digest Management](/docs/relational-databases/security/ledger/ledger-digest-management.md)
-- [Configure automatic database digests](/docs/relational-databases/security/ledger/ledger-how-to-configure-automatic-database-digest.md)
-- [Ledger Overview](/docs/relational-databases/security/ledger/ledger-overview.md)
+- [Digest Management](/sql/relational-databases/security/ledger/ledger-digest-management)
+- [Configure automatic database digests](/sql/relational-databases/security/ledger/ledger-how-to-configure-automatic-database-digest)
+- [Ledger Overview](/sql/relational-databases/security/ledger/ledger-overview)

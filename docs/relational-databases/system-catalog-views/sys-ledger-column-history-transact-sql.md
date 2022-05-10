@@ -85,5 +85,5 @@ ORDER BY t.[commit_time];
 
 ## See also
 
-- [Ledger considerations and limitations](/docs/relational-databases/security/ledger/ledger-limits.md)
-- [Ledger overview](/docs/relational-databases/security/ledger/ledger-overview.md)
+- [Ledger considerations and limitations](/sql/relational-databases/security/ledger/ledger-limits)
+- [Ledger overview](/sql/relational-databases/security/ledger/ledger-overview)

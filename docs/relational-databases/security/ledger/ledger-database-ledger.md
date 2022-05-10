@@ -68,6 +68,8 @@ The following example of a ledger table consists of four transactions that made 
 
 :::image type="content" source="media/ledger/database-ledger-1.png" alt-text="Screenshot of an example ledger table.":::
 
-## Next steps
+## See also
 
-- [Ledger overview](ledger-overview.md) 
+- [Ledger overview](ledger-overview.md)
+- [Data Manipulation Language (DML)](/sql/t-sql/queries/queries)
+- [Ledger views](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql#ledger-views)

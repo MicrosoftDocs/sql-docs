@@ -63,6 +63,6 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 
-- [Database Verification](/docs/relational-databases/security/ledger/ledger-database-verification.md)
-- [Verify a ledger table to detect tampering](/docs/relational-databases/security/ledger/ledger-verify-database.md)
-- [Ledger Overview](/doc/relational-databases/security/ledger/ledger-overview.md)
+- [Database Verification](/sql/relational-databases/security/ledger/ledger-database-verification)
+- [Verify a ledger table to detect tampering](/sql/relational-databases/security/ledger/ledger-verify-database)
+- [Ledger Overview](/sql/relational-databases/security/ledger/ledger-overview)

@@ -22,7 +22,7 @@ ms.date: 05/09/2022
 
 [!INCLUDE [sqlserver2022-asde](../../includes/applies-to-version/sqlserver2022-asde.md)]
 
-This function returns the **datetime** value corresponding to the start of each datetime bucket, from the timestamp defined by the `origin` parameter or the default origin value of `1900-01-01 00:00:00.000` if the origin parameter isn't specified.
+This function returns the date-time value corresponding to the start of each date-time bucket from the timestamp defined by the `origin` parameter, or the default origin value of `1900-01-01 00:00:00.000` if the origin parameter isn't specified.
 
 See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../functions/date-and-time-data-types-and-functions-transact-sql.md) for an overview of all Transact-SQL date and time data types and functions.
 
@@ -56,7 +56,7 @@ The part of *date* that is used with the `number` parameter, for example, year, 
 
 #### *number*
 
-The integer number that decides the width of the bucket combined with *datepart* argument. This represents the width of the datepart buckets from the origin time. This argument can't be a negative integer value.
+The integer number that decides the width of the bucket combined with *datepart* argument. This represents the width of the *datepart* buckets from the origin time. This argument can't be a negative integer value.
 
 #### *date*
 
@@ -94,7 +94,7 @@ The return value data type for this method is dynamic. The return type depends o
 
 ### Understanding the output from `DATE_BUCKET`
 
-`DATE_BUCKET` returns the latest date or time value, corresponding to the datePart and number parameter. For example, in the expressions below, `DATE_BUCKET` will return the output value of `2020-04-13 00:00:00.0000000`, as the output is calculated based on one week buckets from the default origin time of `1900-01-01 00:00:00.000`. The value `2020-04-13 00:00:00.0000000` is 6,276 weeks from the origin value of `1900-01-01 00:00:00.000`.
+`DATE_BUCKET` returns the latest date or time value, corresponding to the *datepart* and *number* parameter. For example, in the expressions below, `DATE_BUCKET` will return the output value of `2020-04-13 00:00:00.0000000`, as the output is calculated based on one week buckets from the default origin time of `1900-01-01 00:00:00.000`. The value `2020-04-13 00:00:00.0000000` is 6,276 weeks from the origin value of `1900-01-01 00:00:00.000`.
 
 ```sql
 DECLARE @date DATETIME2 = '2020-04-15 21:22:11';
@@ -319,7 +319,6 @@ SELECT DATE_BUCKET(HOUR, 2, @date, @origin);
 
 ## See also
 
-- [FIRST_VALUE (Transact-SQL)](first-value-transact-sql.md)
-- [LAST_VALUE (Transact-SQL)](last-value-transact-sql.md)
-- [GENERATE_SERIES (Transact-SQL)](generate-series-transact-sql.md)
 - [CAST and CONVERT &#40;Transact-SQL&#41;](../functions/cast-and-convert-transact-sql.md)
+- [Date and time types](../data-types/date-and-time-types.md)
+- [Date and time data types and functions (Transact-SQL)](date-and-time-data-types-and-functions-transact-sql.md)

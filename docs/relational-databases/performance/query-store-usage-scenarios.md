@@ -66,7 +66,7 @@ When you identify a query with suboptimal performance, your action depends on th
 5.  Consider rewriting expensive query. For example, take advantages of query parameterization and reduce usage of dynamic SQL. Implement optimal logic when read the data (apply data filtering on database side, not on application side).  
 
 ## A/B testing  
- Use Query Store to compare workload performance before and after the application changes. 
+Use Query Store to compare workload performance before and after the application changes. 
 
 The following list contains several examples where you can use Query Store to assess impact of the environment or application change to the workload performance:  
   
@@ -125,7 +125,7 @@ Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] all Query Optimi
   
 4.  Move to latest database compatibility level: get your workload exposed to the latest Query Optimizer, to potentially create new plans.  
   
-5.  Use Query Store for analysis and regression fixes: usually, the new Query Optimizer changes should produce better plans. However, Query Store will provide an easy way to identify plan choice regressions and fix them using a plan forcing mechanism. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], when using the [Automatic Plan Correction](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) feature, this step becomes automatic.  
+5.  Use Query Store for analysis and regression fixes: usually, the new Query Optimizer improvements should produce better plans. However, Query Store will provide an easy way to identify plan choice regressions and fix them using a plan forcing mechanism. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], when using the [Automatic Plan Correction](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) feature, this step becomes automatic.  
 
     a.  For cases where there are regressions, force the previously known good plan in the Query Store.  
   
@@ -218,4 +218,4 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
 
 - [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
 - [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)         
-- [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
+- [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)  

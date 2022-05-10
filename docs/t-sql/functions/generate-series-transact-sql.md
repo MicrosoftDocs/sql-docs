@@ -24,8 +24,6 @@ ms.date: 05/09/2022
 
 Generates a series of numbers within a given interval. The interval and the step between series values are defined by the user.
 
-See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../functions/date-and-time-data-types-and-functions-transact-sql.md) for an overview of all Transact-SQL date and time data types and functions.
-
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
@@ -150,7 +148,5 @@ value
 
 ## See also
 
-- [DATE_BUCKET (Transact-SQL)](date-bucket-transact-sql.md)
-- [FIRST_VALUE (Transact-SQL)](first-value-transact-sql.md)
-- [LAST_VALUE (Transact-SQL)](last-value-transact-sql.md)
 - [SEQUENCES (Transact-SQL)](../../relational-databases/system-information-schema-views/sequences-transact-sql.md)
+- [Relational operators (Transact-SQL)](../language-elements/relational-operators-transact-sql.md)

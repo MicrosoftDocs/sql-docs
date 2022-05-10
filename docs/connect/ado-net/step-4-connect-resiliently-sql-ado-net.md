@@ -39,7 +39,7 @@ The list of error numbers that are categorized as transient faults is available 
   
 ## Step 2: Create and run sample application  
   
-This sample assumes .NET Framework 4.5.1 or later is installed.  The C# code sample consists of one file named Program.cs. Its code is provided in the next section.  
+This sample assumes .NET Framework 4.6.2 or later is installed.  The C# code sample consists of one file named Program.cs. Its code is provided in the next section.  
   
 ### Step 2.a: Capture and compile the code sample  
   

@@ -107,10 +107,10 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-|Distributed Replay |  SQL Server setup no longer includes Distributed Replay. It will be available as a download |
-| SQL Server Management Studio | |
-|Azure Data Studio | |
-
+|Distributed Replay |  SQL Server setup no longer includes the Distributed Replay client and controller executables. These will be available, along with the admin executable, as a separate download |
+| SQL Server Management Studio | SSMS version 19.0 is now available and is the recommended version of SSMS for SQL Server 2022.  It can be downloaded from <need to add link when available> |
+|Azure Data Studio | The latest release of ADS, 1.XY, is available for download <include link> and includes support for SQL Server 2022.  |
+| SqlPackage.exe | Version ZY of SqlPackage provides support for SQL Server 2022, please visit <will add link> for more information. |
 ## Machine Learning
 
 | New feature or update | Details |

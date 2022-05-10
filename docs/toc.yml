@@ -561,9 +561,9 @@ items:
       items:
       - name: Backup to Azure
         items:
-        - name: Backup To URL
+        - name: Backup to URL for Microsoft Azure Blob Storage
           href: relational-databases/backup-restore/sql-server-backup-to-url.md
-        - name: Backup To Azure blob storage
+        - name: Backup to Azure blob storage with PowerShell
           href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
         - name: Delete backup log files
           href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
@@ -579,6 +579,14 @@ items:
             href: relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md
           - name: Migrate settings from SQL Server 2014
             href: relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md
+      - name: Backup to S3-compatible object storage
+        items:
+        - name: Backup/Restore with S3-compatible object storage
+          href: relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md
+        - name: Backup to URL for S3-compatible object storage
+          href: relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md
+        - name: Best practices and troubleshooting
+          href: relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md
       - name: Backup On-premises
         items:
         - name: Full backup

@@ -12,7 +12,6 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
-
 # SQL Server backup to URL for S3-compatible object storage
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
@@ -86,7 +85,7 @@ High-level overview of the supported features for `BACKUP` and `RESTORE`
 7. URLs can be specified either in virtual host or path style format.
 8. `WITH CREDENTIAL` is supported.
 9. `REGION` is supported and the default value is `us-east-1` .
-10. `MAXTRANSFERSIZE` will range from 5 MB to 20 MB, 10 MB is the default value for the S3 connector.
+10. `MAXTRANSFERSIZE` will range from 5 MB to 20 MB. 10 MB is the default value for the S3 connector.
 
 ### Supported Arguments for Backup
 

@@ -1,6 +1,6 @@
 ---
 title: "Back up to URL best practices & troubleshooting for S3-compatible object storage"
-description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to Azure Blob Storage.
+description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to S3-compatible object storage.
 ms.custom: 
 ms.date: 05/09/2022
 ms.prod: sql
@@ -84,7 +84,7 @@ WITH IDENTITY = 'S3 Access Key',
 SECRET = '<AccessKeyID>:<SecretKeyID>';
 ```
 
-In this statement `<AccessKeyID>` is not allowed to contain a ':' character. If the credential is not created prior to running the backup/restore query, the user will see the following error message:
+In this statement `<AccessKeyID>` is not allowed to contain a `:` character. If the credential is not created prior to running the backup/restore query, the user will see the following error message:
 
 ```
 Msg 3201, Level 16, State 1, Line 50
@@ -151,7 +151,7 @@ WITH COMPRESSION;
 
 ## Maximum length of URL
 
-The total URL length is limited to 259 bytes by the Backup and Restore engine. This means that '*s3://hostname/objectkey*' shouldn't exceed 259 characters. Leaving aside `s3://` the user can input the path length (hostname + object key) to be 259 – 5 = 254 characters. Refer to [SQL Server Backup to URL - SQL Server | Microsoft Docs](https://docs.microsoft.com/sql/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-ver15). the backup T-SQL syntax statement will throw the following error message:
+The total URL length is limited to 259 bytes by the Backup and Restore engine. This means that `s3://hostname/objectkey` shouldn't exceed 259 characters. Leaving aside `s3://` the user can input the path length (hostname + object key) to be 259 – 5 = 254 characters. Refer to [SQL Server Backup to URL - SQL Server](sql-server-backup-to-url.md). The backup T-SQL syntax statement will throw the following error message:
 
 ```
 SQL Server has a maximum limit of 259 characters for a backup device name. The BACKUP TO URL consumes 36 characters for the required elements used to specify the URL - 'https://.blob.core.windows.net//.bak', leaving 223 characters for account, container, and blob names put together'
@@ -181,7 +181,7 @@ Msg 3013, Level 16, State 1, Line 20
 BACKUP DATABASE is terminating abnormally.
 ```
 
-To get past this problem the following predefined location must be created ***/usr/local/share/ca-certificates/mssql-ca-certificates***
+To get past this problem the following predefined location must be created `/usr/local/share/ca-certificates/mssql-ca-certificates`
 where the self-signed certificates, or certificates not shipped with PAL, should be placed by the user. SQL Server will read the certificates from the folder during startup and add them to the PAL trust store.
 
 Up to 50 files can be stored in this location, if the folder is not created, when SQL Server is started, the SQL Server error log will show:

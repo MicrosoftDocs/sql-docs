@@ -18,7 +18,7 @@ ms.custom: kr2b-contr-experiment
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
-Whether or not the [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] operates with Active Directory integration, `AZDATA_PASSWORD` is set during deployment. It provides a basic authentication to the cluster controller and master instance. This document describes how to manually update `AZDATA_PASSWORD`.
+Whether or not your [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] operates with Active Directory integration, `AZDATA_PASSWORD` is set during deployment. It provides a basic authentication to the cluster controller and master instance. This document describes how to manually update `AZDATA_PASSWORD`.
 
 ## Change AZDATA_PASSWORD for controller
 
@@ -48,7 +48,8 @@ If the cluster operates in non-Active Directory mode, update the Apache Knox Gat
 
 1. Generate a new complex password for `AZDATA_USERNAME` to replace the existing `AZDATA_PASSWORD`.
 
-   To simplify the example, the next steps use "newPassword" because the generated password is "newPassword".
+   > [!NOTE]
+   > To simplify the example, the next steps use "newPassword" because the generated password is "newPassword".
 
 1. Get `hexsalt` from the `auth.users` table:
 
@@ -62,7 +63,7 @@ If the cluster operates in non-Active Directory mode, update the Apache Knox Gat
 
    For your convenience, we provide a pre-built tool `pbkdf2` to encrypt the password. Download the platform-appropriate .NET Core app for [`pbkdf2`](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/password-hashing/pbkdf2/prebuilt-binaries).
 
-   The app is self-contained and requires no prerequisites, such as .NET runtimes. To encrypt the password run:
+   The app is self-contained and requires no prerequisites, such as .NET runtimes. To encrypt the password run this command:
 
    ```bash
    pbkdf2 <password> <hexsalt>
@@ -93,17 +94,17 @@ After following the steps to update AZDATA_PASSWORD, [Grafana](app-monitor.md) a
 
 Follow these options for manually updating the password for [Grafana](app-monitor.md).
 
-1. The htpasswd utility is required. You can install this utility on any client machine.
+1. The `htpasswd` utility is required. You can install this utility on any client machine.
   
     ### [For Ubuntu](#tab/for-ubuntu)
-    On Ubuntu Linux you can use the following command:
+    On Ubuntu Linux, use the following command:
 
     ```bash
     sudo apt install apache2-utils
     ```
 
     ### [For RHEL](#tab/for-rhel)
-    On Red Hat Enterprise Linux you can use the following command:
+    On Red Hat Enterprise Linux, use the following command:
 
     ```bash
     sudo yum install httpd-tools
@@ -124,7 +125,7 @@ Follow these options for manually updating the password for [Grafana](app-monito
     admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=
     ```
 
-3. Now encode the password:
+3. Encode the password:
 
     ```bash
     echo "admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=" | base64
@@ -181,7 +182,7 @@ Follow these options for manually updating the password for [Grafana](app-monito
 
     The wait isn't significant and the pod should be online within seconds. To check the status of the pod you can use the same `get pods` command as used in the previous step.
 
-    If you see the mgmtproxy pod doesn't promptly return to *Ready* status, use `kubectl` to describe the pod:
+    If you see the `mgmtproxy` pod doesn't promptly return to *Ready* status, use `kubectl` to describe the pod:
 
     ```bash
     kubectl describe pods mgmtproxy-xxxxx  -n <namespace>
@@ -213,7 +214,7 @@ Follow these options for manually updating the password for [Kibana](cluster-log
 
     ![A screenshot of the menu on the left pane of Kibana, with the Security option chosen.](media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-1.jpg)
 
-3. On the security page, under the heading **Authentication Backends**, select **Internal User Database**.
+3. On the **Security** page, under the heading **Authentication Backends**, select **Internal User Database**.
 
     ![A screenshot of the security page, with the Internal User Database box chosen.](media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-2.jpg)
 

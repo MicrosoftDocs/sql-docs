@@ -76,35 +76,35 @@ For more information on the way key versions are used on SQL Server Big Data Clu
 
 ## HDFS Key and encryption zone monitoring
 
-1. To monitor the status of an encryption zone re-encryption:
+- To monitor the status of an encryption zone re-encryption, use this command:
 
-   ```console
-   azdata bdc hdfs encryption-zone status
-   ```
+  ```console
+  azdata bdc hdfs encryption-zone status
+  ```
 
-1. To get the encryption information about a file in an encryption zone:
+- To get the encryption information about a file in an encryption zone, use this command:
 
-   ```console
-   azdata bdc hdfs encryption-zone get-file-encryption-info --path /securelake/data.csv
-   ```
+  ```console
+  azdata bdc hdfs encryption-zone get-file-encryption-info --path /securelake/data.csv
+  ```
 
-1. Listing all encryption zones:
+- To list all encryption zones, use this command:
 
-   ```console
-   azdata bdc hdfs encryption-zone list
-   ```
+  ```console
+  azdata bdc hdfs encryption-zone list
+  ```
 
-1. To list all the available keys for HDFS:
+- To list all the available keys for HDFS, use this command:
 
-   ```console
-   azdata bdc hdfs key list
-   ```
+  ```console
+  azdata bdc hdfs key list
+  ```
 
-1. In order to create a custom key for HDFS encryption:
+- To create a custom key for HDFS encryption, use ths command:
 
-   ```console
-   azdata hdfs key create --name key1 --size 256
-   ```
+  ```console
+  azdata hdfs key create --name key1 --size 256
+  ```
 
 Possible sizes are 128, 192 256. The default is 256.
 

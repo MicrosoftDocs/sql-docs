@@ -35,7 +35,7 @@ For information on configuring and using encryption at rest see the following gu
 
 ## Root key encryption using external providers
 
-With the capability to bring in external keys in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], the main encryption key fetches the public key using the application that the customer deploys. When HDFS keys are rotated and used, the calls to decrypt the HDFS keys are sent to the control plane, and then redirected to the application using the key identifier provided by the customer. For SQL Server, the requests to encrypt are sent and fulfilled by the control plane, since it has the public key. The requests to decrypt the Data Encryption Key (DEK) from SQL are sent to control plane as well, and then are redirected to the application that interfaces with the external provider, such as a Hardware Security Module (HSM).
+With the capability to bring in external keys in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], the main encryption key fetches the public key using the application that the customer deploys. When HDFS keys are rotated and used, the calls to decrypt the HDFS keys are sent to the control plane, and then redirected to the application using the key identifier provided by the customer. For SQL Server, the requests to encrypt are sent and fulfilled by the control plane, since it has the public key. The requests to decrypt the Data Encryption Key (DEK) from SQL Server are sent to control plane as well, and then are redirected to the application that interfaces with the external provider, such as a Hardware Security Module (HSM).
 
 :::image type="content" source="media/big-data-cluster-key-versions/sql-customerkey.png" alt-text="Diagram represents the situation after Customer Key is installed.":::
 
@@ -57,7 +57,7 @@ The following sections provide the steps required to configure an external key p
 
 Create a PEM file with a 2048-bit RSA key and upload it to the key value store in your external key provider.
 
-For example, the key file may be added to the KV store in Hashicorp Vault at path *bdc-encryption-secret* and the name of the secret can be rsa2048.
+For example, the key file might be added to the KV store in Hashicorp Vault at path *bdc-encryption-secret* and the name of the secret can be rsa2048.
 
 ### Customize and deploy the integration application on Big Data Clusters
 
@@ -110,30 +110,30 @@ For example, the key file may be added to the KV store in Hashicorp Vault at pat
 
 ### Configure Big Data Clusters to use the external key provider
 
-Set the `AZDATA_EXTERNAL_KEY_PIN` environment variable to provide the token that allows access to the external key provider:
+1. Set the `AZDATA_EXTERNAL_KEY_PIN` environment variable to provide the token that allows access to the external key provider:
 
-```console
-export AZDATA_EXTERNAL_KEY_PIN=<your PIN/token here>
-```
+   ```console
+   export AZDATA_EXTERNAL_KEY_PIN=<your PIN/token here>
+   ```
 
-> [!NOTE]
-> The integration application deployment process uses the token to access your external key provider. However the `AZDATA_EXTERNAL_KEY_PIN` variable is saved encrypted in Big Data Clusters control plane so that it can be interpreted by the application. A different authentication mechanism can be used too, but the application needs to be changed. Check the _custom*.py_ python application for the complete integration logic that's being used.
+   > [!NOTE]
+   > The integration application deployment process uses the token to access your external key provider. However the `AZDATA_EXTERNAL_KEY_PIN` variable is saved encrypted in Big Data Clusters control plane so that it can be interpreted by the application. A different authentication mechanism can be used too, but the application needs to be changed. Check the _custom*.py_ python application for the complete integration logic that's being used.
 
-Configure the key in Big Data Clusters using the following `azdata` command structure. Change the required parameters to your specific implementation. The following example uses a HashiCorp Vault structure as provided by *custom2.py*.
+1. Configure the key in Big Data Clusters using the following `azdata` command structure. Change the required parameters to your specific implementation. The following example uses a HashiCorp Vault structure as provided by *custom2.py*.
 
-```bash
-azdata bdc kms update --app-name <YOUR-APP-NAME> --app-version <YOUR-APP-VERSION> \
---key-attributes keypath=<YOUR-KEY-PATH>,vaulturl=http://<YOUR-IP>:<YOUR-PORT>,keyname=<YOUR-KEY-NAME> \
---provider External
-```
+   ```bash
+   azdata bdc kms update --app-name <YOUR-APP-NAME> --app-version <YOUR-APP-VERSION> \
+   --key-attributes keypath=<YOUR-KEY-PATH>,vaulturl=http://<YOUR-IP>:<YOUR-PORT>,keyname=<YOUR-KEY-NAME> \
+   --provider External
+   ```
 
-The `--provider External` option configures Big Data Clusters KMS to use the integration application as the endpoint for key operations.
+   The `--provider External` parameter value configures Big Data Clusters KMS to use the integration application as the endpoint for key operations.
 
-Verify the root encryption key as the externally managed one by using the following command.
+1. Verify the root encryption key as the externally managed one by using the following command.
 
-```bash
-azdata bdc kms show
-```
+   ```bash
+   azdata bdc kms show
+   ```
 
 ### Encrypt your databases and encryption zones with the new keys
 
@@ -148,43 +148,43 @@ USE master;
 select * from sys.asymmetric_keys;
 ```
 
-The asymmetric key appears with the naming convention "tde_asymmetric_key_\<version\>". The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md). For example, use the following T-SQL command:
+The asymmetric key appears with the naming convention `tde_asymmetric_key_<version>`. The SQL Server administrator can then change the protector of the DEK to the asymmetric key using [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md). For example, use the following T-SQL command:
 
 ```sql
 USE db1;
 ALTER DATABASE ENCRYPTION KEY ENCRYPTION BY SERVER ASYMMETRIC KEY tde_asymmetric_key_0;
 ```
 
-Run the following command to check the current encryption key:
+1. Run the following command to check the current encryption key:
 
-```bash
-azdata bdc hdfs key describe
-```
+   ```bash
+   azdata bdc hdfs key describe
+   ```
 
-Get information about the version of the key protecting the EZ key:
+1. Get information about the version of the key protecting the encryption zone key:
 
-```bash
-azdata bdc hdfs key describe --name <key name>
-```
+   ```bash
+   azdata bdc hdfs key describe --name <key name>
+   ```
 
-Roll your key to the new external managed key:
+1. Roll your key to the new external managed key:
 
-```bash
-azdata bdc hdfs key roll --name <new key name>
-```
+   ```bash
+   azdata bdc hdfs key roll --name <new key name>
+   ```
 
-Start encryption:
+1. Start encryption by using this command:
 
-```bash
-azdata bdc hdfs encryption-zone reencrypt –-path <your EZ path> --action start
-```
+   ```bash
+   azdata bdc hdfs encryption-zone reencrypt –-path <your EZ path> --action start
+   ```
 
-Verify the key hierarchy using the following commands:
+1. Verify the key hierarchy using the following commands:
 
-```bash
-azdata bdc kms show
-azdata bdc hdfs key describe
-```
+   ```bash
+   azdata bdc kms show
+   azdata bdc hdfs key describe
+   ```
 
 ## Next steps
 

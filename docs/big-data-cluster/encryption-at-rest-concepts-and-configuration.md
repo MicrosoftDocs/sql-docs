@@ -50,7 +50,7 @@ For more information, see [Key Versions in [!INCLUDE[big-data-clusters-2019](../
 
 * System-managed keys
 
-  The Big Data Clusters KMS service manages all keys and certificates for SQL Server and HDFS.
+  The Big Data Clusters KMS service manages all keys and certificates for SQL Server and HDFS
 
 * User-defined keys
 
@@ -77,9 +77,9 @@ The feature set introduces the Big Data Clusters KMS controller service to provi
 ### SQL Server instances
 
 * A system-generated certificate is installed on SQL Server pods to be used with TDE commands. The system-managed certificate naming standard is `TDECertificate` + `timestamp`. For example, `TDECertificate2020_09_15_22_46_27`.
-* Master instance Big Data Clusters provisioned databases and user databases won't be encrypted automatically. DBAs may use the installed certificate to encrypt any database.
+* Master instance Big Data Clusters provisioned databases and user databases won't be encrypted automatically. Database administrators might use the installed certificate to encrypt any database.
 * Compute pool and storage pool are automatically encrypted using the system-generated certificate.
-* Data pool encryption, although technically possible using T-SQL `EXECUTE AT` commands, is discouraged and unsupported at this time. Using this technique to encrypt data pool databases might not be effective and encryption may not be happening at the desired state. The approach also creates an incompatible upgrade path towards next releases.
+* Data pool encryption, although technically possible using T-SQL `EXECUTE AT` commands, is discouraged and unsupported at this time. Using this technique to encrypt data pool databases might not be effective and encryption might not be happening at the desired state. The approach also creates an incompatible upgrade path towards next releases.
 * SQL Server key rotation is achieved using standard T-SQL administrative commands. For more information, see [SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide](encryption-at-rest-sql-server-tde.md).
 * Encryption monitoring happens through existing standard SQL Server DMVs for TDE.
 * Backing up and restoring a TDE enabled database into the cluster is supported.
@@ -139,7 +139,7 @@ No other steps are required.
 > [!CAUTION]
 > Before upgrading to SQL Server Big Data Clusters CU8, perform a complete backup of your data.
 
-Encryption Zones won't be configured. The Hadoop KMS component won't be configured to use Big Data Clusters KMS. In order to configure and enable HDFS encryption zones after upgrade, follow instructions in the next section.
+Encryption zones won't be configured. The Hadoop KMS component won't be configured to use Big Data Clusters KMS. In order to configure and enable HDFS encryption zones after upgrade, follow instructions in the next section.
 
 #### Enable HDFS encryption zones after upgrade to CU8
 
@@ -276,8 +276,7 @@ In order to enable an external key provider to secure the root keys of encryptio
 
 ## Next steps
 
-To learn more about how key versions are used on [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]
- see [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)
+To learn more about how key versions are used on [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)], see [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md).
 
 To learn more about how to effectively use encryption at rest [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]
 see the following articles:

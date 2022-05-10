@@ -48,14 +48,15 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-|Azure Purview integration|Apply Purview policies to any SQL Server instance that is enrolled in both Azure Arc and to Azure Purview data governance.<br/><br/>- Follow the principle of least privilege using Azure Purview data and access policies.|
+|Microsoft Purview integration|Apply Microsoft Purview access policies to any SQL Server instance that is enrolled in both Azure Arc and the Microsoft Purview Data use management.<br/><br/>- Newly introduced *SQL Performance Monitor*, and *SQL Security Auditor* roles align with the principle of least privilege using Microsoft Purview access policies.|
 |Ledger | In-database blockchain to create an immutable track record of data modifications over time. See [SQL Database ledger](/azure/azure-sql/database/ledger-landing).|
 |Azure Active Directory authentication| Manage integrated authentication with Azure Active Directory.|
 |Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).| 
 |Enhanced encryption | TDS 8.0 - TDS wrapped in TLS.|
 |New permissions & roles | Enable least privileged access for administrative tasks. See summary information in [New granular permissions & roles](#new-granular-permissions--roles).|
 |Dynamic data masking | Granular permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).|
-| Support for PFX certificates | Supports certificate, and key backup and restore scenarios, along with integration with Azure Blob Storage service for the same. This enables adherence to security best practices and compliance standards guidelines that prohibit the usage of insecure or deprecated algorithms like RC4 and SHA-1.| 
+|Support for PFX certificates | Supports certificate, and key backup and restore scenarios, along with integration with Azure Blob Storage service for the same. This enables adherence to security best practices and compliance standards guidelines that prohibit the usage of insecure or deprecated algorithms like RC4 and SHA-1.| 
+|Support MS-TDS 8.0 protocol | New MS-TDS protocol iteration:<br/>- Makes encryption mandatory<br/>- Aligns MS-TDS with HTTPS making it managable by network appliances for additional security<br/>- Removes MS-TDS / TLS custom interleaving and enables usage of TLS 1.3 and subsequent TLS protocol versions.| 
 
 ## Performance
 

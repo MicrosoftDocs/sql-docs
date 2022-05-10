@@ -31,7 +31,7 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-|Azure Synapse Link for SQL|Get near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. <br/><br/> For details and known limitations, see [Create Synapse Link for SQL Server 2022 (Preview) - Azure Synapse Analytics [Microsoft Docs](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022#known-limitations).|
+|Azure Synapse Link for SQL|Get near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. <br/><br/> For details and known limitations, see [Create Synapse Link for SQL Server 2022 Preview - Azure Synapse Analytics](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022#known-limitations).|
 |Object storage integration | Integrate SQL Server with S3 compatible object storage in addition to Azure storage. 
 |Data virtualization | ODBC driver refresh|
 
@@ -50,7 +50,7 @@ The following sections provide an overview of these features.
 | New feature or update | Details |
 |:---|:---|
 |Azure Purview integration|Apply Purview policies to any SQL Server instance that is enrolled in both Azure Arc and to Azure Purview data governance.<br/><br/>- Follow least privilege principal with Azure RBAC.|
-|Ledger | In-database blockchain to create an immutable track record of data modifications over time.See [SQL Database ledger](/azure/azure-sql/database/ledger-landing).|
+|Ledger | In-database blockchain to create an immutable track record of data modifications over time. See [SQL Database ledger](/azure/azure-sql/database/ledger-landing).|
 |Azure Active Directory authentication| Manage integrated authentication with Azure Active Directory.|
 |Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).| 
 |Enhanced encryption | TDS 8.0 - TDS wrapped in TLS.|
@@ -64,7 +64,7 @@ The following sections provide an overview of these features.
 | New feature or update | Details |
 |:---|:---|
 | Query Store improvements | Accelerated query performance with no code changes with improvements to: <br/><br/>- [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) on by default.<br/>- Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas)|
-|Memory grant feedback | Optimize memory allocation is stored in the query store, so when the memory grant information is available when the query returns to cache after eviction.|
+|Memory grant feedback | Memory allocation is stored in the Query Store, so memory grant information is available when the query returns to cache after eviction.|
 | Columnstore indexes | Improvements to string processing| 
 | In-memory OLTP management | - Improve memory management in large memory servers to reduce out of memory conditions <br/>- Add a new stored procedure to manually release unused memory on demand.|
 | Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s).|
@@ -73,9 +73,9 @@ The following sections provide an overview of these features.
 | Buffer pool parallel scan | |
 | Additional optimization| Improvements to string processing for columnstore indexes <br/>
 |In-Memory OLTP memory management improvements| - Improve memory management in large memory servers to reduce out of memory conditions.<br/><br/>- Add a new stored procedure to manually release unused memory on demand.|
-|Improved concurrency| Concurrent global allocation map (GAM) and shared global allocation map (SGAM) updates allows multiple threads updating GAM and SGAM pages under S latch.|
+|Improved concurrency| Concurrent global allocation map (GAM) and shared global allocation map (SGAM) updates allows multiple threads updating GAM and SGAM pages under Shared latch.|
 |Automatic Degree of parallelism (DOP) feedback |Automatically adjusts degree of parallelism for repeating queries to optimize for workloads where excessive parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. See [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).|
-| Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. See [Cardinality Estimation (SQL Server)](../relational-databases/performance/cardinality-estimation-sql-server.md. |
+| Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. See [Cardinality Estimation (SQL Server)](../relational-databases/performance/cardinality-estimation-sql-server.md). |
 
 
 ## Operations

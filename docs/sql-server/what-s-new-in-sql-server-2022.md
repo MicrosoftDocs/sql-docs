@@ -68,7 +68,7 @@ The following sections provide an overview of these features.
 | Columnstore indexes | Improvements to string processing| 
 | In-memory OLTP management | - Improve memory management in large memory servers to reduce out of memory conditions <br/>- Add a new stored procedure to manually release unused memory on demand.|
 | Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s).|
-| [Query Store hints](../relational-databases/performance/query-store-hints.md) | Previously only available on Azure SQL Database and Azure SQL Managed Instance, now on SQL Server 2022 Preview.|
+| Query Store hints | [Query Store hints]](../relational-databases/performance/query-store-hints.md) provide an easy-to-use method for shaping query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, now are available in SQL Server 2022 Preview.|
 | XML compression |XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md).|
 | Buffer pool parallel scan | |
 | Additional optimization| Improvements to string processing for columnstore indexes <br/>

@@ -17,7 +17,7 @@ ms.date: 5/24/2022
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article shows how to use the **mssql** extension for Visual Studio Code (VS Code) to work with SQL Server and Azure SQL databases on Windows, macOS, and Linux. The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
+This article shows how to use the **mssql** extension for Visual Studio Code (VS Code) to work with databases in SQL Server on Windows, macOS, and Linux, as well as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The [mssql extension for Visual Studio Code](https://aka.ms/mssql-marketplace) lets you connect to a SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
 ## Create or open a SQL file
 
@@ -74,11 +74,11 @@ Follow these steps to create a connection profile and connect to a SQL Server.
 
 As an alternative to the previous steps, you can also create and edit connection profiles in the User Settings file (*settings.json*). To open the settings file, select **File** > **Preferences** > **Settings**. For more information, see [Manage connection profiles](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles).
 
-## Create a SQL database
+## Create a database
 
 1. In the new SQL file that you started earlier, type *sql* to display a list of editable code snippets.
 
-   ![SQL snippets](./media/sql-server-develop-use-vscode/vscode-sql-snippets.png)
+   ![Screenshot of editor in VS Code, SQL snippets](./media/sql-server-develop-use-vscode/vscode-sql-snippets.png)
 
 2. Select **sqlCreateDatabase**.
 
@@ -100,7 +100,7 @@ As an alternative to the previous steps, you can also create and edit connection
 
 4. Press **Ctrl**+**Shift**+**E** to execute the Transact-SQL commands. View the results in the query window.
 
-    ![Create database messages](./media/sql-server-develop-use-vscode/vscode-create-database-messages.png)
+    ![Screenshot of VS code GUI, create database messages](./media/sql-server-develop-use-vscode/vscode-create-database-messages.png)
 
     > [!TIP]
     > You can customize the shortcut keys for the mssql commands. See [Customize shortcuts](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts).
@@ -115,7 +115,7 @@ As an alternative to the previous steps, you can also create and edit connection
 
 4. Select the new **TutorialDB** database.
 
-   ![Use database](./media/sql-server-develop-use-vscode/vscode-use-database.png)
+   ![Screenshot of VS code GUI, choosing a database](./media/sql-server-develop-use-vscode/vscode-use-database.png)
 
 5. In the code editor, type *sql* to display the snippets, select **sqlCreateTable**, and then press **Enter**.
 
@@ -164,7 +164,7 @@ As an alternative to the previous steps, you can also create and edit connection
 
 2. Press **Ctrl**+**Shift**+**E** to execute the commands. The two result sets display in the **Results** window.
 
-   ![Results](./media/sql-server-develop-use-vscode/vscode-result-grid.png)
+   ![Screenshot of VS code, the Results pane ](./media/sql-server-develop-use-vscode/vscode-result-grid.png)
 
 ## View and save the result
 
@@ -172,21 +172,21 @@ As an alternative to the previous steps, you can also create and edit connection
 
 2. Select the **Results** and **Messages** panel headers to collapse and expand the panels.
 
-   ![Toggle headers](./media/sql-server-develop-use-vscode/vscode-toggle-messages-pannel.png)
+   ![Screenshot of VS code, Toggle headers](./media/sql-server-develop-use-vscode/vscode-toggle-messages-pannel.png)
 
    > [!TIP]
    > You can customize the default behavior of the mssql extension. See [Customize extension options](https://github.com/Microsoft/vscode-mssql/wiki/customize-options).
 
 3. Select the maximize grid icon on the second result grid to zoom in to those results.
 
-   ![Maximize grid](./media/sql-server-develop-use-vscode/vscode-maximize-grid.png)
+   ![Screenshot of VS code, Maximize grid](./media/sql-server-develop-use-vscode/vscode-maximize-grid.png)
 
    > [!NOTE]
    > The maximize icon displays when your T-SQL script produces two or more result grids.
 
 4. Open the grid context menu by right-clicking on the grid.
 
-   ![Context menu](./media/sql-server-develop-use-vscode/vscode-grid-context-menu.png)
+   ![Screenshot of VS Code, Context menu](./media/sql-server-develop-use-vscode/vscode-grid-context-menu.png)
 
 5. Select **Select All**.
 
@@ -196,7 +196,7 @@ As an alternative to the previous steps, you can also create and edit connection
 
 8. Verify that the JSON file saves and opens in Visual Studio Code.
 
-   ![Save as JSON](./media/sql-server-develop-use-vscode/vscode-save-as-json.png)
+   ![Screenshot of editor in VS code, Save as JSON](./media/sql-server-develop-use-vscode/vscode-save-as-json.png)
 
 If you need to save and run SQL scripts later, for administration or a larger development project, save the scripts with a *.sql* extension.
 

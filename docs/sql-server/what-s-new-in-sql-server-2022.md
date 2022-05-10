@@ -25,6 +25,12 @@ For more information and known issues, see [[!INCLUDE[sql-server-2022](../includ
 
 For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../azure-data-studio/download-azure-data-studio.md).
 
+> [!VIDEO html5-player.libsyn.com/embed/episode/id/21195518]
+
+<!---
+<iframe title="Libsyn Player" style="border: none" src="//html5-player.libsyn.com/embed/episode/id/21195518/height/450/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/" height="450" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+--->
+
 The following sections provide an overview of these features.
 
 ## Analytics

@@ -33,7 +33,7 @@ For more information, see [the Supported platforms section in the installation g
 * [Install SQL Server on Linux](sql-server-linux-setup.md) and verify the installation.
 
 * Check the SQL Server Linux repositories for the Python and R extensions. 
-  If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
+  If you already configured source repositories for the database engine install, you can run the **mssql-server-extensibility** package install commands using the same repo registration.
 
 * You should have a tool for running T-SQL commands. 
 
@@ -136,16 +136,20 @@ The following commands register the repository providing the R language platform
     library("RevoScaleR")
     ```
 
-16. Configure the installed R runtime with SQL Server for Linux. *RFolderVersion* is the version-specific folder name for your installation of R runtime, for example, `R4.2`.
+16. Configure the installed R runtime with SQL Server for Linux, where `path/to/` is the file path to the r binary, and `RFolderVersion` is the version-specific folder name for your installation of R runtime, for example, `R4.2`.
 
     ```bash  
     /opt/mssql/bin/mssql-conf set extensibility rbinpath /path/to/RFolderVersion/lib/R/bin/R
     /opt/mssql/bin/mssql-conf set extensibility datadirectories /path/to/RFolderVersion/
+    ```
 
+17. Restart the Launchpad service.
+
+    ```bash
     systemctl restart mssql-launchpadd.service
     ```
 
-17. Configure SQL Server for Linux to allow external scripts using the `sp_configure` system stored procedure.
+18. Configure SQL Server for Linux to allow external scripts using the `sp_configure` system stored procedure.
 
     ```sql
     EXEC sp_configure 'external scripts enabled', 1;
@@ -154,7 +158,7 @@ The following commands register the repository providing the R language platform
     GO
     ```
 
-18. Verify the installation by executing a simple T-SQL command to return the version of R:
+19. Verify the installation by executing a simple T-SQL command to return the version of R:
 
     ```sql
     EXEC sp_execute_external_script @script=N'print(R.version)',@language=N'R';
@@ -188,7 +192,7 @@ The following commands register the repository providing the R language platform
 6. Install revoscalepy for the root user, specifying the absolute file path to the `.whl` file.
 
     ```bash  
-    sudo -H pip install /path/to/revoscalepy.whl
+    pip install /path/to/revoscalepy.whl
     ```
 
 7. Verify the revoscalepy installation from the python terminal. Verify the library can be imported.
@@ -197,20 +201,11 @@ The following commands register the repository providing the R language platform
     import revoscalepy
     ```
 
-8. Configure the installed Python runtime with SQL Server. This step will differ based on what option you chose in step 2.
-
-    To verify the installation from source:
+8. Configure the installed Python runtime with SQL Server, where `/path/to` is the path to the python installation binary, and `pythonFolderVersion` is the desired version of Python installed, for example, `python3.10`. Use the following script with your actual installation path:
 
     ```bash
-    sudo /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /usr/local/bin/python3.10
-    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/local/
-    ```
-
-    To verify the installation from `apt install`:
-
-    ```bash
-    sudo /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /usr/bin/python3.10
-    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/local/:/usr/local/lib/python3.10/dist-packages
+    /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /path/to/pythonFolderVersion
+    /opt/mssql/bin/mssql-conf set extensibility datadirectories /path/to/:/path/to/lib/pythonFolderVersion/dist-packages
     ```
 
 9. Restart the Launchpad service.
@@ -281,20 +276,6 @@ To validate installation:
   WITH RESULT SETS (([hello] int not null)); 
   GO 
   ```
-
-<a name="install-all"></a>
-
-## Unattended installation
-
-Using the [unattended install](sql-server-linux-setup.md#unattended) for the Database Engine, add the packages for mssql-mlservices and EULAs.
-
- Use one of the mlservices-specific EULA parameters for the open-source R and Python distributions:
-
-```bash
-sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
-```
-
-The complete EULA is documented at [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
 ## Offline installation
 

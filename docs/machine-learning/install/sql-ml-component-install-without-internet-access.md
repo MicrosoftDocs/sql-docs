@@ -24,7 +24,7 @@ By default, installers connect to Microsoft download sites to get required and u
 
 In-database analytics consist of database engine instance, plus additional components for R and Python integration, depending on the version of SQL Server. 
 
-+ Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server 2022 Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning-sql-2022.md).
++ Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. The offline installation process is therefore similar to the online process. For more information, see [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server 2022 Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning-sql-2022.md).
 + SQL Server 2019 includes R, Python, and Java.
 + SQL Server 2017 includes R and Python.
 + SQL Server 2016 is R-only.
@@ -36,7 +36,7 @@ In-database analytics consist of database engine instance, plus additional compo
 Offline installation of SQL Server 2022 is similar to the online installation experience. 
 
 1. Use SQL Setup to install the Machine Learning services feature.
-2. Download any desired runtimes and copy them to the offline installation server. Custom runtimes for SQL Server 2022 are customer-installed. CAB files are not used. 
+2. Download any desired runtimes and copy them to the offline installation server. Custom runtimes for SQL Server 2022 are customer-installed. CAB files are not used for SQL Server 2022.
 3. Download any desired packages and copy them to the offline installation server. Otherwise, refer to instructions for installation from SQL Setup and installation of any desired custom packages: 
  - [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md)
  - [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning-sql-2022.md)
@@ -142,8 +142,6 @@ Copy the SQL Server installation media (.iso or .cab) and in-database analytics 
 
 The %TEMP% folder is required for Python CAB files. For R, you can use %TEMP% or set the `myrcachedirectory` parameter to the CAB path.
 
-::: moniker-end
-
 ## Run Setup
 
 When you run SQL Server Setup on a computer disconnected from the internet, Setup adds an **Offline installation** page to the wizard so that you can specify the location of the CAB files you copied in the previous step.
@@ -158,13 +156,15 @@ When you run SQL Server Setup on a computer disconnected from the internet, Setu
 
 5. Continue following the on-screen prompts to complete the installation.
 
+::: moniker-end
 <a name="apply-cu"></a>
 
 ## Apply cumulative updates
 
-We recommend that you apply the latest cumulative update to both the database engine and machine learning components. Cumulative updates are installed through the Setup program. 
+We recommend that you apply the latest cumulative update to both the database engine and machine learning components. 
 
 ::: moniker range="=sql-server-ver16"
+
 1. Start with a baseline instance. You can only apply cumulative updates to existing installations of the initial release of SQL Server.
 
 2. On an internet connected device, go to the cumulative update list for your version of SQL Server. [See Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
@@ -178,6 +178,9 @@ We recommend that you apply the latest cumulative update to both the database en
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sql-server-ver15"
+
+Cumulative updates are installed through the Setup program. 
+
 1. Start with a baseline instance. You can only apply cumulative updates to existing installations of the initial release of SQL Server.
 
 2. On an internet connected device, go to the cumulative update list for your version of SQL Server. [See Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
@@ -185,6 +188,8 @@ We recommend that you apply the latest cumulative update to both the database en
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
+
+Cumulative updates are installed through the Setup program. 
 
 1. Start with a baseline instance. You can only apply cumulative updates to existing installations of the SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2.
 

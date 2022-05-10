@@ -35,7 +35,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 |[Agent becomes unresponsive upon modifying, disabling, or enabling existing jobs](#agent-becomes-unresponsive-upon-modifying-disabling-or-enabling-existing-jobs)|May 2020|Resolved|June 2020|
 |[Permissions on resource group not applied to SQL Managed Instance](#permissions-on-resource-group-not-applied-to-sql-managed-instance)|Feb 2020|Resolved|Nov 2020|
 |[Limitation of manual failover via portal for failover groups](#limitation-of-manual-failover-via-portal-for-failover-groups)|Jan 2020|Has Workaround||
-|[SQL Agent roles need explicit EXECUTE permissions for non-sysadmin logins](#in-memory-oltp-memory-limits-are-not-applied)|Dec 2019|Has Workaround||
+|[SQL Agent roles need explicit EXECUTE permissions for non-sysadmin logins](#sql-agent-roles-need-explicit-execute-permissions-for-non-sysadmin-logins)|Dec 2019|Has Workaround||
 |[SQL Agent jobs can be interrupted by Agent process restart](#sql-agent-jobs-can-be-interrupted-by-agent-process-restart)|Dec 2019|Resolved|Mar 2020|
 |[Azure AD logins and users are not supported in SSDT](#azure-ad-logins-and-users-are-not-supported-in-ssdt)|Nov 2019|No Workaround||
 |[In-memory OLTP memory limits are not applied](#in-memory-oltp-memory-limits-are-not-applied)|Oct 2019|Has Workaround||

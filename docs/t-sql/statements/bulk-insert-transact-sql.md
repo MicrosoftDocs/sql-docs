@@ -153,7 +153,7 @@ Specifies that BULK INSERT performs the import operation using the specified dat
 
 Specifies a named external data source pointing to the Azure Blob Storage location of the file that will be imported. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). For an example, see [Import data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
-#### ERRORFILE ='*error_file_path*'
+#### ERRORFILE = '*error_file_path*'
 
 Specifies the file used to collect rows that have formatting errors and can't be converted to an OLE DB rowset. These rows are copied into this error file from the data file "as is."
 

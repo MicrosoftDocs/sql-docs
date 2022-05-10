@@ -62,7 +62,7 @@ To delete a column, simply select on the trash icon as highlighted below
 
 Remember to save your work by using the “Ctrl/Cmd + S” keys on your keyboard. Saving changes opens up a dialog box with options for either immediately applying the changes to the database or creating a script that applies the changes. See below:
 
-:::image type="content" source="media/table-designer-azure-data-studio/table-designer-save-dialog-box.PNG" alt-text="Screenshot of Table Designer showing save dialog box.":::
+:::image type="content" source="media/table-designer-azure-data-studio/save-dialog-for-table-designer.png" alt-text="Screenshot of Table Designer showing save dialog box.":::
 
 Just like Visual Studio Code, an indicator that your work is NOT saved is the shaded circular dot that appears on the right hand side of the tab indicator that you are on. Once your work is saved, this dot disappears. Compare the images below.
 

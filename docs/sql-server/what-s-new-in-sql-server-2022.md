@@ -54,7 +54,7 @@ The following sections provide an overview of these features.
 |Azure Active Directory authentication| Manage integrated authentication with Azure Active Directory.|
 |Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).| 
 |Enhanced encryption | TDS 8.0 - TDS wrapped in TLS.|
-|New permissions & roles | Ennabled least privileged access for administrator tasks. See summary summary information in [New granular permissions & roles](#new-granular-permissions--roles).|
+|New permissions & roles | Enabled least privileged access for administrator tasks. See summary information in [New granular permissions & roles](#new-granular-permissions--roles).|
 |Dynamic data masking | Granular permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).|
 | Support for PFX certificates | Supports certificate, and key backup and restore scenarios, along with integration with Azure Blob Storage service for the same. This enables adherence to security best practices and compliance standards guidelines that prohibit the usage of insecure or deprecated algorithms like RC4 and SHA-1.| 
 

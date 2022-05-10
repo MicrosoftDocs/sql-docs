@@ -34,7 +34,6 @@ The following sections provide an overview of these features.
 |Azure Synapse Link for SQL|Get near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. <br/><br/> For details and known limitations, see [Create Synapse Link for SQL Server 2022 Preview - Azure Synapse Analytics](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022#known-limitations). <br/></br> See also, [Known issues](/azure/synapse-analytics/synapse-link/synapse-link-for-sql-2022-known-issues)|
 |Object storage integration | SQL Server 2022 Preview introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3 compatible object storage in addition to Azure Storage. Object storage integration enables two scenarios in SQL Server 2022. The first is BACKUP TO URL and the second is Data Lake Virtualization.
 |Data virtualization | Enhances data virtualization capabilities by integrating Polybase with S3 compatible object storage, also adding the support to Parquet file types.|
-| Backup and restore to S3 compatible object storage | SQL Server 2022 extends the `BACKUP`/`RESTORE` `TO`/`FROM` `URL` syntax by adding support for a new S3 connector using the REST API.|
 
 ## Availability
 
@@ -57,7 +56,6 @@ The following sections provide an overview of these features.
 |New permissions & roles | Enable least privileged access for administrative tasks. See summary information in [New granular permissions & roles](#new-granular-permissions--roles).|
 |Dynamic data masking | Granular permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).|
 | Support for PFX certificates | Supports certificate, and key backup and restore scenarios, along with integration with Azure Blob Storage service for the same. This enables adherence to security best practices and compliance standards guidelines that prohibit the usage of insecure or deprecated algorithms like RC4 and SHA-1.| 
-
 
 ## Performance
 
@@ -91,6 +89,7 @@ The following sections provide an overview of these features.
 | Optimized plan forcing| Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).|
 | Shrink database & file | Wait at low priority.|
 | Max server memory calculations | During setup, the installation will configure max server memory to align with recommendations. See [Server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md). |
+| Backup and restore to S3 compatible object storage | SQL Server 2022 extends the `BACKUP`/`RESTORE` `TO`/`FROM` `URL` syntax by adding support for a new S3 connector using the REST API.|
 
 ## Language
 

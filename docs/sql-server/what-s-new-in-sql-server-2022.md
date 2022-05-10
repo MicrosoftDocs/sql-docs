@@ -63,7 +63,7 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-| Query Store improvements | Accelerated query performance with no code changes with improvements to: <br/><br/>- [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) on by default.<br/>- Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas)|
+| Query Store improvements | Accelerated query performance with no code changes with improvements to: <br/><br/>- [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) on by default. For more information, see [Query Store improvements](#query-store-improvements) later in this article. <br/>- Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas)|
 |Memory grant feedback | Optimize memory allocation is stored in the query store, so when the memory grant information is available when the query returns to cache after eviction.|
 | Columnstore indexes | Improvements to string processing| 
 | In-memory OLTP management | - Improve memory management in large memory servers to reduce out of memory conditions <br/>- Add a new stored procedure to manually release unused memory on demand.|

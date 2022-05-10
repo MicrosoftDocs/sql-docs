@@ -17,6 +17,9 @@ The Azure SQL Database local development experience is a combination of tools an
 
 The Azure SQL Database local development experience consists of extensions for VSCode and Azure Data Studio that allow users to source control Database Projects and work offline when needed. The local development experience uses the [Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md), a containerized database with close fidelity with the Azure SQL Database public service, as runtime host for Database Projects that can be published and tested locally as part of developer's inner loop.
 
+   > [!NOTE] 
+   > We are planning to evolve this local development experience for Azure SQL Database over time to cover new scenarios and use cases, simplifying the process of developing and testing applications targeting Azure SQL Database. You can find out more about future plans in this space by reading [this blog post on Azure SQL Database Devs’ Corner](https://aka.ms/sql-db-local-dev-experience-plan).
+
 Once a Database Project is ready to be deployed, the local development experience enables developers to publish the database directly to the global Azure SQL Database service, or push the Database Project to a Git repository where additional steps of a deployment pipeline can be triggered as part of the developer's outer loop.
 
 A common example would be pushing the project to a GitHub repository that leverages GitHub Actions to automate database creation or apply schema changes to a database in Azure SQL Database. The Azure SQL Database emulator itself can also be used as part of Continuous Integration and Continuous Deployment (CI/CD) processes to automate database validation and testing.

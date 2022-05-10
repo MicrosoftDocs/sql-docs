@@ -186,7 +186,7 @@ Specifies a complete database backup. If a list of files and filegroups is speci
 When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. Only a log backup can be restored to a specific time or transaction within the backup.
 
 > [!NOTE]
-> Only a full database backup can be performed on the **master** database.
+> Only a full database backup can be performed on the `master` database.
 
 #### LOG    
 Specifies a backup of the transaction log only. The log is backed up from the last successfully executed log backup to the current end of the log. Before you can create the first log backup, you must create a full backup.
@@ -229,7 +229,7 @@ Specifies that all read/write filegroups be backed up in the partial backup. If 
 > Explicitly listing the read/write filegroups by using FILEGROUP instead of READ_WRITE_FILEGROUPS creates a file backup.
 
 #### FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }    
-Is the logical name of a read-only filegroup or a variable whose value equates to the logical name of a read-only filegroup that is to be included in the partial backup. For more information, see "\<file_or_filegroup>," earlier in this topic.
+Is the logical name of a read-only filegroup or a variable whose value equates to the logical name of a read-only filegroup that is to be included in the partial backup. For more information, see "\<file_or_filegroup>," earlier in this article.
 
 *n*    
 Is a placeholder that indicates that multiple read-only filegroups can be specified in a comma-separated list.
@@ -249,10 +249,12 @@ Is the logical name of the backup device to which the database is backed up. The
 #### { DISK \| TAPE \| URL} **=** { **'**_physical\_device\_name_**'** \| **@**_physical\_device\_name\_var_ \| 'NUL' }    
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (URL starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2)
 
-Specifies a disk file or tape device, or a URL. The URL format is used for creating backups to Microsoft Azure Blob Storage or S3-compatible object storage. For more information and examples, see:
+Specifies a disk file or tape device, or a URL. 
+
+The URL format is used for creating backups to Microsoft Azure Blob Storage or S3-compatible object storage. For more information and examples, see:
 
 - [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Microsoft Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).
-- [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). For more information, see [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).
+- Backup and restore to S3-compatible storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). For more information, see [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).
 
 > [!NOTE]
 > The NUL disk device will discard all information sent to it and should only be used for testing. This is not for production use.
@@ -287,7 +289,7 @@ See "\<backup_device>," earlier in this section.
 *n*    
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list. The number of devices in the MIRROR TO clause must equal the number of devices in the TO clause.
 
-For more information, see "Media Families in Mirrored Media Sets" in the [Remarks](#general-remarks) section, later in this topic.
+For more information, see "Media Families in Mirrored Media Sets" in the [Remarks](#general-remarks) section, later in this article.
 
 [ *next-mirror-to* ]    
 Is a placeholder that indicates that a single BACKUP statement can contain up to three MIRROR TO clauses, in addition to the single TO clause.
@@ -328,7 +330,7 @@ If you choose to encrypt, you will also have to specify the encryptor using the 
 - `SERVER CERTIFICATE` = Encryptor_Name
 - `SERVER ASYMMETRIC KEY` = Encryptor_Name
 
-The `SERVER CERTIFICATE` and `SERVER ASYMMETRIC KEY` are a certificate and an asymmetric key created in `master` database. For more information see [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) and [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md) respectively.
+The `SERVER CERTIFICATE` and `SERVER ASYMMETRIC KEY` are a certificate and an asymmetric key created in `master` database. For more information, see [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) and [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md) respectively.
 
 > [!WARNING]
 > When encryption is used in conjunction with the `FILE_SNAPSHOT` argument, the metadata file itself is encrypted using the specified encryption algorithm and the system verifies that [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) was completed for the database. No additional encryption happens for the data itself. The backup fails if the database was not encrypted or if the encryption was not completed before the backup statement was issued.
@@ -437,7 +439,7 @@ NOSKIP
 Instructs the BACKUP statement to check the expiration date of all backup sets on the media before allowing them to be overwritten. This is the default behavior.
 
 SKIP    
-Disables the checking of backup set expiration and name that is usually performed by the BACKUP statement to prevent overwrites of backup sets. For information about the interactions between { INIT | NOINIT } and { NOSKIP | SKIP }, see "Remarks," later in this topic.
+Disables the checking of backup set expiration and name that is usually performed by the BACKUP statement to prevent overwrites of backup sets. For information about the interactions between { INIT | NOINIT } and { NOSKIP | SKIP }, see "Remarks," later in this article.
 To view the expiration dates of backup sets, query the **expiration_date** column of the [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) history table.
 
 #### { **NOFORMAT** | FORMAT }    
@@ -580,7 +582,7 @@ Using standby mode requires a standby file, specified by *standby_file_name*, wh
 This file holds the rolled back changes, which must be reversed if RESTORE LOG operations are to be subsequently applied. There must be enough disk space for the standby file to grow so that it can contain all the distinct pages from the database that were modified by rolling back uncommitted transactions.
 
 #### NO_TRUNCATE    
-Specifies that the is log not truncated and causes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to attempt the backup regardless of the state of the database. Consequently, a backup taken with `NO_TRUNCATE` might have incomplete metadata. This option allows backing up the log in situations where the database is damaged.
+Specifies that the tranmsaction log should not be not truncated and causes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to attempt the backup regardless of the state of the database. Consequently, a backup taken with `NO_TRUNCATE` might have incomplete metadata. This option allows backing up the transaction log in situations where the database is damaged.
 
 The NO_TRUNCATE option of BACKUP LOG is equivalent to specifying both COPY_ONLY and CONTINUE_AFTER_ERROR.
 
@@ -683,7 +685,7 @@ GO
 
 ##### Media families in mirrored media sets
 
-Each backup device specified in the `TO` clause of a BACKUP statement corresponds to a media family. For example, if the `TO` clauses lists three devices, BACKUP writes data to three media families. In a mirrored media set, every mirror must contain a copy of every media family. This is why the number of devices must be identical in every mirror.
+Each backup device specified in the `TO` clause of a BACKUP statement corresponds to a media family. For example, if the `TO` clause lists three devices, BACKUP writes data to three media families. In a mirrored media set, every mirror must contain a copy of every media family. This is why the number of devices must be identical in every mirror.
 
 When multiple devices are listed for each mirror, the order of the devices determines which media family is written to a particular device. For example, in each of the device lists, the second device corresponds to the second media family. For the devices in the above example, the correspondence between devices and media families is shown in the following table.
 
@@ -698,7 +700,7 @@ For more information about mirrored media sets, see [Mirrored Backup Media Sets]
 
 ### <a name="Restoring_Backups"></a> Restoring SQL Server backups
 
-To restore a database and, optionally, recover it to bring it online, or to restore a file or filegroup, use either the [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement or the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Restore** tasks. For more information see [Restore and Recovery Overview](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
+To restore a database and, optionally, recover it to bring it online, or to restore a file or filegroup, use either the [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement or the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Restore** tasks. For more information, see [Restore and Recovery Overview](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
 ## <a name="Additional_Considerations"></a> Additional considerations about BACKUP options
 
@@ -735,7 +737,7 @@ Cross-platform backup operations, even between different processor types, can be
 
 Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], setting `MAXTRANSFERSIZE` **larger than 65536 (64 KB)** enables an optimized compression algorithm for [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) encrypted databases that first decrypts a page, compresses it, and then encrypts it again. If `MAXTRANSFERSIZE` is not specified, or if `MAXTRANSFERSIZE = 65536` (64 KB) is used, backup compression with TDE encrypted databases directly compresses the encrypted pages, and may not yield good compression ratios. For more information, see [Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases).
 
-Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5, setting `MAXTRANSFERSIZE` is no longer required to enable this optimized compression algorithm with TDE. If the backup command is specified `WITH COMPRESSION` or the *backup compression default* server configuration is set to 1, `MAXTRANSFERSIZE` will automatically be increased to 128K to enable the optimized algorithm. If `MAXTRANSFERSIZE` is specified on the backup command with a value > 64K, the provided value will be honored. In other words, SQL Server will never automatically decrease the value, it will only increase it. If you need to back up a TDE encrypted database with `MAXTRANSFERSIZE = 65536`, you must specify `WITH NO_COMPRESSION` or ensure that the *backup compression default* server configuration is set to 0.
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5, setting `MAXTRANSFERSIZE` is no longer required to enable this optimized compression algorithm with TDE. If the backup command is specified `WITH COMPRESSION` or the *backup compression default* server configuration is set to 1, `MAXTRANSFERSIZE` will automatically be increased to 128 K to enable the optimized algorithm. If `MAXTRANSFERSIZE` is specified on the backup command with a value > 64 K, the provided value will be honored. In other words, SQL Server will never automatically decrease the value, it will only increase it. If you need to back up a TDE encrypted database with `MAXTRANSFERSIZE = 65536`, you must specify `WITH NO_COMPRESSION` or ensure that the *backup compression default* server configuration is set to 0.
 
 > [!NOTE]
 > There are some cases where the default `MAXTRANSFERSIZE` is greater than 64K:
@@ -758,7 +760,7 @@ Operations that cannot run during a database or transaction log backup include:
 
 - Shrink database or shrink file operations. This includes auto-shrink operations.
 
-If a backup operation overlaps with a file-management or shrink operation, a conflict arises. Regardless of which of the conflicting operation began first, the second operation waits for the lock set by the first operation to time out (the time-out period is controlled by a session timeout setting). If the lock is released during the time-out period, the second operation continues. If the lock times out, the second operation fails.
+If a backup operation overlaps with a file management or shrink operation, a conflict arises. Regardless of which of the conflicting operation began first, the second operation waits for the lock set by the first operation to time out (the time-out period is controlled by a session timeout setting). If the lock is released during the time-out period, the second operation continues. If the lock times out, the second operation fails.
 
 ## Metadata
 
@@ -770,7 +772,7 @@ If a backup operation overlaps with a file-management or shrink operation, a con
 - [backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)
 - [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)
 
-When a restore is performed, if the backup set was not already recorded in the **msdb** database, the backup history tables might be modified.
+When a restore is performed, if the backup set was not already recorded in the `msdb` database, the backup history tables might be modified.
 
 ## Security
 
@@ -943,6 +945,7 @@ WITH STATS = 5;
 ```
 
 ### J. Backing up to S3-compatible object storage
+**Applies to: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]**
 
 This example performs a full backup database of the `Sales` database to an S3-compatible object storage platform. The name of the credential is not required in the statement or to match the exact URL path, but will perform a lookup for the proper credential on the URL provided. For more information, see [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md).
 
@@ -1005,7 +1008,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 ## Azure SQL Managed Instance
 
-Backs up a SQL database in Azure SQL Managed Instance. SQL [Managed Instance](/azure/sql-database/sql-database-managed-instance) has automatic backups. You can create full database `COPY_ONLY` backups. Differential, log, and file snapshot backups are not supported.
+Backs up a SQL database in Azure SQL Managed Instance. [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) has automatic backups. You can create full database `COPY_ONLY` backups. Differential, log, and file snapshot backups are not supported.
 
 Also applies to [Azure Arc-enabled SQL Managed Instance](/azure/azure-arc/data/managed-instance-overview).
 
@@ -1196,7 +1199,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5, COPY_ONLY;
 ```
 
-## See also
+## Next steps
 
 [Restore database](restore-statements-transact-sql.md)
 
@@ -1352,7 +1355,7 @@ These dynamic management views contain information about all backup, restore, an
 
 ## Performance
 
-To perform a backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] first backs up the metadata, and then it performs a parallel backup of the database data stored on the Compute nodes. Data is copied directly from each Compute nodes to the backup directory. To achieve the best performance for moving data from the Compute nodes to the backup directory, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] controls the number of Compute nodes that are copying data concurrently.
+To perform a backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] first backs up the metadata, and then it performs a parallel backup of the database data stored on the Compute nodes. Data is copied directly from each Compute node to the backup directory. To achieve the best performance for moving data from the Compute nodes to the backup directory, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] controls the number of Compute nodes that are copying data concurrently.
 
 ## Locking
 
@@ -1398,7 +1401,7 @@ EXEC sp_pdw_remove_network_credentials 'xxx.xxx.xxx.xxx';
 
 ### C. Create a full backup of a user database
 
-The following example creates a full backup of the Invoices user database. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will create the Invoices2013 directory and will save the backup files to the \\\10.192.63.147\backups\yearly\Invoices2013Full directory.
+The following example creates a full backup of the Invoices user database. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will create the `Invoices2013` directory and will save the backup files to the `\\10.192.63.147\backups\yearly\Invoices2013Full` directory.
 
 ```sql
 BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
@@ -1406,7 +1409,7 @@ BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices201
 
 ### D. Create a differential backup of a user database
 
-The following example creates a differential backup, which includes all changes made since the last full backup of the Invoices database. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will create the \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff directory to which it will store the files. The description 'Invoices 2013 differential backup' will be stored with the header information for the backup.
+The following example creates a differential backup, which includes all changes made since the last full backup of the Invoices database. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will create the `\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` directory to which it will store the files. The description 'Invoices 2013 differential backup' will be stored with the header information for the backup.
 
 The differential backup will only run successfully if the last full backup of Invoices completed successfully.
 
@@ -1418,7 +1421,7 @@ BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices201
 
 ### E. Create a full backup of the master database
 
-The following example creates a full backup of the master database and stores it in the directory '\\\10.192.63.147\backups\2013\daily\20130722\master'.
+The following example creates a full backup of the `master` database and stores it in the directory '\\\10.192.63.147\backups\2013\daily\20130722\master'.
 
 ```sql
 BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master';
@@ -1426,9 +1429,9 @@ BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\
 
 ### F. Create a backup of appliance login information
 
-The master database stores the appliance login information. To backup the appliance login information you need to backup master.
+The `master` database stores the appliance login information. To backup the appliance login information you need to backup the `master` database.
 
-The following example creates a full backup of the master database.
+The following example creates a full backup of the `master` database.
 
 ```sql
 BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master'
@@ -1439,7 +1442,7 @@ WITH (
 ;
 ```
 
-## See also
+## Next steps
 
 [RESTORE DATABASE - Parallel Data Warehouse](../../t-sql/statements/restore-statements-transact-sql.md)
 

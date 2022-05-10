@@ -16,7 +16,7 @@ ms.author: wiassaf
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-This topic introduces the concepts, requirements and components necessary to use Microsoft Azure Blob Storage as a backup destination. The backup and restore functionality are same or similar to when using DISK or TAPE, with a few differences. These differences and a few code examples are included in this topic.  
+This article introduces the concepts, requirements and components necessary to use Microsoft Azure Blob Storage as a backup destination. The backup and restore functionality are same or similar to when using DISK or TAPE, with a few differences. These differences and a few code examples are included in this article.  
   
 ## Overview
 
@@ -43,9 +43,9 @@ The main reasons are:
 - Shared Access Signature is a safer way to authorize blob access compared to storage key.
 - You can backup to multiple block blobs to get better backup and restore performance, and support larger database backup.
 - [Block blob](https://azure.microsoft.com/pricing/details/storage/blobs/) is cheaper than [page blob](https://azure.microsoft.com/pricing/details/storage/page-blobs/).
-- Customers that need to backup to page blobs via a proxy server will need to use backuptourl.exe.
+- Customers that need to backup to page blobs via a proxy server will need to use `backuptourl.exe`.
 
-Backup of a large database to Blob Storage is subject to the limitations listed in [Managed Instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+Backup of a large database to Azure Blob Storage is subject to the limitations listed in [Azure SQL Managed Instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
 
 If the database is too large, either:
 
@@ -84,7 +84,7 @@ The only supported backup to URL for Azure Blob Storage is to block blobs, using
   
 **Credential:** A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. Here, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore processes use credential to authenticate to Azure Blob Storage and its container and blob objects. The Credential stores either the name of the storage account and the storage account **access key** values or container URL and its Shared Access Signature token. Once the credential is created, the syntax of the BACKUP/RESTORE statements determines the type of blob and the credential required.  
   
-For an example about how to create a Shared Access Signature, see [Create a Shared Access Signature](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) examples later in this topic and to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential, see [Create a credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) examples later in this topic.  
+For an example about how to create a Shared Access Signature, see [Create a Shared Access Signature](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) examples later in this article and to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential, see [Create a credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) examples later in this article.  
   
 For general information about credentials, see [Credentials](../security/authentication-access/credentials-database-engine.md)  
   
@@ -106,7 +106,7 @@ The following are security considerations and requirements when backing up to or
 
 ##  <a name="limitations"></a> Limitations of backup/restore to Azure Blob Storage
   
-- SQL Server limits the maximum backup size supported using a page blob to 1 TB. The maximum backup size supported using block blobs is limited to approximately 200 GB (50,000 blocks * 4MB MAXTRANSFERSIZE). Block blobs support striping to support substantially larger backup sizes.  
+- SQL Server limits the maximum backup size supported using a page blob to 1 TB. The maximum backup size supported using block blobs is limited to approximately 200 GB (50,000 blocks * 4 MB MAXTRANSFERSIZE). Block blobs support striping to support substantially larger backup sizes.  
   
     > [!IMPORTANT]  
     >  Although the maximum backup size supported by a single block blob is 200 GB, it's possible for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to write in smaller block sizes, which can lead [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to reach the 50,000 block limit before the entire backup is transferred. Stripe backups (even if they're smaller than 200 GB) to avoid the block limit, especially when if you use differential or uncompressed backups.
@@ -163,14 +163,14 @@ The following are security considerations and requirements when backing up to or
 |**WITH OPTIONS:**||||  
 |CREDENTIAL|Y||WITH CREDENTIAL is only supported when using BACKUP TO URL option to back up to Azure Blob Storage and only if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
 |FILE_SNAPSHOT|Y|||  
-|ENCRYPTION|Y||When the **WITH ENCRYPTION** argument is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File-Snapshot Backup ensures that the entire database was TDE-encrypted before taking the backup and, if so, encrypts the file-snapshot backup file itself using the algorithm specified for TDE on the database. If all data in the database in the entire database is not encrypted, the backup will fail (e.g. the encryption process is not yet complete).|  
+|ENCRYPTION|Y||When the **WITH ENCRYPTION** argument is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File-Snapshot Backup ensures that the entire database was TDE-encrypted before taking the backup and, if so, encrypts the file-snapshot backup file itself using the algorithm specified for TDE on the database. If all data in the database in the entire database is not encrypted, the backup will fail (for example, the encryption process is not yet complete).|  
 |DIFFERENTIAL|Y|||  
 |COPY_ONLY|Y|||  
 |COMPRESSION&#124;NO_COMPRESSION|Y|Not supported for file-snapshot backup||  
 |DESCRIPTION|Y|||  
 |NAME|Y|||  
 |EXPIREDATE &#124; RETAINDAYS|-|||  
-|NOINIT &#124; INIT|-||Appending to blobs is not possible. To overwrite a backup use the **WITH FORMAT** argument. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the **WITH FORMAT** argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original backup.|  
+|NOINIT &#124; INIT|-||Appending to blobs is not possible. To overwrite a backup, use the **WITH FORMAT** argument. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the **WITH FORMAT** argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original backup.|  
 |NOSKIP &#124; SKIP|-|||  
 |NOFORMAT &#124; FORMAT|Y||A backup taken to an existing blob fails unless **WITH FORMAT** is specified. The existing blob is overwritten when **WITH FORMAT** is specified. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the FORMAT argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original file-snapshot backup. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the **WITH FORMAT** argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original backup.|  
 |MEDIADESCRIPTION|Y|||  
@@ -234,9 +234,9 @@ You can back up a database to URL through the Back Up task in SQL Server Managem
   
 1.  In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
 
-2.  Expand **Databases**, right-click the desired database, point to **Tasks**, and then click **Back Up...**.
+2.  Expand **Databases**, right-click the desired database, point to **Tasks**, and then select **Back Up...**.
   
-3.  On the **General** page in the **Destination** section the **URL** option is available in the **Back up to:** drop-down list.  The **URL** option is used to create a backup to Microsoft Azure storage. Click **Add** and the **Select Backup Destination** dialog box will open:
+3.  On the **General** page in the **Destination** section the **URL** option is available in the **Back up to:** drop-down list.  The **URL** option is used to create a backup to Microsoft Azure storage. Select **Add** and the **Select Backup Destination** dialog box will open:
     1.  **Azure storage container:** The name of the Microsoft Azure storage container to store the backup files.  Select an existing container from the drop-down list or manually enter the container. 
   
     2.  **Shared Access Policy:** Enter the shared access signature for a manually entered container.  This field is not available if an existing container was chosen. 
@@ -248,7 +248,7 @@ You can back up a database to URL through the Back Up task in SQL Server Managem
 > [!NOTE] 
 >  **Add** supports multiple backup files and storage containers for a single media set.
 
-When you select **URL** as the destination, certain options in the **Media Options** page are disabled.  The following topics have more information on the Back Up Database dialog:  
+When you select **URL** as the destination, certain options in the **Media Options** page are disabled.  The following articles have more information on the Back Up Database dialog:  
   
  - [Back Up Database &#40;General Page&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)  
   
@@ -271,9 +271,9 @@ The Restore Database task includes **URL** as a device to restore from.  The fol
   
 2. On the **General** page, select **Device** under the **Source** section.
   
-3. Click the browse (...) button to open the **Select backup devices** dialog box. 
+3. Select the browse (...) button to open the **Select backup devices** dialog box. 
 
-4. Select **URL** from the **Backup media type:** drop-down list.  Click **Add** to open the **Select a Backup File Location** dialog box.
+4. Select **URL** from the **Backup media type:** drop-down list.  Select **Add** to open the **Select a Backup File Location** dialog box.
 
     1. **Azure storage container:** The fully qualified name of the Microsoft Azure storage container which contains the backup files.  Select an existing container from the drop-down list or manually enter the fully qualified container name.
       
@@ -281,7 +281,7 @@ The Restore Database task includes **URL** as a device to restore from.  The fol
       
     3. **Add:**  Used to register an existing container that you do not have a shared access signature for.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
       
-    4. **OK:**    SQL Server connects to Microsoft Azure storage using the SQL Credential information you provided and opens the **Locate Backup File in Microsoft Azure** dialog. The backup files residing in the storage container are displayed on this page. Select the file you want to use to restore and click **OK**. This takes you back to the **Select Backup Devices** dialog, and clicking **OK** on this dialog takes you back to the main **Restore** dialog where you will be able complete the restore. 
+    4. **OK:**    SQL Server connects to Microsoft Azure storage using the SQL Credential information you provided and opens the **Locate Backup File in Microsoft Azure** dialog. The backup files residing in the storage container are displayed on this page. Select the file you want to use to restore and select **OK**. This takes you back to the **Select Backup Devices** dialog, and clicking **OK** on this dialog takes you back to the main **Restore** dialog where you will be able complete the restore. 
   
      [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -434,8 +434,8 @@ The following example restores the AdventureWorks2016 sample database to its sta
    GO  
    ```  
   
-## See also  
+## Next steps
 
-- [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
+- [SQL Server Backup to URL for Azure Blob Storage best practices and troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
 - [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 - [Tutorial: Using Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)

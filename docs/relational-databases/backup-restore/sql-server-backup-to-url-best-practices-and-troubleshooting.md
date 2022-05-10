@@ -15,7 +15,7 @@ ms.author: wiassaf
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  This topic includes best practices and troubleshooting tips for SQL Server backup and restores to Microsoft Azure Blob Storage.
+  This article includes best practices and troubleshooting tips for SQL Server backup and restores to Microsoft Azure Blob Storage.
   
  For more information about using Azure Blob Storage for SQL Server backup or restore operations, see:  
   
@@ -190,7 +190,7 @@ BACKUP DATABASE is terminating abnormally.
 BackupIoRequest::ReportIoError: write failure on backup device https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   
-If you turn on the verbose logging using the trace flag 3051 you may also see the following message in the logs:  
+If you turn on the verbose logging using the trace flag 3051, you may also see the following message in the logs:  
   
 `HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.)` 
   
@@ -217,7 +217,8 @@ To resolve this issue, create a configuration file that allows the Backup to URL
   
 2.  Place the configuration file in the Binn folder of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instance. For example, if my [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on the C drive of the machine, place the configuration file in `C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn`.  
   
-## See Also  
- [Restoring From Backups Stored in Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
-[BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
+## Next steps
+
+ - [Restoring From Backups Stored in Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
+ - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
+ - [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

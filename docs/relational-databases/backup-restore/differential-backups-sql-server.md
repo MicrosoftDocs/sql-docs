@@ -31,7 +31,7 @@ ms.author: kendralittle
 -   Under the full recovery model, using differential backups can reduce the number of log backups that you have to restore.  
   
 ##  <a name="Overview"></a> Overview of Differential Backups  
- A differential backup captures the state of any *extents* (collections of eight physically contiguous pages) that have changed between when the differential base was created and the when differential backup is created. This means that the size of a given differential backup depends on the amount of data that has changed since the base. Generally, the older a base is, the larger a new differential backup will be. In a series of differential backups, a frequently updated extent is likely to contain different data in each differential backup.  
+ A differential backup captures the state of any *extents* (collections of eight physically contiguous pages) that have changed between when the differential base was created and when the differential backup is created. This means that the size of a given differential backup depends on the amount of data that has changed since the base. Generally, the older a base is, the larger a new differential backup will be. In a series of differential backups, a frequently updated extent is likely to contain different data in each differential backup.  
   
  The following illustration shows how a differential backup works. The figure shows 24 data extents, 6 of which have changed. The differential backup contains only these 6 data extents. The differential backup operation relies on a bitmap page that contains a bit for every extent. For each extent updated since the base, the bit is set to 1 in the bitmap.  
   

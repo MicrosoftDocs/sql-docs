@@ -15,6 +15,10 @@ ms.date: 5/24/2022
 
 The Schema Compare extension provides an easy-to-use experience to compare two database definitions and apply the differences from the source to the target.  This includes active database connections, dacpac files, and [SQL projects](sql-database-project-extension.md).
 
+It can be tedious to manually manage and synchronize different database versions. The Schema Compare extension simplifies the process of comparing databases and gives you full control when synchronizing them &mdash; you can selectively filter specific differences and categories of differences before applying the changes. The Schema Compare extension is a reliable tool that saves you time and code.
+
+![Schema Compare: Options Dialog](media/schema-compare-extension/schema-compare-options.png)
+
 ## Features
 
 * Compare schemas between two dacpac files, databases, or SQL projects
@@ -26,13 +30,8 @@ The Schema Compare extension provides an easy-to-use experience to compare two d
 
 ![Schema Compare: Example Comparison](media/schema-compare-extension/schema-compare.png)
 
-## Why Would I Use the Schema Compare Extension?
 
-It can be tedious to manually manage and synchronize different database versions. The Schema Compare extension simplifies the process of comparing databases and gives you full control when synchronizing them &mdash; you can selectively filter specific differences and categories of differences before applying the changes. The Schema Compare extension is a reliable tool that saves you time and code.
-
-![Schema Compare: Options Dialog](media/schema-compare-extension/schema-compare-options.png)
-
-## Install the Extension
+## Install the extension
 
 1. Select the Extensions Icon to view the available extensions.
 
@@ -42,7 +41,7 @@ It can be tedious to manually manage and synchronize different database versions
 
 3. Once installed, **Reload** to enable the extension in Azure Data Studio (only required when installing an extension for the first time).
 
-## Launch a Schema Compare
+## Launch a schema comparison
 
 1. To open the Schema Compare dialog, **right-click** a database in the Object Explorer and Select **Schema Compare**. The database you select is set as the Source database in the comparison.
 

@@ -104,6 +104,14 @@ The following sections provide an overview of these features.
 | Resumable ALTER TABLE ADD CONSTRAINT | Support to pause, and resume a running ADD CONSTRAINT operation to perform it during maintenance windows. Resume such operation after failovers and system failures. Execute such operation on a large table despite the small log size available.
 |T-SQL functions | - [GREATEST (Transact-SQL)](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST (Transact-SQL)](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT (Transact-SQL)](../t-sql/functions/string-split-transact-sql.md).|
 
+## Tools
+
+| New feature or update | Details |
+|:---|:---|
+|Distributed Replay |  SQL Server setup no longer includes Distributed Replay. It will be available as a download |
+| SQL Server Management Studio | |
+|Azure Data Studio | |
+
 ## Additional information
 
 This section provides additional information for the features highlighted above.
@@ -148,7 +156,7 @@ This section summarizes the granular permissions and roles that SQL Server 2022 
 
 ### Query Store improvements
 
-Query Store helps you better track performance history, troubleshoot query plan related issues, and enable new capabilities in Azure SQL Database and SQL Server 2022. Additionally, Query Store hints are a preview feature in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. To use Query Store features, enable Query Store. For instructions, see [Enable the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#enabling).
+Query Store helps you better track performance history, troubleshoot query plan related issues, and enable new capabilities in Azure SQL Database and SQL Server 2022. Additionally, Query Store hints are a preview feature in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. To use Query Store features, enable Query Store. For instructions, see [Enable the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Enabling).
 
 - For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to SQL Server 2022, these databases will retain the previous Query Store settings.
 

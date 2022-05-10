@@ -156,7 +156,7 @@ You need to provide your application's **Client ID**, **Tenant ID**, and **Subsc
         branches: [ main ]
     ```
 
-1. Rename your workflow `SQL for GitHub Actions` and add the checkout and login actions. These actions will checkout your site code and authenticate with Azure using the `AZURE_CREDENTIALS` GitHub secret you created earlier.
+1. Rename your workflow `SQL for GitHub Actions` and add the checkout and login actions. These actions will check out your site code and authenticate with Azure using the `AZURE_CREDENTIALS` GitHub secret you created earlier.
 
     # [Service principal](#tab/userlevel)
 
@@ -214,7 +214,7 @@ You need to provide your application's **Client ID**, **Tenant ID**, and **Subsc
         dacpac-package: './Database.dacpac'
     ```
 
-1. Complete your workflow by adding an action to logout of Azure. Here is the completed workflow. The file will appear in the `.github/workflows` folder of your repository.
+1. Complete your workflow by adding an action to logout of Azure. Here's the completed workflow. The file will appear in the `.github/workflows` folder of your repository.
 
     # [Service principal](#tab/userlevel)
 

@@ -87,33 +87,34 @@ For local installations, you must run Setup as an administrator. If you install 
 
 ::: moniker range="=sql-server-ver15"
  
-    - **Database Engine Services**
+   **Database Engine Services**
+   
+   To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+   
+   **Machine Learning Services and Language Extensions**
+   
+   This option installs the Language Extensions component that support Java code execution.
+   
+   If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Machine Learning Services and Language Extensions** and **Java**.
 
-    To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
-  
-    - **Machine Learning Services and Language Extensions**
-
-    This option installs the Language Extensions component that support Java code execution.
-
-    - If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Machine Learning Services and Language Extensions** and **Java**.
-    - If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select **Java**.
-
-    If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
-
-    ![Screenshot of the Feature options for Language Extensions](../media/windows-java/2019/sql-install-feature-selection.png)
+   If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select **Java**.
+   
+   If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/   sql-machine-learning-services-windows-install.md).
+   
+   ![Screenshot of the Feature options for Language Extensions](../media/windows-java/2019/sql-install-feature-selection.png)
 
 ::: moniker-end
 ::: moniker range=">=sql-server-ver16"
   
-    - **Database Engine Services**
-
-    To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
-  
-    - **Machine Learning Services and Language Extensions**
-
-    This option installs the Language Extensions component that support Java code execution.
-
-    ![Screenshot of the Feature options for Language Extensions](../media/windows-java/2022/sql-server-2022-machine-learning-services-feature-selection.png)
+   **Database Engine Services**
+   
+   To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+   
+   **Machine Learning Services and Language Extensions**
+   
+   This option installs the Language Extensions component that support Java code execution.
+   
+   ![Screenshot of the Feature options for Language Extensions](../media/windows-java/2022/sql-server-2022-machine-learning-services-feature-selection.png)
 
 ::: moniker-end
 ::: moniker range="=sql-server-ver15"
@@ -168,9 +169,17 @@ For local installations, you must run Setup as an administrator. If you install 
 
 4. Create a new system variable for `JRE_HOME` with the value of the JDK/JRE path (found in step 1).
 
+::: moniker range=">=sql-server-ver15"
+5. Restart [Launchpad](../concepts/extensibility-framework.md#launchpad).
+
+    1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+
+    1. Under SQL Server Services, right-click SQL Server Launchpad and select **Restart**.
+
+::: moniker-end
 ::: moniker range=">=sql-server-ver16"
 
-4a. Register language extension
+5. Register language extension
     Follow these steps to download and register the Java language extension, which is used for the Java custom runtime.
     
     1. Download the **java-lang-extension-windows-release.zip** file from [the Java language extension for SQL Server GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases). Download the latest Windows `java-lang-extension-windows.zip` file.
@@ -187,13 +196,13 @@ For local installations, you must run Setup as an administrator. If you install 
     GO
     ```
 
-::: moniker-end
-
-5. Restart [Launchpad](../concepts/extensibility-framework.md#launchpad).
+6. Restart [Launchpad](../concepts/extensibility-framework.md#launchpad).
 
     1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
     1. Under SQL Server Services, right-click SQL Server Launchpad and select **Restart**.
+
+::: moniker-end
 
 <a name="perms-nonwindows"></a>
 

@@ -28,48 +28,73 @@ To complete this quickstart, you need Azure Data Studio and an Azure Cosmos DB A
 
 1. The first time you start Azure Data Studio the **Connection** dialog opens. If the **Connection** dialog doesn't open, select the **New Connection** icon in the **SERVERS** page:
 
-    :::image type="content" source="media/quickstart-cosmos-mongo/new-connection-icon.png" lightbox="" alt-text="New connection icon.":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/new-connection-icon.png" lightbox="media/quickstart-cosmos-mongo/new-connection-icon.png" alt-text="New connection icon in the Servers sidebar.":::
 
-1. In the form that pops up, select **Browse**, and then select the **+** icon to sign in to Azure.
+1. In the dialog that appears, select **Browse**, and then select the **+** icon to sign in to Azure.
 
-    :::image type="content" source="" lightbox="" alt-text="":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/add-azure-account.png" lightbox="media/quickstart-cosmos-mongo/add-azure-account.png" alt-text="Use + button to add new Azure account in the Connection dialog.":::
 
-1. Once you're signed in to Azure, select the Azure Cosmos DB account you'd like to access.
+1. Once you're signed in to Azure, select the Azure Cosmos DB account you'd like to access or fill in the **Connection Details** from fields using the details in this table.
 
-    :::image type="content" source="" lightbox="" alt-text="":::
+    | Setting | Value | Description |
+    | --- | --- | --- |
+    | **Connection type** | *Mongo account* | Set this value to *Mongo account* to use with Azure Cosmos DB API for MongoDB. |
+    | **Mongo account** | *\[cosmos-account-name\]* | Name of Azure Cosmos DB account. |
+    | **Authentication type** | *Azure Active Directory - Universal with MFA support* | Choose between *Azure Active Directory* or *Basic* authentication options. |
+    | **Account** | *\[current-aad-user-name\]* | Only visible if using *Azure Active Directory* authentication. Select the Azure AD account that you wish to use for authentication. |
+    | **Username** | | Only visible if using *Basic* authentication. Enter the username for authentication. |
+    | **Connection String** | | Only visible if using *Basic* authentication. Enter the connection string for authentication. |
+    | **Server group** | *\<Default\>* | |
+    | **Name (optional)** | | Enter any unique name to use in the **SERVERS** sidebar. |
+
+    :::image type="content" source="media/quickstart-cosmos-mongo/connection-credentials-form.png" lightbox="media/quickstart-cosmos-mongo/connection-credentials-form.png" alt-text="Dialog with credentials required to create a connection.":::
 
 1. Select **Connect**.
 
+    > [!IMPORTANT]
+    > If you selected *Azure Active Directory* authentication, you may be prompted to select a MongoDB connection string value to use for your connection.
+
 Your server will open in the **SERVERS** sidebar after you've successfully connected.
 
-## Create a database
+## Create a database and collection
 
-The following steps will create a database named **SourceDatabase**:
+The following steps will create a database named **SourceDatabase** and a collection named **People**:
 
 1. Open the context menu for your account, and select **Create Database**.
 
-    :::image type="content" source="" lightbox="" alt-text="":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/create-database-menu-option.png" lightbox="media/quickstart-cosmos-mongo/create-database-menu-option.png" alt-text="Create database option in MongoDB context menu.":::
 
-1. Fill in the dialog fields using the details in this table, and then select ****.
+1. In the **Database** and **Collection** popup dialogs, use the details in this table.
 
-    :::image type="content" source="" lightbox="" alt-text="":::
+    | Prompt | Value |
+    | --- | --- |
+    | **Database name** | *SourceDatabase* |
+    | **Collection name** | *People* |
 
 1. After the operation completes, the new database should appear in the list of databases.
 
     > [!TIP]
     > If the database does not appear in the list, select **Refresh**.
 
+1. Expand the **SourceDatabase** and **People** nodes in the **SERVERS** sidebar.
+
+    :::image type="content" source="media/quickstart-cosmos-mongo/servers-sidebar-tree.png" lightbox="media/quickstart-cosmos-mongo/servers-sidebar-tree.png" alt-text="Database and collection hierarchy under the Mongo account note in the SERVERS sidebar.":::
+
 ## Create a sample collection
 
-The following steps will create a collection named **Persons** pre-populated with a sample data set:
+The following steps will populate the **People** collection with a sample data set:
 
-1. Select **Databases** to navigate to the list of databases in your account. Select the **SourceDatabase** option.
+1. Select **Databases** to navigate to the list of databases in your account.
 
-    :::image type="content" source="" lightbox="" alt-text="":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/navigate-databases.png" lightbox="media/quickstart-cosmos-mongo/navigate-databases.png" alt-text="Option to navigate to databases view.":::
 
-1. In the header menu, select **Import Sample Data**.
+1. Select the **SourceDatabase** item in the list of databases.
 
-    :::image type="content" source="" lightbox="" alt-text="":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/database-list-item.png" lightbox="media/quickstart-cosmos-mongo/database-list-item.png" alt-text="SourceDatabase list item within databases list.":::
+
+1. In the header menu, select **Import Sample Data**. In the confirmation dialog, select **Yes**.
+
+    :::image type="content" source="media/quickstart-cosmos-mongo/navigate-import.png" lightbox="media/quickstart-cosmos-mongo/navigate-import.png" alt-text="Option to perform an import":::
 
 1. Wait for the import operation to complete.
 
@@ -80,9 +105,9 @@ The following steps will create a collection named **Persons** pre-populated wit
 
 The following steps will use the **Mongo Shell** to execute a query and view the results of the query:
 
-1. Open the context menu for your account, and select **Open Mongo Shell**.
+1. In the menu for your database, select **Open Mongo Shell**.
 
-    :::image type="content" source="" lightbox="" alt-text="":::
+    :::image type="content" source="media/quickstart-cosmos-mongo/navigate-mongo-shell.png" lightbox="media/quickstart-cosmos-mongo/navigate-mongo-shell.png" alt-text="Menu option to open Mongo Shell.":::
 
 1. Execute the following query in the shell.
 
@@ -90,9 +115,12 @@ The following steps will use the **Mongo Shell** to execute a query and view the
     db.Persons.find().pretty()
     ```
 
-1. Observe the output of the query within the shell.
+    > [!TIP]
+    > The ``pretty()`` method in Mongo displays the results of a query in a format that's easy to read. To learn more, see the [official MongoDB documentation for cursor.pretty](https://www.mongodb.com/docs/manual/reference/method/cursor.pretty/).
 
-    :::image type="content" source="" lightbox="" alt-text="":::
+1. Observe the output of the query within the shell. The output should contain
+
+    :::image type="content" source="media/quickstart-cosmos-mongo/mongo-query-results.png" lightbox="media/quickstart-cosmos-mongo/mongo-query-results.png" alt-text="Mongo Shell query results.":::
 
 ## Next steps
 

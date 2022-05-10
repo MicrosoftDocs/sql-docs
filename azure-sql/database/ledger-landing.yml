@@ -42,6 +42,10 @@ landingContent:
             url: /sql/relational-databases/security/ledger/ledger-append-only-ledger-tables
           - text: Updatable ledger tables
             url: /sql/relational-databases/security/ledger/ledger-updatable-ledger-tables
+          - text: Digest management
+            url: /sql/relational-databases/security/ledger/ledger-digest-management
+          - text: Database verification
+            url: /sql/relational-databases/security/ledger/ledger-database-verification
 
 
   # Card 
@@ -62,25 +66,16 @@ landingContent:
             url: /sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables
           - text: Create updatable ledger tables
             url: /sql/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables
-          - text: How to verify a ledger table to detect tampering
-            url: /sql/relational-databases/security/ledger/ledger-verify-database
-          - text: Convert regular tables into ledger tables
-            url: /sql/relational-databases/security/ledger/ledger-how-to-convert-regular-tables-into-ledger-tables
-          - text: How to enable automatic digest storage
+          - text: Enable automatic digest storage
             url: /sql/relational-databases/security/ledger/ledger-how-to-enable-automatic-digest-storage
-
-
-  # Card
-  - title: Ledger management, verification, and storage
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Digest management
-            url: /sql/relational-databases/security/ledger/ledger-digest-management
-          - text: Database verification
-            url: /sql/relational-databases/security/ledger/ledger-database-verification
+          - text: Migrate data from regular tables to ledger tables
+            url: /sql/relational-databases/security/ledger/ledger-how-to-migrate-data-to-ledger-tables
           - text: Recover ledger database after tampering
             url: /sql/relational-databases/security/ledger/ledger-how-to-recover-after-tampering
+          - text: Verify a ledger table to detect tampering
+            url: /sql/relational-databases/security/ledger/ledger-verify-database
+
+
 
   # Card
   - title: Ledger references

@@ -61,8 +61,8 @@ landingContent:
             url: ledger-how-to-append-only-ledger-tables.md
           - text: Create updatable ledger tables
             url: ledger-how-to-updatable-ledger-tables.md
-          - text: Convert regular tables into ledger tables
-            url: ledger-how-to-convert-regular-tables-into-ledger-tables.md
+          - text: Migrate data from regular tables to ledger tables
+            url: ledger-how-to-migrate-data-to-ledger-tables.md
           - text: How to enable automatic digest storage
             url: ledger-how-to-enable-automatic-digest-storage.md
           - text: How to verify a ledger table to detect tampering

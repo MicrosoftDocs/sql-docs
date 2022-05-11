@@ -21,9 +21,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 # Cardinality Estimation (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
-The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer is a cost-based Query Optimizer. This means that it selects query plans that have the lowest estimated processing cost to execute. The Query Optimizer determines the cost of executing a query plan based on two main factors:
+The SQL Server Query Optimizer is a cost-based Query Optimizer. This means that it selects query plans that have the lowest estimated processing cost to execute. The Query Optimizer determines the cost of executing a query plan based on two main factors:
 
 - The total number of rows processed at each level of a query plan, referred to as the cardinality of the plan.
 - The cost model of the algorithm dictated by the operators used in the query.
@@ -43,7 +43,7 @@ In the following cases, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 - Queries that involve joining columns through arithmetic or string concatenation operators.
 - Queries that compare variables whose values aren't known when the query is compiled and optimized.
 
-This article illustrates how you can assess and choose the best CE configuration for your system. Most systems benefit from the latest CE because it's the most accurate. The CE predicts how many rows your query will likely return. The cardinality prediction is used by the Query Optimizer to generate the optimal query plan. With more accurate estimations, the Query Optimizer can usually do a better job of producing a more optimal query plan. 
+This article illustrates how you can assess and choose the best CE configuration for your system. Most systems benefit from the latest CE because it's the most accurate. The CE predicts how many rows your query will likely return. The cardinality prediction is used by the Query Optimizer to generate the optimal query plan. With more accurate estimations, the Query Optimizer can usually do a better job of producing a more optimal query plan.
   
 Your application system could possibly have an important query whose plan is changed to a slower plan due to changes in the CE throughout versions. You have techniques and tools for identifying a query that performs slower due to CE issues. And you have options for how to address the ensuing performance issues.
   
@@ -60,7 +60,7 @@ In 1998, a major update of the CE was part of [!INCLUDE[ssNoVersion](../../inclu
 
 Subsequent updates started with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], meaning compatibility levels 120 and above. The CE updates for levels 120 and above incorporate updated assumptions and algorithms that work well on modern data warehousing and on OLTP workloads. From the CE 70 assumptions, the following model assumptions were changed starting with CE 120:
 
-- **Independence** becomes **Correlation:** The combination of the different column values is not necessarily independent. This may resemble more real-life data querying.
+- **Independence** becomes **Correlation:** The combination of the different column values isn't necessarily independent. This may resemble more real-life data querying.
 - **Simple Containment** becomes **Base Containment:** Users might query for data that doesn't exist. For example, for an equality join between two tables, we use the base tables histograms to estimate the join selectivity, and then factor in the predicates selectivity.
 
 ## Use Query Store to assess the CE version
@@ -299,7 +299,7 @@ To make sure that the Cardinality Estimator of the Query Optimizer provides good
 
 - Make sure that constant-only expressions in the condition of your query are either constant-foldable, or can be evaluated at compilation time.
 
-- If you have to use a local variable to evaluate an expression to be used in a query, consider evaluating it in a different scope than the query. For example, it may be helpful to perform one of the following:
+- If you have to use a local variable to evaluate an expression to be used in a query, consider evaluating it in a different scope than the query. For example, it may be helpful to perform one of the following options:
 
   - Pass the value of the variable to a stored procedure that contains the query you want to evaluate, and have the query use the procedure parameter instead of a local variable.
 
@@ -307,7 +307,7 @@ To make sure that the Cardinality Estimator of the Query Optimizer provides good
 
   - Parameterize the query and execute it by using `sp_executesql`, and pass the value of the variable as a parameter to the query.
 
-## Cardinality Estimation feedback
+## Cardinality Estimation (CE) feedback
 
 (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])|, the Cardinality Estimation (CE) feedback is part of the Intelligent query processing family of features and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
 
@@ -315,9 +315,9 @@ Because no single set of CE models and assumptions can accommodate the vast arra
 
 ### Understanding Cardinality Estimation
 
-Cardinality Estimation (CE) is how the Query Optimizer can estimate the total number of rows processed at each level of a query plan. Cardinality estimation in SQL Server is derived primarily from histograms created when indexes or statistics are created, either manually or automatically. Sometimes, SQL Server also uses constraint information and logical rewrites of queries to determine cardinality. For more information, see [Cardinality Estimation](https://docs.microsoft.com/sql/relational-databases/performance/cardinality-estimation-sql-server).
+Cardinality Estimation (CE) is how the Query Optimizer can estimate the total number of rows processed at each level of a query plan. Cardinality estimation in SQL Server is derived primarily from histograms created when indexes or statistics are created, either manually or automatically. Sometimes, SQL Server also uses constraint information and logical rewrites of queries to determine cardinality.
 
-Different versions of the Database Engine use different CE model assumptions based on how data is distributed and queried. See [Versions of the CE](https://docs.microsoft.com/sql/relational-databases/performance/cardinality-estimation-sql-server#versions-of-the-ce).
+Different versions of the Database Engine use different CE model assumptions based on how data is distributed and queried. See [versions of the CE](#versions-of-the-ce) for more information.
 
 ### CE feedback implementation
 
@@ -327,7 +327,7 @@ CE feedback learns which CE model assumptions are optimal over time and then app
 
 2. If an assumption looks incorrect, a subsequent execution of the same query is tested with a query plan that adjusts the impactful CE model assumption and **verifies** if it helps.
 
-3. If it improves plan quality, the old query plan is **replaced** with a query plan that uses the appropriate [USE HINT query hint](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query#use_hint) that adjusts the estimation model, implemented through the [Query Store hint](https://docs.microsoft.com/sql/relational-databases/performance/query-store-hints) mechanism.
+3. If it improves plan quality, the old query plan is **replaced** with a query plan that uses the appropriate [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#l-using-use-hint) that adjusts the estimation model, implemented through the [Query Store hint](query-store-hints.md) mechanism.
 
 Only verified feedback is persisted. CE feedback isn't used for that query if the adjusted model assumption results in a performance regression. In this context, a user canceled query is also perceived as a regression.
 
@@ -358,7 +358,7 @@ GO
 
 When the database compatibility is set to 160, and default correlation is used, CE feedback will attempt to move the correlation to the correct direction one step at a time based on whether the estimated cardinality was underestimated or overestimated compared to the actual number of rows. Use full correlation if an actual number of rows is greater than the estimated cardinality. Use full independence if an actual number of rows is smaller than the estimated cardinality.
 
-For more information, see [Versions of the CE](https://docs.microsoft.com/sql/relational-databases/performance/cardinality-estimation-sql-server#versions-of-the-ce)
+See [versions of the CE](#versions-of-the-ce) for more information.
 
 #### Join Containment
 
@@ -382,7 +382,7 @@ WHERE d.MonthNumberOfYear = 7 AND f.CurrencyKey = 3 AND f.AverageRate > 1;
 GO
 ```
 
-For more information, see [Versions of the CE](https://docs.microsoft.com/sql/relational-databases/performance/cardinality-estimation-sql-server#versions-of-the-ce).
+For more information, see [versions of the CE](#versions-of-the-ce).
 
 #### Optimizer row goal
 
@@ -407,7 +407,7 @@ To enable CE feedback, enable database compatibility level 160 for the database 
 
 CE feedback activity is visible via the `query_feedback_analysis` and `query_feedback_validation` XEvents.
 
-Hints set by CE feedback can be tracked using the [sys.query_store_query_hints](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-query-store-query-hints-transact-sql) catalog view.
+Hints set by CE feedback can be tracked using the [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md) catalog view.
 
 Feedback information can be tracked using the `sys.query_store_plan_feedback` catalog view. **NOTE:** This view may change in a later SQL Server 2022 CTP.
 
@@ -419,7 +419,7 @@ To disable CE feedback at the query level, use the `DISABLE_CE_FEEDBACK` query h
 
 If a query has a query plan forced through Query Store, CE feedback won't be used for that query.
 
-If a query uses hard-coded query hints or is using Query Store hints set by the user, CE feedback won't be used for that query. For more information, see [Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query) and [Query Store hints](https://docs.microsoft.com/sql/relational-databases/performance/query-store-hints).
+If a query uses hard-coded query hints or is using Query Store hints set by the user, CE feedback won't be used for that query. For more information, see [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md) and [Query Store hint](query-store-hints.md).
 
 To allow CE feedback to override hard-coded query hints and Query Store user hints, use the `ALTER DATABASE SCOPED CONFIGURATION SET FORCE_CE_FEEDBACK = ON` database scoped configuration. **NOTE:** This configuration isn't yet available.
 
@@ -445,7 +445,7 @@ WHERE OrderAddedDate >= '2016-05-01';
   
 In the following SELECT we see filtered predicates on `Model` and `ModelVariant`. We intuitively understand that when `Model` is 'Xbox' there's a chance the `ModelVariant` is 'One', given that Xbox has a variant called One.
   
-Starting with CE 120, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] understands there might be a correlation between the two columns on the same table, `Model` and `ModelVariant`. The CE makes a more accurate estimation of how many rows will be returned by the query, and the [query optimizer](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) generates a more optimal plan.
+Starting with CE 120, SQL Server understands there might be a correlation between the two columns on the same table, `Model` and `ModelVariant`. The CE makes a more accurate estimation of how many rows will be returned by the query, and the [query optimizer](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) generates a more optimal plan.
   
 ```sql  
 SELECT Model, Purchase_Price  

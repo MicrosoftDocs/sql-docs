@@ -423,7 +423,7 @@ If this page is skipped during setup, the default MaxDOP value is the recommende
 
 ### UI element list
 
-* **Max degree of parallelism (MaxDOP)** is the value for the maximum number of processors to use during parallel execution of a single statement. The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Recommendations).
+* **Max degree of parallelism (MaxDOP)** is the value for the maximum number of processors to use during parallel execution of a single statement. The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#recommendations).
 
 ## <a name="memory"><a/> Database Engine Configuration - Memory page
 

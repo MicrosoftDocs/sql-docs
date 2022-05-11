@@ -1157,7 +1157,7 @@ The degree of parallelism sets the number of processors to use in parallel plan 
 Setting the max degree of parallelism option to 0 (default) enables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors in a parallel plan execution. Although [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sets a runtime target of 64 logical processors when MAXDOP option is set to 0, a different value can be manually set if needed. Setting MAXDOP to 0 for queries and indexes allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors for the given queries or indexes in a parallel plan execution. MAXDOP is not an enforced value for all parallel queries, but rather a tentative target for all queries eligible for parallelism. This means that if not enough worker threads are available at runtime, a query may execute with a lower degree of parallelism than the MAXDOP server configuration option.
 
 > [!TIP]
-> Refer to this [documentation page](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Recommendations) for guidelines on configuring MAXDOP.
+> Refer to this [documentation page](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#recommendations) for guidelines on configuring MAXDOP.
 
 ### Parallel Query Example
 

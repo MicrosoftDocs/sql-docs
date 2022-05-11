@@ -160,12 +160,6 @@ To set this option at the instance level, see [Configure the max degree of paral
 > To accomplish this at the server level, use the **max degree of parallelism (MAXDOP)** [server configuration option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).     
 > To accomplish this at the workload level, use the **MAX_DOP** [Resource Governor workload group configuration option](../../t-sql/statements/create-workload-group-transact-sql.md).    
 
-DOP_FEEDBACK = { ON | OFF }
-
-Beginning in SQL Server 2022 Preview.
-
-Identifies parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is deemed inefficient, DOP Feedback will lower the DOP for the next execution of the query, from whatever is the configured DOP, and verify if it helps. Requires Query Store enabled.
-
 PRIMARY
 
 Can only be set for the secondaries, while the database in on the primary, and indicates that the configuration will be the one set for the primary. If the configuration for the primary changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitly. **PRIMARY** is the default setting for the secondaries.
@@ -439,6 +433,12 @@ OPTIMIZED_PLAN_FORCING **=** { **ON** | OFF }
 **APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Preview) and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (Preview)
 
 Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as a compilation replay script. A compiliation replay script is stored as part of the compressed showplan XML in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute. Learn more in [Optimized plan forcing with Query Store](../../relational-databases/performance/optimized-plan-forcing-query-store.md).
+
+DOP_FEEDBACK = { ON | OFF }
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+Identifies parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is deemed inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verifies if it helps. Requires Query Store enabled.
 
 ## <a name="Permissions"></a> Permissions
 

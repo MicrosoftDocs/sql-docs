@@ -100,6 +100,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS = { ON | OFF }
     | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
     | OPTIMIZED_PLAN_FORCING = { ON | OFF }
+
+  | DOP_FEEDBACK = { ON | OFF }
 }
 ```
 
@@ -157,6 +159,12 @@ To set this option at the instance level, see [Configure the max degree of paral
 > To accomplish this at the query level, use the **MAXDOP** [query hint](../../t-sql/queries/hints-transact-sql-query.md).    
 > To accomplish this at the server level, use the **max degree of parallelism (MAXDOP)** [server configuration option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).     
 > To accomplish this at the workload level, use the **MAX_DOP** [Resource Governor workload group configuration option](../../t-sql/statements/create-workload-group-transact-sql.md).    
+
+DOP_FEEDBACK = { ON | OFF }
+
+Beginning in SQL Server 2022 Preview.
+
+Identifies parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is deemed inefficient, DOP Feedback will lower the DOP for the next execution of the query, from whatever is the configured DOP, and verify if it helps. Requires Query Store enabled.
 
 PRIMARY
 

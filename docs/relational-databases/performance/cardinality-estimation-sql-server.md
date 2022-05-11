@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 # Cardinality Estimation (SQL Server)
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The SQL Server Query Optimizer is a cost-based Query Optimizer. This means that it selects query plans that have the lowest estimated processing cost to execute. The Query Optimizer determines the cost of executing a query plan based on two main factors:
 
@@ -308,6 +308,8 @@ To make sure that the Cardinality Estimator of the Query Optimizer provides good
   - Parameterize the query and execute it by using `sp_executesql`, and pass the value of the variable as a parameter to the query.
 
 ## Cardinality Estimation (CE) feedback
+
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])|, the Cardinality Estimation (CE) feedback is part of the Intelligent query processing family of features and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
 

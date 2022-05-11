@@ -68,22 +68,19 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-| Query Store improvements | Accelerated query performance with no code changes with improvements to: <br/><br/>- [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md). For more information, see [Query Store improvements](#query-store-improvements) later in this article. <br/>- Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas). <br/>|
-| Memory grant feedback | Optimize memory allocation is stored in the query store, so when the memory grant information is available when the query returns to cache after eviction.|
+| Query Store improvements | Accelerated query performance with no code changes with improvements to: <br/><br/>- [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md). For more information, see [Query Store improvements](#query-store-improvements) later in this article. <br/>- Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).|
+| Memory grant feedback | Optimize memory allocation is stored in the Query Store, so when the memory grant information is available when the query returns to cache after eviction.|
 | Percentile grant |  A new algorithm improves performance of queries with widely vacillating memory requirements. Reviews more than just the single previous memory need - includes information from further back in the history as well.|
 | In-memory OLTP management | - Improve memory management in large memory servers to reduce out of memory conditions <br/>- Add a new stored procedure to manually release unused memory on demand.|
 | Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s).|
 | Query Store hints | [Query Store hints]](../relational-databases/performance/query-store-hints.md) leverage leverages Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, now are available in SQL Server 2022 Preview.|
 | XML compression |XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md).|
 | Buffer pool parallel scan |Improves the performance of Buffer Pool scan operations on large-memory machines by utilizing multiple CPU cores for buffer pool scan operations. |
-| Additional optimization | Improvements to string processing for columnstore indexes |
+| Improved optimization | SQL Server 2022 Preview leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batchmode operations. | 
 |In-Memory OLTP memory management improvements| - Improve memory management in large memory servers to reduce out of memory conditions.<br/><br/>- Add a new stored procedure to manually release unused memory on demand.|
 |System page latch concurrency enhancements| Concurrent global allocation map (GAM) and shared global allocation map (SGAM) updates allows multiple threads updating GAM and SGAM pages under Shared latch.|
 |Automatic Degree of parallelism (DOP) feedback |Automatically adjusts degree of parallelism for repeating queries to optimize for workloads where excessive parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. See [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).|
 | Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. See [Cardinality Estimation (SQL Server)](../relational-databases/performance/cardinality-estimation-sql-server.md). |
-
-> [!NOTE]
-> To use Query Store features, enable Query Store. For instructions, see [Enable the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#enabling).
 
 ## Operations
 
@@ -104,7 +101,7 @@ The following sections provide an overview of these features.
 |Approximate Percentile functions |- [APPROX_PERCENTILE_CONT (Transact-SQL)](../t-sql/functions/approx-percentile-cont-transact-sql.md)<br/>- [APPROX_PERCENTILE_DISC (Transact-SQL)](../t-sql/functions/approx-percentile-disc-transact-sql.md)|
 | CREATE STATISTICS | Adds [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)<br/><br/>Automatic statistics with low priority.|
 | Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br/>- [DATE_BUCKET](../t-sql/functions/date-bucket-transact-sql.md)<br/>- [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)<br/>- [GENERATE_SERIES](../t-sql/functions/generate-series-transact-sql.md)<br/>- [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)
-| JSON functions | - [ISJSON (Transact-SQL)](../t-sql/functions/isjson-transact-sql.md)<br/>- [JSON_PATH_EXISTS (Transact-SQL)](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT (Transact-SQL)](../t-sql/functions/json-object-transact-sql.md)<br/>- [JSON_ARRAY (Transact-SQL)](../t-sql/functions/json-array-transact-sql.md)
+| JSON functions | - [ISJSON (Transact-SQL)](../t-sql/functions/functions.md)<br/>- [JSON_PATH_EXISTS (Transact-SQL)](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT (Transact-SQL)](../t-sql/functions/functions.md)<br/>- [JSON_ARRAY (Transact-SQL)](../t-sql/functions/functions.md)
 |SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function which uses the window in OVER clause is applied. See [SELECT (Transact-SQL)](../t-sql/queries/select-transact-sql.md).|
 | Resumable ALTER TABLE ADD CONSTRAINT | Support to pause, and resume a running ADD CONSTRAINT operation to perform it during maintenance windows. Resume such operation after failovers and system failures. Execute such operation on a large table despite the small log size available.
 |T-SQL functions | - [GREATEST (Transact-SQL)](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST (Transact-SQL)](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT (Transact-SQL)](../t-sql/functions/string-split-transact-sql.md).|
@@ -113,10 +110,10 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-| Azure Data Studio | The latest release of ADS, 1.XY, is available for download <include link> and includes support for SQL Server 2022.  |
+| Azure Data Studio | Get the latest release at [Download and install Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). The latest release includes support for SQL Server 2022.  |
 | Distributed Replay |  SQL Server setup no longer includes the Distributed Replay client and controller executables. These will be available, along with the admin executable, as a separate download |
-| SQL Server Management Studio | SSMS version 19.0 is now available and is the recommended version of SSMS for SQL Server 2022.  It can be downloaded from <need to add link when available> |
-| SqlPackage.exe | Version ZY of SqlPackage provides support for SQL Server 2022, please visit <will add link> for more information. |
+| SQL Server Management Studio | SSMS version 19.0 is now available and is the recommended version of SSMS for SQL Server 2022. [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). |
+| SqlPackage.exe | Version ZY of SqlPackage provides support for SQL Server 2022. Get the latest version at [Download and install sqlpackage](../tools/sqlpackage/sqlpackage-download.md).|
 
 ## SQL Machine Learning Services
 

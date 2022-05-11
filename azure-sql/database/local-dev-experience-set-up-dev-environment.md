@@ -34,13 +34,20 @@ Install [Docker Desktop](https://www.docker.com/products/docker-desktop/). If yo
 
 Ensure that Docker Desktop is running before using your local development environment for Azure SQL Database.
 
-## Visual Studio Code users
+## Install extension
+
+There are different extensions to install depending on your preferred development tool. 
+
+| Extension | Visual Studio Code | Azure Data Studio |
+|--|--|--|
+| The [mssql extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) | Install the mssql extension. | Installation is not necessary as the extension as the functionality is natively available. |
+| [SQL Database Projects extension (Preview)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode) | Installation as not necessary as the SQL Database Projects extension is bundled with the mssql extension and is automatically installed and updated when the mssql extension is installed or updated. | Install the SQL Database Projects extension. |
+
+# [Visual Studio Code](#tab/vscode)
 
 If you are using [VSCode](https://code.visualstudio.com/Docs), install the [mssql extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql). 
 
 The mssql extension enables you to connect and run queries and test scripts against a database. The database may be running in the Azure SQL Database emulator locally, or it may be a database in the global Azure SQL Database service.
-
-The mssql extension for Visual Studio Code automatically installs the SQL Database Projects extension. The SQL Database Projects extension is bundled with the mssql extension so that it automatically receives updates when you update the mssql extension.
 
 To install the extension:
 
@@ -54,11 +61,9 @@ To install the extension:
 
 1. After the installation completes, select **Reload** to enable the extension.
 
-## Azure Data Studio users
+# [Azure Data Studio](#tab/ads)
 
-[Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) natively provides the functionality from the mssql extension, there is no need to install it manually. 
-
-You only need to install the [SQL Database Projects extension (Preview)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode). The SQL Database Projects extension enables you to capture an existing database schema and/or design new database objects using a declarative database design model. You can commit a database schema to version control. You can also publish a database schema to a database running in the Azure SQL Database emulator, or to a database running in the global Azure SQL Database service. You may publish an entire database, or incremental changes to a database.
+If you are using [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio), install the [SQL Database Projects extension (Preview)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode). The SQL Database Projects extension enables you to capture an existing database schema and/or design new database objects using a declarative database design model. You can commit a database schema to version control. You can also publish a database schema to a database running in the Azure SQL Database emulator, or to a database running in the global Azure SQL Database service. You may publish an entire database, or incremental changes to a database.
 
 To install the SQL Database Projects extension:
 
@@ -71,6 +76,9 @@ To install the SQL Database Projects extension:
 1. Select the **SQL Database Projects** extension, and then select **Install**.
 
 1. After the installation completes, select **Reload** to enable the extension.
+
+---
+
 
 
 ## Begin using your local development environment

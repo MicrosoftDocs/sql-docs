@@ -86,7 +86,17 @@ From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL
 
  Execute permissions on **sp_configure** with no parameters or with only the first parameter are granted to all users by default. To execute **sp_configure** with both parameters to change a configuration option or to run the RECONFIGURE statement, a user must be granted the ALTER SETTINGS server-level permission. The ALTER SETTINGS permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.  
   
-## Using SQL Server Management Studio  
+## Using SQL Server Management Studio (SSMS)
+  
+### To configure the max degree of parallelism option
+  
+1. In **Object Explorer**, right-click a server and select **Properties**.  
+  
+2. Select the **Advanced** node.  
+  
+3. In the **Max Degree of Parallelism** box, select the maximum number of processors to use in parallel plan execution.
+
+## Using Azure Data Studio
   
 ### To configure the max degree of parallelism option
   

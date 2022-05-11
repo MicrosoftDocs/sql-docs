@@ -59,6 +59,12 @@ The following table lists the features of Azure SQL Database that have transitio
 
 Learn about significant changes to the Azure SQL Database documentation.
 
+### May 2022
+
+| Changes | Details |
+| --- | --- |
+| **Local development experience** | The Azure SQL Database local development experience is a combination of tools and procedures that empowers application developers and database professionals to design, edit, build/validate, publish, and run database schemas for databases directly on their workstation using an Azure SQL Database containerized environment. To learn more, see [Local development experience for Azure SQL Database](local-dev-experience-overview.md). | 
+
 ### April 2022
 
 | Changes | Details |

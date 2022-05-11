@@ -7,11 +7,16 @@ author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
 ms.topic: how-to 
-ms.date: 04/28/2022
+ms.date: 05/24/2022
 ms.custom: template-how-to 
 ---
 
 # Publish a Database Project for Azure SQL Database to the local emulator
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+This article provides steps to build and publish a Database Project to the [Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md). 
+
+## Overview
 
 The Azure SQL Database [local development experience](local-dev-experience-overview.md) allow users to source control Database Projects and work offline when needed. The local development experience uses the [Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md), a containerized database with close fidelity with the Azure SQL Database public service, as runtime host for Database Projects that can be published and tested locally as part of developer's inner loop. This article describes how to publish a Database Project to the local emulator.
 
@@ -37,5 +42,4 @@ Learn more about the local development experience for Azure SQL Database:
 - [Set up a local development environment for Azure SQL Database](local-dev-experience-set-up-dev-environment.md)
 - [Create a Database Project for a local Azure SQL Database development environment](local-dev-experience-create-database-project.md)
 - [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)
-- [VSCode and Azure Data Studio extensions for the Azure SQL Database local development experience](local-dev-experience-extensions.md)
 - [Introducing the Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md)

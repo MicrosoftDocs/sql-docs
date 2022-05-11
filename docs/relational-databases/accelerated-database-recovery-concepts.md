@@ -1,7 +1,7 @@
 ---
 description: "Accelerated database recovery"
 title: "Accelerated database recovery"
-ms.date: "01/21/2022"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -11,14 +11,14 @@ helpviewer_keywords:
   - "database recovery [SQL Server]"
 author: mashamsft
 ms.author: mathoma
-ms.reviewer: kfarlee
+ms.reviewer: kfarlee, wiassaf
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Accelerated database recovery
 
 [!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
 
-Accelerated database recovery (ADR) improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process. ADR is new in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and improved in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+Accelerated database recovery (ADR) improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process. ADR is new in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and improved in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)].
 
 ADR is also available for databases in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse SQL. ADR is enabled by default in SQL Database and SQL Managed Instance and cannot be disabled. For more about ADR in Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
 
@@ -128,7 +128,7 @@ The four key components of ADR are:
 
   The cleaner is the asynchronous process that wakes up periodically and cleans page versions that are not needed.
 
-## ADR improvements in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
+## ADR improvements in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)]
 
 There are several improvements to address persistent version store (PVS) storage and improve overall scalability. 
 
@@ -154,7 +154,7 @@ There are several improvements to address persistent version store (PVS) storage
  
 - **Multi-threaded version cleanup**  
   
-  In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance. In [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the clean up process will have multiple threads, with one thread per SQL Server database.
+  In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance. In [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], the clean up process will have multiple threads, with one thread per SQL Server database.
 
 ## Best practices and guidance
 

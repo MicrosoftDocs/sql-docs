@@ -65,6 +65,8 @@ The following sections provide an overview of these features.
 
 ## Performance
 
+SQL Server 2022 Preview reflects continued investment in [Intelligent query processing](../relational-databases/performance/intelligent-query-processing.md). The following table describes improvements that will accelerate query performance with no code changes.
+
 | New feature or update | Details |
 |:---|:---|
 | Query Store on secondary replicas |  Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).<br/><br/> For more information, see [Query Store improvements](#query-store-improvements) later in this article.|
@@ -87,7 +89,7 @@ The following sections provide an overview of these features.
 |:---|:---|
 | Accelerated Database Recovery (ADR) improvement | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. SQL Server 2022 implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiencies. Concurrency improvements help the cleanup process to work more efficiently. ADR cleans pages that could not previously be cleaned due to locking.|
 | Improved Snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client.
-| Setup attached to Azure | Install Azure Arc agent via SQL Server command line setup. For more information, see [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt).|
+| Built-in integration with Azure | Install SQL Server extension for Azure via SQL Server command line setup. For more information, see [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt).|
 | Optimized plan forcing| Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).|
 | Shrink database wait with low priority | In previous releases, shrinking databases and database files to reclaim space often leads to concurrency issues. In SQL Server 2022 an additional option for DBCC SHRINKDATABASE and DBCC SHRINKFILE 'WAIT_AT_LOW_PRIORITY' changes the default behavior. When specifying WAIT_AT_LOW_PRIORITY behavior, new queries requiring Sch-S locks are not blocked by the waiting shrink operation, until the shrink operation stops waiting and begins executing.|
 | Max server memory calculations | During setup, the installation will configure max server memory to align with recommendations. See [Server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md). |
@@ -97,7 +99,6 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-|Approximate Percentile functions |- [APPROX_PERCENTILE_CONT (Transact-SQL)](../t-sql/functions/approx-percentile-cont-transact-sql.md)<br/>- [APPROX_PERCENTILE_DISC (Transact-SQL)](../t-sql/functions/approx-percentile-disc-transact-sql.md)|
 | CREATE STATISTICS | Adds [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)<br/><br/>Automatic statistics with low priority.|
 | Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br/>- [DATE_BUCKET](../t-sql/functions/date-bucket-transact-sql.md)<br/>- [GENERATE_SERIES](../t-sql/functions/generate-series-transact-sql.md)<br/><br/>The following adds support to IGNORE NULLS and RESPECT NULLS:<br/>- [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)<br/>- [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)|
 | JSON functions | - [ISJSON (Transact-SQL)](../t-sql/functions/functions.md)<br/>- [JSON_PATH_EXISTS (Transact-SQL)](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT (Transact-SQL)](../t-sql/functions/functions.md)<br/>- [JSON_ARRAY (Transact-SQL)](../t-sql/functions/functions.md)

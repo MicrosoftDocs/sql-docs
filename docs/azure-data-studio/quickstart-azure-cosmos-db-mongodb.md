@@ -62,7 +62,7 @@ The following steps will create a database named **SourceDatabase** and a collec
 
 1. Open the context menu for your account, and select **Create Database**.
 
-    :::image type="content" source="media/quickstart-azure-cosmos-db-mongodb/create-database-menu-option.png" lightbox="media/quickstart-azure-cosmos-db-mongodb/create-database-menu-option.png" alt-text="Screenshot of the create database option in the MongoDB context menu.":::
+    :::image type="content" source="media/quickstart-azure-cosmos-db-mongodb/create-database-menu-option.png" lightbox="media/quickstart-azure-cosmos-db-mongodb/create-database-menu-option.png" alt-text="Screenshot of the create database option in the Mongo DB context menu.":::
 
 1. In the **Database** and **Collection** popup dialogs, use the details in this table.
 
@@ -90,7 +90,7 @@ The following steps will populate the **People** collection with a sample data s
 
 1. Select the **SourceDatabase** item in the list of databases.
 
-    :::image type="content" source="media/quickstart-azure-cosmos-db-mongodb/database-list-item.png" lightbox="media/quickstart-azure-cosmos-db-mongodb/database-list-item.png" alt-text="Screenshot of database list item named SourceDatabase within databases list.":::
+    :::image type="content" source="media/quickstart-azure-cosmos-db-mongodb/database-list-item.png" lightbox="media/quickstart-azure-cosmos-db-mongodb/database-list-item.png" alt-text="Screenshot of database list item named Source Database within databases list.":::
 
 1. In the header menu, select **Import Sample Data**. In the confirmation dialog, select **Yes**.
 

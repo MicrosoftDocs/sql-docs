@@ -26,7 +26,6 @@ This article provides details on monitoring and managing [Azure Synapse Link for
     - [Get started with Azure Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022) 
     - [Get started with Azure Synapse Link for Azure SQL Database (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database)
 
-Currently, only a member of the sysadmin server role in SQL Server or the db_owner database role can execute these procedures. 
 
 The SQL Server or the Azure SQL Database will maintain metadata specific to each table group. 
 

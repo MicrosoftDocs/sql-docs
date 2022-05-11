@@ -27,7 +27,7 @@ The mssql extension enables mssql commands and T-SQL IntelliSense in the code ed
 
 2. Select **Plain Text** on the lower status bar, or press **Ctrl**+**K** > **M**, and select **SQL** from the languages dropdown. 
 
-   ![Screenshot of Visual Studio Code G U I, seequel language mode](./media/sql-server-develop-use-vscode/vscode-language-mode.png)
+   ![Screenshot of Visual Studio Code G U I, SQL language mode](./media/sql-server-develop-use-vscode/vscode-language-mode.png)
 
    > [!NOTE]
    > If this is the first time you have used the extension, the extension installs the SQL tools service in the background.
@@ -78,7 +78,7 @@ As an alternative to the previous steps, you can also create and edit connection
 
 1. In the new SQL file that you started earlier, type *sql* to display a list of editable code snippets.
 
-   ![Screenshot of editor in Visual Studio Code, Seequel snippets](./media/sql-server-develop-use-vscode/vscode-sql-snippets.png)
+   ![Screenshot of editor in Visual Studio Code, SQL snippets](./media/sql-server-develop-use-vscode/vscode-sql-snippets.png)
 
 2. Select **sqlCreateDatabase**.
 
@@ -157,7 +157,7 @@ As an alternative to the previous steps, you can also create and edit connection
 
    While you type, T-SQL IntelliSense helps you to complete the statements:
 
-   ![Screenshot of Visual Studio Code U I , T-Seequel IntelliSense.](./media/sql-server-develop-use-vscode/vscode-intellisense.png)
+   ![Screenshot of Visual Studio Code U I , T-SQL IntelliSense.](./media/sql-server-develop-use-vscode/vscode-intellisense.png)
 
    > [!TIP]
    > The mssql extension also has commands to help create INSERT and SELECT statements. These were not used in the previous example.

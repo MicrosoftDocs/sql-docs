@@ -58,8 +58,7 @@ The following sections provide an overview of these features.
 |Ledger | In-database blockchain to create an immutable track record of data modifications over time. See [SQL Database ledger](/azure/azure-sql/database/ledger-landing).|
 |Azure Active Directory authentication| Manage integrated authentication with Azure Active Directory.|
 |Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).| 
-|Enhanced encryption | TDS 8.0 - TDS wrapped in TLS.|
-|New permissions & roles | Enable least privileged access for administrative tasks. See summary information in [New granular permissions & roles](#new-granular-permissions--roles).|
+|New permissions & roles | Enable least privileged access for administrative tasks.|
 |Dynamic data masking | Granular permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).|
 |Support for PFX certificates | Supports certificate, and key backup and restore scenarios, along with integration with Azure Blob Storage service for the same. This enables adherence to security best practices and compliance standards guidelines that prohibit the usage of insecure or deprecated algorithms like RC4 and SHA-1.| 
 |Support MS-TDS 8.0 protocol | New MS-TDS protocol iteration:<br/>- Makes encryption mandatory<br/>- Aligns MS-TDS with HTTPS making it managable by network appliances for additional security<br/>- Removes MS-TDS / TLS custom interleaving and enables usage of TLS 1.3 and subsequent TLS protocol versions.| 
@@ -122,44 +121,6 @@ Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer 
 ## Additional information
 
 This section provides additional information for the features highlighted above.
-
-### New granular permissions & roles
-
-This section summarizes the granular permissions and roles that SQL Server 2022 Preview introduces.
-
-#### Granular permissions
-
-- `CREATE LOGIN` and `CREATE USER`
-  - Complements the existing `ALTER ANY LOGIN` and the `ALTER ANY USER` permission respectively by permitting only the creation of accounts but not altering (changing) existing users or logins.
-
-- `VIEW SERVER SECURITY STATE` and `VIEW DATABASE SECURITY STATE`
-  - All dynamic management views (DMV) in SQL Server are covered by `VIEW SERVER` respectively `VIEW DATABASE STATE`. A subset of DMVs contains information about the security configuration that is not necessary to disclose to for example performance monitoring tasks but would be required to conduct a security auditing. These are covered with this new permission
-
-- `VIEW SERVER PERFORMANCE STATE` and `VIEW DATABASE PERFORMANCE STATE`
-  - All DMVs in SQL Server are covered by `VIEW SERVER` respectively `VIEW DATABASE STATE`. A subset of DMVs contains information about the security configuration that is not necessary to disclose to for example performance monitoring tasks. The remaining DMVs are covered with this new permission.
-- `VIEW ANY DEFINITION` and `VIEW SECURITY DEFINITION`
-  - All catalog views in SQL Server are covered by `VIEW ANY DEFINITION` on server respectively `VIEW DEFINITION` on database. A subset of catalog views contains information about the security configuration that should be limited to a security role. These are covered with this new permission.
-- `VIEW ANY CRYPTOGRAPHICALLY SECURED DEFINITION` and `VIEW CRYPTOGRAPHICALLY SECURED DEFINITION` (server and database)
-  - There are a small number of columns in catalog views that contain data that is highly sensitive and should not be disclosed to everyone who may otherwise have access to the other columns. Examples: key values and passwords. While none of these are stored anywhere in clear text within SQL Server, having even access to the encrypted or hashed value may be considered too risky to disclose. These new permissions cover access to such data.
-
-#### Roles
-
-- `##MS_DefinitionReader##`
-  - Holds `VIEW ANY DEFINITION`
-- `##MS_ServerStateManager##`
-  - Holds `ALTER SERVER STATE`
-- `##MS_ServerStateReader##`
-  - Holds `VIEW SERVER STATE`
-- `##MS_SecurityDefinitionReader##`
-  - Holds `VIEW ANY SECURITY DEFINITION`
-- `##MS_DatabaseConnector##`
-  - Holds `CONNECT ANY DATABASE`
-  - Allows connect to any database on the logical server
-  - The ideal counterpart for `##MS_ServerStateReader##,` `##MS_DefinitionReader##` and `##MS_SecurityDefinitionReader##`
-- `##MS_DatabaseManager##`
-  - Can create and alter any database.
-- `##MS_LoginManager##`
-  - Can create and alter any login.
 
 ### Query Store improvements
 

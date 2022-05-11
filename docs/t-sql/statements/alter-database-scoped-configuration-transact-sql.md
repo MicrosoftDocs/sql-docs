@@ -26,6 +26,7 @@ ms.custom: "seo-lt-2019"
 ms.date: 04/25/2022
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest"
 ---
+
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
 [!INCLUDE[sqlserver2016-asdb-asdbmi-asa.md](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -669,13 +670,14 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 
 [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-## More information   
- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
- [Databases and Files Catalog Views](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
- [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
- [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)    
- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)    
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+## Next steps
+
+- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
+- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Recommendations)
+- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
+- [Databases and Files Catalog Views](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
+- [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
+- [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)    
+- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)    
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)

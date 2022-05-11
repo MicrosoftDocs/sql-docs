@@ -35,13 +35,13 @@ This article describes how to configure the **max degree of parallelism (MAXDOP)
 
 ### Considerations
 
-- This option is an advanced option and should be changed only by an experienced database administrator or certified SQL Server professional.  
+- This option is an advanced option and should be changed only by an experienced database administrator or certified SQL Server professional.
 
-- If the affinity mask option isn't set to the default, it may restrict the number of processors available to SQL Server on symmetric multiprocessing (SMP) systems. 
+- If the affinity mask option isn't set to the default, it may restrict the number of processors available to SQL Server on symmetric multiprocessing (SMP) systems.
   
 - Setting max degree of parallelism (MAXDOP) to 0 allows SQL Server to use all the available processors up to 64 processors. However, this isn't the recommended value for most cases. For more information on the recommended values for max degree of parallelism, see the [Recommendations](#recommendations) section in this page.
 
-- To suppress parallel plan generation, set **max degree of parallelism** to 1. Set the value to a number from 1 to 32,767 to specify the maximum number of processor cores that can be used during a single query execution. If a value greater than the number of available processors is specified, the actual number of available processors is used. If the computer has only one processor, the **max degree of parallelism** value is ignored.  
+- To suppress parallel plan generation, set **max degree of parallelism** to 1. Set the value to a number from 1 to 32,767 to specify the maximum number of processor cores that can be used during a single query execution. If a value greater than the number of available processors is specified, the actual number of available processors is used. If the computer has only one processor, the **max degree of parallelism** value is ignored.
 
 - The max degree of parallelism limit is set per [task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It isn't a per [request](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks up to the MAXDOP limit, and each task will use one worker and one scheduler. For more information, see the *Scheduling parallel tasks* section in the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
   

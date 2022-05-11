@@ -11,10 +11,10 @@ ms.date: 05/24/2022
 ms.custom: template-how-to 
 ---
 
-# Publish a Database Project for Azure SQL Database to the local emulator
+# Publish a Database Project for Azure SQL Database to the local emulator 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article provides steps to build and publish a Database Project to the [Azure SQL Database emulator](local-dev-experience-sql-database-emulator.md). 
+This article provides steps to build and publish a Database Project to the [Azure SQL Database emulator (preview)](local-dev-experience-sql-database-emulator.md). 
 
 ## Overview
 

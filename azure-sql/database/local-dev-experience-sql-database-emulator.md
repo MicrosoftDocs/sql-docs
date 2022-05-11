@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.date: 05/24/2022
 ---
 
-# Introducing the Azure SQL Database emulator (Preview)
+# Introducing the Azure SQL Database emulator (preview)
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This article introduces the Azure SQL Database emulator (currently in preview), which provides the ability to locally validate database and query design together with client application code in a simple and frictionless model as part of the application development process. The Azure SQL Database emulator is a critical component that speeds up the overall workflow for application developers and database professionals. You can use the Azure SQL Database emulator as part of [the local development experience for Azure SQL Database](local-dev-experience-overview.md).
+This article introduces the Azure SQL Database emulator (preview), which provides the ability to locally validate database and query design together with client application code in a simple and frictionless model as part of the application development process. The Azure SQL Database emulator is a critical component that speeds up the overall workflow for application developers and database professionals. You can use the Azure SQL Database emulator as part of [the local development experience for Azure SQL Database](local-dev-experience-overview.md).
 
 To get started, see how to [set up a dev environment](local-dev-experience-set-up-dev-environment.md) and the [Quickstart](local-dev-experience-quickstart.md). 
 

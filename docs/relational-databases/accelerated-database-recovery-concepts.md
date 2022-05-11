@@ -148,7 +148,7 @@ There are several improvements to address persistent version store (PVS) storage
  
 - **Transaction-level persisted version store (PVS)** 
   
-  This improvement allows ADR to cleanup versions belonging to committed transactions independent of whether there are aborted transactions in the system. With this improvement persisted version store (PVS) pages can be deallocated, even if the cleanup cannot complete a successful sweep in order to trim the aborted transaction map. 
+  This improvement allows ADR to clean up versions belonging to committed transactions independent of whether there are aborted transactions in the system. With this improvement persisted version store (PVS) pages can be deallocated, even if the cleanup cannot complete a successful sweep in order to trim the aborted transaction map. 
   
   The result of this improvement is reduced persisted version store (PVS) growth even if ADR cleanup is slow or fails.
  

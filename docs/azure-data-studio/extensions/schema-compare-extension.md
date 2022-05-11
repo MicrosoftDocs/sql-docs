@@ -18,7 +18,7 @@ This article provides an overview of the Schema Compare extension for Azure Data
 It can be tedious to manually manage and synchronize different database versions. The Schema Compare extension simplifies the process of comparing databases and gives you full control when synchronizing them - you can selectively filter specific differences and categories of differences before applying any changes. The Schema Compare extension is a reliable tool that saves you time and code.
 
 
-:::image type="content" source="media/schema-compare-extension/schema-compare-options.png" alt-text="Screenshot of the Azure Data Studio GUI, compare schema extension" lightbox="media/schema-compare-extension/schema-compare-options.png":::
+:::image type="content" source="media/schema-compare-extension/schema-compare-options.png" alt-text="Screenshot of the Azure Data Studio GUI, compare schema extension." lightbox="media/schema-compare-extension/schema-compare-options.png":::
 
 ## Features
 
@@ -31,7 +31,7 @@ The Schema Compare extension provides the following features:
 * Apply changes directly to the target or generate a script to apply changes at a later time. 
 * Save the comparison. 
 
-:::image type="content" source="media/schema-compare-extension/schema-compare.png" alt-text="Screenshot of the Azure Data Studio GUI, comparing schemas" lightbox="media/schema-compare-extension/schema-compare.png":::
+:::image type="content" source="media/schema-compare-extension/schema-compare.png" alt-text="Screenshot of the Azure Data Studio GUI, comparing schemas." lightbox="media/schema-compare-extension/schema-compare.png":::
 
 
 ## Install the extension
@@ -40,7 +40,7 @@ To install the Schema Compare extension, follow these steps:
 
 1. In Azure Data Studio, Select the Extensions Icon to view available extensions.
 
-    :::image type="content" source="media/schema-compare-extension/schema-compare-marketplace-search.png" alt-text="Screenshot of the Azure Data Studio GUI, marketplace search":::
+    :::image type="content" source="media/schema-compare-extension/schema-compare-marketplace-search.png" alt-text="Screenshot of the Azure Data Studio GUI, marketplace search.":::
 
 2. Search for the **Schema Compare** extension and select it to view its details. Select **Install** to add the extension.
 
@@ -52,11 +52,11 @@ To compare schemas, open the Schema Compare dialog box. To do so, follow these s
 
 1. To open the Schema Compare dialog box, right-click a database in Object Explorer and select **Schema Compare**. The database you select is set as the **Source** database in the comparison.
 
-    :::image type="content" source="media/schema-compare-extension/schema-compare-launch.png" alt-text="Screenshot of the Azure Data Studio GUI, schema compare launch":::
+    :::image type="content" source="media/schema-compare-extension/schema-compare-launch.png" alt-text="Screenshot of the Azure Data Studio GUI, schema compare launch.":::
 
 2. Select one of the ellipses (...) to change the **Source** and **Target** of your Schema Compare and select OK.
 
-    :::image type="content" source="media/schema-compare-extension/schema-compare-select-source-target.png" alt-text="Screenshot of the Azure Data Studio GUI, schema compare,  select source and target" lightbox="media/schema-compare-extension/schema-compare-select-source-target.png":::
+    :::image type="content" source="media/schema-compare-extension/schema-compare-select-source-target.png" alt-text="Screenshot of the Azure Data Studio GUI, schema compare,  select source and target." lightbox="media/schema-compare-extension/schema-compare-select-source-target.png":::
 
 3. To customize your comparison, select the **Options** button in the toolbar.
 

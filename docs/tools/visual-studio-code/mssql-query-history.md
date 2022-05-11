@@ -10,9 +10,9 @@ ms.reviewer: maghan
 ms.date: 5/24/2022
 ---
 
-# Query History in the mssql extension
+# Query history in the mssql extension
 
-This article introduces the functionality of query history in the mssql extension for VS Code. Query History is displayed as a section in the SQL Server view, which is available in the side bar by default when the [mssql extension for VS Code](mssql-extensions-vscode.md) is installed.
+This article introduces the functionality of query history in the mssql extension for VS Code. Query history is displayed as a section in the SQL Server view, which is available in the side bar by default when the [mssql extension for VS Code](mssql-extensions-vscode.md) is installed.
 
 :::image type="content" alt-text="Screenshot of Query History viewlet with a blank area below the header." source="./media/mssql-query-history/query-history-tab.png":::
 
@@ -28,7 +28,7 @@ Each row consists of three parts:
 - **Query Text**: The text of the query that was executed
 - **Connection Info**: The server and database the query was executed against
 
-## Query History row actions
+## Query history row actions
 
 Right-clicking on a history row will bring up a menu with the following actions available:
 
@@ -48,7 +48,7 @@ The **Run query** option does the same thing as **Open query** but will addition
 
 The **Delete** option permanently deletes the selected history row.
 
-## Query History management
+## Query history management
 
 Query history capture can be managed with the ability to clear all the history or dynamically pause/start history capture.
 
@@ -66,6 +66,7 @@ The ability to pause and start query history capture is available from the comma
 
 
 ## Next steps
+
 - [Use the mssql extension to query a SQL instance](sql-server-develop-use-vscode.md)
 - [Learn more about Visual Studio Code](https://code.visualstudio.com/docs)
 - [Learn more about contributing to the mssql extension](https://github.com/Microsoft/vscode-mssql/wiki)

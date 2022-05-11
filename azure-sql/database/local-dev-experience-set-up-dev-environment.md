@@ -28,7 +28,7 @@ Before you configure the local development environment for Azure SQL Database, m
 
 ## Install Docker Desktop
 
-The local development environment for Azure SQL Database uses the [Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md), a containerized database with close fidelity to the Azure SQL Database public service. The Azure SQL Database emulator is implemented as a [Docker](https://www.docker.com/) container.
+The local development environment for Azure SQL Database uses the [Azure SQL Database emulator](local-dev-experience-sql-database-emulator.md), a containerized database with close fidelity to the Azure SQL Database public service. The Azure SQL Database emulator is implemented as a [Docker](https://www.docker.com/) container.
 
 Install [Docker Desktop](https://www.docker.com/products/docker-desktop/). If you are using Windows, set up [Docker Desktop for Windows with WSL 2](/windows/wsl/tutorials/wsl-containers).
 
@@ -85,4 +85,4 @@ Learn more about the local development experience for Azure SQL Database:
 - [Create a database project for a local Azure SQL Database development environment](local-dev-experience-create-database-project.md)
 - [Publish a database project for Azure SQL Database to the local emulator](local-dev-experience-publish-emulator.md)
 - [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)
-- [Introducing the Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md)
+- [Introducing the Azure SQL Database emulator](local-dev-experience-sql-database-emulator.md)

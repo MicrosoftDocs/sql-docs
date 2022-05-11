@@ -413,7 +413,7 @@
       - name: Local dev experience 
         href: database/local-dev-experience-overview.md
       - name: The Azure SQL DB emulator
-        href: database/local-dev-experience-azure-sql-database-emulator.md      
+        href: database/local-dev-experience-sql-database-emulator.md      
       - name: SQL Database Projects extension >> 
         href: /sql/azure-data-studio/extensions/sql-database-project-extension
       - name: The mssql extension >> 

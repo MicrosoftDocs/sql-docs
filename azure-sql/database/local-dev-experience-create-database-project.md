@@ -46,4 +46,4 @@ Learn more about the local development experience for Azure SQL Database:
 - [Set up a local development environment for Azure SQL Database](local-dev-experience-set-up-dev-environment.md)
 - [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)
 - [Publish a database project for Azure SQL Database to the local emulator](local-dev-experience-publish-emulator.md)
-- [Introducing the Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md)
+- [Introducing the Azure SQL Database emulator](local-dev-experience-sql-database-emulator.md)

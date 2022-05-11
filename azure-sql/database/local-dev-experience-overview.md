@@ -22,7 +22,7 @@ To get started, see how to [set up a dev environment](local-dev-experience-set-u
 
 The Azure SQL Database local development experience is a combination of tools and procedures that empowers application developers and database professionals to design, edit, build/validate, publish, and run database schemas for databases directly on their workstation using an Azure SQL Database containerized environment.
 
-The Azure SQL Database local development experience consists of extensions for Visual Studio Code and Azure Data Studio that allow users to source control Database Projects and work offline when needed. The local development experience uses the [Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md) (a containerized database with close fidelity to the Azure SQL Database public service) as a runtime host for Database Projects that can be published and tested locally as part of a developer's inner loop.
+The Azure SQL Database local development experience consists of extensions for Visual Studio Code and Azure Data Studio that allow users to source control Database Projects and work offline when needed. The local development experience uses the [Azure SQL Database emulator](local-dev-experience-sql-database-emulator.md) (a containerized database with close fidelity to the Azure SQL Database public service) as a runtime host for Database Projects that can be published and tested locally as part of a developer's inner loop.
 
 Once a Database Project is ready to be deployed, the local development experience enables developers to publish the database directly to the global Azure SQL Database service, or push the Database Project to a Git repository where additional steps of a deployment pipeline can be triggered as part of the developer's outer loop.
 
@@ -51,7 +51,7 @@ The Azure SQL Database emulator is a containerized database with close fidelity 
 
 You can also use the Azure SQL Database emulator as part of local or hosted CI/CD pipelines to support unit and integration testing, without the need to use the global Azure SQL Database cloud service.
 
-Learn more in [Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md).
+Learn more in [Azure SQL Database emulator](local-dev-experience-sql-database-emulator.md).
 
 ## Next steps
 
@@ -61,4 +61,4 @@ Learn more about the local development experience for Azure SQL Database:
 - [Create a Database Project for a local Azure SQL Database development environment](local-dev-experience-create-database-project.md)
 - [Publish a Database Project for Azure SQL Database to the local emulator](local-dev-experience-publish-emulator.md)
 - [Quickstart: Create a local development environment for Azure SQL Database](local-dev-experience-quickstart.md)
-- [Introducing the Azure SQL Database emulator](local-dev-experience-azure-sql-database-emulator.md)
+- [Introducing the Azure SQL Database emulator](local-dev-experience-sql-database-emulator.md)

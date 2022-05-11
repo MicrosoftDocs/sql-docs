@@ -2,7 +2,7 @@
 title: "Best practices with Query Store"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
-ms.date: "4/4/2022"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -536,14 +536,14 @@ For more on estimating and configuring the size of the secondary Azure SQL datab
 
 ## See also
 
-- [ALTER DATABASE SET options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)
-- [Query Store catalog views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
-- [Query Store stored procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
-- [Use Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)
-- [Query processing architecture guide](../../relational-databases/query-processing-architecture-guide.md)
-- [Query Store Hints](query-store-hints.md)
-
+ - [ALTER DATABASE SET options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)
+ - [Query Store catalog views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
+ - [Query Store stored procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
+ - [Use Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)
+ - [Query processing architecture guide](../../relational-databases/query-processing-architecture-guide.md)
+ - [Query Store Hints](query-store-hints.md)
+ 
 ## Next steps
 
-- [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
-- [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md)
+ - [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
+ - [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md)

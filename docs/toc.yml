@@ -57,6 +57,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 16
+          href: big-data-cluster/release-notes-cumulative-update-16.md
         - name: Cumulative Update 15
           href: big-data-cluster/release-notes-cumulative-update-15.md
         - name: Cumulative Update 14
@@ -561,9 +563,9 @@ items:
       items:
       - name: Backup to Azure
         items:
-        - name: Backup To URL
+        - name: Backup to URL for Microsoft Azure Blob Storage
           href: relational-databases/backup-restore/sql-server-backup-to-url.md
-        - name: Backup To Azure blob storage
+        - name: Backup to Azure blob storage with PowerShell
           href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
         - name: Delete backup log files
           href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
@@ -579,6 +581,14 @@ items:
             href: relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md
           - name: Migrate settings from SQL Server 2014
             href: relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md
+      - name: Backup to S3-compatible object storage
+        items:
+        - name: Backup/Restore with S3-compatible object storage
+          href: relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md
+        - name: Backup to URL for S3-compatible object storage
+          href: relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md
+        - name: Best practices and troubleshooting
+          href: relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md
       - name: Backup On-premises
         items:
         - name: Full backup
@@ -4757,6 +4767,8 @@ items:
     items:
     - name: Discontinued functionality in SQL Server
       href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+    - name: Deprecated in SQL Server 2022
+      href: database-engine/deprecated-database-engine-features-in-sql-server-2022.md
     - name: Deprecated in SQL Server 2019
       href: database-engine/deprecated-database-engine-features-in-sql-server-2019.md
     - name: Deprecated in SQL Server 2017
@@ -7030,8 +7042,8 @@ items:
         href: relational-databases/performance/best-practice-with-the-query-store.md
       - name: How Query Store Collects Data
         href: relational-databases/performance/how-query-store-collects-data.md
-      - name: Query Store hints
-        href: relational-databases/performance/query-store-hints.md
+      - name: In-Memory OLTP
+        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
       - name: Optimized plan forcing
         href: relational-databases/performance/optimized-plan-forcing-query-store.md
       - name: In-Memory OLTP
@@ -7524,7 +7536,7 @@ items:
     href: ./ssms/scripting/database-engine-scripting.md
   - name: Subqueries
     href: relational-databases/performance/subqueries.md
-  - name: Data virtualization (Polybase)
+  - name: Data virtualization (PolyBase)
     items:
     - name: Overview
       items:
@@ -7568,6 +7580,8 @@ items:
           href: relational-databases/polybase/polybase-configure-teradata.md
         - name: MongoDB
           href: relational-databases/polybase/polybase-configure-mongodb.md
+        - name: S3-compliant object storage
+          href: relational-databases/polybase/polybase-configure-s3-compatible.md
         - name: ODBC Generic Types
           href: relational-databases/polybase/polybase-configure-odbc-generic.md
       - name: Scale-out groups
@@ -7578,8 +7592,8 @@ items:
         items:
         - name: Virtualize data
           href: relational-databases/polybase/data-virtualization.md
-        - name: Virtualize CSV file
-          href: ./big-data-cluster/data-virtualization-csv.md
+        - name: Virtualize parquet file
+          href: relational-databases/polybase/polybase-virtualize-parquet-file.md          
       - name: Troubleshoot
         items:
         - name: Monitor & troubleshoot
@@ -7707,6 +7721,16 @@ items:
       href: relational-databases/synonyms/create-synonyms.md
 - name: Reporting & Analytics
   items:
+  - name: Azure Synapse Link for SQL
+    items: 
+    - name: Azure Synapse Link for SQL Server >
+      href: /azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link
+    - name: Azure Synapse Link for Azure SQL Database >
+      href: /azure/synapse-analytics/synapse-link/sql-database-synapse-link
+    - name: Azure Synapse Link for SQL change feed
+      href: sql-server/synapse-link/synapse-link-sql-server-change-feed.md
+    - name: Azure Synapse Link for SQL change feed management
+      href: sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md
   - name: Machine Learning Services > 
     href: machine-learning/
   - name: Analytics Platform System > 
@@ -13262,6 +13286,12 @@ items:
       items:
       - name: sys.dm_db_objects_disabled_on_compatibility_level_change
         href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
+    - name: Azure Synapse Link for SQL
+      items:
+      - name: sys.dm_change_feed_errors
+        href: relational-databases/system-dynamic-management-views/sys-dm-change-feed-errors.md
+      - name: sys.dm_change_feed_log_scan_sessions
+        href: relational-databases/system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md
     - name: Azure Synapse Analytics & Parallel Data Warehouse
       href: relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md
       items:
@@ -14959,6 +14989,16 @@ items:
         href: relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
       - name: sp_special_columns_100
         href: relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
+    - name: Azure Synapse Link for SQL
+      items:
+      - name: sp_change_feed_disable_db
+        href: relational-databases/system-stored-procedures/sp-change-feed-disable-db.md
+      - name: sp_change_feed_disable_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-disable-table.md        
+      - name: sp_change_feed_drop_table_group
+        href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
+      - name: sp_help_change_feed
+        href: relational-databases/system-stored-procedures/sp-help-change-feed.md
     - name: SQL Server Agent
       href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:
@@ -16322,6 +16362,8 @@ items:
           href: t-sql/functions/current-timezone-transact-sql.md
         - name: CURRENT_TIMEZONE_ID
           href: t-sql/functions/current-timezone-id-transact-sql.md
+        - name: DATE_BUCKET
+          href: t-sql/functions/date-bucket-transact-sql.md
         - name: DATEADD
           href: t-sql/functions/dateadd-transact-sql.md
         - name: DATEDIFF
@@ -16967,6 +17009,8 @@ items:
           items:
           - name: Overview
             href: t-sql/language-elements/relational-operators-transact-sql.md
+          - name: GENERATE_SERIES
+            href: t-sql/functions/generate-series-transact-sql.md
           - name: OPENDATASOURCE
             href: t-sql/functions/opendatasource-transact-sql.md
           - name: OPENJSON

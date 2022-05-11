@@ -174,19 +174,19 @@ Next are steps you can use to assess whether any of your most important queries 
   
 Suppose that with CE 120 or above, a less efficient query plan is generated for your query. Here are some options you have to activate the better plan, ordered from the largest scope to the smallest:
   
-1. You could set the database compatibility level to a value lower than the latest available, for your whole database.
+- You could set the database compatibility level to a value lower than the latest available, for your whole database.
   
-    1. For example, setting the compatibility level 110 or lower activates CE 70, but it makes all queries subject to the previous CE model. 
+  - For example, setting the compatibility level 110 or lower activates CE 70, but it makes all queries subject to the previous CE model.
 
-    2. Further, setting a lower compatibility level also misses many improvements in the query optimizer for latest versions, and affects all queries against the database.
+  - Further, setting a lower compatibility level also misses many improvements in the query optimizer for latest versions, and affects all queries against the database.
 
-2. You could use `LEGACY_CARDINALITY_ESTIMATION` database option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
+- You could use `LEGACY_CARDINALITY_ESTIMATION` database option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
 
-3. You could use `LEGACY_CARDINALITY_ESTIMATION` query hint, to have a single query use the older CE, while retaining other improvements in the query optimizer.
+- You could use `LEGACY_CARDINALITY_ESTIMATION` query hint, to have a single query use the older CE, while retaining other improvements in the query optimizer.
 
-4. You could enforce the `LEGACY_CARDINALITY_ESTIMATION` via the Query Store hint feature, to have a single query use the older CE without changing the query.
+- You could enforce the `LEGACY_CARDINALITY_ESTIMATION` via the Query Store hint feature, to have a single query use the older CE without changing the query.
 
-5. Force a different plan with Query Store.
+- Force a different plan with Query Store.
 
 ### Database compatibility level
 
@@ -411,9 +411,12 @@ CE feedback activity is visible via the `query_feedback_analysis` and `query_fee
 
 Hints set by CE feedback can be tracked using the [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md) catalog view.
 
-Feedback information can be tracked using the `sys.query_store_plan_feedback` catalog view. **NOTE:** This view may change in a later SQL Server 2022 CTP.
+Feedback information can be tracked using the `sys.query_store_plan_feedback` catalog view.
 
-Starting with CE feedback, a new `IsCEFeedbackAdjusted` attribute is available on the StmtSimple element to see whether CE Feedback adjustment was used. **NOTE:** This property isn't yet available.
+Starting with CE feedback, a new `IsCEFeedbackAdjusted` attribute is available on the StmtSimple element to see whether CE Feedback adjustment was used.
+
+> [!NOTE}
+> This property isn't yet available.
 
 To disable CE feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET CE_FEEDBACK = OFF` database scoped configuration.
 
@@ -423,7 +426,10 @@ If a query has a query plan forced through Query Store, CE feedback won't be use
 
 If a query uses hard-coded query hints or is using Query Store hints set by the user, CE feedback won't be used for that query. For more information, see [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md) and [Query Store hint](query-store-hints.md).
 
-To allow CE feedback to override hard-coded query hints and Query Store user hints, use the `ALTER DATABASE SCOPED CONFIGURATION SET FORCE_CE_FEEDBACK = ON` database scoped configuration. **NOTE:** This configuration isn't yet available.
+To allow CE feedback to override hard-coded query hints and Query Store user hints, use the `ALTER DATABASE SCOPED CONFIGURATION SET FORCE_CE_FEEDBACK = ON` database scoped configuration.
+
+>[!NOTE]
+> This configuration isn't yet available.
 
 ### Feedback and Reporting Issues
 
@@ -431,7 +437,7 @@ For feedback or questions, please email CEFfeedback@microsoft.com
 
 ## Examples of CE improvements  
   
-This section describes example queries that benefit from the enhancements implemented in the CE in recent releases. This is background information that doesn't call for specific action on your part. 
+This section describes example queries that benefit from the enhancements implemented in the CE in recent releases. This is background information that doesn't call for specific action on your part.
   
 ### Example A. CE understands maximum value might be higher than when statistics were last gathered  
   

@@ -16,7 +16,7 @@ ms.custom:
 
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-This article includes detail on how the Azure Synapse Link change feed works. This new SQL Server 2022 and Azure SQL Database feature is currently in preview. 
+This article includes detail on how the Azure Synapse Link for SQL change feed works. This new SQL Server 2022 and Azure SQL Database feature is currently in preview. 
 
 [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, called Azure Synapse Link for SQL. Azure Synapse Link for SQL provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. 
 
@@ -34,7 +34,7 @@ This feature is not currently available for Azure SQL Managed Instance.
 
 For more information on the landing zone for Azure Synapse Link for SQL Server, see [Azure Synapse Link for SQL Server landing zone](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link#landing-zone).
 
-While Azure Synapse Link for SQL Server involves user-provisioned Azure resources including an ADLS Gen2 storage account, the Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
+While Azure Synapse Link for SQL Server involves user-provisioned Azure resources including an ADLS Gen2 storage account, Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
 
 For SQL Server, the landing zone Azure Storage location is customer-managed and visible, but it is not recommended or supported to consume or modify the files in the landing zone. 
 
@@ -42,20 +42,20 @@ For SQL Server, the landing zone Azure Storage location is customer-managed and 
 
 An administrator of SQL Server can enable Azure Synapse Link on a table that is empty, or one that already contains data. The source table must have a primary key.
 
-If on a table that already contains data, Azure Synapse Link will seed the landing zone with an initial full snapshot of the source table. When an existing SQL Server table containing data is added to the Azure Synapse Link, a full snapshot of the initial set of data is generated. The initial snapshot file is a .parquet format file that is transmitted to the landing zone in ADLS Gen2. 
+When an existing SQL Server table containing data is added to Azure Synapse Link for SQL, a full snapshot of the initial set of data is generated. The initial snapshot file is a .parquet format file that is transmitted to the landing zone in ADLS Gen2. 
 
-Azure Synapse Link supports low latency pushing of source table(s) changes to the landing zone in Azure Storage. The change feed uses a CSV file for publishing these changes to Azure Synapse. This tabular format naturally aligns with writing row-granular data changes at a high cadence (on the order of seconds). Most CSV files should be relatively small.
+Azure Synapse Link for SQL supports low latency pushing of source table(s) changes to the landing zone in ADLS Gen2. The change feed uses a CSV file for publishing these changes to Azure Synapse. This tabular format naturally aligns with writing row-granular data changes at a high cadence (on the order of seconds). Most CSV files should be relatively small.
 
 ## Change capture
 
-Capturing changes for Azure Synapse Link is similar to the existing Change Data Capture (CDC) technology. The source of change data is the SQL Server transaction log. The change feed reads the log and adds information about changes to the landing zone.
+Capturing changes for Azure Synapse Link for SQL is similar to the existing Change Data Capture (CDC) technology. The source of change data is the SQL Server transaction log. The change feed reads the log and adds information about changes to the landing zone.
 
 CDC works by harvesting the transaction log to capture all modifications performed on the source table(s). 
 
 - In CDC, the change data is populated internally to a sibling table in the database.
-- In Azure Synapse Link, the data will read directly from the database transaction log, cached in memory, and eventually written to the landing zone in Azure Storage. 
+- In Azure Synapse Link, the data will read directly from the database transaction log, cached in memory, and eventually written to the landing zone in ADLS Gen2. 
 
-If a storage outage occurs, it can cause the landing zone to become unavailable, which will block publications to that landing zone. Similar to the behavior if the SQL Server CDC log reader agent fails or is not running, the source database transaction log cannot be truncated. In the case of a prolonged storage outage or storage configuration change that causes it to become inaccessible, stop the Synapse Link through the Synapse Studio.
+If a storage outage occurs, it can cause the landing zone to become unavailable, which will block publications to that landing zone. Similar to the behavior if the SQL Server CDC log reader agent fails or is not running, the source database transaction log cannot be truncated. In the case of a prolonged storage outage or storage configuration change that causes it to become inaccessible, stop the Synapse Link through Azure Synapse Studio.
 
 ### High availability support
 

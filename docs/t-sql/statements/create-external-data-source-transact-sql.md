@@ -596,7 +596,7 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15"
+::: moniker range="=sql-server-ver15"
 
 ## Overview: SQL Server
 [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)] and later
@@ -1069,7 +1069,7 @@ Provides the connectivity protocol and path to the external data source.
 | Azure Data Lake Storage Gen2 |   `abfs[s]` | `abfss://<container>@<storage _account>.dfs.core.windows.net`  |  Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11+. |
 | [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]  data pool | `sqldatapool` | `sqldatapool://controller-svc/default` | Only supported in [!INCLUDE[ssbigdataclusters-ver15](../../includes/ssbigdataclusters-ver15.md)] | 
 | [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]  storage pool | `sqlhdfs` | `sqlhdfs://controller-svc/default` | Only supported in [!INCLUDE[ssbigdataclusters-ver15](../../includes/ssbigdataclusters-ver15.md)]  |
-| S3-compatible object storage | `s3://` | 's3://<ip_address>:<port>/' | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] |
+| S3-compatible object storage | `s3://` | `s3://<ip_address>:<port>/` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] |
 
 #### Location path:
 
@@ -1350,7 +1350,7 @@ WITH
 GO
 ```
 
-Verify the new external data source with [sys.external_data_sources](../system-catalog-views/sys-external-data-sources-transact-sql.md).
+Verify the new external data source with [sys.external_data_sources](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md).
 
 ```sql
 SELECT * FROM sys.external_data_sources;

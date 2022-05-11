@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Backup to URL for S3-compatible object storage"
+title: "SQL Server backup to URL for S3-compatible object storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the S3-compatible object storage as a backup destination.
 ms.custom: ""
 ms.date: 05/09/2022
@@ -44,7 +44,7 @@ The maximum supported size of a single file is the result of *10,000 parts \* `M
 
 The S3 endpoint must have been configured as follows:
 
-- TLS must has been configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. The endpoint will be validated by a certificate installed on the SQL Server OS Host.
+- TLS must be configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. The endpoint will be validated by a certificate installed on the SQL Server OS Host.
 - A user (`Access Key ID`) has been configured and the secret (`Secret Key ID`) and that user is known to you. You will need both to authenticate against the S3 endpoint.
 - At least one bucket has been configured. Buckets cannot be created or configured from [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
@@ -192,7 +192,7 @@ Only super user should be able to write in the folder, while the `mssql` user mu
 
 ## Unsupported features
 
-- Backup to S3 object storage with a non-secure HTTP URL is not supported. Customers are responsible for setting up their S3 host with an HTTPS URL and this endpoint will be validated by a certificate installed on the SQL Server OS host.
+- Backup to S3-compatible object storage with a non-secure HTTP URL is not supported. Customers are responsible for setting up their S3 host with an HTTPS URL and this endpoint will be validated by a certificate installed on the SQL Server OS host.
 - Backup to S3-compatible object storage is not supported in SQL Server Express and SQL Server Express with Advanced Services editions.
 
 <!-- ## Notebooks

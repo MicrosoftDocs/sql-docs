@@ -289,7 +289,7 @@ DATABASE_SNAPSHOT **=**_database\_snapshot\_name_
   
  Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
   
- When not specified, the default is **1**, except for RESTORE HEADERONLY in which case all backup sets in the media set are processed. For more information, see "Specifying a Backup Set," later in this article.  
+ When not specified, the default is **1**, except for RESTORE HEADERONLY in which case all backup sets in the media set are processed. For more information, see [Specifying a Backup Set](#specifying-a-backup-set).
   
 > [!IMPORTANT]  
 >  This FILE option is unrelated to the FILE option for specifying a database file, FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }.  

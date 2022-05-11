@@ -37,7 +37,7 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-|Azure Synapse Link for SQL|Get near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. <br/><br/> For details and known limitations, see [Create Synapse Link for SQL Server 2022 Preview - Azure Synapse Analytics](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022#known-limitations). <br/></br> See also, [Known issues](/azure/synapse-analytics/synapse-link/synapse-link-for-sql-2022-known-issues)|
+|Azure Synapse Link for SQL|Get near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. <br/><br/> For more details, see [What is Azure Synapse Link for SQL? (Preview) - Azure Synapse Analytics](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). <br/></br> See also, [Known issues](/azure/synapse-analytics/synapse-link/synapse-link-for-sql-2022-known-issues)|
 |Object storage integration | SQL Server 2022 Preview introduces new object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage, in addition to Azure Storage. Object storage integration enables two scenarios in SQL Server 2022. The first is BACKUP TO URL and the second is Data Lake Virtualization.
 |Data virtualization | Enhances data virtualization capabilities by integrating PolyBase with S3-compatible object storage, also adding the support to querying parquet files with T-SQL.|
 
@@ -111,9 +111,10 @@ The following sections provide an overview of these features.
 | New feature or update | Details |
 |:---|:---|
 | Azure Data Studio | Get the latest release at [Download and install Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). The latest release includes support for SQL Server 2022.  |
-| Distributed Replay |  SQL Server setup no longer includes the Distributed Replay client and controller executables. These will be available, along with the admin executable, as a separate download |
+| Distributed Replay |  SQL Server setup no longer includes the Distributed Replay client and controller executables. These will be available, along with the Admin executable, as a separate download |
 | SQL Server Management Studio | SSMS version 19.0 is now available and is the recommended version of SSMS for SQL Server 2022. [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). |
-| SqlPackage.exe | Version ZY of SqlPackage provides support for SQL Server 2022. Get the latest version at [Download and install sqlpackage](../tools/sqlpackage/sqlpackage-download.md).|
+| SqlPackage.exe | Version 19 of SqlPackage provides support for SQL Server 2022. Get the latest version at [Download and install sqlpackage](../tools/sqlpackage/sqlpackage-download.md).|
+| VS Code | The latest release of VS Code, version ZY.X, supports SQL Server 2022 and can be downloaded from https://code.visualstudio.com/ | 
 
 ## SQL Machine Learning Services
 

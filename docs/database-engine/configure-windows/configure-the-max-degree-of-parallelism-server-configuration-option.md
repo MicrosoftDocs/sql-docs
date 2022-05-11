@@ -119,21 +119,19 @@ RECONFIGURE WITH OVERRIDE;
 GO  
 ```  
 
-For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+For more information, see [Server Configuration Options SQL Server](server-configuration-options-sql-server.md).  
   
 ## <a name="FollowUp"></a> Follow Up: After you configure the max degree of parallelism option
 
 The setting takes effect immediately without restarting the server.  
 
-## Feedback
-
-**Applies to:**  SQL Server (starting with SQL Server 2022), Azure SQL Database (at Public Preview), Azure SQL Managed Instance (at Public Preview)
+## Max DOP feedback
 
 Parallelism is often beneficial for reporting and analytical queries, or queries that otherwise handle large amounts of data. Conversely, OLTP-centric queries that are executed in parallel could experience performance issues when the time spent coordinating all threads outweighs the advantages of using a parallel plan.
 
 Before SQL Server 2019, the default value for the max degree of parallelism (MAXDOP) Server Configuration Option and for MAXDOP database scoped configuration was set to 0, which means that all available schedulers could be used if a query was eligible for parallelism. With SQL Server 2019, the default for Server Configuration Option is a calculation based on available processors during setup time, and the MAXDOP database scoped configuration changed to a default of 8 for Azure SQL Database.
 
-For more information and considerations, see [Configure the max degree of parallelism Server Configuration Option](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option#Considerations).
+For more information and considerations, see [Configure the max degree of parallelism Server Configuration Option](configure-the-max-degree-of-parallelism-server-configuration-option.md#a-nameconsiderationsa-considerations).
 
 DOP feedback is part of the Intelligent query processing family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP Feedback self-adjusts DOP to avoid the issues described above.
 
@@ -165,7 +163,7 @@ To disable CE feedback at the query level, use the `DISABLE_DOP_FEEDBACK` query 
 
 If a query has a query plan forced through Query Store, DOP feedback can still be used for that query.
 
-If a query uses the MAXDOP hint, either as a hard-coded query hints or through the Query Store hinting mechanism, and the MAXDOP hint is greater than 2, DOP Feedback will lower the DOP using the hinted value as the ceiling. For more information, see [Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query) and [Query Store hints](https://docs.microsoft.com/sql/relational-databases/performance/query-store-hints).
+If a query uses the MAXDOP hint, either as a hard-coded query hints or through the Query Store hinting mechanism, and the MAXDOP hint is greater than 2, DOP Feedback will lower the DOP using the hinted value as the ceiling. For more information, see [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query) and [Query Store hints](/sql/relational-databases/performance/query-store-hints).
 
 #### Extended Events
 
@@ -178,13 +176,13 @@ The following XEs are available for the feature:
 
 ## See also
 
- [Intelligent query processing](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing)  
- [Configure the max degree of parallelism Server Configuration Option](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option#Considerations)
- [Query Processing Architecture Guide](https://docs.microsoft.com/sql/relational-databases/query-processing-architecture-guide)
- [Trace Flags](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
- [Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)
- [USE HINT query hint](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query#use_hint)
- [Query Store hints](https://docs.microsoft.com/sql/relational-databases/performance/query-store-hints)
+ [Intelligent query processing](/sql/relational-databases/performance/intelligent-query-processing)  
+ [Configure the max degree of parallelism Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option#Considerations)
+ [Query Processing Architecture Guide](/sql/relational-databases/query-processing-architecture-guide)
+ [Trace Flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
+ [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
+ [USE HINT query hint](/sql/t-sql/queries/hints-transact-sql-query#use_hint)
+ [Query Store hints](/sql/relational-databases/performance/query-store-hints)
 
 ## Feedback and Reporting Issues
 

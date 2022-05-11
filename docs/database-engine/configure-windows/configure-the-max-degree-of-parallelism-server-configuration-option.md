@@ -31,9 +31,9 @@ This topic describes how to configure the **max degree of parallelism (MAXDOP)**
 >
 > For more on MAXDOP in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).
 
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Considerations"></a> Considerations  
+## Before You Begin
+
+### Considerations
 
 - This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional.  
 
@@ -54,7 +54,7 @@ This topic describes how to configure the **max degree of parallelism (MAXDOP)**
   
 - In addition to queries and index operations, this option also controls the parallelism of DBCC CHECKTABLE, DBCC CHECKDB, and DBCC CHECKFILEGROUP. You can disable parallel execution plans for these statements by using trace flag 2528. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-### <a name="Recommendations"></a> <a name="Guidelines"></a> Recommendations
+### Recommendations
 
 Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], during service startup if the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects more than eight physical cores per NUMA node or socket at startup, soft-NUMA nodes are created automatically by default. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] places logical processors from the same physical core into different soft-NUMA nodes. The recommendations in the table below are aimed at keeping all the worker threads of a parallel query within the same soft-NUMA node. This will improve the performance of the queries and distribution of worker threads across the NUMA nodes for the workload. For more information, see [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
 
@@ -80,13 +80,13 @@ From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL
 |Server with multiple NUMA nodes|Less than or equal to eight logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
 |Server with multiple NUMA nodes|Greater than eight logical processors per NUMA node|Keep MAXDOP at 8|
   
-### <a name="Security"></a> Security  
+### Security  
   
-#### <a name="Permissions"></a> Permissions
+#### Permissions
 
  Execute permissions on **sp_configure** with no parameters or with only the first parameter are granted to all users by default. To execute **sp_configure** with both parameters to change a configuration option or to run the RECONFIGURE statement, a user must be granted the ALTER SETTINGS server-level permission. The ALTER SETTINGS permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.  
   
-## <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+## Using SQL Server Management Studio  
   
 ### To configure the max degree of parallelism option
   
@@ -96,9 +96,9 @@ From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL
   
 3. In the **Max Degree of Parallelism** box, select the maximum number of processors to use in parallel plan execution.  
   
-## <a name="TsqlProcedure"></a> Using Transact-SQL  
+## Using Transact-SQL (T-SQL)
   
-### To configure the max degree of parallelism option
+### To configure the max degree of parallelism option with T-SQL
   
 1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -121,7 +121,7 @@ GO
 
 For more information, see [Server Configuration Options SQL Server](server-configuration-options-sql-server.md).  
   
-## <a name="FollowUp"></a> Follow Up: After you configure the max degree of parallelism option
+## Follow Up: After you configure the max degree of parallelism option
 
 The setting takes effect immediately without restarting the server.  
 
@@ -131,7 +131,7 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 
 Before SQL Server 2019, the default value for the max degree of parallelism (MAXDOP) Server Configuration Option and for MAXDOP database scoped configuration was set to 0, which means that all available schedulers could be used if a query was eligible for parallelism. With SQL Server 2019, the default for Server Configuration Option is a calculation based on available processors during setup time, and the MAXDOP database scoped configuration changed to a default of 8 for Azure SQL Database.
 
-For more information and considerations, see [Configure the max degree of parallelism Server Configuration Option](configure-the-max-degree-of-parallelism-server-configuration-option.md#a-nameconsiderationsa-considerations).
+For more information and considerations, see [Configure the max degree of parallelism Server Configuration Option](#considerations).
 
 DOP feedback is part of the Intelligent query processing family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP Feedback self-adjusts DOP to avoid the issues described above.
 
@@ -140,13 +140,13 @@ DOP feedback is part of the Intelligent query processing family of features, and
 DOP Feedback will identify parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is deemed inefficient, DOP Feedback will lower the DOP for the next execution of the query, from whatever is the configured DOP, and verify if it helps.
 To assess query eligibility, the adjusted\* query elapsed time is measured over a few executions. The goal of the DOP Feedback feature is to increase overall concurrency and reduce waits significantly, even if it slightly increases query elapsed time.
 
-\* The total elapsed time for each query is adjusted by ignoring Buffer Latch, Buffer IO, and Network IO waits which are external to the parallel query execution.
+- The total elapsed time for each query is adjusted by ignoring Buffer Latch, Buffer IO, and Network IO waits which are external to the parallel query execution.
 
 Only verified feedback is persisted. If the adjusted DOP results in a performance regression, DOP feedback will go back to the last known good DOP. In this context, a user canceled query is also perceived as a regression. Note that DOP Feedback doesn’t recompile plans.
 
 A current stable feedback is reverified upon plan recompilation and may readjust back up, or continue down, but never above MAXDOP setting (including a MAXDOP hint).
 
-### Considerations
+### Feedback considerations
 
 To enable DOP feedback, enable the `DOP_FEEDBACK` database scoped configuration for the database you're connected to when executing the query. The Query Store must be enabled for every database where DOP feedback is used.
 

@@ -890,7 +890,7 @@
     - name: Azure Resource Graph queries
       href: database/resource-graph-samples.md
 
-
+- name: SQL Managed Instance (SQL MI)
   items:
   - name: Documentation
     href: managed-instance/index.yml

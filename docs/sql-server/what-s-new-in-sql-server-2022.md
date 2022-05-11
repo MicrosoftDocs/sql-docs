@@ -65,6 +65,8 @@ The following sections provide an overview of these features.
 
 ## Performance
 
+SQL Server 2022 Preview reflects continued investment in [Intelligent query processing](../relational-databases/performance/intelligent-query-processing.md). The following table describes improvements that will accelerate query performance with no code changes.
+
 | New feature or update | Details |
 |:---|:---|
 | Query Store on secondary replicas |  Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).<br/><br/> For more information, see [Query Store improvements](#query-store-improvements) later in this article.|

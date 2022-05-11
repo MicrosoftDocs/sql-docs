@@ -74,7 +74,7 @@ If preparing for an upgrade to [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 ## Use extended events to assess the CE version
 
-Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to `C:\Temp\` (although you can change the path). When you open the .xel file in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], its detailed information is displayed in a user friendly manner. 
+Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to `C:\Temp\` (although you can change the path). When you open the .xel file in SQL Server Management Studio (SSMS), its detailed information is displayed in a user friendly manner. 
   
 ```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -112,11 +112,11 @@ For information about extended events as tailored for [!INCLUDE[ssSDS](../../inc
   
 Next are steps you can use to assess whether any of your most important queries perform worse under the latest CE. Some of the steps are performed by running a code sample presented in a preceding section. 
 
-1. Open [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Ensure your SQL Server database is set to the highest available compatibility level.  
+1. Open SQL Server Management Studio (SSMS). Ensure your SQL Server database is set to the highest available compatibility level.  
   
 2. Perform the following preliminary steps:  
   
-    1. Open [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].  
+    1. Open SQL Server Management Studio (SSMS).  
   
     2. Run the [!INCLUDE[tsql](../../includes/tsql-md.md)] to ensure that your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is set to the highest available compatibility level.  
   
@@ -277,7 +277,7 @@ The Query Store gives you different ways that you can force the system to use a 
   
 - Execute `sys.sp_query_store_force_plan`.
   
-- In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], expand your **Query Store** node, right-click **Top Resource Consuming Nodes**, and then select **View Top Resource Consuming Nodes**. The display shows buttons labeled **Force Plan** and **Unforce Plan**.
+- In SQL Server Management Studio (SSMS), expand your **Query Store** node, right-click **Top Resource Consuming Nodes**, and then select **View Top Resource Consuming Nodes**. The display shows buttons labeled **Force Plan** and **Unforce Plan**.
   
 For more information about the Query Store, see [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md). 
 
@@ -311,7 +311,7 @@ To make sure that the Cardinality Estimator of the Query Optimizer provides good
 
 [!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
-(Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])|, the Cardinality Estimation (CE) feedback is part of the Intelligent query processing family of features and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
+Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), the Cardinality Estimation (CE) feedback is part of the Intelligent query processing family of features and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
 
 Because no single set of CE models and assumptions can accommodate the vast array of customer workloads and data distributions, CE feedback provides an adaptable solution based on query runtime characteristics. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality. Feedback is applied when significant model estimation errors resulting in performance drops are found.
 

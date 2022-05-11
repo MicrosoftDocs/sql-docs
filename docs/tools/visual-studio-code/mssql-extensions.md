@@ -62,7 +62,7 @@ To install the mssql extension in VS Code, follow these steps:
 
 4. Select the **SQL Server (mssql)** extension, and then select **Install**.
 
-   ![Screenshot of VS Code, install the mssql extension.](./media/sql-server-develop-use-vscode/vscode-extension.png)
+   ![Screenshot of Visual Studio Code, install the m s s q l extension.](./media/sql-server-develop-use-vscode/vscode-extension.png)
 
 5. After the installation completes, select **Reload** to enable the extension.
 

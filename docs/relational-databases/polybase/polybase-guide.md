@@ -86,7 +86,7 @@ For more new features of [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], s
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
 - [Hadoop](polybase-configure-hadoop.md)*
-- [S3-compatible object storage]() TODO
+- [S3-compatible object storage](polybase-configure-s3-compatible.md)
 
 \* PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH), through SQL Server 2019. [!INCLUDE[polybase-java-connector-banner-retirement](../../includes/polybase-java-connector-banner-retirement.md)]
 
@@ -147,4 +147,4 @@ Before using PolyBase, you must [install PolyBase on Windows](polybase-installat
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
 - [ODBC Generic Types](polybase-configure-odbc-generic.md)
-- [S3-compatible object storage]() TODO
+- [S3-compatible object storage](polybase-configure-s3-compatible.md)

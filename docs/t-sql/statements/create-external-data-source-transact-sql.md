@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.custom: ""
-ms.date: 4/28/2022
+ms.date: 5/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
@@ -596,17 +596,17 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15"
+::: moniker range="=sql-server-ver15 || =sql-server-linux-ver15"
 
 ## Overview: SQL Server
-[!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)] and later
+[!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support these primary use cases:
 
 - Data virtualization and data load using [PolyBase][intro_pb]
 - Bulk load operations using `BULK INSERT` or `OPENROWSET`
 
-
+::: moniker-end
 ::: moniker range="=sql-server-linux-ver15"
 
 > [!NOTE]
@@ -1453,7 +1453,6 @@ WITH
 
 <!-- Azure Docs -->
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
-
 
 ::: moniker-end
 

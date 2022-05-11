@@ -26,10 +26,6 @@ This article provides details on monitoring and managing [Azure Synapse Link for
     - [Get started with Azure Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022) 
     - [Get started with Azure Synapse Link for Azure SQL Database (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database)
 
-The Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
-
-For SQL Server, the landing zone is customer-managed and visible, but it is not recommended or supported to consume or modify the files in the landing zone. 
-
 Currently, only a member of the sysadmin server role in SQL Server or the db_owner database role can execute these procedures. 
 
 The SQL Server or the Azure SQL Database will maintain metadata specific to each table group. 
@@ -40,7 +36,7 @@ The following system objects allow for querying the state of the Synapse Link fe
 
 ### View configuration
 
-To review the current configuration of link, execute the [sys.sp_help_change_feed](../../relational-databases/system-stored-procedures/sp-help-change-feed.md) system stored procedure.
+To review the current configuration of the link, execute the [sys.sp_help_change_feed](../../relational-databases/system-stored-procedures/sp-help-change-feed.md) system stored procedure.
 
 ```sql
 EXECUTE sys.sp_help_change_feed
@@ -56,7 +52,7 @@ SELECT * FROM sys.dm_change_feed_errors;
 
 ### View current activity
 
-To view the current activity, use the dynamic management view [sys.dm_change_feed_log_scan_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md), which returns activity for the Azure Synapse Link fo SQL change feed.
+To view the current activity, use the dynamic management view [sys.dm_change_feed_log_scan_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md), which returns activity for the Azure Synapse Link for SQL change feed.
 
 ```sql
 SELECT * FROM sys.dm_change_feed_log_scan_sessions;

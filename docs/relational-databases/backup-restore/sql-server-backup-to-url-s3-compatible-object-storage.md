@@ -184,7 +184,7 @@ For more information see [SQL Server back up to URL for S3-compatible storage be
 
 ### Linux support
 
-SQL Server uses `WinHttp` to implement client of HTTP REST APIs it uses. It relies on OS certificate store for validations of the TLS certificates being presented by HTTP(s) endpoint. However, SQL Server on Linux the CA must be placed on a predefined location to be created at ***/usr/local/share/ca-certificates/mssql-ca-certificates***, only the first 50 certificates can be stored and supported in this folder.
+SQL Server uses `WinHttp` to implement client of HTTP REST APIs it uses. It relies on OS certificate store for validations of the TLS certificates being presented by HTTP(s) endpoint. However, SQL Server on Linux the CA must be placed on a predefined location to be created at `/usr/local/share/ca-certificates/mssql-ca-certificates`, only the first 50 certificates can be stored and supported in this folder.
 
 SQL Server will read the certificates from the folder during startup and add them to the trust store.
 
@@ -210,9 +210,9 @@ The following are the current limitations of backup and restore with S3-compatib
 3. The SQL credential name is limited by 128 characters in UTF-16 format.
 4. Secret key ID only supports alphanumeric values.
 
-## Code examples for BACKUP TO URL on S3-compatible storage
+## Examples
 
-### Create Credential
+### Create credential
 
 - The name of the credential must include the bucket name.
 - The IDENTITY should always be `'S3 Access Key'` when using the S3 connector.
@@ -230,7 +230,7 @@ WITH
 
 ### Backup to URL
 
-The following example performs a full database backup to the object storage endpoint:
+The following example performs a full database backup to the object storage endpoint, striped across multiple files:
 
 ```sql
 BACKUP DATABASE <db_name>

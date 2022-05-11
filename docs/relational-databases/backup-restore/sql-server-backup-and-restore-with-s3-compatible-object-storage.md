@@ -79,15 +79,11 @@ Due to the current limitation of S3 Standard REST API, the temporary uncommitted
 
 ## Next steps
 
-- [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
-- [SQL Server Backup to URL for Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-to-url.md)
- 
-  
-## Next steps
-
+ - [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+ - [SQL Server Backup to URL for Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-to-url.md)
+ - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md). 
  - [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  - [Tutorial: Using S3-compatible object storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
- - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md). 
 
 <!-- Table links -->
 [aws_docs]:  https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html

@@ -26,10 +26,11 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 - [SQL Server backup and restore with S3-compatible object storage preview](sql-server-backup-and-restore-with-s3-compatible-object-storage.md)  
 - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md)
 
+## Troubleshooting and common error causes
 
 Following are some quick ways to troubleshoot errors when backing up to or restoring from the S3-compatible object storage. To avoid errors due to unsupported options or limitations, and to review the list of limitations and support for BACKUP and RESTORE commands, see [SQL Backup and Restore with S3-compliant object storage](sql-server-backup-to-url-s3-compatible-object-storage.md#limitations).
 
-## Correctly formed URL
+### Ensure a correctly formed URL
 
 Here's an example of a virtual host URL formed correctly when issuing a T-SQL backup query such as follows:
 
@@ -47,23 +48,23 @@ TO URL = 's3://<domainName>/<bucketName>/<pathToBackup>/<backupFileName>';
 
 Ensure the following:
 
-1. The URL starts with `'s3://` scheme.
+1. The URL starts with `s3://` scheme.
 1. The S3 storage virtual host `<virtualHost>` or server domain `<domainName>` exists and is running using HTTPS. The endpoint will be validated by a CA installed on the SQL Server OS Host.
 1. `<bucketName>` is the name of this bucket where the backup will be placed. This must be created before running the backup T-SQL. The backup T-SQL doesn't create the bucket for the customer. For example, if the user doesn't create the bucket 'nonExistingBucket' beforehand and runs a T-SQL statement as follows:
-
-```sql
-BACKUP DATABASE AdventureWorks2019
-TO URL = 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2019.bak';
-```
-
-A URL that is not correctly formed may return the following:
-
-```
-Msg 3201, Level 16, State 1, Line 50
-Cannot open backup device 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2019.bak'. Operating system error 50(The request is not supported.).
-Msg 3013, Level 16, State 1, Line 50
-BACKUP DATABASE is terminating abnormally.
-```
+    
+    ```sql
+    BACKUP DATABASE AdventureWorks2019
+    TO URL = 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2019.bak';
+    ```
+    
+    A URL that is not correctly formed may return the following:
+    
+    ```
+    Msg 3201, Level 16, State 1, Line 50
+    Cannot open backup device 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2019.bak'. Operating system error 50(The request is not supported.).
+    Msg 3013, Level 16, State 1, Line 50
+    BACKUP DATABASE is terminating abnormally.
+    ```
 
 1. The `<pathToBackup>` need not exist before running the backup T-SQL. It will be created in the storage server automatically. For example, if the user creates the bucket 'existingBucket' beforehand and not the path `'existingBucket/sqlbackups'`, the following will still run successfully:
 
@@ -72,7 +73,7 @@ BACKUP DATABASE AdventureWorks2019
 TO URL =  's3://<your-endpoint>/existingBucket/sqlbackups/AdventureWorks2019.bak';
 ```
 
-## Create a server-level credential prior to running backup/restore
+### Create a server-level credential prior to running backup/restore
 
 Before running backup/restore TSQL queries to S3-compliant storage, you must create a server level credential. This credential needs to contain the Access key and Secret Key  set up by customers on their S3-compliant object storage server prior to issuing backup/restore queries.
 
@@ -101,7 +102,7 @@ The name of the credential is not required to match the exact URL path. Here is 
 
 If there are multiple credentials matching search, such as more specific `s3://10.193.16.183:8787/myS3Bucket/sqlbackups` and more generic `s3://10.193.16.183:8787/myS3Bucket`, we will choose the most specific one. This will allow you to set up more granular access control at directory level for what folders may be accessed from SQL Server. Bucket name needs to be present part of the credential name.
 
-## Unsupported option FILE_SNAPSHOT
+### Unsupported option FILE_SNAPSHOT
 
 Currently, the BACKUP TSQL option FILE_SNAPSHOT is not supported for S3-compliant object storage. This is an Azure Blob Storage-specific option.
 
@@ -122,7 +123,7 @@ Msg 3013, Level 16, State 1, Line 62
 BACKUP DATABASE is terminating abnormally.
 ```
 
-## Backup stripe exceeding 100,000 MB
+### Backup stripe exceeding 100,000 MB
 
 Currently, the size of a single backup file created by customers in S3-compliant object storage during a backup cannot exceed 100,000 MB per file, using default `MAXTRANSFERSIZE`. If the backup stripe goes beyond 100,000 MB, the backup T-SQL syntax statement will throw the following error message:
 
@@ -149,7 +150,7 @@ TO URL = 's3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2019.bak'
 WITH COMPRESSION;
 ```
 
-## Maximum length of URL
+### Maximum length of URL
 
 The total URL length is limited to 259 bytes by the Backup and Restore engine. This means that `s3://hostname/objectkey` shouldn't exceed 259 characters. Leaving aside `s3://` the user can input the path length (hostname + object key) to be 259 – 5 = 254 characters. Refer to [SQL Server Backup to URL - SQL Server](sql-server-backup-to-url.md). The backup T-SQL syntax statement will throw the following error message:
 
@@ -157,7 +158,7 @@ The total URL length is limited to 259 bytes by the Backup and Restore engine. T
 SQL Server has a maximum limit of 259 characters for a backup device name. The BACKUP TO URL consumes 36 characters for the required elements used to specify the URL - 'https://.blob.core.windows.net//.bak', leaving 223 characters for account, container, and blob names put together'
 ```
 
-## Clock-skew correction
+### Clock-skew correction
 
 The S3 storage might reject connection, giving a "InvalidSignatureException" error back to SQL Server whenever the time difference between SQL Host and S3 server is bigger than 15 minutes. On SQL Server it will show as:
 
@@ -168,7 +169,7 @@ Msg 3013, Level 16, State 1, Line 28
 BACKUP DATABASE is terminating abnormally.
 ```
 
-## SQL Server on Linux support
+### SQL Server on Linux support
 
 SQL Server uses `WinHttp` to implement client of HTTP REST APIs it uses. It relies on OS certificate store for validations of the TLS certificates being presented by HTTP(s) endpoint. However, SQL Server on Linux delegates the certificate validation to SQLPAL which validates the endpoints' HTTPS certificates with the certificate shipped with PAL. Thus, customer-provided self-signed certificates cannot be used on Linux for HTTPS validation.
 

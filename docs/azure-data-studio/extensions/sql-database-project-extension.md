@@ -45,7 +45,7 @@ To install the SQL Database Project extension in Azure Data Studio, follow these
 1. Open the extensions manager to access the available extensions.  To do so, either select the extensions icon or select **Extensions** in the **View** menu.
 1. Identify the *SQL Database Projects* extension by typing all or part of the name in the extension search box. Select an available extension to view its details.
 
-   ![Screenshot of Azure Data Studio, Install extension](media/sql-database-projects-extension/install-database-projects.png)
+   ![Screenshot of Azure Data Studio, Install extension.](media/sql-database-projects-extension/install-database-projects.png)
 
 1. Select the extension you want and choose to **Install** it.
 1. Select **Reload** to enable the extension (only required the first time you install an extension).

@@ -157,14 +157,14 @@ As an alternative to the previous steps, you can also create and edit connection
 
    While you type, T-SQL IntelliSense helps you to complete the statements:
 
-   ![T-SQL IntelliSense](./media/sql-server-develop-use-vscode/vscode-intellisense.png)
+   ![Screenshot of VS code UI, T-SQL IntelliSense.](./media/sql-server-develop-use-vscode/vscode-intellisense.png)
 
    > [!TIP]
    > The mssql extension also has commands to help create INSERT and SELECT statements. These were not used in the previous example.
 
 2. Press **Ctrl**+**Shift**+**E** to execute the commands. The two result sets display in the **Results** window.
 
-   ![Screenshot of VS code, the Results pane ](./media/sql-server-develop-use-vscode/vscode-result-grid.png)
+   ![Screenshot of VS code UI, the Results pane.](./media/sql-server-develop-use-vscode/vscode-result-grid.png)
 
 ## View and save the result
 
@@ -172,21 +172,21 @@ As an alternative to the previous steps, you can also create and edit connection
 
 2. Select the **Results** and **Messages** panel headers to collapse and expand the panels.
 
-   ![Screenshot of VS code, Toggle headers](./media/sql-server-develop-use-vscode/vscode-toggle-messages-pannel.png)
+   ![Screenshot of VS code UI, Toggle headers.](./media/sql-server-develop-use-vscode/vscode-toggle-messages-pannel.png)
 
    > [!TIP]
    > You can customize the default behavior of the mssql extension. See [Customize extension options](https://github.com/Microsoft/vscode-mssql/wiki/customize-options).
 
 3. Select the maximize grid icon on the second result grid to zoom in to those results.
 
-   ![Screenshot of VS code, Maximize grid](./media/sql-server-develop-use-vscode/vscode-maximize-grid.png)
+   ![Screenshot of VS code UI, Maximize grid.](./media/sql-server-develop-use-vscode/vscode-maximize-grid.png)
 
    > [!NOTE]
    > The maximize icon displays when your T-SQL script produces two or more result grids.
 
 4. Open the grid context menu by right-clicking on the grid.
 
-   ![Screenshot of VS Code, Context menu](./media/sql-server-develop-use-vscode/vscode-grid-context-menu.png)
+   ![Screenshot of VS Code UI, Context men.u](./media/sql-server-develop-use-vscode/vscode-grid-context-menu.png)
 
 5. Select **Select All**.
 
@@ -196,7 +196,7 @@ As an alternative to the previous steps, you can also create and edit connection
 
 8. Verify that the JSON file saves and opens in Visual Studio Code.
 
-   ![Screenshot of editor in VS code, Save as JSON](./media/sql-server-develop-use-vscode/vscode-save-as-json.png)
+   ![Screenshot of editor in VS code UI, Save as JSON.](./media/sql-server-develop-use-vscode/vscode-save-as-json.png)
 
 If you need to save and run SQL scripts later, for administration or a larger development project, save the scripts with a *.sql* extension.
 

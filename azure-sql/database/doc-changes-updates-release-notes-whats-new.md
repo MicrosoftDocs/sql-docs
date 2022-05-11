@@ -37,6 +37,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Elastic transactions](elastic-transactions-overview.md) | Elastic transactions allow you to execute transactions distributed among cloud databases in Azure SQL Database. |
 | [Hyperscale short-term retention](automated-backups-overview.md#hyperscale-backups-and-storage-redundancy) | Retain backups up to 35 days for Hyperscale databases, and perform a point-in-time restore within the configured duration. |
 | [Javascript & Python bindings](/azure/azure-functions/functions-bindings-azure-sql)| Use Javascript or Python SQL bindings with Azure Functions. | 
+| [Ledger](ledger-overview.md) | The Azure SQL Database ledger feature allows you to cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. | 
 | [Maintenance window advance notifications](../database/advance-notifications.md)| Advance notifications are available for databases configured to use a non-default [maintenance window](maintenance-window.md). Advance notifications for maintenance windows are in public preview for Azure SQL Database. |
 | [Query editor in the Azure portal](connect-query-portal.md) | The query editor in the portal allows you to run queries against your Azure SQL Database directly from the [Azure portal](https://portal.azure.com).|
 | [Query Store hints](/sql/relational-databases/performance/query-store-hints?view=azuresqldb-current&preserve-view=true) | Use query hints to optimize your query execution via the OPTION clause. |
@@ -46,7 +47,6 @@ The following table lists the features of Azure SQL Database that are currently 
 | [SQL Database emulator](local-dev-experience-sql-database-emulator.md) | The Azure SQL Database emulator provides the ability to locally validate database and query design together with client application code in a simple and frictionless model as part of the application development process. | 
 | [SQL Database Projects extension](/sql/azure-data-studio/extensions/sql-database-project-extension) | An extension to develop databases for Azure SQL Database with Azure Data Studio and VS Code. A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions. | 
 | [SQL Insights](/azure/azure-monitor/insights/sql-insights-overview) | SQL Insights (preview) is a comprehensive solution for monitoring any product in the Azure SQL family. SQL Insights (preview) uses dynamic management views to expose the data you need to monitor health, diagnose problems, and tune performance.|
-| [Short-term Hyperscale retention](automated-backups-overview.md#hyperscale-backups-and-storage-redundancy) | Retain backups up to 35 days for Hyperscale databases, and perform a point-in-time restore within the configured duration. | 
 | [Zone redundant configuration for Hyperscale databases](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) | The zone redundant configuration feature utilizes [Azure Availability Zones](/azure/availability-zones/az-overview#availability-zones) to replicate databases across multiple physical locations within an Azure region. By selecting [zone redundancy](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview), you can make your Hyperscale databases resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic.|
 
 ## General availability (GA)
@@ -94,9 +94,10 @@ Learn about significant changes to the Azure SQL Database documentation.
 | Changes | Details |
 | --- | --- |
 | **Change data capture GA** | Change data capture (CDC) lets you track all the changes that occur on a database. Though this feature has been available for SQL Server for quite some time, using it with Azure SQL Database is now generally available. To learn more, see [Change data capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server). |
+| **Hyperscale short-term retention** | For Hyperscale databases, it's now possible to configure a short-term retention period up to 35 days, performing a point-in-time restore within the configured duration period. This feature is currently in preview. To learn more, see [Hyperscale backups](automated-backups-overview.md#hyperscale-backups-and-storage-redundancy). |
 | **General Purpose tier Zone redundancy GA** | Enabling zone redundancy for your provisioned and serverless General Purpose databases and elastic pools is now generally available in select regions. To learn more, including region availability see [General Purpose zone redundancy](high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability).|
 | **Schema Compare extension**| You can compare schemas for two databases using the Schema Compare extension in Azure Data Studio. To learn more, see [Schema Compare extension](/sql/azure-data-studio/extensions/schema-compare-extension). |
-| **Short-term Hyperscale retention** | It's now possible to configure a short-term retention period up to 35 days for Hyperscale databases, performing a point-in-time restore within the configured duration period. This feature is currently in preview. To learn more, see [Hyperscale backups](automated-backups-overview.md#hyperscale-backups-and-storage-redundancy). |
+
 
 ### March 2022
 

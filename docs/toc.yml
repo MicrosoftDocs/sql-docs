@@ -10461,7 +10461,7 @@ items:
   - name: Visual Studio Code 
     items:
     - name: Overview
-      href: tools/visual-studio-code/mssql-extensions-vscode.md
+      href: tools/visual-studio-code/mssql-extensions.md
     - name: Connect and Query Tutorial
       href: tools/visual-studio-code/sql-server-develop-use-vscode.md
     - name: Query History

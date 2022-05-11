@@ -49,7 +49,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 |pvs_off_row_page_skipped_oldest_active_xdesid|    bigint | The number of pages skipped for reclaim due to the oldest active transaction. |
 |pvs_off_row_page_skipped_min_useful_xts|    bigint | The number of pages skipped for reclaim due to a long snapshot scan. |
 |pvs_off_row_page_skipped_oldest_snapshot|    bigint | The number of pages skipped for reclaim due to online index rebuild activities. This is not common for PVS usage. |
-|pvs_off_row_page_skipped_oldest_aborted_xdesid|bigint| **Applies to: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.**<BR>The number of pages skipped for reclaim due to oldest aborted transactions. If the version cleaner is slow or invalidated, this will reflect how many pages must be kept for aborted transactions. |
+|pvs_off_row_page_skipped_oldest_aborted_xdesid|bigint| **Applies to: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.**<BR />The number of pages skipped for reclaim due to oldest aborted transactions. If the version cleaner is slow or invalidated, this will reflect how many pages must be kept for aborted transactions. |
   
 ## Permissions
 

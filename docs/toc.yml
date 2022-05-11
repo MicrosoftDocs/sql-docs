@@ -7528,7 +7528,7 @@ items:
     href: ./ssms/scripting/database-engine-scripting.md
   - name: Subqueries
     href: relational-databases/performance/subqueries.md
-  - name: Data virtualization (Polybase)
+  - name: Data virtualization (PolyBase)
     items:
     - name: Overview
       items:
@@ -7572,6 +7572,8 @@ items:
           href: relational-databases/polybase/polybase-configure-teradata.md
         - name: MongoDB
           href: relational-databases/polybase/polybase-configure-mongodb.md
+        - name: S3-compliant object storage
+          href: relational-databases/polybase/polybase-configure-s3-compatible.md
         - name: ODBC Generic Types
           href: relational-databases/polybase/polybase-configure-odbc-generic.md
       - name: Scale-out groups
@@ -7582,8 +7584,8 @@ items:
         items:
         - name: Virtualize data
           href: relational-databases/polybase/data-virtualization.md
-        - name: Virtualize CSV file
-          href: ./big-data-cluster/data-virtualization-csv.md
+        - name: Virtualize parquet file
+          href: relational-databases/polybase/polybase-virtualize-parquet-file.md          
       - name: Troubleshoot
         items:
         - name: Monitor & troubleshoot

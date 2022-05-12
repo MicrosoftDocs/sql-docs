@@ -42,7 +42,7 @@ The following table details all intelligent query processing features, along wit
 | [Interleaved Execution](#interleaved-execution-for-mstvfs) | Yes, under compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] under compatibility level 140|Use the actual cardinality of the multi-statement table valued function encountered on first compilation instead of a fixed guess.|
 | [Memory Grant Feedback (Batch Mode)](#batch-mode-memory-grant-feedback) | Yes, under compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] under compatibility level 140|If a batch mode query has operations that spill to disk, add more memory for consecutive executions. If a query wastes > 50% of the memory allocated to it, reduce the memory grant side for consecutive executions.|
 | [Memory Grant Feedback (Row Mode)](#row-mode-memory-grant-feedback) | Yes, under compatibility level 150| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] under compatibility level 150|If a row mode query has operations that spill to disk, add more memory for consecutive executions. If a query wastes > 50% of the memory allocated to it, reduce the memory grant side for consecutive executions.|
-| [Memory Grant Feedback (Percentile and Persistence)](#percentile-and-persistence-mode-memory-grant-feedback) | Yes, under compatibility level 150| Yes, starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) under compatibility level 150 | Addresses existing limitations of memory grant feedback in a non-intrusive way.
+| [Memory Grant Feedback (Percentile and Persistence)](#percentile-and-persistence-mode-memory-grant-feedback) | Yes, under compatibility level 150| Yes, starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) under compatibility level 140 | Addresses existing limitations of memory grant feedback in a non-intrusive way.
 | [Scalar UDF Inlining](#scalar-udf-inlining) | Yes, under compatibility level 150 | Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] under compatibility level 150|Scalar UDFs are transformed into equivalent relational expressions that are "inlined" into the calling query, often resulting in significant performance gains.|
 | [Table Variable Deferred Compilation](#table-variable-deferred-compilation) | Yes, under compatibility level 150| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] under compatibility level 150|Use the actual cardinality of the table variable encountered on first compilation instead of a fixed guess.|
 
@@ -203,7 +203,7 @@ It is recommended that you have a performance baseline for your workload before 
 
 To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you are connected to when executing the query.
 
-`ALTER DATABASE <DATABASE NAME> SET COMPATABILITY LEVEL = 140;`  -- OR HIGHER
+`ALTER DATABASE <DATABASE NAME> SET COMPATABILITY LEVEL = 140;` -- OR HIGHER
 
 The Query Store must be enabled for every database where the persistence portion of this feature is used.
 
@@ -211,25 +211,29 @@ The Query Store must be enabled for every database where the persistence portion
 
 Both of these features are enabled by default when the above instructions are followed. If you want to enable the trace flags but then disable or re-enable the feature, you can do this using a database scoped configuration.
 
-### Persistence
-
-To disable memory grant feedback persistence for all query executions originating from the database,  execute the following within the context of the applicable database:
-
-`ALTER DATABASE SCOPED CONFIGURATION SET MEMORY_GRANT_FEEDBACK_PERSISTENCE = OFF;`
-
-Disabling memory grant feedback persistence will also remove existing collected feedback.
-
-The default setting for `MEMORY_GRANT_FEEDBACK_PERSISTENCE` is `ON`.
-
 ### Percentile
 
-To disable memory grant feedback percentile for all query executions originating from the database,  execute the following within the context of the applicable database:
+To disable memory grant feedback percentile for all query executions originating from the database.
+
+Execute the following within the context of the applicable database:
 
 `ALTER DATABASE SCOPED CONFIGURATION SET MEMORY_GRANT_FEEDBACK_PERCENTILE = OFF;`
 
 Disabling memory grant feedback percentile will also remove existing collected feedback.
 
 The default setting for `MEMORY_GRANT_FEEDBACK_PERCENTILE` is `ON`.
+
+### Persistence
+
+To disable memory grant feedback persistence for all query executions originating from the database.
+
+Execute the following within the context of the applicable database:
+
+`ALTER DATABASE SCOPED CONFIGURATION SET MEMORY_GRANT_FEEDBACK_PERSISTENCE = OFF;`
+
+Disabling memory grant feedback persistence will also remove existing collected feedback.
+
+The default setting for `MEMORY_GRANT_FEEDBACK_PERSISTENCE` is `ON`.
 
 ### Considerations
 

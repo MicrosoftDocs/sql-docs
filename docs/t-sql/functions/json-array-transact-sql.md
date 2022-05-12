@@ -175,7 +175,6 @@ WHERE s.is_user_process = 1;
 |52|["WIN16-VM","Microsoft SQL Server Management Studio - Query",".Net SqlClient Data Provider"]|
 |55|["WIN16-VM","Microsoft SQL Server Management Studio - Query",".Net SqlClient Data Provider"]|
 |56|["WIN19-VM","SQLServerCEIP",".Net SqlClient Data Provider"]|
-```
   
 
 ## See also  

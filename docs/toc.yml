@@ -563,9 +563,9 @@ items:
       items:
       - name: Backup to Azure
         items:
-        - name: Backup To URL
+        - name: Backup to URL for Microsoft Azure Blob Storage
           href: relational-databases/backup-restore/sql-server-backup-to-url.md
-        - name: Backup To Azure blob storage
+        - name: Backup to Azure blob storage with PowerShell
           href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
         - name: Delete backup log files
           href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
@@ -581,6 +581,14 @@ items:
             href: relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md
           - name: Migrate settings from SQL Server 2014
             href: relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md
+      - name: Backup to S3-compatible object storage
+        items:
+        - name: Backup/Restore with S3-compatible object storage
+          href: relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md
+        - name: Backup to URL for S3-compatible object storage
+          href: relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md
+        - name: Best practices and troubleshooting
+          href: relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md
       - name: Backup On-premises
         items:
         - name: Full backup
@@ -7528,7 +7536,7 @@ items:
     href: ./ssms/scripting/database-engine-scripting.md
   - name: Subqueries
     href: relational-databases/performance/subqueries.md
-  - name: Data virtualization (Polybase)
+  - name: Data virtualization (PolyBase)
     items:
     - name: Overview
       items:
@@ -7572,6 +7580,8 @@ items:
           href: relational-databases/polybase/polybase-configure-teradata.md
         - name: MongoDB
           href: relational-databases/polybase/polybase-configure-mongodb.md
+        - name: S3-compliant object storage
+          href: relational-databases/polybase/polybase-configure-s3-compatible.md
         - name: ODBC Generic Types
           href: relational-databases/polybase/polybase-configure-odbc-generic.md
       - name: Scale-out groups
@@ -7582,8 +7592,8 @@ items:
         items:
         - name: Virtualize data
           href: relational-databases/polybase/data-virtualization.md
-        - name: Virtualize CSV file
-          href: ./big-data-cluster/data-virtualization-csv.md
+        - name: Virtualize parquet file
+          href: relational-databases/polybase/polybase-virtualize-parquet-file.md          
       - name: Troubleshoot
         items:
         - name: Monitor & troubleshoot
@@ -10388,9 +10398,15 @@ items:
     - name: Extended features and tools
       href: tools/download-sql-feature-packs.md
   - name: Visual Studio Code 
-    items: 
-    - name: T-SQL scripts
+    items:
+    - name: Overview
+      href: tools/visual-studio-code/mssql-extensions.md
+    - name: Connect and Query Tutorial
       href: tools/visual-studio-code/sql-server-develop-use-vscode.md
+    - name: Query History
+      href: tools/visual-studio-code/mssql-query-history.md
+    - name: SQL Database Projects
+      href: azure-data-studio/extensions/sql-database-project-extension.md
 - name: Tutorials
   items:
   - name: SQL Server

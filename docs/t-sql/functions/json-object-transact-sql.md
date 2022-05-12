@@ -162,7 +162,6 @@ WHERE s.is_user_process = 1;
 |--------|---------------|
 |51|{"security_id":"AQYAAAAAAAVQAAAAY/0dmFnai5oioQHh9eNArBIkYd4=","login":"NT SERVICE\\SQLTELEMETRY$SQL22","status":"sleeping"}|
 |52|{"security_id":"AQUAAAAAAAUVAAAAoGXPfnhLm1/nfIdwAMgbAA==","login":WORKGROUP\\sqluser","status":"running"}|
-```
 
 ## See also  
 

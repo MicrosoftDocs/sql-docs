@@ -57,7 +57,7 @@ float(53)
 ## Remarks
 
 Any nulls in the data set are ignored.
- 
+
 Approximate percentile functions use KLL sketch. The sketch is built by reading the stream of data. Due to the algorithm used, this function requires less memory than its non-approximate counterpart ([PERCENTILE_CONT](/sql/t-sql/functions/percentile-cont-transact-sql)).
 
 This function provides rank-based error guarantees not value based. The function implementation guarantees up to a 1.33% error.

@@ -35,7 +35,7 @@ For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.m
 
 ## Customer technology preview release
 
-This release is customer technology preview (CTP) 2.0. CTP 2.0 is the first public preview releases. Previous releases (CTP 1.x) were available to select participants in the early adopter program (EAP).
+This release is customer technology preview (CTP) 2.0. CTP 2.0 is the first public preview release. Previous releases (CTP 1.x) were available to select participants in the early adopter program (EAP).
 
 This release:
 

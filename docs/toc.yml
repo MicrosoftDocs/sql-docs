@@ -8605,7 +8605,7 @@ items:
       - name: Cancel Option
         href: tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md
   - name: Go-SQLCMD
-    href: tools/gosqlcmd-utility.md
+    href: tools/go-sqlcmd-utility.md
   - name: SQL Server Configuration Manager
     href: tools/configuration-manager/sql-server-services.md
     items:

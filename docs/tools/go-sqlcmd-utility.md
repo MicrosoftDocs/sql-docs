@@ -1,5 +1,5 @@
 ---
-title: go-sqlcmd Utility (Preview)
+title: go-sqlcmd Utility (preview)
 description: The go-sqlcmd utility lets you enter Transact-SQL statements, system procedures, and script files using different modes.
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,7 +13,7 @@ ms.date: 05/12/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
-# go-sqlcmd Utility (Preview)
+# go-sqlcmd utility (preview)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
@@ -127,9 +127,9 @@ This version of sqlcmd supports a broader range of Azure Active Directory authen
 
 ### Command line
 
-To use Azure Active Directory auth, you can use one of two command line switches
+To use Azure Active Directory auth, you can use one of two command line switches.
 
-`-G` is (mostly) compatible with its usage in the prior version of sqlcmd. If a user name and password are provided, it will authenticate using Azure Active Directory Password authentication. If a user name is provided it will use Azure Active Directory Interactive authentication, which may display a web browser. If no user name or password is provided, it will use a DefaultAzureCredential, which attempts to authenticate through a various mechanisms.
+`-G` is (mostly) compatible with its usage in the prior version of sqlcmd. If a user name and password are provided, it will authenticate using Azure Active Directory Password authentication. If a user name is provided it will use Azure Active Directory Interactive authentication, which may display a web browser. If no user name or password is provided, it will use a DefaultAzureCredential, which attempts to authenticate through various mechanisms.
 
 `--authentication-method=` can be used to specify one of the following authentication types.
 
@@ -138,9 +138,9 @@ To use Azure Active Directory auth, you can use one of two command line switches
 - For an overview of the types of authentication this mode will use, see (<https://github.com/Azure/azure-sdk-for-go/tree/main/sdk/azidentity#defaultazurecredential>).
 - Choose this method if your database automation scripts are intended to run in both local development environments and in a production deployment in Azure. In your development environment you'll be able to use a client secret or an Azure CLI login. Without changing the script from the development environment, you'll be able to use a managed identity or client secret on your production deployment.
 - Setting environment variables AZURE_TENANT_ID, and AZURE_CLIENT_ID are necessary for DefaultAzureCredential to begin checking the environment configuration and look for one of the following additional environment variables in order to authenticate:
-- Setting environment variable AZURE_CLIENT_SECRET configures the DefaultAzureCredential to choose ClientSecretCredential.
-- Setting environment variable AZURE_CLIENT_CERTIFICATE_PATH configures the DefaultAzureCredential to choose ClientCertificateCredential if AZURE_CLIENT_SECRET isn't set.
-- Setting environment variable AZURE_USERNAME configures the DefaultAzureCredential to choose UsernamePasswordCredential if AZURE_CLIENT_SECRET and AZURE_CLIENT_CERTIFICATE_PATH aren't set.
+    - Setting environment variable AZURE_CLIENT_SECRET configures the DefaultAzureCredential to choose ClientSecretCredential.
+    - Setting environment variable AZURE_CLIENT_CERTIFICATE_PATH configures the DefaultAzureCredential to choose ClientCertificateCredential if AZURE_CLIENT_SECRET isn't set.
+    - Setting environment variable AZURE_USERNAME configures the DefaultAzureCredential to choose UsernamePasswordCredential if AZURE_CLIENT_SECRET and AZURE_CLIENT_CERTIFICATE_PATH aren't set.
 
 `ActiveDirectoryIntegrated`
 

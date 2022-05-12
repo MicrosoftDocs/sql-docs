@@ -239,10 +239,6 @@ Given feedback data is now persisted in the Query Store, there is some increase 
 
 Percentile-based memory grant errs on the side of reducing spills. Because it's no longer based on the last execution-only but on an observation of the several past executions, this could increase memory usage for oscillating workloads with wide variance in memory grant requirements between executions.
 
-### Feedback and Reporting Issues
-
-For feedback or questions, please email MGFP3Feedback@microsoft.com
-
 ## Interleaved execution for MSTVFs
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]

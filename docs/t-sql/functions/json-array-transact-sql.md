@@ -24,7 +24,7 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 
 [!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
-Constructs JSON object text from zero or more expressions.
+Constructs JSON array text from zero or more expressions.
 
 ## Syntax  
   

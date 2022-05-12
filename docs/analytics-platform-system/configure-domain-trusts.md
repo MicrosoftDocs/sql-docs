@@ -23,9 +23,9 @@ Follow these steps to configure a forwarder on SQL Server PDW DNS.
 
 1. Sign in to appliance_domain-HST01 as the appliance domain administrator.
 1. Open the Hyper-V Manager program (`virtmgmt.msc`), and then you'll:
-   - Connect to appliance_domain-HST01, if not connected by default.
-   - In the **Virtual Machines** pane, right-click **appliance_domain-AD01**, and select **Connect**.
-   - Sign in to appliance_domain-AD01 as the appliance domain administrator.
+   1. Connect to appliance_domain-HST01, if not connected by default.
+   1. In the **Virtual Machines** pane, right-click **appliance_domain-AD01**, and select **Connect**.
+   1. Sign in to appliance_domain-AD01 as the appliance domain administrator.
 
 1. While on appliance_domain-AD01, open the DNS Manager (`dnsmgmt.msc`).
 1. Right-click your DNS server (appliance_domain-AD01), and then select **Properties**.
@@ -34,10 +34,10 @@ Follow these steps to configure a forwarder on SQL Server PDW DNS.
 1. In the **Edit Forwarders** dialog box, enter the IP address of the DNS server for the corporate domain that provides authentication.
 1. Select **OK** to close the **Edit Forwarders** dialog box. Select **OK** to close **DNS Properties**.
 1. While on appliance_domain-HST01, go back to the Hyper-V Manager, and then you'll:
-   - Connect to appliance_domain-HST02, if not connected by default.
-   - Right-click in the **Virtual Machines** pane.
-   - Sign in to appliance_domain-AD02 as the appliance domain administrator.
-   - While on appliance_domain-AD02, perform the preceding steps 3 through 8.
+   1. Connect to appliance_domain-HST02, if not connected by default.
+   1. Right-click in the **Virtual Machines** pane.
+   1. Sign in to appliance_domain-AD02 as the appliance domain administrator.
+   1. While on appliance_domain-AD02, perform the preceding steps 3 through 8.
 
    ![Screenshot that shows the D N S Manager with the Edit Forwarders dialog box open.](./media/configure-domain-trusts/dns-manager.png "SQL_Server_PDW_DNS_manager")
 
@@ -63,10 +63,11 @@ Follow these steps to configure a forwarder on SQL Server PDW DNS.
 ## Add records for CTL and appliance Active Directory nodes on the corporate DNS
 
 1. Continue using the DNS Manager on a corporate domain controller of the domain that will provide authentication. In the left pane, expand **Forward Lookup Zones**. Right-click the new forward lookup zone of SQL Server PDW that you created in a previous step. Select **New Host (A or AAAA)**, and then:
-   - In the **New Host** dialog box, in the **Name** box, enter the name of the SQL Server PDW control node in the format *PDW_region-ctl01*, such as *P12345-ctl01*.
-   - In the **IP address** box, enter the external IP address of the control node.
-   - Select the **Create associated pointer (PTR) record** checkbox.
-   - Select **Add Host** to create a reverse lookup entry for the control node.
+   1. In the **New Host** dialog box, in the **Name** box, enter the name of the SQL Server PDW control node in the format *PDW_region-ctl01*, such as *P12345-ctl01*.
+   1. In the **IP address** box, enter the external IP address of the control node.
+   1. Select the **Create associated pointer (PTR) record** checkbox.
+   1. Select **Add Host** to create a reverse lookup entry for the control node.
+
 1. Repeat the New Host process to create a pointer record for both appliance_domain-AD01 and appliance_domain-AD02.
 
    ![Screenshot that shows the New Host dialog box in the D N S Manager.](./media/configure-domain-trusts/dns-manager-new-host.png "SQL_Server_PDW_dns_manager_new_host")
@@ -93,7 +94,7 @@ Follow these steps to configure a forwarder on SQL Server PDW DNS.
 
 ## Add aliases for the CTL and Active Directory nodes to the corporate DNS
 
-1. Continue using the DNS Manager on a corporate domain controller of the domain that provide authentication. Right-click the forward lookup zone of the authenticating corporate domain, and then select **New Alias (CNAME)**.
+1. Continue using the DNS Manager on a corporate domain controller of the domain that provides authentication. Right-click the forward lookup zone of the authenticating corporate domain, and then select **New Alias (CNAME)**.
 1. In the **New Resource Record** dialog box, in the **Alias name** box, enter the name that you want to use for the control node. This example uses *PdwControl*.
 1. In the **Fully qualified domain name (FQDN) for target host** box, enter the full internal name of the control node. You can also select **Browse** to find it on the DNS in the forward lookup zone with the SQL Server PDW appliance domain name.
 1. In the **New Resource Record** dialog box, in the **Alias name** box, enter the name that you want to use for appliance_domain-AD01. This example uses FabAd01.
@@ -113,11 +114,11 @@ Follow these steps to configure a forwarder on SQL Server PDW DNS.
 1. On a corporate domain controller, open **Active Directory Domains and Trusts** (`domain.msc`).
 1. In the left pane, right-click the domain name, and then select **Properties**.
 1. On the **Trusts** tab, select **New Trust**. Complete the **New Trust Wizard**. Provide appliance domain administrator credentials when asked, for example:
-   - For **Trust Name**, enter the FQDN in the format *F1234.pdw.local*.
-   - Select **Forest trust**.
-   - Select **One-way: incoming**.
-   - Select **Both this domain and the specified domain**. You'll be prompted for administrator credentials on the appliance domain.
-   - In most cases, select **Forest-wide authentication**. Choose **Selective**.
+   1. For **Trust Name**, enter the FQDN in the format *F1234.pdw.local*.
+   1. Select **Forest trust**.
+   1. Select **One-way: incoming**.
+   1. Select **Both this domain and the specified domain**. You'll be prompted for administrator credentials on the appliance domain.
+   1. In most cases, select **Forest-wide authentication**. Choose **Selective**.
 
 > [!NOTE]
 > You can create a two-way trust, but it isn't necessary.

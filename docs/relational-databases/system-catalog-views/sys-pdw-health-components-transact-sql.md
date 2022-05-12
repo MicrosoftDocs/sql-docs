@@ -1,7 +1,6 @@
 ---
 description: "See a reference for the system catalog view sys.pdw_health_components (Transact-SQL) for Analytics Platform System."
 title: "sys.pdw_health_components (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
 ms.date: "05/12/2022"
 ms.prod: sql
 ms.reviewer: ""

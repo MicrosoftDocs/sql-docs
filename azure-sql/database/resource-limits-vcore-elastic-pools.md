@@ -41,7 +41,7 @@ You can set the service tier, compute size (service objective), and storage amou
 If all vCores of an elastic pool are busy, then each database in the pool receives an equal amount of compute resources to process queries. Azure SQL Database provides resource sharing fairness between databases by ensuring equal slices of compute time. Elastic pool resource sharing fairness is in addition to any amount of resource otherwise guaranteed to each database when the vCore min per database is set to a non-zero value.
 
 > [!NOTE]
-> The Gen5 hardware has been renamed to the **standard-series (Gen5)** in the vCore purchasing model.
+> The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.
 
 ## General purpose - provisioned compute - Gen4
 

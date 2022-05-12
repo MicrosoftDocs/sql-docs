@@ -9695,7 +9695,7 @@ items:
           href: ssms/menu-help/options-environment-fonts-and-colors-page.md
         - name: Options (Environment - Help - General Page)
           href: ssms/menu-help/options-environment-help-general-page.md
-        - name: Options (Query Exesqlcution options - Help - General Page)
+        - name: Options (Query Execution options - Help - General Page)
           href: ssms/menu-help/options-query-execution.md
         - name: Options (Azure Service - Help - General Page)
           href: ssms/menu-help/options-azure-services.md

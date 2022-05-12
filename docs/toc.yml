@@ -10398,15 +10398,9 @@ items:
     - name: Extended features and tools
       href: tools/download-sql-feature-packs.md
   - name: Visual Studio Code 
-    items:
-    - name: Overview
-      href: tools/visual-studio-code/mssql-extensions.md
-    - name: Connect and Query Tutorial
+    items: 
+    - name: T-SQL scripts
       href: tools/visual-studio-code/sql-server-develop-use-vscode.md
-    - name: Query History
-      href: tools/visual-studio-code/mssql-query-history.md
-    - name: SQL Database Projects
-      href: azure-data-studio/extensions/sql-database-project-extension.md
 - name: Tutorials
   items:
   - name: SQL Server
@@ -16181,10 +16175,6 @@ items:
         items:
         - name: APPROX_COUNT_DISTINCT
           href: t-sql/functions/approx-count-distinct-transact-sql.md
-        - name: APPROX_PERCENTILE_CONT
-          href: t-sql/functions/approx-percentile-cont-transact-sql.md
-        - name: APPROX_PERCENTILE_DISC
-          href: t-sql/functions/approx-percentile-disc-transact-sql.md
         - name: AVG
           href: t-sql/functions/avg-transact-sql.md
         - name: CHECKSUM_AGG

@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-  Returns recent errors from the Azure Synapse Link for SQL feature, including change feed, snapshot, or incremental change publish processes. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
+  Returns recent errors from the Azure Synapse Link feature, including change feed, snapshot, or incremental change publish processes. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

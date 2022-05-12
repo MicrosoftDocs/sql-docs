@@ -1,16 +1,15 @@
 ---
 title: "What's new in SQL Server 2022 | Microsoft Docs"
 description: Learn about new features for SQL Server 2022 (16.x), which gives you choices of development languages, data types, environments, and operating systems.
-ms.date: 05/04/2022
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: "article"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom: intro-whats-new
+ms.date: 05/04/2022
 monikerRange: ">=sql-server-ver15"
-ms.custom:
-  - intro-whats-new
 ---
 
 # What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]
@@ -19,17 +18,30 @@ ms.custom:
 
 [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud environments, and operating systems.
 
-This article summarizes the new features and enhancements for [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
-
-For more information and known issues, see [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md).
-
-For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../azure-data-studio/download-azure-data-studio.md).
-
 The following video introduces SQL Server 2022 Preview.
 
 > [!VIDEO https://channel9.msdn.com/Shows/data-exposed/introduction-to-sql-server-2022-ep1/player?WT.mc_id=dataexposed-c9-niner]
 
 For additional video content, see [What's new in SQL Server](https://microsoftmechanics.libsyn.com/podcast/whats-new-in-sql-server-2022).
+
+This article summarizes the new features and enhancements for [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
+
+[Get SQL Server 2022 Preview Evaluation Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+
+For more information and known issues, see [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md).
+
+For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../tools/overview-sql-tools.md).
+
+## Customer technology preview release
+
+This release is customer technology preview (CTP) 2.0. CTP 2.0 is the first public preview release. Previous releases (CTP 1.x) were available to select participants in the early adopter program (EAP).
+
+This release:
+
+- Is available as Evaluation Edition. It is available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
+- Does not include support from Microsoft, except for select EAP customers.
+
+After you experience SQL Server 2022 Preview, you're welcome to [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
 
 The following sections provide an overview of these features.
 
@@ -65,8 +77,6 @@ The following sections provide an overview of these features.
 
 ## Performance
 
-SQL Server 2022 Preview reflects continued investment in [Intelligent query processing](../relational-databases/performance/intelligent-query-processing.md). The following table describes improvements that will accelerate query performance with no code changes.
-
 | New feature or update | Details |
 |:---|:---|
 | Query Store on secondary replicas |  Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).<br/><br/> For more information, see [Query Store improvements](#query-store-improvements) later in this article.|
@@ -76,10 +86,10 @@ SQL Server 2022 Preview reflects continued investment in [Intelligent query proc
 | In-memory OLTP management | - Improve memory management in large memory servers to reduce out of memory conditions <br/>- Add a new stored procedure to manually release unused memory on demand.|
 | Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s).|
 | XML compression |XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md).|
-| Buffer Pool parallel scan | Improves the performance of Buffer Pool scan operations on large-memory machines by utilizing multiple CPU cores. Learn more about [Operations that trigger a buffer pool scan may run slowly on large-memory computers](https://go.microsoft.com/fwlink/?linkid=2132602). |
+| Buffer pool parallel scan |Improves the performance of Buffer Pool scan operations on large-memory machines by utilizing multiple CPU cores for buffer pool scan operations. |
 | Improved optimization | SQL Server 2022 Preview leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batchmode operations. | 
 |In-Memory OLTP memory management improvements| - Improve memory management in large memory servers to reduce out of memory conditions.<br/><br/>- Add a new stored procedure to manually release unused memory on demand.|
-| System page latch concurrency enhancements | Concurrent update to global allocation map (GAM) pages and shared global allocation map (SGAM) pages reduces page latch contention while allocating/deallocating data pages and extents.|
+|System page latch concurrency enhancements|- Concurrent update to global allocation map (GAM) pages and shared global allocation map (SGAM) pages reduces page latch contention while allocating/deallocating data pages and extents. <br/><br/>- Improvements on buffer pool scan by using parallel tasks. Learn more about [Operations that trigger a buffer pool scan may run slowly on large-memory computers](https://go.microsoft.com/fwlink/?linkid=2132602).|
 |Automatic Degree of parallelism (DOP) feedback | A new database scoped configuration option `DOP_FEEDBACK` automatically adjusts degree of parallelism for repeating queries to optimize for workloads where excessive parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. Requires Query Store enabled. See [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).|
 | Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. Requires Query Store enabled. See [Cardinality Estimation (SQL Server)](../relational-databases/performance/cardinality-estimation-sql-server.md). |
 
@@ -89,7 +99,7 @@ SQL Server 2022 Preview reflects continued investment in [Intelligent query proc
 |:---|:---|
 | Accelerated Database Recovery (ADR) improvement | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. SQL Server 2022 implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiencies. Concurrency improvements help the cleanup process to work more efficiently. ADR cleans pages that could not previously be cleaned due to locking.|
 | Improved Snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client.
-| Built-in integration with Azure | Install SQL Server extension for Azure via SQL Server command line setup. For more information, see [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt).|
+| Setup attached to Azure | Install Azure Arc agent via SQL Server command line setup. For more information, see [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt).|
 | Optimized plan forcing| Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).|
 | Shrink database wait with low priority | In previous releases, shrinking databases and database files to reclaim space often leads to concurrency issues. In SQL Server 2022 an additional option for DBCC SHRINKDATABASE and DBCC SHRINKFILE 'WAIT_AT_LOW_PRIORITY' changes the default behavior. When specifying WAIT_AT_LOW_PRIORITY behavior, new queries requiring Sch-S locks are not blocked by the waiting shrink operation, until the shrink operation stops waiting and begins executing.|
 | Max server memory calculations | During setup, the installation will configure max server memory to align with recommendations. See [Server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md). |

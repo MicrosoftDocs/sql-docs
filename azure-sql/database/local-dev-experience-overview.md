@@ -31,7 +31,7 @@ A common example would be to push a project to a GitHub repository that leverage
 ![Diagram of the Azure SQL Database local development experience end-to-end workflow.](./media/local-dev-experience-overview/azure-sql-db-local-dev.png)
 
 > [!NOTE] 
-> To learn more about upcoming use cases and new scenarios, review the [Devs's Corner](https://aka.ms/sql-db-local-dev-experience-plan) blog. 
+> To learn more about upcoming use cases and support for new scenarios, review the [Devs's Corner](https://aka.ms/sql-db-local-dev-experience-plan) blog. 
 
 ## Visual Studio Code and Azure Data Studio extensions
 

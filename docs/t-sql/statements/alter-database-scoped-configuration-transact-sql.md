@@ -327,7 +327,7 @@ MEMORY_GRANT_FEEDBACK_PERCENTILE = { ON | OFF }
 
 **APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
-To disable memory grant feedback percentile for all query executions originating from the database.
+Allows you to disable memory grant feedback percentile for all query executions originating from the database.
 
 > [!NOTE]
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.
@@ -336,7 +336,7 @@ MEMORY_GRANT_FEEDBACK_PERSISTENCE = { ON | OFF }
 
 **APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
-To disable memory grant feedback persistence for all query executions originating from the database.
+Allows you to disable memory grant feedback persistence for all query executions originating from the database.
 
 > [!NOTE]
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.

@@ -19,7 +19,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
  The **go-sqlcmd** utility (preview) lets you enter Transact-SQL statements, system procedures, and script files at the command prompt and uses the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver for go language.  go-sqlcmd aims to be a complete port of [sqlcmd](sqlcmd-utility.md) to the go language and compiles to executable binaries for Windows, macOS, and Linux on both x64 and arm64 architectures.
 
- **go-sqlcmd** is open source until the MIT license and available on [GitHub](https://github.com/microsoft/go-sqlcmd).
+ **go-sqlcmd** is open source under the MIT license and available on [GitHub](https://github.com/microsoft/go-sqlcmd).
 
 ## Download and install go-sqlcmd
 
@@ -71,7 +71,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 1. Download the corresponding `-linux-x64.tar.bz2` or `-linux-arm.tar.bz2` asset from the [latest](https://github.com/microsoft/go-sqlcmd/releases/latest) release of go-sqlcmd from the GitHub code repository. 
 
-2. Extract the `sqlcmd.exe` file from the downloaded zip folder.
+2. Extract the `sqlcmd` file from the downloaded zip folder.
 
 
 ### Windows
@@ -85,7 +85,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 1. Download the `-darwin-x64.zip` asset from the [latest](https://github.com/microsoft/go-sqlcmd/releases/latest) release of go-sqlcmd from the GitHub code repository. 
 
-2. Extract the `sqlcmd.exe` file from the downloaded zip folder.
+2. Extract the `sqlcmd` file from the downloaded zip folder.
 
 ## Syntax
 

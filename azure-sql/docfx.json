@@ -67,13 +67,14 @@
       "recommendations": true,
       "_op_documentIdPathDepotMapping": {
         "./": {
-           "depot_name": "Azure.azure-documents"
+          "depot_name": "Azure.azure-documents",
+          "folder_relative_path_in_docset": "articles/azure-sql/"
         }
       }
     },
     "fileMetadata": {
       "breadcrumb_path": {
-        "**/*.md": "/azure/azure-sql-migration/breadcrumb/toc.json"
+        "**/*.md": "/azure/azure-sql/breadcrumb/toc.json"
       },
       "feedback_product_url": {
         "articles/azure-sql/*.md": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",

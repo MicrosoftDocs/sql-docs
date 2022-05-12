@@ -65,7 +65,7 @@ Hyperscale service tier is only available in [vCore model](service-tiers-vcore.m
 
 - **Compute**:
 
-  The Hyperscale compute unit price is per replica. The [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) price is applied to high-availabilty and named replicas automatically. Users may adjust the total number of high-availability secondary replicas from 0 to 4, depending on [SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-database/) requirements.
+  The Hyperscale compute unit price is per replica. The [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) price is applied to [high-availabilty](service-tier-hyperscale-replicas.md#high-availability-replica) and [named replicas](service-tier-hyperscale-replicas.md#named-replica-in-preview) automatically. Users may adjust the total number of high-availability secondary replicas from 0 to 4, depending on availability and scalability requirements, and create up to 30 named replicas to support a variety of read scale-out workloads.
 
 - **Storage**:
 
@@ -90,15 +90,19 @@ The vCore-based service tiers are differentiated based on database availability 
 
 |ㅤ| **General Purpose** | **Hyperscale** | **Business Critical** |
 |:---:|:---:|:---:|:---:|
-|**Best for** |Offers budget oriented balanced compute and storage options. |Most business workloads. Autoscaling storage size up to 100 TB, fast vertical and horizontal compute scaling, fast database restore. |OLTP applications with high transaction rate and low IO latency. Offers highest resilience to failures and fast failovers using multiple synchronously updated replicas. |
-|**Compute size** |1 to 80 vCores |1 to 80  vCores<sup>1</sup> |1 to 80 vCores |
-|**Storage type** |Premium remote storage (per instance) |De-coupled storage with local SSD cache (per instance) |Super-fast local SSD storage (per instance) |
-|**Storage size**<sup>1</sup> |5 GB – 4 TB |Up to 100 TB |5 GB – 4 TB |
-|**IOPS** |500 IOPS per vCore with 7,000 maximum IOPS. |Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload. |5,000 IOPS with 200,000 maximum IOPS. |
-|**Availability** |1 replica, no Read Scale-out, zone-redundant HA (preview), no local cache. |Multiple replicas, up to 4 Read Scale-out, zone-redundant HA (preview), partial local cache. |3 replicas, 1 Read Scale-out, zone-redundant HA, full local storage. |
-|**Backups** |A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days). |A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 7 day retention. |A choice of geo-redundant,zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days). |
+|**Best for** | Offers budget oriented balanced compute and storage options.|Most business workloads. Autoscaling storage size up to 100 TB, fast vertical and horizontal compute scaling, fast database restore.| OLTP applications with high transaction rate and low IO latency. Offers highest resilience to failures and fast failovers using multiple synchronously updated replicas.|
+| **Compute size** | 1 to 80 vCores | 1 to 80  vCores<sup>1</sup> | 1 to 80 vCores |
+| **Storage type** | Premium remote storage (per instance) | De-coupled storage with local SSD cache (per instance) | Super-fast local SSD storage (per instance)|
+| **Storage size**<sup>1</sup> | 5 GB – 4 TB | Up to 100 TB | 5 GB – 4 TB |
+| **IOPS** | 500 IOPS per vCore with 7,000 maximum IOPS | Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload. | 5,000 IOPS with 200,000 maximum IOPS |
+| **Availability** | 1 replica, no Read Scale-out, zone-redundant HA (preview), no local cache | Multiple replicas, up to 4 Read Scale-out, zone-redundant HA (preview), partial local cache | 3 replicas, 1 Read Scale-out, zone-redundant HA, full local storage |
+| **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) |
 
 <sup>1</sup> Elastic pools are not supported in the Hyperscale service tier.
+
+> [!NOTE]
+> Short-term backup retention for of 1-35 days for Hyperscale databases is now in preview.
+
 
 ## Distributed functions architecture
 
@@ -116,7 +120,7 @@ With the ability to rapidly spin up/down additional read-only compute nodes, the
 
 ## Create and manage Hyperscale databases
 
-You can create and manage Hyperscale databases using the [Azure portal](https://portal.azure.com), [Transact-SQL](/sql/t-sql/statements/create-database-transact-sql), [PowerShell](/powershell/module/azurerm.sql/new-azurermsqldatabase), and the [Azure CLI](/cli/azure/sql/db#az_sql_db_create).
+You can create and manage Hyperscale databases using the Azure portal, Transact-SQL, PowerShell and the Azure CLI. Refer [Quickstart: Create a Hyperscale database](hyperscale-database-create-quickstart.md#create-a-hyperscale-database).
 
 
 |  **Operation** |  **Details** | **Learn more** |
@@ -125,15 +129,16 @@ You can create and manage Hyperscale databases using the [Azure portal](https://
 | **Upgrade an existing database to Hyperscale** | Migrating an existing database in Azure SQL Database to the Hyperscale tier is a size of data operation. | Learn [how to migrate an existing database to Hyperscale](manage-hyperscale-database.md#migrate-an-existing-database-to-hyperscale).|
 | **Reverse migrate a Hyperscale database to the General Purpose service tier (preview)** | If you previously migrated an existing Azure SQL Database to the Hyperscale service tier, you can reverse migrate the database to the General Purpose service tier within 45 days of the original migration to Hyperscale.<BR/><BR/>If you wish to migrate the database to another service tier, such as Business Critical, first reverse migrate to the General Purpose service tier, then change the service tier. | Learn [how to reverse migrate from Hyperscale](manage-hyperscale-database.md#reverse-migrate-from-hyperscale), including the [limitations for reverse migration](manage-hyperscale-database.md#limitations-for-reverse-migration).|
 
+
 ## Database high availability in Hyperscale
 
 As in all other service tiers, Hyperscale guarantees data durability for committed transactions regardless of compute replica availability. The extent of downtime due to the primary replica becoming unavailable depends on the type of failover (planned vs. unplanned), [whether zone redundancy is configured](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview), and on the presence of at least one high-availability replica. In a planned failover (i.e. a maintenance event), the system either creates the new primary replica before initiating a failover, or uses an existing high-availability replica as the failover target. In an unplanned failover (i.e. a hardware failure on the primary replica), the system uses a high-availability replica as a failover target if one exists, or creates a new primary replica from the pool of available compute capacity. In the latter case, downtime duration is longer due to extra steps required to create the new primary replica.
 
 For Hyperscale SLA, see [SLA for Azure SQL Database](https://azure.microsoft.com/support/legal/sla/azure-sql-database).
 
-## Backup and restore
+## Back up and restore
 
-Backup and restore operations for Hyperscale databases are file-snapshot based. This enables these operations to be nearly instantaneous. Since Hyperscale architecture utilizes the storage layer for backup and restore, processing burden and performance impact to compute replicas are significantly reduced. Learn more in [Hyperscale backups and storage redundancy](automated-backups-overview.md#hyperscale-backups-and-storage-redundancy).
+Back up and restore operations for Hyperscale databases are file-snapshot based. This enables these operations to be nearly instantaneous. Since Hyperscale architecture utilizes the storage layer for backup and restore, processing burden and performance impact to compute replicas are significantly reduced. Learn more in [Hyperscale backups and storage redundancy](automated-backups-overview.md#hyperscale-backups-and-storage-redundancy).
 
 ## Disaster recovery for Hyperscale databases
 
@@ -160,7 +165,7 @@ These are the current limitations of the Hyperscale service tier.  We're activel
 | When changing Azure SQL Database service tier to Hyperscale, the operation fails if the database has any data files larger than 1 TB | In some cases, it may be possible to work around this issue by [shrinking](file-space-manage.md#shrinking-data-files) the large files to be less than 1 TB before attempting to change the service tier to Hyperscale. Use the following query to determine the current size of database files. `SELECT file_id, name AS file_name, size * 8. / 1024 / 1024 AS file_size_GB FROM sys.database_files WHERE type_desc = 'ROWS'`;|
 | SQL Managed Instance | Azure SQL Managed Instance isn't currently supported with Hyperscale databases. |
 | Elastic Pools |  Elastic Pools aren't currently supported with Hyperscale.|
-| Migration of databases with In-Memory OLTP objects | Hyperscale supports a subset of In-Memory OLTP objects, including memory-optimized table types, table variables, and natively compiled modules. However, when any kind of In-Memory OLTP objects are present in the database being migrated, migration from Premium and Business Critical service tiers to Hyperscale is not supported. To migrate such a database to Hyperscale, all In-Memory OLTP objects and their dependencies must be dropped. After the database is migrated, these objects can be recreated. Durable and non-durable memory-optimized tables are not currently supported in Hyperscale, and must be changed to disk tables.|
+| Migration of databases with In-Memory OLTP objects | Hyperscale supports a subset of In-Memory OLTP objects, including memory-optimized table types, table variables, and natively compiled modules. However, when any In-Memory OLTP objects are present in the database being migrated, migration from Premium and Business Critical service tiers to Hyperscale is not supported. To migrate such a database to Hyperscale, all In-Memory OLTP objects and their dependencies must be dropped. After the database is migrated, these objects can be recreated. Durable and non-durable memory-optimized tables are not currently supported in Hyperscale, and must be changed to disk tables.|
 | Geo-replication | [Geo-replication](active-geo-replication-overview.md) and [auto-failover groups](auto-failover-group-sql-db.md) on Hyperscale is now in public preview. |
 | Intelligent Database Features | With the exception of the "Force Plan" option, all other Automatic Tuning options aren't yet supported on Hyperscale: options may appear to be enabled, but there won't be any recommendations or actions made. |
 | Query Performance Insights | Query Performance Insights is currently not supported for Hyperscale databases. |

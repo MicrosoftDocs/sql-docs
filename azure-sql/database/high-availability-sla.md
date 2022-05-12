@@ -46,19 +46,19 @@ Whenever the database engine or the operating system is upgraded, or a failure i
 
 ## General Purpose service tier zone redundant availability
 
-Zone-redundant configuration for the general purpose service tier is offered for both serverless and provisioned compute. This configuration utilizes [Azure Availability Zones](/azure/availability-zones/az-overview)  to replicate databases across multiple physical locations within an Azure region. By selecting zone-redundancy, you can make your new and existing serverless and provisioned general purpose single databases and elastic pools resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes of the application logic.
+Zone-redundant configuration for the General Purpose service tier is offered for both serverless and provisioned compute. This configuration utilizes [Azure Availability Zones](/azure/availability-zones/az-overview)  to replicate databases across multiple physical locations within an Azure region. By selecting zone-redundancy, you can make your new and existing serverless and provisioned general purpose single databases and elastic pools resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes of the application logic.
 
-Zone-redundant configuration for the general purpose tier has two layers:  
+Zone-redundant configuration for the General Purpose tier has two layers:  
 
 - A stateful data layer with the database files (.mdf/.ldf) that are stored in ZRS(zone-redundant storage). Using [ZRS](/azure/storage/common/storage-redundancy) the data and log files are synchronously copied across three physically isolated Azure availability zones.
-- A stateless compute layer that runs the sqlservr.exe process and contains only transient and cached data, such as TempDB, model databases on the attached SSD, and plan cache, buffer pool, and columnstore pool in memory. This stateless node is operated by Azure Service Fabric that initializes sqlservr.exe, controls health of the node, and performs failover to another node if necessary. For zone-redundant serverless and provisioned general purpose databases, nodes with spare capacity are readily available in other Availability Zones for failover.
+- A stateless compute layer that runs the sqlservr.exe process and contains only transient and cached data, such as TempDB, model databases on the attached SSD, and plan cache, buffer pool, and columnstore pool in memory. This stateless node is operated by Azure Service Fabric that initializes sqlservr.exe, controls health of the node, and performs failover to another node if necessary. For zone-redundant serverless and provisioned General Purpose databases, nodes with spare capacity are readily available in other Availability Zones for failover.
 
-The zone-redundant version of the high availability architecture for the general purpose service tier is illustrated by the following diagram:
+The zone-redundant version of the high availability architecture for the General Purpose service tier is illustrated by the following diagram:
 
-![Zone redundant configuration for general purpose](./media/high-availability-sla/zone-redundant-for-general-purpose.png)
+![Zone redundant configuration for General Purpose](./media/high-availability-sla/zone-redundant-for-general-purpose.png)
 
 > [!IMPORTANT]
-> For general purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, and France Central. This is in preview in the following regions: East US, East US 2, Southeast Asia, Australia East, Japan East, and UK South. 
+> For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, and France Central. This is in preview in the following regions: East US, East US 2, Southeast Asia, Australia East, Japan East, and UK South. 
 
 > [!NOTE]
 > Zone-redundant configuration is not available in SQL Managed Instance. In SQL Database this feature is only available when the Gen5 hardware is selected.

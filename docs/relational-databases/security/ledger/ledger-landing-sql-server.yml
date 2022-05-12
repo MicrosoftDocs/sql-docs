@@ -61,14 +61,14 @@ landingContent:
             url: ledger-how-to-append-only-ledger-tables.md
           - text: Create updatable ledger tables
             url: ledger-how-to-updatable-ledger-tables.md
+          - text: Enable automatic digest storage
+            url: ledger-how-to-enable-automatic-digest-storage.md
           - text: Migrate data from regular tables to ledger tables
             url: ledger-how-to-migrate-data-to-ledger-tables.md
-          - text: How to enable automatic digest storage
-            url: ledger-how-to-enable-automatic-digest-storage.md
-          - text: How to verify a ledger table to detect tampering
-            url: ledger-verify-database.md
           - text: Recover ledger database after tampering
             url: ledger-how-to-recover-after-tampering.md
+          - text: Verify a ledger table to detect tampering
+            url: ledger-verify-database.md
 
 
   # Card
@@ -76,7 +76,7 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: Current ledger limitations
+          - text: Current ledger considerations and limitations
             url: ledger-limits.md
           - text: Ledger whitepaper
             url: https://aka.ms/sql-ledger-whitepaper

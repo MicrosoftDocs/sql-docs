@@ -30,6 +30,7 @@ The following video provides a 13-minute introduction into SQL Server 2019:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
 
+
 The following sections provide an overview of these features.
 
 ## Data virtualization and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
@@ -45,11 +46,9 @@ Businesses today often preside over vast data estates consisting of a wide array
 For more information, see [What are SQL Server [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]?](../big-data-cluster/big-data-cluster-overview.md).
 
 ## Intelligent Database
-
 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] builds on innovations in previous versions to provide industry-leading performance out of the box. From [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) to support for persistent memory devices, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Intelligent Database features improve performance and scalability of all your database workloads without any changes to your application or database design.
 
 ### Intelligent Query Processing
-
 With [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md), you know that critical parallel workloads improve when they're running at scale. At the same time, they remain adaptive to the constantly changing world of data. Intelligent Query Processing is available by default on the latest [database compatibility level](../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-level-140-and-level-150) setting, delivering broad impact that improves the performance of existing workloads with minimal implementation effort.
 
 |New feature or update | Details |
@@ -61,8 +60,8 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 |Approximate query processing with `APPROX_COUNT_DISTINCT` |For scenarios when absolute precision isn't important but responsiveness is critical, `APPROX_COUNT_DISTINCT` aggregates across large datasets while using fewer resources than `COUNT(DISTINCT())` for superior concurrency. See [Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
 | &nbsp; | &nbsp; |
 
-### In-Memory Database
 
+### In-Memory Database
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [In-Memory Database](../relational-databases/in-memory-database.md) technologies leverage modern hardware innovation to deliver unparalleled performance and scale. [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] builds on earlier innovations in this area, such as in-memory online transaction processing (OLTP), to unlock a new level of scalability across all your database workloads.  
 
 |New feature or update | Details |
@@ -73,7 +72,6 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 | &nbsp; | &nbsp; |
 
 ### Intelligent performance
-
 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] builds on Intelligent Database innovations in previous releases to ensure that [it just runs faster](/archive/blogs/bobsql/). These improvements help overcome known resource bottlenecks and provide options for configuring your database server to provide predictable performance across all your workloads.
 
 |New feature or update | Details |
@@ -88,7 +86,6 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 | &nbsp; | &nbsp; |
 
 ### Monitoring
-
 Monitoring improvements unlock performance insights over any database workload, just when you need them.
 
 |New feature or update | Details |
@@ -104,7 +101,6 @@ Monitoring improvements unlock performance insights over any database workload, 
 | &nbsp; | &nbsp; |
 
 ## Developer experience
-
 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] continues to provide a world-class developer experience with enhancements to graph and spatial data types, UTF-8 support, and a new extensibility framework that allows developers to use the language of their choice to gain insights across all their data.
 
 ### Graph
@@ -118,8 +114,7 @@ Monitoring improvements unlock performance insights over any database workload, 
 | &nbsp; | &nbsp; |
 
 ### Unicode support
-
-Support businesses across different countries and regions, where the requirement of providing global multilingual database applications and services is critical to meeting customer demands and complying with specific market regulations.
+Support businesses across different countries and regions, where the requirement of providing global multilingual database applications and services is critical to meeting customer demands and complying with specific market regulations. 
 
 |New feature or update | Details |
 |:---|:---|
@@ -146,7 +141,6 @@ Support businesses across different countries and regions, where the requirement
 | &nbsp; | &nbsp; |
 
 ### Error messages
-
 When an extract, transform, and load (ETL) process fails because the source and the destination don't have matching data types and/or length, troubleshooting used to be time-consuming, especially in large datasets. [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] allows faster insights into data truncation errors.
 
 |New feature or update | Details |
@@ -155,19 +149,17 @@ When an extract, transform, and load (ETL) process fails because the source and 
 | &nbsp; | &nbsp; |
 
 ## Mission-critical security
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a security architecture that's designed to allow database administrators and developers to create secure database applications and counter threats. Each version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has improved on previous versions with the introduction of new features and functionality, and [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] continues to build on this story.
 
 |New feature or update | Details |
 |:---|:---|
 |Always Encrypted with secure enclaves|Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a server-side secure enclave. In-place encryption improves the performance and the reliability of cryptographic operations (encrypting columns, rotating columns, encryption keys, and so on), because it avoids moving data out of the database.<br><br> Support for rich computations (pattern matching and comparison operations) unlocks Always Encrypted to a much broader set of scenarios and applications that demand sensitive data protection, while also requiring richer functionality in Transact-SQL queries. See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Certificate management in SQL Server Configuration Manager|Certificate management tasks such as viewing and deploying certificates is now possible by using SQL Server Configuration Manager. See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md).|
-|Data Discovery & Classification|Data Discovery & Classification provides capabilities for classifying and labeling columns in user tables. Classifying sensitive data (business, financial, healthcare, personal data, etc.) can play a pivotal role in an organizational information protection stature. It can serve as infrastructure for:<ul><li>Helping meet data privacy standards and regulatory compliance requirements</li><li>Various security scenarios, such as monitoring (auditing) and alerting on anomalous access to sensitive data</li><li>Making it easier to identify where sensitive data resides in the enterprise so admins can take the right steps securing the database</li></ul>|
+|Data Discovery & Classification|Data Discovery & Classification provides capabilities for classifying and labeling columns in user tables. Classifying sensitive data (business, financial, healthcare, PII, etc.) can play a pivotal role in an organizational information protection stature. It can serve as infrastructure for:<ul><li>Helping meet data privacy standards and regulatory compliance requirements</li><li>Various security scenarios, such as monitoring (auditing) and alerting on anomalous access to sensitive data</li><li>Making it easier to identify where sensitive data resides in the enterprise so admins can take the right steps securing the database</li></ul>|
 |SQL Server Audit|[Auditing](../relational-databases/security/auditing/sql-server-audit-database-engine.md) has also been enhanced to include a new field `data_sensitivity_information` in the audit log record, which contains the sensitivity classifications (labels) of the actual data that was returned by the query. For details and examples, see [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ## High availability
-
 One common task that everyone who deploys [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has to account for is making sure that all mission critical [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances and the databases within them are available whenever the business and end users need them. Availability is a key pillar of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] platform, and [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] introduces many new features and enhancements that allow businesses to ensure that their database environments are highly available.
 
 ### Availability Groups
@@ -196,7 +188,6 @@ One common task that everyone who deploys [!INCLUDE[ssNoVersion](../includes/ssn
 | &nbsp; | &nbsp; |
 
 ## Platform choice
-
 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] builds on the innovations that were introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] to allow you to run [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on your platform of choice with more functionality and security than ever before.
 
 ### <a id="sql-server-on-linux"></a>Linux
@@ -213,7 +204,6 @@ One common task that everyone who deploys [!INCLUDE[ssNoVersion](../includes/ssn
 | &nbsp; | &nbsp; |
 
 ### Containers
-
 The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is to use containers. [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] builds on the innovations introduced in earlier versions to enable you to deploy [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] containers on new platforms, in a safer manner, and with more functionality.
 
 |New feature or update | Details |
@@ -227,9 +217,9 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 ## Setup options
 
 |New feature or update | Details |
-|:---|:---|
+|:---|:---| 
 |New memory setup options | Sets the *min server memory (MB)* and *max server memory (MB)* server configurations during installation. See [Database Engine Configuration - Memory page](./install/instance-configuration.md#memory) and the `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY`, and `SQLMAXMEMORY` parameters in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The proposed value aligns with the memory configuration guidelines in [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually).| 
-|New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. See [Database Engine Configuration - MaxDOP page](./install/instance-configuration.md#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value aligns with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#recommendations).|
+|New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. See [Database Engine Configuration - MaxDOP page](./install/instance-configuration.md#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value aligns with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 |Setup warning on Server/CAL license Product Key|If an Enterprise Server/CAL license Product Key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. Users can still acknowledge the limitation and continue setup, or enter a License Key that supports the operating system maximum number of processors.|
 | &nbsp; | &nbsp; |
 

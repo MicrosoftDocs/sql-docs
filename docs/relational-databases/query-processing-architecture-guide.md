@@ -1,8 +1,11 @@
 ---
-title: "Query Processing Architecture Guide"
 description: "Query Processing Architecture Guide"
+title: "Query Processing Architecture Guide | Microsoft Docs"
+ms.custom: ""
+ms.date: "02/21/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -10,35 +13,27 @@ helpviewer_keywords:
   - "query processing architecture guide"
   - "row mode execution"
   - "batch mode execution"
-author: "akatesmith"
-ms.author: "katsmith"
-ms.reviewer: "maghan"
-ms.custom: ""
-ms.date: "02/21/2020"
+ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
+author: "pmasl"
+ms.author: "pelopes"
 ---
-
 # Query Processing Architecture Guide
-
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following topics cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
 
 ## Execution modes
-
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can process [!INCLUDE[tsql](../includes/tsql-md.md)] statements using two distinct processing modes:
-
 - Row mode execution
 - Batch mode execution
 
 ### Row mode execution
-
 *Row mode execution* is a query processing method used with traditional RDBMS tables, where data is stored in row format. When a query is executed and accesses data in row store tables, the execution tree operators and child operators read each required row, across all the columns specified in the table schema. From each row that is read, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] then retrieves the columns that are required for the result set, as referenced by a SELECT statement, JOIN predicate, or filter predicate.
 
 > [!NOTE]
 > Row mode execution is very efficient for OLTP scenarios, but can be less efficient when scanning large amounts of data, for example in Data Warehousing scenarios.
 
-### Batch mode execution
-
+### Batch mode execution  
 *Batch mode execution* is a query processing method used to process multiple rows together (hence the term batch). Each column within a batch is stored as a vector in a separate area of memory, so batch mode processing is vector-based. Batch mode processing also uses algorithms that are optimized for the multi-core CPUs and increased memory throughput that are found on modern hardware.      
 
 When it was first introduced, batch mode execution was closely integrated with, and optimized around, the columnstore storage format. However, starting with [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], batch mode execution no longer requires columnstore indexes. For more information, see [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
@@ -51,11 +46,9 @@ When a query is executed in batch mode, and accesses data in columnstore indexes
 > Batch mode execution is very efficient Data Warehousing scenarios, where large amounts of data are read and aggregated.
 
 ## SQL Statement Processing
-
 Processing a single [!INCLUDE[tsql](../includes/tsql-md.md)] statement is the most basic way that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes [!INCLUDE[tsql](../includes/tsql-md.md)] statements. The steps used to process a single `SELECT` statement that references only local base tables (no views or remote tables) illustrates the basic process.
 
 ### Logical Operator Precedence
-
 When more than one logical operator is used in a statement, `NOT` is evaluated first, then `AND`, and finally `OR`. Arithmetic, and bitwise, operators are handled before logical operators. For more information, see [Operator Precedence](../t-sql/language-elements/operator-precedence-transact-sql.md).
 
 In the following example, the color condition pertains to product model 21, and not to product model 20, because `AND` has precedence over `OR`.
@@ -89,23 +82,21 @@ GO
 ```
 
 ### Optimizing SELECT statements
-
 A `SELECT` statement is non-procedural; it does not state the exact steps that the database server should use to retrieve the requested data. This means that the database server must analyze the statement to determine the most efficient way to extract the requested data. This is referred to as optimizing the `SELECT` statement. The component that does this is called the Query Optimizer. The input to the Query Optimizer consists of the query, the database schema (table and index definitions), and the database statistics. The output of the Query Optimizer is a query execution plan, sometimes referred to as a query plan, or execution plan. The contents of an execution plan are described in more detail later in this topic.
 
 The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` statement are illustrated in the following diagram:
 
 ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
-A `SELECT` statement defines only the following:
+A `SELECT` statement defines only the following:  
+* The format of the result set. This is specified mostly in the select list. However, other clauses such as `ORDER BY` and `GROUP BY` also affect the final form of the result set.
+* The tables that contain the source data. This is specified in the `FROM` clause.
+* How the tables are logically related for the purposes of the `SELECT` statement. This is defined in the join specifications, which may appear in the `WHERE` clause or in an `ON` clause following `FROM`.
+* The conditions that the rows in the source tables must satisfy to qualify for the `SELECT` statement. These are specified in the `WHERE` and `HAVING` clauses.
 
-- The format of the result set. This is specified mostly in the select list. However, other clauses such as `ORDER BY` and `GROUP BY` also affect the final form of the result set.
-- The tables that contain the source data. This is specified in the `FROM` clause.
-- How the tables are logically related for the purposes of the `SELECT` statement. This is defined in the join specifications, which may appear in the `WHERE` clause or in an `ON` clause following `FROM`.
-- The conditions that the rows in the source tables must satisfy to qualify for the `SELECT` statement. These are specified in the `WHERE` and `HAVING` clauses.
+A query execution plan is a definition of the following: 
 
-A query execution plan is a definition of the following:
-
-- **The sequence in which the source tables are accessed.**
+- **The sequence in which the source tables are accessed.** 
   Typically, there are many sequences in which the database server can access the base tables to build the result set. For example, if the `SELECT` statement references three tables, the database server could first access `TableA`, use the data from `TableA` to extract matching rows from `TableB`, and then use the data from `TableB` to extract data from `TableC`. The other sequences in which the database server could access the tables are:  
   `TableC`, `TableB`, `TableA`, or  
   `TableB`, `TableA`, `TableC`, or  
@@ -132,12 +123,11 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is im
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] has three options to display execution plans:        
-> - The ***[Estimated Execution Plan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan, as produced by the Query Optimizer.        
-> - The ***[Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], the elapsed and CPU time used during execution.        
-> - The ***[Live Query Statistics](../relational-databases/performance/live-query-statistics.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information during execution progress, and is updated every second. Runtime information includes for example the actual number of rows flowing through the operators.       
+> -  The ***[Estimated Execution Plan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan, as produced by the Query Optimizer.        
+> -  The ***[Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], the elapsed and CPU time used during execution.        
+> -  The ***[Live Query Statistics](../relational-databases/performance/live-query-statistics.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information during execution progress, and is updated every second. Runtime information includes for example the actual number of rows flowing through the operators.       
 
 ### Processing a SELECT Statement
-
 The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses to process a single SELECT statement include the following: 
 
 1. The parser scans the `SELECT` statement and breaks it into logical units such as keywords, expressions, operators, and identifiers.
@@ -146,14 +136,11 @@ The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses
 4. The relational engine starts executing the execution plan. As the steps that require data from the base tables are processed, the relational engine requests that the storage engine pass up data from the rowsets requested from the relational engine.
 5. The relational engine processes the data returned from the storage engine into the format defined for the result set and returns the result set to the client.
 
-### <a name="ConstantFolding"></a> Constant Folding and Expression Evaluation
-
+### <a name="ConstantFolding"></a> Constant Folding and Expression Evaluation 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE[tsql](../includes/tsql-md.md)] literal, such as `3`, `'ABC'`, `'2005-12-31'`, `1.0e3`, or `0x12345678`.
 
 #### Foldable Expressions
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses constant folding with the following types of expressions:
-
 - Arithmetic expressions, such as 1+1, 5/3*2, that contain only constants.
 - Logical expressions, such as 1=1 and 1>2 AND 3>4, that contain only constants.
 - Built-in functions that are considered foldable by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], including `CAST` and `CONVERT`. Generally, an intrinsic function is foldable if it is a function of its inputs only and not other contextual information, such as SET options, language settings, database options, and encryption keys. Nondeterministic functions are not foldable. Deterministic built-in functions are foldable, with some exceptions.
@@ -163,9 +150,7 @@ The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses
 > An exception is made for large object types. If the output type of the folding process is a large object type (text,ntext, image, nvarchar(max), varchar(max), varbinary(max), or XML), then [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold the expression.
 
 #### Nonfoldable Expressions
-
 All other expression types are not foldable. In particular, the following types of expressions are not foldable:
-
 - Nonconstant expressions such as an expression whose result depends on the value of a column.
 - Expressions whose results depend on a local variable or parameter, such as @x.
 - Nondeterministic functions.
@@ -177,7 +162,6 @@ All other expression types are not foldable. In particular, the following types 
 <sup>1</sup> Before [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], deterministic scalar-valued CLR user-defined functions and methods of CLR user-defined types were not foldable. 
 
 #### Examples of Foldable and Nonfoldable Constant Expressions
-
 Consider the following query:
 
 ```sql
@@ -194,12 +178,10 @@ If the `PARAMETERIZATION` database option is not set to `FORCED` for this query,
 
 On the other hand, if `dbo.f` is a scalar user-defined function, the expression `dbo.f(100)` is not folded, because [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold expressions that involve user-defined functions, even if they are deterministic. For more information on parameterization, see [Forced Parameterization](#ForcedParam) later in this article.
 
-#### <a name="ExpressionEval"></a>Expression Evaluation
-
+#### <a name="ExpressionEval"></a>Expression Evaluation 
 In addition, some expressions that are not constant folded but whose arguments are known at compile time, whether the arguments are parameters or constants, are evaluated by the result-set size (cardinality) estimator that is part of the optimizer during optimization.
 
 Specifically, the following built-in functions and special operators are evaluated at compile time if all their inputs are known: `UPPER`, `LOWER`, `RTRIM`, `DATEPART( YY only )`, `GETDATE`, `CAST`, and `CONVERT`. The following operators are also evaluated at compile time if all their inputs are known:
-
 - Arithmetic operators: +, -, \*, /, unary -
 - Logical Operators: `AND`, `OR`, `NOT`
 - Comparison operators: <, >, <=, >=, <>, `LIKE`, `IS NULL`, `IS NOT NULL`
@@ -207,7 +189,6 @@ Specifically, the following built-in functions and special operators are evaluat
 No other functions or operators are evaluated by the Query Optimizer during cardinality estimation.
 
 #### Examples of Compile-Time Expression Evaluation
-
 Consider this stored procedure:
 
 ```sql
@@ -241,17 +222,14 @@ END;
 When the `SELECT` statement in *MyProc2* is optimized in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the value of `@d2` is not known. Therefore, the Query Optimizer uses a default estimate for the selectivity of `OrderDate > @d2`, (in this case 30 percent).
 
 ### Processing Other Statements
-
 The basic steps described for processing a `SELECT` statement apply to other [!INCLUDE[tsql](../includes/tsql-md.md)] statements such as `INSERT`, `UPDATE`, and `DELETE`. `UPDATE` and `DELETE` statements both have to target the set of rows to be modified or deleted. The process of identifying these rows is the same process used to identify the source rows that contribute to the result set of a `SELECT` statement. The `UPDATE` and `INSERT` statements may both contain embedded `SELECT` statements that provide the data values to be updated or inserted.
 
 Even Data Definition Language (DDL) statements, such as `CREATE PROCEDURE` or `ALTER TABLE`, are ultimately resolved to a series of relational operations on the system catalog tables and sometimes (such as `ALTER TABLE ADD COLUMN`) against the data tables.
 
 ### Worktables
-
 The Relational Engine may need to build a worktable to perform a logical operation specified in an [!INCLUDE[tsql](../includes/tsql-md.md)] statement. Worktables are internal tables that are used to hold intermediate results. Worktables are generated for certain `GROUP BY`, `ORDER BY`, or `UNION` queries. For example, if an `ORDER BY` clause references columns that are not covered by any indexes, the Relational Engine may need to generate a worktable to sort the result set into the order requested. Worktables are also sometimes used as spools that temporarily hold the result of executing a part of a query plan. Worktables are built in tempdb and are dropped automatically when they are no longer needed.
 
 ### View Resolution
-
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] query processor treats indexed and nonindexed views differently: 
 
 * The rows of an indexed view are stored in the database in the same format as a table. If the Query Optimizer decides to use an indexed view in a query plan, the indexed view is treated the same way as a base table.
@@ -297,7 +275,6 @@ WHERE OrderDate > '20020531';
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio Showplan feature shows that the relational engine builds the same execution plan for both of these `SELECT` statements.
 
 ### Using Hints with Views
-
 Hints that are placed on views in a query may conflict with other hints that are discovered when the view is expanded to access its base tables. When this occurs, the query returns an error. For example, consider the following view that contains a table hint in its definition:
 
 ```sql
@@ -379,7 +356,6 @@ A query does not have to explicitly reference an indexed view in the `FROM` clau
 The Query Optimizer treats an indexed view referenced in the `FROM` clause as a standard view. The Query Optimizer expands the definition of the view into the query at the start of the optimization process. Then, indexed view matching is performed. The indexed view may be used in the final execution plan selected by the Query Optimizer, or instead, the plan may materialize necessary data from the view by accessing the base tables referenced by the view. The Query Optimizer chooses the lowest-cost alternative.
 
 #### Using Hints with Indexed Views
-
 You can prevent view indexes from being used for a query by using the `EXPAND VIEWS` query hint, or you can use the `NOEXPAND` table hint to force the use of an index for an indexed view specified in the `FROM` clause of a query. However, you should let the Query Optimizer dynamically determine the best access methods to use for each query. Limit your use of `EXPAND` and `NOEXPAND` to specific cases where testing has shown that they improve performance significantly.
 
 The `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
@@ -395,7 +371,6 @@ Generally, when the Query Optimizer matches an indexed view to a query, any hint
 Hints are not allowed in the definitions of indexed views. In compatibility mode 80 and higher, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ignores hints inside indexed view definitions when maintaining them, or when executing queries that use indexed views. Although using hints in indexed view definitions will not produce a syntax error in 80 compatibility mode, they are ignored.
 
 ### Resolving Distributed Partitioned Views
-
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] query processor optimizes the performance of distributed partitioned views. The most important aspect of distributed partitioned view performance is minimizing the amount of data transferred between member servers.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] builds intelligent, dynamic plans that make efficient use of distributed queries to access data from remote member tables: 
@@ -439,19 +414,16 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sometimes builds these types of dynamic execution plans even for queries that are not parameterized. The Query Optimizer may parameterize a query so that the execution plan can be reused. If the Query Optimizer parameterizes a query referencing a partitioned view, the Query Optimizer can no longer assume the required rows will come from a specified base table. It will then have to use dynamic filters in the execution plan.
 
 ## Stored Procedure and Trigger Execution
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stores only the source for stored procedures and triggers. When a stored procedure or trigger is first executed, the source is compiled into an execution plan. If the stored procedure or trigger is again executed before the execution plan is aged from memory, the relational engine detects the existing plan and reuses it. If the plan has aged out of memory, a new plan is built. This process is similar to the process [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] follows for all [!INCLUDE[tsql](../includes/tsql-md.md)] statements. The main performance advantage that stored procedures and triggers have in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compared with batches of dynamic [!INCLUDE[tsql](../includes/tsql-md.md)] is that their [!INCLUDE[tsql](../includes/tsql-md.md)] statements are always the same. Therefore, the relational engine easily matches them with any existing execution plans. Stored procedure and trigger plans are easily reused.
 
 The execution plan for stored procedures and triggers is executed separately from the execution plan for the batch calling the stored procedure or firing the trigger. This allows for greater reuse of the stored procedure and trigger execution plans.
 
 ## Execution Plan Caching and Reuse
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has a pool of memory that is used to store both execution plans and data buffers. The percentage of the pool allocated to either execution plans or data buffers fluctuates dynamically, depending on the state of the system. The part of the memory pool that is used to store execution plans is referred to as the plan cache.
 
 The plan cache has two stores for all compiled plans:
-
-- The **Object Plans** cache store (OBJCP) used for plans related to persisted objects (stored procedures, functions, and triggers).
-- The **SQL Plans** cache store (SQLCP) used for plans related to autoparameterized, dynamic, or prepared queries.
+-  The **Object Plans** cache store (OBJCP) used for plans related to persisted objects (stored procedures, functions, and triggers).
+-  The **SQL Plans** cache store (SQLCP) used for plans related to autoparameterized, dynamic, or prepared queries.
 
 The query below provides information about memory usage for these two cache stores:
 
@@ -462,28 +434,27 @@ WHERE name LIKE '%plans%';
 
 > [!NOTE]
 > The plan cache has two additional stores that are not used for storing plans:     
-> - The **Bound Trees** cache store (PHDR) used for data structures used during plan compilation for views, constraints, and defaults. These structures are known as Bound Trees or Algebrizer Trees.      
-> - The **Extended Stored Procedures** cache store (XPROC) used for predefined system procedures, like `sp_executeSql` or `xp_cmdshell`, that are defined using a DLL, not using Transact-SQL statements. The cached structure contains only the function name and the DLL name in which the procedure is implemented.      
+> -  The **Bound Trees** cache store (PHDR) used for data structures used during plan compilation for views, constraints, and defaults. These structures are known as Bound Trees or Algebrizer Trees.      
+> -  The **Extended Stored Procedures** cache store (XPROC) used for predefined system procedures, like `sp_executeSql` or `xp_cmdshell`, that are defined using a DLL, not using Transact-SQL statements. The cached structure contains only the function name and the DLL name in which the procedure is implemented.      
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] execution plans have the following main components: 
 
 - **Compiled Plan** (or Query Plan)     
   The query plan produced by the compilation process is mostly a re-entrant, read-only data structure used by any number of users. It stores information about:
-  - Physical operators which implement the operation described by logical operators. 
-  - The order of these operators, which determines the order in which data is accessed, filtered, and aggregated. 
-  - The number of estimated rows flowing through the operators. 
+  -  Physical operators which implement the operation described by logical operators. 
+  -  The order of these operators, which determines the order in which data is accessed, filtered, and aggregated. 
+  -  The number of estimated rows flowing through the operators. 
   
      > [!NOTE]
      > In newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], information about the statistics objects that were used for [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md) is also stored.
      
-  - What support objects must be created, such as [worktables](#worktables) or workfiles in tempdb. 
+  -  What support objects must be created, such as [worktables](#worktables) or workfiles in tempdb. 
   No user context or runtime information is stored in the query plan. There are never more than one or two copies of the query plan in memory: one copy for all serial executions and another for all parallel executions. The parallel copy covers all parallel executions, regardless of their degree of parallelism.   
   
-- **Execution Context**  
+- **Execution Context**     
+  Each user that is currently executing the query has a data structure that holds the data specific to their execution, such as parameter values. This data structure is referred to as the execution context. The execution context data structures are reused, but their content is not. If another user executes the same query, the data structures are reinitialized with the context for the new user. 
 
-Each user that is currently executing the query has a data structure that holds the data specific to their execution, such as parameter values. This data structure is referred to as the execution context. The execution context data structures are reused, but their content is not. If another user executes the same query, the data structures are reinitialized with the context for the new user. 
-
-![execution_context](../relational-databases/media/execution-context.gif)
+  ![execution_context](../relational-databases/media/execution-context.gif)
 
 When any [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the [!INCLUDE[ssde_md](../includes/ssde_md.md)] first looks through the plan cache to verify that an existing execution plan for the same [!INCLUDE[tsql](../includes/tsql-md.md)] statement exists. The [!INCLUDE[tsql](../includes/tsql-md.md)] statement qualifies as existing if it literally matches a previously executed [!INCLUDE[tsql](../includes/tsql-md.md)] statement with a cached plan, character per character. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reuses any existing plan it finds, saving the overhead of recompiling the [!INCLUDE[tsql](../includes/tsql-md.md)] statement. If no execution plan exists, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generates a new execution plan for the query.
 
@@ -563,12 +534,10 @@ Changing any of the following SET options for a given execution will affect the 
     :::column-end:::
 :::row-end:::
 
-### Caching multiple plans for the same query
-
+### Caching multiple plans for the same query 
 Queries and execution plans are uniquely identifiable in the [!INCLUDE[ssde_md](../includes/ssde_md.md)], much like a fingerprint:
-
-- The **query plan hash** is a binary hash value calculated on the execution plan for a given query, and used to uniquely identify similar execution plans. 
-- The **query hash** is a binary hash value calculated on the [!INCLUDE[tsql](../includes/tsql-md.md)] text of a query, and is used to uniquely identify queries. 
+-  The **query plan hash** is a binary hash value calculated on the execution plan for a given query, and used to uniquely identify similar execution plans. 
+-  The **query hash** is a binary hash value calculated on the [!INCLUDE[tsql](../includes/tsql-md.md)] text of a query, and is used to uniquely identify queries. 
 
 A compiled plan can be retrieved from the plan cache using a **Plan Handle**, which is a transient identifier that remains constant only while the plan remains in the cache. The plan handle is a hash value derived from the compiled plan of the entire batch. The plan handle for a compiled plan remains the same even if one or more statements in the batch get recompiled.
 
@@ -627,7 +596,7 @@ GO
 
 ```
 memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------  ---------  ---------  ------------------ ------------------ 
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
 0x000001CC6C534060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
@@ -650,7 +619,7 @@ Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../include
 
 ```
 memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------  ---------  ---------  ------------------ ------------------ 
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
 0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
@@ -676,7 +645,7 @@ Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../include
 
 ```
 memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------  ---------  ---------  ------------------ ------------------ 
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
 0x000001CD01DEC060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
 
@@ -692,11 +661,10 @@ sql_handle
 ```
 
 Notice there are now two entries in the `sys.dm_exec_cached_plans` DMV output:
-
-- The `usecounts` column shows the value `1` in the first record which is the plan executed once with `SET ANSI_DEFAULTS OFF`.
-- The `usecounts` column shows the value `2` in the second record which is the plan executed with `SET ANSI_DEFAULTS ON`, because it was executed twice.    
-- The different `memory_object_address` refers to a different execution plan entry in the plan cache. However, the `sql_handle` value is the same for both entries because they refer to the same batch. 
-  - The execution with `ANSI_DEFAULTS` set to OFF has a new `plan_handle`, and it's available for reuse for calls that have the same set of SET options. The new plan handle is necessary because the execution context was reinitialized due to changed SET options. But that doesn't trigger a recompile: both entries refer to the same plan and query, as evidenced by the same `query_plan_hash` and `query_hash` values.
+-  The `usecounts` column shows the value `1` in the first record which is the plan executed once with `SET ANSI_DEFAULTS OFF`.
+-  The `usecounts` column shows the value `2` in the second record which is the plan executed with `SET ANSI_DEFAULTS ON`, because it was executed twice.    
+-  The different `memory_object_address` refers to a different execution plan entry in the plan cache. However, the `sql_handle` value is the same for both entries because they refer to the same batch. 
+   -  The execution with `ANSI_DEFAULTS` set to OFF has a new `plan_handle`, and it's available for reuse for calls that have the same set of SET options. The new plan handle is necessary because the execution context was reinitialized due to changed SET options. But that doesn't trigger a recompile: both entries refer to the same plan and query, as evidenced by the same `query_plan_hash` and `query_hash` values.
 
 What this effectively means is that we have two plan entries in the cache corresponding to the same batch, and it underscores the importance of making sure that the plan cache affecting SET options are the same, when the same queries are executed repeatedly, to optimize for plan reuse and keep plan cache size to its required minimum. 
 
@@ -704,7 +672,6 @@ What this effectively means is that we have two plan entries in the cache corres
 > A common pitfall is that different clients may have different default values for the SET options. For example, a connection made through [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] automatically sets `QUOTED_IDENTIFIER` to ON, while SQLCMD sets `QUOTED_IDENTIFIER` to OFF. Executing the same queries from these two clients will result in multiple plans (as described in the example above).
 
 ### Removing execution plans from the Plan Cache
-
 Execution plans remain in the plan cache as long as there is enough memory to store them. When memory pressure exists, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses a cost-based approach to determine which execution plans to remove from the plan cache. To make a cost-based decision, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] increases and decreases a current cost variable for each execution plan according to the following factors.
 
 When a user process inserts an execution plan into the cache, the user process sets the current cost equal to the original query compile cost; for ad-hoc execution plans, the user process sets the current cost to zero. Thereafter, each time a user process references an execution plan, it resets the current cost to the original compile cost; for ad-hoc execution plans the user process increases the current cost. For all plans, the maximum value for the current cost is the original compile cost.
@@ -1040,9 +1007,9 @@ Parameter sensitivity, also known as "parameter sniffing", refers to a process w
 
 Parameter values are sniffed during compilation or recompilation for the following types of batches:
 
-- Stored procedures
-- Queries submitted via `sp_executesql` 
-- Prepared queries
+-  Stored procedures
+-  Queries submitted via `sp_executesql` 
+-  Prepared queries
 
 For more information on troubleshooting bad parameter sniffing issues, see [Troubleshoot queries with parameter-sensitive query execution plan issues](/azure/azure-sql/identify-query-performance-issues#ParamSniffing).
 
@@ -1058,23 +1025,23 @@ During query optimization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 > Certain constructs inhibit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]'s ability to leverage parallelism on the entire execution plan, or parts or the execution plan.
 
 Constructs that inhibit parallelism include:
--  **Scalar UDFs**        
+-   **Scalar UDFs**        
     For more information on scalar user-defined functions, see [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has the ability to inline these functions, and unlock use of parallelism during query processing. For more information on scalar UDF inlining, see [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
     
--  **Remote Query**        
+-   **Remote Query**        
     For more information on Remote Query, see [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md).
     
--  **Dynamic cursors**        
+-   **Dynamic cursors**        
     For more information on cursors, see [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
     
--  **Recursive queries**        
+-   **Recursive queries**        
     For more information on recursion, see [Guidelines for Defining and Using Recursive Common Table Expressions
 ](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) and [Recursion in T-SQL](/previous-versions/sql/legacy/aa175801(v=sql.80)).
 
--  **Multi-statement table-valued functions (MSTVFs)**        
+-   **Multi-statement table-valued functions (MSTVFs)**        
     For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
     
--  **TOP keyword**        
+-   **TOP keyword**        
     For more information, see [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
 A query execution plan may contain the **NonParallelPlanReason** attribute in the **QueryPlan** element which describes why parallelism was not used.  Values for this attribute include:
@@ -1131,7 +1098,7 @@ At execution time, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)
 
 The update and delete operators in a parallel query execution plan are executed serially, but the WHERE clause of an UPDATE or a DELETE statement may be executed in parallel. The actual data changes are then serially applied to the database.
 
-Up to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the insert operator is also executed serially. However, the SELECT part of an INSERT statement may be executed in parallel. The actual data changes are then serially applied to the database.
+Up to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the insert operator is also executed serially. However, the SELECT part of an INSERT statement may be executed in parallel. The actual data changes are then serially applied to the database. 
 
 Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and database compatibility level 110, the `SELECT … INTO` statement can be executed in parallel. Other forms of insert operators work the same way as described for [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
@@ -1140,7 +1107,6 @@ Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] and database com
 Static and keyset-driven cursors can be populated by parallel execution plans. However, the behavior of dynamic cursors can be provided only by serial execution. The Query Optimizer always generates a serial execution plan for a query that is part of a dynamic cursor.
 
 #### Overriding Degrees of Parallelism
-
 The degree of parallelism sets the number of processors to use in parallel plan execution. This configuration can be set at various levels:
 
 1.  Server level, using the **max degree of parallelism (MAXDOP)** [server configuration option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).</br> **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
@@ -1157,10 +1123,9 @@ The degree of parallelism sets the number of processors to use in parallel plan 
 Setting the max degree of parallelism option to 0 (default) enables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors in a parallel plan execution. Although [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sets a runtime target of 64 logical processors when MAXDOP option is set to 0, a different value can be manually set if needed. Setting MAXDOP to 0 for queries and indexes allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors for the given queries or indexes in a parallel plan execution. MAXDOP is not an enforced value for all parallel queries, but rather a tentative target for all queries eligible for parallelism. This means that if not enough worker threads are available at runtime, a query may execute with a lower degree of parallelism than the MAXDOP server configuration option.
 
 > [!TIP]
-> Refer to this [documentation page](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#recommendations) for guidelines on configuring MAXDOP.
+> Refer to this [documentation page](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines) for guidelines on configuring MAXDOP.
 
 ### Parallel Query Example
-
 The following query counts the number of orders placed in a specific quarter, starting on April 1, 2000, and in which at least one line item of the order was received by the customer later than the committed date. This query lists the count of such orders grouped by each order priority and sorted in ascending priority order. 
 
 This example uses theoretical table and column names.

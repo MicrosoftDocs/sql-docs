@@ -1,11 +1,11 @@
 ---
 title: Big data options on the Microsoft SQL Server platform
 titleSuffix: SQL Server
-description: This article discusses migration strategies for SQL Server 2019 Big Clusters.
+description: This article discusses migration strategies for SQL Server 2019 Big Clusters
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 05/24/2022
+ms.date: 02/22/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -32,12 +32,12 @@ The PolyBase scale-out groups feature of Microsoft SQL Server has been retired. 
 
 Cloudera (CDP) and Hortonworks (HDP) external data sources will also be retired for all in-market versions of SQL Server and will not be included in SQL Server 2022. Moving forward, support for external data sources will be limited to product versions in mainstream support by the respective vendor. You are advised encouraged to use the new object storage integration available in SQL Server 2022. Integration with HDFS will also be added to SQL Server 2022 in a future CTP using a new webhdfs connector. 
 
-Connectivity to HDFS and object storage will now use publicly documented REST APIs instead of a JAVA Hadoop client. In SQL Server 2022, users will need to configure their external data sources to use new connectors when connecting to Azure Storage. For more information, see [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md). The table below summarizes the change: 
+Connectivity to HDFS and object storage will now use publicly documented REST APIs instead of a JAVA Hadoop client. In SQL Server 2022, users will need to configure their external data sources to use new connectors when connecting to Azure Storage. The table below summarizes the change: 
 
 | External Data Source | From | To |
 |:--|:--|:--|
-| Azure Blob Storage | `wasb[s]` | `abs` |
-| ADLS Gen 2 | `abfs[s]` | `adls` |
+| Azure Blob Storage | wasb[s] | abs |
+| ADLS Gen 2 | abfs[s] | adls |
 
 ## Understanding the Big Data Clusters architecture for replacement and migration options
 
@@ -85,9 +85,9 @@ For more information on building scalable architectures, see [Build a scalable s
 
 ## In-Cloud
 
-### Azure SQL with Azure Synapse Analytics
+### Azure SQL with Synapse
 
-You can replace the functionality of SQL Server 2019 Big Data Clusters by using one or more Azure SQL database options for operational data, and Microsoft Azure Synapse for your analytic workloads. 
+You can replace the functionality of SQL Server Big Data Clusters by using one or more Azure SQL database options for operational data, and Microsoft Azure Synapse for your analytic workloads. 
 
 Microsoft Azure Synapse is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems, using distributed processing and data constructs. Azure Synapse brings together SQL technologies used in enterprise data warehousing, Spark technologies used for big data, Pipelines for data integration and ETL/ELT, and deep integration with other Azure services such as Power BI, Cosmos DB, and Azure Machine Learning. 
 
@@ -119,7 +119,7 @@ For more information on Microsoft Azure Synapse, see [What is Azure Synapse Anal
 
 ### Azure SQL plus Azure Machine Learning
 
-You can replace the functionality of SQL Server 2019 Big Data Clusters by using one or more Azure SQL database options for operational data, and Microsoft Azure Machine Learning for your predictive workloads.
+You can replace the functionality of SQL Server Big Data Clusters by using one or more Azure SQL database options for operational data, and Microsoft Azure Machine Learning for your predictive workloads.
 
 Azure Machine Learning is a cloud-based service that can be used for any kind of machine learning, from classical ML to deep learning, supervised, and unsupervised learning. Whether you prefer to write Python or R code with the SDK or work with no-code/low-code options in the studio, you can build, train, and track machine learning and deep-learning models in an Azure Machine Learning Workspace. With Azure Machine Learning, you can start training on your local machine and then scale out to the cloud. The service also interoperates with popular deep learning and reinforcement open-source tools such as PyTorch, TensorFlow, scikit-learn, and Ray RLlib.
 
@@ -143,7 +143,7 @@ For more information on Microsoft Azure Machine Learning, see [How Azure Machine
 
 ### Azure SQL from Databricks
 
-You can replace the functionality of SQL Server 2019 Big Data Clusters by using one or more Azure SQL database options for operational data, and Microsoft Azure Databricks for your analytic workloads. 
+You can replace the functionality of SQL Server Big Data Clusters by using one or more Azure SQL database options for operational data, and Microsoft Azure Databricks for your analytic workloads. 
 
 Azure Databricks is a data analytics platform optimized for the Microsoft Azure cloud services platform. Azure Databricks offers two environments for developing data intensive applications: Azure Databricks SQL Analytics and Azure Databricks Workspace.
 
@@ -186,21 +186,19 @@ For more information on Microsoft Azure Databricks, see [What is Databricks Data
 
 ### Using SQL Server 2022 with Azure Synapse Link for SQL
 
-[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] contains a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, the [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). Azure Synapse Link for SQL Server 2022 provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. This enables near real-time analysis and hybrid transactional and analytical processing with minimal impact on operational systems. Once the data is in Azure Synapse, you can join to  many different data sources regardless of their size, scale, or format. Run powerful analytics over all your relational and non-relational data using your choice of Azure Machine Learning, Spark, or Power BI. Azure Synapse Link is also available [for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link).
-
-### Operational workloads within SQL Server
+[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] contains a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, the [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). Azure Synapse Link for SQL Server 2022 provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. It provides near real-time analysis and hybrid  transactional and analytical processing with minimal impact on operational systems. Once the data is in Synapse, you can combine it with many different data sources regardless of their size, scale, or format and run powerful analytics over all of it using your choice of Azure Machine Learning, Spark, or Power BI. Since the automated change feeds only push what is new or different, data transfer happens much faster and now allows for near real-time insights, with minimal impact on the performance of the source database in SQL Server 2022.
 
 For your operational and even much of your analytic workloads, SQL Server can handle massive database sizes - for more information on maximum capacity specifications for SQL Server, see [Compute capacity limits by edition of SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md). Using multiple SQL Server Instances on separate machines with partitioned T-SQL requests allow a scale-out environment for applications. 
 
-Two general reference architectures are to use SQL Server for structured data queries and a separate installation of a scale-out non-relational system (such as Apache Hadoop or Apache Spark) for on-premises Link to Azure Synapse. The other option is to use a set of containers in a Kubernetes cluster with all components for your solution.
+Using PolyBase enables your SQL Server instance to query data with T-SQL directly from SQL Server, Oracle, Teradata, MongoDB, and Cosmos DB without separately installing client connection software. You can also use the generic ODBC connector on a Microsoft Windows-based Instance to connect to additional providers using third-party ODBC drivers. PolyBase allows T-SQL queries to join the data from external sources to relational tables in an instance of SQL Server. This allows the data to stay in its original location and format. You can virtualize the external data through the SQL Server instance, so that it can be queried in place like any other table in SQL Server. SQL Server 2022 also allows ad-hoc queries and backup/restore over Object-Store (using the S3-API) hardware or software storage options.
 
-### Microsoft SQL Server on Windows, Apache Spark, and on-premises S3-compatible object storage 
+Two general reference architectures are to use SQL Server on a stand-alone server for structured data queries and a separate installation of a scale-out non-relational system (such as Apache Hadoop or Apache Spark) for on-premises Link to Synapse, and the other option is to use a set of containers in a Kubernetes cluster with all components for your solution.
 
-You can install SQL Server on Windows or Linux, and scale up the hardware architecture, leveraging the new SQL Server 2022 [S3-compatible object storage query capability and the PolyBase feature](../relational-databases/polybase/polybase-configure-s3-compatible.md) to enable queries across all data in your environment, even data stored in [parquet files in S3-compatible object storage](../relational-databases/polybase/polybase-virtualize-parquet-file.md).
+### Microsoft SQL Server on Windows, Apache Spark, and Object Storage On-Premises
 
-Using [PolyBase](../relational-databases/polybase/polybase-guide.md) enables your SQL Server instance to query data with T-SQL directly from SQL Server, Oracle, Teradata, MongoDB, and Cosmos DB without separately installing client connection software. You can also use the generic ODBC connector on a Microsoft Windows-based instance to connect to additional providers using third-party ODBC drivers. PolyBase allows T-SQL queries to join the data from external sources to relational tables in an instance of SQL Server. This allows the data to stay in its original location and format. You can virtualize the external data through the SQL Server instance, so that it can be queried in place like any other table in SQL Server. SQL Server 2022 also allows ad-hoc queries and [backup/restore over S3-compatible hardware or software storage options](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md), similar to the [BACKUP/RESTORE TO URL to Azure Blob Storage](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+You can install SQL Server on Windows or Linux, and scale up the hardware architecture, leveraging the SQL Server 2022 object-storage query capability and the PolyBase feature to enable queries across all data in your system.
 
-Installing and configuring a scale-out platform such as Apache Hadoop or Apache Spark allows for querying non-relational data at scale. Using a central set of S3-compatible object storage systems that support the S3 API allows both SQL Server 2022 and Spark to access the same set of data across all systems.
+Installing and configuring a scale-out platform such as Apache Hadoop or Apache Spark allows for querying non-relational data at scale. Using a central set of Object-Storage systems that support the S3-API allows both SQL Server 2022 and Spark to access the same set of data across all systems.
 
 The Microsoft Apache Spark connector for SQL Server and Azure SQL also has that allow you to query data directly from SQL Server using Spark Jobs. For more information on the Apache Spark connector for SQL Server and Azure SQL, see [Apache Spark connector: SQL Server & Azure SQL](../connect/spark/connector.md).
 
@@ -221,7 +219,7 @@ Your next decision is to either rewrite the current functionality in your system
 
 If you plan to migrate the current system with as little code-change as possible, the language compatibility is your primary focus for planning. 
 
-### Code migration
+### Code Migration
 
 Your next step is to audit the code the current system uses and what changes it needs to run against the new environment.
 
@@ -230,7 +228,7 @@ There are two primary vectors for code migration to consider:
 1.  *Sources and Sinks*
 2.  *Functional Migration*
 
-#### Sources and sinks
+#### Sources and Sinks
 
 The first task in code migration is to identify the data source connection methods, strings, or APIs that the code uses to access the
 data that is imported, its path, and its ultimate destination. Document those sources and create a map to the new architecture's locations.
@@ -238,7 +236,7 @@ data that is imported, its path, and its ultimate destination. Document those so
 - If the current solution is using a *pipeline* system to move the data through the system, map the new architecture sources, steps, and sinks to the pipeline's components. 
 - If the new solution is also replacing the *pipeline* architecture, treat the system as a new installation for planning purposes, even if you are reusing the hardware or cloud platform as the replacement.
 
-### Functionality migration
+### Functionality Migration
 
 The most complex work needed in a migration is to reference, update, or create the documentation of the functionality of the current system. If you are planning an in-place upgrade and attempting to reduce the amount of code rewrite as much as possible, this step will take the most time.
 
@@ -246,24 +244,24 @@ However, a migration from a previous technology is often an optimal time to upda
 
 In either case, you have two primary factors involved in the migration: the code and languages the new system supports, and the choices around data movement. Usually, you should be able to simply change connection strings from the current big data cluster to the SQL Server instance and Spark environment. Any data connection information and the code cutover should be minimal.
 
-If you are envisioning a rewrite of your current functionality, map the new libraries, packages, and DLLs to the architecture you chose for your migration. You'll find a list of each of the libraries, languages, and functions that each solution offers in the documentation references shown in the previous sections. Map out any suspect or unsupported languages and plan for the replacement with the chosen
+If you are envisioning a rewrite of your current functionality, map the new libraries, packages, and DLL's to the architecture you chose for your migration. You'll find a list of each of the libraries, languages, and functions that each solution offers in the documentation references shown in the previous sections. Map out any suspect or unsupported languages and plan for the replacement with the chosen
 architecture.
 
-### Data migration options
+### Data Migration Options
 
 There are two common approaches for data movement in a large-scale analytic system. The first is to create a "cutover" process where the original system continues processing data, and that data is rolled up into a smaller set of aggregated report-data source. The new system then starts with fresh data and is used from the migration date onward.
 
-In some cases, all data needs to move from the legacy system to the new system. In this case, you can mount the original file stores from SQL Server 2019 Big Data Clusters if the new system supports it and then copy the data piecewise to the new system, or you can create a physical move.
+In some cases, all data needs to move from the legacy system to the new system. In this case, you can mount the original file stores from SQL Server Big Data Clusters if the new system supports it and then copy the data piecewise to the new system, or you can create a physical move.
 
 Migrating your current data from [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] to another system is highly dependent on two factors: the location of your current data, and the destination being on-premises or to-cloud.
 
-#### On-premises data migration
+#### On-Premises Data Migration
 
 For on-premises to on-premises migrations, you can migrate the SQL Server data with a backup and restore strategy, or you can set up replication to move some or all your relational data. SQL Server Integration Services can also be used to copy data from SQL Server to another location. For more information about moving data with SSIS, see [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
 For the HDFS data in your current SQL Server Big Data Cluster environment, the standard approach is to mount the data to a stand-alone Spark Cluster, and either use the Object Storage process to move the data so that a SQL Server 2022 Instance can access it or leave it as-is and continue to process it with Spark Jobs. 
 
-#### In-cloud data migration
+#### In-Cloud Data Migration
 
 For data located in cloud storage or on premises, you can use the Azure Data Factory, which has over 90 connectors for a full pipeline of transfer, with scheduling, monitoring, alerting, and other services. For more information on Azure Data Factory, see [What is Azure Data Factory?](/azure/data-factory/introduction)
 

@@ -157,7 +157,6 @@
         "language-extensions/**/*.md": "SQL Server Language Extensions",
         "relational-database/replication/**/*.md": "SQL Server Replication",
         "relational-databases/native-client/**/*.md": "SQL Server Native Client",
-        "relational-databases/security/ledger/*.md": "SQL Server and Azure SQL Database",
         "relational-databases/security/ledger/*.yml": "SQL Server and Azure SQL Database",
         "connect/ado-net/**/*.md": "ADO.NET Provider for SQL Server",
         "connect/jdbc/**/*.md": "JDBC Driver for SQL Server",

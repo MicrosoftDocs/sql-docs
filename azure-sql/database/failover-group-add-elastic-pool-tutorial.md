@@ -81,7 +81,8 @@ Create your elastic pool using the Azure portal.
 
        ![Create new server for elastic pool](./media/failover-group-add-elastic-pool-tutorial/use-existing-server-for-elastic-pool.png)
 
-   - **Compute + storage**: Select **Configure elastic pool** to configure your compute, storage, and add your single database to your elastic pool. On the **Pool Settings** tab, leave the default of standard-series (Gen5), with 2 vCores and 32gb.
+   - **Compute + storage**: Select **Configure elastic pool** to configure your compute, storage, and add your single database to your elastic pool. On the **Pool Settings** tab, leave the default of standard-series (Gen5), with 2 vCores and 32 GB of maximum data storage.
+
 
 1. On the **Configure** page, select the **Databases** tab, and then choose to **Add database**. Choose the database you created in section 1 and then select **Apply** to add it to your elastic pool. Select **Apply** again to apply your elastic pool settings and close the **Configure** page.
 

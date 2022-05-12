@@ -63,7 +63,7 @@ Learn about significant changes to the Azure SQL Database documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Gen5 rename** | The Gen5 hardware has been renamed to the **standard-series (Gen5)** in the vCore purchasing model.
+| **Gen5 rename** | The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.
 
 
 

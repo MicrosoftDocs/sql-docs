@@ -52,29 +52,29 @@ Your application system could possibly have an important query whose plan is cha
 In 1998, a major update of the CE was part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, for which the compatibility level was 70. This version of the CE model is set on four basic assumptions:
 
 - **Independence:** Data distributions on different columns are assumed to be independent of each other, unless correlation information is available and usable.
-- **Uniformity:** Distinct values are evenly spaced and that they all have the same frequency. More precisely, within each [histogram](../../relational-databases/statistics/statistics.md#histogram) step, distinct values are evenly spread and each value has same frequency. 
-- **Containment (Simple):** Users query for data that exists. For example, for an equality join between two tables, factor in the predicates selectivity<sup>1</sup> in each input histogram, before joining histograms to estimate the join selectivity. 
+- **Uniformity:** Distinct values are evenly spaced and that they all have the same frequency. More precisely, within each [histogram](../../relational-databases/statistics/statistics.md#histogram) step, distinct values are evenly spread and each value has same frequency.
+- **Containment (Simple):** Users query for data that exists. For example, for an equality join between two tables, factor in the predicates selectivity<sup>1</sup> in each input histogram, before joining histograms to estimate the join selectivity.
 - **Inclusion:** For filter predicates where `Column = Constant`, the constant is assumed to actually exist for the associated column. If a corresponding histogram step is non-empty, one of the step's distinct values is assumed to match the value from the predicate.
 
   <sup>1</sup> Row count that satisfies the predicate.
 
 Subsequent updates started with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], meaning compatibility levels 120 and above. The CE updates for levels 120 and above incorporate updated assumptions and algorithms that work well on modern data warehousing and on OLTP workloads. From the CE 70 assumptions, the following model assumptions were changed starting with CE 120:
 
-- **Independence** becomes **Correlation:** The combination of the different column values isn't necessarily independent. This may resemble more real-life data querying.
-- **Simple Containment** becomes **Base Containment:** Users might query for data that doesn't exist. For example, for an equality join between two tables, we use the base tables histograms to estimate the join selectivity, and then factor in the predicates selectivity.
+- **Independence** becomes **Correlation:** The combination of the different column values are not necessarily independent. This may resemble more real-life data querying.
+- **Simple Containment** becomes **Base Containment:** Users might query for data that does not exist. For example, for an equality join between two tables, we use the base tables histograms to estimate the join selectivity, and then factor in the predicates selectivity.
 
 ## Use Query Store to assess the CE version
 
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], the Query Store is a handy tool for examining the performance of your queries. Once Query Store is enabled, it will begin to track query performance over time, even if execution plans change. Monitor Query Store for high-cost or regressed query performance. For more information, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md). 
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], the Query Store is a handy tool for examining the performance of your queries. Once Query Store is enabled, it will begin to track query performance over time, even if execution plans change. Monitor Query Store for high-cost or regressed query performance. For more information, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 
 If preparing for an upgrade to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or promoting a database compatibility level in any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] platform, consider [Upgrading Databases by using the Query Tuning Assistant](upgrade-dbcompat-using-qta.md), which can help compare query performance in two different compatibility levels.
 
 > [!IMPORTANT]
 > Ensure the Query Store is correctly configured for your database and workload. For more information, see [Best practices with Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md).
 
-## Use extended events to assess the CE version
+## Use extended events to assess the CE version  
 
-Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to `C:\Temp\` (although you can change the path). When you open the .xel file in SQL Server Management Studio (SSMS), its detailed information is displayed in a user friendly manner. 
+Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to `C:\Temp\` (although you can change the path). When you open the .xel file in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], its detailed information is displayed in a user friendly manner.
   
 ```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -168,7 +168,7 @@ Next are steps you can use to assess whether any of your most important queries 
   
     3. Unless your query runs better and with a different plan under the older CE, you almost certainly want the latest CE.  
   
-    4. However, if your query runs with a faster plan under the older CE, consider forcing the system to use the faster plan and to ignore the CE. This way you can have the latest CE on for everything, while keeping the faster plan in the one odd case.
+    4. However, if your query runs with a faster plan under the older CE, consider forcing the system to use the faster plan and to ignore the CE. This way you can have the latest CE on for everything, while keeping the faster plan in the one odd case.  
   
 ## How to activate the best query plan  
   
@@ -176,7 +176,11 @@ Suppose that with CE 120 or above, a less efficient query plan is generated for 
   
 - You could set the database compatibility level to a value lower than the latest available, for your whole database.
   
-  - For example, setting the compatibility level 110 or lower activates CE 70, but it makes all queries subject to the previous CE model.
+  - For example, setting the compatibility level 110 or lower activates CE 70, but it makes all queries subject to the previous CE model.  
+  
+  - Further, setting a lower compatibility level also misses a number of improvements in the query optimizer for latest versions, and affects all queries against the database.
+  
+- You could use `LEGACY_CARDINALITY_ESTIMATION` database option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
 
   - Further, setting a lower compatibility level also misses many improvements in the query optimizer for latest versions, and affects all queries against the database.
 
@@ -190,7 +194,7 @@ Suppose that with CE 120 or above, a less efficient query plan is generated for 
 
 ### Database compatibility level
 
-You can ensure your database is at a particular level by using the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code for [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). 
+You can ensure your database is at a particular level by using the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code for [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 > [!IMPORTANT]
 > The database engine version numbers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] are not comparable with each other, and rather are internal build numbers for these separate products. The database engine for Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is based on the same code base as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine. Most importantly, the database engine in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] always has the newest SQL database engine bits. Version 12 of [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is newer than version 15 of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -206,7 +210,7 @@ WHERE d.name = 'yourDatabase';
 GO  
 ```  
 
-For pre-existing databases running at lower compatibility levels, as long as the application doesn't need to use enhancements that are only available in a higher database compatibility level, it's a valid approach to maintain the previous database compatibility level. For new development work, or when an existing application requires use of new features such as [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md), and some new [!INCLUDE[tsql](../../includes/tsql-md.md)], plan to upgrade the database compatibility level to the latest available. For more information, see [Compatibility levels and Database Engine upgrades](../../database-engine/install-windows/compatibility-certification.md#compatibility-levels-and-database-engine-upgrades). 
+For pre-existing databases running at lower compatibility levels, as long as the application does not need to leverage enhancements that are only available in a higher database compatibility level, it is a valid approach to maintain the previous database compatibility level. For new development work, or when an existing application requires use of new features such as [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md), as well as some new [!INCLUDE[tsql](../../includes/tsql-md.md)], plan to upgrade the database compatibility level to the latest available. For more information, see [Compatibility levels and Database Engine upgrades](../../database-engine/install-windows/compatibility-certification.md#compatibility-levels-and-database-engine-upgrades).
 
 > [!CAUTION]
 > Before changing database compatibility level, review [Best Practices for upgrading Database Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
@@ -221,7 +225,7 @@ For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database set at 
   
 ### Legacy cardinality estimator
 
-For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database set at compatibility level 120 and above, the legacy cardinality estimator (CE version 70) can be activated at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database set at compatibility level 120 and above, the legacy cardinality estimator (CE version 70) can be can be activated at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 
@@ -238,7 +242,7 @@ GO
 
  Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1, modify the query to use the [Query Hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
 
-```sql  
+```sql
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
 WHERE OrderAddedDate >= '2016-05-01'
@@ -247,7 +251,7 @@ OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 
 ### Set a Query Store hint
 
- Queries can be forced to use the legacy cardinality estimator *without modifying the query*, using the [Query Store hints](query-store-hints.md) (Preview) feature. 
+ Queries can be forced to use the legacy cardinality estimator *without modifying the query*, using the [Query Store hints](query-store-hints.md) (Preview) feature.
 
 1. Identify the query in the [sys.query_store_query_text](../system-catalog-views/sys-query-store-query-text-transact-sql.md) and [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md) Query Store catalog views. For example, search for an executed query by text fragment:
 

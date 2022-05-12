@@ -42,7 +42,7 @@ The following table details all intelligent query processing features, along wit
 | [Interleaved Execution](#interleaved-execution-for-mstvfs) | Yes, under compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] under compatibility level 140|Use the actual cardinality of the multi-statement table valued function encountered on first compilation instead of a fixed guess.|
 | [Memory Grant Feedback (Batch Mode)](#batch-mode-memory-grant-feedback) | Yes, under compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] under compatibility level 140|If a batch mode query has operations that spill to disk, add more memory for consecutive executions. If a query wastes > 50% of the memory allocated to it, reduce the memory grant side for consecutive executions.|
 | [Memory Grant Feedback (Row Mode)](#row-mode-memory-grant-feedback) | Yes, under compatibility level 150| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] under compatibility level 150|If a row mode query has operations that spill to disk, add more memory for consecutive executions. If a query wastes > 50% of the memory allocated to it, reduce the memory grant side for consecutive executions.|
-| [Memory Grant Feedback (Percentile and Persistence)](#row-mode-memory-grant-feedback) | Yes, under compatibility level 150| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] under compatibility level 150|If a row mode query has operations that spill to disk, add more memory for consecutive executions. If a query wastes > 50% of the memory allocated to it, reduce the memory grant side for consecutive executions.|
+| [Memory Grant Feedback (Percentile and Persistence)](#percentile-and-persistence-mode-memory-grant-feedback) | Yes, under compatibility level 150| Yes, starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) under compatibility level 150 | Addresses existing limitations of memory grant feedback in a non-intrusive way.
 | [Scalar UDF Inlining](#scalar-udf-inlining) | Yes, under compatibility level 150 | Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] under compatibility level 150|Scalar UDFs are transformed into equivalent relational expressions that are "inlined" into the calling query, often resulting in significant performance gains.|
 | [Table Variable Deferred Compilation](#table-variable-deferred-compilation) | Yes, under compatibility level 150| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] under compatibility level 150|Use the actual cardinality of the table variable encountered on first compilation instead of a fixed guess.|
 
@@ -182,24 +182,24 @@ A USE HINT query hint takes precedence over a database scoped configuration or t
 
 ## Percentile and Persistence mode memory grant feedback
 
-**Applies to:**  SQL Server (starting with SQL Server 2022), Azure SQL Database (at Public Preview), Azure SQL Managed Instance (at Public Preview)
+**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later.
 
-Memory Grant Feedback (MGF) is an existing feature that adjusts the size of the memory allocated for a query based on past performance.  However, the initial phases of this project only stored the memory grant adjustment with the plan in cache – if a plan is evicted from the cache, the feedback process must start again, resulting in poor performance the first few times a query is executed after eviction.  The solution presented in this document is to persist the grant information with the other query information in the Query Store , so that the benefits last across cache evictions.
+Memory Grant Feedback (MGF) is an existing feature that adjusts the size of the memory allocated for a query based on past performance. However, the initial phases of this project only stored the memory grant adjustment with the plan in the cache – if a plan is evicted from the cache, the feedback process must start again, resulting in poor performance the first few times a query is executed after eviction. The solution presented in this document is to persist the grant information with the other query information in the Query Store so that the benefits last across cache evictions.
 
-Additionally, the grant size adjustments only accounted for the most recently used grant.  So, if there is a parameterized query or workload that requires significantly varying memory grant sizes, the most recent grant information could be inaccurate, and could even be very out of step with the actual needs of the query being executed.  Below is a table showing what can happen when the actual needs and previous needs get out of alignment.  This is a maximally undesirable scenario for memory grant feedback.
+Additionally, the grant size adjustments only accounted for the most recently used grant. So, if a parameterized query or workload requires significantly varying memory grant sizes, the most recent grant information could be inaccurate. It could even be significantly out of step with the actual needs of the query being executed. Below is a table showing what can happen when the actual needs and previous needs get out of alignment. This is a maximally undesirable scenario for memory grant feedback.
 
 Last Used Grant Execution with Parameterized Plans
-Images shows the oscillation of a query's memory needs - big, small, big, small... overlaid with the memory grant accorded based on last used grant: big, big, small, big, small, big, small.  After step 1, the actual need and grant based on last grant are completely at odds.
+Images show the oscillation of a query's memory needs - big, small, big, small, etc. - overlaid with the memory grant accorded based on last used grant: big, big, small, big, small, big, small. After step 1, the actual need and grant based on the last grant are entirely at odds.
 
-Without this improvement, Memory Grant Feedback will disable itself – recognizing it’s doing more harm than good.  In this improvement, we introduce a percentile adjustment which will perform the memory grant adjustments based on recent history of executions (more than just the last one execution).  We look at entire history and consider the 90th percentile of historical/past grants, plus some buffer.  Over time, the grant given reduces spills (although there is wasted memory in the case when the parameter used requires only a small amount of memory).
+Memory Grant Feedback disables itself without this improvement – recognizing it’s doing more harm than good. In this improvement, we introduce a percentile adjustment which will perform the memory grant adjustments based on the recent history of executions (more than just the last one execution). We look at the entire history and consider the 90th percentile of historical/past grants, plus some buffer. Over time, the grant given reduces spills (although there is wasted memory in the case when the parameter used requires only a small amount of memory).
 
-Memory grant feedback persistence and percentile addresses existing limitations of memory grant feedback in a non-intrusive way.
+Memory grant feedback persistence and percentile address existing limitations of memory grant feedback in a non-intrusive way.
 
-## Before you enable Memory Grant Feedback: Persistence and Percentile
+### Before you enable Memory Grant Feedback: Persistence and Percentile
 
-It is recommend that you have performance baseline for your workload before the feature is enabled for your server. The baseline numbers will help you determine if you are getting the intended benefit from the feature.
+It is recommended that you have a performance baseline for your workload before the feature is enabled for your server. The baseline numbers will help you determine if you are getting the intended benefit from the feature.
 
-## Enabling Memory Grant Feedback: Persistence and Percentile
+### Enabling Memory Grant Feedback: Persistence and Percentile
 
 To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you are connected to when executing the query.
 
@@ -207,19 +207,11 @@ To enable memory grant feedback persistence and percentile, use database compati
 
 The Query Store must be enabled for every database where the persistence portion of this feature is used.
 
-> **IMPORTANT for SQL Server 2022 CTP 1.0**  
-> For CTP1.0, trace flags 2436, 10823, and 12612 must be enabled globally to use memory grant feedback persistence and percentile. The following example enables all trace flags:  
->
-> `DBCC TRACEON (2436, 10823, 12612, -1);`
+#### How to identify if the feature is enabled, and disable it?
 
-> **For CTP 1.1 and later**
-> The feature is on by default, and the above traceflags will disable the feature instead.
+Both of these features are enabled by default when the above instructions are followed. If you want to enable the trace flags but then disable or re-enable the feature, you can do this using a database scoped configuration.
 
-### How to identify if the feature is enabled, and disable it?
-
-Both of these features are enabled by default when the above instructions are followed. If you wanted to enable the trace flags but then disable or re-enable the feature, you can do this using a database scoped configuration.
-
-## Persistence
+### Persistence
 
 To disable memory grant feedback persistence for all query executions originating from the database,  execute the following within the context of the applicable database:
 
@@ -229,7 +221,7 @@ Disabling memory grant feedback persistence will also remove existing collected 
 
 The default setting for `MEMORY_GRANT_FEEDBACK_PERSISTENCE` is `ON`.
 
-## Percentile
+### Percentile
 
 To disable memory grant feedback percentile for all query executions originating from the database,  execute the following within the context of the applicable database:
 
@@ -239,18 +231,17 @@ Disabling memory grant feedback percentile will also remove existing collected f
 
 The default setting for `MEMORY_GRANT_FEEDBACK_PERCENTILE` is `ON`.
 
-## Considerations
+### Considerations
 
 You can view your current settings by querying `sys.database_scoped_configurations`. Please note that this feature will not work if both `BATCH_MODE_MEMORY_GRANT_FEEDBACK` and `ROW_MODE_MEMORY_GRANT_FEEDBACK` are set to OFF.
 
 Given feedback data is now persisted in the Query Store, there is some increase in the Query Store usage requirements. Based on current estimates, this size increase should not be greater than 10%.
 
-Percentile-based memory grant errs on the side of reducing spills. Because it's no longer based on the very last execution only, but on an observation of the several past executions, this could increase memory usage for oscilating workloads with wide variance in terms of memory grant requirements between executions.
+Percentile-based memory grant errs on the side of reducing spills. Because it's no longer based on the last execution-only but on an observation of the several past executions, this could increase memory usage for oscillating workloads with wide variance in memory grant requirements between executions.
 
-## Feedback and Reporting Issues
+### Feedback and Reporting Issues
 
 For feedback or questions, please email MGFP3Feedback@microsoft.com
-
 
 ## Interleaved execution for MSTVFs
 

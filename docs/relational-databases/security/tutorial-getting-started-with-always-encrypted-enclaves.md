@@ -4,7 +4,7 @@ description: This tutorial teaches you how to create a basic environment for Alw
 ms.custom:
   - seo-lt-2019
   - intro-get-started
-ms.date: 01/11/2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto

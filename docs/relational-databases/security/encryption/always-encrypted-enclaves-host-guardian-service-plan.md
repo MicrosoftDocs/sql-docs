@@ -2,7 +2,7 @@
 title: "Plan for Host Guardian Service attestation"
 description: "Plan Host Guardian Service attestation for SQL Server Always Encrypted with secure enclaves."
 ms.custom: ""
-ms.date: "01/11/2022"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -18,12 +18,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 When you use [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), make sure that the client application is talking to a trustworthy enclave within the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] process. For a virtualization-based security (VBS) enclave, this requirement includes verifying both the code inside the enclave is valid and the computer hosting [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is trustworthy. Remote attestation achieves this goal by introducing a third party that can validate the identity (and optionally, the configuration) of the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer. Before [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] can use an enclave to run a query, it must provide information to the attestation service about its operating environment to obtain a health certificate. This health certificate is then sent to the client, which can independently verify its authenticity with the attestation service. Once the client trusts the health certificate, it knows it is talking to a trustworthy VBS enclave and will issue the query that will use that enclave.
 
-The Host Guardian Service (HGS) role in Windows Server 2019 provides remote attestation capabilities for Always Encrypted with VBS enclaves.
+The Host Guardian Service (HGS) role in Windows Server 2019 or later provides remote attestation capabilities for Always Encrypted with VBS enclaves.
 This article will guide you through the pre-deployment decisions and requirements to use Always Encrypted with VBS enclaves and HGS attestation.
 
 ## Architecture overview
 
-The Host Guardian Service (HGS) is a clustered web service that runs on Windows Server 2019.
+The Host Guardian Service (HGS) is a clustered web service that runs on Windows Server 2019 or later.
 In a typical deployment, there will be 1-3 HGS servers, at least one computer running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], and a computer running a client application or tools, such as SQL Server Management Studio.
 Since the HGS is responsible for determining which computers running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] are trustworthy, it requires both physical and logical isolation from the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance it is protecting.
 If the same admins have access to HGS and a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer, they could configure the attestation service to allow a malicious computer to run [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], enabling them to compromise the VBS enclave.
@@ -98,7 +98,7 @@ The computer(s) running the Host Guardian Service role should meet the following
 
 | Component | Requirement |
 | --------- | ----------- |
-| Operating System | Windows Server 2019 Standard or Datacenter edition |
+| Operating System | Windows Server 2019 or later, Standard or Datacenter edition |
 | CPU | 2 cores (min), 4 cores (recommended) |
 | RAM | 8 GB (min) |
 | NICs | 2 NICs with static IPs recommended (1 for cluster traffic, 1 for HGS service) |

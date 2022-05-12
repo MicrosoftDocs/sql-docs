@@ -39,7 +39,7 @@ The steps for creating a new project using Visual Studio Code, or Azure Data Stu
  
     ![Screenshot of selecting a style for a Database Project in Visual Studio Code.](./media/local-dev-experience-quickstart/database-project-select-style.jpg)
     
-1. To set the target platform for your project, right-click the the **Database Project name** and choose **Change Target Platform**. Select **Azure SQL Database** as the target platform for your project.
+1. To set the target platform for your project, right-click the **Database Project name** and choose **Change Target Platform**. Select **Azure SQL Database** as the target platform for your project.
      
     ![Screenshot of selecting Azure SQL Database as a target for a Database Project.](./media/local-dev-experience-quickstart/database-project-target-platform.jpg)
 
@@ -47,7 +47,7 @@ The steps for creating a new project using Visual Studio Code, or Azure Data Stu
    
     Optionally, SQL Database Project files can be put under source control together with your application projects.
 
-1. Add objects to your Database Project. You can create or alter database objects such as tables, views, stored procedures and scripts. For example, right-click the Database Project name and select **Add Table** to add a table.
+1. Add objects to your Database Project. You can create or alter database objects such as tables, views, stored procedures and scripts. For example, right-click the **Database Project name** and select **Add Table** to add a table.
  
     ![Screenshot of adding a table from the Database Projects menu in Visual Studio Code.](./media/local-dev-experience-quickstart/database-project-add-folder.jpg)
     

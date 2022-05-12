@@ -103,21 +103,21 @@ Several switches and behaviors are altered from [sqlcmd](sqlcmd-utility.md) in g
     - The `SQLCMDPASSWORD` environment variable
     - The `:CONNECT` command
     - When prompted, the user can type the password to complete a connection
-- `-r` requires a 0 or 1 argument
+- `-r` requires a `0` or `1` argument
 - `-R` switch is removed.
 - `-I` switch is removed. To disable quoted identifier behavior, add `SET QUOTED IDENTIFIER OFF` in your scripts.
 - `-N` now takes a string value that can be one of `true`, `false`, or `disable` to specify the encryption choice. (`default` is the same as omitting the parameter)
-  - If `-N` and `-C` are not provided, sqlcmd will negotiate authentication with the server without validating the server certificate.
-  - If `-N` is provided but `-C` is not, sqlcmd will require validation of the server certificate. Note that a `false` value for encryption could still lead to encryption of the login packet.
+  - If `-N` and `-C` aren't provided, sqlcmd will negotiate authentication with the server without validating the server certificate.
+  - If `-N` is provided but `-C` isn't, sqlcmd will require validation of the server certificate. A `false` value for encryption could still lead to encryption of the login packet.
   - If both `-N` and `-C` are provided, sqlcmd will use their values for encryption negotiation.
-  - More information about client/server encryption negotiation can be found at <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-tds/60f56408-0188-4cd5-8b90-25c6f2423868>
+  - More information about client/server encryption negotiation can be found at <https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/60f56408-0188-4cd5-8b90-25c6f2423868>
 - `-u` The generated Unicode output file will have the UTF16 Little-Endian Byte-order mark (BOM) written to it.
 - Some behaviors that were kept to maintain compatibility with `OSQL` may be changed, such as alignment of column headers for some data types.
-- All commands must fit on one line, even `EXIT`. Interactive mode will not check for open parentheses or quotes for commands and prompt for successive lines. The ODBC sqlcmd allows the query run by `EXIT(query)` to span multiple lines.
+- All commands must fit on one line, even `EXIT`. Interactive mode won't check for open parentheses or quotes for commands and prompt for successive lines. The ODBC sqlcmd allows the query run by `EXIT(query)` to span multiple lines.
 
 ## Miscellaneous enhancements
 
-- `:Connect` now has an optional `-G` parameter to select one of the authentication methods for Azure SQL Database  - `SqlAuthentication`, `ActiveDirectoryDefault`, `ActiveDirectoryIntegrated`, `ActiveDirectoryServicePrincipal`, `ActiveDirectoryManagedIdentity`, `ActiveDirectoryPassword`. More information on [Azure Active Directory authentication](#azure-active-directory-authentication) support below. If `-G` is not provided, either Integrated security or SQL Authentication will be used, dependent on the presence of a `-U` user name parameter.
+- `:Connect` now has an optional `-G` parameter to select one of the authentication methods for Azure SQL Database  - `SqlAuthentication`, `ActiveDirectoryDefault`, `ActiveDirectoryIntegrated`, `ActiveDirectoryServicePrincipal`, `ActiveDirectoryManagedIdentity`, `ActiveDirectoryPassword`. More information on [Azure Active Directory authentication](#azure-active-directory-authentication) support below. If `-G` isn't provided, either Integrated security or SQL Authentication will be used, dependent on the presence of a `-U` user name parameter.
 - The new `--driver-logging-level` command line parameter allows you to see traces from the `go-mssqldb` client driver. Use `64` to see all traces.
 - Sqlcmd can now print results using a vertical format. Use the new `-F vertical` command line option to set it. It's also controlled by the `SQLCMDFORMAT` scripting variable.
 
@@ -129,18 +129,18 @@ This version of sqlcmd supports a broader range of Azure Active Directory authen
 
 To use Azure Active Directory auth, you can use one of two command line switches
 
-`-G` is (mostly) compatible with its usage in the prior version of sqlcmd. If a user name and password are provided, it will authenticate using Azure Active Directory Password authentication. If a user name is provided it will use Azure Active Directory Interactive authentication which may display a web browser. If no user name or password is provided, it will use a DefaultAzureCredential which attempts to authenticate through a variety of mechanisms.
+`-G` is (mostly) compatible with its usage in the prior version of sqlcmd. If a user name and password are provided, it will authenticate using Azure Active Directory Password authentication. If a user name is provided it will use Azure Active Directory Interactive authentication, which may display a web browser. If no user name or password is provided, it will use a DefaultAzureCredential, which attempts to authenticate through a various mechanisms.
 
 `--authentication-method=` can be used to specify one of the following authentication types.
 
 `ActiveDirectoryDefault`
 
 - For an overview of the types of authentication this mode will use, see (<https://github.com/Azure/azure-sdk-for-go/tree/main/sdk/azidentity#defaultazurecredential>).
-- Choose this method if your database automation scripts are intended to run in both local development environments and in a production deployment in Azure. You'll be able to use a client secret or an Azure CLI login on your development environment and a managed identity or client secret on your production deployment without changing the script.
+- Choose this method if your database automation scripts are intended to run in both local development environments and in a production deployment in Azure. In your development environment you'll be able to use a client secret or an Azure CLI login. Without changing the script from the development environment, you'll be able to use a managed identity or client secret on your production deployment.
 - Setting environment variables AZURE_TENANT_ID, and AZURE_CLIENT_ID are necessary for DefaultAzureCredential to begin checking the environment configuration and look for one of the following additional environment variables in order to authenticate:
 - Setting environment variable AZURE_CLIENT_SECRET configures the DefaultAzureCredential to choose ClientSecretCredential.
-- Setting environment variable AZURE_CLIENT_CERTIFICATE_PATH configures the DefaultAzureCredential to choose ClientCertificateCredential if AZURE_CLIENT_SECRET is not set.
-- Setting environment variable AZURE_USERNAME configures the DefaultAzureCredential to choose UsernamePasswordCredential if AZURE_CLIENT_SECRET and AZURE_CLIENT_CERTIFICATE_PATH are not set.
+- Setting environment variable AZURE_CLIENT_CERTIFICATE_PATH configures the DefaultAzureCredential to choose ClientCertificateCredential if AZURE_CLIENT_SECRET isn't set.
+- Setting environment variable AZURE_USERNAME configures the DefaultAzureCredential to choose UsernamePasswordCredential if AZURE_CLIENT_SECRET and AZURE_CLIENT_CERTIFICATE_PATH aren't set.
 
 `ActiveDirectoryIntegrated`
 
@@ -150,7 +150,7 @@ This method is currently not implemented and will fall back to `ActiveDirectoryD
 
 This method will authenticate using a user name and password. It will not work if MFA is required.
 You provide the user name and password using the usual command line switches or SQLCMD environment variables.
-Set `AZURE_TENANT_ID` environment variable to the tenant id of the server if not using the default tenant of the user.
+Set `AZURE_TENANT_ID` environment variable to the tenant ID of the server if not using the default tenant of the user.
 
 `ActiveDirectoryInteractive`
 
@@ -162,14 +162,14 @@ Use this method when running sqlcmd on an Azure VM that has either a system-assi
 
 `ActiveDirectoryServicePrincipal`
 
-This method authenticates the provided user name as a service principal id and the password as the client secret for the service principal. Provide a user name in the form `<service principal id>@<tenant id>`. Set `SQLCMDPASSWORD` variable to the client secret. If using a certificate instead of a client secret, set `AZURE_CLIENT_CERTIFICATE_PATH` environment variable to the path of the certificate file.
+This method authenticates the provided user name as a service principal ID and the password as the client secret for the service principal. Provide a user name in the form `<service principal id>@<tenant id>`. Set `SQLCMDPASSWORD` variable to the client secret. If using a certificate instead of a client secret, set `AZURE_CLIENT_CERTIFICATE_PATH` environment variable to the path of the certificate file.
 
 ### Environment variables for Azure Active Directory authentication
 
 Some settings for Azure Active Directory authentication do not have command line inputs, and some environment variables are consumed directly by the `azidentity` package used by `sqlcmd`.
 These environment variables can be set to configure some aspects of Azure Active Directory authentication and to bypass default behaviors. In addition to the variables listed above, the following are sqlcmd-specific and apply to multiple methods.
 
-`SQLCMDCLIENTID` - set this to the identifier of an application registered in your Azure Active Directory which is authorized to authenticate to Azure SQL Database. Applies to `ActiveDirectoryInteractive` and `ActiveDirectoryPassword` methods.
+`SQLCMDCLIENTID` - set this environment variable to the identifier of an application registered in your Azure Active Directory, which is authorized to authenticate to Azure SQL Database. Applies to `ActiveDirectoryInteractive` and `ActiveDirectoryPassword` methods.
 
 ## Next steps
 - [Learn more about go-sqlcmd on GitHub](https://github.com/microsoft/go-mssqldb)

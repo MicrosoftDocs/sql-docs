@@ -19,6 +19,12 @@ ms.custom:
 
 [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud environments, and operating systems.
 
+The following video introduces SQL Server 2022 Preview.
+
+> [!VIDEO https://channel9.msdn.com/Shows/data-exposed/introduction-to-sql-server-2022-ep1/player?WT.mc_id=dataexposed-c9-niner]
+
+For additional video content, see [What's new in SQL Server](https://microsoftmechanics.libsyn.com/podcast/whats-new-in-sql-server-2022).
+
 This article summarizes the new features and enhancements for [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
 
 [Get SQL Server 2022 Preview Evaluation Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
@@ -27,11 +33,16 @@ For more information and known issues, see [[!INCLUDE[sql-server-2022](../includ
 
 For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../tools/overview-sql-tools.md).
 
-The following video introduces SQL Server 2022 Preview.
+## Customer technology preview release
 
-> [!VIDEO https://channel9.msdn.com/Shows/data-exposed/introduction-to-sql-server-2022-ep1/player?WT.mc_id=dataexposed-c9-niner]
+This release is customer technology preview (CTP) 2.0. CTP 2.0 is the first public preview releases. Previous releases (CTP 1.x) were available to select participants in the early adopter program (EAP).
 
-For additional video content, see [What's new in SQL Server](https://microsoftmechanics.libsyn.com/podcast/whats-new-in-sql-server-2022).
+This release:
+
+- Is available as Evaluation Edition. It is available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
+- Does not include support from Microsoft, except for select EAP customers.
+
+After you experience SQL Server 2022 Preview, you're welcome to [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
 
 The following sections provide an overview of these features.
 

@@ -31,8 +31,12 @@ This release has the same hardware and software requirements as [SQL Server 2019
 
 This section identifies known issues you may experience with this product:
 
+### Query Store
+
 - **Issue and customer impact**: Query Store is not enabled by default.
 - **Workaround**: To experience intelligent query processing features, enable Query Store.
+
+### Memory grant feedback
 
 - **Issue and customer impact**: When you try [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#percentile-and-persistence-mode-memory-grant-feedback),  immediately after you enable Query Store SQL Server may return an error (access violation).
 - **Workaround**: Wait a period of time before you try to use Query Store.

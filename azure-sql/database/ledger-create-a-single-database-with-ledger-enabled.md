@@ -74,7 +74,7 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 1. Select **Apply**.
 
-    :::image type="content" source="media/ledger/ledger-configure-ledger-pane.png" alt-text="Screenshot that shows the Configure ledger (preview) pane in the Azure portal.":::
+    :::image type="content" source="media/ledger/ledger-configure-ledger-pane.png" alt-text="Screenshot that shows the Configure ledger pane in the Azure portal.":::
 
 1. Select **Review + create** at the bottom of the page.
 

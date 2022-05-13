@@ -46,8 +46,8 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
    END CATCH
    ```
 
-> [!NOTE]
-   > The verification script can also be found in the Azure Portal. Open the [Azure portal](https://portal.azure.com/) and locate the database you want to verify. In **Security**, select the **Ledger** option. In the **Ledger** pane, select **</> Verify database**.
+   > [!NOTE]
+   > The verification script can also be found in the Azure portal. Open the [Azure portal](https://portal.azure.com/) and locate the database you want to verify. In **Security**, select the **Ledger** option. In the **Ledger** pane, select **</> Verify database**.
 
 1. Execute the query. You'll see that **digest_locations** returns the current location of where your database digests are stored and any previous locations. **Result** returns the success or failure of ledger verification.
 

@@ -22,8 +22,10 @@ After a disastrous event, you can continue running your read-only workloads on S
 
 To use the link feature, you'll need:
 
-- SQL Server 2022 Preview Evaluation Edition. To experience this preview capability, sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup).
-- SQL Server 2019 Enterprise Edition or Developer Edition with [CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) installed on-premises, or on an Azure VM.
+- An instance of SQL Server on-premises or on an Azure VM.
+- A supported version of SQL Server. The supported versions include the following:
+  - SQL Server 2022 Preview Evaluation Edition. To experience this preview capability, sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup).
+  - SQL Server 2019 Enterprise Edition or Developer Edition with [CU15 (or above)](https://support.microsoft.com/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6).
 - Network connectivity between your SQL Server and managed instance is required. If your SQL Server is running on-premises, use a VPN link or Express route. If your SQL Server is running on an Azure VM, either deploy your VM to the same subnet as your managed instance, or use global VNet peering to connect two separate subnets. 
 - Azure SQL Managed Instance provisioned on any service tier.
 

@@ -46,7 +46,7 @@ For more information, see [Key Versions in [!INCLUDE[big-data-clusters-2019](../
 
   * Secure management and storage of keys and certificates used for encryption at rest.
   * Hadoop KMS compatibility. KMS acts as the key management service for HDFS component on Big Data Clusters.
-  * SQL Server transparent data encryption (TDE) certificate management.
+  * SQL Server Transparent Data Encryption (TDE) certificate management.
 
 * System-managed keys
 
@@ -71,7 +71,7 @@ Those keys and certificates are service-managed. This article provides operation
 
 The feature set introduces the Big Data Clusters KMS controller service to provide system-managed keys and certificates for data encryption at rest on both SQL Server and HDFS. Those keys and certificates are service-managed. This article provides operational guidance on how to interact with the service.
 
-* SQL Server instances use the established [Transparent data encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md) functionality.
+* SQL Server instances use the established [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md) functionality.
 * HDFS uses native Hadoop KMS within each pod to interact with Big Data Clusters KMS on the controller. This approach enables HDFS encryption zones, which provide secure paths on HDFS.
 
 ### SQL Server instances
@@ -80,7 +80,7 @@ The feature set introduces the Big Data Clusters KMS controller service to provi
 * Master instance Big Data Clusters provisioned databases and user databases won't be encrypted automatically. Database administrators might use the installed certificate to encrypt any database.
 * Compute pool and storage pool are automatically encrypted using the system-generated certificate.
 * Data pool encryption, although technically possible using T-SQL `EXECUTE AT` commands, is discouraged and unsupported at this time. Using this technique to encrypt data pool databases might not be effective and encryption might not be happening at the desired state. The approach also creates an incompatible upgrade path towards next releases.
-* SQL Server key rotation is achieved using standard T-SQL administrative commands. For more information, see [SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide](encryption-at-rest-sql-server-tde.md).
+* SQL Server key rotation is achieved using standard T-SQL administrative commands. For more information, see [SQL Server Big Data Clusters Transparent Data Encryption (TDE) at rest usage guide](encryption-at-rest-sql-server-tde.md).
 * Encryption monitoring happens through existing standard SQL Server DMVs for TDE.
 * Backing up and restoring a TDE enabled database into the cluster is supported.
 * High availability is supported. If a database on the primary instance of SQL Server is encrypted, then all secondary replica of the database is encrypted as well.

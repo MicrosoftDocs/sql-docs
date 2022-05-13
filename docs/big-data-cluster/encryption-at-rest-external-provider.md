@@ -24,9 +24,9 @@ For information on configuring and using encryption at rest see the following gu
 
 * [Encryption at rest concepts and configuration guide](encryption-at-rest-concepts-and-configuration.md)
 * [SQL Server Big Data Clusters HDFS Encryption Zones usage guide](encryption-at-rest-hdfs-encryption-zones.md)
-* [SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide](encryption-at-rest-sql-server-tde.md)
+* [SQL Server Big Data Clusters Transparent Data Encryption (TDE) at rest usage guide](encryption-at-rest-sql-server-tde.md)
 
-## Prerequisites <a id="prereqs"></a>
+## <a id="prereqs"></a> Prerequisites
 
 * [SQL Server 2019 Big Data Clusters release notes](release-notes-big-data-cluster.md). CU11+ required.
 * [Big data tools](deploy-big-data-tools.md) including [azdata](../azdata/reference/reference-azdata.md) 20.3.5+.
@@ -43,7 +43,7 @@ The following diagram explains the interactions while configuring external keys 
 
 :::image type="content" source="media/big-data-cluster-key-versions/external-key-control-pane-interactions.png" alt-text="Diagram explains the interactions while configuring external keys in control plane."  lightbox="media/big-data-cluster-key-versions/external-key-control-pane-interactions-LG.png":::  
 
-After the key is installed, the encryption and decryption of different payloads are protected by the main encryption key. This protection is similar to system-managed keys, except that the decryption calls routed to control plane are then routed to the key management service (KMS) plugin app. The KMS plugin app routes the request to appropriate location, such as HSM, Hashicorp Vault, or another product.
+After the key is installed, the encryption and decryption of different payloads are protected by the main encryption key. This protection is similar to system-managed keys, except that the decryption calls routed to control plane are then routed to the key management service (KMS) plugin app. The KMS plugin app routes the request to appropriate location, such as an HSM, Hashicorp Vault, or another product.
 
 ## Configuration
 

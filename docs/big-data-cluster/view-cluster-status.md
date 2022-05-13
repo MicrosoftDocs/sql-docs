@@ -100,7 +100,7 @@ The following articles describe how to troubleshoot Big Data Clusters:
 The following articles describe how to troubleshoot big data clusters deployed in Active Directory mode:
 
 - [Troubleshoot SQL Server Big Data Clusters Active Directory integration](troubleshoot-active-directory.md) 
-- [Troubleshoot Active Directory mode sign-in failures](troubleshoot-ad-login-failed-untrusted-domain.md)
+- [Troubleshoot Active Directory mode login failures](troubleshoot-ad-login-failed-untrusted-domain.md)
 - [Troubleshoot Big Data Clusters Active Directory mode deployment stopped](troubleshoot-ad-reverse-lookup-zone.md)
 
 ## Next steps

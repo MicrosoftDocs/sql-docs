@@ -22,7 +22,7 @@ This article shows how to use the encryption at rest capabilities of SQL Server 
 
 A default encryption zone, at */securelake*, is ready to be used. It was created with a system generated 256-bit key named `securelakekey`. This key can be used to create other encryption zones.
 
-## Prerequisites <a id="prereqs"></a>
+## <a id="prereqs"></a> Prerequisites
 
 - [SQL Server Big Data Cluster CU8+](release-notes-big-data-cluster.md) with [Active Directory](active-directory-prerequisites.md) Integration.
 - SQL Server Big Data Clusters user with Kubernetes administrative privileges, a member of the clusterAdmins role. For more information, see [Manage big data cluster access in Active Directory mode](manage-user-access.md).
@@ -114,5 +114,5 @@ Use `azdata` with Big Data Clusters, see [Introducing [!INCLUDE[big-data-cluster
 
 To use an external key provider for encryption at rest, see [External Key Providers in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](encryption-at-rest-external-provider.md).
 
-- [SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide](encryption-at-rest-sql-server-tde.md)
+- [SQL Server Big Data Clusters Transparent Data Encryption (TDE) at rest usage guide](encryption-at-rest-sql-server-tde.md)
 - [Key Versions in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-key-versions.md)

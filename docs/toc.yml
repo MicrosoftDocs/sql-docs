@@ -17392,6 +17392,8 @@ items:
           href: t-sql/statements/backup-master-key-transact-sql.md
         - name: BACKUP SERVICE MASTER KEY
           href: t-sql/statements/backup-service-master-key-transact-sql.md
+        - name: BACKUP SYMMETRIC KEY
+          href: t-sql/statements/backup-symmetric-key-transact-sql.md
         - name: RESTORE
           href: t-sql/statements/restore-statements-transact-sql.md
         - name: RESTORE statements
@@ -17408,6 +17410,8 @@ items:
           href: t-sql/statements/restore-master-key-transact-sql.md
         - name: RESTORE SERVICE MASTER KEY
           href: t-sql/statements/restore-service-master-key-transact-sql.md
+        - name: RESTORE SYMMETRIC KEY
+          href: t-sql/statements/restore-symmetric-key-transact-sql.md
         - name: RESTORE REWINDONLY
           href: t-sql/statements/restore-statements-rewindonly-transact-sql.md
         - name: RESTORE VERIFYONLY

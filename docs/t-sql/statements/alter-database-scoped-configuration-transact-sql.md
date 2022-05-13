@@ -23,7 +23,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: "katsmith"
 ms.custom: "seo-lt-2019"
-ms.date: 04/25/2022
+ms.date: 05/24/2022
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest"
 ---
 
@@ -105,6 +105,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
     | OPTIMIZED_PLAN_FORCING = { ON | OFF }
     | DOP_FEEDBACK = { ON | OFF }
+    | PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
 }
 ```
 
@@ -465,6 +466,12 @@ Identifies parallelism inefficiencies for repeating queries, based on elapsed ti
 ## <a name="Permissions"></a> Permissions
 
 Requires `ALTER ANY DATABASE SCOPED CONFIGURATION` on the database. This permission can be granted by a user with `CONTROL` permission on a database.
+
+PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions.
 
 ## General Remarks
 

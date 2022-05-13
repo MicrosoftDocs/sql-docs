@@ -17,23 +17,30 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: "pmasl"
 ms.author: "pelopes"
 ---
+
 # Query Processing Architecture Guide
+
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
-The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following topics cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The 
+following topics cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
 
 ## Execution modes
+
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can process [!INCLUDE[tsql](../includes/tsql-md.md)] statements using two distinct processing modes:
+
 - Row mode execution
 - Batch mode execution
 
 ### Row mode execution
+
 *Row mode execution* is a query processing method used with traditional RDBMS tables, where data is stored in row format. When a query is executed and accesses data in row store tables, the execution tree operators and child operators read each required row, across all the columns specified in the table schema. From each row that is read, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] then retrieves the columns that are required for the result set, as referenced by a SELECT statement, JOIN predicate, or filter predicate.
 
 > [!NOTE]
 > Row mode execution is very efficient for OLTP scenarios, but can be less efficient when scanning large amounts of data, for example in Data Warehousing scenarios.
 
 ### Batch mode execution  
+
 *Batch mode execution* is a query processing method used to process multiple rows together (hence the term batch). Each column within a batch is stored as a vector in a separate area of memory, so batch mode processing is vector-based. Batch mode processing also uses algorithms that are optimized for the multi-core CPUs and increased memory throughput that are found on modern hardware.      
 
 When it was first introduced, batch mode execution was closely integrated with, and optimized around, the columnstore storage format. However, starting with [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], batch mode execution no longer requires columnstore indexes. For more information, see [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
@@ -46,9 +53,11 @@ When a query is executed in batch mode, and accesses data in columnstore indexes
 > Batch mode execution is very efficient Data Warehousing scenarios, where large amounts of data are read and aggregated.
 
 ## SQL Statement Processing
+
 Processing a single [!INCLUDE[tsql](../includes/tsql-md.md)] statement is the most basic way that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes [!INCLUDE[tsql](../includes/tsql-md.md)] statements. The steps used to process a single `SELECT` statement that references only local base tables (no views or remote tables) illustrates the basic process.
 
 ### Logical Operator Precedence
+
 When more than one logical operator is used in a statement, `NOT` is evaluated first, then `AND`, and finally `OR`. Arithmetic, and bitwise, operators are handled before logical operators. For more information, see [Operator Precedence](../t-sql/language-elements/operator-precedence-transact-sql.md).
 
 In the following example, the color condition pertains to product model 21, and not to product model 20, because `AND` has precedence over `OR`.
@@ -89,10 +98,11 @@ The inputs and outputs of the Query Optimizer during optimization of a single `S
 ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 A `SELECT` statement defines only the following:  
-* The format of the result set. This is specified mostly in the select list. However, other clauses such as `ORDER BY` and `GROUP BY` also affect the final form of the result set.
-* The tables that contain the source data. This is specified in the `FROM` clause.
-* How the tables are logically related for the purposes of the `SELECT` statement. This is defined in the join specifications, which may appear in the `WHERE` clause or in an `ON` clause following `FROM`.
-* The conditions that the rows in the source tables must satisfy to qualify for the `SELECT` statement. These are specified in the `WHERE` and `HAVING` clauses.
+
+- The format of the result set. This is specified mostly in the select list. However, other clauses such as `ORDER BY` and `GROUP BY` also affect the final form of the result set.
+- The tables that contain the source data. This is specified in the `FROM` clause.
+- How the tables are logically related for the purposes of the `SELECT` statement. This is defined in the join specifications, which may appear in the `WHERE` clause or in an `ON` clause following `FROM`.
+- The conditions that the rows in the source tables must satisfy to qualify for the `SELECT` statement. These are specified in the `WHERE` and `HAVING` clauses.
 
 A query execution plan is a definition of the following: 
 
@@ -122,12 +132,14 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer relie
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is important because it enables the database server to adjust dynamically to changing conditions in the database without requiring input from a programmer or database administrator. This enables programmers to focus on describing the final result of the query. They can trust that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer will build an efficient execution plan for the state of the database every time the statement is run.
 
 > [!NOTE]
-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] has three options to display execution plans:        
-> -  The ***[Estimated Execution Plan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan, as produced by the Query Optimizer.        
-> -  The ***[Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], the elapsed and CPU time used during execution.        
-> -  The ***[Live Query Statistics](../relational-databases/performance/live-query-statistics.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information during execution progress, and is updated every second. Runtime information includes for example the actual number of rows flowing through the operators.       
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] has three options to display execution plans:
+>
+> - The ***[Estimated Execution Plan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan, as produced by the Query Optimizer.
+> - The ***[Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], the elapsed and CPU time used during execution.        
+> - The ***[Live Query Statistics](../relational-databases/performance/live-query-statistics.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information during execution progress, and is updated every second. Runtime information includes for example the actual number of rows flowing through the operators.       
 
 ### Processing a SELECT Statement
+
 The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses to process a single SELECT statement include the following: 
 
 1. The parser scans the `SELECT` statement and breaks it into logical units such as keywords, expressions, operators, and identifiers.
@@ -136,21 +148,26 @@ The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses
 4. The relational engine starts executing the execution plan. As the steps that require data from the base tables are processed, the relational engine requests that the storage engine pass up data from the rowsets requested from the relational engine.
 5. The relational engine processes the data returned from the storage engine into the format defined for the result set and returns the result set to the client.
 
-### <a name="ConstantFolding"></a> Constant Folding and Expression Evaluation 
+### <a name="ConstantFolding"></a> Constant Folding and Expression Evaluation
+
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE[tsql](../includes/tsql-md.md)] literal, such as `3`, `'ABC'`, `'2005-12-31'`, `1.0e3`, or `0x12345678`.
 
 #### Foldable Expressions
+
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses constant folding with the following types of expressions:
+
 - Arithmetic expressions, such as 1+1, 5/3*2, that contain only constants.
 - Logical expressions, such as 1=1 and 1>2 AND 3>4, that contain only constants.
 - Built-in functions that are considered foldable by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], including `CAST` and `CONVERT`. Generally, an intrinsic function is foldable if it is a function of its inputs only and not other contextual information, such as SET options, language settings, database options, and encryption keys. Nondeterministic functions are not foldable. Deterministic built-in functions are foldable, with some exceptions.
 - Deterministic methods of CLR user-defined types and deterministic scalar-valued CLR user-defined functions (starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). For more information, see [Constant Folding for CLR User-Defined Functions and Methods](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
-> [!NOTE] 
+> [!NOTE]
 > An exception is made for large object types. If the output type of the folding process is a large object type (text,ntext, image, nvarchar(max), varchar(max), varbinary(max), or XML), then [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold the expression.
 
 #### Nonfoldable Expressions
+
 All other expression types are not foldable. In particular, the following types of expressions are not foldable:
+
 - Nonconstant expressions such as an expression whose result depends on the value of a column.
 - Expressions whose results depend on a local variable or parameter, such as @x.
 - Nondeterministic functions.
@@ -162,6 +179,7 @@ All other expression types are not foldable. In particular, the following types 
 <sup>1</sup> Before [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], deterministic scalar-valued CLR user-defined functions and methods of CLR user-defined types were not foldable. 
 
 #### Examples of Foldable and Nonfoldable Constant Expressions
+
 Consider the following query:
 
 ```sql
@@ -173,15 +191,18 @@ WHERE TotalDue > 117.00 + 1000.00;
 ```
 
 If the `PARAMETERIZATION` database option is not set to `FORCED` for this query, then the expression `117.00 + 1000.00` is evaluated and replaced by its result, `1117.00`, before the query is compiled. Benefits of this constant folding include the following:
+
 - The expression does not have to be evaluated repeatedly at run time.
 - The value of the expression after it is evaluated is used by the Query Optimizer to estimate the size of the result set of the portion of the query `TotalDue > 117.00 + 1000.00`.
 
 On the other hand, if `dbo.f` is a scalar user-defined function, the expression `dbo.f(100)` is not folded, because [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold expressions that involve user-defined functions, even if they are deterministic. For more information on parameterization, see [Forced Parameterization](#ForcedParam) later in this article.
 
-#### <a name="ExpressionEval"></a>Expression Evaluation 
+#### <a name="ExpressionEval"></a>Expression Evaluation
+
 In addition, some expressions that are not constant folded but whose arguments are known at compile time, whether the arguments are parameters or constants, are evaluated by the result-set size (cardinality) estimator that is part of the optimizer during optimization.
 
 Specifically, the following built-in functions and special operators are evaluated at compile time if all their inputs are known: `UPPER`, `LOWER`, `RTRIM`, `DATEPART( YY only )`, `GETDATE`, `CAST`, and `CONVERT`. The following operators are also evaluated at compile time if all their inputs are known:
+
 - Arithmetic operators: +, -, \*, /, unary -
 - Logical Operators: `AND`, `OR`, `NOT`
 - Comparison operators: <, >, <=, >=, <>, `LIKE`, `IS NULL`, `IS NOT NULL`
@@ -189,6 +210,7 @@ Specifically, the following built-in functions and special operators are evaluat
 No other functions or operators are evaluated by the Query Optimizer during cardinality estimation.
 
 #### Examples of Compile-Time Expression Evaluation
+
 Consider this stored procedure:
 
 ```sql
@@ -222,14 +244,17 @@ END;
 When the `SELECT` statement in *MyProc2* is optimized in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the value of `@d2` is not known. Therefore, the Query Optimizer uses a default estimate for the selectivity of `OrderDate > @d2`, (in this case 30 percent).
 
 ### Processing Other Statements
+
 The basic steps described for processing a `SELECT` statement apply to other [!INCLUDE[tsql](../includes/tsql-md.md)] statements such as `INSERT`, `UPDATE`, and `DELETE`. `UPDATE` and `DELETE` statements both have to target the set of rows to be modified or deleted. The process of identifying these rows is the same process used to identify the source rows that contribute to the result set of a `SELECT` statement. The `UPDATE` and `INSERT` statements may both contain embedded `SELECT` statements that provide the data values to be updated or inserted.
 
 Even Data Definition Language (DDL) statements, such as `CREATE PROCEDURE` or `ALTER TABLE`, are ultimately resolved to a series of relational operations on the system catalog tables and sometimes (such as `ALTER TABLE ADD COLUMN`) against the data tables.
 
 ### Worktables
+
 The Relational Engine may need to build a worktable to perform a logical operation specified in an [!INCLUDE[tsql](../includes/tsql-md.md)] statement. Worktables are internal tables that are used to hold intermediate results. Worktables are generated for certain `GROUP BY`, `ORDER BY`, or `UNION` queries. For example, if an `ORDER BY` clause references columns that are not covered by any indexes, the Relational Engine may need to generate a worktable to sort the result set into the order requested. Worktables are also sometimes used as spools that temporarily hold the result of executing a part of a query plan. Worktables are built in tempdb and are dropped automatically when they are no longer needed.
 
 ### View Resolution
+
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] query processor treats indexed and nonindexed views differently: 
 
 * The rows of an indexed view are stored in the database in the same format as a table. If the Query Optimizer decides to use an indexed view in a query plan, the indexed view is treated the same way as a base table.
@@ -275,6 +300,7 @@ WHERE OrderDate > '20020531';
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio Showplan feature shows that the relational engine builds the same execution plan for both of these `SELECT` statements.
 
 ### Using Hints with Views
+
 Hints that are placed on views in a query may conflict with other hints that are discovered when the view is expanded to access its base tables. When this occurs, the query returns an error. For example, consider the following view that contains a table hint in its definition:
 
 ```sql
@@ -356,6 +382,7 @@ A query does not have to explicitly reference an indexed view in the `FROM` clau
 The Query Optimizer treats an indexed view referenced in the `FROM` clause as a standard view. The Query Optimizer expands the definition of the view into the query at the start of the optimization process. Then, indexed view matching is performed. The indexed view may be used in the final execution plan selected by the Query Optimizer, or instead, the plan may materialize necessary data from the view by accessing the base tables referenced by the view. The Query Optimizer chooses the lowest-cost alternative.
 
 #### Using Hints with Indexed Views
+
 You can prevent view indexes from being used for a query by using the `EXPAND VIEWS` query hint, or you can use the `NOEXPAND` table hint to force the use of an index for an indexed view specified in the `FROM` clause of a query. However, you should let the Query Optimizer dynamically determine the best access methods to use for each query. Limit your use of `EXPAND` and `NOEXPAND` to specific cases where testing has shown that they improve performance significantly.
 
 The `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 

@@ -16415,6 +16415,10 @@ items:
         items:
         - name: ISJSON
           href: t-sql/functions/isjson-transact-sql.md
+        - name: JSON_OBJECT
+          href: t-sql/functions/json-object-transact-sql.md
+        - name: JSON_ARRAY
+          href: t-sql/functions/json-array-transact-sql.md
         - name: JSON_VALUE
           href: t-sql/functions/json-value-transact-sql.md
         - name: JSON_QUERY

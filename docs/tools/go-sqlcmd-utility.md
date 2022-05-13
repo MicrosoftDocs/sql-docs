@@ -1,5 +1,5 @@
 ---
-title: go-sqlcmd Utility (preview)
+title: go-sqlcmd utility (preview)
 description: The go-sqlcmd utility lets you enter Transact-SQL statements, system procedures, and script files using different modes.
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -135,7 +135,7 @@ To use Azure Active Directory auth, you can use one of two command line switches
 
 `ActiveDirectoryDefault`
 
-- For an overview of the types of authentication this mode will use, see (<https://github.com/Azure/azure-sdk-for-go/tree/main/sdk/azidentity#defaultazurecredential>).
+- For an overview of the types of authentication this mode will use, see [Default Azure Credential](https://github.com/Azure/azure-sdk-for-go/tree/main/sdk/azidentity#defaultazurecredential).
 - Choose this method if your database automation scripts are intended to run in both local development environments and in a production deployment in Azure. In your development environment you'll be able to use a client secret or an Azure CLI login. Without changing the script from the development environment, you'll be able to use a managed identity or client secret on your production deployment.
 - Setting environment variables AZURE_TENANT_ID, and AZURE_CLIENT_ID are necessary for DefaultAzureCredential to begin checking the environment configuration and look for one of the following additional environment variables in order to authenticate:
     - Setting environment variable AZURE_CLIENT_SECRET configures the DefaultAzureCredential to choose ClientSecretCredential.

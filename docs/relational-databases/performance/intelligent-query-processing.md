@@ -180,7 +180,7 @@ OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'));
 
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
-## Percentile and Persistence mode memory grant feedback
+## Percentile and persistence mode memory grant feedback
 
 **Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later.
 
@@ -479,7 +479,7 @@ The following workloads might benefit from batch mode on rowstore:
 
 ### What changes with batch mode on rowstore?
 
-Set the database to to compatibility level 150. No other changes are required.
+Set the database to compatibility level 150. No other changes are required.
 
 Even if a query does not access any tables with columnstore indexes, the query processor, using heuristics, will decide whether to consider batch mode. The heuristics consist of these checks:
 

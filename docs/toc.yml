@@ -8517,10 +8517,8 @@ items:
   - name: Command prompt utilities
     href: tools/command-prompt-utility-reference-database-engine.md
     items:
-    - name: mssql-cli (command-line query tool)
+    - name: mssql-cli
       href: tools/mssql-cli.md
-    - name: SqlLocalDB
-      href: tools/sqllocaldb-utility.md
     - name: osql
       href: tools/osql-utility.md
     - name: Profiler Utility
@@ -8529,10 +8527,12 @@ items:
       href: tools/sqlagent90-application.md
     - name: SQLdiag
       href: tools/sqldiag-utility.md
-    - name: sqlmaint
-      href: tools/sqlmaint-utility.md
+    - name: SqlLocalDB
+      href: tools/sqllocaldb-utility.md
     - name: sqllogship Application
       href: tools/sqllogship-application.md
+    - name: sqlmaint
+      href: tools/sqlmaint-utility.md
     - name: sqlps
       href: tools/sqlps-utility.md
     - name: sqlservr Application
@@ -8670,6 +8670,8 @@ items:
         href: tools/distributed-replay/status-option-distributed-replay-administration-tool.md
       - name: Cancel Option
         href: tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md
+  - name: Go-SQLCMD
+    href: tools/go-sqlcmd-utility.md
   - name: SQL Server Configuration Manager
     href: tools/configuration-manager/sql-server-services.md
     items:

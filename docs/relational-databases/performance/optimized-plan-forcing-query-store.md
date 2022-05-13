@@ -14,9 +14,10 @@ dev_langs:
 author: thesqlsith
 ms.author: derekw 
 monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
-
 ---
+
 # Optimized plan forcing with Query Store
+
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
 Query optimization is a multi-phased process of generating a “good-enough” query execution plan. In some cases, query compilation, a part of query optimization, can represent a large percentage of overall query execution time and consume significant system resources. Optimized plan forcing is part of the intelligent query processing family of features. Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as a compilation replay script. A compilation replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
@@ -57,7 +58,6 @@ To disable optimized plan forcing at the database level, use the `ALTER DATABASE
 When the optimized plan forcing feature is enabled in a database, you can disable optimized plan forcing for an individual query by using the `DISABLE_OPTIMIZED_PLAN_FORCING` [query hint](../../t-sql/queries/hints-transact-sql-query.md).
 
 Find an example of applying this query hint in [Example E](#e-disable-optimized-plan-forcing-for-a-query).
-
 
 ### Force a plan with Query Store, but disable optimized plan forcing
 

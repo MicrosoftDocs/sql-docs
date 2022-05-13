@@ -433,19 +433,19 @@
           - name: Ledger
             href: database/ledger-landing.yml
           - name: Ledger overview
-            href: database/ledger-overview.md
+            href: /sql/relational-databases/security/ledger/ledger-overview
           - name: Database ledger
-            href: database/ledger-database-ledger.md
+            href: /sql/relational-databases/security/ledger/ledger-database-ledger
           - name: Updatable ledger tables
-            href: database/ledger-updatable-ledger-tables.md
+            href: /sql/relational-databases/security/ledger/ledger-updatable-ledger-tables
           - name: Append-only ledger tables
-            href: database/ledger-append-only-ledger-tables.md
-          - name: Digest management and database verification
-            href: database/ledger-digest-management-and-database-verification.md
-          - name: Ledger auditing
-            href: database/ledger-audit.md
+            href: /sql/relational-databases/security/ledger/ledger-append-only-ledger-tables
+          - name: Digest management
+            href: /sql/relational-databases/security/ledger/ledger-digest-management
+          - name: Database verification
+            href: /sql/relational-databases/security/ledger/ledger-database-verification
           - name: Ledger limitations
-            href: database/ledger-limits.md
+            href: /sql/relational-databases/security/ledger/ledger-limits
         - name: Network access controls
           href: database/network-access-controls-overview.md
         - name: Outbound firewall rules
@@ -633,14 +633,15 @@
       - name: Ledger
         items:
         - name: Create append-only ledger tables
-          href: database/ledger-how-to-append-only-ledger-tables.md
+          href: /sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables
         - name: Create updatable ledger tables
-          href: database/ledger-how-to-updatable-ledger-tables.md
-        - name: Access Azure Confidential Ledger digest
-          displayName: Access Azure Confidential Ledger digest
-          href: database/ledger-how-to-access-acl-digest.md
+          href: /sql/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables
+        - name: Convert regular tables into ledger tables
+          href: /sql/relational-databases/security/ledger/ledger-how-to-convert-regular-tables-into-ledger-tables
+        - name: How to configure automatic database digests
+          href: /sql/relational-databases/security/ledger/ledger-how-to-configure-automatic-database-digest
         - name: Verify ledger database for tampering
-          href: database/ledger-verify-database.md
+          href: /sql/relational-databases/security/ledger/ledger-verify-database
       - name: vNet endpoints - PowerShell
         href: database/scripts/vnet-service-endpoint-rule-powershell-create.md
 

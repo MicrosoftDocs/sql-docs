@@ -119,6 +119,17 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                    [ HIDDEN ] [ NOT NULL ][ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES] ,
                 start_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID START
+                   [ HIDDEN ] NOT NULL [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES],
+  	            end_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID END
+                   [ HIDDEN ] NULL [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES],
+  	            start_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER START
+                   [ HIDDEN ] NOT NULL [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES],
+  	            end_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER END
+                   [ HIDDEN ] NULL [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES]
         ]
        PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )
     | DROP
@@ -636,6 +647,9 @@ As of [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], users can mark one or b
 
 #### DROP  
 Specifies that one or more column definitions, computed column definitions, or table constraints are dropped, or to drop the specification for the columns that the system uses for system versioning.
+
+> [!NOTE]
+> Columns dropped in ledger tables are only soft deleted. A dropped column remains in the ledger table, but it is marked as a dropped column by setting sys.tables.dropped_ledger_table to 1. The ledger view of the dropped ledger table is also marked as dropped by setting sys.tables.dropped_ledger_view_column to 1. A dropped ledger table, its history table, and its ledger view are renamed by adding a prefix (MSSQL_DroppedLedgerTable, MSSQL_DropedLedgerHistory, MSSQL_DroppedLedgerView) and appending a GUID to the original name.ing
 
 #### CONSTRAINT *constraint_name*  
 Specifies that *constraint_name* is removed from the table. Multiple constraints can be listed.

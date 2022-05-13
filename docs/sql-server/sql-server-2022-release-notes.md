@@ -38,8 +38,8 @@ This section identifies known issues you may experience with this product:
 
 ### Memory grant feedback
 
-- **Issue and customer impact**: When you try [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#percentile-and-persistence-mode-memory-grant-feedback),  immediately after you enable Query Store SQL Server may return an error (access violation).
-- **Workaround**: Wait a period of time before you try to use Query Store.
+- **Issue and customer impact**: : Immediately after you enable Query Store, SQL Server may return an error (access violation) if the Query Store is still starting up and you try to use Memory Grant Feedback.
+- **Workaround**: After you enable Query Store, wait for a period of time before you execute queries that are leveraging memory grant feedback. This happens most often with substantial concurrent workload.
 
 ## Build number
 

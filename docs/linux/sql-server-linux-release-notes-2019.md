@@ -1,10 +1,10 @@
 ---
 title: Release notes for SQL Server 2019 on Linux
 description: This article contains the release notes and supported features for SQL Server 2019 running on Linux. Release notes are included for the most recent release and several previous releases.
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: randolphwest
-ms.date: 05/12/2022
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: vanto
+ms.date: 05/16/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -74,7 +74,7 @@ This is the Cumulative Update 16 (CU16) release of [!INCLUDE [sssql19-md](../inc
 > Transparent Data Encryption (TDE)-compressed backups that are made by using previous CU versions of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] can still be restored by using [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 16 and later versions.
 
 > [!WARNING]  
-> The **adutil** tool has been removed from [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux for CU 16, and will be reintroduced in a future Cumulative Update.
+> The **adutil** tool has been removed from [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux for CU 16, and will be reintroduced in a future Cumulative Update. However, you can still [install **adutil** manually](sql-server-linux-ad-auth-adutil-introduction.md#installing-adutil).
 
 ### Package details
 

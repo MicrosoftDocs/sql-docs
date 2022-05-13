@@ -106,7 +106,7 @@ For more information on the way key versions are used on SQL Server Big Data Clu
   azdata hdfs key create --name key1 --size 256
   ```
 
-Possible sizes are 128, 192 256. The default is 256.
+  Possible sizes are 128, 192 256. The default is 256.
 
 ## Next steps
 

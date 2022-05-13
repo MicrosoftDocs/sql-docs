@@ -52,7 +52,7 @@ Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql1
   > [!NOTE]  
 >  The UNMASK permission does not influence metadata visibility: granting UNMASK alone will not disclose any Metadata. UNMASK will always need to be accompanied by a SELECT permission to have any effect. Example: granting UNMASK on database scope and granting SELECT on an individual Table will have the result that the user can only see the metadata of the individual table from which he can select, not any others. Also see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## Best Practices and Common Use Cases  
+## Best practices and common use cases  
   
 -   Creating a mask on a column doesn't prevent updates to that column. So although users receive masked data when querying the masked column, the same users can update the data if they have write permissions. A proper access control policy should still be used to limit update permissions.  
   
@@ -60,7 +60,7 @@ Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql1
   
 -   Dynamic Data Masking is applied when running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export. A database containing masked columns will result in an exported data file with masked data (assuming it's exported by a user without **UNMASK** privileges), and the imported database will contain statically masked data.  
   
-## Querying for Masked Columns  
+## Querying for masked columns  
  Use the **sys.masked_columns** view to query for table-columns that have a masking function applied to them. This view inherits from the **sys.columns** view. It returns all columns in the **sys.columns** view, plus the **is_masked** and **masking_function** columns, indicating if the column is masked, and if so, what masking function is defined. This view only shows the columns on which there's a masking function applied.  
   
 ```sql 
@@ -71,7 +71,7 @@ JOIN sys.tables AS tbl
 WHERE is_masked = 1;  
 ```  
   
-## Limitations and Restrictions  
+## Limitations and restrictions  
  A masking rule can't be defined for the following column types:  
   
 -   Encrypted columns (Always Encrypted)  
@@ -175,7 +175,7 @@ REVERT;
  
  where the number in DiscountCode is random for every query result.
   
-### Adding or Editing a Mask on an Existing Column
+### Adding or editing a mask on an existing column
  Use the **ALTER TABLE** statement to add a mask to an existing column in the table, or to edit the mask on that column.  
 The following example adds a masking function to the `LastName` column:  
 
@@ -191,7 +191,7 @@ ALTER TABLE Data.Membership
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
   
-### Granting Permissions to View Unmasked Data  
+### Granting permissions to view unmasked data  
  Granting the **UNMASK** permission allows `MaskingTestUser` to see the data unmasked.  
   
 ```sql
@@ -373,7 +373,7 @@ ALTER COLUMN LastName DROP MASKED;
    REVOKE UNMASK FROM ServiceHead; 
    ```
 
-## See Also  
+## See also  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   

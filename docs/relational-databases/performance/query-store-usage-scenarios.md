@@ -186,7 +186,7 @@ EXEC sp_create_plan_guide
   
 Solution with plan guides is more precise but it requires more work.  
   
-If all your queries (or the majority of them) are candidates for auto-parameterization, consider configuring `PARAMETERIZATION = FORCED` for the entire database. For more information, see [Guidelines for Using Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).
+If all your queries (or the majority of them) are candidates for auto-parameterization, consider configuring `PARAMETERIZATION = FORCED` for the entire database. For more information, see [Guidelines for Using Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterizationGuide).
   
 ```sql  
 --Apply forced parameterization for entire database  

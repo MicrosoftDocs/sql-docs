@@ -193,7 +193,7 @@ GO
 - [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 - [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 - [SQL Server, SQL Statistics Object](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
-- [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+- [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#degree-of-parallelism-dop)       
 - [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)    
 
 ## Next steps

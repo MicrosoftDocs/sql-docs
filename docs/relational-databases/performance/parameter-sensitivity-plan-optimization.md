@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 Parameter Sensitivity Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information, see
 [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
 
-For more information on existing workarounds for this problem scenario, see [Queries that have parameter sensitive plan (PSP) problems](/azure/azure-sql/identify-query-performance-issues#paramsniffing).
+For more information on existing workarounds for this problem scenario, see [Queries that have parameter sensitive plan (PSP) problems](/azure/azure-sql/identify-query-performance-issues#parameter-sensitivity).
 
 PSP optimization automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans will accommodate different data sizes based on the customer-provided runtime parameter value(s).
 

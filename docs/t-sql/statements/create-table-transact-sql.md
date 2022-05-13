@@ -2,7 +2,7 @@
 description: "CREATE TABLE (Transact-SQL)"
 title: CREATE TABLE (Transact-SQL)
 ms.custom: ""
-ms.date: 05/09/2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: randolphwest
@@ -520,8 +520,8 @@ Specifies a column used by the system to automatically record information about 
 | Parameter | Required data type | Required nullability | Description |
 |--|--|--|--|
 | ROW | datetime2 | START: `NOT NULL` <br />END: `NOT NULL` | Either the start time for which a row version is valid (START) or the end time for which a row version is valid (END). Use this argument with the `PERIOD FOR SYSTEM_TIME` argument to create a temporal table. |
-| TRANSACTION_ID | bigint | START: `NOT NULL` <br />END: `NULL` | The ID of the transaction that creates (START) or invalidates (END) a row version. If the table is a ledger table, the ID references a row in the [sys.database_ledger_transactions](../../relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md) view. <br />**Applies to:** Azure SQL Database. |
-| SEQUENCE_NUMBER | bigint | START: `NOT NULL` <br />END: `NULL` | The sequence number of an operation that creates (START) or deletes (END) a row version. This value is unique within the transaction. <br />**Applies to:** Azure SQL Database. |
+| TRANSACTION_ID | bigint | START: `NOT NULL` <br />END: `NULL` | The ID of the transaction that creates (START) or invalidates (END) a row version. If the table is a ledger table, the ID references a row in the [sys.database_ledger_transactions](../../relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md) view. <br />**Applies to:** SQL Server 2022, Azure SQL Database. |
+| SEQUENCE_NUMBER | bigint | START: `NOT NULL` <br />END: `NULL` | The sequence number of an operation that creates (START) or deletes (END) a row version. This value is unique within the transaction. <br />**Applies to:** SQL Server 2022, Azure SQL Database. |
 
 If you attempt to specify a column that does not meet the above data type or nullability requirements, the system will throw an error. If you do not explicitly specify nullability, the system will define the column as `NULL` or `NOT NULL` per the above requirements.
 
@@ -1012,7 +1012,7 @@ Indicates that a HASH index is created.
 Hash indexes are supported only on memory-optimized tables.
 
 LEDGER = ON ( <ledger_option> [, …n ] ) | OFF    
-**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to:** SQL Server 2022, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!NOTE]
 > If the statement creates a ledger table, the `ENABLE LEDGER` permission is required.
@@ -1045,7 +1045,7 @@ Each row in the ledger view represents either the creation or deletion of a row 
 | --- | --- | --- |
 | Specified using the `TRANSACTION_ID_COLUMN_NAME` option. `ledger_transaction_id` if not specified. | bigint | The ID of the transaction that created or deleted a row version. |
 | Specified using the `SEQUENCE_NUMBER_COLUMN_NAME` option. `ledger_sequence_number` if not specified. | bigint | The sequence number of a row-level operation within the transaction on the table. |
-| Specified using the `OPERATION_TYPE_COLUMN_NAME` option. `ledger_operation_type` if not specified. | tinyint | Contains `0` (**INSERT**) or `1` (**DELETE**). Inserting a row into the ledger table produces a new row in the ledger view containing `0` in this column. Deleting a row from the ledger table produces a new row in the ledger view containing `1` in this column. Updating a row in the ledger table produces two new rows in the ledger view. One row contains `1` (**DELETE**) and the other row contains `1` (**INSERT**) in this column. |
+| Specified using the `OPERATION_TYPE_COLUMN_NAME` option. `ledger_operation_type` if not specified. | tinyint | Contains `1` (**INSERT**) or `2` (**DELETE**). Inserting a row into the ledger table produces a new row in the ledger view containing `1` in this column. Deleting a row from the ledger table produces a new row in the ledger view containing `2` in this column. Updating a row in the ledger table produces two new rows in the ledger view. One row contains `2` (**DELETE**) and the other row contains `1` (**INSERT**) in this column. |
 | Specified using the `OPERATION_TYPE_DESC_COLUMN_NAME` option. `ledger_operation_type_desc` if not specified. | nvarchar(128) | Contains `INSERT` or `DELETE`. See above for details. |
 
 Transactions that include creating ledger table are captured in [**sys.database_ledger_transactions**](../../relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md).

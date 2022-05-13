@@ -8370,6 +8370,20 @@ items:
         href: relational-databases/security/auditing/view-a-sql-server-audit-log.md
       - name: Write audit events to Windows log
         href: relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md
+    - name: Ledger
+      items:
+      - name: Configure a ledger database
+        href: relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md?view=sql-server-ver16&preserve-view=true
+      - name: Create append-only ledger tables
+        href: relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables.md?view=sql-server-ver16&preserve-view=true
+      - name: Create updatable ledger tables
+        href: relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables.md?view=sql-server-ver16&preserve-view=true
+      - name: Migrate data from regular tables to ledger tables
+        href: relational-databases/security/ledger/ledger-how-to-migrate-data-to-ledger-tables.md?view=sql-server-ver16&preserve-view=true
+      - name: Enable automatic digests storage
+        href: relational-databases/security/ledger/ledger-how-to-enable-automatic-digest-storage.md?view=sql-server-ver16&preserve-view=true
+      - name: Verify ledger database for tampering
+        href: relational-databases/security/ledger/ledger-verify-database.md?view=sql-server-ver16&preserve-view=true
   - name: Concepts
     items:
     - name: Protecting SQL Server Intellectual Property
@@ -8455,6 +8469,26 @@ items:
         href: relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md
       - name: Audit records
         href: relational-databases/security/auditing/sql-server-audit-records.md
+    - name: Ledger
+      items:
+      - name: Ledger
+        href: relational-databases/security/ledger/ledger-landing-sql-server.yml
+      - name: Ledger overview
+        href: relational-databases/security/ledger/ledger-overview.md?view=sql-server-ver16&preserve-view=true
+      - name: Database ledger
+        href: relational-databases/security/ledger/ledger-database-ledger.md?view=sql-server-ver16&preserve-view=true
+      - name: Updatable ledger tables
+        href: relational-databases/security/ledger/ledger-updatable-ledger-tables.md?view=sql-server-ver16&preserve-view=true
+      - name: Append-only ledger tables
+        href: relational-databases/security/ledger/ledger-append-only-ledger-tables.md?view=sql-server-ver16&preserve-view=true
+      - name: Digest management
+        href: relational-databases/security/ledger/ledger-digest-management.md?view=sql-server-ver16&preserve-view=true
+      - name: Database verification
+        href: relational-databases/security/ledger/ledger-database-verification.md?view=sql-server-ver16&preserve-view=true
+      - name: Recover ledger database after tampering
+        href: relational-databases/security/ledger/ledger-how-to-recover-after-tampering.md?view=sql-server-ver16&preserve-view=true
+      - name: Ledger limitations
+        href: relational-databases/security/ledger/ledger-limits.md?view=sql-server-ver16&preserve-view=true
   - name: Tutorials
     items:
     - name: Always Encrypted
@@ -8486,10 +8520,8 @@ items:
   - name: Command prompt utilities
     href: tools/command-prompt-utility-reference-database-engine.md
     items:
-    - name: mssql-cli (command-line query tool)
+    - name: mssql-cli
       href: tools/mssql-cli.md
-    - name: SqlLocalDB
-      href: tools/sqllocaldb-utility.md
     - name: osql
       href: tools/osql-utility.md
     - name: Profiler Utility
@@ -8498,10 +8530,12 @@ items:
       href: tools/sqlagent90-application.md
     - name: SQLdiag
       href: tools/sqldiag-utility.md
-    - name: sqlmaint
-      href: tools/sqlmaint-utility.md
+    - name: SqlLocalDB
+      href: tools/sqllocaldb-utility.md
     - name: sqllogship Application
       href: tools/sqllogship-application.md
+    - name: sqlmaint
+      href: tools/sqlmaint-utility.md
     - name: sqlps
       href: tools/sqlps-utility.md
     - name: sqlservr Application
@@ -8639,6 +8673,8 @@ items:
         href: tools/distributed-replay/status-option-distributed-replay-administration-tool.md
       - name: Cancel Option
         href: tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md
+  - name: Go-SQLCMD
+    href: tools/go-sqlcmd-utility.md
   - name: SQL Server Configuration Manager
     href: tools/configuration-manager/sql-server-services.md
     items:
@@ -14881,6 +14917,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md
       - name: sp_changeobjectowner
         href: relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md
+      - name: sp_copy_data_in_batches
+        href: relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql.md
       - name: sp_control_dbmasterkey_password
         href: relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md
       - name: sp_dbfixedrolepermission
@@ -16178,10 +16216,6 @@ items:
         items:
         - name: APPROX_COUNT_DISTINCT
           href: t-sql/functions/approx-count-distinct-transact-sql.md
-        - name: APPROX_PERCENTILE_CONT
-          href: t-sql/functions/approx-percentile-cont-transact-sql.md
-        - name: APPROX_PERCENTILE_DISC
-          href: t-sql/functions/approx-percentile-disc-transact-sql.md
         - name: AVG
           href: t-sql/functions/avg-transact-sql.md
         - name: CHECKSUM_AGG
@@ -16418,6 +16452,10 @@ items:
         items:
         - name: ISJSON
           href: t-sql/functions/isjson-transact-sql.md
+        - name: JSON_OBJECT
+          href: t-sql/functions/json-object-transact-sql.md
+        - name: JSON_ARRAY
+          href: t-sql/functions/json-array-transact-sql.md
         - name: JSON_VALUE
           href: t-sql/functions/json-value-transact-sql.md
         - name: JSON_QUERY
@@ -17399,6 +17437,8 @@ items:
           href: t-sql/statements/backup-master-key-transact-sql.md
         - name: BACKUP SERVICE MASTER KEY
           href: t-sql/statements/backup-service-master-key-transact-sql.md
+        - name: BACKUP SYMMETRIC KEY
+          href: t-sql/statements/backup-symmetric-key-transact-sql.md
         - name: RESTORE
           href: t-sql/statements/restore-statements-transact-sql.md
         - name: RESTORE statements
@@ -17415,6 +17455,8 @@ items:
           href: t-sql/statements/restore-master-key-transact-sql.md
         - name: RESTORE SERVICE MASTER KEY
           href: t-sql/statements/restore-service-master-key-transact-sql.md
+        - name: RESTORE SYMMETRIC KEY
+          href: t-sql/statements/restore-symmetric-key-transact-sql.md
         - name: RESTORE REWINDONLY
           href: t-sql/statements/restore-statements-rewindonly-transact-sql.md
         - name: RESTORE VERIFYONLY

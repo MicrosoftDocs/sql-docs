@@ -1,35 +1,29 @@
 ---
-title: "Azure SQL Database updatable ledger tables"
-description: This article provides information on updatable ledger tables, ledger schema, and ledger views in Azure SQL Database.
-ms.date: "09/09/2021"
+title: "Updatable ledger tables"
+description: This article provides information on updatable ledger tables, ledger schema, and ledger views.
+ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.reviewer: kendralittle, mathoma
 ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
-# Azure SQL Database updatable ledger tables
+# Updatable ledger tables
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
-
-> [!NOTE]
-> Azure SQL Database ledger is currently in public preview.
+[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Updatable ledger tables are system-versioned tables on which users can perform updates and deletes while also providing tamper-evidence capabilities. When updates or deletes occur, all earlier versions of a row are preserved in a secondary table, known as the history table. The history table mirrors the schema of the updatable ledger table. When a row is updated, the latest version of the row remains in the ledger table, while its earlier version is inserted into the history table by the system, transparently to the application. 
 
+Both updatable ledger tables and [temporal tables](../../tables/temporal-tables.md) are system-versioned tables, for which the database engine captures historical row versions in secondary history tables. Either technology provides unique benefits. Updatable ledger tables make both the current and historical data tamper evident. Temporal tables support querying the data stored at any point in time instead of only the data that's correct at the current moment in time. You can use both technologies together by creating tables that are both updatable ledger tables and temporal tables.
+
 :::image type="content" source="media/ledger/ledger-table-architecture.png" alt-text="Diagram that shows ledger table architecture.":::
 
-## Updatable ledger tables vs. temporal tables
-
-Both updatable ledger tables and [temporal tables](/sql/relational-databases/tables/temporal-tables) are system-versioned tables, for which the Database Engine captures historical row versions in secondary history tables. Either technology provides unique benefits. Updatable ledger tables make both the current and historical data tamper evident. Temporal tables support querying the data stored at any point in time instead of only the data that's correct at the current moment in time.
-
-You can use both technologies together by creating tables that are both updatable ledger tables and temporal tables. 
-An updatable ledger table can be created in two ways:
-
-- When you create a new database in the Azure portal by selecting **Enable ledger on all future tables in this database** during ledger configuration, or through specifying the `LEDGER = ON` argument in your [CREATE DATABASE (Transact-SQL)](/sql/t-sql/statements/create-database-transact-sql) statement. This action creates a ledger database and ensures that all future tables created in your database are updatable ledger tables by default.
-- When you create a new table on a database where ledger isn't enabled at the database level by specifying the `LEDGER = ON` argument in your [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) statement.
+You can create an updatable ledger table by specifying the `LEDGER = ON` argument in your [CREATE DATABASE (Transact-SQL)](/sql/t-sql/statements/create-database-transact-sql) statement.
+> [!TIP]
+> `LEDGER = ON` is optional when creating updatable ledger tables in a ledger database. By default, each table is an updatable ledger table in a ledger database.
 
 For information on options available when you specify the `LEDGER` argument in your T-SQL statement, see [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql).
 
@@ -40,8 +34,7 @@ For information on options available when you specify the `LEDGER` argument in y
 
 An updatable ledger table needs to have the following [GENERATED ALWAYS](/sql/t-sql/statements/create-table-transact-sql#generate-always-columns) columns that contain metadata noting which transactions made changes to the table and the order of operations by which rows were updated by the transaction. This data is useful for forensics purposes in understanding how data was inserted over time.
 
-> [!NOTE]
-> If you don't specify the required `GENERATED ALWAYS` columns of the ledger table and ledger history table in the [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql?view=azuresqldb-current&preserve-view=true) statement, the system automatically adds the columns and uses the following default names. For more information, see examples in [Creating an updatable ledger table](/sql/t-sql/statements/create-table-transact-sql?view=azuresqldb-current&preserve-view=true#x-creating-a-updatable-ledger-table).
+If you don't specify the required `GENERATED ALWAYS` columns of the ledger table and ledger history table in the [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql?view=azuresqldb-current&preserve-view=true) statement, the system automatically adds the columns and uses the following default names. For more information, see examples in [Creating an updatable ledger table](/sql/t-sql/statements/create-table-transact-sql?view=azuresqldb-current&preserve-view=true#x-creating-a-updatable-ledger-table).
 
 | Default column name | Data type | Description |
 | --- | --- | --- |
@@ -79,6 +72,7 @@ The ledger view's schema mirrors the columns defined in the updatable ledger and
 | ledger_operation_type_desc | nvarchar(128) | Contains `INSERT` or `DELETE`. For more information, see the preceding row. |
 
 ## Next steps
- 
+
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md)
-- [Create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md) 
+- [Create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md)
+- [How to migrate data from regular tables to ledger tables](ledger-how-to-migrate-data-to-ledger-tables.md)

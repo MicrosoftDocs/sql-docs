@@ -479,7 +479,7 @@ The following workloads might benefit from batch mode on rowstore:
 
 ### What changes with batch mode on rowstore?
 
-Set the database to to compatibility level 150. No other changes are required.
+Set the database to compatibility level 150. No other changes are required.
 
 Even if a query does not access any tables with columnstore indexes, the query processor, using heuristics, will decide whether to consider batch mode. The heuristics consist of these checks:
 

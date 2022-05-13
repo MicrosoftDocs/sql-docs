@@ -2,7 +2,7 @@
 description: "JSON_OBJECT (Transact-SQL)"
 title: "JSON_OBJECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 04/26/2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -14,10 +14,9 @@ dev_langs:
 helpviewer_keywords: 
   - "JSON_OBJECT function"
   - "JSON, validating"
-ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
 author: "uc-msft"
 ms.author: "umajay"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 # JSON_OBJECT (Transact-SQL)
 
@@ -93,7 +92,7 @@ SELECT JSON_OBJECT('name':'value', 'type':1)
   
 ### Example 3
 
-The following example returns a JSON object with one key since the value for one of the key is NULL and the ABSENT ON NULL option is specified.  
+The following example returns a JSON object with one key since the value for one of the keys is NULL and the ABSENT ON NULL option is specified.  
   
 ```sql  
 SELECT JSON_OBJECT('name':'value', 'type':NULL ABSENT ON NULL)
@@ -161,8 +160,8 @@ WHERE s.is_user_process = 1;
 
 |session_id|info|  
 |--------|---------------|
-|51|{"security_id":"AQYAAAAAAAVQAAAAY/0dmFnai5oioQHh9eNArBIkYd4=","login":"NT SERVICE\\SQLTELEMETRY$SQL22","status":"sleeping"}|
-|52|{"security_id":"AQUAAAAAAAUVAAAAoGXPfnhLm1/nfIdwAMgbAA==","login":WORKGROUP\\sqluser","status":"running"}|
+|51|`{"security_id":"AQYAAAAAAAVQAAAAY/0dmFnai5oioQHh9eNArBIkYd4=","login":"NT SERVICE\\SQLTELEMETRY$SQL22"`,"status":"sleeping"}|
+|52|`{"security_id":"AQUAAAAAAAUVAAAAoGXPfnhLm1/nfIdwAMgbAA==","login":WORKGROUP\\sqluser","status":"running"}`|
 
 ## See also  
 

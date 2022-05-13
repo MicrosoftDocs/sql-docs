@@ -2,7 +2,7 @@
 description: "JSON_ARRAY (Transact-SQL)"
 title: "JSON_ARRAY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 04/26/2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -14,10 +14,9 @@ dev_langs:
 helpviewer_keywords: 
   - "JSON_ARRAY function"
   - "JSON, validating"
-ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
 author: "uc-msft"
 ms.author: "umajay"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 # JSON_ARRAY (Transact-SQL)
 
@@ -173,9 +172,9 @@ WHERE s.is_user_process = 1;
 
 |session_id|info|  
 |--------|---------------|
-|52|["WIN16-VM","Microsoft SQL Server Management Studio - Query",".Net SqlClient Data Provider"]|
-|55|["WIN16-VM","Microsoft SQL Server Management Studio - Query",".Net SqlClient Data Provider"]|
-|56|["WIN19-VM","SQLServerCEIP",".Net SqlClient Data Provider"]|
+|52|`["WIN16-VM","Microsoft SQL Server Management Studio - Query",".Net SqlClient Data Provider"]`|
+|55|`["WIN16-VM","Microsoft SQL Server Management Studio - Query",".Net SqlClient Data Provider"]`|
+|56|`["WIN19-VM","SQLServerCEIP",".Net SqlClient Data Provider"]`|
   
 
 ## See also  

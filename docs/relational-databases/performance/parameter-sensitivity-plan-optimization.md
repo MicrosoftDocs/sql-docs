@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 **APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 Parameter Sensitivity Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information, see
-[Parameter Sensitivity](../query-processing-architecture-guide.md#paramsniffing) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#planreuse).
+[Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
 
 For more information on existing workarounds for this problem scenario, see [Queries that have parameter sensitive plan (PSP) problems](/azure/azure-sql/identify-query-performance-issues#paramsniffing).
 
@@ -30,9 +30,9 @@ PSP optimization automatically enables multiple, active cached plans for a singl
 
 ## Understanding parameterization
 
-In the SQL Server Database Engine, using parameters or parameter markers in Transact-SQL statements increases the ability of the relational engine to match new Transact-SQL statements with existing, previously-compiled execution plans and promote plan reutilization. For more information, see [Simple Parameterization](../query-processing-architecture-guide.md#simpleparam).
+In the SQL Server Database Engine, using parameters or parameter markers in Transact-SQL statements increases the ability of the relational engine to match new Transact-SQL statements with existing, previously-compiled execution plans and promote plan reutilization. For more information, see [Simple Parameterization](../query-processing-architecture-guide.md#simple-parameterization).
 
-You can also override the default simple parameterization behavior of SQL Server by specifying that all `SELECT`, `INSERT`, `UPDATE`, and `DELETE` statements in a database be parameterized subject to certain limitations. For more information, see [Forced Parameterization](../query-processing-architecture-guide.md#forcedparam)
+You can also override the default simple parameterization behavior of SQL Server by specifying that all `SELECT`, `INSERT`, `UPDATE`, and `DELETE` statements in a database be parameterized subject to certain limitations. For more information, see [Forced Parameterization](../query-processing-architecture-guide.md#forced-parameterization).
 
 ## PSP optimization implementation
 
@@ -40,11 +40,11 @@ During the initial compilation, column statistics histograms identify non-unifor
 
 For eligible plans, the initial compilation produces a **dispatcher plan** that contains the PSP optimization logic called a dispatcher expression. A dispatcher plan maps to **query variants** based on the cardinality range boundary values predicates.
 
-For each predicate that is chosen, the Query Processor will bucketize them into predicate cardinality ranges based on the runtime cardinality, as seen in the following picture:
+For each predicate that is chosen, the Query Processor bucketizes them into predicate cardinality ranges based on the runtime cardinality, as seen in the following picture:
 
 :::image type="content" source="media/parameter-sensitivity-plan-optimization/psp-boundaries.jpg" alt-text="Image of PSP boundaries":::
 
-Dispatcher plans are automatically rebuilt if there are significant data distribution changes. Query variant plans will independently recompile as needed, same as any other query plan type, and subject to default recompilation events. For more information about recompilation, see [Recompiling Execution Plans](../query-processing-architecture-guide#recompiling-execution-plans).
+Dispatcher plans are automatically rebuilt if there are significant data distribution changes. Query variant plans will independently recompile as needed, same as any other query plan type, and subject to default recompilation events. For more information about recompilation, see [Recompiling Execution Plans](../query-processing-architecture-guide.md#recompiling-execution-plans).
 
 For each query variant mapping to a given dispatcher:
 
@@ -145,10 +145,10 @@ At this time, the following are known issue(s) that will be addressed in upcomin
 ## See also
 
 - [Intelligent query processing](intelligent-query-processing.md)  
-- [Parameter Sensitivity](../query-processing-architecture-guide.md#paramsniffing)
-- [Simple Parameterization](../query-processing-architecture-guide.md#simpleparam)
-- [Forced Parameterization](../query-processing-architecture-guide.mdmd#ForcedParam)
+- [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity)
+- [Simple Parameterization](../query-processing-architecture-guide.md#simple-parameterization)
+- [Forced Parameterization](../query-processing-architecture-guide.md#forced-parameterization)
 - [Hints query](../../t-sql/queries/hints-transact-sql-query.md)
 - [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
 - [Recompiling Execution Plans](../query-processing-architecture-guide.md#recompiling-execution-plans)
-- [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#planreuse)
+- [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse)

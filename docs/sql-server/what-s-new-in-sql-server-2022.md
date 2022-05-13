@@ -1,16 +1,15 @@
 ---
 title: "What's new in SQL Server 2022 | Microsoft Docs"
 description: Learn about new features for SQL Server 2022 (16.x), which gives you choices of development languages, data types, environments, and operating systems.
-ms.date: 05/04/2022
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: "article"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom: intro-whats-new
+ms.date: 05/04/2022
 monikerRange: ">=sql-server-ver15"
-ms.custom:
-  - intro-whats-new
 ---
 
 # What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]
@@ -18,6 +17,12 @@ ms.custom:
 [!INCLUDE [sqlserver2022](../includes/applies-to-version/sqlserver2022.md)]
 
 [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud environments, and operating systems.
+
+The following video introduces SQL Server 2022 Preview.
+
+> [!VIDEO https://channel9.msdn.com/Shows/data-exposed/introduction-to-sql-server-2022-ep1/player?WT.mc_id=dataexposed-c9-niner]
+
+For additional video content, see [What's new in SQL Server](https://microsoftmechanics.libsyn.com/podcast/whats-new-in-sql-server-2022).
 
 This article summarizes the new features and enhancements for [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
 
@@ -27,11 +32,16 @@ For more information and known issues, see [[!INCLUDE[sql-server-2022](../includ
 
 For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../tools/overview-sql-tools.md).
 
-The following video introduces SQL Server 2022 Preview.
+## Customer technology preview release
 
-> [!VIDEO https://channel9.msdn.com/Shows/data-exposed/introduction-to-sql-server-2022-ep1/player?WT.mc_id=dataexposed-c9-niner]
+This release is customer technology preview (CTP) 2.0. CTP 2.0 is the first public preview release. Previous releases (CTP 1.x) were available to select participants in the early adopter program (EAP).
 
-For additional video content, see [What's new in SQL Server](https://microsoftmechanics.libsyn.com/podcast/whats-new-in-sql-server-2022).
+This release:
+
+- Is available as Evaluation Edition. It is available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
+- Does not include support from Microsoft, except for select EAP customers.
+
+After you experience SQL Server 2022 Preview, you're welcome to [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
 
 The following sections provide an overview of these features.
 
@@ -99,7 +109,6 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-|Approximate Percentile functions |- [APPROX_PERCENTILE_CONT (Transact-SQL)](../t-sql/functions/approx-percentile-cont-transact-sql.md)<br/>- [APPROX_PERCENTILE_DISC (Transact-SQL)](../t-sql/functions/approx-percentile-disc-transact-sql.md)|
 | CREATE STATISTICS | Adds [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)<br/><br/>Automatic statistics with low priority.|
 | Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br/>- [DATE_BUCKET](../t-sql/functions/date-bucket-transact-sql.md)<br/>- [GENERATE_SERIES](../t-sql/functions/generate-series-transact-sql.md)<br/><br/>The following adds support to IGNORE NULLS and RESPECT NULLS:<br/>- [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)<br/>- [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)|
 | JSON functions | - [ISJSON (Transact-SQL)](../t-sql/functions/functions.md)<br/>- [JSON_PATH_EXISTS (Transact-SQL)](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT (Transact-SQL)](../t-sql/functions/functions.md)<br/>- [JSON_ARRAY (Transact-SQL)](../t-sql/functions/functions.md)

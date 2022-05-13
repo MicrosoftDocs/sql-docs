@@ -46,7 +46,7 @@ BACKUP SYMMETRIC KEY key_name TO
   
 ## Prerequisite
 
-In order to backup the symmetric key to an Azure Blob storage, you need to:
+In order to back up the symmetric key to an Azure Blob storage, you need to:
 
 1. Have an [Azure storage account](/azure/storage/common/storage-account-create).
 1. [Create stored access policy and shared access storage](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#1---create-stored-access-policy-and-shared-access-storage).

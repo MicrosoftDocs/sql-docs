@@ -68,19 +68,19 @@ RESTORE MASTER KEY FROM
  Specifies the password that is used to encrypt the database master key after it has been loaded into the database.  
   
  FORCE  
- Specifies that the RESTORE process should continue, even if the current database master key is not open, or if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot decrypt some of the private keys that are encrypted with it.  
+ Specifies that the RESTORE process should continue, even if the current database master key isn't open, or if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't decrypt some of the private keys that are encrypted with it.  
   
 ## Remarks
 
- When the master key is restored, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] decrypts all the keys that are encrypted with the currently active master key, and then encrypts these keys with the restored master key. This resource-intensive operation should be scheduled during a period of low demand. If the current database master key is not open or cannot be opened, or if any of the keys that are encrypted by it cannot be decrypted, the restore operation fails.  
+ When the master key is restored, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] decrypts all the keys that are encrypted with the currently active master key, and then encrypts these keys with the restored master key. This resource-intensive operation should be scheduled during a period of low demand. If the current database master key isn't open or can't be opened, or if any of the keys that are encrypted by it can't be decrypted, the restore operation fails.  
   
  Use the FORCE option only if the master key is irretrievable or if decryption fails. Information that is encrypted only by an irretrievable key will be lost.  
   
  If the master key was encrypted by the service master key, the restored master key will also be encrypted by the service master key.  
   
- If there is no master key in the current database, RESTORE MASTER KEY creates a master key. The new master key will not be automatically encrypted with the service master key.  
+ If there's no master key in the current database, RESTORE MASTER KEY creates a master key. The new master key won't be automatically encrypted with the service master key.  
 
- If you are using SQL Server 2022 or later, and want to restore the database master key from an Azure Blob storage, the following prerequisites apply:
+ If you're using SQL Server 2022 or later, and want to restore the database master key from an Azure Blob storage, the following prerequisites apply:
 
  1. Have an [Azure storage account](/azure/storage/common/storage-account-create).
  1. [Create stored access policy and shared access storage](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#1---create-stored-access-policy-and-shared-access-storage).

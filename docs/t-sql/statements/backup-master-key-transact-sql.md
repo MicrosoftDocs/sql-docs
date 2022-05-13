@@ -51,7 +51,7 @@ BACKUP MASTER KEY TO
 ## Arguments
 
  FILE **='***path_to_file***'**  
- Specifies the complete path, including file name, to the file to which the master key will be exported. This may be a local path or a UNC path to a network location.  
+ Specifies the complete path, including file name, to the file to which the master key will be exported. The path may be a local path or a UNC path to a network location.  
 
  URL **='***Azure Blob storage URL***'**   
  **Applies to:** SQL Server 2022 or later   
@@ -62,11 +62,11 @@ BACKUP MASTER KEY TO
   
 ## Remarks
 
- The master key must be open and, therefore, decrypted before it is backed up. If it is encrypted with the service master key, the master key does not have to be explicitly opened. But if the master key is encrypted only with a password, it must be explicitly opened.  
+ The master key must be open and, therefore, decrypted before it's backed up. If it's encrypted with the service master key, the master key doesn't have to be explicitly opened. But if the master key is encrypted only with a password, it must be explicitly opened.  
   
- We recommend that you back up the master key as soon as it is created, and store the backup in a secure, off-site location.  
+ We recommend that you back up the master key as soon as it's created, and store the backup in a secure, off-site location.  
   
- If you are using SQL Server 2022 or later, and want to backup the database master key to an Azure Blob storage, the following prerequisites apply:
+ If you're using SQL Server 2022 or later, and want to back up the database master key to an Azure Blob storage, the following prerequisites apply:
 
 1. Have an [Azure storage account](/azure/storage/common/storage-account-create).
 1. [Create stored access policy and shared access storage](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#1---create-stored-access-policy-and-shared-access-storage).
@@ -80,7 +80,7 @@ Requires CONTROL permission on the database.
   
 ## Examples
 
-The following example creates a backup of the `AdventureWorks2012` master key to a file. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
+The following example creates a backup of the `AdventureWorks2012` master key to a file. Because this master key isn't encrypted by the service master key, a password must be specified when it's opened.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -90,7 +90,7 @@ BACKUP MASTER KEY TO FILE = 'c:\temp\AdventureWorks2012_master_key'
 GO   
 ```  
 
-The following example creates a backup of the `AdventureWorks2012` master key to an Azure Blob storage. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
+The following example creates a backup of the `AdventureWorks2012` master key to an Azure Blob storage. Because this master key isn't encrypted by the service master key, a password must be specified when it's opened.  
   
 ```sql  
 USE AdventureWorks2012;  

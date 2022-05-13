@@ -74,7 +74,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 
 ## Arguments
  *certname*  
- Is the name of the certificate to backup.
+ Is the name of the certificate to back up.
 
  TO FILE = '*path_to_file*'  
  Specifies the complete path, including file name, of the file in which the certificate is to be saved. This path can be a local path or a UNC path to a network location. If only a file name is specified, the file will be saved in the instance's default user data folder (which may or may not be the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA folder). For SQL Server Express LocalDB, the instance's default user data folder is the path specified by the `%USERPROFILE%` environment variable for the account that created the instance.  
@@ -93,23 +93,23 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  Is the password that is used to encrypt the private key before writing the key to the backup file. The password is subject to complexity checks.  
   
  DECRYPTION BY PASSWORD = '*decryption_password*'  
- Is the password that is used to decrypt the private key before backing up the key. This argument is not necessary if the certificate is encrypted by the master key. 
+ Is the password that is used to decrypt the private key before backing up the key. This argument isn't necessary if the certificate is encrypted by the master key. 
   
 ## Remarks  
  If the private key is encrypted with a password in the database, the decryption password must be specified.  
   
- When you back up the private key to a file, encryption is required. The password used to protect the private key in the file is not the same password that is used to encrypt the private key of the certificate in the database.  
+ When you back up the private key to a file, encryption is required. The password used to protect the private key in the file isn't the same password that is used to encrypt the private key of the certificate in the database.  
 
  Private keys are saved in the PVK file format.
 
- To restore a backed up certificate, with or without the private key, use the [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) statement.
+ To restore a backed-up certificate, with or without the private key, use the [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) statement.
  
  To restore a private key to an existing certificate in the database, use the [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) statement.
  
- When performing a backup, the files will be ACLd to the service account of the SQL Server instance. If you need to restore the certificate to a server running under a different account, you will need to adjust the permissions on the files so that they are able to be read by the new account. 
+ When performing a backup, the files will be ACLd to the service account of the SQL Server instance. If you need to restore the certificate to a server running under a different account, you'll need to adjust the permissions on the files so that they're able to be read by the new account. 
   
 ## Permissions  
- Requires CONTROL permission on the certificate and knowledge of the password that is used to encrypt the private key. If only the public part of the certificate is backed up, this command requires some permission on the certificate and that the caller has not been denied VIEW permission on the certificate.  
+ Requires CONTROL permission on the certificate and knowledge of the password that is used to encrypt the private key. If only the public part of the certificate is backed up, this command requires some permission on the certificate and that the caller hasn't been denied VIEW permission on the certificate.  
   
 ## Examples  
   

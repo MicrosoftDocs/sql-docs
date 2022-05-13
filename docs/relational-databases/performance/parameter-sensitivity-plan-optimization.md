@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 
 # Parameter Sensitivity Plan Optimization
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 Parameter Sensitivity Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information, see
 [Parameter Sensitivity](../query-processing-architecture-guide.md#paramsniffing) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#planreuse).

@@ -44,7 +44,8 @@ The following table details all intelligent query processing features, along wit
 | [Memory Grant Feedback (Row Mode)](#row-mode-memory-grant-feedback) | Yes, under compatibility level 150| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] under compatibility level 150|If a row mode query has operations that spill to disk, add more memory for consecutive executions. If a query wastes > 50% of the memory allocated to it, reduce the memory grant side for consecutive executions.|
 | [Memory Grant Feedback (Percentile and Persistence)](#percentile-and-persistence-mode-memory-grant-feedback) | Yes, under compatibility level 150| Yes, starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) under compatibility level 140 | Addresses existing limitations of memory grant feedback in a non-intrusive way.
 | [Scalar UDF Inlining](#scalar-udf-inlining) | Yes, under compatibility level 150 | Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] under compatibility level 150|Scalar UDFs are transformed into equivalent relational expressions that are "inlined" into the calling query, often resulting in significant performance gains.|
-| [Table Variable Deferred Compilation](#table-variable-deferred-compilation) | Yes, under compatibility level 150| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] under compatibility level 150|Use the actual cardinality of the table variable encountered on first compilation instead of a fixed guess.|
+| [Parameter Sensitivity Plan Optimization](#parameter-sensitivity-plan-optimization) | Yes, under compatibility level 150 | Yes, (Starting in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) under compatibility level 150 | Parameter Sensitivity Plan Optimization addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information. |
+| [Table Variable Deferred Compilation](#table-variable-deferred-compilation) | Yes, under compatibility level 150 | Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] under compatibility level 150 | Use the actual cardinality of the table variable encountered on first compilation instead of a fixed guess.|
 
 ## Batch mode Adaptive joins
 
@@ -53,6 +54,125 @@ The following table details all intelligent query processing features, along wit
 The batch mode Adaptive Joins feature enables the choice of a [Hash Join or Nested Loops Join](../../relational-databases/performance/joins.md) method to be deferred until **after** the first input has been scanned, by using a single cached plan. The Adaptive Join operator defines a threshold that is used to decide when to switch to a Nested Loops plan. Your plan can therefore dynamically switch to a better join strategy during execution.
 
 For more information, including how to disable Adaptive joins without changing the compatibility level, see [Understanding Adaptive joins](../../relational-databases/performance/joins.md#adaptive).
+
+## Interleaved execution for MSTVFs
+
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+With interleaved execution, the actual row counts from the function are used to make better-informed downstream query plan decisions. For more information on multi-statement table-valued functions (MSTVFs), see [Table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+Interleaved execution changes the unidirectional boundary between the optimization and execution phases for a single-query execution and enables plans to adapt based on the revised cardinality estimates. During optimization if we encounter a candidate for interleaved execution, which is currently **multi-statement table-valued functions (MSTVFs)**, we will pause optimization, execute the applicable subtree, capture accurate cardinality estimates, and then resume optimization for downstream operations.
+
+MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and 1 for earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. Interleaved execution helps workload performance issues that are due to these fixed cardinality estimates associated with MSTVFs. For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+The following image depicts a [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) output, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworthy areas of the plan (flow is from right to left):
+
+1. The MSTVF Table Scan has a fixed estimate of 100 rows. For this example, however, there are 527,597 rows flowing through this MSTVF Table Scan, as seen in Live Query Statistics via the *527597 of 100* actual of estimated - so the fixed estimate is significantly skewed.
+1. For the Nested Loops operation, only 100 rows are assumed to be returned by the outer side of the join. Given the high number of rows actually being returned by the MSTVF, you are likely better off with a different join algorithm altogether.
+1. For the Hash Match operation, notice the small warning symbol, which in this case is indicating a spill to disk.
+
+![Row flow vs. estimated rows](./media/7_AQPFlowThreeAreas.png)
+
+Contrast the prior plan with the actual plan generated with interleaved execution enabled:
+
+![Interleaved plan](./media/8_AQPInterleavedEnabledPlan.png)
+
+1. Notice that the MSTVF table scan now reflects an accurate cardinality estimate. Also notice the re-ordering of this table scan and the other operations.
+1. And regarding join algorithms, we have switched from a Nested Loop operation to a Hash Match operation instead, which is more optimal given the large number of rows involved.
+1. Also notice that we no longer have spill-warnings, as we're granting more memory based on the true row count flowing from the MSTVF table scan.
+
+### Interleaved execution eligible statements
+
+MSTVF referencing statements in interleaved execution must currently be read-only and not part of a data modification operation. Also, MSTVFs are not eligible for interleaved execution if they do not use runtime constants.
+
+### Interleaved execution benefits
+
+In general, the higher the skew between the estimated vs. actual number of rows, coupled with the number of downstream plan operations, the greater the performance impact.
+In general, interleaved execution benefits queries where:
+
+1. There is a large skew between the estimated vs. actual number of rows for the intermediate result set (in this case, the MSTVF).
+1. And the overall query is sensitive to a change in the size of the intermediate result. This typically happens when there is a complex tree above that subtree in the query plan.
+A simple `SELECT *` from an MSTVF will not benefit from interleaved execution.
+
+### Interleaved execution overhead
+
+The overhead should be minimal-to-none. MSTVFs were already being materialized prior to the introduction of interleaved execution, however the difference is that now we're now allowing deferred optimization and are then leveraging the cardinality estimate of the materialized row set.
+As with any plan affecting changes, some plans could change such that with better cardinality for the subtree we get a worse plan for the query overall. Mitigation can include reverting the compatibility level or using Query Store to force the non-regressed version of the plan.
+
+### Interleaved execution and consecutive executions
+
+Once an interleaved execution plan is cached, the plan with the revised estimates on the first execution is used for consecutive executions without re-instantiating interleaved execution.
+
+### Tracking interleaved execution activity
+
+You can see usage attributes in the actual query execution plan:
+
+| Execution Plan attribute | Description |
+| --- | --- |
+| ContainsInterleavedExecutionCandidates | Applies to the *QueryPlan* node. When *true*, means the plan contains interleaved execution candidates. |
+| IsInterleavedExecuted | Attribute of the *RuntimeInformation* element under the RelOp for the TVF node. When *true*, means the operation was materialized as part of an interleaved execution operation. |
+
+You can also track interleaved execution occurrences via the following xEvents:
+
+| xEvent | Description |
+| ---- | --- |
+| interleaved_exec_status | This event fires when interleaved execution is occurring. |
+| interleaved_exec_stats_update | This event describes the cardinality estimates updated by interleaved execution. |
+| Interleaved_exec_disabled_reason | This event fires when a query with a possible candidate for interleaved execution does not actually get interleaved execution. |
+
+A query must be executed in order to allow interleaved execution to revise MSTVF cardinality estimates. However, the estimated execution plan still shows when there are interleaved execution candidates via the `ContainsInterleavedExecutionCandidates` showplan attribute.
+
+### Interleaved execution caching
+
+If a plan is cleared or evicted from cache, upon query execution there is a fresh compilation that uses interleaved execution.
+A statement using `OPTION (RECOMPILE)` will create a new plan using interleaved execution and not cache it.
+
+### Interleaved execution and query store interoperability
+
+Plans using interleaved execution can be forced. The plan is the version that has corrected cardinality estimates based on initial execution.
+
+### Disabling interleaved execution without changing the compatibility level
+
+Interleaved execution can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher.  To disable interleaved execution for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+
+-- Starting with SQL Server 2019, and in Azure SQL Database
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
+```
+
+When enabled, this setting will appear as enabled in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
+To re-enable interleaved execution for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+
+-- Starting with SQL Server 2019, and in Azure SQL Database
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
+```
+
+You can also disable interleaved execution for a specific query by designating `DISABLE_INTERLEAVED_EXECUTION_TVF` as a [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint). For example:
+
+```sql
+SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
+                            '1-01-2013',
+                            '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
+                            AND [fo].[City Key] = [foo].[City Key]
+                            AND [fo].[Customer Key] = [foo].[Customer Key]
+                            AND [fo].[Stock Item Key] = [foo].[Stock Item Key]
+                            AND [fo].[Order Date Key] = [foo].[Order Date Key]
+                            AND [fo].[Picked Date Key] = [foo].[Picked Date Key]
+                            AND [fo].[Salesperson Key] = [foo].[Salesperson Key]
+                            AND [fo].[Picker Key] = [foo].[Picker Key]
+OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
+```
+
+A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
 ## Batch mode memory grant feedback
 
@@ -243,124 +363,13 @@ Given feedback data is now persisted in the Query Store, there is some increase 
 
 Percentile-based memory grant errs on the side of reducing spills. Because it's no longer based on the last execution-only but on an observation of the several past executions, this could increase memory usage for oscillating workloads with wide variance in memory grant requirements between executions.
 
-## Interleaved execution for MSTVFs
+## Scalar UDF inlining
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-With interleaved execution, the actual row counts from the function are used to make better-informed downstream query plan decisions. For more information on multi-statement table-valued functions (MSTVFs), see [Table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+Scalar UDF inlining automatically transforms [scalar UDFs](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) into relational expressions. It embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs. The results are efficient, set-oriented, and parallel instead of inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
-Interleaved execution changes the unidirectional boundary between the optimization and execution phases for a single-query execution and enables plans to adapt based on the revised cardinality estimates. During optimization if we encounter a candidate for interleaved execution, which is currently **multi-statement table-valued functions (MSTVFs)**, we will pause optimization, execute the applicable subtree, capture accurate cardinality estimates, and then resume optimization for downstream operations.
-
-MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and 1 for earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. Interleaved execution helps workload performance issues that are due to these fixed cardinality estimates associated with MSTVFs. For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
-
-The following image depicts a [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) output, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworthy areas of the plan (flow is from right to left):
-
-1. The MSTVF Table Scan has a fixed estimate of 100 rows. For this example, however, there are 527,597 rows flowing through this MSTVF Table Scan, as seen in Live Query Statistics via the *527597 of 100* actual of estimated - so the fixed estimate is significantly skewed.
-1. For the Nested Loops operation, only 100 rows are assumed to be returned by the outer side of the join. Given the high number of rows actually being returned by the MSTVF, you are likely better off with a different join algorithm altogether.
-1. For the Hash Match operation, notice the small warning symbol, which in this case is indicating a spill to disk.
-
-![Row flow vs. estimated rows](./media/7_AQPFlowThreeAreas.png)
-
-Contrast the prior plan with the actual plan generated with interleaved execution enabled:
-
-![Interleaved plan](./media/8_AQPInterleavedEnabledPlan.png)
-
-1. Notice that the MSTVF table scan now reflects an accurate cardinality estimate. Also notice the re-ordering of this table scan and the other operations.
-1. And regarding join algorithms, we have switched from a Nested Loop operation to a Hash Match operation instead, which is more optimal given the large number of rows involved.
-1. Also notice that we no longer have spill-warnings, as we're granting more memory based on the true row count flowing from the MSTVF table scan.
-
-### Interleaved execution eligible statements
-
-MSTVF referencing statements in interleaved execution must currently be read-only and not part of a data modification operation. Also, MSTVFs are not eligible for interleaved execution if they do not use runtime constants.
-
-### Interleaved execution benefits
-
-In general, the higher the skew between the estimated vs. actual number of rows, coupled with the number of downstream plan operations, the greater the performance impact.
-In general, interleaved execution benefits queries where:
-
-1. There is a large skew between the estimated vs. actual number of rows for the intermediate result set (in this case, the MSTVF).
-1. And the overall query is sensitive to a change in the size of the intermediate result. This typically happens when there is a complex tree above that subtree in the query plan.
-A simple `SELECT *` from an MSTVF will not benefit from interleaved execution.
-
-### Interleaved execution overhead
-
-The overhead should be minimal-to-none. MSTVFs were already being materialized prior to the introduction of interleaved execution, however the difference is that now we're now allowing deferred optimization and are then leveraging the cardinality estimate of the materialized row set.
-As with any plan affecting changes, some plans could change such that with better cardinality for the subtree we get a worse plan for the query overall. Mitigation can include reverting the compatibility level or using Query Store to force the non-regressed version of the plan.
-
-### Interleaved execution and consecutive executions
-
-Once an interleaved execution plan is cached, the plan with the revised estimates on the first execution is used for consecutive executions without re-instantiating interleaved execution.
-
-### Tracking interleaved execution activity
-
-You can see usage attributes in the actual query execution plan:
-
-| Execution Plan attribute | Description |
-| --- | --- |
-| ContainsInterleavedExecutionCandidates | Applies to the *QueryPlan* node. When *true*, means the plan contains interleaved execution candidates. |
-| IsInterleavedExecuted | Attribute of the *RuntimeInformation* element under the RelOp for the TVF node. When *true*, means the operation was materialized as part of an interleaved execution operation. |
-
-You can also track interleaved execution occurrences via the following xEvents:
-
-| xEvent | Description |
-| ---- | --- |
-| interleaved_exec_status | This event fires when interleaved execution is occurring. |
-| interleaved_exec_stats_update | This event describes the cardinality estimates updated by interleaved execution. |
-| Interleaved_exec_disabled_reason | This event fires when a query with a possible candidate for interleaved execution does not actually get interleaved execution. |
-
-A query must be executed in order to allow interleaved execution to revise MSTVF cardinality estimates. However, the estimated execution plan still shows when there are interleaved execution candidates via the `ContainsInterleavedExecutionCandidates` showplan attribute.
-
-### Interleaved execution caching
-
-If a plan is cleared or evicted from cache, upon query execution there is a fresh compilation that uses interleaved execution.
-A statement using `OPTION (RECOMPILE)` will create a new plan using interleaved execution and not cache it.
-
-### Interleaved execution and query store interoperability
-
-Plans using interleaved execution can be forced. The plan is the version that has corrected cardinality estimates based on initial execution.
-
-### Disabling interleaved execution without changing the compatibility level
-
-Interleaved execution can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher.  To disable interleaved execution for all query executions originating from the database, execute the following within the context of the applicable database:
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
-
--- Starting with SQL Server 2019, and in Azure SQL Database
-ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
-```
-
-When enabled, this setting will appear as enabled in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
-To re-enable interleaved execution for all query executions originating from the database, execute the following within the context of the applicable database:
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
-
--- Starting with SQL Server 2019, and in Azure SQL Database
-ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
-```
-
-You can also disable interleaved execution for a specific query by designating `DISABLE_INTERLEAVED_EXECUTION_TVF` as a [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint). For example:
-
-```sql
-SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
-                            '1-01-2013',
-                            '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
-                            AND [fo].[City Key] = [foo].[City Key]
-                            AND [fo].[Customer Key] = [foo].[Customer Key]
-                            AND [fo].[Stock Item Key] = [foo].[Stock Item Key]
-                            AND [fo].[Order Date Key] = [foo].[Order Date Key]
-                            AND [fo].[Picked Date Key] = [foo].[Picked Date Key]
-                            AND [fo].[Salesperson Key] = [foo].[Salesperson Key]
-                            AND [fo].[Picker Key] = [foo].[Picker Key]
-OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
-```
-
-A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
+For more information, see [Scalar UDF inlining](../user-defined-functions/scalar-udf-inlining.md).
 
 ## Table variable deferred compilation
 
@@ -417,13 +426,12 @@ WHERE    O_ORDERKEY    =    L_ORDERKEY
 OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ```
 
-## Scalar UDF inlining
+## Parameter Sensitivity Plan Optimization
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
-Scalar UDF inlining automatically transforms [scalar UDFs](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) into relational expressions. It embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs. The results are efficient, set-oriented, and parallel instead of inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
-
-For more information, see [Scalar UDF inlining](../user-defined-functions/scalar-udf-inlining.md).
+Parameter Sensitivity Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information, see
+[Parameter Sensitivity](../query-processing-architecture-guide.md#paramsniffing) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#planreuse) .
 
 ## Approximate query processing
 
@@ -544,3 +552,4 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 - [Showplan logical and physical operators reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)
 - [Joins](../../relational-databases/performance/joins.md)
 - [Demonstrating Intelligent Query Processing](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)
+- [Parameter Sensitivity Plan Optimization](parameter-sensitivity-plan-optimization.md)

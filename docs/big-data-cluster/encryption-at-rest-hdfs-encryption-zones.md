@@ -100,7 +100,7 @@ For more information on the way key versions are used on SQL Server Big Data Clu
   azdata bdc hdfs key list
   ```
 
-- To create a custom key for HDFS encryption, use ths command:
+- To create a custom key for HDFS encryption, use this command:
 
   ```console
   azdata hdfs key create --name key1 --size 256

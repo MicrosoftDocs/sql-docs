@@ -120,7 +120,7 @@ where SalesOrderID =  @so_id',
   
  You can create a TEMPLATE plan guide in either of the following situations:  
   
--   The PARAMETERIZATION database option is SET to FORCED, but there are queries you want compiled according to the rules of [Simple Parameterization](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
+-   The PARAMETERIZATION database option is SET to FORCED, but there are queries you want compiled according to the rules of [Simple Parameterization](../../relational-databases/query-processing-architecture-guide.md#simple-parameterization).  
   
 -   The PARAMETERIZATION database option is SET to SIMPLE (the default setting), but you want [Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization) to be tried on a class of queries.  
   

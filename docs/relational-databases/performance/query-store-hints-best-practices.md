@@ -85,7 +85,7 @@ Carefully load test changes for mission critical or sensitive systems before app
 
 ### Forced parameterization and the RECOMPILE hint are not supported
 
-Applying the RECOMPILE query hint with Query Store hints is not supported when the database option [PARAMETERIZATION is set to FORCED](../../t-sql/statements/alter-database-transact-sql-set-options.md#parameterization_option-). For more information, see [Guidelines for Using Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterizationGuide).
+Applying the RECOMPILE query hint with Query Store hints is not supported when the database option [PARAMETERIZATION is set to FORCED](../../t-sql/statements/alter-database-transact-sql-set-options.md#parameterization_option-). For more information, see [Guidelines for Using Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization).
 
 The RECOMPILE hint is not compatible with forced parameterization set at the database level. If the database has forced parameterization set, and the RECOMPILE hint is part of the hints string set in Query Store for a query, the Database Engine will ignore the RECOMPILE hint and will apply other hints if leveraged.
 

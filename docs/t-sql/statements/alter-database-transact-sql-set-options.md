@@ -757,7 +757,7 @@ The database can create initial pages using mixed extents.
 This setting is ON for all system databases. The `tempdb` system database is the only system database that supports OFF.
 
 #### **\<PARAMETERIZATION_option> ::=**     
-Controls the parameterization option. For more information on parameterization, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).
+Controls the parameterization option. For more information on parameterization, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#simple-parameterization).
 
 #### PARAMETERIZATION { **SIMPLE** | FORCED }     
 SIMPLE     

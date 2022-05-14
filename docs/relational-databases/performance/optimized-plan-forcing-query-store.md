@@ -1,6 +1,6 @@
 ---
 title: "Optimized plan forcing with Query Store"
-description: Learn about optimized plan forcing and compilation replay scripts in Query Store.
+description: Learn about optimized plan forcing and optimization replay scripts in Query Store.
 ms.custom: ""
 ms.date: 05/03/2022
 ms.prod: sql
@@ -20,15 +20,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-Query optimization is a multi-phased process of generating a “good-enough” query execution plan. In some cases, query compilation, a part of query optimization, can represent a large percentage of overall query execution time and consume significant system resources. Optimized plan forcing is part of the intelligent query processing family of features. Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as a compilation replay script. A compilation replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
+Query optimization is a multi-phased process of generating a "good-enough" query execution plan. In some cases, query compilation, a part of query optimization, can represent a large percentage of overall query execution time and consume significant system resources. Optimized plan forcing is part of the intelligent query processing family of features. Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as an optimization replay script. An optimization replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
 
 ## Optimized plan forcing implementation
 
-When a query first goes through the compilation process, a threshold based on estimation of the time spent in optimization (based on the query optimizer input tree) will determine whether a compilation replay script is created. This threshold is not documented.
+When a query first goes through the compilation process, a threshold based on estimation of the time spent in optimization (based on the query optimizer input tree) will determine whether an optimization replay script is created. This threshold is not documented.
 
-After compilation completes, several runtime metrics become available to assess whether the previous estimation was correct. If it's confirmed the threshold was crossed, the compilation replay script is eligible for persistence. These runtime metrics include the number of objects accessed, the number of joins, the number of optimization tasks executed during optimization, and the actual optimization time.
+After compilation completes, several runtime metrics become available to assess whether the previous estimation was correct. If it's confirmed the threshold was crossed, the optimization replay script is eligible for persistence. These runtime metrics include the number of objects accessed, the number of joins, the number of optimization tasks executed during optimization, and the actual optimization time.
 
-The potential benefit of using a compilation replay script is also compared to the overhead of storing the compilation replay script. An estimation of the relative time to replay the compilation replay script is compared with the time that was spent executing the normal optimization process, based on the number of optimization tasks stored in compilation replay script and the number of optimization tasks executed during normal compilation. If replaying the compilation replay script shows substantial benefit in reducing compilation time, the compilation replay script is persisted.
+The potential benefit of using an optimization replay script is also compared to the overhead of storing the optimization replay script. An estimation of the relative time to replay the optimization replay script is compared with the time that was spent executing the normal optimization process, based on the number of optimization tasks stored in optimization replay script and the number of optimization tasks executed during normal compilation. If replaying the optimization replay script shows substantial benefit in reducing compilation time, the optimization replay script is persisted.
 
 ## Considerations
 
@@ -37,9 +37,9 @@ When the optimized plan forcing feature is enabled, the eligibility criteria for
 1. Only query plans that go through full optimization are eligible, which can be verified by the presence of the `StatementOptmLevel="FULL"` property.
 1. Statements with RECOMPILE hint and distributed queries are not eligible.
 
-However, if the Query Store independently captures a query plan that was scoped out by optimized plan forcing, the compilation replay script will be created for a second recompilation of that same query, subject to default recompilation events. Learn more about recompilation in [Recompiling Execution Plans](../query-processing-architecture-guide.md#recompiling-execution-plans).
+However, if the Query Store independently captures a query plan that was scoped out by optimized plan forcing, the optimization replay script will be created for a second recompilation of that same query, subject to default recompilation events. Learn more about recompilation in [Recompiling Execution Plans](../query-processing-architecture-guide.md#recompiling-execution-plans).
 
-Even if a compilation replay script was generated, it might not be persisted in the Query Store if the Query Store configured capture policies criteria isn't met, notably the number of executions of that statement and its cumulated compile and execution times. In this case, the invalid compilation replay script will be removed from memory asynchronously.
+Even if an optimization replay script was generated, it might not be persisted in the Query Store if the Query Store configured capture policies criteria isn't met, notably the number of executions of that statement and its cumulated compile and execution times. In this case, the invalid optimization replay script will be removed from memory asynchronously.
 
 ## Enable and disable optimized plan forcing
 
@@ -63,7 +63,7 @@ Find an example of applying this query hint in [Example E](#e-disable-optimized-
 
 The [sp_query_store_force_plan](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure includes a `disable_optimized_plan_forcing` parameter, with default OFF (0) (if the parameter is omitted from the procedure call).
 
-The `sys.query_store_plan` catalog view includes columns that indicate if the plan has an associated compilation replay script, and adds a new state to existing failure reason column specific to associated compilation replay script. Learn more in [sys.query_store_plan (Transact-SQL)](../system-catalog-views/sys-query-store-plan-transact-sql.md).
+The `sys.query_store_plan` catalog view includes columns that indicate if the plan has an associated optimization replay script, and adds a new state to existing failure reason column specific to associated optimization replay script. Learn more in [sys.query_store_plan (Transact-SQL)](../system-catalog-views/sys-query-store-plan-transact-sql.md).
 
 ## Examples
 
@@ -91,9 +91,9 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_PLAN_FORCING = ON;
 GO
 ```
 
-### B. Select all queries that have a compilation replay script
+### B. Select all queries that have an optimization replay script
 
-The following example code selects all query_ids that have a compilation replay script in Query Store. Connect to the appropriate user database before running the example code.
+The following example code selects all query_ids that have an optimization replay script in Query Store. Connect to the appropriate user database before running the example code.
 
 ```sql
 SELECT 

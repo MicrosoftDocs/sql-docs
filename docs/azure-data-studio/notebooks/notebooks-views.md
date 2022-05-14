@@ -40,7 +40,7 @@ From here, you can delete, resize, and move the cells from the view.
 :::image type="content" source="media/notebooks-views/notebooks-views-plotly.png" alt-text="Resize":::
 
 - To delete, select the cell and select the **Delete** button on top of the cell (circle 1 in the screenshot).
-- To resize, select the cell and hover to the bottom-left corner (circle 2 of the screenshot), and your cursor should be in resize mode.
+- To resize, select the cell and hover to the bottom-right corner (circle 2 of the screenshot), and your cursor should be in resize mode.
 - To move, select the cell and drag the cell to the desired location.
 - To run the cell only, select the cell to activate the cell, then select the **Run** button from the top menu (circle 1 of the screenshot).
 

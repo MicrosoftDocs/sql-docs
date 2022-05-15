@@ -11,6 +11,8 @@ ms.assetid: 168b7465-a6d6-4329-b46e-fc6c5a3f2d9d
 author: cpichuka 
 ms.author: cpichuka 
 manager: madhuriy
+f1_keywords: 
+  - "ssma.oracle.assessmentreport.f1"
 ---
 # Assessment Report (OracleToSQL)
 The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  

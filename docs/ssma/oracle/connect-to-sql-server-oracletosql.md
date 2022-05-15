@@ -11,6 +11,9 @@ ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 author: cpichuka 
 ms.author: cpichuka 
 manager: madhuriy
+f1_keywords: 
+  - "ssma.oracle.connectmssqlform.f1"
+
 ---
 # Connect to SQL Server  (OracleToSQL)
 Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you want to migrate to. To access the **Connect to SQL Server** dialog box, on the **File** menu, click **Connect to SQL Server**.  

@@ -11,6 +11,8 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
 ms.author: cpichuka
+f1_keywords: 
+  - "ssma.oracle.projectsettingconversion.f1"
 ---
 
 # Project Settings (Conversion) (OracleToSQL)

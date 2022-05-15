@@ -11,6 +11,8 @@ ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
 author: cpichuka 
 ms.author: cpichuka 
 manager: madhuriy
+f1_keywords: 
+  - "ssma.oracle.projectsettinggui.f1"
 ---
 # Project Settings (GUI) (OracleToSQL)
 The GUI project settings let you configure how data appears on the **Data** tab and whether to show the assessment report after conversion or not.  

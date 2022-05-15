@@ -11,6 +11,10 @@ ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: cpichuka 
 ms.author: cpichuka 
 manager: madhuriy
+f1_keywords: 
+  - "ssma.oracle.globalsettingtester.f1"
+
+
 ---
 # Global Settings (Tester) (OracleToSQL)
 Use the Tester page of the **Global Settings** dialog box to specify settings for SSMA Tester.  

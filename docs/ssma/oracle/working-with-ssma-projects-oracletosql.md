@@ -13,6 +13,8 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: cpichuka 
 ms.author: cpichuka 
 manager: madhuriy
+f1_keywords: 
+  - "ssma.oracle.workplacedialog.f1"
 ---
 # Working with SSMA Projects (OracleToSQL)
 To migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you first create an SSMA project. The project is a file that contains the following information:  

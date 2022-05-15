@@ -20,8 +20,9 @@ This article explains how to install the Microsoft ODBC Driver for SQL Server on
 
 This article provides commands for installing the ODBC driver from the bash shell. If you want to download the packages directly, see [Download ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md).
 
-> [!Note]
-> The Microsoft ODBC driver for SQL Server on macOS is only supported on the x64 architecture through version 17.7. Apple M1 (ARM64) support was added starting with version 17.8. The architecture will be detected and the correct package will be automatically installed by the Homebrew formula. If your command prompt is running in x64 emulation mode on the M1, the x64 package will be installed. If you're not running in emulation mode in your command prompt, the ARM64 package will be installed.
+> :warning: Note
+> The Microsoft ODBC driver for SQL Server on macOS supports the x64 architecture through version 17.7. In version 17.8, Apple Silicon (ARM64) support was added, and will be the only architecture to receive future support. The architecture will be detected and the correct package will be automatically installed by the Homebrew formula. If your terminal is running in x64 emulation mode on the M1, the x64 package will be installed. If you're not running in emulation mode in your terminal, the ARM64 package will be installed. 
+> Additionally, the Homebrew default directory changed with the M1, to ```/opt/homebrew```. The paths below use the x64 Homebrew paths, which default to ```/usr/local```, so your filepaths will vary accordingly. 
 
 ## Microsoft ODBC 18
 
@@ -38,7 +39,7 @@ HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql18 mssql-tools18
 
 The following sections provide instructions for installing previous versions of the Microsoft ODBC driver on macOS.
 
-## <a id="17"></a> Microsoft ODBC 17
+### <a id="17"></a> Microsoft ODBC 17
 
 To install Microsoft ODBC driver 17 for SQL Server on macOS, run the following commands:
 
@@ -53,7 +54,7 @@ HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 > If you installed the v17 `msodbcsql` package that was briefly available, you should remove it before installing the `msodbcsql17` package. This will avoid conflicts. The `msodbcsql17` package can be installed side by side with the `msodbcsql` v13 package.
 
 
-## <a id="13.1"></a> ODBC 13.1
+### <a id="13.1"></a> ODBC 13.1
 
 Use the following commands to install the Microsoft ODBC driver 13.1 for SQL Server on OS X 10.11 (El Capitan) and macOS 10.12 (Sierra):
 

@@ -40,3 +40,5 @@ Use this option to specify the default object overwrite behavior:
   
 -   If you select **False**, SSMA does not overwrite object metadata during conversion.  
   
+## See Also
+[Global settings for Logging](global-settings-logging-oracletosql.md)

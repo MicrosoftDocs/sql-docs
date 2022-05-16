@@ -30,3 +30,6 @@ To access the Assessment Report, select objects to convert in source metadata ex
 |**Target**|Shows the conversion's resulting [!INCLUDE[tsql](../../includes/tsql-md.md)] code for the selected object, and error messages for code that was not converted. This pane is visible only when an individual object with code is selected in the left pane.<br /><br />Click the line numbers to set or clear bookmarks. Use the buttons at the top of the pane to navigate through the code.|  
 |**Messages pane**|Shows the errors, warnings, and informational messages that were generated while creating the assessment report. Messages are grouped by number. To view the code that caused the error, click **Errors**, **Warnings**, or **Info**, expand the category of messages, and then click a message.|  
   
+## See Also
+
+[Generating reports](generating-reports-oracletosql.md)

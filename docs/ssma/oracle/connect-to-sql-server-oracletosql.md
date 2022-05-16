@@ -52,3 +52,6 @@ If you want to use this option, select the **Trust Server Certificate** checkbox
 > [!NOTE]  
 > To enable **Trust Server Certificate**, "Encrypt" must be set to **True**.  
   
+## See Also
+
+[Connect to Oracle database](connect-to-oracle-database-oracletosql.md)

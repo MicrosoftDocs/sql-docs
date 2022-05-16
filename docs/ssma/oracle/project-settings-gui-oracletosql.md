@@ -21,7 +21,7 @@ The GUI pane is available in the **Project Settings** and **Default Project Sett
   
 -   Use the **Project Settings** dialog box to set user interface options for the current project. To access the GUI settings, on the **Tools** menu, select **Project Settings**, and then click **GUI** at the bottom of the left pane.  
   
--   Use the **Default Project Settings** dialog box to set user interface options for all projects. To access the GUI settings, on the **Tools** menu, select **Default Project Settings**, select migration project type for which settings are required to be viewed or changed from **Migration Target Version** drop down, and then click **GUI** at the bottom of the left pane.  
+-   Use the **Default Project Settings** dialog box to set user interface options for all projects. To access the GUI settings, on the **Tools** menu, select **Default Project Settings**, select migration project type for which settings are required to be viewed or changed from **Migration Target Version** drop-down, and then click **GUI** at the bottom of the left pane.  
   
 ## Options  
 **Maximum row number for source**  

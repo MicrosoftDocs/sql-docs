@@ -42,10 +42,10 @@ This setting specifies how to save the internal auxiliary tables created during 
   
 4.  Ask User if Table Comparison Failed  
   
-The default option set is : **Always Delete**.  
+The default option set is: **Always Delete**.  
   
 **Perform data rollback**  
-This setting specifies whether to perform a rollback operation after the each test case is run. Default option set is **No**.  
+This setting specifies whether to perform a rollback operation after each test case is run. Default option set is **No**.  
   
 The following options are available for this setting:  
   

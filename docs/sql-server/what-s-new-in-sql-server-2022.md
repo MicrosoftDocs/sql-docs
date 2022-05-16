@@ -61,7 +61,7 @@ The following sections provide an overview of these features.
 |Contained availability group | Create an Always On availability group that:<br/>- Manages its own metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level. <br/>- Includes specialized contained system databases within the availability group. For more information, see [What is a contained availability group?](../database-engine/availability-groups/windows/contained-availability-groups-overview.md)|
 |Distributed availability group |- Changing `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is supported. For more information, visit [ALTER AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/alter-availability-group-transact-sql.md)<br/>- Now using multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.|
 | Improved availability groups | Parallel redo and improvements for readable secondary replicas. |
-| Improved backup metadata | Last valid restore time|
+| Improved backup metadata | `backupset` system table returns last valid restore time. See [backupset (Transact-SQL)](../relational-databases/system-tables/backupset-transact-sql.md).|
 
 ## Security
 

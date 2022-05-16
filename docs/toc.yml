@@ -595,6 +595,8 @@ items:
           href: relational-databases/backup-restore/create-a-full-database-backup-sql-server.md
         - name: Files & Filegroups
           href: relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md
+        - name: T-SQL from snapshot
+          href: relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md
         - name: Differential backup
           href: relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md
         - name: Transaction log

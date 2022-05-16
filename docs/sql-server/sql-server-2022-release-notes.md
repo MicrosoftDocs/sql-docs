@@ -15,10 +15,6 @@ monikerRange: "= sql-server-ver16"
 
 This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] customer technology preview (CTP) 2.0.
 
-For related information about new features and capabilities in this version of SQL Server, see:
-
-> [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](what-s-new-in-sql-server-2022.md).
-
 Complete details about licensing are in `License Terms` folder on the installation media.
 
 ## Hardware and software requirements
@@ -43,5 +39,10 @@ This section identifies known issues you may experience with this product:
 
 ## Build number
 
-The CTP 2.0 build number for SQL Server 2022 Preview is `16.0.xxx.x`.
+The CTP 2.0 build number for SQL Server 2022 Preview is `16.0.600.3`.
 
+## Next steps
+
+For related information about new features and capabilities in this version of SQL Server, see:
+
+[What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](what-s-new-in-sql-server-2022.md).

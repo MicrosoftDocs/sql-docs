@@ -41,15 +41,15 @@ The T-SQL snapshot backup syntax decouples the vendor-dependent snapshot mechani
 
 The following diagram illustrates the high-level workflow of T-SQL snapshot backups:
 
-![Flow of process from suspend, to snapshot, to backup.](./media/create-a-transact-sql-snapshot-backup/t-sql-snapshot-backup-workflow.png)
+![Diagram that shows process from suspend, to snapshot, to backup.](./media/create-a-transact-sql-snapshot-backup/t-sql-snapshot-backup-workflow.png)
 
 The middle snapshot step requires you to initiate the snapshot on the underlying storage. The following diagram shows an example of how a backup script might work in conjunction with SQL Server to complete the snapshot backup process:
 
-![Backup flowchart.](./media/create-a-transact-sql-snapshot-backup/backup.png)
+![Diagram shows example of how the backup script can work with SQL Server to complete the backup process.](./media/create-a-transact-sql-snapshot-backup/backup.png)
 
 Similarly, a restore script might work as follows:
 
-![Restore flowchart](./media/create-a-transact-sql-snapshot-backup/restore.png)
+![Diagram shows how the restore script can work with SQL Server to complete the restore task from a snapshot backup.](./media/create-a-transact-sql-snapshot-backup/restore.png)
 
 ## Examples
 
@@ -176,7 +176,7 @@ FROM DISK='d:\temp\db.bkm'
 WITH METADATA_ONLY, FILE=3
 ```
 
-![Output to backup set results.](./media/create-a-transact-sql-snapshot-backup/output-to-backup set.png)
+![Screenshot of SSMS output to backups set from query.](./media/create-a-transact-sql-snapshot-backup/output-to-backup-set.png)
 
 ### Filtering RESTORE FILELISTONLY output to a database
 
@@ -188,7 +188,7 @@ FROM DISK='d:\temp\db.bkm'
 WITH METADATA_ONLY, FILE=3, DBNAME='testdb3'
 ```
 
-![Results of filtering RESTORE FILELISTONLY output to a database.](./media/create-a-transact-sql-snapshot-backup/filter-db-restore-filelistonly.png)
+![Screenshot of results of filtering RESTORE FILELISTONLY output to a database.](./media/create-a-transact-sql-snapshot-backup/filter-db-restore-filelistonly.png)
 
 ### Restore a snapshot database
 
@@ -240,8 +240,6 @@ FROM DISK='d:\temp\db1.bkm'
 WITH METADATA_ONLY
 ```
 
-![List of snapshot files in a backup set.](./media/create-a-transact-sql-snapshot-backup/extract-db-from-backup set.png)
-
 ### Using RESTORE BACKUPSETONLY to extract a specific database in a backup set containing multiple databases
 
 RESTORE BACKUPSETONLY supports DBNAME parameter if the user wants to output one database out of the 3 databases in the backup set. It also supports FILE parameter to filter multiple backup sets in the backup file.
@@ -255,8 +253,8 @@ WITH METADATA_ONLY, FILE=3, DBNAME=’testdb2’
 ### Dynamic Management Views (DMVs) for seeing the suspend status and locks acquired
 
 ```sql 
-1. sys.dm_server_suspend_status (db_id, db_name, suspend_session_id, suspend_time_ms, is_diffmap_cleared, is_writeio_frozen) 
-2. sys.dm_tran_locks (resource_type, resource_database_id, resource_lock_partition, request_mode, request_type, request_status, request_owner_type, request_session_id)
+sys.dm_server_suspend_status (db_id, db_name, suspend_session_id, suspend_time_ms, is_diffmap_cleared, is_writeio_frozen) 
+sys.dm_tran_locks (resource_type, resource_database_id, resource_lock_partition, request_mode, request_type, request_status, request_owner_type, request_session_id)
 ```
 
 ### Server and database level properties for checking if a database was suspended for snapshot backup

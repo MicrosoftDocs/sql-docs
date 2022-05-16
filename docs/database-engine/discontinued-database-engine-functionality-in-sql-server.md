@@ -1,6 +1,6 @@
 ---
 title: Discontinued database engine functionality
-description: Learn which database engine functionality and features were discontinued in SQL Server 2019 (15.x), SQL Server 2016 (13.x), and previous versions.
+description: Learn which database engine functionality and features were discontinued in SQL Server.
 ms.custom: "seo-lt-2019"
 ms.date: 05/24/2022
 ms.prod: sql
@@ -51,6 +51,10 @@ monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016"
     | R | [olapR](../machine-learning/r/ref-r-olapr.md) | 
     | R | [sqlrutils](../machine-learning/r/ref-r-sqlrutils.md) | 
     | R | [MicrosoftML (R)](../machine-learning/r/ref-r-microsoftml.md) |
+
+- SQL Server Big Data Clusters will be retired. See information in [[!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] overview](../big-data-cluster/big-data-cluster-overview.md).
+
+- SQL Server PolyBase scale-out groups will be retired. Scale out group functionality is removed from the product in SQL Server 2022. PolyBase data virtualization continues to be fully supported as a scale-up feature in SQL Server. See [Changes to PolyBase support in SQL Server](../big-data-cluster/big-data-options.md#changes-to-polybase-support-in-sql-server).
 
 
 ## Discontinued features in [!INCLUDE[sssql19](../includes/sssql19-md.md)]  

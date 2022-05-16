@@ -26,7 +26,9 @@ For additional video content, see [What's new in SQL Server](https://microsoftme
 
 This article summarizes the new features and enhancements for [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
 
-[Get SQL Server 2022 Preview Evaluation Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+## Get SQL Server 2022 Preview
+
+[Get SQL Server 2022 Preview Evaluation Edition](https://go.microsoft.com/fwlink/?linkid=2162126).
 
 For more information and known issues, see [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md).
 
@@ -99,7 +101,7 @@ The following sections provide an overview of these features.
 | New feature or update | Details |
 |:---|:---|
 | Accelerated Database Recovery (ADR) improvement | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. SQL Server 2022 implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiencies. Concurrency improvements help the cleanup process to work more efficiently. ADR cleans pages that could not previously be cleaned due to locking.<br/><br/>See [Restore and Recovery Overview (SQL Server)](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
-| Improved Snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client.
+| Improved snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client.[Create a Transact-SQL snapshot backup](../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md)|
 | Setup attached to Azure | Install Azure Arc agent via SQL Server command line setup. For more information, see [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt).|
 | Optimized plan forcing| Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).|
 | Shrink database wait with low priority | In previous releases, shrinking databases and database files to reclaim space often leads to concurrency issues. In SQL Server 2022 an additional option for DBCC SHRINKDATABASE and DBCC SHRINKFILE 'WAIT_AT_LOW_PRIORITY' changes the default behavior. When specifying WAIT_AT_LOW_PRIORITY behavior, new queries requiring Sch-S locks are not blocked by the waiting shrink operation, until the shrink operation stops waiting and begins executing.|

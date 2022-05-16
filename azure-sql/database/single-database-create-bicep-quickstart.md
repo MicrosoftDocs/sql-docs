@@ -8,7 +8,7 @@ ms.custom: subject-armqs sqldbrb=1, devx-track-azurepowershell, mode-arm
 ms.topic: quickstart
 author: schaffererin
 ms.author: v-eschaffer
-ms.date: 05/15/2022
+ms.date: 05/16/2022
 ---
 
 # Quickstart: Create a single database in Azure SQL Database using Bicep

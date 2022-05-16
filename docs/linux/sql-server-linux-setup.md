@@ -4,14 +4,13 @@ titleSuffix: SQL Server
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/20/2022
+ms.date: 05/12/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.custom:
   - sqlfreshmay19
   - intro-installation
 ms.technology: linux
-ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ---
 # Installation guidance for SQL Server on Linux
 
@@ -53,7 +52,7 @@ SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterpris
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
+[!INCLUDE [linux-supported-platforms-2019](../includes/linux-supported-platforms-2019.md)]
 
 ::: moniker-end
 
@@ -100,7 +99,7 @@ You can also run SQL Server on Linux in an Azure virtual machine. For more infor
 
 After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 
-## <a id="upgrade"></a> Update or Upgrade SQL Server
+## <a id="upgrade"></a> Update or upgrade SQL Server
 
 To update the **mssql-server** package to the latest release, use one of the following commands based on your platform:
 

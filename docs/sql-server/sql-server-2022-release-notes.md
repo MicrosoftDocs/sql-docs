@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2022 Release Notes | Microsoft Docs"
 description: Find information about SQL Server 2019 (16.x) limitations, known issues, help resources, and other release notes.
-ms.date: 04/28/2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -13,21 +13,35 @@ monikerRange: "= sql-server-ver16"
 # [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release notes
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)]. For related information, see:
+This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] customer technology preview (CTP) 2.0.
 
-> [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](what-s-new-in-sql-server-2022.md)
+For related information about new features and capabilities in this version of SQL Server, see:
 
-## [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]
-
-[!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] is the latest public release of [!INCLUDE[SQL Server](../includes/ssnoversion-md.md)].
+> [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](what-s-new-in-sql-server-2022.md).
 
 Complete details about licensing are in `License Terms` folder on the installation media.
 
-## Documentation
+## Hardware and software requirements
 
-- **Issue and customer impact**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation can be filtered by version. Use the control at the top left of each documentation page to filter for your requirements.
+This release has the same hardware and software requirements as [SQL Server 2019](install/hardware-and-software-requirements-for-installing-sql-server-2019.md), except as noted below:
+
+- .NET Framework: 4.7.2. [Download](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+
+## Feature notes
+
+This section identifies known issues you may experience with this product:
+
+### Query Store
+
+- **Issue and customer impact**: Query Store is not enabled by default.
+- **Workaround**: To experience intelligent query processing features, enable Query Store.
+
+### Memory grant feedback
+
+- **Issue and customer impact**: : Immediately after you enable Query Store, SQL Server may return an error (access violation) if the Query Store is still starting up and you try to use memory grant feedback.
+- **Workaround**: After you enable Query Store, wait for a period of time before you execute queries that are leveraging memory grant feedback. This happens most often with substantial concurrent workload.
 
 ## Build number
 
-The RTM build number for SQL Server 2022 is `16.0.xxx.x`.
+The CTP 2.0 build number for SQL Server 2022 Preview is `16.0.xxx.x`.
 

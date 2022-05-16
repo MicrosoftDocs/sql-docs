@@ -2,7 +2,7 @@
 description: "Rotate enclave-enabled keys"
 title: "Rotate  | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/15/2021
+ms.date: 05/24/2022
 ms.prod: sql
 ms.reviewer: vanto
 ms.prod_service: "database-engine, sql-database"

@@ -20,6 +20,9 @@ manager: madhuriy
   
 This documentation introduces you to SSMA for Oracle and provides step-by-step instructions for migrating Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The following table shows articles to help you learn more:  
   
+>[!Note]
+> Try new [Database Migration Assessment for Oracle extension in Azure Data Studio](../../azure-data-studio/extensions/database-migration-assessment-for-oracle-extension.md) for Oracle to SQL pre-assessment and workload categorization. If you are in early phase of Oracle to SQL migration and would need to do a high level workload assessment , interested in sizing Azure SQL target for the Oracle workload  or understand feature migration parity, try the new extension. For detailed code assessment and conversion, continue with SSMA for Oracle.
+
 ## Contents  
   
 |Section|Description|

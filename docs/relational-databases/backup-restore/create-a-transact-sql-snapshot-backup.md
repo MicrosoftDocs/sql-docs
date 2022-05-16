@@ -31,7 +31,7 @@ Here is a [sample PowerShell script](https://github.com/microsoft/sql-server-sam
 
 The T-SQL snapshot backup syntax decouples the vendor-dependent snapshot mechanism from the suspend and backup operations. With this syntax, you can:
 
-1. Freeze a database with ALTER command – providing an opportunity for the you to perform the snapshot of the underlying storage. After which, you can thaw the database and record the snapshot with BACKUP command.
+1. Freeze a database with ALTER command – providing an opportunity for you to perform the snapshot of the underlying storage. After which, you can thaw the database and record the snapshot with BACKUP command.
 2. Perform snapshots of multiple databases simultaneously with the new BACKUP GROUP and BACKUP SERVER commands. This enables snapshots to be performed at the snapshot granularity of the underlying storage and eliminates the need for you to perform a snapshot of the same disk multiple times.
 3. Perform FULL backups as well as COPY_ONLY FULL backups. These backups are recorded in msdb as well.
 4. Perform point-in-time recovery using log backups taken with the normal streaming approach after the snapshot FULL backup. Streaming differential backups are also supported if desired.
@@ -53,7 +53,7 @@ Similarly, a restore script might work as follows:
 
 ## Examples
 
-The following sections show different T-SQL commands used to perform snapshot backup to disk.When a snapshot backup is written to disk, only the metadata connected to the snapshot backup is written to the file. The output will not contain any of the database contents except for the header and the file contents.The shell file created as part of performing snapshot backup should be used with the actual snapshot URIto make a complete backup. RESTORE of a database from this file will require the user to copy the database files from the snapshot URIto the mount point prior to issuing the RESTORE command.Users will be able to run all the traditional T-SQL commands like RESTORE HEADERONLY, RESTORE FILELISTONLY on this snapshot backup metadata file along with RESTORE DATABASE. The syntax supports writing snapshot backup metadata to DISK or URL. The snapshot backup sets can also be appended just like streaming backup sets into a single file. 
+The following sections show different T-SQL commands used to perform snapshot backup to disk.  When a snapshot backup is written to disk, only the metadata connected to the snapshot backup is written to the file. The output will not contain any of the database contents except for the header and the file contents. The shell file created as part of performing snapshot backup should be used with the actual snapshot URIto make a complete backup. RESTORE of a database from this file will require the user to copy the database files from the snapshot URIto the mount point prior to issuing the RESTORE command. Users will be able to run all the traditional T-SQL commands like RESTORE HEADERONLY, RESTORE FILELISTONLY on this snapshot backup metadata file along with RESTORE DATABASE. The syntax supports writing snapshot backup metadata to DISK or URL. The snapshot backup sets can also be appended just like streaming backup sets into a single file. 
 
 > [!NOTE]
 > For backup to URL, block blobs are preferred although page blobs are supported for SQL Server on Windows. For SQL Server on Linux and containers, only block blobs are supported.
@@ -156,9 +156,7 @@ FROM DISK='d:\temp\db.bkm'
 WITH METADATA_ONLY
 ```
 
-![Figure: Output of snapshot backup with RESTORE HEADERONLY](./media/create-a-transact-sql-snapshot-backup/restore-header-only.png)
-
-## Output of snapshot backup with RESTORE FILELISTONLY
+### Output of snapshot backup with RESTORE FILELISTONLY
 
 The output with RESTORE FILELISTONLY displays the first backup set by default:
 

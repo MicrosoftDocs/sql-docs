@@ -78,7 +78,7 @@ For access token authentication, the linked server is created with `AccessToken=
    - **Provider string**: `Server=<fqdn of S2>;AccessToken=%s`.
    - **Catalog**: leave empty.
 
-   :::image type="content" source="media/create-linked-server-with-access-token-authentication.png" alt-text="Screenshot of creating linked server with password authentication":::
+   :::image type="content" source="media/create-linked-server-with-access-token-authentication.png" alt-text="Screenshot of creating linked server with access token authentication":::
 
 1. Select the **Security** tab.
 1. Select **Add**.

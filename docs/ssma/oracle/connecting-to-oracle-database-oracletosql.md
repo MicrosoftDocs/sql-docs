@@ -13,6 +13,8 @@ helpviewer_keywords:
   - "Refreshing Oracle Metadata"
 ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6
 ms.author: cpichuka
+f1_keywords: 
+  - "ssma.oracle.connectoracleform.f1"
 ---
 
 # Connecting to Oracle Database (OracleToSQL)

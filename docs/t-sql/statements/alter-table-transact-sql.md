@@ -58,7 +58,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
 ms.custom: ""
-ms.date: 05/09/2022
+ms.date: 05/24/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE (Transact-SQL)
@@ -341,7 +341,8 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
      {
        NONCLUSTERED (column [ ASC | DESC ] [ ,... n ])
        | NONCLUSTERED HASH (column [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count )
-                    }
+     }
+   [ WITH ( <resumable_options> [, ...n] ) ]
     | FOREIGN KEY
         ( column [ ,...n ] )
         REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ]
@@ -361,6 +362,13 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
       [ ON filegroup_name | default ]
 }
 
+<resumable_options>]::=  
+{
+      ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }  
+    | MAXDOP = max_degree_of_parallelism  
+    | RESUMABLE = { ON | OFF } 
+    | MAX_DURATION = <time> [ MINUTES ]     
+}
 ```
 
 ## Syntax for Azure Synapse Analytics and Parallel Data Warehouse
@@ -1017,6 +1025,14 @@ Requires **ALTER ANY CONNECTION** permission.
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Conditionally drops the column or constraint only if it already exists.
+
+#### <a id="resumable"></a> RESUMABLE = { ON | OFF} 
+**Applies to**: SQL Server 2022 and later.
+
+Specifies whether an online add constraint operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`.
+
+**MAX_DURATION** when used with `RESUMABLE = ON` (requires `ONLINE=ON`) indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion.
+
 
 ## Remarks
 

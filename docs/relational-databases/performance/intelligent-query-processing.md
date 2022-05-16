@@ -65,21 +65,23 @@ Interleaved execution changes the unidirectional boundary between the optimizati
 
 MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and 1 for earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. Interleaved execution helps workload performance issues that are due to these fixed cardinality estimates associated with MSTVFs. For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
-The following image depicts a [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) output, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworthy areas of the plan (flow is from right to left):
+The following image depicts a [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) output, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs
 
-1. The MSTVF Table Scan has a fixed estimate of 100 rows. For this example, however, there are 527,597 rows flowing through this MSTVF Table Scan, as seen in Live Query Statistics via the *527597 of 100* actual of estimated - so the fixed estimate is significantly skewed.
-1. For the Nested Loops operation, only 100 rows are assumed to be returned by the outer side of the join. Given the high number of rows actually being returned by the MSTVF, you are likely better off with a different join algorithm altogether.
-1. For the Hash Match operation, notice the small warning symbol, which in this case is indicating a spill to disk.
+ You can see the actual row flow vs. estimated rows. There are three noteworthy areas of the plan (flow is from right to left):
 
-![Row flow vs. estimated rows](./media/7_AQPFlowThreeAreas.png)
+- The MSTVF Table Scan has a fixed estimate of 100 rows. For this example, however, there are 527,597 rows flowing through this MSTVF Table Scan, as seen in Live Query Statistics via the *527597 of 100* actual of estimated - so the fixed estimate is significantly skewed.
+- For the Nested Loops operation, only 100 rows are assumed to be returned by the outer side of the join. Given the high number of rows actually being returned by the MSTVF, you are likely better off with a different join algorithm altogether.
+- For the Hash Match operation, notice the small warning symbol, which in this case is indicating a spill to disk.
+
+![Graphic of Row flow vs. estimated rows](./media/7_AQPFlowThreeAreas.png)
 
 Contrast the prior plan with the actual plan generated with interleaved execution enabled:
 
-![Interleaved plan](./media/8_AQPInterleavedEnabledPlan.png)
+![Graphic of Interleaved plan](./media/8_AQPInterleavedEnabledPlan.png)
 
-1. Notice that the MSTVF table scan now reflects an accurate cardinality estimate. Also notice the re-ordering of this table scan and the other operations.
-1. And regarding join algorithms, we have switched from a Nested Loop operation to a Hash Match operation instead, which is more optimal given the large number of rows involved.
-1. Also notice that we no longer have spill-warnings, as we're granting more memory based on the true row count flowing from the MSTVF table scan.
+- Notice that the MSTVF table scan now reflects an accurate cardinality estimate. Also notice the re-ordering of this table scan and the other operations.
+- And regarding join algorithms, we have switched from a Nested Loop operation to a Hash Match operation instead, which is more optimal given the large number of rows involved.
+- Also notice that we no longer have spill-warnings, as we're granting more memory based on the true row count flowing from the MSTVF table scan.
 
 ### Interleaved execution eligible statements
 
@@ -88,10 +90,11 @@ MSTVF referencing statements in interleaved execution must currently be read-onl
 ### Interleaved execution benefits
 
 In general, the higher the skew between the estimated vs. actual number of rows, coupled with the number of downstream plan operations, the greater the performance impact.
+
 In general, interleaved execution benefits queries where:
 
-1. There is a large skew between the estimated vs. actual number of rows for the intermediate result set (in this case, the MSTVF).
-1. And the overall query is sensitive to a change in the size of the intermediate result. This typically happens when there is a complex tree above that subtree in the query plan.
+- There is a large skew between the estimated vs. actual number of rows for the intermediate result set (in this case, the MSTVF).
+- And the overall query is sensitive to a change in the size of the intermediate result. This typically happens when there is a complex tree above that subtree in the query plan.
 A simple `SELECT *` from an MSTVF will not benefit from interleaved execution.
 
 ### Interleaved execution overhead

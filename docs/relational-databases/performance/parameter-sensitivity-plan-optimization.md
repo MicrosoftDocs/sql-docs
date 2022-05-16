@@ -17,7 +17,7 @@ ms.date: 05/24/2022
 monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
-# Parameter Sensitivity Plan Optimization
+# Parameter Sensitivity Plan optimization
 
 **APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
@@ -42,7 +42,7 @@ For eligible plans, the initial compilation produces a **dispatcher plan** that 
 
 For each predicate that is chosen, the Query Processor bucketizes them into predicate cardinality ranges based on the runtime cardinality, as seen in the following picture:
 
-:::image type="content" source="media/parameter-sensitivity-plan-optimization/psp-boundaries.jpg" alt-text="Image of PSP boundaries":::
+:::image type="content" source="media/parameter-sensitivity-plan-optimization/psp-boundaries.jpg" alt-text="Graphic of PSP boundaries":::
 
 Dispatcher plans are automatically rebuilt if there are significant data distribution changes. Query variant plans will independently recompile as needed, same as any other query plan type, and subject to default recompilation events. For more information about recompilation, see [Recompiling Execution Plans](../query-processing-architecture-guide.md#recompiling-execution-plans).
 

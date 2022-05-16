@@ -57,6 +57,7 @@ The following resources are defined in the Bicep file:
 
 > [!NOTE]
 > Replace **\<admin-login\>** with the administrator username of the SQL logical server. You'll be prompted to enter **administratorLoginPassword**.
+
   When the deployment finishes, you should see a message indicating the deployment succeeded.
 
 ## Review deployed resources

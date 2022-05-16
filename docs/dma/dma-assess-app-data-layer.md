@@ -57,7 +57,7 @@ To enable this assessment, use the Data Access Migration Toolkit (DAMT), a Visua
 
    ![Screenshot shows the results, a Data Access Report.](../dma/media/dma-assess-app-data-layer/dma-data-access-report.png)
 
-6. Review the report for data connectivity components and for SQL queries embedded in the application code, which appear highlighted.
+6. Review the report for data connectivity components and for SQL queries embedded in the application code. These elements appear highlighted.
 
    ![Screenshot shows SQL queries in application code.](../dma/media/dma-assess-app-data-layer/dma-sql-queries-in-app-code.png)
 

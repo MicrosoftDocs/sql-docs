@@ -23,7 +23,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: "katsmith"
 ms.custom: "seo-lt-2019"
-ms.date: 04/25/2022
+ms.date: 05/24/2022
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest"
 ---
 
@@ -105,6 +105,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
     | OPTIMIZED_PLAN_FORCING = { ON | OFF }
     | DOP_FEEDBACK = { ON | OFF }
+    | PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
 }
 ```
 
@@ -182,7 +183,7 @@ This value is only valid on secondaries while the database in on the primary, an
 
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY }
 
-Enables or disables [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). The default is ON. Setting PARAMETER_SNIFFING to OFF is equivalent to enabling [Trace Flag 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Enables or disables [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity). The default is ON. Setting PARAMETER_SNIFFING to OFF is equivalent to enabling [Trace Flag 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
 > To accomplish this at the query level, see the **OPTIMIZE FOR UNKNOWN** [query hint](../../t-sql/queries/hints-transact-sql-query.md).
@@ -190,7 +191,7 @@ Enables or disables [parameter sniffing](../../relational-databases/query-proces
 
 PRIMARY
 
-This value is only valid on secondaries while the database in on the primary, and specifies that the value for this setting on all secondaries will be the value set for the primary. If the configuration on the primary for using [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitly. PRIMARY is the default setting for the secondaries.
+This value is only valid on secondaries while the database in on the primary, and specifies that the value for this setting on all secondaries will be the value set for the primary. If the configuration on the primary for using [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitly. PRIMARY is the default setting for the secondaries.
 
 <a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
@@ -432,7 +433,7 @@ DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 
 Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the database engine. Once it's set, when a query is executed on that database, only the compatible features will be exercised.  A database's compatibility level is set to AUTO by default when it's first created. The compatibility level is preserved even after database pause/resume, backup/restore operations.
 
-|Compatibility Level    |   Comments|  
+| Compatibility Level |   Comments|  
 |-----------------------|--------------|
 |**AUTO**| Default.  Its value is automatically updated by the Synapse Analytics engine.  The current value is 20.|
 |**10**| Exercises the Transact-SQL and query processing behaviors before the introduction of compatibility level support.|
@@ -461,6 +462,12 @@ DOP_FEEDBACK = { ON | OFF }
 **APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 Identifies parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is deemed inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verifies if it helps. Requires Query Store enabled.
+
+PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions.
 
 ## <a name="Permissions"></a> Permissions
 
@@ -666,7 +673,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 
 ### MAXDOP Resources
 
-- [Degree of Parallelism](../../relational-databases/query-processing-architecture-guide.md#DOP)
+- [Degree of Parallelism](../../relational-databases/query-processing-architecture-guide.md#degree-of-parallelism-dop)
 - [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/kb/2806535)
 
 ### LEGACY_CARDINALITY_ESTIMATION Resources
@@ -676,7 +683,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 
 ### PARAMETER_SNIFFING Resources
 
-- [Parameter Sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
+- [Parameter Sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity)
 - ["I smell a parameter!"](/archive/blogs/queryoptteam/i-smell-a-parameter)
 
 ### QUERY_OPTIMIZER_HOTFIXES Resources
@@ -692,13 +699,14 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 
 [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-## More information   
- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
- [Databases and Files Catalog Views](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
- [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
- [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)    
- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)    
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+## More information
+
+- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
+- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)
+- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
+- [Databases and Files Catalog Views](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
+- [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
+- [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)    
+- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)    
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)

@@ -5,7 +5,6 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,8 +25,9 @@ helpviewer_keywords:
   - "logs [SQL Server], shrinking"
   - "reducing database size"
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
-author: pmasl
-ms.author: umajay
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: umajay, KevinConanMSFT
 monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # DBCC SHRINKDATABASE (Transact-SQL)

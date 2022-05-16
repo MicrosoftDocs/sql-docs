@@ -73,11 +73,11 @@ The following image depicts a [Live Query Statistics](../../relational-databases
 - For the Nested Loops operation, only 100 rows are assumed to be returned by the outer side of the join. Given the high number of rows actually being returned by the MSTVF, you are likely better off with a different join algorithm altogether.
 - For the Hash Match operation, notice the small warning symbol, which in this case is indicating a spill to disk.
 
-![Graphic of Row flow vs. estimated rows](./media/7_AQPFlowThreeAreas.png)
+![Graphic of Row flow versus estimated rows.](./media/7_AQPFlowThreeAreas.png)
 
 Contrast the prior plan with the actual plan generated with interleaved execution enabled:
 
-![Graphic of Interleaved plan](./media/8_AQPInterleavedEnabledPlan.png)
+![Graphic of Interleaved plan.](./media/8_AQPInterleavedEnabledPlan.png)
 
 - Notice that the MSTVF table scan now reflects an accurate cardinality estimate. Also notice the re-ordering of this table scan and the other operations.
 - And regarding join algorithms, we have switched from a Nested Loop operation to a Hash Match operation instead, which is more optimal given the large number of rows involved.

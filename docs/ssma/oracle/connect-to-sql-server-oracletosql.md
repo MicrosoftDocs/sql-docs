@@ -54,4 +54,4 @@ If you want to use this option, select the **Trust Server Certificate** checkbox
   
 ## See Also
 
-[Connect to Oracle database](connect-to-oracle-database-oracletosql.md)
+[Connect to Oracle database](connecting-to-oracle-database-oracletosql.md)

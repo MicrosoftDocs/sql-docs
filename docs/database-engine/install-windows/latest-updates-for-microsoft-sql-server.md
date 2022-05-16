@@ -1,7 +1,7 @@
 ---
 description: A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server.
 title: Latest updates for SQL Server
-ms.date: 05/11/2022
+ms.date: 05/16/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -24,7 +24,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Product Versions   | Latest Service Pack |  Latest GDR | Latest cumulative update | CU Release Date | General Guidance  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/A|[KB 4583458](https://support.microsoft.com/help/4583458)|CU 16 [(KB 5011644)](https://support.microsoft.com/help/5011644)|4/18/2022 <br/>(Windows)<br/><br/>5/10/2022 <br/>(Big Data Clusters)|[SQL Server 2019 Installation](./install-sql-server.md)|
+|SQL Server 2019|N/A|[KB 4583458](https://support.microsoft.com/help/4583458)|CU 16 [(KB 5011644)](https://support.microsoft.com/help/5011644)|4/18/2022 <br/>(Windows)<br/><br/>5/10/2022 <br/>(Big Data Clusters)<br/><br/>5/16/2022<br/>(Linux)|[SQL Server 2019 Installation](./install-sql-server.md)|
 |SQL Server 2017|N/A|[KB 4583456](https://support.microsoft.com/help/4583456)|CU 29 [(KB 5010786)](https://support.microsoft.com/help/5010786)|3/30/2022|[SQL Server 2017 Installation](./install-sql-server.md)|
 |SQL Server 2016|Azure Connect pack [(KB 5014242)](https://support.microsoft.com/help/5014242)|N/A|N/A|N/A|[Link - Azure SQL Managed Instance](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview)|
 |SQL Server 2016|SP3 [(KB 5003279)](https://support.microsoft.com/help/5003279)|N/A|N/A|N/A|[SQL Server 2016 Installation](./install-sql-server.md)|

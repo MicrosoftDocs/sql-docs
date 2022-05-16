@@ -9,7 +9,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 05/12/2022
+ms.date: 05/16/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
@@ -19,7 +19,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
  The **go-sqlcmd** utility (preview) lets you enter Transact-SQL statements, system procedures, and script files at the command prompt and uses the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver for go language.  go-sqlcmd aims to be a complete port of [sqlcmd](sqlcmd-utility.md) to the go language and compiles to executable binaries for Windows, macOS, and Linux on both x64 and arm64 architectures.
 
- **go-sqlcmd** is open source under the MIT license and available on [GitHub](https://github.com/microsoft/go-sqlcmd).
+ **go-sqlcmd** is open source under the MIT license and available on [GitHub](https://github.com/microsoft/go-sqlcmd). As a CLI, go-sqlcmd is ideal for pipelines and edge applications as it has no additional dependencies and supports a wide variety of environment configurations. The capabilities of go-sqlcmd expand beyond the ODBC-based [sqlcmd](sqlcmd-utility.md) to incorporate a [vertical output format](#enhancements) and extensive [Azure Active Directory authentication](#azure-active-directory-authentication) options.
 
 ## Download and install go-sqlcmd
 
@@ -115,7 +115,7 @@ Several switches and behaviors are altered from [sqlcmd](sqlcmd-utility.md) in g
 - Some behaviors that were kept to maintain compatibility with `OSQL` may be changed, such as alignment of column headers for some data types.
 - All commands must fit on one line, even `EXIT`. Interactive mode won't check for open parentheses or quotes for commands and prompt for successive lines. The ODBC sqlcmd allows the query run by `EXIT(query)` to span multiple lines.
 
-## Miscellaneous enhancements
+## Enhancements
 
 - `:Connect` now has an optional `-G` parameter to select one of the authentication methods for Azure SQL Database  - `SqlAuthentication`, `ActiveDirectoryDefault`, `ActiveDirectoryIntegrated`, `ActiveDirectoryServicePrincipal`, `ActiveDirectoryManagedIdentity`, `ActiveDirectoryPassword`. More information on [Azure Active Directory authentication](#azure-active-directory-authentication) support below. If `-G` isn't provided, either Integrated security or SQL Authentication will be used, dependent on the presence of a `-U` user name parameter.
 - The new `--driver-logging-level` command line parameter allows you to see traces from the `go-mssqldb` client driver. Use `64` to see all traces.

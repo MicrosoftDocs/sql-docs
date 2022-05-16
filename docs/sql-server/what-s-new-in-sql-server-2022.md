@@ -39,6 +39,7 @@ This release is customer technology preview (CTP) 2.0. CTP 2.0 is the first publ
 This release:
 
 - Is available as Evaluation Edition. It is available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
+- On Azure Virtual Machines, it is available as Developer Edition.
 - Does not include support from Microsoft, except for select EAP customers.
 
 After you experience SQL Server 2022 Preview, you're welcome to [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
@@ -82,7 +83,7 @@ The following sections provide an overview of these features.
 |:---|:---|
 | Query Store on secondary replicas |  Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).<br/><br/> For more information, see [Query Store improvements](#query-store-improvements) later in this article.|
 | Query Store hints | [Query Store hints](../relational-databases/performance/query-store-hints.md) leverage leverages Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, now are available in SQL Server 2022 Preview. Requires enabling Query Store.|
-| Memory grant feedback | Optimize memory allocation is stored in the Query Store, so when the memory grant information is available when the query returns to cache after eviction. Requires enabling Query Store. |
+| Memory grant feedback | Optimize memory allocation is stored in the Query Store, so when the memory grant information is available when the query returns to cache after eviction. For information, read [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#percentile-and-persistence-mode-memory-grant-feedback). Requires enabling Query Store. |
 | Percentile grant |  A new algorithm improves performance of queries with widely vacillating memory requirements. Reviews more than just the single previous memory need - includes information from further back in the history as well. Requires enabling Query Store.|
 | In-memory OLTP management | - Improve memory management in large memory servers to reduce out of memory conditions <br/>- Add a new stored procedure to manually release unused memory on demand.|
 | Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s).|
@@ -98,7 +99,7 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-| Accelerated Database Recovery (ADR) improvement | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. SQL Server 2022 implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiencies. Concurrency improvements help the cleanup process to work more efficiently. ADR cleans pages that could not previously be cleaned due to locking.|
+| Accelerated Database Recovery (ADR) improvement | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. SQL Server 2022 implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiencies. Concurrency improvements help the cleanup process to work more efficiently. ADR cleans pages that could not previously be cleaned due to locking.<br/><br/>See [Restore and Recovery Overview (SQL Server)](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
 | Improved Snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client.
 | Setup attached to Azure | Install Azure Arc agent via SQL Server command line setup. For more information, see [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt).|
 | Optimized plan forcing| Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).|

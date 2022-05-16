@@ -8,6 +8,7 @@ ms.reviewer: vanto
 ms.topic: conceptual
 author: GithubMirek
 ms.author: mireks
+monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
 ---
 
 # Linked server for SQL Server with Azure Active Director authentication  
@@ -93,3 +94,4 @@ For access token authentication, the linked server is created with `AccessToken=
 
 - [Connect SQL Server to Azure Arc](/sql/sql-server/azure-arc/connect)
 - [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md)
+- [Tutorial: Setup Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)

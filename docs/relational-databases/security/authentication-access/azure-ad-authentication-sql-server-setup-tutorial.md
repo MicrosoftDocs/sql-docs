@@ -8,6 +8,7 @@ ms.reviewer: vanto
 ms.topic: tutorial
 author: GithubMirek
 ms.author: mireks
+monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Tutorial: Setup Azure Active Directory authentication for SQL Server
@@ -28,7 +29,7 @@ In this tutorial, you learn how to:
 
 ## Prerequisites
 
-- SQL Server 2022 CTP 1.1 is installed.
+- SQL Server 2022 is installed.
 - SQL Server is connected to Azure cloud. For more information, see [Connect SQL Server to Azure Arc](/sql/sql-server/azure-arc/connect).
 - SQL Server Arc extension version 1.1.1795.50 or higher is installed.
 - Access to Azure Active Directory is available for authentication purpose. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
@@ -38,6 +39,8 @@ In this tutorial, you learn how to:
 > To perform Azure AD authentication, SQL Server needs to be able to query Azure AD and requires an Azure AD app registration which it can authenticate as. The app registration also needs a handful of permissions for the queries SQL Server will perform.
 >
 > SQL Server uses a certificate for this authentication, and it is stored in Azure Key Vault (AKV). The Azure Arc agent downloads the certificate to the SQL Server instance host.
+>
+> Azure AD authentication is only supported for SQL Server running in the mixed mode authentication (allowing SQL Server and Windows authentication mode). If only Windows authentication mode is chosen, Azure AD authentication is not supported.
 
 ## Create and register an Azure AD application
 
@@ -121,6 +124,7 @@ Select the newly created application, and on the left side menu, select **API Pe
 ## Configure Azure AD authentication for SQL Server through Azure portal
 
 1. Go to the [Azure portal](https://portal.azure.com), and select **SQL Server – Azure Arc**, and select the instance for your SQL Server host.
+1. Check the status of your **SQL Server - Azure Arc** resource and see if it's connected by going to the **Properties** menu. For more information, see [Validate the SQL Server - Azure Arc resources](/sql/sql-server/azure-arc/connect?#validate-the-sql-server---azure-arc-resources).
 
 1. Select **Azure Active Directory** on the left-hand column.
 
@@ -135,7 +139,7 @@ Select the newly created application, and on the left side menu, select **API Pe
 
 > [!NOTE]
 >
-> - It takes several minutes to download certificates, configure settings, etc. After selecting **Save** on the Azure portal, wait 5 to 10 minutes before attempting an Azure AD login. Refreshing the portal will show a warning that the agent is updating.
+> - It takes several minutes to download certificates and configure settings. After setting all parameters and selecting **Save** on the Azure portal, the following message may appear: `SQL Server's Azure Arc agent is currently processing a request. Values below may be incorrect. Please wait until the agent is done before continuing`. Wait until the save process is confirmed with `Saved successfully`, before attempting an Azure AD login.
 > - The Azure Arc server agent can only update once the previous action has completed. This means that saving a new Azure AD configuration before the last one has finalized can cause a failure. If you see the message **Extended call failed** when you select **Save**, wait 5 minutes and then try again.
 > - The admin login specified in the portal will be added as a `sysadmin` to the SQL Server instance, but it will not be listed in `syslogins` or `sys.server_principals`.
 
@@ -296,3 +300,4 @@ For more information on **Azure Active Directory - Universal with MFA** authenti
 
 - [Connect SQL Server to Azure Arc](/sql/sql-server/azure-arc/connect)
 - [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md)
+- [Linked server for SQL Server with Azure Active Director authentication](azure-ad-authentication-sql-server-linked-server.md)

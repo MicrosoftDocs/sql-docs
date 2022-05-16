@@ -8,6 +8,7 @@ ms.reviewer: vanto
 ms.topic: conceptual
 author: GithubMirek
 ms.author: mireks
+monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
 ---
 
 # Azure Active Directory authentication for SQL Server
@@ -30,6 +31,9 @@ The current authentication modes, such as [SQL authentication and Windows authen
 As a central authentication repository used by Azure, Azure AD allows you to store objects such as users, groups, or service principals as identities. Azure AD also allows you to use those identities to authenticate with different Azure services. Azure AD authentication is supported for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. For more information, see [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) and [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 If your Windows Server Active Directory is federated with Azure AD, users can authenticate with SQL Server using their Windows credentials, either as a Windows logins or an Azure AD login. Azure AD doesn't support all AD features, such as service accounts or complex networking forest architecture that is supported for Windows Server Active Directory.
+
+> [!IMPORTANT]
+> Azure AD authentication is only supported for SQL Server running in the mixed mode authentication (allowing SQL Server and Windows authentication mode). If only Windows authentication mode is chosen, Azure AD authentication is not supported.
 
 ## Connecting SQL Server to Azure to use Azure AD
 
@@ -69,6 +73,7 @@ Some non-GUI clients such as `Invoke-Sqlcmd` [Invoke-sqlcmd](/powershell/module/
 
 - [Tutorial: Setup Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
 - [Azure Active Directory (Azure AD) authentication](/azure/active-directory/authentication/overview-authentication)
+- [Linked server for SQL Server with Azure Active Director authentication](azure-ad-authentication-sql-server-linked-server.md)
 
 ## Next steps
 

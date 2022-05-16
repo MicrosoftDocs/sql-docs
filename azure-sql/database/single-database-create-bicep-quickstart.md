@@ -15,7 +15,7 @@ ms.date: 05/16/2022
 
 Creating a [single database](single-database-overview.md) is the quickest and simplest option for creating a database in Azure SQL Database. This quickstart shows you how to create a single database using Bicep.
 
-[Bicep](~/../../../../azure-docs-pr/articles/azure-resource-manager/bicep/overview.md) is a domain-specific language (DSL) that uses declarative syntax to deploy Azure resources. It provides concise syntax, reliable type safety, and support for code reuse. Bicep offers the best authoring experience for your infrastructure-as-code solutions in Azure.
+[Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep) is a domain-specific language (DSL) that uses declarative syntax to deploy Azure resources. It provides concise syntax, reliable type safety, and support for code reuse. Bicep offers the best authoring experience for your infrastructure-as-code solutions in Azure.
 
 ## Prerequisites
 
@@ -104,4 +104,4 @@ Remove-AzResourceGroup -Name exampleRG
   - [Connect and query using Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database?toc=%2fazure%2fsql-database%2ftoc.json)
 - To create a single database using the Azure CLI, see [Azure CLI samples](az-cli-script-samples-content-guide.md).
 - To create a single database using Azure PowerShell, see [Azure PowerShell samples](powershell-script-content-guide.md).
-- To learn how to create Bicep files, see [Create Bicep files with Visual Studio Code](/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code.md).
+- To learn how to create Bicep files, see [Create Bicep files with Visual Studio Code](/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code).

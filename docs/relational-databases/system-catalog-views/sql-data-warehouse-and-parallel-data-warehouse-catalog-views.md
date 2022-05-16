@@ -6,7 +6,7 @@ ms.date: 10/29/2019
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.technology: system-objects
-ms.reviewer: jrasnick
+ms.reviewer: wiassaf
 ms.topic: language-reference
 dev_langs: 
   - "TSQL"

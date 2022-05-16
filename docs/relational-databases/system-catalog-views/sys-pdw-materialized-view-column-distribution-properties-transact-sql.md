@@ -5,7 +5,7 @@ ms.custom: seo-dt-2019
 ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: jrasnick
+ms.reviewer: wiassaf
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

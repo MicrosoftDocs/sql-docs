@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
-ms.reviewer: jrasnick
+ms.reviewer: wiassaf
 dev_langs: 
   - "TSQL"
 monikerRange: ">= aps-pdw-2016"

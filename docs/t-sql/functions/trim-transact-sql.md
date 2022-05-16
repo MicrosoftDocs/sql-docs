@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "09/14/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: "jrasnick"
+ms.reviewer: "wiassaf"
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 

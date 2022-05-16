@@ -1,8 +1,7 @@
 ---
 title: "Create a T-SQL Backup | Microsoft Docs"
 description: This article shows you how to create a Transact-SQL backup in SQL Server using SQL Server Management Studio, Transact-SQL, or PowerShell.
-ms.custom: "contperf-fy21q4-portal"
-ms.date: "05/12/2021"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -10,8 +9,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up databases [SQL Server], full backups"
   - "backups [SQL Server], creating"
-author: MikeRayMSFT
-ms.author: mikeray
+author: perrysk-msft
+ms.author: peskount
+ms.reviewer: mikeray
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 

@@ -29,7 +29,7 @@ The current authentication modes, such as [SQL authentication and Windows authen
 
 As a central authentication repository used by Azure, Azure AD allows you to store objects such as users, groups, or service principals as identities. Azure AD also allows you to use those identities to authenticate with different Azure services. Azure AD authentication is supported for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. For more information, see [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) and [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
-If your Windows Server Active Directory is federated with Azure AD, users can authenticate with SQL Server using their Windows credentials,either as a Windows logins or an Azure AD login. Azure AD doesn't support all AD features, such as service accounts or complex networking forest architecture that is supported for Windows Server Active Directory.
+If your Windows Server Active Directory is federated with Azure AD, users can authenticate with SQL Server using their Windows credentials, either as a Windows logins or an Azure AD login. Azure AD doesn't support all AD features, such as service accounts or complex networking forest architecture that is supported for Windows Server Active Directory.
 
 ## Connecting SQL Server to Azure to use Azure AD
 
@@ -43,7 +43,7 @@ The following authentication methods are available when connecting to SQL Server
 
 ### Azure Active Directory Password
 
-Allows specifying the username and password to the client and driver, but this is disabled on many tenants for security reasons. When possible, we recommend avoiding this as it requires sending passwords over the network. These connections are encrypted, but it is best practice to never send them in the first place.
+Allows specifying the username and password to the client and driver, but this is disabled on many tenants for security reasons. When possible, we recommend avoiding this as it requires sending passwords over the network. These connections are encrypted, but it's best practice to never send them in the first place.
 
 ### Azure Active Directory Integrated
 
@@ -55,19 +55,20 @@ This is the standard interactive method with multi-factor authentication option 
 
 ### Using Application token authentication
 
-Some non-GUI clients such as `Invoke-Sqlcmd` [Invoke-sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) allow providing an access token. The scope or audience must be `https://database.windows.net/`. 
+Some non-GUI clients such as `Invoke-Sqlcmd` [Invoke-sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) allow providing an access token. The scope or audience must be `https://database.windows.net/`.
 
 ## Remarks
 
-- Only SQL Server 2022 on-premises with a Windows Operating System are supported for Azure AD authentication. SQL Server on Azure Virtual Machines are not supported for Azure AD authentication.
+- Only SQL Server 2022 on-premises with a Windows Operating System is supported for Azure AD authentication. SQL Servers on Azure Virtual Machines aren't supported for Azure AD authentication.
 - To connect SQL Server to Azure Arc, the Azure AD account needs the following permissions:
   - Member of the *Azure Connected Machine Onboarding* group or *Contributor* role in the resource group.
   - Member of the *Azure Connected Machine Resource Administrator* role in the resource group.
-  - Member of the the *Reader* role in the resource group.
+  - Member of the *Reader* role in the resource group.
 
 ## See also
 
 - [Tutorial: Setup Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Azure Active Directory (Azure AD) authentication](/azure/active-directory/authentication/overview-authentication)
 
 ## Next steps
 

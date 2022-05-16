@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "03/07/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "table modifications [SQL Server], MERGE statement"
   - "data manipulation language [SQL Server], MERGE statement"
   - "inserting data"
-author: XiaoyuMSFT
-ms.author: XiaoyuL
+author: mstehrani
+ms.author: emtehran
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest"
 ---
 # MERGE (Transact-SQL)

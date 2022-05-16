@@ -1,6 +1,6 @@
 ---
 title: "Resumable table add constraints"
-description: Use the Permissions page or the Securables page to view or set the permissions for securables in SQL Server. 
+description: New resumable capabilities to support pausing and resuming a running ALTER TABLE ADD CONSTRAINT operation. 
 ms.custom: ""
 ms.date: "05/24/2022"
 ms.prod: sql
@@ -61,7 +61,7 @@ For information on the syntax used to enable resumable operations on a table con
 
 ## T-SQL syntax for ALTER INDEX
 
-To pause, resume, or abort the resumable table constraint operation for `ALTER TABLE ADD CONSTRAINT`, use the T-SQL syntax [ALTER INDEX (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-index-transact-sql).
+To pause, resume, or abort the resumable table constraint operation for `ALTER TABLE ADD CONSTRAINT`, use the T-SQL syntax [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql).
 
 For resumable constraints the existing ALTER INDEX ALL command is used.
 

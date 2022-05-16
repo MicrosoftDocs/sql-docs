@@ -27,9 +27,9 @@ The Business Critical service tier model is based on a cluster of database engin
 
 Azure upgrades and patches underlying operating system, drivers, and SQL Server database engine transparently with the minimal down-time for end users. 
 
-Premium availability is enabled in the Business Critical service tier and is designed for intensive workloads that can't tolerate reduced availability due to the ongoing maintenance operations.
+State-of-the-art availability is enabled in the Business Critical service tier and is designed for intensive workloads that can't tolerate reduced availability due to the ongoing maintenance operations.
 
-Compute and storage is integrated on the single node in the premium model. High availability in this architectural model is achieved by replication of compute (SQL Server database engine process) and storage (locally attached SSD) deployed to a  four node cluster, using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
+Compute and storage is integrated on the single node in the Business Critical model. High availability in this architectural model is achieved by replication of compute (SQL Server database engine process) and storage (locally attached SSD) deployed to a  four node cluster, using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
 ![Cluster of database engine nodes](./media/service-tier-business-critical/business-critical-service-tier.png)
 

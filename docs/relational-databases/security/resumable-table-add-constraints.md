@@ -122,7 +122,9 @@ No new permissions for resumable `ALTER TABLE ADD CONSTRAINT` are required.
 
 Here are some examples on using resumable add table constraint operations.
 
-### A. Resumable ALTER TABLE operation for adding a primary key clustered on column (a) with MAX_DURATION of 240 minutes
+### Example 1
+
+Resumable `ALTER TABLE` operation for adding a primary key clustered on column (a) with `MAX_DURATION` of 240 minutes.
 
 ```sql
 ALTER TABLE table1
@@ -130,7 +132,9 @@ ADD CONSTRAINT PK_Constrain PRIMARY KEY CLUSTERED (a)
 WITH (ONLINE = ON, MAXDOP = 2, RESUMABLE = ON, MAX_DURATION = 240);
 ```
 
-### B. Resumable ALTER TABLE operation for adding a unique constraint on two columns (a and b) with MAX_DURATION of 240 minutes
+### Example 2
+
+Resumable `ALTER TABLE` operation for adding a unique constraint on two columns (a and b) with `MAX_DURATION` of 240 minutes.
 
 ```sql
 ALTER TABLE table2
@@ -138,7 +142,9 @@ ADD CONSTRAINT PK_Constrain UNIQUE CLUSTERED (a,b)
 WITH (ONLINE = ON, MAXDOP = 2, RESUMABLE = ON, MAX_DURATION = 240);
 ```
 
-### C. ALTER TABLE operation for adding a primary key clustered being paused and resumed
+### Example 3
+
+`ALTER TABLE` operation for adding a primary key clustered being paused and resumed.
 
 The table below shows two sessions (`Session #1` and `Session #2`) being executed chronologically using the following T-SQL statements. `Session #1` executes a resumable `ALTER TABLE ADD CONSTRAINT` operation creating a primary key on column `Col1`. `Session #2` checks the execution status for the running constraint. After some time, it pauses the reusable operation. `Session #2` checks the status for the paused constraint. Finally, `Session #1` resumes the paused constraint and `Session #2` checks the status again.
 

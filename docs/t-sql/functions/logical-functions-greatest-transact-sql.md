@@ -21,7 +21,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || =azure-sqldw-l
 ---
 # Logical Functions - GREATEST (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-svrless-poolonly.md)]
+[!INCLUDE [sqlserver-2022-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sqlserver2022-asdb-asdbmi-asa-svrless-poolonly.md)]
 
 
  This function returns the maximum value from a list of one or more expressions. 

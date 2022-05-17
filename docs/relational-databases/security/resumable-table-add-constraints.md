@@ -49,7 +49,7 @@ This feature is especially useful for large tables.
 
 ## T-SQL Syntax for ALTER TABLE
 
-For information on the syntax used to enable resumable operations on a table constraint, see the syntax and options in [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql#resumable)
+For information on the syntax used to enable resumable operations on a table constraint, see the syntax and options in [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql#resumable).
 
 ### Remarks for ALTER TABLE
 
@@ -182,3 +182,5 @@ Here's the result set:
 - [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)
 - [sys.index_resumable_operations](/sql/relational-databases/system-catalog-views/sys-index-resumable-operations)
 - [WAIT_AT_LOW_PRIORITY](/sql/t-sql/statements/alter-index-transact-sql#wait-at-low-priority)
+- [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)
+- [ALTER TABLE index_option](/sql/t-sql/statements/alter-table-index-option-transact-sql)

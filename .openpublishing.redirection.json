@@ -59364,6 +59364,61 @@
       "source_path": "docs/database-engine/availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md",
       "redirect_url": "/azure/azure-sql/virtual-machines/windows/availability-group-manually-configure-multiple-regions",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-append-only-ledger-tables.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-append-only-ledger-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-audit.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-database-ledger.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-database-ledger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-database-digest-management-and-database-verification.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-digest-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-how-to-access-acl-digest.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-how-to-append-only-ledger-tables.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-how-to-updatable-ledger-tables.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-limits.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-limits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-overview.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-updatable-ledger-tables.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-updatable-ledger-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-verify-database.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-verify-database",
+      "redirect_document_id": false
     }
   ]
 }

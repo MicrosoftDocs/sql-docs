@@ -18,6 +18,8 @@
     href: quickstart-sql-database.md
   - name: Connect & query Azure Synapse Analytics
     href: quickstart-sql-dw.md
+  - name: Connect & query Azure Cosmos DB API for MongoDB
+    href: quickstart-azure-cosmos-db-mongodb.md
   - name: Connect & query PostgreSQL
     href: quickstart-postgres.md
   - name: Connect & explore Oracle
@@ -46,6 +48,8 @@
       href: extensions/azure-sql-migration-extension.md
     - name: Azure Monitor Logs extension
       href: extensions/azure-monitor-logs-extension.md
+    - name: Azure Cosmos DB API for MongoDB extension
+      href: extensions/azure-cosmos-db-mongodb-extension.md
     - name: Database Migration Assessment for Oracle extension
       href: extensions/database-migration-assessment-for-oracle-extension.md
     - name: Database Schema Conversion Toolkit
@@ -82,8 +86,6 @@
         href: extensions/sql-database-project-extension.md
       - name: Getting Started with the SQL Database Projects extension
         href: extensions/sql-database-project-extension-getting-started.md
-      - name: SDK-style projects
-        href: extensions/sql-database-project-extension-sdk-style-projects.md
       - name: Build and Publish a Project
         href: extensions/sql-database-project-extension-build.md
       - name: Build a Project from the Command Line

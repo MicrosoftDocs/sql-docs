@@ -132,5 +132,5 @@ SELECT
   
 ## See Also  
 [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
-[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#degree-of-parallelism-dop)       
 [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)    

@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article provides guidance for installing, updating, and uninstalling [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Community Technical Preview (CTP) 2.0 on Linux.
+This article provides guidance for installing, updating, and uninstalling [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] community technology preview (CTP) 2.0 on Linux.
 
 > [!TIP]  
 > For installing [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] or [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux, see the [Installation guidance for SQL Server on Linux](./sql-server-linux-setup.md).

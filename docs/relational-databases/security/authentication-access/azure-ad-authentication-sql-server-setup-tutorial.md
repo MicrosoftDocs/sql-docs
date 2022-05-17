@@ -24,7 +24,7 @@ In this tutorial, you learn how to:
 > - Grant permissions to the Azure AD application
 > - Create and assign a certificate
 > - Configure Azure AD authentication for SQL Server through Azure portal
-> - Login and user creation
+> - Create logins and users
 > - Connect with a supported authentication method
 
 ## Prerequisites
@@ -78,7 +78,7 @@ Select the newly created application, and on the left side menu, select **API Pe
 
 ## Create and assign a certificate
 
-1. Go to the [Azure portal](https://portal.azure.com), select **Key vaults**, select the key vault you wish to use or create a new one. Select **Certificates** > **Generate/Import**
+1. Go to the [Azure portal](https://portal.azure.com), select **Key vaults**, and select the key vault you wish to use or create a new one. Select **Certificates** > **Generate/Import**
 
    1. For the **Method of certificate creation**, use **Generate**.
    1. Add a certificate name and subject.
@@ -97,7 +97,7 @@ Select the newly created application, and on the left side menu, select **API Pe
    :::image type="content" source="media/download-certificate.png" alt-text="Screenshot of certificate in the Azure portal where you can view and download the certificate":::
 
    > [!NOTE]
-   > This does not need to be done on the SQL Server host, but any client that will access the Azure portal for the next step.
+   > This does not need to be done on the SQL Server host. Rather, any client that will access the Azure portal for the next step.
 
 1. In the Azure portal, navigate to the app registration created above and select **Certificates & secrets**
 
@@ -148,7 +148,7 @@ Select the newly created application, and on the left side menu, select **API Pe
 After the Azure Arc agent on the SQL Server host has completed its operation, the admin account selected in the **Azure Active Directory** blade in the portal will be a `sysadmin` on the SQL Server instance. To sign in, use any SQL Server client like [SSMS](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
 
 > [!NOTE]
-> All connections to SQL Server that are done with Azure AD authentication require an encrypted connection. If the Database Administrator (DBA) has not setup a trusted SSL/TLS certificate for the server, logins will likely fail with the message **The certificate chain waws issued by an authority that is not trusted.** To fix this, either configure the SQL Server instance to use an SSL/TLS certificate which is trusted by the client. For more information, see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine), or select **trust server certificate** in the advanced connection properties.
+> All connections to SQL Server that are done with Azure AD authentication require an encrypted connection. If the Database Administrator (DBA) has not setup a trusted SSL/TLS certificate for the server, logins will likely fail with the message **The certificate chain was issued by an authority that is not trusted.** To fix this, either configure the SQL Server instance to use an SSL/TLS certificate which is trusted by the client or select **trust server certificate** in the advanced connection properties. For more information, see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
 
 ### Create login syntax
 
@@ -180,7 +180,7 @@ SELECT * FROM sys.server_principals
 ```
 
 > [!NOTE]
-> To grant an Azure AD admin membership to the `sysadmin` role (for example `admin@contoso.com`), execute the following commands in `master` database:
+> To grant an Azure AD user membership to the `sysadmin` role (for example `admin@contoso.com`), execute the following commands in `master` database:
 >
 > ```sql
 > CREATE LOGIN [admin@contoso.com] FROM EXTERNAL PROVIDER; 
@@ -189,8 +189,6 @@ SELECT * FROM sys.server_principals
 > ```
 
 The `sp_addsrvrolemember` command must be executed as a member of the SQL Server `sysadmin` server role.
-
-In a similar way, any Azure AD login can be granted a `sysadmin` role for this server.
 
 ### Create user syntax
 
@@ -266,7 +264,7 @@ SQL Server supports four authentication methods for Azure AD authentication:
 - Azure Active Directory Password
 - Azure Active Directory Integrated
 - Azure Active Directory Universal with Multi-Factor Authentication
-- Using Application token authentication
+- Azure Active Directory access token
 
 Use one of these methods to connect to the SQL Server instance. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
 
@@ -277,11 +275,9 @@ Below is the snapshot of the SSMS connection page using the authentication metho
 :::image type="content" source="media/sql-server-management-studio-connection.png" alt-text="Screenshot S S M S showing the Connect to Server window":::
 
 > [!NOTE]
-> During the authentication process, a database where the user was created must be explicitly indicated in the SSMS. Expand **Options>> Connection Properties > Connect to database: `database_name`**.
->
-> In addition, the **Trust server certificate** and **Encrypt connection** boxes in the **Connection properties** must be enabled.  
+> During the authentication process, a database where the user was created must be explicitly indicated in SSMS. Expand **Options>> Connection Properties > Connect to database: `database_name`**.
 
-For more information on **Azure Active Directory - Universal with MFA** authentication method see [Universal with MFA](/azure-sql/database/authentication-mfa-ssms-configure).
+For more information on **Azure Active Directory - Universal with MFA** authentication method see [Universal with MFA](/azure/azure-sql/database/authentication-mfa-ssms-configure).
 
 > [!NOTE]
 > SQL Server tools that support Azure AD authentication for Azure SQL are also supported for SQL Server 2022.

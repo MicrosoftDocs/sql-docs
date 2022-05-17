@@ -24,11 +24,11 @@ You can now connect to SQL Server using the following authentication methods usi
 - Azure Active Directory Password
 - Azure Active Directory Integrated
 - Azure Active Directory Universal with Multi-Factor Authentication
-- Using Application token authentication
+- Azure Active Directory access token
 
 The current authentication modes, such as [SQL authentication and Windows authentication](/sql/relational-databases/security/choose-an-authentication-mode) remain unchanged.
 
-As a central authentication repository used by Azure, Azure AD allows you to store objects such as users, groups, or service principals as identities. Azure AD also allows you to use those identities to authenticate with different Azure services. Azure AD authentication is supported for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. For more information, see [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) and [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
+As a central authentication repository used by Azure, Azure AD allows you to store objects such as users, groups, or service principals as identities. Azure AD also allows you to use those identities to authenticate with different Azure services. Azure AD authentication is supported for Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, and SQL Server. For more information, see [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) and [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 If your Windows Server Active Directory is federated with Azure AD, users can authenticate with SQL Server using their Windows credentials, either as a Windows logins or an Azure AD login. Azure AD doesn't support all AD features, such as service accounts or complex networking forest architecture that is supported for Windows Server Active Directory.
 
@@ -51,15 +51,15 @@ Allows specifying the username and password to the client and driver, but this i
 
 ### Azure Active Directory Integrated
 
-When the Windows domain is synchronized with Azure AD, and a user is logged into the Windows domain, user Windows credentials are used for Azure AD authentication.
+When the Windows domain is synchronized with Azure AD, and a user is logged into the Windows domain, the user's Windows credentials are used for Azure AD authentication.
 
 ### Azure Active Directory Universal with Multi-Factor Authentication
 
 This is the standard interactive method with multi-factor authentication option for Azure AD accounts. This will work in most scenarios.
 
-### Using Application token authentication
+### Using Azure Active Directory access token authentication
 
-Some non-GUI clients such as `Invoke-Sqlcmd` [Invoke-sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) allow providing an access token. The scope or audience must be `https://database.windows.net/`.
+Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) allow providing an access token. The scope or audience of the access token must be `https://database.windows.net/`.
 
 ## Remarks
 

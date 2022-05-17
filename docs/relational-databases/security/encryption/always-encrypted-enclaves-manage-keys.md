@@ -2,7 +2,7 @@
 description: "Manage keys for Always Encrypted with secure enclaves"
 title: "Manage keys for Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/15/2021
+ms.date: 05/24/2022
 ms.reviewer: vanto
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

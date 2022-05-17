@@ -85,7 +85,7 @@ Using the following guidelines will help you avoid "package not found" errors.
 
 ## See also
 
-::: moniker range="<=sql-server-2017"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 + [Install packages with R tools](install-r-packages-standard-tools.md)
 ::: moniker-end
 ::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"

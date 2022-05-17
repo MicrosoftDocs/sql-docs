@@ -27,7 +27,7 @@ To use the link feature, you'll need a supported version of SQL Server. The foll
 |SQL Server 2019 | Enterprise or Developer |[CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6)|
 |SQL Server 2016 | Enterprise, Standard, or Developer |[SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242)|
 
-In addition to the supported, version, you'll need:
+In addition to the supported version, you'll need:
 
 - Network connectivity between your SQL Server and managed instance is required. If your SQL Server is running on-premises, use a VPN link or Express route. If your SQL Server is running on an Azure VM, either deploy your VM to the same subnet as your managed instance, or use global VNet peering to connect two separate subnets. 
 - Azure SQL Managed Instance provisioned on any service tier.

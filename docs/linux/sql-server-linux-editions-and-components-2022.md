@@ -227,6 +227,7 @@ The following features and services are not available for [!INCLUDE[sssql22](../
 | | Distributed availability groups: changing `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` |
 | | Distributed availability groups: multiple TCP connections |
 | **Security** | Extensible Key Management (EKM) |
+| | Microsoft Defender for Cloud integration |
 | | Windows integrated authentication for linked servers |
 | | Windows integrated authentication for availability group (AG) endpoints |
 | | Azure Active Directory authentication |

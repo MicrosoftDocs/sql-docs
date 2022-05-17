@@ -186,6 +186,7 @@ SELECT * FROM sys.server_principals
 > CREATE LOGIN [admin@contoso.com] FROM EXTERNAL PROVIDER; 
 > GO
 > EXEC sp_addsrvrolemember @loginame='admin@contoso.com', @rolename='sysadmin'
+> GO
 > ```
 
 The `sp_addsrvrolemember` command must be executed as a member of the SQL Server `sysadmin` server role.
@@ -210,6 +211,7 @@ GO
 CREATE USER [my_group_name] FROM LOGIN [my_group_name];        -- for Azure AD group
 GO
 CREATE USER [my_app_name] FROM LOGIN [my_app_name];            -- for Azure AD application
+GO
 ```
 
 To create an Azure AD contained user without a login, the following syntax can be executed:
@@ -228,6 +230,7 @@ GO
 CREATE USER [my_group_name] FROM EXTERNAL PROVIDER;     --for Azure AD contained group
 GO
 CREATE USER [my_group_name] FROM EXTERNAL PROVIDER;     --for Azure AD contained application
+GO
 ```
 
 To list the users created in the database, execute the following T-SQL command:

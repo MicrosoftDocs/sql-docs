@@ -25,7 +25,7 @@ To use the link feature, you'll need a supported version of SQL Server. The foll
 | SQL Server Version  | Editions  | Servicing update requirement |
 |---------|---------|---------|
 |SQL Server 2019 | Enterprise or Developer |[CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6)|
-|SQL Server 2016 | Enterprise, Standard, or Developer |[SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242)|
+|SQL Server 2016 | Enterprise, Standard, or Developer |[SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242)|
 
 In addition to the supported version, you'll need:
 

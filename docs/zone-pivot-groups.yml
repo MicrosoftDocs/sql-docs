@@ -21,3 +21,11 @@ groups:
     title: SUSE (SLES)
   - id: ld2-ubuntu
     title: Ubuntu
+- id: as1-azuresql-sql
+  title: Azure SQL Database and SQL Server
+  prompt: Choose your product
+  pivots:
+  - id: as1-azure-sql-database
+    title: Azure SQL Database
+  - id: as1-sql-server
+    title: SQL Server

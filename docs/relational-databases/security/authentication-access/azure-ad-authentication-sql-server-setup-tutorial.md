@@ -52,7 +52,7 @@ In this tutorial, you learn how to:
 
 See the application registration below:
 
-:::image type="content" source="media/register-app.png" alt-text="Screenshot of registering application in the Azure portal":::
+:::image type="content" source="media/register-app.png" alt-text="Screenshot of registering application in the Azure portal.":::
 
 ## Grant application permissions
 
@@ -71,7 +71,7 @@ Select the newly created application, and on the left side menu, select **API Pe
 
 1. Select **Grant admin consent**
 
-:::image type="content" source="media/configured-app-permissions.png" alt-text="Screenshot of application permissions in the Azure portal":::
+:::image type="content" source="media/configured-app-permissions.png" alt-text="Screenshot of application permissions in the Azure portal.":::
 
 > [!NOTE]
 > To grant **Admin consent** to the permissions above, your account requires a role of Azure AD Global Administrator or Privileged Role Administrator.
@@ -87,14 +87,14 @@ Select the newly created application, and on the left side menu, select **API Pe
 
    1. Select **Create**.
 
-   :::image type="content" source="media/create-certificate.png" alt-text="Screenshot of creating certificate in the Azure portal":::
+   :::image type="content" source="media/create-certificate.png" alt-text="Screenshot of creating certificate in the Azure portal.":::
 
    > [!NOTE]
    > Once the certificate is created, it may say it is **disabled**. Refresh the site and it will show the certificate as enabled.
 
 1. Navigate to the new certificate, and select the row for the certificate's latest version. Select **Download in CER format** to save the certificate's public key.
 
-   :::image type="content" source="media/download-certificate.png" alt-text="Screenshot of certificate in the Azure portal where you can view and download the certificate":::
+   :::image type="content" source="media/download-certificate.png" alt-text="Screenshot of certificate in the Azure portal where you can view and download the certificate.":::
 
    > [!NOTE]
    > This does not need to be done on the SQL Server host. Rather, any client that will access the Azure portal for the next step.
@@ -105,7 +105,7 @@ Select the newly created application, and on the left side menu, select **API Pe
    1. Select the public key (.cer file) downloaded in the last step.
    1. Select **Add**.
 
-   :::image type="content" source="media/upload-certificate-to-application.png" alt-text="Screenshot of certificate and secrets menu in the Azure portal" lightbox="media/upload-certificate-to-application.png":::
+   :::image type="content" source="media/upload-certificate-to-application.png" alt-text="Screenshot of certificate and secrets menu in the Azure portal." lightbox="media/upload-certificate-to-application.png":::
 
 1. In the Azure portal, navigate to the Azure Key Vault instance which the certificate is stored, and select **Access policies**
 
@@ -119,7 +119,7 @@ Select the newly created application, and on the left side menu, select **API Pe
    > [!WARNING]
    > You must **Save** to ensure the permissions are applied. They are not applied after selecting **Add.** To ensure permissions have been stored, refresh the browser window and check the row for your Azure Arc instance is still present.
 
-   :::image type="content" source="media/add-access-policy-on-key-vault.png" alt-text="Screenshot of adding access policy to the key vault in the Azure portal":::
+   :::image type="content" source="media/add-access-policy-on-key-vault.png" alt-text="Screenshot of adding access policy to the key vault in the Azure portal.":::
 
 ## Configure Azure AD authentication for SQL Server through Azure portal
 
@@ -135,7 +135,7 @@ Select the newly created application, and on the left side menu, select **API Pe
 1. Select **Change app registration**, and select the app registration you created earlier.
 1. Select **Save**. This will send a request to the Arc server agent which will configure Azure AD authentication for that SQL Server instance.
 
-:::image type="content" source="media/configure-azure-ad-for-sql-server-instance.png" alt-text="Screenshot of setting Azure Active Directory authentication in the Azure portal":::
+:::image type="content" source="media/configure-azure-ad-for-sql-server-instance.png" alt-text="Screenshot of setting Azure Active Directory authentication in the Azure portal.":::
 
 > [!NOTE]
 >
@@ -275,7 +275,7 @@ Use one of these methods to connect to the SQL Server instance. For more informa
 
 Below is the snapshot of the SSMS connection page using the authentication method, **Azure Active Directory - Universal with MFA**.
 
-:::image type="content" source="media/sql-server-management-studio-connection.png" alt-text="Screenshot S S M S showing the Connect to Server window":::
+:::image type="content" source="media/sql-server-management-studio-connection.png" alt-text="Screenshot S S M S showing the Connect to Server window.":::
 
 > [!NOTE]
 > During the authentication process, a database where the user was created must be explicitly indicated in SSMS. Expand **Options>> Connection Properties > Connect to database: `database_name`**.

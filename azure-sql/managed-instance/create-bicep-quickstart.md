@@ -15,7 +15,7 @@ ms.date: 05/16/2022
 
 This quickstart focuses on the process of deploying a Bicep file to create an Azure SQL Managed Instance and vNet. [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) is an intelligent, fully managed, scalable cloud database, with almost 100% feature parity with the SQL Server database engine.
 
-[!INCLUDE [About Bicep](../includes/resource-manager-quickstart-bicep-introduction.md)]
+[Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep) is a domain-specific language (DSL) that uses declarative syntax to deploy Azure resources. It provides concise syntax, reliable type safety, and support for code reuse. Bicep offers the best authoring experience for your infrastructure-as-code solutions in Azure.
 
 ## Prerequisites
 

@@ -1,16 +1,17 @@
 ---
-title: "Setup Always On availability group with DH2i DxEnterprise running on Linux-based Azure Virtual Machines"
-description: Use DH2i DxEnterprise as the cluster manager to achieve high availability with an availability group on SQL Server on Linux Azure Virtual Machines
-ms.date: 03/04/2021
+title: "Set up Always On availability group on Linux-based Azure VMs"
+description: In this tutorial, use DH2i DxEnterprise as the cluster manager for high availability with an availability group on SQL Server on Linux Azure Virtual Machines.
+ms.date: 05/18/2022
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
+ms.custom: kr2b-contr-experiment
 ---
 
-# Tutorial - Setup a three node Always On availability group with DH2i DxEnterprise running on Linux-based Azure Virtual Machines
+# Tutorial: Setup a three node Always On availability group with DH2i DxEnterprise
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
@@ -31,7 +32,7 @@ This tutorial consists of the following steps:
 > * Create the Internal Azure Load balancer for Availability group listener (optional).
 > * Perform an manual or automatic failover.
 
-In this tutorial, we are going to set up a DxEnterprise cluster using [DxAdmin Client UI](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-dxadmin-client-ui-quick-start-guide/). Optionally, you can also set up the cluster using the [DxCLI](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-software-dxcli-guide/) command-line interface. For this example, we've used four VMs. Three of those VMs are running Ubuntu 18.04, and are part of the three node cluster. The fourth VM is running Windows 10 with the DxAdmin tool to manage and configure the cluster.
+In this tutorial, you'll set up a DxEnterprise cluster using [DxAdmin Client UI](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-dxadmin-client-ui-quick-start-guide/). Optionally, you can also set up the cluster using the [DxCLI](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-software-dxcli-guide/) command-line interface. For this example, we've used four VMs. Three of those VMs are running Ubuntu 18.04, and are part of the three node cluster. The fourth VM is running Windows 10 with the DxAdmin tool to manage and configure the cluster.
 
 ## Prerequisites
 
@@ -39,22 +40,22 @@ In this tutorial, we are going to set up a DxEnterprise cluster using [DxAdmin C
 - Install .NET 3.1 on all the Linux-based VMs that are going to be part of the cluster. Follow the instructions documented [here](/dotnet/core/install/linux) based on the Linux operating system that you choose.
 - A valid DxEnterprise license with availability group management features enabled will be required. For more information, see [DxEnterprise Free Trial](https://dh2i.com/trial/) about how you can obtain a free trial.
 
-## Install SQL Server on all the Azure VMs that will be part of the availability group
+## Install SQL Server on Azure VMs in the availability group
 
-In this tutorial, we are setting up a three node Linux-based cluster running the availability group. Follow the documentation for [SQL Server installation on Linux](/sql/linux/sql-server-linux-overview#install) based on the choice of your Linux platform. We also recommend you install the [SQL Server tools](/sql/linux/sql-server-linux-setup-tools) for this tutorial.
+In this tutorial, you create a three node Linux-based cluster running the availability group. Follow the documentation for [SQL Server installation on Linux](/sql/linux/sql-server-linux-overview#install) based on the choice of your Linux platform. We also recommend you install the [SQL Server tools](/sql/linux/sql-server-linux-setup-tools) for this tutorial.
  
 > [!NOTE]
 > Ensure that the Linux OS that you choose is a common distribution that is supported by both [DH2i DxEnterprise ( See Minimal System Requirements Section)](https://dh2i.com/wp-content/uploads/DxEnterprise-v20-Admin-Guide.pdf) and [Microsoft SQL Server](/sql/linux/sql-server-linux-release-notes-2019#supported-platforms).
 >
 > In this example, we use Ubuntu 18.04, which is supported by both DH2i DxEnterprise and Microsoft SQL Server.
 
-For this tutorial, we are not going to install SQL Server on the Windows VM, as this node is not going to be part of the cluster, and is used only to manage the cluster using DxAdmin.
+For this tutorial, we aren't going to install SQL Server on the Windows VM, because this node isn't going to be part of the cluster, and is used only to manage the cluster using DxAdmin.
 
 After you complete this step, you should have SQL Server and [SQL Server tools](/sql/linux/sql-server-linux-setup-tools) (optionally) installed on all three Linux-based VMs that will participate in the availability group.
  
-## Install DxEnterprise on all the VMs and Configure the cluster
+## Install DxEnterprise on VMs and Configure the cluster
 
-In this step, we are going to install DH2i DxEnterprise for Linux on the three Linux VMs. The following table describes the role each server plays in the cluster:
+In this step, install DH2i DxEnterprise for Linux on the three Linux VMs. The following table describes the role each server plays in the cluster:
 
 | Number of VMs | DH2i DxEnterprise   role | Microsoft SQL   Server availability group replica role |
 |--|--|--|
@@ -82,7 +83,7 @@ After this step, you should have the DxEnterprise cluster created on the Linux V
 > [!NOTE]
 > You can also create a three node cluster where one of the node is added as *configuration-only mode*, as described [here](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups#SupportedAvModes) to enable automatic failover. 
 
-## Create the virtual hosts to provide failover support and high availability
+## Create the virtual hosts for failover support and high availability
 
 In this step, we're going to create a virtual host, availability group, and then add a database, all using the DxAdmin UI.   
 
@@ -102,9 +103,9 @@ After this step, you should have an availability group listener created and mapp
 
 ## Test manual or automatic failover
 
-For the automatic failover test, you can go ahead and bring down the primary replica (power off the virtual machine from the Azure portal). This will replicate the sudden unavailability of the primary node. The expected behavior is:
+For the automatic failover test, you can go ahead and bring down the primary replica (power off the virtual machine from the Azure portal). This test replicates the sudden unavailability of the primary node. The expected behavior is:
 - The cluster manager promotes one of the secondary replicas in the availability group to primary.
-- The failed primary replica automatically joins the cluster after it is back up. The cluster manager promotes it to secondary replica.
+- The failed primary replica automatically joins the cluster after comes back up. The cluster manager promotes it to secondary replica.
 
  
 You could also perform a manual failover by following the below mentioned steps:

@@ -1,14 +1,15 @@
 ---
 title: "Docker: Install containers for SQL Server on Linux"
-description: This quickstart shows how to use Docker to run the SQL Server 2017 and 2019 container images on Linux. You then connect to a database and run a query with sqlcmd.
+description: This quickstart shows how to use Docker to run the SQL Server 2017 and 2019 container images on Linux. You connect to a database and run a query with sqlcmd.
 ms.custom:
   - seo-lt-2019
   - contperf-fy21q1
   - intro-quickstart
+  - kr2b-contr-experiment
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
-ms.date: 03/23/2022
+ms.date: 05/18/2022
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: linux
@@ -54,7 +55,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 20.04. It can
 ## <a id="requirements"></a> Prerequisites
 
 - Docker Engine 1.8+ on any supported Linux distribution. For more information, see [Install Docker](https://docs.docker.com/engine/installation/). For more information on hardware requirements and processor support, see [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md#pmosr).
-- Docker **overlay2** storage driver. This is the default for most users. If you aren't using this storage provider and need to change, see the instructions and warnings in the [docker documentation for configuring overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
+- Docker **overlay2** storage driver. This value is the default for most users. If you aren't using this storage provider and need to change, see the instructions and warnings in the [docker documentation for configuring overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
 - Minimum of 2 GB of disk space.
 - Minimum of 2 GB of RAM.
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
@@ -141,7 +142,7 @@ Before starting the following steps, make sure that you've selected your preferr
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the SQL Server image. |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
-   | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
+   | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this port is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
    | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
    | **-d** | Run the container in the background (daemon) |
@@ -170,7 +171,7 @@ Before starting the following steps, make sure that you've selected your preferr
 
    You should see output similar to the following screenshot:
 
-   ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
+   ![Screenshot shows the output of the Docker p s command, which has columns for STATUS, PORTS, and others.](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
 4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). It will be ready for connection, once the SQL Server error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the SQL Server error log inside the container using the command:
 
@@ -178,7 +179,7 @@ Before starting the following steps, make sure that you've selected your preferr
    docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
-The `--hostname` parameter as discussed above, changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
+The `--hostname` parameter as discussed above, changes the internal name of the container to a custom value. This value is the name you'll see returned in the following Transact-SQL query:
 
 ```sql
 SELECT @@SERVERNAME,
@@ -271,7 +272,7 @@ Before starting the following steps, make sure that you've selected your preferr
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the SQL Server image. |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
-   | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
+   | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this port is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
    | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
    | **mcr.microsoft.com/mssql/server:2019-latest** | The SQL Server 2019 Ubuntu Linux container image. |
@@ -298,7 +299,7 @@ Before starting the following steps, make sure that you've selected your preferr
 
    You should see output similar to the following screenshot:
 
-   ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
+   ![Screenshot shows the output of the Docker p s command, which has columns for STATUS, PORTS, and others.](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
 4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). It will be ready for connection, once the SQL Server error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the SQL Server error log inside the container using the command:
 
@@ -306,7 +307,7 @@ Before starting the following steps, make sure that you've selected your preferr
    docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
-The `--hostname` parameter as discussed above, changes the internal name of the container to a custom value. This changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
+The `--hostname` parameter as discussed above, changes the internal name of the container to a custom value. This value changes the internal name of the container to a custom value. This value is the name you'll see returned in the following Transact-SQL query:
 
 ```sql
 SELECT @@SERVERNAME,
@@ -330,7 +331,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 <!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
 
-The **SA** account is a system administrator on the SQL Server instance that gets created during setup. After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, change your SA password.
+The **SA** account is a system administrator on the SQL Server instance that gets created during setup. After you create your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, change your SA password.
 
    ::: zone pivot="cs1-bash"
 1. Choose a strong password to use for the SA user.
@@ -495,7 +496,7 @@ The following steps use **sqlcmd** outside of your container to connect to SQL S
 
 1. For this example, install the **sqlcmd** tool on your client machine. For more information, see [Install sqlcmd on Windows](../tools/sqlcmd-utility.md) or [Install sqlcmd on Linux](sql-server-linux-setup-tools.md).
 
-1. Run **sqlcmd** specifying the IP address and the port mapped to port 1433 in your container. In this example, that is the same port, 1433, on the host machine. If you specified a different mapped port on the host machine, you would use it here. You'll also need to open the appropriate inbound port on your firewall to allow the connection.
+1. Run **sqlcmd** specifying the IP address and the port mapped to port 1433 in your container. In this example that is the same port, 1433, on the host machine. If you specified a different mapped port on the host machine, you would use it here. You'll also need to open the appropriate inbound port on your firewall to allow the connection.
 
    ::: zone pivot="cs1-bash"
    ```bash

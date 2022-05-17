@@ -1033,7 +1033,7 @@ Specifies whether an online add constraint operation is resumable. Add table con
 
 **MAX_DURATION** when used with `RESUMABLE = ON` (requires `ONLINE=ON`) indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion.
 
-For more information on using resumable add table constraints operations, see [Resumable table add constraints](/sql/relational-databases/security/resumable-table-add-constraints).
+For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable table add constraints](/sql/relational-databases/security/resumable-table-add-constraints).
 
 ## Remarks
 

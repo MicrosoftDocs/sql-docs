@@ -306,25 +306,21 @@ Before starting the following steps, make sure that you've selected your preferr
    docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
-The `--hostname` parameter as discussed above, changes the internal name of the container to a custom value. This value changes the internal name of the container to a custom value. This value is the name you'll see returned in the following Transact-SQL query:
+   The `--hostname` parameter as discussed above, changes the internal name of the container to a custom value. This value changes the internal name of the container to a custom value. This value is the name you'll see returned in the following Transact-SQL query:
 
-```sql
-SELECT @@SERVERNAME,
-    SERVERPROPERTY('ComputerNamePhysicalNetBIOS'),
-    SERVERPROPERTY('MachineName'),
-    SERVERPROPERTY('ServerName')
-```
+   ```sql
+   SELECT @@SERVERNAME,
+       SERVERPROPERTY('ComputerNamePhysicalNetBIOS'),
+       SERVERPROPERTY('MachineName'),
+       SERVERPROPERTY('ServerName')
+   ```
 
-Setting `-h` and `--name` to the same value is a good way to easily identify the target container.
-
+   Setting `-h` and `--name` to the same value is a good way to easily identify the target container.
 
 5. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
 
-
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
-
-
 
 ## <a id="sapassword"></a> Change the SA password
 
@@ -342,7 +338,6 @@ The *SA* account is a system administrator on the SQL Server instance that gets 
    -S localhost -U SA \
     -P "$(read -sp "Enter current SA password: "; echo "${REPLY}")" \
     -Q "ALTER LOGIN SA WITH PASSWORD=\"$(read -sp "Enter new SA password: "; echo "${REPLY}")\""
-
    ```
    ::: zone-end
 

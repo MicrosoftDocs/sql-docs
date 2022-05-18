@@ -173,11 +173,11 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
  RESUMABLE = { ON | OFF}  
  **Applies to**: SQL Server 2022 and later.
 
- Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`.
+ Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. When the `RESUMABLE` option is set to `ON`, the option `ONLINE = ON` is required.
 
- **MAX_DURATION** when used with `RESUMABLE = ON`, requires `ONLINE=ON`.
+ **MAX_DURATION** when used with `RESUMABLE = ON`, requires `ONLINE=ON` as well. **MAXDOP** is supported with `RESUMABLE = ON` as well.
 
- For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable table add constraints](/sql/relational-databases/security/resumable-table-add-constraints).
+ For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable add table constraints](/sql/relational-databases/security/resumable-add-table-constraints).
 
  MAXDOP **=**_max_degree_of_parallelism_  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  

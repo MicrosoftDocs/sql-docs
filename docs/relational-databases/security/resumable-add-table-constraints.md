@@ -1,5 +1,5 @@
 ---
-title: "Resumable table add constraints"
+title: "Resumable add table constraints"
 description: New resumable capabilities to support pausing and resuming a running ALTER TABLE ADD CONSTRAINT operation. 
 ms.custom: ""
 ms.date: "05/24/2022"
@@ -12,7 +12,7 @@ ms.author: vanto
 monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
-# Resumable table add constraints
+# Resumable add table constraints
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
@@ -26,7 +26,7 @@ Starting with SQL Server 2022, resumable operations for online index creation an
 
 - When an index operation is paused, both the original index and the newly created one require disk space and need to be updated during [Data Manipulation Language (DML)](/sql/t-sql/statements/statements#data-manipulation-language) operations.
 
-The new SQL Server extensions allow a resumable operation for the [Data Definition Language (DDL)](/sql/t-sql/statements/statements#data-definition-language) command [ALTER TABLE ADD CONSTRAINT](/sql/t-sql/statements/alter-table-transact-sql) and adding a Primary or Unique Key.
+The new SQL Server extensions allow a resumable operation for the [Data Definition Language (DDL)](/sql/t-sql/statements/statements#data-definition-language) command [ALTER TABLE ADD CONSTRAINT](/sql/t-sql/statements/alter-table-transact-sql) and adding a Primary or Unique Key. For more information on adding a Primary or Unique Key, see [ALTER TABLE table_constraint](/sql/t-sql/statements/alter-table-table-constraint-transact-sql).
 
 ## Resumable operations
 

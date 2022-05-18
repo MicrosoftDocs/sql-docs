@@ -38,7 +38,7 @@ For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../
 SQL Server is supported on Red Hat Enterprise Linux (RHEL), and Ubuntu. It's also supported as a Docker image, which can run on Docker Engine on Linux.
 
 > [!IMPORTANT]  
-> SUSE Linux Enterprise Server (SLES) **is not supported** for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux CTP 2.0, and will follow in a later release.
+> SUSE Linux Enterprise Server (SLES) **is not supported** for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux CTP 2.0.
 
 | Platform | File System | Installation Guide | Get |
 | --- | --- | --- | --- |

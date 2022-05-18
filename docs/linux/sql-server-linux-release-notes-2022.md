@@ -50,7 +50,7 @@ If you're updating existing SQL Server packages, run the appropriate update comm
 
 ## <a id="ctp20"></a> CTP 2.0 (May 2022)
 
-The following section provides package locations and known issues for the first public community technology preview (CTP). To learn more about new features [!INCLUDE[sssql22](../includes/sssql22-md.md)] running on Linux, see the [What's new in SQL Server 2022 Preview](../sql-server/what-s-new-in-sql-server-2022.md).
+The following section provides known issues for the first public community technology preview (CTP). To learn more about new features [!INCLUDE[sssql22](../includes/sssql22-md.md)] running on Linux, see the [What's new in SQL Server 2022 Preview](../sql-server/what-s-new-in-sql-server-2022.md).
 
 ## Known issues
 

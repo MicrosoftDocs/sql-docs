@@ -75,13 +75,13 @@ If you're using Distributed Replay, perform the following steps.
 
     b.  Run `Set @durationInMins=0` so that the trace capture doesn't stop automatically after a specified time.
 
-    c.  To set the maximum file size per trace file, run `Set @maxfilesize`. The recommended size is 200, in MB.
+    c.  To set the maximum file size per trace file, run `Set @maxfilesize`. The recommended size is 200 MB.
 
     d.  Edit `@Tracefile` to set a unique name for your trace file.
 
     e.  Edit `@dbname` to specify a database name if the workload must be captured only on a specific database. By default, the workload on the entire server is captured.
 
-4. To replay the IRF file against the target SQL Server instance, at a command prompt, run the following command:
+4. To replay the IRF file against the target SQL Server instance, run the following command:
 
     ```cmd
     DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"
@@ -106,7 +106,7 @@ If you're using Distributed Replay, perform the following steps.
 
 ## Using InBuilt Replay
 
-If you're using InBuilt Replay, you won't have to set up Distributed Replay. The ability to use InBuilt Replay by using the command line is on the way. Currently, you can use our GUI to run replay using InBuilt Replay.
+If you're using InBuilt Replay, you won't have to set up Distributed Replay. The ability to use InBuilt Replay at the command prompt is on the way. Currently, you can use our GUI to run replay using InBuilt Replay.
 
 ## Analyze traces using the DEA command
 
@@ -128,8 +128,8 @@ When analyzing traces using the DEA command, you can use the following options:
 
 | Option| Description |  
 | --- | --- |
-| `-a`, `--traceA` | Required. File path to the event file for A instance. Example: *C:\traces\Sql2008trace.trc*.  If there's a batch of files, select the first file and DEA checks for rollover files automatically. If files are in blob, provide the folder path where you want the event files stored locally.  Example: *C:\traces\\* |
-| `-b`, `--traceB` | Required. File path to the event file for B instance. Example: *C:\traces\Sql2014trace.trc*. If there's a batch of files, select the first file and DEA checks for rollover files automatically. If files are in blob, provide the folder path where you want the event files stored locally.  Example: *C:\traces\\* |
+| `-a`, `--traceA` | Required. File path to the event file for the A instance. Example: *C:\traces\Sql2008trace.trc*.  If there's a batch of files, select the first file and DEA checks for rollover files automatically. If files are in blob, provide the folder path where you want the event files stored locally.  Example: *C:\traces\\* |
+| `-b`, `--traceB` | Required. File path to the event file for the B instance. Example: *C:\traces\Sql2014trace.trc*. If there's a batch of files, select the first file and DEA checks for rollover files automatically. If files are in blob, provide the folder path where you want the event files stored locally.  Example: *C:\traces\\* |
 | `-r`, `--ReportName` | Required. Name for current analysis. The analysis report that gets generated is identified by this name. |
 | `-t`, `--type` | Default: 0. Type of the SQL Server (SqlServer = 0, AzureSQLDB = 1, Azure SQL Managed Instance = 2). |
 | `-h`, `--host` | Required. SQL Server host name or instance name. |

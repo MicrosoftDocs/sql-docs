@@ -85,7 +85,7 @@ To enable this assessment, use the Data Access Migration Toolkit (DAMT), a Visua
 
     ![Screenshot shows Data Access Migration with an application database selected.](../dma/media/dma-assess-app-data-layer/dma-select-app-database.png)
 
-    To facilitate data access assessment, DMA introduces the ability to include JSON files with application queries. Next, include the JSON file we created earlier with the application queries.
+    To facilitate data access assessment, DMA introduces the ability to include JSON files with application queries. Next, include the JSON file created earlier with the application queries.
 
 11. Select the database and browse to the JSON file exported from Data Access Migration Toolkit to include the queries from the application for the assessment.
 

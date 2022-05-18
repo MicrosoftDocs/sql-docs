@@ -306,7 +306,7 @@ Before starting the following steps, make sure that you've selected your preferr
    docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
    ```
 
-   The `--hostname` parameter as discussed above, changes the internal name of the container to a custom value. This value changes the internal name of the container to a custom value. This value is the name you'll see returned in the following Transact-SQL query:
+   The `--hostname` parameter, as discussed above, changes the internal name of the container to a custom value. This value is the name you'll see returned in the following Transact-SQL query:
 
    ```sql
    SELECT @@SERVERNAME,

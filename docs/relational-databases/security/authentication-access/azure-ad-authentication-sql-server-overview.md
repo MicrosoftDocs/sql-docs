@@ -57,7 +57,7 @@ When the Windows domain is synchronized with Azure AD, and a user is logged into
 
 This is the standard interactive method with multi-factor authentication option for Azure AD accounts. This will work in most scenarios.
 
-### Using Azure Active Directory access token authentication
+### Azure Active Directory access token
 
 Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) allow providing an access token. The scope or audience of the access token must be `https://database.windows.net/`.
 

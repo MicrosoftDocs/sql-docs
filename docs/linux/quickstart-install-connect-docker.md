@@ -1,6 +1,6 @@
 ---
 title: "Docker: Install containers for SQL Server on Linux"
-description: This quickstart shows how to use Docker to run the SQL Server 2017 and 2019 container images on Linux. You connect to a database and run a query with sqlcmd.
+description: This quickstart shows how to use Docker to run the SQL Server 2017 and 2019 container images on Linux. You connect to a database and run a query.
 ms.custom:
   - seo-lt-2019
   - contperf-fy21q1
@@ -25,7 +25,7 @@ zone_pivot_groups: cs1-command-shell
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In this quickstart, you'll use Docker to pull and run the SQL Server 2017 container image, [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server). Then you can connect with `sqlcmd` to create your first database and run queries.
+In this quickstart, you'll use Docker to pull and run the SQL Server 2017 container image, [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server). Then you can connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > If you want to run SQL Server 2019 containers, see the [SQL Server 2019 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true).
@@ -40,7 +40,7 @@ In this quickstart, you'll use Docker to pull and run the SQL Server 2017 contai
 >
 > For more information on supported platforms, see [SQL Server 2019 on Linux release notes](sql-server-linux-release-notes-2019.md).
 
-In this quickstart, you'll use Docker to pull and run the SQL Server 2019 container image, [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server). Then you can connect with `sqlcmd` to create your first database and run queries.
+In this quickstart, you'll use Docker to pull and run the SQL Server 2019 container image, [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server). Then you can connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This quickstart creates SQL Server 2019 containers. If you prefer to create SQL Server 2017 containers, see the [SQL Server 2017 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true).
@@ -331,7 +331,7 @@ The *SA* account is a system administrator on the SQL Server instance that gets 
    ::: zone pivot="cs1-bash"
 1. Choose a strong password to use for the SA user.
 
-1. Use `docker exec` to run `sqlcmd` to change the password using Transact-SQL. In the following example, the old and new passwords are read from user input.
+1. Use `docker exec` to run **sqlcmd** to change the password using Transact-SQL. In the following example, the old and new passwords are read from user input.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -389,7 +389,7 @@ The following steps use the SQL Server command-line tool, [**sqlcmd**](../tools/
    ```
    ::: zone-end
 
-2. Once inside the container, connect locally with `sqlcmd`, using its full path.
+2. Once inside the container, connect locally with **sqlcmd**, using its full path.
 
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourNewStrong@Passw0rd>"
@@ -398,17 +398,17 @@ The following steps use the SQL Server command-line tool, [**sqlcmd**](../tools/
    > [!TIP]
    > You can omit the password on the command-line to be prompted to enter it.
 
-3. If successful, you should get to a `sqlcmd` command prompt: `1>`.
+3. If successful, you should get to a **sqlcmd** command prompt: `1>`.
 
 ## Create and query data
 
-The following sections walk you through using `sqlcmd` and Transact-SQL to create a new database, add data, and run a query.
+The following sections walk you through using **sqlcmd** and Transact-SQL to create a new database, add data, and run a query.
 
 ### Create a new database
 
 The following steps create a new database named `TestDB`.
 
-1. From the `sqlcmd` command prompt, paste the following Transact-SQL command to create a test database:
+1. From the **sqlcmd** command prompt, paste the following Transact-SQL command to create a test database:
 
    ```sql
    CREATE DATABASE TestDB
@@ -430,7 +430,7 @@ The following steps create a new database named `TestDB`.
 
 Next create a new table, `Inventory`, and insert two new rows.
 
-1. From the `sqlcmd` command prompt, switch context to the new `TestDB` database:
+1. From the *sqlcmd* command prompt, switch context to the new `TestDB` database:
 
    ```sql
    USE TestDB
@@ -458,7 +458,7 @@ Next create a new table, `Inventory`, and insert two new rows.
 
 Now, run a query to return data from the `Inventory` table.
 
-1. From the `sqlcmd` command prompt, enter a query that returns rows from the `Inventory` table where the quantity is greater than 152:
+1. From the **sqlcmd** command prompt, enter a query that returns rows from the `Inventory` table where the quantity is greater than 152:
 
    ```sql
    SELECT * FROM Inventory WHERE quantity > 152;
@@ -472,7 +472,7 @@ Now, run a query to return data from the `Inventory` table.
 
 ### Exit the sqlcmd command prompt
 
-1. To end your `sqlcmd` session, type `QUIT`:
+1. To end your **sqlcmd** session, type `QUIT`:
 
    ```sql
    QUIT
@@ -484,13 +484,13 @@ Now, run a query to return data from the `Inventory` table.
 
 You can also connect to the SQL Server instance on your Docker machine from any external Linux, Windows, or macOS tool that supports SQL connections.
 
-The following steps use `sqlcmd` outside of your container to connect to SQL Server running in the container. These steps assume that you already have the SQL Server command-line tools installed outside of your container. The same principles apply when using other tools, but the process of connecting is unique to each tool.
+The following steps use **sqlcmd** outside of your container to connect to SQL Server running in the container. These steps assume that you already have the SQL Server command-line tools installed outside of your container. The same principles apply when using other tools, but the process of connecting is unique to each tool.
 
 1. Find the IP address for your container's host machine, using `ifconfig` or `ip addr`.
 
-1. For this example, install the `sqlcmd` tool on your client machine. For more information, see [Install sqlcmd on Windows](../tools/sqlcmd-utility.md) or [Install sqlcmd on Linux](sql-server-linux-setup-tools.md).
+1. For this example, install the **sqlcmd** tool on your client machine. For more information, see [Install **sqlcmd** on Windows](../tools/sqlcmd-utility.md) or [Install **sqlcmd** on Linux](sql-server-linux-setup-tools.md).
 
-1. Run `sqlcmd` specifying the IP address and the port mapped to port 1433 in your container. In this example, the port is the same port, 1433, on the host machine. If you specified a different mapped port on the host machine, you would use it here. You'll also need to open the appropriate inbound port on your firewall to allow the connection.
+1. Run **sqlcmd** specifying the IP address and the port mapped to port 1433 in your container. In this example, the port is the same port, 1433, on the host machine. If you specified a different mapped port on the host machine, you would use it here. You'll also need to open the appropriate inbound port on your firewall to allow the connection.
 
    ::: zone pivot="cs1-bash"
    ```bash

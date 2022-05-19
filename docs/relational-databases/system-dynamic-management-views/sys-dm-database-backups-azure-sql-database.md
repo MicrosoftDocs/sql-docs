@@ -58,7 +58,7 @@ ORDER BY backup_finish_date DESC;
 ```  
 You can get a friendlier resultset by joining to `sys.databases` and using a `CASE` statement. Run this query in the `master` database to get backup history for all databases in the Azure SQL Database server.
  
- ```
+ ```sql
  SELECT
   db.name,
   backup_start_date, 

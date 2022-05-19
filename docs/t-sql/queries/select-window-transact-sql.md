@@ -41,7 +41,7 @@ Named window definition in the WINDOW clause determines the partitioning and ord
 >ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 160
 >```
 
-[Transact-SQL Syntax Conventions](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)
+[Transact-SQL Syntax Conventions (Transact-SQL)](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -79,13 +79,13 @@ Is the name of the window being referenced by the current window. The referenced
 
 The other arguments are:
 
--   [PARTITION BY](https://docs.microsoft.com/en-us/sql/t-sql/queries/select-over-clause-transact-sql?view=sql-server-ver15#partition-by) that divides the query result set into partitions.
+- [PARTITION BY](select-over-clause-transact-sql.md#partition-by) that divides the query result set into partitions.
 
--   [ORDER BY](https://docs.microsoft.com/en-us/sql/t-sql/queries/select-over-clause-transact-sql?view=sql-server-ver15#order-by) that defines the logical order of the rows within each partition of the result set.
+- [ORDER BY](select-over-clause-transact-sql.md#order-by) that defines the logical order of the rows within each partition of the result set.
 
--   [ROWS/RANGE](https://docs.microsoft.com/en-us/sql/t-sql/queries/select-over-clause-transact-sql?view=sql-server-ver15#rows-or-range) that limits the rows within the partition by specifying start and end points within the partition.
+-   [ROWS/RANGE](select-over-clause-transact-sql.md#rows-or-range) that limits the rows within the partition by specifying start and end points within the partition.
 
-For more specific details about the arguments, see the [OVER Clause](https://docs.microsoft.com/en-us/sql/t-sql/queries/select-over-clause-transact-sql)
+For more specific details about the arguments, see the [OVER Clause](select-over-clause-transact-sql.md)
 
 
 ## General remarks
@@ -104,7 +104,7 @@ The restrictions for usage of window specifications in the OVER clause with the 
 
 ## Examples
 
-### Us3 the window defined in WINDOW clause
+### Use the window defined in WINDOW clause
 
 The following example query shows uses a named window in the OVER clause.
 
@@ -340,4 +340,4 @@ Here is the result set.
 - [Analytic functions (Transact-SQL)](../functions/analytic-functions-transact-sql.md)
 - [SELECT - OVER Clause (Transact-SQL)](select-over-clause-transact-sql.md)
 - [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)
-- [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)  
+- [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)

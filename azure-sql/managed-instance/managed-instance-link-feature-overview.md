@@ -20,13 +20,15 @@ The new link feature in Azure SQL Managed Instance connects your SQL Servers h
 
 After a disastrous event, you can continue running your read-only workloads on SQL Managed Instance in Azure. You can also choose to migrate one or more applications from SQL Server to SQL Managed Instance at the same time, at your own pace, and with the best possible minimum downtime compared to other solutions in Azure today.
 
+## Requirements
+
 To use the link feature, you'll need a supported version of SQL Server. The following table lists the supported versions.
 
 | SQL Server Version  | Editions  | Servicing update requirement |
 |---------|---------|---------|
 |[!INCLUDE [sqlserver2022](../../docs/includes/applies-to-version/sqlserver2022.md)]|Evaluation Edition|Sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.|
-|SQL Server 2019 | Enterprise or Developer |[CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6)|
-|SQL Server 2016 | Enterprise, Standard, or Developer |[SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242)|
+|[!INCLUDE [sqlserver2016](../../docs/includes/applies-to-version/sqlserver2016.md)] | Enterprise or Developer |[CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6)|
+|[!INCLUDE [sqlserver2016](../../docs/includes/applies-to-version/sqlserver2016.md)] | Enterprise, Standard, or Developer |[SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242)|
 
 In addition to the supported version, you'll need:
 
@@ -127,7 +129,8 @@ Managed Instance link has a set of general limitations, and those are listed in 
 ### Preview limitations
 
 Some Managed Instance link features and capabilities are limited **at this time**. Details can be found in the following list:
-- SQL Server 2019, Enterprise Edition or Developer Edition, CU15 (or higher) on Windows or Linux host OS is supported.
+
+- Product version requirements as listed in [Requirements](#requirements). At this time [!INCLUDE [sqlserver2017](../../docs/includes/applies-to-version/sqlserver2017.md)] is not supported.
 - Private endpoint (VPN/VNET) is supported to connect Distributed Availability Groups to SQL Managed Instance. Public endpoint can't be used to connect to SQL Managed Instance.
 - Managed Instance Link authentication between SQL Server instance and SQL Managed Instance is certificate-based, available only through exchange of certificates. Windows authentication between instances isn't supported.
 - Replication of user databases from SQL Server to SQL Managed Instance is one-way. User databases from SQL Managed Instance can't be replicated back to SQL Server.

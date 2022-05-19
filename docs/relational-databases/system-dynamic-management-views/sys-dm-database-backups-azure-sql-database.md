@@ -56,7 +56,7 @@ SELECT *
 FROM sys.dm_database_backups     
 ORDER BY backup_finish_date DESC;  
 ```  
-A friendlier resultset by joining with sys.databases and using CASE statement. Run this query in master database to get backup history for all databases in the Azure SQL Server.
+You can get a friendlier resultset by joining to `sys.databases` and using a `CASE` statement. Run this query in the `master` database to get backup history for all databases in the Azure SQL Database server.
  
  ```
  SELECT

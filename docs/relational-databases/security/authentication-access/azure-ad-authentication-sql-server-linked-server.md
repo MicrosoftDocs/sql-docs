@@ -27,7 +27,7 @@ For this article, it's assumed that there are two SQL Server instances (`S1` and
 
 ## Prerequisites
 
-- Fully operational Azure AD authentication for SQL Server. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md) and [Tutorial: Setup Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md).
+- Fully operational Azure AD authentication for SQL Server. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md) and [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md).
 - [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) version 18.0 or higher. Or download the latest [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
 
 ## Linked server configurations for Azure AD authentication
@@ -94,4 +94,4 @@ For access token authentication, the linked server is created with `AccessToken=
 
 - [Connect SQL Server to Azure Arc](/sql/sql-server/azure-arc/connect)
 - [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md)
-- [Tutorial: Setup Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)

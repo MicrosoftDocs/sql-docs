@@ -111,9 +111,9 @@ Database1 can be a single or pooled database. Copying between different tier poo
 
    ```sql
    -- Execute on the master database to start copying
-   CREATE DATABASE "Database2"
-   AS COPY OF "Database1"
-   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = "pool1" ) );
+   CREATE DATABASE Database2
+   AS COPY OF Database1
+   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = 'pool1' ) );
    ```
 
 ### Copy to a different server
@@ -130,9 +130,19 @@ CREATE DATABASE Database2 AS COPY OF server1.Database1;
 > [!IMPORTANT]
 > Both servers' firewalls must be configured to allow inbound connection from the IP of the client issuing the T-SQL CREATE DATABASE ... AS COPY OF command. To determine the source IP address of current connection, execute `SELECT client_net_address FROM sys.dm_exec_connections WHERE session_id = @@SPID;`
 
+Similarly, the below command copies Database1 on server1 to a new database named Database2 within an elastic pool called pool2, on server2.
+
+```sql
+-- Execute on the master database of the target server (server2) to start copying from Server1 to Server2
+CREATE DATABASE Database2 AS COPY OF server1.Database1 (SERVICE_OBJECTIVE = ELASTIC_POOL( name = 'pool2' ) );
+```
+
 ### Copy to a different subscription
 
 You can use the steps in the [Copy a SQL Database to a different server](#copy-to-a-different-server) section to copy your database to a server in a different subscription using T-SQL. Make sure you use a login that has the same name and password as the database owner of the source database. Additionally, the login must be a member of the `dbmanager` role or a server administrator, on both source and target servers.
+
+> [!TIP]
+> When copying databases in the same Azure Active Directory tenant, authorization on the source and destination servers is simplified if you initiate the copy command using an AAD authentication login with sufficient access on both servers. The minimum necessary level of access is membership in the `dbmanager` role in the master database on both servers. For example, you can use an AAD login is a member of an AAD group designated as the server administrator on both servers.
 
 ```sql
 --Step# 1

@@ -82,7 +82,7 @@ WHERE db.name <> 'master'
 ORDER BY backup_start_date DESC
 ```
 
-Run the below query in the user database context to get backup history for single database.
+Run the below query in the user database context to get backup history for a single database.
 
 ```
 SELECT

@@ -1,5 +1,5 @@
 ---
-title: "Setup Azure Active Directory authentication for SQL Server"
+title: "Set up Azure Active Directory authentication for SQL Server"
 description: Tutorial on how to set up Azure Active Directory Authentication for SQL Server
 ms.date: "05/24/2022"
 ms.prod: sql
@@ -11,11 +11,11 @@ ms.author: mireks
 monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
-# Tutorial: Setup Azure Active Directory authentication for SQL Server
+# Tutorial: Set up Azure Active Directory authentication for SQL Server
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-This document describes a step-by-step process on how to setup Azure Active Directory (Azure AD) authentication for SQL Server, as well as how to use different Azure AD authentication methods. This feature is available in SQL Server 2022 or later versions, and is only supported for SQL Server on-premises for Windows OS.
+This document describes a step-by-step process on how to set up Azure Active Directory (Azure AD) authentication for SQL Server, as well as how to use different Azure AD authentication methods. This feature is available in SQL Server 2022 or later versions, and is only supported for SQL Server on-premises for Windows OS.
 
 In this tutorial, you learn how to:
 
@@ -148,7 +148,7 @@ Select the newly created application, and on the left side menu, select **API Pe
 After the Azure Arc agent on the SQL Server host has completed its operation, the admin account selected in the **Azure Active Directory** blade in the portal will be a `sysadmin` on the SQL Server instance. To sign in, use any SQL Server client like [SSMS](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
 
 > [!NOTE]
-> All connections to SQL Server that are done with Azure AD authentication require an encrypted connection. If the Database Administrator (DBA) has not setup a trusted SSL/TLS certificate for the server, logins will likely fail with the message **The certificate chain was issued by an authority that is not trusted.** To fix this, either configure the SQL Server instance to use an SSL/TLS certificate which is trusted by the client or select **trust server certificate** in the advanced connection properties. For more information, see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
+> All connections to SQL Server that are done with Azure AD authentication require an encrypted connection. If the Database Administrator (DBA) has not set up a trusted SSL/TLS certificate for the server, logins will likely fail with the message **The certificate chain was issued by an authority that is not trusted.** To fix this, either configure the SQL Server instance to use an SSL/TLS certificate which is trusted by the client or select **trust server certificate** in the advanced connection properties. For more information, see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
 
 ### Create login syntax
 

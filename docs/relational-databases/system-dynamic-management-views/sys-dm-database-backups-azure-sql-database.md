@@ -84,7 +84,7 @@ ORDER BY backup_start_date DESC
 
 Run the below query in the user database context to get backup history for a single database.
 
-```
+```sql
 SELECT
   backup_start_date, 
   backup_finish_date,

@@ -20,7 +20,7 @@ This tutorial explains how to configure an SQL Server Always On availability gro
 For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterprise-availability-groups/).
 
 > [!NOTE]
-> Microsoft supports data movement, the availability group, and the SQL Server components. Contact DH2i for support related to the documentation of DH2i DxEnterprise cluster, for the cluster and quorum management.
+> Microsoft supports data movement, availability groups, and the SQL Server components. Contact DH2i for support related to the documentation of DH2i DxEnterprise cluster, for the cluster and quorum management.
 
 In this tutorial, you'll set up a DxEnterprise cluster using [DxAdmin Client UI](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-dxadmin-client-ui-quick-start-guide/). Optionally, you can also set up the cluster using the [DxCLI](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-software-dxcli-guide/) command-line interface. For this example, we've used four VMs. Three of those VMs are running Ubuntu 18.04, and are part of the three node cluster. The fourth VM is running Windows 10 with the DxAdmin tool to manage and configure the cluster.
 

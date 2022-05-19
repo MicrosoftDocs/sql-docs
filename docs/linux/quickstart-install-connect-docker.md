@@ -55,7 +55,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 20.04. It can
 ## <a id="requirements"></a> Prerequisites
 
 - Docker Engine 1.8+ on any supported Linux distribution. For more information, see [Install Docker](https://docs.docker.com/engine/installation/). For more information on hardware requirements and processor support, see [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md#pmosr).
-- Docker overlay2 storage driver. This value is the default for most users. If you aren't using this storage provider and need to change, see the instructions and warnings in the [docker documentation for configuring overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
+- Docker `overlay2` storage driver. This value is the default for most users. If you aren't using this storage provider and need to change, see the instructions and warnings in the [docker documentation for configuring overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
 - Minimum of 2 GB of disk space.
 - Minimum of 2 GB of RAM.
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
@@ -94,7 +94,7 @@ Before starting the following steps, make sure that you've selected your preferr
    The previous command pulls the latest SQL Server 2017 container image. If you want to pull a specific image, you add a colon and the tag name. For example, `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`. To see all available images, see [the mssql-server Docker hub page](https://hub.docker.com/r/microsoft/mssql-server).
 
    ::: zone pivot="cs1-bash"
-   For the bash commands in this article, `sudo` is used. If you don't want to use `sudo` to run Docker, you can configure a *docker* group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
+   For the bash commands in this article, `sudo` is used. If you don't want to use `sudo` to run Docker, you can configure a `docker` group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
    ::: zone-end
 
@@ -132,7 +132,7 @@ Before starting the following steps, make sure that you've selected your preferr
    ::: zone-end
 
    > [!NOTE]
-   > The password should follow the SQL Server default password policy, otherwise the container can not setup SQL server and will stop working. By default, the password must be at least 8 characters long and contain characters from three of the following four sets: uppercase letters, lowercase letters, base 10 digits, and symbols. You can examine the error log by using the [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) command.
+   > The password should follow the SQL Server default password policy, otherwise the container can not setup SQL server and will stop working. By default, the password must be at least 8 characters long and contain characters from three of the following four sets: uppercase letters, lowercase letters, base-10 digits, and symbols. You can examine the error log by using the [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) command.
    >
    > By default, this creates a container with the Developer edition of SQL Server 2017. The process for running production editions in containers is slightly different. For more information, see [Run production container images](./sql-server-linux-docker-container-deployment.md#production).
 
@@ -172,7 +172,7 @@ Before starting the following steps, make sure that you've selected your preferr
 
    ![Screenshot shows the output of the Docker p s command, which has columns for STATUS, PORTS, and other values.](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). The server is ready for connection once the SQL Server error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the SQL Server error log inside the container using the command:
+4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the SQL Server error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the SQL Server error log inside the container using the command:
 
    ```bash
    docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
@@ -184,7 +184,7 @@ Before starting the following steps, make sure that you've selected your preferr
    SELECT @@SERVERNAME,
        SERVERPROPERTY('ComputerNamePhysicalNetBIOS'),
        SERVERPROPERTY('MachineName'),
-       SERVERPROPERTY('ServerName')
+       SERVERPROPERTY('ServerName');
    ```
 
    Setting `--hostname` and `--name` to the same value is a good way to easily identify the target container.
@@ -231,7 +231,7 @@ Before starting the following steps, make sure that you've selected your preferr
    The previous command pulls the SQL Server 2019 container image based on Ubuntu. To instead use container images based on RedHat, see [Run RHEL-based container images](./sql-server-linux-docker-container-deployment.md#rhel). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/_/microsoft-mssql-server).
 
    ::: zone pivot="cs1-bash"
-   For the bash commands in this article, `sudo` is used. If you don't want to use `sudo` to run Docker, you can configure a *docker* group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
+   For the bash commands in this article, `sudo` is used. If you don't want to use `sudo` to run Docker, you can configure a `docker` group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
    ::: zone-end
 
 2. To run the container image with Docker, you can use the following command from a bash shell or elevated PowerShell command prompt.
@@ -261,7 +261,7 @@ Before starting the following steps, make sure that you've selected your preferr
    ::: zone-end
 
    > [!NOTE]
-   > The password should follow the SQL Server default password policy, otherwise the container can not setup SQL server and will stop working. By default, the password must be at least 8 characters long and contain characters from three of the following four sets: uppercase letters, lowercase letters, base 10 digits, and symbols. You can examine the error log by using the [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) command.
+   > The password should follow the SQL Server default password policy, otherwise the container can not setup SQL server and will stop working. By default, the password must be at least 8 characters long and contain characters from three of the following four sets: uppercase letters, lowercase letters, base-10 digits, and symbols. You can examine the error log by using the [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) command.
    >
    > By default, this creates a container with the Developer edition of SQL Server 2019.
 
@@ -300,7 +300,7 @@ Before starting the following steps, make sure that you've selected your preferr
 
    ![Screenshot shows the output of the Docker p s command, which has columns for STATUS, PORTS, and other values.](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). The server is ready for connection once the SQL Server error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the SQL Server error log inside the container using the command:
+4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the SQL Server error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the SQL Server error log inside the container using the command:
 
    ```bash
    docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
@@ -312,7 +312,7 @@ Before starting the following steps, make sure that you've selected your preferr
    SELECT @@SERVERNAME,
        SERVERPROPERTY('ComputerNamePhysicalNetBIOS'),
        SERVERPROPERTY('MachineName'),
-       SERVERPROPERTY('ServerName')
+       SERVERPROPERTY('ServerName');
    ```
 
    Setting `-h` and `--name` to the same value is a good way to easily identify the target container.

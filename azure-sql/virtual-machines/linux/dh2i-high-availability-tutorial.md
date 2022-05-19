@@ -86,7 +86,7 @@ After this step, you should have the DxEnterprise cluster created on the Linux V
 In this step, you create a virtual host, availability group, and then add a database, all using the DxAdmin UI.
 
 > [!NOTE]
-> During this step, the SQL Server instances are restarted to enable Always On. 
+> During this step, the SQL Server instances are restarted to enable availability groups. 
 
 Connect to the Windows client machine running DxAdmin to connect to the cluster created in the step above. Follow the steps documented at [MSSQL Availability Groups with DxAdmin](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-0-software-mssql-availability-groups-with-dxadmin-quick-start-guide/) to enable Always On and create the virtual host and availability group.
 

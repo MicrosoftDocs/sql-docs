@@ -70,11 +70,11 @@ ORDER BY order_by_expression
 
 #### window_name
 
-Is the name of the defined window specification. This name will be used by the window functions in the OVER clause to refer the window specification. Window names must follow the rules for identifiers.
+Name of the name of the defined window specification. This name will be used by the window functions in the OVER clause to refer the window specification. Window names must follow the rules for identifiers.
 
 #### reference_window_name
 
-Is the name of the window being referenced by the current window. The referenced window must be among the windows defined in the WINDOW clause.
+Name of the window being referenced by the current window. The referenced window must be among the windows defined in the WINDOW clause.
 
 The other arguments are:
 
@@ -97,7 +97,7 @@ When a query uses multiple windows, one named window can reference another named
 
 Based on the order in which the windows are defined in the window clause, forward and backward window references are permitted. In other words, a window may use any other window defined in the `<window_expression>` that it is part of, as `reference_window_name`, irrespective of the order of which they are defined. Cyclic references and using multiple window references in a single window are not allowed.
 
-The scope of the new window_name of a defined window contained in a `<window_expression>` consists of any window definition that are part of the `<window_expression>`, together with the SELECT clause of the `<query_specification>` or `<SELECT statement>` that contains the window clause. If the `<window_expression>` is contained in a `<query_specification>` that is part of `<query_expression>` which is a simple table query, then the scope of the new window_name also includes the `<order_by_expression>`, if any, of that `<query_expression>`.
+The scope of the new window_name of a defined window contained in a `<window_expression>` consists of any window definitions that are part of the `<window_expression>`, together with the SELECT clause of the `<query_specification>` or `<SELECT statement>` that contains the window clause. If the `<window_expression>` is contained in a `<query_specification>` that is part of `<query_expression>` which is a simple table query, then the scope of the new window_name also includes the `<order_by_expression>`, if any, of that `<query_expression>`.
 
 The restrictions for usage of window specifications in the OVER clause with the aggregate and analytic functions based on their semantics are applicable to WINDOW clause.
 

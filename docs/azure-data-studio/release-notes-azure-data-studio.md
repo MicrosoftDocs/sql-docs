@@ -28,6 +28,8 @@ Azure Data Studio 1.36.2 is the latest general availability (GA) release.
 
 #### Bug fixes in 1.36.2
 
+| New Item | Details |
+|----------|---------|
 | Query Plan Viewer | Fixed issue with execution plan zoom and operator icons. |
 | Query Plan Viewer | Updated parallelism icon direction. |
 

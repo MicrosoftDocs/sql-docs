@@ -17164,6 +17164,8 @@ items:
           href: t-sql/queries/select-for-clause-transact-sql.md
         - name: SELECT - GROUP BY
           href: t-sql/queries/select-group-by-transact-sql.md
+        - name: SELECT - WINDOW Clause
+          href: t-sql/queries/select-window-transact-sql.md
         - name: SELECT - HAVING
           href: t-sql/queries/select-having-transact-sql.md
         - name: SELECT - INTO Clause

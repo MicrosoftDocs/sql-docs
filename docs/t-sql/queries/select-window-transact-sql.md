@@ -128,7 +128,7 @@ ORDER BY PostalCode;
 GO
 ```
 
-The following query is the equivalent of the above query without using WINDOW clause.
+The following query is the equivalent of the above query without using the WINDOW clause.
 
 ```sql
 USE AdventureWorks2012;
@@ -168,7 +168,7 @@ Here is the result set.
 
 ### Simple example reuses windows in OVER clause
 
-The following example shows defining a window specification and using it multiple times in OVER clause.
+The following example shows defining a window specification and using it multiple times in an OVER clause.
 
 ```sql
 ALTER DATABASE AdventureWorks2012 SET Compatibility_level = 160;
@@ -189,7 +189,7 @@ WINDOW win AS (PARTITION BY SalesOrderID);
 GO
 ```
 
-The following query is the equivalent of the above query without using WINDOW clause.
+The following query is the equivalent of the above query without using the WINDOW clause.
 
 ```sql
 USE AdventureWorks2012;
@@ -232,7 +232,7 @@ Here is the result set.
 
 ### Defining common specification in WINDOW clause
 
-This example shows defining a common specification in a window and using it to define additional specifications in OVER clause.
+This example shows defining a common specification in a window and using it to define additional specifications in the OVER clause.
 
 ```sql
 ALTER DATABASE AdventureWorks2012 SET Compatibility_level = 160;
@@ -253,7 +253,7 @@ WINDOW win AS (ORDER BY SalesOrderID, ProductID);
 GO
 ```
 
-The following query is the equivalent of the above query without using WINDOW clause.
+The following query is the equivalent of the above query without using the WINDOW clause.
 
 ```sql
 USE AdventureWorks2012;
@@ -284,7 +284,7 @@ Here is the result set.
 
 ### Forward and backward window references
 
-This example shows using named windows as forward and backward references when defining a new window in WINDOW clause.
+This example shows using named windows as forward and backward references when defining a new window in the WINDOW clause.
 
 ```sql
 ALTER DATABASE AdventureWorks2012 SET Compatibility_level = 160;
@@ -306,7 +306,7 @@ WINDOW win1 AS (win3),
 GO
 ```
 
-The following query is the equivalent of the above query without using WINDOW clause.
+The following query is the equivalent of the above query without using the WINDOW clause.
 
 ```sql
 USE AdventureWorks2012;

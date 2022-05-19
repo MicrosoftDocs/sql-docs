@@ -1,6 +1,6 @@
 ---
 title: "Assess an app's data access layer with Data Migration Assistant"
-description: Learn how to use Data Migration Assistant to assess an application’s data access layer. Apps can persist data. The data access layer gives access to this data.
+description: Learn how to use the Data Migration Assistant to assess the data access layer for an application. The data access layer gives access to persisted data.
 ms.date: 05/18/2022
 ms.prod: sql
 ms.prod_service: "dma"
@@ -32,7 +32,7 @@ In this case, you can see that the application is using a SQL query to get the n
 
 As an application owner, you need to be able to identify the various databases that the application can connect to and the queries embedded in the application’s data access layer. In addition, you need to identify any changes required to modernize the application to Azure Data services.
 
-## Assess an app with Data Access Migration Toolkit
+## Assess an application with Data Access Migration Toolkit
 
 To enable this assessment, use the Data Access Migration Toolkit (DAMT), a Visual Studio Code extension. The latest version of this extension (v 0.2) adds support for .NET applications and T-SQL dialect.
 

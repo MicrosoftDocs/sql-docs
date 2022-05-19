@@ -46,15 +46,15 @@ When you start a new workload capture with the `Deacmd.exe` command, you can use
 | Option| Description |  
 | --- | --- |
 | `-n`, `--name` | Required. Trace file name. |
-| `-x`, `--format` | Required. Format of the trace (Trace = 0, XEvents = 1). |
+| `-x`, `--format` | Required. Format of the trace (0 = Trace, 1 = XEvents). |
 | `-d`, `--duration` | Required. Maximum duration for the capture, in minutes. |
 | `-l`, `--location` | Required. Location of output folder for storing trace or XEvent files on the host computer. |
-| `-t`, `--type` | Default: 0. Type of the SQL Server (SqlServer = 0, AzureSQLDB = 1, Azure SQL Managed Instance = 2). |
+| `-t`, `--type` | Default: 0. Type of the SQL Server (0 = SqlServer, 1 = AzureSQLDB, 2 = Azure SQL Managed Instance). |
 | `-h`, `--host` | Required. SQL Server host name or instance name to start the capture. |
 | `-e`, `--encrypt` | Default: True. Encrypt connection to SQL Server instance. |
 | `--trust` | Default: False. Trust server certificate while connecting to SQL Server instance. |
 | `-f`, `--databasename` | Name of the database to filter your traces, if not specified the capture starts on all the databases. |
-| `-m`, `--authmode` | Default: 0. Authentication mode (Windows = 0, Sql Authentication = 1). |
+| `-m`, `--authmode` | Default: 0. Authentication mode (0 = Windows, 1 = Sql Authentication). |
 | `-u`, `--username` | User name for connecting to the SQL Server. |
 | `-p`, `--password` | Password for connecting to the SQL Server. |
 
@@ -131,11 +131,11 @@ When analyzing traces using the DEA command, you can use the following options:
 | `-a`, `--traceA` | Required. File path to the event file for the A instance. Example: *C:\traces\Sql2008trace.trc*.  If there's a batch of files, select the first file and DEA checks for rollover files automatically. If files are in blob, provide the folder path where you want the event files stored locally.  Example: *C:\traces\\* |
 | `-b`, `--traceB` | Required. File path to the event file for the B instance. Example: *C:\traces\Sql2014trace.trc*. If there's a batch of files, select the first file and DEA checks for rollover files automatically. If files are in blob, provide the folder path where you want the event files stored locally.  Example: *C:\traces\\* |
 | `-r`, `--ReportName` | Required. Name for current analysis. The analysis report that gets generated is identified by this name. |
-| `-t`, `--type` | Default: 0. Type of the SQL Server (SqlServer = 0, AzureSQLDB = 1, Azure SQL Managed Instance = 2). |
+| `-t`, `--type` | Default: 0. Type of the SQL Server (0 = SqlServer, 1 = AzureSQLDB, 2 = Azure SQL Managed Instance). |
 | `-h`, `--host` | Required. SQL Server host name or instance name. |
 | `-e`, `--encrypt` | Default: True. Encrypt connection to SQL Server instance.|
 | `--trust` | Default: False. Trust server certificate while connecting to SQL Server instance. |
-| `-m`, `--authmode` | Default: 0. Authentication mode (Windows = 0, Sql Authentication = 1). |
+| `-m`, `--authmode` | Default: 0. Authentication mode (0 = Windows, 1 = Sql Authentication). |
 | `-u`, `--username` | User name for connecting to the SQL Server. |
 | `--p` | Password for connecting to the SQL Server. |
 | `--ab` | Default: False. Storage location of trace A is in blob. If used, must also specify `--abu (Trace A Blob Url)` |

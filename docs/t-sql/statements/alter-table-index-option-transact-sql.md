@@ -43,6 +43,7 @@ ms.author: wiassaf
       [ , ...n ] ) ]  
   | ONLINE = { ON | OFF }  
   | RESUMABLE = { ON | OFF }
+  | MAX_DURATION = <time> [MINUTES]
 }  
   
 <range> ::=   

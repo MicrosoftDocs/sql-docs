@@ -41,7 +41,7 @@ SSMS 18.11 is the latest general availability (GA) version. If you have a previo
 
 - Release number: 19.0
 - Build number: 15.0.18410.0
-- Release date: MAy 24, 2022
+- Release date: May 24, 2022
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).
 

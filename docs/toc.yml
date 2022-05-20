@@ -8510,7 +8510,7 @@ items:
         href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
     - name: Azure Active Directory authentication
       items: 
-      - name: Setup Azure AD authentication
+      - name: Set up Azure AD authentication
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md
   - name: Reference
     items:

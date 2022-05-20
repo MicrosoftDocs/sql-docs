@@ -4869,6 +4869,8 @@ items:
     items:
     - name: Compatibility Certification
       href: database-engine/install-windows/compatibility-certification.md
+    - name: Supported Version & Edition Upgrades SQL Server 2022
+      href: database-engine/install-windows/supported-version-and-edition-upgrades-2022.md
     - name: Supported Version & Edition Upgrades SQL Server 2019
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2019.md
     - name: Supported Version & Edition Upgrades SQL Server 2017

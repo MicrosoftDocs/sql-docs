@@ -1055,7 +1055,7 @@ WITH
       )
 )
 
-CREATE EXTERNAL TABLE [dbo].[DimProductexternal]
+CREATE EXTERNAL TABLE [dbo].[DimProduct_external]
 ( [ProductKey] [int] NOT NULL,
   [ProductLabel] nvarchar NULL,
   [ProductName] nvarchar NULL )

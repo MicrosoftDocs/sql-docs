@@ -58,7 +58,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
 ms.custom: ""
-ms.date: 05/09/2022
+ms.date: 05/24/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE (Transact-SQL)
@@ -341,7 +341,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
      {
        NONCLUSTERED (column [ ASC | DESC ] [ ,... n ])
        | NONCLUSTERED HASH (column [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count )
-                    }
+     }
     | FOREIGN KEY
         ( column [ ,...n ] )
         REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ]
@@ -360,7 +360,6 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
   | CLUSTERED COLUMNSTORE [WITH ( COMPRESSION_DELAY = {0 | delay [Minutes]})]
       [ ON filegroup_name | default ]
 }
-
 ```
 
 ## Syntax for Azure Synapse Analytics and Parallel Data Warehouse
@@ -1018,6 +1017,15 @@ Requires **ALTER ANY CONNECTION** permission.
 
 Conditionally drops the column or constraint only if it already exists.
 
+#### <a id="resumable"></a> RESUMABLE = { ON | OFF} 
+**Applies to**: SQL Server 2022 and later.
+
+Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](/sql/t-sql/statements/alter-table-index-option-transact-sql) in the [ALTER TABLE table_constraint](/t-sql/statements/alter-table-table-constraint-transact-sql).
+
+**MAX_DURATION** when used with `RESUMABLE = ON` (requires `ONLINE = ON`) indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion.
+
+For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable table add constraints](/sql/relational-databases/security/resumable-table-add-constraints).
+
 ## Remarks
 
 To add new rows of data, use [INSERT](../../t-sql/statements/insert-transact-sql.md). To remove rows of data, use [DELETE](../../t-sql/statements/delete-transact-sql.md) or [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md). To change the values in existing rows, use [UPDATE](../../t-sql/queries/update-transact-sql.md).
@@ -1367,6 +1375,16 @@ ALTER TABLE Customers ADD
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = MyCEK,
     ENCRYPTION_TYPE = RANDOMIZED,
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;
+```
+
+#### K. Adding a primary key with resumerable operation
+
+Resumable `ALTER TABLE` operation for adding a primary key clustered on column (a) with `MAX_DURATION` of 240 minutes.
+
+```sql
+ALTER TABLE table1
+ADD CONSTRAINT PK_Constrain PRIMARY KEY CLUSTERED (a)
+WITH (ONLINE = ON, MAXDOP = 2, RESUMABLE = ON, MAX_DURATION = 240);
 ```
 
 ### <a name="Drop"></a>Dropping columns and constraints

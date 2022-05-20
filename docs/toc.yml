@@ -8520,6 +8520,8 @@ items:
     items:
     - name: Permissions or Securables page
       href: relational-databases/security/permissions-or-securables-page.md
+    - name: Resumable add table contraints
+      href: relational-databases/security/resumable-add-table-constraints.md
 - name: Tools
   items:
   - name: Overview

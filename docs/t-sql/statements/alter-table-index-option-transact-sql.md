@@ -2,7 +2,7 @@
 description: "ALTER TABLE index_option (Transact-SQL)"
 title: "ALTER TABLE index_option (Transact-SQL)"
 ms.custom: ""
-ms.date: 05/09/2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: randolphwest
@@ -41,7 +41,9 @@ ms.author: wiassaf
   | XML_COMPRESSION = { ON | OFF }  
       [ ON PARTITIONS ({ <partition_number_expression> | <range> }   
       [ , ...n ] ) ]  
-  | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }  
+  | ONLINE = { ON | OFF }  
+  | RESUMABLE = { ON | OFF }
+  | MAX_DURATION = <time> [MINUTES]
 }  
   
 <range> ::=   
@@ -59,7 +61,7 @@ ms.author: wiassaf
 {  
     WAIT_AT_LOW_PRIORITY ( MAX_DURATION = <time> [ MINUTES ] ,   
                            ABORT_AFTER_WAIT = { NONE | SELF | BLOCKERS } )   
-}  
+}
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -168,7 +170,16 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
   
 > [!NOTE]
 >  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
-  
+
+ RESUMABLE = { ON | OFF}  
+ **Applies to**: SQL Server 2022 and later.
+
+ Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. When the `RESUMABLE` option is set to `ON`, the option `ONLINE = ON` is required.
+
+ **MAX_DURATION** when used with `RESUMABLE = ON` (requires `ONLINE = ON`) indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion. **MAXDOP** is supported with `RESUMABLE = ON` as well.
+
+ For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable add table constraints](/sql/relational-databases/security/resumable-add-table-constraints).
+
  MAXDOP **=**_max_degree_of_parallelism_  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   

@@ -186,6 +186,8 @@ Value: 1
 
     SQL Server 2012 supports multiple containers per filegroup and can make things much easier. No complicated partitioning schemes may be needed to manage larger number of files.
 
+-  When there are very large number of FILESTREAM containers in a SQL instance, starting the databases which have many FILESTREAM containers might take a long time to register them in the FILESTREAM filter driver. Spreading them in multiple different volumes will help with improving database startup time.
+
 - The NTFS MFT may become fragmented, and that can cause performance issues. The MFT reserved size does depend on volume size, so you may or may not encounter this.
 
   - You can check the MFT fragmentation with `defrag /A /V C:` (change C: to the actual volume name).

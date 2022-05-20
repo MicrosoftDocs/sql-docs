@@ -58,22 +58,22 @@ ORDER BY backup_finish_date DESC;
 ```  
 You can get a friendlier resultset by joining to `sys.databases` and using a `CASE` statement. Run this query in the `master` database to get backup history for all databases in the Azure SQL Database server.
  
- ```sql
- SELECT db.name
-	, backup_start_date
-	, backup_finish_date
-	, CASE backup_type
-		WHEN 'D' THEN 'Full'
-		WHEN 'I' THEN 'Differential'
-		WHEN 'L' THEN 'Transaction Log'
-		END AS BackupType
-	, CASE in_retention
-		WHEN 1 THEN 'In Retention'
-		WHEN 0 THEN 'Out of Retention'
-		END AS is_Bakcup_Available
+```sql
+SELECT db.name
+    , backup_start_date
+    , backup_finish_date
+    , CASE backup_type
+        WHEN 'D' THEN 'Full'
+        WHEN 'I' THEN 'Differential'
+        WHEN 'L' THEN 'Transaction Log'
+    END AS BackupType
+    , CASE in_retention
+        WHEN 1 THEN 'In Retention'
+        WHEN 0 THEN 'Out of Retention'
+        END AS is_Bakcup_Available
 FROM sys.dm_database_backups AS ddb
 INNER JOIN sys.databases AS db
-	ON ddb.physical_database_name = db.physical_database_name
+    ON ddb.physical_database_name = db.physical_database_name
 ORDER BY backup_start_date DESC;
 ```
 
@@ -81,18 +81,18 @@ Run the below query in the user database context to get backup history for a sin
 
 ```sql
 SELECT backup_start_date
-	, backup_finish_date
-	, CASE backup_type
-		WHEN 'D' THEN 'Full'
-		WHEN 'I' THEN 'Differential'
-		WHEN 'L' THEN 'Transaction Log'
-		END AS BackupType
-	, CASE in_retention
-		WHEN 1 THEN 'In Retention'
-		WHEN 0 THEN 'Out of Retention'
-		END AS is_Bakcup_Available
+    , backup_finish_date
+    , CASE backup_type
+        WHEN 'D' THEN 'Full'
+        WHEN 'I' THEN 'Differential'
+        WHEN 'L' THEN 'Transaction Log'
+        END AS BackupType
+    , CASE in_retention
+        WHEN 1 THEN 'In Retention'
+    WHEN 0 THEN 'Out of Retention'
+    END AS is_Bakcup_Available
 FROM sys.dm_database_backups AS ddb
 INNER JOIN sys.databases AS db
-	ON ddb.physical_database_name = db.physical_database_name
+    ON ddb.physical_database_name = db.physical_database_name
 ORDER BY backup_start_date DESC;
 ```

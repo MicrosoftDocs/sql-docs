@@ -20,9 +20,15 @@ The new link feature in Azure SQL Managed Instance connects your SQL Servers h
 
 After a disastrous event, you can continue running your read-only workloads on SQL Managed Instance in Azure. You can also choose to migrate one or more applications from SQL Server to SQL Managed Instance at the same time, at your own pace, and with the best possible minimum downtime compared to other solutions in Azure today.
 
-To use the link feature, you'll need:
+To use the link feature, you'll need a supported version of SQL Server. The following table lists the supported versions.
 
-- SQL Server 2019 Enterprise Edition or Developer Edition with [CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) installed on-premises, or on an Azure VM.
+| SQL Server Version  | Editions  | Servicing update requirement |
+|---------|---------|---------|
+|SQL Server 2019 | Enterprise or Developer |[CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6)|
+|SQL Server 2016 | Enterprise, Standard, or Developer |[SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242)|
+
+In addition to the supported version, you'll need:
+
 - Network connectivity between your SQL Server and managed instance is required. If your SQL Server is running on-premises, use a VPN link or Express route. If your SQL Server is running on an Azure VM, either deploy your VM to the same subnet as your managed instance, or use global VNet peering to connect two separate subnets. 
 - Azure SQL Managed Instance provisioned on any service tier.
 

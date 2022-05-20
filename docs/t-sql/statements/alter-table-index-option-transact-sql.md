@@ -41,8 +41,8 @@ ms.author: wiassaf
   | XML_COMPRESSION = { ON | OFF }  
       [ ON PARTITIONS ({ <partition_number_expression> | <range> }   
       [ , ...n ] ) ]  
-  | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }  
-  | RESUMABLE { ON [ ( <resumable_options> ) ] | OFF }
+  | ONLINE = { ON | OFF }  
+  | RESUMABLE = { ON | OFF }
 }  
   
 <range> ::=   
@@ -61,13 +61,6 @@ ms.author: wiassaf
     WAIT_AT_LOW_PRIORITY ( MAX_DURATION = <time> [ MINUTES ] ,   
                            ABORT_AFTER_WAIT = { NONE | SELF | BLOCKERS } )   
 }
-
-<resumable_options>]::=  
-{  
-    [ ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF } , ]  
-    [ MAXDOP = max_degree_of_parallelism , ]
-    [ MAX_DURATION = <time> [MINUTES} ]
-}  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -182,7 +175,7 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
 
  Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. When the `RESUMABLE` option is set to `ON`, the option `ONLINE = ON` is required.
 
- **MAX_DURATION** when used with `RESUMABLE = ON` (requires `ONLINE=ON`) indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion. **MAXDOP** is supported with `RESUMABLE = ON` as well.
+ **MAX_DURATION** when used with `RESUMABLE = ON` (requires `ONLINE = ON`) indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion. **MAXDOP** is supported with `RESUMABLE = ON` as well.
 
  For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable add table constraints](/sql/relational-databases/security/resumable-add-table-constraints).
 

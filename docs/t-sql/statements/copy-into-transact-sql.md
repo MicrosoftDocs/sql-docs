@@ -274,13 +274,17 @@ IDENTITY_INSERT specifies whether the identity value or values in the imported d
 - IDENTITY_INSERT can only be set for one table at a time.
 
 #### *AUTO_CREATE_TABLE = { 'ON' | 'OFF' }*
-*AUTO_CREATE_TABLE* specifies if the table could be automatically created by working alongside with automatic schema discovery.
+*AUTO_CREATE_TABLE* specifies if the table could be automatically created by working alongside with automatic schema discovery. It is available oly for parquet files
 
 - ON: Enables automatic table creation. The COPY INTO process will create a new table automatically by discovering the structure of the file to be loaded.
 - OFF: Automatic table creation is not enabled. Default.
 
 >[!NOTE]  
 > The automatic table creation works alongside with automatic schema discovery. The automatic table creation is NOT enabled by default.
+
+> [!GUIDELINES]  
+> Do not load into hash distributed tables from parquet files using COPY INTO with AUTO_CREATE_TABLE = 'ON'
+> If parquet files are to be loaded into Hash Distributed tables using COPY INTO, load it into a Round Robin staging table followed by insert select from that table to the target hash distribued table. 
 
 ### Permissions  
 

@@ -59,7 +59,7 @@ SSMS 19 is the latest general availability (GA) release of SSMS. If you need a p
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
-## Additional Downloads
+## Next steps
 
 For a list of all SQL Server Management Studio downloads, search the [Microsoft Download Center](https://www.microsoft.com/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending).  
   

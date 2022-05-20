@@ -8971,8 +8971,12 @@ items:
     items:
     - name: Download SSMS
       href: ssms/download-sql-server-management-studio-ssms.md
-    - name: Release Notes
+    - name: Download
+      href: ssms/download-sql-server-management-studio-ssms-19.md
+    - name: Release notes
       href: ssms/release-notes-ssms.md
+    - name: Release notes (current)
+      href: ssms/release-notes-ssms-current.md
     - name: Overview
       items:
       - name: SQL Server Management Studio (SSMS)

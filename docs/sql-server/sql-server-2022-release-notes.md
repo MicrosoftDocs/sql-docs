@@ -13,7 +13,7 @@ monikerRange: "= sql-server-ver16"
 # [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release notes
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] customer technology preview (CTP) 2.0.
+This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] community technology preview (CTP) 2.0.
 
 Complete details about licensing are in `License Terms` folder on the installation media.
 

@@ -1,6 +1,6 @@
 ---
 title: Create SQL Server on a Windows virtual machine in the Azure portal | Microsoft Docs
-description: This tutorial shows how to create a Windows virtual machine with SQL Server 2017 in the Azure portal.
+description: This tutorial shows how to create a Windows virtual machine with SQL Server in the Azure portal.
 services: virtual-machines-windows
 documentationcenter: na
 author: bluefooted
@@ -16,7 +16,7 @@ ms.reviewer: mathoma
 ms.custom: mode-ui
 ---
 
-# Quickstart: Create SQL Server 2017 on a Windows virtual machine in the Azure portal
+# Quickstart: Create SQL Server on a Windows virtual machine in the Azure portal
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
@@ -42,7 +42,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
 1. Select **Azure SQL** in the left-hand menu of the Azure portal. If **Azure SQL** is not in the list, select **All services**, then type *Azure SQL* in the search box.
 1. Select **+Add** to open the **Select SQL deployment option** page. You can view additional information by selecting **Show details** on the **SQL virtual machines** tile.
-1. Select the **Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016** image from the dropdown.
+1. Select one of the versions labelled **Free SQL Server License...** from the dropdown.
 
    ![Screenshot that shows where you select the Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016 image.](./media/sql-vm-create-portal-quickstart/select-sql-2017-vm-image.png)
 
@@ -62,7 +62,7 @@ On the **Basics** tab, provide the following information:
     1. Type _SQLVM_ for the **Virtual machine name**. 
     1. Choose a location for your **Region**. 
     1. For the purpose of this quickstart, leave **Availability options** set to _No infrastructure redundancy required_. To find out more information about availability options, see [Availability](/azure/virtual-machines/availability). 
-    1. In the **Image** list, select _Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016_. 
+    1. In the **Image** list, select the image with the version of SQL Server and operating system you want. For example, you can use an image with a label that begins with _Free SQL Server License:_.
     1. Choose to **Change size** for the **Size** of the virtual machine and select the **A2 Basic** offering. Be sure to clean up your resources once you're done with them to prevent any unexpected charges. 
 
    ![Instance details](./media/sql-vm-create-portal-quickstart/basics-instance-details.png)
@@ -132,7 +132,7 @@ If you do not need your SQL VM to run continually, you can avoid unnecessary cha
 
 ## Next steps
 
-In this quickstart, you created a SQL Server 2017 virtual machine in the Azure portal. To learn more about how to migrate your data to the new SQL Server, see the following article.
+In this quickstart, you created a SQL Server virtual machine in the Azure portal. To learn more about how to migrate your data to the new SQL Server, see the following article.
 
 > [!div class="nextstepaction"]
 > [Migrate a database to a SQL VM](migrate-to-vm-from-sql-server.md)

@@ -10485,12 +10485,16 @@ items:
         href: linux/sql-server-linux-whats-new.md
     - name: Release notes
       items:
+      - name: SQL Server 2022 Preview
+        href: linux/sql-server-linux-release-notes-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-release-notes-2019.md
       - name: SQL Server 2017
         href: linux/sql-server-linux-release-notes.md
     - name: Editions & Features
       items:
+      - name: SQL Server 2022 Preview
+        href: linux/sql-server-linux-editions-and-components-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-editions-and-components-2019.md
       - name: SQL Server 2017
@@ -10560,6 +10564,8 @@ items:
       items:
       - name: Install SQL Server
         href: linux/sql-server-linux-setup.md
+      - name: Install SQL Server 2022 Preview
+        href: linux/sql-server-linux-setup-2022.md
       - name: Install SQL Server tools
         href: linux/sql-server-linux-setup-tools.md
       - name: Install SQL Server Agent
@@ -17160,6 +17166,8 @@ items:
           href: t-sql/queries/select-for-clause-transact-sql.md
         - name: SELECT - GROUP BY
           href: t-sql/queries/select-group-by-transact-sql.md
+        - name: SELECT - WINDOW Clause
+          href: t-sql/queries/select-window-transact-sql.md
         - name: SELECT - HAVING
           href: t-sql/queries/select-having-transact-sql.md
         - name: SELECT - INTO Clause

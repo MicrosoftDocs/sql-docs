@@ -25,7 +25,7 @@ ms.custom:
 ms.date: 05/24/2022
 ---
 
-# Download SQL Server Management Studio (SSMS) 19 (Preview)
+# Download SQL Server Management Studio (SSMS) 19 (Preview 2)
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
@@ -35,19 +35,19 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 ## Download SSMS
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 18.11.1](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 19 (Preview)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.11 is the latest general availability (GA) version. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.11.1 upgrades it to 18.11.1.
+SSMS 19 (Preview) is the latest preview.
 
-- Release number: 19.0
-- Build number: 15.0.18410.0
+- Release number: 19.0 (Preview)
+- Build number: 16.0.19054.0
 - Release date: May 24, 2022
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).
 
-The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions, so both versions are available for use. However, if you have a *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.11. You can see if you have the preview version by going to the **Help > About** window.
+The SSMS 19.x installation doesn't upgrade or replace SSMS versions 18.x or earlier. SSMS 19.x installs side by side with previous versions, so both versions are available for use. However, if you have an earlier *preview* version of SSMS 19 installed, you must uninstall it before installing the latest SSMS 19 preview. You can see if you have a preview version by going to the **Help > About** window.
 
-If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**.
+If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 19**.
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
@@ -55,8 +55,8 @@ If a computer contains side-by-side installations of SSMS, verify you start the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 18.11.1:  
-[Chinese (Simplified)](https://aka.ms/ssmsfullsetup?clcid=0x804) | [Chinese (Traditional)](https://aka.ms/ssmsfullsetup?clcid=0x404) | [English (United States)](https://aka.ms/ssmsfullsetup?clcid=0x409) | [French](https://aka.ms/ssmsfullsetup?clcid=0x40c) | [German](https://aka.ms/ssmsfullsetup?clcid=0x407) | [Italian](https://aka.ms/ssmsfullsetup?clcid=0x410) | [Japanese](https://aka.ms/ssmsfullsetup?clcid=0x411) | [Korean](https://aka.ms/ssmsfullsetup?clcid=0x412) | [Portuguese (Brazil)](https://aka.ms/ssmsfullsetup?clcid=0x416) | [Russian](https://aka.ms/ssmsfullsetup?clcid=0x419) | [Spanish](https://aka.ms/ssmsfullsetup?clcid=0x40a)
+SQL Server Management Studio 19 (Preview):  
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x40a)
 
 > [!TIP]
 > If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please select **Read in English** at the top of this page. You can download different languages from the US-English version site by selecting [available languages](#available-languages).
@@ -64,13 +64,9 @@ SQL Server Management Studio 18.11.1:
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](../powershell/download-sql-server-ps-module.md).
 
-## What's new
-
-For details and more information about what's new in this release, see [Release notes for SQL Server Management Studio](release-notes-ssms.md).
-
 ## Previous versions
 
-This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
+This article is for the Preview version of SSMS 19 only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
 [!INCLUDE[ssms-connect-azure-ad](../includes/ssms-connect-azure-ad.md)]
 
@@ -126,7 +122,7 @@ These components aren't uninstalled because they can be shared with other produc
 ## Supported SQL offerings
 
 - This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](/lifecycle/products/?products=sql-server.md) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics.
-- Additionally, SSMS 18.x can be installed side by side with SSMS 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
+- Additionally, SSMS 19 (Preview) can be installed side by side with SSMS 18.x, 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
 - SQL Server Integration Services (SSIS) - SSMS version 17.x or later doesn't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side by side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 
 ## SSMS System Requirements

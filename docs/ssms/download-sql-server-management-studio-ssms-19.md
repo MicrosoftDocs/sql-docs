@@ -25,7 +25,7 @@ ms.custom:
 ms.date: 05/24/2022
 ---
 
-# Download SQL Server Management Studio (SSMS) 19 (Preview 2)
+# Download SQL Server Management Studio (SSMS) 19 (Preview)
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 

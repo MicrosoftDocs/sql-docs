@@ -62,7 +62,7 @@ On the **Basics** tab, provide the following information:
     1. Type _SQLVM_ for the **Virtual machine name**. 
     1. Choose a location for your **Region**. 
     1. For the purpose of this quickstart, leave **Availability options** set to _No infrastructure redundancy required_. To find out more information about availability options, see [Availability](/azure/virtual-machines/availability). 
-    1. In the **Image** list, select the image you want. For example, you can use an image with a lable that begins with _Free SQL Server License:_.
+    1. In the **Image** list, select the image with the version of SQL Server and operating system you want. For example, you can use an image with a label that begins with _Free SQL Server License:_.
     1. Choose to **Change size** for the **Size** of the virtual machine and select the **A2 Basic** offering. Be sure to clean up your resources once you're done with them to prevent any unexpected charges. 
 
    ![Instance details](./media/sql-vm-create-portal-quickstart/basics-instance-details.png)

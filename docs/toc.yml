@@ -8231,6 +8231,8 @@ items:
         href: relational-databases/security/authentication-access/create-an-application-role.md
       - name: Create a credential
         href: relational-databases/security/authentication-access/create-a-credential.md
+      - name: Linked servers with Azure AD authentication
+        href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-linked-server.md
     - name: Encryption
       items:
       - name: Always Encrypted
@@ -8433,6 +8435,8 @@ items:
         href: relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md
       - name: Ownership and user-schema separation
         href: relational-databases/security/authentication-access/ownership-and-user-schema-separation.md
+      - name: Azure Active Directory authentication
+        href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md
     - name: Encryption
       href: relational-databases/security/encryption/sql-server-encryption.md
       items:
@@ -8508,10 +8512,16 @@ items:
         href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
       - name: Develop a .NET Framework application using Always Encrypted with secure enclaves
         href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
+    - name: Azure Active Directory authentication
+      items: 
+      - name: Set up Azure AD authentication
+        href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md
   - name: Reference
     items:
     - name: Permissions or Securables page
       href: relational-databases/security/permissions-or-securables-page.md
+    - name: Resumable add table contraints
+      href: relational-databases/security/resumable-add-table-constraints.md
 - name: Tools
   items:
   - name: Overview
@@ -10483,16 +10493,12 @@ items:
         href: linux/sql-server-linux-whats-new.md
     - name: Release notes
       items:
-      - name: SQL Server 2022 Preview
-        href: linux/sql-server-linux-release-notes-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-release-notes-2019.md
       - name: SQL Server 2017
         href: linux/sql-server-linux-release-notes.md
     - name: Editions & Features
       items:
-      - name: SQL Server 2022 Preview
-        href: linux/sql-server-linux-editions-and-components-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-editions-and-components-2019.md
       - name: SQL Server 2017
@@ -10562,8 +10568,6 @@ items:
       items:
       - name: Install SQL Server
         href: linux/sql-server-linux-setup.md
-      - name: Install SQL Server 2022 Preview
-        href: linux/sql-server-linux-setup-2022.md
       - name: Install SQL Server tools
         href: linux/sql-server-linux-setup-tools.md
       - name: Install SQL Server Agent
@@ -17164,6 +17168,8 @@ items:
           href: t-sql/queries/select-for-clause-transact-sql.md
         - name: SELECT - GROUP BY
           href: t-sql/queries/select-group-by-transact-sql.md
+        - name: SELECT - WINDOW Clause
+          href: t-sql/queries/select-window-transact-sql.md
         - name: SELECT - HAVING
           href: t-sql/queries/select-having-transact-sql.md
         - name: SELECT - INTO Clause

@@ -23,6 +23,10 @@ This release has the same hardware and software requirements as [SQL Server 2019
 
 - .NET Framework: 4.7.2. [Download](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
+## Linux
+
+SQL Server 2022 Preview on Linux images are coming soon.
+
 ## Feature notes
 
 This section identifies known issues you may experience with this product:

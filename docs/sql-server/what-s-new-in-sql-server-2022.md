@@ -30,11 +30,7 @@ This article summarizes the new features and enhancements for [!INCLUDE[sql-serv
 
 [Get SQL Server 2022 Preview Evaluation Edition](https://go.microsoft.com/fwlink/?linkid=2162126).
 
-To get SQL Server 2022 Preview on Linux, see [Installation guidance for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-setup-2022.md).
-
 For more information and known issues, see [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md).
-
-For Linux limitations, see [Unsupported features and services](../linux/sql-server-linux-editions-and-components-2022.md#unsupported-features-and-services).
 
 For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../tools/overview-sql-tools.md).
 

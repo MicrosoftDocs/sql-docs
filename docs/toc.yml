@@ -10493,16 +10493,12 @@ items:
         href: linux/sql-server-linux-whats-new.md
     - name: Release notes
       items:
-      - name: SQL Server 2022 Preview
-        href: linux/sql-server-linux-release-notes-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-release-notes-2019.md
       - name: SQL Server 2017
         href: linux/sql-server-linux-release-notes.md
     - name: Editions & Features
       items:
-      - name: SQL Server 2022 Preview
-        href: linux/sql-server-linux-editions-and-components-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-editions-and-components-2019.md
       - name: SQL Server 2017
@@ -10572,8 +10568,6 @@ items:
       items:
       - name: Install SQL Server
         href: linux/sql-server-linux-setup.md
-      - name: Install SQL Server 2022 Preview
-        href: linux/sql-server-linux-setup-2022.md
       - name: Install SQL Server tools
         href: linux/sql-server-linux-setup-tools.md
       - name: Install SQL Server Agent

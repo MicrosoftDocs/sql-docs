@@ -4,7 +4,8 @@ titleSuffix: SQL Server
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios.
 author: VanMSFT
 ms.author: vanto
-ms.date: 05/12/2022
+ms.reviewer: randolphwest
+ms.date: 05/24/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.custom:
@@ -16,7 +17,7 @@ ms.technology: linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article provides guidance for installing, updating, and uninstalling SQL Server 2017 and SQL Server 2019 on Linux.
+This article provides guidance for installing, updating, and uninstalling [!INCLUDE [sssql17-md](../includes/sssql17-md.md)], and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux.
 
 For other deployment scenarios, see:
 
@@ -24,8 +25,8 @@ For other deployment scenarios, see:
 - [Docker containers](./sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - Big Data Clusters](../big-data-cluster/deploy-get-started.md)
 
-> [!TIP]
-> This guide covers several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:
+This guide covers several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:
+
 > - [RHEL quickstart](quickstart-install-connect-red-hat.md)
 > - [SLES quickstart](quickstart-install-connect-suse.md)
 > - [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
@@ -50,7 +51,7 @@ SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterpris
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15 "
 
 [!INCLUDE [linux-supported-platforms-2019](../includes/linux-supported-platforms-2019.md)]
 

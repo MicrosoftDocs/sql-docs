@@ -46,16 +46,23 @@ There are some practical differences to consider when working with contained ava
 
 Each contained availability group has its own `master` and `msdb` system databases, named after the name of the availability group. For example, in contained availability group `MyContainedAG`, you will have databases named `MyContainedAG_master` and `MyContainedAG_msdb`. These system databases are automatically seeded to new replicas and updates are replicated to these databases just like any other database in an availability group.  This means that when you add an object such as a login, or agent job while connected to the contained availability group, when the contained availability group fails over to another instance, connecting to the contained availability group, you will still see the agent jobs, and be able to authenticate using the login created in the contained availability group.
 
-  > [!IMPORTANT]
-  > The system databases in a newly created contained availability group are not copies from the instance where the CREATE AVAILABILITY GROUP command is run.  They are initially empty templates without any data.  Immediately after creation, the admin accounts on the instance creating the contained AG are copied into Contained Master.  That way the admin can log into the contained AG and set up the rest of the configuration.  If you've created local users or configurations in your instance, they will not automatically appear when you create your contained system databases, and they will not be visible when you connect to the contained availability group. You need to manually re-create them in the contained system databases within the context of the contained availability group.  The exception to this is that all of the logins in the sysadmin role in the parent instance are copied into the new AG specific master DB.
+>[!IMPORTANT]
+>Contained availability groups are a mechanism for keeping execution environment configurations consistent across the replicas of an availability group.  They do NOT represent a security boundary.  There is no boundary which keeps a connection to a contained availability group from accessing databases outside of the AG, for example.
+
+The system databases in a newly created contained availability group are not copies from the instance where the CREATE AVAILABILITY GROUP command is run.  They are initially empty templates without any data.  Immediately after creation, the admin accounts on the instance creating the contained AG are copied into Contained Master.  That way the admin can log into the contained AG and set up the rest of the configuration.  If you've created local users or configurations in your instance, they will not automatically appear when you create your contained system databases, and they will not be visible when you connect to the contained availability group. You need to manually re-create them in the contained system databases within the context of the contained availability group.  The exception to this is that all of the logins in the sysadmin role in the parent instance are copied into the new AG specific master DB.
 
 ### Connect (Contained environment)
 
-It's important to distinguish the difference between connecting to the instance, and connecting to the contained availability group. The only way to access the environment of the contained availability group is to connect to the contained availability group listener, or to set focus on a database which is in the contained availability group. i.e.
+It's important to distinguish the difference between connecting to the instance, and connecting to the contained availability group. The only way to access the environment of the contained availability group is to connect to the contained availability group listener, or to connect to a database which is in the contained availability group. i.e.
 
-```sql
-USE MyContainedAG_master
+```csharp
+"Persist Security Info=False;
+User ID=MyUser;Password=*****;
+Initial Catalog=MyContainedDatabase;
+Server=MyServer;"
 ```
+
+Where MyContainedDatabase is a database within the contained availability group which you wish to interact with.
 
 **This means that you must create a listener for the contained availability group to effectively use a contained availability group.** If you connect to one of the _instances_ hosting the  contained availability group rather than _directly to the contained availability group through the listener_, you will be in the environment of the instance, and not the contained availability group.
 

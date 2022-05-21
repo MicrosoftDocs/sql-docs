@@ -34,14 +34,14 @@ For more information and known issues, see [[!INCLUDE[sql-server-2022](../includ
 
 For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../tools/overview-sql-tools.md).
 
-## Customer technology preview release
+## Community technology preview release
 
-This release is customer technology preview (CTP) 2.0. CTP 2.0 is the first public preview release. Previous releases (CTP 1.x) were available to select participants in the early adopter program (EAP).
+This release is community technology preview (CTP) 2.0. CTP 2.0 is the first public preview release. Previous releases (CTP 1.x) were available to select participants in the early adopter program (EAP).
 
 This release:
 
 - Is available as Evaluation Edition. It is available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
-- On Azure Virtual Machines, it is available as Developer Edition.
+- On Azure Virtual Machines, it is available as Developer Edition. It is available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
 - Does not include support from Microsoft, except for select EAP customers.
 
 After you experience SQL Server 2022 Preview, you're welcome to [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
@@ -61,20 +61,21 @@ The following sections provide an overview of these features.
 |:---|:---|
 | Link to Azure SQL Managed Instance | Connect your SQL Server instance to Azure SQL Managed Instance. See [Link feature for Azure SQL Managed Instance (preview)](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview). To experience this feature you can [register here](https://aka.ms/mi-link-2022-signup).|
 |Contained availability group | Create an Always On availability group that:<br/>- Manages its own metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level. <br/>- Includes specialized contained system databases within the availability group. For more information, see [What is a contained availability group?](../database-engine/availability-groups/windows/contained-availability-groups-overview.md)|
-|Distributed availability group |- Changing `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is supported. For more information, visit [ALTER AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/alter-availability-group-transact-sql.md)<br/>- Now using multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.|
-| Improved availability groups | Parallel redo and improvements for readable secondary replicas. |
+|Distributed availability group |- Changing `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is supported. For more information, visit [ALTER AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/alter-availability-group-transact-sql.md)<br/> - Now using multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.|
+| Improved availability groups | - ParallelRedoThreadPool : Instance level thread pool shared with all databases having redo work. With this, each database can take the benefit of parallel redo. Limited to max 100 threads limit earlier. <br/> - Parallel Redo Batch Redo - Redo of log records are batched under one latch improving speed. This helps both, catchup redo and crash recovery redo. |
 | Improved backup metadata | `backupset` system table returns last valid restore time. See [backupset (Transact-SQL)](../relational-databases/system-tables/backupset-transact-sql.md).|
 
 ## Security
 
 | New feature or update | Details |
 |:---|:---|
+| Microsoft Defender for Cloud integration | Protect your SQL servers using the Defender for SQL plan. Defender for SQL plan requires that SQL Server Extension for Azure is enabled and includes functionalities for discovering and mitigating potential database vulnerabilities and detecting anomalous activities that could indicate a threat to your databases. [Learn more](/azure/defender-for-cloud/defender-for-sql-introduction) on how Defender for SQL can protect your entire database estate anywhere: on-premises, hybrid, and multi-cloud environments.
 |Microsoft Purview integration|Apply Microsoft Purview access policies to any SQL Server instance that is enrolled in both Azure Arc and the Microsoft Purview Data use management.<br/><br/>- Newly introduced *SQL Performance Monitor*, and *SQL Security Auditor* roles align with the principle of least privilege using Microsoft Purview access policies.</br></br>Check out [Access provisioning by data owner for SQL Server on Azure Arc-enabled servers](/azure/purview/how-to-data-owner-policies-arc-sql-server) for details.|
 |Ledger | The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. See [Ledger](/sql/relational-databases/security/ledger/ledger-overview).|
-|Azure Active Directory authentication| Manage integrated authentication with Azure Active Directory.|
+|Azure Active Directory authentication| Use [Azure Active Directory (Azure AD) authentication](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview) to connect to SQL Server.|
 |Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).| 
 |New permissions & roles | Enable least privileged access for administrative tasks.|
-|Dynamic data masking | Granular permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md#granular).|
+|Dynamic data masking | Granular UNMASK permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md#granular).|
 |Support for PFX certificates and symmetric key enhancements | Supports certificate, and key backup and restore scenarios, along with integration with Azure Blob Storage service for the same. This enables adherence to security best practices and compliance standards guidelines that prohibit the usage of insecure or deprecated algorithms like RC4.|
 |Support MS-TDS 8.0 protocol | New MS-TDS protocol iteration:<br/>- Makes encryption mandatory<br/>- Aligns MS-TDS with HTTPS making it manageable by network appliances for additional security<br/>- Removes MS-TDS / TLS custom interleaving and enables usage of TLS 1.3 and subsequent TLS protocol versions.| 
 
@@ -86,12 +87,12 @@ The following sections provide an overview of these features.
 | Query Store hints | [Query Store hints](../relational-databases/performance/query-store-hints.md) leverage leverages Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, now are available in SQL Server 2022 Preview. Requires enabling Query Store.|
 | Memory grant feedback | Optimize memory allocation is stored in the Query Store, so when the memory grant information is available when the query returns to cache after eviction. For information, read [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#percentile-and-persistence-mode-memory-grant-feedback). Requires enabling Query Store. |
 | Percentile grant |  A new algorithm improves performance of queries with widely vacillating memory requirements. Reviews more than just the single previous memory need - includes information from further back in the history as well. Requires enabling Query Store.|
-| In-memory OLTP management | - Improve memory management in large memory servers to reduce out of memory conditions <br/>- Add a new stored procedure to manually release unused memory on demand.|
+| In-memory OLTP management | - Improve memory management in large memory servers to reduce out of memory conditions |
 | Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s).|
 | XML compression |XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md).|
-| Buffer pool parallel scan |Improves the performance of Buffer Pool scan operations on large-memory machines by utilizing multiple CPU cores for buffer pool scan operations. |
 | Improved optimization | SQL Server 2022 Preview leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batchmode operations. | 
-|System page latch concurrency enhancements|- Concurrent update to global allocation map (GAM) pages and shared global allocation map (SGAM) pages reduces page latch contention while allocating/deallocating data pages and extents. <br/><br/>- Improvements on buffer pool scan by using parallel tasks. Learn more about [Operations that trigger a buffer pool scan may run slowly on large-memory computers](https://go.microsoft.com/fwlink/?linkid=2132602).|
+| System page latch concurrency enhancements | Concurrent updates to global allocation map (GAM) pages and shared global allocation map (SGAM) pages reduce page latch contention while allocating/deallocating data pages and extents. These enhancements apply to all user databases and especially benefit tempdb heavy workloads.|
+| Buffer pool parallel scan | Improves the performance of buffer bool scan operations on large-memory machines by utilizing multiple CPU cores. Learn more about [Operations that trigger a buffer pool scan may run slowly on large-memory computers](https://go.microsoft.com/fwlink/?linkid=2132602). |
 |Automatic Degree of parallelism (DOP) feedback | A new database scoped configuration option `DOP_FEEDBACK` automatically adjusts degree of parallelism for repeating queries to optimize for workloads where excessive parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. Requires Query Store enabled. See [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).|
 | Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. Requires Query Store enabled. See [Cardinality Estimation (SQL Server)](../relational-databases/performance/cardinality-estimation-sql-server.md). |
 | Optimized plan forcing| Uses compilation replay to improve the compilation time for forced plan generation by pre-caching non-repeatable plan compilation steps. Learn more in [Optimized plan forcing with Query Store](../relational-databases/performance/optimized-plan-forcing-query-store.md).|
@@ -105,6 +106,7 @@ The following sections provide an overview of these features.
 | Accelerated Database Recovery (ADR) improvement | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. SQL Server 2022 implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiencies. Concurrency improvements help the cleanup process to work more efficiently. ADR cleans pages that could not previously be cleaned due to locking.<br/><br/>See [Restore and Recovery Overview (SQL Server)](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
 | Improved snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client. [Create a Transact-SQL snapshot backup](../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).|
 | Shrink database wait with low priority | In previous releases, shrinking databases and database files to reclaim space often leads to concurrency issues. In SQL Server 2022 an additional option for DBCC SHRINKDATABASE and DBCC SHRINKFILE 'WAIT_AT_LOW_PRIORITY' changes the default behavior. When specifying WAIT_AT_LOW_PRIORITY behavior, new queries requiring Sch-S locks are not blocked by the waiting shrink operation, until the shrink operation stops waiting and begins executing. See [WAIT_AT_LOW_PRIORITY](../relational-databases/databases/shrink-a-database.md#remarks).|
+|Asynchronous auto update statistics concurrency|Avoid potential concurrency issues using asynchronous statistics update if you enable the ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [database-scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 | Backup and restore to S3 compatible object storage | SQL Server 2022 extends the `BACKUP`/`RESTORE` `TO`/`FROM` `URL` syntax by adding support for a new S3 connector using the REST API. See [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).|
 
 ## Language
@@ -114,8 +116,8 @@ The following sections provide an overview of these features.
 | CREATE STATISTICS | Adds [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)<br/><br/>Automatic statistics with low priority.|
 | Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br/>- [DATE_BUCKET](../t-sql/functions/date-bucket-transact-sql.md)<br/>- [GENERATE_SERIES](../t-sql/functions/generate-series-transact-sql.md)<br/><br/>The following adds support to IGNORE NULLS and RESPECT NULLS:<br/>- [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)<br/>- [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)|
 | JSON functions | - [ISJSON (Transact-SQL)](../t-sql/functions/isjson-transact-sql.md)<br/>- [JSON_PATH_EXISTS (Transact-SQL)](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT (Transact-SQL)](../t-sql/functions/json-object-transact-sql.md)<br/>- [JSON_ARRAY (Transact-SQL)](../t-sql/functions/json-array-transact-sql.md)|
-|SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function which uses the window in OVER clause is applied. See [SELECT (Transact-SQL)](../t-sql/queries/select-transact-sql.md).|
-| Resumable ALTER TABLE ADD CONSTRAINT | Support to pause, and resume a running ADD CONSTRAINT operation to perform it during maintenance windows. Resume such operation after failovers and system failures. Execute such operation on a large table despite the small log size available. See [ALTER TABLE (Transact-SQL)](../t-sql/statements/alter-table-transact-sql.md)|
+|SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function which uses the window in OVER clause is applied. See [SELECT - WINDOW - (Transact-SQL)](../t-sql/queries/select-window-transact-sql.md).|
+| Resumable add table constraints | Supports [pausing and resuming an ALTER TABLE ADD CONSTRAINT](/sql/relational-databases/security/resumable-table-add-constraints) operation. Resume such operation after maintenance windows, failovers, or system failures.
 |T-SQL functions |- [GREATEST (Transact-SQL)](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST (Transact-SQL)](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT (Transact-SQL)](../t-sql/functions/string-split-transact-sql.md).|
 
 ## Tools
@@ -126,7 +128,7 @@ The following sections provide an overview of these features.
 | Distributed Replay |  SQL Server setup no longer includes the Distributed Replay client and controller executables. These will be available, along with the Admin executable, as a separate download |
 | SQL Server Management Studio | SSMS version 19.0 is now available and is the recommended version of SSMS for SQL Server 2022. [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). |
 | SqlPackage.exe | Version 19 of SqlPackage provides support for SQL Server 2022. Get the latest version at [Download and install sqlpackage](../tools/sqlpackage/sqlpackage-download.md).|
-| VS Code | The latest release of VS Code, version ZY.X, supports SQL Server 2022 and can be downloaded from https://code.visualstudio.com/ | 
+| VS Code | The latest release of VS Code, version 1.67, supports SQL Server 2022. Get it at https://code.visualstudio.com/. | 
 
 ## SQL Machine Learning Services
 

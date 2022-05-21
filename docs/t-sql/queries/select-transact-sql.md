@@ -38,6 +38,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [ [FROM *table_source*](../../t-sql/queries/from-transact-sql.md) ] [ [WHERE *search_condition*](../../t-sql/queries/where-transact-sql.md) ]  
   
  [ [GROUP BY *group_by_expression*](../../t-sql/queries/select-group-by-transact-sql.md) ]  
+
+ [ [WINDOW *window expression*](../../t-sql/queries/select-window-transact-sql.md)]
   
  [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
   

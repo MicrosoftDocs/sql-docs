@@ -22,6 +22,15 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
 
+### SQL Server 2022 
+
+In SQL Server 2022 Preview, configure your external data sources to use new connectors when you connect to Azure Storage. The table below summarizes the change:
+
+| External Data Source | From | To |
+| -------------------- | ---- | -- |
+| Azure Blob Storage   | wasb[s] | abs |
+| ADLS Gen 2           | abfs[s] | adls |
+
 ### Configure Azure blob storage connectivity
 
 First, configure SQL Server PolyBase to use Azure blob storage.

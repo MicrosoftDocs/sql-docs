@@ -13,7 +13,7 @@ monikerRange: "= sql-server-ver16"
 # [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release notes
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] customer technology preview (CTP) 2.0.
+This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] community technology preview (CTP) 2.0.
 
 Complete details about licensing are in `License Terms` folder on the installation media.
 
@@ -22,6 +22,10 @@ Complete details about licensing are in `License Terms` folder on the installati
 This release has the same hardware and software requirements as [SQL Server 2019](install/hardware-and-software-requirements-for-installing-sql-server-2019.md), except as noted below:
 
 - .NET Framework: 4.7.2. [Download](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+
+## Linux
+
+SQL Server 2022 Preview on Linux images are coming soon.
 
 ## Feature notes
 

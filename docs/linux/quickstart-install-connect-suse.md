@@ -76,20 +76,8 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on SLES,
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
    ```
 
-::: moniker-end
-<!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
-
-1. Download the [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] SLES repository configuration file:
-
-   ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2019.repo
-   ```
-
-   > [!WARNING]  
-   > SUSE Linux Enterprise Server (SLES) is not a supported platform for the Community Technology Preview (CTP) 2.0 release of [!INCLUDE[sssql22](../includes/sssql22-md.md)]. You won't be able to install [!INCLUDE[sssql22](../includes/sssql22-md.md)].
-
-::: moniker-end
+   > [!TIP]  
+   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql19-md](../includes/sssql19-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-ver15&preserve-view=true#install) version of this article.
 
 1. Refresh your repositories.
 
@@ -130,6 +118,64 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on SLES,
    ```
 
 At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running on your SLES machine and is ready to use!
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
+
+1. Download the [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] SLES repository configuration file:
+
+   ```bash
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2019.repo
+   ```
+
+   > [!WARNING]  
+   > SUSE Linux Enterprise Server (SLES) is not a supported platform for the Community Technology Preview (CTP) 2.0 release of [!INCLUDE[sssql22](../includes/sssql22-md.md)]. You won't be able to install [!INCLUDE[sssql22](../includes/sssql22-md.md)].
+
+   > [!TIP]  
+   > If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](quickstart-install-connect-suse.md?view=sql-server-linux-2017&preserve-view=true#install) version of this article.
+
+1. Refresh your repositories.
+
+   ```bash
+   sudo zypper --gpg-auto-import-keys refresh 
+   ```
+
+   To ensure that the Microsoft package signing key is installed on your system, you can import it using the command below:
+
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+   ```
+
+1. Run the following commands to install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]:
+
+   ```bash
+   sudo zypper install -y mssql-server
+   ```
+
+1. After the package installation finishes, run `mssql-conf setup` and follow the prompts to set the SA password and choose your edition. As a reminder, the following [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] editions are freely licensed: Evaluation, Developer, and Express.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
+
+   Remember to specify a strong password for the SA account. You need a minimum length 8 characters, including uppercase and lowercase letters, base-10 digits and/or non-alphanumeric symbols.
+
+1. Once the configuration is done, verify that the service is running:
+
+   ```bash
+   systemctl status mssql-server
+   ```
+
+1. If you plan to connect remotely, you might also need to open the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] TCP port (default 1433) on your firewall. If you're using the SuSE firewall, you need to edit the `/etc/sysconfig/SuSEfirewall2` configuration file. Modify the `FW_SERVICES_EXT_TCP` entry to include the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] port number.
+
+   ```ini
+   FW_SERVICES_EXT_TCP="1433"
+   ```
+
+At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running on your SLES machine and is ready to use!
+
+::: moniker-end
 
 ## <a id="tools"></a> Install the SQL Server command-line tools
 

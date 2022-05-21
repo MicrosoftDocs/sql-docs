@@ -61,7 +61,7 @@ The examples in this article use the `docker` command. However, most of these co
 
 - Docker Engine 1.8+ on any supported Linux distribution. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
 - For more information on hardware requirements and processor support, see:
-  - [SQL Server 2016 and 2017: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#pmosr)
+  - [SQL Server 2016 and 2017: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
   - [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md)
 
 - Docker `overlay2` storage driver. This driver is the default for most users. If you aren't using this storage provider and need to change, see the instructions and warnings in the [Docker documentation for configuring overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
@@ -72,13 +72,12 @@ The examples in this article use the `docker` command. However, most of these co
 
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
-## Pull and run the SQL Server Linux container image
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+## <a id="pullandrun2017"></a> Pull and run the SQL Server Linux container image
 
 Before starting the following steps, make sure that you've selected your preferred shell (**bash**, **PowerShell**, or **cmd**) at the top of this article.
 
-<!--SQL Server 2017 on Linux-->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
-<a id="pullandrun2017"></a>
 1. Pull the [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] Linux container image from the Microsoft Container Registry.
 
    ::: zone pivot="cs1-bash"
@@ -141,10 +140,73 @@ Before starting the following steps, make sure that you've selected your preferr
       mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
+
+   Your password should follow the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] default password policy, otherwise the container can't set up [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and will stop working. By default, the password must be at least eight characters long and contain characters from three of the following four sets: uppercase letters, lowercase letters, base-10 digits, and symbols. You can examine the error log by using the [`docker logs`](https://docs.docker.com/engine/reference/commandline/logs/) command.
+
+   By default, this quickstart creates a container with the Developer edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The process for running production editions in containers is slightly different. For more information, see [Run production container images](./sql-server-linux-docker-container-deployment.md#production).
+
+   The following table provides a description of the parameters in the previous `docker run` example:
+
+   | Parameter | Description |
+   |-----|-----|
+   | **-e "ACCEPT_EULA=Y"** |  Set the `ACCEPT_EULA` variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is listening on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
+   | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
+   | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
+   | **-d** | Run the container in the background (daemon). |
+   | **mcr.microsoft.com/mssql/server:*nnnn*-latest** | The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux container image, where *nnnn* is the version tag. |
+
+1. To view your Docker containers, use the `docker ps` command.
+
+   ::: zone pivot="cs1-bash"
+   ```bash
+   sudo docker ps -a
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-powershell"
+   ```PowerShell
+   docker ps -a
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-cmd"
+   ```cmd
+   docker ps -a
+   ```
+   ::: zone-end
+
+   You should see output similar to the following screenshot:
+
+   :::image type="content" source="./media/quickstart-install-connect-docker/docker-ps-command.png" alt-text="Screenshot shows the output of the Docker p s command, which has columns for STATUS, PORTS, and other values.":::
+
+1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
+
+   ```bash
+   docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
+   ```
+
+   The `--hostname` parameter, as discussed above, changes the internal name of the container to a custom value. This value is the name you'll see returned in the following Transact-SQL query:
+
+   ```sql
+   SELECT @@SERVERNAME,
+       SERVERPROPERTY('ComputerNamePhysicalNetBIOS'),
+       SERVERPROPERTY('MachineName'),
+       SERVERPROPERTY('ServerName');
+   ```
+
+   Setting `--hostname` and `--name` to the same value is a good way to easily identify the target container.
+
+1. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
+
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
-<a id="pullandrun2019"></a>
+## <a id="pullandrun2019"></a> Pull and run the SQL Server Linux container image
+
+Before starting the following steps, make sure that you've selected your preferred shell (**bash**, **PowerShell**, or **cmd**) at the top of this article.
+
 1. Pull the [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] Linux container image from the Microsoft Container Registry.
 
    ::: zone pivot="cs1-bash"
@@ -207,10 +269,73 @@ Before starting the following steps, make sure that you've selected your preferr
       mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
+
+   Your password should follow the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] default password policy, otherwise the container can't set up [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and will stop working. By default, the password must be at least eight characters long and contain characters from three of the following four sets: uppercase letters, lowercase letters, base-10 digits, and symbols. You can examine the error log by using the [`docker logs`](https://docs.docker.com/engine/reference/commandline/logs/) command.
+
+   By default, this quickstart creates a container with the Developer edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The process for running production editions in containers is slightly different. For more information, see [Run production container images](./sql-server-linux-docker-container-deployment.md#production).
+
+   The following table provides a description of the parameters in the previous `docker run` example:
+
+   | Parameter | Description |
+   |-----|-----|
+   | **-e "ACCEPT_EULA=Y"** |  Set the `ACCEPT_EULA` variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is listening on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
+   | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
+   | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
+   | **-d** | Run the container in the background (daemon). |
+   | **mcr.microsoft.com/mssql/server:*nnnn*-latest** | The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Linux container image, where *nnnn* is the version tag. |
+
+1. To view your Docker containers, use the `docker ps` command.
+
+   ::: zone pivot="cs1-bash"
+   ```bash
+   sudo docker ps -a
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-powershell"
+   ```PowerShell
+   docker ps -a
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-cmd"
+   ```cmd
+   docker ps -a
+   ```
+   ::: zone-end
+
+   You should see output similar to the following screenshot:
+
+   :::image type="content" source="./media/quickstart-install-connect-docker/docker-ps-command.png" alt-text="Screenshot shows the output of the Docker p s command, which has columns for STATUS, PORTS, and other values.":::
+
+1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
+
+   ```bash
+   docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
+   ```
+
+   The `--hostname` parameter, as discussed above, changes the internal name of the container to a custom value. This value is the name you'll see returned in the following Transact-SQL query:
+
+   ```sql
+   SELECT @@SERVERNAME,
+       SERVERPROPERTY('ComputerNamePhysicalNetBIOS'),
+       SERVERPROPERTY('MachineName'),
+       SERVERPROPERTY('ServerName');
+   ```
+
+   Setting `--hostname` and `--name` to the same value is a good way to easily identify the target container.
+
+1. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
+
 ::: moniker-end
 <!--SQL Server 2022 on Linux-->
 ::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
-<a id="pullandrun2022"></a>
+## <a id="pullandrun2022"></a> Pull and run the SQL Server Linux container image
+
+Before starting the following steps, make sure that you've selected your preferred shell (**bash**, **PowerShell**, or **cmd**) at the top of this article.
+
 1. Pull the [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Linux container image from the Microsoft Container Registry.
 
    ::: zone pivot="cs1-bash"
@@ -273,7 +398,6 @@ Before starting the following steps, make sure that you've selected your preferr
       mcr.microsoft.com/mssql/server:2022-latest
    ```
    ::: zone-end
-::: moniker-end
 
    Your password should follow the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] default password policy, otherwise the container can't set up [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and will stop working. By default, the password must be at least eight characters long and contain characters from three of the following four sets: uppercase letters, lowercase letters, base-10 digits, and symbols. You can examine the error log by using the [`docker logs`](https://docs.docker.com/engine/reference/commandline/logs/) command.
 
@@ -333,6 +457,8 @@ Before starting the following steps, make sure that you've selected your preferr
    Setting `--hostname` and `--name` to the same value is a good way to easily identify the target container.
 
 1. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
+
+::: moniker-end
 
 ## <a id="sapassword"></a> Change the system administrator password
 

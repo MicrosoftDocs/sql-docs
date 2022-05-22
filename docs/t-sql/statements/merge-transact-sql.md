@@ -277,27 +277,43 @@ Specifies the graph match pattern. For more information about the arguments for 
 >[!IMPORTANT]
 > Preview features are meant for testing only and should not be used on production instances or production data. Please also keep a copy of your test data if the data is important.
 >
-> In Azure Synapse Analytics the MERGE command, currently in preview, may, under certain conditions, leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases. This problem may happen when these two conditions are met:
->
+> In Azure Synapse Analytics the MERGE command, currently in preview, may, under certain conditions, leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases. This problem may happen in 2 cases:
+> 
+> **Case 1**
 > - The MERGE T-SQL statement was executed on a HASH distributed TARGET table in Azure Synapse SQL database AND
 > - The TARGET table of the MERGE has secondary indices or a UNIQUE constraint.
 >
-> The problem has been fixed in Synapse SQL version ***10.0.15563.0*** and higher.    
+> **Case 2**
+> - The MERGE T-SQL statement updated a distribution key column of a HASH distributed table.
+>
+> **Case 1**: fixed in Synapse SQL version ***10.0.15563.0*** and higher.   
 > - To check, connect to the Synapse SQL database via SQL Server Management Studio (SSMS) and run ```SELECT @@VERSION```.  If the fix has not been applied, manually pause and resume your Synapse SQL pool to get the fix. 
 > - Until the fix has been verified applied to your Synapse SQL pool, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints.
 > - This fix doesn't repair tables already affected by the MERGE problem.  Use scripts below to identify and repair any affected tables manually.
 >
-> To check which hash distributed tables in a database cannot work with MERGE due to this issue, run this statement
+> **Case 2**: Microsoft is working on fixing this problem. This article will be updated when the fix is ready.
+> - Until further notice, avoid using the MERGE command to update distribution key columns in HASH distributed tables. 
+> - Use the scripts below to identify and repair any affected tables manually.
+>
+> To check which hash distributed tables in a database may be of concern (if used in the Cases above), run this statement
 >```sql
+> -- Case 1
 > select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b
 > on a.object_id = b.object_id
 > join
 > sys.pdw_table_distribution_properties c
 > on a.object_id = c.object_id
-> where b.type = 2 and c.distribution_policy_desc = 'HASH'
+> where b.type = 2 and c.distribution_policy_desc = 'HASH';
+>
+> -- Subject to Case 2, if distribution key value is updated in MERGE statement
+> select a.name, c.distribution_policy_desc from sys.tables a 
+> join
+> sys.pdw_table_distribution_properties c
+> on a.object_id = c.object_id
+> where c.distribution_policy_desc = 'HASH';
 > ```
 > 
-> To check if a hash distributed TARGET table for MERGE is affected by this issue, follow these steps to examine if the tables have rows landed in wrong distribution.  If 'no need for repair' is returned, this table is not affected.  
+> To check if a hash distributed table for MERGE is affected by either Case 1 or Case 2, follow these steps to examine if the tables have rows landed in wrong distribution.  If 'no need for repair' is returned, this table is not affected.  
 >
 >```sql
 > if object_id('[check_table_1]', 'U') is not null
@@ -308,14 +324,14 @@ Specifies the graph match pattern. For more information about the arguments for 
 > go
 >
 > create table [check_table_1] with(distribution = round_robin) as
-> select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> group by <DISTRIBUTION_COLUMN>;
+> select <DISTRIBUTION_COLUMN> as x from <MERGE_TABLE> group by <DISTRIBUTION_COLUMN>;
 > go
 >
 > create table [check_table_2] with(distribution = hash(x)) as
 > select x from [check_table_1];
 >go
 >
-> if not exists(select top 1 * from (select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> except select x from 
+> if not exists(select top 1 * from (select <DISTRIBUTION_COLUMN> as x from <MERGE_TABLE> except select x from 
 > [check_table_2]) as tmp)
 > select 'no need for repair' as result
 > else select 'needs repair' as result
@@ -336,10 +352,10 @@ Specifies the graph match pattern. For more information about the arguments for 
 > if object_id('[repair_table]', 'U') is not null
 > drop table [repair_table];
 > go
-> create table [repair_table_temp] with(distribution = round_robin) as select * from <MERGE_TARGET_TABLE>;
+> create table [repair_table_temp] with(distribution = round_robin) as select * from <MERGE_TABLE>;
 > go
 >
-> -- [repair_table] will hold the repaired table generated from <MERGE_TARGET_TABLE>
+> -- [repair_table] will hold the repaired table generated from <MERGE_TABLE>
 > create table [repair_table] with(distribution = hash(<DISTRIBUTION_COLUMN>)) as select * from [repair_table_temp];
 > go
 >if object_id('[repair_table_temp]', 'U') is not null

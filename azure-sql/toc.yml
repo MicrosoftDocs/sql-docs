@@ -301,6 +301,9 @@
       - name: Hyperscale
         displayName: Create Hyperscale database
         href: database/hyperscale-database-create-quickstart.md
+      - name: Bicep
+        displayName: ARM, Resource Manager, Template
+        href: database/single-database-create-bicep-quickstart.md
       - name: ARM template
         displayName: Resource Manager
         href: database/single-database-create-arm-template-quickstart.md

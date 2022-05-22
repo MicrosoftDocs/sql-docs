@@ -1,5 +1,5 @@
 ---
-title: "Monitoring Performance By Using the Query Store"
+title: "Monitor Performance By Using the Query Store"
 description: The SQL Server Query Store provides insight on query plan choice and performance. Query Store captures history of queries, plans, and runtime statistics.
 ms.custom: ""
 ms.date: 03/15/2022
@@ -15,18 +15,20 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
-# Monitoring performance by using the Query Store
+# Monitor performance by using the Query Store
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASA Dedicated Only](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-dedicated-pool-only.md)]
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store feature provides you with insight on query plan choice and performance. It simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes happened on the server. You can configure query store using the [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) option.
 
-For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
+- For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
+- For information on discovering actionable information and tune performance with the Query Store, see [Tune performance with the Query Store](tune-performance-with-the-query-store.md).
+- For information on shaping query plans without changing application code, see [Query Store hints](query-store-hints.md).
 
 > [!IMPORTANT]
 > If you are using Query Store for just in time workload insights in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
 
-## <a name="Enabling"></a> Enabling the Query Store
+## <a name="Enabling"></a> Enable the Query Store
 
  Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics databases, and is enabled by default for new Azure SQL Database databases.
 
@@ -129,7 +131,7 @@ Select a plan to see the graphical query plan. Buttons are available to view the
 
 To force a plan, select a query and plan, then select **Force Plan**. You can only force plans that were saved by the query plan feature and are still retained in the query plan cache.
 
-## <a name="Waiting"></a> Finding waiting queries
+## <a name="Waiting"></a> Find waiting queries
 
 Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], wait statistics per query over time are available in Query Store.
 
@@ -285,7 +287,7 @@ To find out detailed information about Query Store status, execute following in 
 SELECT * FROM sys.database_query_store_options;
 ```
 
-#### Setting Query Store interval
+#### Configure Query Store interval
 
 You can override interval for aggregating query runtime statistics (default is 60 minutes). New value for interval is exposed through `sys.database_query_store_options` view.
 
@@ -336,7 +338,7 @@ SET QUERY_STORE (
 
 For the full list of configuration options, see [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
-#### Cleaning up the space
+#### Clean up the space
 
 Query Store internal tables are created in the PRIMARY filegroup during database creation and that configuration cannot be changed later. If you are running out of space you might want to clear older Query Store data by using the following statement.
 
@@ -394,305 +396,28 @@ The example above uses the `sp_query_store_remove_query` extended stored procedu
 - Use `sp_query_store_reset_exec_stats` to clear runtime statistics for a given plan.
 - Use `sp_query_store_remove_plan` to remove a single plan.
 
-### <a name="Performance"></a> Performance Auditing and Troubleshooting
+### <a name="Performance"></a> Performance auditing and troubleshooting
 
-Query Store keeps a history of compilation and runtime metrics throughout query executions, allowing you to ask questions about your workload. The following sample queries may be helpful in your performance baseline and query performance investigation:
+For more information about diving into performance tuning with Query Store, see [Tune performance with the Query Store](tune-performance-with-the-query-store.md).
 
-#### Last queries executed on the database
-
-The last *n* queries executed on the database:
-
-```sql
-SELECT TOP 10 qt.query_sql_text, q.query_id,
-    qt.query_text_id, p.plan_id, rs.last_execution_time
-FROM sys.query_store_query_text AS qt
-JOIN sys.query_store_query AS q
-    ON qt.query_text_id = q.query_text_id
-JOIN sys.query_store_plan AS p
-    ON q.query_id = p.query_id
-JOIN sys.query_store_runtime_stats AS rs
-    ON p.plan_id = rs.plan_id
-ORDER BY rs.last_execution_time DESC;
-```
-
-#### Execution counts
-
-Number of executions for each query:
-
-```sql
-SELECT q.query_id, qt.query_text_id, qt.query_sql_text,
-    SUM(rs.count_executions) AS total_execution_count
-FROM sys.query_store_query_text AS qt
-JOIN sys.query_store_query AS q
-    ON qt.query_text_id = q.query_text_id
-JOIN sys.query_store_plan AS p
-    ON q.query_id = p.query_id
-JOIN sys.query_store_runtime_stats AS rs
-    ON p.plan_id = rs.plan_id
-GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
-ORDER BY total_execution_count DESC;
-```
-
-#### Longest average execution time
-
-The number of queries with the longest average execution time within last hour:
-
-```sql
-SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,
-    qt.query_text_id, p.plan_id, GETUTCDATE() AS CurrentUTCTime,
-    rs.last_execution_time
-FROM sys.query_store_query_text AS qt
-JOIN sys.query_store_query AS q
-    ON qt.query_text_id = q.query_text_id
-JOIN sys.query_store_plan AS p
-    ON q.query_id = p.query_id
-JOIN sys.query_store_runtime_stats AS rs
-    ON p.plan_id = rs.plan_id
-WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
-ORDER BY rs.avg_duration DESC;
-```
-
-#### Biggest average physical I/O reads
-
-The number of queries that had the biggest average physical I/O reads in last 24 hours, with corresponding average row count and execution count:
-
-```sql
-SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,
-    q.query_id, qt.query_text_id, p.plan_id, rs.runtime_stats_id,
-    rsi.start_time, rsi.end_time, rs.avg_rowcount, rs.count_executions
-FROM sys.query_store_query_text AS qt
-JOIN sys.query_store_query AS q
-    ON qt.query_text_id = q.query_text_id
-JOIN sys.query_store_plan AS p
-    ON q.query_id = p.query_id
-JOIN sys.query_store_runtime_stats AS rs
-    ON p.plan_id = rs.plan_id
-JOIN sys.query_store_runtime_stats_interval AS rsi
-    ON rsi.runtime_stats_interval_id = rs.runtime_stats_interval_id
-WHERE rsi.start_time >= DATEADD(hour, -24, GETUTCDATE())
-ORDER BY rs.avg_physical_io_reads DESC;
-```
-
-#### Queries with multiple plans
-
-These queries are especially interesting because they are candidates for regressions due to plan choice change. The following query identifies these queries along with all plans:
-
-```sql
-WITH Query_MultPlans
-AS
-(
-SELECT COUNT(*) AS cnt, q.query_id
-FROM sys.query_store_query_text AS qt
-JOIN sys.query_store_query AS q
-    ON qt.query_text_id = q.query_text_id
-JOIN sys.query_store_plan AS p
-    ON p.query_id = q.query_id
-GROUP BY q.query_id
-HAVING COUNT(distinct plan_id) > 1
-)
-
-SELECT q.query_id, object_name(object_id) AS ContainingObject,
-    query_sql_text, plan_id, p.query_plan AS plan_xml,
-    p.last_compile_start_time, p.last_execution_time
-FROM Query_MultPlans AS qm
-JOIN sys.query_store_query AS q
-    ON qm.query_id = q.query_id
-JOIN sys.query_store_plan AS p
-    ON q.query_id = p.query_id
-JOIN sys.query_store_query_text qt
-    ON qt.query_text_id = q.query_text_id
-ORDER BY query_id, plan_id;
-```
-
-#### Highest wait durations 
-
-This query will return top 10 queries with the highest wait durations:
-
-```sql
-SELECT TOP 10
-    qt.query_text_id,
-    q.query_id,
-    p.plan_id,
-    sum(total_query_wait_time_ms) AS sum_total_wait_ms
-FROM sys.query_store_wait_stats ws
-JOIN sys.query_store_plan p ON ws.plan_id = p.plan_id
-JOIN sys.query_store_query q ON p.query_id = q.query_id
-JOIN sys.query_store_query_text qt ON q.query_text_id = qt.query_text_id
-GROUP BY qt.query_text_id, q.query_id, p.plan_id
-ORDER BY sum_total_wait_ms DESC;
-```
-
-> [!NOTE]
-> In Azure Synapse Analytics, the Query Store sample queries in this section are supported with the exception of wait stats, which are not available in the Azure Synapse Analytics Query Store DMVs.
-
- #### Queries that recently regressed in performance
-
-The following query example returns all queries for which execution time doubled in last 48 hours due to a plan choice change. This query compares all runtime stat intervals side by side:
-
-```sql
-SELECT
-    qt.query_sql_text,
-    q.query_id,
-    qt.query_text_id,
-    rs1.runtime_stats_id AS runtime_stats_id_1,
-    rsi1.start_time AS interval_1,
-    p1.plan_id AS plan_1,
-    rs1.avg_duration AS avg_duration_1,
-    rs2.avg_duration AS avg_duration_2,
-    p2.plan_id AS plan_2,
-    rsi2.start_time AS interval_2,
-    rs2.runtime_stats_id AS runtime_stats_id_2
-FROM sys.query_store_query_text AS qt
-JOIN sys.query_store_query AS q
-    ON qt.query_text_id = q.query_text_id
-JOIN sys.query_store_plan AS p1
-    ON q.query_id = p1.query_id
-JOIN sys.query_store_runtime_stats AS rs1
-    ON p1.plan_id = rs1.plan_id
-JOIN sys.query_store_runtime_stats_interval AS rsi1
-    ON rsi1.runtime_stats_interval_id = rs1.runtime_stats_interval_id
-JOIN sys.query_store_plan AS p2
-    ON q.query_id = p2.query_id
-JOIN sys.query_store_runtime_stats AS rs2
-    ON p2.plan_id = rs2.plan_id
-JOIN sys.query_store_runtime_stats_interval AS rsi2
-    ON rsi2.runtime_stats_interval_id = rs2.runtime_stats_interval_id
-WHERE rsi1.start_time > DATEADD(hour, -48, GETUTCDATE())
-    AND rsi2.start_time > rsi1.start_time
-    AND p1.plan_id <> p2.plan_id
-    AND rs2.avg_duration > 2*rs1.avg_duration
-ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
-```
-
-If you want to see performance all regressions (not only those related to plan choice change), remove condition `AND p1.plan_id <> p2.plan_id` from the previous query.
-
- #### Queries with historical regression in performance
-
-Comparing recent execution to historical execution, the next query compares query execution based on period of execution. In this particular example, the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metric is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:
-
-```sql
---- "Recent" workload - last 1 hour
-DECLARE @recent_start_time datetimeoffset;
-DECLARE @recent_end_time datetimeoffset;
-SET @recent_start_time = DATEADD(hour, -1, SYSUTCDATETIME());
-SET @recent_end_time = SYSUTCDATETIME();
-
---- "History" workload
-DECLARE @history_start_time datetimeoffset;
-DECLARE @history_end_time datetimeoffset;
-SET @history_start_time = DATEADD(hour, -24, SYSUTCDATETIME());
-SET @history_end_time = SYSUTCDATETIME();
-
-WITH
-hist AS
-(
-    SELECT
-        p.query_id query_id,
-        ROUND(ROUND(CONVERT(FLOAT, SUM(rs.avg_duration * rs.count_executions)) * 0.001, 2), 2) AS total_duration,
-        SUM(rs.count_executions) AS count_executions,
-        COUNT(distinct p.plan_id) AS num_plans
-     FROM sys.query_store_runtime_stats AS rs
-        JOIN sys.query_store_plan AS p ON p.plan_id = rs.plan_id
-    WHERE (rs.first_execution_time >= @history_start_time
-               AND rs.last_execution_time < @history_end_time)
-        OR (rs.first_execution_time <= @history_start_time
-               AND rs.last_execution_time > @history_start_time)
-        OR (rs.first_execution_time <= @history_end_time
-               AND rs.last_execution_time > @history_end_time)
-    GROUP BY p.query_id
-),
-recent AS
-(
-    SELECT
-        p.query_id query_id,
-        ROUND(ROUND(CONVERT(FLOAT, SUM(rs.avg_duration * rs.count_executions)) * 0.001, 2), 2) AS total_duration,
-        SUM(rs.count_executions) AS count_executions,
-        COUNT(distinct p.plan_id) AS num_plans
-    FROM sys.query_store_runtime_stats AS rs
-        JOIN sys.query_store_plan AS p ON p.plan_id = rs.plan_id
-    WHERE  (rs.first_execution_time >= @recent_start_time
-               AND rs.last_execution_time < @recent_end_time)
-        OR (rs.first_execution_time <= @recent_start_time
-               AND rs.last_execution_time > @recent_start_time)
-        OR (rs.first_execution_time <= @recent_end_time
-               AND rs.last_execution_time > @recent_end_time)
-    GROUP BY p.query_id
-)
-SELECT
-    results.query_id AS query_id,
-    results.query_text AS query_text,
-    results.additional_duration_workload AS additional_duration_workload,
-    results.total_duration_recent AS total_duration_recent,
-    results.total_duration_hist AS total_duration_hist,
-    ISNULL(results.count_executions_recent, 0) AS count_executions_recent,
-    ISNULL(results.count_executions_hist, 0) AS count_executions_hist
-FROM
-(
-    SELECT
-        hist.query_id AS query_id,
-        qt.query_sql_text AS query_text,
-        ROUND(CONVERT(float, recent.total_duration/
-                   recent.count_executions-hist.total_duration/hist.count_executions)
-               *(recent.count_executions), 2) AS additional_duration_workload,
-        ROUND(recent.total_duration, 2) AS total_duration_recent,
-        ROUND(hist.total_duration, 2) AS total_duration_hist,
-        recent.count_executions AS count_executions_recent,
-        hist.count_executions AS count_executions_hist
-    FROM hist
-        JOIN recent
-            ON hist.query_id = recent.query_id
-        JOIN sys.query_store_query AS q
-            ON q.query_id = hist.query_id
-        JOIN sys.query_store_query_text AS qt
-            ON q.query_text_id = qt.query_text_id
-) AS results
-WHERE additional_duration_workload > 0
-ORDER BY additional_duration_workload DESC
-OPTION (MERGE JOIN);
-```
-
-### <a name="Stability"></a> Maintaining query performance stability
-
-For queries executed multiple times you may notice that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses different plans, resulting in different resource utilization and duration. With Query Store, you can detect when query performance regressed and determine the optimal plan within a period of interest. You can then force that optimal plan for future query execution.
-
-You can also identify inconsistent query performance for a query with parameters (either auto-parameterized or manually parameterized). Among different plans, you can identify the plan that is fast and optimal enough for all or most of the parameter values and force that plan, keeping predictable performance for the wider set of user scenarios.
-
-### Force a plan for a query (apply forcing policy)
-
-When a plan is forced for a certain query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tries to force the plan in the optimizer. If plan forcing fails, an XEvent is fired and the optimizer is instructed to optimize in the normal way.
-
-```sql
-EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
-```
-
-When using `sp_query_store_force_plan` you can only force plans that were recorded by Query Store as a plan for that query. In other words, the only plans available for a query are those that were already used to execute that query while Query Store was active.
-
-> [!NOTE]
-> Forcing plans in Query Store is not supported in Azure Synapse Analytics. 
-
-#### <a name="ctp23"><a/> Plan forcing support for fast forward and static cursors
-
-Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and Azure SQL Database (all deployment models), Query Store supports the ability to force query execution plans for fast forward and static [!INCLUDE[tsql](../../includes/tsql-md.md)] and API cursors. Forcing is supported via `sp_query_store_force_plan` or through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Store reports.
-
-### Remove plan forcing for a query
-
-To rely again on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer to calculate the optimal query plan, use `sp_query_store_unforce_plan` to unforce the plan that was selected for the query.
-
-```sql
-EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
-```
-
-## See Also
-
-- [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
-- [Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)
+Other performance topics:
 - [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md)
-- [How Query Store Collects Data](../../relational-databases/performance/how-query-store-collects-data.md)
+
+
+## See also
+
 - [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
 - [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
-- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
-- [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)
-- [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)
+- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
 - [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)
 - [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md)
-- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+- [How Query Store Collects Data](../../relational-databases/performance/how-query-store-collects-data.md)
+- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
+- [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)
+- [Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)
+
+## Next steps
+
+- [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)
+- [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)
+- [Tune performance with the Query Store](tune-performance-with-the-query-store.md)

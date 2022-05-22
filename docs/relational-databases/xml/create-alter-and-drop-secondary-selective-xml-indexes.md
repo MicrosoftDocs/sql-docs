@@ -1,7 +1,7 @@
 ---
 title: "Create, alter, and drop secondary selective XML index"
 description: Learn how to create a new secondary selective XML index, or alter or drop an existing secondary selective XML index.
-ms.date: 04/29/2022
+ms.date: 05/05/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: randolphwest
@@ -55,7 +55,7 @@ FOR
 );
 ```
 
-## <a name="drop"></a> Drop a secondary selective XML index
+## <a id="drop"></a> Drop a secondary selective XML index
 
 Drop a secondary selective XML index using Transact-SQL by calling the DROP INDEX statement. For more information, see [DROP INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/drop-index-selective-xml-indexes.md).
 

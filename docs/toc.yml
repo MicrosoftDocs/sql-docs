@@ -7022,16 +7022,12 @@ items:
     - name: Query Store
       href: relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       items:
-      - name: In-Memory OLTP
-        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
-      - name: Best Practice
+      - name: Best Practices for Monitoring
         href: relational-databases/performance/best-practice-with-the-query-store.md
-      - name: Usage Scenarios
-        href: relational-databases/performance/query-store-usage-scenarios.md
       - name: How Query Store Collects Data
         href: relational-databases/performance/how-query-store-collects-data.md
-      - name: Query Store hints
-        href: relational-databases/performance/query-store-hints.md
+      - name: In-Memory OLTP
+        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md
       items:
@@ -7448,6 +7444,15 @@ items:
         href: relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
       - name: Validate Plan Guides After Upgrade
         href: relational-databases/performance/validate-plan-guides-after-upgrade.md
+    - name: Query Store
+      href: relational-databases/performance/tune-performance-with-the-query-store.md
+      items:
+      - name: Query Store hints
+        href: relational-databases/performance/query-store-hints.md
+      - name: Query Store hints best practices
+        href: relational-databases/performance/query-store-hints-best-practices.md
+      - name: Usage Scenarios
+        href: relational-databases/performance/query-store-usage-scenarios.md        
     - name: Query Tuning Assistant
       href: relational-databases/performance/upgrade-dbcompat-using-qta.md
     - name: Resource governor
@@ -8446,10 +8451,8 @@ items:
   - name: Command prompt utilities
     href: tools/command-prompt-utility-reference-database-engine.md
     items:
-    - name: mssql-cli (command-line query tool)
+    - name: mssql-cli
       href: tools/mssql-cli.md
-    - name: SqlLocalDB
-      href: tools/sqllocaldb-utility.md
     - name: osql
       href: tools/osql-utility.md
     - name: Profiler Utility
@@ -8458,10 +8461,12 @@ items:
       href: tools/sqlagent90-application.md
     - name: SQLdiag
       href: tools/sqldiag-utility.md
-    - name: sqlmaint
-      href: tools/sqlmaint-utility.md
+    - name: SqlLocalDB
+      href: tools/sqllocaldb-utility.md
     - name: sqllogship Application
       href: tools/sqllogship-application.md
+    - name: sqlmaint
+      href: tools/sqlmaint-utility.md
     - name: sqlps
       href: tools/sqlps-utility.md
     - name: sqlservr Application
@@ -8599,6 +8604,8 @@ items:
         href: tools/distributed-replay/status-option-distributed-replay-administration-tool.md
       - name: Cancel Option
         href: tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md
+  - name: Go-SQLCMD
+    href: tools/go-sqlcmd-utility.md
   - name: SQL Server Configuration Manager
     href: tools/configuration-manager/sql-server-services.md
     items:
@@ -10361,9 +10368,15 @@ items:
     - name: Extended features and tools
       href: tools/download-sql-feature-packs.md
   - name: Visual Studio Code 
-    items: 
-    - name: T-SQL scripts
+    items:
+    - name: Overview
+      href: tools/visual-studio-code/mssql-extensions.md
+    - name: Connect and Query Tutorial
       href: tools/visual-studio-code/sql-server-develop-use-vscode.md
+    - name: Query History
+      href: tools/visual-studio-code/mssql-query-history.md
+    - name: SQL Database Projects
+      href: azure-data-studio/extensions/sql-database-project-extension.md
 - name: Tutorials
   items:
   - name: SQL Server

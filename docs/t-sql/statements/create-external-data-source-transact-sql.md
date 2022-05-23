@@ -3,6 +3,7 @@ title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.reviewer: randolphwest
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:
@@ -16,7 +17,6 @@ helpviewer_keywords:
   - "PolyBase, create data source"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
 ms.custom: ""
 ms.date: 5/24/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqledge-current"
@@ -62,7 +62,7 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
 
 ::: moniker range="=sql-server-2016"
 
-<a name="SQL Server 2016">## Overview: SQL Server 2016</a>
+## Overview: SQL Server
 
 [!INCLUDE[SQL2016+](../../includes/applies-to-version/sqlserver2016.md)]
 
@@ -296,7 +296,7 @@ WITH
 
 ::: moniker range="=sql-server-2017||=sql-server-linux-2017"
 
-## Overview: SQL Server 2017
+## Overview: SQL Server
 
 [!INCLUDE[SQL2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
@@ -597,7 +597,7 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
 ::: moniker range="=sql-server-ver15 || =sql-server-linux-ver15"
 
-## Overview: SQL Server 2019
+## Overview: SQL Server
 
 [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)] and later
 
@@ -1019,8 +1019,7 @@ WITH
 ::: moniker range=">=sql-server-ver16"
 
 
-## Overview: SQL Server 2022
-
+## Overview: SQL Server
 [!INCLUDE[SQL2022](../../includes/applies-to-version/sqlserver2022.md)] and later
 
 Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support these primary use cases:

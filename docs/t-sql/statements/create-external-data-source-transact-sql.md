@@ -8,7 +8,7 @@ ms.technology: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE EXTERNAL DATA SOURCE"
-  - "CREATE_EXTERNAL_DATA_SOURCE"
+  - "CREATE_EXTERNAL_DATA_SOURCE"yy
 dev_langs:
   - "TSQL"
 helpviewer_keywords:

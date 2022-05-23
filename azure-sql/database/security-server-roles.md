@@ -7,11 +7,14 @@ ms.subservice: security
 author: AndreasWolter
 ms.author: anwolter
 ms.topic: conceptual
-ms.date: 03/14/2022
+ms.date: 05/24/2022
 ms.reviewer: kendralittle, vanto, mathoma
 ---
 
 # Azure SQL Database server roles for permission management
+
+> [!NOTE]
+> The built-in server-level roles in this article are in public preview for Azure SQL Database. These server-level roles are also part of the release for [SQL Server 2022](/sql/relational-databases/security/authentication-access/server-level-roles#fixed-server-level-roles-introduced-in-sql-server-2022).
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
@@ -22,9 +25,9 @@ In Azure SQL Database, the server is a logical concept and permissions cannot be
 
 These special fixed server-level roles use the prefix **##MS_** and the suffix **##** to distinguish from other regular user-created principals.
 
-Like SQL Server on-premises, server permissions are organized hierarchically. The permissions that are held by these server-level roles can propagate to database permissions. For the permissions to be effectively propagated to the database, a login needs to have a user account in the database.
+Like SQL Server on-premises, server permissions are organized hierarchically. The permissions that are held by these server-level roles can propagate to database permissions. For the permissions to be effectively useful at the database level, a login needs to either be a member of the server-level role **##MS_DatabaseConnector##**, which grants **CONNECT** to all databases, or have a user account in individual databases. This also applies to the virtual `master` database.
 
-For example, the server-level role **##MS_ServerStateReader##** holds the permission **VIEW SERVER STATE**. If a login who is member of this role has a user account in the databases *master* and *WideWorldImporters*, this user will have the permission, **VIEW DATABASE STATE** in those two databases. 
+For example, the server-level role **##MS_ServerStateReader##** holds the permission **VIEW SERVER STATE**. If a login who is member of this role has a user account in the databases `master` and `WideWorldImporters`, this user will have the permission, **VIEW DATABASE STATE** in those two databases.
 
 > [!NOTE]
 > Any permission can be denied within user databases, in effect, overriding the server-wide grant via role membership. However, in the system database *master*, permissions cannot be granted or denied.
@@ -42,18 +45,25 @@ The following table shows the fixed server-level roles and their capabilities.
   
 |Built-in server-level role|Description|  
 |------------------------------|-----------------|  
+|**##MS_DatabaseConnector##**|Members of the **##MS_DatabaseConnector##** fixed server role can connect to any database without requiring a User-account in the database to connect to. <br /><br />To deny the **CONNECT** permission to a specific database, users can create a matching user account for this login in the database and then **DENY** the **CONNECT** permission to the database-user. This **DENY** permission will overrule the **GRANT CONNECT** permission coming from this role.|
+|**##MS_DatabaseManager##**|Members of the **##MS_DatabaseManager##** fixed server role can create and delete databases. A member of the **##MS_DatabaseManager##** role that creates a database, becomes the owner of that database, which allows that user to connect to that database as the `dbo` user. The `dbo` user has all database permissions in the database. Members of the **##MS_DatabaseManager##** role don't necessarily have permission to access databases that they don't own. It is recommended to use this server role over the **dbmanager** database level role that exists in `master`.|
 |**##MS_DefinitionReader##**|Members of the **##MS_DefinitionReader##** fixed server role can read all catalog views that are covered by **VIEW ANY DEFINITION**, respectively **VIEW DEFINITION** on any database on which the member of this role has a user account.|  
+|**##MS_LoginManager##**|Members of the **##MS_LoginManager##** fixed server role can create and delete logins. It is recommended to use this server role over the **loginmanager** database level role that exists in `master`.|
+|**##MS_SecurityDefinitionReader##**|Members of the **##MS_SecurityDefinitionReader##** fixed server role can read all catalog views that are covered by **VIEW ANY SECURITY DEFINITION**, and respectively has **VIEW SECURITY DEFINITION** permission on any database on which the member of this role has a user account. This is a small subset of what the **##MS_DefinitionReader##** server role has access to.|
 |**##MS_ServerStateReader##**|Members of the **##MS_ServerStateReader##** fixed server role can read all dynamic management views (DMVs) and functions that are covered by **VIEW SERVER STATE**, respectively **VIEW DATABASE STATE** on any database on which the member of this role has a user account.|
 |**##MS_ServerStateManager##**|Members of the **##MS_ServerStateManager##** fixed server role have the same permissions as the **##MS_ServerStateReader##** role. Also, it holds the **ALTER SERVER STATE** permission, which allows access to several management operations, such as: `DBCC FREEPROCCACHE`, `DBCC FREESYSTEMCACHE ('ALL')`, `DBCC SQLPERF()`; |  
 
-
 ## Permissions of fixed server roles
 
-Each built-in server-level role has certain permissions assigned to it. The following table shows the permissions assigned to the server-level roles. It also shows the database-level permissions inherited if a user account exist in the database.
+Each built-in server-level role has certain permissions assigned to it. The following table shows the permissions assigned to the server-level roles. It also shows the inherited database-level permissions as long as the user can connect to individual databases.
   
 |Fixed server-level role|Server-level permissions|Database-level permissions (if a database user matching the login exists)  
 |-------------|----------|-----------------|  
-|**##MS_DefinitionReader##**|VIEW ANY DATABASE, VIEW ANY DEFINITION, VIEW ANY SECURITY DEFINITION|VIEW DEFINITION, VIEW SECURITY DEFINITION|  
+|**##MS_DatabaseConnector##**|CONNECT ANY DATABASE |CONNECT |
+|**##MS_DatabaseManager##**|CREATE ANY DATABASE<br />ALTER ANY DATABASE | ALTER|
+|**##MS_DefinitionReader##**|VIEW ANY DATABASE, VIEW ANY DEFINITION, VIEW ANY SECURITY DEFINITION|VIEW DEFINITION, VIEW SECURITY DEFINITION| 
+|**##MS_LoginManager##**|CREATE LOGIN<br />ALTER ANY LOGIN | N/A |
+|**##MS_SecurityDefinitionReader##**| VIEW ANY SECURITY DEFINITION | VIEW SECURITY DEFINITION | 
 |**##MS_ServerStateReader##**|VIEW SERVER STATE, VIEW SERVER PERFORMANCE STATE, VIEW SERVER SECURITY STATE|VIEW DATABASE STATE, VIEW DATABASE PERFORMANCE STATE, VIEW DATABASE SECURITY STATE|  
 |**##MS_ServerStateManager##**|ALTER SERVER STATE, VIEW SERVER STATE, VIEW SERVER PERFORMANCE STATE, VIEW SERVER SECURITY STATE|VIEW DATABASE STATE, VIEW DATABASE PERFORMANCE STATE, VIEW DATABASE SECURITY STATE|   
   

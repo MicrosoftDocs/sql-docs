@@ -63,6 +63,9 @@ The following table shows the fixed server-level roles and their capabilities.
 
 The following table shows additional fixed server-level roles that are introduced with SQL Server 2022 and their capabilities.
 
+> [!NOTE]
+> These server-level permissions are not available for Azure SQL Managed Instance or Azure Synapse Analytics.
+
 |Built-in server-level role |Description |
 |------------------------------|-----------------|  
 |**##MS_DatabaseConnector##**|Members of the **##MS_DatabaseConnector##** fixed server role can connect to any database without requiring a User-account in the database to connect to. <br /><br />To deny the **CONNECT** permission to a specific database, users can create a matching user account for this login in the database and then **DENY** the **CONNECT** permission to the database-user. This **DENY** permission will overrule the **GRANT CONNECT** permission coming from this role.|

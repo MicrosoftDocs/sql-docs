@@ -4,15 +4,14 @@ titleSuffix: SQL Server Language Extensions
 description: Learn how to install SQL Server Java Language Extension on Red Hat, Ubuntu, and SUSE Linux.
 author: rothja
 ms.author: jroth
-manager: 
-ms.date: 05/24/2022
 ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
+ms.custom: intro-installation
+ms.date: 05/24/2022
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
-ms.custom:
-  - intro-installation
 ---
+
 # Install SQL Server Java Language Extension on Linux
 
 [!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)] and later
@@ -30,7 +29,9 @@ Although you can [install the database engine and Language Extensions concurrent
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 + You should have a tool for running T-SQL commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-2017&preserve-view=true#linux-installation), a free download that runs on Linux.
+
 ::: monikerRange="=sql-server-linux-ver15"
+
 + Package location for the Java extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-server-extensibility-java** package install commands using the same repo registration.
 ::: moniker-end
 + Language Extensions is also supported on Linux containers. We do not provide pre-built containers with Language Extensions, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
@@ -51,6 +52,7 @@ On an internet-connected device, packages are downloaded and installed independe
 ## Install Java language extension
 
 ::: monikerRange="=sql-server-linux-ver15"
+
 You can install Language Extensions and Java on Linux by installing **mssql-server-extensibility-java**. When you install **mssql-server-extensibility-java**, the package automatically installs JRE 11 if it is not already installed. It will also add the JVM path to an environment variable called JRE_HOME.
 
 To enable the Java Language Extension, build a custom binary by following the instructions from the [Java Language Extension page on GitHub](
@@ -62,13 +64,16 @@ https://github.com/microsoft/sql-server-language-extensions/tree/main/language-e
 ::: moniker-end
 
 ::: monikerRange="=sql-server-linux-ver16"
-You can download and install any Java runtime as desired, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime. Starting with SQL Server 2022, no Java runtime is installed by SQL Setup. 
+
+You can download and install any Java runtime as desired, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime. Starting with SQL Server 2022, no Java runtime is installed by SQL Setup.
 
 To enable the Java Language Extension, build a custom binary by following the instructions from the [Java Language Extension page on GitHub](
 https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/java).
+
 ::: moniker-end
 
 ::: monikerRange="=sql-server-linux-ver15"
+
 ### RedHat install command
 
 You can install Language Extensions for Java on RedHat using the command below.

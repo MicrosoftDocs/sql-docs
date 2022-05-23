@@ -27,7 +27,7 @@ ms.author: mathoma
   
 |Section|Description|  
 |-------------|-----------------|  
-|[Always On Availability Groups Is Not Enabled](#IsHadrEnabled)|If an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is not enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the instance doesn't support availability group creation and cannot host any availability replicas.|  
+|[Always On Availability Groups Isn't Enabled](#IsHadrEnabled)|If an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is not enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the instance doesn't support availability group creation and can't host any availability replicas.|  
 |[Accounts](#Accounts)|Discusses requirements for correctly configuring the accounts under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running.|  
 |[Endpoints](#Endpoints)|Discusses how to diagnose issues with the database mirroring endpoint of a server instance.|  
 |[Network access](#NetworkAccess)|Documents the requirement that each server instance that is hosting an availability replica must be able to access the port of each of the other server instances over TCP.|  
@@ -109,7 +109,7 @@ For more information, see [Enable and Disable Always On Availability Groups &#40
     GO  
     ```  
   
-3.  For [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it is listening on the correct ports.  
+3.  For [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it's listening on the correct ports.  
   
 4.  Make sure that the endpoints are started (STATE=STARTED). On each server instance, use the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement:  
   
@@ -230,7 +230,7 @@ For correct configuration of an Availability Group listener follow "[Configure a
    ```
   
 ##  <a name="Msg1418"></a> Endpoint Access (SQL Server Error 1418)  
- This [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] message indicates that the server network address specified in the endpoint URL cannot be reached or doesn't exist, and it suggests that you verify the network address name and reissue the command.  
+ This [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] message indicates that the server network address specified in the endpoint URL can't be reached or doesn't exist, and it suggests that you verify the network address name and reissue the command.  
   
 ##  <a name="JoinDbFails"></a> Join Database Fails (SQL Server Error 35250)  
  This section discusses the possible causes and resolution of a failure to join secondary databases to the availability group because the connection to the primary replica isn't active. This is the full error message:
@@ -333,7 +333,7 @@ For **detailed** step-by-step instructions, refer to Engine error [MSSQLSERVER_3
    >[!NOTE]
    > If you are running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, you must take additional configuration steps. Ensure that the network security group (NSG) of each replica VM allows traffic to the endpoint port and the DNN port, if you are using DNN listener. If you are using VNN listener, you must ensure the [load balancer is configured correctly](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).
 
-7. Ensure that the READ_ONLY_ROUTING_URL (TCP://system-address:port) contains the correct fully-qualified domain name (FQDN) and port number. See:  
+7. Ensure that the READ_ONLY_ROUTING_URL (TCP://system-address:port) contains the correct fully qualified domain name (FQDN) and port number. See:  
    - [Calculating read_only_routing_url for Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson) 
    - [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)
    - [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md) 

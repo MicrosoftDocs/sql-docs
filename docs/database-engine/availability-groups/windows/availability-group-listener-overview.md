@@ -92,6 +92,7 @@ This article provides an overview of an availability group listener. You can als
 
     ```console
     sqlcmd -S aglistener19,50254
+    1> 
     ```
   
   

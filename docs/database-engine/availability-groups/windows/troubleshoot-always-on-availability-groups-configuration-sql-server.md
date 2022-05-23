@@ -31,6 +31,7 @@ ms.author: mathoma
 |[Accounts](#Accounts)|Discusses requirements for correctly configuring the accounts under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running.|  
 |[Endpoints](#Endpoints)|Discusses how to diagnose issues with the database mirroring endpoint of a server instance.|  
 |[Network access](#NetworkAccess)|Documents the requirement that each server instance that is hosting an availability replica must be able to access the port of each of the other server instances over TCP.|  
+|[Listener](#Listener)|Documents how to establish the IP address and port of the listener and make sure it is running and listening for incoming connections|  
 |[Endpoint Access (SQL Server Error 1418)](#Msg1418)|Contains information about this [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error message.|  
 |[Join Database Fails (SQL Server Error 35250)](#JoinDbFails)|Discusses the possible causes and resolution of a failure to join secondary databases to an availability group because the connection to the primary replica isn't active.|  
 |[Read-Only Routing is Not Working Correctly](#ROR)||  
@@ -195,6 +196,39 @@ Run the following PowerShell script to examine for disabled inbound traffic rule
    ```dos
    netstat -a
 
+
+##  <a name="Listener"></a> Listener
+
+For correct configuration of an Availability Group listener follow "[Configure a listener for an Always On availability group](create-or-configure-an-availability-group-listener-sql-server.md)"
+
+1. Once the listener is configured you can validate the IP address it and port it is listening on by using the following query
+
+```sql
+SELECT dns_name AS AG_listener_name, port, ip_configuration_string_from_cluster 
+FROM sys.availability_group_listeners
+```
+
+1. You can also find the listener information together with the SQL Server ports using this query:
+ 
+```sql 
+SELECT  SERVERPROPERTY ('servername') servername, ip_address, port, type_desc,state_desc, start_time, * 
+FROM sys.dm_tcp_listener_states 
+WHERE ip_address not in ('127.0.0.1', '::1') and type <> 2
+```
+
+1. If you need to establish connectivity to the listener and suspect a port is blocked, you can test using telnet client. In this example the listener port is configured as 50123 and IP address is 192.168.20.15 and name aglistener.
+
+```console
+telnet 192.168.20.15 50123 
+telnet aglistener19 50123
+```
+
+1. Finally, check if the listener is listening. To check for port 50123 
+
+
+```console
+netstat -aon -p tcp | findstr 50123
+```
   
 ##  <a name="Msg1418"></a> Endpoint Access (SQL Server Error 1418)  
  This [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] message indicates that the server network address specified in the endpoint URL cannot be reached or doesn't exist, and it suggests that you verify the network address name and reissue the command.  

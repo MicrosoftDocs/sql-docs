@@ -26,6 +26,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 # GRANT Database Scoped Credential Permissions (Transact-SQL) 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
+> [!NOTE]
+> GRANT Database Scoped Credential Permissions is only supported for serverless SQL pools in Azure Synapse Analytics.
+
 Grants permissions on a database scoped credential. 
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

@@ -8,7 +8,7 @@ ms.technology: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE EXTERNAL DATA SOURCE"
-  - "CREATE_EXTERNAL_DATA_SOURCE"yy
+  - "CREATE_EXTERNAL_DATA_SOURCE"
 dev_langs:
   - "TSQL"
 helpviewer_keywords:
@@ -62,7 +62,7 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
 
 ::: moniker range="=sql-server-2016"
 
-## Overview: SQL Server
+## Overview: SQL Server 2016
 
 [!INCLUDE[SQL2016+](../../includes/applies-to-version/sqlserver2016.md)]
 
@@ -296,7 +296,7 @@ WITH
 
 ::: moniker range="=sql-server-2017||=sql-server-linux-2017"
 
-## Overview: SQL Server
+## Overview: SQL Server 2017
 
 [!INCLUDE[SQL2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
@@ -597,7 +597,7 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
 ::: moniker range="=sql-server-ver15 || =sql-server-linux-ver15"
 
-## Overview: SQL Server
+## Overview: SQL Server 2019
 
 [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)] and later
 
@@ -1019,7 +1019,7 @@ WITH
 ::: moniker range=">=sql-server-ver16"
 
 
-## Overview: SQL Server
+## Overview: SQL Server 2022
 [!INCLUDE[SQL2022](../../includes/applies-to-version/sqlserver2022.md)] and later
 
 Creates an external data source for PolyBase queries. External data sources are used to establish connectivity and support these primary use cases:
@@ -1029,7 +1029,6 @@ Creates an external data source for PolyBase queries. External data sources are 
 
 > [!NOTE]
 > This syntax varies in different versions of SQL Server on Linux. Use the version selector dropdown to choose the appropriate version. This content applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.
-
 
 ## <a id="syntax"></a> Syntax for SQL Server 2022 and later
 

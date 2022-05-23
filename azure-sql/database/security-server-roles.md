@@ -18,7 +18,7 @@ ms.reviewer: kendralittle, vanto, mathoma
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-In Azure SQL Database, the server is a logical concept and permissions cannot be granted on a server level. To simplify permission management, Azure SQL Database provides a set of fixed server-level roles to help you manage the permissions on a [logical server](logical-servers.md). Roles are security principals that group logins.
+In Azure SQL Database, the server is a logical concept and permissions can't be granted on a server level. To simplify permission management, Azure SQL Database provides a set of fixed server-level roles to help you manage the permissions on a [logical server](logical-servers.md). Roles are security principals that group logins.
 
 > [!NOTE]
 > The *roles* concept in this article are like *groups* in the Windows operating system.
@@ -32,7 +32,7 @@ For example, the server-level role **##MS_ServerStateReader##** holds the permis
 > [!NOTE]
 > Any permission can be denied within user databases, in effect, overriding the server-wide grant via role membership. However, in the system database *master*, permissions cannot be granted or denied.
 
-Azure SQL Database currently provides three fixed server roles. The permissions that are granted to the fixed server roles cannot be changed and these roles can't have other fixed roles as members. You can add server-level logins as members to server-level roles.
+Azure SQL Database currently provides three fixed server roles. The permissions that are granted to the fixed server roles can't be changed and these roles can't have other fixed roles as members. You can add server-level logins as members to server-level roles.
 
 > [!IMPORTANT]
 > Each member of a fixed server role can add other logins to that same role.
@@ -46,9 +46,9 @@ The following table shows the fixed server-level roles and their capabilities.
 |Built-in server-level role|Description|  
 |------------------------------|-----------------|  
 |**##MS_DatabaseConnector##**|Members of the **##MS_DatabaseConnector##** fixed server role can connect to any database without requiring a User-account in the database to connect to. <br /><br />To deny the **CONNECT** permission to a specific database, users can create a matching user account for this login in the database and then **DENY** the **CONNECT** permission to the database-user. This **DENY** permission will overrule the **GRANT CONNECT** permission coming from this role.|
-|**##MS_DatabaseManager##**|Members of the **##MS_DatabaseManager##** fixed server role can create and delete databases. A member of the **##MS_DatabaseManager##** role that creates a database, becomes the owner of that database, which allows that user to connect to that database as the `dbo` user. The `dbo` user has all database permissions in the database. Members of the **##MS_DatabaseManager##** role don't necessarily have permission to access databases that they don't own. It is recommended to use this server role over the **dbmanager** database level role that exists in `master`.|
+|**##MS_DatabaseManager##**|Members of the **##MS_DatabaseManager##** fixed server role can create and delete databases. A member of the **##MS_DatabaseManager##** role that creates a database, becomes the owner of that database, which allows that user to connect to that database as the `dbo` user. The `dbo` user has all database permissions in the database. Members of the **##MS_DatabaseManager##** role don't necessarily have permission to access databases that they don't own. It's recommended to use this server role over the **dbmanager** database level role that exists in `master`.|
 |**##MS_DefinitionReader##**|Members of the **##MS_DefinitionReader##** fixed server role can read all catalog views that are covered by **VIEW ANY DEFINITION**, respectively **VIEW DEFINITION** on any database on which the member of this role has a user account.|  
-|**##MS_LoginManager##**|Members of the **##MS_LoginManager##** fixed server role can create and delete logins. It is recommended to use this server role over the **loginmanager** database level role that exists in `master`.|
+|**##MS_LoginManager##**|Members of the **##MS_LoginManager##** fixed server role can create and delete logins. It's recommended to use this server role over the **loginmanager** database level role that exists in `master`.|
 |**##MS_SecurityDefinitionReader##**|Members of the **##MS_SecurityDefinitionReader##** fixed server role can read all catalog views that are covered by **VIEW ANY SECURITY DEFINITION**, and respectively has **VIEW SECURITY DEFINITION** permission on any database on which the member of this role has a user account. This is a small subset of what the **##MS_DefinitionReader##** server role has access to.|
 |**##MS_ServerStateReader##**|Members of the **##MS_ServerStateReader##** fixed server role can read all dynamic management views (DMVs) and functions that are covered by **VIEW SERVER STATE**, respectively **VIEW DATABASE STATE** on any database on which the member of this role has a user account.|
 |**##MS_ServerStateManager##**|Members of the **##MS_ServerStateManager##** fixed server role have the same permissions as the **##MS_ServerStateReader##** role. Also, it holds the **ALTER SERVER STATE** permission, which allows access to several management operations, such as: `DBCC FREEPROCCACHE`, `DBCC FREESYSTEMCACHE ('ALL')`, `DBCC SQLPERF()`; |  
@@ -85,7 +85,7 @@ The examples in this section show how to work with server-level roles in Azure S
 
 ### A. Adding a SQL login to a server-level role
 
-The following example adds the SQL login 'Jiao' to the server-level role ##MS_ServerStateReader##. This statement has to be run in the virtual master database.
+The following example adds the SQL login 'Jiao' to the server-level role ##MS_ServerStateReader##. This statement has to be run in the virtual `master` database.
   
 ```sql  
 ALTER SERVER ROLE ##MS_ServerStateReader##
@@ -95,7 +95,7 @@ GO
 
 ### B. Listing all principals (SQL authentication) which are members of a server-level role
 
-The following statement returns all members of any fixed server-level role using the `sys.server_role_members` and `sys.sql_logins` catalog views. This statement has to be run in the virtual master database.
+The following statement returns all members of any fixed server-level role using the `sys.server_role_members` and `sys.sql_logins` catalog views. This statement has to be run in the virtual `master` database.
   
 ```sql  
 SELECT
@@ -116,7 +116,7 @@ GO
 
 #### Part 1: Preparing role membership and user account
 
-Run this command from the virtual master database.
+Run this command from the virtual `master` database.
 
 ```sql  
 ALTER SERVER ROLE ##MS_ServerStateReader##
@@ -140,7 +140,7 @@ INNER JOIN sys.sql_logins AS sql_logins
 GO  
 ``` 
 
-Here is the result set.
+Here's the result set.
   
 ```
 MemberPrincipalID MemberPrincipalName RolePrincipalID RolePrincipalName        
@@ -187,7 +187,7 @@ SELECT * FROM sys.dm_exec_query_stats
 
 ### D. Check server-level roles for Azure AD logins
 
-Run this command in the virtual master database to see all Azure AD logins that are part of server-level roles in SQL Database. For more information on Azure AD server logins, see [Azure Active Directory server principals](authentication-azure-ad-logins.md).
+Run this command in the virtual `master` database to see all Azure AD logins that are part of server-level roles in SQL Database. For more information on Azure AD server logins, see [Azure Active Directory server principals](authentication-azure-ad-logins.md).
 
 ```sql
 SELECT roles.principal_id AS RolePID,roles.name AS RolePName,
@@ -201,7 +201,7 @@ SELECT roles.principal_id AS RolePID,roles.name AS RolePName,
 
 ### E. Check the virtual master database roles for specific logins
 
-Run this command in the virtual master database to check with roles `bob` has, or change the value to match your principal.
+Run this command in the virtual `master` database to check with roles `bob` has, or change the value to match your principal.
 
 ```sql
 SELECT DR1.name AS DbRoleName, isnull (DR2.name, 'No members')  AS DbUserName
@@ -213,10 +213,10 @@ SELECT DR1.name AS DbRoleName, isnull (DR2.name, 'No members')  AS DbUserName
 
 ## Limitations of server-level roles
 
-- Role assignments may take up to 5 minutes to become effective. Also for existing sessions, changes to server role assignments don't take effect until the connection is closed and reopened. This is due to the distributed architecture between the *master* database and other databases on the same logical server.
+- Role assignments may take up to 5 minutes to become effective. Also for existing sessions, changes to server role assignments don't take effect until the connection is closed and reopened. This is due to the distributed architecture between the `master` database and other databases on the same logical server.
   - Partial workaround: to reduce the waiting period and ensure that server role assignments are current in a database, a server administrator, or an Azure AD administrator can run `DBCC FLUSHAUTHCACHE` in the user database(s) on which the login has access. Current logged on users still have to reconnect after running `DBCC FLUSHAUTHCACHE` for the membership changes to take effect on them.
 
-- `IS_SRVROLEMEMBER()` isn't supported in the *master* database.
+- `IS_SRVROLEMEMBER()` isn't supported in the `master` database.
 
 
 ## See also

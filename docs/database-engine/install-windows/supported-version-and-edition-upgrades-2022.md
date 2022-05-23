@@ -102,44 +102,9 @@ The following tips and tools can help you plan and implement your migration.
    > If an automatic or manual failover happens and the SQL Server 2022 Preview instance becomes primary, SQL Server 2008 or SQL Server 2008 R2 instance becomes secondary and cannot receive changes from primary.
 
 - Bulk load: Tables can be bulk copied from SQL Server 2008 or SQL Server 2008 R2 to SQL Server 2022 Preview.
-
-## [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Edition upgrade 
-
-The following table lists the supported edition upgrade scenarios in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].  
-
-For step-by-step instructions on how to perform an edition upgrade, see [Upgrade to a Different Edition of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
-  
-|**Upgrade From**|**Upgrade To**|  
-|------------------|----------------|  
-|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise (Server+CAL and Core)**|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise |  
-|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Evaluation Enterprise**|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise (Server+CAL or Core License) <br/><br/> [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Standard <br/> <br/> [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Developer <br/> <br/> [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Web <br/> <br/> Upgrading from Evaluation (a free edition) to any of the paid editions is supported for stand-alone installations, but isn't supported for clustered installations. This limitation does not apply to stand-alone instances installed on a Windows Failover Cluster participating in an availability group. |  
-|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Standard**|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise (Server+CAL or Core License)|  
-|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Developer**|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise (Server+CAL or Core License) <br/><br/> [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Web <br/> <br/> [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Standard|  
-|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Web|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise (Server+CAL or Core License) <br/><br/> [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Standard|  
-|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Express*|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise (Server+CAL or Core License) <br/><br/> [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Developer <br/> <br/> [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Standard <br/> <br/> [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Web|  
-  
- Additionally you can also perform an edition upgrade between [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise (Server+CAL license) and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise (Core License):  
-  
-|**Edition Upgrade From**|**Edition Upgrade To**|  
-|--------------------------|------------------------|  
-|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise (Server+CAL License)**|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise (Core License)|  
-|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise (Core License)|[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise (Server+CAL License)|  
-  
- \* Also applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Express with Tools and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Express with Advanced Services.  
-  
- ** Changing the edition of a clustered instance of [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] limited. The following scenarios are not supported for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] failover clusters:  
-  
-- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Enterprise to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Developer, Standard, or Evaluation.  
-  
-- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Developer to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Standard or Evaluation.  
-  
-- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Standard to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Evaluation.  
-  
-- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Evaluation to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Standard.  
   
 ## See also  
 
-- [Editions and supported features of [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md)
 - [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md)
 
 ## Next steps

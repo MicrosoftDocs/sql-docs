@@ -15,7 +15,9 @@ helpviewer_keywords:
   - "MaxDop"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: contperf-fy20q4
+ms.custom:
+- contperf-fy20q4
+- event-tier1-build-2022
 ---
 # Configure the max degree of parallelism Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

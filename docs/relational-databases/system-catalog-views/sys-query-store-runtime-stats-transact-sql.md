@@ -1,7 +1,8 @@
 ---
 description: "sys.query_store_runtime_stats (Transact-SQL)"
 title: "sys.query_store_runtime_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "4/26/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

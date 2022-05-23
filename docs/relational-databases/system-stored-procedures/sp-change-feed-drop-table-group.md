@@ -1,7 +1,8 @@
 ---
 description: "The sp_change_feed_drop_table_group system stored procedure drops a table group and internal metadata objects for Azure Synapse Link for SQL."
 title: "sp_change_feed_drop_table_group (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.service: synapse-analytics
 ms.prod_service: "database-engine, sql-database, synapse-analytics"

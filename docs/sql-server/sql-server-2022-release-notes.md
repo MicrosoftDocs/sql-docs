@@ -6,6 +6,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: "article"
+ms.custom:
+- event-tier1-build-2022
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: "= sql-server-ver16"

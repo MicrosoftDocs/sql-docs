@@ -1,7 +1,8 @@
 ---
 title: "Thread and Task Architecture Guide | Microsoft Docs"
 description: Learn about thread and task architecture in SQL Server, including task scheduling, hot add CPU, and best practices for using computers with more than 64 CPUs.
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "09/23/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

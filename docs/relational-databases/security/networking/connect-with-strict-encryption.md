@@ -4,6 +4,8 @@ description: This article describes how to connect to SQL Server using the stric
 ms.prod: sql
 ms.technology: security
 ms.topic: how-to
+ms.custom:
+- event-tier1-build-2022
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/24/2022"

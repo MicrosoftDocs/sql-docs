@@ -1,7 +1,8 @@
 ---
 description: "The sp_change_feed_disable_db system stored procedure disables the Azure Synapse Link for SQL change feed at the database level."
 title: "sp_change_feed_disable_db (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.service: synapse-analytics
 ms.prod_service: "database-engine, sql-database, synapse-analytics"

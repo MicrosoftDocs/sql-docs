@@ -10,6 +10,8 @@ f1_keywords:
   - "DATE_BUCKET_TSQL"
 dev_langs:
   - "TSQL"
+ms.custom:
+- event-tier1-build-2022
 helpviewer_keywords:
   - "DATE_BUCKET function"
   - "analytic functions, DATE_BUCKET"

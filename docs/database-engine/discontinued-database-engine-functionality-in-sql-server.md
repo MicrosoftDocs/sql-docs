@@ -1,7 +1,9 @@
 ---
 title: Discontinued database engine functionality
 description: Learn which database engine functionality and features were discontinued in SQL Server.
-ms.custom: "seo-lt-2019"
+ms.custom:
+- seo-lt-2019
+- event-tier1-build-2022
 ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: high-availability

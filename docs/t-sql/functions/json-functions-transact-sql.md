@@ -1,7 +1,8 @@
 ---
 description: "JSON Functions (Transact-SQL)"
 title: "JSON Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql

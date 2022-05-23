@@ -5,6 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 05/24/2022
 ms.topic: how-to
+ms.custom:
+- event-tier1-build-2022
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=sql-server-ver15"

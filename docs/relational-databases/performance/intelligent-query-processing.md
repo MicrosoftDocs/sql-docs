@@ -9,7 +9,9 @@ helpviewer_keywords:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ms.reviewer: "wiassaf"
-ms.custom: seo-dt-2019
+ms.custom:
+- seo-dt-2019
+- event-tier1-build-2022
 ms.date: 11/27/2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

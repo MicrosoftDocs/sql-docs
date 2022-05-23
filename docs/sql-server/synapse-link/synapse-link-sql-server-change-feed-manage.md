@@ -10,6 +10,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ms.custom:
+- event-tier1-build-2022
 ---
 
 # Manage Azure Synapse Link for SQL Server and Azure SQL Database

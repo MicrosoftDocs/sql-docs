@@ -6,6 +6,8 @@ ms.metadata: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei

@@ -11,7 +11,8 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 05/09/2022
 # monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---

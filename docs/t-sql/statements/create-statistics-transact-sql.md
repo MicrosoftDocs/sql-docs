@@ -22,10 +22,10 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: "katsmith"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-
 ---
 
 # CREATE STATISTICS (Transact-SQL)

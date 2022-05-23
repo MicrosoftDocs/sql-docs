@@ -1,7 +1,8 @@
 ---
 description: "sys.sp_copy_data_in_batches (Transact-SQL)"
 title: "sys.sp_copy_data_in_batches (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""

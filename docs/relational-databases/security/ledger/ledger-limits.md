@@ -4,6 +4,8 @@ description: Limitations and considerations for the ledger feature
 ms.date: "05/24/2022"
 ms.service: sql-database
 ms.subservice: security
+ms.custom:
+- event-tier1-build-2022
 ms.reviewer: kendralittle, mathoma
 ms.topic: conceptual
 author: VanMSFT
@@ -113,4 +115,3 @@ However, any operations that might affect the format of existing data, such as c
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
 - [Database ledger](ledger-database-ledger.md)
-

@@ -1,7 +1,8 @@
 ---
 title: "Optimized plan forcing with Query Store"
 description: Learn about optimized plan forcing and optimization replay scripts in Query Store.
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 05/03/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

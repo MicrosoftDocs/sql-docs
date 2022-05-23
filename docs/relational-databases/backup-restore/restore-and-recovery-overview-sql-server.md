@@ -1,7 +1,8 @@
 ---
 title: "Restore and Recovery Overview (SQL Server) | Microsoft Docs"
 description: This article is an overview of the operations involved in recovering a SQL Server database from a failure by restoring a set of SQL Server backups in sequence.
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore

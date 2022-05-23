@@ -1,7 +1,8 @@
 ---
 description: "CREATE EXTERNAL TABLE (Transact-SQL) creates an external table."
 title: "CREATE EXTERNAL TABLE (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 5/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"

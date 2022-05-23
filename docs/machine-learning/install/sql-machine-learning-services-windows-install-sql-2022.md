@@ -8,8 +8,9 @@ ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
-  - seo-lt-2019
-  - intro-installation
+- seo-lt-2019
+- intro-installation
+- event-tier1-build-2022
 monikerRange: ">=sql-server-ver16"
 ---
 # Install SQL Server 2022 Machine Learning Services (Python and R) on Windows

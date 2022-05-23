@@ -1,7 +1,8 @@
 ---
 description: "sp_query_store_reset_exec_stats (Transact-SQL)"
 title: "sp_query_store_reset_exec_stats (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "04/26/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

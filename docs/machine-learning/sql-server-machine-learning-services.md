@@ -10,7 +10,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ms.custom:
-  - intro-overview
+- intro-overview
+- event-tier1-build-2022
 ---
 # What is SQL Server Machine Learning Services with Python and R?
 [!INCLUDE [SQL Server 2017 SQL and Managed Instance](../includes/applies-to-version/sqlserver2017-asdbmi.md)]

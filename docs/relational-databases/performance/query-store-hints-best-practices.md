@@ -1,7 +1,8 @@
 ---
 title: "Query Store hints (preview) best practices"
 description: "Best practices for the Query Store hints feature, which helps you to shape query plans without changing application code."
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 04/28/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

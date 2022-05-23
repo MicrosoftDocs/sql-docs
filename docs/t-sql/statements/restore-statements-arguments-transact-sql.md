@@ -1,7 +1,8 @@
 ---
 description: "RESTORE Statements - Arguments that are described in the Syntax sections of the RESTORE T-SQL syntax."
 title: "RESTORE Arguments (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 05/10/2022
 ms.prod: sql
 ms.prod_service: "sql-database"

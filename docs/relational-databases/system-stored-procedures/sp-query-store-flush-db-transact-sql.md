@@ -1,7 +1,8 @@
 ---
 description: "sp_query_store_flush_db (Transact-SQL)"
 title: "sp_query_store_flush_db (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "04/25/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

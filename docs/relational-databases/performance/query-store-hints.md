@@ -1,7 +1,8 @@
 ---
 title: "Query Store hints (preview)"
 description: "Learn about the Query Store hints feature, which can be used to shape query plans without changing application code."
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "5/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -4,15 +4,13 @@ titleSuffix: SQL Server Language Extensions
 description: Learn how to install SQL Server Java Language Extension on Red Hat, Ubuntu, and SUSE Linux.
 author: rothja
 ms.author: jroth
-manager: 
-ms.date: 05/24/2022
 ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
-ms.custom:
-  - intro-installation
+ms.custom: intro-installation
+ms.date: 05/24/2022
 ---
+
 # Install SQL Server Java Language Extension on Linux
 
 [!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)] and later
@@ -62,14 +60,10 @@ https://github.com/microsoft/sql-server-language-extensions/tree/main/language-e
 
 ::: moniker-end
 
-::: monikerRange=">sql-server-linux-ver15"
-
-You can download and install any Java runtime as desired, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime. Starting with SQL Server 2022, no Java runtime is installed by SQL Setup. 
+You can download and install any Java runtime as desired, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime. Starting with SQL Server 2022, no Java runtime is installed by SQL Setup.
 
 To enable the Java Language Extension, build a custom binary by following the instructions from the [Java Language Extension page on GitHub](
 https://github.com/microsoft/sql-server-language-extensions/tree/main/language-extensions/java).
-
-::: moniker-end
 
 ::: monikerRange="=sql-server-linux-ver15"
 

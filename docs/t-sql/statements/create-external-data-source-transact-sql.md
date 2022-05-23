@@ -62,7 +62,7 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
 
 ::: moniker range="=sql-server-2016"
 
-## Overview: SQL Server 2016
+<a name="SQL Server 2016">## Overview: SQL Server 2016</a>
 
 [!INCLUDE[SQL2016+](../../includes/applies-to-version/sqlserver2016.md)]
 

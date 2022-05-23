@@ -80,19 +80,19 @@ The following example creates a named replica `guestlist_NamedReplica` for datab
 1. In the [Azure portal](https://portal.azure.com), browse to the database for which you want to create the named replica.
 2. On the SQL Database page, select your database, scroll to **Data management**, select **Replicas**, and then select **Create replica**.
 
-    :::image type="content" source="./media/named-replicasconfigure-portal\azure-create-named-replicas.png" alt-text="Configure named replica":::
+    :::image type="content" source="./media/named-replicasconfigure-portal\azure-create-named-replicas.png" alt-text="Create named replica":::
 3. Choose Named replica under Replica configuration, select or create the server for the named replica, enter named replica database name and configure the **Compute + storage** options if necessary.
 
-    :::image type="content" source="./media/named-replicasconfigure-portal/azure-choose-named-replica.png" alt-text="{alt-text}":::
+    :::image type="content" source="./media/named-replicasconfigure-portal/azure-choose-named-replica.png" alt-text="Configure named replica":::
 
 4. Click **Review + create**, review the information, and then click **Create**.
 5. The named replica deployment process begins.
 
-    :::image type="content" source="./media/named-replicasconfigure-portal/azure-deployment-named-replica.png" alt-text="Screenshot that shows the deployment status of the named replica.":::
+    :::image type="content" source="./media/named-replicasconfigure-portal/azure-deployment-named-replica.png" alt-text="Screenshot showing deployment status.":::
 
 6. When the deployment is complete, the named replica displays its status.
 
-    :::image type="content" source="./media/named-replicasconfigure-portal/azure-deploymentcomplete-named-replica.png" alt-text="Screenshot that shows the named replica status after deployment.":::
+    :::image type="content" source="./media/named-replicasconfigure-portal/azure-deploymentcomplete-named-replica.png" alt-text="Screenshot showing named replica status after deployment.":::
 
 7. Return to the primary database page, and then select **Replicas**. Your named replica is listed under **Named replicas**.
 
@@ -133,7 +133,7 @@ You can define the service level objective of a named replica when you create it
 # [Portal](#tab/portal)
 
 Open named replica database page, and then select **Compute + storage**. Update the vCores.
-    :::image type="content" source="./media/named-replicasconfigure-portal/azure-update-named-replica.png" alt-text="{alt-text}":::
+    :::image type="content" source="./media/named-replicasconfigure-portal/azure-update-named-replica.png" alt-text="screenshot that shows updating named replica slo":::
 
 # [T-SQL](#tab/tsql)
 ```sql
@@ -157,7 +157,7 @@ To remove a named replica, you drop it just like you would a regular database.
 # [Portal](#tab/portal)
 
 Open named replica database page, and choose `Delete` option.
-    :::image type="content" source="./media/named-replicasconfigure-portal/azure-delete-named-replicas.png" alt-text="{alt-text}":::
+    :::image type="content" source="./media/named-replicasconfigure-portal/azure-delete-named-replicas.png" alt-text="screenshot that shows deletion of named replica":::
 
 # [T-SQL](#tab/tsql)
 Make sure you are connected to the `master` database of the server with the named replica you want to drop, and then use the following command:

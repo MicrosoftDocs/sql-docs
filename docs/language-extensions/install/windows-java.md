@@ -2,16 +2,16 @@
 title: Install Java Language Extension on Windows
 titleSuffix: SQL Server Language Extensions
 description: Learn how to install the SQL Server Java Language Extension feature on Windows.
-author: rothja
-ms.author: jroth
-ms.date: 11/11/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
+author: rothja
+ms.author: jroth
+ms.custom: intro-installation
+ms.date: 11/11/2020
 monikerRange: ">=sql-server-ver15"
-ms.custom:
-  - intro-installation
 ---
+
 # Install SQL Server Java Language Extension on Windows
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)] and later
@@ -117,7 +117,7 @@ For local installations, you must run Setup as an administrator. If you install 
     
     **Machine Learning Services and Language Extensions**: This option installs the Language Extensions component that support Java code execution.
     
-    :::image type="content" source="../media/windows-java/2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of the Feature options for Language Extensions.":::
+    :::image type="content" source="../media/windows-java/2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of instance features.":::
 
 ::: moniker-end
 

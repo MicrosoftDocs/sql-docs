@@ -80,6 +80,10 @@ landingContent:
             url: ledger-limits.md
           - text: Ledger whitepaper
             url: https://aka.ms/sql-ledger-whitepaper
+          - text: Microsoft Customer Story - Lenovo reinforces customer trust with ledger in Azure SQL Database
+            url: https://customers.microsoft.com/story/1497685499820529889-lenovo-manufacturing-azure-SQL-database-ledger
+          - text: Microsoft Customer Story - RTGS.global automates financial transfers, unlocks trillions in capital with Azure
+            url: https://customers.microsoft.com/story/1497685499820529889-lenovo-manufacturing-azure-SQL-database-ledger
 
 
   # Card
@@ -112,3 +116,4 @@ landingContent:
             url: /sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql
           - text: sys.sp_copy_data_in_batches (Transact-SQL)
             url: /sql/relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql
+

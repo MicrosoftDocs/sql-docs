@@ -37,7 +37,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
  This feature is incompatible with database export using Data Tier Application Framework (DACFx). You must drop all certificates before exporting.  
 
 > [!NOTE]
-> In SQL Server 2022, certificates with private keys can be backed up or restored directly to and from files or binary blobs using the public key pairs (PKCS) #12 or personal information exchange (PFX) format.
+> In SQL Server 2022, certificates with private keys can be backed up or restored directly to and from files or binary blobs using the public key pairs (PKCS) #12 or personal information exchange (PFX) format. All system-generated certificates have a minimum strength of RSA-3072 in SQL Server 2022.
 >
 > The PKCS #12 or PFX format is a binary format for storing the server certificate, any intermediate certificates, and the private key in one file. PFX files usually have extensions such as `.pfx` and `.p12`. This makes it easier for customers to adhere to the current security best practice guidelines and compliance standards that prohibit RC4 encryption, by eliminating the need to use conversion tools such as PVKConverter (for the PVK or DER format).
   

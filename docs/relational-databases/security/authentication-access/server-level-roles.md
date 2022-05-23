@@ -37,11 +37,12 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
  Like SQL Server on-premises, server permissions are organized hierarchically. The permissions that are held by these server-level roles can propagate to database permissions. For the permissions to be effectively useful at the database level, a login needs to either be a member of the server-level role **##MS_DatabaseConnector##**, which grants **CONNECT** permission to all databases, or have a user account in individual databases. This also applies to the `master` database. For example, the server-level role **##MS_ServerStateReader##** holds the permission **VIEW SERVER STATE**. If a login who is member of this role has a user account in the databases, `master` and `WideWorldImporters`, this user will have the permission, **VIEW DATABASE STATE** in those two databases.
 
  You can add server-level principals ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, Windows accounts, and Windows groups) into server-level roles. Each member of a fixed server role can add other logins to that same role. Members of user-defined server roles can't add other server principals to the role.
-
-> [!NOTE]
-> These server-level permissions are not available in Azure SQL Database or Azure Synapse Analytics. There are special [Azure SQL Database server roles for permission management](/azure/azure-sql/database/security-server-roles). For more information about SQL Database, see [Controlling and granting database access.](/azure/sql-database/sql-database-manage-logins).
   
 ## Fixed server-level roles  
+
+> [!NOTE]
+> These server-level roles introduced prior to SQL Server 2022 are not available in Azure SQL Database or Azure Synapse Analytics. There are special [Azure SQL Database server roles for permission management](/azure/azure-sql/database/security-server-roles) that are equivalent to the server-level roles introduced in SQL Server 2022. For more information about SQL Database, see [Controlling and granting database access.](/azure/sql-database/sql-database-manage-logins).
+
 The following table shows the fixed server-level roles and their capabilities.  
 
 |Fixed server-level role |Description |

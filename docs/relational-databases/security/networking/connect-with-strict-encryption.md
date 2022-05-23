@@ -81,7 +81,7 @@ You can also test the connection to SQL Server with `strict` encryption using th
 
 ## Remarks
 
-If you see `SSL certificate validation failed.`, validate that:
+If you see `SSL certificate validation failed`, validate that:
 
 - Server certificate is valid on the machine you're using for testing
 - At least one of the following is true:

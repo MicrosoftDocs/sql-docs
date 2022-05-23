@@ -7,7 +7,9 @@ ms.topic: "article"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-ms.custom: intro-whats-new
+ms.custom:
+- intro-whats-new
+- event-tier1-build-2022
 ms.date: 05/24/2022
 monikerRange: ">=sql-server-ver15"
 ---

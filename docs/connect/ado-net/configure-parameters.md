@@ -4,6 +4,8 @@ description: Command objects use parameters to pass values to SQL statements or 
 ms.date: 11/25/2020
 dev_langs: 
   - "csharp"
+ms.custom:
+- event-tier1-build-2022
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.prod: sql
 ms.prod_service: connectivity

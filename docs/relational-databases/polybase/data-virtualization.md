@@ -6,6 +6,8 @@ ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 12/13/2019
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 ms.prod: sql
 ms.technology: polybase
 monikerRange: ">= sql-server-ver15"

@@ -1,7 +1,8 @@
 ---
 description: "DBCC SHRINKFILE shrinks the size of a database file."
 title: "DBCC SHRINKFILE (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"

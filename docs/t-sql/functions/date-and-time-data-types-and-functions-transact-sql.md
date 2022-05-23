@@ -2,7 +2,9 @@
 title: "Date and Time Data Types and Functions"
 description: Links to Date and Time data types and functions articles.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+ms.custom:
+- seo-lt-2019
+- event-tier1-build-2022
 ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "sql-database"

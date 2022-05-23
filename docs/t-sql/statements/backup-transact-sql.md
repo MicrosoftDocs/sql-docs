@@ -1,7 +1,8 @@
 ---
 description: "BACKUP (Transact-SQL) backs up a SQL database."
 title: "BACKUP (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 05/10/2022
 ms.prod: sql
 ms.prod_service: "sql-database"

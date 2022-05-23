@@ -11,6 +11,8 @@ f1_keywords:
   - "STRING_SPLIT_TSQL"
 dev_langs: 
   - "TSQL"
+ms.custom:
+- event-tier1-build-2022
 helpviewer_keywords: 
   - "STRING_SPLIT function"
 author: WilliamDAssafMSFT

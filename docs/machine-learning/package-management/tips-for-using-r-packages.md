@@ -6,6 +6,8 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/06/2019
 ms.topic: how-to
+ms.custom:
+- event-tier1-build-2022
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 

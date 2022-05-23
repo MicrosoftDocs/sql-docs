@@ -6,6 +6,8 @@ ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 helpviewer_keywords: 
   - "accelerated database recovery [SQL Server], recovery-only"
   - "database recovery [SQL Server]"

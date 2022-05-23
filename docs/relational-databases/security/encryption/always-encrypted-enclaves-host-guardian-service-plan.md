@@ -1,7 +1,8 @@
 ---
 title: "Plan for Host Guardian Service attestation"
 description: "Plan Host Guardian Service attestation for SQL Server Always Encrypted with secure enclaves."
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: vanto

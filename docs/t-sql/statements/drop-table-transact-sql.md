@@ -1,7 +1,8 @@
 ---
 description: "DROP TABLE (Transact-SQL)"
 title: "DROP TABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/25/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"

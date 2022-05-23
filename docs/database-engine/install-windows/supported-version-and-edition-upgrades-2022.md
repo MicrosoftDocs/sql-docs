@@ -1,7 +1,8 @@
 ---
 title: "Supported version and edition upgrades (SQL Server 2022 Preview)"
 description: The supported version and edition upgrades for SQL Server 2022 Preview. 
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 05/24/2022
 ms.prod: sql
 ms.reviewer: ""

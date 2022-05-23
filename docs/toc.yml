@@ -8387,6 +8387,10 @@ items:
         href: relational-databases/security/ledger/ledger-how-to-enable-automatic-digest-storage.md?view=sql-server-ver16&preserve-view=true
       - name: Verify ledger database for tampering
         href: relational-databases/security/ledger/ledger-verify-database.md?view=sql-server-ver16&preserve-view=true
+    - name: Networking
+      items:
+      - name: Connect using strict connection encryption
+        href: relational-databases/security/networking/connect-with-strict-encryption.md
   - name: Concepts
     items:
     - name: Protecting SQL Server Intellectual Property
@@ -8494,6 +8498,10 @@ items:
         href: relational-databases/security/ledger/ledger-how-to-recover-after-tampering.md?view=sql-server-ver16&preserve-view=true
       - name: Ledger limitations
         href: relational-databases/security/ledger/ledger-limits.md?view=sql-server-ver16&preserve-view=true
+    - name: Networking
+      items:
+      - name: TDS 8.0 and TLS 1.3
+        href: relational-databases/security/networking/tds-8-and-tls-1-3.md
   - name: Tutorials
     items:
     - name: Always Encrypted

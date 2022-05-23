@@ -77,7 +77,7 @@ The following sections provide an overview of these features.
 |New permissions & roles | Enable least privileged access for administrative tasks.|
 |Dynamic data masking | Granular UNMASK permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md#granular).|
 |Support for PFX certificates and symmetric key enhancements | Supports certificate, and key backup and restore scenarios, along with integration with Azure Blob Storage service for the same. This enables adherence to security best practices and compliance standards guidelines that prohibit the usage of insecure or deprecated algorithms like RC4.|
-|Support MS-TDS 8.0 protocol | New MS-TDS protocol iteration:<br/>- Makes encryption mandatory<br/>- Aligns MS-TDS with HTTPS making it manageable by network appliances for additional security<br/>- Removes MS-TDS / TLS custom interleaving and enables usage of TLS 1.3 and subsequent TLS protocol versions.| 
+|Support MS-TDS 8.0 protocol | New MS-TDS protocol iteration. See [TDS 8.0 and TLS 1.3 support](/sql/relational-databases/security/networking/tds-8-and-tls-1-3):<br/>- Makes encryption mandatory<br/>- Aligns MS-TDS with HTTPS making it manageable by network appliances for additional security<br/>- Removes MS-TDS / TLS custom interleaving and enables usage of TLS 1.3 and subsequent TLS protocol versions. See [TDS 8.0 and TLS 1.3 support](/sql/relational-databases/security/networking/tds-8-and-tls-1-3).| 
 
 ## Performance
 
@@ -117,7 +117,7 @@ The following sections provide an overview of these features.
 | Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br/>- [DATE_BUCKET](../t-sql/functions/date-bucket-transact-sql.md)<br/>- [GENERATE_SERIES](../t-sql/functions/generate-series-transact-sql.md)<br/><br/>The following adds support to IGNORE NULLS and RESPECT NULLS:<br/>- [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)<br/>- [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)|
 | JSON functions | - [ISJSON (Transact-SQL)](../t-sql/functions/isjson-transact-sql.md)<br/>- [JSON_PATH_EXISTS (Transact-SQL)](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT (Transact-SQL)](../t-sql/functions/json-object-transact-sql.md)<br/>- [JSON_ARRAY (Transact-SQL)](../t-sql/functions/json-array-transact-sql.md)|
 |SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function which uses the window in OVER clause is applied. See [SELECT - WINDOW - (Transact-SQL)](../t-sql/queries/select-window-transact-sql.md).|
-| Resumable add table constraints | Supports [pausing and resuming an ALTER TABLE ADD CONSTRAINT](/sql/relational-databases/security/resumable-table-add-constraints) operation. Resume such operation after maintenance windows, failovers, or system failures.
+| Resumable add table constraints | Supports [pausing and resuming an ALTER TABLE ADD CONSTRAINT](/sql/relational-databases/security/resumable-add-table-constraints) operation. Resume such operation after maintenance windows, failovers, or system failures.
 |T-SQL functions |- [GREATEST (Transact-SQL)](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST (Transact-SQL)](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT (Transact-SQL)](../t-sql/functions/string-split-transact-sql.md).|
 
 ## Tools

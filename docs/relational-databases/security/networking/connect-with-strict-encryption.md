@@ -28,7 +28,7 @@ In this article, we'll show you how to connect to SQL Server 2022 using the stri
 
 ## Connect to SQL Server using a .NET application
 
-For information on building and connecting to SQL Server using the `strict` encryption type, see [Connection String Syntax](/dotnet/framework/data/adonet/connection-string-syntax) on how to properly build the connection string. For more information on the new connection string properties, see [Additional changes to connection string encryption properties](hold).
+For information on building and connecting to SQL Server using the `strict` encryption type, see [Connection String Syntax](/dotnet/framework/data/adonet/connection-string-syntax) on how to properly build the connection string. For more information on the new connection string properties, see [Additional changes to connection string encryption properties](/sql/relational-databases/security/networking/tds-8-and-tls-1-3#additional-changes-to-connection-string-encryption-properties).
 
 ## Connect using an ODBC DSN
 

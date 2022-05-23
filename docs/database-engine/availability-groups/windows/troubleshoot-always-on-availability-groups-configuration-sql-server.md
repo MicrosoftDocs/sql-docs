@@ -203,32 +203,31 @@ For correct configuration of an Availability Group listener follow "[Configure a
 
 1. Once the listener is configured you can validate the IP address it and port it is listening on by using the following query
 
-```sql
-SELECT dns_name AS AG_listener_name, port, ip_configuration_string_from_cluster 
-FROM sys.availability_group_listeners
-```
+   ```sql
+   SELECT dns_name AS AG_listener_name, port, ip_configuration_string_from_cluster 
+   FROM sys.availability_group_listeners
+   ```
 
 1. You can also find the listener information together with the SQL Server ports using this query:
  
-```sql 
-SELECT  SERVERPROPERTY ('servername') servername, ip_address, port, type_desc,state_desc, start_time, * 
-FROM sys.dm_tcp_listener_states 
-WHERE ip_address not in ('127.0.0.1', '::1') and type <> 2
-```
+   ```sql 
+   SELECT  SERVERPROPERTY ('servername') servername, ip_address, port, type_desc,state_desc, start_time
+   FROM sys.dm_tcp_listener_states 
+   WHERE ip_address not in ('127.0.0.1', '::1') and type <> 2
+   ```
 
-1. If you need to establish connectivity to the listener and suspect a port is blocked, you can test using telnet client. In this example the listener port is configured as 50123 and IP address is 192.168.20.15 and name aglistener.
+1. If you need to establish connectivity to the listener and suspect a port is blocked, you can perform a test using a telnet client. In this example the listener port is configured as 50123 and IP address is 192.168.20.15 and name is `aglistener`.
 
-```console
-telnet 192.168.20.15 50123 
-telnet aglistener19 50123
-```
+   ```console
+   telnet 192.168.20.15 50123 
+   telnet aglistener19 50123
+   ```
 
 1. Finally, check if the listener is listening. To check for port 50123 
 
-
-```console
-netstat -aon -p tcp | findstr 50123
-```
+   ```console
+   netstat -aon -p tcp | findstr 50123
+   ```
   
 ##  <a name="Msg1418"></a> Endpoint Access (SQL Server Error 1418)  
  This [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] message indicates that the server network address specified in the endpoint URL cannot be reached or doesn't exist, and it suggests that you verify the network address name and reissue the command.  

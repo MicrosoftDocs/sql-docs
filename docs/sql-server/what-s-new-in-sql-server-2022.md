@@ -8,7 +8,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 ms.custom: intro-whats-new
-ms.date: 05/04/2022
+ms.date: 05/24/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -126,9 +126,9 @@ The following sections provide an overview of these features.
 |:---|:---|
 | Azure Data Studio | Get the latest release at [Download and install Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). The latest release includes support for SQL Server 2022.  |
 | Distributed Replay |  SQL Server setup no longer includes the Distributed Replay client and controller executables. These will be available, along with the Admin executable, as a separate download |
-| SQL Server Management Studio | SSMS version 19.0 is now available and is the recommended version of SSMS for SQL Server 2022. [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). |
+| SQL Server Management Studio | SSMS version 19.0 is now available and is the recommended version of SSMS for SQL Server 2022. [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms-19.md). |
 | SqlPackage.exe | Version 19 of SqlPackage provides support for SQL Server 2022. Get the latest version at [Download and install sqlpackage](../tools/sqlpackage/sqlpackage-download.md).|
-| VS Code | The latest release of VS Code, version 1.67, supports SQL Server 2022. Get it at https://code.visualstudio.com/. | 
+| VS Code | The latest release of VS Code, version 1.67, supports SQL Server 2022. Get it at <https://code.visualstudio.com/>. |
 
 ## SQL Machine Learning Services
 

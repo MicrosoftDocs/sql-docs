@@ -35,19 +35,19 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 ## Download SSMS
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 19 (Preview)](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 19 (Preview)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 19 (Preview) is the latest preview.
+SSMS 19 Preview 2 is the latest preview.
 
-- Release number: 19.0 (Preview)
-- Build number: 16.0.19054.0
+- Release number: 19.0 (Preview 2)
+- Build number: 16.0.19056.0
 - Release date: May 24, 2022
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).
 
 The SSMS 19.x installation doesn't upgrade or replace SSMS versions 18.x or earlier. SSMS 19.x installs side by side with previous versions, so both versions are available for use. However, if you have an earlier *preview* version of SSMS 19 installed, you must uninstall it before installing the latest SSMS 19 preview. You can see if you have a preview version by going to the **Help > About** window.
 
-If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 19**.
+If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio v19.0 Preview 2**.
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
@@ -121,7 +121,7 @@ These components aren't uninstalled because they can be shared with other produc
 
 ## Supported SQL offerings
 
-- This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](/lifecycle/products/?products=sql-server.md) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics.
+- This version of SSMS works with all [supported versions of SQL Server 2008 - SQL Server 2019](../sql-server/end-of-support/sql-server-end-of-support-overview.md) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics.
 - Additionally, SSMS 19 (Preview) can be installed side by side with SSMS 18.x, 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
 - SQL Server Integration Services (SSIS) - SSMS version 17.x or later doesn't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side by side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 
@@ -133,13 +133,9 @@ Supported Operating Systems:
 
 - Windows 11 (64-bit)
 - Windows 10 (64-bit) version 1607 (10.0.14393) or later
-- Windows 8.1 (64-bit)
 - Windows Server 2022 (64-bit)
 - Windows Server 2019 (64-bit)
 - Windows Server 2016 (64-bit)
-- Windows Server 2012 R2 (64-bit)
-- Windows Server 2012 (64-bit)
-- Windows Server 2008 R2 (64-bit)
 
 Supported hardware:
 

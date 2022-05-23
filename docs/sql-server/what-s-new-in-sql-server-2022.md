@@ -30,11 +30,7 @@ This article summarizes the new features and enhancements for [!INCLUDE[sql-serv
 
 [Get SQL Server 2022 Preview Evaluation Edition](https://go.microsoft.com/fwlink/?linkid=2162126).
 
-To get SQL Server 2022 Preview on Linux, see [Installation guidance for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-setup-2022.md).
-
 For more information and known issues, see [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md).
-
-For Linux limitations, see [Unsupported features and services](../linux/sql-server-linux-editions-and-components-2022.md#unsupported-features-and-services).
 
 For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../tools/overview-sql-tools.md).
 
@@ -121,7 +117,7 @@ The following sections provide an overview of these features.
 | Time series functions | You can store and analyze data that changes over time, using time-windowing, aggregation, and filtering capabilities.<br/>- [DATE_BUCKET](../t-sql/functions/date-bucket-transact-sql.md)<br/>- [GENERATE_SERIES](../t-sql/functions/generate-series-transact-sql.md)<br/><br/>The following adds support to IGNORE NULLS and RESPECT NULLS:<br/>- [FIRST_VALUE](../t-sql/functions/first-value-transact-sql.md)<br/>- [LAST_VALUE](../t-sql/functions/last-value-transact-sql.md)|
 | JSON functions | - [ISJSON (Transact-SQL)](../t-sql/functions/isjson-transact-sql.md)<br/>- [JSON_PATH_EXISTS (Transact-SQL)](../t-sql/functions/json-path-exists-transact-sql.md)<br/>- [JSON_OBJECT (Transact-SQL)](../t-sql/functions/json-object-transact-sql.md)<br/>- [JSON_ARRAY (Transact-SQL)](../t-sql/functions/json-array-transact-sql.md)|
 |SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function which uses the window in OVER clause is applied. See [SELECT - WINDOW - (Transact-SQL)](../t-sql/queries/select-window-transact-sql.md).|
-| Resumable ALTER TABLE ADD CONSTRAINT | Support to pause, and resume a running ADD CONSTRAINT operation to perform it during maintenance windows. Resume such operation after failovers and system failures. Execute such operation on a large table despite the small log size available. See [ALTER TABLE (Transact-SQL)](../t-sql/statements/alter-table-transact-sql.md)|
+| Resumable add table constraints | Supports [pausing and resuming an ALTER TABLE ADD CONSTRAINT](/sql/relational-databases/security/resumable-table-add-constraints) operation. Resume such operation after maintenance windows, failovers, or system failures.
 |T-SQL functions |- [GREATEST (Transact-SQL)](../t-sql/functions/logical-functions-greatest-transact-sql.md)<br/>- [LEAST (Transact-SQL)](../t-sql/functions/logical-functions-least-transact-sql.md)<br/>- [STRING_SPLIT (Transact-SQL)](../t-sql/functions/string-split-transact-sql.md).|
 
 ## Tools

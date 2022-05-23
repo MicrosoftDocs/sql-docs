@@ -8520,6 +8520,8 @@ items:
     items:
     - name: Permissions or Securables page
       href: relational-databases/security/permissions-or-securables-page.md
+    - name: Resumable add table contraints
+      href: relational-databases/security/resumable-add-table-constraints.md
 - name: Tools
   items:
   - name: Overview
@@ -9049,8 +9051,14 @@ items:
     items:
     - name: Download SSMS
       href: ssms/download-sql-server-management-studio-ssms.md
-    - name: Release Notes
-      href: ssms/release-notes-ssms.md
+    - name: Release notes
+      href: ssms/release-notes-ssms.md    
+    - name: Preview
+      items:
+      - name: Download SSMS 19 (Preview)
+        href: ssms/download-sql-server-management-studio-ssms-19.md
+      - name: SSMS 19 (Preview) release notes
+        href: ssms/release-notes-ssms-current.md
     - name: Overview
       items:
       - name: SQL Server Management Studio (SSMS)
@@ -10491,16 +10499,12 @@ items:
         href: linux/sql-server-linux-whats-new.md
     - name: Release notes
       items:
-      - name: SQL Server 2022 Preview
-        href: linux/sql-server-linux-release-notes-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-release-notes-2019.md
       - name: SQL Server 2017
         href: linux/sql-server-linux-release-notes.md
     - name: Editions & Features
       items:
-      - name: SQL Server 2022 Preview
-        href: linux/sql-server-linux-editions-and-components-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-editions-and-components-2019.md
       - name: SQL Server 2017
@@ -10570,8 +10574,6 @@ items:
       items:
       - name: Install SQL Server
         href: linux/sql-server-linux-setup.md
-      - name: Install SQL Server 2022 Preview
-        href: linux/sql-server-linux-setup-2022.md
       - name: Install SQL Server tools
         href: linux/sql-server-linux-setup-tools.md
       - name: Install SQL Server Agent

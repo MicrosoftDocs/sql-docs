@@ -27,6 +27,10 @@ This release has the same hardware and software requirements as [SQL Server 2019
 
 SQL Server 2022 Preview on Linux images are coming soon.
 
+## Azure Virtual Machine
+
+SQL Server 2022 Preview Azure VM images are coming soon.
+
 ## Feature notes
 
 This section identifies known issues you may experience with this product:

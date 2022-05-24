@@ -2,8 +2,8 @@
 title: Analyze and prevent deadlocks
 titleSuffix: Azure SQL Database
 description: Learn how to analyze deadlocks and prevent them from reoccurring in Azure SQL Database
-author: LitKnd
-ms.author: kendralittle
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mathoma, dfurman
 services: sql-database
 ms.service: sql-database

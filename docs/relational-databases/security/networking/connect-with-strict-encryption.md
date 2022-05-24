@@ -90,6 +90,9 @@ If you see `SSL certificate validation failed`, validate that:
   - Provider SQL Server matches CA name or one of the DNS names in the certificate.
   - `HostNameInCertificate` connection string property matches CA name or one of the DNS names in the certificate.
 
+> [!IMPORTANT]
+> Although TLS 1.3 is supported for SQL Server 2022, client drivers have not been updated to handle TLS 1.3 in this public preview release. TDS 8.0 will still work with TLS 1.2 and earlier versions.
+
 ## See also
 
 - [TDS 8.0 and TLS 1.3 support](tds-8-and-tls-1-3.md)

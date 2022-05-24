@@ -21,7 +21,7 @@ ms.custom: "seo-lt-2019, devx-track-azurecli, devx-track-azurepowershell"
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!TIP]
-> Eliminate the need for an Azure Load Balancer for your Always On availability (AG) group by creating your SQL Server VMs in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+> If you would prefer to eliminate the need for an Azure Load Balancer for your Always On Availability Group (AG) , create your SQL Server VMs in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network. This configuration is not currently supported for deployment via the Azure portal and you will need to configure the AG manually.
 
 This article describes how to use the [Azure portal](https://portal.azure.com) to configure an availability group for SQL Server on Azure VMs within a single subnet. 
 
@@ -41,8 +41,10 @@ To configure an Always On availability group using the Azure portal, you must ha
 
 - An [Azure subscription](https://azure.microsoft.com/free/).
 - A resource group with a domain controller. 
+- A storage account within the same resource group.
 - One or more domain-joined [VMs in Azure running SQL Server 2016 (or later) Enterprise edition](./create-sql-vm-portal.md) in the *same* availability set or *different* availability zones that have been [registered with the SQL IaaS Agent extension in full manageability mode](sql-agent-extension-manually-register-single-vm.md) and are using the same domain account for the SQL Server service on each VM.
 - Two available (not used by any entity) IP addresses. One is for the internal load balancer. The other is for the availability group listener within the same subnet as the availability group. If you're using an existing load balancer, you only need one available IP address for the availability group listener. 
+- WinRM ports 5985/5986 open in the NSG
 
 ## Permissions
 

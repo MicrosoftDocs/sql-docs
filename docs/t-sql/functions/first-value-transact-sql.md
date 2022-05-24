@@ -12,6 +12,8 @@ f1_keywords:
   - "FIRST_VALUE"
 dev_langs:
   - "TSQL"
+ms.custom:
+- event-tier1-build-2022
 helpviewer_keywords:
   - "FIRST_VALUE function"
   - "analytic functions, FIRST_VALUE"

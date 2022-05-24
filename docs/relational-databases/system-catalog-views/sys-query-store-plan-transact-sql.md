@@ -1,7 +1,8 @@
 ---
 description: "sys.query_store_plan (Transact-SQL)"
 title: "sys.query_store_plan (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "04/25/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

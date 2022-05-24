@@ -6,6 +6,8 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: tutorial
+ms.custom:
+- event-tier1-build-2022
 author: GithubMirek
 ms.author: mireks
 monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"

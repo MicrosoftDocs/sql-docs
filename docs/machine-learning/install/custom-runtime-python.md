@@ -8,8 +8,9 @@ ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
-  - contperf-fy21q3
-  - intro-installation
+- contperf-fy21q3
+- intro-installation
+- event-tier1-build-2022
 zone_pivot_groups: sqlml-platforms
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---

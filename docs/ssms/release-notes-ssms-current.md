@@ -5,6 +5,8 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan

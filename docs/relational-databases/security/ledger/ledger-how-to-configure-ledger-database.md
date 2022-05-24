@@ -4,6 +4,8 @@ description: This article discusses how to configure a ledger database in Azure 
 ms.service: sql-database
 ms.subservice: security
 ms.devlang:
+ms.custom:
+- event-tier1-build-2022
 ms.topic: how-to
 author: VanMSFT
 ms.author: vanto

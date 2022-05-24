@@ -1,7 +1,8 @@
 ---
 description: "Reports system level memory consumers for In-Memory OLTP."
 title: "sys.dm_xtp_system_memory_consumers (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 04/27/2022
 ms.prod: sql
 ms.reviewer: ""

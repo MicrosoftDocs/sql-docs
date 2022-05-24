@@ -1,7 +1,8 @@
 ---
 description: "Query Store catalog views (Transact-SQL)"
 title: "Query Store catalog views (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "06/09/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

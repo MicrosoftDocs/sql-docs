@@ -7,6 +7,8 @@ ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 09/21/2021
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 ms.prod: sql
 ms.technology: big-data-cluster
 ---

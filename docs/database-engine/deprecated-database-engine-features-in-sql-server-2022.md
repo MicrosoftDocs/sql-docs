@@ -7,6 +7,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 helpviewer_keywords: 
   - "deprecated changes 2022 [SQL Server]"
 ms.assetid: 

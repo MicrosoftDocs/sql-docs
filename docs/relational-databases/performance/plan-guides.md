@@ -1,7 +1,8 @@
 ---
 title: "Plan Guides"
 description: Learn about plan guides, which let you optimize the performance of queries without directly changing the text of the query in SQL Server.
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "09/20/2021"
 ms.prod: sql
 ms.reviewer: ""

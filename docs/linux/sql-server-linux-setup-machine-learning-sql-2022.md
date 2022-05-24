@@ -11,7 +11,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ms.custom:
-  - intro-installation
+- intro-installation
+- event-tier1-build-2022
 ---
 # Install SQL Server 2022 Machine Learning Services (Python and R) on Linux
 

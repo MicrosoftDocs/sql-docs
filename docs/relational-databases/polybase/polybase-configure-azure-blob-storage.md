@@ -9,8 +9,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ""
 monikerRange: ">= sql-server-2016"
-ms.custom: seo-dt-2019, seo-lt-2019
-
+ms.custom:
+- seo-dt-2019
+- seo-lt-2019
+- event-tier1-build-2022
 ---
 # Configure PolyBase to access external data in Azure Blob Storage
 

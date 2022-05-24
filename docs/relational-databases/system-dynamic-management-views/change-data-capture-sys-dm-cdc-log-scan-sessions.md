@@ -1,7 +1,8 @@
 ---
 description: "The Change Data Capture DMV sys.dm_cdc_log_scan_sessions returns status information about the current log scan session, or aggregated information about all sessions since the instance was last started."
 title: "sys.dm_cdc_log_scan_sessions (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 05/10/2022
 ms.prod: sql
 ms.reviewer: ""
@@ -76,4 +77,3 @@ GO
  - [sys.dm_cdc_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
  - [What is change data capture (CDC)?](../track-changes/about-change-data-capture-sql-server.md)  
   
-

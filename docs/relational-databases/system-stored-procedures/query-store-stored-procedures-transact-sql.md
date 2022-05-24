@@ -1,7 +1,8 @@
 ---
 description: "Query Store stored procedures (Transact-SQL)"
 title: "Query Store stored procedures (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "04/26/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

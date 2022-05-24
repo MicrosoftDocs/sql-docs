@@ -7,6 +7,8 @@ ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 author: VanMSFT
 ms.author: vanto
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

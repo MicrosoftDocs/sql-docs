@@ -1,7 +1,8 @@
 ---
 description: "Hints (Transact-SQL) - Query"
 title: "Query Hints (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 05/03/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -55,7 +56,6 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.reviewer: wiassaf
-
 ---
 # Hints (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

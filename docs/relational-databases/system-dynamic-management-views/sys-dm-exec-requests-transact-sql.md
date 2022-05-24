@@ -17,7 +17,8 @@ helpviewer_keywords:
 author: akatesmith
 ms.author: katsmith
 ms.reviewer: mikeray
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 1/18/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| = azure-sqldw-latest"
 ---

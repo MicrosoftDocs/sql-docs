@@ -20,7 +20,8 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ""
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "03/22/2016"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -110,5 +111,3 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
   
   
-
-

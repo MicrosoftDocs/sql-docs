@@ -7,7 +7,9 @@ ms.author: jroth
 ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
-ms.custom: intro-installation
+ms.custom:
+- intro-installation
+- event-tier1-build-2022
 ms.date: 05/24/2022
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---

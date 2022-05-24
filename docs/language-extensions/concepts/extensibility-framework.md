@@ -6,6 +6,8 @@ author: rothja
 ms.author: jroth 
 ms.date: 05/24/2022
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"

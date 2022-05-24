@@ -1,7 +1,8 @@
 ---
 description: "The sp_change_feed_disable_table system stored procedure disables a table in the change feed for Azure Synapse Link for SQL."
 title: "sp_change_feed_disable_table (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.service: synapse-analytics
 ms.prod_service: "database-engine, sql-database, synapse-analytics"

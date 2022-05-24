@@ -1,7 +1,8 @@
 ---
 description: "JSON_OBJECT (Transact-SQL)"
 title: "JSON_OBJECT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 05/24/2022
 ms.prod: sql
 ms.technology: t-sql

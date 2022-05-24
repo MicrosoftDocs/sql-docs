@@ -7,7 +7,9 @@ ms.prod: sql
 ms.technology: language-extensions
 author: rothja
 ms.author: jroth
-ms.custom: intro-installation
+ms.custom:
+- intro-installation
+- event-tier1-build-2022
 ms.date: 11/11/2020
 monikerRange: ">=sql-server-ver15"
 ---

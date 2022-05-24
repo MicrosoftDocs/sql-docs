@@ -6,6 +6,8 @@ ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 helpviewer_keywords: 
   - "backing up databases [SQL Server], full backups"
   - "backups [SQL Server], creating"

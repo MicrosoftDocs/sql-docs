@@ -16,8 +16,9 @@ helpviewer_keywords:
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
 ms.custom:
-  - contperf-fy21q2
-  - intro-overview
+- contperf-fy21q2
+- intro-overview
+- event-tier1-build-2022
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei

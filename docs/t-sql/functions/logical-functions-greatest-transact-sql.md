@@ -15,7 +15,8 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT 
 ms.author: wiassaf
 ms.reviewer: ""
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "03/11/2022"
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || =azure-sqldw-latest"
 ---

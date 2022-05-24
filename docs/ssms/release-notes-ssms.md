@@ -15,9 +15,9 @@ ms.date: 03/08/2022
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
-
 To view the release notes for SSMS 19 Preview 2, visit [SSMS Release Notes 19](release-notes-ssms-19.md).
+
+This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
 
 [!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
 

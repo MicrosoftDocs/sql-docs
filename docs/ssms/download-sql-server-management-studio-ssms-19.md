@@ -27,7 +27,7 @@ ms.date: 05/24/2022
 
 # Download SQL Server Management Studio (SSMS) 19 (Preview)
 
-[SQL Server ASDB, ASDBMI, ASDW](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure, from SQL Server to Azure SQL Database. SSMS provides tools to configure, monitor, and administer instances of SQL Server and databases. Use SSMS to deploy, monitor, and upgrade the data-tier components used by your applications, and build queries and scripts.
 
@@ -98,15 +98,15 @@ If you want to install SSMS in the background with no GUI prompts, then follow t
 
 ## Installation with Azure Data Studio
 
-- Starting with SSMS 18.7, SSMS installs a system version of Azure Data Studio by default. If an equal or greater system version of Azure Data Studio stable or insiders is already present on the workstation compared to the included version of Azure Data Studio, the installation of Azure Data Studio by SSMS is skipped. The Azure Data Studio version can be found in the release notes.
+- Starting with SSMS 18.7, SSMS installs a system version of Azure Data Studio by default. If an equal or greater version of Azure Data Studio (GA or insiders build) is already present on the workstation compared to the included version of Azure Data Studio, the installation of Azure Data Studio by SSMS is skipped. The Azure Data Studio version can be found in the release notes
 - The Azure Data Studio system installer requires the same security rights as the SSMS installer.
-- The Azure Data Studio installation is completed with the default Azure Data Studio installation options. These are to create a Start Menu folder and add Azure Data Studio to PATH. A desktop shortcut is not created and Azure Data Studio is not registered as a default editor for any file types.
+- The Azure Data Studio installation is completed with the default Azure Data Studio installation options. These are to create a Start Menu folder and add Azure Data Studio to PATH. A desktop shortcut isn't created and Azure Data Studio isn't registered as a default editor for any file types.
 - Localization of Azure Data Studio is accomplished through Language Pack extensions. To localize Azure Data Studio, download the corresponding language pack from the [extension marketplace](../azure-data-studio/extensions/add-extensions.md).
 - At this time, the installation of Azure Data Studio can be skipped by launching the SSMS installer with the command line flag `DoNotInstallAzureDataStudio=1`.
 
 ## Uninstall
 
-SSMS may install shared components if it is determined that they are missing during SSMS installation. SSMS will not automatically uninstall these components when you uninstall SSMS.
+SSMS may install shared components if it's determined that they're missing during SSMS installation. SSMS won't automatically uninstall these components when you uninstall SSMS.
 
 The shared components are:
 

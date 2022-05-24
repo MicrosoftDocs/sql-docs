@@ -6493,7 +6493,7 @@ items:
       href: dma/dma-migrateserverlogins.md
     - name: Best practices
       href: dma/dma-bestpractices.md
-    - name: Assess an app's data access layer
+    - name: Assess application data access layer
       href: dma/dma-assess-app-data-layer.md
     - name: Run from the command-line
       href: dma/dma-commandline.md

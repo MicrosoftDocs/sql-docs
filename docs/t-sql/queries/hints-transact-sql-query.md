@@ -1,8 +1,9 @@
 ---
 description: "Hints (Transact-SQL) - Query"
 title: "Query Hints (Transact-SQL)"
-ms.custom: ""
-ms.date: "09/20/2021"
+ms.custom:
+- event-tier1-build-2022
+ms.date: 05/03/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -55,7 +56,6 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.reviewer: wiassaf
-
 ---
 # Hints (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,6 +84,7 @@ Query hints specify that the indicated hints are used in the scope of a query. T
 { { HASH | ORDER } GROUP   
   | { CONCAT | HASH | MERGE } UNION   
   | { LOOP | MERGE | HASH } JOIN   
+  | DISABLE_OPTIMIZED_PLAN_FORCING 
   | EXPAND VIEWS   
   | FAST <integer_value>   
   | FORCE ORDER   
@@ -171,6 +172,13 @@ Specifies all join operations are performed by LOOP JOIN, MERGE JOIN, or HASH JO
   
 If you specify a join hint in the same query's FROM clause for a specific table pair, this join hint takes precedence in the joining of the two tables. The query hints, though, must still be honored. The join hint for the pair of tables may only restrict the selection of allowed join methods in the query hint. For more information, see [Join Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
+#### DISABLE_OPTIMIZED_PLAN_FORCING 
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+Disables [Optimized plan forcing](../../relational-databases/performance/optimized-plan-forcing-query-store.md) for a query.
+
+Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as an optimization replay script. An optimization replay script is stored as part of the compressed showplan XML in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
+
 #### EXPAND VIEWS  
 Specifies the indexed views are expanded. Also specifies the Query Optimizer won't consider any indexed view as a replacement for any query part. A view is expanded when the view definition replaces the view name in the query text.  
   
@@ -272,7 +280,7 @@ Specifies the parameterization rules that the [!INCLUDE[ssNoVersion](../../inclu
 > The PARAMETERIZATION query hint can only be specified inside a plan guide to override the current setting of the PARAMETERIZATION database SET option. It can't be specified directly within a query.    
 > For more information, see [Specify Query Parameterization Behavior by Using Plan Guides](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
-SIMPLE instructs the Query Optimizer to attempt simple parameterization. FORCED instructs the Query Optimizer to attempt forced parameterization. For more information, see [Forced Parameterization in the Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), and [Simple Parameterization in the Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
+SIMPLE instructs the Query Optimizer to attempt simple parameterization. FORCED instructs the Query Optimizer to attempt forced parameterization. For more information, see [Forced Parameterization in the Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), and [Simple Parameterization in the Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#simple-parameterization).  
 
 #### QUERYTRACEON <integer_value>    
 This option lets you to enable a plan-affecting trace flag only during single-query compilation. Like other query-level options, you can use it together with plan guides to match the text of a query being executed from any session, and automatically apply a plan-affecting trace flag when this query is being compiled. The QUERYTRACEON option is only supported for Query Optimizer trace flags. For more information, see [Trace Flags](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 

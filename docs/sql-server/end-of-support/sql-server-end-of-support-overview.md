@@ -31,7 +31,7 @@ Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is bac
 Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of support stage, you can choose to:
 
 - [Migrate](/azure/azure-sql/migration-guides/) your workload to [Azure SQL](/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
-- Migrate your workload to an Azure Virtual Machine as-is for [free Extended Security Updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support).
+- Migrate your workload to an Azure Virtual Machine as-is for [free Extended Security Updates](/azure/azure-sql/virtual-machines/windows/sql-server-2008-extend-end-of-support).
 - Upgrade to a current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - Purchase an [Extended Security Updates subscription](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
@@ -160,7 +160,7 @@ If you're not ready to upgrade, and you're not ready to move to the cloud, you h
 
 - [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
 - [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
-- [Extend support for free by migrating as-is to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
+- [Extend support for free by migrating as-is to an Azure VM](/azure/azure-sql/virtual-machines/windows/sql-server-2008-extend-end-of-support)
 - [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)
 
 ## SQL Server on Azure VMs
@@ -192,14 +192,14 @@ Another option is to migrate your workload to an [Azure Virtual Machine running 
 
 - [SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)
 - [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
-- [Migrate SQL Server to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
-- [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
+- [Migrate SQL Server to an Azure VM](/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server)
+- [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/azure-sql/virtual-machines/windows/sql-server-2008-extend-end-of-support)
 - [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
 - [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
-- [SQL virtual machine automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
-- [SQL virtual machine automated backup](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-backup-v2)
-- [SQL virtual machine high availability](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
-- [SQL virtual machine frequently asked questions](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-faq)
+- [SQL virtual machine automated patching](/azure/azure-sql/virtual-machines/windows/automated-patching)
+- [SQL virtual machine automated backup](/azure/azure-sql/virtual-machines/windows/automated-backup)
+- [SQL virtual machine high availability](/azure/azure-sql/virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview)
+- [SQL virtual machine frequently asked questions](/azure/azure-sql/virtual-machines/windows/frequently-asked-questions-faq)
 
 ## Azure SQL Database
 
@@ -292,6 +292,6 @@ The following table provides an approximation of lifecycle dates for [!INCLUDE[s
 
 - [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
 - [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
-- [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
+- [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/azure-sql/virtual-machines/windows/sql-server-2008-extend-end-of-support)
 - [SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)
 - [Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)

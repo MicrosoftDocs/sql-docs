@@ -132,7 +132,7 @@ The following sections provide an overview of these features.
 
 ## SQL Machine Learning Services
 
-Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install any desired custom runtime(s) and packages. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install any desired custom runtime(s) and packages. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning-sql-2022.md).
 
 ## Additional information
 

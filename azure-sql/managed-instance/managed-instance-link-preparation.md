@@ -41,9 +41,7 @@ To prepare your SQL Server instance, you need to validate that:
 
 You'll need to restart SQL Server for these changes to take effect.
 
-### Install CU15 (or later)
-
-The link feature for SQL Managed Instance was introduced in CU15 of SQL Server 2019.
+### Install Service Updates
 
 To check your SQL Server version, run the following Transact-SQL (T-SQL) script on SQL Server: 
 
@@ -53,7 +51,13 @@ To check your SQL Server version, run the following Transact-SQL (T-SQL) script 
 SELECT @@VERSION
 ```
 
-If your SQL Server version is earlier than CU15 (15.0.4198.2), install [CU15](https://support.microsoft.com/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) or the latest cumulative update. You must restart your SQL Server instance during the update. 
+Ensure that your SQL Server version has the appropriate servicing update installed. You must restart your SQL Server instance during the update. 
+
+| SQL Server Version  | Editions  | Host OS | Servicing update requirement |
+|---------|---------|---------|
+|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server 2016 and up | No service update available. Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer | Windows Server 2016 and up | [CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) |
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server 2016 and up | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database
 

@@ -35,11 +35,11 @@ In addition to the supported version, you'll need:
 - Network connectivity between your SQL Server and managed instance is required. If your SQL Server is running on-premises, use a VPN link or Express route. If your SQL Server is running on an Azure VM, either deploy your VM to the same subnet as your managed instance, or use global VNet peering to connect two separate subnets. 
 - Azure SQL Managed Instance provisioned on any service tier.
 
-Tooling requirements:
+You'll also need the following tooling:
 
 | Tool  | Notes  | 
 |---------|---------|
-| [SSMS 18.11.1](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), or higher | Required for automated wizard setup for SQL Servers 2019 and 2022. SQL Server 2016 is not supported at this time. |
+| [SSMS 18.11.1](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), or higher | Required for automated wizard setup for SQL Servers 2019 and 2022. <BR>SQL Server 2016 is not supported at this time. |
 | PowerShell module [Az.SQL 3.5.0](https://www.powershellgallery.com/packages/Az.Sql/3.5.0), or higher | Required for manual configuration steps. |
 
 > [!NOTE]

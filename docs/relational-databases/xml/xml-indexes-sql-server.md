@@ -1,8 +1,9 @@
 ---
 title: "XML Indexes (SQL Server)"
 description: Learn how creating XML indexes on xml data type columns can benefit your application by improving query performance.
-ms.custom: ""
-ms.date: 05/05/2022
+ms.custom:
+- event-tier1-build-2022
+ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: randolphwest
@@ -43,6 +44,8 @@ XML indexes can be created on **xml** data type columns. They index all tags, va
 - Queries on XML columns are common in your workload. XML index maintenance cost during data modification must be considered.
 
 - Your XML values are relatively large and the retrieved parts are relatively small. Building the index avoids parsing the whole data at run time and benefits index lookups for efficient query processing.
+
+Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can use [XML compression](#xml-compression), which provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements.
 
 XML indexes fall into the following categories:
 
@@ -213,6 +216,22 @@ Except for the differences described later in this article, creating an XML inde
 - [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
 - [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
 - [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
+
+## XML compression
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+Enabling XML compression changes the physical storage format of the data that is associated with the XML data type to a *compressed binary format*, but doesn't change XML data syntax or semantics. Application changes aren't required when one or more tables are enabled for XML compression.
+
+Only the XML data type is affected by XML compression. XML data is compressed with the [Xpress Compression Algorithm](/openspecs/windows_protocols/ms-xca/a8b7cb0a-92a6-4187-a23b-5e14273b96f8). Any existing XML indexes are compressed using [data compression](../data-compression/data-compression.md). Data compression is enabled internally for XML indexes when XML compression is enabled.
+
+XML compression can be enabled side-by-side with data compression on the same tables.
+
+XML indexes don't inherit the compression property of the table. To compress indexes, you must explicitly enable XML compression on XML indexes.
+
+Secondary XML indexes don't inherit the compression property of the Primary XML index.
+
+By default, the XML compression setting for XML indexes is set to OFF when the index is created.
 
 ## Get information about XML indexes
 

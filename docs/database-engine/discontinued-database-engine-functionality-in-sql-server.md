@@ -1,8 +1,10 @@
 ---
 title: Discontinued database engine functionality
-description: Learn which database engine functionality and features were discontinued in SQL Server 2019 (15.x), SQL Server 2016 (13.x), and previous versions.
-ms.custom: "seo-lt-2019"
-ms.date: 07/22/2020
+description: Learn which database engine functionality and features were discontinued in SQL Server.
+ms.custom:
+- seo-lt-2019
+- event-tier1-build-2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -32,7 +34,6 @@ helpviewer_keywords:
   - "DATABASEPROPERTY"
   - "FASTFIRSTROW hint"
   - "SET DISABLE_DEF_CNST_CHK"
-ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016"
@@ -41,6 +42,22 @@ monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016"
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)].  
+
+## Discontinued features in [!INCLUDE[sssql22](../includes/sssql22-md.md)]  
+
+- The following Machine Learning Services packages are no longer included with installation of SQL Server 2022. Instead, you can installed any custom packages as desired. For more information, see [What's new in SQL Server Machine Learning Services?](../machine-learning/what-s-new-in-sql-server-machine-learning-services.md)
+
+    | **Language** | **Package** |
+    | :-- | :-- |
+    | Python | [microsoftml](../machine-learning/python/ref-py-microsoftml.md)| 
+    | R | [olapR](../machine-learning/r/ref-r-olapr.md) | 
+    | R | [sqlrutils](../machine-learning/r/ref-r-sqlrutils.md) | 
+    | R | [MicrosoftML (R)](../machine-learning/r/ref-r-microsoftml.md) |
+
+- SQL Server Big Data Clusters will be retired. See information in [[!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] overview](../big-data-cluster/big-data-cluster-overview.md).
+
+- SQL Server PolyBase scale-out groups will be retired. Scale out group functionality is removed from the product in SQL Server 2022. PolyBase data virtualization continues to be fully supported as a scale-up feature in SQL Server. See [Changes to PolyBase support in SQL Server](../big-data-cluster/big-data-options.md#changes-to-polybase-support-in-sql-server).
+
 
 ## Discontinued features in [!INCLUDE[sssql19](../includes/sssql19-md.md)]  
 

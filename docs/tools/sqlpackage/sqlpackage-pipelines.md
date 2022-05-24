@@ -52,7 +52,7 @@ By using the [script](/azure/devops/pipelines/yaml-schema#script) keyword in an 
 
 #### GitHub Actions
 
-By using the [run](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions) keyword in a GitHub Action workflow, a step can be added to a GitHub Action that outputs the SqlPackage version number.
+By using the [run](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) keyword in a GitHub Action workflow, a step can be added to a GitHub Action that outputs the SqlPackage version number.
 
 ```yaml
 - name: get sqlpackage version

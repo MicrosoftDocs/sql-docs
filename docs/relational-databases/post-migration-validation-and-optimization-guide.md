@@ -7,6 +7,8 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 helpviewer_keywords: 
   - "post-migration validation and optimization"
   - "guide, post-migration validation and optimization"
@@ -50,7 +52,7 @@ For more information on this topic, see [Keep performance stability during the u
 > For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrations, if this issue existed in the source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrating to a newer version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as-is will not address this scenario. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compiles query plans on stored procedures by using sniffing the input parameters at the first compile, generating a parameterized and reusable plan, optimized for that input data distribution. Even if not stored procedures, most statements generating trivial plans will be parameterized. After a plan is first cached, any future execution maps to a previously cached plan.
-A potential problem arises when that first compilation may not have used the most common sets of parameters for the usual workload. For different parameters, the same execution plan becomes inefficient. For more information on this topic, see [Parameter Sniffing](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
+A potential problem arises when that first compilation may not have used the most common sets of parameters for the usual workload. For different parameters, the same execution plan becomes inefficient. For more information on this topic, see [Parameter Sniffing](../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity).
 
 ### Steps to resolve
 

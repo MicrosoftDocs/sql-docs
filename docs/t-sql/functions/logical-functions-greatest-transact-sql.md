@@ -15,13 +15,14 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT 
 ms.author: wiassaf
 ms.reviewer: ""
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "03/11/2022"
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || =azure-sqldw-latest"
 ---
 # Logical Functions - GREATEST (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-svrless-poolonly.md)]
+[!INCLUDE [sqlserver-2022-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sqlserver2022-asdb-asdbmi-asa-svrless-poolonly.md)]
 
 
  This function returns the maximum value from a list of one or more expressions. 

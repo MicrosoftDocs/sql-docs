@@ -1,8 +1,9 @@
 ---
 description: "ALTER INDEX (Transact-SQL)"
 title: "ALTER INDEX (Transact-SQL)"
-ms.custom: ""
-ms.date: 04/29/2022
+ms.custom:
+- event-tier1-build-2022
+ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: wiassaf, randolphwest
@@ -97,7 +98,8 @@ ALTER INDEX { index_name | ALL } ON <object>
     | MAXDOP = max_degree_of_parallelism
     | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]
-}
+    | XML_COMPRESSION = { ON | OFF }
+        [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]}
 
 <single_partition_rebuild_index_option> ::=
 {
@@ -106,6 +108,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | RESUMABLE = { ON | OFF }
     | MAX_DURATION = <time> [MINUTES}
     | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE } }
+    | XML_COMPRESSION = { ON | OFF }
     | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }
 }
 
@@ -122,7 +125,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
     | IGNORE_DUP_KEY = { ON | OFF }
     | STATISTICS_NORECOMPUTE = { ON | OFF }
-    | COMPRESSION_DELAY= { 0 | delay [Minutes] }
+    | COMPRESSION_DELAY = { 0 | delay [Minutes] }
 }
 
 <resumable_index_option> ::=
@@ -159,11 +162,14 @@ ALTER INDEX { index_name | ALL }
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]
+    | XML_COMPRESSION = { ON | OFF }
+        [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]
 }
 
 <single_partition_rebuild_index_option > ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
+    | XML_COMPRESSION = { ON | OFF }
 }
 
 ```
@@ -245,7 +251,7 @@ The partition number of a partitioned index that is to be rebuilt or reorganized
 
 **WITH (<single_partition_rebuild_index_option>)**
 
-`SORT_IN_TEMPDB`, `MAXDOP`, and `DATA_COMPRESSION` are the options that can be specified when you `REBUILD` a single partition `(PARTITION = partition_number)`. XML indexes can't be specified in a single partition `REBUILD` operation.
+`SORT_IN_TEMPDB`, `MAXDOP`, `DATA_COMPRESSION`, and `XML_COMPRESSION` are the options that can be specified when you `REBUILD` a single partition `(PARTITION = partition_number)`. XML indexes can't be specified in a single partition `REBUILD` operation.
 
 #### DISABLE
 
@@ -542,9 +548,24 @@ Applies only to columnstore indexes, including both nonclustered columnstore and
 
 For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
+#### XML_COMPRESSION
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+Specifies the XML compression option for the specified index that contains one or more **xml** data type columns. The options are as follows:
+
+ON  
+Index or specified partitions are compressed by using XML compression.
+
+OFF  
+Index or specified partitions are not compressed.
+
 #### ON PARTITIONS ( { \<partition_number_expression> | \<range\> } [,...n] )
 
-Specifies the partitions to which the DATA_COMPRESSION setting applies. If the index isn't partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause isn't provided, the DATA_COMPRESSION option applies to all partitions of a partitioned index.
+Specifies the partitions to which the DATA_COMPRESSION or XML_COMPRESSION settings apply. If the index isn't partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause isn't provided, the DATA_COMPRESSION or XML_COMPRESSION option applies to all partitions of a partitioned index.
+
+> [!NOTE]  
+> XML_COMPRESSION is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
 
 `<partition_number_expression>` can be specified in the following ways:
 
@@ -562,6 +583,17 @@ REBUILD WITH
 DATA_COMPRESSION = NONE ON PARTITIONS (1),
 DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
 DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
+);
+```
+
+You can also specify the XML_COMPRESSION option more than once, for example:
+
+```sql
+REBUILD WITH
+(
+  XML_COMPRESSION = OFF ON PARTITIONS (1),
+  XML_COMPRESSION = ON ON PARTITIONS (2, 4, 6 TO 8),
+  XML_COMPRESSION = OFF ON PARTITIONS (3, 5)
 );
 ```
 
@@ -1145,9 +1177,23 @@ WITH (DATA_COMPRESSION = PAGE);
 GO
 ```
 
+### J. Change the setting of an index with XML compression
+
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+
+The following example rebuilds an index on a nonpartitioned rowstore table.
+
+```sql
+ALTER INDEX IX_INDEX1
+ON T1
+REBUILD
+WITH (XML_COMPRESSION = ON);
+GO
+```
+
 For more data compression examples, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
-### J. Online resumable index rebuild
+### K. Online resumable index rebuild
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 

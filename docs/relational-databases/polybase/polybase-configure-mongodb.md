@@ -6,9 +6,11 @@ ms.metadata: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mikeray
+ms.custom:
+- event-tier1-build-2022
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: hudequei
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15"
 ---
 # Configure PolyBase to access external data in MongoDB
@@ -21,8 +23,7 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md).
 
-Before creating a database scoped credential a [Master Key](../../t-sql/statements/create-master-key-transact-sql.md) must be created. 
-    
+Before you create a database scoped credential, the database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md).
 
 ## Configure a MongoDB external data source
 

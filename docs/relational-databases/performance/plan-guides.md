@@ -1,7 +1,8 @@
 ---
 title: "Plan Guides"
 description: Learn about plan guides, which let you optimize the performance of queries without directly changing the text of the query in SQL Server.
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "09/20/2021"
 ms.prod: sql
 ms.reviewer: ""
@@ -120,9 +121,9 @@ where SalesOrderID =  @so_id',
   
  You can create a TEMPLATE plan guide in either of the following situations:  
   
--   The PARAMETERIZATION database option is SET to FORCED, but there are queries you want compiled according to the rules of [Simple Parameterization](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
+-   The PARAMETERIZATION database option is SET to FORCED, but there are queries you want compiled according to the rules of [Simple Parameterization](../../relational-databases/query-processing-architecture-guide.md#simple-parameterization).  
   
--   The PARAMETERIZATION database option is SET to SIMPLE (the default setting), but you want [Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) to be tried on a class of queries.  
+-   The PARAMETERIZATION database option is SET to SIMPLE (the default setting), but you want [Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization) to be tried on a class of queries.  
   
 ## Plan Guide Matching Requirements  
  Plan guides are scoped to the database in which they are created. Therefore, only plan guides that are in the database that is current when a query executes can be matched to the query. For example, if [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is the current database and the following query executes:  

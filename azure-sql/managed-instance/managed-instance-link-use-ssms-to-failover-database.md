@@ -38,7 +38,7 @@ To fail over your databases to SQL Managed Instance, you need the following prer
 >[!IMPORTANT]
 > Current version of SSMS supports automated database fail over for SQL Servers 2019 and 2022.
 > 
-> SQL Server 2016 is not supported with the current SSMS version.
+> SQL Server 2016 is not supported with the current SSMS version. Use [fail over database with scripts](managed-instance-link-use-scripts-to-failover-database.md) instead.
 
 ## Fail over a database
 

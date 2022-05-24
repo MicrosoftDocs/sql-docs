@@ -26,9 +26,9 @@ To use the link feature, you'll need a supported version of SQL Server. The foll
 
 | SQL Server Version  | Editions  | Host OS | Servicing update requirement |
 |---------|---------|---------|
-|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server 2016 and up | Sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer |  Windows Server 2016 and up | [CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) |
-|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server 2016 and up | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
+|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | No servicing update available. You must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer |  Windows Server | [CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) |
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 In addition to the supported version, you'll need:
 
@@ -39,7 +39,7 @@ Tooling requirements:
 
 | Tool  | Notes  | 
 |---------|---------|
-| [SSMS 18.11.1](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms), or higher | Required for automated wizard setup for SQL Servers 2019 and 2022. SQL Server 2016 is not supported at this time. |
+| [SSMS 18.11.1](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), or higher | Required for automated wizard setup for SQL Servers 2019 and 2022. SQL Server 2016 is not supported at this time. |
 | PowerShell module [Az.SQL 3.5.0](https://www.powershellgallery.com/packages/Az.Sql/3.5.0), or higher | Required for manual configuration steps. |
 
 > [!NOTE]

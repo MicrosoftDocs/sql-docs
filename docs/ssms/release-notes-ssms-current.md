@@ -42,7 +42,7 @@ SSMS 19 Preview 2 is the latest preview release of SSMS. If you need a previous 
 | Client Driver | Changed to Microsoft.Data.SqlClient. |
 | Contained Always On Availability Group | Added support for Contained Always On Availability Groups. |
 | Data Classification | Improvements to Data Classification user interface. |
-| Ledger | Added support for Ledger feature Database ledger, visit [What is the database ledger?](https://docs.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-database-ledger?view=sql-server-ver16&viewFallbackFrom=azuresql) for more information. |
+| Ledger | Added support for Ledger feature Database ledger, visit [What is the database ledger?](https://docs.microsoft.com/sql/relational-databases/security/ledger/ledger-database-ledger?view=sql-server-ver16&viewFallbackFrom=azuresql) for more information. |
 | Query Execution or Results | Improved checks for open connections. |
 | Query Tuning Advisor | Updated user interface for improved accessibility. |
 | Showplan | The showplan XML schema has been updated. |

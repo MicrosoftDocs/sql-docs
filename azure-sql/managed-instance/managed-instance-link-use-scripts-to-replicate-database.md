@@ -372,7 +372,7 @@ GO
 ```
 
 >[!IMPORTANT]
-> For SQL Server 2016, please delete `CLUSTER_TYPE = NONE)` from the above T-SQL statement.
+> For SQL Server 2016, please delete `WITH (CLUSTER_TYPE = NONE)` from the above T-SQL statement.
 
 Consider the following:
 

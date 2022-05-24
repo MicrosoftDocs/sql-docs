@@ -334,7 +334,7 @@ sections:
       - question: |
           How do I know what my backup bill will be?
         answer: |
-          To determine your backup storage bill, backup storage size is calculated periodically and multiplied by the backup storage rate and the number of hours since last calculation. To estimate your backup bill for a time period, multiply the billable backup storage size for every hour of the period by the backup storage rate, and add up all hourly amounts. To query relevant Azure Monitor metrics for multiple hourly intervals programmatically, use Azure Monitor [REST API](/azure-monitor/essentials/rest-api-walkthrough.md).
+          To determine your backup storage bill, backup storage size is calculated periodically and multiplied by the backup storage rate and the number of hours since last calculation. To estimate your backup bill for a time period, multiply the billable backup storage size for every hour of the period by the backup storage rate, and add up all hourly amounts. To query relevant Azure Monitor metrics for multiple hourly intervals programmatically, use Azure Monitor [REST API](/azure/azure-monitor/essentials/rest-api-walkthrough).
 
       - question: |
           How will my workload influence my backup storage costs?

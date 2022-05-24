@@ -18,6 +18,9 @@ monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16"
 
 SQL Server 2022 supports Tabular Data Stream (TDS) 8.0, and Transport Layer Security (TLS) 1.3 when TDS 8.0 is used.
 
+> [!IMPORTANT]
+> Although TLS 1.3 is supported for SQL Server 2022, client drivers have not been updated to handle TLS 1.3 in this public preview release. TDS 8.0 will still work with TLS 1.2 and earlier versions.
+
 The [Tabular Data Stream (TDS)](/openspecs/windows_protocols/ms-tds/b46a581a-39de-4745-b076-ec4dbb7d13ec) protocol is an application layer protocol used by clients to connect to SQL Server, while SQL Server uses Transport Layer Security (TLS) to encrypt data that is transmitted across a network between an instance of SQL Server and a client application.
 
 TDS is a secure protocol, but in previous versions of SQL Server, encryption could be turned off or not enabled. To meet the standards of mandatory encryption while using SQL Server, an iteration of the TDS protocol was introduced: TDS 8.0
@@ -38,11 +41,11 @@ During the TDS session lifespan, there are three phases:
 
 Encryption is negotiated during the initial phase, but TDS negotiation happens over an unencrypted connection. The SQL Server connection will look like this for prior versions to TDS 8.0:
 
-TCP handshake --> TDS prelogin (cleartext) and response (cleartext) --> TLS handshake --> authentication (encrypted) --> data exchange (could be encrypted or unencrypted)
+TCP handshake :arrow_right: TDS prelogin (cleartext) and response (cleartext) :arrow_right: TLS handshake :arrow_right: authentication (encrypted) :arrow_right: data exchange (could be encrypted or unencrypted)
 
 With the introduction of TDS 8.0, the SQL Server connections are as follows:
 
-TCP handshake --> TLS handshake --> TDS prelogin (encrypted) and response (encrypted) -->  authentication (encrypted) --> data exchange (encrypted)
+TCP handshake :arrow_right: TLS handshake :arrow_right: TDS prelogin (encrypted) and response (encrypted) :arrow_right:  authentication (encrypted) :arrow_right: data exchange (encrypted)
 
 ## Differences between TLS 1.2 and TLS 1.3
 

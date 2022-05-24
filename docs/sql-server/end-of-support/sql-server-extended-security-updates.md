@@ -87,9 +87,9 @@ ESUs are available to customers running their workload in Azure, on-premises, or
 
 If you migrate your workloads to an Azure service (see the [Overview](#overview) for more information), you'll have access to ESUs for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] for up to three years after the End of Support, at **no additional charges** above the cost of running the Azure service. Customers don't need Software Assurance to receive ESUs in Azure.
 
-Azure services running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels, when the service is configured to use [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
+Azure services running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels, when the service is configured to use [automated patching](/azure/azure-sql/virtual-machines/windows/automated-patching).
 
-Azure services that have ***not* been configured for [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** will need to manually download and deploy ESU patches as described in the [on-premises or hosted environments](#on-premises-or-hosted-environments) section.
+Azure services that have ***not* been configured for [automated patching](/azure/azure-sql/virtual-machines/windows/automated-patching)** will need to manually download and deploy ESU patches as described in the [on-premises or hosted environments](#on-premises-or-hosted-environments) section.
 
 ### On-premises or hosted environments
 
@@ -368,7 +368,7 @@ Yes, customers can migrate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 **For customers with a SQL Server cluster using shared storage, what is the guidance to migrating to Azure?**
 
-Azure doesn't currently support shared storage clustering. For advice on how to configure a highly available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on Azure, refer to the [SQL Server High Availability guide](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr).
+Azure doesn't currently support shared storage clustering. For advice on how to configure a highly available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on Azure, refer to the [SQL Server High Availability guide](/azure/azure-sql/virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview).
 
 **Can customers use Extended Security Updates for SQL Server with a third-party hosting provider?**
 
@@ -376,7 +376,7 @@ Customers can't use ESUs if they move their [!INCLUDE[ssSQL11](../../includes/ss
 
 **What are the best practices for enhancing performance of SQL Server in Azure virtual machines?**
 
-For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Azure virtual machines, see the [SQL Server optimization guide](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance).
+For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Azure virtual machines, see the [SQL Server optimization guide](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices).
 
 ## See also
 
@@ -386,7 +386,7 @@ For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../inclu
 - [Extended Security Updates frequently asked questions (FAQ)](https://aka.ms/sqleosfaq)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
 - [Manage Windows updates by using Azure Automation](/azure/automation/update-management/overview)
-- [SQL Server VM automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
+- [SQL Server VM automated patching](/azure/azure-sql/virtual-machines/windows/automated-patching)
 - [Microsoft Data Migration Guide](https://datamigration.microsoft.com/)
 - [Azure migrate: lift-and-shift options to move your current SQL Server into an Azure VM](https://azure.microsoft.com/services/azure-migrate/)
 - [Cloud adoption framework for SQL migration](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)

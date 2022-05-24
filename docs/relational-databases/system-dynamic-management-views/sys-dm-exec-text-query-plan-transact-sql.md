@@ -1,7 +1,8 @@
 ---
 description: "sys.dm_exec_text_query_plan (Transact-SQL)"
 title: "sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "10/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -97,7 +98,7 @@ A value of -1 indicates the end of the batch. The default value is -1.
   
 -   If a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch or stored procedure contains a call to a user-defined function or a call to dynamic SQL, for example using EXEC (*string*), the compiled XML Showplan for the user-defined function is not included in the table returned by **sys.dm_exec_text_query_plan** for the batch or stored procedure. Instead, you must make a separate call to **sys.dm_exec_text_query_plan** for the *plan_handle* that corresponds to the user-defined function.  
   
-When an ad hoc query uses [simple](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) or [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), the **query_plan** column will contain only the statement text and not the actual query plan. To return the query plan, call **sys.dm_exec_text_query_plan** for the plan handle of the prepared parameterized query. You can determine whether the query was parameterized by referencing the **sql** column of the [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) view or the text column of the [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamic management view.  
+When an ad hoc query uses [simple](../../relational-databases/query-processing-architecture-guide.md#simple-parameterization) or [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), the **query_plan** column will contain only the statement text and not the actual query plan. To return the query plan, call **sys.dm_exec_text_query_plan** for the plan handle of the prepared parameterized query. You can determine whether the query was parameterized by referencing the **sql** column of the [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) view or the text column of the [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamic management view.  
   
 ## Permissions  
  To execute **sys.dm_exec_text_query_plan**, a user must be a member of the **sysadmin** fixed server role or have the VIEW SERVER STATE permission on the server.  

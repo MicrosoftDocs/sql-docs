@@ -2,8 +2,9 @@
 title: "Deploy Host Guardian Service"
 description: "Deploy the Host Guardian Service for Always Encrypted with Secure Enclaves."
 ms.custom:
-  - intro-deployment
-ms.date: "01/13/2022"
+- intro-deployment
+- event-tier1-build-2022
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -26,10 +27,10 @@ Before you start, make sure to read the [Plan for Host Guardian Service attestat
 ## Step 1: Set up the first HGS computer
 
 The Host Guardian Service (HGS) runs as a clustered service on one or more computers.
-In this step, you will set up a new HGS cluster on the first computer.
+In this step, you'll set up a new HGS cluster on the first computer.
 If you already have an HGS cluster and are adding additional computers to it for high availability, skip to [Step 2: Add more HGS computers to the cluster](#step-2-add-more-hgs-computers-to-the-cluster).
 
-Before you start, ensure the computer you're using is running Windows Server 2019 or later - Standard or Datacenter edition, you have local administrator privileges, and the computer is not already joined to an Active Directory domain.
+Before you start, ensure the computer you're using is running Windows Server 2019 or later - Standard or Datacenter edition, you have local administrator privileges, and the computer isn't already joined to an Active Directory domain.
 
 1. Sign in to the first HGS computer as a local administrator and open an elevated Windows PowerShell console. Run the following command to install the Host Guardian Service role. The computer will automatically restart to apply the changes.
 
@@ -54,7 +55,7 @@ Before you start, ensure the computer you're using is running Windows Server 201
 
     Your HGS computer will restart again to finish configuring the Active Directory forest. The next time you log in, your administrator account will be a domain admin account. We recommend reviewing the [Active Directory Domain Services Operations docs](/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations) for more information about managing and securing your new forest.
 
-3. Next, you will set up the HGS cluster and install the attestation service by running the following command in an elevated Windows PowerShell console:
+3. Next, you'll set up the HGS cluster and install the attestation service by running the following command in an elevated Windows PowerShell console:
 
     ```powershell
     # Note: the name you provide here will be shared by all HGS nodes and used to point your SQL Server computers to the HGS cluster.
@@ -65,9 +66,9 @@ Before you start, ensure the computer you're using is running Windows Server 201
 ## Step 2: Add more HGS computers to the cluster
 
 Once your first HGS computer and cluster is set up, you can add additional HGS servers to provide high availability.
-If you are only setting up one HGS server (in a dev/test environment, for example), you can skip to Step 3.
+If you're only setting up one HGS server (in a dev/test environment, for example), you can skip to Step 3.
 
-As with the first HGS computer, ensure the computer you're joining to the cluster is running Windows Server 2019 or later - Standard or Datacenter edition, you have local administrator privileges, and the computer is not already joined to an Active Directory domain.
+As with the first HGS computer, ensure the computer you're joining to the cluster is running Windows Server 2019 or later - Standard or Datacenter edition, you have local administrator privileges, and the computer isn't already joined to an Active Directory domain.
 
 1. Sign in to the computer as a local administrator and open an elevated Windows PowerShell console. Run the following command to install the Host Guardian Service role. The computer will restart automatically to apply the changes.
 
@@ -75,7 +76,7 @@ As with the first HGS computer, ensure the computer you're joining to the cluste
     Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Restart
     ```
 
-2. Check the DNS client configuration on your computer to ensure it can resolve the HGS domain. The following command should return an IP address for your HGS server. If you cannot resolve the HGS domain, you may need to update the DNS server information on your network adapter to use the HGS DNS server for name resolution.
+2. Check the DNS client configuration on your computer to ensure it can resolve the HGS domain. The following command should return an IP address for your HGS server. If you can't resolve the HGS domain, you may need to update the DNS server information on your network adapter to use the HGS DNS server for name resolution.
 
     ```powershell
     # Change 'bastion.local' to the domain name you specified in Step 1.2
@@ -84,7 +85,7 @@ As with the first HGS computer, ensure the computer you're joining to the cluste
     # If it fails, use sconfig.exe, option 8, to set the first HGS computer as your preferred DNS server.
     ```
 
-3. After the computer restarts, run the following command in an elevated Windows PowerShell console to join the computer to the Active Directory domain created by the first HGS server. You will need domain administrator credentials for the AD domain to run this command. When the command completes, the computer will restart and the machine will become an Active Directory domain controller for the HGS domain.
+3. After the computer restarts, run the following command in an elevated Windows PowerShell console to join the computer to the Active Directory domain created by the first HGS server. You'll need domain administrator credentials for the AD domain to run this command. When the command completes, the computer will restart and the machine will become an Active Directory domain controller for the HGS domain.
 
     ```powershell
     # Provide the fully qualified HGS domain name
@@ -101,7 +102,7 @@ As with the first HGS computer, ensure the computer you're joining to the cluste
     Install-HgsServer -HgsDomainName $HgsDomainName -HgsDomainCredential $DomainAdminCred -SafeModeAdministratorPassword $DSRMPassword -Restart
     ```
 
-4. Log in with domain administrator credentials after the computer restarts. Open an elevated Windows PowerShell console and run the following commands to configure the attestation service. Since the attestation service is cluster-aware, it will replicate its configuration from other cluster members. Changes made to the attestation policies on any HGS node will apply to all other nodes.
+4. Sign in with domain administrator credentials after the computer restarts. Open an elevated Windows PowerShell console and run the following commands to configure the attestation service. Since the attestation service is cluster-aware, it will replicate its configuration from other cluster members. Changes made to the attestation policies on any HGS node will apply to all other nodes.
 
     ```powershell
     # Provide the IP address of an existing, initialized HGS server
@@ -115,7 +116,7 @@ As with the first HGS computer, ensure the computer you're joining to the cluste
 ## Step 3: Configure a DNS forwarder to your HGS cluster
 
 HGS runs its own DNS server, which contains the name records needed to resolve the attestation service.
-Your SQL Server computers will not be able to resolve these records until you configure your network's DNS server to forward requests to the HGS DNS servers.
+Your SQL Server computers won't be able to resolve these records until you configure your network's DNS server to forward requests to the HGS DNS servers.
 
 The process for configuring DNS forwarders is vendor-specific, so we recommend contacting your network administrator for the correct guidance for your particular network.
 
@@ -155,13 +156,13 @@ This certificate ensures that your TPM is genuine.
 HGS verifies the endorsement key certificate when you register a new TPM with HGS by comparing the certificate chain with a list of trusted root certificates.
 
 Microsoft publishes a list of known-good TPM vendor root certificates that you can import into the HGS Trusted TPM Root Certificates store.
-If your SQL Server computers are virtualized, you will need to contact your cloud service provider or virtualization platform vendor for information on how to obtain the certificate chain for your virtual TPM's endorsement key.
+If your SQL Server computers are virtualized, you'll need to contact your cloud service provider or virtualization platform vendor for information on how to obtain the certificate chain for your virtual TPM's endorsement key.
 
 To download the trusted TPM root certificates package from Microsoft for physical TPMs, complete the following steps:
 
 1. On a computer with internet access, download the latest TPM root certificates package from [https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925)
 
-2. Verify the signature of the cab file to ensure it is authentic.
+2. Verify the signature of the cab file to ensure it's authentic.
 
     ```powershell
     # Note: replace the path below with the correct one to the file you downloaded in step 1
@@ -178,7 +179,7 @@ To download the trusted TPM root certificates package from Microsoft for physica
     expand.exe -F:* ".\TrustedTpm.cab" ".\TrustedTpmCertificates"
     ```
 
-4. In the new directory, you will see directories for each TPM vendor. You can delete the directories for vendors you do not use.
+4. In the new directory, you'll see directories for each TPM vendor. You can delete the directories for vendors you don't use.
 
 5. Copy the entire "TrustedTpmCertificates" directory to your HGS server.
 
@@ -213,9 +214,9 @@ All HGS computers in your cluster will now use host key mode when a [!INCLUDE [s
 
 In a default installation, HGS only exposes an HTTP (port 80) binding.
 You can configure an HTTPS (port 443) binding to encrypt all communications between [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers and HGS.
-It is recommended that all production instances of HGS use an HTTPS binding.
+It's recommended that all production instances of HGS use an HTTPS binding.
 
-1. Obtain a TLS certificate from your certificate authority, using the fully qualified HGS service name from Step 1.3 as the subject name. If you do not know your service name, you can find it by running `Get-HgsServer` on any HGS computer. You can add alternative DNS names to the Subject Alternate Name list if your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers use a different DNS name to reach your HGS cluster (for example, if HGS is behind a network load balancer with a different address).
+1. Obtain a TLS certificate from your certificate authority, using the fully qualified HGS service name from Step 1.3 as the subject name. If you don't know your service name, you can find it by running `Get-HgsServer` on any HGS computer. You can add alternative DNS names to the Subject Alternate Name list if your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers use a different DNS name to reach your HGS cluster (for example, if HGS is behind a network load balancer with a different address).
 
 2. On the HGS computer, use [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) to enable the HTTPS binding and specify the TLS certificate obtained in the previous step. If your certificate is already installed on the computer in the local certificate store, use the following command to register it with HGS:
 
@@ -224,14 +225,14 @@ It is recommended that all production instances of HGS use an HTTPS binding.
     Set-HgsServer -Http -Https -HttpsCertificateThumbprint "54A043386555EB5118DB367CFE38776F82F4A181"
     ```
 
-    If you have exported your certificate (with a private key) to a password protected PFX file, you can register it with HGS by running the following command:
+    If you've exported your certificate (with a private key) to a password protected PFX file, you can register it with HGS by running the following command:
 
     ```powershell
     $PFXPassword = Read-Host -AsSecureString -Prompt "PFX Password"
     Set-HgsServer -Http -Https -HttpsCertificatePath "C:\path\to\hgs_tls.pfx" -HttpsCertificatePassword $PFXPassword
     ```
 
-3. Repeat steps 1 and 2 for each HGS computer in the cluster. TLS certificates are not automatically replicated between HGS nodes. Additionally, each HGS computer can have its own unique TLS certificate so long as the subject matches the HGS service name.
+3. Repeat steps 1 and 2 for each HGS computer in the cluster. TLS certificates aren't automatically replicated between HGS nodes. Additionally, each HGS computer can have its own unique TLS certificate so long as the subject matches the HGS service name.
 
 ## Step 6: Determine and share the HGS attestation URL
 

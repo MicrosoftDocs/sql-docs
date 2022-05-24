@@ -34,9 +34,9 @@ To replicate your databases to SQL Managed Instance, you need the following prer
 - PowerShell module [Az.SQL 3.5.0](https://www.powershellgallery.com/packages/Az.Sql/3.5.0), or higher
 - A properly [prepared environment](managed-instance-link-preparation.md).
 
-## Database fail over 
+## Database failover 
 
-Database fail over from SQL Server to SQL Managed Instance breaks the link between the two databases. Fail over stops replication and leaves both databases in an independent state, ready for individual read/write workloads. 
+Database failover from SQL Server to SQL Managed Instance breaks the link between the two databases. Failover stops replication and leaves both databases in an independent state, ready for individual read/write workloads. 
 
 To start migrating your database to SQL Managed Instance, first stop any application workloads on SQL Server during your maintenance hours. This enables SQL Managed Instance to catch up with database replication and migrate to Azure while mitigating data loss. 
 

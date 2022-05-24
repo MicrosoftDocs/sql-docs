@@ -22,17 +22,17 @@ Download and install the latest releases:
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
-|[Windows](#windows-net-framework)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2196438)|May 24, 2022|19.1|16.0.6143.0|
-|[macOS .NET Core](#macos-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196439)|May 24, 2022|19.1|16.0.6143.0|
-|[Linux .NET Core](#linux-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196335)|May 24, 2022|19.1|16.0.6143.0|
-|[Windows .NET Core](#windows-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196334)|May 24, 2022|19.1|16.0.6143.0|
+|[Windows](#windows-net-framework)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2196438)|May 24, 2022|19.1|16.0.6161.0|
+|[macOS .NET Core](#macos-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196439)|May 24, 2022|19.1|16.0.6161.0|
+|[Linux .NET Core](#linux-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196335)|May 24, 2022|19.1|16.0.6161.0|
+|[Windows .NET Core](#windows-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196334)|May 24, 2022|19.1|16.0.6161.0|
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional languages, see the [Available Languages](#available-languages) section.
 
 
 ## DacFx
 
-SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DacFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DacFx).  The current DacFx version is 160.6143.0.
+SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DacFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DacFx).  The current DacFx version is 160.6161.0.
 
 Installing the NuGet package via the .NET CLI is accomplished with this command:
 

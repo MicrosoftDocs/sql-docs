@@ -20,10 +20,10 @@ This article lists the features and fixes delivered by the released versions of 
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2196438)|May 24, 2022|19.1|16.0.6143.0|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196439)|May 24, 2022| 19.1|16.0.6143.0|
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196335)|May 24, 2022| 19.1|16.0.6143.0|
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196334)|May 24, 2022| 19.1|16.0.6143.0|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2196438)|May 24, 2022|19.1|16.0.6161.0|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196439)|May 24, 2022| 19.1|16.0.6161.0|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196335)|May 24, 2022| 19.1|16.0.6161.0|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196334)|May 24, 2022| 19.1|16.0.6161.0|
 
 
 ### Features

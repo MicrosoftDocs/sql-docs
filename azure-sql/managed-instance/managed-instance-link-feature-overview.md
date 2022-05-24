@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, danil
-ms.date: 03/28/2022
+ms.date: 05/24/2022
 ---
 # Link feature for Azure SQL Managed Instance (preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -24,11 +24,11 @@ After a disastrous event, you can continue running your read-only workloads on S
 
 To use the link feature, you'll need a supported version of SQL Server. The following table lists the supported versions.
 
-| SQL Server Version  | Editions  | Servicing update requirement |
+| SQL Server Version  | Editions  | Servicing update requirement | Tooling support |
 |---------|---------|---------|
-|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] |Evaluation Edition|Sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.|
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer |[CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6)|
-|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |[SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242)|
+|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] |Evaluation Edition|Sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| [../../../sql/ssms/download-sql-server-management-studio-ssms](SSMS 18.11.1), or higher, [https://www.powershellgallery.com/packages/Az.Sql/3.5.0](Az.SQL 3.5.0), or higher |
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer |[CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) | [../../../sql/ssms/download-sql-server-management-studio-ssms](SSMS 18.11.1), or higher, [https://www.powershellgallery.com/packages/Az.Sql/3.5.0](Az.SQL 3.5.0), or higher |
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |[SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242)| No SSMS support, [https://www.powershellgallery.com/packages/Az.Sql/3.5.0](Az.SQL 3.5.0), or higher |
 
 In addition to the supported version, you'll need:
 

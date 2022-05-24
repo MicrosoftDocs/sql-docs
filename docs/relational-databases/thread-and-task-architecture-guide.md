@@ -1,7 +1,8 @@
 ---
 title: "Thread and Task Architecture Guide | Microsoft Docs"
 description: Learn about thread and task architecture in SQL Server, including task scheduling, hot add CPU, and best practices for using computers with more than 64 CPUs.
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "09/23/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -53,7 +54,7 @@ A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **worker thread**, also
 
 The number of worker threads spawned for each task depends on:
 -	Whether the request was eligible for parallelism as determined by the Query Optimizer.
--	What is the actual available [degree of parallelism (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) in the system based on current load. This may differ from estimated DOP, which is based on the server configuration for max degree of parallelism (MAXDOP). For example, the server configuration for MAXDOP may be 8 but the available DOP at runtime can be only 2, which affects query performance. 
+-	What is the actual available [degree of parallelism (DOP)](../relational-databases/query-processing-architecture-guide.md#degree-of-parallelism-dop) in the system based on current load. This may differ from estimated DOP, which is based on the server configuration for max degree of parallelism (MAXDOP). For example, the server configuration for MAXDOP may be 8 but the available DOP at runtime can be only 2, which affects query performance. 
 
 > [!NOTE]
 > The **max degree of parallelism (MAXDOP)** limit is set per task, not per request. This means that during a parallel query execution, a single request can spawn multiple tasks up to the MAXDOP limit, and each task will use one worker. For more information about MAXDOP, see [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).

@@ -50,7 +50,7 @@ az provider register --namespace 'Microsoft.AzureArcData'
 
 ## Initiate the connection from Azure
 
-If the machine with SQL Server is already connected to Azure Arc, you can register the SQL Server instances on that machine by installing the SQL Server extension (*WindowsAgent.SqlServer*).  Once installed, the SQL Server extension will recognize all the installed SQL Server instances and register them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, if will be automatically registered with Azure. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions how to install and uninstall extensions using  the Azure portal, Azure PowerShell or Azure CLI.
+If the machine with SQL Server is already connected to Azure Arc, you can register the SQL Server instances on that machine by installing the SQL Server extension (*WindowsAgent.SqlServer*).  Once installed, the SQL Server extension will recognize all the installed SQL Server instances and register them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, if will be automatically registered with Azure. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions using the Azure portal, Azure PowerShell or Azure CLI.
 
 > [!IMPORTANT]
 >1. The Managed System Identity for the corresponding **Server - Azure Arc** must have the *Azure Connected SQL Server Onboarding* role at resource group level.

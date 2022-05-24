@@ -97,7 +97,6 @@ In a practice run, the preceding SELECT returned following result table:
 |dolor|  
 |sit|  
 |amet.|  
-| &nbsp; |
 
 The following example enables the `ordinal` column by passing 1 for the optional third argument:  
 
@@ -114,7 +113,6 @@ This statement then returns the following result table:
 |dolor|3|  
 |sit|4|  
 |amet.|5|  
-| &nbsp; ||
 
 ## Examples  
   

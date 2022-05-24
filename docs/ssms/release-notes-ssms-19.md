@@ -46,7 +46,7 @@ SSMS 19 Preview 2 is the latest preview release of SSMS. If you need a previous 
 | Client Driver | Changed to Microsoft.Data.SqlClient. |
 | Contained Always On Availability Group | Added support for Contained Always On Availability Groups. |
 | Data Classification | Improvements to Data Classification user interface. |
-| Ledger | Added support for Ledger feature Database ledger. For more information, visit [What is the database ledger?](https://docs.microsoft.com/sql/relational-databases/security/ledger/ledger-database-ledger?view=sql-server-ver16&preserve-view=true). |
+| Ledger | Added support for Ledger feature Database ledger. For more information, visit [What is the database ledger?](/sql/relational-databases/security/ledger/ledger-database-ledger). |
 | Query Execution or Results | Improved checks for open connections. |
 | Query Tuning Advisor | Updated user interface for improved accessibility. |
 | Showplan | The showplan XML schema has been updated. |
@@ -59,7 +59,7 @@ SSMS 19 Preview 2 is the latest preview release of SSMS. If you need a previous 
 | New Item | Details |
 |----------|---------|
 | Availability Group Dashboard | Fixed the issue when connecting to the Availability Group Dashboard for an AG on SQL Server 2016, which resulted in "unknown property ClusterType" error. |
-| Query Editor | Fixed issue with audible notification occurring when closing a query window. See [SSMS 18.11.1 Beeps When I Close a Query Window](https://docs.microsoft.com/answers/questions/775502/ssms-18111-beeps-when-i-close-a-query-window.html). |
+| Query Editor | Fixed issue with audible notification occurring when closing a query window. See [SSMS 18.11.1 Beeps When I Close a Query Window](/answers/questions/775502/ssms-18111-beeps-when-i-close-a-query-window.html). |
 
 #### Known issues 19.0 Preview 2
 

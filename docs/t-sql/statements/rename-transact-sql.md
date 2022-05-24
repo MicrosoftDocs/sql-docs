@@ -23,7 +23,8 @@ Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. R
 
 
 > [!NOTE]
-> Renaming standalone dedicated sql pools (formerly SQL DW) is supported. Renaming a dedicated SQL pool is in Azure Synapse Analytics is not currently supported.
+> Renaming standalone dedicated SQL pools (formerly SQL DW) is supported. Renaming a dedicated SQL pool in Azure Synapse Analytics is not currently supported.
+
 
 ## Syntax
 

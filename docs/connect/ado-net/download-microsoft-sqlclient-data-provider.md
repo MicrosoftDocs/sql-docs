@@ -1,7 +1,7 @@
 ---
 title: Download Microsoft SqlClient Data Provider for SQL Server
 description: Download page for ADO.NET and Microsoft SqlClient Data Provider for SQL Server.
-ms.date: 03/31/2022
+ms.date: 05/19/2022
 dev_langs:
   - "csharp"
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
@@ -25,6 +25,7 @@ If you need to download the Microsoft.Data.SqlClient package for offline use, it
 * [4.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/4.1.0)
 * [4.0.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/4.0.1)
 * [4.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/4.0.0)
+* [3.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/3.1.0)
 * [3.0.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/3.0.1)
 * [3.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/3.0.0)
 * [2.1.4](https://www.nuget.org/packages/Microsoft.Data.SqlClient/2.1.4)

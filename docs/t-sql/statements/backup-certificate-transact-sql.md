@@ -1,8 +1,9 @@
 ---
 description: "BACKUP CERTIFICATE (Transact-SQL)"
 title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/16/2020"
+ms.custom:
+- event-tier1-build-2022
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
@@ -25,7 +26,6 @@ helpviewer_keywords:
   - "backing up certificates [SQL Server]"
   - "decryption [SQL Server]"
   - "cryptography [SQL Server], certificates"
-ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
@@ -33,7 +33,12 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
 # BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
 
-  Exports a certificate to a file.  
+  Exports a certificate to a file.
+
+> [!NOTE]
+> In SQL Server 2022, certificates with private keys can be backed up or restored directly to and from files or binary blobs using the public key pairs (PKCS) #12 or personal information exchange (PFX) format.
+>
+> The PKCS #12 or PFX format is a binary format for storing the server certificate, any intermediate certificates, and the private key in one file. PFX files usually have extensions such as `.pfx` and `.p12`. This makes it easier for customers to adhere to the current security best practice guidelines and compliance standards that prohibit RC4 encryption, by eliminating the need to use conversion tools such as PVKConverter (for the PVK or DER format).
   
  ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +48,9 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
 -- Syntax for SQL Server  
   
 BACKUP CERTIFICATE certname TO FILE = 'path_to_file'  
-    [ WITH PRIVATE KEY   
+    [ WITH
+      [FORMAT = 'PFX',]
+      PRIVATE KEY   
       (   
         FILE = 'path_to_private_key_file' ,  
         ENCRYPTION BY PASSWORD = 'encryption_password'   
@@ -68,10 +75,14 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 
 ## Arguments
  *certname*  
- Is the name of the certificate to backup.
+ Is the name of the certificate to back up.
 
  TO FILE = '*path_to_file*'  
  Specifies the complete path, including file name, of the file in which the certificate is to be saved. This path can be a local path or a UNC path to a network location. If only a file name is specified, the file will be saved in the instance's default user data folder (which may or may not be the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA folder). For SQL Server Express LocalDB, the instance's default user data folder is the path specified by the `%USERPROFILE%` environment variable for the account that created the instance.  
+
+ WITH FORMAT = *'PFX'*   
+ **Applies to:** SQL Server 2022 or later   
+ Specifies exporting a certificate and its private key to a PFX file. This clause is optional.
 
  WITH PRIVATE KEY
  Specifies that the private key of the certificate is to be saved to a file. This clause is optional.
@@ -83,23 +94,23 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  Is the password that is used to encrypt the private key before writing the key to the backup file. The password is subject to complexity checks.  
   
  DECRYPTION BY PASSWORD = '*decryption_password*'  
- Is the password that is used to decrypt the private key before backing up the key. This argument is not necessary if the certificate is encrypted by the master key. 
+ Is the password that is used to decrypt the private key before backing up the key. This argument isn't necessary if the certificate is encrypted by the master key. 
   
 ## Remarks  
  If the private key is encrypted with a password in the database, the decryption password must be specified.  
   
- When you back up the private key to a file, encryption is required. The password used to protect the private key in the file is not the same password that is used to encrypt the private key of the certificate in the database.  
+ When you back up the private key to a file, encryption is required. The password used to protect the private key in the file isn't the same password that is used to encrypt the private key of the certificate in the database.  
 
  Private keys are saved in the PVK file format.
 
- To restore a backed up certificate, with or without the private key, use the [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) statement.
+ To restore a backed-up certificate, with or without the private key, use the [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) statement.
  
  To restore a private key to an existing certificate in the database, use the [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) statement.
  
- When performing a backup, the files will be ACLd to the service account of the SQL Server instance. If you need to restore the certificate to a server running under a different account, you will need to adjust the permissions on the files so that they are able to be read by the new account. 
+ When performing a backup, the files will be ACLd to the service account of the SQL Server instance. If you need to restore the certificate to a server running under a different account, you'll need to adjust the permissions on the files so that they're able to be read by the new account. 
   
 ## Permissions  
- Requires CONTROL permission on the certificate and knowledge of the password that is used to encrypt the private key. If only the public part of the certificate is backed up, this command requires some permission on the certificate and that the caller has not been denied VIEW permission on the certificate.  
+ Requires CONTROL permission on the certificate and knowledge of the password that is used to encrypt the private key. If only the public part of the certificate is backed up, this command requires some permission on the certificate and that the caller hasn't been denied VIEW permission on the certificate.  
   
 ## Examples  
   
@@ -130,9 +141,22 @@ BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'
     FILE = 'c:\storedkeys\sales09key' ,   
     ENCRYPTION BY PASSWORD = '9n34khUbhk$w4ecJH5gh' );  
 GO  
-```  
-  
-## See Also  
+```
+
+### D. Export a certificate and its private key to a PFX file
+
+```sql
+BACKUP CERTIFICATE Shipping04 TO FILE = 'c:\storedcerts\shipping04cert.pfx'
+WITH  
+    FORMAT = 'PFX',  
+    PRIVATE KEY ( 
+ENCRYPTION BY PASSWORD = '9n34khUbhk$w4ecJH5gh',  
+ALGORITHM = 'AES_256'
+    )
+```
+
+## See also
+
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
@@ -142,4 +166,3 @@ GO
  [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
-

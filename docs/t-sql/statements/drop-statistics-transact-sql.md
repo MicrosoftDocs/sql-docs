@@ -1,11 +1,7 @@
 ---
+title: DROP STATISTICS (Transact-SQL)
 description: "DROP STATISTICS (Transact-SQL)"
-title: "DROP STATISTICS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/22/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -21,17 +17,22 @@ helpviewer_keywords:
   - "dropping statistics"
   - "table statistics [SQL Server]"
   - "statistical information [SQL Server], removing"
-ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.reviewer: ""
+ms.custom:
+- event-tier1-build-2022
+ms.date: "03/22/2016"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # DROP STATISTICS (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Drops statistics for multiple collections within the specified tables in the current database.  
+Drops statistics for multiple collections within the specified tables in the current database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -110,5 +111,3 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
   
   
-
-

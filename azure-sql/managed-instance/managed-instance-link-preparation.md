@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 04/02/2022
+ms.date: 05/24/2022
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
@@ -27,7 +27,7 @@ This article teaches you how to prepare your environment for a [Managed Instance
 To use the link with Azure SQL Managed Instance, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [SQL Server 2019 Enterprise or Developer edition](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019?filetype=EXE), starting with [CU15 (15.0.4198.2)](https://support.microsoft.com/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6).
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
 
 ## Prepare your SQL Server instance
@@ -41,9 +41,7 @@ To prepare your SQL Server instance, you need to validate that:
 
 You'll need to restart SQL Server for these changes to take effect.
 
-### Install CU15 (or later)
-
-The link feature for SQL Managed Instance was introduced in CU15 of SQL Server 2019.
+### Install Service Updates
 
 To check your SQL Server version, run the following Transact-SQL (T-SQL) script on SQL Server: 
 
@@ -53,7 +51,13 @@ To check your SQL Server version, run the following Transact-SQL (T-SQL) script 
 SELECT @@VERSION
 ```
 
-If your SQL Server version is earlier than CU15 (15.0.4198.2), install [CU15](https://support.microsoft.com/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) or the latest cumulative update. You must restart your SQL Server instance during the update. 
+Ensure that your SQL Server version has the appropriate servicing update installed. You must restart your SQL Server instance during the update. 
+
+| SQL Server Version  | Editions  | Host OS | Servicing update requirement |
+|---------|---------|---------|
+|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer | Windows Server | [CU15 (or above)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6) |
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database
 
@@ -106,6 +110,9 @@ If the availability groups feature isn't enabled, follow these steps to enable i
    :::image type="content" source="./media/managed-instance-link-preparation/always-on-availability-groups-properties.png" alt-text="Screenshot that shows the properties for Always On availability groups.":::
 
 1. Select **OK** in the dialog to restart the SQL Server service.
+
+>[!IMPORTANT]
+> To enable Always On on SQL Server 2016, please install Windows Server Failover Cluster (WSFC) module on the host Windows Server. No WSFC configuration, or multiple nodes configuration is required. Presence of the WSFC module only is required for the Always On check box to be enabled in SQL Server Configuration Manager.
 
 ### Enable startup trace flags
 

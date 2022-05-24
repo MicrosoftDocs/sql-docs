@@ -27,7 +27,7 @@ ms.date: 05/24/2022
 
 # Download SQL Server Management Studio (SSMS) 19 (Preview)
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[SQL Server ASDB, ASDBMI, ASDW](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure, from SQL Server to Azure SQL Database. SSMS provides tools to configure, monitor, and administer instances of SQL Server and databases. Use SSMS to deploy, monitor, and upgrade the data-tier components used by your applications, and build queries and scripts.
 
@@ -35,7 +35,9 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 ## Download SSMS
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 19 (Preview)](https://aka.ms/ssmsfullsetup)**
+To download the latest general availability (GA) version of SSMS, visit [Download SSMS](download-sql-server-management-studio-ssms.md).
+
+:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 19 (Preview)](https://go.microsoft.com/fwlink/?linkid=2195969&clcid=0x409)**
 
 SSMS 19 Preview 2 is the latest preview.
 

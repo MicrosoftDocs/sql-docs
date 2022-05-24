@@ -17,6 +17,8 @@ ms.date: 05/24/2022
 
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
 
+To visit the latest general availability (GA) version of SSMS release notes, visit [SSMS Release Notes](release-notes-ssms.md).
+
 [!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
 
 ## Current SSMS release

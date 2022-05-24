@@ -11,7 +11,7 @@ ms.topic: guide
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 04/02/2022
+ms.date: 05/24/2022
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
@@ -106,6 +106,9 @@ If the availability groups feature isn't enabled, follow these steps to enable i
    :::image type="content" source="./media/managed-instance-link-preparation/always-on-availability-groups-properties.png" alt-text="Screenshot that shows the properties for Always On availability groups.":::
 
 1. Select **OK** in the dialog to restart the SQL Server service.
+
+>[!IMPORTANT]
+> To enable Always On on SQL Server 2016, please install Windows Server Failover Cluster (WSFC) module on the host Windows Server. No WSFC configuration, or multiple nodes are required. Presence of the WSFC module only is required for the Always On check box to be enabled in SQL Server Configuration Manager.
 
 ### Enable startup trace flags
 

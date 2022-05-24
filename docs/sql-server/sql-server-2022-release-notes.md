@@ -49,7 +49,7 @@ This section identifies known issues you may experience with this product:
 
 ## Build number
 
-The CTP 2.0 build number for SQL Server 2022 Preview is `16.0.600.3`.
+The CTP 2.0 build number for SQL Server 2022 Preview is `16.0.600.9`.
 
 ## Next steps
 

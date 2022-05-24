@@ -43627,7 +43627,7 @@
     },
     {
       "source_path": "docs/linux/sql-server-linux-azure-virtual-machine.md",
-      "redirect_url": "/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart",
       "redirect_document_id": false
     },
     {
@@ -47912,7 +47912,7 @@
     },
     {
       "source_path": "docs/relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md",
-      "redirect_url": "/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision",
+      "redirect_url": "/azure/azure-sql/virtual-machines/windows/create-sql-vm-portal",
       "redirect_document_id": false
     },
     {

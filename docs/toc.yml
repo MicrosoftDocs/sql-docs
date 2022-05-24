@@ -905,7 +905,7 @@ items:
         - name: PowerShell
           href: database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
         - name: Azure virtual machines >
-          href: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
+          href: /azure/azure-sql/virtual-machines/windows/availability-group-overview
     - name: How-to
       href: database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md
       items:
@@ -10532,7 +10532,7 @@ items:
     - name: Run & Connect - Docker
       href: linux/quickstart-install-connect-docker.md
     - name: Provision a SQL VM in Azure >
-      href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
+      href: /azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart
     - name: Run & Connect - Cloud
       href: linux/quickstart-install-connect-clouds.md
   - name: Tutorials

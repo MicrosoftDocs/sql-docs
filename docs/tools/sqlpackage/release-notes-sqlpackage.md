@@ -95,7 +95,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
-| Deployment | Increased deployment time when deploying using Azure Active Directory user/password authentication due to MSAL throttling. [More Information on GitHub](https://github.com/microsoft/DacFx/issues/92) | Use an alternative authentication method, such as [Azure Active Directory Service Principal](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-service-principal)|
+| Deployment | Increased deployment time when deploying using Azure Active Directory user/password authentication due to MSAL throttling. [More Information on GitHub](https://github.com/microsoft/DacFx/issues/92) | Use an alternative authentication method, such as [Azure Active Directory Service Principal](/azure/azure-sql/database/authentication-aad-service-principal)|
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 

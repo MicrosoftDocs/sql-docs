@@ -39,8 +39,8 @@ Tooling requirements:
 
 | Tool  | Notes  | 
 |---------|---------|
-| [SSMS 18.11.1](../../../sql/ssms/download-sql-server-management-studio-ssms.md), or higher | Required for automated wizard setup for SQL Servers 2019 and 2022. SQL Server 2016 is not supported at this time. |
-| [Az.SQL 3.5.0](https://www.powershellgallery.com/packages/Az.Sql/3.5.0), or higher | Required for manual configuration steps. |
+| [SSMS 18.11.1](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms), or higher | Required for automated wizard setup for SQL Servers 2019 and 2022. SQL Server 2016 is not supported at this time. |
+| PowerShell module [Az.SQL 3.5.0](https://www.powershellgallery.com/packages/Az.Sql/3.5.0), or higher | Required for manual configuration steps. |
 
 > [!NOTE]
 > SQL Managed Instance link feature is available in all public Azure regions. 

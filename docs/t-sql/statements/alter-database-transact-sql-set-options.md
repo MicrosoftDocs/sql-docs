@@ -1,8 +1,9 @@
 ---
 title: "ALTER DATABASE SET Options (Transact-SQL)"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
-ms.custom: ""
-ms.date: 02/23/2022
+ms.custom:
+- event-tier1-build-2022
+ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -433,7 +434,7 @@ Enables or disables `FORCE_LAST_GOOD_PLAN` [Automatic tuning](../../relational-d
 ON     
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new query plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan.
 
-If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new query plan. The statement will fail if the Query Store isn't enabled or if the Query Store isn't in *Read-Write* mode.
+If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new query plan. The statement will fail if the [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) isn't enabled or if the Query Store isn't in *Read-Write* mode.
 
 OFF     
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. The default value is OFF.
@@ -757,7 +758,7 @@ The database can create initial pages using mixed extents.
 This setting is ON for all system databases. The `tempdb` system database is the only system database that supports OFF.
 
 #### **\<PARAMETERIZATION_option> ::=**     
-Controls the parameterization option. For more information on parameterization, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).
+Controls the parameterization option. For more information on parameterization, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#simple-parameterization).
 
 #### PARAMETERIZATION { **SIMPLE** | FORCED }     
 SIMPLE     
@@ -771,14 +772,16 @@ The current setting of this option can be determined by examining the `is_parame
 #### <a name="query-store"></a> **\<query_store_options> ::=**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
-ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
+ON | OFF [ ( FORCED )  ] | CLEAR [ ALL ]     
 Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ON     
-Enables the Query Store.
+Enables the Query Store. 
+
+Many new performance features of SQL Server 2022 such as Query Store hints, CE Feedback, Degree of Parallelism (DOP) feedback, and Memory Grant feedback (MGF) persistence required Query Store to be enabled. For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to SQL Server 2022, these databases will retain the previous Query Store settings. If there is concern about the overhead Query Store may introduce, administrators can leverage [custom capture policies](#query_capture_policy_option_list--) with `QUERY_CAPTURE_MODE = CUSTOM`. For examples of how to enable the Query Store with custom capture policy options, see the Examples section later in this article.  
 
 OFF [ ( FORCED ) ]      
-Disables the Query Store. OFF is the default value. FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes the Query Store to shut down as fast as possible. FORCED applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6, and later builds.
+Disables the Query Store. <!--OFF is the default value for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].--> FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes the Query Store to shut down as fast as possible. FORCED applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6, and later builds.
 
 > [!NOTE]  
 > Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
@@ -810,7 +813,7 @@ Determines the space issued to the Query Store. MAX_STORAGE_SIZE_MB is type **bi
 > Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
 
 > [!IMPORTANT]
-> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), or adjust the Query Store configurations.    
+> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), or adjust the Query Store configurations.    
 > Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
 
 #### INTERVAL_LENGTH_MINUTES     
@@ -828,7 +831,7 @@ Size-based cleanup won't be automatically activated.
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
 #### QUERY_CAPTURE_MODE { ALL \| **AUTO** \| CUSTOM \| NONE }     
-Designates the currently active query capture mode. Each mode defines specific query capture policies.
+Designates the currently active query capture mode. Each mode defines specific query capture policies. QUERY_CAPTURE_MODE is type **nvarchar**. 
 
 > [!NOTE]
 > Cursors, queries inside Stored Procedures, and Natively compiled queries are always captured when the query capture mode is set to ALL, AUTO, or CUSTOM.
@@ -845,9 +848,8 @@ Stop capturing new queries. The Query Store will continue to collect compile and
 CUSTOM     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
-Allows control over the QUERY_CAPTURE_POLICY options.
+Allows control over the [QUERY_CAPTURE_POLICY options](#query_capture_policy_option_list--). Custom capture policies can help Query Store capture the most important queries in your workload. See the <query_capture_policy_option_list> for customizable options.
 
-QUERY_CAPTURE_MODE is type **nvarchar**. 
 
 #### MAX_PLANS_PER_QUERY     
 Defines the maximum number of plans maintained for each query. MAX_PLANS_PER_QUERY is type **int**. The default value is **200**.
@@ -866,18 +868,34 @@ Wait statistics information per query won't be captured.
 #### **\<query_capture_policy_option_list> :: =**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
-Controls the Query Store capture policy options. Except for STALE_CAPTURE_POLICY_THRESHOLD, these options define the OR conditions that need to happen for queries to be captured in the defined Stale Capture Policy Threshold value.
+Controls the [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) capture policy options. Except for STALE_CAPTURE_POLICY_THRESHOLD, these options define the OR conditions that need to happen for queries to be captured in the defined Stale Capture Policy Threshold value.
 
-#### STALE_CAPTURE_POLICY_THRESHOLD = *integer* { DAYS | HOURS }     
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the `QUERY_CAPTURE_MODE = AUTO` setting captures query store details when any of the following thresholds are hit:
+
+*    EXECUTION_COUNT = 30 executions = execution count
+*    TOTAL_COMPILE_CPU_TIME_MS = 1 second = compile time in milliseconds
+*    TOTAL_EXECUTION_CPU_TIME_MS = 100 ms = execution CPU time in milliseconds
+
+For example:
+
+```sql
+EXECUTION_COUNT = 30, 
+TOTAL_COMPILE_CPU_TIME_MS = 1000, 
+TOTAL_EXECUTION_CPU_TIME_MS = 100 
+```
+
+You can customize these options with `QUERY_CAPTURE_MODE = CUSTOM`:
+
+STALE_CAPTURE_POLICY_THRESHOLD = *integer* { DAYS | HOURS }     
 Defines the evaluation interval period to determine if a query should be captured. The default is 1 day, and it can be set from 1 hour to seven days.
 
-#### EXECUTION_COUNT = *integer*         
+EXECUTION_COUNT = *integer*         
 Defines the number of times a query is executed over the evaluation period. The default is 30, which means that for the default Stale Capture Policy Threshold, a query must execute at least 30 times in one day to be persisted in the Query Store. EXECUTION_COUNT is type **int**.
 
-#### TOTAL_COMPILE_CPU_TIME_MS = *integer*         
+TOTAL_COMPILE_CPU_TIME_MS = *integer*         
 Defines total elapsed compile CPU time used by a query over the evaluation period. The default is 1000, which means that for the default Stale Capture Policy Threshold, a query must have a total of at least one second of CPU time spent during query compilation in one day to be persisted in the Query Store. TOTAL_COMPILE_CPU_TIME_MS is type **int**.
 
-#### TOTAL_EXECUTION_CPU_TIME_MS = *integer*     
+TOTAL_EXECUTION_CPU_TIME_MS = *integer*     
 Defines total elapsed execution CPU time used by a query over the evaluation period. The default is 100 which means that for the default Stale Capture Policy Threshold, a query must have a total of at least 100 ms of CPU time spent during execution in one day to be persisted in the Query Store. TOTAL_EXECUTION_CPU_TIME_MS is type **int**.
 
 #### **\<recovery_option> ::=**     
@@ -1935,7 +1953,7 @@ Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type *
 > Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
 
 > [!IMPORTANT]
-> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), or adjust the Query Store configurations.    
+> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), or adjust the Query Store configurations.    
 > Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
 
 #### INTERVAL_LENGTH_MINUTES     
@@ -2755,7 +2773,7 @@ Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type *
 > Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
 
 > [!IMPORTANT]
-> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), or adjust the Query Store configurations.    
+> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization), or adjust the Query Store configurations.    
 > Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
 
 #### INTERVAL_LENGTH_MINUTES     

@@ -34,6 +34,7 @@ To replicate your databases to SQL Managed Instance through the link, you need t
 
 >[!IMPORTANT]
 > Current version of SSMS supports automated link configuration for SQL Servers 2019 and 2022.
+> 
 > SQL Server 2016 is not supported with the current SSMS version.
 
 ## Replicate a database

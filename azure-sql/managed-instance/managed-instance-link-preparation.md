@@ -108,7 +108,7 @@ If the availability groups feature isn't enabled, follow these steps to enable i
 1. Select **OK** in the dialog to restart the SQL Server service.
 
 >[!IMPORTANT]
-> To enable Always On on SQL Server 2016, please install Windows Server Failover Cluster (WSFC) module on the host Windows Server. No WSFC configuration, or multiple nodes are required. Presence of the WSFC module only is required for the Always On check box to be enabled in SQL Server Configuration Manager.
+> To enable Always On on SQL Server 2016, please install Windows Server Failover Cluster (WSFC) module on the host Windows Server. No WSFC configuration, or multiple nodes configuration is required. Presence of the WSFC module only is required for the Always On check box to be enabled in SQL Server Configuration Manager.
 
 ### Enable startup trace flags
 

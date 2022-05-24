@@ -54,7 +54,7 @@ Please note that any fixes from SSMS 18.11.1 and the next SSMS release are avail
 | New Item | Details |
 |----------|---------|
 | Availability Group Dashboard | Fixed the issue when connecting to the Availability Group Dashboard for an AG on SQL Server 2016 which resulted in "unknown property ClusterType" error. |
-| Query Editor | Fixed issue with audible notification occurring when closing a query window.  See [SSMS 18.11.1 Beeps When I Close a Query Window](https://docs.microsoft.com/en-us/answers/questions/775502/ssms-18111-beeps-when-i-close-a-query-window.html). |
+| Query Editor | Fixed issue with audible notification occurring when closing a query window.  See [SSMS 18.11.1 Beeps When I Close a Query Window](https://docs.microsoft.com/answers/questions/775502/ssms-18111-beeps-when-i-close-a-query-window.html). |
 
 #### Known issues 19.0 Preview 2
 

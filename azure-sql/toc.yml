@@ -921,6 +921,9 @@
         href: managed-instance/instance-create-quickstart.md
       - name: PowerShell
         href: managed-instance/create-configure-managed-instance-powershell-quickstart.md
+      - name: Bicep
+        displayName: ARM, Resource Manager, Template
+        href: managed-instance/create-bicep-quickstart.md
       - name: ARM template
         displayName: Resource Manager
         href: managed-instance/create-template-quickstart.md

@@ -1,7 +1,7 @@
 ---
 title: "STRING_SPLIT (Transact-SQL)"
 description: "Transact-SQL reference for the STRING_SPLIT function. This table-valued function splits a string into substrings based on a character delimiter."
-ms.date: "11/04/2021"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -11,6 +11,8 @@ f1_keywords:
   - "STRING_SPLIT_TSQL"
 dev_langs: 
   - "TSQL"
+ms.custom:
+- event-tier1-build-2022
 helpviewer_keywords: 
   - "STRING_SPLIT function"
 author: WilliamDAssafMSFT
@@ -53,7 +55,7 @@ STRING_SPLIT ( string , separator [ , enable_ordinal ] )
 An **int** or **bit** [expression](../../t-sql/language-elements/expressions-transact-sql.md) that serves as a flag to enable or disable the `ordinal` output column. A value of 1 enables the `ordinal` column. If *enable_ordinal* is omitted, `NULL`, or has a value of 0, the `ordinal` column is disabled.  
 
 > [!NOTE]
-> The *enable_ordinal* argument and `ordinal` output column are currently only supported in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (serverless SQL pool only).
+> The *enable_ordinal* argument and `ordinal` output column are currently supported in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (serverless SQL pool only). Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the argument and output column are available in SQL Server.
 
 ## Return Types  
 
@@ -95,12 +97,11 @@ In a practice run, the preceding SELECT returned following result table:
 |dolor|  
 |sit|  
 |amet.|  
-| &nbsp; |
 
 The following example enables the `ordinal` column by passing 1 for the optional third argument:  
 
 ```sql
-SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ', 1);
+SELECT * FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ', 1);
 ```
 
 This statement then returns the following result table:  
@@ -112,7 +113,6 @@ This statement then returns the following result table:
 |dolor|3|  
 |sit|4|  
 |amet.|5|  
-| &nbsp; ||
 
 ## Examples  
   

@@ -50,7 +50,7 @@ DROP SERVER AUDIT audit_name
   
 ```sql  
 ALTER SERVER AUDIT HIPAA_Audit  
-STATE = OFF;  
+WITH (STATE = OFF);    
 GO  
 DROP SERVER AUDIT HIPAA_Audit;  
 GO  

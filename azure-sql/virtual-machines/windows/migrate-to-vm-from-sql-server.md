@@ -12,7 +12,7 @@ ms.workload: iaas-sql-server
 ms.tgt_pltfrm: vm-windows-sql-server
 ms.subservice: migration
 ms.topic: how-to
-ms.date: 04/26/2022
+ms.date: 05/24/2022
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
 ---
@@ -25,7 +25,7 @@ There are many ways to migrate an on-premises SQL Server user database to SQL Se
 [!INCLUDE [learn-about-deployment-models](../../includes/learn-about-deployment-models-both-include.md)]
 
 > [!NOTE]
-> SQL Server 2012 is approaching the [end of support life cycle](/lifecycle/products/microsoft-sql-server-2012) for on-premises instances. To extend support, you can either migrate your SQL Server instance to an Azure VM, or buy Extended Security Updates to keep it on-premises. For more information, see [Extend support for SQL Server 2012 with Azure](sql-server-extend-end-of-support.md)
+> SQL Server 2012 is approaching its [end of support life cycle](/lifecycle/products/microsoft-sql-server-2012) for on-premises instances. To extend support, you can either migrate your SQL Server instance to an Azure VM, or buy Extended Security Updates to keep it on-premises. For more information, see [Extend support for SQL Server with Azure](sql-server-extend-end-of-support.md).
 
 ## What are the primary migration methods?
 

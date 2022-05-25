@@ -7,11 +7,10 @@ author: bluefooted
 tags: azure-service-management
 ms.service: virtual-machines-sql
 ms.subservice: management
-
 ms.topic: conceptual
 ms.tgt_pltfrm: vm-windows-sql-server
 ms.workload: iaas-sql-server
-ms.date: 04/26/2022
+ms.date: 05/24/2022
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
 ms.custom: "seo-lt-2019"
@@ -22,8 +21,7 @@ ms.custom: "seo-lt-2019"
 
 SQL Server 2012 has reached the [end of its support (EOS) life cycle](/lifecycle/products/microsoft-sql-server-2012). Because many customers are still using this version, we're providing several options to continue getting support. You can migrate your on-premises SQL Server instances to Azure virtual machines (VMs), migrate to Azure SQL Database, or stay on-premises and purchase extended security updates.
 
-> [!TIP]
->  
+> [!TIP]  
 > Customers on SQL Server 2008 and SQL Server 2008 R2 can migrate to Azure SQL Server VMs if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
 
 Unlike with a managed instance, migrating to an Azure VM does not require recertifying your applications. And unlike with staying on-premises, you'll receive free extended security patches by migrating to an Azure VM.
@@ -42,7 +40,7 @@ Images deployed through Azure Marketplace come with the SQL IaaS extension pre-i
 
 > [!NOTE]
 >  
-> Although the SQL Server **Create** and **Manage** blades will work with the SQL Server 2012 image in the Azure portal, the following features are _not supported_: Automatic backups, Azure Key Vault integration, and R Services.
+> Although the SQL Server **Create** and **Manage** options will work with the SQL Server 2012 image in the Azure portal, the following features are _not supported_: Automatic backups, Azure Key Vault integration, and R Services.
 
 ## Licensing
 

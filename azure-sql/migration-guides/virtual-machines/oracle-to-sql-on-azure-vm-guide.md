@@ -298,12 +298,14 @@ When SSMA Tester runs a test case, the test engine executes the objects selected
 
    :::image type="content" source="./media/oracle-to-sql-on-azure-vm-guide/tester-test-result.png" alt-text="Screenshot that shows a sample tester test report":::
 
-7.Select details to get more information.
+1. Select details to get more information.
 
    Example of positive data validation.
+
    :::image type="content" source="./media/oracle-to-sql-on-azure-vm-guide/tester-test-success.png" alt-text="Screenshot that shows a sample  tester success report.":::
 
    Example of failed data validation.
+
    :::image type="content" source="./media/oracle-to-sql-on-azure-vm-guide/tester-test-failed.png" alt-text="Screenshot that shows tester failure report.":::
 
 ### Optimize

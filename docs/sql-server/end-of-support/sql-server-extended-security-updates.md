@@ -1,13 +1,13 @@
 ---
 title: "What are Extended Security Updates?"
 description: Learn how to use Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012.
-ms.custom: ""
 ms.date: 05/24/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
+ms.custom: references_regions
 monikerRange: ">=sql-server-2016"
 ---
 # What are Extended Security Updates for SQL Server?
@@ -262,6 +262,7 @@ To download ESUs, follow these steps:
 The following list shows the supported regions for this service:
 
 - Australia East
+- Canada Central
 - Central US
 - East Asia
 - East US

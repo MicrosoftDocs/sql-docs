@@ -8,6 +8,7 @@ ms.technology: install
 ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
+ms.custom: references_regions
 monikerRange: ">=sql-server-2016"
 ---
 # What are Extended Security Updates for SQL Server?

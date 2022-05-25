@@ -73,16 +73,80 @@ GO
   
 ##  <a name="roots"></a> The semantics of the root directories at the instance, database, and FileTable levels  
  This directory hierarchy observes the following semantics:  
-  
--   The instance-level FILESTREAM share is configured by an administrator and stored as a property of the server. You can rename this share by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. A renaming operation does not take effect until the server is restarted.  
-  
--   The database-level **DIRECTORY_NAME** is null by default when you create a new database. An administrator can set or change this name by using the **ALTER DATABASE** statement. The name must be unique (in a case-insensitive comparison) in that instance.  
-  
--   You typically provide the **FILETABLE_DIRECTORY** name as part of the **CREATE TABLE** statement when you create a FileTable. You can change this name by using the **ALTER TABLE** command.  
-  
+
 -   You cannot rename these root directories through file I/O operations.  
   
--   You cannot open these root directories with exclusive file handles.  
+-   You cannot open these root directories with exclusive file handles.   
+
+ <table>
+  <thead>
+    <th>Level</th>
+    <th style="width:60%;">Description</th>
+    <th>Image</th>
+  <thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left; vertical-align: top;">
+        Instance
+      </td>
+      <td style="text-align: left; vertical-align: top;">
+        The instance-level FILESTREAM share is configured by an administrator and stored as a property of the server. You can rename this share by using SQL Server Configuration Manager. A renaming operation does not take effect until the server is restarted.
+        <br/>
+        <br/> Hierarchy tag: <code>&lt;instance-level FILESTREAM share&gt;</code>
+        <br/> Example Value: <code>WindowsShareName</code>
+      </td>
+      <td style="text-align: center; vertical-align: middle;">
+        <img src="./res/MMCSQL_WidnowsShareName.png" alt="MMC SQL Server Instance Options"/>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: left; vertical-align: top;">
+        Database
+      </<td>
+      <td style="text-align: left; vertical-align: top;">
+        The database-level <strong>DIRECTORY_NAME</strong> is null by default when you create a new database. An administrator can set or change this name by using the <code>ALTER DATABASE</code> statement. The name must be unique (in a case-insensitive comparison) in that instance.  
+        <br/>
+        <br/> Hierarchy tag: <code>&lt;database-level directory&gt;</code>
+        <br/> Example Value: <code>DBLevelDirName</code>
+      </<td>
+      <td>
+        <img src="./res/SSMS_DBLevelDirName.png" alt="SSMS Database Level Directory Name"/>
+      </<td>
+    </tr>
+    <tr>
+      <td style="text-align: left; vertical-align: top;">
+        FileTable
+      </<td>
+      <td style="text-align: left; vertical-align: top;">
+        You typically provide the <strong>FILETABLE_DIRECTORY</strong> name as part of the <code>CREATE TABLE</code> statement when you create a FileTable. You can change this name by using the <code>ALTER TABLE</code> command.
+        <br/>
+        <br/> Hierarchy tag: <code>&lt;FileTable directory&gt;</code>
+        <br/> Example Value: <code>FileTableDir</code>
+      </<td>
+      <td>
+        <img src="./res/SQL_FileTableDir.png" alt="SQL FileTable Directory"/>
+      </<td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <td>Summary:</td>
+    <td colspan=2>
+      By supplementing the example values into the hierarchy tags in: <br/>
+      <code>
+        \\&lt;machine&gt;\&lt;instance-level FILESTREAM share&gt;\&lt;database-level directory&gt;\&lt;FileTable directory&gt;\
+      </code>
+      <br/>
+      <br/>
+      the result are:
+      <br/>
+      <code>
+       \\&lt;machine&gt;\WindowsShareName\DBLevelDirName\FileTableDir\
+      </code>
+      <br/>
+    </td>
+  </tfoot>
+ </table>
+
   
 ##  <a name="is_directory"></a> The is_directory column in the FileTable schema  
  The following table describes the interaction between the **is_directory** column and the **file_stream** column that contains the FILESTREAM data in a FileTable.  

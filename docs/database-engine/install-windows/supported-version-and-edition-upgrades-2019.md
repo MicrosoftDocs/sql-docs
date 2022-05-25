@@ -4,7 +4,7 @@ description: The supported version and edition upgrades for SQL Server 2019.
 ms.custom: ""
 ms.date: 05/24/2022
 ms.prod: sql
-ms.reviewer: randolphwest
+ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:

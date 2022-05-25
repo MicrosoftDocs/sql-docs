@@ -15,9 +15,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "TRIM function"
-ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "= azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRIM (Transact-SQL)

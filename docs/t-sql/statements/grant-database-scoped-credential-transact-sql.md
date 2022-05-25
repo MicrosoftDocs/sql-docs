@@ -1,6 +1,6 @@
 ---
 title: GRANT Database Scoped Credential (Transact-SQL)
-description: "GRANT Database Scoped Credential Permissions (Transact-SQL)"
+description: "GRANT Database Scoped Credential permissions"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.technology: t-sql
@@ -19,18 +19,15 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: ""
 ms.custom: ""
-ms.date: "06/19/2017"
-monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.date: "05/25/2022"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 
-# GRANT Database Scoped Credential Permissions (Transact-SQL) 
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
-
-> [!NOTE]
-> GRANT Database Scoped Credential Permissions is only supported for serverless SQL pools in Azure Synapse Analytics.
+# GRANT Database Scoped Credential permissions (Transact-SQL) 
+[!INCLUDE[sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 Grants permissions on a database scoped credential. 
-  
+
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -45,13 +42,14 @@ GRANT permission  [ ,...n ]
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *permission*  
+
+#### *permission*  
  Specifies a permission that can be granted on a database scoped credential. Listed below.  
   
- ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
+#### ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
  Specifies the database scoped credential on which the permission is being granted. The scope qualifier "::" is required.  
   
- *database_principal*  
+#### *database_principal*  
  Specifies the principal to which the permission is being granted. One of the following:  
   
 -   database user  
@@ -63,10 +61,10 @@ GRANT permission  [ ,...n ]
 -   database user mapped to an asymmetric key  
 -   database user not mapped to a server principal.  
   
-GRANT OPTION  
+#### GRANT OPTION  
  Indicates that the principal will also be given the ability to grant the specified permission to other principals.  
   
-AS *granting_principal*  
+#### AS *granting_principal*  
  Specifies a principal from which the principal executing this query derives its right to grant the permission. One of the following:  
   
 -   database user  
@@ -88,6 +86,9 @@ AS *granting_principal*
 |ALTER|CONTROL|CONTROL|  
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
+
+> [!NOTE]
+> In Azure Synapse Analytics, GRANT on database scoped credential is supported for serverless SQL pools only.
   
 ## Permissions  
  The grantor (or the principal specified with the AS option) must have either the permission itself with GRANT OPTION, or a higher permission that implies the permission being granted.  
@@ -109,7 +110,7 @@ AS *granting_principal*
   
  Grantees of CONTROL SERVER permission, such as members of the **sysadmin** fixed server role, can grant any permission on any securable in the server. Grantees of CONTROL permission on a database, such as members of the **db_owner** fixed database role, can grant any permission on any securable in the database. Grantees of CONTROL permission on a schema can grant any permission on any object within the schema.  
   
-## See Also  
+## Next steps 
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE Database Scoped Credential (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
  [DENY Database Scoped Credential (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   

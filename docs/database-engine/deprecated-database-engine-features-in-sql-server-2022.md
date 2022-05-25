@@ -25,6 +25,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 
 - Distributed Replay
 - Machine Learning server
+- StretchDB
 
 Features that were deprecated in prior releases are also deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]:
 

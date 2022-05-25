@@ -921,6 +921,9 @@
         href: managed-instance/instance-create-quickstart.md
       - name: PowerShell
         href: managed-instance/create-configure-managed-instance-powershell-quickstart.md
+      - name: Bicep
+        displayName: ARM, Resource Manager, Template
+        href: managed-instance/create-bicep-quickstart.md
       - name: ARM template
         displayName: Resource Manager
         href: managed-instance/create-template-quickstart.md
@@ -1317,12 +1320,16 @@
         href: database/az-cli-script-samples-content-guide.md?tabs=managed-instance
       - name: Create SQL Managed Instance
         href: managed-instance/scripts/create-configure-managed-instance-cli.md
-      - name: Configure Transparent Data Encryption (TDE)
+      - name: Configure transparent data encryption (TDE)
         href: managed-instance/scripts/transparent-data-encryption-byok-sql-managed-instance-cli.md
       - name: Restore geo-backup
         href: managed-instance/scripts/restore-geo-backup-cli.md  
     - name: Azure PowerShell
-      href: database/powershell-script-content-guide.md?tabs=managed-instance
+      items:
+      - name: Samples overview
+        href: database/powershell-script-content-guide.md?tabs=managed-instance
+      - name: Configure transparent data encryption (TDE)
+        href: managed-instance/scripts/transparent-data-encryption-byok-powershell.md
     - name: Azure Resource Manager
       href: database/arm-templates-content-guide.md?tabs=managed-instance
     - name: Code samples

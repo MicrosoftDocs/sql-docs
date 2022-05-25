@@ -6,6 +6,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: "article"
+ms.custom:
+- event-tier1-build-2022
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: "= sql-server-ver16"
@@ -27,6 +29,10 @@ This release has the same hardware and software requirements as [SQL Server 2019
 
 SQL Server 2022 Preview on Linux images are coming soon.
 
+## Azure Virtual Machine
+
+SQL Server 2022 Preview Azure VM images are coming soon.
+
 ## Feature notes
 
 This section identifies known issues you may experience with this product:
@@ -43,7 +49,7 @@ This section identifies known issues you may experience with this product:
 
 ## Build number
 
-The CTP 2.0 build number for SQL Server 2022 Preview is `16.0.600.3`.
+The CTP 2.0 build number for SQL Server 2022 Preview is `16.0.600.9`.
 
 ## Next steps
 

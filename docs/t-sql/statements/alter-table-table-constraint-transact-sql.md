@@ -1,7 +1,8 @@
 ---
 description: "ALTER TABLE table_constraint (Transact-SQL)"
 title: "table_constraint (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

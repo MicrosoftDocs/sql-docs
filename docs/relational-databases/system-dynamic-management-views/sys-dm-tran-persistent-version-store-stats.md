@@ -1,7 +1,8 @@
 ---
 description: "The sys.dm_tran_persistent_version_store_stats dynamic management view returns information for accelerated database recovery (ADR) persistent version store (PVS) metrics."
 title: "sys.dm_tran_persistent_version_store_stats (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"

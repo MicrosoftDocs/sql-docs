@@ -1,7 +1,8 @@
 ---
 description: "sys.system_columns (Transact-SQL)"
 title: "sys.system_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"

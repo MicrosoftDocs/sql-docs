@@ -15,7 +15,8 @@ helpviewer_keywords:
 author: LitKnd
 ms.author: kendralittle
 ms.reviewer: ""
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "10/20/2015"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

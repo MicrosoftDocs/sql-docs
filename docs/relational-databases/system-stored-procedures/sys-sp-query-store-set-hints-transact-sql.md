@@ -1,7 +1,8 @@
 ---
 description: "The sys.sp_query_store_set_hints system stored procedure creates or updates Query Store hints for a given query, allowing you to influence queries without changing application code or database objects."
 title: "sys.sp_query_store_set_hints (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 05/24/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

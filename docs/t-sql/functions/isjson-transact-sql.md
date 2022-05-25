@@ -1,7 +1,8 @@
 ---
 description: "ISJSON (Transact-SQL)"
 title: "ISJSON (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 04/26/2022
 ms.prod: sql
 ms.technology: t-sql

@@ -1,7 +1,8 @@
 ---
 description: "The sp_help_change_feed system stored procedure monitors the current Synapse Link configuration."
 title: "sp_help_change_feed (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.service: synapse-analytics
 ms.prod_service: "database-engine, sql-database, synapse-analytics"

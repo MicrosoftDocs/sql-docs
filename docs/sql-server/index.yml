@@ -10,8 +10,11 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 12/02/2021
-  ms.custom: FY22Q2Fresh
-
+  ms.custom:
+  - event-tier1-build-2022
+  - event-tier1-build-2022
+  - FY22Q2Fresh
+  - event-tier1-build-2022
 landingContent:
 
   - title: SQL on Azure

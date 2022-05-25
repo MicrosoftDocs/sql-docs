@@ -1,7 +1,8 @@
 ---
 description: "RESTORE SYMMETRIC KEY (Transact-SQL)"
 title: "RESTORE SYMMETRIC KEY (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""
@@ -60,7 +61,7 @@ For more information, see [Tutorial: Use Azure Blob Storage with SQL Server](/sq
 
 ## Permissions
 
-Requires CONTROL permission on the database. 
+Requires ALTER permission on the symmetric key. If adding encryption by a certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. If dropping encryption by a certificate or asymmetric key, requires CONTROL permission on the certificate or asymmetric key.
   
 ## Examples
 

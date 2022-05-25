@@ -8,6 +8,8 @@ f1_keywords:
   - "GENERATE_SERIES_TSQL"
 dev_langs:
   - "TSQL"
+ms.custom:
+- event-tier1-build-2022
 helpviewer_keywords:
   - "GENERATE_SERIES function"
   - "analytic functions, GENERATE_SERIES"

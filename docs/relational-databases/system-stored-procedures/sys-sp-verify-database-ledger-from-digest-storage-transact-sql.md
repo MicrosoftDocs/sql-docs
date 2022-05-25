@@ -1,7 +1,8 @@
 ---
 description: "sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL)"
 title: "sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""

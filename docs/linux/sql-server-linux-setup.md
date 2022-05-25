@@ -9,8 +9,9 @@ ms.date: 05/24/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.custom:
-  - sqlfreshmay19
-  - intro-installation
+- sqlfreshmay19
+- intro-installation
+- event-tier1-build-2022
 ms.technology: linux
 ---
 # Installation guidance for SQL Server on Linux
@@ -96,7 +97,7 @@ You can install SQL Server 2017 or SQL Server 2019 on Linux from the command lin
 | Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true) |
 | Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true) |
 
-You can also run SQL Server on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json).
+You can also run SQL Server on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?toc=/sql/toc/toc.json).
 
 After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 

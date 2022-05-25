@@ -7,7 +7,10 @@ ms.date: 05/24/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019, contperf-fy21q3 
+ms.custom:
+- seo-lt-2019
+- contperf-fy21q3
+- event-tier1-build-2022
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Modify R/Python code to run in SQL Server (In-Database) instances

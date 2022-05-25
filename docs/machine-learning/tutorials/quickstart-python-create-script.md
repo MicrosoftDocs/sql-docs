@@ -9,8 +9,9 @@ ms.topic: quickstart
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
-  - contperf-fy21q1
-  - intro-quickstart
+- contperf-fy21q1
+- intro-quickstart
+- event-tier1-build-2022
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

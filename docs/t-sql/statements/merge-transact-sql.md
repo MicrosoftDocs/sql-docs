@@ -22,7 +22,8 @@ helpviewer_keywords:
 author: XiaoyuMSFT
 ms.author: XiaoyuL
 ms.reviewer: ""
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "03/07/2022"
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest"
 ---

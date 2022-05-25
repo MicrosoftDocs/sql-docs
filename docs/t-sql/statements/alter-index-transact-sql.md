@@ -1,7 +1,8 @@
 ---
 description: "ALTER INDEX (Transact-SQL)"
 title: "ALTER INDEX (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"

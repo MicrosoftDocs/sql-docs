@@ -7,6 +7,8 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 helpviewer_keywords: 
   - "post-migration validation and optimization"
   - "guide, post-migration validation and optimization"

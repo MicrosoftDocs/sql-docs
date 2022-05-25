@@ -1,7 +1,9 @@
 ---
 title: "Automatic tuning"
 description: Learn about automatic tuning in SQL Server and Azure SQL Database
-ms.custom: "fasttrack-edit"
+ms.custom:
+- fasttrack-edit
+- event-tier1-build-2022
 ms.date: "09/20/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

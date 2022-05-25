@@ -1,7 +1,8 @@
 ---
 description: "sys.database_query_store_internal_state (Transact-SQL)"
 title: "sys.database_query_store_internal_state (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "4/26/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

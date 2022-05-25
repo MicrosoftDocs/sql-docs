@@ -7,8 +7,9 @@ ms.topic: overview
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
-  - sqlseattle
-  - intro-whats-new
+- sqlseattle
+- intro-whats-new
+- event-tier1-build-2022
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"

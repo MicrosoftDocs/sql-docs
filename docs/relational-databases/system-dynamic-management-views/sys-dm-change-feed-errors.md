@@ -1,7 +1,8 @@
 ---
 description: "sys.dm_change_feed_errors (Transact-SQL) returns recent errors for the Azure Synapse Link feature."
 title: "sys.dm_change_feed_errors (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""

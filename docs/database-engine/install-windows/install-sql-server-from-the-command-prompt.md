@@ -83,7 +83,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: ""
 ms.custom:
-  - intro-installation
+- intro-installation
+- event-tier1-build-2022
 ms.date: 01/07/2020
 monikerRange: ">=sql-server-2016"
 ---

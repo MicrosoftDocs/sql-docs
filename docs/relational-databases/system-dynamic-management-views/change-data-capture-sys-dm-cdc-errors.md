@@ -1,7 +1,8 @@
 ---
 description: "The Change Data Capture DMV sys.dm_cdc_errors returns one row for each error encountered during the change data capture log scan session.  "
 title: "sys.dm_cdc_errors (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 05/10/2022
 ms.prod: sql
 ms.reviewer: ""
@@ -51,4 +52,3 @@ The DMV `sys.dm_cdc_errors` contains error information for the previous 32 sessi
  - [sys.dm_repl_traninfo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)  
   
   
-

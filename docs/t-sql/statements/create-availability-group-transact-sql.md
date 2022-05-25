@@ -1,7 +1,8 @@
 ---
 description: "CREATE AVAILABILITY GROUP (Transact-SQL)"
 title: "CREATE AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "10/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"

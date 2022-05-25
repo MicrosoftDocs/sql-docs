@@ -1,7 +1,9 @@
 ---
 title: "Shrink a database"
 description: Learn how to shrink a database by using Object in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: FY22Q2Fresh
+ms.custom:
+- FY22Q2Fresh
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

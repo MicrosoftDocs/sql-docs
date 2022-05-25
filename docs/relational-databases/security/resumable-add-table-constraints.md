@@ -1,7 +1,8 @@
 ---
 title: "Resumable add table constraints"
 description: New resumable capabilities to support pausing and resuming a running ALTER TABLE ADD CONSTRAINT operation. 
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.reviewer: ""

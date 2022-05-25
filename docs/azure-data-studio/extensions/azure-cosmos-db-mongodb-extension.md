@@ -4,6 +4,8 @@ description: Learn how to install the Azure Data Studio Azure Cosmos DB for Mong
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
+ms.custom:
+- event-tier1-build-2022
 author: seesharprun
 ms.author: sidandrews
 ms.reviewer: esarroyo

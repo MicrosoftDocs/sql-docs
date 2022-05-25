@@ -1,7 +1,8 @@
 ---
 description: "RESTORE Statements restore SQL database backups taken using the BACKUP command."
 title: "RESTORE (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: 05/10/2022
 ms.prod: sql
 ms.prod_service: "sql-database"

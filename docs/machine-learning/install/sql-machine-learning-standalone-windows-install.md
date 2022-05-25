@@ -8,8 +8,9 @@ ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom:
-  - seo-lt-2019
-  - intro-installation
+- seo-lt-2019
+- intro-installation
+- event-tier1-build-2022
 monikerRange: "=sql-server-2016 || =sql-server-2017 || =sql-server-ver15"
 ---
 # Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup

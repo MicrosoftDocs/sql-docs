@@ -1,7 +1,8 @@
 ---
 description: "RESTORE MASTER KEY (Transact-SQL)"
 title: "RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"

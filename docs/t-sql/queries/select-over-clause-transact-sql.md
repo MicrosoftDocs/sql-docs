@@ -620,7 +620,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  The following example shows using the OVER clause with an aggregate function in a calculated value. Notice that the aggregates are calculated by `SalesOrderNumber` and the percentage of the total sales order is calculated for each line of each `SalesOrderNumber`.  
   
 ```sql  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW2019
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   
        OrderQuantity AS Qty,   

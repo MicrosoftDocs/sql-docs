@@ -1,7 +1,8 @@
 ---
 description: "The sys.query_store_query_hints system catalog view returns Query Store hints."
 title: "sys.query_store_query_hints (Transact-SQL)"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

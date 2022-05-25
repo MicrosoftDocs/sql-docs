@@ -12,6 +12,8 @@ f1_keywords:
   - "LAST_VALUE_TSQL"
 dev_langs: 
   - "TSQL"
+ms.custom:
+- event-tier1-build-2022
 helpviewer_keywords: 
   - "analytic functions, LAST_VALUE"
   - "LAST_VALUE function"

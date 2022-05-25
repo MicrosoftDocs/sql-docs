@@ -1,7 +1,8 @@
 ---
 description: "BACKUP CERTIFICATE (Transact-SQL)"
 title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom:
+- event-tier1-build-2022
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
@@ -165,4 +166,3 @@ ALGORITHM = 'AES_256'
  [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
-
